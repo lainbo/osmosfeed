@@ -51,8 +51,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-13 datetime="2023-07-13T06:20:11.000Z">2023-07-13</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-13 datetime="2023-07-13T06:20:11.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-13 datetime="2023-07-13T14:00:35.000Z">2023-07-13</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-13 datetime="2023-07-13T14:00:35.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -67,6 +67,27 @@
                   <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7255217876365017145"
+                        open
+                      >
+                        <summary class="article-expander__title">https://github.com/devlive-community/openai-java-sdk 这个 SDK 简直是太好用了 赶快尝试使用</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7255217876365017145">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>https://github.com/devlive-community/openai-java-sdk
+这个 SDK 简直是太好用了
+赶快尝试使用</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -175,6 +196,7 @@ resource-type…</span>
                         <summary class="article-expander__title">发布了: 看这篇论文《Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM》https://arxiv.org/pdf/2104.04473.pdf 体会到做大模...</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/64af52e2e1ebb63d2c287e8b">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>看这篇论文《Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM》https://arxiv.org/pdf/2104.04473.pdf 体会到做大模型工程的难度有多么大，文中提到使用 1024 张 80G 显存的 A100 卡训练 1750 亿参数的 GPT-3 模型，需要花费 34 天，这是理论上的数据，但是实际情况大概率不是如此。
 过程中，最容易遇到的是基础设施瓶颈和稳定性问题，针对大模型的训练有三种并行策略，分别是数据并行、流水线并行和张量并行，理解起来并不复杂：
@@ -185,6 +207,8 @@ resource-type…</span>
 要确保整个集群的算力稳定，就需要建设一个可观测、可自愈、可扩展、可调试的大型系统，例如可以观测整个集群的算力动图，从图中识别出是否有 GPU 掉卡、是否有显存 OOM、是否有网络异常、是否有储存异常等等，需要有巡检模块和自愈模块，还有具备非黑屏环境的互动调试模块。
 从整个工程的整体设计来看，不算复杂，但是要深入进去解决每一个问题，还是很让人头疼的，一次运行的失败，可能会丢失好多天的算力数据，如果是一个不能稳定复现的问题，排查起来就更要命了。
 一旦将整个集群的稳定性控制下来以后，那么就有希望将大模型的训练时间优化到接近理论值，这类工程的建设还是十分有价值的，商业化的前景也比较大。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -228,10 +252,13 @@ resource-type…</span>
                         <summary class="article-expander__title">发布了: 当业务方坚持要做/承接一件事情的时候，通常都会有他自己的理由，如果他不愿意表达出来，说明他可能还没有组织好这个理由的推理逻辑。 如果站在技术视角...</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/64ae55cc16e524750286174e">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>当业务方坚持要做/承接一件事情的时候，通常都会有他自己的理由，如果他不愿意表达出来，说明他可能还没有组织好这个理由的推理逻辑。
 如果站在技术视角提出了不做的理由，那跟业务方直接的沟通矛盾就会加剧：他思考的是，为什么你不能帮助一起把这件事情做成；而你思考的是，为什么非要把这件事情做成，明明可以不做。
 这种情况，最好的办法，不是去表达自己立场下的观点和判断，而是不停地询问对方，如何看待当前的事情，做和不做的收益和弊端分别是什么，可以逼着对方把逻辑梳理清楚。最后的结果可能是他把你说服了（做），也可能是他把自己给说服了（不做）。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -247,6 +274,7 @@ resource-type…</span>
                         <summary class="article-expander__title">发布了: 《小而美：持续盈利的经营法则》这本书说，要是把创业步骤写在纸上，看上去会非常容易： 1）你的理想客户是哪些？缩小这个群体的范围，直到不能再缩小为...</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/64ae05bf1b83e0b21ae907a9">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>《小而美：持续盈利的经营法则》这本书说，要是把创业步骤写在纸上，看上去会非常容易：
 1）你的理想客户是哪些？缩小这个群体的范围，直到不能再缩小为止
@@ -254,6 +282,8 @@ resource-type…</span>
 3）设置一个严格的时间表，专心致志地设计一个方案，然后收取费用
 4）不断重复这个过程，直到找到一个可行的产品，然后围绕它扩大经营
 找到目标群体，找到 MVP，设置好定价，干。不过真当干起来的时候，一堆新的问题又出现了，经常会容易迷失到分支任务中，忘记了主线是要干啥。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -305,6 +335,8 @@ Codecademy</span>
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>AOC显示器有推荐吗？铁汁们</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -324,6 +356,8 @@ Codecademy</span>
                               <span>#工欲善其事必先利其器 #开发工具推荐 #Seal软件
 Bito 的 AI 助手将 ChatGPT 带到您的 IDE 或 Chrome 中，让您可以轻松编写代码、理解语法、编写测试用例、解释代码、注释代码、检查安全性，甚至解释高级概念。好使！
 火速尝鲜：https://bito.ai/</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -341,6 +375,8 @@ Bito 的 AI 助手将 ChatGPT 带到您的 IDE 或 Chrome 中，让您可以轻�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>jym，有没有好用的ssh和ftp工具推荐一些，我的xshell又㕛叒叕打不开了</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -359,6 +395,8 @@ Bito 的 AI 助手将 ChatGPT 带到您的 IDE 或 Chrome 中，让您可以轻�
                             <span class="media-object__text">
                               <span>功能强大的开源数据中台系统 DataCap 1.12.0 发布
 https://datacap.edurt.io/release/latest.html</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -473,6 +511,8 @@ Antd 已经到了 5.x，Fusion 还是 1.x。这版本后背后意味着 Fusion �
                               <span>开源项目visualization-collection，一个专注于前端视觉效果的集合应用，包含CSS动效、Canvas动画、人工智能应用等上百个案例，今天终于发布了Vue版本，各位使用Vue开发的小伙伴赶紧来围观啦。
 应用地址(PC端)：http://hepengwei.cn
 源码地址：https://github.com/hepengwei/visualization-collection-vue</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -490,6 +530,8 @@ Antd 已经到了 5.x，Fusion 还是 1.x。这版本后背后意味着 Fusion �
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>有没有大佬给推荐一个svn工具。在mac中可以合并分支的那种呀。。那次代码冲突以后合并太难了。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -507,6 +549,8 @@ Antd 已经到了 5.x，Fusion 还是 1.x。这版本后背后意味着 Fusion �
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>[7243698841848348730#每天一个知识点#] VulcanSQL是一个開源的給数据应用的数据API框架，让懂得编写SQL的朋友们，只需编写SQL模板，就能快速创建和分享数据API。其他构建API的底层技术和细节，VulcanSQL帮你处理。欢迎大家来看看並給予我們回饋！[微笑][微笑][微笑]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -634,7 +678,7 @@ Gitee地址
 以上，如果对你有用的话，不妨点赞收藏关注一下，谢谢 🙏
 😊 微信公众号: OrzR3
 💖 不定期更新一些技术类，生活类，读书类的文章。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -681,7 +725,7 @@ will-change是一个CSS属性，它可以告诉浏览器某个元素将要发生
 
 在上述示例中，我们告诉浏览器，该元素即将发生变换（transform），以便浏览器在渲染时提前分配所需的资源。
 值得注意的是，因为will-change是为了性能优化而设计…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -768,7 +812,7 @@ React之所以已经一年没有发布稳定release，是因为发展方向已�
 在此期间的更新都是面向上层框架，所以开发者很难感知到React的变化。
 但这并不能说明React停止迭代了，也不能据此认为前端发展的停滞。
 如果一定要定量观察React最近一年的发展，距离React v19里程碑，已经大体过半了：</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -801,6 +845,8 @@ React之所以已经一年没有发布稳定release，是因为发展方向已�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>垫江县气象台2023年7月11日14时40分发布“高温橙色预警信号”，预计7月11日白天至12日白天，我县桂溪街道、桂阳街道、三溪镇、裴兴镇、坪山镇、白家镇、包家镇、鹤游镇、砚台镇、永平镇、澄溪镇、高峰镇、永安镇、周嘉镇、普顺镇、新民镇、沙坪镇、曹回镇、太平镇、黄沙镇、长龙镇、五洞镇等大部分乡镇（街道）日最高气温将升至37℃以上，请注意防范。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -818,6 +864,8 @@ React之所以已经一年没有发布稳定release，是因为发展方向已�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>万州区气象台2023年07月11日14时11分发布高温橙色预警信号：预计我区今天下午甘宁、熊家、高梁、李河、太龙、龙驹、新田、天城、高笋塘、钟鼓楼、陈家坝等乡镇街道最高气温将升至37℃以上。有关部门和单位按照职责落实防暑降温保障措施；尽量避免在高温时段进行户外活动，高温条件下作业的人员应当缩短连续工作时间；对老、弱、病、幼人群提供防暑降温指导，并采取必要的防护措施；有关部门和单位应当注意防范因用电量过高，以及电线、变压器等电力负载过大而引发的火灾。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -835,6 +883,8 @@ React之所以已经一年没有发布稳定release，是因为发展方向已�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>梁平区气象台2023年07月11日13时50分发布“高温橙色预警信号”：预计11日14时至18时我区海拔400米以下的部分乡镇（街道）最高气温将升到37℃以上，请注意防暑降温及预防火灾。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -852,6 +902,8 @@ React之所以已经一年没有发布稳定release，是因为发展方向已�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>巫山县气象台于2023年7月11日13时20分发布“高温橙色预警信号”，预计11日13时至18时，福田镇、龙溪镇、大昌镇、双龙镇、龙门街道、高唐街道、巫峡镇、曲尺乡、大溪乡、官渡镇、抱龙镇、培石乡等海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防暑降温及预防火灾。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -869,6 +921,8 @@ React之所以已经一年没有发布稳定release，是因为发展方向已�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>巫溪县气象台2023年7月11日10时50分发布“高温橙色预警信号”，预计11日13时至19时，我县徐家镇、白鹿镇、大河乡、下堡镇、中梁乡、天星乡、宁厂镇、城厢镇、宁河街道、柏杨街道、凤凰镇、兰英乡、花台乡、峰灵镇、蒲莲镇、田坝镇、红池坝镇、天元乡、土城镇等海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防暑降温及预防火灾。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -886,6 +940,8 @@ React之所以已经一年没有发布稳定release，是因为发展方向已�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>荣昌区气象台2023年07月11日10时44分发布高温橙色预警信号。预计7月11日13时—19时，我区日最高气温将升至37℃以上，请广大市民做好防暑降温措施，减少户外活动。各镇(街)及相关部门加强森林防火、城市火灾风险管控，并做好交通旅游安全以及学生防溺水工作。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -903,6 +959,8 @@ React之所以已经一年没有发布稳定release，是因为发展方向已�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>丰都县气象局2023年7月11日9时40分发布高温橙色预警信号，预计11-13日白天我县三建乡、虎威镇、树人镇、保合镇、兴龙镇、仁沙镇、社坛镇、名山街道、十直镇、三元镇、青龙乡、双龙镇、三合街道、湛普镇、双路镇、兴义镇、高家镇、龙孔镇、董家镇、许明寺镇等长江沿线、龙河沿线及北部乡镇日最高气温将升至37℃以上，局地40℃以上，森林火险气象等级较高，请注意防暑降温及预防火灾。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -932,6 +990,7 @@ React之所以已经一年没有发布稳定release，是因为发展方向已�
                         <summary class="article-expander__title">发布了: 一个独立开发者的五年：https://mp.weixin.qq.com/s/x6PLSIMn_1qcKnXWPT-J-Q 作者的几个观点： 1）建离岸公司做美元市场是个不错的选择 2）应该尽可能多...</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/64acb83aca2b035a482a4409">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>一个独立开发者的五年：https://mp.weixin.qq.com/s/x6PLSIMn_1qcKnXWPT-J-Q
 作者的几个观点：
@@ -942,6 +1001,8 @@ React之所以已经一年没有发布稳定release，是因为发展方向已�
 5）把客户当做朋友，从客户身上涌现新的产品想法，保持思考
 6）生意是一门艺术，在各个环节发挥自己的创造力来对抗无聊
 7）这是一个最好的时代，代码永不眠，去创造</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1019,7 +1080,7 @@ import {useUserStore} from &#x27;@/stores/global/user&#x27;;
  * @returns
  */
 export const isAuth &#x3D; (authCode:…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1065,7 +1126,7 @@ const tree &#x3D; {
     child:[],
     parent:root
   },…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;20
+                                &ensp;<span class="article-reading-time">(&hairsp;19
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1418,9 +1479,12 @@ Storybook 始于 2016 年。从那时起，我们开创了组件驱动开发、�
                         <summary class="article-expander__title">发布了: 有的人的时间怎么提效都觉得不够用，而有的人的时间是需要打发才能度过的。 为第二类人去提供服务，大抵是更有市场的。</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/64ac083d16e52475024f60f3">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>有的人的时间怎么提效都觉得不够用，而有的人的时间是需要打发才能度过的。
 为第二类人去提供服务，大抵是更有市场的。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1436,8 +1500,11 @@ Storybook 始于 2016 年。从那时起，我们开创了组件驱动开发、�
                         <summary class="article-expander__title">发布了: 哈哈哈</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/64abc28e16e5247502471981">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FnQdrEsGPoZ8nB9vxGOtenkFqR0sv3.png?imageMogr2/auto-orient/format/jpeg/thumbnail/300x2000%3E/quality/70/interlace/1" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>哈哈哈</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1453,8 +1520,11 @@ Storybook 始于 2016 年。从那时起，我们开创了组件驱动开发、�
                         <summary class="article-expander__title">发布了: 有人喜欢群聊，有人喜欢私聊。喜欢群聊的人是想通过观点讨论，获得一个思维更开阔的解，毕竟不同的人掌握的信息以及对信息的理解是存在偏差的，带来的问...</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/64abb43c7b5daee543ebdc97">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>有人喜欢群聊，有人喜欢私聊。喜欢群聊的人是想通过观点讨论，获得一个思维更开阔的解，毕竟不同的人掌握的信息以及对信息的理解是存在偏差的，带来的问题就是讨论容易发散；喜欢私聊的人是为了最小化沟通，避免引入更多观点和讨论，将决策收敛到一个最小的域。不过哪一种方式，都是为了达成共识的最大公约数，让更多人满意。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1470,9 +1540,12 @@ Storybook 始于 2016 年。从那时起，我们开创了组件驱动开发、�
                         <summary class="article-expander__title">发布了: 快速推进流程，能 ignore 的 ignore，能 mock 的 mock，不要在前期就以完美主义的心态干活；随时拉干系人进来快速对焦问题，明确时间节奏；将全流程的风...</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/64abad29b1d391675d365cc0">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>快速推进流程，能 ignore 的 ignore，能 mock 的 mock，不要在前期就以完美主义的心态干活；随时拉干系人进来快速对焦问题，明确时间节奏；将全流程的风险一次性暴露出来，然后逐个推进，并行解决问题。最后再去想全局优化和自动化提效的事情，顺序不能反，反了会容易在错误的方向上走太远。
 接受不完美，接受漏洞百出，接受前期屎一般的体验，这很重要，但是要从心理上接受，还是挺难的。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1504,6 +1577,8 @@ Storybook 始于 2016 年。从那时起，我们开创了组件驱动开发、�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>万盛经开区气象台2023年07月10日19时45分发布“大风蓝色预警信号”，我区石林镇、黑山镇部分地区风力已达7级且将持续，预计万东镇、关坝镇、青年镇等风力可达7级，局地阵风可达8级以上，请注意防范大风可能造成的棚舍、广告牌等搭建物的倒塌。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1521,6 +1596,8 @@ Storybook 始于 2016 年。从那时起，我们开创了组件驱动开发、�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>重庆市涪陵区气象台2023年7月10日11时40分发布高温橙色预警信号:预计7月10日12时至12日20时，我区各乡镇街道海拔500米以下地区日最高气温将至37℃以上，请各地注意防暑降温及预防火灾。防御指南:“八及时”：及时落实防暑降温保障措施，及时停止户外作业，高危行业及时停业，及时开展因用电量过高，以及电线、变压器等电力负载过大而引发的火灾排查，及时报告火险灾情险情，及时开展森林火险检查巡查，及时转移人员，主要领导必有一人带班及时处置险情灾情。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1538,6 +1615,8 @@ Storybook 始于 2016 年。从那时起，我们开创了组件驱动开发、�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>渝北区气象台2023年7月10日11时45分发布&quot;高温橙色预警信号&quot;，预计10日至11日，我区全部镇街日最高气温将升至37℃以上。请注意防暑降温及预防火灾。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1555,6 +1634,8 @@ Storybook 始于 2016 年。从那时起，我们开创了组件驱动开发、�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>万盛经开区气象台2023年7月10日11时发布“高温橙色预警信号”，预计7月10日白天至12日白天，我区万盛街道、东林街道、万东镇、丛林镇、关坝镇、黑山镇、石林镇、金桥镇、南桐镇、青年镇海拔400米以下地区日最高气温将达37℃以上，请注意防暑降温及预防火灾。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1572,6 +1653,8 @@ Storybook 始于 2016 年。从那时起，我们开创了组件驱动开发、�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>潼南区气象台2023年7月10日10时20分发布高温橙色预警信号：预计7月10日至11日，我区全部镇街日最高气温将升至37℃以上，请注意防暑降温和预防火灾。防御指南：1.有关部门和单位按照职责落实防暑降温保障措施；2.尽量避免在高温时段进行户外活动，高温条件下作业的人员应当缩短连续工作时间；3.对老、弱、病、幼人群提供防暑降温指导，并采取必要的防护措施；4.有关部门和单位应当注意防范因用电量过高，以及电线、变压器等电力负载过大而引发的火灾。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1589,6 +1672,8 @@ Storybook 始于 2016 年。从那时起，我们开创了组件驱动开发、�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>城口县气象台2023年7月10日10时30分发布“高温橙色预警信号”，预计7月10日白天至7月11日白天，我县修齐镇、巴山镇、庙坝镇、高观镇、坪坝镇、沿河乡、鸡鸣乡、厚坪乡、明通镇、高燕镇、明中乡、周溪乡、咸宜镇等乡镇海拔700米以下地区日最高气温将超过37℃。请注意防暑降温及预防火灾。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1606,6 +1691,8 @@ Storybook 始于 2016 年。从那时起，我们开创了组件驱动开发、�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>重庆市铜梁区气象台2023年7月10日10时20分发布高温橙色预警信号:预计10日13时至20时，我区巴川街道、南城街道、旧县街道、大庙镇、安居镇等大部镇街最高气温将升至37℃以上,请各地注意防暑降温及预防火灾。防御指南:1.有关部门和单位按照职责落实防暑降温保障措施；2.尽量避免在高温时段进行户外活动，高温条件下作业的人员应当缩短连续工作时间；3.对老、弱、病、幼人群提供防暑降温指导，并采取必要的防护措施；4.有关部门和单位应当注意防范因用电量过高，以及电线、变压器等电力负载过大而引发的火灾。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1623,6 +1710,8 @@ Storybook 始于 2016 年。从那时起，我们开创了组件驱动开发、�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>永川区气象台2023年7月10日10时发布“高温橙色预警信号”，预计7月10日12时至11日18时，茶山竹海街道、陈食街道、临江镇、板桥镇、中山路街道、大安街道、金龙镇、南大街街道、宝峰镇、青峰镇、双石镇、胜利路街道、三教镇、红炉镇、永荣镇、松溉镇、朱沱镇、仙龙镇、五间镇、吉安镇、何埂镇、来苏镇、卫星湖街道日最高气温将升至37℃以上。请以上各地注意防暑降温及预防火灾。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1640,6 +1729,8 @@ Storybook 始于 2016 年。从那时起，我们开创了组件驱动开发、�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>綦江区气象台2023年7月10日9时50分发布“高温橙色预警信号”，预计10日9时至18时，古南街道、文龙街道、通惠街道、三江街道、新盛街道、永新镇、石角镇、永城镇、篆塘镇、赶水镇、东溪镇等地区日最高气温将升至37℃以上。请以上各地注意防暑降温及预防火灾。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1673,6 +1764,8 @@ Storybook 始于 2016 年。从那时起，我们开创了组件驱动开发、�
                               <span>《泛积木-低代码》微前端、零前端的低代码开发框架。
 https://www.fxss.work/
 ​欢迎大家免费注册体验并转发，好用支持下单噢[奸笑][奸笑][奸笑]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1699,6 +1792,8 @@ NVIDIA NeMo Guardrails 是一个开源工具库，致力于使LLM大语言模型
 ·       NeMo Guardrails 与 Langchain 结合使用
 ·       在NeMo Guardrails中自定义使用LLM大语言模型
 ·       全网首发：Huggingface与Ai21在NeMo Guardrails中应用的代码实战</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1716,6 +1811,8 @@ NVIDIA NeMo Guardrails 是一个开源工具库，致力于使LLM大语言模型
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>用于生成项目目录树的包，支持 .md 和 .txt 两种格式：https://github.com/inblossoms/file-mkdir；</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1768,6 +1865,8 @@ Rnote还支持笔的反馈声音、可重新配置的手写笔按钮快捷键、
 Rnote还提供了自动保存功能和深色/浅色模式，让你在使用过程中更加便捷和舒适。
 总之，Rnote是一款功能强大、易于使用的绘图工具，可以满足你在绘图和笔记方面的各种需求。
 https://pan.quark.cn/s/71e4cecb0438</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1797,6 +1896,8 @@ https://pan.quark.cn/s/71e4cecb0438</span>
 操作轻巧，内置大量快捷键
 
 软件地址：https://pan.quark.cn/s/f50ab002e4b5</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1998,7 +2099,7 @@ emo时间的思考
 如果不是我就统统删除console之后再build
 这样既不会干扰我开发，也不会影响别人开发调试了。
 上次的文章已经…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2042,7 +2143,7 @@ Svelte的语言写法是很像原生js的，性能跟原生js无差别，Svelte�
 我们看看编译之后的内容是什么
 
 我们可以看到block里面，其实p函数就是更新值、c函数就是创建dom，d就是卸载dom。本质Svelte其实就是帮助我们做到了声明式的处理。那么我们如何监听到数据的变更，Svelte其实…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2092,7 +2193,7 @@ Web3。去年年初，Web3还很火了的，现在好像，嗯，一般般。后
 结束
 最近新弄了一个公粽号：写代码的浩，求关注 😄。
 后面会逐步把掌握的前端知识以及职场知识沉淀下来。 如果还有什么疑问或者建议，可以多多交流，原创文章，文笔有限，才疏学浅，文中若有不正之处，万望告知。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2196,6 +2297,8 @@ lighthouse-ci实现机制很简单，核心实现步骤如上图，差异就是l
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>忠县气象台2023年7月8日21时20分发布“大雾黄色预警信号”，预计7月8日22时至9日10时，石黄镇、金鸡镇、马灌镇、新立镇、花桥镇、双桂镇、拔山镇、三汇镇、官坝镇、金声乡、兴峰乡、汝溪镇、野鹤镇、石宝镇、涂井乡、黄金镇、忠州街道、白石镇、永丰镇、善广乡、新生街道、白公街道、东溪镇、复兴镇、乌杨街道、磨子土家族乡、石子乡、任家镇、洋渡镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2213,6 +2316,8 @@ lighthouse-ci实现机制很简单，核心实现步骤如上图，差异就是l
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>奉节县气象台2023年7月8日17时11分发布“暴雨黄色预警信号”，8日15时至17时云雾土家族乡、青龙镇等乡镇降雨量已超过40毫米，预计7月8日17时至8日23时，吐祥镇、太和土家族乡、云雾土家族乡、青龙镇、兴隆镇、冯坪乡、龙桥土家族乡等乡镇累积雨量将达50毫米以上，最大小时雨强可达20-30毫米，并伴有短时强降水、雷电、阵性大风等强对流天气；注意防范强降水可能诱发的山体滑坡、中小河流洪水、山洪、城乡积涝等次生灾害，以及雷电、大风可能造成的不利影响。防御指南：1.政府及相关部门按照职责做好防暴雨应急和抢险工作；2.交通管理部门应当根据路况在强降雨路段采取交通管制措施，在积水路段实行交通引导；3.切断低洼地带有危险的室外电源，暂停在空旷地方的户外作业，转移危险地带人员和危房居民到安全场所避雨；4.检查城市、农田、鱼塘排水系统，采取必要的排涝措施，并注意防范可能引发的山洪、滑坡、泥石流等灾害。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2230,6 +2335,8 @@ lighthouse-ci实现机制很简单，核心实现步骤如上图，差异就是l
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>石柱县气象台2023年7月8日12时发布“暴雨黄色预警信号”，目前中益乡已达暴雨，预计8日12时至20时，悦崃镇、三益乡、鱼池镇、沙子镇、洗新乡、新乐乡、金竹乡、黄水镇等街道（乡镇）累积雨量将达50毫米以上，最大小时雨强可达20-30毫米，并伴有雷电、阵性大风等强对流天气。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2247,6 +2354,8 @@ lighthouse-ci实现机制很简单，核心实现步骤如上图，差异就是l
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>彭水县气象台2023年7月8日9时30分发布“暴雨橙色预警信号”，预计8日9时至12时，走马乡、龙溪镇、善感乡、诸佛乡、桑柘镇、大同镇、乔梓乡、鞍子镇、梅子垭镇、桐楼乡、保家镇、鹿鸣乡、龙射镇、平安镇、靛水街道、万足镇、绍庆街道、新田镇、汉葭街道、长生镇、高谷镇、岩东乡、双龙乡、龙塘乡、润溪乡、朗溪乡、鹿角镇、石盘乡、黄家镇、太原镇、普子镇等乡镇（街道）累积雨量将达50毫米以上，最大小时雨强可达20-40毫米，并伴有雷电等强对流天气；注意防范强降水可能诱发的山体滑坡、泥石流、中小河流洪水、山洪、城乡积涝等次生灾害，以及雷电可能造成的不利影响。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2520,6 +2629,8 @@ const dialogVisible &#x3D; computed({
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>[7210228048107896891#每日快讯#]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2584,6 +2695,8 @@ const dialogVisible &#x3D; computed({
 支持向所有打开的 ssh 会话发送命令
 支持会话上的锁定/解锁操作
 软件地址：https://pan.quark.cn/s/ea8e747293fd</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2601,6 +2714,8 @@ const dialogVisible &#x3D; computed({
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>有人要海外服务器吗 [害羞]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2632,6 +2747,8 @@ const dialogVisible &#x3D; computed({
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>酉阳县气象台2023年7月8日06时20分升级发布“暴雨橙色预警信号”，目前我县龙潭镇、李溪镇、酉水河镇、酉酬镇、黑水镇、双泉乡等乡镇已出现暴雨天气，预计7月8日06时20分至12时我县仍将出现较强降水，庙溪乡、后坪乡、万木镇、小河镇、铜鼓镇、南腰界镇、车田乡、可大乡等地雨量将达暴雨，并伴有短时强降水、雷电等强对流天气。防御指南：1．政府及相关部门按照职责做好防暴雨应急工作；2．切断有危险的室外电源，暂停户外作业；3．处于危险地带的单位应当停课、停业，采取专门措施保护已到校学生、幼儿和其他上班人员的安全；4．做好城市、农田的排涝，注意防范可能引发的山洪、滑坡、泥石流等灾害。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2649,6 +2766,8 @@ const dialogVisible &#x3D; computed({
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>黔江区气象台2023年7月8日5时40分发布“暴雨蓝色预警信号”，目前石会镇累计降雨量已超过50毫米，预计8日5时至17时，五里镇、马喇镇、濯水镇、金洞乡、邻鄂镇、阿蓬江镇、鹅池镇、水市镇、石家镇等乡镇累积雨量将达50毫米以上，最大小时雨强可达20-30毫米，局地伴有雷电等强对流天气；注意防范强降水可能诱发的山体滑坡、泥石流、中小河流洪水、山洪、城乡积涝等次生灾害，以及雷电可能造成的不利影响。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2666,6 +2785,8 @@ const dialogVisible &#x3D; computed({
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>江津区气象台2023年7月8日3时48分发布“雷电黄色预警信号”，预计未来6小时，四面山镇、四屏镇、柏林镇、中山镇、蔡家镇等镇街将出现雷雨天气，局地伴有短时强降水、阵性大风等强对流天气，请注意防范。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2683,6 +2804,8 @@ const dialogVisible &#x3D; computed({
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>秀山县气象台2023年7月8日1时10分更新发布“暴雨黄色预警信号”，预计未来6小时内，我县妙泉镇、膏田镇、溶溪镇、溪口镇、乌杨街道、官庄街道、清溪场街道、龙凤坝镇、平凯街道、中和街道、龙池镇等街道（乡镇）累积雨量将达50毫米以上，并伴有雷电等强对流天气；注意防范强降水可能诱发的山体滑坡、泥石流、中小河流洪水、山洪、城乡积涝等次生灾害，以及雷电可能造成的不利影响。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2700,6 +2823,8 @@ const dialogVisible &#x3D; computed({
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>秀山县气象台2023年7月7日17时10分发布“雷电黄色预警信号”，预计未来6小时内，我县大溪乡、海洋乡、石堤镇、里仁镇、宋农镇、龙池镇、妙泉镇、涌洞镇、峨溶镇、洪安镇、官庄街道、溪口镇、溶溪镇、膏田镇等所有乡镇街道将出现雷雨天气，局地伴有短时强降水、阵性大风等强对流天气，请注意防范。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2752,6 +2877,63 @@ Phind
 针对你具体问题的详细和有见地的回答
 通过搜索检索到的相…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7252839465906110520"
+                        open
+                      >
+                        <summary class="article-expander__title">Vite 4.4实验性地支持Lightning CSS,Lightning CSS更快的CSS处理利器</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7252839465906110520">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: cyanosis
+点击在线阅读，体验更好
+链接
+
+
+
+
+现代JavaScript高级小册
+链接
+
+
+深入浅出Dart
+链接
+
+
+现代TypeScript高级小册
+链接
+
+
+
+
+lightning css中文文档
+Vite 4.4实验性
+从Vite 4.4开始，Vite实验性地支持Lightning CSS。你可以通过在你的配置文件中添加 css.transformer: &#x27;lightningcss&#x27; 来选择它，并安装可选的lightningcss依赖：
+bash
+npm add -D lightningcss
+
+如果启用了这个选项，CSS文件将由Lightning CSS处理，而不是PostCSS。你可以将Lightning CSS选项传递给css.lightningcss 配置选项进行配置。
+要配置CSS模块，你需要使用css.lightningcss.cssModules 来替代css.modules（后者用于配置PostCSS如何处理CSS模块）。
+默认情况下，Vite使用esbuild来压缩CSS。 Lightning CSS也可以通过build.cssMinify: &#x27;lightningcss&#x27; 作为CSS压缩器。
+什么是Lightning CSS
+
+Lightning CSS简单理解就是Rust版本的PostCSS,然后 Lightning CSS内置了一些功能，比如 CSS压缩，语法降级，语法支持前缀，CSS模块化功能
+入门Lightning CSS
+使用Node
+首先，使用npm或Yarn等包管理器安装Lightning CSS。
+npm install --save-dev lightningcss
+
+安装完成后，导入模块并调用Lightning CSS的API之一。transform函数将从Node Buffer编译CSS样式表。以下示例将…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2852,8 +3034,11 @@ Phind
                         <summary class="article-expander__title">发布了: 五年前是 84kg，设定目标 67kg，看来瘦下来确实不是一蹴而就的事情😄</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/64a77bc87b5daee54384d8c0">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fszt_fzyRvZIaEIfbQ_fMXjBLmIav3.jpeg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>五年前是 84kg，设定目标 67kg，看来瘦下来确实不是一蹴而就的事情😄</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2958,6 +3143,8 @@ Phind
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>彭水县气象台2023年7月7日04时30分发布“暴雨橙色预警信号”，7日01时到04时我县靛水、岩东、汉葭等部分乡镇（街道）已出现强降雨天气；预计7日04时至07时，善感乡、诸佛乡、桑柘镇、大同镇、乔梓乡、鞍子镇、梅子垭镇、桐楼乡、保家镇、靛水街道、万足镇、绍庆街道、新田镇、汉葭街道、长生镇、高谷镇、岩东乡、大垭乡、双龙乡、龙塘乡、润溪乡、朗溪乡、鹿角镇、石盘乡、黄家镇等街道（乡镇）累积雨量将达50毫米以上，最大小时雨强可达30-40毫米，并伴有雷电、阵性大风等强对流天气；注意防范强降水可能诱发的山体滑坡、泥石流、中小河流洪水、山洪、城乡积涝等次生灾害，以及雷电、大风可能造成的不利影响。防御指南:1.政府及相关部门按照职责做好防暴雨应急工作；2.切断有危险的室外电源，暂停户外作业；3.处于危险地带的单位应当停课、停业，采取专门措施保护已到校学生、幼儿和其他上班人员的安全；4.做好城市、农田的排涝，注意防范可能引发的山洪、滑坡、泥石流等灾害。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2975,6 +3162,8 @@ Phind
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>黔江区气象台2023年7月7日2时发布“雷电黄色预警信号”，预计7日2时至8时，白土乡、金溪镇、水田乡、冯家街道、蓬东乡、新华乡、太极镇、石家镇、鹅池镇、水市镇、阿蓬江镇、濯水镇、马喇镇、金洞乡、五里镇等偏南乡镇街道将出现雷雨天气，局地伴有短时强降水，请注意防范。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2992,6 +3181,8 @@ Phind
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>万盛经开区气象台2023年7月7日02时05分发布“雷电橙色预警信号”，我区万盛街道、东林街道、万东镇、南桐镇、金桥镇已受到雷电活动影响且将持续，预计未来2小时内丛林镇、关坝镇、石林镇、黑山镇、青年镇将受到雷电活动影响，出现雷电灾害事故的可能性比较大，请注意预防雷电、大风、短时强降水等强对流天气可能造成的灾害。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3009,6 +3200,8 @@ Phind
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>彭水县气象台2023年7月7日01时10分发布“雷电黄色预警信号”，预计未来0-6小时内我县善感乡、诸佛乡、桑柘镇、大同镇、鞍子镇、梅子垭镇、桐楼乡、保家镇、靛水街道、万足镇、绍庆街道、新田镇、汉葭街道、长生镇、高谷镇、岩东乡、大垭乡、双龙乡、龙塘乡、润溪乡、朗溪乡、鹿角镇、石盘乡、黄家镇等大部分乡镇（街道）将出现雷电，局地伴有短时强降水、阵性大风等强对流天气，请注意防范。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3063,57 +3256,6 @@ Phind
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7252684645979111461"
-                        open
-                      >
-                        <summary class="article-expander__title">给你十万条数据，给我顺滑的渲染出来！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7252684645979111461">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: orange
-highlight: a11y-light
-前言
-这是一道面试题，这个问题出来的一刹那，很容易想到的就是for循环100000次吧，但是这方案着实让浏览器崩溃啊！还有什么解决方案呢？
-正文
-1. for 循环100000次
-虽说for循环有点low，但是，当面试官问，为什么会让浏览器崩溃的时候，你知道咋解释吗？
-我们的思路是打印js运行时间和页面渲染时间，第一个console.log的触发时间是在页面进行渲染之前，此时得到的间隔时间为JS运行所需要的时间；第二个console.log是在 setTimeout 中的，它的触发时间是在渲染完成，在下一次Event Loop中执行的。
-
-
-
-
-  
-  
-  Document
-
-
-
-  
-
-
-  
-    let now &#x3D; Date.now();  //Date.now()得到时间戳
-
-    const total &#x3D; 100000
-    const ul &#x3D; document.getElementById(&#x27;ul&#x27;)
-
-    for (let i &#x3D; 0; i &lt; total; i++) {
-      let li &#x3D; document.createElement(&#x27;li&#x27;)
-      li.innerHTML &#x3D; ~~(Math.random() * total) 
-      ul.appendChild(li)
-    }
- …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;12
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7252605744255615035"
                         open
                       >
@@ -3136,7 +3278,7 @@ ChatGPT 可以聊天，进行常识问答，写文章，进行翻译等等。但
 
 瞎编内容举例，看起来合乎逻辑但实际上都是错误的
 这是因为大语言模型并不能判断他所生成的内容现实生活中是否是真实存在的，他只是单纯根据&quot;概率&quot;来生成最符合语言结构的内容，也就是根据前文的内容去生成后文的内容，并没有能力判断生成的内容是否准确合乎现实场景。如果你用 ChatGPT 写论文并且不加以修改的话，Cha…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;19
+                                &ensp;<span class="article-reading-time">(&hairsp;20
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3252,12 +3394,15 @@ ChatGPT 可以聊天，进行常识问答，写文章，进行翻译等等。但
                         <summary class="article-expander__title">发布了: 陆奇的一个分享中，https://u2tocxb6wz.feishu.cn/file/CHvVbp7spoxcBLxE2Lcc3rclnXe?continueFlag&#x3D;0f80442fa179178aba048e2445daa29d，将数字化分成了...</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/64a682cee54c189738b1556f">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FpyINeCBwyFhMzInQTbvPdxkPlO8v3.png?imageMogr2/auto-orient/format/jpeg/thumbnail/300x2000%3E/quality/70/interlace/1" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>陆奇的一个分享中，https://u2tocxb6wz.feishu.cn/file/CHvVbp7spoxcBLxE2Lcc3rclnXe?continueFlag&#x3D;0f80442fa179178aba048e2445daa29d，将数字化分成了三个时代：
 - 信息化时代，信息无处不在，人以脑力为主，体力为辅
 - 知识化时代，模型无处不在，人以尝新为主，其他为辅
 - 自主化时代，人类持续创新探索
 未来，这个社会更需要创业者、科学家，把模型做的更强，解放信息化时代的生产力。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3289,6 +3434,8 @@ ChatGPT 可以聊天，进行常识问答，写文章，进行翻译等等。但
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>Mac GlobalProtect Client 安装，亲测有用，安装完最好重启一下电脑</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3306,27 +3453,8 @@ ChatGPT 可以聊天，进行常识问答，写文章，进行翻译等等。但
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>还没有GPT4.0接口？分享一个OpenAi代理平台，国内可以直接访问，而且支持GPT4.0 https://www.aigc2d.com</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7252500978555961400"
-                        open
-                      >
-                        <summary class="article-expander__title">《战士归乡》https://music.163.com/#/song?id&#x3D;490183003 编码效率：+25% 思考速度：+30% 工作热情：+50%</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7252500978555961400">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>《战士归乡》https://music.163.com/#/song?id&#x3D;490183003
-
-编码效率：+25%
-思考速度：+30%
-工作热情：+50%</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4167,6 +4295,8 @@ Monica 是由 GPT-4 驱动的人工智能助手，现在注册赠送你 100 个�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>我发现，有个CSS三角函数之后，以前很多需要JS计算才能实现的布局现在都可以纯CSS完成了，代码简洁了不少。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4260,6 +4390,8 @@ Monica 是由 GPT-4 驱动的人工智能助手，现在注册赠送你 100 个�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>有没有办法使用CSS让数字从0-100像动画一样不停变化呢？如果你一时不知道该如何实现，则本文值得一看。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4336,8 +4468,8 @@ OpenAI 要求验证手机号，国内的手机都通不过。也就是说，它�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5543699993">
-        <time id="build-timestamp" datetime="2023-07-13T13:30:35.211Z">2023-07-13T13:30:35.211Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5545212779">
+        <time id="build-timestamp" datetime="2023-07-13T15:52:34.092Z">2023-07-13T15:52:34.092Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-07-13T13:30:35.237Z</id>
+    <id>urn:2023-07-13T15:52:34.126Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-07-13T13:30:35.237Z</updated>
+    <updated>2023-07-13T15:52:34.126Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[https://github.com/devlive-community/openai-java-sdk 这个 SDK 简直是太好用了 赶快尝试使用]]></title>
+        <id>7255217876365017145</id>
+        <link href="https://juejin.cn/pin/7255217876365017145"/>
+        <updated>2023-07-13T14:00:35.000Z</updated>
+        <summary type="html"><![CDATA[https://github.com/devlive-community/openai-java-sdk
+这个 SDK 简直是太好用了
+赶快尝试使用]]></summary>
+        <author>
+            <name>qianmoq</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[#工欲善其事必先利其器 #开发工具推荐 #Seal软件 利用来自 Git 和 Jira 的数据驱动洞察和见解，以了解和掌握开发团队的进度。Hivel 消除了软件工程流程中的瓶颈...]]></title>
         <id>7255126807552737339</id>
@@ -1779,6 +1791,54 @@ Phind
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Vite 4.4实验性地支持Lightning CSS,Lightning CSS更快的CSS处理利器]]></title>
+        <id>https://juejin.cn/post/7252839465906110520</id>
+        <link href="https://juejin.cn/post/7252839465906110520"/>
+        <updated>2023-07-07T02:49:36.000Z</updated>
+        <summary type="html"><![CDATA[theme: cyanosis
+点击在线阅读，体验更好
+链接
+
+
+
+
+现代JavaScript高级小册
+链接
+
+
+深入浅出Dart
+链接
+
+
+现代TypeScript高级小册
+链接
+
+
+
+
+lightning css中文文档
+Vite 4.4实验性
+从Vite 4.4开始，Vite实验性地支持Lightning CSS。你可以通过在你的配置文件中添加 css.transformer: 'lightningcss' 来选择它，并安装可选的lightningcss依赖：
+bash
+npm add -D lightningcss
+
+如果启用了这个选项，CSS文件将由Lightning CSS处理，而不是PostCSS。你可以将Lightning CSS选项传递给css.lightningcss 配置选项进行配置。
+要配置CSS模块，你需要使用css.lightningcss.cssModules 来替代css.modules（后者用于配置PostCSS如何处理CSS模块）。
+默认情况下，Vite使用esbuild来压缩CSS。 Lightning CSS也可以通过build.cssMinify: 'lightningcss' 作为CSS压缩器。
+什么是Lightning CSS
+
+Lightning CSS简单理解就是Rust版本的PostCSS,然后 Lightning CSS内置了一些功能，比如 CSS压缩，语法降级，语法支持前缀，CSS模块化功能
+入门Lightning CSS
+使用Node
+首先，使用npm或Yarn等包管理器安装Lightning CSS。
+npm install --save-dev lightningcss
+
+安装完成后，导入模块并调用Lightning CSS的API之一。transform函数将从Node Buffer编译CSS样式表。以下示例将…]]></summary>
+        <author>
+            <name>linwu</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[发布了: 五年前是 84kg，设定目标 67kg，看来瘦下来确实不是一蹴而就的事情😄]]></title>
         <id>https://m.okjike.com/originalPosts/64a77bc87b5daee54384d8c0</id>
         <link href="https://m.okjike.com/originalPosts/64a77bc87b5daee54384d8c0"/>
@@ -1874,47 +1934,6 @@ Phind
         <summary type="html"><![CDATA[《GRIME》是一款快速而残酷的动作冒险 RPG。在游戏中，你将使用能够变换形态和作用的活化武器摧毁敌人，然后通过黑洞吞噬敌人的遗体来强化自身宿体，打破充满肢解恐怖和离奇剧情的世界。]]></summary>
         <author>
             <name>Akupara Games</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[给你十万条数据，给我顺滑的渲染出来！]]></title>
-        <id>https://juejin.cn/post/7252684645979111461</id>
-        <link href="https://juejin.cn/post/7252684645979111461"/>
-        <updated>2023-07-06T12:59:34.000Z</updated>
-        <summary type="html"><![CDATA[theme: orange
-highlight: a11y-light
-前言
-这是一道面试题，这个问题出来的一刹那，很容易想到的就是for循环100000次吧，但是这方案着实让浏览器崩溃啊！还有什么解决方案呢？
-正文
-1. for 循环100000次
-虽说for循环有点low，但是，当面试官问，为什么会让浏览器崩溃的时候，你知道咋解释吗？
-我们的思路是打印js运行时间和页面渲染时间，第一个console.log的触发时间是在页面进行渲染之前，此时得到的间隔时间为JS运行所需要的时间；第二个console.log是在 setTimeout 中的，它的触发时间是在渲染完成，在下一次Event Loop中执行的。
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-
-<body>
-  <ul id="ul"></ul>
-
-  <script>
-    let now = Date.now();  //Date.now()得到时间戳
-
-    const total = 100000
-    const ul = document.getElementById('ul')
-
-    for (let i = 0; i < total; i++) {
-      let li = document.createElement('li')
-      li.innerHTML = ~~(Math.random() * total) 
-      ul.appendChild(li)
-    }
- …]]></summary>
-        <author>
-            <name>zt_ever</name>
         </author>
     </entry>
     <entry>
@@ -2028,20 +2047,6 @@ ChatGPT 可以聊天，进行常识问答，写文章，进行翻译等等。但
   @如是江南：雨打荷叶闲听雨]]></summary>
         <author>
             <name>Derek</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[《战士归乡》https://music.163.com/#/song?id=490183003 编码效率：+25% 思考速度：+30% 工作热情：+50%]]></title>
-        <id>7252500978555961400</id>
-        <link href="https://juejin.cn/pin/7252500978555961400"/>
-        <updated>2023-07-06T03:01:18.000Z</updated>
-        <summary type="html"><![CDATA[《战士归乡》https://music.163.com/#/song?id=490183003
-
-编码效率：+25%
-思考速度：+30%
-工作热情：+50%]]></summary>
-        <author>
-            <name>深漂的西伯利亚狼</name>
         </author>
     </entry>
     <entry>
