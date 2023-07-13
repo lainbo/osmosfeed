@@ -34,7 +34,7 @@
           "description": "我发现，有个CSS三角函数之后，以前很多需要JS计算才能实现的布局现在都可以纯CSS完成了，代码简洁了不少。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/06/css-sin-cos-tan-function/",
           "publishedOn": "2023-06-29T16:23:42.000Z",
-          "wordCount": 1354,
+          "wordCount": 1356,
           "title": "CSS sin()/cos()等数学三角函数简介与应用",
           "imageUrl": null
         },
@@ -44,7 +44,7 @@
           "description": "有没有办法使用CSS让数字从0-100像动画一样不停变化呢？如果你一时不知道该如何实现，则本文值得一看。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/06/css-text-number-loading/",
           "publishedOn": "2023-06-18T06:51:29.000Z",
-          "wordCount": 1218,
+          "wordCount": 1219,
           "title": "我使用CSS模拟个假的数字loading效果",
           "imageUrl": null
         }
@@ -655,16 +655,6 @@
           "wordCount": 521,
           "title": "重庆市秀山土家族苗族自治县发布雷电黄色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230707/t20230707_526318580.html",
-          "author": "国家预警信息发布中心",
-          "description": "彭水县气象台2023年7月7日04时30分发布“暴雨橙色预警信号”，7日01时到04时我县靛水、岩东、汉葭等部分乡镇（街道）已出现强降雨天气；预计7日04时至07时，善感乡、诸佛乡、桑柘镇、大同镇、乔梓乡、鞍子镇、梅子垭镇、桐楼乡、保家镇、靛水街道、万足镇、绍庆街道、新田镇、汉葭街道、长生镇、高谷镇、岩东乡、大垭乡、双龙乡、龙塘乡、润溪乡、朗溪乡、鹿角镇、石盘乡、黄家镇等街道（乡镇）累积雨量将达50毫米以上，最大小时雨强可达30-40毫米，并伴有雷电、阵性大风等强对流天气；注意防范强降水可能诱发的山体滑坡、泥石流、中小河流洪水、山洪、城乡积涝等次生灾害，以及雷电、大风可能造成的不利影响。防御指南:1.政府及相关部门按照职责做好防暴雨应急工作；2.切断有危险的室外电源，暂停户外作业；3.处于危险地带的单位应当停课、停业，采取专门措施保护已到校学生、幼儿和其他上班人员的安全；4.做好城市、农田的排涝，注意防范可能引发的山洪、滑坡、泥石流等灾害。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230707/t20230707_526318580.html",
-          "publishedOn": "2023-07-06T21:10:03.000Z",
-          "wordCount": 521,
-          "title": "重庆市彭水苗族土家族自治县发布暴雨橙色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -736,7 +726,7 @@
           "description": "大家好，我卡颂。\n遥想前几年，不管是React还是Vue，都在快速迭代版本，以至于很多同学抱怨学不动了。\n而现在，React已经一年没更新稳定release了。\n\n甚至有人认为，这就是前端已死最直接的证据：\n\n那么，React最近一年为什么不发版了呢？是因为前端框架领域已经没有新活儿可整了么？React v19是不是遥遥无期了？\n欢迎围观朋友圈、加入人类高质量前端交流群，带飞\n最近一年React活跃吗？\n不想看长文章的同学，这里一句话总结本文观点：\nReact之所以一年没发版，并不是因为无活可整，而是在完成框架从UI库到元框架的转型\n首先，我们来看看，最近这一年React的更新活跃度是否降低？\n从代码push量来看，最近一年甚至比release产出较多的前几年更活跃：\n\n既然更活跃，那React这段时间到底在做什么呢？从代码增删行数可以一窥端倪，其中：\n绿色柱状代表代码增加行数\n红色柱状代表代码减少行数\n红色折线代表代码行数总体趋势\n\n从代码量变化来看，React历史上大体分为四个时期：\n13年开源，到17年之前的功能迭代期\n持续到18年的重构期（重构React Fiber架构）\n18～22年基于Fiber架构的新功能迭代期\n22年至今的重构期\n功能迭代期与重构期的区别在于：\n前者主要是在稳定的架构上迭代新特性\n后者一般重构底层架构的同时，重构老特性\n剧烈的代码量波动通常发生在重构期。比如，在最近的重构期内，PR #25774删除了3w行代码。\n\n这个PR主要改变React对于同一个子包，同时拥有.new、.old两个文件的开发模式\n最近一年React都在干啥？\n明确了React最近一年处于重构期。那么，究竟是重构什么呢？\n答案是 —— 将RSC（React Server Component，服务端组件）接入当前React体系内。\n有同学会问：RSC只是个类似SSR的特性，为什么要实现他还涉及重构？\n这是因为RSC不仅是一个特性，更是React未来主要的发展方向，其意义不亚于Hooks。所以，围绕RSC的迭代涉及大量代码的重构。比如：\nSSR相关代码需要修改\nSSR代码修改导致Suspense组件代码修改\nSuspense的修改又牵扯到useEffect回调触发时机的变化\n可以说是牵一发而动全身了。\nRSC为什么重要\n为什么RSC对React这么重要？要回答这个问题，得从开源项目的发展聊起。\n开源项目要想获得成功，一定需要满足目标用户（开发者）的需求。\n早期，React作为前端框架，满足了UI开发的需求。在此期间，React团队的迭代方向主要是：\n摸索更清晰的开发范式（发布了Error Boundray、Suspense、Hooks）\n修补代码（发布新的Context实现）\n优化开发体验（发布CRA）\n底层优化（重构Fiber架构）\n可以发现，这些迭代内容中大部分（除了底层优化）都是直接面向普通开发者的，所以React文档（文档也是面向开发者的）中都有体现，开发者通过文档能直观的感受到React不断迭代。\n随着前端领域的发展，逐渐涌现出各种业务开发的最佳实践，比如：\n状态管理的最佳实践\n路由的最佳实践\nSSR的最佳实践\n一些框架开始整合这些最佳实践（比如Next.js、Remix，或者国内的Umijs...）\n到了这一时期，开发者更多是通过使用这些框架间接使用React。\n感受到这一变化后，React团队的发展方向逐渐变化 —— 从面向开发者的前端框架变为面向上层框架的元框架。\n发展方向变化最明显的表现是 —— 文档中新出的特性普通开发者很少会用到，比如：\nuseTransition\nuseId\nuseMutableSource\n这些特性都是作为元框架，给上层框架（或库）使用的。\n上述特性虽然普通开发者很少用到，但至少文档中提及了。但随着React不断向元框架方向发展，即使出了新特性，文档中已经不再提及了。比如：\nuseOptimistic\nuseFormStatus\n上述两个Hook想必大部分同学都没听过。他们是React源码中切实存在的Hook。但由于是元框架理念下的产物，所以React文档并未提及。相反，Next.js文档中可以看到使用介绍。\n总结\nReact之所以已经一年没有发布稳定release，是因为发展方向已经从面向开发者转型为面向上层框架。\n在此期间的更新都是面向上层框架，所以开发者很难感知到React的变化。\n但这并不能说明React停止迭代了，也不能据此认为前端发展的停滞。\n如果一定要定量观察React最近一年的发展，距离React v19里程碑，已经大体过半了：",
           "link": "https://juejin.cn/post/7254171813117820985",
           "publishedOn": "2023-07-11T01:22:07.000Z",
-          "wordCount": 1158,
+          "wordCount": 1252,
           "title": "为什么React一年不发新版了？",
           "imageUrl": null
         },
@@ -806,7 +796,7 @@
           "description": "theme: smartblue\nhighlight: an-old-hope\n前言\n我们熟知的三大框架，从vue的响应式的virtual dom处理，到react的fiber架构下的异步更新渲染的virtual dom处理，再到angular的独立设计的dom更新策略、依赖注入等。接下来我会简要描述前端未来框架及发展。\n三大框架的特性\n声明式、虚拟DOM、组件化\nreact、angular、vue三个框架的相同点都是声明式在模板中定义我们的循环和显示等等，我们无需命令式的修改dom。我们不再考虑原来的dom更新策略，我们使用了虚拟dom和真实dom的对比，使其在大场景的按需更新节点是非常有用的。同时框架都面向了组件化的开发，我们可以更高效的解决代码复用的问题。\n前端框架趋势\n\n我们可以看出趋势很明显的3个编译阶段的框架，Svelte、Solid、Qwik。\nSvelte 前端框架\nSvelte的语言写法是很像原生js的，性能跟原生js无差别，Svelte解决了框架在运行时层面的虚拟dom比对在复用节点没有那么需要时的性能问题，我们可以直接在编译阶段的真实dom处理。最核心的就是静态分析的编译器，让我们知道哪个变量变更，按需更新节点即可。我们看下Svelte的具体用法：\n<script>\n  let count = 0;\n  const increment = () => {\n    count += 1;\n  };\n</script>\n\n<button on:click={increment}>\n  count is {count}\n</button>\n\n我们看看编译之后的内容是什么\n\n我们可以看到block里面，其实p函数就是更新值、c函数就是创建dom，d就是卸载dom。本质Svelte其实就是帮助我们做到了声明式的处理。那么我们如何监听到数据的变更，Svelte其实…",
           "link": "https://juejin.cn/post/7253610755126427705",
           "publishedOn": "2023-07-09T08:51:47.000Z",
-          "wordCount": 1490,
+          "wordCount": 1351,
           "title": "前端未来框架的选择",
           "imageUrl": null
         },
@@ -826,7 +816,7 @@
           "description": "theme: qklhk-chocolate\n点击在线阅读，体验更好\n链接\n\n\n\n\n现代JavaScript高级小册\n链接\n\n\n深入浅出Dart\n链接\n\n\n现代TypeScript高级小册\n链接\n\n\n\n引言\n给组内的项目都在CICD流程上更新上了性能守卫插件，效果也还不错，同事还疯狂夸奖我\n\n接下里进入我们的此次的主题吧\n由于我组主要是负责的是H5移动端项目，老板比较关注性能方面的指标，比如首页打开速度，所以一般会关注FP,FCP等等指标，所以一般项目写完以后都会用lighthouse查看，或者接入性能监控系统采集指标.\n\n但是会出现两个问题，如果采用第一种方式，使用lighthouse查看性能指标，这个得依赖开发自身的积极性，他要是开发完就Merge上线，你也不知道具体指标怎么样。如果采用第二种方式，那么同样是发布到线上才能查看。最好的方式就是能强制要求开发在还没发布的时候使用lighthouse查看一下，那么在什么阶段做这个策略呢。聪明的同学可能想到，能不能在CICD构建阶段加上策略。其实是可以的，谷歌也想到了这个场景，提供性能守卫这个lighthouse ci插件\n性能守卫\n性能守卫是一种系统或工具，用于监控和管理应用程序或系统的性能。它旨在确保应用程序在各种负载和使用情况下能够提供稳定和良好的性能。\nLighthouse是一个开源的自动化工具，提供了四种使用方式：\nChrome DevTools\nChrome插件\nNode CLI\nNode模块\n\n其架构实现图是这样的，有兴趣的同学可以深入了解一下\n这里我们我们借助Lighthouse Node模块继承到CICD流程中，这样我们就能在构建阶段知道我们的页面具体性能，如果指标不合格，那么就不给合并MR\n剖析lighthouse-ci实现\nlighthouse-ci实现机制很简单，核心实现步骤如上图，差异就是lighth…",
           "link": "https://juejin.cn/post/7253331974051823675",
           "publishedOn": "2023-07-09T00:22:09.000Z",
-          "wordCount": 3561,
+          "wordCount": 3595,
           "title": "我给项目加了性能守卫插件，同事叫我晚上别睡的太死",
           "imageUrl": null
         },
@@ -878,6 +868,213 @@
           "publishedOn": "2023-07-06T11:42:06.000Z",
           "wordCount": 6062,
           "title": "使用Nodejs和Langchain开发大模型",
+          "imageUrl": null
+        }
+      ]
+    },
+    {
+      "title": "沸点 - 开发工具推荐",
+      "feedUrl": "https://rsshub.app/juejin/pins/6824710202000932877",
+      "siteUrl": "https://juejin.cn/pins/recommended",
+      "articles": [
+        {
+          "id": "7255217876365017145",
+          "author": "qianmoq",
+          "description": "https://github.com/devlive-community/openai-java-sdk\n这个 SDK 简直是太好用了\n赶快尝试使用",
+          "link": "https://juejin.cn/pin/7255217876365017145",
+          "publishedOn": "2023-07-13T14:00:35.000Z",
+          "wordCount": 455,
+          "title": "https://github.com/devlive-community/openai-java-sdk 这个 SDK 简直是太好用了 赶快尝试使用",
+          "imageUrl": null
+        },
+        {
+          "id": "7255126807552737339",
+          "author": "Seal软件",
+          "description": "#工欲善其事必先利其器 #开发工具推荐 #Seal软件\n利用来自 Git 和 Jira 的数据驱动洞察和见解，以了解和掌握开发团队的进度。Hivel 消除了软件工程流程中的瓶颈，从而提高发布的速度、吞吐量和质量。通过识别倦怠迹象并使用健康的指标，来衡量和提高开发人员的生产力。\n工具官网：https://www.hivel.ai/",
+          "link": "https://juejin.cn/pin/7255126807552737339",
+          "publishedOn": "2023-07-13T06:20:11.000Z",
+          "wordCount": 479,
+          "title": "#工欲善其事必先利其器 #开发工具推荐 #Seal软件 利用来自 Git 和 Jira 的数据驱动洞察和见解，以了解和掌握开发团队的进度。Hivel 消除了软件工程流程中的瓶颈...",
+          "imageUrl": null
+        },
+        {
+          "id": "7254792161115914297",
+          "author": "锦先生",
+          "description": "发现一个学习语言的神仙网站，很多都是免费哦\nCodecademy",
+          "link": "https://juejin.cn/pin/7254792161115914297",
+          "publishedOn": "2023-07-12T07:15:51.000Z",
+          "wordCount": 451,
+          "title": "发现一个学习语言的神仙网站，很多都是免费哦 Codecademy",
+          "imageUrl": null
+        },
+        {
+          "id": "7254793459122044989",
+          "author": "我会好好吃饭歌",
+          "description": "AOC显示器有推荐吗？铁汁们",
+          "link": "https://juejin.cn/pin/7254793459122044989",
+          "publishedOn": "2023-07-12T07:04:55.000Z",
+          "wordCount": 446,
+          "title": "AOC显示器有推荐吗？铁汁们",
+          "imageUrl": null
+        },
+        {
+          "id": "7254574621898899513",
+          "author": "Seal软件",
+          "description": "#工欲善其事必先利其器 #开发工具推荐 #Seal软件\nBito 的 AI 助手将 ChatGPT 带到您的 IDE 或 Chrome 中，让您可以轻松编写代码、理解语法、编写测试用例、解释代码、注释代码、检查安全性，甚至解释高级概念。好使！\n火速尝鲜：https://bito.ai/",
+          "link": "https://juejin.cn/pin/7254574621898899513",
+          "publishedOn": "2023-07-12T03:43:53.000Z",
+          "wordCount": 491,
+          "title": "#工欲善其事必先利其器 #开发工具推荐 #Seal软件 Bito 的 AI 助手将 ChatGPT 带到您的 IDE 或 Chrome 中，让您可以轻松编写代码、理解语法、编写测试用例、解释...",
+          "imageUrl": null
+        },
+        {
+          "id": "7254699605669445691",
+          "author": "afabama",
+          "description": "jym，有没有好用的ssh和ftp工具推荐一些，我的xshell又㕛叒叕打不开了",
+          "link": "https://juejin.cn/pin/7254699605669445691",
+          "publishedOn": "2023-07-12T03:35:48.000Z",
+          "wordCount": 446,
+          "title": "jym，有没有好用的ssh和ftp工具推荐一些，我的xshell又㕛叒叕打不开了",
+          "imageUrl": null
+        },
+        {
+          "id": "7254725753169707068",
+          "author": "qianmoq",
+          "description": "功能强大的开源数据中台系统 DataCap 1.12.0 发布\nhttps://datacap.edurt.io/release/latest.html",
+          "link": "https://juejin.cn/pin/7254725753169707068",
+          "publishedOn": "2023-07-12T03:28:02.000Z",
+          "wordCount": 465,
+          "title": "功能强大的开源数据中台系统 DataCap 1.12.0 发布 https://datacap.edurt.io/release/latest.html",
+          "imageUrl": null
+        },
+        {
+          "id": "7254439788048252985",
+          "author": "River_何",
+          "description": "开源项目visualization-collection，一个专注于前端视觉效果的集合应用，包含CSS动效、Canvas动画、人工智能应用等上百个案例，今天终于发布了Vue版本，各位使用Vue开发的小伙伴赶紧来围观啦。\n应用地址(PC端)：http://hepengwei.cn\n源码地址：https://github.com/hepengwei/visualization-collection-vue",
+          "link": "https://juejin.cn/pin/7254439788048252985",
+          "publishedOn": "2023-07-11T10:53:30.000Z",
+          "wordCount": 442,
+          "title": "开源项目visualization-collection，一个专注于前端视觉效果的集合应用，包含CSS动效、Canvas动画、人工智能应用等上百个案例，今天终于发布了Vue版本，各位使用...",
+          "imageUrl": null
+        },
+        {
+          "id": "7254335110009880613",
+          "author": "马尔扎哈贼6",
+          "description": "有没有大佬给推荐一个svn工具。在mac中可以合并分支的那种呀。。那次代码冲突以后合并太难了。",
+          "link": "https://juejin.cn/pin/7254335110009880613",
+          "publishedOn": "2023-07-11T03:10:32.000Z",
+          "wordCount": 441,
+          "title": "有没有大佬给推荐一个svn工具。在mac中可以合并分支的那种呀。。那次代码冲突以后合并太难了。",
+          "imageUrl": null
+        },
+        {
+          "id": "7254143696484007995",
+          "author": "cyyeh",
+          "description": "[7243698841848348730#每天一个知识点#] VulcanSQL是一个開源的給数据应用的数据API框架，让懂得编写SQL的朋友们，只需编写SQL模板，就能快速创建和分享数据API。其他构建API的底层技术和细节，VulcanSQL帮你处理。欢迎大家来看看並給予我們回饋！[微笑][微笑][微笑]",
+          "link": "https://juejin.cn/pin/7254143696484007995",
+          "publishedOn": "2023-07-11T01:38:48.000Z",
+          "wordCount": 526,
+          "title": "[7243698841848348730#每天一个知识点#] VulcanSQL是一个開源的給数据应用的数据API框架，让懂得编写SQL的朋友们，只需编写SQL模板，就能快速创建和分享数据API...",
+          "imageUrl": null
+        },
+        {
+          "id": "7254101170950733861",
+          "author": "fxss",
+          "description": "《泛积木-低代码》微前端、零前端的低代码开发框架。\nhttps://www.fxss.work/\n​欢迎大家免费注册体验并转发，好用支持下单噢[奸笑][奸笑][奸笑]",
+          "link": "https://juejin.cn/pin/7254101170950733861",
+          "publishedOn": "2023-07-10T10:57:44.000Z",
+          "wordCount": 446,
+          "title": "《泛积木-低代码》微前端、零前端的低代码开发框架。 https://www.fxss.work/ ​欢迎大家免费注册体验并转发，好用支持下单噢[奸笑][奸笑][奸笑]",
+          "imageUrl": null
+        },
+        {
+          "id": "7254066710368600124",
+          "author": "DD111",
+          "description": "[7073670907851440160#新人报道#] 本周四晚20:00在线研讨会开放报名中！\nNVIDIA NeMo Guardrails 是一个开源工具库，致力于使LLM大语言模型的使用更加合法合规。它可以轻松地为基于 LLM 的对话系统添加可编程护栏，用以避免讨论违法违规内容，从而构建可靠、安全的 LLM 对话系统。\n随着 NeMo Guardrails 0.2.0 新版本的发布，除了支持 OpenAI，它还扩展支持了诸如 AI21、Huggingface-Hub 等更多的AI对话引擎和大语言模型。本次分享将为您抢先揭秘：如何在 NeMo Guardrails 中自定义使用 LLM 大语言模型。\n对 NLP、LLM 大语言模型和对话式 AI 感兴趣、有开发需求的开发者朋友们请不要错过！\n通过本次研讨会，您将了解到：\n·       NVIDIA 开源工具库NeMo Guardrails 介绍\n·       NeMo Guardrails 中的Colang语言\n·       NeMo Guardrails 与 Langchain 结合使用\n·       在NeMo Guardrails中自定义使用LLM大语言模型\n·       全网首发：Huggingface与Ai21在NeMo Guardrails中应用的代码实战",
+          "link": "https://juejin.cn/pin/7254066710368600124",
+          "publishedOn": "2023-07-10T09:01:22.000Z",
+          "wordCount": 588,
+          "title": "[7073670907851440160#新人报道#] 本周四晚20:00在线研讨会开放报名中！ NVIDIA NeMo Guardrails 是一个开源工具库，致力于使LLM大语言模型的使用更加合法合规。...",
+          "imageUrl": null
+        },
+        {
+          "id": "7253828299939348537",
+          "author": "inblossoms",
+          "description": "用于生成项目目录树的包，支持 .md 和 .txt 两种格式：https://github.com/inblossoms/file-mkdir；",
+          "link": "https://juejin.cn/pin/7253828299939348537",
+          "publishedOn": "2023-07-10T02:28:01.000Z",
+          "wordCount": 467,
+          "title": "用于生成项目目录树的包，支持 .md 和 .txt 两种格式：https://github.com/inblossoms/file-mkdir；",
+          "imageUrl": null
+        },
+        {
+          "id": "7253750281962700861",
+          "author": "IT技术分享社区",
+          "description": "Rnote是一款基于矢量的开源绘图应用程序，可以应用于草图、手写笔记以及注释文档和图片。该应用程序适用于学生、教师和拥有绘图板的人。\n它提供了PDF和图片导入/导出等功能，支持无限画布以及适用于大小屏幕的自适应UI。\n此外，Rnote支持具有各种笔画风格的压敏笔输入，用形状工具添加不同的形状，并提供了一个选择工具，可以移动、旋转、调整大小和修改你添加/绘制的内容。\n你还可以使用文档扩展布局和可定制的页面格式，以及可定制的背景颜色、图案和尺寸来让你的作品更具个性化。\nRnote还支持笔的反馈声音、可重新配置的手写笔按钮快捷键、集成的工作区浏览器以及拖放和剪贴板功能。从PDF、位图和SVG文件导入也是Rnote的一大特点，同时使用原生的.rnote文件来保存/加载文件，支持导出到SVG和PDF。\nRnote还提供了自动保存功能和深色/浅色模式，让你在使用过程中更加便捷和舒适。\n总之，Rnote是一款功能强大、易于使用的绘图工具，可以满足你在绘图和笔记方面的各种需求。\nhttps://pan.quark.cn/s/71e4cecb0438",
+          "link": "https://juejin.cn/pin/7253750281962700861",
+          "publishedOn": "2023-07-09T22:30:55.000Z",
+          "wordCount": 459,
+          "title": "Rnote是一款基于矢量的开源绘图应用程序，可以应用于草图、手写笔记以及注释文档和图片。该应用程序适用于学生、教师和拥有绘图板的人。 它提供了PDF和图片导入/...",
+          "imageUrl": null
+        },
+        {
+          "id": "7253429618740052025",
+          "author": "IT技术分享社区",
+          "description": "妙言是一款轻量，美观的markdown笔记应用，目前仅支持MacOS，markdown是一种轻量级标记语言，支持以文本的方式对文档进行排版编辑等。基于Swift5原生开发，拥有极简的设计风格。\n软件主要有以下几点优点：\n纯本地使用，无需联网\n安全，完全开源，不会上传用户信息\n支持语法高亮，黑暗模式\n支持国际化\n极简设计，美观简约\n文件夹+文件列表+编辑器三栏设计\n中文默认使用霞鹜[wù]文楷体，字体优美\n性能极致\n操作轻巧，内置大量快捷键\n\n软件地址：https://pan.quark.cn/s/f50ab002e4b5",
+          "link": "https://juejin.cn/pin/7253429618740052025",
+          "publishedOn": "2023-07-09T04:22:57.000Z",
+          "wordCount": 459,
+          "title": "妙言是一款轻量，美观的markdown笔记应用，目前仅支持MacOS，markdown是一种轻量级标记语言，支持以文本的方式对文档进行排版编辑等。基于Swift5原生开发，拥有...",
+          "imageUrl": null
+        },
+        {
+          "id": "7253012988966142013",
+          "author": "Simon_He",
+          "description": "[7210228048107896891#每日快讯#]",
+          "link": "https://juejin.cn/pin/7253012988966142013",
+          "publishedOn": "2023-07-08T02:56:26.000Z",
+          "wordCount": 459,
+          "title": "[7210228048107896891#每日快讯#]",
+          "imageUrl": null
+        },
+        {
+          "id": "7253012988964962365",
+          "author": "IT技术分享社区",
+          "description": "今天给大家推荐一款跨平台的SSH免费终端软件NxShell，Linux远程连接工具，免费SSH客户端、主机服务器远程管理客户端。\n功能特点：\n所有源代码发布在 Github/Gitee\n支持SSH协议\n支持Windows/Linux/MacOS平台\n支持 en-US 和 zh-CN 的语言\n支持Sftp协议\n支持 SSH 隧道（socksv5）。默认情况下，它侦听端口 10080。\n支持ftp协议\n支持会话配置导入/导出\n支持xterm主题配置\n支持串口协议\n支持 xterm 记录器管理器\n支持VNC协议\n支持深色/浅色主题配置\n支持会话全屏\n支持布局\n支持向所有打开的 ssh 会话发送命令\n支持会话上的锁定/解锁操作\n软件地址：https://pan.quark.cn/s/ea8e747293fd",
+          "link": "https://juejin.cn/pin/7253012988964962365",
+          "publishedOn": "2023-07-07T23:47:33.000Z",
+          "wordCount": 498,
+          "title": "今天给大家推荐一款跨平台的SSH免费终端软件NxShell，Linux远程连接工具，免费SSH客户端、主机服务器远程管理客户端。 功能特点： 所有源代码发布在 Github/Gite...",
+          "imageUrl": null
+        },
+        {
+          "id": "7252909472247545893",
+          "author": "云湾_小米",
+          "description": "有人要海外服务器吗 [害羞]",
+          "link": "https://juejin.cn/pin/7252909472247545893",
+          "publishedOn": "2023-07-07T07:40:41.000Z",
+          "wordCount": 444,
+          "title": "有人要海外服务器吗 [害羞]",
+          "imageUrl": null
+        },
+        {
+          "id": "7252569524029685821",
+          "author": "简单不容易",
+          "description": "Mac GlobalProtect Client 安装，亲测有用，安装完最好重启一下电脑",
+          "link": "https://juejin.cn/pin/7252569524029685821",
+          "publishedOn": "2023-07-06T08:09:10.000Z",
+          "wordCount": 478,
+          "title": "Mac GlobalProtect Client 安装，亲测有用，安装完最好重启一下电脑",
+          "imageUrl": null
+        },
+        {
+          "id": "7252522702484619319",
+          "author": "Alone88",
+          "description": "还没有GPT4.0接口？分享一个OpenAi代理平台，国内可以直接访问，而且支持GPT4.0 https://www.aigc2d.com",
+          "link": "https://juejin.cn/pin/7252522702484619319",
+          "publishedOn": "2023-07-06T05:53:20.000Z",
+          "wordCount": 448,
+          "title": "还没有GPT4.0接口？分享一个OpenAi代理平台，国内可以直接访问，而且支持GPT4.0 https://www.aigc2d.com",
           "imageUrl": null
         }
       ]
