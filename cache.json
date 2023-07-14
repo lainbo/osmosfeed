@@ -645,16 +645,6 @@
           "wordCount": 521,
           "title": "重庆市黔江区发布暴雨蓝色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230708/t20230708_526320198.html",
-          "author": "国家预警信息发布中心",
-          "description": "江津区气象台2023年7月8日3时48分发布“雷电黄色预警信号”，预计未来6小时，四面山镇、四屏镇、柏林镇、中山镇、蔡家镇等镇街将出现雷雨天气，局地伴有短时强降水、阵性大风等强对流天气，请注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20230708/t20230708_526320198.html",
-          "publishedOn": "2023-07-07T20:20:03.000Z",
-          "wordCount": 521,
-          "title": "重庆市江津区发布雷电黄色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -686,7 +676,7 @@
           "description": "b 站视频播放的是很快的，基本是点哪就播放到哪。\n而且如果你上次看到某个位置，下次会从那个位置继续播放。\n那么问题来了：如果一个很大的视频，下载下来需要很久，怎么做到点哪个位置快速播放那个位置的视频呢？\n前面写过一篇 range 请求的文章，也就是不下载资源的全部内容，只下载 range 对应的范围的部分。\n那视频的快速播放，是不是也是基于 range 来实现的呢？\n我们先复习下 range 请求：\n\n请求的时候带上 range：\n\n服务端会返回 206 状态码，还有 Content-Range 的 header 代表当前下载的是整个资源的哪一部分：\n\n这里的 Content-Length 是当前内容的长度，而 Content-Range 里是资源总长度和当前资源的范围。\n更多关于 Range 的介绍可以看这篇文章：基于 HTTP Range 实现文件分片并发下载！\n那 b 站视频是不是用 Range 来实现的快速播放呢？\n我们先在知乎的视频试一下：\n随便打开一个视频页面，比如这个：\n\n然后打开 devtools，刷新页面，拖动下进度条，可以看到确实有 206 的状态码：\n\n我们可以在搜索框输入 status-code:206 把它过滤出来：\n\n这是一种叫过滤器的技巧：\n\n可以根据 method、domain、mime-type 等过滤。\nhas-response-header：过滤响应包含某个 header 的请求\nmethod：根据 GET、POST 等请求方式过滤请求\ndomain: 根据域名过滤\nstatus-code：过滤响应码是 xxx 的请求，比如 404、500 等\nlarger-than：过滤大小超过多少的请求，比如 100k，1M\nmime-type：过滤某种 mime 类型的请求，比如 png、mp4、json、html 等\nresource-type…",
           "link": "https://juejin.cn/post/7255110638154072120",
           "publishedOn": "2023-07-13T04:04:34.000Z",
-          "wordCount": 1432,
+          "wordCount": 1851,
           "title": "通过调试技术，我理清了 b 站视频播放很快的原理",
           "imageUrl": null
         },
@@ -696,7 +686,7 @@
           "description": "腾小云导读\nAIGC 这一时代潮流已然不可阻挡，我们要做的不是慌乱，而是把握住这个时代的机会。本文就和大家一起来探索在 AIGC 下，前端工程师即将面临的挑战和机遇。聊聊从以前到现在，AIGC 给我们带来了怎么样的变化，下一代前端工程师又该何去何从？\n目录\n1 疯狂的 AIGC\n2 范式迁移 —— AIGC 下开发模式改变的本质\n2.1 命令式 -> 声明式\n2.2 声明式 -> AIGC 式\n3 下一代前端工程师\n3.1 要善于利用\n3.2 要纵观全局\n3.3 要懂得批判\n3.4 要合理使用\n4 未来可期\n5 望天下再无码农\n6 探讨 6.1 AIGC 下，前端会消失吗？\n6.2 前端开发工程师会过分依赖 AI 吗？\n01疯狂的 AIGC\n记得 ChatGPT4 刚出来的时候，OpenAI 总裁 Greg Brockman 用笔和纸画了一个网页草图，GPT4 仅用几秒的时间便完成了网页的设计和代码的编写。\n\n不知道当时前端同学们看到是个怎样的想法哈，反正我当时心都凉了，好不容易把 vue 的源码搞懂了，这就没啥用了，饭碗砸了，蓝瘦香菇。\n好吧，开个玩笑 。AI 已然如此，此时就不得不问那个老生常谈的问题了，前端工程师们该何去何从呢？\n想来定有一些同学持悲观态度：前端已死，不值得做下去了，AI 马上就替代了。也会有些同学与之相反吧：AI 降临，神级辅助，又不吃经济，又有大用。\n\n\n\n我想说的是，AIGC 一定会对前端开发的未来会产生重大影响，至于这个影响对于前端工程师来说，是正是反，从来都不是工具决定的，而是用工具的人来决定的。我们要做的，不是去担忧焦虑，而是把握住它。\n02、范式迁移 —— AIGC 下开发模式改变的本质\n在这之前，我们先来聊聊前端开发这些年的发展。\n2.1 命令式 -> 声明式\n命令式：关注过程，代码能够与自然语言产生一一对应的关系，代码本身描述的是“做…",
           "link": "https://juejin.cn/post/7254812112562896952",
           "publishedOn": "2023-07-12T08:27:03.000Z",
-          "wordCount": 1762,
+          "wordCount": 2096,
           "title": "AIGC浪潮下，鹅厂新一代前端人的真实工作感受",
           "imageUrl": null
         },
@@ -716,7 +706,7 @@
           "description": "最近在思考一个可有可无的问题：\n“我们是不是要换一个组件库？”\n为什么会有这个问题？\n简单同步一下背景，我效力于 Lazada 商家前端团队。从接手系统以来(近 2 年) 就一直使用着 Alibaba Fusion 这套组件库。据我所知淘系都是在使用这套组件库进行业务开发，已经有 7 ~ 10 年了吧。我们团队花了 2 年时间从 @alife/next(内部版本已经不更新) 升级到了 @alifd/next，并在此之上建立了一套前端组件库体系。将 Lazada Seller Center 改了模样，在 Fusion 的基础上建立了一套支持整个 Lazada B 端业务的设计规范和业务组件库，覆盖页面 500+。\n旧\n新\n\n\n\n\n\n\n\n\n\n在这样一个可以说牵一发动全身的背景下，为何还敢有这种想法？\n不美\n美的反义词，不应该是丑，而是庸俗\n不能说 Fusion 丑，但绝对算不上美，这点应该没有争议吧。\n虽然也可以在大量的主题样式定制的情况下也可以做到下面这样看上去还行的效果：\n\n\n但说实话，这不能算出众。导致不出众的原因，可以从 Ant Design 上面寻找，Ant Design 的许多细节实现细到令人发指，比如：\n弹出窗的追踪动效\n\n按钮的点击动效\n\nTooltip 的箭头追踪\n\nNumberPicker 控制按钮放大\n\n这些细节决定了在它上层构建出的应用品质，同样是在一个基础上进行主题和样式的调整。有 Antd 这样品质的基础，就会让在此之上构建的应用品质不会很低，自然也能够带来更好的用户体验及产品品质。\n迭代\n拿 Antd 的仓库和 Fusion 相比，还是有蛮大的差距的，这些差距不只是技术水平的差距，可能在 10 年前他们的代码质量是差不多的，但贵在 Antd 是一个健康的迭代状态。\nAntd 已经到了 5.x，Fusion 还是 1.x。这版本后背后意味着 Fusi…",
           "link": "https://juejin.cn/post/7254559214588543034",
           "publishedOn": "2023-07-12T03:30:53.000Z",
-          "wordCount": 1901,
+          "wordCount": 2103,
           "title": "今天这个 Antd 是非换不可吗？",
           "imageUrl": null
         },
@@ -726,7 +716,7 @@
           "description": "theme: smartblue\n国际惯例，官网链接\n官网传送门\nGithub地址\ngithub上有几个demos例子，介绍了基础用法。\n\n我参考官网的例子，写了一个demo示例\n安装\nturn.js 依赖 jquery 库，所以需要先安装 jquery\nnpm install jquery --save\n\n引入\nimport $ from 'jquery'\nimport turn from '@/utils/turn.js'\n\n下载 turn.js 文件，然后在组件中引入\nimport turn from \"@/utils/turn.js\";\n\nvue.config.js 配置\nconst webpack = require('webpack');\nmodule.exports = {\n    lintOnSave: false,\n    //配置webpack选项的内容\n    configureWebpack: {\n        plugins: [\n            new webpack.ProvidePlugin({\n                $: \"jquery\",\n                jQuery: \"jquery\",\n            })\n        ]\n    },\n \n}\n\n或者，这样：\nconst webpack = require('webpack')\nmodule.exports = {\n  chainWebpack: config => {\n    config.plugin('provide').use(webpack.ProvidePlugin, [{\n      $: 'jquery',\n      jquery: 'jquery',\n      jQuery: 'jquery',\n      'window.jQuery': 'jquery'\n    }])\n  }\n}\n\n翻页方法，以及参数\n  $(\"#book\").turn({\n      //启用硬件加速,移动端有效\n      acceleration: false,\n      //显示：single=单页，double=双页，默认双页\n      display: \"double\",\n      // 翻页撒开鼠标，页面的延迟\n      duration: 800,\n      // 默认显示第几页\n      page: 1,\n      // 折叠处的光泽渐变，主要体现翻页的立体感、真实感\n      gradients: true,\n      // 中心翻取决于有多少页面可见 true or false\n      autoCenter: true,\n      // 设置可翻页的页角(都试过了，乱写 4个角都能出发卷起)， bl,br   tl,tr   bl,tr\n      turnCorners: \"bl,br\",\n      //页面高度\n      height: this.turnPage.height,\n      //翻书范围宽度，总宽度\n      width: this.turnPage.width,\n      when: {\n          //监听事件\n          turning: function (e, page, view) {\n              console.log(\"翻页前触发\");\n              console.log(e, page, view);\n              // 翻页前触发\n              console.log(page);\n          },\n          turned: function (e, page) {\n              console.log(\"翻页后触发\");\n              console.log(e, page);\n              // 翻页后触发\n              console.log(page);\n          },\n      },\n  });\n\n上一页\n$(\"#book\").turn(\"previous\");\n\n下一页\n$(\"#book\").turn(\"next\");\n\n示例代码\n完整代码，已经放到 Gitee 上面了，组件名为 TurnjsComponent\nGitee地址\n最后的话\n以上，如果对你有用的话，不妨点赞收藏关注一下，谢谢 🙏\n😊 微信公众号: OrzR3\n💖 不定期更新一些技术类，生活类，读书类的文章。",
           "link": "https://juejin.cn/post/7254443448564006967",
           "publishedOn": "2023-07-11T10:15:43.000Z",
-          "wordCount": 1652,
+          "wordCount": 1557,
           "title": "一个好用的轮子 turn.js 实现仿真翻书的效果",
           "imageUrl": null
         },
@@ -768,6 +758,16 @@
           "publishedOn": "2023-07-10T14:12:55.000Z",
           "wordCount": 5992,
           "title": "讲讲我做低代码平台这一年",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7254027262885855291",
+          "author": "Wanp",
+          "description": "highlight: zenburn\ntheme: smartblue\n为撒我们要使用单点登录\n通常情况下我们开发一套系统时，我们都会写一套登录页面。当用户需要访问系统时需要先进行账号登录然后进入系统使用。但是当我们有多个系统时难道需要用户登录多次吗？显然这种方式是不优雅的😶‍🌫️，此时就轮到单点登录登场了。本文将主要以前端的视角来聊一聊该如何落地单点登录。\n单点登录的英文名叫做：Single Sign On（简称SSO）😶‍🌫️\n单点登录能干嘛\n简单粗暴的说单点登录就是\n一处登录 处处登录 🤡\n单点登录在前端的系统模型\n\n单点登录实施方案\n单点登录目前有两种方案\ncookie 共享方案(子域名方案)\nticket 方案（凭证交换）\n这两个方案是有共同点的，我们看看它们有哪些共同的部分\n需要一个独立的登录系统\n通用重定向的方式完成子系统登录\n结合以上可以发现，这两个方案其实在前端的差异性并不大，主要就是需要考虑如何实现登录态共享。\ncookie 共享方案\n传统的登录方式是用户在登录页完成登录，然后后端通过 set-cookie 将 token 写入到浏览器的 cookie 当中之后的每次请求都会携带token完成身份验证。此时的登录模块和业务模块是同一系统下的不同页面。\n\n\n单点登录模型下的登录模块和业务模块是独立的不同系统\n结合以上流程图我们来分析一波，图中的A和sso都是example.com的子域名，当用户访问A-client时会向A-server发送身份验证请求检验当前请求是否携带有效token，如无效则返回特定 code A-client接到返回后根据 code 做出不同响应。\nA-server返回 token 有效，则继续保持对A-client的访问。\nA-server返回 token 无效。\n\n\nA-client重定向至SSO-client并携带re…",
+          "link": "https://juejin.cn/post/7254027262885855291",
+          "publishedOn": "2023-07-10T08:14:45.000Z",
+          "wordCount": 1260,
+          "title": "👀SSO单点登录 知多少",
           "imageUrl": null
         },
         {
@@ -851,22 +851,12 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7253000004165206071",
-          "author": "ssh_晨曦时梦见兮",
-          "description": "首发于公众号 前端从进阶到入院，欢迎关注。\nHi，大家好我 ssh，自从 ChatGPT 火了以后，AI 对于编程方式的影响也逐渐成为了一个热门的话题。当然，目前这股热潮慢慢平静下来后，比较多的一部分工程师普遍的认知是，AI 不会夺走我们的工作，而是会协助我们提高生产力。\n今天，我就正巧看见 logRocket 的一篇 Blog，推荐给大家几个用 AI 提高编码生产力的工具：6 AI tools for developers to help boost your productivity，接下来我来分享给你：\n正文\n在构建优质软件时，一个开发团队的存在是至关重要的，团队中的开发人员、设计师和项目经理都扮演着重要的角色。但是对于那些独自拥有一个应用想法或者希望改进现有应用的开发者来说，情况会有所不同。\n对于没有完整团队的开发者来说，学习新功能或修复旧问题可能需要花费太多的时间，可能需要花几个小时来搜索、阅读文档和观看教学视频。幸运的是，人工智能的进步极大地加快了这个过程。\n在人们提到人工智能的时候，ChatGPT 是一个相对通用的工具。然而，真正发挥人工智能优势的是专门解决开发领域特定问题的定制工具。\n有很多满足这一描述的工具，下面我们将介绍六个工具，并了解它们的用途。快速导航：\nPhind\nCodeverter\nbloop.ai\nCodeium\nColPat\nRegExGPT\n在本文结尾，你可以看到总结表格，其中包含了所有这六个人工智能开发工具的用途，以帮助你更好地了解每个工具适应你的工作流程。\nPhind\n\n我们首先介绍的工具是 Phind，一个专为开发人员量身定制的搜索引擎。与更通用的工具如 ChatGPT 相比，Phind 更专注于开发人员的需求。\n有趣的是，作为一个搜索引擎，Phind 的回答通常包含两个部分：\n针对你具体问题的详细和有见地的回答\n通过搜索检索到的相…",
-          "link": "https://juejin.cn/post/7253000004165206071",
-          "publishedOn": "2023-07-07T19:37:54.000Z",
-          "wordCount": 1889,
-          "title": "6 个 AI 工具，让你的代码生产力上天🚀",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7252605744255615035",
           "author": "火石",
           "description": "前言：\n熟悉 ChatGPT 的同学一定还知道 Langchain 这个AI开发框架。由于大模型的知识仅限于它的训练数据内部，它有一个强大的“大脑”而没有“手臂”，而 Langchain 这个框架出现的背景就是解决大模型缺少“手臂”的问题，使得大模型可以与外部接口，数据库，前端应用交互。可以说大模型解决了99%的智能化问题，而 Langchain 就是来解决这最后1%和外部应用的打通。\nLangchain 同时支持 python 和 nodejs ，这意味着即使不熟悉 python 的前端技术栈同学也能够无缝参与到大模型人工智能应用的开发之中。\n在正式介绍 Langchain 之前，首先看一下单纯依靠一个大模型解决用户需求会有什么问题。\n大语言模型的缺陷\n缺陷1：模型无法掌握实时资讯\nChatGPT 可以聊天，进行常识问答，写文章，进行翻译等等。但是由于训练一个大模型庞大的成本，ChatGPT（包括其他同类型大语言模型），无法做到实时将世界上发生的新闻训练集成到模型中。ChatGPT 的知识截止日期是2021年9月。这意味着 ChatGPT 只包含截至2021年9月之前的知识。\n\n直接询问去年发生的新闻得到的明显是错误的信息，英国女王已于2022年9月8日去世\n缺陷2：「一本正经地胡说八道」\n大语言模型核心原理是根据\"概率\"来不断生成下一个 Token 来生成新的内容。只要你给出的大致合乎逻辑的提示词，模型可能会一本正经地开始瞎编，通过概率来生成最合乎逻辑的内容。\n\n\n瞎编内容举例，看起来合乎逻辑但实际上都是错误的\n这是因为大语言模型并不能判断他所生成的内容现实生活中是否是真实存在的，他只是单纯根据\"概率\"来生成最符合语言结构的内容，也就是根据前文的内容去生成后文的内容，并没有能力判断生成的内容是否准确合乎现实场景。如果你用 ChatGPT 写论文并且不加以修改的话，Cha…",
           "link": "https://juejin.cn/post/7252605744255615035",
           "publishedOn": "2023-07-06T11:42:06.000Z",
-          "wordCount": 5257,
+          "wordCount": 5550,
           "title": "使用Nodejs和Langchain开发大模型",
           "imageUrl": null
         }
