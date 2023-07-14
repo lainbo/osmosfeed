@@ -34,7 +34,7 @@
           "description": "我发现，有个CSS三角函数之后，以前很多需要JS计算才能实现的布局现在都可以纯CSS完成了，代码简洁了不少。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/06/css-sin-cos-tan-function/",
           "publishedOn": "2023-06-29T16:23:42.000Z",
-          "wordCount": 1356,
+          "wordCount": 1355,
           "title": "CSS sin()/cos()等数学三角函数简介与应用",
           "imageUrl": null
         },
@@ -44,7 +44,7 @@
           "description": "有没有办法使用CSS让数字从0-100像动画一样不停变化呢？如果你一时不知道该如何实现，则本文值得一看。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/06/css-text-number-loading/",
           "publishedOn": "2023-06-18T06:51:29.000Z",
-          "wordCount": 1219,
+          "wordCount": 1218,
           "title": "我使用CSS模拟个假的数字loading效果",
           "imageUrl": null
         }
@@ -55,6 +55,16 @@
       "feedUrl": "https://feeds.feedburner.com/ruanyifeng",
       "siteUrl": "http://www.ruanyifeng.com/blog/",
       "articles": [
+        {
+          "id": "http://www.ruanyifeng.com/blog/2023/07/weekly-issue-262.html",
+          "author": null,
+          "description": "这里记录每周值得分享的科技内容，周五发布。\n本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。\n封面图\n\n你以为这是一群羊在草原上吃草。错了，这是智利阿塔卡马沙漠的阵列望远镜，一共66台天线，大部分直径12米，高度15米。（via）\n告别密码\n上网体验最差的环节，肯定是密码。\n\n互联网发展了20多年，所有环节都巨大改善，只有密码除外，还是20年前的用法。\n更准确的说，它的用户体验比20年前更差了。密码的强度要求现在越来越高，一般不能少于8个字符，还要包括特殊符号。另外，除了密码，通常还有其他验证（短信、图片识别、OTP 时间码等等）。\n\n最让人无语的是，即使变得如此麻烦，依然不能杜绝密码被盗、被破解、被钓鱼的风险。\n多年来，业界一直努力，试图解决密码问题。近两年终于有了突破，各大公司达成一致，设计出了一套密码的替代方案：密钥登陆，英文叫做 Passkey。\n\nPasskey 这个方案可以做到，登录不需要密码，解决了上面提到的所有问题，而且用户很容易上手，主要厂商已经全部支持。\n2022年 WWDC 大会，苹果宣布支持 Passkey。\n\n2023年5月，谷歌和微软同时宣布，全面接入 Passkey。\n\n\n今天，我就简单讲讲，Passkey 到底怎么回事。\n其实，手机 App 早就做到了\"无密码登录\"，按一下指纹，或者人脸识别，就可以登录，完全不需要密码。\n\n于是，很早就有人想到了，可以设计一套通用机制，让网站也去调用手机上面的硬件识别，从而彻底告别密码。这就是 Passkey 的由来。\n具体来说，Passkey 之所以不要密码，因为采用了密钥登录。网站不再保存用户密码，而是保存用户的公钥。登录时，用户必须用自己的私钥，解开公钥加密的随机数，从而确认身份。\n这也意味着，用户要自己保存私钥。这是很麻烦的…",
+          "link": "http://www.ruanyifeng.com/blog/2023/07/weekly-issue-262.html",
+          "publishedOn": "2023-07-14T00:03:10.000Z",
+          "wordCount": null,
+          "title": "科技爱好者周刊（第 262 期）：告别密码",
+          "imageUrl": null
+        },
         {
           "id": "http://www.ruanyifeng.com/blog/2023/07/weely-issue-261.html",
           "author": null,
@@ -260,16 +270,6 @@
           "imageUrl": "https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png"
         },
         {
-          "id": "https://fivekey.zhubai.love/posts/2288936286486433792",
-          "author": "5key",
-          "description": "篇首语  \n    \n  对于今年的 Figma Config，大家都抱以了非常大的期望，想看看在 AI 设计方面一直没有太多声音的Figma 究竟在憋什么大招。还有很多设计协同领域的产品，也在等着 Config 大会上的消息，想看看行业的头部公司在想些什么，也好决定接下来是否需要对自己的产品做一下方向的调整。  \n    \n  但没想到的是，这次 Figma 还是比较“保守”的，主 Keynote 会场并没有用过多的篇幅去介绍 AI 设计的内容，而是依旧将重点放在了对现有产品功能的迭代上。比如更贴近研发环节的 Dev Mode、更全局的变量能力、更高级的原型设计能力以及那些广大用户在日常工作中所关注的小细节上。  \n    \n  当然，在 AI 方面 Figma 也并非没有动作。CEO Dylan Field 同时也宣布 Figma 收购了一家社区中专注于 AI 的公司 - Diagram，以及其带来的AI 辅助工具 - Genius。借由这次大会 Figma 也基本向大家表达了对 AI 的态度，分享了他们如何看待设计行业的未来发展，以及如何将 AI 与 Figma 进行结合的思考。  \n    \n  相较于这次大会所发布的那些新功能，我更感叹于 Figma 团队在设计领域中的思考深度以及他们的执行力。让我会想起了当年做设计协同产品的场景，有很多在协作上的想法我们曾经也思考过，但我们考虑得还是不够成熟、不够体系，也没有如他们一般足够的魄力将这些想法坚持下去。  \n    \n  今年的 Config 大会信息量还是挺大的，因为这也是自己曾经奋斗了快四年的领域，所以也特别有感触。相较于那些布的新功能我更想和大家一起聊聊 Figma 对设计这个行业的观点以及他们背后的思考。这次我准备用两篇文章来和大家分别聊一聊 AI 设计和设计协同这两个领域，今天这篇我们将先从 AI 设计这部分开始。  \n    \n  Figma 如何看待 AI 设计  \n    \n  在第一天的 Keynote 上，CEO Dylan Field 就给大家分享了他对 AI 设计的观点：  \n    \n  AI 可以帮助任何人获得一个好的初稿，但好的初稿不是一个世界级产品，从初稿到世界级产品的过程中需要设计师和设计团队的参与。  \n        \n  Figma 认为（至少在当下） AI 是无法替代设计师来主动生成具备优秀体验的产品设计方案的。所以在 Figma 的体系中，AI 当下并不会成为设计的主要生产者，而是在整个设计环节中扮演设计助手的角色，为设计师提供辅助。  \n    \n  这似乎与大家这段时间正在感知到的有些不太一样。为何前面很多的公司都在思考如何让 AI 更好的代替设计师完成界面设计的工作，而 Figma 却认为 AI 只能给设计师做助手呢？而作为设计师我们又应该如何思考自己与 AI 的关系呢？  \n    \n  想要帮自己理清思路，找到属于自己的答案，我么就需要先思考一下以下两个问题：  \n    \n  \n  如何定义设计需求  \n    \n  如何定义一个好的设计方案  \n  \n    \n  如何定义设计需求  \n    \n  在日常工作中有非常多各式各样的设计需求，比如日常的报名活动、营销活动界面、订单管理系统、商品功能发布、下单支付流程、产品官网等等…  \n    \n  这些都是我们需要处理的需求，在团队的日常管理中通常我们会将需求进行分层，再派发给不同的设计师进行跟进。比如商品发布、下单支付流程这些业务逻辑复杂、对设计要求高的项目我们通常会让最资深的设计师带队来进行设计，而那些相对简单、模式化的报名活动、后台管理系统等需求则交由相对资历较浅的设计师或外包公司来独立跟进。  \n    \n  基于设计的复杂性和特性来进行划分，是我们在做需求分层时最见的方式，目的是让我们的设计资源能够更合理的分配来达到价值的最大化。但如果今天团队中再增加一位 AI 设计师，那么我们可能就需要换一种方式来进行表达了，在这里我将它定义为标准化需求和个性化需求。  \n    \n  标准化需求 vs 个性化需求",
-          "link": "https://fivekey.zhubai.love/posts/2288936286486433792",
-          "publishedOn": "2023-07-07T03:05:51.000Z",
-          "wordCount": 63,
-          "title": "#21 从 Figma 视角看 AI 设计 - Config 2023（上）",
-          "imageUrl": "https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png"
-        },
-        {
           "id": "https://zhiliaofuxiang.zhubai.love/posts/2288665010102480896",
           "author": "知了",
           "description": "BOSS直聘都能被干崩溃，这服务器得来多大的压力？  \n    \n  这背后我觉得挺悲哀的，找工作难，找个好工作难上加难。  \n    \n  因为毕业生专业知识缺乏，导致毕业生都有先学习不看报酬的    求知心里    ，对刚毕业的大学生来说这其实这是件好事。但这对已经工作的社畜前辈来说简直是    灾难    。为什么？  \n    \n  首先咱们在校招或者招聘软件上看到的工作岗位，都不具备    不可替代性    ，有你没你都一样，这也是为什么很多公司在招聘的时候都会优先考虑毕业生，毕竟同样的事情，    一个    入职一两年的员工工资可以找    两个    大学生。    量变产生质变    ，老板拎得比谁都清。  \n    \n  其次是很大学生在入职之后都停止了    知识的输入    ，得过且过并没有将以后的发展纳入自己的思考范围。在一个地域的人力市场    跳来跳去    ，没有长远的发展计划或事业，没有自己的    职业特长。  \n    \n  最后是毕业生的    心里问题    ，很多的毕业生不愿意去别的城市工作，毕竟能在自己熟悉的城市工作会少很多的麻烦，还有对工作岗位的看法，希望自己的工作高大上不愿意去做比较比较普通的岗位。  \n    \n  总得来说，毕业工作难，不仅是社会的问题也是学校和学生个人的问题",
@@ -327,6 +327,16 @@
           "publishedOn": "2023-07-04T14:46:31.000Z",
           "wordCount": 63,
           "title": "No69：如何在创造经济中疯狂致富",
+          "imageUrl": "https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png"
+        },
+        {
+          "id": "https://adrian.zhubai.love/posts/2287986248193028096",
+          "author": "辣酱",
+          "description": "西蒙在他的小册子《人类的认知》中提到过一种解决问题的方法，叫做    手段-目标    分析法；  \n    \n  这种解决问题的方法的核心在于我们有一个明确的目标，以及我们有一个现状，目标和现状之间存在着差异，我们需要用各种手段去缩小这种差距。  \n    \n  所以，解决问题实际上就是用各种手段将现状和目标对齐。  \n    \n  但另一方面，现状和目标之间差异并不是单一的，甚至很多时候，现状和目标之间的差异是一个差异集合，正是这种差异的数量之别，导致问题的复杂程度不同。  \n    \n  例如，一个上楼的问题，我们都需要从一楼上到六楼，这时候我们面临的问题就是，我们在一楼，我们的目标在6楼，我们的目标和我们的现状之间存在着5层楼额差异，我们需要通过一定的手段去缩小这个差异。  \n    \n  所以我们要解决掉上到六楼这个问题，我们通常可选的手段就有走楼梯，或者搭乘电梯。  \n    \n  我们从宏观层面来看，我们和六楼之间存在着5层楼的差异，但当我们在选择手段的时候选择乘坐电梯，但当我们乘坐电梯到3楼的时候，电梯因为故障停止了运行，这时候尽管我们的总目标没有发生变化，但有新的差异被引入，而此时也出现了新的子目标，那就是让电梯正常运行。  \n    \n  我们很多的问题解决过程基本都遵循着这样的规律，有一个目标，为了达成这个目标我们要缩短和目标之间的距离，但是缩短目标的距离所采取的手段，本身又可能造成新的差异。  \n    \n  这就是彼得圣吉在《第五项修炼》中说的：“我们今天的问题，都来源于昨天的解决方案”，同样，这也是我们面临的问题总是会复杂的原因。  \n    \n  再比如我们去天安门的例子，我们如果选择搭乘地铁去天安门，那么我们就首先要缩短去地铁站的距离，我们选择骑车去地铁站，我们要找到一辆自行车，同时自行车可以被使用，从一个点到另外一个点之间总有各种差异要解决。  \n    \n  所以我们最常听到的一个问题是，解决这个问题的最佳方案是什么？  \n    \n  这是一个超级烦人的问题，其实很多时候我们并不能确认到底什么样的方案才是最佳方案，我认为主要原因是标准问题：最佳方案的标准，往往在方案被采用之前是未知的。  \n    \n  但问题的定义本身可能会给我们一个用来评判一个方案是否是最佳（或者说目前看来是最优）的框架，也就是我们的解决手段和差异的组合应该是一个阶梯形。  \n    \n  什么意思？  \n    \n  如果一个问题存在4个差异点，我们罗列了4种解决方案，我们可以将这四种方案，和四种差异放到同一个矩阵里面，如下图。  \n        \n  一个问题中有4种差异ABCD，有四种手段1234，当我们采用方案1的时候，我们可以消灭掉差异A，当我们采用方案2的时候，我们可以消灭差异AB，使用手段3可以解决差异ABC，使用手段4可以解决差异ABCD，最终我们的手段和差异的组合就像是一个阶梯一样，这个阶梯就是我们生活中大部分问题的结构。  \n    \n  我们可能采用某种手段可以解决掉其中一种差异，采用另外一种方案，可以解决掉其中好几种差异。我们从这个结构里面可以看出来，我们对于解决问题所采用的手段，是否是最佳的，有一个非常明显的判断标准就是，这个手段是否解决了所有的差异？如果是，那么他就是最佳的手段。  \n    \n  在实践中，我们通常可能面临一个非常现实的处境，我们无法穷举所有的差异，甚至很多的差异的辨别需要依赖经验，这是这个范式中唯一的变量。  \n    \n  以我最近所面临的一个问题作为例子来结束本文，最近我们的一项业务目标中涉及到两种内容的增长，我们姑且定义为内容A，和内容B。  \n    \n  针对这两种内容的增长我们制定了不同的增长策略1和2，也都取得了一定的效果，但在最终复盘的时候我们发现，增长策略1在生效的过程中，同时也大幅带动了内容B的增长，于是我们果断砍掉了增长策略2，加码策略1.  \n    \n  在这个实际的例子，策略1可以解决所有的差异，所以策略2是最佳策略。  \n    \n  最后，或许这个阶梯的结构可以给我们一个新的理解所谓的简单的视角，当我们使用手段的叠加的时候，方案通常是复杂的，但当我们尽可能的去寻找那个可能覆盖掉大量差异的方案时，通常方案就会变得很简洁。  \n    \n  感谢你的阅读~  晚安！",
+          "link": "https://adrian.zhubai.love/posts/2287986248193028096",
+          "publishedOn": "2023-07-04T12:10:44.000Z",
+          "wordCount": 63,
+          "title": "#39 问题解决范式：手段-目标分析法",
           "imageUrl": "https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png"
         },
         {
@@ -686,7 +696,7 @@
           "description": "b 站视频播放的是很快的，基本是点哪就播放到哪。\n而且如果你上次看到某个位置，下次会从那个位置继续播放。\n那么问题来了：如果一个很大的视频，下载下来需要很久，怎么做到点哪个位置快速播放那个位置的视频呢？\n前面写过一篇 range 请求的文章，也就是不下载资源的全部内容，只下载 range 对应的范围的部分。\n那视频的快速播放，是不是也是基于 range 来实现的呢？\n我们先复习下 range 请求：\n\n请求的时候带上 range：\n\n服务端会返回 206 状态码，还有 Content-Range 的 header 代表当前下载的是整个资源的哪一部分：\n\n这里的 Content-Length 是当前内容的长度，而 Content-Range 里是资源总长度和当前资源的范围。\n更多关于 Range 的介绍可以看这篇文章：基于 HTTP Range 实现文件分片并发下载！\n那 b 站视频是不是用 Range 来实现的快速播放呢？\n我们先在知乎的视频试一下：\n随便打开一个视频页面，比如这个：\n\n然后打开 devtools，刷新页面，拖动下进度条，可以看到确实有 206 的状态码：\n\n我们可以在搜索框输入 status-code:206 把它过滤出来：\n\n这是一种叫过滤器的技巧：\n\n可以根据 method、domain、mime-type 等过滤。\nhas-response-header：过滤响应包含某个 header 的请求\nmethod：根据 GET、POST 等请求方式过滤请求\ndomain: 根据域名过滤\nstatus-code：过滤响应码是 xxx 的请求，比如 404、500 等\nlarger-than：过滤大小超过多少的请求，比如 100k，1M\nmime-type：过滤某种 mime 类型的请求，比如 png、mp4、json、html 等\nresource-type…",
           "link": "https://juejin.cn/post/7255110638154072120",
           "publishedOn": "2023-07-13T04:04:34.000Z",
-          "wordCount": 2412,
+          "wordCount": 1851,
           "title": "通过调试技术，我理清了 b 站视频播放很快的原理",
           "imageUrl": null
         },
@@ -696,7 +706,7 @@
           "description": "最近在思考一个可有可无的问题：\n“我们是不是要换一个组件库？”\n为什么会有这个问题？\n简单同步一下背景，我效力于 Lazada 商家前端团队。从接手系统以来(近 2 年) 就一直使用着 Alibaba Fusion 这套组件库。据我所知淘系都是在使用这套组件库进行业务开发，已经有 7 ~ 10 年了吧。我们团队花了 2 年时间从 @alife/next(内部版本已经不更新) 升级到了 @alifd/next，并在此之上建立了一套前端组件库体系。将 Lazada Seller Center 改了模样，在 Fusion 的基础上建立了一套支持整个 Lazada B 端业务的设计规范和业务组件库，覆盖页面 500+。\n旧\n新\n\n\n\n\n\n\n\n\n\n在这样一个可以说牵一发动全身的背景下，为何还敢有这种想法？\n不美\n美的反义词，不应该是丑，而是庸俗\n不能说 Fusion 丑，但绝对算不上美，这点应该没有争议吧。\n虽然也可以在大量的主题样式定制的情况下也可以做到下面这样看上去还行的效果：\n\n\n但说实话，这不能算出众。导致不出众的原因，可以从 Ant Design 上面寻找，Ant Design 的许多细节实现细到令人发指，比如：\n弹出窗的追踪动效\n\n按钮的点击动效\n\nTooltip 的箭头追踪\n\nNumberPicker 控制按钮放大\n\n这些细节决定了在它上层构建出的应用品质，同样是在一个基础上进行主题和样式的调整。有 Antd 这样品质的基础，就会让在此之上构建的应用品质不会很低，自然也能够带来更好的用户体验及产品品质。\n迭代\n拿 Antd 的源码和 Fusion 还是有蛮大的差距的，这些差距不只是技术水平的差距，可能在 10 年前他们的代码质量是差不多的，但贵在 Antd 是一个健康的迭代状态。\nAntd 已经到了 5.x，Fusion 还是 1.x。这版本后背后意味着 Fusion …",
           "link": "https://juejin.cn/post/7254559214588543034",
           "publishedOn": "2023-07-12T03:30:53.000Z",
-          "wordCount": 1923,
+          "wordCount": 1901,
           "title": "今天这个 Antd 咱们是非换不可吗？",
           "imageUrl": null
         },
@@ -706,7 +716,7 @@
           "description": "theme: smartblue\n国际惯例，官网链接\n官网传送门\nGithub地址\ngithub上有几个demos例子，介绍了基础用法。\n\n我参考官网的例子，写了一个demo示例\n安装\nturn.js 依赖 jquery 库，所以需要先安装 jquery\nnpm install jquery --save\n\n引入\nimport $ from 'jquery'\nimport turn from '@/utils/turn.js'\n\n下载 turn.js 文件，然后在组件中引入\nimport turn from \"@/utils/turn.js\";\n\nvue.config.js 配置\nconst webpack = require('webpack');\nmodule.exports = {\n    lintOnSave: false,\n    //配置webpack选项的内容\n    configureWebpack: {\n        plugins: [\n            new webpack.ProvidePlugin({\n                $: \"jquery\",\n                jQuery: \"jquery\",\n            })\n        ]\n    },\n \n}\n\n或者，这样：\nconst webpack = require('webpack')\nmodule.exports = {\n  chainWebpack: config => {\n    config.plugin('provide').use(webpack.ProvidePlugin, [{\n      $: 'jquery',\n      jquery: 'jquery',\n      jQuery: 'jquery',\n      'window.jQuery': 'jquery'\n    }])\n  }\n}\n\n翻页方法，以及参数\n  $(\"#book\").turn({\n      //启用硬件加速,移动端有效\n      acceleration: false,\n      //显示：single=单页，double=双页，默认双页\n      display: \"double\",\n      // 翻页撒开鼠标，页面的延迟\n      duration: 800,\n      // 默认显示第几页\n      page: 1,\n      // 折叠处的光泽渐变，主要体现翻页的立体感、真实感\n      gradients: true,\n      // 中心翻取决于有多少页面可见 true or false\n      autoCenter: true,\n      // 设置可翻页的页角(都试过了，乱写 4个角都能出发卷起)， bl,br   tl,tr   bl,tr\n      turnCorners: \"bl,br\",\n      //页面高度\n      height: this.turnPage.height,\n      //翻书范围宽度，总宽度\n      width: this.turnPage.width,\n      when: {\n          //监听事件\n          turning: function (e, page, view) {\n              console.log(\"翻页前触发\");\n              console.log(e, page, view);\n              // 翻页前触发\n              console.log(page);\n          },\n          turned: function (e, page) {\n              console.log(\"翻页后触发\");\n              console.log(e, page);\n              // 翻页后触发\n              console.log(page);\n          },\n      },\n  });\n\n上一页\n$(\"#book\").turn(\"previous\");\n\n下一页\n$(\"#book\").turn(\"next\");\n\n示例代码\n完整代码，已经放到 Gitee 上面了，组件名为 TurnjsComponent\nGitee地址\n最后的话\n以上，如果对你有用的话，不妨点赞收藏关注一下，谢谢 🙏\n😊 微信公众号: OrzR3\n💖 不定期更新一些技术类，生活类，读书类的文章。",
           "link": "https://juejin.cn/post/7254443448564006967",
           "publishedOn": "2023-07-11T10:15:43.000Z",
-          "wordCount": 1219,
+          "wordCount": 1557,
           "title": "一个好用的轮子 turn.js 实现仿真翻书的效果",
           "imageUrl": null
         },
@@ -726,7 +736,7 @@
           "description": "大家好，我卡颂。\n遥想前几年，不管是React还是Vue，都在快速迭代版本，以至于很多同学抱怨学不动了。\n而现在，React已经一年没更新稳定release了。\n\n甚至有人认为，这就是前端已死最直接的证据：\n\n那么，React最近一年为什么不发版了呢？是因为前端框架领域已经没有新活儿可整了么？React v19是不是遥遥无期了？\n欢迎围观朋友圈、加入人类高质量前端交流群，带飞\n最近一年React活跃吗？\n不想看长文章的同学，这里一句话总结本文观点：\nReact之所以一年没发版，并不是因为无活可整，而是在完成框架从UI库到元框架的转型\n首先，我们来看看，最近这一年React的更新活跃度是否降低？\n从代码push量来看，最近一年甚至比release产出较多的前几年更活跃：\n\n既然更活跃，那React这段时间到底在做什么呢？从代码增删行数可以一窥端倪，其中：\n绿色柱状代表代码增加行数\n红色柱状代表代码减少行数\n红色折线代表代码行数总体趋势\n\n从代码量变化来看，React历史上大体分为四个时期：\n13年开源，到17年之前的功能迭代期\n持续到18年的重构期（重构React Fiber架构）\n18～22年基于Fiber架构的新功能迭代期\n22年至今的重构期\n功能迭代期与重构期的区别在于：\n前者主要是在稳定的架构上迭代新特性\n后者一般重构底层架构的同时，重构老特性\n剧烈的代码量波动通常发生在重构期。比如，在最近的重构期内，PR #25774删除了3w行代码。\n\n这个PR主要改变React对于同一个子包，同时拥有.new、.old两个文件的开发模式\n最近一年React都在干啥？\n明确了React最近一年处于重构期。那么，究竟是重构什么呢？\n答案是 —— 将RSC（React Server Component，服务端组件）接入当前React体系内。\n有同学会问：RSC只是个类似SSR的特性，为什么要实现他还涉及重构？\n这是因为RSC不仅是一个特性，更是React未来主要的发展方向，其意义不亚于Hooks。所以，围绕RSC的迭代涉及大量代码的重构。比如：\nSSR相关代码需要修改\nSSR代码修改导致Suspense组件代码修改\nSuspense的修改又牵扯到useEffect回调触发时机的变化\n可以说是牵一发而动全身了。\nRSC为什么重要\n为什么RSC对React这么重要？要回答这个问题，得从开源项目的发展聊起。\n开源项目要想获得成功，一定需要满足目标用户（开发者）的需求。\n早期，React作为前端框架，满足了UI开发的需求。在此期间，React团队的迭代方向主要是：\n摸索更清晰的开发范式（发布了Error Boundray、Suspense、Hooks）\n修补代码（发布新的Context实现）\n优化开发体验（发布CRA）\n底层优化（重构Fiber架构）\n可以发现，这些迭代内容中大部分（除了底层优化）都是直接面向普通开发者的，所以React文档（文档也是面向开发者的）中都有体现，开发者通过文档能直观的感受到React不断迭代。\n随着前端领域的发展，逐渐涌现出各种业务开发的最佳实践，比如：\n状态管理的最佳实践\n路由的最佳实践\nSSR的最佳实践\n一些框架开始整合这些最佳实践（比如Next.js、Remix，或者国内的Umijs...）\n到了这一时期，开发者更多是通过使用这些框架间接使用React。\n感受到这一变化后，React团队的发展方向逐渐变化 —— 从面向开发者的前端框架变为面向上层框架的元框架。\n发展方向变化最明显的表现是 —— 文档中新出的特性普通开发者很少会用到，比如：\nuseTransition\nuseId\nuseMutableSource\n这些特性都是作为元框架，给上层框架（或库）使用的。\n上述特性虽然普通开发者很少用到，但至少文档中提及了。但随着React不断向元框架方向发展，即使出了新特性，文档中已经不再提及了。比如：\nuseOptimistic\nuseFormStatus\n上述两个Hook想必大部分同学都没听过。他们是React源码中切实存在的Hook。但由于是元框架理念下的产物，所以React文档并未提及。相反，Next.js文档中可以看到使用介绍。\n总结\nReact之所以已经一年没有发布稳定release，是因为发展方向已经从面向开发者转型为面向上层框架。\n在此期间的更新都是面向上层框架，所以开发者很难感知到React的变化。\n但这并不能说明React停止迭代了，也不能据此认为前端发展的停滞。\n如果一定要定量观察React最近一年的发展，距离React v19里程碑，已经大体过半了：",
           "link": "https://juejin.cn/post/7254171813117820985",
           "publishedOn": "2023-07-11T01:22:07.000Z",
-          "wordCount": 1252,
+          "wordCount": 778,
           "title": "为什么React一年不发新版了？",
           "imageUrl": null
         },
@@ -736,7 +746,7 @@
           "description": "theme: cyanosis\nhighlight: atom-one-dark\n往期回顾\n前端框架搭建——从零开始搭建一个高颜值后台管理系统全栈框架(一)\n后端框架搭建——从零开始搭建一个高颜值后台管理系统全栈框架(二)\n实现登录功能jwt or token+redis？——从零开始搭建一个高颜值后台管理系统全栈框架(三)\n封装axios，让请求变得丝滑——从零开始搭建一个高颜值后台管理系统全栈框架(四)\n实现前后端全自动化部署，解放你的双手。——从零开始搭建一个高颜值后台管理系统全栈框架(五)\n雪花算法，附件方案，邮箱验证，修改密码。——从零开始搭建一个高颜值后台管理系统全栈框架(六)\n基于react-router v6实现动态菜单、动态路由。内含vue动态路由实现。——从零开始搭建一个高颜值后台管理系统全栈框架(七）\n通过RBAC模型实现前后端动态菜单和动态路由——从零开始搭建一个高颜值后台管理系统全栈框架(八)\n前言\n按钮权限控制在后台管理系统中是一个比较常见的需求，下面和大家分享一下再react中常见的几种实现方式，不过最想分享的还是后面的黑科技方案。\n实现添加按钮权限功能\n改造上一篇文章中添加菜单的表单，添加一个按钮类型菜单。\n\n这里权限代码建议页面路由:按钮类型格式，保证全局唯一。\n改造菜单模型，添加权限代码字段\n\n常见前端按钮权限控制实现方案\n前言\n从用户信息中获取按钮菜单，把authCode取出来存到全局用户信息中。\n\n封装判断权限全局方法\n// src/utils/auth.ts\nimport {useUserStore} from '@/stores/global/user';\n\n/**\n * 判断是否有权限\n * @param authCode 权限代码\n * @returns\n */\nexport const isAuth = (authCode:…",
           "link": "https://juejin.cn/post/7254123931246772280",
           "publishedOn": "2023-07-10T16:15:32.000Z",
-          "wordCount": 2000,
+          "wordCount": 2027,
           "title": "使用黑科技实现前端按钮权限控制，太优雅了。——从零开始搭建一个高颜值后台管理系统全栈框架(九)",
           "imageUrl": null
         },
@@ -746,7 +756,7 @@
           "description": "最近这几年低代码这个词很火我想对于大多数程序员来说都不算陌生，从百度搜索指数也可以看出，其搜索量从21年开始有了一个明显的增长。\n\n那低代码或者无代码技术目前有哪些应用场景呢？其底层的技术是什么样的？其如何与当今大火的 AIGC 结合呢？正好在过去一年的工作中我作为项目的核心技术负责人从 0 到 1 经历了我们公司内部低代码平台的建设过程，在这其中也有了许多心得希望通过这篇文章分享给大家。 \n一、技术方案\n\n搭建平台整体技术架构如上图所示，下面给大家一一拆解相信大家可以很容易的理解其中的具体原理。 \n整体流程\n一般来讲一个低代码平台前端核心由三部分组成分别为：组件面板、画布、配置面板。\n\n类似这样：\n\n这样：\n\n正常的搭建过程一般是从左侧组件面板中拖拽组件到画布中，之后选中该组件使用右侧的配置面板对该组件的样式、事件等内容进行配置，使用不同的组件最终直到一个完整的页面生成，过程类似搭积木，当然在搭建的过程中也需要有预览功能等模拟浏览器真实环境对搭建产物进行调试。\n\n那么我们拖拽的每个组件究竟是如何拼装成页面的？其实本质上我们是将一个页面抽象为若干组件，这些组件以相应的关系拼接在一起最终构成了一个完整的页面，举个简单的例子：\n\n比如如上的苹果官网首页，从上到下我们大致可以将其分为四个组件：导航栏 Nav 组件、背景 Background组件、Link 组件导航组件、以及最底层承载所有组件的 Root 根组件。\n如果需要描述这些组件之间的关系我们可以使用类似如下的一个扁平树形结构（没有使用多层嵌套结构而使用扁平树形结构的原因是扁平化结构便于操作）：\nconst tree = {\n  root:{\n    child:[nav,background],\n    parent:null,\n  },\n  nav:{\n    child:[],\n    parent:root\n  },…",
           "link": "https://juejin.cn/post/7254104833514618917",
           "publishedOn": "2023-07-10T14:12:55.000Z",
-          "wordCount": 5997,
+          "wordCount": 5725,
           "title": "讲讲我做低代码平台这一年",
           "imageUrl": null
         },
@@ -766,7 +776,7 @@
           "description": "theme: channing-cyan\n算命转盘\n前言\n给自己做一个算命转盘，有事没事算算命，看看运势挺好的（虽然我也看不懂）。\n这个算命转盘我是实现在了自己的个人博客中的这里是地址，感兴趣可以点进去看看。\n实现过程\n开发技术：react + ts\n该转盘主要是嵌套了三层 圆形滚动组件 来实现的，再通过 ref 绑定组件，调用其中的 scrollTo 方法即可使组件发生指定的滚动，再传入随机数，即可实现随机旋转效果，通过嵌套三层该组件实现三层的随机旋转，模拟“算命”效果。\n// 这是精简后的代码\nexport default () => {\n  const onScrollCircle = () => {\n    const index = Math.floor(Math.random() * zodiacList.length)\n    scrollCircleRef.current?.scrollTo({index, duration: 1000})\n  }\n  return (\n    <>\n      <ScrollCircle ref={scrollCircleRef}></ScrollCircle>\n      <button onClick={() => onScrollCircle}>点击旋转</button>\n    </>    \n  )\n}   \n\n三层大致结构如下：具体代码可以看码上掘金\n转盘的第一层\nexport default () => {\n  return (\n    <ScrollCircle>\n      {list.map((item, index) => (\n        <ScrollCircle.Item\n          key={index}\n          index={index}\n        >\n     …",
           "link": "https://juejin.cn/post/7254014646779428922",
           "publishedOn": "2023-07-10T06:24:33.000Z",
-          "wordCount": 1729,
+          "wordCount": 1745,
           "title": "作为一名前端给自己做一个算命转盘不过分吧",
           "imageUrl": null
         },
@@ -776,7 +786,7 @@
           "description": "首发于公众号 前端从进阶到入院，欢迎关注。\nHi 大家好我是 ssh，在公司项目中，我们编写组件文档支持都是用的 Storybook，总体来说体验很好，当然我也遇到了一些问题，比如说依赖容易安装失败或编译失败，需要深度配置 webpack 等等，这两天看到 Storybook 宣布它们发布了 7.0 版本，而且据他们说是一次最重大的更新。看起来好像解决了很多我在使用过程中的痛点，下面我来和大家一起分享 Storybook 7.0 - Next-level component development and testing：\n正文\nStorybook 是高标准的 UI 工作套件。由于其无与伦比的框架兼容性和丰富的开发、文档和测试功能，它被广泛应用于许多行业中的团队，包括 Monday.com、The Guardian、Intuit 等等。\n我很高兴地宣布 Storybook 7 的发布（SB7），这是我们两年多来的首个重大发布，也是迄今为止最大的更新。\n新版本包括：\n⚡ 一流的 Vite 支持\n🧩 通过新的 Frameworks API，对 NextJS 和 SvelteKit 进行零配置支持\n🔖 Component Story Format 3，增强了类型安全性\n📝 文档大修：支持 MDX2 和简化的文档 block\n💅 全新的 UI 设计\n✅ 改进的交互测试和测试覆盖率\n🚥 通过预打包和生态系统 CI 增强稳定性\n💯 在各个层面上进行了数百项改进\n请继续阅读，了解 Storybook 7 带来的所有改进。这些改进还在Storybook Day的演示中进行了总结分享。\nStorybook：下一个篇章\nStorybook 始于 2016 年。从那时起，我们开创了组件驱动开发、文档和测试的 UI 工作环境的概念。\n在此期间，前端生态系统发生了巨大变化。IE11 终于…",
           "link": "https://juejin.cn/post/7253841547165696061",
           "publishedOn": "2023-07-10T03:16:39.000Z",
-          "wordCount": 3064,
+          "wordCount": 3058,
           "title": "Storybook 7 来了：迄今为止最大的更新",
           "imageUrl": null
         },
@@ -786,7 +796,7 @@
           "description": "theme: channing-cyan\nhighlight: atom-one-dark\n文章同步在公众号：萌萌哒草头将军，欢迎关注\n插件已经开源了，可以看文章末尾\nconsole狂魔能有多狂\n事情是这样的，前段时间我加入了公司某个小项目组\n入组第一天，我要来了项目权限，下载完代码和依赖\n然后npm start，打开浏览器控制台，\n我尼玛，一个登陆页面就这么多log？\n此刻我怀着忐忑的心情打开了自己的即将负责的模块入口页面：\n这让我怎么调试啊？\n\n上图我已经把敏感信息屏蔽掉了(^/ω＼^)，每点击下页面就会蹦出好几行console\n全局一搜索，居然有近800多条console语句。\n\n起初，我为了方便我调试，我把影响我调试的console一一注释了，真是个体力活。\n就在我开心了几天后，同事在开发群里发问了，“我调试打印的console怎么不见了？”，\n我说我注释了，那么多console我没法调试啊，然后就被好几个同事”围攻“了，\n后来想想没经过人家的同意修改人家的代码确实不对！\n其实从他们的代码来看，完全是躺平的状态，完全放弃了公司的代码规范，真的很让人emo。\nemo时间的思考\n既然人家喜欢那样做，我也没办法，emo了一会，我就寻找别的方法解决让我强迫症发作的方法。\n第一种方法是如果有console就不让提交代码，显然不现实，\n第二种方法是使用去除conosle的插件，但是有个缺点，我的console也会被去掉，\n焦虑了好久，我就想到，有没有一种插件，在开发环境只展示开发者自己的console，但是不影响别人开发时调试。\n找了好久都没找到，那就自己动手开发一个吧。\n我的思路是\n在每个文件中匹配console语句\n用匹配到的行，请求git，查看当前行的作者\n如果不是我就统统删除console之后再build\n这样既不会干扰我开发，也不会影响别人开发调试了。\n上次的文章已经…",
           "link": "https://juejin.cn/post/7253734111663079484",
           "publishedOn": "2023-07-09T16:45:48.000Z",
-          "wordCount": 1762,
+          "wordCount": 1810,
           "title": "面对躺平同事，我开发了一个插件治好了我的精神内耗⚡⚡⚡",
           "imageUrl": null
         },
@@ -796,7 +806,7 @@
           "description": "theme: smartblue\nhighlight: an-old-hope\n前言\n我们熟知的三大框架，从vue的响应式的virtual dom处理，到react的fiber架构下的异步更新渲染的virtual dom处理，再到angular的独立设计的dom更新策略、依赖注入等。接下来我会简要描述前端未来框架及发展。\n三大框架的特性\n声明式、虚拟DOM、组件化\nreact、angular、vue三个框架的相同点都是声明式在模板中定义我们的循环和显示等等，我们无需命令式的修改dom。我们不再考虑原来的dom更新策略，我们使用了虚拟dom和真实dom的对比，使其在大场景的按需更新节点是非常有用的。同时框架都面向了组件化的开发，我们可以更高效的解决代码复用的问题。\n前端框架趋势\n\n我们可以看出趋势很明显的3个编译阶段的框架，Svelte、Solid、Qwik。\nSvelte 前端框架\nSvelte的语言写法是很像原生js的，性能跟原生js无差别，Svelte解决了框架在运行时层面的虚拟dom比对在复用节点没有那么需要时的性能问题，我们可以直接在编译阶段的真实dom处理。最核心的就是静态分析的编译器，让我们知道哪个变量变更，按需更新节点即可。我们看下Svelte的具体用法：\n<script>\n  let count = 0;\n  const increment = () => {\n    count += 1;\n  };\n</script>\n\n<button on:click={increment}>\n  count is {count}\n</button>\n\n我们看看编译之后的内容是什么\n\n我们可以看到block里面，其实p函数就是更新值、c函数就是创建dom，d就是卸载dom。本质Svelte其实就是帮助我们做到了声明式的处理。那么我们如何监听到数据的变更，Svelte其实…",
           "link": "https://juejin.cn/post/7253610755126427705",
           "publishedOn": "2023-07-09T08:51:47.000Z",
-          "wordCount": 1351,
+          "wordCount": 988,
           "title": "前端未来框架的选择",
           "imageUrl": null
         },
@@ -806,7 +816,7 @@
           "description": "highlight: a11y-dark\ntheme: devui-blue\n前端已死！这个声音从年初开始，持续了小半年。紧接着，一堆的前端前辈出来说，前端不会死。哈哈哈，我觉得这个话题很有意思。也来蹭个热点。嗯，现在已经不算热点了，这个话题已经凉了。\n最近想法很多，总想写点东西，就拿这个话题开始吧。希望能对大家有帮助。\n什么情况\n首先，要看看为什么会有这个观点。原因也很简单，自从去年开始，各大公司都开始裁员，然后HC也开始减少。但是因为前几年互联网工资收入高，每年毕业的应届生那是一年比一年多。前端培训班也火热的不行，每年都向社会输送大面积的前端开发。\n所以，从供需角度看，前端开发找工作，尤其是刚毕业和刚培训毕业的前端开发，今年找工作就是地狱模式。所以有人说“前端已死”，自然很快就能获得共鸣。\n另外的声音\n然后，有意思的来了。“前端已死”这个话题火了后，各大前端自媒体，前端前辈都出来发声。观点出奇的一致：前端不会死。一下子就把前端已死的观点给压下去了。这种社区声音180度的大转弯也是少见。\n到底死没死\n说完现象，我说下我的观点。\n“前端已死”的声音能获得共鸣，说明前端已经发展到了一个关键的时间点。\n只要还有页面，还有小程序，前端就不会死。\n不会死，并不是说能活的很好。\n行业周期\n互联网在行业分类中属于第三产业，也就是服务业。服务业的特点就是周期性。如果所有服务业的周期是往下走的，互联网也好不了。三年疫情，大家都知道，服务业已经被折腾的不行了，即使今年放开了，大家还敢开线下店吗？被互联网服务的行业大部分都过的不好，互联网能好吗。\n当然，后面随着经济复苏，互联网也会慢慢恢复景气。但是这里还有另外一个点，由于互联网前几年工资都太高了，年年倒挂，导致选计算机专业的人越来越多。以大学四年计算，后面3年每年毕业的计算机专业的学生，还是会持续增加的。\n所以呢，从供需角度，技术互联网恢复景气了，互联网招聘未必会恢复景气。\n另外，就前端开发而言，我感觉好多东西都很成熟了。最近看技术社区的文章，感觉很久没有看到很新的内容了(也许是推荐系统搞得信息茧房)。大家都在几个领域里面深挖。如果没有新的方向出来，真的很难容纳这么多的求职者。后面看看AI能不能创新出一波职位吧。\n所以呢，从互联网行业和前端行业来看，前端已经发展到了一个关键点，后面如果没有新的方向出来，即使互联网恢复景气，求职也不会像以前那么轻松了。\n技术周期\n从我毕业，基本上都在做互联网，期间其实经历过好几轮技术迭代。比如最早的Flash, 到PHP, PC端的JQuery。你很难在招聘网站上找到要求这些技术的岗位了。\n新方向在哪里\n其实聊了这么多，本质就是一个供需。供需这个角度真的太强大了，能解释很多问题。如果未来没有一个新的大方向出现，那么在岗位需求变化不大的情况下，每年大量学生毕业，也就是供应增多，求职困难是必然的。\nAI。从去年底开始，AI持续火热，目前虽然有退烧，但是AI的趋势已经明确。后面要看的是，AI是不是需要大量的前端工作。这块大家可以说说自己的判断。\nVR元宇宙。Meta搞元宇宙，差点把自己搞死，现在苹果也出VR设备，观察下能不能把这个行业带起来。大家说有没有可能。\nWeb3。去年年初，Web3还很火了的，现在好像，嗯，一般般。后面能不能再次爆发，也要继续观察。大家也可以说说自己的开发。\n扯一句\n最后扯一句。我看了好多前端前辈对“前端已死”的看法，都说前端不会死，会死的都是初级前端，前端要持续学习，要让自己不可替代。说实话，我觉得这都是屁话。写代码的谁不是从初级开始的呢，现在是完全不给初级的机会，断档了！写代码的人，已经是最爱学习的那一批人了吧，永远在学习新东西。还有让自己不可替代，公司会想办法让你可替代，后面聊一聊不可替代这个话题，我也有很多想说的。\n结束\n最近新弄了一个公粽号：写代码的浩，求关注 😄。\n后面会逐步把掌握的前端知识以及职场知识沉淀下来。 如果还有什么疑问或者建议，可以多多交流，原创文章，文笔有限，才疏学浅，文中若有不正之处，万望告知。",
           "link": "https://juejin.cn/post/7253437782333669434",
           "publishedOn": "2023-07-09T07:24:37.000Z",
-          "wordCount": 1161,
+          "wordCount": 1051,
           "title": "迷茫的前端们",
           "imageUrl": null
         },
@@ -816,7 +826,7 @@
           "description": "theme: qklhk-chocolate\n点击在线阅读，体验更好\n链接\n\n\n\n\n现代JavaScript高级小册\n链接\n\n\n深入浅出Dart\n链接\n\n\n现代TypeScript高级小册\n链接\n\n\n\n引言\n给组内的项目都在CICD流程上更新上了性能守卫插件，效果也还不错，同事还疯狂夸奖我\n\n接下里进入我们的此次的主题吧\n由于我组主要是负责的是H5移动端项目，老板比较关注性能方面的指标，比如首页打开速度，所以一般会关注FP,FCP等等指标，所以一般项目写完以后都会用lighthouse查看，或者接入性能监控系统采集指标.\n\n但是会出现两个问题，如果采用第一种方式，使用lighthouse查看性能指标，这个得依赖开发自身的积极性，他要是开发完就Merge上线，你也不知道具体指标怎么样。如果采用第二种方式，那么同样是发布到线上才能查看。最好的方式就是能强制要求开发在还没发布的时候使用lighthouse查看一下，那么在什么阶段做这个策略呢。聪明的同学可能想到，能不能在CICD构建阶段加上策略。其实是可以的，谷歌也想到了这个场景，提供性能守卫这个lighthouse ci插件\n性能守卫\n性能守卫是一种系统或工具，用于监控和管理应用程序或系统的性能。它旨在确保应用程序在各种负载和使用情况下能够提供稳定和良好的性能。\nLighthouse是一个开源的自动化工具，提供了四种使用方式：\nChrome DevTools\nChrome插件\nNode CLI\nNode模块\n\n其架构实现图是这样的，有兴趣的同学可以深入了解一下\n这里我们我们借助Lighthouse Node模块继承到CICD流程中，这样我们就能在构建阶段知道我们的页面具体性能，如果指标不合格，那么就不给合并MR\n剖析lighthouse-ci实现\nlighthouse-ci实现机制很简单，核心实现步骤如上图，差异就是lighth…",
           "link": "https://juejin.cn/post/7253331974051823675",
           "publishedOn": "2023-07-09T00:22:09.000Z",
-          "wordCount": 3595,
+          "wordCount": 3531,
           "title": "我给项目加了性能守卫插件，同事叫我晚上别睡的太死",
           "imageUrl": null
         },
@@ -826,7 +836,7 @@
           "description": "这是一个基于Vue 3、Echarts、高德地图和Pinia开发的大屏可视化项目，提供了如下功能\n大屏适配\n图表组件(Echarts)封装\n高德地图组件封装\n拖拽布局\n入场动画\n无缝滚动\n源码地址\n在线示例\n前言\n上一篇文章分享了大屏适配、图表组件(Echarts)封装、拖拽布局以及地图组件等功能的封装\n高效开发大屏可视化项目：公共组件封装指南\n今天主要分享大屏入场动画和无缝滚动相关功能的实现\n入场动画\n最终效果展示\n\n主要使用了CSS动画\nHeader 动画\nsrc/views/screen/components/Header.vue 一个简单的淡入动画\n.es-screen-header {\nanimation: fade 3s;\n}\n@keyframes fade {\nfrom {\nopacity: 0;\n}\nto {\nopacity: 1;\n}\n}\n\nLeft 左侧动画\nsrc/views/screen/components/left/index.vue\n.es-screen-left-item {\n/* ... */\n&:nth-child(1) {\nheight: 550px;\nanimation-duration: .8s; // 新增\n}\n&:nth-child(2) {\nanimation-duration: 1.5s; // 新增\n}\n}\n@keyframes slide {\n  0% {\n    transform: translateX(-100%);\n  }\n  80% {\n    transform: translateX(20px);\n  }\n  100% {\n    transform: translateX(0);\n  }\n}\n\n左侧定义一个滑入动画，从左侧-100%进入到20px最后回到0原来的位置，这样定义会有一个弹的效果\nRight …",
           "link": "https://juejin.cn/post/7253115535483207737",
           "publishedOn": "2023-07-08T09:45:44.000Z",
-          "wordCount": 3188,
+          "wordCount": 3170,
           "title": "高效开发大屏可视化项目第二弹：入场动画和无缝滚动",
           "imageUrl": null
         },
@@ -836,7 +846,7 @@
           "description": "theme: smartblue\n一个Hook让你体验极致舒适的Dialog使用方式！\n\nDialog地狱\n为啥是地狱？\n因为凡是有Dialog出现的页面，其代码绝对优雅不起来！因为一旦你在也个组件中引入Dialog，就最少需要额外维护一个visible变量。如果只是额外维护一个变量这也不是不能接受，可是当同样的Dialog组件，即需要在父组件控制它的展示与隐藏，又需要在子组件中控制。\n为了演示我们先实现一个MyDialog组件，代码来自ElementPlus的Dialog示例\n<script setup lang=\"ts\">\nimport { computed } from 'vue';\nimport { ElDialog } from 'element-plus';\n\nconst props = defineProps<{\n  visible: boolean;\n  title?: string;\n}>();\n\nconst emits = defineEmits<{\n  (event: 'update:visible', visible: boolean): void;\n  (event: 'close'): void;\n}>();\n\nconst dialogVisible = computed<boolean>({\n  get() {\n    return props.visible;\n  },\n  set(visible) {\n    emits('update:visible', visible);\n    if (!visible) {\n      emits('close');\n    }\n  },\n});\n</script>\n\n<template>\n  <ElDialog v-model=\"dialogVisible\" :title=\"title\" widt…",
           "link": "https://juejin.cn/post/7253062314306322491",
           "publishedOn": "2023-07-08T01:49:15.000Z",
-          "wordCount": 3381,
+          "wordCount": 2989,
           "title": "极致舒适的Vue弹窗使用方案",
           "imageUrl": null
         },
@@ -846,7 +856,7 @@
           "description": "首发于公众号 前端从进阶到入院，欢迎关注。\nHi，大家好我 ssh，自从 ChatGPT 火了以后，AI 对于编程方式的影响也逐渐成为了一个热门的话题。当然，目前这股热潮慢慢平静下来后，比较多的一部分工程师普遍的认知是，AI 不会夺走我们的工作，而是会协助我们提高生产力。\n今天，我就正巧看见 logRocket 的一篇 Blog，推荐给大家几个用 AI 提高编码生产力的工具：6 AI tools for developers to help boost your productivity，接下来我来分享给你：\n正文\n在构建优质软件时，一个开发团队的存在是至关重要的，团队中的开发人员、设计师和项目经理都扮演着重要的角色。但是对于那些独自拥有一个应用想法或者希望改进现有应用的开发者来说，情况会有所不同。\n对于没有完整团队的开发者来说，学习新功能或修复旧问题可能需要花费太多的时间，可能需要花几个小时来搜索、阅读文档和观看教学视频。幸运的是，人工智能的进步极大地加快了这个过程。\n在人们提到人工智能的时候，ChatGPT 是一个相对通用的工具。然而，真正发挥人工智能优势的是专门解决开发领域特定问题的定制工具。\n有很多满足这一描述的工具，下面我们将介绍六个工具，并了解它们的用途。快速导航：\nPhind\nCodeverter\nbloop.ai\nCodeium\nColPat\nRegExGPT\n在本文结尾，你可以看到总结表格，其中包含了所有这六个人工智能开发工具的用途，以帮助你更好地了解每个工具适应你的工作流程。\nPhind\n\n我们首先介绍的工具是 Phind，一个专为开发人员量身定制的搜索引擎。与更通用的工具如 ChatGPT 相比，Phind 更专注于开发人员的需求。\n有趣的是，作为一个搜索引擎，Phind 的回答通常包含两个部分：\n针对你具体问题的详细和有见地的回答\n通过搜索检索到的相…",
           "link": "https://juejin.cn/post/7253000004165206071",
           "publishedOn": "2023-07-07T19:37:54.000Z",
-          "wordCount": 1863,
+          "wordCount": 1889,
           "title": "6 个 AI 工具，让你的代码生产力上天🚀",
           "imageUrl": null
         },
@@ -856,7 +866,7 @@
           "description": "theme: cyanosis\n点击在线阅读，体验更好\n链接\n\n\n\n\n现代JavaScript高级小册\n链接\n\n\n深入浅出Dart\n链接\n\n\n现代TypeScript高级小册\n链接\n\n\n\n\nlightning css中文文档\nVite 4.4实验性\n从Vite 4.4开始，Vite实验性地支持Lightning CSS。你可以通过在你的配置文件中添加 css.transformer: 'lightningcss' 来选择它，并安装可选的lightningcss依赖：\nbash\nnpm add -D lightningcss\n\n如果启用了这个选项，CSS文件将由Lightning CSS处理，而不是PostCSS。你可以将Lightning CSS选项传递给css.lightningcss 配置选项进行配置。\n要配置CSS模块，你需要使用css.lightningcss.cssModules 来替代css.modules（后者用于配置PostCSS如何处理CSS模块）。\n默认情况下，Vite使用esbuild来压缩CSS。 Lightning CSS也可以通过build.cssMinify: 'lightningcss' 作为CSS压缩器。\n什么是Lightning CSS\n\nLightning CSS简单理解就是Rust版本的PostCSS,然后 Lightning CSS内置了一些功能，比如 CSS压缩，语法降级，语法支持前缀，CSS模块化功能\n入门Lightning CSS\n使用Node\n首先，使用npm或Yarn等包管理器安装Lightning CSS。\nnpm install --save-dev lightningcss\n\n安装完成后，导入模块并调用Lightning CSS的API之一。transform函数将从Node Buffer编译CSS样式表。以下示例将…",
           "link": "https://juejin.cn/post/7252839465906110520",
           "publishedOn": "2023-07-07T02:49:36.000Z",
-          "wordCount": 2216,
+          "wordCount": 2226,
           "title": "Vite 4.4实验性地支持Lightning CSS,Lightning CSS更快的CSS处理利器",
           "imageUrl": null
         },
@@ -866,7 +876,7 @@
           "description": "前言：\n熟悉 ChatGPT 的同学一定还知道 Langchain 这个AI开发框架。由于大模型的知识仅限于它的训练数据内部，它有一个强大的“大脑”而没有“手臂”，而 Langchain 这个框架出现的背景就是解决大模型缺少“手臂”的问题，使得大模型可以与外部接口，数据库，前端应用交互。可以说大模型解决了99%的智能化问题，而 Langchain 就是来解决这最后1%和外部应用的打通。\nLangchain 同时支持 python 和 nodejs ，这意味着即使不熟悉 python 的前端技术栈同学也能够无缝参与到大模型人工智能应用的开发之中。\n在正式介绍 Langchain 之前，首先看一下单纯依靠一个大模型解决用户需求会有什么问题。\n大语言模型的缺陷\n缺陷1：模型无法掌握实时资讯\nChatGPT 可以聊天，进行常识问答，写文章，进行翻译等等。但是由于训练一个大模型庞大的成本，ChatGPT（包括其他同类型大语言模型），无法做到实时将世界上发生的新闻训练集成到模型中。ChatGPT 的知识截止日期是2021年9月。这意味着 ChatGPT 只包含截至2021年9月之前的知识。\n\n直接询问去年发生的新闻得到的明显是错误的信息，英国女王已于2022年9月8日去世\n缺陷2：「一本正经地胡说八道」\n大语言模型核心原理是根据\"概率\"来不断生成下一个 Token 来生成新的内容。只要你给出的大致合乎逻辑的提示词，模型可能会一本正经地开始瞎编，通过概率来生成最合乎逻辑的内容。\n\n\n瞎编内容举例，看起来合乎逻辑但实际上都是错误的\n这是因为大语言模型并不能判断他所生成的内容现实生活中是否是真实存在的，他只是单纯根据\"概率\"来生成最符合语言结构的内容，也就是根据前文的内容去生成后文的内容，并没有能力判断生成的内容是否准确合乎现实场景。如果你用 ChatGPT 写论文并且不加以修改的话，Cha…",
           "link": "https://juejin.cn/post/7252605744255615035",
           "publishedOn": "2023-07-06T11:42:06.000Z",
-          "wordCount": 6062,
+          "wordCount": 6047,
           "title": "使用Nodejs和Langchain开发大模型",
           "imageUrl": null
         }
@@ -903,7 +913,7 @@
           "description": "发现一个学习语言的神仙网站，很多都是免费哦\nCodecademy",
           "link": "https://juejin.cn/pin/7254792161115914297",
           "publishedOn": "2023-07-12T07:15:51.000Z",
-          "wordCount": 451,
+          "wordCount": 454,
           "title": "发现一个学习语言的神仙网站，很多都是免费哦 Codecademy",
           "imageUrl": null
         },
@@ -913,7 +923,7 @@
           "description": "AOC显示器有推荐吗？铁汁们",
           "link": "https://juejin.cn/pin/7254793459122044989",
           "publishedOn": "2023-07-12T07:04:55.000Z",
-          "wordCount": 446,
+          "wordCount": 449,
           "title": "AOC显示器有推荐吗？铁汁们",
           "imageUrl": null
         },
@@ -933,7 +943,7 @@
           "description": "jym，有没有好用的ssh和ftp工具推荐一些，我的xshell又㕛叒叕打不开了",
           "link": "https://juejin.cn/pin/7254699605669445691",
           "publishedOn": "2023-07-12T03:35:48.000Z",
-          "wordCount": 446,
+          "wordCount": 449,
           "title": "jym，有没有好用的ssh和ftp工具推荐一些，我的xshell又㕛叒叕打不开了",
           "imageUrl": null
         },
