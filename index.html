@@ -181,6 +181,38 @@ Passkey 这个方案可以做到，登录不需要密码，解决了上面提到
                 </section>
               </section>
             </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Lainbo&#x27;s Blog</button>
+                  <a class="source-heading__link" href="https://www.jason-liang.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.jason-liang.com/article/note-taking"
+                        open
+                      >
+                        <summary class="article-expander__title">规避笔记陷阱</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.jason-liang.com/article/note-taking">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://www.notion.so/images/page-cover/nasa_earth_grid.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>在我们的学习和工作过程中，笔记的重要性不言而喻，但是做笔记的过程中有一些陷阱需要规避，这里讨论了一些陷阱，希望对你有所启发</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -218,127 +250,6 @@ Passkey 这个方案可以做到，登录不需要密码，解决了上面提到
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>建设比以往更大、更复杂的铁路网络！在原作成功的基础上，这款续作将保留一切优秀元素并带来更多精彩体验。随着当地工业面临的挑战日趋困难和复杂，山谷似乎变得更加辽阔了！</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7255220627794673725"
-                        open
-                      >
-                        <summary class="article-expander__title">Million.js 真的比 React 快 70% 吗</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7255220627794673725">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>hello 大家好，我是 superZidan，这篇文章想跟大家聊聊 Million.js 真的比 React 快 70% 吗 这个话题，如果大家遇到任何问题，欢迎 联系我
-Aiden Bai 为 React 开发者发布了新版本的 Million 库。
-这个项目并不新鲜。 它于 2021 年 6 月 13 日发布了 0.0.9 版本。
-最新版本 编号为 2.4.4，并且表明了该项目现在相当稳定。
-它带来了一些小的改进，但这不是最重要的。
-由于首页上的声明：
-
-至少这是我所看到的在网速较慢的时候加载页面的情况 😅
-一段时间后，可以看到计数器上升：
-
-React 本身相当快， React + Vite 提供了很棒的开发体验
-有什么办法可以让终端用户感受到 页面变得更快 ？
-为了回答这个问题，我浏览了技术文档，解释了 Million 如何改进 diff 和 reconciliation
-如果你还不熟悉 React，这里有一个对其工作原理的简短回顾：
-React 创建了一个称为 Virtual DOM 的结构 。React 不操作真正的 DOM，而是操作 VDOM。从历史上看，它很有用，因为 DOM 操作很慢。
-当需要更新真实 DOM 时，React 会比较 DOM 和 VDOM 以将它们进行同步。
-整个过程分为两部分。 一种称为 diff， 它是在寻找差异。 reconciliation 是决定 VDOM 更改是否应应用于 DOM 的过程。
-总而言之，它像是一个专家，缓存和同步整个系统，来减少操作真实 DOM 的频率。
-这个过程非常好，但也需要一些权衡。React 并不真正知道组件树中发生了什么变化。 所以它必须遍历树并找到发生变化的节点。
-这意味着对于一个比较大的 DOM，比如一张表，一个小小的变化就会触发大量的计算，纯粹是为了弄清楚发生了什么变化。
-假设你有一张表格，以表格形式显示你的兽医诊所患者。 你有 100 名患者，并注意到为新患者提供了错误的姓名。 你需要改变了一只猫的名字。
-这个时候，React 可能需要检查 100 行和 10 列才能查看发生了什么变化才能更新 DOM。 这种行为是比较损耗性能的。
-Million 不会将组件视为黑盒，只查看它将渲染的内容以及结果是否与之前的渲染不同
-
-Million 通过检查组件的状态来识别哪些组件会受到变化的 树传播的影响。 这意味着它能够更快地找出许多静态组件中必须更新的组件。
-“树传播”（tree propagation）在 React 中通常指的是组件之间通过虚拟 DOM 树进行的更新传递过程。当某个组件的状态发生变化时，React 会通过重新渲染虚拟 DOM 树来确定哪些组件需要更新，并将这些更新传播到整个组件树中受影响的组件。这个过程被称为树传播，因为更新从根组件开始，逐级向下传递到叶子组件。这种机制可以有效地减少不必要的重新渲染，提高性能
-这种能力是 Million.js 库的核心。 官方网站上有一个交互式演示来说明结果：
-
-单击 Million.js 时没有任何反应，单击 React 按钮会向我们显示红色的故障动画。
-还有一个由 Stefan Krause 开发的 JS 框架速度基准的链接。
-在比较 React 和 Million.js 之后，我们将看到这样的结果：
-
-我们可以看到指标都有不错的提升。
-「选择行（select row）」和「交换行（swap rows）」也相当快。 速度几乎和 vanilla JS 一样。 我们看到 Million.js 使 React 速度提高了 4-5 倍
-Million.js 页面没有提供方法，因此很难重现 benchmark 中的 70% 数字
-但可以肯定的是，benchmark 显示了一些重要的性能改进，而且我确信在某种情况下会达到这个数字。
-我喜欢 Million.js 的一点是，你只能将它用于某些组件，这意味着根据需求将其引入更大的项目应该很容易，而且不会有灾难性的风险。
-因此，如果仅更改 UI 的一部分并且你的 React 应用程序出现卡顿，Million.js 将帮助你修复它。
-真是一个精美的工程作品。 我很喜欢！
-本文为翻译文，原文地址 在这里</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7255110638154072120"
-                        open
-                      >
-                        <summary class="article-expander__title">通过调试技术，我理清了 b 站视频播放很快的原理</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7255110638154072120">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>b 站视频播放的是很快的，基本是点哪就播放到哪。
-而且如果你上次看到某个位置，下次会从那个位置继续播放。
-那么问题来了：如果一个很大的视频，下载下来需要很久，怎么做到点哪个位置快速播放那个位置的视频呢？
-前面写过一篇 range 请求的文章，也就是不下载资源的全部内容，只下载 range 对应的范围的部分。
-那视频的快速播放，是不是也是基于 range 来实现的呢？
-我们先复习下 range 请求：
-
-请求的时候带上 range：
-
-服务端会返回 206 状态码，还有 Content-Range 的 header 代表当前下载的是整个资源的哪一部分：
-
-这里的 Content-Length 是当前内容的长度，而 Content-Range 里是资源总长度和当前资源的范围。
-更多关于 Range 的介绍可以看这篇文章：基于 HTTP Range 实现文件分片并发下载！
-那 b 站视频是不是用 Range 来实现的快速播放呢？
-我们先在知乎的视频试一下：
-随便打开一个视频页面，比如这个：
-
-然后打开 devtools，刷新页面，拖动下进度条，可以看到确实有 206 的状态码：
-
-我们可以在搜索框输入 status-code:206 把它过滤出来：
-
-这是一种叫过滤器的技巧：
-
-可以根据 method、domain、mime-type 等过滤。
-has-response-header：过滤响应包含某个 header 的请求
-method：根据 GET、POST 等请求方式过滤请求
-domain: 根据域名过滤
-status-code：过滤响应码是 xxx 的请求，比如 404、500 等
-larger-than：过滤大小超过多少的请求，比如 100k，1M
-mime-type：过滤某种 mime 类型的请求，比如 png、mp4、json、html 等
-resource-type…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -394,6 +305,69 @@ resource-type…</span>
 利用来自 Git 和 Jira 的数据驱动洞察和见解，以了解和掌握开发团队的进度。Hivel 消除了软件工程流程中的瓶颈，从而提高发布的速度、吞吐量和质量。通过识别倦怠迹象并使用健康的指标，来衡量和提高开发人员的生产力。
 工具官网：https://www.hivel.ai/</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7255110638154072120"
+                        open
+                      >
+                        <summary class="article-expander__title">通过调试技术，我理清了 b 站视频播放很快的原理</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7255110638154072120">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>b 站视频播放的是很快的，基本是点哪就播放到哪。
+而且如果你上次看到某个位置，下次会从那个位置继续播放。
+那么问题来了：如果一个很大的视频，下载下来需要很久，怎么做到点哪个位置快速播放那个位置的视频呢？
+前面写过一篇 range 请求的文章，也就是不下载资源的全部内容，只下载 range 对应的范围的部分。
+那视频的快速播放，是不是也是基于 range 来实现的呢？
+我们先复习下 range 请求：
+
+请求的时候带上 range：
+
+服务端会返回 206 状态码，还有 Content-Range 的 header 代表当前下载的是整个资源的哪一部分：
+
+这里的 Content-Length 是当前内容的长度，而 Content-Range 里是资源总长度和当前资源的范围。
+更多关于 Range 的介绍可以看这篇文章：基于 HTTP Range 实现文件分片并发下载！
+那 b 站视频是不是用 Range 来实现的快速播放呢？
+我们先在知乎的视频试一下：
+随便打开一个视频页面，比如这个：
+
+然后打开 devtools，刷新页面，拖动下进度条，可以看到确实有 206 的状态码：
+
+我们可以在搜索框输入 status-code:206 把它过滤出来：
+
+这是一种叫过滤器的技巧：
+
+可以根据 method、domain、mime-type 等过滤。
+has-response-header：过滤响应包含某个 header 的请求
+method：根据 GET、POST 等请求方式过滤请求
+domain: 根据域名过滤
+status-code：过滤响应码是 xxx 的请求，比如 404、500 等
+larger-than：过滤大小超过多少的请求，比如 100k，1M
+mime-type：过滤某种 mime 类型的请求，比如 png、mp4、json、html 等
+resource-type…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -544,7 +518,7 @@ resource-type…</span>
                             <span class="media-object__text">
                               <span>发现一个学习语言的神仙网站，很多都是免费哦
 Codecademy</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -648,6 +622,43 @@ https://datacap.edurt.io/release/latest.html</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7254572706536734781"
+                        open
+                      >
+                        <summary class="article-expander__title">项目中前端如何实现无感刷新 token！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7254572706536734781">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: channing-cyan
+前一阵遇到了一个问题，线上平台有时会出现用户正在使用的时候，突然要用户去进行登录，这样会造成很不好的用户体验，但是当时一直没有好的思路因此搁置了下来；通过零散时间查询资料以及思考，最终解决了这个问题，接下来跟大家分享一下！
+环境
+请求采用的 Axios V1.3.2。
+平台的采用的 JWT(JSON Web Tokens) 进行用户登录鉴权。
+（拓展：JWT 是一种认证机制，让后台知道该请求是来自于受信的客户端；更详细的可以自行查询相关资料）
+问题现象
+线上用户在使用的时候，偶尔会出现突然跳转到登录页面，需要重新登录的现象。
+原因
+突然跳转到登录页面，是由于当前的 token 过期，导致请求失败；在 axios 的响应拦截axiosInstance.interceptors.response.use中处理失败请求返回的状态码 401，此时得知token失效，因此跳转到登录页面，让用户重新进行登录。
+平台目前的逻辑是在 token 未过期内，用户登录平台可直接进入首页，无需进行登录操作；因此就存在该现象：用户打开平台，由于此时 token 未过期，用户直接进入到了首页，进行其他操作。但是在用户操作的过程中，token 突然失效了，此时就会出现突然跳转到登录页面，严重影响用户的体验感！
+注：目前线上项目中存在数据大屏，一些实时数据的显示；因此存在用户长时间停留在大屏页面，不进行操作，查看实时数据的情况）
+切入点
+怎样及时的、在用户感知不到的情况下更新token？
+当 token 失效的情况下，出错的请求可能不仅只有一个；当失效的 token 更新后，怎样将多个失败的请求，重新发送？
+操作流程
+好了！经过了一番分析后，我们找到了问题的所在，并且确定了切入点；那么接下来让我们实操，将问题解决掉。
+前要：
+accessToken（用于请求头中…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7254559214588543034"
                         open
                       >
@@ -688,8 +699,8 @@ NumberPicker 控制按钮放大
 
 这些细节决定了在它上层构建出的应用品质，同样是在一个基础上进行主题和样式的调整。有 Antd 这样品质的基础，就会让在此之上构建的应用品质不会很低，自然也能够带来更好的用户体验及产品品质。
 迭代
-拿 Antd 的源码和 Fusion 还是有蛮大的差距的，这些差距不只是技术水平的差距，可能在 10 年前他们的代码质量是差不多的，但贵在 Antd 是一个健康的迭代状态。
-Antd 已经到了 5.x，Fusion 还是 1.x。这版本后背后意味着 Fusion …</span>
+拿 Antd 的仓库和 Fusion 相比，还是有蛮大的差距的，这些差距不只是技术水平的差距，可能在 10 年前他们的代码质量是差不多的，但贵在 Antd 是一个健康的迭代状态。
+Antd 已经到了 5.x，Fusion 还是 1.x。这版本后背后意味着 Fusi…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
                             </span>
@@ -1326,34 +1337,7 @@ export const isAuth &#x3D; (authCode:…</span>
                         <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7254104833514618917">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>最近这几年低代码这个词很火我想对于大多数程序员来说都不算陌生，从百度搜索指数也可以看出，其搜索量从21年开始有了一个明显的增长。
-
-那低代码或者无代码技术目前有哪些应用场景呢？其底层的技术是什么样的？其如何与当今大火的 AIGC 结合呢？正好在过去一年的工作中我作为项目的核心技术负责人从 0 到 1 经历了我们公司内部低代码平台的建设过程，在这其中也有了许多心得希望通过这篇文章分享给大家。 
-一、技术方案
-
-搭建平台整体技术架构如上图所示，下面给大家一一拆解相信大家可以很容易的理解其中的具体原理。 
-整体流程
-一般来讲一个低代码平台前端核心由三部分组成分别为：组件面板、画布、配置面板。
-
-类似这样：
-
-这样：
-
-正常的搭建过程一般是从左侧组件面板中拖拽组件到画布中，之后选中该组件使用右侧的配置面板对该组件的样式、事件等内容进行配置，使用不同的组件最终直到一个完整的页面生成，过程类似搭积木，当然在搭建的过程中也需要有预览功能等模拟浏览器真实环境对搭建产物进行调试。
-
-那么我们拖拽的每个组件究竟是如何拼装成页面的？其实本质上我们是将一个页面抽象为若干组件，这些组件以相应的关系拼接在一起最终构成了一个完整的页面，举个简单的例子：
-
-比如如上的苹果官网首页，从上到下我们大致可以将其分为四个组件：导航栏 Nav 组件、背景 Background组件、Link 组件导航组件、以及最底层承载所有组件的 Root 根组件。
-如果需要描述这些组件之间的关系我们可以使用类似如下的一个扁平树形结构（没有使用多层嵌套结构而使用扁平树形结构的原因是扁平化结构便于操作）：
-const tree &#x3D; {
-  root:{
-    child:[nav,background],
-    parent:null,
-  },
-  nav:{
-    child:[],
-    parent:root
-  },…</span>
+                              <span>最近这几年低代码这个词很火， 那低代码或者无代码技术目前有哪些应用场景呢？其底层的技术是什么样的？其如何与当今大火的 AIGC 结合呢？</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;20
                                   min&hairsp;)</span>
                             </span>
@@ -1372,36 +1356,8 @@ const tree &#x3D; {
                         <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7254027262885855291">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>highlight: zenburn
-theme: smartblue
-为撒我们要使用单点登录
-通常情况下我们开发一套系统时，我们都会写一套登录页面。当用户需要访问系统时需要先进行账号登录然后进入系统使用。但是当我们有多个系统时难道需要用户登录多次吗？显然这种方式是不优雅的😶‍🌫️，此时就轮到单点登录登场了。本文将主要以前端的视角来聊一聊该如何落地单点登录。
-单点登录的英文名叫做：Single Sign On（简称SSO）😶‍🌫️
-单点登录能干嘛
-简单粗暴的说单点登录就是
-一处登录 处处登录 🤡
-单点登录在前端的系统模型
-
-单点登录实施方案
-单点登录目前有两种方案
-cookie 共享方案(子域名方案)
-ticket 方案（凭证交换）
-这两个方案是有共同点的，我们看看它们有哪些共同的部分
-需要一个独立的登录系统
-通用重定向的方式完成子系统登录
-结合以上可以发现，这两个方案其实在前端的差异性并不大，主要就是需要考虑如何实现登录态共享。
-cookie 共享方案
-传统的登录方式是用户在登录页完成登录，然后后端通过 set-cookie 将 token 写入到浏览器的 cookie 当中之后的每次请求都会携带token完成身份验证。此时的登录模块和业务模块是同一系统下的不同页面。
-
-
-单点登录模型下的登录模块和业务模块是独立的不同系统
-结合以上流程图我们来分析一波，图中的A和sso都是example.com的子域名，当用户访问A-client时会向A-server发送身份验证请求检验当前请求是否携带有效token，如无效则返回特定 code A-client接到返回后根据 code 做出不同响应。
-A-server返回 token 有效，则继续保持对A-client的访问。
-A-server返回 token 无效。
-
-
-A-client重定向至SSO-client并携带re…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
+                              <span>👀SSO单点登录 知多少</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1419,37 +1375,8 @@ A-client重定向至SSO-client并携带re…</span>
                         <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7254014646779428922">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>theme: channing-cyan
-算命转盘
-前言
-给自己做一个算命转盘，有事没事算算命，看看运势挺好的（虽然我也看不懂）。
-这个算命转盘我是实现在了自己的个人博客中的这里是地址，感兴趣可以点进去看看。
-实现过程
-开发技术：react + ts
-该转盘主要是嵌套了三层 圆形滚动组件 来实现的，再通过 ref 绑定组件，调用其中的 scrollTo 方法即可使组件发生指定的滚动，再传入随机数，即可实现随机旋转效果，通过嵌套三层该组件实现三层的随机旋转，模拟“算命”效果。
-// 这是精简后的代码
-export default () &#x3D;&gt; {
-  const onScrollCircle &#x3D; () &#x3D;&gt; {
-    const index &#x3D; Math.floor(Math.random() * zodiacList.length)
-    scrollCircleRef.current?.scrollTo({index, duration: 1000})
-  }
-  return (
-    
-      
-       onScrollCircle}&gt;点击旋转
-        
-  )
-}   
-
-三层大致结构如下：具体代码可以看码上掘金
-转盘的第一层
-export default () &#x3D;&gt; {
-  return (
-    
-      {list.map((item, index) &#x3D;&gt; (
-        
-     …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
+                              <span>作为一名前端给自己做一个算命转盘不过分吧</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1485,7 +1412,7 @@ Storybook 是高标准的 UI 工作套件。由于其无与伦比的框架兼容
 Storybook：下一个篇章
 Storybook 始于 2016 年。从那时起，我们开创了组件驱动开发、文档和测试的 UI 工作环境的概念。
 在此期间，前端生态系统发生了巨大变化。IE11 终于…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                &ensp;<span class="article-reading-time">(&hairsp;10
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1678,45 +1605,6 @@ Storybook 始于 2016 年。从那时起，我们开创了组件驱动开发、�
     
       竹白（邮箱、微信）      ｜      语雀      ｜      电报      
 封面来源：Midjourney</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://workreview.zhubai.love/posts/2290183001612890112"
-                        open
-                      >
-                        <summary class="article-expander__title">Keynote #12 怎样做汇报提案？（3）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://workreview.zhubai.love/posts/2290183001612890112">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>提前把反馈点设计在提案节奏里  
-    
-  
-    
-  小意见：提前和领导沟通好，会上cue一下，让所有人认识到此共识  
-    
-  大反馈：开放性问题要谨慎无准备地提出  
-    
-  
-    
-  如果有人在会上问到你没有准备到的问题？  
-    
-  1/ 稳住  
-    
-  2/ 安抚  
-    
-  3/ 会后就细节单独沟通  
-    
-  
-    
-  
-  《沟通训练营》脱不花</span>
                             </span>
                           </div>
                         </a>
@@ -2710,7 +2598,7 @@ animation-duration: 1.5s; // 新增
 
 左侧定义一个滑入动画，从左侧-100%进入到20px最后回到0原来的位置，这样定义会有一个弹的效果
 Right …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                &ensp;<span class="article-reading-time">(&hairsp;9
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3078,25 +2966,6 @@ const dialogVisible &#x3D; computed({
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20230707/t20230707_526319803.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市秀山土家族苗族自治县发布雷电黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20230707/t20230707_526319803.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>秀山县气象台2023年7月7日17时10分发布“雷电黄色预警信号”，预计未来6小时内，我县大溪乡、海洋乡、石堤镇、里仁镇、宋农镇、龙池镇、妙泉镇、涌洞镇、峨溶镇、洪安镇、官庄街道、溪口镇、溶溪镇、膏田镇等所有乡镇街道将出现雷雨天气，局地伴有短时强降水、阵性大风等强对流天气，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -3145,6 +3014,76 @@ Phind
 通过搜索检索到的相…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >竹白 - TOP20</button>
+                  <a class="source-heading__link" href="https://analy.zhubai.wiki">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://fivekey.zhubai.love/posts/2288936286486433792"
+                        open
+                      >
+                        <summary class="article-expander__title">#21 从 Figma 视角看 AI 设计 - Config 2023（上）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://fivekey.zhubai.love/posts/2288936286486433792">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>篇首语  
+    
+  对于今年的 Figma Config，大家都抱以了非常大的期望，想看看在 AI 设计方面一直没有太多声音的Figma 究竟在憋什么大招。还有很多设计协同领域的产品，也在等着 Config 大会上的消息，想看看行业的头部公司在想些什么，也好决定接下来是否需要对自己的产品做一下方向的调整。  
+    
+  但没想到的是，这次 Figma 还是比较“保守”的，主 Keynote 会场并没有用过多的篇幅去介绍 AI 设计的内容，而是依旧将重点放在了对现有产品功能的迭代上。比如更贴近研发环节的 Dev Mode、更全局的变量能力、更高级的原型设计能力以及那些广大用户在日常工作中所关注的小细节上。  
+    
+  当然，在 AI 方面 Figma 也并非没有动作。CEO Dylan Field 同时也宣布 Figma 收购了一家社区中专注于 AI 的公司 - Diagram，以及其带来的AI 辅助工具 - Genius。借由这次大会 Figma 也基本向大家表达了对 AI 的态度，分享了他们如何看待设计行业的未来发展，以及如何将 AI 与 Figma 进行结合的思考。  
+    
+  相较于这次大会所发布的那些新功能，我更感叹于 Figma 团队在设计领域中的思考深度以及他们的执行力。让我会想起了当年做设计协同产品的场景，有很多在协作上的想法我们曾经也思考过，但我们考虑得还是不够成熟、不够体系，也没有如他们一般足够的魄力将这些想法坚持下去。  
+    
+  今年的 Config 大会信息量还是挺大的，因为这也是自己曾经奋斗了快四年的领域，所以也特别有感触。相较于那些布的新功能我更想和大家一起聊聊 Figma 对设计这个行业的观点以及他们背后的思考。这次我准备用两篇文章来和大家分别聊一聊 AI 设计和设计协同这两个领域，今天这篇我们将先从 AI 设计这部分开始。  
+    
+  Figma 如何看待 AI 设计  
+    
+  在第一天的 Keynote 上，CEO Dylan Field 就给大家分享了他对 AI 设计的观点：  
+    
+  AI 可以帮助任何人获得一个好的初稿，但好的初稿不是一个世界级产品，从初稿到世界级产品的过程中需要设计师和设计团队的参与。  
+        
+  Figma 认为（至少在当下） AI 是无法替代设计师来主动生成具备优秀体验的产品设计方案的。所以在 Figma 的体系中，AI 当下并不会成为设计的主要生产者，而是在整个设计环节中扮演设计助手的角色，为设计师提供辅助。  
+    
+  这似乎与大家这段时间正在感知到的有些不太一样。为何前面很多的公司都在思考如何让 AI 更好的代替设计师完成界面设计的工作，而 Figma 却认为 AI 只能给设计师做助手呢？而作为设计师我们又应该如何思考自己与 AI 的关系呢？  
+    
+  想要帮自己理清思路，找到属于自己的答案，我么就需要先思考一下以下两个问题：  
+    
+  
+  如何定义设计需求  
+    
+  如何定义一个好的设计方案  
+  
+    
+  如何定义设计需求  
+    
+  在日常工作中有非常多各式各样的设计需求，比如日常的报名活动、营销活动界面、订单管理系统、商品功能发布、下单支付流程、产品官网等等…  
+    
+  这些都是我们需要处理的需求，在团队的日常管理中通常我们会将需求进行分层，再派发给不同的设计师进行跟进。比如商品发布、下单支付流程这些业务逻辑复杂、对设计要求高的项目我们通常会让最资深的设计师带队来进行设计，而那些相对简单、模式化的报名活动、后台管理系统等需求则交由相对资历较浅的设计师或外包公司来独立跟进。  
+    
+  基于设计的复杂性和特性来进行划分，是我们在做需求分层时最见的方式，目的是让我们的设计资源能够更合理的分配来达到价值的最大化。但如果今天团队中再增加一位 AI 设计师，那么我们可能就需要换一种方式来进行表达了，在这里我将它定义为标准化需求和个性化需求。  
+    
+  标准化需求 vs 个性化需求</span>
                             </span>
                           </div>
                         </a>
@@ -3297,7 +3236,7 @@ ChatGPT 可以聊天，进行常识问答，写文章，进行翻译等等。但
 
 瞎编内容举例，看起来合乎逻辑但实际上都是错误的
 这是因为大语言模型并不能判断他所生成的内容现实生活中是否是真实存在的，他只是单纯根据&quot;概率&quot;来生成最符合语言结构的内容，也就是根据前文的内容去生成后文的内容，并没有能力判断生成的内容是否准确合乎现实场景。如果你用 ChatGPT 写论文并且不加以修改的话，Cha…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;19
+                                &ensp;<span class="article-reading-time">(&hairsp;20
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4254,7 +4193,7 @@ Monica 是由 GPT-4 驱动的人工智能助手，现在注册赠送你 100 个�
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Lainbo’s Blog</button>
+                  >Lainbo&#x27;s Blog</button>
                   <a class="source-heading__link" href="https://www.jason-liang.com/">Open</a>
                 </h3>
                 <section class="articles-per-source">
@@ -4268,11 +4207,9 @@ Monica 是由 GPT-4 驱动的人工智能助手，现在注册赠送你 100 个�
                         <summary class="article-expander__title">Volta的使用</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://www.jason-liang.com/article/use-volta">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://www.notion.so/images/page-cover/nasa_earth_grid.jpg" loading="lazy" class="media-object__media article-image" />
+                              <img src="./bg_image.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>nvm切换node版本可能是一个伪需求，我们真正的需求是一些特殊的项目需要特殊的node版本，其余项目用默认版本。Volta解决了这一点</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4396,8 +4333,8 @@ OpenAI 要求验证手机号，国内的手机都通不过。也就是说，它�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5551349797">
-        <time id="build-timestamp" datetime="2023-07-14T06:52:26.148Z">2023-07-14T06:52:26.148Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5552816447">
+        <time id="build-timestamp" datetime="2023-07-14T09:52:14.493Z">2023-07-14T09:52:14.493Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
