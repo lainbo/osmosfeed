@@ -367,7 +367,7 @@ status-code：过滤响应码是 xxx 的请求，比如 404、500 等
 larger-than：过滤大小超过多少的请求，比如 100k，1M
 mime-type：过滤某种 mime 类型的请求，比如 png、mp4、json、html 等
 resource-type…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1337,7 +1337,34 @@ export const isAuth &#x3D; (authCode:…</span>
                         <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7254104833514618917">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>最近这几年低代码这个词很火， 那低代码或者无代码技术目前有哪些应用场景呢？其底层的技术是什么样的？其如何与当今大火的 AIGC 结合呢？</span>
+                              <span>最近这几年低代码这个词很火我想对于大多数程序员来说都不算陌生，从百度搜索指数也可以看出，其搜索量从21年开始有了一个明显的增长。
+
+那低代码或者无代码技术目前有哪些应用场景呢？其底层的技术是什么样的？其如何与当今大火的 AIGC 结合呢？正好在过去一年的工作中我作为项目的核心技术负责人从 0 到 1 经历了我们公司内部低代码平台的建设过程，在这其中也有了许多心得希望通过这篇文章分享给大家。 
+一、技术方案
+
+搭建平台整体技术架构如上图所示，下面给大家一一拆解相信大家可以很容易的理解其中的具体原理。 
+整体流程
+一般来讲一个低代码平台前端核心由三部分组成分别为：组件面板、画布、配置面板。
+
+类似这样：
+
+这样：
+
+正常的搭建过程一般是从左侧组件面板中拖拽组件到画布中，之后选中该组件使用右侧的配置面板对该组件的样式、事件等内容进行配置，使用不同的组件最终直到一个完整的页面生成，过程类似搭积木，当然在搭建的过程中也需要有预览功能等模拟浏览器真实环境对搭建产物进行调试。
+
+那么我们拖拽的每个组件究竟是如何拼装成页面的？其实本质上我们是将一个页面抽象为若干组件，这些组件以相应的关系拼接在一起最终构成了一个完整的页面，举个简单的例子：
+
+比如如上的苹果官网首页，从上到下我们大致可以将其分为四个组件：导航栏 Nav 组件、背景 Background组件、Link 组件导航组件、以及最底层承载所有组件的 Root 根组件。
+如果需要描述这些组件之间的关系我们可以使用类似如下的一个扁平树形结构（没有使用多层嵌套结构而使用扁平树形结构的原因是扁平化结构便于操作）：
+const tree &#x3D; {
+  root:{
+    child:[nav,background],
+    parent:null,
+  },
+  nav:{
+    child:[],
+    parent:root
+  },…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;20
                                   min&hairsp;)</span>
                             </span>
@@ -1356,8 +1383,36 @@ export const isAuth &#x3D; (authCode:…</span>
                         <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7254027262885855291">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>👀SSO单点登录 知多少</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
+                              <span>highlight: zenburn
+theme: smartblue
+为撒我们要使用单点登录
+通常情况下我们开发一套系统时，我们都会写一套登录页面。当用户需要访问系统时需要先进行账号登录然后进入系统使用。但是当我们有多个系统时难道需要用户登录多次吗？显然这种方式是不优雅的😶‍🌫️，此时就轮到单点登录登场了。本文将主要以前端的视角来聊一聊该如何落地单点登录。
+单点登录的英文名叫做：Single Sign On（简称SSO）😶‍🌫️
+单点登录能干嘛
+简单粗暴的说单点登录就是
+一处登录 处处登录 🤡
+单点登录在前端的系统模型
+
+单点登录实施方案
+单点登录目前有两种方案
+cookie 共享方案(子域名方案)
+ticket 方案（凭证交换）
+这两个方案是有共同点的，我们看看它们有哪些共同的部分
+需要一个独立的登录系统
+通用重定向的方式完成子系统登录
+结合以上可以发现，这两个方案其实在前端的差异性并不大，主要就是需要考虑如何实现登录态共享。
+cookie 共享方案
+传统的登录方式是用户在登录页完成登录，然后后端通过 set-cookie 将 token 写入到浏览器的 cookie 当中之后的每次请求都会携带token完成身份验证。此时的登录模块和业务模块是同一系统下的不同页面。
+
+
+单点登录模型下的登录模块和业务模块是独立的不同系统
+结合以上流程图我们来分析一波，图中的A和sso都是example.com的子域名，当用户访问A-client时会向A-server发送身份验证请求检验当前请求是否携带有效token，如无效则返回特定 code A-client接到返回后根据 code 做出不同响应。
+A-server返回 token 有效，则继续保持对A-client的访问。
+A-server返回 token 无效。
+
+
+A-client重定向至SSO-client并携带re…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1375,7 +1430,36 @@ export const isAuth &#x3D; (authCode:…</span>
                         <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7254014646779428922">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>作为一名前端给自己做一个算命转盘不过分吧</span>
+                              <span>theme: channing-cyan
+算命转盘
+前言
+给自己做一个算命转盘，有事没事算算命，看看运势挺好的（虽然我也看不懂）。
+这个算命转盘我是实现在了自己的个人博客中的这里是地址，感兴趣可以点进去看看。
+实现过程
+开发技术：react + ts
+该转盘主要是嵌套了三层 圆形滚动组件 来实现的，再通过 ref 绑定组件，调用其中的 scrollTo 方法即可使组件发生指定的滚动，再传入随机数，即可实现随机旋转效果，通过嵌套三层该组件实现三层的随机旋转，模拟“算命”效果。
+// 这是精简后的代码
+export default () &#x3D;&gt; {
+  const onScrollCircle &#x3D; () &#x3D;&gt; {
+    const index &#x3D; Math.floor(Math.random() * zodiacList.length)
+    scrollCircleRef.current?.scrollTo({index, duration: 1000})
+  }
+  return (
+    
+      
+       onScrollCircle}&gt;点击旋转
+        
+  )
+}   
+
+三层大致结构如下：具体代码可以看码上掘金
+转盘的第一层
+export default () &#x3D;&gt; {
+  return (
+    
+      {list.map((item, index) &#x3D;&gt; (
+        
+     …</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
                             </span>
@@ -2598,7 +2682,7 @@ animation-duration: 1.5s; // 新增
 
 左侧定义一个滑入动画，从左侧-100%进入到20px最后回到0原来的位置，这样定义会有一个弹的效果
 Right …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                &ensp;<span class="article-reading-time">(&hairsp;11
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2646,7 +2730,7 @@ const dialogVisible &#x3D; computed({
 
 
   &lt;ElDialog v-model&#x3D;&quot;dialogVisible&quot; :title&#x3D;&quot;title&quot; widt…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                &ensp;<span class="article-reading-time">(&hairsp;10
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4207,9 +4291,11 @@ Monica 是由 GPT-4 驱动的人工智能助手，现在注册赠送你 100 个�
                         <summary class="article-expander__title">Volta的使用</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://www.jason-liang.com/article/use-volta">
                           <div class="article-summary-box-inner media-object">
-                              <img src="./bg_image.jpg" loading="lazy" class="media-object__media article-image" />
+                              <img src="https://www.notion.so/images/page-cover/nasa_earth_grid.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>nvm切换node版本可能是一个伪需求，我们真正的需求是一些特殊的项目需要特殊的node版本，其余项目用默认版本。Volta解决了这一点</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4333,8 +4419,8 @@ OpenAI 要求验证手机号，国内的手机都通不过。也就是说，它�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5552816447">
-        <time id="build-timestamp" datetime="2023-07-14T09:52:14.493Z">2023-07-14T09:52:14.493Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5554345739">
+        <time id="build-timestamp" datetime="2023-07-14T12:59:23.934Z">2023-07-14T12:59:23.934Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
