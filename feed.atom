@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-07-16T01:17:12.855Z</id>
+    <id>urn:2023-07-16T03:52:22.918Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-07-16T01:17:12.855Z</updated>
+    <updated>2023-07-16T03:52:22.918Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -172,6 +172,68 @@ Vue3源码学习
 持续学习、多参与到开源项目。]]></summary>
         <author>
             <name>Lvzl</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[基于 Tauri， 我写了一个 Markdown 桌面 App]]></title>
+        <id>https://juejin.cn/post/7255189463746986039</id>
+        <link href="https://juejin.cn/post/7255189463746986039"/>
+        <updated>2023-07-13T10:23:59.000Z</updated>
+        <summary type="html"><![CDATA[highlight: monokai
+本文视频地址
+前言
+大家好，我是小马。
+去年，我开发了一款微信排版编辑器 MDX Editor。它可以自定义组件、样式，生成二维码，代码 Diff 高亮，并支持导出 Markdown 和 PDF 等功能。然而，作为一个微信排版编辑器，它的受众面比较有限，并不适用于每个人。因此，我基于该编辑器开发了 MDX Editor 桌面版，它支持 Mac、Windows 和 Linux，并且非常轻量，整个应用的大小只有 7M。现在，MDX Editor 桌面版已经成为我的创作工具。如果你对它感兴趣，可以在文末获取。
+演示
+技术选型
+开发 MDX Editor 桌面 App，我使用了如下核心技术栈:
+React (Next.js)
+Tauri —— 构建跨平台桌面应用的开发框架
+Tailwind CSS —— 原子类样式框架，支持深色皮肤
+Ant Design v5 —— 使用"Tree"组件管理文档树
+功能与实现
+1. MDX 自定义组件
+MDX 结合了 Markdown 和 JSX 的优点，它让你可以在 Markdown 文档中直接使用 React 组件，构建复杂的交互式文档。如果你熟悉 React，你可以在 "Config" 标签页中自定义你的组件；如果你不是一个程序员，你也可以基于现有模板进行创作。例如，模板中的 "Gallery" 组件实际上就是一个 "flex" 布局。
+代码
+
+function Gallery({children}) {
+
+return <div className="flex gallery">
+
+{children}
+
+</div>
+
+}
+
+
+
+
+2. 深色皮肤
+对于笔记软件来说，深色皮肤已经成为一个不可或缺的部分。MDX Editor 使用 Tailwind CSS 实现了深色皮肤。
+
+3. 多主题
+编辑器内置了 10+个文档主题和代码主题，你可以点击右上方的设置按钮进行切换。
+
+4. 本地文件管理
+桌面 App 还支持管理本地文件。你可以选择一个目录，或者将你的文档工作目录拖入编辑器，便能够实时地在编辑器中管理文档。
+
+当我在开发这个功能之前，我曾担心自己不熟悉 Rust，无法完成这个功能。但是，熟悉了 Tauri 文档之后，我发现其实很简单。Tauri 提供了文件操作的 API，使得我们不需要编写 Rust 代码，只需要调用 Tauri API 就能完成文件管理。
+import { readTextFile, BaseDirectory } from '@tauri-apps/api/fs';
+
+// 读取路径为 `$APPCONFIG/app.conf` 的文本文件
+
+const contents = await readTextFile('app.conf', { dir: BaseDirectory.AppConfig });
+
+
+文档目录树采用了 Ant Design 的 Tree 组件实现，通过自定义样式使其与整体皮肤风格保持一致，这大大减少了编码工作量。
+5. 文档格式化
+在文档写作的过程中，格式往往会打断你的创作思路。虽然 Markdown 已经完全舍弃了格式操作，但有时你仍然需要注意中英文之间的空格、段落之间的空行等细节。MDX Editor 使用了 prettier 来格式化文档，只需按下 command+s 就能自动格式化文档。
+
+最后
+如果你对这个编辑器感兴趣，可以在 Github 下载桌面版体验。如果你对实现过程感兴趣，也可以直接查看源码。如果您有任何好的建议，可以在上面提出 Issues，或者关注微信公众号 "JS 酷" 并留言反馈。]]></summary>
+        <author>
+            <name>狂奔滴小马</name>
         </author>
     </entry>
     <entry>
@@ -893,7 +955,34 @@ export const isAuth = (authCode:…]]></summary>
         <id>https://juejin.cn/post/7254104833514618917</id>
         <link href="https://juejin.cn/post/7254104833514618917"/>
         <updated>2023-07-10T14:12:55.000Z</updated>
-        <summary type="html"><![CDATA[最近这几年低代码这个词很火， 那低代码或者无代码技术目前有哪些应用场景呢？其底层的技术是什么样的？其如何与当今大火的 AIGC 结合呢？]]></summary>
+        <summary type="html"><![CDATA[最近这几年低代码这个词很火我想对于大多数程序员来说都不算陌生，从百度搜索指数也可以看出，其搜索量从21年开始有了一个明显的增长。
+
+那低代码或者无代码技术目前有哪些应用场景呢？其底层的技术是什么样的？其如何与当今大火的 AIGC 结合呢？正好在过去一年的工作中我作为项目的核心技术负责人从 0 到 1 经历了我们公司内部低代码平台的建设过程，在这其中也有了许多心得希望通过这篇文章分享给大家。 
+一、技术方案
+
+搭建平台整体技术架构如上图所示，下面给大家一一拆解相信大家可以很容易的理解其中的具体原理。 
+整体流程
+一般来讲一个低代码平台前端核心由三部分组成分别为：组件面板、画布、配置面板。
+
+类似这样：
+
+这样：
+
+正常的搭建过程一般是从左侧组件面板中拖拽组件到画布中，之后选中该组件使用右侧的配置面板对该组件的样式、事件等内容进行配置，使用不同的组件最终直到一个完整的页面生成，过程类似搭积木，当然在搭建的过程中也需要有预览功能等模拟浏览器真实环境对搭建产物进行调试。
+
+那么我们拖拽的每个组件究竟是如何拼装成页面的？其实本质上我们是将一个页面抽象为若干组件，这些组件以相应的关系拼接在一起最终构成了一个完整的页面，举个简单的例子：
+
+比如如上的苹果官网首页，从上到下我们大致可以将其分为四个组件：导航栏 Nav 组件、背景 Background组件、Link 组件导航组件、以及最底层承载所有组件的 Root 根组件。
+如果需要描述这些组件之间的关系我们可以使用类似如下的一个扁平树形结构（没有使用多层嵌套结构而使用扁平树形结构的原因是扁平化结构便于操作）：
+const tree = {
+  root:{
+    child:[nav,background],
+    parent:null,
+  },
+  nav:{
+    child:[],
+    parent:root
+  },…]]></summary>
         <author>
             <name>南橘北枳丶</name>
         </author>
@@ -1592,54 +1681,6 @@ Web3。去年年初，Web3还很火了的，现在好像，嗯，一般般。后
 软件地址：https://pan.quark.cn/s/f50ab002e4b5]]></summary>
         <author>
             <name>IT技术分享社区</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[我给项目加了性能守卫插件，同事叫我晚上别睡的太死]]></title>
-        <id>https://juejin.cn/post/7253331974051823675</id>
-        <link href="https://juejin.cn/post/7253331974051823675"/>
-        <updated>2023-07-09T00:22:09.000Z</updated>
-        <summary type="html"><![CDATA[theme: qklhk-chocolate
-点击在线阅读，体验更好
-链接
-
-
-
-
-现代JavaScript高级小册
-链接
-
-
-深入浅出Dart
-链接
-
-
-现代TypeScript高级小册
-链接
-
-
-
-引言
-给组内的项目都在CICD流程上更新上了性能守卫插件，效果也还不错，同事还疯狂夸奖我
-
-接下里进入我们的此次的主题吧
-由于我组主要是负责的是H5移动端项目，老板比较关注性能方面的指标，比如首页打开速度，所以一般会关注FP,FCP等等指标，所以一般项目写完以后都会用lighthouse查看，或者接入性能监控系统采集指标.
-
-但是会出现两个问题，如果采用第一种方式，使用lighthouse查看性能指标，这个得依赖开发自身的积极性，他要是开发完就Merge上线，你也不知道具体指标怎么样。如果采用第二种方式，那么同样是发布到线上才能查看。最好的方式就是能强制要求开发在还没发布的时候使用lighthouse查看一下，那么在什么阶段做这个策略呢。聪明的同学可能想到，能不能在CICD构建阶段加上策略。其实是可以的，谷歌也想到了这个场景，提供性能守卫这个lighthouse ci插件
-性能守卫
-性能守卫是一种系统或工具，用于监控和管理应用程序或系统的性能。它旨在确保应用程序在各种负载和使用情况下能够提供稳定和良好的性能。
-Lighthouse是一个开源的自动化工具，提供了四种使用方式：
-Chrome DevTools
-Chrome插件
-Node CLI
-Node模块
-
-其架构实现图是这样的，有兴趣的同学可以深入了解一下
-这里我们我们借助Lighthouse Node模块继承到CICD流程中，这样我们就能在构建阶段知道我们的页面具体性能，如果指标不合格，那么就不给合并MR
-剖析lighthouse-ci实现
-lighthouse-ci实现机制很简单，核心实现步骤如上图，差异就是lighth…]]></summary>
-        <author>
-            <name>linwu</name>
         </author>
     </entry>
     <entry>
