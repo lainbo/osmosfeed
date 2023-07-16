@@ -44,7 +44,7 @@
           "description": "我发现，有个CSS三角函数之后，以前很多需要JS计算才能实现的布局现在都可以纯CSS完成了，代码简洁了不少。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/06/css-sin-cos-tan-function/",
           "publishedOn": "2023-06-29T16:23:42.000Z",
-          "wordCount": 1355,
+          "wordCount": 1357,
           "title": "CSS sin()/cos()等数学三角函数简介与应用",
           "imageUrl": null
         },
@@ -54,7 +54,7 @@
           "description": "有没有办法使用CSS让数字从0-100像动画一样不停变化呢？如果你一时不知道该如何实现，则本文值得一看。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/06/css-text-number-loading/",
           "publishedOn": "2023-06-18T06:51:29.000Z",
-          "wordCount": 1220,
+          "wordCount": 1221,
           "title": "我使用CSS模拟个假的数字loading效果",
           "imageUrl": null
         }
@@ -148,7 +148,7 @@
           "description": "一个独立开发者的五年：https://mp.weixin.qq.com/s/x6PLSIMn_1qcKnXWPT-J-Q\n作者的几个观点：\n1）建离岸公司做美元市场是个不错的选择\n2）应该尽可能多地去发挥三方资源的优势，来成就「一人公司」\n3）菲律宾人力成本低而且英语好，是个不错的海外雇佣选项\n4）Learn to sell. Learn to build. 大多数独立开发者不会 sell\n5）把客户当做朋友，从客户身上涌现新的产品想法，保持思考\n6）生意是一门艺术，在各个环节发挥自己的创造力来对抗无聊\n7）这是一个最好的时代，代码永不眠，去创造",
           "link": "https://m.okjike.com/originalPosts/64acb83aca2b035a482a4409",
           "publishedOn": "2023-07-11T02:02:34.000Z",
-          "wordCount": 406,
+          "wordCount": 405,
           "title": "发布了: 一个独立开发者的五年：https://mp.weixin.qq.com/s/x6PLSIMn_1qcKnXWPT-J-Q 作者的几个观点： 1）建离岸公司做美元市场是个不错的选择 2）应该尽可能多...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -626,7 +626,7 @@
           "description": "b 站视频播放的是很快的，基本是点哪就播放到哪。\n而且如果你上次看到某个位置，下次会从那个位置继续播放。\n那么问题来了：如果一个很大的视频，下载下来需要很久，怎么做到点哪个位置快速播放那个位置的视频呢？\n前面写过一篇 range 请求的文章，也就是不下载资源的全部内容，只下载 range 对应的范围的部分。\n那视频的快速播放，是不是也是基于 range 来实现的呢？\n我们先复习下 range 请求：\n\n请求的时候带上 range：\n\n服务端会返回 206 状态码，还有 Content-Range 的 header 代表当前下载的是整个资源的哪一部分：\n\n这里的 Content-Length 是当前内容的长度，而 Content-Range 里是资源总长度和当前资源的范围。\n更多关于 Range 的介绍可以看这篇文章：基于 HTTP Range 实现文件分片并发下载！\n那 b 站视频是不是用 Range 来实现的快速播放呢？\n我们先在知乎的视频试一下：\n随便打开一个视频页面，比如这个：\n\n然后打开 devtools，刷新页面，拖动下进度条，可以看到确实有 206 的状态码：\n\n我们可以在搜索框输入 status-code:206 把它过滤出来：\n\n这是一种叫过滤器的技巧：\n\n可以根据 method、domain、mime-type 等过滤。\nhas-response-header：过滤响应包含某个 header 的请求\nmethod：根据 GET、POST 等请求方式过滤请求\ndomain: 根据域名过滤\nstatus-code：过滤响应码是 xxx 的请求，比如 404、500 等\nlarger-than：过滤大小超过多少的请求，比如 100k，1M\nmime-type：过滤某种 mime 类型的请求，比如 png、mp4、json、html 等\nresource-type…",
           "link": "https://juejin.cn/post/7255110638154072120",
           "publishedOn": "2023-07-13T04:04:34.000Z",
-          "wordCount": 1766,
+          "wordCount": 1801,
           "title": "通过调试技术，我理清了 b 站视频播放很快的原理",
           "imageUrl": null
         },
@@ -636,7 +636,7 @@
           "description": "腾小云导读\nAIGC 这一时代潮流已然不可阻挡，我们要做的不是慌乱，而是把握住这个时代的机会。本文就和大家一起来探索在 AIGC 下，前端工程师即将面临的挑战和机遇。聊聊从以前到现在，AIGC 给我们带来了怎么样的变化，下一代前端工程师又该何去何从？\n目录\n1 疯狂的 AIGC\n2 范式迁移 —— AIGC 下开发模式改变的本质\n2.1 命令式 -> 声明式\n2.2 声明式 -> AIGC 式\n3 下一代前端工程师\n3.1 要善于利用\n3.2 要纵观全局\n3.3 要懂得批判\n3.4 要合理使用\n4 未来可期\n5 望天下再无码农\n6 探讨 6.1 AIGC 下，前端会消失吗？\n6.2 前端开发工程师会过分依赖 AI 吗？\n01疯狂的 AIGC\n记得 ChatGPT4 刚出来的时候，OpenAI 总裁 Greg Brockman 用笔和纸画了一个网页草图，GPT4 仅用几秒的时间便完成了网页的设计和代码的编写。\n\n不知道当时前端同学们看到是个怎样的想法哈，反正我当时心都凉了，好不容易把 vue 的源码搞懂了，这就没啥用了，饭碗砸了，蓝瘦香菇。\n好吧，开个玩笑 。AI 已然如此，此时就不得不问那个老生常谈的问题了，前端工程师们该何去何从呢？\n想来定有一些同学持悲观态度：前端已死，不值得做下去了，AI 马上就替代了。也会有些同学与之相反吧：AI 降临，神级辅助，又不吃经济，又有大用。\n\n\n\n我想说的是，AIGC 一定会对前端开发的未来会产生重大影响，至于这个影响对于前端工程师来说，是正是反，从来都不是工具决定的，而是用工具的人来决定的。我们要做的，不是去担忧焦虑，而是把握住它。\n02、范式迁移 —— AIGC 下开发模式改变的本质\n在这之前，我们先来聊聊前端开发这些年的发展。\n2.1 命令式 -> 声明式\n命令式：关注过程，代码能够与自然语言产生一一对应的关系，代码本身描述的是“做…",
           "link": "https://juejin.cn/post/7254812112562896952",
           "publishedOn": "2023-07-12T08:27:03.000Z",
-          "wordCount": 2087,
+          "wordCount": 2141,
           "title": "AIGC浪潮下，鹅厂新一代前端人的真实工作感受",
           "imageUrl": null
         },
@@ -646,7 +646,7 @@
           "description": "theme: channing-cyan\n前一阵遇到了一个问题，线上平台有时会出现用户正在使用的时候，突然要用户去进行登录，这样会造成很不好的用户体验，但是当时一直没有好的思路因此搁置了下来；通过零散时间查询资料以及思考，最终解决了这个问题，接下来跟大家分享一下！\n环境\n请求采用的 Axios V1.3.2。\n平台的采用的 JWT(JSON Web Tokens) 进行用户登录鉴权。\n（拓展：JWT 是一种认证机制，让后台知道该请求是来自于受信的客户端；更详细的可以自行查询相关资料）\n问题现象\n线上用户在使用的时候，偶尔会出现突然跳转到登录页面，需要重新登录的现象。\n原因\n突然跳转到登录页面，是由于当前的 token 过期，导致请求失败；在 axios 的响应拦截axiosInstance.interceptors.response.use中处理失败请求返回的状态码 401，此时得知token失效，因此跳转到登录页面，让用户重新进行登录。\n平台目前的逻辑是在 token 未过期内，用户登录平台可直接进入首页，无需进行登录操作；因此就存在该现象：用户打开平台，由于此时 token 未过期，用户直接进入到了首页，进行其他操作。但是在用户操作的过程中，token 突然失效了，此时就会出现突然跳转到登录页面，严重影响用户的体验感！\n注：目前线上项目中存在数据大屏，一些实时数据的显示；因此存在用户长时间停留在大屏页面，不进行操作，查看实时数据的情况）\n切入点\n怎样及时的、在用户感知不到的情况下更新token？\n当 token 失效的情况下，出错的请求可能不仅只有一个；当失效的 token 更新后，怎样将多个失败的请求，重新发送？\n操作流程\n好了！经过了一番分析后，我们找到了问题的所在，并且确定了切入点；那么接下来让我们实操，将问题解决掉。\n前要：\naccessToken（用于请求头中…",
           "link": "https://juejin.cn/post/7254572706536734781",
           "publishedOn": "2023-07-12T03:45:01.000Z",
-          "wordCount": 2315,
+          "wordCount": 2257,
           "title": "项目中前端如何实现无感刷新 token！",
           "imageUrl": null
         },
@@ -666,7 +666,7 @@
           "description": "theme: smartblue\n国际惯例，官网链接\n官网传送门\nGithub地址\ngithub上有几个demos例子，介绍了基础用法。\n\n我参考官网的例子，写了一个demo示例\n安装\nturn.js 依赖 jquery 库，所以需要先安装 jquery\nnpm install jquery --save\n\n引入\nimport $ from 'jquery'\nimport turn from '@/utils/turn.js'\n\n下载 turn.js 文件，然后在组件中引入\nimport turn from \"@/utils/turn.js\";\n\nvue.config.js 配置\nconst webpack = require('webpack');\nmodule.exports = {\n    lintOnSave: false,\n    //配置webpack选项的内容\n    configureWebpack: {\n        plugins: [\n            new webpack.ProvidePlugin({\n                $: \"jquery\",\n                jQuery: \"jquery\",\n            })\n        ]\n    },\n \n}\n\n或者，这样：\nconst webpack = require('webpack')\nmodule.exports = {\n  chainWebpack: config => {\n    config.plugin('provide').use(webpack.ProvidePlugin, [{\n      $: 'jquery',\n      jquery: 'jquery',\n      jQuery: 'jquery',\n      'window.jQuery': 'jquery'\n    }])\n  }\n}\n\n翻页方法，以及参数\n  $(\"#book\").turn({\n      //启用硬件加速,移动端有效\n      acceleration: false,\n      //显示：single=单页，double=双页，默认双页\n      display: \"double\",\n      // 翻页撒开鼠标，页面的延迟\n      duration: 800,\n      // 默认显示第几页\n      page: 1,\n      // 折叠处的光泽渐变，主要体现翻页的立体感、真实感\n      gradients: true,\n      // 中心翻取决于有多少页面可见 true or false\n      autoCenter: true,\n      // 设置可翻页的页角(都试过了，乱写 4个角都能出发卷起)， bl,br   tl,tr   bl,tr\n      turnCorners: \"bl,br\",\n      //页面高度\n      height: this.turnPage.height,\n      //翻书范围宽度，总宽度\n      width: this.turnPage.width,\n      when: {\n          //监听事件\n          turning: function (e, page, view) {\n              console.log(\"翻页前触发\");\n              console.log(e, page, view);\n              // 翻页前触发\n              console.log(page);\n          },\n          turned: function (e, page) {\n              console.log(\"翻页后触发\");\n              console.log(e, page);\n              // 翻页后触发\n              console.log(page);\n          },\n      },\n  });\n\n上一页\n$(\"#book\").turn(\"previous\");\n\n下一页\n$(\"#book\").turn(\"next\");\n\n示例代码\n完整代码，已经放到 Gitee 上面了，组件名为 TurnjsComponent\nGitee地址\n最后的话\n以上，如果对你有用的话，不妨点赞收藏关注一下，谢谢 🙏\n😊 微信公众号: OrzR3\n💖 不定期更新一些技术类，生活类，读书类的文章。",
           "link": "https://juejin.cn/post/7254443448564006967",
           "publishedOn": "2023-07-11T10:15:43.000Z",
-          "wordCount": 1617,
+          "wordCount": 1570,
           "title": "一个好用的轮子 turn.js 实现仿真翻书的效果",
           "imageUrl": null
         },
@@ -686,7 +686,7 @@
           "description": "大家好，我卡颂。\n遥想前几年，不管是React还是Vue，都在快速迭代版本，以至于很多同学抱怨学不动了。\n而现在，React已经一年没更新稳定release了。\n\n甚至有人认为，这就是前端已死最直接的证据：\n\n那么，React最近一年为什么不发版了呢？是因为前端框架领域已经没有新活儿可整了么？React v19是不是遥遥无期了？\n欢迎围观朋友圈、加入人类高质量前端交流群，带飞\n最近一年React活跃吗？\n不想看长文章的同学，这里一句话总结本文观点：\nReact之所以一年没发版，并不是因为无活可整，而是在完成框架从UI库到元框架的转型\n首先，我们来看看，最近这一年React的更新活跃度是否降低？\n从代码push量来看，最近一年甚至比release产出较多的前几年更活跃：\n\n既然更活跃，那React这段时间到底在做什么呢？从代码增删行数可以一窥端倪，其中：\n绿色柱状代表代码增加行数\n红色柱状代表代码减少行数\n红色折线代表代码行数总体趋势\n\n从代码量变化来看，React历史上大体分为四个时期：\n13年开源，到17年之前的功能迭代期\n持续到18年的重构期（重构React Fiber架构）\n18～22年基于Fiber架构的新功能迭代期\n22年至今的重构期\n功能迭代期与重构期的区别在于：\n前者主要是在稳定的架构上迭代新特性\n后者一般重构底层架构的同时，重构老特性\n剧烈的代码量波动通常发生在重构期。比如，在最近的重构期内，PR #25774删除了3w行代码。\n\n这个PR主要改变React对于同一个子包，同时拥有.new、.old两个文件的开发模式\n最近一年React都在干啥？\n明确了React最近一年处于重构期。那么，究竟是重构什么呢？\n答案是 —— 将RSC（React Server Component，服务端组件）接入当前React体系内。\n有同学会问：RSC只是个类似SSR的特性，为什么要实现他还涉及重构？\n这是因为RSC不仅是一个特性，更是React未来主要的发展方向，其意义不亚于Hooks。所以，围绕RSC的迭代涉及大量代码的重构。比如：\nSSR相关代码需要修改\nSSR代码修改导致Suspense组件代码修改\nSuspense的修改又牵扯到useEffect回调触发时机的变化\n可以说是牵一发而动全身了。\nRSC为什么重要\n为什么RSC对React这么重要？要回答这个问题，得从开源项目的发展聊起。\n开源项目要想获得成功，一定需要满足目标用户（开发者）的需求。\n早期，React作为前端框架，满足了UI开发的需求。在此期间，React团队的迭代方向主要是：\n摸索更清晰的开发范式（发布了Error Boundray、Suspense、Hooks）\n修补代码（发布新的Context实现）\n优化开发体验（发布CRA）\n底层优化（重构Fiber架构）\n可以发现，这些迭代内容中大部分（除了底层优化）都是直接面向普通开发者的，所以React文档（文档也是面向开发者的）中都有体现，开发者通过文档能直观的感受到React不断迭代。\n随着前端领域的发展，逐渐涌现出各种业务开发的最佳实践，比如：\n状态管理的最佳实践\n路由的最佳实践\nSSR的最佳实践\n一些框架开始整合这些最佳实践（比如Next.js、Remix，或者国内的Umijs...）\n到了这一时期，开发者更多是通过使用这些框架间接使用React。\n感受到这一变化后，React团队的发展方向逐渐变化 —— 从面向开发者的前端框架变为面向上层框架的元框架。\n发展方向变化最明显的表现是 —— 文档中新出的特性普通开发者很少会用到，比如：\nuseTransition\nuseId\nuseMutableSource\n这些特性都是作为元框架，给上层框架（或库）使用的。\n上述特性虽然普通开发者很少用到，但至少文档中提及了。但随着React不断向元框架方向发展，即使出了新特性，文档中已经不再提及了。比如：\nuseOptimistic\nuseFormStatus\n上述两个Hook想必大部分同学都没听过。他们是React源码中切实存在的Hook。但由于是元框架理念下的产物，所以React文档并未提及。相反，Next.js文档中可以看到使用介绍。\n总结\nReact之所以已经一年没有发布稳定release，是因为发展方向已经从面向开发者转型为面向上层框架。\n在此期间的更新都是面向上层框架，所以开发者很难感知到React的变化。\n但这并不能说明React停止迭代了，也不能据此认为前端发展的停滞。\n如果一定要定量观察React最近一年的发展，距离React v19里程碑，已经大体过半了：",
           "link": "https://juejin.cn/post/7254171813117820985",
           "publishedOn": "2023-07-11T01:22:07.000Z",
-          "wordCount": 1140,
+          "wordCount": 1087,
           "title": "为什么React一年不发新版了？",
           "imageUrl": null
         },
@@ -703,7 +703,7 @@
         {
           "id": "https://juejin.cn/post/7254104833514618917",
           "author": "南橘北枳丶",
-          "description": "最近这几年低代码这个词很火我想对于大多数程序员来说都不算陌生，从百度搜索指数也可以看出，其搜索量从21年开始有了一个明显的增长。\n\n那低代码或者无代码技术目前有哪些应用场景呢？其底层的技术是什么样的？其如何与当今大火的 AIGC 结合呢？正好在过去一年的工作中我作为项目的核心技术负责人从 0 到 1 经历了我们公司内部低代码平台的建设过程，在这其中也有了许多心得希望通过这篇文章分享给大家。 \n一、技术方案\n\n搭建平台整体技术架构如上图所示，下面给大家一一拆解相信大家可以很容易的理解其中的具体原理。 \n整体流程\n一般来讲一个低代码平台前端核心由三部分组成分别为：组件面板、画布、配置面板。\n\n类似这样：\n\n这样：\n\n正常的搭建过程一般是从左侧组件面板中拖拽组件到画布中，之后选中该组件使用右侧的配置面板对该组件的样式、事件等内容进行配置，使用不同的组件最终直到一个完整的页面生成，过程类似搭积木，当然在搭建的过程中也需要有预览功能等模拟浏览器真实环境对搭建产物进行调试。\n\n那么我们拖拽的每个组件究竟是如何拼装成页面的？其实本质上我们是将一个页面抽象为若干组件，这些组件以相应的关系拼接在一起最终构成了一个完整的页面，举个简单的例子：\n\n比如如上的苹果官网首页，从上到下我们大致可以将其分为四个组件：导航栏 Nav 组件、背景 Background组件、Link 组件导航组件、以及最底层承载所有组件的 Root 根组件。\n如果需要描述这些组件之间的关系我们可以使用类似如下的一个扁平树形结构（没有使用多层嵌套结构而使用扁平树形结构的原因是扁平化结构便于操作）：\nconst tree = {\n  root:{\n    child:[nav,background],\n    parent:null,\n  },\n  nav:{\n    child:[],\n    parent:root\n  },…",
+          "description": "最近这几年低代码这个词很火， 那低代码或者无代码技术目前有哪些应用场景呢？其底层的技术是什么样的？其如何与当今大火的 AIGC 结合呢？",
           "link": "https://juejin.cn/post/7254104833514618917",
           "publishedOn": "2023-07-10T14:12:55.000Z",
           "wordCount": 5984,
@@ -716,7 +716,7 @@
           "description": "highlight: zenburn\ntheme: smartblue\n为撒我们要使用单点登录\n通常情况下我们开发一套系统时，我们都会写一套登录页面。当用户需要访问系统时需要先进行账号登录然后进入系统使用。但是当我们有多个系统时难道需要用户登录多次吗？显然这种方式是不优雅的😶‍🌫️，此时就轮到单点登录登场了。本文将主要以前端的视角来聊一聊该如何落地单点登录。\n单点登录的英文名叫做：Single Sign On（简称SSO）😶‍🌫️\n单点登录能干嘛\n简单粗暴的说单点登录就是\n一处登录 处处登录 🤡\n单点登录在前端的系统模型\n\n单点登录实施方案\n单点登录目前有两种方案\ncookie 共享方案(子域名方案)\nticket 方案（凭证交换）\n这两个方案是有共同点的，我们看看它们有哪些共同的部分\n需要一个独立的登录系统\n通用重定向的方式完成子系统登录\n结合以上可以发现，这两个方案其实在前端的差异性并不大，主要就是需要考虑如何实现登录态共享。\ncookie 共享方案\n传统的登录方式是用户在登录页完成登录，然后后端通过 set-cookie 将 token 写入到浏览器的 cookie 当中之后的每次请求都会携带token完成身份验证。此时的登录模块和业务模块是同一系统下的不同页面。\n\n\n单点登录模型下的登录模块和业务模块是独立的不同系统\n结合以上流程图我们来分析一波，图中的A和sso都是example.com的子域名，当用户访问A-client时会向A-server发送身份验证请求检验当前请求是否携带有效token，如无效则返回特定 code A-client接到返回后根据 code 做出不同响应。\nA-server返回 token 有效，则继续保持对A-client的访问。\nA-server返回 token 无效。\n\n\nA-client重定向至SSO-client并携带re…",
           "link": "https://juejin.cn/post/7254027262885855291",
           "publishedOn": "2023-07-10T08:14:45.000Z",
-          "wordCount": 1249,
+          "wordCount": 1297,
           "title": "👀SSO单点登录 知多少",
           "imageUrl": null
         },
@@ -746,7 +746,7 @@
           "description": "theme: channing-cyan\nhighlight: atom-one-dark\n文章同步在公众号：萌萌哒草头将军，欢迎关注\n插件已经开源了，可以看文章末尾\nconsole狂魔能有多狂\n事情是这样的，前段时间我加入了公司某个小项目组\n入组第一天，我要来了项目权限，下载完代码和依赖\n然后npm start，打开浏览器控制台，\n我尼玛，一个登陆页面就这么多log？\n此刻我怀着忐忑的心情打开了自己的即将负责的模块入口页面：\n这让我怎么调试啊？\n\n上图我已经把敏感信息屏蔽掉了(^/ω＼^)，每点击下页面就会蹦出好几行console\n全局一搜索，居然有近800多条console语句。\n\n起初，我为了方便我调试，我把影响我调试的console一一注释了，真是个体力活。\n就在我开心了几天后，同事在开发群里发问了，“我调试打印的console怎么不见了？”，\n我说我注释了，那么多console我没法调试啊，然后就被好几个同事”围攻“了，\n后来想想没经过人家的同意修改人家的代码确实不对！\n其实从他们的代码来看，完全是躺平的状态，完全放弃了公司的代码规范，真的很让人emo。\nemo时间的思考\n既然人家喜欢那样做，我也没办法，emo了一会，我就寻找别的方法解决让我强迫症发作的方法。\n第一种方法是如果有console就不让提交代码，显然不现实，\n第二种方法是使用去除conosle的插件，但是有个缺点，我的console也会被去掉，\n焦虑了好久，我就想到，有没有一种插件，在开发环境只展示开发者自己的console，但是不影响别人开发时调试。\n找了好久都没找到，那就自己动手开发一个吧。\n我的思路是\n在每个文件中匹配console语句\n用匹配到的行，请求git，查看当前行的作者\n如果不是我就统统删除console之后再build\n这样既不会干扰我开发，也不会影响别人开发调试了。\n上次的文章已经…",
           "link": "https://juejin.cn/post/7253734111663079484",
           "publishedOn": "2023-07-09T16:45:48.000Z",
-          "wordCount": 1782,
+          "wordCount": 1759,
           "title": "面对躺平同事，我开发了一个插件治好了我的精神内耗⚡⚡⚡",
           "imageUrl": null
         },
@@ -756,7 +756,7 @@
           "description": "theme: smartblue\nhighlight: an-old-hope\n前言\n我们熟知的三大框架，从vue的响应式的virtual dom处理，到react的fiber架构下的异步更新渲染的virtual dom处理，再到angular的独立设计的dom更新策略、依赖注入等。接下来我会简要描述前端未来框架及发展。\n三大框架的特性\n声明式、虚拟DOM、组件化\nreact、angular、vue三个框架的相同点都是声明式在模板中定义我们的循环和显示等等，我们无需命令式的修改dom。我们不再考虑原来的dom更新策略，我们使用了虚拟dom和真实dom的对比，使其在大场景的按需更新节点是非常有用的。同时框架都面向了组件化的开发，我们可以更高效的解决代码复用的问题。\n前端框架趋势\n\n我们可以看出趋势很明显的3个编译阶段的框架，Svelte、Solid、Qwik。\nSvelte 前端框架\nSvelte的语言写法是很像原生js的，性能跟原生js无差别，Svelte解决了框架在运行时层面的虚拟dom比对在复用节点没有那么需要时的性能问题，我们可以直接在编译阶段的真实dom处理。最核心的就是静态分析的编译器，让我们知道哪个变量变更，按需更新节点即可。我们看下Svelte的具体用法：\n<script>\n  let count = 0;\n  const increment = () => {\n    count += 1;\n  };\n</script>\n\n<button on:click={increment}>\n  count is {count}\n</button>\n\n我们看看编译之后的内容是什么\n\n我们可以看到block里面，其实p函数就是更新值、c函数就是创建dom，d就是卸载dom。本质Svelte其实就是帮助我们做到了声明式的处理。那么我们如何监听到数据的变更，Svelte其实…",
           "link": "https://juejin.cn/post/7253610755126427705",
           "publishedOn": "2023-07-09T08:51:47.000Z",
-          "wordCount": 1364,
+          "wordCount": 1321,
           "title": "前端未来框架的选择",
           "imageUrl": null
         },
@@ -776,7 +776,7 @@
           "description": "theme: qklhk-chocolate\n点击在线阅读，体验更好\n链接\n\n\n\n\n现代JavaScript高级小册\n链接\n\n\n深入浅出Dart\n链接\n\n\n现代TypeScript高级小册\n链接\n\n\n\n引言\n给组内的项目都在CICD流程上更新上了性能守卫插件，效果也还不错，同事还疯狂夸奖我\n\n接下里进入我们的此次的主题吧\n由于我组主要是负责的是H5移动端项目，老板比较关注性能方面的指标，比如首页打开速度，所以一般会关注FP,FCP等等指标，所以一般项目写完以后都会用lighthouse查看，或者接入性能监控系统采集指标.\n\n但是会出现两个问题，如果采用第一种方式，使用lighthouse查看性能指标，这个得依赖开发自身的积极性，他要是开发完就Merge上线，你也不知道具体指标怎么样。如果采用第二种方式，那么同样是发布到线上才能查看。最好的方式就是能强制要求开发在还没发布的时候使用lighthouse查看一下，那么在什么阶段做这个策略呢。聪明的同学可能想到，能不能在CICD构建阶段加上策略。其实是可以的，谷歌也想到了这个场景，提供性能守卫这个lighthouse ci插件\n性能守卫\n性能守卫是一种系统或工具，用于监控和管理应用程序或系统的性能。它旨在确保应用程序在各种负载和使用情况下能够提供稳定和良好的性能。\nLighthouse是一个开源的自动化工具，提供了四种使用方式：\nChrome DevTools\nChrome插件\nNode CLI\nNode模块\n\n其架构实现图是这样的，有兴趣的同学可以深入了解一下\n这里我们我们借助Lighthouse Node模块继承到CICD流程中，这样我们就能在构建阶段知道我们的页面具体性能，如果指标不合格，那么就不给合并MR\n剖析lighthouse-ci实现\nlighthouse-ci实现机制很简单，核心实现步骤如上图，差异就是lighth…",
           "link": "https://juejin.cn/post/7253331974051823675",
           "publishedOn": "2023-07-09T00:22:09.000Z",
-          "wordCount": 3554,
+          "wordCount": 3595,
           "title": "我给项目加了性能守卫插件，同事叫我晚上别睡的太死",
           "imageUrl": null
         },
@@ -786,7 +786,7 @@
           "description": "前言：\n熟悉 ChatGPT 的同学一定还知道 Langchain 这个AI开发框架。由于大模型的知识仅限于它的训练数据内部，它有一个强大的“大脑”而没有“手臂”，而 Langchain 这个框架出现的背景就是解决大模型缺少“手臂”的问题，使得大模型可以与外部接口，数据库，前端应用交互。可以说大模型解决了99%的智能化问题，而 Langchain 就是来解决这最后1%和外部应用的打通。\nLangchain 同时支持 python 和 nodejs ，这意味着即使不熟悉 python 的前端技术栈同学也能够无缝参与到大模型人工智能应用的开发之中。\n在正式介绍 Langchain 之前，首先看一下单纯依靠一个大模型解决用户需求会有什么问题。\n大语言模型的缺陷\n缺陷1：模型无法掌握实时资讯\nChatGPT 可以聊天，进行常识问答，写文章，进行翻译等等。但是由于训练一个大模型庞大的成本，ChatGPT（包括其他同类型大语言模型），无法做到实时将世界上发生的新闻训练集成到模型中。ChatGPT 的知识截止日期是2021年9月。这意味着 ChatGPT 只包含截至2021年9月之前的知识。\n\n直接询问去年发生的新闻得到的明显是错误的信息，英国女王已于2022年9月8日去世\n缺陷2：「一本正经地胡说八道」\n大语言模型核心原理是根据\"概率\"来不断生成下一个 Token 来生成新的内容。只要你给出的大致合乎逻辑的提示词，模型可能会一本正经地开始瞎编，通过概率来生成最合乎逻辑的内容。\n\n\n瞎编内容举例，看起来合乎逻辑但实际上都是错误的\n这是因为大语言模型并不能判断他所生成的内容现实生活中是否是真实存在的，他只是单纯根据\"概率\"来生成最符合语言结构的内容，也就是根据前文的内容去生成后文的内容，并没有能力判断生成的内容是否准确合乎现实场景。如果你用 ChatGPT 写论文并且不加以修改的话，Cha…",
           "link": "https://juejin.cn/post/7252605744255615035",
           "publishedOn": "2023-07-06T11:42:06.000Z",
-          "wordCount": 5987,
+          "wordCount": 5978,
           "title": "使用Nodejs和Langchain开发大模型",
           "imageUrl": null
         }
