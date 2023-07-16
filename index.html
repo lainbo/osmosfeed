@@ -51,6 +51,53 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-16 datetime="2023-07-16T11:34:46.000Z">2023-07-16</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-16 datetime="2023-07-16T11:34:46.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7256176612197695546"
+                        open
+                      >
+                        <summary class="article-expander__title">idea 最稳激活方式：打开 https://idea.eiyou.fun 点击中间《获取专属激活地址》的按钮，支付宝扫码支付后，点击《我已捐赠》稍等片刻就能生成专属的服务器授权...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7256176612197695546">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>idea 最稳激活方式：打开 https://idea.eiyou.fun 点击中间《获取专属激活地址》的按钮，支付宝扫码支付后，点击《我已捐赠》稍等片刻就能生成专属的服务器授权地址,超级稳定！</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-14 datetime="2023-07-14T06:06:00.000Z">2023-07-14</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-14 datetime="2023-07-14T06:06:00.000Z"></time>
           </button>
@@ -760,7 +807,7 @@ NumberPicker 控制按钮放大
 迭代
 拿 Antd 的仓库和 Fusion 相比，还是有蛮大的差距的，这些差距不只是技术水平的差距，可能在 10 年前他们的代码质量是差不多的，但贵在 Antd 是一个健康的迭代状态。
 Antd 已经到了 5.x，Fusion 还是 1.x。这版本后背后意味着 Fusi…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1150,7 +1197,7 @@ Gitee地址
 以上，如果对你有用的话，不妨点赞收藏关注一下，谢谢 🙏
 😊 微信公众号: OrzR3
 💖 不定期更新一些技术类，生活类，读书类的文章。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1609,6 +1656,60 @@ const tree &#x3D; {
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7254066710370025532"
+                        open
+                      >
+                        <summary class="article-expander__title">你写个todo-list要多久？预告：百度某部门日常实习面试即将要考todo-list</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7254066710370025532">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>预告：百度某部门实习面试即将要考todo-list
+mentor让我给候选人出面试题哈哈😄，因为部门主要想招能快速上手业务然后干活的，前端时间在掘金也看到了有面试官考察了手写todo-list，这个小玩意儿还是挺有意思的，考察了数组的一些操作、v-for、动态添加样式，总之数据驱动视图的思想时时刻刻贯穿编码，还是挺考察基本功的。
+因为还要给mentor准备题目的答案，我也写了个todo-list，耗时大概在十多分钟，还记得一年前刚学前端的时候，看尚硅谷的课程写的第一个玩具就是todo-list，当时跟着视频磨磨叽叽的敲出来也老高兴了，还发了个说说哈哈。
+写这篇文章的目的当然是拯救即将要面试的有缘人啦，绝对不是水篇文章来混点经验😂，秋招也开始了，祝大家，也祝自己顺利
+体验地址：https://todo-list.osrc.com
+源码地址：https://github.com/jinrd123/todo-list
+TodoList.vue：
+
+import {ref} from &quot;vue&quot;;
+const todo &#x3D; ref(&quot;&quot;);
+const todoList &#x3D; ref([]);
+const addTodo &#x3D; () &#x3D;&gt; {
+  todoList.value.push({todoName: todo.value, status: false});
+  todo.value &#x3D; &quot;&quot;;
+}
+const deleteTodo &#x3D; () &#x3D;&gt; {
+  todoList.value &#x3D; todoList.value.filter((todo) &#x3D;&gt; {
+    return todo.status !&#x3D;&#x3D; true;
+  })
+}
+const finishTodo &#x3D; (index) &#x3D;&gt; {
+  todoList.value[index].status &#x3D; !todoList.value[index].status;
+}
+
+​
+
+  
+add todo
+  
+done
+    
+delete finished todos
+
+​
+
+​</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7254027262885855291"
                         open
                       >
@@ -1693,7 +1794,7 @@ export default () &#x3D;&gt; {
       {list.map((item, index) &#x3D;&gt; (
         
      …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1931,63 +2032,36 @@ Storybook 始于 2016 年。从那时起，我们开创了组件驱动开发、�
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://speciouspm.zhubai.love/posts/2290064205401174016"
+                        data-accordion-key="https://workreview.zhubai.love/posts/2290183001612890112"
                         open
                       >
-                        <summary class="article-expander__title">AIGC 每周看点 #15 确保更聪明的人工智能系统遵循我们的意图 0703-0709</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://speciouspm.zhubai.love/posts/2290064205401174016">
+                        <summary class="article-expander__title">Keynote #12 怎样做汇报提案？（3）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://workreview.zhubai.love/posts/2290183001612890112">
                           <div class="article-summary-box-inner media-object">
                               <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
-                              <span>本周内容概述  
+                              <span>提前把反馈点设计在提案节奏里  
     
   
-  可控的人工智能  
     
-  OpenAI 的新能力与新限制  
+  小意见：提前和领导沟通好，会上cue一下，让所有人认识到此共识  
     
-  作为服务的合规性是大公司的一种护城河  
-    
-  其他 7 条值得关注的新闻  
-    
-  9 款 AI 产品  
-    
-  2 个指南与 5 个最佳实践  
-    
-  3 篇论文与 1 门课程  
-    
-  以及其他一些趣味信息  
-  
-          
-  01  
-    
-  可控的人工智能  
-    
-  OpenAI 在上周早些时间发表了一份公告，指出可能在十年之内到来的「超级智能」将带来影响力的技术革命，同时也可能隐藏着未知危险。  
-    
-  当前人工智能技术通常是根据人类反馈进行强化学习得，依赖于人类监督人工智能得能力。但面对更聪明的人工智能，这种办法将变得不再可靠，也无法实现针对超级智能的对齐工作。  
-    
-  因此， OpenAI 认为需要一个新的治理机构，来确保比人类聪明得多得人工智能系统遵循人类意图。  
+  大反馈：开放性问题要谨慎无准备地提出  
     
   
-  解决方案是    建立一个达到人类水平的自动对齐研究代理，使用大规模计算拓展对齐能力，以此为基础迭代调整超级智能的发展    。  
     
-  由 OpenAI 联合创始人兼首席科学家 Ilya Sutskever 带领新设立超级对齐团队，计划在未来四年内用大约 20% 的计算资源用于解决超级智能的对齐问题。  
+  如果有人在会上问到你没有准备到的问题？  
     
-  计划广泛分享成果，将促进其它机构模型的一致性和安全性看作是工作的重要组成部分。  
+  1/ 稳住  
+    
+  2/ 安抚  
+    
+  3/ 会后就细节单独沟通  
+    
   
     
-  延展阅读  
-    
   
-      Introducing Superalignment      
-    
-      OpenAI：20%算力投入，四年内控制超级智能      
-  
-      
-  02  
-    
- …</span>
+  《沟通训练营》脱不花</span>
                             </span>
                           </div>
                         </a>
@@ -2648,50 +2722,6 @@ emo时间的思考
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7253610755126427705"
-                        open
-                      >
-                        <summary class="article-expander__title">前端未来框架的选择</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7253610755126427705">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: smartblue
-highlight: an-old-hope
-前言
-我们熟知的三大框架，从vue的响应式的virtual dom处理，到react的fiber架构下的异步更新渲染的virtual dom处理，再到angular的独立设计的dom更新策略、依赖注入等。接下来我会简要描述前端未来框架及发展。
-三大框架的特性
-声明式、虚拟DOM、组件化
-react、angular、vue三个框架的相同点都是声明式在模板中定义我们的循环和显示等等，我们无需命令式的修改dom。我们不再考虑原来的dom更新策略，我们使用了虚拟dom和真实dom的对比，使其在大场景的按需更新节点是非常有用的。同时框架都面向了组件化的开发，我们可以更高效的解决代码复用的问题。
-前端框架趋势
-
-我们可以看出趋势很明显的3个编译阶段的框架，Svelte、Solid、Qwik。
-Svelte 前端框架
-Svelte的语言写法是很像原生js的，性能跟原生js无差别，Svelte解决了框架在运行时层面的虚拟dom比对在复用节点没有那么需要时的性能问题，我们可以直接在编译阶段的真实dom处理。最核心的就是静态分析的编译器，让我们知道哪个变量变更，按需更新节点即可。我们看下Svelte的具体用法：
-
-  let count &#x3D; 0;
-  const increment &#x3D; () &#x3D;&gt; {
-    count +&#x3D; 1;
-  };
-
-
-
-  count is {count}
-
-
-我们看看编译之后的内容是什么
-
-我们可以看到block里面，其实p函数就是更新值、c函数就是创建dom，d就是卸载dom。本质Svelte其实就是帮助我们做到了声明式的处理。那么我们如何监听到数据的变更，Svelte其实…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7253437782333669434"
                         open
                       >
@@ -3287,39 +3317,6 @@ ChatGPT 可以聊天，进行常识问答，写文章，进行翻译等等。但
                 </section>
               </section>
             </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7252569524029685821"
-                        open
-                      >
-                        <summary class="article-expander__title">Mac GlobalProtect Client 安装，亲测有用，安装完最好重启一下电脑</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7252569524029685821">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Mac GlobalProtect Client 安装，亲测有用，安装完最好重启一下电脑</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -3467,30 +3464,6 @@ ChatGPT 可以聊天，进行常识问答，写文章，进行翻译等等。但
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zhiliaofuxiang.zhubai.love/posts/2288171891510640640"
-                        open
-                      >
-                        <summary class="article-expander__title">分享一个拟定合同的网站</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zhiliaofuxiang.zhubai.love/posts/2288171891510640640">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>合同嗖嗖：      https://contract.yoo-ai.com/      
-    
-  在不知道怎么设立合同的时候可以去网站直接搜索关键词或者根据热门板块选择自己想要的模板。  
-    
-  分享这个网站的原因是希望，大家可以在需要签合同前了解合同的格式和内容，少踩坑和查漏补缺，不说害人之心不可有，但是防人之心不可无。  
-    
-  网页截图：</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -3565,6 +3538,68 @@ ChatGPT 可以聊天，进行常识问答，写文章，进行翻译等等。但
 如何开始？
 如何增加你的听众？
 如何提高生产力？</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://adrian.zhubai.love/posts/2287986248193028096"
+                        open
+                      >
+                        <summary class="article-expander__title">#39 问题解决范式：手段-目标分析法</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://adrian.zhubai.love/posts/2287986248193028096">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>西蒙在他的小册子《人类的认知》中提到过一种解决问题的方法，叫做    手段-目标    分析法；  
+    
+  这种解决问题的方法的核心在于我们有一个明确的目标，以及我们有一个现状，目标和现状之间存在着差异，我们需要用各种手段去缩小这种差距。  
+    
+  所以，解决问题实际上就是用各种手段将现状和目标对齐。  
+    
+  但另一方面，现状和目标之间差异并不是单一的，甚至很多时候，现状和目标之间的差异是一个差异集合，正是这种差异的数量之别，导致问题的复杂程度不同。  
+    
+  例如，一个上楼的问题，我们都需要从一楼上到六楼，这时候我们面临的问题就是，我们在一楼，我们的目标在6楼，我们的目标和我们的现状之间存在着5层楼额差异，我们需要通过一定的手段去缩小这个差异。  
+    
+  所以我们要解决掉上到六楼这个问题，我们通常可选的手段就有走楼梯，或者搭乘电梯。  
+    
+  我们从宏观层面来看，我们和六楼之间存在着5层楼的差异，但当我们在选择手段的时候选择乘坐电梯，但当我们乘坐电梯到3楼的时候，电梯因为故障停止了运行，这时候尽管我们的总目标没有发生变化，但有新的差异被引入，而此时也出现了新的子目标，那就是让电梯正常运行。  
+    
+  我们很多的问题解决过程基本都遵循着这样的规律，有一个目标，为了达成这个目标我们要缩短和目标之间的距离，但是缩短目标的距离所采取的手段，本身又可能造成新的差异。  
+    
+  这就是彼得圣吉在《第五项修炼》中说的：“我们今天的问题，都来源于昨天的解决方案”，同样，这也是我们面临的问题总是会复杂的原因。  
+    
+  再比如我们去天安门的例子，我们如果选择搭乘地铁去天安门，那么我们就首先要缩短去地铁站的距离，我们选择骑车去地铁站，我们要找到一辆自行车，同时自行车可以被使用，从一个点到另外一个点之间总有各种差异要解决。  
+    
+  所以我们最常听到的一个问题是，解决这个问题的最佳方案是什么？  
+    
+  这是一个超级烦人的问题，其实很多时候我们并不能确认到底什么样的方案才是最佳方案，我认为主要原因是标准问题：最佳方案的标准，往往在方案被采用之前是未知的。  
+    
+  但问题的定义本身可能会给我们一个用来评判一个方案是否是最佳（或者说目前看来是最优）的框架，也就是我们的解决手段和差异的组合应该是一个阶梯形。  
+    
+  什么意思？  
+    
+  如果一个问题存在4个差异点，我们罗列了4种解决方案，我们可以将这四种方案，和四种差异放到同一个矩阵里面，如下图。  
+        
+  一个问题中有4种差异ABCD，有四种手段1234，当我们采用方案1的时候，我们可以消灭掉差异A，当我们采用方案2的时候，我们可以消灭差异AB，使用手段3可以解决差异ABC，使用手段4可以解决差异ABCD，最终我们的手段和差异的组合就像是一个阶梯一样，这个阶梯就是我们生活中大部分问题的结构。  
+    
+  我们可能采用某种手段可以解决掉其中一种差异，采用另外一种方案，可以解决掉其中好几种差异。我们从这个结构里面可以看出来，我们对于解决问题所采用的手段，是否是最佳的，有一个非常明显的判断标准就是，这个手段是否解决了所有的差异？如果是，那么他就是最佳的手段。  
+    
+  在实践中，我们通常可能面临一个非常现实的处境，我们无法穷举所有的差异，甚至很多的差异的辨别需要依赖经验，这是这个范式中唯一的变量。  
+    
+  以我最近所面临的一个问题作为例子来结束本文，最近我们的一项业务目标中涉及到两种内容的增长，我们姑且定义为内容A，和内容B。  
+    
+  针对这两种内容的增长我们制定了不同的增长策略1和2，也都取得了一定的效果，但在最终复盘的时候我们发现，增长策略1在生效的过程中，同时也大幅带动了内容B的增长，于是我们果断砍掉了增长策略2，加码策略1.  
+    
+  在这个实际的例子，策略1可以解决所有的差异，所以策略2是最佳策略。  
+    
+  最后，或许这个阶梯的结构可以给我们一个新的理解所谓的简单的视角，当我们使用手段的叠加的时候，方案通常是复杂的，但当我们尽可能的去寻找那个可能覆盖掉大量差异的方案时，通常方案就会变得很简洁。  
+    
+  感谢你的阅读~  晚安！</span>
                             </span>
                           </div>
                         </a>
@@ -4165,8 +4200,8 @@ Monica 是由 GPT-4 驱动的人工智能助手，现在注册赠送你 100 个�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5567024135">
-        <time id="build-timestamp" datetime="2023-07-16T09:52:19.659Z">2023-07-16T09:52:19.659Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5567788171">
+        <time id="build-timestamp" datetime="2023-07-16T12:57:34.021Z">2023-07-16T12:57:34.021Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
