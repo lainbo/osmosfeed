@@ -475,16 +475,6 @@
           "wordCount": 521,
           "title": "重庆市綦江区发布高温橙色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230711/t20230711_526325369.html",
-          "author": "国家预警信息发布中心",
-          "description": "垫江县气象台2023年7月11日14时40分发布“高温橙色预警信号”，预计7月11日白天至12日白天，我县桂溪街道、桂阳街道、三溪镇、裴兴镇、坪山镇、白家镇、包家镇、鹤游镇、砚台镇、永平镇、澄溪镇、高峰镇、永安镇、周嘉镇、普顺镇、新民镇、沙坪镇、曹回镇、太平镇、黄沙镇、长龙镇、五洞镇等大部分乡镇（街道）日最高气温将升至37℃以上，请注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230711/t20230711_526325369.html",
-          "publishedOn": "2023-07-11T06:55:04.000Z",
-          "wordCount": 521,
-          "title": "重庆市垫江县发布高温橙色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -516,7 +506,7 @@
           "description": "腾小云导读\n搜狗百科是一个服务于互联网用户的高质量内容平台。文章主要介绍团队在梳理业务时发现百科无线前端项目在研发流程、架构设计、研发效率、页面性能等方面存在诸多问题和痛点。作者团队是如何对这个系统进行升级和改造的？又是如何分析出怎么样的优化方案才是最适合业务的？欢迎各位开发者继续阅读~\n目录\n1 背景\n2 项目收益\n3 升级方案\n3.1 现状分析\n3.2 优化动作\n4 项目成果\n4.1 用户体验\n4.2 带宽成本\n4.3 技术沉淀\n5 总结与展望\n01、背景\n垂类前端研发组在梳理百科业务时，发现百科无线前端在研发流程、架构设计、研发效率、页面性能等方面存在诸多问题和痛点，为更好地支撑产品需求迭代和研发效率提升，优先对百科无线前端技术体系进行一次系统的升级和优化。\n\n02、项目收益\n核心页面指标\n\n03、升级方案\n3.1 现状分析\n本节主要从项目组织、技术架构、研发流程、页面性能、监控等维度来具体分析。\n3.1.1 项目组织现状\n百科无线端由词条页及视频集合二级页、首页及其他二级页、静态页面3个项目组成。因项目拆分较碎，组件、模块、API 接口、Service 等无法有效复用，例如搜索中间页横跨多个项目需要开发多次的问题。\n项目目录没有合理的分层，目录结构和 wenke-dev/wenke-webpack（封装的构件 npm 包）高度耦合，无法移动。\n\n3.1.2 技术架构现状\n技术架构主要由接入层、展现层、渲染层组成，渲染层比较薄，仅做首屏模版渲染。具体如下图：\n\n接入层现状\n接入层通过 IAS 接入，IAS 是一个类似 Nginx 接入服务，名字路由支持北极星、L5、TAF、IP 端口等方式，现状如下：\n路由规则配置存在多乱情况，缺少统一前缀及规范，问题排查和维护比较困难，其中词条页路由规则就有10多个。 已下线路由，没有及时进行清理。 无线端和 PC 端路由适配策略在…",
           "link": "https://juejin.cn/post/7256674113002864701",
           "publishedOn": "2023-07-17T09:51:25.000Z",
-          "wordCount": 1843,
+          "wordCount": 2142,
           "title": "毫秒级突破！腾讯技术团队是如何做前端性能优化的？",
           "imageUrl": null
         },
@@ -546,8 +536,18 @@
           "description": "前言\n如期而至，我独立开发的 JavaScript 框架 Strve.js 迎来了一个大版本5.6.2。此次版本距离上次大版本发布已经接近半年之多，为什么这么长时间没有发布新的大版本呢？主要是研究 Strve.js 如何支持单文件组件，使代码智能提示、代码格式化方面更加友好。之前也发布了 Strve SFC，但是由于其语法规则的繁琐以及是在运行时编译的种种原因，我果断放弃了这个方案的继续研究。而这次的版本5.6.2成功解决了代码智能提示、代码格式化方面友好的问题，另外还增加了很多锦上添花的特性，这些都归功于我们这次版本成功支持JSX语法。熟悉React的朋友知道，JSX语法非常灵活。 而 Strve.js 一大特性也就是灵活操作代码块，这里的代码块我们可以理解成函数，而JSX语法在一定场景下也恰恰满足了我们这种需求。\n那么，我们如何在 Strve 项目中使用JSX语法呢？我们在Strve项目构建工具 CreateStrveApp 预置了模版，你可以选择 strve-jsx 或者 strve-jsx-apps 模版即可。我们使用 CreateStrveApp 搭建完 Strve 项目会发现，同时安装了babelPluginStrve、babelPluginJsxToStrve，这是因为我们需要使用 babelPluginJsxToStrve 将 JSX 转换为标签模版，之后再使用babelPluginStrve 将标签模版转换为 Virtual DOM，进而实现差异化更新视图。\n尝试\n我既然发布出了一个大版本，并且个人还算比较满意。那么下一步我如何推广它呢？毕竟毛遂自荐有时候还是非常有意义的。所以，我打算通过js-framework-benchmark 这个项目评估下性能。\njs-framework-benchmark 是什么？我们这里就简单介绍下 js-framework-…",
           "link": "https://juejin.cn/post/7256250499280158776",
           "publishedOn": "2023-07-16T18:09:49.000Z",
-          "wordCount": 2967,
+          "wordCount": 3003,
           "title": "我终于成功登上了JS 框架榜单，并且仅落后于 React 4 名！",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7255955134131503164",
+          "author": "0522Skylar",
+          "description": "文章封面来自于深圳湾桥，很漂亮！\n本文是阅读源码之后，学习到一些新写法，平常业务开发也可以用起来。在我看来，阅读源码，不但能知道该框架的底层原理，出现bug时，可以快速排查和修复，更重要的是，阅读源码就像向优秀的人学习，掌握我们不曾了解的新知识点，看看别人是如何编写出漂亮的，可复用的代码。\n操作符!.\nonMounted(() => {\n  // 组合在一起,!. 就是“强制执行方法,然后再访问它的返回值”。\n  const items = breadcrumb.value!.querySelectorAll(`.${ns.e('item')}`)\n  if (items.length) {\n    items[items.length - 1].setAttribute('aria-current', 'page')\n  }\n})\n\n取值和监听值变化，不使用watch\nconst checkedValue = computed<CascaderValue>({\n  get() {\n    return cloneDeep(props.modelValue) as CascaderValue\n  },\n  set(val) {\n    emit(UPDATE_MODEL_EVENT, val)\n    emit(CHANGE_EVENT, val)\n    if (props.validateEvent) {\n      formItem?.validate('change').catch((err) => debugWarn(err))\n    }\n  },\n})\n\n透传使用symbol\nprovide(\n      CASCADER_PANEL_INJECTION_KEY, // 透传下去，使用Symbol作为唯一值\n      reactive({\n        c…",
+          "link": "https://juejin.cn/post/7255955134131503164",
+          "publishedOn": "2023-07-16T03:15:45.000Z",
+          "wordCount": 2125,
+          "title": "element-plus源码学习后，我了解到多种多样的写法",
           "imageUrl": null
         },
         {
@@ -606,7 +606,7 @@
           "description": "theme: cyanosis\n\n文件传输是一个常见的需求。对于大文件的下载和上传，直接使用传统的方式可能会遇到性能和用户体验方面的问题。幸运的是，前端技术提供了一些高效的解决方案：文件流操作和切片下载与上传。本文将深入探讨这些技术，帮助你理解它们的原理和实现方法，以优化文件传输效率和提升用户体验。\n一、前端文件流操作\n在前端开发中，文件流操作是指通过数据流的方式处理文件，对文件进行读取、写入和展示等操作。下面详细介绍了前端文件流操作的几个基本概念和技术。\n数据流和文件处理的基本概念\n数据流是指连续的数据序列，可以从一个源传输到另一个目的地。在前端开发中，文件可以被看作数据流的一种形式，可以通过数据流的方式进行处理。 文件处理涉及读取和写入文件的操作，包括读取文件的内容、写入数据到文件，以及对文件进行删除、重命名等操作。\nBlob 对象和 ArrayBuffer：处理二进制数据\n在前端处理文件时，经常需要处理二进制数据。Blob（Binary Large Object）对象是用来表示二进制数据的一个接口，可以存储大量的二进制数据。Blob 对象可以通过构造函数进行创建，也可以通过其他 API 生成，例如通过 FormData 对象获取上传的文件。 而 ArrayBuffer 是 JavaScript 中的一个对象类型，用于表示一个通用的、固定长度的二进制数据缓冲区。我们可以通过 ArrayBuffer 来操作和处理文件的二进制数据。\n代码如下：\nimport React, { useState } from 'react';\n\nfunction FileInput() {\n  const [fileContent, setFileContent] = useState('');\n\n  // 读取文件内容到ArrayBuffer\n  function readFileToAr…",
           "link": "https://juejin.cn/post/7255189826226602045",
           "publishedOn": "2023-07-13T09:18:11.000Z",
-          "wordCount": 4633,
+          "wordCount": 4269,
           "title": "前端文件流、切片下载和上传：优化文件传输效率与用户体验",
           "imageUrl": null
         },
@@ -646,7 +646,7 @@
           "description": "theme: channing-cyan\n前一阵遇到了一个问题，线上平台有时会出现用户正在使用的时候，突然要用户去进行登录，这样会造成很不好的用户体验，但是当时一直没有好的思路因此搁置了下来；通过零散时间查询资料以及思考，最终解决了这个问题，接下来跟大家分享一下！\n环境\n请求采用的 Axios V1.3.2。\n平台的采用的 JWT(JSON Web Tokens) 进行用户登录鉴权。\n（拓展：JWT 是一种认证机制，让后台知道该请求是来自于受信的客户端；更详细的可以自行查询相关资料）\n问题现象\n线上用户在使用的时候，偶尔会出现突然跳转到登录页面，需要重新登录的现象。\n原因\n突然跳转到登录页面，是由于当前的 token 过期，导致请求失败；在 axios 的响应拦截axiosInstance.interceptors.response.use中处理失败请求返回的状态码 401，此时得知token失效，因此跳转到登录页面，让用户重新进行登录。\n平台目前的逻辑是在 token 未过期内，用户登录平台可直接进入首页，无需进行登录操作；因此就存在该现象：用户打开平台，由于此时 token 未过期，用户直接进入到了首页，进行其他操作。但是在用户操作的过程中，token 突然失效了，此时就会出现突然跳转到登录页面，严重影响用户的体验感！\n注：目前线上项目中存在数据大屏，一些实时数据的显示；因此存在用户长时间停留在大屏页面，不进行操作，查看实时数据的情况）\n切入点\n怎样及时的、在用户感知不到的情况下更新token？\n当 token 失效的情况下，出错的请求可能不仅只有一个；当失效的 token 更新后，怎样将多个失败的请求，重新发送？\n操作流程\n好了！经过了一番分析后，我们找到了问题的所在，并且确定了切入点；那么接下来让我们实操，将问题解决掉。\n前要：\naccessToken（用于请求头中…",
           "link": "https://juejin.cn/post/7254572706536734781",
           "publishedOn": "2023-07-12T03:45:01.000Z",
-          "wordCount": 2250,
+          "wordCount": 1920,
           "title": "项目中前端如何实现无感刷新 token！",
           "imageUrl": null
         },
@@ -656,7 +656,7 @@
           "description": "theme: devui-blue\n大量v-if的弊端\n在实际项目中，通常会遇到存在大量的业务条件选择的场景，这种情况下如果使用大量的\"v-if\"和\"v-else\"指令，会造成\n1、页面渲染性能下降，加载时间增加： 每个v-if 都需要遍历并计算这些条件，尤其是在条件选择复杂且计算开销较大时，会导致初始渲染的耗时增加，从而延长页面的加载时间。\n2、冗余代码增加：过多的v-if 会导致模板代码变得冗长和难以维护。导致代码可读性降低，难以理解和调试。\n3、可维护下降：当模板中存在大量的v-if时，由于每个条件判断都是独立的，修改其中一个条件可能需要修改多个地方，增加了出错的可能性，并使维护变得复杂。\n4、内存增加： 每个v-if条件都会生成对应的DOM元素，并在切换条件时进行创建和销毁，当模板中存在大量的v-if时，会导致内存占用增加，对性能和资源消耗产生影响。\n可选的优化方案\n利用计算属性\n将复杂的条件逻辑转移到计算属性中处理，避免在template模板中频繁使用\"v-if\"和\"v-else\"。通过计算属性的返回值来控制渲染的内容, 这样使得template代码更简洁，条件处理的逻辑更清晰且更易维护。\n<template> \n    <div> \n        <span v-if=\"displayText\">{{ displayText }}</span> \n    </div> \n </template> \n <script> \n     export default { \n         data() { \n             return { \n                 // ... \n              }; \n         }, \n         computed: { \n             displayText() { \n…",
           "link": "https://juejin.cn/post/7254559214588575802",
           "publishedOn": "2023-07-12T03:32:11.000Z",
-          "wordCount": 2022,
+          "wordCount": 2359,
           "title": "如何优化Vue template 中的大量条件选择v-if",
           "imageUrl": null
         },
@@ -681,22 +681,12 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7254397517968867365",
-          "author": "超神熊猫",
-          "description": "theme: condensed-night-purple\n前言\nwill-change 一个既陌生又熟悉的属性，以前在使用这个属性的时候，单纯是因为要做性能优化，加上will-change会使得动画变得流畅一些，但是实际上到底是什么原因导致加上will-change就能使得动画流畅，它有什么弊端？\n<template>\n  <div class=\"list\">\n    <div class=\"item\" v-for=\"i,k in lists\" :key=\"k\">\n      ...\n    </div>\n  </div>\n</template>\n\n<style>\n.item {\n  will-change: transform;\n}\n</style>\n\n给一个循环的元素加入了will-cahnge，这意味着网页上会有大量的元素加入了will-change，并且长留存\n在现代网页设计中，性能优化成为了一个重要的议题。一种关键的优化工具是CSS属性will-change，它可以告诉浏览器元素将要发生的变化，从而提前分配资源并优化渲染。本文将深入探讨will-change的使用和原理，以帮助开发者充分发挥其潜力，提升网页性能。\n一、什么是will-change？\nwill-change是一个CSS属性，它可以告诉浏览器某个元素将要发生的变化。通过明确指定这些变化，浏览器可以事先分配和优化相应的资源，从而提升渲染的性能。\n二、will-change的使用方法\n要使用will-change，只需将它应用于你要进行性能优化的元素上。\n.element {\n  will-change: transform;\n}\n\n在上述示例中，我们告诉浏览器，该元素即将发生变换（transform），以便浏览器在渲染时提前分配所需的资源。\n值得注意的是，因为will-change是为了性能优化而设计…",
-          "link": "https://juejin.cn/post/7254397517968867365",
-          "publishedOn": "2023-07-11T07:45:55.000Z",
-          "wordCount": 1378,
-          "title": "🐻🐻🐻我只想使用will-change，又有什么错？",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7253437782333669434",
           "author": "写代码的浩",
           "description": "highlight: a11y-dark\ntheme: devui-blue\n前端已死！这个声音从年初开始，持续了小半年。紧接着，一堆的前端前辈出来说，前端不会死。哈哈哈，我觉得这个话题很有意思。也来蹭个热点。嗯，现在已经不算热点了，这个话题已经凉了。\n最近想法很多，总想写点东西，就拿这个话题开始吧。希望能对大家有帮助。\n什么情况\n首先，要看看为什么会有这个观点。原因也很简单，自从去年开始，各大公司都开始裁员，然后HC也开始减少。但是因为前几年互联网工资收入高，每年毕业的应届生那是一年比一年多。前端培训班也火热的不行，每年都向社会输送大面积的前端开发。\n所以，从供需角度看，前端开发找工作，尤其是刚毕业和刚培训毕业的前端开发，今年找工作就是地狱模式。所以有人说“前端已死”，自然很快就能获得共鸣。\n另外的声音\n然后，有意思的来了。“前端已死”这个话题火了后，各大前端自媒体，前端前辈都出来发声。观点出奇的一致：前端不会死。一下子就把前端已死的观点给压下去了。这种社区声音180度的大转弯也是少见。\n到底死没死\n说完现象，我说下我的观点。\n“前端已死”的声音能获得共鸣，说明前端已经发展到了一个关键的时间点。\n只要还有页面，还有小程序，前端就不会死。\n不会死，并不是说能活的很好。\n行业周期\n互联网在行业分类中属于第三产业，也就是服务业。服务业的特点就是周期性。如果所有服务业的周期是往下走的，互联网也好不了。三年疫情，大家都知道，服务业已经被折腾的不行了，即使今年放开了，大家还敢开线下店吗？被互联网服务的行业大部分都过的不好，互联网能好吗。\n当然，后面随着经济复苏，互联网也会慢慢恢复景气。但是这里还有另外一个点，由于互联网前几年工资都太高了，年年倒挂，导致选计算机专业的人越来越多。以大学四年计算，后面3年每年毕业的计算机专业的学生，还是会持续增加的。\n所以呢，从供需角度，技术互联网恢复景气了，互联网招聘未必会恢复景气。\n另外，就前端开发而言，我感觉好多东西都很成熟了。最近看技术社区的文章，感觉很久没有看到很新的内容了(也许是推荐系统搞得信息茧房)。大家都在几个领域里面深挖。如果没有新的方向出来，真的很难容纳这么多的求职者。后面看看AI能不能创新出一波职位吧。\n所以呢，从互联网行业和前端行业来看，前端已经发展到了一个关键点，后面如果没有新的方向出来，即使互联网恢复景气，求职也不会像以前那么轻松了。\n技术周期\n从我毕业，基本上都在做互联网，期间其实经历过好几轮技术迭代。比如最早的Flash, 到PHP, PC端的JQuery。你很难在招聘网站上找到要求这些技术的岗位了。\n新方向在哪里\n其实聊了这么多，本质就是一个供需。供需这个角度真的太强大了，能解释很多问题。如果未来没有一个新的大方向出现，那么在岗位需求变化不大的情况下，每年大量学生毕业，也就是供应增多，求职困难是必然的。\nAI。从去年底开始，AI持续火热，目前虽然有退烧，但是AI的趋势已经明确。后面要看的是，AI是不是需要大量的前端工作。这块大家可以说说自己的判断。\nVR元宇宙。Meta搞元宇宙，差点把自己搞死，现在苹果也出VR设备，观察下能不能把这个行业带起来。大家说有没有可能。\nWeb3。去年年初，Web3还很火了的，现在好像，嗯，一般般。后面能不能再次爆发，也要继续观察。大家也可以说说自己的开发。\n扯一句\n最后扯一句。我看了好多前端前辈对“前端已死”的看法，都说前端不会死，会死的都是初级前端，前端要持续学习，要让自己不可替代。说实话，我觉得这都是屁话。写代码的谁不是从初级开始的呢，现在是完全不给初级的机会，断档了！写代码的人，已经是最爱学习的那一批人了吧，永远在学习新东西。还有让自己不可替代，公司会想办法让你可替代，后面聊一聊不可替代这个话题，我也有很多想说的。\n结束\n最近新弄了一个公粽号：写代码的浩，求关注 😄。\n后面会逐步把掌握的前端知识以及职场知识沉淀下来。 如果还有什么疑问或者建议，可以多多交流，原创文章，文笔有限，才疏学浅，文中若有不正之处，万望告知。",
           "link": "https://juejin.cn/post/7253437782333669434",
           "publishedOn": "2023-07-09T07:24:37.000Z",
-          "wordCount": 1089,
+          "wordCount": 1169,
           "title": "迷茫的前端们",
           "imageUrl": null
         }
@@ -708,12 +698,22 @@
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
         {
+          "id": "7257012010515513402",
+          "author": "步伐者",
+          "description": "有使用Google日历 用日常工作的吗？ 聊聊它的缺点吧！",
+          "link": "https://juejin.cn/pin/7257012010515513402",
+          "publishedOn": "2023-07-18T08:21:15.000Z",
+          "wordCount": 456,
+          "title": "有使用Google日历 用日常工作的吗？ 聊聊它的缺点吧！",
+          "imageUrl": null
+        },
+        {
           "id": "7256958758794657848",
           "author": "不会撩妹的楚留香",
           "description": "推荐一个设置 cookie 的 chrome 插件\nhttps://chrome.google.com/webstore/detail/easy-cookies/gaponncihgmdkgepddfjajfajhjpddkp?hl=zh-CN&authuser=0\nhttps://github.com/Dolov/chrome-easy-cookies",
           "link": "https://juejin.cn/pin/7256958758794657848",
           "publishedOn": "2023-07-18T05:49:13.000Z",
-          "wordCount": 482,
+          "wordCount": 479,
           "title": "推荐一个设置 cookie 的 chrome 插件 https://chrome.google.com/webstore/detail/easy-cookies/gaponncihgmdkgepddfjajfajhjpddkp?hl=zh-CN&authuser=0 https:/...",
           "imageUrl": null
         },
@@ -723,7 +723,7 @@
           "description": "[7210002980895916043#挑战每日一条沸点#] #工欲善其事必先利其器 #开发工具推荐 #Seal软件\nIT Tools 是一个免费开源的方便在线工具集合，供开发人员和 IT 工作人员使用。它包括令牌生成器、大小写转换器、基本转换器、QR 代码生成器、Git cheatsheet、lorem ipsum 生成器等等！\n速速 get：https://it-tools.tech/",
           "link": "https://juejin.cn/pin/7256964915133661240",
           "publishedOn": "2023-07-18T03:47:07.000Z",
-          "wordCount": 506,
+          "wordCount": 503,
           "title": "[7210002980895916043#挑战每日一条沸点#] #工欲善其事必先利其器 #开发工具推荐 #Seal软件 IT Tools 是一个免费开源的方便在线工具集合，供开发人员和 IT 工作...",
           "imageUrl": null
         },
@@ -733,7 +733,7 @@
           "description": "请教一下各位大佬，有没有什么工具可以将支付宝小程序项目转换为uniapp项目",
           "link": "https://juejin.cn/pin/7256672676094181435",
           "publishedOn": "2023-07-17T10:25:10.000Z",
-          "wordCount": 453,
+          "wordCount": 450,
           "title": "请教一下各位大佬，有没有什么工具可以将支付宝小程序项目转换为uniapp项目",
           "imageUrl": null
         },
@@ -743,7 +743,7 @@
           "description": "问个问题，mac卸载了一个应用，在访达的应用程序里面是看不到这个的，但是在启动台里面会有一个这个在，点了也没反应，请问一下这个怎么才能删",
           "link": "https://juejin.cn/pin/7256620538093060155",
           "publishedOn": "2023-07-17T08:04:31.000Z",
-          "wordCount": 460,
+          "wordCount": 457,
           "title": "问个问题，mac卸载了一个应用，在访达的应用程序里面是看不到这个的，但是在启动台里面会有一个这个在，点了也没反应，请问一下这个怎么才能删",
           "imageUrl": null
         },
@@ -753,7 +753,7 @@
           "description": "有没有比较好用的思维导图组件？",
           "link": "https://juejin.cn/pin/7256607606465347643",
           "publishedOn": "2023-07-17T06:56:21.000Z",
-          "wordCount": 455,
+          "wordCount": 452,
           "title": "有没有比较好用的思维导图组件？",
           "imageUrl": null
         },
@@ -773,7 +773,7 @@
           "description": "idea 最稳激活方式：打开 https://idea.eiyou.fun 点击中间《获取专属激活地址》的按钮，支付宝扫码支付后，点击《我已捐赠》稍等片刻就能生成专属的服务器授权地址,超级稳定！",
           "link": "https://juejin.cn/pin/7256176612197695546",
           "publishedOn": "2023-07-16T11:34:46.000Z",
-          "wordCount": 461,
+          "wordCount": 464,
           "title": "idea 最稳激活方式：打开 https://idea.eiyou.fun 点击中间《获取专属激活地址》的按钮，支付宝扫码支付后，点击《我已捐赠》稍等片刻就能生成专属的服务器授权...",
           "imageUrl": null
         },
@@ -783,7 +783,7 @@
           "description": "在开发过程中经常面临繁琐的任务重复，就真的没有一种工具可以自动化这些任务[流泪]让人喘口气吗？",
           "link": "https://juejin.cn/pin/7255493179942780965",
           "publishedOn": "2023-07-14T06:06:00.000Z",
-          "wordCount": 449,
+          "wordCount": 446,
           "title": "在开发过程中经常面临繁琐的任务重复，就真的没有一种工具可以自动化这些任务[流泪]让人喘口气吗？",
           "imageUrl": null
         },
@@ -793,7 +793,7 @@
           "description": "https://github.com/devlive-community/openai-java-sdk\n这个 SDK 简直是太好用了\n赶快尝试使用",
           "link": "https://juejin.cn/pin/7255217876365017145",
           "publishedOn": "2023-07-13T14:00:35.000Z",
-          "wordCount": 464,
+          "wordCount": 461,
           "title": "https://github.com/devlive-community/openai-java-sdk 这个 SDK 简直是太好用了 赶快尝试使用",
           "imageUrl": null
         },
@@ -803,7 +803,7 @@
           "description": "#工欲善其事必先利其器 #开发工具推荐 #Seal软件\n利用来自 Git 和 Jira 的数据驱动洞察和见解，以了解和掌握开发团队的进度。Hivel 消除了软件工程流程中的瓶颈，从而提高发布的速度、吞吐量和质量。通过识别倦怠迹象并使用健康的指标，来衡量和提高开发人员的生产力。\n工具官网：https://www.hivel.ai/",
           "link": "https://juejin.cn/pin/7255126807552737339",
           "publishedOn": "2023-07-13T06:20:11.000Z",
-          "wordCount": 488,
+          "wordCount": 485,
           "title": "#工欲善其事必先利其器 #开发工具推荐 #Seal软件 利用来自 Git 和 Jira 的数据驱动洞察和见解，以了解和掌握开发团队的进度。Hivel 消除了软件工程流程中的瓶颈...",
           "imageUrl": null
         },
@@ -813,7 +813,7 @@
           "description": "发现一个学习语言的神仙网站，很多都是免费哦\nCodecademy",
           "link": "https://juejin.cn/pin/7254792161115914297",
           "publishedOn": "2023-07-12T07:15:51.000Z",
-          "wordCount": 454,
+          "wordCount": 451,
           "title": "发现一个学习语言的神仙网站，很多都是免费哦 Codecademy",
           "imageUrl": null
         },
@@ -823,7 +823,7 @@
           "description": "AOC显示器有推荐吗？铁汁们",
           "link": "https://juejin.cn/pin/7254793459122044989",
           "publishedOn": "2023-07-12T07:04:55.000Z",
-          "wordCount": 449,
+          "wordCount": 446,
           "title": "AOC显示器有推荐吗？铁汁们",
           "imageUrl": null
         },
@@ -833,7 +833,7 @@
           "description": "#工欲善其事必先利其器 #开发工具推荐 #Seal软件\nBito 的 AI 助手将 ChatGPT 带到您的 IDE 或 Chrome 中，让您可以轻松编写代码、理解语法、编写测试用例、解释代码、注释代码、检查安全性，甚至解释高级概念。好使！\n火速尝鲜：https://bito.ai/",
           "link": "https://juejin.cn/pin/7254574621898899513",
           "publishedOn": "2023-07-12T03:43:53.000Z",
-          "wordCount": 500,
+          "wordCount": 497,
           "title": "#工欲善其事必先利其器 #开发工具推荐 #Seal软件 Bito 的 AI 助手将 ChatGPT 带到您的 IDE 或 Chrome 中，让您可以轻松编写代码、理解语法、编写测试用例、解释...",
           "imageUrl": null
         },
@@ -843,7 +843,7 @@
           "description": "jym，有没有好用的ssh和ftp工具推荐一些，我的xshell又㕛叒叕打不开了",
           "link": "https://juejin.cn/pin/7254699605669445691",
           "publishedOn": "2023-07-12T03:35:48.000Z",
-          "wordCount": 449,
+          "wordCount": 446,
           "title": "jym，有没有好用的ssh和ftp工具推荐一些，我的xshell又㕛叒叕打不开了",
           "imageUrl": null
         },
@@ -853,7 +853,7 @@
           "description": "功能强大的开源数据中台系统 DataCap 1.12.0 发布\nhttps://datacap.edurt.io/release/latest.html",
           "link": "https://juejin.cn/pin/7254725753169707068",
           "publishedOn": "2023-07-12T03:28:02.000Z",
-          "wordCount": 474,
+          "wordCount": 471,
           "title": "功能强大的开源数据中台系统 DataCap 1.12.0 发布 https://datacap.edurt.io/release/latest.html",
           "imageUrl": null
         },
@@ -863,7 +863,7 @@
           "description": "开源项目visualization-collection，一个专注于前端视觉效果的集合应用，包含CSS动效、Canvas动画、人工智能应用等上百个案例，今天终于发布了Vue版本，各位使用Vue开发的小伙伴赶紧来围观啦。\n应用地址(PC端)：http://hepengwei.cn\n源码地址：https://github.com/hepengwei/visualization-collection-vue",
           "link": "https://juejin.cn/pin/7254439788048252985",
           "publishedOn": "2023-07-11T10:53:30.000Z",
-          "wordCount": 451,
+          "wordCount": 448,
           "title": "开源项目visualization-collection，一个专注于前端视觉效果的集合应用，包含CSS动效、Canvas动画、人工智能应用等上百个案例，今天终于发布了Vue版本，各位使用...",
           "imageUrl": null
         },
@@ -873,7 +873,7 @@
           "description": "有没有大佬给推荐一个svn工具。在mac中可以合并分支的那种呀。。那次代码冲突以后合并太难了。",
           "link": "https://juejin.cn/pin/7254335110009880613",
           "publishedOn": "2023-07-11T03:10:32.000Z",
-          "wordCount": 450,
+          "wordCount": 447,
           "title": "有没有大佬给推荐一个svn工具。在mac中可以合并分支的那种呀。。那次代码冲突以后合并太难了。",
           "imageUrl": null
         },
@@ -883,7 +883,7 @@
           "description": "[7243698841848348730#每天一个知识点#] VulcanSQL是一个開源的給数据应用的数据API框架，让懂得编写SQL的朋友们，只需编写SQL模板，就能快速创建和分享数据API。其他构建API的底层技术和细节，VulcanSQL帮你处理。欢迎大家来看看並給予我們回饋！[微笑][微笑][微笑]",
           "link": "https://juejin.cn/pin/7254143696484007995",
           "publishedOn": "2023-07-11T01:38:48.000Z",
-          "wordCount": 566,
+          "wordCount": 519,
           "title": "[7243698841848348730#每天一个知识点#] VulcanSQL是一个開源的給数据应用的数据API框架，让懂得编写SQL的朋友们，只需编写SQL模板，就能快速创建和分享数据API...",
           "imageUrl": null
         },
@@ -893,18 +893,8 @@
           "description": "《泛积木-低代码》微前端、零前端的低代码开发框架。\nhttps://www.fxss.work/\n​欢迎大家免费注册体验并转发，好用支持下单噢[奸笑][奸笑][奸笑]",
           "link": "https://juejin.cn/pin/7254101170950733861",
           "publishedOn": "2023-07-10T10:57:44.000Z",
-          "wordCount": 455,
+          "wordCount": 452,
           "title": "《泛积木-低代码》微前端、零前端的低代码开发框架。 https://www.fxss.work/ ​欢迎大家免费注册体验并转发，好用支持下单噢[奸笑][奸笑][奸笑]",
-          "imageUrl": null
-        },
-        {
-          "id": "7254066710368600124",
-          "author": "DD111",
-          "description": "[7073670907851440160#新人报道#] 本周四晚20:00在线研讨会开放报名中！\nNVIDIA NeMo Guardrails 是一个开源工具库，致力于使LLM大语言模型的使用更加合法合规。它可以轻松地为基于 LLM 的对话系统添加可编程护栏，用以避免讨论违法违规内容，从而构建可靠、安全的 LLM 对话系统。\n随着 NeMo Guardrails 0.2.0 新版本的发布，除了支持 OpenAI，它还扩展支持了诸如 AI21、Huggingface-Hub 等更多的AI对话引擎和大语言模型。本次分享将为您抢先揭秘：如何在 NeMo Guardrails 中自定义使用 LLM 大语言模型。\n对 NLP、LLM 大语言模型和对话式 AI 感兴趣、有开发需求的开发者朋友们请不要错过！\n通过本次研讨会，您将了解到：\n·       NVIDIA 开源工具库NeMo Guardrails 介绍\n·       NeMo Guardrails 中的Colang语言\n·       NeMo Guardrails 与 Langchain 结合使用\n·       在NeMo Guardrails中自定义使用LLM大语言模型\n·       全网首发：Huggingface与Ai21在NeMo Guardrails中应用的代码实战",
-          "link": "https://juejin.cn/pin/7254066710368600124",
-          "publishedOn": "2023-07-10T09:01:22.000Z",
-          "wordCount": 585,
-          "title": "[7073670907851440160#新人报道#] 本周四晚20:00在线研讨会开放报名中！ NVIDIA NeMo Guardrails 是一个开源工具库，致力于使LLM大语言模型的使用更加合法合规。...",
           "imageUrl": null
         }
       ]
