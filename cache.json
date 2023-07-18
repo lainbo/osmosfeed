@@ -93,6 +93,16 @@
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/64b66acfe54c189738335791",
+          "author": null,
+          "description": "哈哈哈哈哈，https://github.com/danielmiessler/SecLists/pull/155",
+          "link": "https://m.okjike.com/originalPosts/64b66acfe54c189738335791",
+          "publishedOn": "2023-07-18T10:34:55.000Z",
+          "wordCount": 402,
+          "title": "发布了: 哈哈哈哈哈，https://github.com/danielmiessler/SecLists/pull/155",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FhQVfvhrgZeJuVarO0IzmPeGv0jAv3.jpeg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/64b49317e54c189738028350",
           "author": null,
           "description": "高德 VIP 挺会玩，试用期三个月。\n已经通过了，我来看看有啥不同😅",
@@ -181,16 +191,6 @@
           "wordCount": 397,
           "title": "发布了: 哈哈哈",
           "imageUrl": "https://cdnv2.ruguoapp.com/FnQdrEsGPoZ8nB9vxGOtenkFqR0sv3.png?imageMogr2/auto-orient/format/jpeg/thumbnail/300x2000%3E/quality/70/interlace/1"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/64abb43c7b5daee543ebdc97",
-          "author": null,
-          "description": "有人喜欢群聊，有人喜欢私聊。喜欢群聊的人是想通过观点讨论，获得一个思维更开阔的解，毕竟不同的人掌握的信息以及对信息的理解是存在偏差的，带来的问题就是讨论容易发散；喜欢私聊的人是为了最小化沟通，避免引入更多观点和讨论，将决策收敛到一个最小的域。不过哪一种方式，都是为了达成共识的最大公约数，让更多人满意。",
-          "link": "https://m.okjike.com/originalPosts/64abb43c7b5daee543ebdc97",
-          "publishedOn": "2023-07-10T07:33:16.000Z",
-          "wordCount": 385,
-          "title": "发布了: 有人喜欢群聊，有人喜欢私聊。喜欢群聊的人是想通过观点讨论，获得一个思维更开阔的解，毕竟不同的人掌握的信息以及对信息的理解是存在偏差的，带来的问...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         }
       ]
     },
@@ -506,7 +506,7 @@
           "description": "腾小云导读\n搜狗百科是一个服务于互联网用户的高质量内容平台。文章主要介绍团队在梳理业务时发现百科无线前端项目在研发流程、架构设计、研发效率、页面性能等方面存在诸多问题和痛点。作者团队是如何对这个系统进行升级和改造的？又是如何分析出怎么样的优化方案才是最适合业务的？欢迎各位开发者继续阅读~\n目录\n1 背景\n2 项目收益\n3 升级方案\n3.1 现状分析\n3.2 优化动作\n4 项目成果\n4.1 用户体验\n4.2 带宽成本\n4.3 技术沉淀\n5 总结与展望\n01、背景\n垂类前端研发组在梳理百科业务时，发现百科无线前端在研发流程、架构设计、研发效率、页面性能等方面存在诸多问题和痛点，为更好地支撑产品需求迭代和研发效率提升，优先对百科无线前端技术体系进行一次系统的升级和优化。\n\n02、项目收益\n核心页面指标\n\n03、升级方案\n3.1 现状分析\n本节主要从项目组织、技术架构、研发流程、页面性能、监控等维度来具体分析。\n3.1.1 项目组织现状\n百科无线端由词条页及视频集合二级页、首页及其他二级页、静态页面3个项目组成。因项目拆分较碎，组件、模块、API 接口、Service 等无法有效复用，例如搜索中间页横跨多个项目需要开发多次的问题。\n项目目录没有合理的分层，目录结构和 wenke-dev/wenke-webpack（封装的构件 npm 包）高度耦合，无法移动。\n\n3.1.2 技术架构现状\n技术架构主要由接入层、展现层、渲染层组成，渲染层比较薄，仅做首屏模版渲染。具体如下图：\n\n接入层现状\n接入层通过 IAS 接入，IAS 是一个类似 Nginx 接入服务，名字路由支持北极星、L5、TAF、IP 端口等方式，现状如下：\n路由规则配置存在多乱情况，缺少统一前缀及规范，问题排查和维护比较困难，其中词条页路由规则就有10多个。 已下线路由，没有及时进行清理。 无线端和 PC 端路由适配策略在…",
           "link": "https://juejin.cn/post/7256674113002864701",
           "publishedOn": "2023-07-17T09:51:25.000Z",
-          "wordCount": 2142,
+          "wordCount": 2140,
           "title": "毫秒级突破！腾讯技术团队是如何做前端性能优化的？",
           "imageUrl": null
         },
@@ -518,6 +518,16 @@
           "publishedOn": "2023-07-17T07:34:25.000Z",
           "wordCount": 1617,
           "title": "我们正在开发一套组件库，欢迎你的加入~",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7256386855721074747",
+          "author": "nuIl",
+          "description": "leaferjs，全新的渲染引擎\n1. 前言\n前几天群里有人发了一个新 Canvas 渲染引擎的图片，看数据和宣传口号相当炸裂，号称只用 1.5s 可以渲染 100 万个矩形，还是个国产的。\n\n出于个人兴趣，就花了一点儿时间研究了一下感兴趣的点，如果有错误，希望可以指出。\n2. 架构设计\n从火焰图上可以看出，leaferjs 创建节点非常轻量，只做了 setAttr 的操作。\n\n大部分耗时集中在创建节点和布局，渲染仅仅花了3ms。\n\n那 leaferjs 为什么有这么好的性能呢？我简单去看了一下源码。\nleafer 主要包括了 leafer 和 ui 两个 git 仓库，核心渲染能力在 leafer 里面，ui 封装了一些绘制类，比如 Image、Line 等等。\n先看一下官网上一个详细的用法：\nimport { App, Leafer, Rect } from 'leafer-ui'\n\nconst app = new App({ view: window, type: 'user' }) \n\nconst backgroundLayer = new Leafer()\nconst contentLayer = new Leafer({ type: 'design' })\nconst wireframeLayer = new Leafer()\n\napp.add(backgroundLayer)\napp.add(contentLayer)\napp.add(wireframeLayer)\n\nconst background = new Rect({ width: 800, height: 600, fill: 'gray' })\nconst rect = new Rect({ x: 100, y: 100, fill: '#32cd79', draggable: true })\nc…",
+          "link": "https://juejin.cn/post/7256386855721074747",
+          "publishedOn": "2023-07-17T02:21:10.000Z",
+          "wordCount": 3325,
+          "title": "leaferjs，全新的 Canvas 渲染引擎",
           "imageUrl": null
         },
         {
@@ -536,7 +546,7 @@
           "description": "前言\n如期而至，我独立开发的 JavaScript 框架 Strve.js 迎来了一个大版本5.6.2。此次版本距离上次大版本发布已经接近半年之多，为什么这么长时间没有发布新的大版本呢？主要是研究 Strve.js 如何支持单文件组件，使代码智能提示、代码格式化方面更加友好。之前也发布了 Strve SFC，但是由于其语法规则的繁琐以及是在运行时编译的种种原因，我果断放弃了这个方案的继续研究。而这次的版本5.6.2成功解决了代码智能提示、代码格式化方面友好的问题，另外还增加了很多锦上添花的特性，这些都归功于我们这次版本成功支持JSX语法。熟悉React的朋友知道，JSX语法非常灵活。 而 Strve.js 一大特性也就是灵活操作代码块，这里的代码块我们可以理解成函数，而JSX语法在一定场景下也恰恰满足了我们这种需求。\n那么，我们如何在 Strve 项目中使用JSX语法呢？我们在Strve项目构建工具 CreateStrveApp 预置了模版，你可以选择 strve-jsx 或者 strve-jsx-apps 模版即可。我们使用 CreateStrveApp 搭建完 Strve 项目会发现，同时安装了babelPluginStrve、babelPluginJsxToStrve，这是因为我们需要使用 babelPluginJsxToStrve 将 JSX 转换为标签模版，之后再使用babelPluginStrve 将标签模版转换为 Virtual DOM，进而实现差异化更新视图。\n尝试\n我既然发布出了一个大版本，并且个人还算比较满意。那么下一步我如何推广它呢？毕竟毛遂自荐有时候还是非常有意义的。所以，我打算通过js-framework-benchmark 这个项目评估下性能。\njs-framework-benchmark 是什么？我们这里就简单介绍下 js-framework-…",
           "link": "https://juejin.cn/post/7256250499280158776",
           "publishedOn": "2023-07-16T18:09:49.000Z",
-          "wordCount": 3003,
+          "wordCount": 2967,
           "title": "我终于成功登上了JS 框架榜单，并且仅落后于 React 4 名！",
           "imageUrl": null
         },
@@ -596,7 +606,7 @@
           "description": "highlight: monokai\n本文视频地址\n前言\n大家好，我是小马。\n去年，我开发了一款微信排版编辑器 MDX Editor。它可以自定义组件、样式，生成二维码，代码 Diff 高亮，并支持导出 Markdown 和 PDF 等功能。然而，作为一个微信排版编辑器，它的受众面比较有限，并不适用于每个人。因此，我基于该编辑器开发了 MDX Editor 桌面版，它支持 Mac、Windows 和 Linux，并且非常轻量，整个应用的大小只有 7M。现在，MDX Editor 桌面版已经成为我的创作工具。如果你对它感兴趣，可以在文末获取。\n演示\n技术选型\n开发 MDX Editor 桌面 App，我使用了如下核心技术栈:\nReact (Next.js)\nTauri —— 构建跨平台桌面应用的开发框架\nTailwind CSS —— 原子类样式框架，支持深色皮肤\nAnt Design v5 —— 使用\"Tree\"组件管理文档树\n功能与实现\n1. MDX 自定义组件\nMDX 结合了 Markdown 和 JSX 的优点，它让你可以在 Markdown 文档中直接使用 React 组件，构建复杂的交互式文档。如果你熟悉 React，你可以在 \"Config\" 标签页中自定义你的组件；如果你不是一个程序员，你也可以基于现有模板进行创作。例如，模板中的 \"Gallery\" 组件实际上就是一个 \"flex\" 布局。\n代码\n\nfunction Gallery({children}) {\n\nreturn <div className=\"flex gallery\">\n\n{children}\n\n</div>\n\n}\n\n\n\n\n2. 深色皮肤\n对于笔记软件来说，深色皮肤已经成为一个不可或缺的部分。MDX Editor 使用 Tailwind CSS 实现了深色皮肤。\n\n3. 多主题\n编辑器内置了 10+个文档主题和代码主题，你可以点击右上方的设置按钮进行切换。\n\n4. 本地文件管理\n桌面 App 还支持管理本地文件。你可以选择一个目录，或者将你的文档工作目录拖入编辑器，便能够实时地在编辑器中管理文档。\n\n当我在开发这个功能之前，我曾担心自己不熟悉 Rust，无法完成这个功能。但是，熟悉了 Tauri 文档之后，我发现其实很简单。Tauri 提供了文件操作的 API，使得我们不需要编写 Rust 代码，只需要调用 Tauri API 就能完成文件管理。\nimport { readTextFile, BaseDirectory } from '@tauri-apps/api/fs';\n\n// 读取路径为 `$APPCONFIG/app.conf` 的文本文件\n\nconst contents = await readTextFile('app.conf', { dir: BaseDirectory.AppConfig });\n\n\n文档目录树采用了 Ant Design 的 Tree 组件实现，通过自定义样式使其与整体皮肤风格保持一致，这大大减少了编码工作量。\n5. 文档格式化\n在文档写作的过程中，格式往往会打断你的创作思路。虽然 Markdown 已经完全舍弃了格式操作，但有时你仍然需要注意中英文之间的空格、段落之间的空行等细节。MDX Editor 使用了 prettier 来格式化文档，只需按下 command+s 就能自动格式化文档。\n\n最后\n如果你对这个编辑器感兴趣，可以在 Github 下载桌面版体验。如果你对实现过程感兴趣，也可以直接查看源码。如果您有任何好的建议，可以在上面提出 Issues，或者关注微信公众号 \"JS 酷\" 并留言反馈。",
           "link": "https://juejin.cn/post/7255189463746986039",
           "publishedOn": "2023-07-13T10:23:59.000Z",
-          "wordCount": 1543,
+          "wordCount": 1547,
           "title": "基于 Tauri， 我写了一个 Markdown 桌面 App",
           "imageUrl": null
         },
@@ -606,7 +616,7 @@
           "description": "theme: cyanosis\n\n文件传输是一个常见的需求。对于大文件的下载和上传，直接使用传统的方式可能会遇到性能和用户体验方面的问题。幸运的是，前端技术提供了一些高效的解决方案：文件流操作和切片下载与上传。本文将深入探讨这些技术，帮助你理解它们的原理和实现方法，以优化文件传输效率和提升用户体验。\n一、前端文件流操作\n在前端开发中，文件流操作是指通过数据流的方式处理文件，对文件进行读取、写入和展示等操作。下面详细介绍了前端文件流操作的几个基本概念和技术。\n数据流和文件处理的基本概念\n数据流是指连续的数据序列，可以从一个源传输到另一个目的地。在前端开发中，文件可以被看作数据流的一种形式，可以通过数据流的方式进行处理。 文件处理涉及读取和写入文件的操作，包括读取文件的内容、写入数据到文件，以及对文件进行删除、重命名等操作。\nBlob 对象和 ArrayBuffer：处理二进制数据\n在前端处理文件时，经常需要处理二进制数据。Blob（Binary Large Object）对象是用来表示二进制数据的一个接口，可以存储大量的二进制数据。Blob 对象可以通过构造函数进行创建，也可以通过其他 API 生成，例如通过 FormData 对象获取上传的文件。 而 ArrayBuffer 是 JavaScript 中的一个对象类型，用于表示一个通用的、固定长度的二进制数据缓冲区。我们可以通过 ArrayBuffer 来操作和处理文件的二进制数据。\n代码如下：\nimport React, { useState } from 'react';\n\nfunction FileInput() {\n  const [fileContent, setFileContent] = useState('');\n\n  // 读取文件内容到ArrayBuffer\n  function readFileToAr…",
           "link": "https://juejin.cn/post/7255189826226602045",
           "publishedOn": "2023-07-13T09:18:11.000Z",
-          "wordCount": 4269,
+          "wordCount": 4510,
           "title": "前端文件流、切片下载和上传：优化文件传输效率与用户体验",
           "imageUrl": null
         },
@@ -618,6 +628,16 @@
           "publishedOn": "2023-07-13T04:04:34.000Z",
           "wordCount": 1732,
           "title": "通过调试技术，我理清了 b 站视频播放很快的原理",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7254861171823247420",
+          "author": "王大冶",
+          "description": "微信搜索 【大迁世界】, 我会第一时间和你分享前端行业趋势，学习途径等等。\n本文 GitHub  https://github.com/qq449245884/xiaozhi 已收录，有一线大厂面试完整考点、资料以及我的系列文章。\n快来免费体验ChatGpt plus版本的，我们出的钱 体验地址:https://chat.waixingyun.cn 可以加入网站底部技术群，一起找bug，另外新版作图神器已上线 https://cube.waixingyun.cn/home\n1.Documatic  Documatic\n地址：https://www.documatic.com/\nDocumatic 是一个高效的搜索引擎工具，旨在帮助开发人员轻松搜索他们的代码库，找到特定的代码片段、函数、方法和其他相关信息。该工具旨在通过在几秒钟内快速提供准确和相关的搜索结果，节省开发人员宝贵的时间，提高他们的生产力。\nDocumatic是一个带有自然语言查询功能的代码搜索工具，它简化了专家和新手开发人员对代码库的搜索。一旦您输入查询，Documatic会快速从代码库中获取相关的代码块，使您能够轻松找到所需的信息。\n\nTransform.tools\n地址：https://transform.tools/\ntransform.tools 是一个网站，它可以让你转换几乎所有的东西，比如将HTML转换为JSX，JavaScript转换为JSON，CSS转换为JS对象等等。当我需要转换任何东西时，它真的帮我节省了很多时间。\n\n\nConvertio\n地址：https://convertio.co/zh/\nConvertio - 在线转换文件的简单工具。超过309种不同的文档、图像、电子表格、电子书、存档、演示文稿、音频和视频格式。例如，将PNG转换为JPEG，SVG转换为PNG，PNG转换为ICO等等。…",
+          "link": "https://juejin.cn/post/7254861171823247420",
+          "publishedOn": "2023-07-13T00:41:57.000Z",
+          "wordCount": 1239,
+          "title": "每个前端开发者都应知道的10个实用网站",
           "imageUrl": null
         },
         {
@@ -646,7 +666,7 @@
           "description": "theme: channing-cyan\n前一阵遇到了一个问题，线上平台有时会出现用户正在使用的时候，突然要用户去进行登录，这样会造成很不好的用户体验，但是当时一直没有好的思路因此搁置了下来；通过零散时间查询资料以及思考，最终解决了这个问题，接下来跟大家分享一下！\n环境\n请求采用的 Axios V1.3.2。\n平台的采用的 JWT(JSON Web Tokens) 进行用户登录鉴权。\n（拓展：JWT 是一种认证机制，让后台知道该请求是来自于受信的客户端；更详细的可以自行查询相关资料）\n问题现象\n线上用户在使用的时候，偶尔会出现突然跳转到登录页面，需要重新登录的现象。\n原因\n突然跳转到登录页面，是由于当前的 token 过期，导致请求失败；在 axios 的响应拦截axiosInstance.interceptors.response.use中处理失败请求返回的状态码 401，此时得知token失效，因此跳转到登录页面，让用户重新进行登录。\n平台目前的逻辑是在 token 未过期内，用户登录平台可直接进入首页，无需进行登录操作；因此就存在该现象：用户打开平台，由于此时 token 未过期，用户直接进入到了首页，进行其他操作。但是在用户操作的过程中，token 突然失效了，此时就会出现突然跳转到登录页面，严重影响用户的体验感！\n注：目前线上项目中存在数据大屏，一些实时数据的显示；因此存在用户长时间停留在大屏页面，不进行操作，查看实时数据的情况）\n切入点\n怎样及时的、在用户感知不到的情况下更新token？\n当 token 失效的情况下，出错的请求可能不仅只有一个；当失效的 token 更新后，怎样将多个失败的请求，重新发送？\n操作流程\n好了！经过了一番分析后，我们找到了问题的所在，并且确定了切入点；那么接下来让我们实操，将问题解决掉。\n前要：\naccessToken（用于请求头中…",
           "link": "https://juejin.cn/post/7254572706536734781",
           "publishedOn": "2023-07-12T03:45:01.000Z",
-          "wordCount": 1920,
+          "wordCount": 2250,
           "title": "项目中前端如何实现无感刷新 token！",
           "imageUrl": null
         },
@@ -656,7 +676,7 @@
           "description": "theme: devui-blue\n大量v-if的弊端\n在实际项目中，通常会遇到存在大量的业务条件选择的场景，这种情况下如果使用大量的\"v-if\"和\"v-else\"指令，会造成\n1、页面渲染性能下降，加载时间增加： 每个v-if 都需要遍历并计算这些条件，尤其是在条件选择复杂且计算开销较大时，会导致初始渲染的耗时增加，从而延长页面的加载时间。\n2、冗余代码增加：过多的v-if 会导致模板代码变得冗长和难以维护。导致代码可读性降低，难以理解和调试。\n3、可维护下降：当模板中存在大量的v-if时，由于每个条件判断都是独立的，修改其中一个条件可能需要修改多个地方，增加了出错的可能性，并使维护变得复杂。\n4、内存增加： 每个v-if条件都会生成对应的DOM元素，并在切换条件时进行创建和销毁，当模板中存在大量的v-if时，会导致内存占用增加，对性能和资源消耗产生影响。\n可选的优化方案\n利用计算属性\n将复杂的条件逻辑转移到计算属性中处理，避免在template模板中频繁使用\"v-if\"和\"v-else\"。通过计算属性的返回值来控制渲染的内容, 这样使得template代码更简洁，条件处理的逻辑更清晰且更易维护。\n<template> \n    <div> \n        <span v-if=\"displayText\">{{ displayText }}</span> \n    </div> \n </template> \n <script> \n     export default { \n         data() { \n             return { \n                 // ... \n              }; \n         }, \n         computed: { \n             displayText() { \n…",
           "link": "https://juejin.cn/post/7254559214588575802",
           "publishedOn": "2023-07-12T03:32:11.000Z",
-          "wordCount": 2359,
+          "wordCount": 2022,
           "title": "如何优化Vue template 中的大量条件选择v-if",
           "imageUrl": null
         },
@@ -669,26 +689,6 @@
           "wordCount": 1930,
           "title": "今天这个 Antd 是非换不可吗？",
           "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7254443448564006967",
-          "author": "OrzR3",
-          "description": "theme: smartblue\n国际惯例，官网链接\n官网传送门\nGithub地址\ngithub上有几个demos例子，介绍了基础用法。\n\n我参考官网的例子，写了一个demo示例\n安装\nturn.js 依赖 jquery 库，所以需要先安装 jquery\nnpm install jquery --save\n\n引入\nimport $ from 'jquery'\nimport turn from '@/utils/turn.js'\n\n下载 turn.js 文件，然后在组件中引入\nimport turn from \"@/utils/turn.js\";\n\nvue.config.js 配置\nconst webpack = require('webpack');\nmodule.exports = {\n    lintOnSave: false,\n    //配置webpack选项的内容\n    configureWebpack: {\n        plugins: [\n            new webpack.ProvidePlugin({\n                $: \"jquery\",\n                jQuery: \"jquery\",\n            })\n        ]\n    },\n \n}\n\n或者，这样：\nconst webpack = require('webpack')\nmodule.exports = {\n  chainWebpack: config => {\n    config.plugin('provide').use(webpack.ProvidePlugin, [{\n      $: 'jquery',\n      jquery: 'jquery',\n      jQuery: 'jquery',\n      'window.jQuery': 'jquery'\n    }])\n  }\n}\n\n翻页方法，以及参数\n  $(\"#book\").turn({\n      //启用硬件加速,移动端有效\n      acceleration: false,\n      //显示：single=单页，double=双页，默认双页\n      display: \"double\",\n      // 翻页撒开鼠标，页面的延迟\n      duration: 800,\n      // 默认显示第几页\n      page: 1,\n      // 折叠处的光泽渐变，主要体现翻页的立体感、真实感\n      gradients: true,\n      // 中心翻取决于有多少页面可见 true or false\n      autoCenter: true,\n      // 设置可翻页的页角(都试过了，乱写 4个角都能出发卷起)， bl,br   tl,tr   bl,tr\n      turnCorners: \"bl,br\",\n      //页面高度\n      height: this.turnPage.height,\n      //翻书范围宽度，总宽度\n      width: this.turnPage.width,\n      when: {\n          //监听事件\n          turning: function (e, page, view) {\n              console.log(\"翻页前触发\");\n              console.log(e, page, view);\n              // 翻页前触发\n              console.log(page);\n          },\n          turned: function (e, page) {\n              console.log(\"翻页后触发\");\n              console.log(e, page);\n              // 翻页后触发\n              console.log(page);\n          },\n      },\n  });\n\n上一页\n$(\"#book\").turn(\"previous\");\n\n下一页\n$(\"#book\").turn(\"next\");\n\n示例代码\n完整代码，已经放到 Gitee 上面了，组件名为 TurnjsComponent\nGitee地址\n最后的话\n以上，如果对你有用的话，不妨点赞收藏关注一下，谢谢 🙏\n😊 微信公众号: OrzR3\n💖 不定期更新一些技术类，生活类，读书类的文章。",
-          "link": "https://juejin.cn/post/7254443448564006967",
-          "publishedOn": "2023-07-11T10:15:43.000Z",
-          "wordCount": 1629,
-          "title": "一个好用的轮子 turn.js 实现仿真翻书的效果",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7253437782333669434",
-          "author": "写代码的浩",
-          "description": "highlight: a11y-dark\ntheme: devui-blue\n前端已死！这个声音从年初开始，持续了小半年。紧接着，一堆的前端前辈出来说，前端不会死。哈哈哈，我觉得这个话题很有意思。也来蹭个热点。嗯，现在已经不算热点了，这个话题已经凉了。\n最近想法很多，总想写点东西，就拿这个话题开始吧。希望能对大家有帮助。\n什么情况\n首先，要看看为什么会有这个观点。原因也很简单，自从去年开始，各大公司都开始裁员，然后HC也开始减少。但是因为前几年互联网工资收入高，每年毕业的应届生那是一年比一年多。前端培训班也火热的不行，每年都向社会输送大面积的前端开发。\n所以，从供需角度看，前端开发找工作，尤其是刚毕业和刚培训毕业的前端开发，今年找工作就是地狱模式。所以有人说“前端已死”，自然很快就能获得共鸣。\n另外的声音\n然后，有意思的来了。“前端已死”这个话题火了后，各大前端自媒体，前端前辈都出来发声。观点出奇的一致：前端不会死。一下子就把前端已死的观点给压下去了。这种社区声音180度的大转弯也是少见。\n到底死没死\n说完现象，我说下我的观点。\n“前端已死”的声音能获得共鸣，说明前端已经发展到了一个关键的时间点。\n只要还有页面，还有小程序，前端就不会死。\n不会死，并不是说能活的很好。\n行业周期\n互联网在行业分类中属于第三产业，也就是服务业。服务业的特点就是周期性。如果所有服务业的周期是往下走的，互联网也好不了。三年疫情，大家都知道，服务业已经被折腾的不行了，即使今年放开了，大家还敢开线下店吗？被互联网服务的行业大部分都过的不好，互联网能好吗。\n当然，后面随着经济复苏，互联网也会慢慢恢复景气。但是这里还有另外一个点，由于互联网前几年工资都太高了，年年倒挂，导致选计算机专业的人越来越多。以大学四年计算，后面3年每年毕业的计算机专业的学生，还是会持续增加的。\n所以呢，从供需角度，技术互联网恢复景气了，互联网招聘未必会恢复景气。\n另外，就前端开发而言，我感觉好多东西都很成熟了。最近看技术社区的文章，感觉很久没有看到很新的内容了(也许是推荐系统搞得信息茧房)。大家都在几个领域里面深挖。如果没有新的方向出来，真的很难容纳这么多的求职者。后面看看AI能不能创新出一波职位吧。\n所以呢，从互联网行业和前端行业来看，前端已经发展到了一个关键点，后面如果没有新的方向出来，即使互联网恢复景气，求职也不会像以前那么轻松了。\n技术周期\n从我毕业，基本上都在做互联网，期间其实经历过好几轮技术迭代。比如最早的Flash, 到PHP, PC端的JQuery。你很难在招聘网站上找到要求这些技术的岗位了。\n新方向在哪里\n其实聊了这么多，本质就是一个供需。供需这个角度真的太强大了，能解释很多问题。如果未来没有一个新的大方向出现，那么在岗位需求变化不大的情况下，每年大量学生毕业，也就是供应增多，求职困难是必然的。\nAI。从去年底开始，AI持续火热，目前虽然有退烧，但是AI的趋势已经明确。后面要看的是，AI是不是需要大量的前端工作。这块大家可以说说自己的判断。\nVR元宇宙。Meta搞元宇宙，差点把自己搞死，现在苹果也出VR设备，观察下能不能把这个行业带起来。大家说有没有可能。\nWeb3。去年年初，Web3还很火了的，现在好像，嗯，一般般。后面能不能再次爆发，也要继续观察。大家也可以说说自己的开发。\n扯一句\n最后扯一句。我看了好多前端前辈对“前端已死”的看法，都说前端不会死，会死的都是初级前端，前端要持续学习，要让自己不可替代。说实话，我觉得这都是屁话。写代码的谁不是从初级开始的呢，现在是完全不给初级的机会，断档了！写代码的人，已经是最爱学习的那一批人了吧，永远在学习新东西。还有让自己不可替代，公司会想办法让你可替代，后面聊一聊不可替代这个话题，我也有很多想说的。\n结束\n最近新弄了一个公粽号：写代码的浩，求关注 😄。\n后面会逐步把掌握的前端知识以及职场知识沉淀下来。 如果还有什么疑问或者建议，可以多多交流，原创文章，文笔有限，才疏学浅，文中若有不正之处，万望告知。",
-          "link": "https://juejin.cn/post/7253437782333669434",
-          "publishedOn": "2023-07-09T07:24:37.000Z",
-          "wordCount": 1169,
-          "title": "迷茫的前端们",
-          "imageUrl": null
         }
       ]
     },
@@ -697,6 +697,26 @@
       "feedUrl": "https://rsshub.app/juejin/pins/6824710202000932877",
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
+        {
+          "id": "7257039072362954811",
+          "author": "冷冷的火花",
+          "description": "webstorm点击引用的组件或者引入的js可以直接跳转到对用文件或者对应方法，vscode有没有插件可以实现这样的功能",
+          "link": "https://juejin.cn/pin/7257039072362954811",
+          "publishedOn": "2023-07-18T10:44:15.000Z",
+          "wordCount": 448,
+          "title": "webstorm点击引用的组件或者引入的js可以直接跳转到对用文件或者对应方法，vscode有没有插件可以实现这样的功能",
+          "imageUrl": null
+        },
+        {
+          "id": "7257048145233444925",
+          "author": "webup",
+          "description": "[7243698841848348730#每天一个知识点#] 给大家推荐一个 Node.js 在线 REPL 神器平台 Val Town，可以看成 Node.js 版本的在线 Jupter Notebook，配合开发 OpenAI、LangChain 应用非常方便，如下是一个 OpenAI Chat Completions 调用的示例 🚀",
+          "link": "https://juejin.cn/pin/7257048145233444925",
+          "publishedOn": "2023-07-18T10:39:09.000Z",
+          "wordCount": 532,
+          "title": "[7243698841848348730#每天一个知识点#] 给大家推荐一个 Node.js 在线 REPL 神器平台 Val Town，可以看成 Node.js 版本的在线 Jupter Notebook，配合开发 OpenAI...",
+          "imageUrl": null
+        },
         {
           "id": "7257012010515513402",
           "author": "步伐者",
@@ -723,7 +743,7 @@
           "description": "[7210002980895916043#挑战每日一条沸点#] #工欲善其事必先利其器 #开发工具推荐 #Seal软件\nIT Tools 是一个免费开源的方便在线工具集合，供开发人员和 IT 工作人员使用。它包括令牌生成器、大小写转换器、基本转换器、QR 代码生成器、Git cheatsheet、lorem ipsum 生成器等等！\n速速 get：https://it-tools.tech/",
           "link": "https://juejin.cn/pin/7256964915133661240",
           "publishedOn": "2023-07-18T03:47:07.000Z",
-          "wordCount": 503,
+          "wordCount": 510,
           "title": "[7210002980895916043#挑战每日一条沸点#] #工欲善其事必先利其器 #开发工具推荐 #Seal软件 IT Tools 是一个免费开源的方便在线工具集合，供开发人员和 IT 工作...",
           "imageUrl": null
         },
@@ -763,7 +783,7 @@
           "description": "Go ORM助手v1.2.0，正式发布！插件的代码补全能力更强了，性能更好了。新增live template功能，支持了更多orm！！\n下载地址 https://github.com/maiqingqiang/go-orm-helper\n[7210228048107896891#每日快讯#]",
           "link": "https://juejin.cn/pin/7256307512243339320",
           "publishedOn": "2023-07-16T15:27:21.000Z",
-          "wordCount": 479,
+          "wordCount": 496,
           "title": "Go ORM助手v1.2.0，正式发布！插件的代码补全能力更强了，性能更好了。新增live template功能，支持了更多orm！！ 下载地址 https://github.com/maiqingqiang/go...",
           "imageUrl": null
         },
@@ -875,26 +895,6 @@
           "publishedOn": "2023-07-11T03:10:32.000Z",
           "wordCount": 447,
           "title": "有没有大佬给推荐一个svn工具。在mac中可以合并分支的那种呀。。那次代码冲突以后合并太难了。",
-          "imageUrl": null
-        },
-        {
-          "id": "7254143696484007995",
-          "author": "cyyeh",
-          "description": "[7243698841848348730#每天一个知识点#] VulcanSQL是一个開源的給数据应用的数据API框架，让懂得编写SQL的朋友们，只需编写SQL模板，就能快速创建和分享数据API。其他构建API的底层技术和细节，VulcanSQL帮你处理。欢迎大家来看看並給予我們回饋！[微笑][微笑][微笑]",
-          "link": "https://juejin.cn/pin/7254143696484007995",
-          "publishedOn": "2023-07-11T01:38:48.000Z",
-          "wordCount": 519,
-          "title": "[7243698841848348730#每天一个知识点#] VulcanSQL是一个開源的給数据应用的数据API框架，让懂得编写SQL的朋友们，只需编写SQL模板，就能快速创建和分享数据API...",
-          "imageUrl": null
-        },
-        {
-          "id": "7254101170950733861",
-          "author": "fxss",
-          "description": "《泛积木-低代码》微前端、零前端的低代码开发框架。\nhttps://www.fxss.work/\n​欢迎大家免费注册体验并转发，好用支持下单噢[奸笑][奸笑][奸笑]",
-          "link": "https://juejin.cn/pin/7254101170950733861",
-          "publishedOn": "2023-07-10T10:57:44.000Z",
-          "wordCount": 452,
-          "title": "《泛积木-低代码》微前端、零前端的低代码开发框架。 https://www.fxss.work/ ​欢迎大家免费注册体验并转发，好用支持下单噢[奸笑][奸笑][奸笑]",
           "imageUrl": null
         }
       ]
