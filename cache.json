@@ -676,7 +676,7 @@
           "description": "theme: devui-blue\n大量v-if的弊端\n在实际项目中，通常会遇到存在大量的业务条件选择的场景，这种情况下如果使用大量的\"v-if\"和\"v-else\"指令，会造成\n1、页面渲染性能下降，加载时间增加： 每个v-if 都需要遍历并计算这些条件，尤其是在条件选择复杂且计算开销较大时，会导致初始渲染的耗时增加，从而延长页面的加载时间。\n2、冗余代码增加：过多的v-if 会导致模板代码变得冗长和难以维护。导致代码可读性降低，难以理解和调试。\n3、可维护下降：当模板中存在大量的v-if时，由于每个条件判断都是独立的，修改其中一个条件可能需要修改多个地方，增加了出错的可能性，并使维护变得复杂。\n4、内存增加： 每个v-if条件都会生成对应的DOM元素，并在切换条件时进行创建和销毁，当模板中存在大量的v-if时，会导致内存占用增加，对性能和资源消耗产生影响。\n可选的优化方案\n利用计算属性\n将复杂的条件逻辑转移到计算属性中处理，避免在template模板中频繁使用\"v-if\"和\"v-else\"。通过计算属性的返回值来控制渲染的内容, 这样使得template代码更简洁，条件处理的逻辑更清晰且更易维护。\n<template> \n    <div> \n        <span v-if=\"displayText\">{{ displayText }}</span> \n    </div> \n </template> \n <script> \n     export default { \n         data() { \n             return { \n                 // ... \n              }; \n         }, \n         computed: { \n             displayText() { \n…",
           "link": "https://juejin.cn/post/7254559214588575802",
           "publishedOn": "2023-07-12T03:32:11.000Z",
-          "wordCount": 2359,
+          "wordCount": 2022,
           "title": "如何优化Vue template 中的大量条件选择v-if",
           "imageUrl": null
         },
