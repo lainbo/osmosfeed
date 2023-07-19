@@ -98,7 +98,7 @@
           "description": "只要是个前端，基本上都用过 Moment.js，一个解决浏览器和 Node.js 环境 Date 和 Time 规范性问题的仓库。在 Code Review 的时候，看到组里有同学提到“建议将这个库替换成 Day.js”，理由是 Moment.js 已经处于不维护态了，https://momentjs.com/docs/#/-project-status/recommendations/，这个库从 2011 年诞生至今，也算是很好的承担了它的历史使命。不过，从 Npm 的数据可以看到，Moment 每周的下载量仍然有 ~2kw 次，数百万的项目依然还在使用，量级庞大。\n下意识又去翻了下 jQuery 的官网，本以为 Vue/React 发展这么些年已经将市场瓜分殆尽，结果从维基百科翻到， “2022 年统计数据显示，在 Top 100w 的流行网站中，jQuery 占比仍有 77%”，生命力十分旺盛！它最新一个版本的发布日是 2023.05.11，还做了一个重大的升级，将选择器引擎 Sizzle 扔到了 jQuery 内核，不再作为单独项目维护。\n旧的技术更替周期还是很漫长的，大部分项目都会被历史包袱和技术债务所裹挟。",
           "link": "https://m.okjike.com/originalPosts/64b7b677e54c18973853a2eb",
           "publishedOn": "2023-07-19T10:09:59.000Z",
-          "wordCount": 469,
+          "wordCount": 491,
           "title": "发布了: 只要是个前端，基本上都用过 Moment.js，一个解决浏览器和 Node.js 环境 Date 和 Time 规范性问题的仓库。在 Code Review 的时候，看到组里有同学提到“...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -128,7 +128,7 @@
           "description": "恒大负债 2.4 万亿是什么概念：约等于 4 亿根爱马仕皮带。🤣",
           "link": "https://m.okjike.com/originalPosts/64b7674538acc7bb5142413d",
           "publishedOn": "2023-07-19T04:32:05.000Z",
-          "wordCount": 421,
+          "wordCount": 417,
           "title": "发布了: 恒大负债 2.4 万亿是什么概念：约等于 4 亿根爱马仕皮带。🤣",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fm1Q1p6k3NWHZdzkylKUri1MA6AXv3.jpeg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
         },
@@ -566,7 +566,7 @@
           "description": "leaferjs，全新的渲染引擎\n1. 前言\n前几天群里有人发了一个新 Canvas 渲染引擎的图片，看数据和宣传口号相当炸裂，号称只用 1.5s 可以渲染 100 万个矩形，还是个国产的。\n\n出于个人兴趣，就花了一点儿时间研究了一下感兴趣的点，如果有错误，希望可以指出。\n2. 架构设计\n从火焰图上可以看出，leaferjs 创建节点非常轻量，只做了 setAttr 的操作。\n\n大部分耗时集中在创建节点和布局，渲染仅仅花了3ms。\n\n那 leaferjs 为什么有这么好的性能呢？我简单去看了一下源码。\nleafer 主要包括了 leafer 和 ui 两个 git 仓库，核心渲染能力在 leafer 里面，ui 封装了一些绘制类，比如 Image、Line 等等。\n先看一下官网上一个详细的用法：\nimport { App, Leafer, Rect } from 'leafer-ui'\n\nconst app = new App({ view: window, type: 'user' }) \n\nconst backgroundLayer = new Leafer()\nconst contentLayer = new Leafer({ type: 'design' })\nconst wireframeLayer = new Leafer()\n\napp.add(backgroundLayer)\napp.add(contentLayer)\napp.add(wireframeLayer)\n\nconst background = new Rect({ width: 800, height: 600, fill: 'gray' })\nconst rect = new Rect({ x: 100, y: 100, fill: '#32cd79', draggable: true })\nc…",
           "link": "https://juejin.cn/post/7256386855721074747",
           "publishedOn": "2023-07-17T02:21:10.000Z",
-          "wordCount": 2835,
+          "wordCount": 3325,
           "title": "leaferjs，全新的 Canvas 渲染引擎",
           "imageUrl": null
         },
@@ -616,7 +616,7 @@
           "description": "theme: vue-pro\n点击在线阅读，体验更好\n链接\n\n\n\n\n现代JavaScript高级小册\n链接\n\n\n深入浅出Dart\n链接\n\n\n现代TypeScript高级小册\n链接\n\n\nlinwu的算法笔记📒\n链接\n\n\n\n\n这也是我给组内新成员写的部分基础入职文档介绍，分享给大家\n理清内部平台\n进入一家新公司，你需要了解以下几个平台以及使用方式：\n需求分发平台，常见类似jira\n代码托管平台，常见类似gitlab\n设计稿平台，常见类似figma\n接口协议文档\n配置邮箱\n内部OA平台\n基本理清这些平台就足够了，一般公司都是会在新人入职文档写明，如果没有，那就得一个一个去问。\niTerm2的配置\n效果图\n\n下载iTerm2：\n前往官方网站（https://www.iterm2.com/）下载最新版本的iTerm2。\n完成下载后，打开安装包，将iTerm2应用程序拖动到\"Applications\"文件夹中。\n设置默认Shell为zsh：\n打开iTerm2应用程序。\n在菜单栏中，选择\"iTerm2\" -> \"Preferences\"，或使用快捷键\"Command + ,\"打开偏好设置。\n在\"General\"选项卡的\"Preferences\"部分，点击\"Command\"选项，选择\"Command\"和\"Return\"。\n在\"Profiles\"选项卡的\"General\"部分，点击\"Command\"选项，选择\"Login Shell\"。\n安装Oh My Zsh：\n打开终端（iTerm2）。\n运行以下命令安装Oh My Zsh：\nsh -c \"$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)\"\n\n安装完成后，关闭终端并重新打开一个新的终端。\n安装Powe…",
           "link": "https://juejin.cn/post/7255684102111379511",
           "publishedOn": "2023-07-15T06:58:41.000Z",
-          "wordCount": 2376,
+          "wordCount": 2694,
           "title": "⭐️入职新公司需要准备哪些工作，如何让同事觉得你是大神",
           "imageUrl": null
         },
@@ -636,7 +636,7 @@
           "description": "theme: smartblue\nhighlight: a11y-dark\n\n前言\n弱弱的问，有多少同学知道钉钉也是有小程序的？那有多少同学参与过开发过钉钉小程序？深度参与过呢？有多深，至少50个页面起吧！一轮筛选过后应该没剩下多少勇士了，古茗应该算是勇士之一了。\n在两年前我们决定all in钉钉小程序，因为h5的一些体验问题、业务需要快速迭代，所以小程序是首选；本身公司所有的用户、组织等数据也都是绑定在钉钉上，所以最后敲定钉钉小程序。tob业务目前有6个应用是由钉钉小程序承载的，页面500+，除了小程序还有h5应用也是跑在钉钉容器内，表单引擎、组件库、request、oss、F2、debug工具库等配套基建也是围绕着钉钉小程序卷了一遍，客观来说真的是靠钉钉小程序吃饭啊！\n但是在这两年和钉钉小程序的py交易中，总能感受到钉钉小程序承接业务能力的天花板很低，业务稍微发力就能够到，以至于给产品留下了“坏印象”（前端不太行~😒）。所以我们也一直主动保持和钉钉小程序团队的沟通，几乎每周都会反馈问题和建议。但是伤心的是大部分的问题都是要靠自己解决，直到前几天的一个工单让我绷不住了。\n批评\n准备好了，开始喷了。\n诡异的数字键盘\n是什么原因让我必须站出来\"夸\"一下它呢？就是钉钉小程序ios端不能正确弹出数字键盘这件事的让我彻底绷不住了。冷静，我还是一名前端er，让我们回归技术\n我们都知道手机浏览器会根据input的 type 类型唤起对应类型的键盘，手机可以直接点击查看\n\n小程序侧也是针对 input 提供了对应的配置。但是你知道吗，钉钉小程序的这个配置就是个摆设，\n于是我们怀着揣着疑问去钉钉社区里面提问，得到的回复如下，不知回复的人是否是官方技术，很震惊\n得不到结果，接着又去官方提了工单，得到的肯定的回复是 ios webkit存在bug，需要等 apple 修复，我们（钉钉）处理不…",
           "link": "https://juejin.cn/post/7255480546427371578",
           "publishedOn": "2023-07-14T03:29:12.000Z",
-          "wordCount": 1283,
+          "wordCount": 1620,
           "title": "感谢钉钉小程序这些年赏我饭吃🍔，嗝~",
           "imageUrl": null
         },
@@ -696,7 +696,7 @@
           "description": "theme: channing-cyan\n前一阵遇到了一个问题，线上平台有时会出现用户正在使用的时候，突然要用户去进行登录，这样会造成很不好的用户体验，但是当时一直没有好的思路因此搁置了下来；通过零散时间查询资料以及思考，最终解决了这个问题，接下来跟大家分享一下！\n环境\n请求采用的 Axios V1.3.2。\n平台的采用的 JWT(JSON Web Tokens) 进行用户登录鉴权。\n（拓展：JWT 是一种认证机制，让后台知道该请求是来自于受信的客户端；更详细的可以自行查询相关资料）\n问题现象\n线上用户在使用的时候，偶尔会出现突然跳转到登录页面，需要重新登录的现象。\n原因\n突然跳转到登录页面，是由于当前的 token 过期，导致请求失败；在 axios 的响应拦截axiosInstance.interceptors.response.use中处理失败请求返回的状态码 401，此时得知token失效，因此跳转到登录页面，让用户重新进行登录。\n平台目前的逻辑是在 token 未过期内，用户登录平台可直接进入首页，无需进行登录操作；因此就存在该现象：用户打开平台，由于此时 token 未过期，用户直接进入到了首页，进行其他操作。但是在用户操作的过程中，token 突然失效了，此时就会出现突然跳转到登录页面，严重影响用户的体验感！\n注：目前线上项目中存在数据大屏，一些实时数据的显示；因此存在用户长时间停留在大屏页面，不进行操作，查看实时数据的情况）\n切入点\n怎样及时的、在用户感知不到的情况下更新token？\n当 token 失效的情况下，出错的请求可能不仅只有一个；当失效的 token 更新后，怎样将多个失败的请求，重新发送？\n操作流程\n好了！经过了一番分析后，我们找到了问题的所在，并且确定了切入点；那么接下来让我们实操，将问题解决掉。\n前要：\naccessToken（用于请求头中…",
           "link": "https://juejin.cn/post/7254572706536734781",
           "publishedOn": "2023-07-12T03:45:01.000Z",
-          "wordCount": 2250,
+          "wordCount": 1909,
           "title": "项目中前端如何实现无感刷新 token！",
           "imageUrl": null
         }
