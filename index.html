@@ -230,6 +230,54 @@ IT Tools 是一个免费开源的方便在线工具集合，供开发人员和 I
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7256983702810181688"
+                        open
+                      >
+                        <summary class="article-expander__title">无虚拟 DOM 版 Vue 进行到哪一步了？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7256983702810181688">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: channing-cyan
+前言
+就在一年前的 Vue Conf 2022，尤雨溪向大家分享了一个非常令人期待的新模式：无虚拟 DOM 模式！
+我看了回放之后非常兴奋，感觉这是个非常牛逼的新 feature，于是赶紧写了篇文章：
+《无虚拟 DOM 版 Vue 即将到来》
+鉴于可能会有部分人还不知道或者还没听过什么是 Vue 无虚拟 DOM 模式，我们先来简单的介绍一下：Vue 无虚拟 DOM 编译模式在官方那边叫 Vue Vapor Mode，直译过来就是：Vue 蒸汽模式。
+为什么叫蒸汽模式呢？个人瞎猜的哈：第一次工业革命开创了以机器代替手工劳动的时代，并且是以蒸汽机作为动力机被广泛使用为标志的。这跟 Vue1 有点像，Vue 赶上了前端界的第一次工业革命(以声明式代替命令式的时代)，此时的 Vue 还没有虚拟 DOM，也就是 Vue 的蒸汽时代。
+不过万万没想到的是历史居然是个轮回，当年火的不行的虚拟 DOM 如今早已日薄西山、跌落了神坛，现在无虚拟 DOM 居然又开始重返王座。当然重返王座这个说法也不是很准确，只能说开始演变成为了一种新的流行趋势吧！这无疑让尤大想起了那个蒸汽时代的 Vue1，于是就起名为 Vapor。
+当然也有这么一种可能：自从为自己的框架起名为 Vue 之后，尤大就特别钟意以 V 开头的单词，不信你看：
+Vue
+Vite
+Vetur
+Volar
+Vapor
+不过以上那些都是自己瞎猜的，人家到底是不是那么想的还有待商榷。可以等下次他再开直播时发弹幕问他，看他会怎么回答。
+但是吧，都过了一年多了，这个令我特别期待的新特性一点信都没有，上网搜到的内容也都是捕风捉影，这甚至让我开始怀疑 Vapor Mode 是不是要难产了？不过好在一年后的今天，Vue Conf 2023 如期而至，在那里我终于看到了自己所期待的与 Vapor Mode 有关…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >国家应急广播 - 重庆预警信息</button>
                   <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
                 </h3>
@@ -544,49 +592,6 @@ github地址
 项目的重构
 我们现在的项目是基于之前的项目重构的，因为之前的项目耦合度较强，规范度是不…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7256582988490194981"
-                        open
-                      >
-                        <summary class="article-expander__title">面试官：输入url到浏览器页面展示，CPU转了几圈😏😏😏</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7256582988490194981">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: cyanosis
-highlight: atom-one-dark
-浏览器作为我们经常使用的软件,你是否有认真想过,当我们在浏览器中输入一个 URL 或者直接点开一个 URL 后,就可以看到网页内容了。它为什么能显示出来,你是否有考虑过,你是否清楚地知道它背后都经历了什么过程。
-那么从今天的文章中我们就来看看这到底经历了什么过程。
-什么是 URL
-URL 也叫统一资源定位符,它是互联网上用于标识和定位资源的地址。它是一个字符串,用于描述互联网上的资源位置,俗称网页地址,简称网址。URL 通常用于访问网页、图像、视频、文档和其他类型的文件。
-URL 由多个部分组成,包括协议、主机名、端口号、路径和查询字符串等。以下是 URL 的一般结构:
-协议://主机名[:端口号]/路径?查询字符串
-
-协议: 指定了访问资源时使用的通信协议,例如 HTTP 和 HTTPS;
-主机名: 指定了存储资源的服务器的域名或 IP 地址;
-端口号: 它是可选的,用于标识服务器上特定的服务;
-路径: 指定了资源在服务器上的位置;
-查询字符串: 包含了向服务器发送的额外参数,通常用于搜索、过滤或传递信息;
-主机名负责的是主机到主机之间的通信,而端口号是进程到进程之间的通信,首先要主机和主机之间的通信,再有进程到进程之间的通信。
-以下是一个示例 URL:
-https://www.example.com:8080/path/to/resource?param1&#x3D;value1¶m2&#x3D;value2
-
-在这个示例中:
-协议是 HTTPS;
-主机名是 www.example.com;
-端口号是 8080;
-路径是 /path/to/resource;
-查询字符串是 param1&#x3D;value1¶m2&#x3D;value2;
-通过解析 URL,浏览器或其他客户端可以向服务器发起请求,并获取对应的资…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;16
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3685,8 +3690,8 @@ https://datacap.edurt.io/release/latest.html</span>
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5592745839">
-        <time id="build-timestamp" datetime="2023-07-18T21:52:17.763Z">2023-07-18T21:52:17.763Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5593988930">
+        <time id="build-timestamp" datetime="2023-07-19T01:20:40.620Z">2023-07-19T01:20:40.620Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
