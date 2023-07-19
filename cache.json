@@ -98,7 +98,7 @@
           "description": "只要是个前端，基本上都用过 Moment.js，一个解决浏览器和 Node.js 环境 Date 和 Time 规范性问题的仓库。在 Code Review 的时候，看到组里有同学提到“建议将这个库替换成 Day.js”，理由是 Moment.js 已经处于不维护态了，https://momentjs.com/docs/#/-project-status/recommendations/，这个库从 2011 年诞生至今，也算是很好的承担了它的历史使命。不过，从 Npm 的数据可以看到，Moment 每周的下载量仍然有 ~2kw 次，数百万的项目依然还在使用，量级庞大。\n下意识又去翻了下 jQuery 的官网，本以为 Vue/React 发展这么些年已经将市场瓜分殆尽，结果从维基百科翻到， “2022 年统计数据显示，在 Top 100w 的流行网站中，jQuery 占比仍有 77%”，生命力十分旺盛！它最新一个版本的发布日是 2023.05.11，还做了一个重大的升级，将选择器引擎 Sizzle 扔到了 jQuery 内核，不再作为单独项目维护。\n旧的技术更替周期还是很漫长的，大部分项目都会被历史包袱和技术债务所裹挟。",
           "link": "https://m.okjike.com/originalPosts/64b7b677e54c18973853a2eb",
           "publishedOn": "2023-07-19T10:09:59.000Z",
-          "wordCount": 491,
+          "wordCount": 469,
           "title": "发布了: 只要是个前端，基本上都用过 Moment.js，一个解决浏览器和 Node.js 环境 Date 和 Time 规范性问题的仓库。在 Code Review 的时候，看到组里有同学提到“...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -536,7 +536,7 @@
           "description": "腾小云导读\n搜狗百科是一个服务于互联网用户的高质量内容平台。文章主要介绍团队在梳理业务时发现百科无线前端项目在研发流程、架构设计、研发效率、页面性能等方面存在诸多问题和痛点。作者团队是如何对这个系统进行升级和改造的？又是如何分析出怎么样的优化方案才是最适合业务的？欢迎各位开发者继续阅读~\n目录\n1 背景\n2 项目收益\n3 升级方案\n3.1 现状分析\n3.2 优化动作\n4 项目成果\n4.1 用户体验\n4.2 带宽成本\n4.3 技术沉淀\n5 总结与展望\n01、背景\n垂类前端研发组在梳理百科业务时，发现百科无线前端在研发流程、架构设计、研发效率、页面性能等方面存在诸多问题和痛点，为更好地支撑产品需求迭代和研发效率提升，优先对百科无线前端技术体系进行一次系统的升级和优化。\n\n02、项目收益\n核心页面指标\n\n03、升级方案\n3.1 现状分析\n本节主要从项目组织、技术架构、研发流程、页面性能、监控等维度来具体分析。\n3.1.1 项目组织现状\n百科无线端由词条页及视频集合二级页、首页及其他二级页、静态页面3个项目组成。因项目拆分较碎，组件、模块、API 接口、Service 等无法有效复用，例如搜索中间页横跨多个项目需要开发多次的问题。\n项目目录没有合理的分层，目录结构和 wenke-dev/wenke-webpack（封装的构件 npm 包）高度耦合，无法移动。\n\n3.1.2 技术架构现状\n技术架构主要由接入层、展现层、渲染层组成，渲染层比较薄，仅做首屏模版渲染。具体如下图：\n\n接入层现状\n接入层通过 IAS 接入，IAS 是一个类似 Nginx 接入服务，名字路由支持北极星、L5、TAF、IP 端口等方式，现状如下：\n路由规则配置存在多乱情况，缺少统一前缀及规范，问题排查和维护比较困难，其中词条页路由规则就有10多个。 已下线路由，没有及时进行清理。 无线端和 PC 端路由适配策略在…",
           "link": "https://juejin.cn/post/7256674113002864701",
           "publishedOn": "2023-07-17T09:51:25.000Z",
-          "wordCount": 2140,
+          "wordCount": 2142,
           "title": "毫秒级突破！腾讯技术团队是如何做前端性能优化的？",
           "imageUrl": null
         },
@@ -566,7 +566,7 @@
           "description": "leaferjs，全新的渲染引擎\n1. 前言\n前几天群里有人发了一个新 Canvas 渲染引擎的图片，看数据和宣传口号相当炸裂，号称只用 1.5s 可以渲染 100 万个矩形，还是个国产的。\n\n出于个人兴趣，就花了一点儿时间研究了一下感兴趣的点，如果有错误，希望可以指出。\n2. 架构设计\n从火焰图上可以看出，leaferjs 创建节点非常轻量，只做了 setAttr 的操作。\n\n大部分耗时集中在创建节点和布局，渲染仅仅花了3ms。\n\n那 leaferjs 为什么有这么好的性能呢？我简单去看了一下源码。\nleafer 主要包括了 leafer 和 ui 两个 git 仓库，核心渲染能力在 leafer 里面，ui 封装了一些绘制类，比如 Image、Line 等等。\n先看一下官网上一个详细的用法：\nimport { App, Leafer, Rect } from 'leafer-ui'\n\nconst app = new App({ view: window, type: 'user' }) \n\nconst backgroundLayer = new Leafer()\nconst contentLayer = new Leafer({ type: 'design' })\nconst wireframeLayer = new Leafer()\n\napp.add(backgroundLayer)\napp.add(contentLayer)\napp.add(wireframeLayer)\n\nconst background = new Rect({ width: 800, height: 600, fill: 'gray' })\nconst rect = new Rect({ x: 100, y: 100, fill: '#32cd79', draggable: true })\nc…",
           "link": "https://juejin.cn/post/7256386855721074747",
           "publishedOn": "2023-07-17T02:21:10.000Z",
-          "wordCount": 3325,
+          "wordCount": 2835,
           "title": "leaferjs，全新的 Canvas 渲染引擎",
           "imageUrl": null
         },
@@ -636,7 +636,7 @@
           "description": "theme: smartblue\nhighlight: a11y-dark\n\n前言\n弱弱的问，有多少同学知道钉钉也是有小程序的？那有多少同学参与过开发过钉钉小程序？深度参与过呢？有多深，至少50个页面起吧！一轮筛选过后应该没剩下多少勇士了，古茗应该算是勇士之一了。\n在两年前我们决定all in钉钉小程序，因为h5的一些体验问题、业务需要快速迭代，所以小程序是首选；本身公司所有的用户、组织等数据也都是绑定在钉钉上，所以最后敲定钉钉小程序。tob业务目前有6个应用是由钉钉小程序承载的，页面500+，除了小程序还有h5应用也是跑在钉钉容器内，表单引擎、组件库、request、oss、F2、debug工具库等配套基建也是围绕着钉钉小程序卷了一遍，客观来说真的是靠钉钉小程序吃饭啊！\n但是在这两年和钉钉小程序的py交易中，总能感受到钉钉小程序承接业务能力的天花板很低，业务稍微发力就能够到，以至于给产品留下了“坏印象”（前端不太行~😒）。所以我们也一直主动保持和钉钉小程序团队的沟通，几乎每周都会反馈问题和建议。但是伤心的是大部分的问题都是要靠自己解决，直到前几天的一个工单让我绷不住了。\n批评\n准备好了，开始喷了。\n诡异的数字键盘\n是什么原因让我必须站出来\"夸\"一下它呢？就是钉钉小程序ios端不能正确弹出数字键盘这件事的让我彻底绷不住了。冷静，我还是一名前端er，让我们回归技术\n我们都知道手机浏览器会根据input的 type 类型唤起对应类型的键盘，手机可以直接点击查看\n\n小程序侧也是针对 input 提供了对应的配置。但是你知道吗，钉钉小程序的这个配置就是个摆设，\n于是我们怀着揣着疑问去钉钉社区里面提问，得到的回复如下，不知回复的人是否是官方技术，很震惊\n得不到结果，接着又去官方提了工单，得到的肯定的回复是 ios webkit存在bug，需要等 apple 修复，我们（钉钉）处理不…",
           "link": "https://juejin.cn/post/7255480546427371578",
           "publishedOn": "2023-07-14T03:29:12.000Z",
-          "wordCount": 1620,
+          "wordCount": 1283,
           "title": "感谢钉钉小程序这些年赏我饭吃🍔，嗝~",
           "imageUrl": null
         },
@@ -686,7 +686,7 @@
           "description": "微信搜索 【大迁世界】, 我会第一时间和你分享前端行业趋势，学习途径等等。\n本文 GitHub  https://github.com/qq449245884/xiaozhi 已收录，有一线大厂面试完整考点、资料以及我的系列文章。\n快来免费体验ChatGpt plus版本的，我们出的钱 体验地址:https://chat.waixingyun.cn 可以加入网站底部技术群，一起找bug，另外新版作图神器已上线 https://cube.waixingyun.cn/home\n1.Documatic  Documatic\n地址：https://www.documatic.com/\nDocumatic 是一个高效的搜索引擎工具，旨在帮助开发人员轻松搜索他们的代码库，找到特定的代码片段、函数、方法和其他相关信息。该工具旨在通过在几秒钟内快速提供准确和相关的搜索结果，节省开发人员宝贵的时间，提高他们的生产力。\nDocumatic是一个带有自然语言查询功能的代码搜索工具，它简化了专家和新手开发人员对代码库的搜索。一旦您输入查询，Documatic会快速从代码库中获取相关的代码块，使您能够轻松找到所需的信息。\n\nTransform.tools\n地址：https://transform.tools/\ntransform.tools 是一个网站，它可以让你转换几乎所有的东西，比如将HTML转换为JSX，JavaScript转换为JSON，CSS转换为JS对象等等。当我需要转换任何东西时，它真的帮我节省了很多时间。\n\n\nConvertio\n地址：https://convertio.co/zh/\nConvertio - 在线转换文件的简单工具。超过309种不同的文档、图像、电子表格、电子书、存档、演示文稿、音频和视频格式。例如，将PNG转换为JPEG，SVG转换为PNG，PNG转换为ICO等等。…",
           "link": "https://juejin.cn/post/7254861171823247420",
           "publishedOn": "2023-07-13T00:41:57.000Z",
-          "wordCount": 854,
+          "wordCount": 1241,
           "title": "每个前端开发者都应知道的10个实用网站",
           "imageUrl": null
         },
