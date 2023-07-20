@@ -17,9 +17,9 @@
           "description": "在我们的学习和工作过程中，笔记的重要性不言而喻，但是做笔记的过程中有一些陷阱需要规避，这里讨论了一些陷阱，希望对你有所启发",
           "link": "https://www.jason-liang.com/article/note-taking",
           "publishedOn": "2023-07-14T00:00:00.000Z",
-          "wordCount": 181,
+          "wordCount": 22,
           "title": "规避笔记陷阱",
-          "imageUrl": "https://www.notion.so/images/page-cover/nasa_earth_grid.jpg"
+          "imageUrl": "/bg_image.jpg"
         },
         {
           "id": "https://www.jason-liang.com/article/use-volta",
@@ -27,9 +27,9 @@
           "description": "nvm切换node版本可能是一个伪需求，我们真正的需求是一些特殊的项目需要特殊的node版本，其余项目用默认版本。Volta解决了这一点",
           "link": "https://www.jason-liang.com/article/use-volta",
           "publishedOn": "2023-06-21T00:00:00.000Z",
-          "wordCount": 174,
+          "wordCount": 22,
           "title": "Volta的使用",
-          "imageUrl": "https://www.notion.so/images/page-cover/nasa_earth_grid.jpg"
+          "imageUrl": "/bg_image.jpg"
         }
       ]
     },
@@ -44,7 +44,7 @@
           "description": "我发现，有个CSS三角函数之后，以前很多需要JS计算才能实现的布局现在都可以纯CSS完成了，代码简洁了不少。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/06/css-sin-cos-tan-function/",
           "publishedOn": "2023-06-29T16:23:42.000Z",
-          "wordCount": 1364,
+          "wordCount": 1365,
           "title": "CSS sin()/cos()等数学三角函数简介与应用",
           "imageUrl": null
         }
@@ -92,6 +92,16 @@
       "feedUrl": "https://rsshub.app/jike/user/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
+        {
+          "id": "https://m.okjike.com/originalPosts/64b899a763e42a95c41ed3db",
+          "author": null,
+          "description": "简单的 Prompt 编写几乎不需要使用工具，给大模型设定一个角色，然后给出几个示例以强调输入输出的规则，基本就可以满足需要，但涉及到复杂任务拆解和链式思考的时候，例如针对业务需求建模、给学生做助教、设计互动游戏等等，含糊的规则会让大模型给出过于简单且不符合预期的答案。\n好的办法是，编写一个具备清晰步骤的 Prompt，让 AI 学会按照我们期望的思考路径往下推理，这就涉及到任务的拆解和规则的设定，举个栗子，“让 AI 能够针对复杂问题做拆解，建设领域模型，给出框架代码和 API，最后对问题做总结”，对应的 Prompt：\n------ START\n这是一个领域模型建设问题的拆解思路，步骤如下：\n1. 问题分析，当你看到 “DDD:” 开头的问题时，对问题进行分析和梳理，找到领域中的实体、属性、关系和行为进行建模，创建领域模型，并用文字绘制出实体之间的关系图\n2. 针对第一步中的建模内容和关系图进行分析和梳理，与最初始的问题对比，找到更优解，循环第一步，直到建模达到优良的水平\n3. 根据第二步的结果，输出 Model 层和 Service 层的代码，并枚举需要用到的 Restful 请求范例\n4. 对问题和分析过程进行总结，重点描述以上解法中的难点和重点\n例如：\n\"\"\"\nDDD: 实现一个抽奖模块\n### 问题分析\n实体：抽奖活动、参与者、奖品\n属性：\n- 抽奖活动：{}\n- 参与者：{}\n- 奖品：{}\n关系：\n- 抽奖活动和参与者的关系：{}\n- 抽奖活动和奖品的关系:：{}\n### 领域建模\n通过文字使用UML类图将上面的实体、属性和关系表达出来: {}\n### 编写代码\n根据上述 UML，将对应的 Model 和 Service 层，使用 Node.js 代码编写出来: {}\n### Restful 接口\n将所有的接口以如下形式展示出来，params 和 result 使用 json 描述：\n```\nGET /api/prize\nparams: {}\nresult: {}\n```\n### 总结\n{}\n\"\"\"\n------ END\n过程中需要让大模型针对每一步的结果进行对比、反思，让它进入到一个递归优化的循环过程，这么做当然是为了最大程度压榨大模型的计算资源和扩大推理半径，当然，如果在 Prompt 中给定更多的限制条件，效果也一样，因为这会让模型推理过程中少走大量的低质量分支，相当于直接以专家路线往前推导。\n上面的 Prompt 如果没有给出实例，模型的推理结果会十分简单，完全不是按照我们期望的效果展示的，所以针对这种复杂任务的推理，需要给出 one-shot 或者 few-shot。那么这个范例的效果如何呢，可以看看：https://chat.openai.com/share/4e37257e-0e7d-4287-b68f-de382ef7bbc2",
+          "link": "https://m.okjike.com/originalPosts/64b899a763e42a95c41ed3db",
+          "publishedOn": "2023-07-20T02:19:19.000Z",
+          "wordCount": 516,
+          "title": "发布了: 简单的 Prompt 编写几乎不需要使用工具，给大模型设定一个角色，然后给出几个示例以强调输入输出的规则，基本就可以满足需要，但涉及到复杂任务拆解和链...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fn8AlWawBkYj5AEJ5Z-kBPrauZ-Ov3.png?imageMogr2/auto-orient/crop/!x2015a0a0/thumbnail/x300"
+        },
         {
           "id": "https://m.okjike.com/originalPosts/64b7b677e54c18973853a2eb",
           "author": null,
@@ -181,16 +191,6 @@
           "wordCount": 398,
           "title": "发布了: 我们今天生活的时代是一个慕强的时代，作为弱者是很痛苦的，因为周边的人都比你强。 狮子和兔子，兔子想说话，狮子说，你的牙齿呢，你闭嘴。 可是狮子在...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/64b0ba4af14149eb21c3ef32",
-          "author": null,
-          "description": "工作九周年，也是三十岁的第一年。\n每一年回望过去，总能看到有一丝丝的变化，这让我觉得自己的人生还算是有意义的。在对抗局限和焦虑的过程中，去寻找内心的那一份笃定，或许就是意义本身吧。\n感谢曾经遇到的每一个人。",
-          "link": "https://m.okjike.com/originalPosts/64b0ba4af14149eb21c3ef32",
-          "publishedOn": "2023-07-14T03:00:26.000Z",
-          "wordCount": 404,
-          "title": "发布了: 工作九周年，也是三十岁的第一年。 每一年回望过去，总能看到有一丝丝的变化，这让我觉得自己的人生还算是有意义的。在对抗局限和焦虑的过程中，去寻找...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fmew9527dZv84K2UDIYgpDOc76pRv3.png?imageMogr2/auto-orient/format/jpeg/thumbnail/300x2000%3E/quality/70/interlace/1"
         }
       ]
     },
@@ -199,6 +199,16 @@
       "feedUrl": "https://rsshub.app/zhubai/top20",
       "siteUrl": "https://analy.zhubai.wiki",
       "articles": [
+        {
+          "id": "https://speciouspm.zhubai.love/posts/2292730290072326144",
+          "author": "Yishan",
+          "description": "本周内容概述  \n    \n  \n  Bard 2023 年七月更新  \n    \n  Claude 2 正式推出  \n    \n  LangChain 的问题  \n    \n  马斯克成立人工智能公司 xAI 以「理解宇宙」  \n    \n  与美联社合作的同时，OpenAI 被 FTC 开启关于不实信息的调查  \n    \n  WAIC 与 生成式人工智能服务管理办法  \n    \n  “一刀切的人工智能监管方法没有任何意义”  \n  \n          \n  01  \n    \n  Bard 2023年七月更新  \n    \n  上周大事之一，      就是 Bard 23.07.13 的这一轮更新      ，终于支持了中文对话，也增加了不少能力。除了对话记录、语言支持、对话分享等 UX 方面的更新以外，有不少用户发现 Bard 甚至能够识别 UI 效果图并返回代码。  \n    \n  这在更新说明里用短短一句“基于 Google Lens 实现了图像识别”，却是所有对话机器人服务中最早实现这个能力的。做出过类似承诺的 OpenAI 还刚修补好中断了一整天的代码解释器服务，识别图片写代码这事估计还得等一会儿。  \n    \n  具体更新内容如下：  \n    \n  \n  支持超过 40 种语言，包括阿拉伯语、中文  \n    \n  开放访问至所有 27 个欧盟国家以及巴西  \n    \n  基于 Google Lens 的图像识别（仅支持英文 prompt，会过滤人像  \n    \n  支持使用 40 余种语言朗读生成的文本（中文只有女声  \n    \n  页面左侧增加对话记录，支持置顶、重命名（终于！  \n    \n  支持分享单段对话或整个对话（点开看看      g.co      \n    \n  支持 5 种方式重新生成文本，更长/短、更简单/休闲/专业…",
+          "link": "https://speciouspm.zhubai.love/posts/2292730290072326144",
+          "publishedOn": "2023-07-17T14:21:52.000Z",
+          "wordCount": 63,
+          "title": "AIGC 每周看点 #16 各显神通的大语言模型们 0710-0716",
+          "imageUrl": "https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png"
+        },
         {
           "id": "https://river.zhubai.love/posts/2292551648813916160",
           "author": "何弦",
@@ -237,16 +247,6 @@
           "publishedOn": "2023-07-15T02:04:16.000Z",
           "wordCount": 63,
           "title": "41｜写了 40 期，内容上的方向，我想说......",
-          "imageUrl": "https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png"
-        },
-        {
-          "id": "https://shyrz.zhubai.love/posts/2291808078876250112",
-          "author": "Shyrz @CyberClip",
-          "description": "23 · 07 · 15 号刊 第 37 期  \n    \n  诸位，见信如面。炎炎夏日，注意防暑。也感谢一直以来的支持！  \n    \n  本期选文中《把对失败的恐惧转化为好奇心的增长》探讨了现代人对失败的恐惧，并提出了切实可行的应对方法；《世界上最致命的东西》介绍了肉毒杆菌毒素的发现，以及它是如何应用到医疗美容行业的。  \n    \n  希望有所启发。  \n    \n      博客      ｜      竹白      \n        \n  Stream Your Ideas to the Top  \n        \n      IdeaChat       →   \n    \n  IdeaChat 是一款由人工智能驱动的对话式应用，助力您实现下一个创想。  \n    \n  注册 IdeaChat 将会免费获得 100 点数以供试用。IdeaChat 支持微信或支付宝付款，为国内用户提供了稳定的使用 ChatGPT 的途径，如果你希望长期使用，请根据自身情况考虑购买服务。  \n    \n  （    点击上面的链接订阅或在付款时使用优惠码 SHYRZ 即可享受 8 折优惠    ，我能从中获得一定比例的返利）  \n        \n  把对失败的恐惧转化为好奇心的增长  \n    \n  → 原文链接    ：      Turning Fear of Failure into Increments of Curiosity       — Anne-Laure Le Cunff / NessLabs  \n    \n  年轻的时候，我非常想住在日本。日本是一个有非常严格的移民法规的国家，但是我的大学有一个交流计划，可以去另一个国家学习一个学期。  \n    \n  唯一的问题是：合作的日本大学是日本最挑剔的大学之一。记得我当时想：「我不可能被录取」。  \n    \n…",
-          "link": "https://shyrz.zhubai.love/posts/2291808078876250112",
-          "publishedOn": "2023-07-15T01:17:19.000Z",
-          "wordCount": 63,
-          "title": "#38 失败恐惧症",
           "imageUrl": "https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png"
         },
         {
@@ -511,12 +511,22 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
+          "id": "https://juejin.cn/post/7257076605570646076",
+          "author": "大白萝卜",
+          "description": "之前公司调整洗牌，裁掉了一大波人，像我这样做了快一年的，也竟是研发老员工了...最近领导安排我开始面试，拿到第一份简历是一位10年经验的前端大佬，看完简历后突然蒙圈，我该问什么问题，用过什么框架？ 项目遇到过什么问题？困难是怎么解决的？webpack做过哪些性能优化？\n\n诶，想到这，突然觉得哪天我也去投递简历了，很有可能会同样被问到这些问题，看看自己在现在公司干了快一年了，似乎也没有做过太多总结，瞬间感觉不寒而栗。\n\n既然这些都迟早是要总结的，今天那就来回顾一下， 创业公司工作一年， 到底收获了什么？同时也希望我的经历能给大家带来一丝启发。\n后台管理web阶段\n坐标一线城市北京，前面刚来两三个月一直在做公司后台系统，使用技术栈主要是vue2+elementUI，因为刚来，很多业务逻辑要熟悉，没有时间去做优化，而且入职第三天就开始写代码了。\nTailwind\n为了提高写代码的效率，正好当时看到tailwind，觉得很新奇，就给引入到项目里来了。可以用类名来直接书写css样式：\n\ntailwind可以节省很多编写类名的脑力， 同时开发的时候不再需要在style和template来回切换，直接在类名里写属性，用起来是真香！而且据官网介绍，全部使用tailwind编码之后，css的文件最后打包编译出来，基本都小于10KB？！因为引入了elementUI组件库，也没法验证，但节省心智是实实在在的。\n\nDrone CI\nCI工具，配置之后本地npm run build后会自动提交到drone，它会帮忙完成测试，代码缓存，cdn刷新等操作，并且可以设置在自动化部署完成后，出现飞书提醒，整体界面看上去也比较舒服\n\nSentry\n线上日志监控，用户在使用过程中产生了报错，sentry会实时发送提醒，咱们就可以通过日志回放可以分析出错原因，相当于飞机的黑盒子， 甚至可以回放用户的操作过程，挺强…",
+          "link": "https://juejin.cn/post/7257076605570646076",
+          "publishedOn": "2023-07-18T16:04:18.000Z",
+          "wordCount": 1183,
+          "title": "在创业公司做前端一年，这些经验到底值不值？",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7256983702810181688",
           "author": "手撕红黑树",
           "description": "theme: channing-cyan\n前言\n就在一年前的 Vue Conf 2022，尤雨溪向大家分享了一个非常令人期待的新模式：无虚拟 DOM 模式！\n我看了回放之后非常兴奋，感觉这是个非常牛逼的新 feature，于是赶紧写了篇文章：\n《无虚拟 DOM 版 Vue 即将到来》\n鉴于可能会有部分人还不知道或者还没听过什么是 Vue 无虚拟 DOM 模式，我们先来简单的介绍一下：Vue 无虚拟 DOM 编译模式在官方那边叫 Vue Vapor Mode，直译过来就是：Vue 蒸汽模式。\n为什么叫蒸汽模式呢？个人瞎猜的哈：第一次工业革命开创了以机器代替手工劳动的时代，并且是以蒸汽机作为动力机被广泛使用为标志的。这跟 Vue1 有点像，Vue 赶上了前端界的第一次工业革命(以声明式代替命令式的时代)，此时的 Vue 还没有虚拟 DOM，也就是 Vue 的蒸汽时代。\n不过万万没想到的是历史居然是个轮回，当年火的不行的虚拟 DOM 如今早已日薄西山、跌落了神坛，现在无虚拟 DOM 居然又开始重返王座。当然重返王座这个说法也不是很准确，只能说开始演变成为了一种新的流行趋势吧！这无疑让尤大想起了那个蒸汽时代的 Vue1，于是就起名为 Vapor。\n当然也有这么一种可能：自从为自己的框架起名为 Vue 之后，尤大就特别钟意以 V 开头的单词，不信你看：\nVue\nVite\nVetur\nVolar\nVapor\n不过以上那些都是自己瞎猜的，人家到底是不是那么想的还有待商榷。可以等下次他再开直播时发弹幕问他，看他会怎么回答。\n但是吧，都过了一年多了，这个令我特别期待的新特性一点信都没有，上网搜到的内容也都是捕风捉影，这甚至让我开始怀疑 Vapor Mode 是不是要难产了？不过好在一年后的今天，Vue Conf 2023 如期而至，在那里我终于看到了自己所期待的与 Vapor Mode 有关…",
           "link": "https://juejin.cn/post/7256983702810181688",
           "publishedOn": "2023-07-18T06:58:45.000Z",
-          "wordCount": 1718,
+          "wordCount": 1723,
           "title": "无虚拟 DOM 版 Vue 进行到哪一步了？",
           "imageUrl": null
         },
@@ -546,7 +556,7 @@
           "description": "腾小云导读\n搜狗百科是一个服务于互联网用户的高质量内容平台。文章主要介绍团队在梳理业务时发现百科无线前端项目在研发流程、架构设计、研发效率、页面性能等方面存在诸多问题和痛点。作者团队是如何对这个系统进行升级和改造的？又是如何分析出怎么样的优化方案才是最适合业务的？欢迎各位开发者继续阅读~\n目录\n1 背景\n2 项目收益\n3 升级方案\n3.1 现状分析\n3.2 优化动作\n4 项目成果\n4.1 用户体验\n4.2 带宽成本\n4.3 技术沉淀\n5 总结与展望\n01、背景\n垂类前端研发组在梳理百科业务时，发现百科无线前端在研发流程、架构设计、研发效率、页面性能等方面存在诸多问题和痛点，为更好地支撑产品需求迭代和研发效率提升，优先对百科无线前端技术体系进行一次系统的升级和优化。\n\n02、项目收益\n核心页面指标\n\n03、升级方案\n3.1 现状分析\n本节主要从项目组织、技术架构、研发流程、页面性能、监控等维度来具体分析。\n3.1.1 项目组织现状\n百科无线端由词条页及视频集合二级页、首页及其他二级页、静态页面3个项目组成。因项目拆分较碎，组件、模块、API 接口、Service 等无法有效复用，例如搜索中间页横跨多个项目需要开发多次的问题。\n项目目录没有合理的分层，目录结构和 wenke-dev/wenke-webpack（封装的构件 npm 包）高度耦合，无法移动。\n\n3.1.2 技术架构现状\n技术架构主要由接入层、展现层、渲染层组成，渲染层比较薄，仅做首屏模版渲染。具体如下图：\n\n接入层现状\n接入层通过 IAS 接入，IAS 是一个类似 Nginx 接入服务，名字路由支持北极星、L5、TAF、IP 端口等方式，现状如下：\n路由规则配置存在多乱情况，缺少统一前缀及规范，问题排查和维护比较困难，其中词条页路由规则就有10多个。 已下线路由，没有及时进行清理。 无线端和 PC 端路由适配策略在…",
           "link": "https://juejin.cn/post/7256674113002864701",
           "publishedOn": "2023-07-17T09:51:25.000Z",
-          "wordCount": 2142,
+          "wordCount": 1843,
           "title": "毫秒级突破！腾讯技术团队是如何做前端性能优化的？",
           "imageUrl": null
         },
@@ -556,7 +566,7 @@
           "description": "项目地址\ngithub地址\n可以先点进来康康~\n技术栈\n目前我们整体采用的是vue3+typescript+less作为整体的开发的选择\n需要说的是，我们并没有采用很多组件库采用的TSX的写法，而是选择了SFC的写法，这是因为我们觉得对于大部分的vue开发者来说，可能template的写法已经深入到大家的开发思想之中，所以我们想让更多的人参与进来，这是我们的一个初衷。\n当然，现在有另一群小伙伴已经开始到了React端的建设之中，感谢大家的努力！在vue端建设丰富之后，我们会商讨接下来的计划，来决定要不要团队的一部分人去投入到多端的工作之中，这可能要取决于我们最初组织者的初衷和未来的发展计划。\n初衷\n我们的组织者是一个UI大大“yike”，这里放一下他的小破站的地址。\n这套组件库最开始创建的原因非常简单。就是作为一名设计人员，出于对前端组件的好奇，希望有一套属自己的组件库，用以表达自己的设计。但实践过程中个人的力量终究是有限的，团队的力量是无穷的，现在开源出来期待与大家一起建设它。希望能用团队的力量，不断完善这个项目。\n那么，现在就会说到另一个话题：现在组件库这么多，而且基本是几家独大，那么这样做下去的意义在哪里？\n这也是我们一开始开会就在讨论的问题，目前我们的计划还是，先开发基础组件，开发完技术组件后，我们会开发一些有意思的功能性组件，类似用户组件、登录组件、评论组件、富文本等等，这也是我们需要先开发基础组件的原因。\n我觉得我们和目前主流的组件库侧重点是不一样的，他们是为了将基础的业务组件做到更好，做到一种极致，而我们更多是想开发一些通用性并不那么强的，好玩的一些东西。\n我觉得我们是有优势的，毕竟我们有着专业的UI，可以做更好的设计、交互体验以及UI走查，UI设计这也是我们最注重的一点~\n项目的重构\n我们现在的项目是基于之前的项目重构的，因为之前的项目耦合度较强，规范度是不…",
           "link": "https://juejin.cn/post/7256599901593124921",
           "publishedOn": "2023-07-17T07:34:25.000Z",
-          "wordCount": 1617,
+          "wordCount": 1219,
           "title": "我们正在开发一套组件库，欢迎你的加入~",
           "imageUrl": null
         },
@@ -576,7 +586,7 @@
           "description": "leaferjs，全新的渲染引擎\n1. 前言\n前几天群里有人发了一个新 Canvas 渲染引擎的图片，看数据和宣传口号相当炸裂，号称只用 1.5s 可以渲染 100 万个矩形，还是个国产的。\n\n出于个人兴趣，就花了一点儿时间研究了一下感兴趣的点，如果有错误，希望可以指出。\n2. 架构设计\n从火焰图上可以看出，leaferjs 创建节点非常轻量，只做了 setAttr 的操作。\n\n大部分耗时集中在创建节点和布局，渲染仅仅花了3ms。\n\n那 leaferjs 为什么有这么好的性能呢？我简单去看了一下源码。\nleafer 主要包括了 leafer 和 ui 两个 git 仓库，核心渲染能力在 leafer 里面，ui 封装了一些绘制类，比如 Image、Line 等等。\n先看一下官网上一个详细的用法：\nimport { App, Leafer, Rect } from 'leafer-ui'\n\nconst app = new App({ view: window, type: 'user' }) \n\nconst backgroundLayer = new Leafer()\nconst contentLayer = new Leafer({ type: 'design' })\nconst wireframeLayer = new Leafer()\n\napp.add(backgroundLayer)\napp.add(contentLayer)\napp.add(wireframeLayer)\n\nconst background = new Rect({ width: 800, height: 600, fill: 'gray' })\nconst rect = new Rect({ x: 100, y: 100, fill: '#32cd79', draggable: true })\nc…",
           "link": "https://juejin.cn/post/7256386855721074747",
           "publishedOn": "2023-07-17T02:21:10.000Z",
-          "wordCount": 2835,
+          "wordCount": 2833,
           "title": "leaferjs，全新的 Canvas 渲染引擎",
           "imageUrl": null
         },
@@ -596,7 +606,7 @@
           "description": "前言\n如期而至，我独立开发的 JavaScript 框架 Strve.js 迎来了一个大版本5.6.2。此次版本距离上次大版本发布已经接近半年之多，为什么这么长时间没有发布新的大版本呢？主要是研究 Strve.js 如何支持单文件组件，使代码智能提示、代码格式化方面更加友好。之前也发布了 Strve SFC，但是由于其语法规则的繁琐以及是在运行时编译的种种原因，我果断放弃了这个方案的继续研究。而这次的版本5.6.2成功解决了代码智能提示、代码格式化方面友好的问题，另外还增加了很多锦上添花的特性，这些都归功于我们这次版本成功支持JSX语法。熟悉React的朋友知道，JSX语法非常灵活。 而 Strve.js 一大特性也就是灵活操作代码块，这里的代码块我们可以理解成函数，而JSX语法在一定场景下也恰恰满足了我们这种需求。\n那么，我们如何在 Strve 项目中使用JSX语法呢？我们在Strve项目构建工具 CreateStrveApp 预置了模版，你可以选择 strve-jsx 或者 strve-jsx-apps 模版即可。我们使用 CreateStrveApp 搭建完 Strve 项目会发现，同时安装了babelPluginStrve、babelPluginJsxToStrve，这是因为我们需要使用 babelPluginJsxToStrve 将 JSX 转换为标签模版，之后再使用babelPluginStrve 将标签模版转换为 Virtual DOM，进而实现差异化更新视图。\n尝试\n我既然发布出了一个大版本，并且个人还算比较满意。那么下一步我如何推广它呢？毕竟毛遂自荐有时候还是非常有意义的。所以，我打算通过js-framework-benchmark 这个项目评估下性能。\njs-framework-benchmark 是什么？我们这里就简单介绍下 js-framework-…",
           "link": "https://juejin.cn/post/7256250499280158776",
           "publishedOn": "2023-07-16T18:09:49.000Z",
-          "wordCount": 2601,
+          "wordCount": 3003,
           "title": "我终于成功登上了JS 框架榜单，并且仅落后于 React 4 名！",
           "imageUrl": null
         },
@@ -686,18 +696,8 @@
           "description": "b 站视频播放的是很快的，基本是点哪就播放到哪。\n而且如果你上次看到某个位置，下次会从那个位置继续播放。\n那么问题来了：如果一个很大的视频，下载下来需要很久，怎么做到点哪个位置快速播放那个位置的视频呢？\n前面写过一篇 range 请求的文章，也就是不下载资源的全部内容，只下载 range 对应的范围的部分。\n那视频的快速播放，是不是也是基于 range 来实现的呢？\n我们先复习下 range 请求：\n\n请求的时候带上 range：\n\n服务端会返回 206 状态码，还有 Content-Range 的 header 代表当前下载的是整个资源的哪一部分：\n\n这里的 Content-Length 是当前内容的长度，而 Content-Range 里是资源总长度和当前资源的范围。\n更多关于 Range 的介绍可以看这篇文章：基于 HTTP Range 实现文件分片并发下载！\n那 b 站视频是不是用 Range 来实现的快速播放呢？\n我们先在知乎的视频试一下：\n随便打开一个视频页面，比如这个：\n\n然后打开 devtools，刷新页面，拖动下进度条，可以看到确实有 206 的状态码：\n\n我们可以在搜索框输入 status-code:206 把它过滤出来：\n\n这是一种叫过滤器的技巧：\n\n可以根据 method、domain、mime-type 等过滤。\nhas-response-header：过滤响应包含某个 header 的请求\nmethod：根据 GET、POST 等请求方式过滤请求\ndomain: 根据域名过滤\nstatus-code：过滤响应码是 xxx 的请求，比如 404、500 等\nlarger-than：过滤大小超过多少的请求，比如 100k，1M\nmime-type：过滤某种 mime 类型的请求，比如 png、mp4、json、html 等\nresource-type…",
           "link": "https://juejin.cn/post/7255110638154072120",
           "publishedOn": "2023-07-13T04:04:34.000Z",
-          "wordCount": 1425,
+          "wordCount": 1813,
           "title": "通过调试技术，我理清了 b 站视频播放很快的原理",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7254861171823247420",
-          "author": "王大冶",
-          "description": "微信搜索 【大迁世界】, 我会第一时间和你分享前端行业趋势，学习途径等等。\n本文 GitHub  https://github.com/qq449245884/xiaozhi 已收录，有一线大厂面试完整考点、资料以及我的系列文章。\n快来免费体验ChatGpt plus版本的，我们出的钱 体验地址:https://chat.waixingyun.cn 可以加入网站底部技术群，一起找bug，另外新版作图神器已上线 https://cube.waixingyun.cn/home\n1.Documatic  Documatic\n地址：https://www.documatic.com/\nDocumatic 是一个高效的搜索引擎工具，旨在帮助开发人员轻松搜索他们的代码库，找到特定的代码片段、函数、方法和其他相关信息。该工具旨在通过在几秒钟内快速提供准确和相关的搜索结果，节省开发人员宝贵的时间，提高他们的生产力。\nDocumatic是一个带有自然语言查询功能的代码搜索工具，它简化了专家和新手开发人员对代码库的搜索。一旦您输入查询，Documatic会快速从代码库中获取相关的代码块，使您能够轻松找到所需的信息。\n\nTransform.tools\n地址：https://transform.tools/\ntransform.tools 是一个网站，它可以让你转换几乎所有的东西，比如将HTML转换为JSX，JavaScript转换为JSON，CSS转换为JS对象等等。当我需要转换任何东西时，它真的帮我节省了很多时间。\n\n\nConvertio\n地址：https://convertio.co/zh/\nConvertio - 在线转换文件的简单工具。超过309种不同的文档、图像、电子表格、电子书、存档、演示文稿、音频和视频格式。例如，将PNG转换为JPEG，SVG转换为PNG，PNG转换为ICO等等。…",
-          "link": "https://juejin.cn/post/7254861171823247420",
-          "publishedOn": "2023-07-13T00:41:57.000Z",
-          "wordCount": 854,
-          "title": "每个前端开发者都应知道的10个实用网站",
           "imageUrl": null
         },
         {
@@ -718,12 +718,22 @@
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
         {
+          "id": "7257518510532198458",
+          "author": "小凯服务器",
+          "description": "早上好,有需要服务器或者了解可找我[灵光一现]",
+          "link": "https://juejin.cn/pin/7257518510532198458",
+          "publishedOn": "2023-07-20T02:20:23.000Z",
+          "wordCount": 463,
+          "title": "早上好,有需要服务器或者了解可找我[灵光一现]",
+          "imageUrl": null
+        },
+        {
           "id": "7257344346797998139",
           "author": "小白菜又可怜又很菜",
           "description": "图表分析的工具，类似grafana的 有人使用过不，有没有国产的类似这款grafana的工具，并且免费，咱纯属个智障，啥不造，不知道咋找啦。",
           "link": "https://juejin.cn/pin/7257344346797998139",
           "publishedOn": "2023-07-19T05:47:21.000Z",
-          "wordCount": 463,
+          "wordCount": 457,
           "title": "图表分析的工具，类似grafana的 有人使用过不，有没有国产的类似这款grafana的工具，并且免费，咱纯属个智障，啥不造，不知道咋找啦。",
           "imageUrl": null
         },
@@ -733,7 +743,7 @@
           "description": "有需要服务器的吗[害羞]",
           "link": "https://juejin.cn/pin/7257333598469718074",
           "publishedOn": "2023-07-19T04:22:36.000Z",
-          "wordCount": 470,
+          "wordCount": 468,
           "title": "有需要服务器的吗[害羞]",
           "imageUrl": null
         },
@@ -753,7 +763,7 @@
           "description": "有使用Google日历 用日常工作的吗？ 聊聊它的缺点吧！",
           "link": "https://juejin.cn/pin/7257012010515513402",
           "publishedOn": "2023-07-18T08:21:15.000Z",
-          "wordCount": 463,
+          "wordCount": 460,
           "title": "有使用Google日历 用日常工作的吗？ 聊聊它的缺点吧！",
           "imageUrl": null
         },
@@ -763,7 +773,7 @@
           "description": "推荐一个设置 cookie 的 chrome 插件\nhttps://chrome.google.com/webstore/detail/easy-cookies/gaponncihgmdkgepddfjajfajhjpddkp?hl=zh-CN&authuser=0\nhttps://github.com/Dolov/chrome-easy-cookies",
           "link": "https://juejin.cn/pin/7256958758794657848",
           "publishedOn": "2023-07-18T05:49:13.000Z",
-          "wordCount": 486,
+          "wordCount": 480,
           "title": "推荐一个设置 cookie 的 chrome 插件 https://chrome.google.com/webstore/detail/easy-cookies/gaponncihgmdkgepddfjajfajhjpddkp?hl=zh-CN&authuser=0 https:/...",
           "imageUrl": null
         },
@@ -773,7 +783,7 @@
           "description": "[7210002980895916043#挑战每日一条沸点#] #工欲善其事必先利其器 #开发工具推荐 #Seal软件\nIT Tools 是一个免费开源的方便在线工具集合，供开发人员和 IT 工作人员使用。它包括令牌生成器、大小写转换器、基本转换器、QR 代码生成器、Git cheatsheet、lorem ipsum 生成器等等！\n速速 get：https://it-tools.tech/",
           "link": "https://juejin.cn/pin/7256964915133661240",
           "publishedOn": "2023-07-18T03:47:07.000Z",
-          "wordCount": 516,
+          "wordCount": 541,
           "title": "[7210002980895916043#挑战每日一条沸点#] #工欲善其事必先利其器 #开发工具推荐 #Seal软件 IT Tools 是一个免费开源的方便在线工具集合，供开发人员和 IT 工作...",
           "imageUrl": null
         },
@@ -783,7 +793,7 @@
           "description": "请教一下各位大佬，有没有什么工具可以将支付宝小程序项目转换为uniapp项目",
           "link": "https://juejin.cn/pin/7256672676094181435",
           "publishedOn": "2023-07-17T10:25:10.000Z",
-          "wordCount": 457,
+          "wordCount": 451,
           "title": "请教一下各位大佬，有没有什么工具可以将支付宝小程序项目转换为uniapp项目",
           "imageUrl": null
         },
@@ -793,7 +803,7 @@
           "description": "问个问题，mac卸载了一个应用，在访达的应用程序里面是看不到这个的，但是在启动台里面会有一个这个在，点了也没反应，请问一下这个怎么才能删",
           "link": "https://juejin.cn/pin/7256620538093060155",
           "publishedOn": "2023-07-17T08:04:31.000Z",
-          "wordCount": 459,
+          "wordCount": 453,
           "title": "问个问题，mac卸载了一个应用，在访达的应用程序里面是看不到这个的，但是在启动台里面会有一个这个在，点了也没反应，请问一下这个怎么才能删",
           "imageUrl": null
         },
@@ -803,7 +813,7 @@
           "description": "有没有比较好用的思维导图组件？",
           "link": "https://juejin.cn/pin/7256607606465347643",
           "publishedOn": "2023-07-17T06:56:21.000Z",
-          "wordCount": 456,
+          "wordCount": 450,
           "title": "有没有比较好用的思维导图组件？",
           "imageUrl": null
         },
@@ -823,7 +833,7 @@
           "description": "idea 最稳激活方式：打开 https://idea.eiyou.fun 点击中间《获取专属激活地址》的按钮，支付宝扫码支付后，点击《我已捐赠》稍等片刻就能生成专属的服务器授权地址,超级稳定！",
           "link": "https://juejin.cn/pin/7256176612197695546",
           "publishedOn": "2023-07-16T11:34:46.000Z",
-          "wordCount": 471,
+          "wordCount": 465,
           "title": "idea 最稳激活方式：打开 https://idea.eiyou.fun 点击中间《获取专属激活地址》的按钮，支付宝扫码支付后，点击《我已捐赠》稍等片刻就能生成专属的服务器授权...",
           "imageUrl": null
         },
@@ -833,7 +843,7 @@
           "description": "在开发过程中经常面临繁琐的任务重复，就真的没有一种工具可以自动化这些任务[流泪]让人喘口气吗？",
           "link": "https://juejin.cn/pin/7255493179942780965",
           "publishedOn": "2023-07-14T06:06:00.000Z",
-          "wordCount": 453,
+          "wordCount": 447,
           "title": "在开发过程中经常面临繁琐的任务重复，就真的没有一种工具可以自动化这些任务[流泪]让人喘口气吗？",
           "imageUrl": null
         },
@@ -843,7 +853,7 @@
           "description": "https://github.com/devlive-community/openai-java-sdk\n这个 SDK 简直是太好用了\n赶快尝试使用",
           "link": "https://juejin.cn/pin/7255217876365017145",
           "publishedOn": "2023-07-13T14:00:35.000Z",
-          "wordCount": 468,
+          "wordCount": 462,
           "title": "https://github.com/devlive-community/openai-java-sdk 这个 SDK 简直是太好用了 赶快尝试使用",
           "imageUrl": null
         },
@@ -853,7 +863,7 @@
           "description": "#工欲善其事必先利其器 #开发工具推荐 #Seal软件\n利用来自 Git 和 Jira 的数据驱动洞察和见解，以了解和掌握开发团队的进度。Hivel 消除了软件工程流程中的瓶颈，从而提高发布的速度、吞吐量和质量。通过识别倦怠迹象并使用健康的指标，来衡量和提高开发人员的生产力。\n工具官网：https://www.hivel.ai/",
           "link": "https://juejin.cn/pin/7255126807552737339",
           "publishedOn": "2023-07-13T06:20:11.000Z",
-          "wordCount": 492,
+          "wordCount": 486,
           "title": "#工欲善其事必先利其器 #开发工具推荐 #Seal软件 利用来自 Git 和 Jira 的数据驱动洞察和见解，以了解和掌握开发团队的进度。Hivel 消除了软件工程流程中的瓶颈...",
           "imageUrl": null
         },
@@ -863,7 +873,7 @@
           "description": "发现一个学习语言的神仙网站，很多都是免费哦\nCodecademy",
           "link": "https://juejin.cn/pin/7254792161115914297",
           "publishedOn": "2023-07-12T07:15:51.000Z",
-          "wordCount": 458,
+          "wordCount": 452,
           "title": "发现一个学习语言的神仙网站，很多都是免费哦 Codecademy",
           "imageUrl": null
         },
@@ -873,7 +883,7 @@
           "description": "AOC显示器有推荐吗？铁汁们",
           "link": "https://juejin.cn/pin/7254793459122044989",
           "publishedOn": "2023-07-12T07:04:55.000Z",
-          "wordCount": 453,
+          "wordCount": 447,
           "title": "AOC显示器有推荐吗？铁汁们",
           "imageUrl": null
         },
@@ -883,7 +893,7 @@
           "description": "#工欲善其事必先利其器 #开发工具推荐 #Seal软件\nBito 的 AI 助手将 ChatGPT 带到您的 IDE 或 Chrome 中，让您可以轻松编写代码、理解语法、编写测试用例、解释代码、注释代码、检查安全性，甚至解释高级概念。好使！\n火速尝鲜：https://bito.ai/",
           "link": "https://juejin.cn/pin/7254574621898899513",
           "publishedOn": "2023-07-12T03:43:53.000Z",
-          "wordCount": 504,
+          "wordCount": 498,
           "title": "#工欲善其事必先利其器 #开发工具推荐 #Seal软件 Bito 的 AI 助手将 ChatGPT 带到您的 IDE 或 Chrome 中，让您可以轻松编写代码、理解语法、编写测试用例、解释...",
           "imageUrl": null
         },
@@ -893,7 +903,7 @@
           "description": "jym，有没有好用的ssh和ftp工具推荐一些，我的xshell又㕛叒叕打不开了",
           "link": "https://juejin.cn/pin/7254699605669445691",
           "publishedOn": "2023-07-12T03:35:48.000Z",
-          "wordCount": 453,
+          "wordCount": 447,
           "title": "jym，有没有好用的ssh和ftp工具推荐一些，我的xshell又㕛叒叕打不开了",
           "imageUrl": null
         },
@@ -903,18 +913,8 @@
           "description": "功能强大的开源数据中台系统 DataCap 1.12.0 发布\nhttps://datacap.edurt.io/release/latest.html",
           "link": "https://juejin.cn/pin/7254725753169707068",
           "publishedOn": "2023-07-12T03:28:02.000Z",
-          "wordCount": 478,
+          "wordCount": 472,
           "title": "功能强大的开源数据中台系统 DataCap 1.12.0 发布 https://datacap.edurt.io/release/latest.html",
-          "imageUrl": null
-        },
-        {
-          "id": "7254439788048252985",
-          "author": "River_何",
-          "description": "开源项目visualization-collection，一个专注于前端视觉效果的集合应用，包含CSS动效、Canvas动画、人工智能应用等上百个案例，今天终于发布了Vue版本，各位使用Vue开发的小伙伴赶紧来围观啦。\n应用地址(PC端)：http://hepengwei.cn\n源码地址：https://github.com/hepengwei/visualization-collection-vue",
-          "link": "https://juejin.cn/pin/7254439788048252985",
-          "publishedOn": "2023-07-11T10:53:30.000Z",
-          "wordCount": 455,
-          "title": "开源项目visualization-collection，一个专注于前端视觉效果的集合应用，包含CSS动效、Canvas动画、人工智能应用等上百个案例，今天终于发布了Vue版本，各位使用...",
           "imageUrl": null
         }
       ]

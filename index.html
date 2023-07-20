@@ -51,6 +51,123 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-20 datetime="2023-07-20T02:20:23.000Z">2023-07-20</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-20 datetime="2023-07-20T02:20:23.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7257518510532198458"
+                        open
+                      >
+                        <summary class="article-expander__title">早上好,有需要服务器或者了解可找我[灵光一现]</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7257518510532198458">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>早上好,有需要服务器或者了解可找我[灵光一现]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Barret李靖的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/64b899a763e42a95c41ed3db"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 简单的 Prompt 编写几乎不需要使用工具，给大模型设定一个角色，然后给出几个示例以强调输入输出的规则，基本就可以满足需要，但涉及到复杂任务拆解和链...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/64b899a763e42a95c41ed3db">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fn8AlWawBkYj5AEJ5Z-kBPrauZ-Ov3.png?imageMogr2/auto-orient/crop/!x2015a0a0/thumbnail/x300" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>简单的 Prompt 编写几乎不需要使用工具，给大模型设定一个角色，然后给出几个示例以强调输入输出的规则，基本就可以满足需要，但涉及到复杂任务拆解和链式思考的时候，例如针对业务需求建模、给学生做助教、设计互动游戏等等，含糊的规则会让大模型给出过于简单且不符合预期的答案。
+好的办法是，编写一个具备清晰步骤的 Prompt，让 AI 学会按照我们期望的思考路径往下推理，这就涉及到任务的拆解和规则的设定，举个栗子，“让 AI 能够针对复杂问题做拆解，建设领域模型，给出框架代码和 API，最后对问题做总结”，对应的 Prompt：
+------ START
+这是一个领域模型建设问题的拆解思路，步骤如下：
+1. 问题分析，当你看到 “DDD:” 开头的问题时，对问题进行分析和梳理，找到领域中的实体、属性、关系和行为进行建模，创建领域模型，并用文字绘制出实体之间的关系图
+2. 针对第一步中的建模内容和关系图进行分析和梳理，与最初始的问题对比，找到更优解，循环第一步，直到建模达到优良的水平
+3. 根据第二步的结果，输出 Model 层和 Service 层的代码，并枚举需要用到的 Restful 请求范例
+4. 对问题和分析过程进行总结，重点描述以上解法中的难点和重点
+例如：
+&quot;&quot;&quot;
+DDD: 实现一个抽奖模块
+### 问题分析
+实体：抽奖活动、参与者、奖品
+属性：
+- 抽奖活动：{}
+- 参与者：{}
+- 奖品：{}
+关系：
+- 抽奖活动和参与者的关系：{}
+- 抽奖活动和奖品的关系:：{}
+### 领域建模
+通过文字使用UML类图将上面的实体、属性和关系表达出来: {}
+### 编写代码
+根据上述 UML，将对应的 Model 和 Service 层，使用 Node.js 代码编写出来: {}
+### Restful 接口
+将所有的接口以如下形式展示出来，params 和 result 使用 json 描述：
+&#x60;&#x60;&#x60;
+GET /api/prize
+params: {}
+result: {}
+&#x60;&#x60;&#x60;
+### 总结
+{}
+&quot;&quot;&quot;
+------ END
+过程中需要让大模型针对每一步的结果进行对比、反思，让它进入到一个递归优化的循环过程，这么做当然是为了最大程度压榨大模型的计算资源和扩大推理半径，当然，如果在 Prompt 中给定更多的限制条件，效果也一样，因为这会让模型推理过程中少走大量的低质量分支，相当于直接以专家路线往前推导。
+上面的 Prompt 如果没有给出实例，模型的推理结果会十分简单，完全不是按照我们期望的效果展示的，所以针对这种复杂任务的推理，需要给出 one-shot 或者 few-shot。那么这个范例的效果如何呢，可以看看：https://chat.openai.com/share/4e37257e-0e7d-4287-b68f-de382ef7bbc2</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-19 datetime="2023-07-19T23:30:03.000Z">2023-07-19</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-19 datetime="2023-07-19T23:30:03.000Z"></time>
           </button>
@@ -269,11 +386,126 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-18 datetime="2023-07-18T14:17:22.000Z">2023-07-18</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-18 datetime="2023-07-18T14:17:22.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-18 datetime="2023-07-18T16:04:18.000Z">2023-07-18</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-18 datetime="2023-07-18T16:04:18.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7257076605570646076"
+                        open
+                      >
+                        <summary class="article-expander__title">在创业公司做前端一年，这些经验到底值不值？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7257076605570646076">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>之前公司调整洗牌，裁掉了一大波人，像我这样做了快一年的，也竟是研发老员工了...最近领导安排我开始面试，拿到第一份简历是一位10年经验的前端大佬，看完简历后突然蒙圈，我该问什么问题，用过什么框架？ 项目遇到过什么问题？困难是怎么解决的？webpack做过哪些性能优化？
+
+诶，想到这，突然觉得哪天我也去投递简历了，很有可能会同样被问到这些问题，看看自己在现在公司干了快一年了，似乎也没有做过太多总结，瞬间感觉不寒而栗。
+
+既然这些都迟早是要总结的，今天那就来回顾一下， 创业公司工作一年， 到底收获了什么？同时也希望我的经历能给大家带来一丝启发。
+后台管理web阶段
+坐标一线城市北京，前面刚来两三个月一直在做公司后台系统，使用技术栈主要是vue2+elementUI，因为刚来，很多业务逻辑要熟悉，没有时间去做优化，而且入职第三天就开始写代码了。
+Tailwind
+为了提高写代码的效率，正好当时看到tailwind，觉得很新奇，就给引入到项目里来了。可以用类名来直接书写css样式：
+
+tailwind可以节省很多编写类名的脑力， 同时开发的时候不再需要在style和template来回切换，直接在类名里写属性，用起来是真香！而且据官网介绍，全部使用tailwind编码之后，css的文件最后打包编译出来，基本都小于10KB？！因为引入了elementUI组件库，也没法验证，但节省心智是实实在在的。
+
+Drone CI
+CI工具，配置之后本地npm run build后会自动提交到drone，它会帮忙完成测试，代码缓存，cdn刷新等操作，并且可以设置在自动化部署完成后，出现飞书提醒，整体界面看上去也比较舒服
+
+Sentry
+线上日志监控，用户在使用过程中产生了报错，sentry会实时发送提醒，咱们就可以通过日志回放可以分析出错原因，相当于飞机的黑盒子， 甚至可以回放用户的操作过程，挺强…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7256983702810181688"
+                        open
+                      >
+                        <summary class="article-expander__title">无虚拟 DOM 版 Vue 进行到哪一步了？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7256983702810181688">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: channing-cyan
+前言
+就在一年前的 Vue Conf 2022，尤雨溪向大家分享了一个非常令人期待的新模式：无虚拟 DOM 模式！
+我看了回放之后非常兴奋，感觉这是个非常牛逼的新 feature，于是赶紧写了篇文章：
+《无虚拟 DOM 版 Vue 即将到来》
+鉴于可能会有部分人还不知道或者还没听过什么是 Vue 无虚拟 DOM 模式，我们先来简单的介绍一下：Vue 无虚拟 DOM 编译模式在官方那边叫 Vue Vapor Mode，直译过来就是：Vue 蒸汽模式。
+为什么叫蒸汽模式呢？个人瞎猜的哈：第一次工业革命开创了以机器代替手工劳动的时代，并且是以蒸汽机作为动力机被广泛使用为标志的。这跟 Vue1 有点像，Vue 赶上了前端界的第一次工业革命(以声明式代替命令式的时代)，此时的 Vue 还没有虚拟 DOM，也就是 Vue 的蒸汽时代。
+不过万万没想到的是历史居然是个轮回，当年火的不行的虚拟 DOM 如今早已日薄西山、跌落了神坛，现在无虚拟 DOM 居然又开始重返王座。当然重返王座这个说法也不是很准确，只能说开始演变成为了一种新的流行趋势吧！这无疑让尤大想起了那个蒸汽时代的 Vue1，于是就起名为 Vapor。
+当然也有这么一种可能：自从为自己的框架起名为 Vue 之后，尤大就特别钟意以 V 开头的单词，不信你看：
+Vue
+Vite
+Vetur
+Volar
+Vapor
+不过以上那些都是自己瞎猜的，人家到底是不是那么想的还有待商榷。可以等下次他再开直播时发弹幕问他，看他会怎么回答。
+但是吧，都过了一年多了，这个令我特别期待的新特性一点信都没有，上网搜到的内容也都是捕风捉影，这甚至让我开始怀疑 Vapor Mode 是不是要难产了？不过好在一年后的今天，Vue Conf 2023 如期而至，在那里我终于看到了自己所期待的与 Vapor Mode 有关…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7256879435339628604"
+                        open
+                      >
+                        <summary class="article-expander__title">前端基建原来可以做这么多事情</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7256879435339628604">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前端基建是指在前端开发过程中，为提高开发效率、代码质量和团队协作而构建的一些基础设施和工具。下面是前端基建可以做的一些事情：
+脚手架工具：开发和维护一个通用的脚手架工具，可以帮助团队快速初始化项目结构、配置构建工具、集成常用的开发依赖等。
+组件库：开发和维护一个内部的组件库，包含常用的UI组件、业务组件等，提供给团队成员复用，减少重复开发的工作量。
+构建工具和打包工具：搭建和维护一套完善的构建和打包工具链，包括使用Webpack、Parcel等工具进行代码的压缩、合并、打包等工具，优化前端资源加载和性能。
+自动化测试工具：引入自动化测试工具，如Jest、Mocha等，编写和维护测试用例，进行单元测试、集成测试、UI测试等，提高代码质量和可靠性。
+文档工具：使用工具如JSDoc、Swagger等，生成项目的API文档、接口文档等，方便团队成员查阅和维护。
+Git工作流：制定和规范团队的Git工作流程，使用版本控制工具管理代码，方便团队协作和代码回退。
+性能监控和优化：引入性能监控工具，如Lighthouse、Web Vitals等，对项目进行性能分析，优化网页加载速度、响应时间等。
+工程化规范：制定并推广团队的代码规范、目录结构规范等，提高代码的可读性、可维护性和可扩展性。
+持续集成和部署：搭建持续集成和部署系统，如Jenkins、Travis CI等，实现代码的自动构建、测试和部署，提高开发效率和代码质量。
+项目文档和知识库：建立一个内部的项目文档和知识库，记录项目的技术细节、开发经验、常见问题等，方便团队成员查阅和学习。
+通过建立和维护前端基建，可以提高团队的协作效率，减少重复劳动，提高代码质量和项目的可维护性。
+当涉及到前端基建时，还有一些其他的事情可以考虑：
+代码质量工具：引入代码质量工具，如ESLint、Prettier等，对代码进行静态分析和格式化，提高代码的一致…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -413,86 +645,6 @@ https://github.com/Dolov/chrome-easy-cookies</span>
 IT Tools 是一个免费开源的方便在线工具集合，供开发人员和 IT 工作人员使用。它包括令牌生成器、大小写转换器、基本转换器、QR 代码生成器、Git cheatsheet、lorem ipsum 生成器等等！
 速速 get：https://it-tools.tech/</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7256983702810181688"
-                        open
-                      >
-                        <summary class="article-expander__title">无虚拟 DOM 版 Vue 进行到哪一步了？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7256983702810181688">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: channing-cyan
-前言
-就在一年前的 Vue Conf 2022，尤雨溪向大家分享了一个非常令人期待的新模式：无虚拟 DOM 模式！
-我看了回放之后非常兴奋，感觉这是个非常牛逼的新 feature，于是赶紧写了篇文章：
-《无虚拟 DOM 版 Vue 即将到来》
-鉴于可能会有部分人还不知道或者还没听过什么是 Vue 无虚拟 DOM 模式，我们先来简单的介绍一下：Vue 无虚拟 DOM 编译模式在官方那边叫 Vue Vapor Mode，直译过来就是：Vue 蒸汽模式。
-为什么叫蒸汽模式呢？个人瞎猜的哈：第一次工业革命开创了以机器代替手工劳动的时代，并且是以蒸汽机作为动力机被广泛使用为标志的。这跟 Vue1 有点像，Vue 赶上了前端界的第一次工业革命(以声明式代替命令式的时代)，此时的 Vue 还没有虚拟 DOM，也就是 Vue 的蒸汽时代。
-不过万万没想到的是历史居然是个轮回，当年火的不行的虚拟 DOM 如今早已日薄西山、跌落了神坛，现在无虚拟 DOM 居然又开始重返王座。当然重返王座这个说法也不是很准确，只能说开始演变成为了一种新的流行趋势吧！这无疑让尤大想起了那个蒸汽时代的 Vue1，于是就起名为 Vapor。
-当然也有这么一种可能：自从为自己的框架起名为 Vue 之后，尤大就特别钟意以 V 开头的单词，不信你看：
-Vue
-Vite
-Vetur
-Volar
-Vapor
-不过以上那些都是自己瞎猜的，人家到底是不是那么想的还有待商榷。可以等下次他再开直播时发弹幕问他，看他会怎么回答。
-但是吧，都过了一年多了，这个令我特别期待的新特性一点信都没有，上网搜到的内容也都是捕风捉影，这甚至让我开始怀疑 Vapor Mode 是不是要难产了？不过好在一年后的今天，Vue Conf 2023 如期而至，在那里我终于看到了自己所期待的与 Vapor Mode 有关…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7256879435339628604"
-                        open
-                      >
-                        <summary class="article-expander__title">前端基建原来可以做这么多事情</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7256879435339628604">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前端基建是指在前端开发过程中，为提高开发效率、代码质量和团队协作而构建的一些基础设施和工具。下面是前端基建可以做的一些事情：
-脚手架工具：开发和维护一个通用的脚手架工具，可以帮助团队快速初始化项目结构、配置构建工具、集成常用的开发依赖等。
-组件库：开发和维护一个内部的组件库，包含常用的UI组件、业务组件等，提供给团队成员复用，减少重复开发的工作量。
-构建工具和打包工具：搭建和维护一套完善的构建和打包工具链，包括使用Webpack、Parcel等工具进行代码的压缩、合并、打包等工具，优化前端资源加载和性能。
-自动化测试工具：引入自动化测试工具，如Jest、Mocha等，编写和维护测试用例，进行单元测试、集成测试、UI测试等，提高代码质量和可靠性。
-文档工具：使用工具如JSDoc、Swagger等，生成项目的API文档、接口文档等，方便团队成员查阅和维护。
-Git工作流：制定和规范团队的Git工作流程，使用版本控制工具管理代码，方便团队协作和代码回退。
-性能监控和优化：引入性能监控工具，如Lighthouse、Web Vitals等，对项目进行性能分析，优化网页加载速度、响应时间等。
-工程化规范：制定并推广团队的代码规范、目录结构规范等，提高代码的可读性、可维护性和可扩展性。
-持续集成和部署：搭建持续集成和部署系统，如Jenkins、Travis CI等，实现代码的自动构建、测试和部署，提高开发效率和代码质量。
-项目文档和知识库：建立一个内部的项目文档和知识库，记录项目的技术细节、开发经验、常见问题等，方便团队成员查阅和学习。
-通过建立和维护前端基建，可以提高团队的协作效率，减少重复劳动，提高代码质量和项目的可维护性。
-当涉及到前端基建时，还有一些其他的事情可以考虑：
-代码质量工具：引入代码质量工具，如ESLint、Prettier等，对代码进行静态分析和格式化，提高代码的一致…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -758,7 +910,7 @@ class AddStrategy implements CalculatorStrategy {
 接入层现状
 接入层通过 IAS 接入，IAS 是一个类似 Nginx 接入服务，名字路由支持北极星、L5、TAF、IP 端口等方式，现状如下：
 路由规则配置存在多乱情况，缺少统一前缀及规范，问题排查和维护比较困难，其中词条页路由规则就有10多个。 已下线路由，没有及时进行清理。 无线端和 PC 端路由适配策略在…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -792,7 +944,7 @@ github地址
 我觉得我们是有优势的，毕竟我们有着专业的UI，可以做更好的设计、交互体验以及UI走查，UI设计这也是我们最注重的一点~
 项目的重构
 我们现在的项目是基于之前的项目重构的，因为之前的项目耦合度较强，规范度是不…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -925,6 +1077,107 @@ highlight: a11y-dark
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >竹白 - TOP20</button>
+                  <a class="source-heading__link" href="https://analy.zhubai.wiki">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://speciouspm.zhubai.love/posts/2292730290072326144"
+                        open
+                      >
+                        <summary class="article-expander__title">AIGC 每周看点 #16 各显神通的大语言模型们 0710-0716</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://speciouspm.zhubai.love/posts/2292730290072326144">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>本周内容概述  
+    
+  
+  Bard 2023 年七月更新  
+    
+  Claude 2 正式推出  
+    
+  LangChain 的问题  
+    
+  马斯克成立人工智能公司 xAI 以「理解宇宙」  
+    
+  与美联社合作的同时，OpenAI 被 FTC 开启关于不实信息的调查  
+    
+  WAIC 与 生成式人工智能服务管理办法  
+    
+  “一刀切的人工智能监管方法没有任何意义”  
+  
+          
+  01  
+    
+  Bard 2023年七月更新  
+    
+  上周大事之一，      就是 Bard 23.07.13 的这一轮更新      ，终于支持了中文对话，也增加了不少能力。除了对话记录、语言支持、对话分享等 UX 方面的更新以外，有不少用户发现 Bard 甚至能够识别 UI 效果图并返回代码。  
+    
+  这在更新说明里用短短一句“基于 Google Lens 实现了图像识别”，却是所有对话机器人服务中最早实现这个能力的。做出过类似承诺的 OpenAI 还刚修补好中断了一整天的代码解释器服务，识别图片写代码这事估计还得等一会儿。  
+    
+  具体更新内容如下：  
+    
+  
+  支持超过 40 种语言，包括阿拉伯语、中文  
+    
+  开放访问至所有 27 个欧盟国家以及巴西  
+    
+  基于 Google Lens 的图像识别（仅支持英文 prompt，会过滤人像  
+    
+  支持使用 40 余种语言朗读生成的文本（中文只有女声  
+    
+  页面左侧增加对话记录，支持置顶、重命名（终于！  
+    
+  支持分享单段对话或整个对话（点开看看      g.co      
+    
+  支持 5 种方式重新生成文本，更长/短、更简单/休闲/专业…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://river.zhubai.love/posts/2292551648813916160"
+                        open
+                      >
+                        <summary class="article-expander__title">20230717 生活底线</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://river.zhubai.love/posts/2292551648813916160">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>There is more to life than increasing its speed.   
+    
+  Mahatma Gandhi  
+    
+  生活不仅仅是追求速度的提升。  
+    
+  The more I worked, the less I exercised, read fiction, saw friends, went for long and meandering walks, cooked—the things that made me feel like a well-rounded person. The other bits of my life fell away, and the more I worked, the more I felt invested in work: the more I needed work to go well in order to feel good about myself. But over time, I felt less like myself, less effective at work, and powerless to do anything about the onslaught of assignments being thrown my way.  
+    
+  One way to help mitigate this is to maintain boundaries with your definitions (you are     not     your job) and your time (recharging is not a luxury). It’s to work on your self-care.   
+    
+  I keep m…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >沸点 - 开发工具推荐</button>
                   <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
                 </h3>
@@ -981,48 +1234,6 @@ highlight: a11y-dark
                               <span>有没有比较好用的思维导图组件？</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >竹白 - TOP20</button>
-                  <a class="source-heading__link" href="https://analy.zhubai.wiki">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://river.zhubai.love/posts/2292551648813916160"
-                        open
-                      >
-                        <summary class="article-expander__title">20230717 生活底线</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://river.zhubai.love/posts/2292551648813916160">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>There is more to life than increasing its speed.   
-    
-  Mahatma Gandhi  
-    
-  生活不仅仅是追求速度的提升。  
-    
-  The more I worked, the less I exercised, read fiction, saw friends, went for long and meandering walks, cooked—the things that made me feel like a well-rounded person. The other bits of my life fell away, and the more I worked, the more I felt invested in work: the more I needed work to go well in order to feel good about myself. But over time, I felt less like myself, less effective at work, and powerless to do anything about the onslaught of assignments being thrown my way.  
-    
-  One way to help mitigate this is to maintain boundaries with your definitions (you are     not     your job) and your time (recharging is not a luxury). It’s to work on your self-care.   
-    
-  I keep m…</span>
                             </span>
                           </div>
                         </a>
@@ -1108,7 +1319,7 @@ highlight: a11y-dark
 尝试
 我既然发布出了一个大版本，并且个人还算比较满意。那么下一步我如何推广它呢？毕竟毛遂自荐有时候还是非常有意义的。所以，我打算通过js-framework-benchmark 这个项目评估下性能。
 js-framework-benchmark 是什么？我们这里就简单介绍下 js-framework-…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                &ensp;<span class="article-reading-time">(&hairsp;10
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1631,52 +1842,6 @@ https://stackblitz.com/edit/vue-4af73c?file&#x3D;src%2FApp.vue
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://shyrz.zhubai.love/posts/2291808078876250112"
-                        open
-                      >
-                        <summary class="article-expander__title">#38 失败恐惧症</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://shyrz.zhubai.love/posts/2291808078876250112">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>23 · 07 · 15 号刊 第 37 期  
-    
-  诸位，见信如面。炎炎夏日，注意防暑。也感谢一直以来的支持！  
-    
-  本期选文中《把对失败的恐惧转化为好奇心的增长》探讨了现代人对失败的恐惧，并提出了切实可行的应对方法；《世界上最致命的东西》介绍了肉毒杆菌毒素的发现，以及它是如何应用到医疗美容行业的。  
-    
-  希望有所启发。  
-    
-      博客      ｜      竹白      
-        
-  Stream Your Ideas to the Top  
-        
-      IdeaChat       →   
-    
-  IdeaChat 是一款由人工智能驱动的对话式应用，助力您实现下一个创想。  
-    
-  注册 IdeaChat 将会免费获得 100 点数以供试用。IdeaChat 支持微信或支付宝付款，为国内用户提供了稳定的使用 ChatGPT 的途径，如果你希望长期使用，请根据自身情况考虑购买服务。  
-    
-  （    点击上面的链接订阅或在付款时使用优惠码 SHYRZ 即可享受 8 折优惠    ，我能从中获得一定比例的返利）  
-        
-  把对失败的恐惧转化为好奇心的增长  
-    
-  → 原文链接    ：      Turning Fear of Failure into Increments of Curiosity       — Anne-Laure Le Cunff / NessLabs  
-    
-  年轻的时候，我非常想住在日本。日本是一个有非常严格的移民法规的国家，但是我的大学有一个交流计划，可以去另一个国家学习一个学期。  
-    
-  唯一的问题是：合作的日本大学是日本最挑剔的大学之一。记得我当时想：「我不可能被录取」。  
-    
-…</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -1866,7 +2031,7 @@ https://stackblitz.com/edit/vue-4af73c?file&#x3D;src%2FApp.vue
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>在开发过程中经常面临繁琐的任务重复，就真的没有一种工具可以自动化这些任务[流泪]让人喘口气吗？</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1915,42 +2080,6 @@ highlight: a11y-dark
 于是我们怀着揣着疑问去钉钉社区里面提问，得到的回复如下，不知回复的人是否是官方技术，很震惊
 得不到结果，接着又去官方提了工单，得到的肯定的回复是 ios webkit存在bug，需要等 apple 修复，我们（钉钉）处理不…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Barret李靖的即刻动态</button>
-                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/64b0ba4af14149eb21c3ef32"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 工作九周年，也是三十岁的第一年。 每一年回望过去，总能看到有一丝丝的变化，这让我觉得自己的人生还算是有意义的。在对抗局限和焦虑的过程中，去寻找...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/64b0ba4af14149eb21c3ef32">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fmew9527dZv84K2UDIYgpDOc76pRv3.png?imageMogr2/auto-orient/format/jpeg/thumbnail/300x2000%3E/quality/70/interlace/1" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>工作九周年，也是三十岁的第一年。
-每一年回望过去，总能看到有一丝丝的变化，这让我觉得自己的人生还算是有意义的。在对抗局限和焦虑的过程中，去寻找内心的那一份笃定，或许就是意义本身吧。
-感谢曾经遇到的每一个人。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2037,11 +2166,9 @@ Passkey 这个方案可以做到，登录不需要密码，解决了上面提到
                         <summary class="article-expander__title">规避笔记陷阱</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://www.jason-liang.com/article/note-taking">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://www.notion.so/images/page-cover/nasa_earth_grid.jpg" loading="lazy" class="media-object__media article-image" />
+                              <img src="/bg_image.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>在我们的学习和工作过程中，笔记的重要性不言而喻，但是做笔记的过程中有一些陷阱需要规避，这里讨论了一些陷阱，希望对你有所启发</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2374,41 +2501,7 @@ status-code：过滤响应码是 xxx 的请求，比如 404、500 等
 larger-than：过滤大小超过多少的请求，比如 100k，1M
 mime-type：过滤某种 mime 类型的请求，比如 png、mp4、json、html 等
 resource-type…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7254861171823247420"
-                        open
-                      >
-                        <summary class="article-expander__title">每个前端开发者都应知道的10个实用网站</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7254861171823247420">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>微信搜索 【大迁世界】, 我会第一时间和你分享前端行业趋势，学习途径等等。
-本文 GitHub  https://github.com/qq449245884/xiaozhi 已收录，有一线大厂面试完整考点、资料以及我的系列文章。
-快来免费体验ChatGpt plus版本的，我们出的钱 体验地址:https://chat.waixingyun.cn 可以加入网站底部技术群，一起找bug，另外新版作图神器已上线 https://cube.waixingyun.cn/home
-1.Documatic  Documatic
-地址：https://www.documatic.com/
-Documatic 是一个高效的搜索引擎工具，旨在帮助开发人员轻松搜索他们的代码库，找到特定的代码片段、函数、方法和其他相关信息。该工具旨在通过在几秒钟内快速提供准确和相关的搜索结果，节省开发人员宝贵的时间，提高他们的生产力。
-Documatic是一个带有自然语言查询功能的代码搜索工具，它简化了专家和新手开发人员对代码库的搜索。一旦您输入查询，Documatic会快速从代码库中获取相关的代码块，使您能够轻松找到所需的信息。
-
-Transform.tools
-地址：https://transform.tools/
-transform.tools 是一个网站，它可以让你转换几乎所有的东西，比如将HTML转换为JSX，JavaScript转换为JSON，CSS转换为JS对象等等。当我需要转换任何东西时，它真的帮我节省了很多时间。
-
-
-Convertio
-地址：https://convertio.co/zh/
-Convertio - 在线转换文件的简单工具。超过309种不同的文档、图像、电子表格、电子书、存档、演示文稿、音频和视频格式。例如，将PNG转换为JPEG，SVG转换为PNG，PNG转换为ICO等等。…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2475,7 +2568,7 @@ Codecademy</span>
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>AOC显示器有推荐吗？铁汁们</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2515,7 +2608,7 @@ Bito 的 AI 助手将 ChatGPT 带到您的 IDE 或 Chrome 中，让您可以轻�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>jym，有没有好用的ssh和ftp工具推荐一些，我的xshell又㕛叒叕打不开了</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2605,46 +2698,11 @@ accessToken（用于请求头中…</span>
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-11 datetime="2023-07-11T10:53:30.000Z">2023-07-11</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-11 datetime="2023-07-11T10:53:30.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-11 datetime="2023-07-11T06:47:42.000Z">2023-07-11</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-11 datetime="2023-07-11T06:47:42.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7254439788048252985"
-                        open
-                      >
-                        <summary class="article-expander__title">开源项目visualization-collection，一个专注于前端视觉效果的集合应用，包含CSS动效、Canvas动画、人工智能应用等上百个案例，今天终于发布了Vue版本，各位使用...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7254439788048252985">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>开源项目visualization-collection，一个专注于前端视觉效果的集合应用，包含CSS动效、Canvas动画、人工智能应用等上百个案例，今天终于发布了Vue版本，各位使用Vue开发的小伙伴赶紧来围观啦。
-应用地址(PC端)：http://hepengwei.cn
-源码地址：https://github.com/hepengwei/visualization-collection-vue</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -3677,11 +3735,9 @@ accessToken（用于请求头中…</span>
                         <summary class="article-expander__title">Volta的使用</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://www.jason-liang.com/article/use-volta">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://www.notion.so/images/page-cover/nasa_earth_grid.jpg" loading="lazy" class="media-object__media article-image" />
+                              <img src="/bg_image.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>nvm切换node版本可能是一个伪需求，我们真正的需求是一些特殊的项目需要特殊的node版本，其余项目用默认版本。Volta解决了这一点</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3694,8 +3750,8 @@ accessToken（用于请求头中…</span>
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5605732195">
-        <time id="build-timestamp" datetime="2023-07-20T01:15:29.517Z">2023-07-20T01:15:29.517Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5606684078">
+        <time id="build-timestamp" datetime="2023-07-20T03:52:33.385Z">2023-07-20T03:52:33.385Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
