@@ -44,7 +44,7 @@
           "description": "我发现，有个CSS三角函数之后，以前很多需要JS计算才能实现的布局现在都可以纯CSS完成了，代码简洁了不少。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/06/css-sin-cos-tan-function/",
           "publishedOn": "2023-06-29T16:23:42.000Z",
-          "wordCount": 1361,
+          "wordCount": 1364,
           "title": "CSS sin()/cos()等数学三角函数简介与应用",
           "imageUrl": null
         }
@@ -128,7 +128,7 @@
           "description": "恒大负债 2.4 万亿是什么概念：约等于 4 亿根爱马仕皮带。🤣",
           "link": "https://m.okjike.com/originalPosts/64b7674538acc7bb5142413d",
           "publishedOn": "2023-07-19T04:32:05.000Z",
-          "wordCount": 417,
+          "wordCount": 421,
           "title": "发布了: 恒大负债 2.4 万亿是什么概念：约等于 4 亿根爱马仕皮带。🤣",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fm1Q1p6k3NWHZdzkylKUri1MA6AXv3.jpeg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
         },
@@ -407,6 +407,16 @@
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
         {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230720/t20230720_526335769.html",
+          "author": "国家预警信息发布中心",
+          "description": "忠县气象台2023年7月20日7时10分发布“大雾黄色预警信号”，预计20日7时至12时，涂井乡、石宝镇、汝溪镇、金声乡、野鹤镇、磨子土家族乡、乌杨街道、石子乡、白公街道、复兴镇、东溪镇、忠州街道、黄金镇、永丰镇、花桥镇、三汇镇、马灌镇、官坝镇、金鸡镇、石黄镇、兴峰乡、新生街道、白石镇、任家镇、双桂镇、拔山镇、洋渡镇、善广乡、新立镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20230720/t20230720_526335769.html",
+          "publishedOn": "2023-07-19T23:30:03.000Z",
+          "wordCount": 713,
+          "title": "重庆市忠县发布大雾黄色预警",
+          "imageUrl": null
+        },
+        {
           "id": "http://www.cneb.gov.cn/yjxx/csyj/20230718/t20230718_526333269.html",
           "author": "国家预警信息发布中心",
           "description": "重庆市万州区气象台2023年7月18日13时50分发布“高温橙色预警信号”，预计7月18日14时至7月18日20时，我区分水、新田、长岭、龙驹、李河、高笋塘、牌楼、太白、龙都、五桥、百安坝、双河口、天城、九池等镇乡街道海拔400米以下地区日最高气温将升到37℃以上，请注意防暑降温及预防火灾。有关部门和单位按照职责落实防暑降温保障措施；尽量避免在高温时段进行户外活动，高温条件下作业的人员应当缩短连续工作时间；对老、弱、病、幼人群提供防暑降温指导，并采取必要的防护措施；有关部门和单位应当注意防范因用电量过高，以及电线、变压器等电力负载过大而引发的火灾；需控制野外用火，注意防范森林草原火灾；户外游泳，注意防范溺水。",
@@ -566,7 +576,7 @@
           "description": "leaferjs，全新的渲染引擎\n1. 前言\n前几天群里有人发了一个新 Canvas 渲染引擎的图片，看数据和宣传口号相当炸裂，号称只用 1.5s 可以渲染 100 万个矩形，还是个国产的。\n\n出于个人兴趣，就花了一点儿时间研究了一下感兴趣的点，如果有错误，希望可以指出。\n2. 架构设计\n从火焰图上可以看出，leaferjs 创建节点非常轻量，只做了 setAttr 的操作。\n\n大部分耗时集中在创建节点和布局，渲染仅仅花了3ms。\n\n那 leaferjs 为什么有这么好的性能呢？我简单去看了一下源码。\nleafer 主要包括了 leafer 和 ui 两个 git 仓库，核心渲染能力在 leafer 里面，ui 封装了一些绘制类，比如 Image、Line 等等。\n先看一下官网上一个详细的用法：\nimport { App, Leafer, Rect } from 'leafer-ui'\n\nconst app = new App({ view: window, type: 'user' }) \n\nconst backgroundLayer = new Leafer()\nconst contentLayer = new Leafer({ type: 'design' })\nconst wireframeLayer = new Leafer()\n\napp.add(backgroundLayer)\napp.add(contentLayer)\napp.add(wireframeLayer)\n\nconst background = new Rect({ width: 800, height: 600, fill: 'gray' })\nconst rect = new Rect({ x: 100, y: 100, fill: '#32cd79', draggable: true })\nc…",
           "link": "https://juejin.cn/post/7256386855721074747",
           "publishedOn": "2023-07-17T02:21:10.000Z",
-          "wordCount": 3325,
+          "wordCount": 2835,
           "title": "leaferjs，全新的 Canvas 渲染引擎",
           "imageUrl": null
         },
@@ -576,7 +586,7 @@
           "description": "theme: orange\nhighlight: a11y-dark\n前言\n半年时间撑过了三轮裁员，还是在第四轮的时候被裁了，差一周时间就入职满一年了。去年7月份换了一家新公司，刚进公司的时候感觉蒸蒸日上，特别有朝气，氛围也很轻松。这一年除了负责业务开发外，还做了很多前端基建方面的工作，多次技术分享，开发了很多个ai应用，对机器学习、ai这块产生了很多的兴趣。\n工作期间也带了三个前端实习生，亦师亦友，结下了深厚的友谊。一个大专带了本科、985、研究生学历的实习生。不过不得不感叹学历太重要了，本科的实习生实习结束后工作难找，选择去考公。985和研究生的大厂随便面试，一个去了美团，一个去了华为，但技术能力是没有太多的差距的。\n在里面也认识了很多关系好的朋友，最开始一切都很轻松，可是从去年年底开始就传出了要裁员的消息，把我关系最好的一个前端同事给裁了，今年来了后又陆陆续续裁了两波，部门内只剩三个前端了。\n部门也换了新领导，上周一上午刚开会制定了新的开发流程，以为会稳定下来，短时间内不会再裁了，可是下午正在敲代码的时候新部门领导还是把我喊走了，说需求不多了，让我交接一下工作，补偿是n+1，有了前几轮裁员的经历，我也知道迟早会有这么一天，在公司虽然做了很多事情，但架不住在职时间短，被裁成本低，和新领导又不熟。\n晚上回来改了改简历，后面几天投了一下，现在成都的环境很严峻，对大专更是不友好，虽然考了专升本，但感觉作用也不是特别大，现在好多外包都要求全日制本科。去年七月份找工作还能一天约两个面试，今年七月份找一周都很难约到两个。\n不过还是要多调整简历和好好复习，努力去找工作，工作这五年再加上自己平时不断学习，在技术广度、深度还有前端架构能力都有着很丰富的经验，还有强大的学习能力和解决问题的能力，大环境改变不了，只能改变自己，多学习，确保每一个面试都能表现的很好。后面也会分享一下面试准备和面…",
           "link": "https://juejin.cn/post/7256393626682163237",
           "publishedOn": "2023-07-17T01:45:23.000Z",
-          "wordCount": 6720,
+          "wordCount": 7033,
           "title": "被裁员了，记录下去年刚入职一个月时在组内关于前端基建的技术分享",
           "imageUrl": null
         },
@@ -586,7 +596,7 @@
           "description": "前言\n如期而至，我独立开发的 JavaScript 框架 Strve.js 迎来了一个大版本5.6.2。此次版本距离上次大版本发布已经接近半年之多，为什么这么长时间没有发布新的大版本呢？主要是研究 Strve.js 如何支持单文件组件，使代码智能提示、代码格式化方面更加友好。之前也发布了 Strve SFC，但是由于其语法规则的繁琐以及是在运行时编译的种种原因，我果断放弃了这个方案的继续研究。而这次的版本5.6.2成功解决了代码智能提示、代码格式化方面友好的问题，另外还增加了很多锦上添花的特性，这些都归功于我们这次版本成功支持JSX语法。熟悉React的朋友知道，JSX语法非常灵活。 而 Strve.js 一大特性也就是灵活操作代码块，这里的代码块我们可以理解成函数，而JSX语法在一定场景下也恰恰满足了我们这种需求。\n那么，我们如何在 Strve 项目中使用JSX语法呢？我们在Strve项目构建工具 CreateStrveApp 预置了模版，你可以选择 strve-jsx 或者 strve-jsx-apps 模版即可。我们使用 CreateStrveApp 搭建完 Strve 项目会发现，同时安装了babelPluginStrve、babelPluginJsxToStrve，这是因为我们需要使用 babelPluginJsxToStrve 将 JSX 转换为标签模版，之后再使用babelPluginStrve 将标签模版转换为 Virtual DOM，进而实现差异化更新视图。\n尝试\n我既然发布出了一个大版本，并且个人还算比较满意。那么下一步我如何推广它呢？毕竟毛遂自荐有时候还是非常有意义的。所以，我打算通过js-framework-benchmark 这个项目评估下性能。\njs-framework-benchmark 是什么？我们这里就简单介绍下 js-framework-…",
           "link": "https://juejin.cn/post/7256250499280158776",
           "publishedOn": "2023-07-16T18:09:49.000Z",
-          "wordCount": 3003,
+          "wordCount": 2601,
           "title": "我终于成功登上了JS 框架榜单，并且仅落后于 React 4 名！",
           "imageUrl": null
         },
@@ -676,7 +686,7 @@
           "description": "b 站视频播放的是很快的，基本是点哪就播放到哪。\n而且如果你上次看到某个位置，下次会从那个位置继续播放。\n那么问题来了：如果一个很大的视频，下载下来需要很久，怎么做到点哪个位置快速播放那个位置的视频呢？\n前面写过一篇 range 请求的文章，也就是不下载资源的全部内容，只下载 range 对应的范围的部分。\n那视频的快速播放，是不是也是基于 range 来实现的呢？\n我们先复习下 range 请求：\n\n请求的时候带上 range：\n\n服务端会返回 206 状态码，还有 Content-Range 的 header 代表当前下载的是整个资源的哪一部分：\n\n这里的 Content-Length 是当前内容的长度，而 Content-Range 里是资源总长度和当前资源的范围。\n更多关于 Range 的介绍可以看这篇文章：基于 HTTP Range 实现文件分片并发下载！\n那 b 站视频是不是用 Range 来实现的快速播放呢？\n我们先在知乎的视频试一下：\n随便打开一个视频页面，比如这个：\n\n然后打开 devtools，刷新页面，拖动下进度条，可以看到确实有 206 的状态码：\n\n我们可以在搜索框输入 status-code:206 把它过滤出来：\n\n这是一种叫过滤器的技巧：\n\n可以根据 method、domain、mime-type 等过滤。\nhas-response-header：过滤响应包含某个 header 的请求\nmethod：根据 GET、POST 等请求方式过滤请求\ndomain: 根据域名过滤\nstatus-code：过滤响应码是 xxx 的请求，比如 404、500 等\nlarger-than：过滤大小超过多少的请求，比如 100k，1M\nmime-type：过滤某种 mime 类型的请求，比如 png、mp4、json、html 等\nresource-type…",
           "link": "https://juejin.cn/post/7255110638154072120",
           "publishedOn": "2023-07-13T04:04:34.000Z",
-          "wordCount": 1813,
+          "wordCount": 1425,
           "title": "通过调试技术，我理清了 b 站视频播放很快的原理",
           "imageUrl": null
         },
@@ -686,7 +696,7 @@
           "description": "微信搜索 【大迁世界】, 我会第一时间和你分享前端行业趋势，学习途径等等。\n本文 GitHub  https://github.com/qq449245884/xiaozhi 已收录，有一线大厂面试完整考点、资料以及我的系列文章。\n快来免费体验ChatGpt plus版本的，我们出的钱 体验地址:https://chat.waixingyun.cn 可以加入网站底部技术群，一起找bug，另外新版作图神器已上线 https://cube.waixingyun.cn/home\n1.Documatic  Documatic\n地址：https://www.documatic.com/\nDocumatic 是一个高效的搜索引擎工具，旨在帮助开发人员轻松搜索他们的代码库，找到特定的代码片段、函数、方法和其他相关信息。该工具旨在通过在几秒钟内快速提供准确和相关的搜索结果，节省开发人员宝贵的时间，提高他们的生产力。\nDocumatic是一个带有自然语言查询功能的代码搜索工具，它简化了专家和新手开发人员对代码库的搜索。一旦您输入查询，Documatic会快速从代码库中获取相关的代码块，使您能够轻松找到所需的信息。\n\nTransform.tools\n地址：https://transform.tools/\ntransform.tools 是一个网站，它可以让你转换几乎所有的东西，比如将HTML转换为JSX，JavaScript转换为JSON，CSS转换为JS对象等等。当我需要转换任何东西时，它真的帮我节省了很多时间。\n\n\nConvertio\n地址：https://convertio.co/zh/\nConvertio - 在线转换文件的简单工具。超过309种不同的文档、图像、电子表格、电子书、存档、演示文稿、音频和视频格式。例如，将PNG转换为JPEG，SVG转换为PNG，PNG转换为ICO等等。…",
           "link": "https://juejin.cn/post/7254861171823247420",
           "publishedOn": "2023-07-13T00:41:57.000Z",
-          "wordCount": 1241,
+          "wordCount": 854,
           "title": "每个前端开发者都应知道的10个实用网站",
           "imageUrl": null
         },
@@ -696,7 +706,7 @@
           "description": "theme: channing-cyan\n前一阵遇到了一个问题，线上平台有时会出现用户正在使用的时候，突然要用户去进行登录，这样会造成很不好的用户体验，但是当时一直没有好的思路因此搁置了下来；通过零散时间查询资料以及思考，最终解决了这个问题，接下来跟大家分享一下！\n环境\n请求采用的 Axios V1.3.2。\n平台的采用的 JWT(JSON Web Tokens) 进行用户登录鉴权。\n（拓展：JWT 是一种认证机制，让后台知道该请求是来自于受信的客户端；更详细的可以自行查询相关资料）\n问题现象\n线上用户在使用的时候，偶尔会出现突然跳转到登录页面，需要重新登录的现象。\n原因\n突然跳转到登录页面，是由于当前的 token 过期，导致请求失败；在 axios 的响应拦截axiosInstance.interceptors.response.use中处理失败请求返回的状态码 401，此时得知token失效，因此跳转到登录页面，让用户重新进行登录。\n平台目前的逻辑是在 token 未过期内，用户登录平台可直接进入首页，无需进行登录操作；因此就存在该现象：用户打开平台，由于此时 token 未过期，用户直接进入到了首页，进行其他操作。但是在用户操作的过程中，token 突然失效了，此时就会出现突然跳转到登录页面，严重影响用户的体验感！\n注：目前线上项目中存在数据大屏，一些实时数据的显示；因此存在用户长时间停留在大屏页面，不进行操作，查看实时数据的情况）\n切入点\n怎样及时的、在用户感知不到的情况下更新token？\n当 token 失效的情况下，出错的请求可能不仅只有一个；当失效的 token 更新后，怎样将多个失败的请求，重新发送？\n操作流程\n好了！经过了一番分析后，我们找到了问题的所在，并且确定了切入点；那么接下来让我们实操，将问题解决掉。\n前要：\naccessToken（用于请求头中…",
           "link": "https://juejin.cn/post/7254572706536734781",
           "publishedOn": "2023-07-12T03:45:01.000Z",
-          "wordCount": 1909,
+          "wordCount": 2250,
           "title": "项目中前端如何实现无感刷新 token！",
           "imageUrl": null
         }
@@ -733,7 +743,7 @@
           "description": "[7243698841848348730#每天一个知识点#] 给大家推荐一个 Node.js 在线 REPL 神器平台 Val Town，可以看成 Node.js 版本的在线 Jupter Notebook，配合开发 OpenAI、LangChain 应用非常方便，如下是一个 OpenAI Chat Completions 调用的示例 🚀",
           "link": "https://juejin.cn/pin/7257048145233444925",
           "publishedOn": "2023-07-18T10:39:09.000Z",
-          "wordCount": 529,
+          "wordCount": 573,
           "title": "[7243698841848348730#每天一个知识点#] 给大家推荐一个 Node.js 在线 REPL 神器平台 Val Town，可以看成 Node.js 版本的在线 Jupter Notebook，配合开发 OpenAI...",
           "imageUrl": null
         },
