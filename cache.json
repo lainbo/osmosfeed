@@ -17,7 +17,7 @@
           "description": "Clash确实是开箱即用，但开箱时并不是一个优秀的状态。当我将所有服务迁移到国外服务商时，我意识到在短时间内离不开Clash了。为了防止出现问题，我研究了一些Clash相关的东西。现在是时候做一个总结了。",
           "link": "https://www.jason-liang.com/article/clash-config",
           "publishedOn": "2023-07-20T00:00:00.000Z",
-          "wordCount": 241,
+          "wordCount": 239,
           "title": "Clash折腾总结",
           "imageUrl": "https://www.notion.so/images/page-cover/nasa_earth_grid.jpg"
         }
@@ -1326,7 +1326,7 @@
           "description": "首发于公众号 前端从进阶到入院，欢迎关注。\n大家好，我 ssh。在过去的开发中，我一直在用 styled-component 库作为 CSS 的解决方案。它有很多优点，灵活、可复用性强、功能强大、可以接受动态 JS 变量传入组件等等…… 但今天我看到一篇文章，说都是 Spot 团队的人已经决定抛弃 CSS-in-JS 的方案了，因为对他们来说，性能损耗已经远远超过其灵活性的优势了。接下来，我来和大家分享一下这篇Why We're Breaking Up with CSS-in-JS\n嗨，我是 Sam,来自Spot的软件工程师，也是广泛使用的 React CSS-in-JS 库 Emotion 的第二活跃的维护者。本文将深入探讨最初吸引我使用 CSS-in-JS 的原因，以及我(和 Spot 团队其他成员)决定抛弃它的原因。\n我们将简要概述 CSS-in-JS 以及它的优缺点。然后，我们将深入探讨 CSS-in-JS 在 Spot 带来的性能问题，以及如何避免这些问题。\n什么是 CSS-in-JS\n顾名思义，CSS-in-JS 让你可以在 JavaScript 或 TypeScript 代码中编写 CSS 来设置 React 组件的样式：\n// @emotion/react (css prop), 使用对象样式\nfunction ErrorMessage({ children }) {\n  return (\n    <div\n      css={{\n        color: \"red\",\n        fontWeight: \"bold\",\n      }}\n    >\n      {children}\n    </div>\n  );\n}\n\n// styled-components 或 @emotion/styled, 使用字符串样式\nconst ErrorMessa…",
           "link": "https://juejin.cn/post/7257711054901624869",
           "publishedOn": "2023-07-20T06:21:51.000Z",
-          "wordCount": 3251,
+          "wordCount": 3260,
           "title": "再见，CSS-in-JS",
           "imageUrl": null
         },
@@ -1396,7 +1396,7 @@
           "description": "theme: condensed-night-purple\n\n前端基建是指在前端开发过程中，为提高开发效率、代码质量和团队协作而构建的一些基础设施和工具。下面是前端基建可以做的一些事情：\n脚手架工具：开发和维护一个通用的脚手架工具，可以帮助团队快速初始化项目结构、配置构建工具、集成常用的开发依赖等。\n组件库：开发和维护一个内部的组件库，包含常用的UI组件、业务组件等，提供给团队成员复用，减少重复开发的工作量。\n构建工具和打包工具：搭建和维护一套完善的构建和打包工具链，包括使用Webpack、Parcel等工具进行代码的压缩、合并、打包等工具，优化前端资源加载和性能。\n自动化测试工具：引入自动化测试工具，如Jest、Mocha等，编写和维护测试用例，进行单元测试、集成测试、UI测试等，提高代码质量和可靠性。\n文档工具：使用工具如JSDoc、Swagger等，生成项目的API文档、接口文档等，方便团队成员查阅和维护。\nGit工作流：制定和规范团队的Git工作流程，使用版本控制工具管理代码，方便团队协作和代码回退。\n性能监控和优化：引入性能监控工具，如Lighthouse、Web Vitals等，对项目进行性能分析，优化网页加载速度、响应时间等。\n工程化规范：制定并推广团队的代码规范、目录结构规范等，提高代码的可读性、可维护性和可扩展性。\n持续集成和部署：搭建持续集成和部署系统，如Jenkins、Travis CI等，实现代码的自动构建、测试和部署，提高开发效率和代码质量。\n项目文档和知识库：建立一个内部的项目文档和知识库，记录项目的技术细节、开发经验、常见问题等，方便团队成员查阅和学习。\n通过建立和维护前端基建，可以提高团队的协作效率，减少重复劳动，提高代码质量和项目的可维护性。\n当涉及到前端基建时，还有一些其他的事情可以考虑：\n代码质量工具：引入代码质量工具，如ESLint、…",
           "link": "https://juejin.cn/post/7256879435339628604",
           "publishedOn": "2023-07-18T02:44:48.000Z",
-          "wordCount": 780,
+          "wordCount": 1161,
           "title": "前端基建原来可以做这么多事情",
           "imageUrl": null
         },
@@ -1426,7 +1426,7 @@
           "description": "首发于公众号 前端从进阶到入院，欢迎关注。\n前两天 Vue Mastery 刚刚发布了 Vue Conf 2023 US 的视频，虽然这个大会已经过去一段时间了，但是还是有非常多的内容值得去总结。\nVue 3.3 发布，新特性集合。\nVite Press 1.0 Beta 发布。\nVue 3.x 计划\nVapor Mode\n一些新的平台特性对 Vue 的帮助\nVue 3.3\n这个国内已经有很多媒体总结过了，这里我就不再赘述，放一张尤雨溪的Announcing Vue 3.3的目录截图，大概内容一目了然。\n\nVite Press\n\nVitePress 1.0 beta 已经发布，很快就正式发布 1.0。\nVitePress 是 VuePress 的继任者，更轻更快性能更强，而且更性感（默认主题），它是一个静态站点生成器，丢进你的 md 文件，就可以自动生成一个漂亮的静态站点。\n目前 Vue 官网、Vite 官网、Rollup 官网等等都是基于 VitePress 构建，非常好用。\n尤雨溪提到他们团队为 VitePress 感到自豪。\n\nVue 3.x minors 计划\n接下来是 Vue 3.x minors 版本接下来的计划。\n稳定 Suspense 组件\n把 Teleport 组件移到 core 部分里去，这样即使你传送的目标元素还没有 mounted，也可以正常运行。Guillane 在做这个事。\n提高 computed 属性的计算效率，减少不必要的重新计算。\nSSR 的渲染改进\n\nLazy Hydration（这个应该和Google IO 19 年提到过的渐进式注水类似）\nNuxt 中一些 HTML 标签奇怪的行为会导致服务端和客户端的 HTML 不匹配，Vue 团队打算做一些校验并且在控制台给出警告。\n\n\nVapor Mode\n第三、四季度，主要是做 Vapor M…",
           "link": "https://juejin.cn/post/7256723839941673020",
           "publishedOn": "2023-07-17T21:56:22.000Z",
-          "wordCount": 2050,
+          "wordCount": 2121,
           "title": "Vue Conf 2023 精彩回顾，新语法草案助 Vue 继续封神",
           "imageUrl": null
         },
@@ -1476,7 +1476,7 @@
           "description": "leaferjs，全新的渲染引擎\n1. 前言\n前几天群里有人发了一个新 Canvas 渲染引擎的图片，看数据和宣传口号相当炸裂，号称只用 1.5s 可以渲染 100 万个矩形，还是个国产的。\n\n出于个人兴趣，就花了一点儿时间研究了一下感兴趣的点，如果有错误，希望可以指出。\n2. 架构设计\n从火焰图上可以看出，leaferjs 创建节点非常轻量，只做了 setAttr 的操作。\n\n大部分耗时集中在创建节点和布局，渲染仅仅花了3ms。\n\n那 leaferjs 为什么有这么好的性能呢？我简单去看了一下源码。\nleafer 主要包括了 leafer 和 ui 两个 git 仓库，核心渲染能力在 leafer 里面，ui 封装了一些绘制类，比如 Image、Line 等等。\n先看一下官网上一个详细的用法：\nimport { App, Leafer, Rect } from 'leafer-ui'\n\nconst app = new App({ view: window, type: 'user' }) \n\nconst backgroundLayer = new Leafer()\nconst contentLayer = new Leafer({ type: 'design' })\nconst wireframeLayer = new Leafer()\n\napp.add(backgroundLayer)\napp.add(contentLayer)\napp.add(wireframeLayer)\n\nconst background = new Rect({ width: 800, height: 600, fill: 'gray' })\nconst rect = new Rect({ x: 100, y: 100, fill: '#32cd79', draggable: true })\nc…",
           "link": "https://juejin.cn/post/7256386855721074747",
           "publishedOn": "2023-07-17T02:21:10.000Z",
-          "wordCount": 3299,
+          "wordCount": 2833,
           "title": "leaferjs，全新的 Canvas 渲染引擎",
           "imageUrl": null
         },
@@ -1506,7 +1506,7 @@
           "description": "文章封面来自于深圳湾桥，很漂亮！\n本文是阅读源码之后，学习到一些新写法，平常业务开发也可以用起来。在我看来，阅读源码，不但能知道该框架的底层原理，出现bug时，可以快速排查和修复，更重要的是，阅读源码就像向优秀的人学习，掌握我们不曾了解的新知识点，看看别人是如何编写出漂亮的，可复用的代码。\n操作符!.\nonMounted(() => {\n  // 组合在一起,!. 就是“强制执行方法,然后再访问它的返回值”。\n  const items = breadcrumb.value!.querySelectorAll(`.${ns.e('item')}`)\n  if (items.length) {\n    items[items.length - 1].setAttribute('aria-current', 'page')\n  }\n})\n\n取值和监听值变化，不使用watch\nconst checkedValue = computed<CascaderValue>({\n  get() {\n    return cloneDeep(props.modelValue) as CascaderValue\n  },\n  set(val) {\n    emit(UPDATE_MODEL_EVENT, val)\n    emit(CHANGE_EVENT, val)\n    if (props.validateEvent) {\n      formItem?.validate('change').catch((err) => debugWarn(err))\n    }\n  },\n})\n\n透传使用symbol\nprovide(\n      CASCADER_PANEL_INJECTION_KEY, // 透传下去，使用Symbol作为唯一值\n      reactive({\n        c…",
           "link": "https://juejin.cn/post/7255955134131503164",
           "publishedOn": "2023-07-16T03:15:45.000Z",
-          "wordCount": 2119,
+          "wordCount": 1564,
           "title": "element-plus源码学习后，我了解到多种多样的写法",
           "imageUrl": null
         },
@@ -1593,7 +1593,7 @@
           "description": "图表分析的工具，类似grafana的 有人使用过不，有没有国产的类似这款grafana的工具，并且免费，咱纯属个智障，啥不造，不知道咋找啦。",
           "link": "https://juejin.cn/pin/7257344346797998139",
           "publishedOn": "2023-07-19T05:47:21.000Z",
-          "wordCount": 453,
+          "wordCount": 457,
           "title": "图表分析的工具，类似grafana的 有人使用过不，有没有国产的类似这款grafana的工具，并且免费，咱纯属个智障，啥不造，不知道咋找啦。",
           "imageUrl": null
         },
@@ -1613,7 +1613,7 @@
           "description": "[7243698841848348730#每天一个知识点#] 给大家推荐一个 Node.js 在线 REPL 神器平台 Val Town，可以看成 Node.js 版本的在线 Jupter Notebook，配合开发 OpenAI、LangChain 应用非常方便，如下是一个 OpenAI Chat Completions 调用的示例 🚀",
           "link": "https://juejin.cn/pin/7257048145233444925",
           "publishedOn": "2023-07-18T10:39:09.000Z",
-          "wordCount": 561,
+          "wordCount": 541,
           "title": "[7243698841848348730#每天一个知识点#] 给大家推荐一个 Node.js 在线 REPL 神器平台 Val Town，可以看成 Node.js 版本的在线 Jupter Notebook，配合开发 OpenAI...",
           "imageUrl": null
         },
@@ -1643,7 +1643,7 @@
           "description": "[7210002980895916043#挑战每日一条沸点#] #工欲善其事必先利其器 #开发工具推荐 #Seal软件\nIT Tools 是一个免费开源的方便在线工具集合，供开发人员和 IT 工作人员使用。它包括令牌生成器、大小写转换器、基本转换器、QR 代码生成器、Git cheatsheet、lorem ipsum 生成器等等！\n速速 get：https://it-tools.tech/",
           "link": "https://juejin.cn/pin/7256964915133661240",
           "publishedOn": "2023-07-18T03:47:07.000Z",
-          "wordCount": 510,
+          "wordCount": 504,
           "title": "[7210002980895916043#挑战每日一条沸点#] #工欲善其事必先利其器 #开发工具推荐 #Seal软件 IT Tools 是一个免费开源的方便在线工具集合，供开发人员和 IT 工作...",
           "imageUrl": null
         },
