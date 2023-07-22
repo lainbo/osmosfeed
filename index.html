@@ -51,8 +51,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-22 datetime="2023-07-22T06:20:04.000Z">2023-07-22</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-22 datetime="2023-07-22T06:20:04.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-22 datetime="2023-07-22T06:55:03.000Z">2023-07-22</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-22 datetime="2023-07-22T06:55:03.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -67,6 +67,25 @@
                   <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230722/t20230722_526340191.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市万州区发布高温橙色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230722/t20230722_526340191.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>万州区气象台2023年7月22日14时30分发布“高温橙色预警信号”，预计7月22日15时至20时，我区分水、新田、长岭、走马、太龙、龙驹、高笋塘、牌楼、太白、龙都、五桥、双河口、天城、九池、陈家坝等镇乡街道海拔400米以下地区日最高气温将升到37℃以上，请注意防暑降温及预防火灾。外出时请做好防暑防晒；避免高温时段进行户外活动;注意防范溺水。缩短户外露天作业时间。落实防暑降温措施。相关部门按照预案，做好高温应对、防火相关工作。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -2247,6 +2266,45 @@ const ErrorMessa…</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7257511618824355877"
+                        open
+                      >
+                        <summary class="article-expander__title">通过ip获取用户登录地点，实现登录日志功能。——从零开始搭建一个高颜值后台管理系统全栈框架(十一)</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7257511618824355877">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: cyanosis
+highlight: atom-one-dark
+往期回顾
+前端框架搭建——从零开始搭建一个高颜值后台管理系统全栈框架(一)
+后端框架搭建——从零开始搭建一个高颜值后台管理系统全栈框架(二)
+实现登录功能jwt or token+redis？——从零开始搭建一个高颜值后台管理系统全栈框架(三)
+封装axios，让请求变得丝滑——从零开始搭建一个高颜值后台管理系统全栈框架(四)
+实现前后端全自动化部署，解放你的双手。——从零开始搭建一个高颜值后台管理系统全栈框架(五)
+雪花算法，附件方案，邮箱验证，修改密码。——从零开始搭建一个高颜值后台管理系统全栈框架(六)
+基于react-router v6实现动态菜单、动态路由。内含vue动态路由实现。——从零开始搭建一个高颜值后台管理系统全栈框架(七）
+通过RBAC模型实现前后端动态菜单和动态路由——从零开始搭建一个高颜值后台管理系统全栈框架(八)
+使用黑科技实现前端按钮权限控制，太优雅了。——从零开始搭建一个高颜值后台管理系统全栈框架(九)
+集成WebSocket实现用户权限变更消息推送，自动刷新。——从零开始搭建一个高颜值后台管理系统全栈框架(十)
+前言
+上一篇文章中留了一个坑，pm2开启多进程，会导致给用户推送消息失败，具体原因上一篇文章中已经说过了。这一篇我们先解决一下这个问题。
+现在各大平台都支持显示用户地址，其实实现起来很简单。我们这一篇就实现一下通过用户ip获取用户地址。
+使用redis消息广播解决上篇文章的坑
+实现思路
+改造发消息的方法，通过redis消息广播把消息发给各个进程，各个进程监听对应频道，如果收到消息，通过userId找到用户websocket连接，然后把消息发出去。
+具体实现
+后端redis发布订阅方法和普通redis不能使用同一个redis实例，发布订阅也不能使用同一个实…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7257441765976506425"
                         open
                       >
@@ -2386,7 +2444,7 @@ const newTree &#x3D; oldTree.map(t &#x3D;&gt; t.children.map(xxx))
 官网: https://zhangshichun.github.io/tree-lodash/
 github: https://github.com/zhangshichun/tree-lodash
 看名字就知道，…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                &ensp;<span class="article-reading-time">(&hairsp;8
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2666,7 +2724,7 @@ Git工作流：制定和规范团队的Git工作流程，使用版本控制工�
 通过建立和维护前端基建，可以提高团队的协作效率，减少重复劳动，提高代码质量和项目的可维护性。
 当涉及到前端基建时，还有一些其他的事情可以考虑：
 代码质量工具：引入代码质量工具，如ESLint、…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3871,77 +3929,6 @@ uni基于通用的前端技术栈，采用vue语法+微信小程序api，无额�
 这里语法差别不是很大，通常情况下.vue组件直接修改为.nvue就可以了，nvue就是weex上补充了uni的jsApi；
 但是其只能兼容到App，其他平台还要额外添加额外组件去处理，这就会是维护成本上升；
 兼容HBuilder和c…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7255684102111379511"
-                        open
-                      >
-                        <summary class="article-expander__title">⭐️入职新公司需要准备哪些工作，如何让同事觉得你是大神</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7255684102111379511">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: vue-pro
-点击在线阅读，体验更好
-链接
-
-
-
-
-现代JavaScript高级小册
-链接
-
-
-深入浅出Dart
-链接
-
-
-现代TypeScript高级小册
-链接
-
-
-linwu的算法笔记📒
-链接
-
-
-
-
-这也是我给组内新成员写的部分基础入职文档介绍，分享给大家
-理清内部平台
-进入一家新公司，你需要了解以下几个平台以及使用方式：
-需求分发平台，常见类似jira
-代码托管平台，常见类似gitlab
-设计稿平台，常见类似figma
-接口协议文档
-配置邮箱
-内部OA平台
-基本理清这些平台就足够了，一般公司都是会在新人入职文档写明，如果没有，那就得一个一个去问。
-iTerm2的配置
-效果图
-
-下载iTerm2：
-前往官方网站（https://www.iterm2.com/）下载最新版本的iTerm2。
-完成下载后，打开安装包，将iTerm2应用程序拖动到&quot;Applications&quot;文件夹中。
-设置默认Shell为zsh：
-打开iTerm2应用程序。
-在菜单栏中，选择&quot;iTerm2&quot; -&gt; &quot;Preferences&quot;，或使用快捷键&quot;Command + ,&quot;打开偏好设置。
-在&quot;General&quot;选项卡的&quot;Preferences&quot;部分，点击&quot;Command&quot;选项，选择&quot;Command&quot;和&quot;Return&quot;。
-在&quot;Profiles&quot;选项卡的&quot;General&quot;部分，点击&quot;Command&quot;选项，选择&quot;Login Shell&quot;。
-安装Oh My Zsh：
-打开终端（iTerm2）。
-运行以下命令安装Oh My Zsh：
-sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;
-
-安装完成后，关闭终端并重新打开一个新的终端。
-安装Powe…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;9
                                   min&hairsp;)</span>
                             </span>
@@ -5337,8 +5324,8 @@ Passkey 这个方案可以做到，登录不需要密码，解决了上面提到
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5629362542">
-        <time id="build-timestamp" datetime="2023-07-22T06:52:16.873Z">2023-07-22T06:52:16.873Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5630033276">
+        <time id="build-timestamp" datetime="2023-07-22T09:52:18.061Z">2023-07-22T09:52:18.061Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
