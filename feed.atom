@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-07-23T18:52:19.735Z</id>
+    <id>urn:2023-07-23T21:52:22.615Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-07-23T18:52:19.735Z</updated>
+    <updated>2023-07-23T21:52:22.615Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -2730,6 +2730,66 @@ xwg create <项目名>
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Nest + Sharp 实现了一个 gif 压缩工具，帮我省不少钱]]></title>
+        <id>https://juejin.cn/post/7256684089264783397</id>
+        <link href="https://juejin.cn/post/7256684089264783397"/>
+        <updated>2023-07-17T12:22:05.000Z</updated>
+        <summary type="html"><![CDATA[不知道大家有没有场景会需要 GIF 压缩，我是经常会用到。
+因为公众号的图片最大支持 10M，但是我录制出来的 GIF 经常超过 10M。
+比如这样一个图片：
+
+在编辑器上传会提示超过 10 M 了：
+
+这时候就需要 GIF 压缩，不然文章发不了。
+于是我在百度搜素 GIF 压缩，就找到了一个工具：
+
+它确实能解决我的问题：
+
+但是要花钱：
+
+一年 148 呢，对一个小工具来说还是挺贵的。
+但没办法，这对我是刚需，总不能不发文章了吧。
+于是去年年底我就开了一年的会员：
+
+但最近发现有 npm 包可以做这个，没必要买这种网站的会员。。。
+当时我的心情是这样的：
+
+这个 npm 包就是 sharp，它是用来处理各种图片的：
+
+
+它可以用来调整图片的大小，对图片做旋转、颜色调整、合成图片等。
+这些功能我用不到，我就关心它的 gif 压缩功能。
+看了下文档，大概这样用：
+const sharp = require('sharp');
+
+sharp('1.image.gif', {
+    animated: true,
+    limitInputPixels: false
+}).gif({
+    compressionLevel: 9,
+    colours: 10
+}).toFile('2.image.gif')
+
+我们先试试看：
+node 执行这个文件，可以看到产生了 2.image.gif，只有 2.7 M
+
+要知道之前的 1.image.gif 可是有 21M 啊：
+
+然后打开它看看：
+
+没啥问题。
+回过头来，我们再来看看这段代码：
+
+animated 设为 true 是读取所有的帧，不然默认只会读取 gif 的第一帧。
+limitInputPixels 设为 false 是不限制大小，默认太大的图片是会报错的。
+然后是输出参数：
+
+compressionLevel …]]></summary>
+        <author>
+            <name>zxg_神说要有光</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[请教一下各位大佬，有没有什么工具可以将支付宝小程序项目转换为uniapp项目]]></title>
         <id>7256672676094181435</id>
         <link href="https://juejin.cn/pin/7256672676094181435"/>
@@ -3092,21 +3152,6 @@ highlight: a11y-dark
   20.工艺智能公司“蕴硕物联”获数千万元A轮融资]]></summary>
         <author>
             <name>靳斯羽</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[我终于成功登上了JS 框架榜单，并且仅落后于 React 4 名！]]></title>
-        <id>https://juejin.cn/post/7256250499280158776</id>
-        <link href="https://juejin.cn/post/7256250499280158776"/>
-        <updated>2023-07-16T18:09:49.000Z</updated>
-        <summary type="html"><![CDATA[前言
-如期而至，我独立开发的 JavaScript 框架 Strve.js 迎来了一个大版本5.6.2。此次版本距离上次大版本发布已经接近半年之多，为什么这么长时间没有发布新的大版本呢？主要是研究 Strve.js 如何支持单文件组件，使代码智能提示、代码格式化方面更加友好。之前也发布了 Strve SFC，但是由于其语法规则的繁琐以及是在运行时编译的种种原因，我果断放弃了这个方案的继续研究。而这次的版本5.6.2成功解决了代码智能提示、代码格式化方面友好的问题，另外还增加了很多锦上添花的特性，这些都归功于我们这次版本成功支持JSX语法。熟悉React的朋友知道，JSX语法非常灵活。 而 Strve.js 一大特性也就是灵活操作代码块，这里的代码块我们可以理解成函数，而JSX语法在一定场景下也恰恰满足了我们这种需求。
-那么，我们如何在 Strve 项目中使用JSX语法呢？我们在Strve项目构建工具 CreateStrveApp 预置了模版，你可以选择 strve-jsx 或者 strve-jsx-apps 模版即可。我们使用 CreateStrveApp 搭建完 Strve 项目会发现，同时安装了babelPluginStrve、babelPluginJsxToStrve，这是因为我们需要使用 babelPluginJsxToStrve 将 JSX 转换为标签模版，之后再使用babelPluginStrve 将标签模版转换为 Virtual DOM，进而实现差异化更新视图。
-尝试
-我既然发布出了一个大版本，并且个人还算比较满意。那么下一步我如何推广它呢？毕竟毛遂自荐有时候还是非常有意义的。所以，我打算通过js-framework-benchmark 这个项目评估下性能。
-js-framework-benchmark 是什么？我们这里就简单介绍下 js-framework-…]]></summary>
-        <author>
-            <name>前端历劫之路</name>
         </author>
     </entry>
     <entry>
