@@ -118,7 +118,7 @@
           "description": "新人进到公司，很容易陷入到加班状态，分析原因，有这么几种：\n1. 技术还不够熟练，业务相对复杂，需要了解的东西很多，改一句代码得看两个小时的上下文，外加两个小时的文档，写 bug 的概率也很高\n2. 沟通遇到障碍，跟上下游对焦的时候，各自表达都不够充分，导致大量的返工和重复沟通，如果遇到喜欢推卸责任的老油条，自己的工作量还会无形之中增加很多\n3. 团队氛围很奇特，例如要把工作时长拉满，老板不走，自己不敢走，随时会被老板喊过去对问题和方案等等\n技术问题和沟通能力问题，这都是跟经验有关的，属于硬伤，第三点是团队文化问题，如果几个问题撞到一起，那加班应该就是家常便饭了。",
           "link": "https://m.okjike.com/originalPosts/64bc932e38acc7bb51bc6b6f",
           "publishedOn": "2023-07-23T02:40:46.000Z",
-          "wordCount": 395,
+          "wordCount": 399,
           "title": "发布了: 新人进到公司，很容易陷入到加班状态，分析原因，有这么几种： 1. 技术还不够熟练，业务相对复杂，需要了解的东西很多，改一句代码得看两个小时的上下文...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -128,7 +128,7 @@
           "description": "跟朋友聊到独立开发者怎么思考创意，做出与众不同的产品，他的回答很有意思。\n点子通常是最不重要的，作为一个独立开发者，如果考虑盈利，不用刻意去考虑市面上没有出现过的创新点子，不是说不行，而是很难想到那种别人完全没想过又没尝试过的。\n可以去看市面上已经有的产品，它们得到了市场的验证，只要是自己想做的，那就去做，当然需要有理由，例如市面上的产品体验不是自己想要的，没有 Cover 到更多场景的用户等等。\n也看到一些闷声发财的产品，他们有一个外号叫“缝合怪”，就是把市面上多个不错的创意点抄过来，缝合成一个新的产品，效果也是不错的，但是会让人无奈。",
           "link": "https://m.okjike.com/originalPosts/64bc8e82b1d391675dcbcb47",
           "publishedOn": "2023-07-23T02:20:50.000Z",
-          "wordCount": 393,
+          "wordCount": 411,
           "title": "发布了: 跟朋友聊到独立开发者怎么思考创意，做出与众不同的产品，他的回答很有意思。 点子通常是最不重要的，作为一个独立开发者，如果考虑盈利，不用刻意去考...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -138,7 +138,7 @@
           "description": "最近身边一个朋友被裁员，面了两个月，不想再面了，拿了 pdd 的 offer，很纠结要不要去，对方 hr 在电话里明说，11116，早上十一点，晚上十一点，一周六天，🤦‍♂️，十一点下班，基本就不会有个人时间了。",
           "link": "https://m.okjike.com/originalPosts/64bc76b1e1ebb63d2c62e2ad",
           "publishedOn": "2023-07-23T00:39:13.000Z",
-          "wordCount": 457,
+          "wordCount": 458,
           "title": "发布了: 最近身边一个朋友被裁员，面了两个月，不想再面了，拿了 pdd 的 offer，很纠结要不要去，对方 hr 在电话里明说，11116，早上十一点，晚上十一点，一周六...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -1636,7 +1636,7 @@
           "description": "日历组件想必大家都用过，在各个组件库里都有。\n比如 antd 的 Calendar 组件（或者 DatePicker 组件）：\n\n那这种日历组件是怎么实现的呢？\n其实原理很简单，今天我们就来自己实现一个。\n首先，要过一下 Date 的 api：\n创建 Date 对象时可以传入年月日时分秒。\n比如 2023 年 7 月 30，就是这么创建：\nnew Date(2023, 6, 30);\n\n可以调用 toLocaleString 来转成当地日期格式的字符串显示：\n\n有人说 7 月为啥第二个参数传 6 呢？\n因为 Date 的 month 是从 0 开始计数的，取值是 0 到 11：\n\n而日期 date 是从 1 到 31。\n而且有个小技巧，当你 date 传 0 的时候，取到的是上个月的最后一天：\n\n-1 就是上个月的倒数第二天，-2 就是倒数第三天这样。\n这个小技巧有很大的用处，可以用这个来拿到每个月有多少天：\n\n今年一月 31 天、二月 28 天、三月 31 天。。。\n除了日期外，也能通过 getFullYear、getMonth 拿到年份和月份：\n\n还可以通过 getDay 拿到星期几。\n比如今天（2023-7-19）是星期三：\n\n就这么几个 api 就已经可以实现日历组件了。\n不信？我们来试试看：\n用 cra 创建 typescript 的 react 项目：\nnpx create-react-app --template=typescript calendar-test\n\n\n我们先来写下静态的布局：\n大概一个 header，下面是从星期日到星期六，再下面是从 1 到 31：\n改下 App.tsx:\nimport React from 'react';\nimport './index.css';\n\nfunction Calendar() {\n  return (\n   …",
           "link": "https://juejin.cn/post/7257441765976506425",
           "publishedOn": "2023-07-19T12:56:58.000Z",
-          "wordCount": 4058,
+          "wordCount": 4360,
           "title": "整天用 Calendar 日历组件，不如自己手写一个吧！",
           "imageUrl": null
         },
@@ -1656,7 +1656,7 @@
           "description": "theme: Chinese-red\nhighlight: monokai\n警告：本文充满了王婆卖瓜式的宣传，但没有一句虚假宣传；\n希望你了解一下 tree-lodash 的适用场景，并在合适的时候浅浅试用一下。\n\n📖阅读本文，你将\n了解一款 “像呼吸一样好用” 的\"树操作\"函数库\n通过非常容易理解的动图，理解三种遍历策略\n获得一个嘲笑作者的机会，以及：求求你给个 star 吧\n一、不想再做 “树先生”\n我抬眼看去，这前端代码歪歪扭扭，横七竖八，角落缝隙里塞满了一个熟悉的字眼：\n树。\n菜单是树。路由是树。DOM 是树。组织结构是树。权限点是树。低代码还是树。品类树。清单树。物料树。合约树。父节点，子节点，子子孙孙……\n我翻开代码，处处是我和同事们缝缝补补的树结构操作的函数。\nconst newTree = oldTree.map(t => t.children.map(xxx))\n\n不完美的实现，不完善的处理。不存在的用例。不曾出现的文档和注释。\n为什么？如此常见的 “树结构”，竟然没有一款类似 lodash 的函数库？\n或者有，但我竟然不知道！项目里竟然没引入！？\n我躺在床上转辗反侧，横竖无法入眠，于是披衣而起，掩上门，决心要为自己，也为同事们写点什么。\n于是有了一个纯纯的 “树操作” 函数开源库: tree-lodash（别名：树大师）。\n它没别的本事，专注于 树结构 的操作，让你在业务中面对 树 时，操作像呼吸一样自然。\n\n对，就像这么自然。\n告别手写方法的“树先生”，拥抱经过考验的“树大师”。\n二、tree-lodash 是个什么样的库？\n2.1 简介\n官网: https://zhangshichun.github.io/tree-lodash/\ngithub: https://github.com/zhangshichun/tree-lodash\n看名字就知道，…",
           "link": "https://juejin.cn/post/7257085361261297719",
           "publishedOn": "2023-07-19T00:03:02.000Z",
-          "wordCount": 2276,
+          "wordCount": 1950,
           "title": "“树先生”厌倦了，开源一根【树大师】(tree-lodash)",
           "imageUrl": null
         },
@@ -1666,7 +1666,7 @@
           "description": "之前公司调整洗牌，裁掉了一大波人，像我这样做了快一年的，也竟是研发老员工了...最近领导安排我开始面试，拿到第一份简历是一位10年经验的前端大佬，看完简历后突然蒙圈，我该问什么问题，用过什么框架？ 项目遇到过什么问题？困难是怎么解决的？webpack做过哪些性能优化？\n\n诶，想到这，突然觉得哪天我也去投递简历了，很有可能会同样被问到这些问题，看看自己在现在公司干了快一年了，似乎也没有做过太多总结，瞬间感觉不寒而栗。\n\n既然这些都迟早是要总结的，今天那就来回顾一下， 创业公司工作一年， 到底收获了什么？同时也希望我的经历能给大家带来一丝启发。\n后台管理web阶段\n坐标一线城市北京，前面刚来两三个月一直在做公司后台系统，使用技术栈主要是vue2+elementUI，因为刚来，很多业务逻辑要熟悉，没有时间去做优化，而且入职第三天就开始写代码了。\nTailwind\n为了提高写代码的效率，正好当时看到tailwind，觉得很新奇，就给引入到项目里来了。可以用类名来直接书写css样式：\n\ntailwind可以节省很多编写类名的脑力， 同时开发的时候不再需要在style和template来回切换，直接在类名里写属性，用起来是真香！而且据官网介绍，全部使用tailwind编码之后，css的文件最后打包编译出来，基本都小于10KB？！因为引入了elementUI组件库，也没法验证，但节省心智是实实在在的。\n\nDrone CI\nCI工具，配置之后本地npm run build后会自动提交到drone，它会帮忙完成测试，代码缓存，cdn刷新等操作，并且可以设置在自动化部署完成后，出现飞书提醒，整体界面看上去也比较舒服\n\nSentry\n线上日志监控，用户在使用过程中产生了报错，sentry会实时发送提醒，咱们就可以通过日志回放可以分析出错原因，相当于飞机的黑盒子， 甚至可以回放用户的操作过程，挺强…",
           "link": "https://juejin.cn/post/7257076605570646076",
           "publishedOn": "2023-07-18T16:04:18.000Z",
-          "wordCount": 1140,
+          "wordCount": 887,
           "title": "在创业公司做前端一年，这些经验到底值不值？",
           "imageUrl": null
         },
@@ -1893,7 +1893,7 @@
           "description": "[7243698841848348730#每天一个知识点#] 给大家推荐一个 Node.js 在线 REPL 神器平台 Val Town，可以看成 Node.js 版本的在线 Jupter Notebook，配合开发 OpenAI、LangChain 应用非常方便，如下是一个 OpenAI Chat Completions 调用的示例 🚀",
           "link": "https://juejin.cn/pin/7257048145233444925",
           "publishedOn": "2023-07-18T10:39:09.000Z",
-          "wordCount": 534,
+          "wordCount": 528,
           "title": "[7243698841848348730#每天一个知识点#] 给大家推荐一个 Node.js 在线 REPL 神器平台 Val Town，可以看成 Node.js 版本的在线 Jupter Notebook，配合开发 OpenAI...",
           "imageUrl": null
         },
@@ -1923,7 +1923,7 @@
           "description": "[7210002980895916043#挑战每日一条沸点#] #工欲善其事必先利其器 #开发工具推荐 #Seal软件\nIT Tools 是一个免费开源的方便在线工具集合，供开发人员和 IT 工作人员使用。它包括令牌生成器、大小写转换器、基本转换器、QR 代码生成器、Git cheatsheet、lorem ipsum 生成器等等！\n速速 get：https://it-tools.tech/",
           "link": "https://juejin.cn/pin/7256964915133661240",
           "publishedOn": "2023-07-18T03:47:07.000Z",
-          "wordCount": 508,
+          "wordCount": 501,
           "title": "[7210002980895916043#挑战每日一条沸点#] #工欲善其事必先利其器 #开发工具推荐 #Seal软件 IT Tools 是一个免费开源的方便在线工具集合，供开发人员和 IT 工作...",
           "imageUrl": null
         },
