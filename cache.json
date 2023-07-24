@@ -34,7 +34,7 @@
           "description": "同样的布局效果，在2017年、2021年和2023年有着不同的实现，代码愈发的简洁高效，一起来看看CSS的发展对Web开发的帮助吧。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/07/css-image-aspect-ratio-layout/",
           "publishedOn": "2023-07-20T14:36:38.000Z",
-          "wordCount": 1148,
+          "wordCount": 1150,
           "title": "CSS高宽不等图片固定比例布局的三重进化",
           "imageUrl": null
         },
@@ -44,7 +44,7 @@
           "description": "我发现，有个CSS三角函数之后，以前很多需要JS计算才能实现的布局现在都可以纯CSS完成了，代码简洁了不少。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/06/css-sin-cos-tan-function/",
           "publishedOn": "2023-06-29T16:23:42.000Z",
-          "wordCount": 1365,
+          "wordCount": 1367,
           "title": "CSS sin()/cos()等数学三角函数简介与应用",
           "imageUrl": null
         }
@@ -128,7 +128,7 @@
           "description": "使用 LangChain 做项目，作者花了一个多月，从入门到放弃，写了一篇《我为什么放弃了 LangChain？》https://mp.weixin.qq.com/s/jIbz9JYc8-_ua-QLENX__A\nLangChain 的范式设计很大程度增加了编程的复杂度，过度抽象也增加了认知负荷，而 AI Agents 的发展还在起步萌芽阶段，过早地深度封装和固定编程范式，对技术的发展本身也是一次伤害。\n作者在项目实战中对比了使用 LangChain 和直接调用 ChatGPT API，体会到固定思考方式的 LangChain 并没有输出更好的结果，而改造它，让它变得听话则需要很大的力气，尽管它也提供了 Custom Agent/Chain 的能力，但这就像是杀鸡用牛刀，不还如手撸代码。\n之前我在尝试使用通过 LangChain 调用 ChatGLM 的时候，也感受到了 LangChain 自身的一些局限性，它的设计可谓是为 ChatGPT 量身定制，底层 LLM 一更换，就会出现严重失调，需要对它的各种参数进行微调，而效果还不一定很好，最终又变成了手动定制 Prompt 直接跟 LLM 交互的模式。\n针对不同诉求的开发者，未来市面上一定还会出现更多的轻量化工具，以减轻编码负担，降低理解成本。",
           "link": "https://m.okjike.com/originalPosts/64bd46391b83e0b21a59939b",
           "publishedOn": "2023-07-23T15:24:41.000Z",
-          "wordCount": 447,
+          "wordCount": 453,
           "title": "发布了: 使用 LangChain 做项目，作者花了一个多月，从入门到放弃，写了一篇《我为什么放弃了 LangChain？》https://mp.weixin.qq.com/s/jIbz9JYc8-_ua-QLENX__A...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -148,7 +148,7 @@
           "description": "骨传导的耳机，搜到不少，价格从 300 到 1500 不等，有没有推荐的品牌和型号？看到好几款，把防水当成一个卖点🤔",
           "link": "https://m.okjike.com/originalPosts/64bcc679ca2b035a48ad5997",
           "publishedOn": "2023-07-23T06:19:37.000Z",
-          "wordCount": 415,
+          "wordCount": 419,
           "title": "发布了: 骨传导的耳机，搜到不少，价格从 300 到 1500 不等，有没有推荐的品牌和型号？看到好几款，把防水当成一个卖点🤔",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -1606,7 +1606,7 @@
           "description": "首发于公众号 前端从进阶到入院，欢迎关注。\n大家好，我 ssh。在过去的开发中，我一直在用 styled-component 库作为 CSS 的解决方案。它有很多优点，灵活、可复用性强、功能强大、可以接受动态 JS 变量传入组件等等…… 但今天我看到一篇文章，说都是 Spot 团队的人已经决定抛弃 CSS-in-JS 的方案了，因为对他们来说，性能损耗已经远远超过其灵活性的优势了。接下来，我来和大家分享一下这篇Why We're Breaking Up with CSS-in-JS\n嗨，我是 Sam,来自Spot的软件工程师，也是广泛使用的 React CSS-in-JS 库 Emotion 的第二活跃的维护者。本文将深入探讨最初吸引我使用 CSS-in-JS 的原因，以及我(和 Spot 团队其他成员)决定抛弃它的原因。\n我们将简要概述 CSS-in-JS 以及它的优缺点。然后，我们将深入探讨 CSS-in-JS 在 Spot 带来的性能问题，以及如何避免这些问题。\n什么是 CSS-in-JS\n顾名思义，CSS-in-JS 让你可以在 JavaScript 或 TypeScript 代码中编写 CSS 来设置 React 组件的样式：\n// @emotion/react (css prop), 使用对象样式\nfunction ErrorMessage({ children }) {\n  return (\n    <div\n      css={{\n        color: \"red\",\n        fontWeight: \"bold\",\n      }}\n    >\n      {children}\n    </div>\n  );\n}\n\n// styled-components 或 @emotion/styled, 使用字符串样式\nconst ErrorMessa…",
           "link": "https://juejin.cn/post/7257711054901624869",
           "publishedOn": "2023-07-20T06:21:51.000Z",
-          "wordCount": 3251,
+          "wordCount": 3260,
           "title": "再见，CSS-in-JS",
           "imageUrl": null
         },
@@ -1646,7 +1646,7 @@
           "description": "玩爬虫首先绕不过的一项就是登录，绝大多数网站在登录或注册时都会使用验证码来验证用户是否为真实人类而不是机器人或恶意程序。我们常见的验证码有几种形式，例如：数字字母验证码、滑块验证码、算数验证码、图片识别验证码等等，不同的方式带来的用户体验和防御能力是不同的，现在很多网站为了兼顾用户体验都选择滑块验证码。\n本文通过前端技术 Puppeteer 来实现自动化操作，Canvas API 实现简单的图像识别，计算滑块需要滑动距离，实现一个高效且识别概率很高的破解方案。\n如果你对这些技术没有了解也不用担心，本文也兼顾了一些基础知识。\n为什么破解掘金滑块验证码？\n掘金在使用账号和密码组合登录时，会出现滑块验证码，这样做是为了防止恶意程序顺利登录。选择掘金有以下 3 个原因：\n验证码底图已经包含了缺口（拼图形状），没有获取到完整的原始图片，这样提高了识别难度，因为直接像素对比计算即可得到缺口位置。\n滑块移动会记录用户操作轨迹，如果是机器生硬匀速拖拽，即使位置完全吻合也是无法完成校验，这进一步提高了难度。\n我有些邪恶的想法，呵呵。\n这里贴一张实际展示动图：\n\n快速上手 puppeteer\n你需要掌握一点 node 知识，不需要太多，这里默认你已经会了。\n前端爬虫使用 puppeteer 是个不错的选择，它可以模拟用户操作，你的所有代码都是按照操作步骤一步一步的去编写，上手非常简单，你只需要了解几个 API 就足够你使用了。\n每一个接口的其他配置，请自行参考文档。\n安装\nnpm i puppeteer\n\n创建一个浏览器\n这步相当于你双击了你桌面上的 Chrome。\nconst browser = await puppeteer.launch({\n    headless: false,\n    defaultViewport: {\n      width: 1200,\n      heigh…",
           "link": "https://juejin.cn/post/7257386139849801789",
           "publishedOn": "2023-07-19T07:06:18.000Z",
-          "wordCount": 3866,
+          "wordCount": 3860,
           "title": "使用前端技术破解掘金滑块验证码",
           "imageUrl": null
         },
@@ -1656,7 +1656,7 @@
           "description": "theme: Chinese-red\nhighlight: monokai\n警告：本文充满了王婆卖瓜式的宣传，但没有一句虚假宣传；\n希望你了解一下 tree-lodash 的适用场景，并在合适的时候浅浅试用一下。\n\n📖阅读本文，你将\n了解一款 “像呼吸一样好用” 的\"树操作\"函数库\n通过非常容易理解的动图，理解三种遍历策略\n获得一个嘲笑作者的机会，以及：求求你给个 star 吧\n一、不想再做 “树先生”\n我抬眼看去，这前端代码歪歪扭扭，横七竖八，角落缝隙里塞满了一个熟悉的字眼：\n树。\n菜单是树。路由是树。DOM 是树。组织结构是树。权限点是树。低代码还是树。品类树。清单树。物料树。合约树。父节点，子节点，子子孙孙……\n我翻开代码，处处是我和同事们缝缝补补的树结构操作的函数。\nconst newTree = oldTree.map(t => t.children.map(xxx))\n\n不完美的实现，不完善的处理。不存在的用例。不曾出现的文档和注释。\n为什么？如此常见的 “树结构”，竟然没有一款类似 lodash 的函数库？\n或者有，但我竟然不知道！项目里竟然没引入！？\n我躺在床上转辗反侧，横竖无法入眠，于是披衣而起，掩上门，决心要为自己，也为同事们写点什么。\n于是有了一个纯纯的 “树操作” 函数开源库: tree-lodash（别名：树大师）。\n它没别的本事，专注于 树结构 的操作，让你在业务中面对 树 时，操作像呼吸一样自然。\n\n对，就像这么自然。\n告别手写方法的“树先生”，拥抱经过考验的“树大师”。\n二、tree-lodash 是个什么样的库？\n2.1 简介\n官网: https://zhangshichun.github.io/tree-lodash/\ngithub: https://github.com/zhangshichun/tree-lodash\n看名字就知道，…",
           "link": "https://juejin.cn/post/7257085361261297719",
           "publishedOn": "2023-07-19T00:03:02.000Z",
-          "wordCount": 2276,
+          "wordCount": 1950,
           "title": "“树先生”厌倦了，开源一根【树大师】(tree-lodash)",
           "imageUrl": null
         },
@@ -1746,7 +1746,7 @@
           "description": "腾小云导读\n搜狗百科是一个服务于互联网用户的高质量内容平台。文章主要介绍团队在梳理业务时发现百科无线前端项目在研发流程、架构设计、研发效率、页面性能等方面存在诸多问题和痛点。作者团队是如何对这个系统进行升级和改造的？又是如何分析出怎么样的优化方案才是最适合业务的？欢迎各位开发者继续阅读~\n目录\n1 背景\n2 项目收益\n3 升级方案\n3.1 现状分析\n3.2 优化动作\n4 项目成果\n4.1 用户体验\n4.2 带宽成本\n4.3 技术沉淀\n5 总结与展望\n01、背景\n垂类前端研发组在梳理百科业务时，发现百科无线前端在研发流程、架构设计、研发效率、页面性能等方面存在诸多问题和痛点，为更好地支撑产品需求迭代和研发效率提升，优先对百科无线前端技术体系进行一次系统的升级和优化。\n\n02、项目收益\n核心页面指标\n\n03、升级方案\n3.1 现状分析\n本节主要从项目组织、技术架构、研发流程、页面性能、监控等维度来具体分析。\n3.1.1 项目组织现状\n百科无线端由词条页及视频集合二级页、首页及其他二级页、静态页面3个项目组成。因项目拆分较碎，组件、模块、API 接口、Service 等无法有效复用，例如搜索中间页横跨多个项目需要开发多次的问题。\n项目目录没有合理的分层，目录结构和 wenke-dev/wenke-webpack（封装的构件 npm 包）高度耦合，无法移动。\n\n3.1.2 技术架构现状\n技术架构主要由接入层、展现层、渲染层组成，渲染层比较薄，仅做首屏模版渲染。具体如下图：\n\n接入层现状\n接入层通过 IAS 接入，IAS 是一个类似 Nginx 接入服务，名字路由支持北极星、L5、TAF、IP 端口等方式，现状如下：\n路由规则配置存在多乱情况，缺少统一前缀及规范，问题排查和维护比较困难，其中词条页路由规则就有10多个。 已下线路由，没有及时进行清理。 无线端和 PC 端路由适配策略在…",
           "link": "https://juejin.cn/post/7256674113002864701",
           "publishedOn": "2023-07-17T09:51:25.000Z",
-          "wordCount": 1843,
+          "wordCount": 2140,
           "title": "毫秒级突破！腾讯技术团队是如何做前端性能优化的？",
           "imageUrl": null
         },
@@ -1796,7 +1796,7 @@
           "description": "uni-app介绍及对其优缺点理解\n开发多端兼容应用的一种较好的方案：\n\n开发者编写一套代码，可发布到iOS、Android、Web（响应式）、以及各种小程序（微信/支付宝/百度/头条/飞书/QQ/快手/钉钉/淘宝）、快应用等多个平台，常见平台基本上都可以被兼容到；\n开发体验还是相对较好的，很多时候可以在h5开发，然后在app或者mp上调整一下就可以用了；\n\n个人感觉相对于rn这种需要一直运行在真机或者模拟器上，开发体验是要好一些；\n如果没有多端兼容的需求或者预留平台开发的任务，只是为了开发一种平台，还是建议使用对应比较成熟的技术会更好一些；\n\n如纯原生的Android或者IOS，性能肯定是要更好一点的；\n一般H5的开发体验也比用uni好一些；\n跨端也不是说一劳永逸不需要对相应的端进行测试和兼容的，还是会有一些问题需要处理的，如官方知道的跨端注意事项；\n\n有时候一些关键的点上走不通，可能就需要花费很多额外的工作去做相应端的兼容，如百度小程序不支持scoped；\nApp转为微信小程序的一点经验；\n另一些三方sdk，只兼容了android或者ios的原生，根本没考虑uni-app的情况，这个时候就要费劲的去做兼容处理，需要做原生混合编码，对纯前端来说不是很友好，可能还是需要原生的app开发进行操作；\n从Vue过渡过去成本非常低，不会有太多额外的学习成本：\n\nuni基于通用的前端技术栈，采用vue语法+微信小程序api，无额外学习成本；\n对于使用uni来开发App来说，直接跳过了学习weex的环节；\n对于App原生有的时候会需要用到nvue的技术；\n\n这里语法差别不是很大，通常情况下.vue组件直接修改为.nvue就可以了，nvue就是weex上补充了uni的jsApi；\n但是其只能兼容到App，其他平台还要额外添加额外组件去处理，这就会是维护成本上升；\n兼容HBuilder和c…",
           "link": "https://juejin.cn/post/7255855818595647546",
           "publishedOn": "2023-07-15T15:11:59.000Z",
-          "wordCount": 2678,
+          "wordCount": 2642,
           "title": "uni-app开发经验总结",
           "imageUrl": null
         }
@@ -1863,7 +1863,7 @@
           "description": "[7243698841848348730#每天一个知识点#] 给大家推荐一个 Node.js 在线 REPL 神器平台 Val Town，可以看成 Node.js 版本的在线 Jupter Notebook，配合开发 OpenAI、LangChain 应用非常方便，如下是一个 OpenAI Chat Completions 调用的示例 🚀",
           "link": "https://juejin.cn/pin/7257048145233444925",
           "publishedOn": "2023-07-18T10:39:09.000Z",
-          "wordCount": 535,
+          "wordCount": 530,
           "title": "[7243698841848348730#每天一个知识点#] 给大家推荐一个 Node.js 在线 REPL 神器平台 Val Town，可以看成 Node.js 版本的在线 Jupter Notebook，配合开发 OpenAI...",
           "imageUrl": null
         },
