@@ -17,7 +17,7 @@
           "description": "Clash确实是开箱即用，但开箱时并不是一个优秀的状态。当我将所有服务迁移到国外服务商时，我意识到在短时间内离不开Clash了。为了防止出现问题，我研究了一些Clash相关的东西。现在是时候做一个总结了。",
           "link": "https://www.jason-liang.com/article/clash-config",
           "publishedOn": "2023-07-20T00:00:00.000Z",
-          "wordCount": 321,
+          "wordCount": 343,
           "title": "Clash折腾总结",
           "imageUrl": "https://www.notion.so/images/page-cover/nasa_earth_grid.jpg"
         }
@@ -44,7 +44,7 @@
           "description": "同样的布局效果，在2017年、2021年和2023年有着不同的实现，代码愈发的简洁高效，一起来看看CSS的发展对Web开发的帮助吧。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/07/css-image-aspect-ratio-layout/",
           "publishedOn": "2023-07-20T14:36:38.000Z",
-          "wordCount": 1182,
+          "wordCount": 1181,
           "title": "CSS高宽不等图片固定比例布局的三重进化",
           "imageUrl": null
         },
@@ -426,6 +426,16 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230726/t20230726_526345518.html",
+          "author": "国家预警信息发布中心",
+          "description": "江津区气象台2023年7月26日1时30分发布“暴雨黄色预警信号”，预计未来6小时，中山镇、蔡家镇、柏林镇、四面山镇、四屏镇等镇街累计雨量将达50毫米以上，最大小时雨强可达20-50毫米，并伴有雷电、阵性大风等强对流天气，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20230726/t20230726_526345518.html",
+          "publishedOn": "2023-07-25T17:50:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市江津区发布暴雨黄色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230725/t20230725_526345043.html",
           "author": "国家预警信息发布中心",
@@ -2261,6 +2271,16 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
+          "id": "https://juejin.cn/post/7259595485090906149",
+          "author": "啥也不懂的前端",
+          "description": "如果面试官，或者有人问你foreach怎么跳出循环，请你大声的告诉ta，跳不出！！！！！！！！！！\nforeach 跳不出循环\n为什么呢？\n先看看foreach大体实现。\nArray.prototype.customForEach = function (fn) {\n    for (let i = 0; i < this.length; i++) {\n        fn.call(this, this[i], i, this)\n    }\n}\n\nlist.customForEach((item, i, list) => {\n    console.log(item, i, list)\n})\n\nlet list = [1,2,3,4,5]\n\nlist.forEach((item,index,list)=>{\n    console.log(item,index,list)\n})\n\nlist.customForEach((item,index,list)=>{\n    console.log(item,index,list)\n})\n\n\n\n两个输出的结果是一样的没啥问题，这就是foreach的大体实现，既然都知道了它的实现，那么对它为什么跳不出循环♻️应该都知道了，再不清楚的话，再看一下下面的例子。\n\nfunction demo(){\n    return 'demo'\n}\n\nfunction demo2(){\n    demo()\n    return 'demo2'\n}\n\ndemo()\n\n\n在demo2函数里面调用demo函数，demo函数的return能阻止demo2函数下面的执行吗？很明显不行啊，demo函数里的return跟demo2函数一点关系都没有。现在你再回头看看foreach的实现，就明白它跳不出循环一清二楚了。\n有点同学说不是可以通过抛出错误跳出循环吗？是的。看看下面例子。\n\nlet list = [1,2,3,4,5]\n\ntry {\n    list.forEach((item, index, list) => {\n        if (index === 2) {\n            throw new Error('demo')\n        }\n        console.log(item)\n    })\n} catch (e) {\n    // console.log(e)\n}\n\n\n\n结果是我们想要，但是你看代码，哪个正常人会这样写代码？是非foreach不用吗？还是其他的循环关键字不配呢。\nend\n有反驳在评论区，show me your code !!!!!!!!!",
+          "link": "https://juejin.cn/post/7259595485090906149",
+          "publishedOn": "2023-07-25T08:24:44.000Z",
+          "wordCount": 933,
+          "title": "请自信的大声告诉面试官forEach跳不出循环",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7259355632930291773",
           "author": "前端历劫之路",
           "description": "官方结果\n前不久，Strve.js 刚刚发布了一个大版本5.6.2，最大的特性就是支持JSX语法，让 Strve.js 编码方式更加多样。另外，我还将 Strve.js 发布到 js-framework-benchmark 这个 JavaScript 框架榜单项目上，并获得了对于我来说不错的排名。因为当时 Chrome 的版本还在114，没有发布新的官方版本(Official results)，所以只能先看快照结果(Snapshot of the results)，快照结果可能针对混合浏览器版本，每个基准测试的运行次数可能有所不同，所以结果有些偏差。\n\n那就只能等待官方版本发布了，当时还耐不住性子问了下作者，作者也非常耐心地回答了我的问题。作为开发人员，这一点我很佩服！就在早晨，作者还特意给我回了消息，“Chrome 115发布了” ！真是太有心了！\n\n我赶紧打开最新官方结果网址：\nhttps://krausest.github.io/js-framework-benchmark/2023/table_chrome_115.0.5790.98.html\n心想会不会偏差太大啊！这种心态跟看成绩单没啥区别。打开之后，我从后面往前数，还是之前的名次，这下心放下了。\n性能测试基准分为三类：\n持续时间\n启动指标\n内存分配\n持续时间\n目前 63 个框架，Strve.js 排名第 50 名。\n\n启动指标\n目前 63 个框架，Strve.js 与其他6个框架并排第 6 名。\n\n内存分配\n目前 63 个框架，Strve.js 排名第 12 名。\n\n贡献\nStrve.js 登上JS框架的榜单之后，我也发布了一篇文章，反响挺不错的，收到了很多朋友们的点赞和鼓励。在这里，非常感谢大家长期以来对我的支持！\n另外，我还比较开心的是收到了两条比较有质量的PR。\n第一条：\n作为该框架的活跃用户，我注意到开发人员社区对其越来越感兴趣。 添加 npm 使用趋势将为了解该框架的流行度和采用情况提供有价值的见解。\n我相信这一补充将对框架的现有用户和潜在用户都有好处。 它将有助于跟踪其增长并提供进一步改进的机会。\n\n第二条：\n生命周期挂钩 onMounted 和 onUnmounted 应该多次应用，例如在不同的组件中使用。 但它们只能使用一次，因为变量 mountHook 和 unMountedHook 只是普通值。\n所以我修改了三个关于生命周期钩子的文件，包括lib/diff.js、src/diff.ts和types/diff.d.ts，以允许它们被多次使用。\n你创建的程序令人兴奋，所以我阅读并探索了你的代码和提交历史，直到接近 3.00。 我相信通过你的代码我能理解你的大部分想法。 如果你允许的话，我愿意成为你的伙伴。 该程序正在开发中。 它具有更大的优化潜力。 我希望我们能为所有 Web 开发人员构建一个强大且流行的框架。\n\n尤其是第二条，大佬居然阅读代码接近 3点，当时我看时间也相近，确实没有错。非常感谢这位大佬对 Strve.js 的贡献，也希望我们国内社区能有越来越多这样的大佬。\n两位大佬的PR已经合并了，将在新的版本中发布。\n伙伴\n在上面大佬说了一句话让我觉得非常好，“如果你允许的话，我愿意成为你的伙伴。 该计划正在开发中。 它具有更大的优化潜力。 我希望我们能为所有 Web 开发人员构建一个强大且流行的框架”。当然，Strve.js 还有很多的优化空间，比如优化算法等等。我一个人的精力有限，非常欢迎大家加入 Strve.js 大家庭，成为伙伴！\n代码虽然是枯燥的，但是我们携手做一件伟大的事情，是非常有成就感的！\nStrve 源码仓库：https://github.com/maomincoding/strve\nStrve 中文文档：https://maomincoding.gitee.io/strve-doc-zh/\n谢谢大家的阅读！如果大家觉得 Strve.js 不错，麻烦帮我点下 Star 吧！",
@@ -2296,7 +2316,7 @@
           "description": "前言\n小王，你的页面白屏了，赶快修复一下。小王排查后发现是服务端传回来的数据格式不对导致，无数据时传回来不是 [] 而是 null, 从而导致 forEach 方法报错导致白屏，于是告诉测试，这是服务端的错误导致，要让服务端来修改，结果测试来了一句：“服务端返回数据格式错误也不能白屏！！” “好吧，千错万错都是前端的错。” 小王抱怨着把白屏修复了。\n刚过不久，老李喊道：“小王，你的组件又渲染不出来了。” 小王不耐烦地过来去看了一下，“你这个属性data 格式不对，要数组，你传个对象干嘛呢。”老李反驳： “ 就算 data 格式传错，也不应该整个组件渲染不出来，至少展示暂无数据吧！” “行，你说什么就是什么吧。” 小王又抱怨着把问题修复了。\n类似场景，小王时不时都要经历一次，久而久之，大家都觉得小王的技术太菜了。小王听到后，倍感委屈：“这都是别人的错误，反倒成为我的错了！”\n等到小王离职后，我去看了一下他的代码，的确够烂的，不堪一击！太烂了！下面来吐槽一下。\n一、变量解构一解就报错\n优化前：\nconst App = (props) => {\n  const { data } = props;\n  const { name, age } = data\n}\n\n如果你觉得以上代码没问题，我只能说你对你变量的解构赋值掌握的不扎实。\n解构赋值的规则是，只要等号右边的值不是对象或数组，就先将其转为对象。由于 undefined 、null 无法转为对象，所以对它们进行解构赋值时都会报错。\n所以当 data 为 undefined 、null 时候，上述代码就会报错。\n优化后：\nconst App = (props) => {\n  const { data } = props || {};\n  const { name, age } = data || {};\n}\n\n二、不靠谱的默认值\n估…",
           "link": "https://juejin.cn/post/7259007674520158268",
           "publishedOn": "2023-07-24T01:34:30.000Z",
-          "wordCount": 3559,
+          "wordCount": 3812,
           "title": "你的代码不堪一击！太烂了！",
           "imageUrl": null
         },
@@ -2306,7 +2326,7 @@
           "description": "theme: cyanosis\nhighlight: atom-one-dark\n在不久前的一个大厂实习面试的一面当中,一上来没多久就给我丢出了这么一个问题,搞得我头都大了。我也看过很多面经,发现真的很喜欢问这个。关于 React 的,10 篇里面有 5 篇都会问到 Fiber 相关的。\n那么从今天这篇文章我们就来好好学学这个 Fiber 有多重要!\n整篇文章一个 28000 多字 (我已经尽量控制了,代码都没贴,直接放的图片,还是这么多),可能一时半刻看不完,而且里面涉及到的东西有点多,或许有点难理解,可以收藏起来分段进行观看,如果有不懂的或者哪里讲错了的,欢迎评论区指出。\nFiber\nFiber 是 React 中一种用于实现虚拟 DOM 和组件协调的新的架构。它是 React 16 中引入的重要概念，旨在优化渲染过程、实现异步渲染，并提高应用的性能和用户体验。\n首先声明一点,Fiber 既可以看作是链表,也可以看作是树。说他是树,是因为它的形状像树,但是并没有树的特征,树是一个只有指向子节点的指针,并没有指向父节点的指针,因为我叫习惯了,所以在后面的内容中都说是 fiber 树\n什么是 Fiber\nFiber 也称协程,它和线程不一样,协程本身是没有并发和并行能力的,它需要配合线程,它只是一种控制流程让出机制。\n线程是并发执行的基本单位，一个进程可以包含多个线程，每个线程独立执行。而协程则是在单个线程中实现的并发。协程通过协作式的方式在同一个线程中切换执行，可以避免多线程之间的竞争条件和锁的使用，减少了线程之间的切换开销和资源消耗。\n在前端中，JavaScript 提供了一种称为生成器 Generator 的功能，它可以用于实现协程。生成器函数可以暂停执行，并且在需要的时候可以从上一个暂停的位置恢复执行。通过调用生成器的 next() 方法，可以逐步执行生成器函数的代…",
           "link": "https://juejin.cn/post/7258881840823844920",
           "publishedOn": "2023-07-23T23:37:05.000Z",
-          "wordCount": 6322,
+          "wordCount": 5833,
           "title": "某大厂一面: 讲讲 Fiber 架构以及它是如何实现增量渲染的🥱🥱🥱",
           "imageUrl": null
         },
@@ -2336,18 +2356,8 @@
           "description": "想必大家都看过哆啦A梦，时光机是里面的常用道具。\n\n那坐时光机是什么样的体验呢？\n我用 Three.js 写了一下，应该是这种感觉：\n\n我们一起来实现一下。\n首先，我们过一下 Three.js 的基础：\n在二维屏幕上渲染三维物体，得有个坐标轴。\n在 three.js 里以向右的方向为 x 轴，向上的方向为 y 轴，向前的方向为 z 轴：\n\n然后管理在三维坐标系里的物体得有个对象体系。\nThree.js 的对象体系是这样的：\n\n所有三维场景中的东西都加到 scene 里来管理。\n三维世界本来是黑的，有了 light 之后才能看到东西，有点光源、环境光等不同的光源。\n三维世界中的物体，可以从不同角度去观察，改变位置就可以看到不同的风景，这就是相机 camera 的事情。\n三维世界中的物体叫做 mesh，任何一个物体都有一个形状，比如圆柱、立方体等，也就是 geometry，然后还得有材质 material，比如金属材质可以反光、普通材质不能。材质可以指定颜色、还可以指定图片作为纹理 texture。\n场景中的所有物体，会由渲染器 WebGLRenderer 渲染出来。\n场景、物体、灯光、相机、渲染器，这就是 three.js 的核心概念。\n每一个物体都可以设置位置 position、缩放 scale、旋转 rotation。\n每一帧渲染的时候，改变物体的位置、颜色、旋转角度等就可以实现动画效果了。\n大家想一下，时空隧道用什么几何体比较合适呢？\n很明显，是圆柱，也就是 CylinderGeometry\n在 three.js 文档中可以看到预览大概是这样样子：\n\n示例代码是这样的：\n\n创建一个圆柱几何体 CylinderGeometry ，传入上圆半径、下圆半径，高度，分段数量（分的多了就是圆了）。\n指定材质，用 MeshBasicMaterial，指定蓝色。\n然后就可以创建一个物…",
           "link": "https://juejin.cn/post/7258319655285178428",
           "publishedOn": "2023-07-22T06:24:02.000Z",
-          "wordCount": 4241,
+          "wordCount": 4257,
           "title": "用 Three.js 画一个哆啦A梦的时光机",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7257785104713367611",
-          "author": "孟祥_成都",
-          "description": "前言\n首先声明，后续所有组件都会有类似详细的教程 + 代码演示（以前的组件库教程不用看了，这是一个新的开始，是生产环境可用的，并且拿国内知名组件库的功能和代码质量作为对比，市面上百分之95%的所谓react组件库教程你都不用看了，大多数骗小白的，欢迎加群交流，我的微信：a2298613245)。\n注：其实看源码我发现不少疑惑的代码，觉得不应该那样写，比较明显的，我就给floating-ui提了pr，也合进去了（刚刚合了一个变量重复计算的问题），还有就是给这些知名的库提pr是非常简单的事情，只要你真的去梳理源码，总会有不少能提的，只是大家很少去钻研源码罢了。\n腾讯的tdesign的弹出层组件，使用了@popper-js, 大家可以点击链接查看效果，我也看其源码实现了类似的组件，其依赖的@popper-js已经有点过时了，并且因为它是第三方库，如果你的弹出层组件有些定制化的需求，腾讯的tdsign是做不了任何优化的。\n所以为了我自己能够做出超越腾讯的tdesign，并且超越ant deisgn类似功能的组件（在ant中叫rc-trigger组件，是ant底层依赖的组件，并没有出现在官网中），我从0到1改造了@popper-js代码。\n注：@popper-js现在新版是floating-ui，我也看了其代码，其核心代码大同小异，主要是修复了一些边界的case，和增加了一些性能优化点，我改造的@popper-js也将这些新的代码融入其中。\n所以以下的@popper-js应该是增强版，不是官方的@popper-js\n为什么我的定位组件更好\n这个疑问可以换做可为什么@popper-js比国内所有的弹出层组件更好？\n受众多，功能非常稳定\n因为这个组件的作者专做这一个功能已经有很多年了，在jquery时期就在开始做了，目前github上最受欢迎的弹出层组件，目前的版本来看，就算有bug，也…",
-          "link": "https://juejin.cn/post/7257785104713367611",
-          "publishedOn": "2023-07-20T09:12:21.000Z",
-          "wordCount": 3349,
-          "title": "【目前最好的react组件库教程】手写增强版 @popper-js （主体逻辑分析）",
           "imageUrl": null
         },
         {
@@ -2386,7 +2396,7 @@
           "description": "小小需求\n实现一个 Tooltip，就是那种很简单有一个按钮，按一下就会出现或消失气泡的组件，就是下面这个效果。\n\n\n\n放个按钮、加个点击事件、做好气泡的定位好像就搞定了。然鹅，事情没有发展的这么顺利。\n开发\n组件结构\n按照上面说的过程，放好按钮，添加好点击事件。比较复杂的地方就是处理气泡的定位，气泡需要进行绝对定位，让它脱离文档流，不能在隐藏或偏移的时候还占个坑（需要实现那种浮动的效果）。还有气泡有个小三角，这个三角也是需要额外处理定位的。于是设计了组件的结构如下：\n\nTooltip 包着 Button 显示在界面上，设置定位属性，让它可以成为子元素定位的基准元素。然后创建 Prompt，它会相对于 Tooltip 进行定位，Prompt 中的小三角形则相对于 Prompt 进行定位。定位的具体数值则根据元素的尺寸和想放置的位置进行定位。在这个例子中就是实现气泡在按钮下方居中显示， Prompt 偏移数值计算如下：\n代码\n代码如下：（wxml 和 wxss 没有高亮，用 html 和 css 格式代替了）\n<view class=\"tooltip\" >\n<button size=\"mini\" bindtap=\"handleTooltipShow\">TOOLTIP</button>\n<view wx:if=\"{{showTooltip}}\" class=\"prompt-container\">\n<view class=\"prompt-title\">这是弹窗标题</view>\n<view class=\"prompt-content\">这是弹窗内容，啊吧啊吧吧</view>\n</view>\n</view>\n\n.tooltip{\ndisplay: flex;\nalign-items: center;\nposition:relative;\nwidth:350rpx;\nheight: …",
           "link": "https://juejin.cn/post/7257516901843763257",
           "publishedOn": "2023-07-20T01:41:53.000Z",
-          "wordCount": 2640,
+          "wordCount": 2652,
           "title": "在微信小程序里使用rpx，被坑了😕 ｜ 不同设备表现不同",
           "imageUrl": null
         },
@@ -2456,7 +2466,7 @@
           "description": "之前公司调整洗牌，裁掉了一大波人，像我这样做了快一年的，也竟是研发老员工了...最近领导安排我开始面试，拿到第一份简历是一位10年经验的前端大佬，看完简历后突然蒙圈，我该问什么问题，用过什么框架？ 项目遇到过什么问题？困难是怎么解决的？webpack做过哪些性能优化？\n\n诶，想到这，突然觉得哪天我也去投递简历了，很有可能会同样被问到这些问题，看看自己在现在公司干了快一年了，似乎也没有做过太多总结，瞬间感觉不寒而栗。\n\n既然这些都迟早是要总结的，今天那就来回顾一下， 创业公司工作一年， 到底收获了什么？同时也希望我的经历能给大家带来一丝启发。\n后台管理web阶段\n坐标一线城市北京，前面刚来两三个月一直在做公司后台系统，使用技术栈主要是vue2+elementUI，因为刚来，很多业务逻辑要熟悉，没有时间去做优化，而且入职第三天就开始写代码了。\nTailwind\n为了提高写代码的效率，正好当时看到tailwind，觉得很新奇，就给引入到项目里来了。可以用类名来直接书写css样式：\n\ntailwind可以节省很多编写类名的脑力， 同时开发的时候不再需要在style和template来回切换，直接在类名里写属性，用起来是真香！而且据官网介绍，全部使用tailwind编码之后，css的文件最后打包编译出来，基本都小于10KB？！因为引入了elementUI组件库，也没法验证，但节省心智是实实在在的。\n\nDrone CI\nCI工具，配置之后本地npm run build后会自动提交到drone，它会帮忙完成测试，代码缓存，cdn刷新等操作，并且可以设置在自动化部署完成后，出现飞书提醒，整体界面看上去也比较舒服\n\nSentry\n线上日志监控，用户在使用过程中产生了报错，sentry会实时发送提醒，咱们就可以通过日志回放可以分析出错原因，相当于飞机的黑盒子， 甚至可以回放用户的操作过程，挺强…",
           "link": "https://juejin.cn/post/7257076605570646076",
           "publishedOn": "2023-07-18T16:04:18.000Z",
-          "wordCount": 1140,
+          "wordCount": 896,
           "title": "在创业公司做前端一年，这些经验到底值不值？",
           "imageUrl": null
         }
