@@ -51,11 +51,154 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-26 datetime="2023-07-26T10:10:04.000Z">2023-07-26</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-26 datetime="2023-07-26T10:10:04.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-26 datetime="2023-07-26T15:45:53.000Z">2023-07-26</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-26 datetime="2023-07-26T15:45:53.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Barret李靖的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/reposts/64c13fb11e2cb61bca4856e5"
+                        open
+                      >
+                        <summary class="article-expander__title">转发了: 找了一个下载视频字幕的工具，现在连 puppeteer 无头浏览器都不需要了，直接用 yt-dlp 一行命令搞定下载，试了下，还真好用。 关键是人家还支持爱奇艺/...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/reposts/64c13fb11e2cb61bca4856e5">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>找了一个下载视频字幕的工具，现在连 puppeteer 无头浏览器都不需要了，直接用 yt-dlp 一行命令搞定下载，试了下，还真好用。
+关键是人家还支持爱奇艺/腾讯/Bilibili/Youtube 等各大网站的字幕下载。工具地址：https://github.com/yt-dlp/yt-dlp
+
+转发 @Barret李靖: 使用 AI 总结 Youtube 视频，走 you-get 下载视频 → FFmpeg 转音频 → whisper 再转文字 → AI 总结，这个方法很通用，但是速度实在太慢了，临时想到了一个野路子，验证了下也是可行的：
+1）直接从网页接口拉取对应的字幕
+2）AI 总结
+Youtube 的字幕数据并没有藏的特别深，在图一就可以找到，控制台输入 document.getElementsByTagName(&#x27;ytd-app&#x27;)[0].data.playerResponse，对应的数据如图二所示。
+做成 Chrome 插件可以直接完成数据读取，如果想做到更自动化，也可以使用 puppeteer headless 模式抓取，成本还是很低的，1s 内可以完成总结任务。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/64c1376cfbc9a354346f2c64"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 使用 AI 总结 Youtube 视频，走 you-get 下载视频 → FFmpeg 转音频 → whisper 再转文字 → AI 总结，这个方法很通用，但是速度实在太慢了，临时想到了...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/64c1376cfbc9a354346f2c64">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fr4QKKkUbS2GOy07npubagGk_Z4fv3.png?imageMogr2/auto-orient/format/jpeg/thumbnail/300x2000%3E/quality/70/interlace/1" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>使用 AI 总结 Youtube 视频，走 you-get 下载视频 → FFmpeg 转音频 → whisper 再转文字 → AI 总结，这个方法很通用，但是速度实在太慢了，临时想到了一个野路子，验证了下也是可行的：
+1）直接从网页接口拉取对应的字幕
+2）AI 总结
+Youtube 的字幕数据并没有藏的特别深，在图一就可以找到，控制台输入 document.getElementsByTagName(&#x27;ytd-app&#x27;)[0].data.playerResponse，对应的数据如图二所示。
+做成 Chrome 插件可以直接完成数据读取，如果想做到更自动化，也可以使用 puppeteer headless 模式抓取，成本还是很低的，1s 内可以完成总结任务。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/64c12917571c8261c95c57fa"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 刚提到 LangChain 过度抽象带来了较大的认知负荷问题，就看到了社区出现了一款新的开源框架 AutoChain，https://github.com/Forethought-Technologies/A...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/64c12917571c8261c95c57fa">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>刚提到 LangChain 过度抽象带来了较大的认知负荷问题，就看到了社区出现了一款新的开源框架 AutoChain，https://github.com/Forethought-Technologies/AutoChain，它的理念是：Build lightweight, extensible, and testable LLM Agents
+除了具备 LangChain 的能力，还从 AutoGPT 汲取了部分灵感，它可以做这些事情包括：
+1）生成轻量、可拓展的 Agent Pipeline
+2）支持自定义参数适配不同 LLM，并支持函数调用
+3）可以实现类似 AutoGPT 的自动对话过程
+4）在内存中实现了对话记录和工具输出的跟踪调试
+概念少了一大堆，玩起来愉快多了。其实以当前 OpenAI 接口的丰富度来看，甚至都不需要做啥封装，直接撸就行了。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/64c124c5571c8261c95bdd71"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 他人对自己的评价，反应出来的不一定是真实的自己，因为每个人看待这个世界的方式受到他此刻的心情、认知和经验的影响，如果对自己没有深刻的认知，就很...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/64c124c5571c8261c95bdd71">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>他人对自己的评价，反应出来的不一定是真实的自己，因为每个人看待这个世界的方式受到他此刻的心情、认知和经验的影响，如果对自己没有深刻的认知，就很容易误认为自己就是他人眼中的自己，要知道，活成他人眼中的自己很累，也永远都活不好。
+他人说的话并不重要，但自己对他人说的话所做出的反应，一定是重要的，因为所有的反应都是最真实的自己。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/64c11dded099868a445ad66d"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: html 中的 
+ 元素通常放了一堆脚本、样式和 meta 等内容，你可能从未在意过这些内容的摆放顺序，但是错误的顺序会直接影响网页的加载和渲染效率，...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/64c11dded099868a445ad66d">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FlQcnkmK3lcPiLdo9lF8FUFcnbL3v3.png?imageMogr2/auto-orient/format/jpeg/thumbnail/300x2000%3E/quality/70/interlace/1" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>html 中的  元素通常放了一堆脚本、样式和 meta 等内容，你可能从未在意过这些内容的摆放顺序，但是错误的顺序会直接影响网页的加载和渲染效率，这个演讲中提到了原理：https://www.youtube.com/watch?v&#x3D;uqLl-Yew2o8&amp;t&#x3D;2873s，作者建议遵循如下顺序：
+1. preconnect
+2. script-async
+3. css-contains-@ import
+4. sync-js
+5. sync-css
+6. preload
+7. script-defer
+8. prefetch / prerender
+9. seo-relative
+有一个工具叫做 capo.js，https://github.com/rviscomi/capo.js，使用它可以快速识别和优化性能问题，同时也提供了一个 Chrome 插件，可以安装试一试：https://chrome.google.com/webstore/detail/capo-get-your-%EF%B9%A4%F0%9D%9A%91%F0%9D%9A%8E%F0%9D%9A%8A%F0%9D%9A%8D%EF%B9%A5/ohabpnaccigjhkkebjofhpmebofgpbeb</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -694,7 +837,7 @@ interface User {
 写过 Java、SpringBoot、JPA 等代码的后端程序员应该非常熟悉的一些概念：
 抽象： 万物都可抽象成相关的类和对象
 面向对象： 继承、封装、…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -937,47 +1080,6 @@ const sum &#x3D; computed(() &#x3D;&gt; {
                               <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>承认自己的无知乃是开启智慧的大门。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/64be1643e1ebb63d2c89f710"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 推荐下 iCSS 这个专题，https://github.com/chokcoco/iCSS，分享了很多关于 CSS 的奇技淫巧、布局、动画、滤镜、视差、沉浸式体验、性能优化等，看完之...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/64be1643e1ebb63d2c89f710">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FoTywG5ayrE98csUj6KjolB3Dimiv3.gif?imageMogr2/auto-orient/format/jpeg/thumbnail/300x2000%3E/quality/70/interlace/1" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>推荐下 iCSS 这个专题，https://github.com/chokcoco/iCSS，分享了很多关于 CSS 的奇技淫巧、布局、动画、滤镜、视差、沉浸式体验、性能优化等，看完之后惊呼，原来 CSS 已经可以干这么多事情啦！这些效果的实现，运用了一些高级 CSS 技巧，如变量、动画、伪类、伪元素等，也得益于浏览器底层渲染能力的升级。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/64bdea3863e42a95c49b53c1"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 超高 ROI 优化网页性能的一个技巧：content-visibility，这里有一篇详细的文章介绍：https://www.cnblogs.com/coco1s/p/16373817.html，在长列表、长文...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/64bdea3863e42a95c49b53c1">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fjn_fWxmXC2s9zHDfAqLYkjrosWmv3.png?imageMogr2/auto-orient/format/jpeg/thumbnail/300x2000%3E/quality/70/interlace/1" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>超高 ROI 优化网页性能的一个技巧：content-visibility，这里有一篇详细的文章介绍：https://www.cnblogs.com/coco1s/p/16373817.html，在长列表、长文本的场景下，这个属性的优势十分明显，与之配套的属性是 contain-intrinsic-size。
-类似的属性还有很多，例如 image-lazyload/preconnect/font-display/will-change/preload 等等，都是稍微修改下 html/css 属性，就可以获得较大网页性能和体验提升收益的。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
@@ -2419,8 +2521,6 @@ A：按照上述步骤 &amp; 规则进行发布即可，活动结束后会统一
 类装饰器（Class Decorators）：应用于类声明之前，用于修改类的行为。类装饰器接收一个参数，即被修饰的类构造函数，可以用来扩展类的功能、修改类的元数据等。
 方法装饰器（Method Decorators）：应用于类方法之前，用于修改方法的行为。方法装饰器接收三个参数，分别是被修饰的类的原型对象、方法的名称和属性描述符。可以用来拦截方法调用、修改方法的元数据等。
 属性装饰器（Property Decorators）：应用于类属性之前，用于修改属性的行为。属性装饰器接收两个参数，分别是被修饰的类的原型对象和属性的名称。…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;12
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2875,89 +2975,6 @@ vue和flutter该怎么选择呢
   Web App可以自适应窗口布局  
     
   这个小工具的想象空间非常大，且免费版已足够好用。一些需要高频在网页端进行的操作，例如Google翻译、与ChatGPT对话、浏览财经资讯，都可以通过Menubar X聚合到菜单栏中，每当需要时快速开启即可。  …</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Barret李靖的即刻动态</button>
-                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/64bd4ef2ca2b035a48bbae17"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 我认识一位做了快十年的独立开发者，他说过去几年最难熬的事情不是做产品，也不是卖产品以解决生计问题（当然这两件事情也很难），而是缺少交流，克服内...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/64bd4ef2ca2b035a48bbae17">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>我认识一位做了快十年的独立开发者，他说过去几年最难熬的事情不是做产品，也不是卖产品以解决生计问题（当然这两件事情也很难），而是缺少交流，克服内心的孤独。
-做独立开发者，与在公司上班不一样，没有那么多上游下游的合作伙伴，一个月下来见到最多的恐怕还是外卖/快递小哥。为了避免过于频繁的客服和无效的社交，产品的反馈基本都是以邮件的形式沟通。一个人吭哧吭哧，加上对社交缺少足够的动力和勇气，经常也会觉得无聊。
-好在后面，他调整了社交的模式，约人聊天，也开始把产品社群运作了起来，聊的多了，精神世界也就丰富了。他也喜欢找一些有意思的咖啡厅办公。
-是不是独立开发者都容易出现这种孤独感？上次还聊到一个朋友，第一款产品投进去差不多九个月，也是好长时间没出门。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/reposts/64bd4766b1d391675ddf44fe"
-                        open
-                      >
-                        <summary class="article-expander__title">转发了: 好像基本都在推荐韶音，是不是这个品牌已经垄断了市场了，😄</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/reposts/64bd4766b1d391675ddf44fe">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>好像基本都在推荐韶音，是不是这个品牌已经垄断了市场了，😄
-
-转发 @Barret李靖: 骨传导的耳机，搜到不少，价格从 300 到 1500 不等，有没有推荐的品牌和型号？看到好几款，把防水当成一个卖点🤔</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/64bd46391b83e0b21a59939b"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 使用 LangChain 做项目，作者花了一个多月，从入门到放弃，写了一篇《我为什么放弃了 LangChain？》https://mp.weixin.qq.com/s/jIbz9JYc8-_ua-QLENX__A...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/64bd46391b83e0b21a59939b">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>使用 LangChain 做项目，作者花了一个多月，从入门到放弃，写了一篇《我为什么放弃了 LangChain？》https://mp.weixin.qq.com/s/jIbz9JYc8-_ua-QLENX__A
-LangChain 的范式设计很大程度增加了编程的复杂度，过度抽象也增加了认知负荷，而 AI Agents 的发展还在起步萌芽阶段，过早地深度封装和固定编程范式，对技术的发展本身也是一次伤害。
-作者在项目实战中对比了使用 LangChain 和直接调用 ChatGPT API，体会到固定思考方式的 LangChain 并没有输出更好的结果，而改造它，让它变得听话则需要很大的力气，尽管它也提供了 Custom Agent/Chain 的能力，但这就像是杀鸡用牛刀，不还如手撸代码。
-之前我在尝试使用通过 LangChain 调用 ChatGLM 的时候，也感受到了 LangChain 自身的一些局限性，它的设计可谓是为 ChatGPT 量身定制，底层 LLM 一更换，就会出现严重失调，需要对它的各种参数进行微调，而效果还不一定很好，最终又变成了手动定制 Prompt 直接跟 LLM 交互的模式。
-针对不同诉求的开发者，未来市面上一定还会出现更多的轻量化工具，以减轻编码负担，降低理解成本。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3773,7 +3790,7 @@ Three.js 的对象体系是这样的：
 创建一个圆柱几何体 CylinderGeometry ，传入上圆半径、下圆半径，高度，分段数量（分的多了就是圆了）。
 指定材质，用 MeshBasicMaterial，指定蓝色。
 然后就可以创建一个物…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
+                                &ensp;<span class="article-reading-time">(&hairsp;14
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -5775,6 +5792,23 @@ GPL 规定，必须向使用者提供源码，并且使用者有权重新发布�
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://store.epicgames.com/zh-CN/p/train-valley-2-3606da"
+                        open
+                      >
+                        <summary class="article-expander__title">Train Valley 2</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://store.epicgames.com/zh-CN/p/train-valley-2-3606da">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>建设比以往更大、更复杂的铁路网络！在原作成功的基础上，这款续作将保留一切优秀元素并带来更多精彩体验。随着当地工业面临的挑战日趋困难和复杂，山谷似乎变得更加辽阔了！</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://store.epicgames.com/zh-CN/p/the-elder-scrolls-online"
                         open
                       >
@@ -5831,62 +5865,39 @@ GPL 规定，必须向使用者提供源码，并且使用者有权重新发布�
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7257713854746001463"
-                        open
-                      >
-                        <summary class="article-expander__title">如果连接互联网后，通过手机端APP扫码进入的办公云桌面办公，万一需要和客户进行线上资金交易，数据信息安全会有保护吗？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7257713854746001463">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>如果连接互联网后，通过手机端APP扫码进入的办公云桌面办公，万一需要和客户进行线上资金交易，数据信息安全会有保护吗？</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7257705589140717629"
-                        open
-                      >
-                        <summary class="article-expander__title">云上办公现在是主流趋势了么？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7257705589140717629">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>云上办公现在是主流趋势了么？</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >掘金前端本周最热</button>
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7257785104713367611"
+                        open
+                      >
+                        <summary class="article-expander__title">【目前最好的react组件库教程】手写增强版 @popper-js （主体逻辑分析）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7257785104713367611">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言
+首先声明，后续所有组件都会有类似详细的教程 + 代码演示（以前的组件库教程不用看了，这是一个新的开始，是生产环境可用的，并且拿国内知名组件库的功能和代码质量作为对比，市面上百分之95%的所谓react组件库教程你都不用看了，大多数骗小白的，欢迎加群交流，我的微信：a2298613245)。
+注：其实看源码我发现不少疑惑的代码，觉得不应该那样写，比较明显的，我就给floating-ui提了pr，也合进去了（刚刚合了一个变量重复计算的问题），还有就是给这些知名的库提pr是非常简单的事情，只要你真的去梳理源码，总会有不少能提的，只是大家很少去钻研源码罢了。
+腾讯的tdesign的弹出层组件，使用了@popper-js, 大家可以点击链接查看效果，我也看其源码实现了类似的组件，其依赖的@popper-js已经有点过时了，并且因为它是第三方库，如果你的弹出层组件有些定制化的需求，腾讯的tdsign是做不了任何优化的。
+所以为了我自己能够做出超越腾讯的tdesign，并且超越ant deisgn类似功能的组件（在ant中叫rc-trigger组件，是ant底层依赖的组件，并没有出现在官网中），我从0到1改造了@popper-js代码。
+注：@popper-js现在新版是floating-ui，我也看了其代码，其核心代码大同小异，主要是修复了一些边界的case，和增加了一些性能优化点，我改造的@popper-js也将这些新的代码融入其中。
+所以以下的@popper-js应该是增强版，不是官方的@popper-js
+为什么我的定位组件更好
+这个疑问可以换做可为什么@popper-js比国内所有的弹出层组件更好？
+受众多，功能非常稳定
+因为这个组件的作者专做这一个功能已经有很多年了，在jquery时期就在开始做了，目前github上最受欢迎的弹出层组件，目前的版本来看，就算有bug，也…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -5998,7 +6009,7 @@ function ErrorMessage({ children }) {
 
 // styled-components 或 @emotion/styled, 使用字符串样式
 const ErrorMessa…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                &ensp;<span class="article-reading-time">(&hairsp;11
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -6028,7 +6039,7 @@ Type aliases and interfaces are very similar, and in many cases you can choose
 1. Type Aliases 类型别名
 我们在写 TS 的时候，遇到「对象类型」或者「联合类型」，可以直接在类型注释中编写，比如：
 let userId: number | string // 联合类…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                &ensp;<span class="article-reading-time">(&hairsp;9
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -6074,6 +6085,58 @@ position:relative;
 width:350rpx;
 height: …</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7257713854746001463"
+                        open
+                      >
+                        <summary class="article-expander__title">如果连接互联网后，通过手机端APP扫码进入的办公云桌面办公，万一需要和客户进行线上资金交易，数据信息安全会有保护吗？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7257713854746001463">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>如果连接互联网后，通过手机端APP扫码进入的办公云桌面办公，万一需要和客户进行线上资金交易，数据信息安全会有保护吗？</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7257705589140717629"
+                        open
+                      >
+                        <summary class="article-expander__title">云上办公现在是主流趋势了么？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7257705589140717629">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>云上办公现在是主流趋势了么？</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -6223,7 +6286,7 @@ CSS原生嵌套浏览器兼容性查看
 2017年8月15日，node-inspect 的作者 Jan Olaf Krems 说 cssnext 把嵌套定义成了“明天的 CSS”，但他还是想看到原生的 CSS 嵌套，毕竟 JS 的生态系统已经证明避免“每个人都使用自己的半标准语言”绝对是健康的。
 2018年2月23日，Lea Verou 再次发声，说她现在还在用 CSS 预处理器写嵌套，一旦 CSS 支持了原生嵌套，她就果断弃用预处理。
 2018年5月25日，postcss-preset-env 的作者 Jonathan Neal 再次提议重新考虑下让 CSS 支持原生嵌套（也就是本文章的切入点），…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                &ensp;<span class="article-reading-time">(&hairsp;11
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -6263,66 +6326,6 @@ highlight: atom-one-dark
 具体实现
 后端redis发布订阅方法和普通redis不能使用同一个redis实例，发布订阅也不能使用同一个实…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7257441765976506425"
-                        open
-                      >
-                        <summary class="article-expander__title">整天用 Calendar 日历组件，不如自己手写一个吧！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7257441765976506425">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>日历组件想必大家都用过，在各个组件库里都有。
-比如 antd 的 Calendar 组件（或者 DatePicker 组件）：
-
-那这种日历组件是怎么实现的呢？
-其实原理很简单，今天我们就来自己实现一个。
-首先，要过一下 Date 的 api：
-创建 Date 对象时可以传入年月日时分秒。
-比如 2023 年 7 月 30，就是这么创建：
-new Date(2023, 6, 30);
-
-可以调用 toLocaleString 来转成当地日期格式的字符串显示：
-
-有人说 7 月为啥第二个参数传 6 呢？
-因为 Date 的 month 是从 0 开始计数的，取值是 0 到 11：
-
-而日期 date 是从 1 到 31。
-而且有个小技巧，当你 date 传 0 的时候，取到的是上个月的最后一天：
-
--1 就是上个月的倒数第二天，-2 就是倒数第三天这样。
-这个小技巧有很大的用处，可以用这个来拿到每个月有多少天：
-
-今年一月 31 天、二月 28 天、三月 31 天。。。
-除了日期外，也能通过 getFullYear、getMonth 拿到年份和月份：
-
-还可以通过 getDay 拿到星期几。
-比如今天（2023-7-19）是星期三：
-
-就这么几个 api 就已经可以实现日历组件了。
-不信？我们来试试看：
-用 cra 创建 typescript 的 react 项目：
-npx create-react-app --template&#x3D;typescript calendar-test
-
-
-我们先来写下静态的布局：
-大概一个 header，下面是从星期日到星期六，再下面是从 1 到 31：
-改下 App.tsx:
-import React from &#x27;react&#x27;;
-import &#x27;./index.css&#x27;;
-
-function Calendar() {
-  return (
-   …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;15
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -7380,8 +7383,8 @@ Passkey 这个方案可以做到，登录不需要密码，解决了上面提到
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5669022172">
-        <time id="build-timestamp" datetime="2023-07-26T12:56:08.554Z">2023-07-26T12:56:08.554Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5670958266">
+        <time id="build-timestamp" datetime="2023-07-26T15:53:37.564Z">2023-07-26T15:53:37.564Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
