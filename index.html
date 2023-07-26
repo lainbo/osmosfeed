@@ -596,6 +596,63 @@ end
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7259405321020424251"
+                        open
+                      >
+                        <summary class="article-expander__title">为啥面试官总喜欢问computed是咋实现的？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7259405321020424251">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>也许你我素未谋面，但很可能相见恨晚，我是前端胖头鱼
+前言
+通过前面几篇文章，我们对Vue3中的响应式设计有了初步的了解。
+面试官：Vue3响应式系统都不会写，还敢说精通？
+面试官：你觉得Vue的响应式系统仅仅是一个Proxy？
+Vue3：原来你是这样的“异步更新”
+而对于每天都在用的计算属性(computed)，我猜你肯定也想窥探其奥妙与原理对吧！走起！！！
+
+从computed的特性出发
+computed最耀眼的几个特性是啥？
+1. 依赖追踪
+import { reactive, computed } from &#x27;vue&#x27;
+
+const state &#x3D; reactive({
+  a: 1,
+  b: 2,
+  c: 3,
+})
+const sum &#x3D; computed(() &#x3D;&gt; {
+  return state.a + state.b
+})
+
+
+我们定义了一个响应式数据state和一个计算属性sum, Vue会自动追踪sum依赖的数据state.a和state.b，并建立相应的依赖关系。
+也就是只有state.a和state.b发生变化的时候，sum才会重新计算而state.c任由它怎么变，sum都将丝毫不受影响。
+2. 缓存
+还是上面的例子，如果state.a和state.b打死都不再改变值了，那么我们读取sum的时候，它将会返回上一次计算的结果，而不是重新计算。
+3. 懒计算
+这个特性比较容易被忽略，简单地说只有计算属性真正被使用（读取）的时候才会进行计算，否则咱就仅仅是定义了一个变量而已。
+import { reactive, computed } from &#x27;vue&#x27;
+
+const state &#x3D; reactive({
+  a: 1,
+  b: 2,
+  c: 3
+})
+
+const sum &#x3D; computed(() &#x3D;&gt; {
+  console.log(&#x27;执…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -2228,7 +2285,7 @@ Q：可以同时参与社区的其他活动吗？
 A：一篇文章只能参与一个活动。
 Q：怎么知道自己是否符合要求？
 A：按照上述步骤 &amp; 规则进行发布即可，活动结束后会统一进行审核，并在群内公示，有问题可以申诉。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2548,7 +2605,7 @@ vue和flutter该怎么选择呢
 多端兼容且平等，vue和flutter哪个熟练，开发快就用哪个。
 多端部分兼容，那么兼容部分复用，不兼容或需求不同部分各自改动，vue和flutter都可胜任。
 难以兼容或需求大为不同，干脆分开各自开发，web端用vue,安卓端/桌面端用flutter。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -5604,39 +5661,62 @@ GPL 规定，必须向使用者提供源码，并且使用者有权重新发布�
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
                 </h3>
                 <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7257785104713367611"
+                        data-accordion-key="7257713854746001463"
                         open
                       >
-                        <summary class="article-expander__title">【目前最好的react组件库教程】手写增强版 @popper-js （主体逻辑分析）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7257785104713367611">
+                        <summary class="article-expander__title">如果连接互联网后，通过手机端APP扫码进入的办公云桌面办公，万一需要和客户进行线上资金交易，数据信息安全会有保护吗？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7257713854746001463">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>前言
-首先声明，后续所有组件都会有类似详细的教程 + 代码演示（以前的组件库教程不用看了，这是一个新的开始，是生产环境可用的，并且拿国内知名组件库的功能和代码质量作为对比，市面上百分之95%的所谓react组件库教程你都不用看了，大多数骗小白的，欢迎加群交流，我的微信：a2298613245)。
-注：其实看源码我发现不少疑惑的代码，觉得不应该那样写，比较明显的，我就给floating-ui提了pr，也合进去了（刚刚合了一个变量重复计算的问题），还有就是给这些知名的库提pr是非常简单的事情，只要你真的去梳理源码，总会有不少能提的，只是大家很少去钻研源码罢了。
-腾讯的tdesign的弹出层组件，使用了@popper-js, 大家可以点击链接查看效果，我也看其源码实现了类似的组件，其依赖的@popper-js已经有点过时了，并且因为它是第三方库，如果你的弹出层组件有些定制化的需求，腾讯的tdsign是做不了任何优化的。
-所以为了我自己能够做出超越腾讯的tdesign，并且超越ant deisgn类似功能的组件（在ant中叫rc-trigger组件，是ant底层依赖的组件，并没有出现在官网中），我从0到1改造了@popper-js代码。
-注：@popper-js现在新版是floating-ui，我也看了其代码，其核心代码大同小异，主要是修复了一些边界的case，和增加了一些性能优化点，我改造的@popper-js也将这些新的代码融入其中。
-所以以下的@popper-js应该是增强版，不是官方的@popper-js
-为什么我的定位组件更好
-这个疑问可以换做可为什么@popper-js比国内所有的弹出层组件更好？
-受众多，功能非常稳定
-因为这个组件的作者专做这一个功能已经有很多年了，在jquery时期就在开始做了，目前github上最受欢迎的弹出层组件，目前的版本来看，就算有bug，也…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
+                              <span>如果连接互联网后，通过手机端APP扫码进入的办公云桌面办公，万一需要和客户进行线上资金交易，数据信息安全会有保护吗？</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7257705589140717629"
+                        open
+                      >
+                        <summary class="article-expander__title">云上办公现在是主流趋势了么？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7257705589140717629">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>云上办公现在是主流趋势了么？</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
@@ -5713,7 +5793,7 @@ Q9：我购买了新版会员，实物礼品什么时候发货
 举例：7月17号购买的在21号发货，7月21号购买的在28号发货，节假日顺延
 
 掘金会员制度调整给您造成的不便，还望谅解。如有疑问请私信【赵小饼】</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -5778,7 +5858,7 @@ Type aliases and interfaces are very similar, and in many cases you can choose
 1. Type Aliases 类型别名
 我们在写 TS 的时候，遇到「对象类型」或者「联合类型」，可以直接在类型注释中编写，比如：
 let userId: number | string // 联合类…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -5824,58 +5904,6 @@ position:relative;
 width:350rpx;
 height: …</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7257713854746001463"
-                        open
-                      >
-                        <summary class="article-expander__title">如果连接互联网后，通过手机端APP扫码进入的办公云桌面办公，万一需要和客户进行线上资金交易，数据信息安全会有保护吗？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7257713854746001463">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>如果连接互联网后，通过手机端APP扫码进入的办公云桌面办公，万一需要和客户进行线上资金交易，数据信息安全会有保护吗？</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7257705589140717629"
-                        open
-                      >
-                        <summary class="article-expander__title">云上办公现在是主流趋势了么？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7257705589140717629">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>云上办公现在是主流趋势了么？</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -6167,7 +6195,7 @@ teleport组件
 全局api也只能通过导入的方式进行调用，做到更好的treesharking(可能是调用了全局api却没有使用...)
 SPA首页加载慢怎么解决（商汤科技）
 减小入口文件体积，常见的手段就是进行路由的懒加…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;38
+                                &ensp;<span class="article-reading-time">(&hairsp;40
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -7376,8 +7404,8 @@ Passkey 这个方案可以做到，登录不需要密码，解决了上面提到
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5664449756">
-        <time id="build-timestamp" datetime="2023-07-26T03:52:35.709Z">2023-07-26T03:52:35.709Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5665606624">
+        <time id="build-timestamp" datetime="2023-07-26T06:52:24.912Z">2023-07-26T06:52:24.912Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
