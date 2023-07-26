@@ -34,7 +34,7 @@
           "description": "没想到，以前有些不方便实现的排版和布局效果可以使用text-wrap:balance轻松实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/07/css-text-wrap-balance/",
           "publishedOn": "2023-07-25T07:03:30.000Z",
-          "wordCount": 927,
+          "wordCount": 925,
           "title": "5分钟快速了解text-wrap:balance的作用",
           "imageUrl": null
         },
@@ -44,7 +44,7 @@
           "description": "同样的布局效果，在2017年、2021年和2023年有着不同的实现，代码愈发的简洁高效，一起来看看CSS的发展对Web开发的帮助吧。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/07/css-image-aspect-ratio-layout/",
           "publishedOn": "2023-07-20T14:36:38.000Z",
-          "wordCount": 1182,
+          "wordCount": 1180,
           "title": "CSS高宽不等图片固定比例布局的三重进化",
           "imageUrl": null
         },
@@ -54,7 +54,7 @@
           "description": "我发现，有个CSS三角函数之后，以前很多需要JS计算才能实现的布局现在都可以纯CSS完成了，代码简洁了不少。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/06/css-sin-cos-tan-function/",
           "publishedOn": "2023-06-29T16:23:42.000Z",
-          "wordCount": 1367,
+          "wordCount": 1365,
           "title": "CSS sin()/cos()等数学三角函数简介与应用",
           "imageUrl": null
         }
@@ -148,7 +148,7 @@
           "description": "很犀利的一篇文章，《工作不要当老黄牛》，https://hwv430.blogspot.com/2023/07/blog-post_8.html\n作者认为，工作晋升从来都不是看你做成了多少事情，而是看你辅佐的上司情况效果如何；进入企业工作，你的目标就是得升迁，尽一切可能升迁；在企业工作，客观规则就是：up or out。",
           "link": "https://m.okjike.com/originalPosts/64be92f1f14149eb211004dc",
           "publishedOn": "2023-07-24T15:04:17.000Z",
-          "wordCount": 389,
+          "wordCount": 390,
           "title": "发布了: 很犀利的一篇文章，《工作不要当老黄牛》，https://hwv430.blogspot.com/2023/07/blog-post_8.html 作者认为，工作晋升从来都不是看你做成了多少事情，...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -426,6 +426,16 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230726/t20230726_526345763.html",
+          "author": "国家预警信息发布中心",
+          "description": "秀山县气象台2023年7月26日8时40分继续发布“暴雨橙色预警信号”，预计未来3小时内，我县涌洞镇、大溪乡、峨溶镇、石堤镇、里仁镇、龙池镇、妙泉镇、宋农镇、海洋乡等乡镇累计雨量将达50毫米以上，最大小时雨强可达30-50毫米，并伴有雷电、阵性大风等强对流天气；注意防范强降水可能诱发的山体滑坡、泥石流、中小河流洪水、山洪、城乡积涝等次生灾害，以及雷电、大风可能造成的不利影响。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230726/t20230726_526345763.html",
+          "publishedOn": "2023-07-26T01:00:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市秀山土家族苗族自治县发布暴雨橙色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230726/t20230726_526345566.html",
           "author": "国家预警信息发布中心",
@@ -2316,7 +2326,7 @@
           "description": "如果面试官，或者有人问你foreach怎么跳出循环，请你大声的告诉ta，跳不出！！！！！！！！！！\nforeach 跳不出循环\n为什么呢？\n先看看foreach大体实现。\nArray.prototype.customForEach = function (fn) {\n    for (let i = 0; i < this.length; i++) {\n        fn.call(this, this[i], i, this)\n    }\n}\n\nlist.customForEach((item, i, list) => {\n    console.log(item, i, list)\n})\n\nlet list = [1,2,3,4,5]\n\nlist.forEach((item,index,list)=>{\n    console.log(item,index,list)\n})\n\nlist.customForEach((item,index,list)=>{\n    console.log(item,index,list)\n})\n\n\n\n两个输出的结果是一样的没啥问题，这就是foreach的大体实现，既然都知道了它的实现，那么对它为什么跳不出循环♻️应该都知道了，再不清楚的话，再看一下下面的例子。\n\nfunction demo(){\n    return 'demo'\n}\n\nfunction demo2(){\n    demo()\n    return 'demo2'\n}\n\ndemo()\n\n\n在demo2函数里面调用demo函数，demo函数的return能阻止demo2函数下面的执行吗？很明显不行啊，demo函数里的return跟demo2函数一点关系都没有。现在你再回头看看foreach的实现，就明白它跳不出循环一清二楚了。\n有点同学说不是可以通过抛出错误跳出循环吗？是的。看看下面例子。\n\nlet list = [1,2,3,4,5]\n\ntry {\n    list.forEach((item, index, list) => {\n        if (index === 2) {\n            throw new Error('demo')\n        }\n        console.log(item)\n    })\n} catch (e) {\n    // console.log(e)\n}\n\n\n\n结果是我们想要，但是你看代码，哪个正常人会这样写代码？是非foreach不用吗？还是其他的循环关键字不配呢。\nend\n有反驳在评论区，show me your code !!!!!!!!!",
           "link": "https://juejin.cn/post/7259595485090906149",
           "publishedOn": "2023-07-25T08:24:44.000Z",
-          "wordCount": 1218,
+          "wordCount": 934,
           "title": "请自信的大声告诉面试官forEach跳不出循环",
           "imageUrl": null
         },
@@ -2346,7 +2356,7 @@
           "description": "theme: channing-cyan\n前言\n在某一天逛掘金论坛的时候，看到了一篇讲述权限控制的文章，《面试官问我按钮级别权限怎么控制，我说v-if，面试官说再见》。文章内容整体看下来简单易懂，但是当我翻看到评论的时候，看到热门评论第一的回复中有推荐用装饰器来配置权限的标识。这种说法我也是第一次看到，然后就接着看了下去，但是看的我是云里雾里并没有搞懂是如何实现的。然后这个楼主说了让去看他最新的文章，但是并没有看到这个楼主发布的相关文章。所以就想着自己研究一下具体是如何实现这个功能的。以下就是自己对于装饰器的一些个人见解，以及实现的简单的demo。\n装饰器介绍\n这里搬运一下 ChatGPT 对于装饰器的描述：\n在 TypeScript 中，装饰器（Decorators）是一种特殊的声明，它修饰的是类及其方法或者修饰属性的方法以及参数。装饰器提供了一种在编译时修改且运行时执行继承后类和类成员的能力，从而实现元编程（metaprogramming）的效果。\n装饰器使用了@符号，紧接着是装饰器的名称，放置在被修饰的目标之前。装饰器可以是一个函数或一个类，它接收不同的参数，具体取决于装饰的目标类型。\n在 TypeScript 中，装饰器可以用于以下几个方面：\n类装饰器（Class Decorators）：应用于类声明之前，用于修改类的行为。类装饰器接收一个参数，即被修饰的类构造函数，可以用来扩展类的功能、修改类的元数据等。\n方法装饰器（Method Decorators）：应用于类方法之前，用于修改方法的行为。方法装饰器接收三个参数，分别是被修饰的类的原型对象、方法的名称和属性描述符。可以用来拦截方法调用、修改方法的元数据等。\n属性装饰器（Property Decorators）：应用于类属性之前，用于修改属性的行为。属性装饰器接收两个参数，分别是被修饰的类的原型对象和属性的名称。…",
           "link": "https://juejin.cn/post/7258970835045646392",
           "publishedOn": "2023-07-24T01:58:39.000Z",
-          "wordCount": 3661,
+          "wordCount": 3642,
           "title": "用装饰器来优化前端权限控制",
           "imageUrl": null
         },
@@ -2366,7 +2376,7 @@
           "description": "theme: cyanosis\nhighlight: atom-one-dark\n在不久前的一个大厂实习面试的一面当中,一上来没多久就给我丢出了这么一个问题,搞得我头都大了。我也看过很多面经,发现真的很喜欢问这个。关于 React 的,10 篇里面有 5 篇都会问到 Fiber 相关的。\n那么从今天这篇文章我们就来好好学学这个 Fiber 有多重要!\n整篇文章一个 28000 多字 (我已经尽量控制了,代码都没贴,直接放的图片,还是这么多),可能一时半刻看不完,而且里面涉及到的东西有点多,或许有点难理解,可以收藏起来分段进行观看,如果有不懂的或者哪里讲错了的,欢迎评论区指出。\nFiber\nFiber 是 React 中一种用于实现虚拟 DOM 和组件协调的新的架构。它是 React 16 中引入的重要概念，旨在优化渲染过程、实现异步渲染，并提高应用的性能和用户体验。\n首先声明一点,Fiber 既可以看作是链表,也可以看作是树。说他是树,是因为它的形状像树,但是并没有树的特征,树是一个只有指向子节点的指针,并没有指向父节点的指针,因为我叫习惯了,所以在后面的内容中都说是 fiber 树\n什么是 Fiber\nFiber 也称协程,它和线程不一样,协程本身是没有并发和并行能力的,它需要配合线程,它只是一种控制流程让出机制。\n线程是并发执行的基本单位，一个进程可以包含多个线程，每个线程独立执行。而协程则是在单个线程中实现的并发。协程通过协作式的方式在同一个线程中切换执行，可以避免多线程之间的竞争条件和锁的使用，减少了线程之间的切换开销和资源消耗。\n在前端中，JavaScript 提供了一种称为生成器 Generator 的功能，它可以用于实现协程。生成器函数可以暂停执行，并且在需要的时候可以从上一个暂停的位置恢复执行。通过调用生成器的 next() 方法，可以逐步执行生成器函数的代…",
           "link": "https://juejin.cn/post/7258881840823844920",
           "publishedOn": "2023-07-23T23:37:05.000Z",
-          "wordCount": 6322,
+          "wordCount": 5822,
           "title": "某大厂一面: 讲讲 Fiber 架构以及它是如何实现增量渲染的🥱🥱🥱",
           "imageUrl": null
         },
@@ -2378,6 +2388,16 @@
           "publishedOn": "2023-07-23T22:40:23.000Z",
           "wordCount": 1200,
           "title": "我入职了",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7258607903585353784",
+          "author": "unitiny",
+          "description": "theme: cyanosis\n前言\n早听说flutter多端兼容，上手容易，便学习了下，果然感受到对新手的友好气息。刚好我有个朋友用go开发了小游戏的后台，缺个前端，我便接下当练手项目。\n游戏介绍\n游戏地址：\nhttp://139.159.234.134/\n欢迎大家来体验。\n游戏界面：\n大厅\n\n房间\n\n游戏\n\n\nUI设计我觉得还是不错的（doge)\n玩法介绍：\n该游戏是个抢卡得分游戏。抢牌阶段中，多个玩家从卡堆中抢卡，卡牌点数凑齐20点得分。出牌阶段中，玩家可用抢来的特殊卡干扰对手或调整自己卡牌点数，以凑齐20点得分。总共九个回合，回合结束后得分高者胜出。\n开发感受\n技术栈：\n我朋友写后端也是用来练手的，所以学到的技术都一块整上了。\ngo后端\n核心：微服务（consul+grpc)，kong网关，gin，redis，mysql\n其它：zap日志，viper，nacos，jwt，gorm，sentinal\ngithub地址：https://github.com/ppeew/twenty_game\n前端\nflutter以及一些插件。\nUI用masterGo设计出来，然后手写页面并封装组件。下次再用flutter，就不手写了，整上别人的组件库。\ngithub地址：https://github.com/unitiny/snatch-card\n这么看来，还是后端技术整的活多。\n体验：\n用flutter开发前端体验还是很不错的\n借鉴了react的思想，将UI和逻辑整合到一个组件类里，内聚性高，因此开发起来特别迅速。\n方法中可返回Widget，数据渲染及组件分离很方便。\n内置组件Column,Row,Stack，在布局上既方便快速，又保证兼容性。\n方方面面都是类，会不自觉地封装组件，或者继承原组件并扩展一些功能。vue也可以做到，但封装的想法没这么强烈，封装起来也没有类方便。\n当然flutter的缺点也有\n对web兼容还不是很好，比如我使用Image.network()时，在安卓上无报错，但web上用不了，得改用\nHtmlElementView + ImageElement代替。\nweb端和安卓端还是要各自开一个项目编码。比如要使用兼容web端的HtmlElementView组件，得导入dart:html库。而安卓环境下没有这个库，是无法在编译运行的。因此，正确做法应先开发web端。完成后再复制项目到安卓环境下运行，将无法编译的部分更换成安卓端的写法。\nvue和flutter该怎么选择呢\n对于vue和flutter，以后开发用哪个作为主力呢？\n我之前也很犹豫这类问题，后来一想，这就是一个用锤子还是用扳手问题，当然得看场景使用，哪个更方便更贴合需求就用哪个呗。因此：\n要求多端兼容，但偏向web端，那我会用vue+uniapp开发\n要求多端兼容，但偏向安卓端或桌面端，那我会用flutter开发\n多端兼容且平等，vue和flutter哪个熟练，开发快就用哪个。\n多端部分兼容，那么兼容部分复用，不兼容或需求不同部分各自改动，vue和flutter都可胜任。\n难以兼容或需求大为不同，干脆分开各自开发，web端用vue,安卓端/桌面端用flutter。",
+          "link": "https://juejin.cn/post/7258607903585353784",
+          "publishedOn": "2023-07-23T02:52:43.000Z",
+          "wordCount": 1486,
+          "title": "flutter初体验，用flutter+go开发一个小游戏。纠结以后用vue还是flutter作为开发主力呢？",
           "imageUrl": null
         },
         {
@@ -2406,7 +2426,7 @@
           "description": "theme: smartblue\n尊敬的掘友们：\n感谢过去一年来对掘金会员的支持，现因掘金会员整体资源因素影响，对会员权益进行了调整，针对改版前老会员的一些疑问，小饼整理了一份Q&A给大家，希望各位jym可以仔细阅读：\n新会员上线日期：2023年7月10日，在此之前任何形式购买的会员均为旧版会员，享受旧版权益\nQ&A\nQ1：已经购买会员，是否可以退款？\n虚拟商品开通权益已经下发，因此不支持退款。建议您在购买前仔细了解掘金会员权益，如对权益有疑问及时跟赵小饼沟通。\nQ2：新会员权益跟老会员权益有什么区别？\n核心权益区别如下，更多详细权益请移步购买页：点我了解\n\n新版会员\n老版会员\n\n\n\n\n字节内部课\n免费看\n免费看\n\n\n小册兑换券\n1张\n3张\n\n\n小册借阅卡\n无\n5张\n\n\n小册全场折扣\n7折\n7折\n\n\n珊瑚获得\n运营活动\n阅读行为获得（7月10号下线）\n\n\n实物周边\n有\n无\n\n\n\nQ3：什么是小册借阅卡？如何获得小册借阅卡？\n旧版会员开通会送借阅卡，新版会员借阅卡需要在会员商城-虚拟兑换中用珊瑚进行兑换。借阅卡可以借阅带有“VIP”标识的小册（并不是所有小册都可借阅），每使用一张借阅卡可免费学习一本小册21天\n\nQ4：如何获得会员积分（珊瑚）？\n旧版会员通过社区行为可以获得珊瑚，新版会员目前仅能通过平台活动获取珊瑚。\nQ5：现在开通新版会员还送会员积分（珊瑚）吗？\n不送\nQ6：旧版会员过期了，再续费还是旧版权益还是新版权益？\n新版权益，即一张69.9兑换券+实物周边任选一个\nQ7：旧版会员过期了，我的权益未使用完毕（兑换券、借阅卡和珊瑚），我可以继续使用吗？\n非会员身份的情况下，权益仍旧在您的账户中，并不进行回收，兑换券还可以使用，但是借阅卡、珊瑚不能使用。如需使用需要开通会员身份\nQ8：我用珊瑚抵扣的时候，出现珊瑚扣了但是付款失败怎么办？\n付款失败后订单失效，珊瑚会自动退回到您的账户中，请您耐心等待。\nQ9：我购买了新版会员，实物礼品什么时候发货\n当周五之前购买的通常在当周周五发货，当周周五购买的在下周五发货。\n举例：7月17号购买的在21号发货，7月21号购买的在28号发货，节假日顺延\n\n掘金会员制度调整给您造成的不便，还望谅解。如有疑问请私信【赵小饼】",
           "link": "https://juejin.cn/post/7257710391018586170",
           "publishedOn": "2023-07-20T06:22:58.000Z",
-          "wordCount": 980,
+          "wordCount": 653,
           "title": "【公告】掘金会员变更通知",
           "imageUrl": null
         },
@@ -2426,7 +2446,7 @@
           "description": "这知识它怎么就不进脑子 😡\n不知道是不是上了年纪，上个月刚看过的知识点，转头就忘的一干二净 🤷‍♂️\n遥想初中的时候，记英语单词那叫一个 6 🤔️，单词在哪个单元的哪个位置我都能记得一清二楚。反观现在，时不时的怀疑自己是不是脑子坏掉了，或是提前得了老年痴呆症 🤨\n基于这个背景，我还是把知识点记下来吧 😭，好记性不如烂笔头，Let's go! 🚀\n🚩 其实关于 TS 中 type 和 interface 的区别，人家官方早有解释：\nType aliases and interfaces are very similar, and in many cases you can choose between them freely. Almost all features of an interface are available in type, the key distinction is that a type cannot be re-opened to add new properties vs an interface which is always extendable.\n类型别名和接口非常相似，在许多情况下，您可以在它们之间自由选择。接口几乎所有的特性都可以在类型中使用，关键的区别在于类型不能重新打开以添加新属性，而接口总是可扩展的。\n去看文档 🙄️ 「Differences Between Type Aliases and Interfaces」\n下面我们对 type 和 interface 进行逐一的了解，最后举例并讨论一下二者的区别，Go！🚀\n1. Type Aliases 类型别名\n我们在写 TS 的时候，遇到「对象类型」或者「联合类型」，可以直接在类型注释中编写，比如：\nlet userId: number | string // 联合类…",
           "link": "https://juejin.cn/post/7257711054900723749",
           "publishedOn": "2023-07-20T04:59:46.000Z",
-          "wordCount": 2845,
+          "wordCount": 2848,
           "title": "还是记不住 TS 的 interface 和 type 的区别？",
           "imageUrl": null
         },
@@ -2466,7 +2486,7 @@
           "description": "日历组件想必大家都用过，在各个组件库里都有。\n比如 antd 的 Calendar 组件（或者 DatePicker 组件）：\n\n那这种日历组件是怎么实现的呢？\n其实原理很简单，今天我们就来自己实现一个。\n首先，要过一下 Date 的 api：\n创建 Date 对象时可以传入年月日时分秒。\n比如 2023 年 7 月 30，就是这么创建：\nnew Date(2023, 6, 30);\n\n可以调用 toLocaleString 来转成当地日期格式的字符串显示：\n\n有人说 7 月为啥第二个参数传 6 呢？\n因为 Date 的 month 是从 0 开始计数的，取值是 0 到 11：\n\n而日期 date 是从 1 到 31。\n而且有个小技巧，当你 date 传 0 的时候，取到的是上个月的最后一天：\n\n-1 就是上个月的倒数第二天，-2 就是倒数第三天这样。\n这个小技巧有很大的用处，可以用这个来拿到每个月有多少天：\n\n今年一月 31 天、二月 28 天、三月 31 天。。。\n除了日期外，也能通过 getFullYear、getMonth 拿到年份和月份：\n\n还可以通过 getDay 拿到星期几。\n比如今天（2023-7-19）是星期三：\n\n就这么几个 api 就已经可以实现日历组件了。\n不信？我们来试试看：\n用 cra 创建 typescript 的 react 项目：\nnpx create-react-app --template=typescript calendar-test\n\n\n我们先来写下静态的布局：\n大概一个 header，下面是从星期日到星期六，再下面是从 1 到 31：\n改下 App.tsx:\nimport React from 'react';\nimport './index.css';\n\nfunction Calendar() {\n  return (\n   …",
           "link": "https://juejin.cn/post/7257441765976506425",
           "publishedOn": "2023-07-19T12:56:58.000Z",
-          "wordCount": 4360,
+          "wordCount": 4367,
           "title": "整天用 Calendar 日历组件，不如自己手写一个吧！",
           "imageUrl": null
         },
@@ -2491,22 +2511,12 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7257085361261297719",
-          "author": "摸鱼的春哥",
-          "description": "theme: Chinese-red\nhighlight: monokai\n警告：本文充满了王婆卖瓜式的宣传，但没有一句虚假宣传；\n希望你了解一下 tree-lodash 的适用场景，并在合适的时候浅浅试用一下。\n\n📖阅读本文，你将\n了解一款 “像呼吸一样好用” 的\"树操作\"函数库\n通过非常容易理解的动图，理解三种遍历策略\n获得一个嘲笑作者的机会，以及：求求你给个 star 吧\n一、不想再做 “树先生”\n我抬眼看去，这前端代码歪歪扭扭，横七竖八，角落缝隙里塞满了一个熟悉的字眼：\n树。\n菜单是树。路由是树。DOM 是树。组织结构是树。权限点是树。低代码还是树。品类树。清单树。物料树。合约树。父节点，子节点，子子孙孙……\n我翻开代码，处处是我和同事们缝缝补补的树结构操作的函数。\nconst newTree = oldTree.map(t => t.children.map(xxx))\n\n不完美的实现，不完善的处理。不存在的用例。不曾出现的文档和注释。\n为什么？如此常见的 “树结构”，竟然没有一款类似 lodash 的函数库？\n或者有，但我竟然不知道！项目里竟然没引入！？\n我躺在床上转辗反侧，横竖无法入眠，于是披衣而起，掩上门，决心要为自己，也为同事们写点什么。\n于是有了一个纯纯的 “树操作” 函数开源库: tree-lodash（别名：树大师）。\n它没别的本事，专注于 树结构 的操作，让你在业务中面对 树 时，操作像呼吸一样自然。\n\n对，就像这么自然。\n告别手写方法的“树先生”，拥抱经过考验的“树大师”。\n二、tree-lodash 是个什么样的库？\n2.1 简介\n官网: https://zhangshichun.github.io/tree-lodash/\ngithub: https://github.com/zhangshichun/tree-lodash\n看名字就知道，…",
-          "link": "https://juejin.cn/post/7257085361261297719",
-          "publishedOn": "2023-07-19T00:03:02.000Z",
-          "wordCount": 2276,
-          "title": "“树先生”厌倦了，开源一根【树大师】(tree-lodash)",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7257076605570646076",
           "author": "大白萝卜",
           "description": "之前公司调整洗牌，裁掉了一大波人，像我这样做了快一年的，也竟是研发老员工了...最近领导安排我开始面试，拿到第一份简历是一位10年经验的前端大佬，看完简历后突然蒙圈，我该问什么问题，用过什么框架？ 项目遇到过什么问题？困难是怎么解决的？webpack做过哪些性能优化？\n\n诶，想到这，突然觉得哪天我也去投递简历了，很有可能会同样被问到这些问题，看看自己在现在公司干了快一年了，似乎也没有做过太多总结，瞬间感觉不寒而栗。\n\n既然这些都迟早是要总结的，今天那就来回顾一下， 创业公司工作一年， 到底收获了什么？同时也希望我的经历能给大家带来一丝启发。\n后台管理web阶段\n坐标一线城市北京，前面刚来两三个月一直在做公司后台系统，使用技术栈主要是vue2+elementUI，因为刚来，很多业务逻辑要熟悉，没有时间去做优化，而且入职第三天就开始写代码了。\nTailwind\n为了提高写代码的效率，正好当时看到tailwind，觉得很新奇，就给引入到项目里来了。可以用类名来直接书写css样式：\n\ntailwind可以节省很多编写类名的脑力， 同时开发的时候不再需要在style和template来回切换，直接在类名里写属性，用起来是真香！而且据官网介绍，全部使用tailwind编码之后，css的文件最后打包编译出来，基本都小于10KB？！因为引入了elementUI组件库，也没法验证，但节省心智是实实在在的。\n\nDrone CI\nCI工具，配置之后本地npm run build后会自动提交到drone，它会帮忙完成测试，代码缓存，cdn刷新等操作，并且可以设置在自动化部署完成后，出现飞书提醒，整体界面看上去也比较舒服\n\nSentry\n线上日志监控，用户在使用过程中产生了报错，sentry会实时发送提醒，咱们就可以通过日志回放可以分析出错原因，相当于飞机的黑盒子， 甚至可以回放用户的操作过程，挺强…",
           "link": "https://juejin.cn/post/7257076605570646076",
           "publishedOn": "2023-07-18T16:04:18.000Z",
-          "wordCount": 1140,
+          "wordCount": 887,
           "title": "在创业公司做前端一年，这些经验到底值不值？",
           "imageUrl": null
         }
@@ -2517,6 +2527,16 @@
       "feedUrl": "https://rsshub.app/juejin/pins/6824710202000932877",
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
+        {
+          "id": "7259762205985046585",
+          "author": "凯凯服务器",
+          "description": "有没有想要了解服务器的老铁呢[灵光一现]可找我",
+          "link": "https://juejin.cn/pin/7259762205985046585",
+          "publishedOn": "2023-07-26T01:02:59.000Z",
+          "wordCount": 444,
+          "title": "有没有想要了解服务器的老铁呢[灵光一现]可找我",
+          "imageUrl": null
+        },
         {
           "id": "7259614073264308279",
           "author": "十年踪迹",
@@ -2543,7 +2563,7 @@
           "description": "有需要服务器的吗",
           "link": "https://juejin.cn/pin/7259563080106541112",
           "publishedOn": "2023-07-25T04:11:55.000Z",
-          "wordCount": 443,
+          "wordCount": 444,
           "title": "有需要服务器的吗",
           "imageUrl": null
         },
@@ -2553,7 +2573,7 @@
           "description": "大厂云代充充值 有需要的老铁吗[害羞]",
           "link": "https://juejin.cn/pin/7259409410488827964",
           "publishedOn": "2023-07-25T02:47:38.000Z",
-          "wordCount": 449,
+          "wordCount": 450,
           "title": "大厂云代充充值 有需要的老铁吗[害羞]",
           "imageUrl": null
         },
@@ -2705,16 +2725,6 @@
           "publishedOn": "2023-07-17T08:04:31.000Z",
           "wordCount": 448,
           "title": "问个问题，mac卸载了一个应用，在访达的应用程序里面是看不到这个的，但是在启动台里面会有一个这个在，点了也没反应，请问一下这个怎么才能删",
-          "imageUrl": null
-        },
-        {
-          "id": "7256607606465347643",
-          "author": "上杉达也",
-          "description": "有没有比较好用的思维导图组件？",
-          "link": "https://juejin.cn/pin/7256607606465347643",
-          "publishedOn": "2023-07-17T06:56:21.000Z",
-          "wordCount": 445,
-          "title": "有没有比较好用的思维导图组件？",
           "imageUrl": null
         }
       ]
