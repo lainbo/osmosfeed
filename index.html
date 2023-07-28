@@ -1300,6 +1300,23 @@ Elasticsearch 倒霉的地方在于，遇到的竞争对手是亚马逊，世界
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://store.epicgames.com/zh-CN/p/severed-steel"
+                        open
+                      >
+                        <summary class="article-expander__title">《Severed Steel》</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://store.epicgames.com/zh-CN/p/severed-steel">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>这是一款时尚而接地气的单人 FPS 游戏，具有流畅的特技系统、可摧毁的立体像素环境、大量的子弹时间、独特的独臂主人公，以及暗黑系电子原声音乐。</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://store.epicgames.com/zh-CN/p/homeworld-remastered-collection"
                         open
                       >
@@ -1492,6 +1509,8 @@ Hi 大家好我 ssh，最近听了小宇宙的上 Web Worker 频道的播客： 
 一步步成长，从 element-plus 到 Vue 核心
 谈到最初的编程和开源经历时，三咲智子开玩笑说自己可能是个“新生代”，在高中就开始接触前端技术了。那时主要是自己写一些小项目自娱自乐，并没有系统地学习。真正让三咲智子入门前端和开源的是参与 element-plus 组件库的维护工作。
 element-plus 是基于 Vue 框架的桌面端组件库，提供了丰富的 UI 组件。三咲智子所在的公司当时选用了 element-plus 来快速构建内部系统，在使用过程中三咲智子主动修复了一些 bug 并提交…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4839,7 +4858,7 @@ webpack的热更新原理是怎样的？
 面试官：还有其他方案吗？
 我：嗯...，应该没有了吧，我只了解过这两种方式。
 面试官：好吧…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4923,30 +4942,19 @@ UI设计我觉得还是不错的（doge)
 go后端
 核心：微服务（consul+grpc)，kong网关，gin，redis，mysql
 其它：zap日志，viper，nacos，jwt，gorm，sentinal
+同时设计了诸多管道以及协程，保证抢卡游戏的并发及安全
 github地址：https://github.com/ppeew/twenty_game
 前端
 flutter以及一些插件。
 UI用masterGo设计出来，然后手写页面并封装组件。下次再用flutter，就不手写了，整上别人的组件库。
 github地址：https://github.com/unitiny/snatch-card
 这么看来，还是后端技术整的活多。
-体验：
-用flutter开发前端体验还是很不错的
-借鉴了react的思想，将UI和逻辑整合到一个组件类里，内聚性高，因此开发起来特别迅速。
-方法中可返回Widget，数据渲染及组件分离很方便。
-内置组件Column,Row,Stack，在布局上既方便快速，又保证兼容性。
-方方面面都是类，会不自觉地封装组件，或者继承原组件并扩展一些功能。vue也可以做到，但封装的想法没这么强烈，封装起来也没有类方便。
-当然flutter的缺点也有
-对web兼容还不是很好，比如我使用Image.network()时，在安卓上无报错，但web上用不了，得改用
-HtmlElementView + ImageElement代替。
-web端和安卓端还是要各自开一个项目编码。比如要使用兼容web端的HtmlElementView组件，得导入dart:html库。而安卓环境下没有这个库，是无法在编译运行的。因此，正确做法应先开发web端。完成后再复制项目到安卓环境下运行，将无法编译的部分更换成安卓端的写法。
-vue和flutter该怎么选择呢
-对于vue和flutter，以后开发用哪个作为主力呢？
-我之前也很犹豫这类问题，后来一想，这就是一个用锤子还是用扳手问题，当然得看场景使用，哪个更方便更贴合需求就用哪个呗。因此：
-要求多端兼容，但偏向web端，那我会用vue+uniapp开发
-要求多端兼容，但偏向安卓端或桌面端，那我会用flutter开发
-多端兼容且平等，vue和flutter哪个熟练，开发快就用哪个。
-多端部分兼容，那么兼容部分复用，不兼容或需求不同部分各自改动，vue和flutter都可胜任。
-难以兼容或需求大为不同，干脆分开各自开发，web端用vue,安卓端/桌面端用flutter。</span>
+开发难点：
+需求：
+后端传来的websocket消息是异步的，且消息里有个msgType字段，需要前端识别并使用不同处理函数去处理数据，进而更改游戏状态。
+而前端需要异步接收消息，同步渲染组件，保证每种类型的消息都会渲染展示出来。
+难点1：
+对于前端通知并渲染组件的需求，我是用Provider的notifyListeners去通知监听组件，而监听组件使用S…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;8
                                   min&hairsp;)</span>
                             </span>
@@ -5935,25 +5943,6 @@ Three.js 的对象体系是这样的：
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20230721/t20230721_526339078.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市秀山土家族苗族自治县发布雷电黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20230721/t20230721_526339078.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>秀山县气象台2023年7月21日18时30分发布“雷电黄色预警信号”，预计未来6小时内，我县龙凤坝镇、清溪场街道、隘口镇、膏田镇、溶溪镇、中和街道、官庄街道、溪口镇、平凯街道、乌杨街道等所有乡镇街道将出现雷雨天气，局地伴有短时强降水、阵性大风等强对流天气，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -6532,23 +6521,6 @@ GPL 规定，必须向使用者提供源码，并且使用者有权重新发布�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>巫妖（The Lich）让世界陷入了永无止境的循环之中，所有人都饱经无尽混乱的摧残。玩家需操纵一摞不断扩充的神秘卡牌，为英勇的英雄每次独特的冒险循环中设定敌人、建筑和各类地形。</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://store.epicgames.com/zh-CN/p/severed-steel"
-                        open
-                      >
-                        <summary class="article-expander__title">《Severed Steel》</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://store.epicgames.com/zh-CN/p/severed-steel">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>这是一款时尚而接地气的单人 FPS 游戏，具有流畅的特技系统、可摧毁的立体像素环境、大量的子弹时间、独特的独臂主人公，以及暗黑系电子原声音乐。</span>
                             </span>
                           </div>
                         </a>
@@ -7576,8 +7548,8 @@ Passkey 这个方案可以做到，登录不需要密码，解决了上面提到
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5690627429">
-        <time id="build-timestamp" datetime="2023-07-28T09:52:45.516Z">2023-07-28T09:52:45.516Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5692182465">
+        <time id="build-timestamp" datetime="2023-07-28T12:56:13.324Z">2023-07-28T12:56:13.324Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
