@@ -668,6 +668,70 @@
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7260516157786325050"
+                        open
+                      >
+                        <summary class="article-expander__title">你是否好奇，前端专家的简历怎么写？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7260516157786325050">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: channing-cyan
+大家好，我是前端面试题宝典团队的 Fine 老师。
+其实我们团队关于简历修改的文章，已经有很多了，相信应届生和初、中级的的前端工程师，都能通过我们之前的文章，了解到很多的简历修改技巧。
+那么大家是否好奇，资深前端工程师，甚至前端专家的简历究竟是怎么写的，又有哪些优化的技巧呢？
+今天我们就根据实际的辅导案例，来看看一位工作了 7 年的前端大佬的简历情况。
+在阅读今天的分享前，推荐大家先通过之前的文章，了解进行简历优化的基本原则和技巧。链接已经直接挂在下面了，大家自取：
+阿里面试官来告诉你，如何在前端简历中写项目经历？
+一份优秀的前端开发工程师简历是怎么样的？
+【面试技巧系列】“项目亮点”怎么挖掘？
+前端校招简历怎么改？看这一篇就够了
+只有 1 年工作经验，前端简历怎么改？
+背景
+这份简历的主人公，是在近期报名的简历辅导。他在互联网公司工作了 7 年，并且在团队中担任重要角色，带领团队完成过从 0 到 1 的大项目，技术能力和工作经验都很丰富。
+本篇点评经过本人的的授权，部分个人信息也做了脱敏处理，感谢这位小伙伴对我们的支持。
+先来看看进行简历辅导的主要方向：
+优化简历结构与内容
+挖掘个人亮点
+在简历中引导面试官的项目相关提问，避免给自己埋坑
+指导重点复习方向
+修改之前
+来看看修改前的简历
+
+
+简历点评
+个人简介
+这块写的太过简单了些，可以把「年龄、学历、工作年限、所在城市」等信息加上，HR 筛选简历时会看。
+专业技能
+“个人优势”可以改成“专业技能”，毕竟都是一些前端的通用技能，大部分都算不上优势。
+参考修改如下：
+1. 熟练掌握前端基础（JavaScript、CSS3、HTML5），能够快速实现Web端和移动端页面搭建。
+2. 熟悉小程序开发，包括云函数、云数据库、云存储和云托管以及 H5 页面开发。
+3. 熟练使用 Vue 框架以…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >阮一峰的网络日志</button>
                   <a class="source-heading__link" href="http://www.ruanyifeng.com/blog/">Open</a>
                 </h3>
@@ -5153,48 +5217,6 @@ webpack的热更新原理是怎样的？
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7258850748149219384"
-                        open
-                      >
-                        <summary class="article-expander__title">Vue 加载远程组件的解决方案</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7258850748149219384">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>背景
-最近的项目有一个加载远程组件的需求。基于此我对 Vue 加载远程组件的方案进行了研究，并且整理了两个可行的解决方案。
-HTML 文件 + umd 组件
-这个方案是最简单、最容易实现的。组件以 umd 的格式进行打包，然后在 HTML 文件中直接使用。
-
-    
-
-
-
-    // 将组件 URL 挂载到 script 标签上，然后通过 window 获取这个组件
-    await lodaScript(&#x27;http://localhost/component/input/0.1.0/bundle.js&#x27;)
-    app.component(&#x27;TestInput&#x27;, window.TestInput)
-
-
-但是这个方案不适合在大型项目中使用，效率比较低。
-Vue 工程项目 + esm /umd 组件
-Vue 工程项目 + esm /umd 组件是我目前在使用的方案，但是在研究的过程中遇到了两个问题，逐一解决后，才把这个方案趟通了。
-第一个问题 Relative references must start with either &quot;/&quot;, &quot;./&quot;, or &quot;../&quot;
-由于我们的项目不需要兼容 IE，所以打包组件采用的是 esm 格式。打包后的组件源码如下：
-import { reactive } from &#x27;vue&#x27;
-// other code...
-
-然后在主项目中进行引用：
-const { default: TestInput } &#x3D; await import(&#x27;http://localhost/compone…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7258607903585353784"
                         open
                       >
@@ -7448,8 +7470,8 @@ Passkey 这个方案可以做到，登录不需要密码，解决了上面提到
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5701270156">
-        <time id="build-timestamp" datetime="2023-07-29T15:52:20.985Z">2023-07-29T15:52:20.985Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5701989466">
+        <time id="build-timestamp" datetime="2023-07-29T18:52:11.008Z">2023-07-29T18:52:11.008Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
