@@ -780,6 +780,43 @@
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7260742402397863992"
+                        open
+                      >
+                        <summary class="article-expander__title">前端中 JS 发起的请求可以暂停吗？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7260742402397863992">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: hydrogen
+highlight: agate
+之前在沸点看到一个哥们提出一个问题。
+
+这个问题非常有意思，我一看到就想了很多可以回复的答案，但是评论区太窄，就直接开一篇文章来写了。
+审题
+JS 发起的请求可以暂停吗？这一句话当中有两个概念需要明确，一是什么样的状态才能称之为 暂停？二是 JS 发起的请求 是什么？
+怎么样才算暂停？
+暂停 全称暂时停止，在已开始未结束的过程中临时停止可以称之为暂停，意味着这个过程可以在某个时间点截断然后在另一个时间点重新续上。
+请求应该是什么？
+这里得先介绍一下 TCP/IP 网络模型， 网络模型自上而下分为 应用层、传输层、网络层和网络接口层。
+
+上图表示的意思是，每次网络传输，应用数据在发送至目标前都需要通过网络模型一层一层的包装，就像寄快递一样，把要寄的物品先打包好登记一下大小，再装在盒子里登记一下目的地，然后再装到车上，最后送往目的地。
+请求(Request) 这个概念就可以理解为客户端通过若干次数据网络传输，将单份数据完整发给服务端的行为，而针对某次请求服务端往客户端发送的答复数据则可以称之为 响应(Response)。
+理论上应用层的协议可以通过类似于标记数据包序列号等等一系列手段来实现暂停机制。但是 TCP 协议并不支持，TCP 协议的数据传输是流式的，数据被视为一连串的字节流。客户端发送的数据会被拆分成多个 TCP 段（TCP segments），而这些段在网络中是独立传输的，无法直接控制每个 TCP 段的传输，因此也无法实现暂停请求或者暂停响应的功能。
+
+解答提问
+如果请求是指网络模型中的一次请求传输，那理所当然是不可能暂停的。
+来看看提问者的使用场景 —— JS 发起的请求，那么可以认为问题当中的请求，应该是指在 JS 运行时中发起的 XMLHttpRequest 或者是 fetch 请求，而请求既然已…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7260516157786325050"
                         open
                       >
@@ -1900,7 +1937,7 @@ LLM应用最广、普及度最高的应用场景是聊天助手（比如chatGPT�
 你会学到什么
 其实脚手架并不实现，难的是最佳实践的整理和沉淀。本文不会涉及到最佳实践方面的内容，只是教会你如何实现一个最基础的脚手架，以此作为展示最佳实践的载体。
 因为是手把手教妹子写脚手架，所以本文很详细，字数…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;30
+                                &ensp;<span class="article-reading-time">(&hairsp;29
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1931,7 +1968,7 @@ Hi 大家好我 ssh，最近听了小宇宙的上 Web Worker 频道的播客： 
 一步步成长，从 element-plus 到 Vue 核心
 谈到最初的编程和开源经历时，三咲智子开玩笑说自己可能是个“新生代”，在高中就开始接触前端技术了。那时主要是自己写一些小项目自娱自乐，并没有系统地学习。真正让三咲智子入门前端和开源的是参与 element-plus 组件库的维护工作。
 element-plus 是基于 Vue 框架的桌面端组件库，提供了丰富的 UI 组件。三咲智子所在的公司当时选用了 element-plus 来快速构建内部系统，在使用过程中三咲智子主动修复了一些 bug 并提交…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2808,7 +2845,7 @@ packages:
 高级：
 搭建过整套资源加载优化方案，能说明白整体方案的各个细节，包括前端、客户端、服务端分别需要实现哪些功能点、依赖哪些基础能力，以及如何配合。
 设计并实…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4863,7 +4900,7 @@ interface QueueItem {
  */
 export function createAutoMergedRequest(
  …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4982,7 +5019,7 @@ A：按照上述步骤 &amp; 规则进行发布即可，活动结束后会统一
 类装饰器（Class Decorators）：应用于类声明之前，用于修改类的行为。类装饰器接收一个参数，即被修饰的类构造函数，可以用来扩展类的功能、修改类的元数据等。
 方法装饰器（Method Decorators）：应用于类方法之前，用于修改方法的行为。方法装饰器接收三个参数，分别是被修饰的类的原型对象、方法的名称和属性描述符。可以用来拦截方法调用、修改方法的元数据等。
 属性装饰器（Property Decorators）：应用于类属性之前，用于修改属性的行为。属性装饰器接收两个参数，分别是被修饰的类的原型对象和属性的名称。…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                &ensp;<span class="article-reading-time">(&hairsp;12
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -5096,6 +5133,109 @@ const App &#x3D; (props) &#x3D;&gt; {
                               <span>你好 我是ChatGPT 你可以问我任何问题 https://sunmier.com/#/</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >竹白 - TOP20</button>
+                  <a class="source-heading__link" href="https://analy.zhubai.wiki">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://river.zhubai.love/posts/2295128100243111936"
+                        open
+                      >
+                        <summary class="article-expander__title">20230724 为幸福生活服务的工作</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://river.zhubai.love/posts/2295128100243111936">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>关于工作：  
+    
+  （1）通过从事我们的天职获得快乐和满足感；  
+    
+  （2）通过给社会或他人提供服务来获得财富；  
+    
+  （3）我们的兴趣和专长不止一个。  
+      
+  忘记在哪里看到的观点：让老人和小孩去工作，小孩精力充沛，老人害怕孤单或被社会遗忘。相比之下，被各方责任拉扯压榨的中年人更渴望属于自己的宁静。  
+    
+  同时，在FIRE群里，也有提早退休的人因感到无聊而重新投入职场。  
+    
+  我想，工作本身并非美好生活的对立面，过度工作才是。  
+    
+  我从去年10月份就不再上班了，但是我一直在工作（in my own way)， 并觉得工作（或者更确切地说，事业、天职）是我生活中不可或缺的一部分。  
+    
+  只工作，不上班。  
+    
+  只是，我所说的工作和目前社会上大部分的用来挣钱的手段并不一定重合，它是我热爱的事业。就像纳瓦尔说的专长（Specific Knowledge），那些即便不挣钱你也愿意做的事情，让你充满热情，忘记时间流逝的事情。累积专长的过程，对你而言就像玩耍，对他人来说却很吃力。  
+    
+  The way to get out of the competition trap is to be authentic, to find the thing you know how to do better than anybody. You know how to do it better because you love it, and no one can compete with you. If you love to do it, be authentic, and then figure out how to map that to what society ac…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://xiaoshu.zhubai.love/posts/2295080313749114880"
+                        open
+                      >
+                        <summary class="article-expander__title">Indie Hacker，互联网打工人的下一个出路？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://xiaoshu.zhubai.love/posts/2295080313749114880">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>你好，我是小树。这是我为你写的第 73 封信。每期都会同步更新在微信公众号      一颗小树      和      竹白专栏      。现在有 314 位朋友订阅了这封信，也欢迎你。  
+    
+  最近 Indie Hacker 这一概念在我的时间线中经常出现，出于兴趣，做了一些学习，以下是我的收获和思考。  
+    
+  什么是 Indie Hacker  
+    
+      Indie Hackers       里的定义是：  
+    
+  
+  构建线上项目并能够从中获得收入的人  
+    
+  寻求财务独立，创意自由和工作时间自由的人  
+  
+    
+  Indie Hacker 未必只能是一个人，也可以是几个人的小团队。  
+    
+  举几个具体的例子：  
+    
+  
+      @levelsio      ：代表作有       photoai      ，收入 $58K MRR  
+    
+      @Tibo      ：代表作       tweethunter       和       taplio       ，收入 $10m ARR  
+    
+      @Baye aka 威力狈      ：代表作有熊猫吃短信、ServerCat 等  
+    
+      JimmyLv.eth 吕立青      ：代表作       BibiGPT      
+  
+    
+  当然，Indie Hacker 并不要求你一定具备技术能力，还有诸如在线课程、电子书、Notion 模版、视觉/交互设计等多样的数字业务，只是具备技术能力，能够更轻松地实现更复杂的产品。  
+    
+  为什么越来越多的人关注  
+    
+  
+  由于众所周知的原因，大家开始对单纯地打工产生不安全感，希望能够拥有属于自己的生意 …</span>
                             </span>
                           </div>
                         </a>
@@ -5218,51 +5358,38 @@ webpack的热更新原理是怎样的？
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7258607903585353784"
+                        data-accordion-key="https://juejin.cn/post/7258850748149219384"
                         open
                       >
-                        <summary class="article-expander__title">flutter初体验，用flutter+go开发一个小游戏。纠结以后用vue还是flutter作为开发主力呢？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7258607903585353784">
+                        <summary class="article-expander__title">Vue 加载远程组件的解决方案</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7258850748149219384">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>theme: cyanosis
-前言
-早听说flutter多端兼容，上手容易，便学习了下，果然感受到对新手的友好气息。刚好我有个朋友用go开发了小游戏的后台，缺个前端，我便接下当练手项目。
-游戏介绍
-游戏地址：
-http://139.159.234.134/
-欢迎大家来体验。
-游戏界面：
-大厅
+                              <span>背景
+最近的项目有一个加载远程组件的需求。基于此我对 Vue 加载远程组件的方案进行了研究，并且整理了两个可行的解决方案。
+HTML 文件 + umd 组件
+这个方案是最简单、最容易实现的。组件以 umd 的格式进行打包，然后在 HTML 文件中直接使用。
 
-房间
-
-游戏
+    
 
 
-UI设计我觉得还是不错的（doge)
-玩法介绍：
-该游戏是个抢卡得分游戏。抢牌阶段中，多个玩家从卡堆中抢卡，卡牌点数凑齐20点得分。出牌阶段中，玩家可用抢来的特殊卡干扰对手或调整自己卡牌点数，以凑齐20点得分。总共九个回合，回合结束后得分高者胜出。
-开发感受
-技术栈：
-我朋友写后端也是用来练手的，所以学到的技术都一块整上了。
-go后端
-核心：微服务（consul+grpc)，kong网关，gin，redis，mysql
-其它：zap日志，viper，nacos，jwt，gorm，sentinal
-同时设计了诸多管道以及协程，保证抢卡游戏的并发及安全
-github地址：https://github.com/ppeew/twenty_game
-前端
-flutter以及一些插件。
-UI用masterGo设计出来，然后手写页面并封装组件。下次再用flutter，就不手写了，整上别人的组件库。
-github地址：https://github.com/unitiny/snatch-card
-这么看来，还是后端技术整的活多。
-开发难点：
-需求：
-后端传来的websocket消息是异步的，且消息里有个msgType字段，需要前端识别并使用不同处理函数去处理数据，进而更改游戏状态。
-而前端需要异步接收消息，同步渲染组件，保证每种类型的消息都会渲染展示出来。
-难点1：
-对于前端通知并渲染组件的需求，我是用Provider的notifyListeners去通知监听组件，而监听组件使用S…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
+
+    // 将组件 URL 挂载到 script 标签上，然后通过 window 获取这个组件
+    await lodaScript(&#x27;http://localhost/component/input/0.1.0/bundle.js&#x27;)
+    app.component(&#x27;TestInput&#x27;, window.TestInput)
+
+
+但是这个方案不适合在大型项目中使用，效率比较低。
+Vue 工程项目 + esm /umd 组件
+Vue 工程项目 + esm /umd 组件是我目前在使用的方案，但是在研究的过程中遇到了两个问题，逐一解决后，才把这个方案趟通了。
+第一个问题 Relative references must start with either &quot;/&quot;, &quot;./&quot;, or &quot;../&quot;
+由于我们的项目不需要兼容 IE，所以打包组件采用的是 esm 格式。打包后的组件源码如下：
+import { reactive } from &#x27;vue&#x27;
+// other code...
+
+然后在主项目中进行引用：
+const { default: TestInput } &#x3D; await import(&#x27;http://localhost/compone…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -5279,24 +5406,89 @@ github地址：https://github.com/unitiny/snatch-card
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >国家应急广播 - 重庆预警信息</button>
-                  <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
+                  >竹白 - TOP20</button>
+                  <a class="source-heading__link" href="https://analy.zhubai.wiki">Open</a>
                 </h3>
                 <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20230723/t20230723_526341743.html"
+                        data-accordion-key="https://moonvy.zhubai.love/posts/2294931146439495680"
                         open
                       >
-                        <summary class="article-expander__title">重庆市秀山土家族苗族自治县发布雷电黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20230723/t20230723_526341743.html">
+                        <summary class="article-expander__title">Moonvy 月维设计素材周刊 第 074 期</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://moonvy.zhubai.love/posts/2294931146439495680">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
-                              <span>秀山县气象台2023年7月23日17时发布“雷电黄色预警信号”，预计未来6小时内，我县洪安镇、雅江镇、中平乡、岑溪乡、石耶镇、龙池镇、官庄街道、峨溶镇、涌洞镇、宋农镇、平凯街道、中和街道、里仁镇、海洋乡等乡镇街道将出现雷雨天气，局地可能伴有短时强降水、阵性大风等强对流天气，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
+                              <span>🏆 产品推荐  
+    
+      Figma 3D 插件：Simple3D      
+    
+  用路径扩展 3D 形状，包含曲面自定义和角度自定义，非常灵活方便👍  
+    
+      https://www.figma.com/community/plugin/1260632020336566834/Simple3D      
+        
+      产品向导工具      
+    
+  driver.js，这是一个JavaScript库，它可以用来创建产品向导、突出显示、上下文帮助等功能。可以方便的在网页中预览效果。  
+    
+      https://driverjs.com/      
+        
+      Figma 图标插件：Figicon      
+    
+  群友开发的图标插件，收录了2000+的免费图标，支持中文搜索并且分类清晰，在 figma 里找图标更方便了。  
+    
+      https://www.figma.com/community/plugin/1111565622161029659/Figicon      
+        
+      Figma 样机插件：Mockup      
+    
+  Mockup 样机插件新增了 AI 功能，选中矢量图生成有质感的图像。  
+    
+      https://www.figma.com/community/plugin/817043359134136295/Mockup      
+        
+      Figma 插件：Markdown 文字转化      
+    
+  群友开发的新插件，该插件可以识别 Markdown 的标题（以 # 开头的行）和普通文本，按照预设的字体、字号、颜色等样式在 Figma 中创建相应的…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://bluemoment.zhubai.love/posts/2294922566822887424"
+                        open
+                      >
+                        <summary class="article-expander__title">科技漫谈｜三款Mac实用小工具</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://bluemoment.zhubai.love/posts/2294922566822887424">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>这是聪奇的第35封Newsletter，推荐使用邮箱订阅      《蓝调时间》      。  
+    
+  Macbook是我的工作设备，在使用过程中，我发现了以下三款有趣又实用的小工具，我觉得很值得推荐你一试。  
+        
+  Menubar X  
+    
+  Menubar X是一款集成在顶部菜单栏的mini浏览器，官方对它的定位是用来运行各种Web App。打开这款工具，可以看到琳琅满目的App列表，每一个App都和在手机或iPad上使用体验差异不大。拖动调节窗口尺寸，App便能自适应布局。  
+        
+  Menubar X支持许多Web App，包括新闻、工具、生产力、小游戏、社交等类别  
+    
+  与常规的网页浏览器不同，Menubar X让各种Web App的加载和切换都更加高效。通过预设的快捷键，用户可以轻松唤出想要使用的Web App，而关闭窗口之后，App会以小图标的形式收纳在顶部菜单栏中。免费版用户最多同时打开两个Web App（官方命名为标签页），付费后可解锁无限个同时启动的Web App。  
+        
+  Menubar X支持丰富的窗口自定义设置  
+    
+  除了一键开关这样的摸鱼神助能力，Menubar X还针对小窗口App的特性做了更多设计，用户可以将Web App吸附在所有页面的顶部展示，或者对Web App的窗口适配进行自定义。  
+            
+  Web App可以自适应窗口布局  
+            
+  Web App可以自适应窗口布局  
+    
+  这个小工具的想象空间非常大，且免费版已足够好用。一些需要高频在网页端进行的操作，例如Google翻译、与ChatGPT对话、浏览财经资讯，都可以通过Menubar X聚合到菜单栏中，每当需要时快速开启即可。  …</span>
                             </span>
                           </div>
                         </a>
@@ -5314,8 +5506,8 @@ github地址：https://github.com/unitiny/snatch-card
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-22 datetime="2023-07-22T17:02:28.000Z">2023-07-22</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-22 datetime="2023-07-22T17:02:28.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-21 datetime="2023-07-21T13:32:52.000Z">2023-07-21</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-21 datetime="2023-07-21T13:32:52.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -5326,53 +5518,295 @@ github地址：https://github.com/unitiny/snatch-card
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                  >竹白 - TOP20</button>
+                  <a class="source-heading__link" href="https://analy.zhubai.wiki">Open</a>
                 </h3>
                 <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7258509816691834917"
+                        data-accordion-key="https://bobfu.zhubai.love/posts/2294167511514107904"
                         open
                       >
-                        <summary class="article-expander__title">谈谈干前端四年的几点感受</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7258509816691834917">
+                        <summary class="article-expander__title">野鱼志 020 自然瑜伽、客厅 demo 文化、香港城市观察、史上最难俄罗斯方块和熊头鸽币汇总</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://bobfu.zhubai.love/posts/2294167511514107904">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
-                              <span>19年毕业的我，最开始怀揣着无限憧憬进入这个行业
-不知不觉，已经工作4年了，如果算上大四实习的时光，也接近5年了。
-4年间换了两家公司。
-对于工作，我也有过很多的困扰和迷茫，现在依旧在走一步看一步的状态。
-或许一觉起来工作没了，都是概率事件。
-为什么会有这篇文章？
-一是与行业内大佬山月交流了一次，解惑答疑，有所感悟，想记录下心中所想；
-二是呼应一年前的文章《谈谈干前端三年的几点感受》，对比看看自己想法变化。
-https://juejin.cn/post/7110030532280320031
-前端在一个公司定位
-一年前我说，前端在公司的定位是必要不重要，现在的想法依旧不变，只是对象变了。
-整个技术开发人员，在一个公司的定位都是处于必要但不重要的角色，可替代性非常高。
-可替代的属性越高，价值属性便越低。
-也许局部或者短期看，技术开发的薪资是高的，但这对于公司来说，是成本。
-如果公司要降本增效，最先压榨的也是这部分人员。
-有这样一种说法，“技术傍身，编程改变世界”等等，其实是有些误导人的。
-重要的从来都是想法，是渠道，不是技术。
-只要能想到，大概率都能实现，实现不了就加班想办法实现。
-能够提出想法的人，才处于一个公司重要的地位。
-就正如我看到的，一个公司，核心业务人员离职，公司上下极力挽留，一个开发离职，领导回复祝好。
-我们要学些什么
-学有价值的东西。
-何谓价值，价值就是经过时间考验，依旧不变的东西。
-我个人极其反对花太多精力深入研究各个技术的源码。
-技术说到底是工具，工具最重要的使用，不是本身，而且只要是工具，便都有替代品，
-有新的技术，又会有新的源码，学是学不完的。
-而计算机行业，不变的什么，有价值的是什么？
-是计算机网络，是计算机组成原理，是数据结构与网络，是操作系统，是信息安全，是项目管理，是软件测试。
-以上都是大学中计算机类的专业课程，这些年没有变过。
-具体一点，与前…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
+                              <span>《野鱼志》（    Amateur Fieldnotes    ）是一份创作者社群田野笔记，由傅丰元、Forrest 和灵感买家俱乐部成员撰写。每两周一期，免费订阅。  
+    
+  
+        
+      monkey       边做边学的赛博调酒游戏原型，完成 0.2%。  
+    
+  期待你访问      本文的 Notion 版本      并评论留言。你的反馈对我们很重要。  
+    
+  
+    
+  写在前面  
+    
+  Hi 我是灵感买家俱乐部的 Forrest～  
+    
+  来野乌咖啡馆的朋友或许都听过我和 Bob 的这么一句话，「欢迎大家！各位可以连一下熊头下的小图标。」  
+        
+  在野乌咖啡馆吧台上放着的熊头，除了是指引大家聚在一起对话的路牌，也是邀请各位为自己的体验重新定价的打赏入口。  
+    
+  去年 11 月，这个「熊头鸽币」罐      诞生了      。过去八个月，我们共收到了 86 笔打赏，合计 1895.32 元。这是我们的一些发现：  
+    
+  
+  86 笔打赏中，16 笔匿名，70 笔具名；最高一笔 200 元，最少一笔 1 元；平均每个月 237 元 ，已经能 cover 掉野乌咖啡馆「场地费」（50 美元/月）的七成。  
+    
+  大家都喜欢在留言里说「请鲍勃和 Forrest 喝咖啡」，我们趁机算了一下线上野乌咖啡馆的咖啡物价：11 元一杯（单次打赏平均 22 元，两人平分即 11 元）。现实中，已经能请住北京的鲍勃喝楼下面包店 9.9 元的拿铁；也够广东江门的 Forrest 喝上一杯冻拿铁（前提得办月卡）。不过， Forrest 一天得喝两杯咖啡，写《野鱼志》期间一天三杯。  
+    
+  每次打赏前我们都和大家说「少量多次少量多次」，目前两次及以上重复…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://anyway.zhubai.love/posts/2294071588163301376"
+                        open
+                      >
+                        <summary class="article-expander__title">安妮薇看看 Anyway.Now #131</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://anyway.zhubai.love/posts/2294071588163301376">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>新设计、新功能，老牌浏览器大更新: Opera One      
+    
+  这新 UI 甚至有点儿 bento box 的风格，一些细节的交互、动效也确实看上去更「现代」一点儿。说起来最近这些浏览器是越来越想革 Chrome 的命了，但是本主播可能是真的老了，试了那么多新产品，各有特色也都解决了很多实际问题，但我还是潜意识里有一种「她不是 Rachel」的感觉  
+        
+  
+      
+      会员抽奖: 制糖工厂充电器 × 5      
+    
+  感谢 Ping 总赞助的来自 CANDYSIGN 的 3 个 35W 和 2 个 65W GaN 充电器~ 安妮薇会员（过期的也可以）都能报名抽奖~  
+        
+  
+      
+      微软 Office 的新默认字体终于定了      
+    
+  经过好多年的测试，微软终于在最初圈定的       5 款字体      里找到了新的默认继承者，并且改名叫做了 Aptos，事实上这也是风格上最保守的一款了~  
+        
+  
+      
+      交互设计里的隐形小细节      
+    
+  跟 Config 大会上 Rasmus       分享的主题      惊人类似，这篇文章找了一些我们日常系统里的每天都用的交互的细节详细展开，这个配图和视频的工作量非常惊人了  
+        
+  
+      
+      图解 SVG 格式交互教程      
+    
+  一直对这种可交互的教程类网站没啥抵抗力，做得好棒~ 虽然 SVG 格式的命令我还是比较熟悉的，但再看一遍还是觉得很有意思~  
+        
+  
+      
+  # 随便看看  
+    
+  
+      Monotype 收购 Fontworks      
+    
+      一个独立创造者的五年      
+    
+      Apple，重新定义 HDR      
+    
+      iPhone 闹钟的贪睡时间为什么是 9 分钟？      
+    
+      配饭视频: 向量数据库技术鉴赏      
+  
+      
+  # 安妮薇招聘所  
+    
+  本报所含招聘岗位大部分来自会员群群友和朋友们的推荐，试运行期间也对所有读者提供免费招聘内容展示，有需要的朋友欢迎直接将「招聘内容」、「招聘城市」、「招聘岗位」以及外链链接发给我们~  
+      
+      百度移动客户端部招高级产品体验设计师      
+    
+  上海 &amp; 北京 / 3 年以上工作经验  
+      
+      QQ 浏览器招视觉设计师      
+    
+  深圳 / 可投递至 purplexinli@tencent.com  
+      
+      腾讯广告招交互 / 产品体验设计师      
+    
+  深圳 / 需要 B 端产品经验  
+      
+      微信广告设计团队招视觉设计师      
+    
+  深圳 / 2 年以上经验  
+      
+      乐高招产品设计实习生      
+    
+  上海 / 可投递至 vincent.sun@lego.com  
+      
+  The End  
+    
+  安妮薇看看总第 131 期，创刊于二〇一七年二月  
+    
+  本期主编:       JJ      、      CLU       · 象征性副主编:       Leon      
+    
+  
+  
+        
+  
+    
+  Anyway.Now 为你提供设计相关行业的新闻资讯、网摘推荐等内容。你也可以通过       RSS       或者       Telegram 频道      订阅，但同样推荐在      官网      上浏览以获得更好的阅读体验。设计、生活美学、数码科技为主题的播客       Anyway.FM       也开启了播客会员服务       Anyway.Member      ，欢迎关注~</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://weixin.zhubai.love/posts/2293994198800162816"
+                        open
+                      >
+                        <summary class="article-expander__title">每周AI大事件|苹果开发Apple GPT、OpenAI用合成数据训AI、GPT-4变得越来越笨</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://weixin.zhubai.love/posts/2293994198800162816">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>欢迎来到站长之家的[每周AI大事件]，这里记录了过去一周值得关注的AI领域热点内容，帮助大家更好地了解      人工智能      领域的动态和发展风向。  
+        
+  Part1动态  
+    
+  [国内要闻]  
+    
+  1.      腾讯音乐推出AI社交APP“未伴”      
+    
+  腾讯音乐旗下一款名为“未伴”的AI社交APP在近期开启测试。未伴是一个集AI陪聊、AI伴侣写真等多个功能于一体的AI聊天产品。进入产品首页后，用户需要选择一个AI伴侣，也可以由自己来创造。  
+    
+  2.      联想与百度“文心一格”达成AIGC合作      
+    
+  联想与百度在AIGC领域达成深度合作，推出ICT首家AI定制服务。联想官网私人定制业务全面引入百度文心一格，消费者可通过官网AIGC主题绘画活动定制笔记本电脑外观。  
+    
+  3.      WPS AI全新升级      
+    
+  WPS 办公软件宣布推出全新的AI功能。包括 WPS AI 智能助手、全新的组件功能、更新的视觉设计和协作功能。  
+    
+  4.      汤姆猫:AI产品已初步实现AI识物、AI绘图、对话等功能      
+    
+  汤姆猫表示，借助国内合作方的多模态通用大模型，公司国内团队打造的AI产品持续在完善视觉能力、对话能力及情感感知能力，目前已初步实现AI识物、AI绘图、情景对话、英语口语启蒙等功能。公司将于近期开展产品的封闭式测试。  
+    
+  5.      2023年上半年AI应用下载量同比增长114% 突破3亿次      
+    
+  报告显示，随着      ChatGPT      和Stable Diffusion等AI算法的更新迭代，全球AI市场快速升温。2023年上半年，AI应用下载量同比…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://oracle.zhubai.love/posts/2293983317034926080"
+                        open
+                      >
+                        <summary class="article-expander__title">【0721早报】土地承包制居然已经到期的周五</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://oracle.zhubai.love/posts/2293983317034926080">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>而存量房贷利率要下调了，果然活得够久就什么都会见到。  
+      
+  @人工智能  
+    
+  1.抖音社交负责人调岗大模型团队，字节研发大模型新项目代号O  
+    
+  2.美团独家投资大模型公司“智谱AI”  
+    
+  3.台积电总裁魏哲家：AI需求不能弥补库存调整，将进一步下调今年晶圆代工产值预期  
+    
+  4.高通全球副总裁孙刚：高通下一代手机平台将支持50亿-70亿参数大模型  
+    
+  5.微软、OpenAI等公司已使用合成数据来训练AI模型  
+    
+  6.谷歌测试AI技术来制作新闻报道  
+      
+  @国内国外  
+    
+  1.农业农村部：会同相关部门研究制定第二轮土地承包到期后再延长30年试点工作指导意见  
+    
+  2.国家防总针对京津冀启动防汛四级应急响应  
+    
+  3.中国民办教育协会回应“中国将向教培公司发放牌照恢复课外辅导”：谣言  
+    
+  4.常州市部分银行同意下调存量房贷利率  
+    
+  5.山东莱荣高铁被举报偷工减料，官方回应：省交通运输厅已成立调查组  
+    
+  6.中美应对气候变化对话在京举行，双方商定将继续保持密切沟通  
+    
+  7.IMF：美元升值对新兴市场冲击更大  
+    
+  8.美众议院批准FAA再授权法案，旨在缓解航司劳动力紧张问题  
+    
+  9.美国FTC拟暂停对微软和动视暴雪合并案审判，有望达成和解  
+    
+  10.美国上周首次申领失业救济人数为22.8万人，前值为23.7万人  
+    
+  11.土耳其央行宣布加息250个基点  
+    
+  12.身陷论文造假风波，美国斯坦福大学校长宣布辞职  
+    
+  13.神舟十六号航天员乘组圆满完成出舱活动全部既定任务  
+    
+  14.大型强子对撞机发现新奇异五夸克粒子  
+    
+  15.世界头号黑客凯文・米特尼克去世，曾造成最大的损失达4亿美元  
+      
+  @商业  
+    
+  1.微信支付全面开放绑定境外卡  
+    
+  2.外国人在中国已可用支付宝支付，全国可刷  
+    
+  3.首届「盒马村」大会召开，6 家盒马村授牌成立  
+    
+  4.奈雪的茶主品牌放开加盟  
+    
+  5.航班管家：暑期国内机票订单已超2019年同期98%  
+    
+  6.南航回应机票近4万元只给1瓶水：具体以机上安排为准  
+    
+  7.上汽回应奥迪收购平台传闻：与奥迪达成共识，共同开发电动汽车  
+    
+  8.红杉中国据悉商谈成立200亿元人民币科创基金  
+    
+  9.台积电二季度净利润1818亿元新台币  
+    
+  10.iPhone 15 Pro 系列或面临供货紧张  
+    
+  11.亚马逊计划年内在美国所有Whole Foods门店推出掌纹支付服务  
+    
+  12.特斯拉上海工厂接近满负荷运行  
+    
+  13.特斯拉将在马来西亚建充电网络  
+    
+  14.奈飞取消无广告基础版套餐  
+    
+  15.暴雪宣布旗下游戏登陆Steam，《守望先锋2》已率先上架  
+    
+  16.华尔街前几大银行上半年总计裁员2.1万人  
+    
+  17.国内数据安全领域专业厂商“世平信息”获新一轮战略融资  
+    
+  18.纯果蔬、无添加功能性软饮研发商“源究所”连续获数千万元Pre-A及A轮融资  
+    
+  19.数字隔离芯片厂商“锐来博”获500万元天使轮融资  
+    
+  20.PaaS系统服务提供商“纷享销客”获3000万美元新一轮战略融资  
+    
+  21.高端聚合物新材料研发商“拓烯科技”获近10亿元B轮融资</span>
                             </span>
                           </div>
                         </a>
@@ -5381,20 +5815,6 @@ https://juejin.cn/post/7110030532280320031
                 </section>
               </section>
             </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-21 datetime="2023-07-21T09:19:23.000Z">2023-07-21</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-21 datetime="2023-07-21T09:19:23.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -5510,11 +5930,139 @@ GPL 规定，必须向使用者提供源码，并且使用者有权重新发布�
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-20 datetime="2023-07-20T15:00:00.000Z">2023-07-20</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-20 datetime="2023-07-20T15:00:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-20 datetime="2023-07-20T15:44:35.000Z">2023-07-20</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-20 datetime="2023-07-20T15:44:35.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >竹白 - TOP20</button>
+                  <a class="source-heading__link" href="https://analy.zhubai.wiki">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://happyfire.zhubai.love/posts/2293838272793280512"
+                        open
+                      >
+                        <summary class="article-expander__title">1link.fun 每周分享 10 个有趣的链接 | 第 59 期</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://happyfire.zhubai.love/posts/2293838272793280512">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>上周回了趟老家, 周刊鸽了一期, 抱歉. 上次周刊发起的互动方式投票, 经过长达 7 天的投票周期, 最终收到了 0 个投票, 所以互动这个事儿就到此为止了 :-)  
+    
+      AI 涂鸦生图      
+        
+  stability AI 推出了一个新的 AI 工具, 根据涂鸦和文字描述生成图片, 上图是我随手画了一个恐龙的涂鸦, 然后使用     dinasor child drawing water color     这个提示词生成的结果, 效果非常好.  
+    
+  目前这个工具 web 页面免费使用. 不过如果不登录好像有次数限制.  
+    
+      30万个免费 SVG 图标      
+            
+  这个网站上号称有超过 30 万个 SVG 的图标和品牌 Logo, 你可以免费下载使用, 还可以在线对 SVG 图片进行编辑(比如改个填充颜色之类的)  
+    
+      GPT-4 性能下降      
+        
+  很多用户声称最近这段时间 OpenAI 的 ChatGPT 3.5 和 4 输出质量有明显下降, 这篇文章通过分析近几个月以来的 GPT 3.5 和 GPT 4 的输出验证了这一说法.  
+    
+  具体分析方法是根据 GPT 3.5 和 GPT 4 在这几个月中对于数学问题, 代码生成, 回答敏感问题和视觉推理方面的响应来判断, 比如研究发现 GPT 4 生成的可执行代码从 3 月份的 52% 下降到了 6 月份的 10%  
+    
+      将 19 世纪的装饰性瓷砖插图引入 21 世纪的 Web 应用程序      
+        
+  把互联网档案馆保存下来的 19 世纪的瓷砖插图用 Web 技术重新排版, 你可以对瓷砖进行      拼接 / 旋转 / 镜像…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://workreview.zhubai.love/posts/2293819647713734656"
+                        open
+                      >
+                        <summary class="article-expander__title">书单推荐 | 2023年上半年合集</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://workreview.zhubai.love/posts/2293819647713734656">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>栏目介绍「书单推荐」  
+    
+  这个栏目是写给不想躺平的人看的。对于一个渴望改变自己命运，或在某方面有所成长的人，绕不开的人生命题就是“改变”。  
+    
+  为有系统地介绍笔者读过的确为经典、实操性强、能达到醍醐灌顶的好书，本栏目针对付费用户，进行书单总结推荐，更新频率为每月一篇。在这里，只推荐来自名人推荐的+我自己已经读完+读完后认知质的飞跃+已经小范围推荐给同事朋友反馈也很好的书。  
+    
+  某种意义而言，过去虽然也读书，但对书籍的挑选不甚讲究，而现在开始精挑细选后，更是觉得人生太短、好书太多，时间应该更多留给精品，而不是“人云亦云、人读亦读”。  
+    
+  Live by design, not by default.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://somethinginmybrain.zhubai.love/posts/2293814901003124736"
+                        open
+                      >
+                        <summary class="article-expander__title">我脑袋里的怪东西 24 - 我们在努力些什么</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://somethinginmybrain.zhubai.love/posts/2293814901003124736">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>今天想和大家探讨努力这个话题，也是一个困扰了我很久的问题。  
+    
+  
+    
+  工作 3 年有多，拍摄过各种各样的人。我们总是在网上听到「这个世界缺少的不是美，而是发现美的眼睛」，3 年前我会举双手同意这种说法，但是现在我不认同。  
+    
+  
+    
+  这 3 年的拍摄过程中，我最大的感悟是：实际上大部分拍摄对象的生活真的很无聊。我相信当今做视频如此之卷的环境下，缺少的从不是发现美的眼睛，而是我们真的很难遇到「美」的人和事了。  
+    
+  
+    
+  怎么理解这个「美」？我的理解就是    独特、有意思的、意外的    。不可捉摸、编排的事情才是美的事情，不可贴标签、套身份的人才是美的人。从这角度出发，重新观察一下身边，是不是已经很久没有遇到美的人和事了？  
+    
+  
+    
+  说回我自己，很多时候我都觉得是我们在赋予拍摄对象被纪录的意义。我作为视频工作者，深知如何通过摄影、剪辑、甚至设计情节以达到我想要的视觉效果。用当下那句很俗的话怎么说来着，对，满足了观众的情绪价值。但是如果不是我们这样「用力过猛」地修饰，他们的生活真的还有值得被纪录的内容吗？  
+    
+  
+    
+  又或者说，这种「矮仔里面挑高个」的做法，真的有意义吗？  
+    
+  
+    
+  当然，这个问题的答案由不得我来回答。于是，当你再在视频平台漫无目的地浏览时，会发现很多看起来选题独特、角度清奇但看完后只觉得强行升华的视频。对于我来说，这种视频有一个很匹配的比喻 —— 它们和创作者之间就像通过相亲结婚。再简而言之，我甚至能感受到创作者还没完工时发出过无数次「拍都拍了」的哀叹。  
+    
+  
+    
+  所以我们到底在努力些什么啊？  
+    
+  
+    
+  当然，你也可以从另一个角度出发去看，那么思路应该就是类似于看菜吃饭这种…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -5691,6 +6239,591 @@ GPL 规定，必须向使用者提供源码，并且使用者有权重新发布�
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-19 datetime="2023-07-19T16:22:36.000Z">2023-07-19</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-19 datetime="2023-07-19T16:22:36.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >竹白 - TOP20</button>
+                  <a class="source-heading__link" href="https://analy.zhubai.wiki">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://220525.zhubai.love/posts/2293485449438187520"
+                        open
+                      >
+                        <summary class="article-expander__title">人的价值在于他所看重的事物的价值。 | No.48</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://220525.zhubai.love/posts/2293485449438187520">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Hi朋友，展信好。  
+    
+          最近一个月，因为一些小事我突然又回到了在深圳的那种状态。这种状态袭来时，身体的反应从抑郁变成了无数次怀念过往某一个瞬间的“白月光”。无数次想回到过去，重新改写过去某个选择，或者是从新再来一遍，越是不甘越是痛苦。所以我又扎进了健身房，通过运动带来的肌肉酸痛缓解这种精神上的痛苦。  
+        
+          深圳时期抑郁的核心是我在外部的评价体系中迷失了自己。单纯地用升职加薪、光鲜的大厂这种简单又可笑的标准评价自己的价值。如果我不能在职场上获得更好的职级、更好的薪水、更光鲜的履历，那我的能力就是不够的，自己也是不够好的。  
+    
+          另一方面内心深处又觉得自己没有这么差劲，身边肯定我的人有很多，自己也在努力做着一些尝试和改变，比如带饭上班、运动、写小红书、newsletter等等。这些正反馈又让我觉得自己是有价值的，同时这种价值感在我的评价体系中是虚妄且轻飘飘的，它很难与外部的评价体系去对抗。  
+    
+          自我价值的认可在两个极端反复横跳，这种状态让人陷入了虚无的抑郁状态。毫无意义的工作更是雪上加霜，让自我价值的认可直接跌到了谷底。用钱衡量自我价值，间接意味着用数字来衡量自我价值，我们都知道这样是不对的，所以内心世界的天平总是会失衡。  
+    
+          数字是个绝对值，在这个衡量标准下，人的一切价值都被抹杀，只有能与金钱交换的部分才算得上价值，其余的都被抹零。就像一位全职主妇。虽然付出了很多，因为其不能带来直接的经济价值，就被打上了无价值的标签。不同的是这次给自我打标签的是自己。  
+    
+          在那段时间，我突然意识到我的生活除了工作一无所有。工作是生活的重心，除了工作没有其他东西能够支撑我的精神世界。我也找不到很有意义的事情，能让…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://produck.zhubai.love/posts/2293375234915049472"
+                        open
+                      >
+                        <summary class="article-expander__title">Vol.20 - 本周新产品发现与思考</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://produck.zhubai.love/posts/2293375234915049472">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Folio - 将您的产品演示转化为身临其境的体验  
+        
+  产品链接：  
+      
+  产品简介：  
+    
+  Folio 的新更新引入了平移、缩放和模糊功能，以突出显示关键区域、隐藏敏感信息以及轻松地在您的网站上嵌入交互式演示。  
+    
+  我的思考：  
+    
+  VE2X上发现的这个产品，考虑到国内糟糕的创作现状，做的东西感觉还是很不错的，UI设计和痛点都有一定的把握到。其实我看到后第一感觉是真不错，但了解一下之后，随即给我的感觉是失望。这个失望不是该产品哪里做的不够好，而是我认为这个产品太专注于解决单点问题，而没有考虑到全局。  
+    
+  这个产品的使用场景是 product lauch video、或者其他涉及到    录屏演示    的业务，如果你像我一样经常使用录屏来和远程团队沟通，或者向一些观众展示某些内容，你会发现这里面的痛点远远不止Zoom、Pan 这些突出重点的操作，实际上这个东西属于锦上添花。在录屏业务里更重点需要解决的其实是    内容层面上的问题    ：  
+    
+  举个例子    ：错误表述片段删除和改写  即，    当你有一句话说错了或者描述不清楚，如何去改动这个视频让整个视频还是可以发布的，因为录屏往往很难再重新录制一个片段插进去，环境音和动作都会让整个视频不连贯。  
+    
+  如果我来做设计，我的思路会是这样：  
+    
+  
+  视频转为文本流进行类似 doc 形式编辑，可生成模拟动嘴视频作为剪辑后视频画面补充  
+    
+  提供悬浮半透明演讲稿，录屏流和人像流独立录制，只录制规定区域而不显示演讲稿  
+    
+  将视频编辑分成可来回切动的两面，A 面为 DOC 编辑，B 面为特效、背景等内容设置  
+    
+  4.doc形式页面编辑重提供语气词标注功能，方便…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-18 datetime="2023-07-18T16:01:33.000Z">2023-07-18</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-18 datetime="2023-07-18T16:01:33.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >竹白 - TOP20</button>
+                  <a class="source-heading__link" href="https://analy.zhubai.wiki">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://toolight.zhubai.love/posts/2293117764229550080"
+                        open
+                      >
+                        <summary class="article-expander__title">第39期 - 偷懒爱好者周刊 23/07/19</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://toolight.zhubai.love/posts/2293117764229550080">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>本周刊由偷懒工具（      https://toolight.cn/      ）特别赞助  
+    
+  一、上周科技圈大事记  
+    
+  
+  
+  周一（7.10）  
+    
+  
+  Meta 宣布 Threads 的注册人数破亿  
+    
+  数字人民币 SIM 卡硬钱包上线，以运营商超级 SIM 卡为载体，可在手机无电状态下完成支付  
+  
+  
+    
+  
+  周二（7.11）  
+    
+  
+  Anthropic 推出全新 AI 聊天机器人 Claude 2，可与 OpenAI 的 ChatGPT 一较高下  
+    
+  百川智能发布参数量 130 亿的通用大语言模型 Baichuan-13B  
+    
+  国际地层委员会旗下人类世工作小组正式宣布，地球约在70年前因人类活动影响，已迈入全新地质篇章 —— 人类世  
+    
+  汪应洛院士逝世  
+  
+  
+    
+  
+  周三（7.12）  
+    
+  
+  我国载人登月初步方案公布，2030 年前用两枚运载火箭对接登陆  
+    
+  我国科学家成功实现 51 比特超导量子簇态制备和验证  
+    
+  我国朱雀二号火箭成功发射，成为全球首枚成功入轨的液氧甲烷火箭  
+    
+  特斯拉创始人马斯克宣布成立人工智能公司 xAI  
+    
+  微信重申消息不会显示对方已读  
+  
+  
+    
+  
+  周四（7.13）  
+    
+  
+  国家网信办联合多部委公布《生成式人工智能服务管理暂行办法》  
+    
+  华为去年专利许可收入 5.6 亿美元  
+    
+  京东正式推出了千亿参数规模的言犀大模型  
+    
+  全球首个陆上商用模块化小型核反应堆玲龙一号反应堆核心模块完成出厂验收  
+  
+  
+    
+  
+  周五…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://dex.zhubai.love/posts/2292914282163761152"
+                        open
+                      >
+                        <summary class="article-expander__title">#200</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://dex.zhubai.love/posts/2292914282163761152">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>周刊写了快 4 年，从疫情开始写到疫情结束，只拖延时间，从未断更过，终于熬到第 200 期了。还记得第 100 期的时候，那时还同步在公众号更新，收到了不少朋友的打赏，自从放弃维护公众号并改为付费订阅模式之后，还能坚持更新的动力也就是很多      觉得本周刊有一定价值的付费用户了      ，甚至去年涨价时很多人还一次性买了 5 年。所以借这次机会搞个抽奖，也感谢几个朋友主动提供了自家的产品作为支持。感谢大家的喜欢！  
+    
+  
+    
+  奖品（3）  
+    
+  第一个奖品是由字节跳动的工程师海岛心hey开发的    博客托管服务       Gridea      ，一年的订阅资格（Pro Yearly Subscription 100% Off Coupon），价值 10 美金。数量 10 个。中奖后会收到兑换码，注册登录后即可使用。  
+        
+  第二个奖品是由 Leo 赞助的 iOS 应用       躲猫猫 - 隐藏应用保护隐私手机防沉迷管理      ，口碑非常好的软件。数量 10 个。同样中奖后会收到注册码通过 App Store 兑换。  
+        
+  
+    
+  以上奖品抽奖地址，请使用微信小程序打开：      https://lucky.nocode.com/v2/s/8rw0yOtZnb8      
+    
+  
+    
+  第三个奖品是由       candysign 制糖工厂      提供的：硬糖菇得帕瓦磁吸充电座无线三合一手机支撑架懒人充电宝    ，价值 369 元，数量 2 个，仅限付费会员参与。收到中奖信息后会通过邮寄方式发送。  
+        
+  另外这次没有抽制糖工厂他们的新品，因为卖得实在太好，第一批早早就卖断货了，虽然网上对这次的新品争议很大，但丝毫不影响销量，我个人实测体验也还不错。等过段时间我们再组织团购他们的新品，据说还有几个也会陆续发布。</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://oracle.zhubai.love/posts/2292893312526995456"
+                        open
+                      >
+                        <summary class="article-expander__title">【0718早报】小米在印度的沉没成本如此高的周二</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://oracle.zhubai.love/posts/2292893312526995456">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>属实没想到左脸挨揍了还要把右脸伸过去。  
+      
+  @人工智能  
+    
+  1.携程集团发布首个旅游行业垂直大模型“携程问道”  
+    
+  2.网易云音乐内测上线“私人DJ”，打造首个AI推荐音乐助手  
+    
+  3.最新研究：在创造性思维方面ChatGPT可以与前1%的人类相媲美  
+      
+  @国内国外  
+    
+  1.中国今年上半年GDP同比增长5.5%  
+    
+  2.调查显示中国平台工人超2亿  
+    
+  3.国资委：充分发挥国有龙头企业的支撑带动作用，推动传统产业数字化智能化绿色化转型升级  
+    
+  4.工信部：加强 CPU、GPU 和服务器等重点产品研发  
+    
+  5.崔东树：重启燃油车车购税优惠，减免购车人员个税、汽车下乡、鼓励结婚购车等更多的措施  
+    
+  6.两部门发文，网络安全保险迎发展窗口期  
+    
+  7.我国网络安全保险领域首份政策文件出炉，促成中国保险业新的“蓝海市场  
+    
+  8.缓解负债压力，多家中小银行跟进下调存款利率  
+    
+  9.台风“泰利”登陆广东湛江，为今年首个登陆我国的台风  
+    
+  10.条例规定台风天符合条件员工可拒绝上班  
+    
+  11.俄罗斯将推出新面额纸币  
+    
+  12.欧盟将要求所有手持设备均可更换电池  
+    
+  13.印度和印尼计划建立本币贸易  
+    
+  14.研究显示中国表情包日发送量达6亿次  
+    
+  15.以色列研究人员开发出诱导癌细胞“自杀”新方法  
+      
+  @商业  
+    
+  1.官方回应“微信号长期未使用将被回收”：有零钱就不会被注销  
+    
+  2.张利东卸任今日头条公司职务  
+    
+  3.小米To B副总裁离职，加入爱奇艺VR公司任  
+    
+  4.小米印度总裁：将着力开拓线下市场，招聘更多店员以重振销售  
+    
+  5.58同城姚劲波要求砍掉不盈利业务  
+    
+  6.五芳斋回应“端午销量下行”：传言与公司实际情况严重不符  
+    
+  7.IDo钻戒创始人成失信被执行人  
+    
+  8.信立泰：SAL0119获得FDA药品临床试验许可  
+    
+  9.中芯国际：高永岗因工作调整辞任公司董事长  
+    
+  10.中国恒大：2021年收入为2500.1亿元，净亏损6862.2亿元  
+    
+  11.台积电回应3纳米再夺苹果大单：不评论市场传闻  
+    
+  12.iPhone 15 系列或采用堆叠式电池技术  
+    
+  13.特斯拉董事会放弃 7.35 亿美元股票和现金奖励，以和解投资者诉讼  
+    
+  14.SpaceX预计2023年营收将翻倍至80亿美元  
+    
+  15.腾讯大股东Prosus：希望继续成为腾讯长期股东，看好中国消费互联网行业  
+    
+  16.暴雪总裁回应国服问题：尽一切可能让中国服务器尽快重开  
+    
+  17.ShakeShack回应使用过期原料：涉事门店未按规定操作  
+    
+  18.松下考虑在印度建设电池工厂  
+    
+  19.心血管专科医疗服务连锁品牌“贤德医疗“获数千万美元A轮融资  
+    
+  20.AR 初创公司“致敬未知”获千万美元天使轮融资</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-17 datetime="2023-07-17T23:41:16.000Z">2023-07-17</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-17 datetime="2023-07-17T23:41:16.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >竹白 - TOP20</button>
+                  <a class="source-heading__link" href="https://analy.zhubai.wiki">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lifeplayer.zhubai.love/posts/2292871069965090816"
+                        open
+                      >
+                        <summary class="article-expander__title">为什么要做难的事</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lifeplayer.zhubai.love/posts/2292871069965090816">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>我有过一个同事，是某个大城市的健美比赛季军。看到他的简历时，我没怎么犹豫——虽然当时的业务和健美完全没有关系。  
+    
+  这个判断很简单：若是一个人有这样的毅力，能在日复一日的枯燥训练和饮食限制中把自己练到这样的水准，那么他一定有能力去做其他的事情。  
+    
+  事实证明这个判断没错。  
+    
+  任何人都一样。如果在简历上有一项类似这样的经历，那会比成绩单有说服力得多。  
+    
+  最少在前半生，我们都是为了简历而活着。我们所做的事情会成为佐证材料，用来证明自己的能力。而其中最重要的，是那些我们做过的最困难的事情。它甚至不一定是我们做过的最有价值的事情，也不一定和当前要做的工作有关。  
+    
+  就像雄孔雀拖着大尾巴一样。虽然那东西又累赘又没有用，但是它是个证明：看，我拖着这么长的尾巴，却活得很好；这说明我够健康，够强壮——选择我吧，灰扑扑的雌孔雀，你不会失望的。  
+    
+  我们做过的最困难而且成功了的事情，就是这样的证明。为了这些更难的事情，可以放弃一些常人认为重要的事；比如一份好看的成绩单。  
+    
+  在真实的世界中做困难的事情，比获得好看的成绩单要难得多。在学校中学习的确定性很高，能证明的事情其实并不多。而在真实世界中做一些真正的难事，则需要更多。  
+    
+  所以要是不知道该做什么的话，去挑战一下困难的事情。写一个软件，把它卖出去。写一部长篇小说，出版。录一张专辑，再开一场演唱会。或者骑行 3000 公里，把沿途拍的照片出个作品集。  
+    
+  重点在于做出了某些成果，而这个成果只有少数人能够获得。重点不是单纯的困难：连续一千天吃肯德基也很难，但是它显然不是一个好的证明。不要搞错了；单纯的困难，并没有什么意义。  
+    
+  如果做不了什么困难的事情，那么就去追求一份好看的成绩单吧。好的成绩相对容易获得，而且也算是某些能力的证明——虽然现在正在因为它太过普遍，而失去了说服力。  
+    
+  而那些没有做过什么困难的事情，甚至连好看的成绩单都没有的人呢？我觉得这最少也能说明些什么了。</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://huazi.zhubai.love/posts/2292739192000217088"
+                        open
+                      >
+                        <summary class="article-expander__title">BLUE周刊-Vol.077</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://huazi.zhubai.love/posts/2292739192000217088">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>这里是「BLUE·周刊」的第77期  
+    
+  🔍 发现  
+    
+  🧩       用Figma变量做的小游戏↗︎      
+    
+  一个按钮连击游戏，也是一个利用AIGC完成的小项目。
+  
+        
+  🧩       使用变量渲染真实 3D↗︎      
+    
+  使用物体的真实3D坐标，并通过数学运算来转换它们，以创建动态效果。甚至可以实时改变物体的属性。  
+        
+  🧩       这个网站的开屏好酷↗︎      
+        
+  
+    
+  🧩       Dockbar↗︎      
+    
+  复刻了Mac的dockbar  
+        
+  🧩 小红书「涂鸦」功能  
+    
+  小红书新增了一个「涂鸦」功能，你在画板上随便画，然后AI可以帮你生成一幅画（有几种风格自选）。
+让涂鸦变得生动有灵魂，是一件开心的事。
+  
+        
+  📦 资源  
+    
+  🧩       线条涂鸦↗︎      
+    
+  60多个涂鸦元素，可以用来点缀页面或者作为海报中的装饰元素。
+  
+        
+  🧩       免费商用字体库↗︎      
+    
+  主要面向中国大陆使用的免费商用字体库，每一个字体都经过严格筛选，最大程度上避免侵权风险并做到可追溯可验证。  
+        
+  📖 阅读  
+    
+  🧩       MJ 实战分享 - 把一个同事变成数字人继而又发展成表情包的全过程↗︎      
+        
+  
+    
+  🧩       一个独立创造者的五年↗︎      
+    
+  一名独立创造者分享了他开发面向海外用户的SaaS产品的经历和心得，探讨了个体创业者的机会和挑战。  
+        
+  🧩       如何复刻Cail大佬炫酷的个站↗︎      
+    
+  Cail大佬的网站太优雅了，上周还特意写了一篇教程，来教你如何克隆他的个人博客，部署成你自己的版本。  
+        
+  📰 资讯  
+    
+  🧩 微软正式更换 Office 默认字体，用 Aptos 取代 Calibri  
+    
+  微软确定了 Office 全新默认字体 Aptos，新字体已经开始向用户分批次推送。Aptos 是一款非衬线体，来自设计师 Steve Matteson，它取代同为非衬线体的 Calibri，成为 Word、Outlook、PowerPoint 和 Excel 中的新默认字体。  
+        
+  🧩       Stability AI 推出新服务「Stable Doodle」：将草图转换为高质量图像↗︎      
+    
+  Stability AI 是推出图像生成模型 Stable Diffusion 的初创公司，他们正在推出一项将素描转化为图像的新服务。这项名为 Stable Doodle 的素描转图像服务利用最新的 Stable Diffusion 模型，分析素描的轮廓并生成一个「视觉上令人愉悦」的艺术渲染图。该服务从今天起通过 ClipDrop 平台提供。  
+        
+  🧩 Apple Store官方在线商店上线微信小程序  
+        
+  
+    
+  📮 订阅方式  
+    
+      竹白（邮箱、微信）      ｜      语雀      ｜      电报      
+封面来源：      Twitter</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://speciouspm.zhubai.love/posts/2292730290072326144"
+                        open
+                      >
+                        <summary class="article-expander__title">AIGC 每周看点 #16 各显神通的大语言模型们 0710-0716</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://speciouspm.zhubai.love/posts/2292730290072326144">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>本周内容概述  
+    
+  
+  Bard 2023 年七月更新  
+    
+  Claude 2 正式推出  
+    
+  LangChain 的问题  
+    
+  马斯克成立人工智能公司 xAI 以「理解宇宙」  
+    
+  与美联社合作的同时，OpenAI 被 FTC 开启关于不实信息的调查  
+    
+  WAIC 与 生成式人工智能服务管理办法  
+    
+  “一刀切的人工智能监管方法没有任何意义”  
+  
+          
+  01  
+    
+  Bard 2023年七月更新  
+    
+  上周大事之一，      就是 Bard 23.07.13 的这一轮更新      ，终于支持了中文对话，也增加了不少能力。除了对话记录、语言支持、对话分享等 UX 方面的更新以外，有不少用户发现 Bard 甚至能够识别 UI 效果图并返回代码。  
+    
+  这在更新说明里用短短一句“基于 Google Lens 实现了图像识别”，却是所有对话机器人服务中最早实现这个能力的。做出过类似承诺的 OpenAI 还刚修补好中断了一整天的代码解释器服务，识别图片写代码这事估计还得等一会儿。  
+    
+  具体更新内容如下：  
+    
+  
+  支持超过 40 种语言，包括阿拉伯语、中文  
+    
+  开放访问至所有 27 个欧盟国家以及巴西  
+    
+  基于 Google Lens 的图像识别（仅支持英文 prompt，会过滤人像  
+    
+  支持使用 40 余种语言朗读生成的文本（中文只有女声  
+    
+  页面左侧增加对话记录，支持置顶、重命名（终于！  
+    
+  支持分享单段对话或整个对话（点开看看      g.co      
+    
+  支持 5 种方式重新生成文本，更长/短、更简单/休闲/专业…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://river.zhubai.love/posts/2292551648813916160"
+                        open
+                      >
+                        <summary class="article-expander__title">20230717 生活底线</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://river.zhubai.love/posts/2292551648813916160">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>There is more to life than increasing its speed.   
+    
+  Mahatma Gandhi  
+    
+  生活不仅仅是追求速度的提升。  
+    
+  The more I worked, the less I exercised, read fiction, saw friends, went for long and meandering walks, cooked—the things that made me feel like a well-rounded person. The other bits of my life fell away, and the more I worked, the more I felt invested in work: the more I needed work to go well in order to feel good about myself. But over time, I felt less like myself, less effective at work, and powerless to do anything about the onslaught of assignments being thrown my way.  
+    
+  One way to help mitigate this is to maintain boundaries with your definitions (you are     not     your job) and your time (recharging is not a luxury). It’s to work on your self-care.   
+    
+  I keep m…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-14 datetime="2023-07-14T00:03:10.000Z">2023-07-14</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-14 datetime="2023-07-14T00:03:10.000Z"></time>
           </button>
@@ -5829,8 +6962,8 @@ Passkey 这个方案可以做到，登录不需要密码，解决了上面提到
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5704826055">
-        <time id="build-timestamp" datetime="2023-07-30T06:52:15.768Z">2023-07-30T06:52:15.768Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5705535211">
+        <time id="build-timestamp" datetime="2023-07-30T09:52:16.073Z">2023-07-30T09:52:16.073Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
