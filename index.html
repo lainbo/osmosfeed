@@ -51,8 +51,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-04 datetime="2023-08-04T09:10:04.000Z">2023-08-04</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-04 datetime="2023-08-04T09:10:04.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-04 datetime="2023-08-04T10:35:04.000Z">2023-08-04</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-04 datetime="2023-08-04T10:35:04.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -67,6 +67,25 @@
                   <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20230804/t20230804_526363838.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市万州区发布雷电黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20230804/t20230804_526363838.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>万州区气象台2023年8月4日18时发布“雷电黄色预警信号”，预计8月4日18时至5日00时，罗田镇、恒合土家族乡、龙驹镇、普子乡、白土镇、地宝土家族乡将出现雷雨天气，局地伴有短时强降水、阵性大风、冰雹等强对流天气，请注意防范。政府及相关部门按照职责做好防雷工作；请注意防范大风可能造成棚舍和广告牌等搭建物的倒塌以及对高空作业、水域作业和航行的影响；密切关注天气，尽量避免户外活动。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -529,11 +548,108 @@ WiFi 使用的频率是 2.4 GHz 和 5 GHz，最多再加上 6 GHz。而光的频
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-03 datetime="2023-08-03T15:00:00.000Z">2023-08-03</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-03 datetime="2023-08-03T15:00:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-03 datetime="2023-08-03T23:32:23.000Z">2023-08-03</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-03 datetime="2023-08-03T23:32:23.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7263089207128850489"
+                        open
+                      >
+                        <summary class="article-expander__title">整会promise这8个高级用法，再被问倒来喷我</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7263089207128850489">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: smartblue
+
+本文来自alova作者投稿，alova可以让你编写更少的代码即可实现特定业务场景下的高效数据交互，在过去3个月对外发布以来在github上已收到了 1500+star，alova官网，感兴趣可以看看。
+发现很多人还只会promise常规用法
+在js项目中，promise的使用应该是必不可少的，但我发现在同事和面试者中，很多中级或以上的前端都还停留在promiseInst.then()、promiseInst.catch()、Promise.all等常规用法，连async/await也只是知其然，而不知其所以然。
+但其实，promise还有很多巧妙的高级用法，也将一些高级用法在alova请求策略库内部大量运用。
+现在，我把这些毫无保留地在这边分享给大家，看完你应该再也不会被问倒了，最后还有压轴题哦。
+觉得对你有帮助还请点赞收藏评论哦！
+1. promise数组串行执行
+例如你有一组接口需要串行执行，首先你可能会想到使用await
+const requestAry &#x3D; [() &#x3D;&gt; api.request1(), () &#x3D;&gt; api.request2(), () &#x3D;&gt; api.request3()];
+for (const requestItem of requestAry) {
+  await promiseItem();
+}
+
+如果使用promise的写法，那么你可以使用then函数来串联多个promise，从而实现串行执行。
+const requestAry &#x3D; [() &#x3D;&gt; api.request1(), () &#x3D;&gt; api.request2(), () &#x3D;&gt; api.request3()];
+const finallyPromise &#x3D; requestAry.reduce(
+    (currentPromise, nextRequ…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7262975395620618298"
+                        open
+                      >
+                        <summary class="article-expander__title">重磅更新，unocss终于可以完美使用px单位了</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7262975395620618298">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: cyanosis
+前言
+不管是unocss还是tailwindcss和windicss，默认的单位都是rem，这有一定的设计理念，但其实这对于习惯使用px单位的人来说不太友好，有相当一部分人因为这点而放弃使用原子化css
+那么，有没有办法使用px呢，其实三大原子css框架都支持px的写法，比如下面这样
+
+使用 w-[100px] 就可以表示 width: 100px;
+好了，本篇文章水完了~
+
+哈哈，开玩笑的
+虽然这种方式确实可以实现使用px单位，但是有以下两个问题
+不够简洁，要多写很多字符，别看只是4个字符，4个字符完全可以多写一个原子样式了
+不能使用属性的方式编写，很丑，且会报错（Vue项目），如下图
+
+
+如果 w-100 能表示 width: 100px; 是不是很完美呢，本篇文章要介绍的就是要实现这样的一个效果，
+铺垫完毕，上正文
+如何实现 w-100 &#x3D; width: 100px
+方案一
+之前我发布过一篇关于unocss的文章，里面有介绍一种让 w-100 表示 width: 100px; 的方法，就是修改html的 font-size
+
+大家都知道 rem 是相对于 html 的 font-size 计算的， html 默认 font-size 是 16px, 也就是说 1rem &#x3D; 16px
+但是, 在原子css的默认预设中，1单位 &#x3D; 0.25rem，如下图
+
+也就是 4单位 &#x3D; 1rem，所以要表示 100px（6.25rem） 得写成 25单位
+
+很明显，这对于习惯了用 px 单位的人来说，心算成本太高了，有时候甚至得拿出计算器来算一下
+当然，也有更简单的速算方法，只需要记住 1单位 &#x3D; 4px 就行了，100 / 4 &#x3D; 25
+那有没有方式可以不计算呢，答案肯定是有的，既然我们知道了计算规则，那么只需要修改 html 的 font-siz…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -629,66 +745,6 @@ DemoGPT 通过自动化整个流水线生成过程来为开发人员提供支持
 开源地址：https://github.com/melih-unsal/DemoGPT
 官方网站：https://www.demogpt.io/</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7262975395620618298"
-                        open
-                      >
-                        <summary class="article-expander__title">重磅更新，unocss终于可以完美使用px单位了</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7262975395620618298">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: cyanosis
-前言
-不管是unocss还是tailwindcss和windicss，默认的单位都是rem，这有一定的设计理念，但其实这对于习惯使用px单位的人来说不太友好，有相当一部分人因为这点而放弃使用原子化css
-那么，有没有办法使用px呢，其实三大原子css框架都支持px的写法，比如下面这样
-
-使用 w-[100px] 就可以表示 width: 100px;
-好了，本篇文章水完了~
-
-哈哈，开玩笑的
-虽然这种方式确实可以实现使用px单位，但是有以下两个问题
-不够简洁，要多写很多字符，别看只是4个字符，4个字符完全可以多写一个原子样式了
-不能使用属性的方式编写，很丑，且会报错（Vue项目），如下图
-
-
-如果 w-100 能表示 width: 100px; 是不是很完美呢，本篇文章要介绍的就是要实现这样的一个效果，
-铺垫完毕，上正文
-如何实现 w-100 &#x3D; width: 100px
-方案一
-之前我发布过一篇关于unocss的文章，里面有介绍一种让 w-100 表示 width: 100px; 的方法，就是修改html的 font-size
-
-大家都知道 rem 是相对于 html 的 font-size 计算的， html 默认 font-size 是 16px, 也就是说 1rem &#x3D; 16px
-但是, 在原子css的默认预设中，1单位 &#x3D; 0.25rem，如下图
-
-也就是 4单位 &#x3D; 1rem，所以要表示 100px（6.25rem） 得写成 25单位
-
-很明显，这对于习惯了用 px 单位的人来说，心算成本太高了，有时候甚至得拿出计算器来算一下
-当然，也有更简单的速算方法，只需要记住 1单位 &#x3D; 4px 就行了，100 / 4 &#x3D; 25
-那有没有方式可以不计算呢，答案肯定是有的，既然我们知道了计算规则，那么只需要修改 html 的 font-siz…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3172,8 +3228,6 @@ try {
 
 🎤个人影响力：稀土掘金社区百万流量倾斜，给予个人社区帐号及小册更多曝光，帮助创作者个人品牌打造升级，获得稀土掘金线上、线下活动优先合作权。
 🏅️活动专属奖励：8月1日～9月15日，成功报名本次活动即可获得 「…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5872,70 +5926,6 @@ Flutter，要求开发者学习dart，了解dart和flutter的API，最好还会�
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7260700447170101306"
-                        open
-                      >
-                        <summary class="article-expander__title">axios使用异步方式无感刷新token，简单，太简单了</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7260700447170101306">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>highlight: a11y-dark
-🍉 废话在前
-写vue的伙伴们无感刷新token相信大家都不陌生了吧，刚好，最近自己的一个项目中就需要用到这个需求，因为之前没有弄过这个，研究了一个上午，终于还是把它拿下了，小小的一个token刷新😏。
-
-下面接着分析一下踩到的坑以及解决思路
-🍗 接着踩坑
-我按照之前传统的方式在返回拦截器里面进行token刷新，正常的数据可以返回，但是这个时候会有比较麻烦的地方，就是请求的数据可以在拦截器里面得到，但是不能渲染到界面上（看到这里的时候我是懵的）。
-看一下代码
-
-service.interceptors.response.use(
-  response &#x3D;&gt; {
-    const res &#x3D; response.data
-    //刷新token的时候，可以从这里拦截到新数据，但是没有显示在页面上
-    console.log(&#x27;拦截数据：&#x27;,res)
-    if (loadingInstance) {
-      loadingInstance.close();
-      NProgress.done();
-    }
-    switch (res.code) {
-      case 200:
-        return res
-      case 401:
-        router.push({
-          path: &quot;/login&quot;,
-        })
-        localStorage.clear();
-        Notification.error({
-          title: &#x27;令牌过期&#x27;,
-          message: &#x27;当前身份信息超过三天已失效，请您重新登录&#x27;,
-          duration: 0
-        });
-        br…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >竹白 - TOP20</button>
                   <a class="source-heading__link" href="https://analy.zhubai.wiki">Open</a>
                 </h3>
@@ -7401,8 +7391,8 @@ Passkey 这个方案可以做到，登录不需要密码，解决了上面提到
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5760857020">
-        <time id="build-timestamp" datetime="2023-08-04T09:52:21.571Z">2023-08-04T09:52:21.571Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5762436138">
+        <time id="build-timestamp" datetime="2023-08-04T12:56:07.810Z">2023-08-04T12:56:07.810Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
