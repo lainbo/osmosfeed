@@ -51,6 +51,79 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-04 datetime="2023-08-04T00:07:41.000Z">2023-08-04</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-04 datetime="2023-08-04T00:07:41.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >阮一峰的网络日志</button>
+                  <a class="source-heading__link" href="http://www.ruanyifeng.com/blog/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.ruanyifeng.com/blog/2023/08/weekly-issue-265.html"
+                        open
+                      >
+                        <summary class="article-expander__title">科技爱好者周刊（第 265 期）：WiFi 的后面是 LiFi</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.ruanyifeng.com/blog/2023/08/weekly-issue-265.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>这里记录每周值得分享的科技内容，周五发布。
+本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。
+封面图
+
+8月2日，日本能代市举办一年一度的&quot;天空的不夜城&quot;花灯游行，这是为了纪念当地古代的灯笼节。如果不说，这照片看起来真像 AI 生成的。（via）
+WiFi 的后面是 LiFi
+今年6月，IEEE（电气和电子工程师协会）通过了 802.11bb 标准。
+它是光通信标准，也就是通过光上网，英文简写为 LiFi，一看就跟 WiFi 有血缘关系。其中，LiFi 的 L 代表了 Light（光）。
+
+国内的报道并不多，但这是一个很有意思的技术，值得好好谈一下。
+首先说说 LiFi 到底是什么？
+我们知道，无线上网使用的是无线电波，将上网信号调制在无线电波里面。
+无线电波是电磁波，光波也是电磁波，所以我们也可以把上网信号调制在光波里面，通过光来上网。
+
+光波传送无线信号，有一些显著的优点。
+（1）带宽极大。
+WiFi 使用的频率是 2.4 GHz 和 5 GHz，最多再加上 6 GHz。而光的频率是 430 THz 到 750 THz，是 WiFi 的几十万倍。
+频率越高，可以加载的信号越多，带宽越大。所以，光波上网的带宽是难以想象的。当然，频率越高，穿墙能力越弱。
+（2）没有无线电干扰。
+任何对无线电敏感的场合都可以使用光波上网，比如飞机、手术室等。光也不存在辐射问题，对人体无害。
+（3）没有频谱资源限制。
+光波不需要像无线电波那样申请频段，频谱资源极其丰富。
+（4）技术难度低。
+光波的调制和解调，没有什么技术难度，厂家可以快速投入生产，产品成本也不高。
+我在网上查到，oppo 2020年就申请了 LiFi 手机的专利。
+
+笔记本也有的专门 LiFi 收发器，插在 USB 口就行了。
+
+但是，LiFI 也有…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-03 datetime="2023-08-03T15:00:00.000Z">2023-08-03</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-03 datetime="2023-08-03T15:00:00.000Z"></time>
           </button>
@@ -514,7 +587,7 @@ varlet-app-template 是一个开箱即用的轻量化移动端 Web 模板，基�
 获取项目
 通过模板仓库创建一个你的仓库
 https://github.com/varletjs/varlet-app-template/generate…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2461,7 +2534,7 @@ try {
 交流
 有梦想，有干货，微信搜索 【大迁世界】 关注这个在凌晨还在刷碗的刷碗智。
 本文 GitHub  https://github.com/qq449245884/xiaozhi 已收录，有一线大厂面试完整考点、资料以及我的系列文章。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -5063,25 +5136,6 @@ Flutter，要求开发者学习dart，了解dart和flutter的API，最好还会�
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20230728/t20230728_526349442.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市渝北区发布暴雨黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20230728/t20230728_526349442.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>渝北区气象台2023年7月28日8时发布“暴雨黄色预警信号”，预计未来6小时，龙塔街道、龙溪街道、龙山街道、茨竹镇、悦来街道、仙桃街道、双龙湖街道、回兴街道、木耳镇、兴隆镇、玉峰山镇、大湾镇、古路镇、双凤桥街道、两路街道、王家街道、宝圣湖街道等镇街累计雨量将达50毫米以上，最大小时雨强可达20-30毫米，并伴有雷电、阵性大风等强对流天气，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -5581,120 +5635,11 @@ Elasticsearch 倒霉的地方在于，遇到的竞争对手是亚马逊，世界
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-27 datetime="2023-07-27T23:30:04.000Z">2023-07-27</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-27 datetime="2023-07-27T23:30:04.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-27 datetime="2023-07-27T15:00:33.000Z">2023-07-27</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-27 datetime="2023-07-27T15:00:33.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >国家应急广播 - 重庆预警信息</button>
-                  <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20230728/t20230728_526349344.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市巴南区发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20230728/t20230728_526349344.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>巴南区气象台2023年7月28日07时发布“大雾黄色预警信号”，预计28日07时至14时，我区龙洲湾街道、鱼洞街道、莲花街道、花溪街道、李家沱街道等大部镇街将出现能见度小于500米的雨雾，局部地区能见度小于200米。请各地注意防范雨雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/hsyj/20230728/t20230728_526349329.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市沙坪坝区发布暴雨红色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/hsyj/20230728/t20230728_526349329.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>沙坪坝区气象台2023年7月28日06时50分升级发布“暴雨红色预警信号”，预计未来3小时降雨仍将持续，青木关镇、中梁镇、凤凰镇、回龙坝镇等镇街累计雨量将达100~130毫米，最大小时雨强可达30~50毫米，并伴有雷电等强对流天气；注意防范强降水可能诱发的山体滑坡、泥石流、中小河流洪水、山洪、城乡积涝等次生灾害，以及雷电可能造成的不利影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/hsyj/20230728/t20230728_526349287.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市璧山区发布暴雨红色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/hsyj/20230728/t20230728_526349287.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>璧山区气象台2023年7月28日6时20分更新7月28日03时30分发布的“暴雨红色预警信号”，预计28日7时至10时，大路街道、河边镇、福禄镇、大兴镇、正兴镇、丁家街道等街道（乡镇）累计雨量将达100毫米以上，并伴有雷电、阵性大风等强对流天气；注意防范强降水可能诱发的山体滑坡、泥石流、中小河流洪水、山洪、城乡积涝等次生灾害，以及雷电、大风可能造成的不利影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230728/t20230728_526349268.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市巴南区发布暴雨橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230728/t20230728_526349268.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>巴南区气象台2023年7月28日06时升级发布“暴雨橙色预警信号”，目前我区界石镇、南彭街道、安澜镇、圣灯山镇、李家沱街道、一品街道、龙洲湾街道、南泉街道、天星寺镇、惠民街道等镇街已出现22-52毫米降雨，预计未来3小时强降雨仍将持续，我区南彭街道、安澜镇、圣灯山镇、李家沱街道、一品街道、龙洲湾街道、南泉街道、天星寺镇、惠民街道、二圣镇、东温泉镇、木洞镇、麻柳嘴镇、双河口镇、丰盛镇、姜家镇等镇街累计雨量将达50-70毫米，最大小时雨强可达30-40毫米，并伴有雷电、阵性大风等强对流天气，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230728/t20230728_526349261.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市大足区发布暴雨橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230728/t20230728_526349261.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>大足区气象台2023年7月28日05时50分更新发布“暴雨橙色预警信号”：预计未来3小时内我区玉龙镇、雍溪镇、金山镇、万古镇、国梁镇、回龙镇、石马镇、拾万镇、古龙镇、三驱镇、棠香街道、智凤街道、龙岗街道、宝顶镇、高升镇、铁山镇、中敖镇、高坪镇、龙滩子街道、通桥街道、邮亭镇、双路街道、龙水镇、珠溪镇、龙石镇、季家镇、宝兴镇等镇街降雨量将达50-80毫米以上，最大小时雨强可达20-40毫米；注意防范强降水可能诱发的山体滑坡、山洪、城乡积涝等次生灾害。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -5935,63 +5880,11 @@ https://www.aigc2d.com/</span>
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-26 datetime="2023-07-26T08:02:20.000Z">2023-07-26</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-26 datetime="2023-07-26T08:02:20.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-26 datetime="2023-07-26T14:14:53.000Z">2023-07-26</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-26 datetime="2023-07-26T14:14:53.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7260000197530107963"
-                        open
-                      >
-                        <summary class="article-expander__title">jym，有知道vscode怎么取消这个提示吗？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7260000197530107963">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>jym，有知道vscode怎么取消这个提示吗？</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7259982868364050490"
-                        open
-                      >
-                        <summary class="article-expander__title">需要海外服务器/高防CDN可以dd我</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7259982868364050490">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>需要海外服务器/高防CDN可以dd我</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -6003,6 +5896,66 @@ https://www.aigc2d.com/</span>
                   <a class="source-heading__link" href="https://analy.zhubai.wiki">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://rimson.zhubai.love/posts/2295990027123261440"
+                        open
+                      >
+                        <summary class="article-expander__title">034. 抖音观察：听见更多人的声音</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://rimson.zhubai.love/posts/2295990027123261440">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>记几个最近在抖音看到的话题、事件、评论。  
+    
+  自杀会错过什么  
+    
+  有一个挑战叫「如果一年前你自杀了，你会错过什么」，我第一次看到就虎躯一震，但心里没有答案。翻看大家的投稿和评论，大家回答的其实都是「如果一年前你死了，你会错过什么」。  
+    
+  死和自杀还是不一样的。客观来说，怎么死都会错过这一年发生的所有事。如果假定人自杀是因为失去希望、信念、意义，那么自杀额外失去的，是从错过的这些事情中反驳绝望的机会。  
+    
+  人不能同时活在过去，又拥有对过去的感受。怀念过去和憧憬未来，只要满足一个，就会觉得时间是美妙的。  
+    
+  题外话，河北共青团将万青的《杀死那个石家庄人》改为《杀不死的石家庄人》并改编了歌词，评论也很好看。  
+    
+  听见更多人的声音  
+    
+  最近抖音出了很多变声特效，更多的人开始愿意用声音去分享，更多的人开始在抖音上「说话」，即使没有用他们自己的声音。  
+    
+  我喜欢这些特效，喜欢这次运营，喜欢大家开始更多地说话这件事。视频和图文相比，除了更连贯和饱满的视觉表达，还多了声音这个要素。  
+    
+  我刚接触抖音的时候，大概2017年，抖音上只能「看到」大家的生活，而「听不到」大家的生活——亮点是音乐BGM，可以配舞蹈、变装、vlog，还有其他一切。  
+    
+  后来2019年接触到播客，迷上了通过声音接触人和故事的感觉。也是在那段时间，抖音开始有很多纯人声的BGM，有对话、独白等等，即使是搞笑配音或者自言自语，我看到也觉得开心，因为这些声音不来自录音棚，而是出自另一些真实的抖音用户。  
+    
+  现在，借着变声这个声音的面具，羞涩的大家开始更真实地展示自己的生活和表达自己的情感，比如解说画面中的故事和物品，或者发几句日记，或者唱歌。  
+    
+  抖音评论区也支持了发语音，我特别喜欢听，语音评论让我有了和更多人待在一起的感觉，甚至我逛评论区的时间远远超出看视频本身。这让我回想起在视频号工作时，和同事讨论的一个问题：打开短视频，这个手机里的场景，离现实中我们走进一个热闹的房间，还有多少差距？  
+    
+  看到更多的人开始表达自己，不管方式是什么，我都会感到开心。  
+    
+  真实  
+    
+  「解密Instagram」的英文原书名叫「No Filter」，从读完到现在，我仍然在思考的问题是，滤镜是否让这个世界变得更好了。更多人表达自己的同时，也有更多人开始伪装自己、表达不真实的自己，我是否还感到开心呢？  
+    
+  拿我喜欢的摄影来举例。我简单受了一些文艺青年的影响，认同照片后期是不应该浓妆艳抹的。但我的审美已经受到影响，所以觉得原片不好看，同时也会承受直出带来的社交压力。这个压力的形成很有意思，是一个负反馈循环。就说发朋友圈吧，我发的越少，那么我发的朋友圈就应该越精致，然后我就不可能频繁地发朋友圈了。  
+    
+  于是我最近开始拍胶片，不做修饰的胶卷照片，色彩好坏的责任全在景物和胶卷本身，而不在我。我真正负责的只有记录，这也是我最初以为的摄影的本质。  
+    
+  陌生人的约定  
+    
+  刷到一个在花鸟鱼虫市场拍照的视频，评论区有陌生网友互相邀约，很有诗意：  
+        
+  爱你的粤  
+    
+  一个博主在分享「那些低成本的快乐」，其中有一条是发朋友圈得到朋友们的点赞。一个山西朋友分享了今天拍的天空，说无人可以分享，发朋友圈基本没消息，此时一位广东靓仔路过：</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -6246,6 +6199,58 @@ https://www.aigc2d.com/</span>
                 </section>
               </section>
             </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7260000197530107963"
+                        open
+                      >
+                        <summary class="article-expander__title">jym，有知道vscode怎么取消这个提示吗？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7260000197530107963">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>jym，有知道vscode怎么取消这个提示吗？</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7259982868364050490"
+                        open
+                      >
+                        <summary class="article-expander__title">需要海外服务器/高防CDN可以dd我</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7259982868364050490">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>需要海外服务器/高防CDN可以dd我</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -6362,44 +6367,6 @@ https://www.aigc2d.com/</span>
   睡觉质量变得更好，睡眠时长也更长。而且一醒来，一翻身就能起床。  
     
   内心更加平静，正好天气好，多了…</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://river.zhubai.love/posts/2295128100243111936"
-                        open
-                      >
-                        <summary class="article-expander__title">20230724 为幸福生活服务的工作</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://river.zhubai.love/posts/2295128100243111936">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>关于工作：  
-    
-  （1）通过从事我们的天职获得快乐和满足感；  
-    
-  （2）通过给社会或他人提供服务来获得财富；  
-    
-  （3）我们的兴趣和专长不止一个。  
-      
-  忘记在哪里看到的观点：让老人和小孩去工作，小孩精力充沛，老人害怕孤单或被社会遗忘。相比之下，被各方责任拉扯压榨的中年人更渴望属于自己的宁静。  
-    
-  同时，在FIRE群里，也有提早退休的人因感到无聊而重新投入职场。  
-    
-  我想，工作本身并非美好生活的对立面，过度工作才是。  
-    
-  我从去年10月份就不再上班了，但是我一直在工作（in my own way)， 并觉得工作（或者更确切地说，事业、天职）是我生活中不可或缺的一部分。  
-    
-  只工作，不上班。  
-    
-  只是，我所说的工作和目前社会上大部分的用来挣钱的手段并不一定重合，它是我热爱的事业。就像纳瓦尔说的专长（Specific Knowledge），那些即便不挣钱你也愿意做的事情，让你充满热情，忘记时间流逝的事情。累积专长的过程，对你而言就像玩耍，对他人来说却很吃力。  
-    
-  The way to get out of the competition trap is to be authentic, to find the thing you know how to do better than anybody. You know how to do it better because you love it, and no one can compete with you. If you love to do it, be authentic, and then figure out how to map that to what society ac…</span>
                             </span>
                           </div>
                         </a>
@@ -6867,8 +6834,8 @@ Passkey 这个方案可以做到，登录不需要密码，解决了上面提到
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5755985388">
-        <time id="build-timestamp" datetime="2023-08-03T21:52:20.602Z">2023-08-03T21:52:20.602Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5757152895">
+        <time id="build-timestamp" datetime="2023-08-04T00:55:32.731Z">2023-08-04T00:55:32.731Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
