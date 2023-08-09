@@ -90,7 +90,7 @@
 致敬敢想敢做能想能做的人。
 ---
 这是三年前跟朋友一块吃饭聊天，在日记里记录下来的一些内容，不爱加班的他，果然一直都没有加班，任何想干的事情，也都是说干就干，当时他说要搞一个花果山水帘洞培训班，没想到现在真的成了「大圣」，哈哈哈~</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1972,6 +1972,48 @@
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7264440609129119804"
+                        open
+                      >
+                        <summary class="article-expander__title">这些天，我们前端组一起处理的项目优化</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7264440609129119804">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: smartblue
+highlight: atelier-sulphurpool-light
+前言
+  大家好，我是前端贰货道士。很早一段时间，我们前端组做了一些国外系统的小优化(集中表现在代码执行速度，系统安全等方面)，故新建一篇文章来记录这次优化的经历。如果本文对您有帮助，烦请大家一键三连哦, 蟹蟹大家~
+1. 减小文件体积
+方法一：删除需要预先加载和预先获取的资源，一般使用这种方法
+link标签中的preload和prefetch：
+preload插件用于预加载资源。 即在当前页面加载完成后，立即加载并缓存指定的资源。预加载的资源被认为是当前页面所需的关键资源，因此会优先下载和缓存。
+prefetch插件用于预获取资源。 即在当前页面加载完成后，异步地加载并缓存指定的资源，以供将来可能需要的页面使用。预获取的资源被认为是可能会在未来的导航中使用的资源，但不是当前页面所必需的。
+&#x60;vue.config.js&#x60;
+
+module.exports &#x3D; {
+  chainWebpack: (config) &#x3D;&gt; {
+    &#x60;删除需要预先加载(当前页面)的资源，当需要这些资源的时候，页面会自动加载&#x60;
+    config.plugins.delete(&#x27;preload&#x27;)  
+    &#x60;删除需要预先获取(将来的页面)的资源&#x60;
+    config.plugins.delete(&#x27;prefetch&#x27;)
+  }
+}
+
+方法二：使用webpack合并js代码
+合并js代码的意义：
+减少网络请求： 每个js文件都需要通过网络进行单独的请求和响应。通过将多个js文件合并为一个文件，可以减少页面需要发起的网络请求次数，从而降低延迟和提高加载速度。
+提高加载速度： 合并js代码可以减少网页中需要下载的总文件大小。较小的文件大小意味着更快的下载速度，因为客户端需要花费更少的时间来…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7264395683125510203"
                         open
                       >
@@ -2128,7 +2170,7 @@ tag: effect 的类型,区分是 useEffect 还是 useLayoutEffect;
 import React, { useEffect, useState, useLayoutEffect } from &quot;react&quot;;
 
 const App &#x3D; () &#x3D;&gt;…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;27
+                                &ensp;<span class="article-reading-time">(&hairsp;26
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2873,43 +2915,66 @@ const App &#x3D; () &#x3D;&gt;…</span>
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="7264117921231601721"
+                        data-accordion-key="https://juejin.cn/post/7264125562393788473"
                         open
                       >
-                        <summary class="article-expander__title">致敬Vim之父，伟大的慈善家 &amp; 传奇程序员 Bram Moolenaar，R.I.P🕯️🙏 ，几乎每天都在用的编辑器Vim，”编辑器之神”。https://github.com/brammool，享年6...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7264117921231601721">
+                        <summary class="article-expander__title">神奇canvas 带你实现魔法摄像头</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7264125562393788473">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>致敬Vim之父，伟大的慈善家 &amp; 传奇程序员 Bram Moolenaar，R.I.P🕯️🙏 ，几乎每天都在用的编辑器Vim，”编辑器之神”。https://github.com/brammool，享年62岁，去世前一个月还在对Vim做着更新、修改工作🫡</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                              <span>背景
+我们用手机的摄像头自拍，很容易实现 简单的自拍效果，如复古、黑白等等。其实我们使用web端的JavaScript也是可以实现的。接下来就带领小伙伴实现一个魔法摄像头。并且提供了截图下载功能。
+魔鬼风格
+
+复古风格
+
+关键技术
+canvas 它可以用于动画、游戏画面、数据可视化、图片编辑以及实时视频处理等方面。
+video 用于在 HTML 或者 XHTML 文档中嵌入媒体播放器
+navigator.mediaDevices.getUserMedia 用来将摄像头视频转成文件流
+requestAnimationFrame 你希望执行一个动画，并且要求浏览器在下次重绘之前调用指定的回调函数更新动画
+小程序 canvas 生成海报 一次搞掂
+主要业务流程
+调用摄像头加载画面到video上
+使用canvas将video视频逐帧画到canvas上
+实现canvas滤镜效果
+点击截图
+调用摄像头加载画面到video上
+
+
+
+
+
+
+  Canvas Demo
+
+
+
+  
+  
+  
+    // 获取视频元素和画布元素
+    const video &#x3D; document.getElementById(&#x27;videoElement&#x27;);
+
+    // 检查浏览器是否支持 getUserMedia API
+    if (navigator.mediaDevices &amp;&amp; navigator.mediaDevices.getUserMedia) {
+      // 请求访问摄像头
+      naviga…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;29
                                   min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
                       </details>
                     </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
@@ -3025,7 +3090,7 @@ eslint 一般我们用的是命令行的方式，当然，它也有 api 的方�
 我们 new 了 ESLint 的对象，指定配置，不自动 fix。
 然后用 lintText 来检查一段代码，打印结果。
 这里我们就用了一个 rule ，也就是检查末尾分号的，…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                &ensp;<span class="article-reading-time">(&hairsp;12
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3062,6 +3127,39 @@ https://rxdrag.vercel.app
 设计制作一个项目的时候，最好适当提高自己的要求，从利他的角度思考，比如：能够方便发布独立npm包，方便第三方引用；要考虑，代码怎么写，别人容易读。这样的要求，能让你设计的代码结构更合理，扩展性更好。时间久了，代码会越来越优雅。本项目也是这个思路下完成的，希望作者代码能够越来越好！
 项目画布的css大部分复制了这个项目：https://github.com/StavinLi/Workfl…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;13
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7264117921231601721"
+                        open
+                      >
+                        <summary class="article-expander__title">致敬Vim之父，伟大的慈善家 &amp; 传奇程序员 Bram Moolenaar，R.I.P🕯️🙏 ，几乎每天都在用的编辑器Vim，”编辑器之神”。https://github.com/brammool，享年6...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7264117921231601721">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>致敬Vim之父，伟大的慈善家 &amp; 传奇程序员 Bram Moolenaar，R.I.P🕯️🙏 ，几乎每天都在用的编辑器Vim，”编辑器之神”。https://github.com/brammool，享年62岁，去世前一个月还在对Vim做着更新、修改工作🫡</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4100,7 +4198,7 @@ const list &#x3D; reactive([
 啊~行，配合模板部分还是能看懂的，继续来：
 
 啊？我可以接受两个函数长得差不多，但是功能应该也差不多吧？你这addControl2里面的功能和addControl完全不一样啊！！一个是绑定控制地图时的监听回调，一个是添加地图控件，我承认这两种确实都能称之为…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4147,6 +4245,69 @@ const list &#x3D; reactive([
 以上是我这段时间面试的一些经历；但是工作确实并不好找。
 主要原因还是面试机会少，很多公司都要求本科以及本专业等等，其实面试的话都还好基本上跟原来差别不大，还有就是对刚出来的这些小伙伴可能不是很友好。所以希望大家如果有工作的话，就先好好上班吧！目前大环境都是这样的，加油哦！</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7263113577152790586"
+                        open
+                      >
+                        <summary class="article-expander__title">提高 React 项目整洁度的 21 个最佳实践💯💯💯</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7263113577152790586">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: cyanosis
+highlight: atom-one-dark
+React 在如何组织结构方面非常开放。这正是为什么我们有责任保持项目的整洁和可维护性。
+今天，我们将讨论一些改善 React 应用程序健康状况的最佳实践。这些规则被广泛接受。因此，掌握这些知识至关重要。
+所有内容都将以代码展示，所以做好准备！
+1. 使用 JSX 简写
+尝试使用 JSX 简写来传递 Boolean 布尔值变量。假设您想要控制导航栏组件的标题可见性。
+Bad ❌
+return ;
+
+Good ✔
+return ;
+
+2. 使用三元运算符
+假设你想根据角色显示用户的详细信息。
+Bad ❌
+const { role } &#x3D; user;
+
+if (role &#x3D;&#x3D;&#x3D; ADMIN) {
+  return ;
+} else {
+  return ;
+}
+
+Good ✔
+const { role } &#x3D; user;
+
+return role &#x3D;&#x3D;&#x3D; ADMIN ?  : ;
+
+3. 利用对象字面量
+对象字面量可以帮助我们的代码更具可读性。假设你想根据角色显示三种类型的用户。不能使用三元，因为选项数量超过两个。
+Bad ❌
+const { role } &#x3D; user;
+
+switch (role) {
+  case ADMIN:
+    return ;
+  case EMPLOYEE:
+    return ;
+  case USER:
+    return ;
+}
+
+Good ✔
+const { role …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;13
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4794,7 +4955,7 @@ Web Component ，或者说自定义元素(Custom Element) 更加贴切，它就�
 Tailwind CSS 广受欢迎
 
 在 tailwindcss 的 github 上目前居然已经有了 70.8K  个 sta…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -5868,104 +6029,6 @@ qiankun &amp; single-spa 等微前端框架的运行原理；
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7262595677469392933"
-                        open
-                      >
-                        <summary class="article-expander__title">接入：强盛集团管理系统</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7262595677469392933">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-前一段时间, 写了强盛集团管理系统(基于 BPMN 引擎的工作流系统), 打算使用 qiankun 改造下项目架构, 迈向微前端, 今天开始第六章接入：强盛集团管理系统。
-最终效果
-展示强盛集团管理系统(基于 BPMN 引擎的工作流系统)【独立部署】部分页面
-基座在线网址访问
-接入工作流系统
-基座中添加子应用的入口
-// register-apps.js
-
-registerMicroApps([
-  {
-    name: &quot;oa&quot;,
-    entry: process.env.NODE_ENV &#x3D;&#x3D;&#x3D; &quot;production&quot; ? &quot;/oa/&quot; : &quot;//localhost:8080&quot;,
-    activeRule: &quot;/oa&quot;,
-    container: &quot;#Appmicro&quot;,
-    loader,
-    props: { a: 1, util: {}, globalState: {} },
-  },
-]);
-
-添加子应用的入口, entry 在打生产包后, 访问子应用需要加/oa/
-改造工作流系统
-// main.js
-
-Vue.config.productionTip &#x3D; false;
-
-let instance &#x3D; null;
-function render(props &#x3D; {}) {
-  const { container } &#x3D; props;
-  instance &#x3D; new Vue({
-    router,
-    store,
-    render: (h) &#x3D;&gt; h(App),
-  }).$mount(container ? container.querySelector(&quot;#app&quot;) : &quot;#app&quot;);
-}
-
-// 独立运行时
-if (!window.__POWERED_BY_QIANKUN__) {
-  render();
-…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7262542750405804091"
-                        open
-                      >
-                        <summary class="article-expander__title">推荐一个页面引导库 driver.js</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7262542750405804091">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>页面引导功能是 web 开发中常见的一个功能。通过页面引导功能，你可以让用户第一时间熟悉你的页面功能。今天给大家推荐一个页面引导库 driver.js。
-简介
-driver.js 是一款用原生 js 实现的页面引导库，上手非常简单，体积在 gzip 压缩下仅仅 5kb。
-我们来看下如何使用 driver.js
-import { driver } from &quot;driver.js&quot;;
-import &quot;driver.js/dist/driver.css&quot;;
-
-const driverObj &#x3D; driver({
-  showProgress: true,
-  steps: [
-    { element: &#x27;.page-header&#x27;, popover: { title: &#x27;Title&#x27;, description: &#x27;Description&#x27; } },
-    { element: &#x27;.top-nav&#x27;, popover: { title: &#x27;Title&#x27;, description: &#x27;Description&#x27; } },
-    { element: &#x27;.sidebar&#x27;, popover: { title: &#x27;Title&#x27;, description: &#x27;Description&#x27; } },
-    { element: &#x27;.footer&#x27;, popover: { title: &#x27;Title&#x27;, description: &#x27;Description&#x27; } },
-  ]
-});
-
-driverObj.drive()
-
-可以看到仅仅十几行代码，你就可以完成页面引导功能的编写。
-首先引入 driver.js 库及其 css 文件
-然后调用 driver 函数构造一个 driverObj 对象，通过 steps 参数编写你的引导步骤，element 为需要高亮的 DOM 元素或 DOM 对应…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7262364351531810876"
                         open
                       >
@@ -6238,234 +6301,6 @@ Next.js 提供了许多优点和功能：
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20230802/t20230802_526360012.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市渝北区发布大风黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20230802/t20230802_526360012.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>渝北区气象台2023年8月2日17时20分发布“大风黄色预警信号”，预计未来12小时内，统景镇、石船镇、大盛镇、洛碛镇、龙兴镇、茨竹镇、木耳镇、古路镇、兴隆镇风力可达8级，局地阵风可达9级以上，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/lanseyj/20230802/t20230802_526359932.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市南川区发布大风蓝色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/lanseyj/20230802/t20230802_526359932.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>南川区气象台2023年8月2日17时10分发布“大风蓝色预警信号”，预计8月2日17时至3日5时，金山镇、德隆镇、三泉镇、山王坪镇、南城街道、西城街道、东城街道、南平镇、庆元镇、古花镇、合溪镇、水江镇风力可达6级，局地阵风可达7级以上，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20230802/t20230802_526359933.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市渝北区发布雷电黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20230802/t20230802_526359933.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>渝北区气象台2023年8月2日17时发布“雷电黄色预警信号”，预计未来6小时内，古路镇、石船镇、统景镇、大湾镇、双龙湖街道、木耳镇、仙桃街道、双凤桥街道、王家街道、兴隆镇、玉峰山镇、宝圣湖街道、两路街道、悦来街道、回兴街道、大盛镇、洛碛镇、龙兴镇将出现雷雨天气，局地伴有短时强降水、阵性大风等强对流天气，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20230802/t20230802_526359903.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市长寿区发布雷电黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20230802/t20230802_526359903.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>长寿区气象台2023年8月2日16时52分发布“雷电黄色预警信号”：预计未来6小时内，我区江南街道、凤城街道、晏家街道、八颗街道、渡舟街道、但渡镇可能发生雷电活动，可能会造成雷电灾害事故，局地伴有短时强降水、阵性大风等强对流天气，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20230802/t20230802_526359874.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市合川区发布雷电黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20230802/t20230802_526359874.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>合川区气象台2023年8月2日16时55分发布“雷电黄色预警信号”，预计未来6小时内，涞滩镇、龙市镇、沙鱼镇、草街街道、官渡镇、双凤镇、狮滩镇、大石街道、隆兴镇、钱塘镇、古楼镇、盐井街道、渭沱镇、合阳城街道、钓鱼城街道、南津街街道、铜溪镇、云门街道、太和镇将出现雷雨天气，局地伴有短时强降水、阵性大风等强对流天气，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20230802/t20230802_526359744.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市涪陵区发布雷电黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20230802/t20230802_526359744.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>涪陵区气象台2023年8月2日16时发布“雷电黄色预警信号”，预计2日16时至22时，马武镇、义和街道、李渡街道、大顺镇、龙潭镇、青羊镇、蔺市街道、江东街道、马鞍街道、荔枝街道、龙桥街道、白涛街道、武陵山乡、同乐镇将出现雷雨天气，局地伴有短时强降水、阵性大风、冰雹等强对流天气，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/lanseyj/20230802/t20230802_526359736.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市忠县发布大风蓝色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/lanseyj/20230802/t20230802_526359736.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>忠县气象台2023年8月2日16时发布“大风蓝色预警信号”，预计2日16时至22时，双桂镇、新立镇、拔山镇、花桥镇、石宝镇、野鹤镇、汝溪镇、金声乡、石子乡、洋渡镇、乌杨街道、马灌镇、涂井乡、黄金镇等乡镇（街道）风力可达6级，局地阵风可达7级以上，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/lanseyj/20230802/t20230802_526359711.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市万州区发布大风蓝色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/lanseyj/20230802/t20230802_526359711.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>万州区气象台2023年8月2日15时50分发布“大风蓝色预警信号”，目前我区武陵镇已出现7级阵性大风，预计2日16时至20时，长坪乡、新乡镇、燕山乡、溪口乡、瀼渡镇、新田镇、武陵镇、走马镇等地将出现7级或以上阵性大风，请注意防范。政府及相关部门按照职责做好防大风工作；关好门窗，加固围板、棚架、广告牌等易被风吹动的搭建物，妥善安置易受大风影响的室外物品，遮盖建筑物资；相关水域水上作业和过往船舶采取积极的应对措施，如回港避风或者绕道航行等；行人注意尽量少骑自行车，刮风时不要在广告牌、临时搭建物等下面逗留；有关部门和单位注意森林、草原等防火。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20230802/t20230802_526359569.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市南川区发布雷电黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20230802/t20230802_526359569.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>南川区气象台2023年8月2日14时50分发布“雷电黄色预警信号”，预计8月2日15时至3日21时，楠竹山镇、石墙镇、峰岩乡、中桥乡、骑龙镇、民主镇、冷水关镇、德隆镇、庆元镇、古花镇、三泉镇、合溪镇、大有镇、头渡镇、山王坪镇、水江镇、大观镇、福寿镇、鸣玉镇、河图镇、太平场镇、乾丰镇、黎香湖镇、白沙镇、石溪镇、南平镇、石莲镇、兴隆镇、金山镇、南城街道、神童镇、东城街道、西城街道、木凉镇将出现雷雨天气，局地伴有短时强降水、阵性大风等强对流天气，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20230802/t20230802_526359556.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市石柱土家族自治县发布雷电黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20230802/t20230802_526359556.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>石柱县气象台2023年8月2日14时40分发布“雷电黄色预警信号”，预计未来6小时内，大歇镇、万安街道、南宾街道、下路街道、黎场乡、西沱镇、王家乡、鱼池镇、王场镇、沿溪镇、临溪镇、石家乡、金铃乡、金竹乡、新乐乡、六塘乡、龙潭乡、马武镇、三星乡、黄鹤镇、洗新乡、沙子镇、河嘴乡、万朝镇、龙沙镇、三河镇、桥头镇将出现雷雨天气，局地伴有短时强降水、阵性大风、冰雹等强对流天气，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/lanseyj/20230802/t20230802_526359554.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市武隆区发布大风蓝色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/lanseyj/20230802/t20230802_526359554.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>武隆区气象台2023年8月2日14时50分发布“大风蓝色预警信号”，目前我区凤山街道等地区已出现7级以上大风，预计未来12小时大风仍将持续，芙蓉街道、羊角街道等部分地区将出现7级以上大风，可能会造成大风灾害。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20230802/t20230802_526359540.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市忠县发布雷电黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20230802/t20230802_526359540.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>忠县气象台2023年8月2日14时40分发布“雷电黄色预警信号”，预计2日14时至20时，涂井乡、石宝镇、汝溪镇、金声乡、野鹤镇、磨子土家族乡、乌杨街道、石子乡、白公街道、复兴镇、东溪镇、忠州街道、黄金镇、永丰镇、花桥镇、三汇镇、马灌镇、官坝镇、金鸡镇、石黄镇、兴峰乡、新生街道、白石镇、任家镇、双桂镇、拔山镇、洋渡镇、善广乡、新立镇将出现雷雨天气，局地伴有短时强降水、阵性大风、冰雹等强对流天气，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -6507,64 +6342,6 @@ Next.js 提供了许多优点和功能：
                               <img src="https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>省流@23-08-02 🍦 恰饭 没恰到哈哈哈。 🚀 新闻 华中科技大学博士后复现 LK-99 磁悬浮现象 安卓版 ChatGPT 现已全面上线 🔬 科研 詹姆斯·韦伯望远镜在深空发现巨大问号星系 🔖 深度 英国《在线安全法案》将破坏端到端加密 🍹 有趣 最多产的 Alpine Linux 软件包维护者即将退出 仅表谢意！ 高德地图升级“积水地图”，北京、泉州等城市可查看易积水点 ⚡ 速览 Firefox 116 稳定版发布：画中画可调整音量，不再支持 Win7 / Win8.1 OpenAI 已提交 GPT-5 商标申请</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7262323026770870327"
-                        open
-                      >
-                        <summary class="article-expander__title">StreamSaver.js入门教程：优雅解决前端下载文件的难题</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7262323026770870327">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: smartblue
-本文简介
-本文介绍一个能让前端优雅下载大文件的工具：StreamSaver.js
-⚡️ StreamSaver.js GitHub地址
-⚡️ 官方案例
-StreamSaver.js 可用于实现在Web浏览器中直接将大文件流式传输到用户设备的功能。
-传统的下载方式可能导致大文件的加载时间较长或造成内存占用过大的问题，使用  标签打开新页面下载文件，遇到 .txt 或者 .mp4 之类的文件可能就直接在页面展示了，不会触发下载功能。而 StreamSaver.js 则通过流式下载的方式解决了这些问题。
-StreamSaver.js 将大文件拆分成小块，并在下载过程中逐块传输到硬盘，从而降低内存占用和提高下载速度。
-环境准备
-要学习 StreamSaver.js 首先要准备一份或者多份可下载的文件。
-你可以使用网络上的文件资源，但这需要你自己去找。
-你也可以在自己的电脑运行个服务，把文件资源丢进去即可。
-如果你用脚手架创建项目，比如vue或者react之类的项目，也可以把文件放在静态资源目录里。
-比如用 vite 创建一个 Vue 项目，然后在 public 目录下创建一个 test.txt 文件。项目运行起来，在浏览器访问 http://localhost:端口号/public/test.txt 就能查看到这个文件内容。
-安装 StreamSaver.js
-可以使用 CDN 或者 npm 安装 StreamSaver.js。
-本文使用 CDN 的方式讲解。
-CDN
-打开 StreamSaver.js的仓库。
-
-把 StreamSaver.js 文件下载到你项目里引入即可。
-
-
-npm
-⚡️StreamSaver npm地址
-使用以下命令下载 StreamSa…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -8671,8 +8448,8 @@ Passkey 这个方案可以做到，登录不需要密码，解决了上面提到
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5805840141">
-        <time id="build-timestamp" datetime="2023-08-09T06:52:24.524Z">2023-08-09T06:52:24.524Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5807531870">
+        <time id="build-timestamp" datetime="2023-08-09T09:52:31.556Z">2023-08-09T09:52:31.556Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
