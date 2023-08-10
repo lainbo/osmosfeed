@@ -34,7 +34,7 @@
           "description": "今天好好了解了下kbd、var、samp等HTML，发现以前表示前端源代码的方式简单且浅薄了。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/07/html-samp-element/",
           "publishedOn": "2023-07-31T14:31:18.000Z",
-          "wordCount": 976,
+          "wordCount": 975,
           "title": "HTML kbd、var、samp元素你使用过没？",
           "imageUrl": null
         },
@@ -44,7 +44,7 @@
           "description": "没想到，以前有些不方便实现的排版和布局效果可以使用text-wrap:balance轻松实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/07/css-text-wrap-balance/",
           "publishedOn": "2023-07-25T07:03:30.000Z",
-          "wordCount": 964,
+          "wordCount": 968,
           "title": "5分钟快速了解text-wrap:balance的作用",
           "imageUrl": null
         },
@@ -54,7 +54,7 @@
           "description": "同样的布局效果，在2017年、2021年和2023年有着不同的实现，代码愈发的简洁高效，一起来看看CSS的发展对Web开发的帮助吧。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/07/css-image-aspect-ratio-layout/",
           "publishedOn": "2023-07-20T14:36:38.000Z",
-          "wordCount": 1190,
+          "wordCount": 1199,
           "title": "CSS高宽不等图片固定比例布局的三重进化",
           "imageUrl": null
         }
@@ -122,6 +122,16 @@
       "feedUrl": "https://rsshub.app/jike/user/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
+        {
+          "id": "https://m.okjike.com/originalPosts/64d45cf2ba30ac5540ade9b0",
+          "author": null,
+          "description": "在一个独立开发者的交流群里，看到有人问，做好了 Chrome 插件，如何实现免费/付费的接入，他不想过于复杂地折腾 OAuth 登录和支付模块，在研究 Chrome 插件排行榜（https://extpose.com/top-grossing）的时候，恰好看到一个有趣的玩法：\n1）在后端实现一个最简单的邮件注册和登录模块，用于记录用户付费状态\n2）使用爱发电（https://afdian.net）的「自选金额」作为支付工具，可以通过 URL 拼接参数的方式实现自定义金额（如图），同时附带 remark 信息\n3）用户支付成功后，利用爱发电提供的 Webhook 将用户的支付成功信息（含 remarks）回调给后端\n4）后端通过解析 remark 里的订单/用户信息，将用户标记为付费状态\n这个方案的缺点是只支持支付宝和微信支付，且平台收取 6% 的服务费。之前还看到一个更自助的模式，用户直接向自己的支付宝/微信/银行账号付款，在付费完成后，手动/自动给用户邮箱发送 token，相比爱发电方案，需要去对接上面提到的第三步，略微复杂一点。\n不知道大家还用过哪些更轻便的玩法？😄",
+          "link": "https://m.okjike.com/originalPosts/64d45cf2ba30ac5540ade9b0",
+          "publishedOn": "2023-08-10T03:43:46.000Z",
+          "wordCount": 433,
+          "title": "发布了: 在一个独立开发者的交流群里，看到有人问，做好了 Chrome 插件，如何实现免费/付费的接入，他不想过于复杂地折腾 OAuth 登录和支付模块，在研究 Chrome ...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fm_onJ2Egn41ZbMI4PIgAqwQ9_2dv3.png?imageMogr2/auto-orient/format/jpeg/thumbnail/300x2000%3E/quality/70/interlace/1"
+        },
         {
           "id": "https://m.okjike.com/originalPosts/64d328032edae6abdc37829a",
           "author": null,
@@ -211,16 +221,6 @@
           "wordCount": 448,
           "title": "发布了: 看到一个 Prompt 届的 Github 产品，FlowGPT，https://flowgpt.com，以开源社区运作方式聚集了上百万的 Prompt Engineers，在上面有逛到非常多实用的 Pr...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FpXlLIOVggCvqs_O0sLiiXLA0ceNv3.png?imageMogr2/auto-orient/format/jpeg/thumbnail/300x2000%3E/quality/70/interlace/1"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/64ca94482edae6abdc74a699",
-          "author": null,
-          "description": "正准备睡觉，群里看到同事给我出了一道难题，排查 Node.js 堆外内存的泄露原因。搞到这时候，折腾明白了😄，感谢淘宝 Node.js 团队研发的 andb 工具，内网点过赞，开源了继续点赞👍",
-          "link": "https://m.okjike.com/originalPosts/64ca94482edae6abdc74a699",
-          "publishedOn": "2023-08-02T17:37:12.000Z",
-          "wordCount": 398,
-          "title": "发布了: 正准备睡觉，群里看到同事给我出了一道难题，排查 Node.js 堆外内存的泄露原因。搞到这时候，折腾明白了😄，感谢淘宝 Node.js 团队研发的 andb 工具，...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         }
       ]
     },
@@ -436,6 +436,246 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372783.html",
+          "author": "国家预警信息发布中心",
+          "description": "黔江区气象台2023年8月10日11时30分发布“高温橙色预警信号”，预计8月10日12时至11日21时，我区海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372783.html",
+          "publishedOn": "2023-08-10T03:50:03.000Z",
+          "wordCount": 523,
+          "title": "重庆市黔江区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372772.html",
+          "author": "国家预警信息发布中心",
+          "description": "合川区森林防灭火指挥部、合川区应急管理局、合川区林业局、合川区气象局2023年8月10日11时30分联合发布“森林草原火险橙色预警信号”，预计8月10-13日我区将出现4级及以上森林火险气象等级，高度危险，引发森林火灾的可能性较大。防御指南：1.密切关注天气情况和森林火险预警变化；2.加强野外火源管理，停止一切野外用火审批；3.加强森林防火宣传教育、巡护监测和督导检查；4.增设林区路口检查卡点，增加巡护人员；5.做好扑救森林火灾物资调拨准备；6.各级森林消防队伍靠前驻防，进入待命状态。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372772.html",
+          "publishedOn": "2023-08-10T03:45:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市合川区发布森林草原火险橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372762.html",
+          "author": "国家预警信息发布中心",
+          "description": "武隆区气象台2023年8月10日11时20分发布“高温橙色预警信号”，预计10日13时至19时，鸭江镇、平桥镇、长坝镇、白马镇、羊角街道、凤山街道、芙蓉街道、江口镇、火炉镇、沧沟乡、石桥乡、黄莺乡等乡镇街道海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372762.html",
+          "publishedOn": "2023-08-10T03:40:05.000Z",
+          "wordCount": 523,
+          "title": "重庆市武隆区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372761.html",
+          "author": "国家预警信息发布中心",
+          "description": "南川区气象台2023年8月10日10时50分发布“高温橙色预警信号”，预计8月10日13时至18时，太平场镇、神童镇、石莲镇、东城街道、西城街道、兴隆镇、南城街道、南平镇、中桥乡、水江镇、白沙镇、楠竹山镇、石墙镇、峰岩乡、骑龙镇、鸣玉镇海拔600米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372761.html",
+          "publishedOn": "2023-08-10T03:40:05.000Z",
+          "wordCount": 523,
+          "title": "重庆市南川区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372747.html",
+          "author": "国家预警信息发布中心",
+          "description": "梁平区气象台2023年8月10日11时10分发布“高温橙色预警信号”，预计10日12时至19时，曲水镇、安胜镇、星桥镇、合兴街道、文化镇、复平镇、大观镇、紫照镇、柏家镇、石安镇、金带街道、蟠龙镇、双桂街道、福禄镇、梁山街道、礼让镇、竹山镇、袁驿镇、龙胜乡、明达镇、龙门镇、碧山镇、虎城镇、新盛镇、荫平镇、铁门乡、屏锦镇、云龙镇、和林镇、回龙镇、聚奎镇、仁贤街道、七星镇海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372747.html",
+          "publishedOn": "2023-08-10T03:35:03.000Z",
+          "wordCount": 523,
+          "title": "重庆市梁平区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372736.html",
+          "author": "国家预警信息发布中心",
+          "description": "彭水自治县气象台2023年8月10日11时发布“高温橙色预警信号”，预计10日14时至18时，汉葭街道、靛水街道、绍庆街道、高谷镇、保家镇、郁山镇、新田镇、万足镇、鹿角镇等海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372736.html",
+          "publishedOn": "2023-08-10T03:30:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市彭水苗族土家族自治县发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372735.html",
+          "author": "国家预警信息发布中心",
+          "description": "涪陵区气象台2023年8月10日11时发布“高温橙色预警信号”，预计10日13时至19时，敦仁街道、白涛街道、珍溪镇、焦石镇、清溪镇、南沱镇、罗云镇、江东街道、龙桥街道、石沱镇、马鞍街道、百胜镇、崇义街道、义和街道、江北街道、李渡街道、增福镇、青羊镇、大顺镇、同乐镇、龙潭镇、马武镇、新妙镇、荔枝街道、蔺市街道海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372735.html",
+          "publishedOn": "2023-08-10T03:30:03.000Z",
+          "wordCount": 523,
+          "title": "重庆市涪陵区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372701.html",
+          "author": "国家预警信息发布中心",
+          "description": "永川区气象台2023年8月10日11时01分发布“高温橙色预警信号”：预计8月10日13时至19时，茶山竹海街道、陈食街道、临江镇、板桥镇、中山路街道、大安街道、金龙镇、南大街街道、宝峰镇、青峰镇、双石镇、胜利路街道、三教镇、红炉镇、永荣镇、松溉镇、朱沱镇、仙龙镇、五间镇、吉安镇、何埂镇、来苏镇、卫星湖街道海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372701.html",
+          "publishedOn": "2023-08-10T03:10:05.000Z",
+          "wordCount": 523,
+          "title": "重庆市永川区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372699.html",
+          "author": "国家预警信息发布中心",
+          "description": "万州区气象台2023年8月10日10时35分发布“高温橙色预警信号”，预计10日11时至19时，我区太龙镇、黄柏乡、长岭镇、高笋塘街道、新田镇、郭村镇、李河镇、高梁镇、大周镇、熊家镇、陈家坝街道、小周镇、龙都街道、周家坝街道、高峰街道、弹子镇、沙河街道、长滩镇、钟鼓楼街道、余家镇、武陵镇、天城街道、五桥街道、百安坝街道、太白街道、九池街道、牌楼街道、双河口街道、响水镇、甘宁镇、白羊镇等镇乡街道海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。注意防中暑、防溺水；注意林区、景区、城镇、古镇古街、农事活动、祭祀等火灾防范；注意节约用电、用水和安全生产；缩短户外活动和露天作业时间；相关部门和镇街按照职责，做好高温防范应对工作。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372699.html",
+          "publishedOn": "2023-08-10T03:10:05.000Z",
+          "wordCount": 523,
+          "title": "重庆市万州区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/hsyj/20230810/t20230810_526372702.html",
+          "author": "国家预警信息发布中心",
+          "description": "江津区气象台2023年8月10日10时30分发布“高温红色预警信号”，预计8月10日12时至10日19时，贾嗣镇、支坪镇、杜市镇、鼎山街道、珞璜镇、夏坝镇、广兴镇、西湖镇、石门镇、油溪镇、龙华镇、几江街道、先锋镇、吴滩镇、圣泉街道、德感街道、双福街道、永兴镇、朱杨镇、石蟆镇、白沙镇、李市镇等镇街日最高气温将升至40℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/hsyj/20230810/t20230810_526372702.html",
+          "publishedOn": "2023-08-10T03:10:05.000Z",
+          "wordCount": 523,
+          "title": "重庆市江津区发布高温红色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372692.html",
+          "author": "国家预警信息发布中心",
+          "description": "渝北区气象台2023年8月10日10时30分发布“高温橙色预警信号”，预计10日13时至18时，石船镇、大盛镇、洛碛镇、龙兴镇、统景镇、大湾镇、双龙湖街道、茨竹镇、木耳镇、古路镇、仙桃街道、双凤桥街道、王家街道、兴隆镇、龙塔街道、龙溪街道、龙山街道、玉峰山镇、宝圣湖街道、两路街道、悦来街道、回兴街道海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372692.html",
+          "publishedOn": "2023-08-10T03:05:06.000Z",
+          "wordCount": 523,
+          "title": "重庆市渝北区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372687.html",
+          "author": "国家预警信息发布中心",
+          "description": "奉节县气象台2023年8月10日09时50分发布“高温橙色预警信号”，预计10日13时至19时，安坪镇、康坪乡、朱衣镇、夔州街道、永安街道、夔门街道、白帝镇、康乐镇、永乐镇、鱼复街道海拔400米以下地区日最高气温将升至37℃以上，局地可达40℃。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372687.html",
+          "publishedOn": "2023-08-10T03:05:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市奉节县发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372668.html",
+          "author": "国家预警信息发布中心",
+          "description": "万盛经开区气象台2023年8月10日10时40分发布“高温橙色预警信号”，预计10日13时至19时，万盛街道、东林街道、万东镇、金桥镇、丛林镇、关坝镇、青年镇、南桐镇海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372668.html",
+          "publishedOn": "2023-08-10T02:55:03.000Z",
+          "wordCount": 523,
+          "title": "重庆市万盛经开区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372657.html",
+          "author": "国家预警信息发布中心",
+          "description": "綦江区气象台2023年8月10日10时40分发布“高温橙色预警信号”，预计10日10时至18时，古南街道、文龙街道、通惠街道、三江街道、篆塘镇、扶欢镇、东溪镇、赶水镇、石角镇、永城镇、隆盛镇、新盛街道、永新镇、郭扶镇、三角镇海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372657.html",
+          "publishedOn": "2023-08-10T02:50:05.000Z",
+          "wordCount": 523,
+          "title": "重庆市綦江区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372636.html",
+          "author": "国家预警信息发布中心",
+          "description": "巫溪县气象台2023年8月10日10时20分发布“高温橙色预警信号”，预计10日13时至19时，我县柏杨街道、宁河街道、城厢镇、凤凰镇、花台乡、蒲莲镇、兰英乡、双阳乡、宁厂镇、大河乡、天星乡、下堡镇、白鹿镇、徐家镇、鱼鳞乡、乌龙乡、土城镇、天元乡、中梁乡、田坝镇、红池坝镇等海拔400米以下地区日最高气温将升至37℃以上。其中柏杨街道、宁河街道、凤凰镇、白鹿镇、天星乡日最高气温可达40℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372636.html",
+          "publishedOn": "2023-08-10T02:40:05.000Z",
+          "wordCount": 523,
+          "title": "重庆市巫溪县发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372628.html",
+          "author": "国家预警信息发布中心",
+          "description": "璧山区气象台2023年8月10日10时发布“高温橙色预警信号”，预计10日13时至19时，八塘镇、七塘镇、大路街道、河边镇、璧城街道、福禄镇、大兴镇、璧泉街道、青杠街道、来凤街道、正兴镇、丁家街道、健龙镇、广普镇、三合镇日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372628.html",
+          "publishedOn": "2023-08-10T02:35:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市璧山区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372626.html",
+          "author": "国家预警信息发布中心",
+          "description": "巫山县气象台2023年8月10日10时10分发布“高温橙色预警信号”，预计10日13时至18时，龙溪镇、福田镇、大昌镇、双龙镇、巫峡镇、高唐街道、龙门街道、曲尺乡、大溪乡、官渡镇、抱龙镇、培石乡等海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372626.html",
+          "publishedOn": "2023-08-10T02:35:03.000Z",
+          "wordCount": 523,
+          "title": "重庆市巫山县发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372625.html",
+          "author": "国家预警信息发布中心",
+          "description": "铜梁区气象台2023年8月10日9时50分发布“高温橙色预警信号”，预计8月10日12时至10日19时，旧县街道、二坪镇、东城街道、南城街道、土桥镇、侣俸镇、太平镇、巴川街道、水口镇、石鱼镇、蒲吕街道、庆隆镇等海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。防御指南：1.注意防中暑、防溺水；2.注意林区、景区、城镇、古镇古街、农事活动、祭祀等火灾防范；3.注意节约用电、用水和安全生产；4.缩短户外活动和露天作业时间；5.相关部门和乡镇街道按照职责，做好高温防范应对工作。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372625.html",
+          "publishedOn": "2023-08-10T02:35:03.000Z",
+          "wordCount": 523,
+          "title": "重庆市铜梁区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/hsyj/20230810/t20230810_526372603.html",
+          "author": "国家预警信息发布中心",
+          "description": "云阳县气象台2023年8月10日10时10分发布“高温红色预警信号”，预计10日13时至18时，我县海拔400米以下地区日最高气温将达40℃以上，海拔400-600米地区日最高气温将达37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/hsyj/20230810/t20230810_526372603.html",
+          "publishedOn": "2023-08-10T02:25:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市云阳县发布高温红色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372594.html",
+          "author": "国家预警信息发布中心",
+          "description": "荣昌区气象台2023年8月10日10时05分发布“高温橙色预警信号”，预计8月10日13时至19时，我区全部镇街日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372594.html",
+          "publishedOn": "2023-08-10T02:20:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市荣昌区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372585.html",
+          "author": "国家预警信息发布中心",
+          "description": "巴南区气象台2023年8月10日9时50分发布“高温橙色预警信号”，预计10日12时至19时，我区李家沱街道、花溪街道、莲花街道、鱼洞街道、龙洲湾街道、一品街道、界石镇、南泉街道、惠民街道、木洞镇、丰盛镇、双河口镇、麻柳嘴镇、东温泉镇、南彭街道、姜家镇、接龙镇、二圣镇、圣灯山镇海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372585.html",
+          "publishedOn": "2023-08-10T02:15:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市巴南区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372562.html",
+          "author": "国家预警信息发布中心",
+          "description": "沙坪坝区气象台2023年8月10日9时50分发布“高温橙色预警信号”，预计10日13时至20时，天星桥街道、磁器口街道、沙坪坝街道、小龙坎街道、土湾街道、联芳街道、土主街道、陈家桥街道、回龙坝镇、丰文街道、青木关镇、中梁镇、双碑街道、凤凰镇、覃家岗街道、歌乐山街道、新桥街道、山洞街道、渝碚路街道、石井坡街道、童家桥街道、井口街道海拔400米以下地区日最高气温将升至37℃以上，局地可达40℃。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372562.html",
+          "publishedOn": "2023-08-10T02:00:05.000Z",
+          "wordCount": 523,
+          "title": "重庆市沙坪坝区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372555.html",
+          "author": "国家预警信息发布中心",
+          "description": "北碚区气象台2023年8月10日9时40分发布“高温橙色预警信号”，预计10日13时至20时，天府镇、朝阳街道、澄江镇、东阳街道、三圣镇、柳荫镇、金刀峡镇、静观镇、施家梁镇、龙凤桥街道、歇马街道、蔡家岗街道、童家溪镇、复兴街道、天生街道、水土街道、北温泉街道海拔400米以下地区日最高气温将升至37℃以上，其中澄江镇、歇马街道、三圣镇、童家溪镇部分区域日最高气温可达40℃以上，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372555.html",
+          "publishedOn": "2023-08-10T01:55:05.000Z",
+          "wordCount": 523,
+          "title": "重庆市北碚区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372509.html",
+          "author": "国家预警信息发布中心",
+          "description": "长寿区气象台2023年8月10日09时20分发布“高温橙色预警信号”：预计10日11时至19时，我区江南街道、晏家街道、凤城街道、但渡镇、菩提街道、八颗街道、渡舟街道、洪湖镇、万顺镇、葛兰镇、新市街道、双龙镇、邻封镇、长寿湖镇、云集镇、龙河镇、石堰镇、云台镇、海棠镇日最高气温将升至37℃以上。请各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372509.html",
+          "publishedOn": "2023-08-10T01:35:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市长寿区发布高温橙色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526372307.html",
           "author": "国家预警信息发布中心",
@@ -2105,16 +2345,6 @@
           "wordCount": 524,
           "title": "重庆市巫溪县发布高温橙色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230803/t20230803_526360788.html",
-          "author": "国家预警信息发布中心",
-          "description": "云阳县气象台2023年8月3日10时发布“高温橙色预警信号”，预计8月3日13时至18时，全县海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防暑降温及预防火灾。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230803/t20230803_526360788.html",
-          "publishedOn": "2023-08-03T02:15:03.000Z",
-          "wordCount": 523,
-          "title": "重庆市云阳县发布高温橙色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -2151,6 +2381,16 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
+          "id": "https://juejin.cn/post/7265121637497733155",
+          "author": "孟祥_成都",
+          "description": "前言\n首先声明，没有标题党哈！\n以下我知道的国内知名react组件库全部都有这个bug，你们现在都能去复现，一个提pr的好机会就让给你们了，哈哈！复现组件库：\n阿里系：ant design, fusion design，\n字节系：arco design\n腾讯：tdesign\n本来字节还有一个semi design，结果我发现它没有Affix组件，也就是固钉组件，让他躲过一劫，他有这个组件我也觉得肯定会复现相同的bug。\nAffix组件是什么，以及bug复现\nAffix组件（固钉组件）能将页面元素钉在可视范围。如下图：\n\n这个button组件，会在距离顶部80px的时候会固定在屏幕上（position: fixed）,如下图：\n\n如何复现bug\n你在这个button元素任意父元素上，加上以下任意style属性\nwill-change: transform;\nwill-change: filter;\nwill-change: perspective;\ntransform 不为none\nperspective不为none\n非safari浏览器，filter属性不为none\n非safari浏览器，backdrop-filter属性不为none\n等等\n都可以让这个固定组件失效，就是原本是距离顶部80px固定。\n我的组件库没有这个bug，哈哈\nmx-design\n目前组件不是很多，还在努力迭代中，不知道凭借没有这个bug的小小优点，能不能从你手里取一个star，哈哈\nbug原因\naffix组件无非都是用了fixed布局，我是如何发现这个bug的呢，我的组件库动画系统用的framer-motion，我本来是想在react-router切换路由的时候整点动画的，动画效果就是给body元素加入例如transform的变化。\n然后我再看我的固钉组件怎么失效了。。。后来仔细一想，才发现想起来fi…",
+          "link": "https://juejin.cn/post/7265121637497733155",
+          "publishedOn": "2023-08-09T06:50:50.000Z",
+          "wordCount": 877,
+          "title": "我的天！居然国内所有react组件库都有这个bug！",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7264920948751188008",
           "author": "花果山大圣",
           "description": "视频版\n去年开始学员想做远程的就越来越多了，我年底开始学面试英语，今年五月开始用chatgpt写了个英语简历海投，边面试边练英语，一大堆拒信后， 7月初开始有海外remote的offer，到今天拿到第一笔工资，证明这条路可行，并且不是骗子，可以辅导越来越多的学员可以选择全球的岗位，脱离内卷\n今天总结一下国内和海外前端面试的区别吧，欢迎讨论\n每个人想做远程的原因不同，可能想回老家，可能想脱离大厂内卷等等，就不讨论了，在哪些网站可以看到远程的工作机会之前视频聊过，至少Linkdin上每天推送的Remote岗位就足够\n欢迎加我，畅聊前端 & 英语学习\n\n面试风格和要求\n\n写简历就是第一步，我其实比较挫，就用deepl翻译的中文简历，然后就开始投递了，我坚信没有什么事情是准备完美了再开始，而是直接开始，在面试中练习英语和熟悉面试风格，当然也是拒信无数\n我也感受到国内外面试风格的巨大差别，国内大厂如果想招一个司机，会要求这个司机基本功好，有三年驾龄，并且得会修发动机\n国外的要求是司机基本功好，有三年驾龄，并且有点幽默感，开车的过程中能聊天解闷\n国内的面试题大家都熟悉了，主要聊一下我遇见海外的面试风格和如何准备\n面试前经常直接丢你你个在线做算法题的链接，有点像国内的牛客网，leetcode的简单和中等难度足够了，基本都是原题，可以参考前端啃算法去刷，绝对足够了\n框架的使用，注意这里真的就是使用，没有所谓的优化和源码，我面了这么多家，一家问源码的都没有（其实我很擅长这个），Vue，React，Next.js，Nuxt 都是问api怎么用的，对于我来说比较简单了\n系统设计，这个我理解是国外版本的【八股文】，就是问你如何设计一个XX，不分前后端，也有专门的书可以看，感兴趣我可以分享\n行文面试，简称BQ，这个对我是难度最大的，其实就是英语的门槛，你需要描述大概一下问题\n\n你为啥要加入我们呀\n项…",
@@ -2168,6 +2408,16 @@
           "publishedOn": "2023-08-08T13:11:13.000Z",
           "wordCount": 4207,
           "title": "什么,你还不会 vue 表格跨页多选?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7264582065869127732",
+          "author": "PuffMeow",
+          "description": "本篇文章同时收录在公众号《泡芙玩编程》，来这里你可以学习前端、Node.js、Rust～，同步更新文章中\n这里抛出一个问题\n作为一个前端为什么要去学习 Rust ？\n这是个好问题，有人可能觉得前端学习 Rust 意义不大，学习成本高，投入产出比低啥的，JavaScript、TypeScript 这些前端语言还没搞明白呢，为什么还要去学一门这么难的新语言？\n那么今天我就谈谈我自己对于这个问题的看法~，主要是分为 5 点：\n性能\n跨平台特性\n安全性\n职业视野\n职业竞争力\n性能\nRust 可以给 Node.js 提供一个性能逃生通道，当我们使用 Node.js 遇到性能瓶颈或 CPU 密集计算场景的时候，便可以使用 Rust 编写 Native Addon 解决这个问题了，Native Addon 就是一个二进制文件，也就是 xxx.node 文件，比如 swc(对应 babel)、Rspack(对应Webpack)、Rome(对应 eslint、prettier、babel、webpack 等，目标是代替我们所熟悉的所有前端工具链...)，上面提到的工具链就都是使用 Rust 编写的，性能比 Node.js 对应功能的包都有了极大的提高，同时 Rust 也是支持多线程的，你编写的多线程代码在 Node.js 中一样可以跑，这就可以解决了 Node.js 不擅长 CPU 密集型的问题。在前端架构领域目前 Rust 已经差不多是标配了，阿里、字节内部的前端基建目前都开始基于 Rust 去重构了。\n跨平台\n可以编写高性能且支持跨平台的 WebAssembly 扩展，可以在浏览器、IOT 嵌入式设备、服务端环境等地方使用，并且也拥有很不错的性能；和上面提到的 Native Addon 不一样， Native Addon 在不同的平台上都需要单独的进行编译，不支持跨平台；但是 WebAssembly 不一样，虽然它的性能没 Native Addon 好，但是跨平台成本很低，我编写的一份代码在 Node.js 中执行没问题，在 Deno 中跑也没问题，在 Java 或者 Go 中跑也都没问题，甚至在单片机也可以运行，只要引入对应的 Wasm 运行时即可。现在 Docker 也已经有 WebAssembly 版本了；同时 Rust 也是目前编写 WebAssembly 最热门的语言，因为它没有垃圾回收，性能高，并且有一个超好用的包管理器 cargo。\n安全\nRust 编译器真的是事无巨细，它保证你编写的代码不会出低级错误，比如一些类型上的错误和内存分配上的错误，基本上只要 Rust 代码能够编译通过，就可以安心上线，在服务端、操作系统等领域来说这也是个很好的特性，Linux 系统和安卓系统内核都已经开始使用 Rust ，这还信不过嘛？\n视野\nRust 可以提升自己在服务端领域的视野，Rust 不同于 Node.js 这个使用动态 JS 语言的运行时，它是一门正儿八经的静态编译型编程语言，并且没有垃圾回收，可以让我们掌握和理解计算机的一些底层工作机制，比如内存是如何分配和释放的，Rust 中使用所有权、生命周期等概念来保证内存安全，这对我们对于编程的理解也可以进一步提升，很多人说学习了 Rust 之后对自己编写其它语言的代码也有了更深的理解，毕竟计算机底层的概念都是相通的，开阔自己的编程思维。\n职业竞争力\n这个问题简单，你比别人多一门技能，比如 WebAssembly 和 Native Addon 都可以作为 Node.js 性能优化的一种手段，面试的时候说你会使用 Rust 解决 Node.js 性能问题，这不是比别人多一些竞争力吗？面试官那肯定也会觉得你顶呱呱~ 另外虽然目前 Rust 的工作机会比较少，但是也不代表没有，阿里和字节目前都有关于前端基建的岗位，会 Rust 是加分项，另外 Rust 在 TIOBE 编程语言榜排名中已经冲进了前 20，今年 6 月份是第 20 名，7 月份是第 17 名，流行度开始慢慢上来了，我相信以后工作机会也会越来越多的。\n总结\n不过，总的来说，这还是得看自己个人的学习能力，学有余力的时候可以学习一下 Rust，我自己不是 Rust 吹啊，我学习 Rust 的过程中真的觉得很有趣，因为里面的很多概念在前端领域中都是接触不到的，学了之后真的像是打开了新世界的大门，包括可以去看 Deno 的源码了，可以了解到一个 Js 运行时是怎么进行工作的，这些都是与我们前端息息相关的东西，即使哪天不做前端了，可以去转服务端或嵌入式方向，起码编程语言这一关不需要费多大力气了，Rust 是目前唯一一门从计算机底层到应用层都有落地应用的语言。不多说了，学就完事了，技多不压身嘛",
+          "link": "https://juejin.cn/post/7264582065869127732",
+          "publishedOn": "2023-08-08T02:54:13.000Z",
+          "wordCount": 1383,
+          "title": "作为一个前端为什么要学习 Rust ？",
           "imageUrl": null
         },
         {
@@ -2281,16 +2531,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7263113577152790586",
-          "author": "Moment",
-          "description": "theme: cyanosis\nhighlight: atom-one-dark\nReact 在如何组织结构方面非常开放。这正是为什么我们有责任保持项目的整洁和可维护性。\n今天，我们将讨论一些改善 React 应用程序健康状况的最佳实践。这些规则被广泛接受。因此，掌握这些知识至关重要。\n所有内容都将以代码展示，所以做好准备！\n1. 使用 JSX 简写\n尝试使用 JSX 简写来传递 Boolean 布尔值变量。假设您想要控制导航栏组件的标题可见性。\nBad ❌\nreturn <Navbar showTitle={true} />;\n\nGood ✔\nreturn <Navbar showTitle />;\n\n2. 使用三元运算符\n假设你想根据角色显示用户的详细信息。\nBad ❌\nconst { role } = user;\n\nif (role === ADMIN) {\n  return <AdminUser />;\n} else {\n  return <NormalUser />;\n}\n\nGood ✔\nconst { role } = user;\n\nreturn role === ADMIN ? <AdminUser /> : <NormalUser />;\n\n3. 利用对象字面量\n对象字面量可以帮助我们的代码更具可读性。假设你想根据角色显示三种类型的用户。不能使用三元，因为选项数量超过两个。\nBad ❌\nconst { role } = user;\n\nswitch (role) {\n  case ADMIN:\n    return <AdminUser />;\n  case EMPLOYEE:\n    return <EmployeeUser />;\n  case USER:\n    return <NormalUser />;\n}\n\nGood ✔\nconst { role …",
-          "link": "https://juejin.cn/post/7263113577152790586",
-          "publishedOn": "2023-08-04T00:00:06.000Z",
-          "wordCount": 3967,
-          "title": "提高 React 项目整洁度的 21 个最佳实践💯💯💯",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7263089207128850489",
           "author": "古韵",
           "description": "theme: smartblue\n\n本文来自alova作者投稿，alova是一个请求策略库，可以让你编写更少的代码即可实现特定业务场景下的高效数据交互，在过去3个月对外发布以来在github上已收到了 1500+star，alova官网，感兴趣可以看看。\n发现很多人还只会promise常规用法\n在js项目中，promise的使用应该是必不可少的，但我发现在同事和面试者中，很多中级或以上的前端都还停留在promiseInst.then()、promiseInst.catch()、Promise.all等常规用法，连async/await也只是知其然，而不知其所以然。\n但其实，promise还有很多巧妙的高级用法，也将一些高级用法在alova请求策略库内部大量运用。\n现在，我把这些毫无保留地在这边分享给大家，看完你应该再也不会被问倒了，最后还有压轴题哦。\n觉得对你有帮助还请点赞收藏评论哦！\n1. promise数组串行执行\n例如你有一组接口需要串行执行，首先你可能会想到使用await\nconst requestAry = [() => api.request1(), () => api.request2(), () => api.request3()];\nfor (const requestItem of requestAry) {\n  await requestItem();\n}\n\n如果使用promise的写法，那么你可以使用then函数来串联多个promise，从而实现串行执行。\nconst requestAry = [() => api.request1(), () => api.request2(), () => api.request3()];\nconst finallyPromise = requestAry.reduce(\n    (currentPromise,…",
@@ -2339,16 +2579,6 @@
           "wordCount": 1145,
           "title": "🏃🏻‍♀️这一次，让我们一起系统学习微前端！",
           "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7262364351531810876",
-          "author": "董员外",
-          "description": "highlight: an-old-hope\ntheme: channing-cyan\n最近在做一个全栈项目，前端知识非常琐碎，所以想把前端知识点汇总到一起，无论是以后想查询某个知识点，还是学习到新的知识，都可以快速的查询和记录\n全部代码已开源到GitHub；先赞后看，年入百万！\n技术栈使用React的Next.js框架和Tailwind CSS，大纲如下\n\n为什么是Next.js\nNext.js是一个基于React的服务端渲染框架。 这是一个用于 生产环境的 React 框架\nNext.js 提供了许多优点和功能：\n服务端渲染 (SSR) 和预渲染 (SSG) ：Next.js 支持服务端渲染和预渲染，这意味着页面在服务器端生成，而不是在客户端。这有助于提高网页的加载速度和搜索引擎优化（SEO），同时也提供更好的首次渲染体验。\n快速加载时间：由于 Next.js 支持预渲染和服务端渲染，用户可以更快地看到页面内容，因为大部分工作在服务器端完成，减少了客户端加载所需的时间。\n热模块替换 (HMR) ：Next.js 支持热模块替换，这意味着在进行开发时，您可以在保持应用程序运行的同时修改代码，并立即看到变化，无需刷新页面。\n简单的部署：Next.js 的默认配置使得应用程序的部署非常简单。您可以使用 Vercel、Netlify 等平台将应用程序快速部署到云端，或者将其部署到自己的服务器上。\n丰富的生态系统：Next.js 是一个非常受欢迎的框架，拥有庞大的社区和丰富的插件，扩展和工具支持。这使得开发人员能够轻松解决常见问题，并快速构建复杂的 web 应用程序。\n自动优化：Next.js 内置了许多优化功能，包括自动压缩和缓存等，这些功能有助于提高应用程序的性能和用户体验。\n支持多种数据获取方法：Next.js 提供了多种数据获取方式，如 getServerSideProp…",
-          "link": "https://juejin.cn/post/7262364351531810876",
-          "publishedOn": "2023-08-02T01:15:24.000Z",
-          "wordCount": 3511,
-          "title": "😼使用Next.js搭建一个全栈前端知识库项目",
-          "imageUrl": null
         }
       ]
     },
@@ -2358,12 +2588,22 @@
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
         {
+          "id": "7265307106576351266",
+          "author": "Seal软件",
+          "description": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件#\nCode to Image 免费工具，帮您把代码段轻松转换为各种风格的图片~如果您常常需要进行对外演示或者正在经营自己的技术博客，那么这个图片转换工具能帮助您大大提升博客和Slides质感，可以傻瓜式自定义图片背景、宽度、窗口模式以及编程语言，欢迎尝试！\n尝鲜网址：https://ray.so/",
+          "link": "https://juejin.cn/pin/7265307106576351266",
+          "publishedOn": "2023-08-10T02:05:41.000Z",
+          "wordCount": 503,
+          "title": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件# Code to Image 免费工具，帮您把代码段轻松转换为各种风格的图片~如果您常常需要进行对外演示或者正在经营自...",
+          "imageUrl": null
+        },
+        {
           "id": "7265180298689085501",
           "author": "优弧",
           "description": "这个工具真不错。。。https://app.warp.dev/referral/LQQX5N",
           "link": "https://juejin.cn/pin/7265180298689085501",
           "publishedOn": "2023-08-09T12:02:26.000Z",
-          "wordCount": 488,
+          "wordCount": 491,
           "title": "这个工具真不错。。。https://app.warp.dev/referral/LQQX5N",
           "imageUrl": null
         },
@@ -2383,7 +2623,7 @@
           "description": "今天我们在 ProductHunt 中发布了产品，希望大家能帮忙点赞及传播一下，拜谢！https://www.producthunt.com/posts/aircode",
           "link": "https://juejin.cn/pin/7264437782332325946",
           "publishedOn": "2023-08-07T09:36:38.000Z",
-          "wordCount": 490,
+          "wordCount": 493,
           "title": "今天我们在 ProductHunt 中发布了产品，希望大家能帮忙点赞及传播一下，拜谢！https://www.producthunt.com/posts/aircode",
           "imageUrl": null
         },
@@ -2393,7 +2633,7 @@
           "description": "致敬Vim之父，伟大的慈善家 & 传奇程序员 Bram Moolenaar，R.I.P🕯️🙏 ，几乎每天都在用的编辑器Vim，”编辑器之神”。https://github.com/brammool，享年62岁，去世前一个月还在对Vim做着更新、修改工作🫡",
           "link": "https://juejin.cn/pin/7264117921231601721",
           "publishedOn": "2023-08-06T12:28:49.000Z",
-          "wordCount": 509,
+          "wordCount": 512,
           "title": "致敬Vim之父，伟大的慈善家 & 传奇程序员 Bram Moolenaar，R.I.P🕯️🙏 ，几乎每天都在用的编辑器Vim，”编辑器之神”。https://github.com/brammool，享年6...",
           "imageUrl": null
         },
@@ -2546,16 +2786,6 @@
           "wordCount": 474,
           "title": "请问有可以替代语雀的文档软件推荐吗？语雀收费有点贵",
           "imageUrl": null
-        },
-        {
-          "id": "7261741840829923387",
-          "author": "Seal软件",
-          "description": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件#\nChat2Code——通过交互式聊天来将文本实现为组件！\n只需输入“create a counter”，从框架中进行选择，Chat2Code 就会使用 tailwind 从你的文本中生成组件，还可以通过聊天要求修改。\n立即尝试：https://chat2code.dev/",
-          "link": "https://juejin.cn/pin/7261741840829923387",
-          "publishedOn": "2023-07-31T02:45:24.000Z",
-          "wordCount": 508,
-          "title": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件# Chat2Code——通过交互式聊天来将文本实现为组件！ 只需输入“create a counter”，从框架中进行选择，Chat2...",
-          "imageUrl": null
         }
       ]
     },
@@ -2570,9 +2800,9 @@
           "description": "BMW motorrad marks its 100 years with R18 the crown mot …\n  倪爽的阅读分享 – 2023年8月8日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b48%e6%9c%888%e6%97%a5/",
           "publishedOn": "2023-08-08T21:40:26.000Z",
-          "wordCount": 441,
+          "wordCount": null,
           "title": "倪爽的阅读分享 – 2023年8月8日",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/08/U2-pilot-suit.webp"
+          "imageUrl": null
         },
         {
           "id": "https://nishuang.net/?p=29729",
@@ -2580,9 +2810,9 @@
           "description": "Genius Japanese packaging designs that make life easier …\n  倪爽的阅读分享 – 2023年8月7日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b48%e6%9c%887%e6%97%a5/",
           "publishedOn": "2023-08-08T21:36:02.000Z",
-          "wordCount": 425,
+          "wordCount": null,
           "title": "倪爽的阅读分享 – 2023年8月7日",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/08/image.jpeg"
+          "imageUrl": null
         },
         {
           "id": "https://nishuang.net/?p=29725",
@@ -2590,9 +2820,9 @@
           "description": "How cities can stem the tide of pedestrian deaths from  …\n  倪爽的阅读分享 – 2023年8月6日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b48%e6%9c%886%e6%97%a5/",
           "publishedOn": "2023-08-08T21:29:45.000Z",
-          "wordCount": 386,
+          "wordCount": null,
           "title": "倪爽的阅读分享 – 2023年8月6日",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/08/download.webp"
+          "imageUrl": null
         },
         {
           "id": "https://nishuang.net/?p=29720",
@@ -2600,9 +2830,9 @@
           "description": "What’s The Perfect Design Process? — Smashing Magazine& …\n  倪爽的阅读分享 – 2023年8月5日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b48%e6%9c%885%e6%97%a5/",
           "publishedOn": "2023-08-05T00:28:08.000Z",
-          "wordCount": 457,
+          "wordCount": null,
           "title": "倪爽的阅读分享 – 2023年8月5日",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/08/airtags_hu15b0b9990707d99e388f3ce92790c332_1876800_1920x0_resize_q75_box.jpeg"
+          "imageUrl": null
         },
         {
           "id": "https://nishuang.net/?p=29715",
@@ -2610,9 +2840,9 @@
           "description": "I can’t believe this worked 我简直不敢相信这个成功了 这是一个期待已久的 …\n  倪爽的阅读分享 – 2023年8月4日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b48%e6%9c%884%e6%97%a5/",
           "publishedOn": "2023-08-04T00:28:04.000Z",
-          "wordCount": 394,
+          "wordCount": null,
           "title": "倪爽的阅读分享 – 2023年8月4日",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/08/Submersible-PC.jpg"
+          "imageUrl": null
         },
         {
           "id": "https://nishuang.net/?p=29709",
@@ -2620,9 +2850,9 @@
           "description": "Scandinavian heavy metal: Why Earth’s happiest pl …\n  倪爽的阅读分享 – 2023年8月3日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b48%e6%9c%883%e6%97%a5/",
           "publishedOn": "2023-08-04T00:15:43.000Z",
-          "wordCount": 348,
+          "wordCount": null,
           "title": "倪爽的阅读分享 – 2023年8月3日",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/08/Meshuggah_-_Rock_am_Ring_2018-6418.jpg"
+          "imageUrl": null
         },
         {
           "id": "https://nishuang.net/?p=29702",
@@ -2630,9 +2860,9 @@
           "description": "前 Facebook 设计副总裁 Julie Zhuo 的发表了一篇热情而深刻的文章：“更高层次的设计。一篇长 …\n  更高层次的设计（翻译稿） 查看全文 »",
           "link": "https://nishuang.net/%e6%9b%b4%e9%ab%98%e5%b1%82%e6%ac%a1%e7%9a%84%e8%ae%be%e8%ae%a1%ef%bc%88%e7%bf%bb%e8%af%91%e7%a8%bf%ef%bc%89/",
           "publishedOn": "2023-08-02T22:22:58.000Z",
-          "wordCount": 387,
+          "wordCount": null,
           "title": "更高层次的设计（翻译稿）",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/08/918ede5a-bb31-4c6c-b4e4-27f8155d2a25_1024x1024.webp"
+          "imageUrl": null
         },
         {
           "id": "https://nishuang.net/?p=29697",
@@ -2640,9 +2870,9 @@
           "description": "NASA Hears ‘Heartbeat’ From Voyager 2 After …\n  倪爽的阅读分享 – 2023年8月2日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b48%e6%9c%882%e6%97%a5/",
           "publishedOn": "2023-08-02T15:47:05.000Z",
-          "wordCount": 406,
+          "wordCount": null,
           "title": "倪爽的阅读分享 – 2023年8月2日",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/08/boras-sweden-consolidated-pby-catalina-vintage-royalty-free-image-1690566508-1024x576.jpeg"
+          "imageUrl": null
         },
         {
           "id": "https://nishuang.net/?p=29694",
@@ -2650,9 +2880,9 @@
           "description": "無熱量零卡食用油-蔗糖聚酯（Olestra）：副作用、爭議和相關研究 – 別人Google了什麼？ …\n  倪爽的阅读分享 – 2023年8月1日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b48%e6%9c%881%e6%97%a5/",
           "publishedOn": "2023-08-01T14:42:58.000Z",
-          "wordCount": 338,
+          "wordCount": null,
           "title": "倪爽的阅读分享 – 2023年8月1日",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/08/inner-223355-kinfolk-1.jpeg"
+          "imageUrl": null
         },
         {
           "id": "https://nishuang.net/?p=29691",
@@ -2660,9 +2890,9 @@
           "description": "岩田先生：任天堂传奇社长如是说 – 100X阅读 岩田聪的传记是一本特别亲和的书，不同于一般的名人 …\n  倪爽的阅读分享 – 2023年7月30日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b47%e6%9c%8830%e6%97%a5/",
           "publishedOn": "2023-08-01T14:37:47.000Z",
-          "wordCount": 458,
+          "wordCount": null,
           "title": "倪爽的阅读分享 – 2023年7月30日",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/08/data-centre-electrical-infrastructure-thermal-camera-surveys.jpeg"
+          "imageUrl": null
         },
         {
           "id": "https://nishuang.net/?p=29686",
@@ -2670,9 +2900,9 @@
           "description": "Up to 1,200 Airbus Jet Engines Recalled 高达1,200台空中客车喷气发 …\n  倪爽的阅读分享 – 2023年7月29日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b47%e6%9c%8829%e6%97%a5/",
           "publishedOn": "2023-07-29T04:11:24.000Z",
-          "wordCount": 343,
+          "wordCount": null,
           "title": "倪爽的阅读分享 – 2023年7月29日",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/07/visitors-to-us-engine-manufacturer-pratt-whitneys-corporate-news-photo-1690464275.jpeg"
+          "imageUrl": null
         },
         {
           "id": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b47%e6%9c%8828%e6%97%a5/",
@@ -2680,9 +2910,9 @@
           "description": "Whistleblower tells Congress the US is concealing ̵ …\n  倪爽的阅读分享 – 2023年7月28日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b47%e6%9c%8828%e6%97%a5/",
           "publishedOn": "2023-07-29T03:45:33.000Z",
-          "wordCount": 434,
+          "wordCount": null,
           "title": "倪爽的阅读分享 – 2023年7月28日",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/07/images-1.fill_.size_2000x2000.v1690456922.jpg"
+          "imageUrl": null
         },
         {
           "id": "https://nishuang.net/?p=29679",
@@ -2690,9 +2920,9 @@
           "description": "The dark side of Figma’s Dev Mode Figma的开发模式的阴暗面 F …\n  倪爽的阅读分享 – 2023年7月27日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b47%e6%9c%8827%e6%97%a5/",
           "publishedOn": "2023-07-27T04:15:24.000Z",
-          "wordCount": 379,
+          "wordCount": null,
           "title": "倪爽的阅读分享 – 2023年7月27日",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/07/BillyHCKWOK_002.jpeg"
+          "imageUrl": null
         },
         {
           "id": "https://nishuang.net/?p=29666",
@@ -2700,9 +2930,9 @@
           "description": "How developers will test their apps before Vision Pro l …\n  倪爽的阅读分享 – 2023年7月26日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b47%e6%9c%8826%e6%97%a5/",
           "publishedOn": "2023-07-26T05:12:23.000Z",
-          "wordCount": 476,
+          "wordCount": null,
           "title": "倪爽的阅读分享 – 2023年7月26日",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/07/the-world-s-lowest-car-is-a-fiat-panda-that-will-break-your-brain_6.jpeg"
+          "imageUrl": null
         },
         {
           "id": "https://nishuang.net/?p=29641",
@@ -2710,9 +2940,9 @@
           "description": "Trek Bicycle Competes in Tour de France With Bikes Deve …\n  倪爽的阅读分享 – 2023年7月25日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b47%e6%9c%8825%e6%97%a5/",
           "publishedOn": "2023-07-25T12:30:49.000Z",
-          "wordCount": 417,
+          "wordCount": null,
           "title": "倪爽的阅读分享 – 2023年7月25日",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/07/Trek-Madone_CFD-1024x518.jpg"
+          "imageUrl": null
         },
         {
           "id": "https://nishuang.net/?p=29618",
@@ -2720,9 +2950,9 @@
           "description": "Google 創辦人 Sergey Brin 的秘密飛船再度曝光！全碳纖打造、可飛 3700 公里 ̵ …\n  倪爽的阅读分享 – 2023年7月24日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b47%e6%9c%8824%e6%97%a5/",
           "publishedOn": "2023-07-24T02:47:06.000Z",
-          "wordCount": 485,
+          "wordCount": null,
           "title": "倪爽的阅读分享 – 2023年7月24日",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/07/airtag.jpg"
+          "imageUrl": null
         },
         {
           "id": "https://nishuang.net/?p=29558",
@@ -2730,9 +2960,9 @@
           "description": "Branding a city: What makes a successful design? 城 …\n  倪爽的阅读分享 – 2023年7月23日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b47%e6%9c%8823%e6%97%a5/",
           "publishedOn": "2023-07-23T13:37:27.000Z",
-          "wordCount": 409,
+          "wordCount": null,
           "title": "倪爽的阅读分享 – 2023年7月23日",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/07/oppenheimer-still1-62df17ed1c2fb-1.webp"
+          "imageUrl": null
         },
         {
           "id": "https://nishuang.net/?p=29552",
@@ -2740,9 +2970,9 @@
           "description": "Yes, Showrunner AI is terrible – but it could be the fu …\n  倪爽的阅读分享 – 2023年7月22日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b47%e6%9c%8822%e6%97%a5/",
           "publishedOn": "2023-07-23T00:36:34.000Z",
-          "wordCount": 538,
+          "wordCount": null,
           "title": "倪爽的阅读分享 – 2023年7月22日",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/07/GettyImages-1219527349-e1688570427599.webp"
+          "imageUrl": null
         },
         {
           "id": "https://nishuang.net/?p=29527",
@@ -2750,9 +2980,9 @@
           "description": "Who killed Google Reader? 谁杀死了Google Reader？ 谷歌阅读器是一个于2 …\n  倪爽的阅读分享 – 2023年7月21日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b47%e6%9c%8821%e6%97%a5/",
           "publishedOn": "2023-07-23T00:24:33.000Z",
-          "wordCount": 588,
+          "wordCount": null,
           "title": "倪爽的阅读分享 – 2023年7月21日",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/07/2365.webp"
+          "imageUrl": null
         },
         {
           "id": "https://nishuang.net/?p=29455",
@@ -2760,9 +2990,9 @@
           "description": "解决了什么问题 分享优质内容和获取优质内容，总是难题。 我是经验丰富的设计顾问和充满好奇心的设计师，按照“分享 …\n  学习 | AI 时代的阅读分享 查看全文 »",
           "link": "https://nishuang.net/ai%e6%97%b6%e4%bb%a3%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab/",
           "publishedOn": "2023-07-20T15:45:09.000Z",
-          "wordCount": 438,
+          "wordCount": null,
           "title": "学习 | AI 时代的阅读分享",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/07/spheres.jpg"
+          "imageUrl": null
         }
       ]
     },
