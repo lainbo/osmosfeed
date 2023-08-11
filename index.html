@@ -1799,7 +1799,7 @@ Code to Image 免费工具，帮您把代码段轻松转换为各种风格的图
 4）后端通过解析 remark 里的订单/用户信息，将用户标记为付费状态
 这个方案的缺点是只支持支付宝和微信支付，且平台收取 6% 的服务费。之前还看到一个更自助的模式，用户直接向自己的支付宝/微信/银行账号付款，在付费完成后，手动/自动给用户邮箱发送 token，相比爱发电方案，需要去对接上面提到的第三步，略微复杂一点。
 不知道大家还用过哪些更轻便的玩法？😄</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4249,6 +4249,63 @@ export default {
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7264391149430390843"
+                        open
+                      >
+                        <summary class="article-expander__title">在你的 VSCode 里深夜放烟火</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7264391149430390843">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>我从没有见过极光出现的村落
+也没有见过有人 在深夜放烟火
+见过有人在 vscode 里深夜放烟火么？
+今天我们就一起来放一下：
+
+首先，vscode 是基于 electron 实现的，也就是界面都是网页写的。
+而且它有一个 decoration 的 api，可以给 editor 的文本加样式：
+
+参数有 before、after 也就是前后加一个伪元素，还有 border、backgound 等样式。
+是不是就和写 css 一样？
+因为它本来就是 css。
+基于这个 api，我们就可以给某段文本加一段样式。
+这就是 vscode 里放烟花的原理。
+下面我们来写一下：
+全局安装 vscode 插件脚手架：
+npm install -g yo generator-code
+
+然后创建 vscode 插件项目：
+yo code
+
+
+
+点击调试，会出现新的 vscode 窗口，然后输入 hello world 命令，右下角有 hello world 弹窗：
+
+这就说明插件跑成功了。
+然后我们开始写具体的逻辑：
+在 src/extension.ts 里注册 fireworks 命令：
+import * as vscode from &#x27;vscode&#x27;;
+
+export function activate(context: vscode.ExtensionContext) {
+
+const fireworksCommand &#x3D; vscode.commands.registerCommand(&#x27;fireworks&#x27;, () &#x3D;&gt; {
+vscode.window.showInformationMessage(&#x27;光光光&#x27;);
+});
+
+context.subscriptions.push(fireworksCommand);
+}
+
+export function deactivate() {}…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7264201112873730085"
                         open
                       >
@@ -6179,54 +6236,6 @@ const list &#x3D; reactive([
   {
     …</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;10
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7263315523537928250"
-                        open
-                      >
-                        <summary class="article-expander__title">清朝项目太臭怎么办？TS重构它！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7263315523537928250">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>多图预警，流量党慎入
-图片：均图片在上，描述在下
-全文：6474字 阅读需要约28分钟
-项目背景
-最近公司要求给一个老项目加功能，具体就是把原来免费的服务改成付费的，然后再加一点其他的功能，我之前看到过那个项目的线上，这么一说，顿感不妙。截个图简单感受一下：
-
-农业数字云页面
-
-告警平台页
-
-天气监测页面（navBar直接没了，我天😅）
-
-气象大数据页，好家伙直接空壳页面，也是没有navBar了，好像进入了一个全新的大屏项目。
-报错什么的咱就不说了，光log信息就看的眼花缭乱，点几下给你log十几行出来，你说log就log吧，把名字取好也行，不过各位，看图😅。
-好好好，虽然线上看起来没那么漂亮，可能人家代码写的工整呢？
-那咱接下来看看代码，我草！等会jym，咱先不看代码，光这目录结构就把俺老猪吓一跳：
-
-
-
-
-牛蛙牛蛙，今天算开眼了，根目录下命名个entries，好家伙下面还有components、views、App.vue（这是把另一个项目整个搬过来了是吧😅），根目录下同时拥有：utils、tools、service，好家伙，直接跟俺摆迷魂阵！更离谱的是，view下面还有view，view下的文件夹还有components，组件和页面完全分不清啊！敢问掘友们见过这种史诗级屎目录吗？
-被目录结构震惊之后，先平复一下心情，看一下代码，代码写的还是挺工整的
-做好准备，图来了：
-先拿个vue组件看看：
-
-（那个分页函数是我后来写的）嗯~中规中矩，我还可以接受，毕竟命名什么的还算规范，看个十几分钟就没问题了，继续看个组件
-
-啊~行，配合模板部分还是能看懂的，继续来：
-
-啊？我可以接受两个函数长得差不多，但是功能应该也差不多吧？你这addControl2里面的功能和addControl完全不一样啊！！一个是绑定控制地图时的监听回调，一个是添加地图控件，我承认这两种确实都能称之为…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -9086,8 +9095,8 @@ Passkey 这个方案可以做到，登录不需要密码，解决了上面提到
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5831234683">
-        <time id="build-timestamp" datetime="2023-08-11T09:52:23.502Z">2023-08-11T09:52:23.502Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5832821422">
+        <time id="build-timestamp" datetime="2023-08-11T12:55:23.221Z">2023-08-11T12:55:23.221Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

@@ -64,7 +64,7 @@
           "description": "同样的布局效果，在2017年、2021年和2023年有着不同的实现，代码愈发的简洁高效，一起来看看CSS的发展对Web开发的帮助吧。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/07/css-image-aspect-ratio-layout/",
           "publishedOn": "2023-07-20T14:36:38.000Z",
-          "wordCount": 1200,
+          "wordCount": 1201,
           "title": "CSS高宽不等图片固定比例布局的三重进化",
           "imageUrl": null
         }
@@ -168,7 +168,7 @@
           "description": "看到一个可以简化前后端交互模式的创新设计方案，http-modular，https://github.com/akira-cn/http-modular\n以前我们要实现前后端交互，比较通用的流程是：\n1）开发好后端接口，一个也可能是多个接口\n2）前端封装一个/多个调用后端接口的函数，或者干脆提供 SDK\n3）前端逻辑调用函数/SDK\n新的思路是这样的：由于浏览器支持 ES Module 规范，可以通过 import 远程 URL 地址加载 JavaScript 代码，我们可以使用 http-modular 对服务端逻辑进行封装，从而省略部分 1 以及全部 2 的工作，变成了：\n1）开发好一个后端接口\n2）前端 import HTTP 接口地址后，直接调用函数\n整个交互模式变成了类 RPC 调用，对后端来说，相当于直接把 Service 代码暴露出来使用，避免了 Controller 这一层的编写。\n具体的演示过程可以看这篇实践文章：https://juejin.cn/post/7265625144764334121",
           "link": "https://m.okjike.com/originalPosts/64d5971fba30ac5540cb4cc4",
           "publishedOn": "2023-08-11T02:04:15.000Z",
-          "wordCount": 486,
+          "wordCount": 488,
           "title": "发布了: 看到一个可以简化前后端交互模式的创新设计方案，http-modular，https://github.com/akira-cn/http-modular 以前我们要实现前后端交互，比较通用的流程...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fojl0p_WXmE9e89er851ElJKPOpov3.png?imageMogr2/auto-orient/format/jpeg/thumbnail/300x2000%3E/quality/70/interlace/1"
         },
@@ -198,7 +198,7 @@
           "description": "在一个独立开发者的交流群里，看到有人问，做好了 Chrome 插件，如何实现免费/付费的接入，他不想过于复杂地折腾 OAuth 登录和支付模块，在研究 Chrome 插件排行榜（https://extpose.com/top-grossing）的时候，恰好看到一个有趣的玩法：\n1）在后端实现一个最简单的邮件注册和登录模块，用于记录用户付费状态\n2）使用爱发电（https://afdian.net）的「自选金额」作为支付工具，可以通过 URL 拼接参数的方式实现自定义金额（如图），同时附带 remark 信息\n3）用户支付成功后，利用爱发电提供的 Webhook 将用户的支付成功信息（含 remarks）回调给后端\n4）后端通过解析 remark 里的订单/用户信息，将用户标记为付费状态\n这个方案的缺点是只支持支付宝和微信支付，且平台收取 6% 的服务费。之前还看到一个更自助的模式，用户直接向自己的支付宝/微信/银行账号付款，在付费完成后，手动/自动给用户邮箱发送 token，相比爱发电方案，需要去对接上面提到的第三步，略微复杂一点。\n不知道大家还用过哪些更轻便的玩法？😄",
           "link": "https://m.okjike.com/originalPosts/64d45cf2ba30ac5540ade9b0",
           "publishedOn": "2023-08-10T03:43:46.000Z",
-          "wordCount": 449,
+          "wordCount": 453,
           "title": "发布了: 在一个独立开发者的交流群里，看到有人问，做好了 Chrome 插件，如何实现免费/付费的接入，他不想过于复杂地折腾 OAuth 登录和支付模块，在研究 Chrome ...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fm_onJ2Egn41ZbMI4PIgAqwQ9_2dv3.png?imageMogr2/auto-orient/format/jpeg/thumbnail/300x2000%3E/quality/70/interlace/1"
         },
@@ -2601,6 +2601,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7264391149430390843",
+          "author": "zxg_神说要有光",
+          "description": "我从没有见过极光出现的村落\n也没有见过有人 在深夜放烟火\n见过有人在 vscode 里深夜放烟火么？\n今天我们就一起来放一下：\n\n首先，vscode 是基于 electron 实现的，也就是界面都是网页写的。\n而且它有一个 decoration 的 api，可以给 editor 的文本加样式：\n\n参数有 before、after 也就是前后加一个伪元素，还有 border、backgound 等样式。\n是不是就和写 css 一样？\n因为它本来就是 css。\n基于这个 api，我们就可以给某段文本加一段样式。\n这就是 vscode 里放烟花的原理。\n下面我们来写一下：\n全局安装 vscode 插件脚手架：\nnpm install -g yo generator-code\n\n然后创建 vscode 插件项目：\nyo code\n\n\n\n点击调试，会出现新的 vscode 窗口，然后输入 hello world 命令，右下角有 hello world 弹窗：\n\n这就说明插件跑成功了。\n然后我们开始写具体的逻辑：\n在 src/extension.ts 里注册 fireworks 命令：\nimport * as vscode from 'vscode';\n\nexport function activate(context: vscode.ExtensionContext) {\n\nconst fireworksCommand = vscode.commands.registerCommand('fireworks', () => {\nvscode.window.showInformationMessage('光光光');\n});\n\ncontext.subscriptions.push(fireworksCommand);\n}\n\nexport function deactivate() {}…",
+          "link": "https://juejin.cn/post/7264391149430390843",
+          "publishedOn": "2023-08-07T04:23:09.000Z",
+          "wordCount": 3440,
+          "title": "在你的 VSCode 里深夜放烟火",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7264201112873730085",
           "author": "ssh_晨曦时梦见兮",
           "description": "首发于公众号 前端从进阶到入院，欢迎关注。\nHi，大家好我是 ssh，最近看了一期访谈：第 2 集 | 尤雨溪现场飙歌！新加坡的新生活、如何做决策、成功靠运气吗？如何面对黑粉，和以往对于尤雨溪的访谈都是围绕着 Vue、Vite 等工作展开不同，这期关于尤雨溪的访谈，更多的侧重点放在了生活和一些精神层面的探讨上，也让我们在代码以外，从为人处世、心态、亲子关系、成长历程等方面了解尤雨溪这个人。\n这是一次很轻松的访谈，主持人打趣说，如果 Evan 在访谈中提“Vue”这个词五次以上，就需要再 twitter 小号置顶这个节目一星期 😆\n这次访谈的主题确定为“多维人生中的平衡”。尤雨溪作为编程界的大牛级人物，在技术视野的广阔上已臻于化境，他对产品的判断和把握也已达到炉火纯青的地步。\n但是，如果我们仅仅将尤雨溪定义为一个程序代码的生产机器，那就太片面和肤浅了。\n尤雨溪的兴趣爱好、生活状态、人生哲学等方面，其实也值得我们细细探索，因为它们组成了一个多维的、立体的尤雨溪。\n我们希望通过此次长篇大论的采访，能够更加全面和立体地了解大牛级人物的成长历程、心态状态、价值取向等，从中汲取智慧，并反思在各种理想和现实的拉锯中，如何找到属于自己的平衡点。\n一、少年心性，热爱音乐无疆界\n首先是尤雨溪的兴趣爱好方面。主持人 Randy 透过微博了解到，尤雨溪喜欢在全民 KTV 唱歌，于是好奇地询问他是否热衷音乐，以及喜欢哪些歌手和曲目。\n对此，尤雨溪热情回答，他从小就对音乐情有独钟。在初中阶段，他会听一些 Backstreet Boys 等欧美流行歌曲来提高英语水平。\n后来，通过一个音乐爱好者朋友的介绍，尤雨溪开始涉猎各种类型的音乐，例如摇滚、嘻哈等曲风。\n时至今日，尤雨溪最喜欢的国语男歌手是方大同，尤其是他早期的专辑，如《Wonderland》。主持人 Randy 立刻提出请求，让尤雨溪即兴演唱方大…",
@@ -2668,16 +2678,6 @@
           "publishedOn": "2023-08-04T15:28:31.000Z",
           "wordCount": 3057,
           "title": "面试官 ： vue3中 ref和 reactive的区别 ？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7263315523537928250",
-          "author": "德莱厄斯",
-          "description": "多图预警，流量党慎入\n图片：均图片在上，描述在下\n全文：6474字 阅读需要约28分钟\n项目背景\n最近公司要求给一个老项目加功能，具体就是把原来免费的服务改成付费的，然后再加一点其他的功能，我之前看到过那个项目的线上，这么一说，顿感不妙。截个图简单感受一下：\n\n农业数字云页面\n\n告警平台页\n\n天气监测页面（navBar直接没了，我天😅）\n\n气象大数据页，好家伙直接空壳页面，也是没有navBar了，好像进入了一个全新的大屏项目。\n报错什么的咱就不说了，光log信息就看的眼花缭乱，点几下给你log十几行出来，你说log就log吧，把名字取好也行，不过各位，看图😅。\n好好好，虽然线上看起来没那么漂亮，可能人家代码写的工整呢？\n那咱接下来看看代码，我草！等会jym，咱先不看代码，光这目录结构就把俺老猪吓一跳：\n\n\n\n\n牛蛙牛蛙，今天算开眼了，根目录下命名个entries，好家伙下面还有components、views、App.vue（这是把另一个项目整个搬过来了是吧😅），根目录下同时拥有：utils、tools、service，好家伙，直接跟俺摆迷魂阵！更离谱的是，view下面还有view，view下的文件夹还有components，组件和页面完全分不清啊！敢问掘友们见过这种史诗级屎目录吗？\n被目录结构震惊之后，先平复一下心情，看一下代码，代码写的还是挺工整的\n做好准备，图来了：\n先拿个vue组件看看：\n\n（那个分页函数是我后来写的）嗯~中规中矩，我还可以接受，毕竟命名什么的还算规范，看个十几分钟就没问题了，继续看个组件\n\n啊~行，配合模板部分还是能看懂的，继续来：\n\n啊？我可以接受两个函数长得差不多，但是功能应该也差不多吧？你这addControl2里面的功能和addControl完全不一样啊！！一个是绑定控制地图时的监听回调，一个是添加地图控件，我承认这两种确实都能称之为…",
-          "link": "https://juejin.cn/post/7263315523537928250",
-          "publishedOn": "2023-08-04T07:32:31.000Z",
-          "wordCount": 1392,
-          "title": "清朝项目太臭怎么办？TS重构它！",
           "imageUrl": null
         },
         {
@@ -2843,7 +2843,7 @@
           "description": "[7073670907851440160#新人报道#] 有没有好用的云笔记",
           "link": "https://juejin.cn/pin/7262207330087141435",
           "publishedOn": "2023-08-01T08:09:50.000Z",
-          "wordCount": 464,
+          "wordCount": 456,
           "title": "[7073670907851440160#新人报道#] 有没有好用的云笔记",
           "imageUrl": null
         },
