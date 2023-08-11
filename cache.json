@@ -34,7 +34,7 @@
           "description": "nonce可以用来决定哪些内联JS执行，popover可以无JS实现浮层弹出层交互效果。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/html-attribute-nonce-translate/",
           "publishedOn": "2023-08-10T15:24:42.000Z",
-          "wordCount": 1093,
+          "wordCount": 1107,
           "title": "查漏补缺，我仍未知道的HTML nonce和popover属性",
           "imageUrl": null
         },
@@ -64,7 +64,7 @@
           "description": "同样的布局效果，在2017年、2021年和2023年有着不同的实现，代码愈发的简洁高效，一起来看看CSS的发展对Web开发的帮助吧。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/07/css-image-aspect-ratio-layout/",
           "publishedOn": "2023-07-20T14:36:38.000Z",
-          "wordCount": 1201,
+          "wordCount": 1200,
           "title": "CSS高宽不等图片固定比例布局的三重进化",
           "imageUrl": null
         }
@@ -168,7 +168,7 @@
           "description": "看到一个可以简化前后端交互模式的创新设计方案，http-modular，https://github.com/akira-cn/http-modular\n以前我们要实现前后端交互，比较通用的流程是：\n1）开发好后端接口，一个也可能是多个接口\n2）前端封装一个/多个调用后端接口的函数，或者干脆提供 SDK\n3）前端逻辑调用函数/SDK\n新的思路是这样的：由于浏览器支持 ES Module 规范，可以通过 import 远程 URL 地址加载 JavaScript 代码，我们可以使用 http-modular 对服务端逻辑进行封装，从而省略部分 1 以及全部 2 的工作，变成了：\n1）开发好一个后端接口\n2）前端 import HTTP 接口地址后，直接调用函数\n整个交互模式变成了类 RPC 调用，对后端来说，相当于直接把 Service 代码暴露出来使用，避免了 Controller 这一层的编写。\n具体的演示过程可以看这篇实践文章：https://juejin.cn/post/7265625144764334121",
           "link": "https://m.okjike.com/originalPosts/64d5971fba30ac5540cb4cc4",
           "publishedOn": "2023-08-11T02:04:15.000Z",
-          "wordCount": 488,
+          "wordCount": 486,
           "title": "发布了: 看到一个可以简化前后端交互模式的创新设计方案，http-modular，https://github.com/akira-cn/http-modular 以前我们要实现前后端交互，比较通用的流程...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fojl0p_WXmE9e89er851ElJKPOpov3.png?imageMogr2/auto-orient/format/jpeg/thumbnail/300x2000%3E/quality/70/interlace/1"
         },
@@ -198,7 +198,7 @@
           "description": "在一个独立开发者的交流群里，看到有人问，做好了 Chrome 插件，如何实现免费/付费的接入，他不想过于复杂地折腾 OAuth 登录和支付模块，在研究 Chrome 插件排行榜（https://extpose.com/top-grossing）的时候，恰好看到一个有趣的玩法：\n1）在后端实现一个最简单的邮件注册和登录模块，用于记录用户付费状态\n2）使用爱发电（https://afdian.net）的「自选金额」作为支付工具，可以通过 URL 拼接参数的方式实现自定义金额（如图），同时附带 remark 信息\n3）用户支付成功后，利用爱发电提供的 Webhook 将用户的支付成功信息（含 remarks）回调给后端\n4）后端通过解析 remark 里的订单/用户信息，将用户标记为付费状态\n这个方案的缺点是只支持支付宝和微信支付，且平台收取 6% 的服务费。之前还看到一个更自助的模式，用户直接向自己的支付宝/微信/银行账号付款，在付费完成后，手动/自动给用户邮箱发送 token，相比爱发电方案，需要去对接上面提到的第三步，略微复杂一点。\n不知道大家还用过哪些更轻便的玩法？😄",
           "link": "https://m.okjike.com/originalPosts/64d45cf2ba30ac5540ade9b0",
           "publishedOn": "2023-08-10T03:43:46.000Z",
-          "wordCount": 453,
+          "wordCount": 449,
           "title": "发布了: 在一个独立开发者的交流群里，看到有人问，做好了 Chrome 插件，如何实现免费/付费的接入，他不想过于复杂地折腾 OAuth 登录和支付模块，在研究 Chrome ...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fm_onJ2Egn41ZbMI4PIgAqwQ9_2dv3.png?imageMogr2/auto-orient/format/jpeg/thumbnail/300x2000%3E/quality/70/interlace/1"
         },
@@ -2616,7 +2616,7 @@
           "description": "首发于公众号 前端从进阶到入院，欢迎关注。\nHi，大家好我是 ssh，最近看了一期访谈：第 2 集 | 尤雨溪现场飙歌！新加坡的新生活、如何做决策、成功靠运气吗？如何面对黑粉，和以往对于尤雨溪的访谈都是围绕着 Vue、Vite 等工作展开不同，这期关于尤雨溪的访谈，更多的侧重点放在了生活和一些精神层面的探讨上，也让我们在代码以外，从为人处世、心态、亲子关系、成长历程等方面了解尤雨溪这个人。\n这是一次很轻松的访谈，主持人打趣说，如果 Evan 在访谈中提“Vue”这个词五次以上，就需要再 twitter 小号置顶这个节目一星期 😆\n这次访谈的主题确定为“多维人生中的平衡”。尤雨溪作为编程界的大牛级人物，在技术视野的广阔上已臻于化境，他对产品的判断和把握也已达到炉火纯青的地步。\n但是，如果我们仅仅将尤雨溪定义为一个程序代码的生产机器，那就太片面和肤浅了。\n尤雨溪的兴趣爱好、生活状态、人生哲学等方面，其实也值得我们细细探索，因为它们组成了一个多维的、立体的尤雨溪。\n我们希望通过此次长篇大论的采访，能够更加全面和立体地了解大牛级人物的成长历程、心态状态、价值取向等，从中汲取智慧，并反思在各种理想和现实的拉锯中，如何找到属于自己的平衡点。\n一、少年心性，热爱音乐无疆界\n首先是尤雨溪的兴趣爱好方面。主持人 Randy 透过微博了解到，尤雨溪喜欢在全民 KTV 唱歌，于是好奇地询问他是否热衷音乐，以及喜欢哪些歌手和曲目。\n对此，尤雨溪热情回答，他从小就对音乐情有独钟。在初中阶段，他会听一些 Backstreet Boys 等欧美流行歌曲来提高英语水平。\n后来，通过一个音乐爱好者朋友的介绍，尤雨溪开始涉猎各种类型的音乐，例如摇滚、嘻哈等曲风。\n时至今日，尤雨溪最喜欢的国语男歌手是方大同，尤其是他早期的专辑，如《Wonderland》。主持人 Randy 立刻提出请求，让尤雨溪即兴演唱方大…",
           "link": "https://juejin.cn/post/7264201112873730085",
           "publishedOn": "2023-08-07T01:25:52.000Z",
-          "wordCount": 1525,
+          "wordCount": 895,
           "title": "代码之外的尤雨溪：在新加坡的生活，以及如何面对黑粉",
           "imageUrl": null
         },
