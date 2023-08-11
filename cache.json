@@ -34,7 +34,7 @@
           "description": "nonce可以用来决定哪些内联JS执行，popover可以无JS实现浮层弹出层交互效果。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/html-attribute-nonce-translate/",
           "publishedOn": "2023-08-10T15:24:42.000Z",
-          "wordCount": 1088,
+          "wordCount": 1094,
           "title": "查漏补缺，我仍未知道的HTML nonce和popover属性",
           "imageUrl": null
         },
@@ -64,7 +64,7 @@
           "description": "同样的布局效果，在2017年、2021年和2023年有着不同的实现，代码愈发的简洁高效，一起来看看CSS的发展对Web开发的帮助吧。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/07/css-image-aspect-ratio-layout/",
           "publishedOn": "2023-07-20T14:36:38.000Z",
-          "wordCount": 1199,
+          "wordCount": 1200,
           "title": "CSS高宽不等图片固定比例布局的三重进化",
           "imageUrl": null
         }
@@ -143,6 +143,36 @@
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/64d5ac49795eb418ab318186",
+          "author": null,
+          "description": "上次研究的是以个人身份注册，推友走通了美国公司注册流程，https://twitter.com/lai_jia_wei/status/1689633714358378496，可以对比着看看。\n开通以后，685 刀/年，如果有稳定的产品/服务对外提供，可以考虑注册，如果没有的话，先想一想要做啥吧😄\n另外，有朋友提醒我说，“美国对美国公司全球征税，搞不好某次去加拿大过境就被扣下了，可以选择爱尔兰或其他地区的公司”，申请了公司，一定要注意定期报税的问题。\nBarret李靖发表了动态：关于独立开发者进行海外收款，看了推友们提供的线索，大概捋清楚了逻辑，有些必不可少的东西是绕不过去的：\n\n1. 美国手机号码，可以去淘宝上买个 Paygo，3 刀/月，缺点是国内上网受限，也就收收短信，听听电话，最好打开 WiFi-calling，否则漫游费用还不低；也可以尝试下橙卡，10 刀/月，免翻墙上网\n\n2. 美国私人地址，它是一个可以收信件包裹的真实物理地址，在 Anytime Mailbox 上购买，9 刀/月，按年付便宜点（不知道是否还有其他推荐的平台）；拿到这个地址之前，需要先完成 1583 公证，否则人家不租给你，这个可以在 Fiverr 找中介代办，便宜的 25 刀，完成这个认证的另外一个好处是，可以收取金融相关的信件，例如账单、支票等\n\n3. 美国个人税号 ITIN，美国人自己用的是 SSN，非美国人可以去 IRS 申请 ITIN，有了这个东西就可以去申请美国的银行账户和信用卡了；看到 Fiverr 上报价 36 刀还包含上面提到的 1583 公证，算良心价么？\n\n4. 美国独立上网 IP，没有稳定的 IP 逃不过很多金融服务的风控系统，甚至连网页都无法打开\n\n另外，ITIN 需要至少三年内报税一次，否则会被作废。把 1583 公证和 ITIN 搞完，再加上办理好美国的银行账户，以及其他七七八八的学习和沟通，至少需要 2~3 个月时间，周期还是挺长的。\n\n这篇文章介绍得较为详细，看起来也还比较靠谱，可以参考参考：https://itangtalk.com/digital-migration/\n\n以上是个人玩法，看推友留言，似乎直接注册公司会简单一些，很多中介服务会打包解决各项耗时问题，等我再去研究研究，对比下哪个更省心。",
+          "link": "https://m.okjike.com/originalPosts/64d5ac49795eb418ab318186",
+          "publishedOn": "2023-08-11T03:34:33.000Z",
+          "wordCount": 485,
+          "title": "发布了: 上次研究的是以个人身份注册，推友走通了美国公司注册流程，https://twitter.com/lai_jia_wei/status/1689633714358378496，可以对比着看看。 开通以后...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+        },
+        {
+          "id": "https://m.okjike.com/originalPosts/64d5971fba30ac5540cb4cc4",
+          "author": null,
+          "description": "看到一个可以简化前后端交互模式的创新设计方案，http-modular，https://github.com/akira-cn/http-modular\n以前我们要实现前后端交互，比较通用的流程是：\n1）开发好后端接口，一个也可能是多个接口\n2）前端封装一个/多个调用后端接口的函数，或者干脆提供 SDK\n3）前端逻辑调用函数/SDK\n新的思路是这样的：由于浏览器支持 ES Module 规范，可以通过 import 远程 URL 地址加载 JavaScript 代码，我们可以使用 http-modular 对服务端逻辑进行封装，从而省略部分 1 以及全部 2 的工作，变成了：\n1）开发好一个后端接口\n2）前端 import HTTP 接口地址后，直接调用函数\n整个交互模式变成了类 RPC 调用，对后端来说，相当于直接把 Service 代码暴露出来使用，避免了 Controller 这一层的编写。\n具体的演示过程可以看这篇实践文章：https://juejin.cn/post/7265625144764334121",
+          "link": "https://m.okjike.com/originalPosts/64d5971fba30ac5540cb4cc4",
+          "publishedOn": "2023-08-11T02:04:15.000Z",
+          "wordCount": 451,
+          "title": "发布了: 看到一个可以简化前后端交互模式的创新设计方案，http-modular，https://github.com/akira-cn/http-modular 以前我们要实现前后端交互，比较通用的流程...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fojl0p_WXmE9e89er851ElJKPOpov3.png?imageMogr2/auto-orient/format/jpeg/thumbnail/300x2000%3E/quality/70/interlace/1"
+        },
+        {
+          "id": "https://m.okjike.com/reposts/64d58db41e74dff792593a0c",
+          "author": null,
+          "description": "聊到为啥做 toC 创业，Vakee 提到了做投资时的一个感受：“ToB 太难了，不死不活的，耗很久”，画面感真的很强😅。RockFlow 是她当前的创业产品，一款专为年轻人打造的休闲投资软件，用 Vakee 的话来说，“你下载软件，Follow Vakee，躺着跟单就行了”，哈哈。\n又一个有趣的灵魂，@Vakee赖蕴琦 👇🏻\n\n转发 @Vakee赖蕴琦: 今天和@Barret李靖 讨论了很多有意思的问题，非常棒，不是每个群体都像工程师这么有探索精神的，更不是每个工程师都像Barret这么有好奇心和思考力的🐒",
+          "link": "https://m.okjike.com/reposts/64d58db41e74dff792593a0c",
+          "publishedOn": "2023-08-11T01:24:04.000Z",
+          "wordCount": 405,
+          "title": "转发了: 聊到为啥做 toC 创业，Vakee 提到了做投资时的一个感受：“ToB 太难了，不死不活的，耗很久”，画面感真的很强😅。RockFlow 是她当前的创业产品，一款...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/64d5839fba30ac5540c90d4e",
           "author": null,
           "description": "看来不整个 Stripe 还玩不转",
@@ -158,7 +188,7 @@
           "description": "在一个独立开发者的交流群里，看到有人问，做好了 Chrome 插件，如何实现免费/付费的接入，他不想过于复杂地折腾 OAuth 登录和支付模块，在研究 Chrome 插件排行榜（https://extpose.com/top-grossing）的时候，恰好看到一个有趣的玩法：\n1）在后端实现一个最简单的邮件注册和登录模块，用于记录用户付费状态\n2）使用爱发电（https://afdian.net）的「自选金额」作为支付工具，可以通过 URL 拼接参数的方式实现自定义金额（如图），同时附带 remark 信息\n3）用户支付成功后，利用爱发电提供的 Webhook 将用户的支付成功信息（含 remarks）回调给后端\n4）后端通过解析 remark 里的订单/用户信息，将用户标记为付费状态\n这个方案的缺点是只支持支付宝和微信支付，且平台收取 6% 的服务费。之前还看到一个更自助的模式，用户直接向自己的支付宝/微信/银行账号付款，在付费完成后，手动/自动给用户邮箱发送 token，相比爱发电方案，需要去对接上面提到的第三步，略微复杂一点。\n不知道大家还用过哪些更轻便的玩法？😄",
           "link": "https://m.okjike.com/originalPosts/64d45cf2ba30ac5540ade9b0",
           "publishedOn": "2023-08-10T03:43:46.000Z",
-          "wordCount": 459,
+          "wordCount": 449,
           "title": "发布了: 在一个独立开发者的交流群里，看到有人问，做好了 Chrome 插件，如何实现免费/付费的接入，他不想过于复杂地折腾 OAuth 登录和支付模块，在研究 Chrome ...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fm_onJ2Egn41ZbMI4PIgAqwQ9_2dv3.png?imageMogr2/auto-orient/format/jpeg/thumbnail/300x2000%3E/quality/70/interlace/1"
         },
@@ -211,36 +241,6 @@
           "wordCount": 424,
           "title": "发布了: 在申请海外银行账户的时候，看到有推友推荐了爱沙尼亚的「数字居民」，研究了下，感觉还是挺有意思的。 爱沙尼亚是欧洲的一个小国家，也是全球第一个落...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/64d0f85862e51d2dc70af320",
-          "author": null,
-          "description": "“我们都焦虑，谁不焦虑呢，我还想回到三十五岁之前，那个时候多好，对酒当歌。”\n斯威格说，让我们泰然若属，与自己的时代狭路相逢，与自己当下的时刻狭路相逢，做好人生中每一个节点该做的事情，我们有太多要做的事情，但是我们做的事情太少了。",
-          "link": "https://m.okjike.com/originalPosts/64d0f85862e51d2dc70af320",
-          "publishedOn": "2023-08-07T13:57:44.000Z",
-          "wordCount": 413,
-          "title": "发布了: “我们都焦虑，谁不焦虑呢，我还想回到三十五岁之前，那个时候多好，对酒当歌。” 斯威格说，让我们泰然若属，与自己的时代狭路相逢，与自己当下的时刻...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/64d07d89d8f8e55bd91c55d4",
-          "author": null,
-          "description": "在 M1 机器上装 Linux 系统跑业务构建，思路清奇，但效果极佳。\n有看到一篇 M1 芯片的性能测试数据，https://jysperm.me/2021/01/macbook-air-apple-silicon/#%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95，作者得出的一个结论是：对于 Node.js 依赖安装、前端项目构建、Swift 代码编译这些 CPU 密集且内存访问频繁、其中一些步骤依赖单核性能的场景，M1 有着非常明显的提升，即使使用 Rosetta 2 转译也要显著好于 i5。\n在两年前，我们自己也做了类似的实验，得出的结论是基本一致的，而且买了一批机器，将 Mac 系统换成了 Linux，然后接入到集群进行调度，从数据上看，构建时间整体下降了 30%~60%，在高频协同尤其是 CI 任务繁重的项目中，这种投入的收益还是蛮高的。",
-          "link": "https://m.okjike.com/originalPosts/64d07d89d8f8e55bd91c55d4",
-          "publishedOn": "2023-08-07T05:13:45.000Z",
-          "wordCount": 444,
-          "title": "发布了: 在 M1 机器上装 Linux 系统跑业务构建，思路清奇，但效果极佳。 有看到一篇 M1 芯片的性能测试数据，https://jysperm.me/2021/01/macbook-air-apple-sil...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fntr5n8EDqHtMmRLeA5QZszzSGYVv3.png?imageMogr2/auto-orient/format/jpeg/thumbnail/300x2000%3E/quality/70/interlace/1"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/64cd0fda6b666fcb5af6d6f7",
-          "author": null,
-          "description": "Chrome 浏览器早在 83 版本就原生支持了人脸识别和 OCR 文字识别，试用了一下，还是比较靠谱的，FaceDetector API 可以将人脸矩形轮廓（含眼睛、鼻子、嘴巴矩形轮廓）描述出来，TextDetector 可以将文字轮廓给识别出来。相关草案：https://wicg.github.io/shape-detection-api/\n不过直到今天还处于 experimental feature，需要打开 Chrome 的 enable-experimental-web-platform-features flag 才支持。不清楚为啥没有完全开放，估计跟不同环境的浏览器性能存在一定的关系，例如某些低版本的手机上跑不动这个 API。",
-          "link": "https://m.okjike.com/originalPosts/64cd0fda6b666fcb5af6d6f7",
-          "publishedOn": "2023-08-04T14:48:58.000Z",
-          "wordCount": 431,
-          "title": "发布了: Chrome 浏览器早在 83 版本就原生支持了人脸识别和 OCR 文字识别，试用了一下，还是比较靠谱的，FaceDetector API 可以将人脸矩形轮廓（含眼睛、鼻子、...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fq2Lcvlyv773aMgPSpLLnN8pcT81v3.png?imageMogr2/auto-orient/format/jpeg/thumbnail/300x2000%3E/quality/70/interlace/1"
         }
       ]
     },
@@ -456,6 +456,216 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374638.html",
+          "author": "国家预警信息发布中心",
+          "description": "荣昌区气象台2023年8月11日11时27分发布“高温橙色预警信号”，预计8月11日13时至19时，我区全部镇街日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374638.html",
+          "publishedOn": "2023-08-11T03:45:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市荣昌区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374575.html",
+          "author": "国家预警信息发布中心",
+          "description": "铜梁区气象台2023年8月11日10时40分发布“高温橙色预警信号”，预计11日12时至19时，蒲吕街道、巴川街道、东城街道、旧县街道、水口镇、白羊镇、二坪镇、华兴镇、安溪镇、大庙镇、虎峰镇、福果镇、石鱼镇、庆隆镇、侣俸镇、平滩镇、太平镇、少云镇、安居镇、维新镇、高楼镇等海拔400米以下地区日最高气温将升至37℃以上，请以上各地注意防范。防御指南：1.注意防中暑、防溺水；2.注意林区、景区、城镇、古镇古街、农事活动、祭祀等火灾防范；3.注意节约用电、用水和安全生产；4.缩短户外活动和露天作业时间；5.相关部门和乡镇街道按照职责，做好高温防范应对工作。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374575.html",
+          "publishedOn": "2023-08-11T03:15:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市铜梁区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374576.html",
+          "author": "国家预警信息发布中心",
+          "description": "万州区气象台2023年8月11日10时50分发布“高温橙色预警信号”，预计11日12时至20时，我区太龙镇、黄柏乡、长岭镇、高笋塘街道、新田镇、郭村镇、李河镇、高梁镇、大周镇、熊家镇、陈家坝街道、小周镇、龙都街道、周家坝街道、高峰街道、弹子镇、沙河街道、长滩镇、钟鼓楼街道、余家镇、武陵镇、天城街道、五桥街道、百安坝街道、太白街道、九池街道、牌楼街道、双河口街道、响水镇、甘宁镇、白羊镇等镇乡街道海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。注意防中暑、防溺水；注意林区、景区、城镇、古镇古街、农事活动、祭祀等火灾防范；注意节约用电、用水和安全生产；缩短户外活动和露天作业时间；相关部门和镇街按照职责，做好高温防范应对工作。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374576.html",
+          "publishedOn": "2023-08-11T03:15:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市万州区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374562.html",
+          "author": "国家预警信息发布中心",
+          "description": "奉节县气象台2023年8月11日10时50分发布“高温橙色预警信号”，预计11日13时至19时，红土乡、青莲镇、公平镇、石岗乡、康乐镇、汾河镇、白帝镇、草堂镇、夔门街道、鱼复街道、永安街道、夔州街道、朱衣镇、康坪乡、安坪镇、永乐镇、鹤峰乡、甲高镇、羊市镇、大树镇海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374562.html",
+          "publishedOn": "2023-08-11T03:10:06.000Z",
+          "wordCount": 523,
+          "title": "重庆市奉节县发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374559.html",
+          "author": "国家预警信息发布中心",
+          "description": "云阳县气象台2023年8月11日11时发布“高温橙色预警信号”，预计11日13时至18时，全县海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374559.html",
+          "publishedOn": "2023-08-11T03:10:05.000Z",
+          "wordCount": 523,
+          "title": "重庆市云阳县发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374556.html",
+          "author": "国家预警信息发布中心",
+          "description": "綦江区气象台2023年8月11日10时50分发布“高温橙色预警信号”，预计11日12时至18时，永新镇、篆塘镇、安稳镇、石角镇、永城镇、三角镇、古南街道、通惠街道、文龙街道、三江街道日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374556.html",
+          "publishedOn": "2023-08-11T03:10:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市綦江区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374546.html",
+          "author": "国家预警信息发布中心",
+          "description": "永川区气象台2023年8月11日10时50分发布“高温橙色预警信号”，预计11日14时至17时，茶山竹海街道、陈食街道、临江镇、板桥镇、中山路街道、大安街道、金龙镇、南大街街道、宝峰镇、青峰镇、双石镇、胜利路街道、三教镇、红炉镇、永荣镇、松溉镇、朱沱镇、仙龙镇、五间镇、吉安镇、何埂镇、来苏镇、卫星湖街道海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374546.html",
+          "publishedOn": "2023-08-11T03:05:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市永川区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374543.html",
+          "author": "国家预警信息发布中心",
+          "description": "北碚区气象台2023年8月11日10时50分发布“高温橙色预警信号”，预计11日12时至19时，天府镇、朝阳街道、澄江镇、东阳街道、三圣镇、柳荫镇、金刀峡镇、静观镇、施家梁镇、龙凤桥街道、歇马街道、蔡家岗街道、童家溪镇、复兴街道、天生街道、水土街道、北温泉街道海拔400米以下地区日最高气温将升至37℃以上，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374543.html",
+          "publishedOn": "2023-08-11T03:05:03.000Z",
+          "wordCount": 523,
+          "title": "重庆市北碚区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374535.html",
+          "author": "国家预警信息发布中心",
+          "description": "渝北区气象台2023年8月11日10时40分发布“高温橙色预警信号”，预计11日12时至19时，石船镇、大盛镇、洛碛镇、龙兴镇、统景镇、大湾镇、双龙湖街道、茨竹镇、木耳镇、古路镇、仙桃街道、双凤桥街道、王家街道、兴隆镇、龙塔街道、龙溪街道、龙山街道、玉峰山镇、宝圣湖街道、两路街道、悦来街道、回兴街道海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374535.html",
+          "publishedOn": "2023-08-11T03:00:06.000Z",
+          "wordCount": 523,
+          "title": "重庆市渝北区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374507.html",
+          "author": "国家预警信息发布中心",
+          "description": "垫江县气象台2023年8月11日10时30分发布“高温橙色预警信号”，预计11日12时至20时，我县桂溪街道、桂阳街道、新民镇、曹回镇、沙坪镇、周嘉镇、裴兴镇、五洞镇、白家镇、太平镇、永安镇、高安镇、杠家镇等乡镇（街道）日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374507.html",
+          "publishedOn": "2023-08-11T02:55:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市垫江县发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374506.html",
+          "author": "国家预警信息发布中心",
+          "description": "涪陵区气象台2023年8月11日9时50分发布“高温橙色预警信号”，预计8月11日10时至13日20时，石沱镇、增福镇、新妙镇、大顺镇、龙潭镇、青羊镇、同乐镇、马武镇、蔺市街道、义和街道、李渡街道、马鞍街道、龙桥街道、荔枝街道、江北街道、百胜镇、江东街道、白涛街道、焦石镇、罗云镇、清溪镇、南沱镇、珍溪镇、崇义街道、敦仁街道海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。防御指南：1.注意防中暑、防溺水；2.注意林区、景区、城镇、古镇古街、农事活动、祭祀等火灾防范；3.注意节约用电、用水和安全生产；4.缩短户外活动和露天作业时间；5.相关部门和乡镇街道按照职责，做好高温防范应对工作。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374506.html",
+          "publishedOn": "2023-08-11T02:55:03.000Z",
+          "wordCount": 523,
+          "title": "重庆市涪陵区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374480.html",
+          "author": "国家预警信息发布中心",
+          "description": "璧山区气象台2023年8月11日10时30分发布“高温橙色预警信号”，预计11日13时至19时，青杠街道、大兴镇、正兴镇、来凤街道、丁家街道、广普镇、健龙镇、三合镇、八塘镇、七塘镇、河边镇、福禄镇、大路街道日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374480.html",
+          "publishedOn": "2023-08-11T02:45:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市璧山区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374479.html",
+          "author": "国家预警信息发布中心",
+          "description": "江津区气象台2023年8月11日10时20分发布“高温橙色预警信号”，预计11日13时至19时，贾嗣镇、支坪镇、杜市镇、鼎山街道、珞璜镇、夏坝镇、广兴镇、西湖镇、嘉平镇、中山镇、石门镇、油溪镇、龙华镇、几江街道、圣泉街道、先锋镇、吴滩镇、德感街道、双福街道、蔡家镇、永兴镇、塘河镇、慈云镇、朱杨镇、石蟆镇、白沙镇、李市镇等镇街海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374479.html",
+          "publishedOn": "2023-08-11T02:45:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市江津区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374444.html",
+          "author": "国家预警信息发布中心",
+          "description": "璧山区气象台2023年8月11日10时15分发布“高温橙色预警信号”，预计10日13时至19时，八塘镇、七塘镇、大路街道、河边镇、璧城街道、福禄镇、大兴镇、璧泉街道、青杠街道、来凤街道、正兴镇、丁家街道、健龙镇、广普镇、三合镇日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374444.html",
+          "publishedOn": "2023-08-11T02:35:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市璧山区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374427.html",
+          "author": "国家预警信息发布中心",
+          "description": "万盛经开区气象台2023年8月11日10时15分发布“高温橙色预警信号”，预计11日13时至19时，万盛街道、东林街道、万东镇、金桥镇、丛林镇、关坝镇、青年镇、南桐镇海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374427.html",
+          "publishedOn": "2023-08-11T02:30:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市万盛经开区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374388.html",
+          "author": "国家预警信息发布中心",
+          "description": "沙坪坝区气象台2023年8月11日10时10分发布“高温橙色预警信号”，预计11日13时至20时，天星桥街道、磁器口街道、沙坪坝街道、小龙坎街道、土湾街道、联芳街道、土主街道、陈家桥街道、回龙坝镇、丰文街道、青木关镇、中梁镇、双碑街道、凤凰镇、覃家岗街道、歌乐山街道、新桥街道、山洞街道、渝碚路街道、石井坡街道、童家桥街道、井口街道海拔400米以下地区日最高气温将升至37℃以上，局地可达40℃。请以上各地做好防火、防中暑、防溺水和安全生产工作，注意节约用水用电。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374388.html",
+          "publishedOn": "2023-08-11T02:20:05.000Z",
+          "wordCount": 523,
+          "title": "重庆市沙坪坝区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374386.html",
+          "author": "国家预警信息发布中心",
+          "description": "合川区气象台2023年8月11日10时10分继续发布“高温橙色预警信号”，预计11日13时至19时，我区全部镇街海拔400米以下地区日最高气温将升至37℃以上，其中渭沱镇、草街街道、云门街道、双槐镇、香龙镇、钱塘镇、小沔镇、南津街街道、合阳城街道部分区域最高气温可达39℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374386.html",
+          "publishedOn": "2023-08-11T02:20:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市合川区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374370.html",
+          "author": "国家预警信息发布中心",
+          "description": "巫溪县气象台2023年8月11日9时40分发布“高温橙色预警信号”，预计11日13时至19时，我县天元乡、土城镇、中梁乡、乌龙乡、鱼鳞乡、下堡镇、长桂乡、天星乡、大河乡、白鹿镇、徐家镇、宁厂镇、双阳乡、兰英乡、城厢镇、宁河街道、柏杨街道、凤凰镇、花台乡、蒲莲镇、田坝镇、红池坝镇、上磺镇、古路镇、峰灵镇等海拔400米以下地区日最高气温将升至37℃以上，其中柏杨街道、宁河街道、凤凰镇、白鹿镇、天星乡日最高气温可达40℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374370.html",
+          "publishedOn": "2023-08-11T02:15:03.000Z",
+          "wordCount": 523,
+          "title": "重庆市巫溪县发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374360.html",
+          "author": "国家预警信息发布中心",
+          "description": "丰都县气象台2023年8月11日9时50分发布“高温橙色预警信号”，预计11日12时至18时，董家镇、许明寺镇、三元镇、仁沙镇、双龙镇、青龙乡、保合镇、社坛镇、兴龙镇、虎威镇、名山街道、树人镇、十直镇、龙孔镇、兴义镇、高家镇、双路镇、三合街道、湛普镇、包鸾镇、三建乡、龙河镇、江池镇海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374360.html",
+          "publishedOn": "2023-08-11T02:10:05.000Z",
+          "wordCount": 523,
+          "title": "重庆市丰都县发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374252.html",
+          "author": "国家预警信息发布中心",
+          "description": "巴南区气象台2023年8月11日09时20分发布“高温橙色预警信号”，预计11日11时至19时，我区李家沱街道、花溪街道、莲花街道、鱼洞街道、龙洲湾街道、南泉街道、界石镇、一品街道、惠民街道、南彭街道、二圣镇、木洞镇、双河口镇、麻柳嘴镇、丰盛镇、东温泉镇、姜家镇、天星寺镇、安澜镇、接龙镇、圣灯山镇、石龙镇海拔400米以下地区日最高气温将升至37℃以上，局地可达40℃。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374252.html",
+          "publishedOn": "2023-08-11T01:40:05.000Z",
+          "wordCount": 523,
+          "title": "重庆市巴南区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374237.html",
+          "author": "国家预警信息发布中心",
+          "description": "开州区气象局2023年8月11日09时20分发布“高温橙色预警信号”：预计11日13时至19时，我区五通乡、巫山镇、岳溪镇、南门镇、长沙镇、赵家街道、竹溪镇、临江镇、铁桥镇、南雅镇、义和镇、中和镇、敦好镇、白鹤街道、文峰街道、汉丰街道、镇东街道、云枫街道、正安街道、渠口镇、金峰镇、厚坝镇、丰乐街道、和谦镇、温泉镇、郭家镇海拔400米以下地区最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374237.html",
+          "publishedOn": "2023-08-11T01:35:05.000Z",
+          "wordCount": 523,
+          "title": "重庆市开州区发布高温橙色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/csyj/20230810/t20230810_526373577.html",
           "author": "国家预警信息发布中心",
@@ -2245,116 +2455,6 @@
           "wordCount": 523,
           "title": "重庆市万州区发布雷电黄色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230804/t20230804_526363606.html",
-          "author": "国家预警信息发布中心",
-          "description": "大足区气象台2023年8月4日17时发布“雷电黄色预警信号”：预计未来0-6小时我区龙岗街道、棠香街道、万古镇、铁山镇、中敖镇、高坪镇、石马镇、季家镇、金山镇、宝兴镇、国梁镇、龙石镇、宝顶镇、雍溪镇、三驱镇、高升镇、玉龙镇、古龙镇、拾万镇、回龙镇、邮亭镇、珠溪镇、龙水镇、智凤街道、双路街道、通桥街道、龙滩子街道等镇街将有雷电产生，请注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20230804/t20230804_526363606.html",
-          "publishedOn": "2023-08-04T09:10:04.000Z",
-          "wordCount": 523,
-          "title": "重庆市大足区发布雷电黄色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230804/t20230804_526363564.html",
-          "author": "国家预警信息发布中心",
-          "description": "巴南区气象台2023年8月4日16时20分发布“雷电黄色预警信号”，预计未来6小时，我区南彭街道、惠民街道、南泉街道、界石镇、花溪街道、李家沱街道、龙洲湾街道、莲花街道、鱼洞街道、东温泉镇、二圣镇、丰盛镇、木洞镇、姜家镇、天星寺镇等镇街将出现雷雨天气，请注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20230804/t20230804_526363564.html",
-          "publishedOn": "2023-08-04T08:55:03.000Z",
-          "wordCount": 523,
-          "title": "重庆市巴南区发布雷电黄色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230804/t20230804_526363526.html",
-          "author": "国家预警信息发布中心",
-          "description": "合川区气象台2023年8月4日16时25分发布“雷电黄色预警信号”，预计未来6小时，土场镇、草街街道、官渡镇、清平镇、双凤镇、狮滩镇、小沔镇、大石街道、钱塘镇、盐井街道、渭沱镇、合阳城街道、钓鱼城街道、南津街街道、铜溪镇、云门街道将出现雷雨天气，局地伴有短时强降水、阵性大风等强对流天气，请注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20230804/t20230804_526363526.html",
-          "publishedOn": "2023-08-04T08:35:03.000Z",
-          "wordCount": 523,
-          "title": "重庆市合川区发布雷电黄色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230804/t20230804_526363507.html",
-          "author": "国家预警信息发布中心",
-          "description": "万盛经开区气象台2023年8月4日16时10分发布“雷电黄色预警信号”，预计4日16时至22时，我区万盛街道、东林街道、万东镇、金桥镇、丛林镇、关坝镇、石林镇、青年镇、黑山镇、南桐镇将受雷电活动影响，有出现雷电灾害事故的可能性，请注意预防雷电、大风、短时强降水等强对流天气可能造成的灾害。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20230804/t20230804_526363507.html",
-          "publishedOn": "2023-08-04T08:30:04.000Z",
-          "wordCount": 523,
-          "title": "重庆市万盛经开区发布雷电黄色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230804/t20230804_526363425.html",
-          "author": "国家预警信息发布中心",
-          "description": "江津区气象台2023年8月4日15时40分发布“雷电黄色预警信号”，预计未来6小时，永兴镇、李市镇、嘉平镇、西湖镇、蔡家镇、中山镇、柏林镇、四面山镇等镇街将出现雷雨天气，局地伴有短时强降水、阵性大风等强对流天气，请注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20230804/t20230804_526363425.html",
-          "publishedOn": "2023-08-04T07:55:04.000Z",
-          "wordCount": 523,
-          "title": "重庆市江津区发布雷电黄色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230804/t20230804_526363413.html",
-          "author": "国家预警信息发布中心",
-          "description": "武隆区气象台2023年8月4日15时30分发布“雷电橙色预警信号”，我区凤山街道、芙蓉街道已经出现雷电并将持续；预计未来2小时内黄莺乡、江口镇、羊角街道、白马镇、火炉镇、仙女山街道等乡镇街道将出现雷雨天气，并伴有短时强降水、阵性大风等强对流天气，请注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230804/t20230804_526363413.html",
-          "publishedOn": "2023-08-04T07:50:04.000Z",
-          "wordCount": 523,
-          "title": "重庆市武隆区发布雷电橙色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230804/t20230804_526363333.html",
-          "author": "国家预警信息发布中心",
-          "description": "石柱县气象台2023年8月4日14时40分发布“雷电黄色预警信号”，预计未来6小时内，下路街道、万安街道、南宾街道、三星乡、六塘乡、三河镇、大歇镇、龙沙镇、桥头镇、洗新乡、沙子镇、中益乡、三益乡将出现雷雨天气，局地伴有短时强降水、阵性大风等强对流天气，请注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20230804/t20230804_526363333.html",
-          "publishedOn": "2023-08-04T07:10:04.000Z",
-          "wordCount": 523,
-          "title": "重庆市石柱土家族自治县发布雷电黄色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230804/t20230804_526363208.html",
-          "author": "国家预警信息发布中心",
-          "description": "涪陵区气象台2023年8月4日13时50分发布“雷电黄色预警信号”，预计4日14时至20时，敦仁街道、白涛街道、珍溪镇、焦石镇、清溪镇、南沱镇、罗云镇、江东街道、龙桥街道、石沱镇、马鞍街道、百胜镇、崇义街道、义和街道、江北街道、李渡街道、增福镇、青羊镇、大顺镇、同乐镇、龙潭镇、马武镇、新妙镇、荔枝街道、蔺市街道将出现雷雨天气，局地伴有短时强降水、阵性大风、冰雹等强对流天气，请注意防范。防御指南：1.政府及相关部门按照职责做好防雷工作；2.请注意防范大风可能造成棚舍和广告牌等搭建物的倒塌以及对高空作业、水域作业和航行的影响；3.密切关注天气，尽量避免户外活动。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20230804/t20230804_526363208.html",
-          "publishedOn": "2023-08-04T06:15:06.000Z",
-          "wordCount": 523,
-          "title": "重庆市涪陵区发布雷电黄色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230804/t20230804_526362856.html",
-          "author": "国家预警信息发布中心",
-          "description": "巫山县气象台2023年8月4日10时55分发布“高温橙色预警信号”，预计4日13时至19时，福田镇、龙溪镇、大昌镇、双龙镇、龙门街道、高唐街道、巫峡镇、曲尺乡、大溪乡、官渡镇、抱龙镇、培石乡等海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防暑降温及预防火灾。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230804/t20230804_526362856.html",
-          "publishedOn": "2023-08-04T03:05:04.000Z",
-          "wordCount": 523,
-          "title": "重庆市巫山县发布高温橙色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230804/t20230804_526362709.html",
-          "author": "国家预警信息发布中心",
-          "description": "云阳县气象台2023年8月4日10时继续发布“高温橙色预警信号”，预计8月4日至6日，全县海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防暑降温及预防火灾。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230804/t20230804_526362709.html",
-          "publishedOn": "2023-08-04T02:10:04.000Z",
-          "wordCount": 523,
-          "title": "重庆市云阳县发布高温橙色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230804/t20230804_526362591.html",
-          "author": "国家预警信息发布中心",
-          "description": "奉节县气象台2023年8月4日09时继续发布“高温橙色预警信号”，预计8月4日13时至8月6日18时，朱衣镇、石岗乡、公平镇、红土乡、康乐镇、白帝镇、草堂镇、夔门街道、鱼复街道、永安街道、夔州街道、康坪乡、安坪镇、永乐镇、鹤峰乡、新民镇、五马镇、青龙镇、甲高镇、羊市镇海拔400米以下地区日最高气温将升至37℃以上，请以上各地注意防暑降温及预防火灾。防御指南：1.外出做好防暑防晒；避免高温时段进行户外活动；注意防范溺水。2.缩短户外露天作业时间。3.落实防暑降温保障措施。4.相关部门按照预案，做好高温应对、防火相关工作。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230804/t20230804_526362591.html",
-          "publishedOn": "2023-08-04T01:30:04.000Z",
-          "wordCount": 523,
-          "title": "重庆市奉节县发布高温橙色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -2390,6 +2490,16 @@
       "feedUrl": "https://rsshub.app/juejin/trending/frontend/weekly",
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
+        {
+          "id": "https://juejin.cn/post/7265505732158472249",
+          "author": "北岛贰",
+          "description": "theme: v-green\nhighlight: atom-one-dark\n版权声明：本人文章仅在掘金平台发布，请勿抄袭搬运，转载请注明作者及原文链接 🦉\n阅读提示：网页版带有主题和代码高亮，阅读体验更佳 🍉\n忍无可忍，不吐不快。\n本期不写技术文章，单纯来吐槽下公司项目里的奇葩代码，还都是一些资深老前端写的，希望各位对号入座。\n知道了什么是烂代码，才能写出好代码。\n别说什么代码和人有一个能跑就行的话，玩笑归玩笑。\n人都有菜的时候，写出垃圾代码无可厚非，但是工作几年了还是写垃圾代码，有点说不过去。\n我认为的垃圾代码，不是你写不出深度优先、广度优先的算法，也不是你写不出发布订阅、策略模式的 if else。\n我认为垃圾代码都有一个共性：看了反胃。就是你看了天然的不舒服，看了就头疼的代码，比如排版极丑，没有空格、没有换行、没有缩进。\n优秀的代码就是简洁清晰，不能用策略模式优化 if else 没关系，多几行代码影响不大，你只要清晰，就是好代码。\n有了差代码、好代码的基本标准，那我们也废话不多说，来盘盘这些资深前端的代码，到底差在哪里。\n---------------------------------------------更新------------------------------------------------\n集中回答一下评论区的问题：\n1、项目是原来某大厂的项目，是当时的外包团队写的，整体的代码是还行的。eslint、commitlint 之类的也是有的，只不过这些都是可以禁用的，作用全靠个人自觉。\n2、后来项目被我司收购，原来的人也转为我司员工，去支撑其他项目了。这个项目代码也就换成我们这批新来的维护了。很多代码是三几年前留下的确实没错，谁年轻的时候没写过烂代码，这是可以理解的。只不过同为三年前的代码，为啥有人写的简单清晰，拆分清楚，有的就这么脏乱差呢？…",
+          "link": "https://juejin.cn/post/7265505732158472249",
+          "publishedOn": "2023-08-10T10:18:16.000Z",
+          "wordCount": 1561,
+          "title": "吐槽大会，来瞧瞧资深老前端写的垃圾代码",
+          "imageUrl": null
+        },
         {
           "id": "https://juejin.cn/post/7265121637497733155",
           "author": "孟祥_成都",
@@ -2438,16 +2548,6 @@
           "publishedOn": "2023-08-08T02:54:13.000Z",
           "wordCount": 1493,
           "title": "作为一个前端为什么要学习 Rust ？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7264582065868783668",
-          "author": "ssh_晨曦时梦见兮",
-          "description": "首发于公众号 前端从进阶到入院，欢迎关注。\nHi，大家好我是 ssh，今天和大家分享一篇文章，讲述了 Chrome 团队和 Youtube 共同配合，优化了油管这个世界上并不存在的视频网站的性能。\n首屏速度更快了\n播放器组件大幅度优化\n通过 Core Web Vitals 指标的页面比例更高\n从这篇分享 Building a Better Web - Part 1: A faster YouTube on web中，你能学习到世界上顶尖的团队是如何相互配合，优化世界各地用户的性能体验。\nChrome 团队经常谈到“建设更棒的 Web”，这啥意思呢？Web 体验应该快速、可访问，并在用户最需要的时候具备网络可靠性。\n吃自己的狗食（Eating Your Own Dog Food）是谷歌文化的一部分，所以 Chrome 团队与 YouTube 合作，在“建设更棒的 Web”的新系列中分享了在这个过程中学到的经验教训。这个系列的第一部分将深入探讨 YouTube 如何建立更迅捷的 Web 体验。\n\nYouTube 移动观看页顺利超过Core Web Vitals设立的阈值。\n建设更快的 Web\n对于 YouTube 来说，性能和网页上视频和其他内容(如推荐和评论)的加载速度有关。性能也由 YouTube 响应用户交互(如搜索、播放器控制、点赞和分享)的速度决定。\n巴西、印度和印度尼西亚等发展中市场对 YouTube 移动网页很重要。由于这些地区的许多用户设备和网速都比较拉跨，确保快速流畅的体验就很关键了。\n为了向所有用户提供良好的体验，YouTube 着手通过懒加载和代码现代化来改进Core Web Vitals等性能指标。\n改进 Core Web Vitals\n为了判断需要改进哪些领域，YouTube 团队使用Chrome 用户体验报告(CrUX)来查看移动端实际的用户在视频观…",
-          "link": "https://juejin.cn/post/7264582065868783668",
-          "publishedOn": "2023-08-08T02:31:21.000Z",
-          "wordCount": 1867,
-          "title": "某不存在的视频网站性能拉跨，Chrome 团队出手相助…",
           "imageUrl": null
         },
         {
@@ -2743,7 +2843,7 @@
           "description": "[7073670907851440160#新人报道#] 有没有好用的云笔记",
           "link": "https://juejin.cn/pin/7262207330087141435",
           "publishedOn": "2023-08-01T08:09:50.000Z",
-          "wordCount": 474,
+          "wordCount": 473,
           "title": "[7073670907851440160#新人报道#] 有没有好用的云笔记",
           "imageUrl": null
         },
