@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-08-11T15:52:47.765Z</id>
+    <id>urn:2023-08-11T18:52:49.195Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-08-11T15:52:47.765Z</updated>
+    <updated>2023-08-11T18:52:49.195Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -925,6 +925,33 @@ Code to Image 免费工具，帮您把代码段轻松转换为各种风格的图
         <summary type="html"><![CDATA[武隆区气象台2023年8月9日18时20分发布“大风蓝色预警信号”，目前我区凤山街道等地区已出现7级以上大风，预计未来12小时大风将持续，凤山街道、芙蓉街道、仙女山街道、羊角街道、白马镇风力可达7级，局地阵风可达8级以上，并伴有雷电、短时强降水（20-30mm），请注意防范。]]></summary>
         <author>
             <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[面试官：tree-shaking的原理是什么？]]></title>
+        <id>https://juejin.cn/post/7265125368553685050</id>
+        <link href="https://juejin.cn/post/7265125368553685050"/>
+        <updated>2023-08-09T09:15:31.000Z</updated>
+        <summary type="html"><![CDATA[theme: channing-cyan
+highlight: a11y-light
+前言
+在前端面试的过程中，前端工程化一直是考察面试者能力的一个重点，而在我们常用的项目打包工具中，无论是webpack还是rollup，都具备一项很强大的能力——tree-shaking，所以面试官也常常会问到tree-shaking的原理是什么，这时我们该如何回答呢？其实核心原理就是AST。
+在前端开发中，其实AST的应用有很多，比如我们前端项目的打包工具webpack、代码检查工具Eslint，代码转换工具babel都依赖了AST的语法分析和转换能力。
+AST简单介绍
+AST是Abstract Syntax Tree的缩写，这玩意儿的全称叫抽象语法树，它可以用来描述我们代码的语法结构。
+举个例子：
+// ast.js
+let a = 1;
+function add() {}
+
+我这里创建了一个文件ast.js，可以把整个文件理解为一个File节点，存放程序体，而里面就是我们javascript的语法节点了，我们javascript语法节点的根节点是Program，而我们在里面定了了两个节点，第一个节点是let a = 1，解析为ast是VariableDeclaration，也就是变量声明节点，第二个节点是function add() {}，解析为ast是FunctionDeclaration，也就是函数声明节点。
+这里给大家推荐一个平台：AST Explorer，能很清晰看到JavaScript代码转化为AST后的结果，看下下面这张图就一目了然了：
+
+AST的作用
+那拿到了代码的ast信息我们能做什么呢？
+代码分析与转换。AST可以将我们的代码解析成一棵ast树，我们自然可以将这棵树进行处理和转换，这个最经典的应用莫过于babel了，将我们的高级语法ES6转换为ES5后，然后再把as…]]></summary>
+        <author>
+            <name>han_</name>
         </author>
     </entry>
     <entry>
@@ -3241,56 +3268,6 @@ https://rxdrag.vercel.app
   倪爽的阅读分享 – 2023年8月5日 查看全文 »]]></summary>
         <author>
             <name>Frank</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[面试官 ： vue3中 ref和 reactive的区别 ？]]></title>
-        <id>https://juejin.cn/post/7263411272892825655</id>
-        <link href="https://juejin.cn/post/7263411272892825655"/>
-        <updated>2023-08-04T15:28:31.000Z</updated>
-        <summary type="html"><![CDATA[theme: juejin
-大家好，我是前端小张同学，最近有朋友在面试过程中经常被问到这么一个问题，vue3 中的ref 和 reactive的区别在哪里，为什么 要定义两个API 一个 api不能实现 响应式更新吗？？
-带着这个疑问 ，我们 接下来进行逐一探讨。
-1 : 分析
-1.1 ref and reactive 怎么用 ?
-相信大家都知道在vue3中我们可以通过一些api去定义响应式数据，比如 ref, reactive ,shallowRef.
-ref 基本使用
-<template>
-    <div>
-        <span>{{inner.content.text}}</span>
-         <span>{{count}}</span>
-    </div>
- </template>
-<script setup>
-const inner = ref({
-  content: {
-    text: "内部内容"
-  }
-}); // 你可以通过 ref 定义复杂数据类型
-// or
-const count = ref(20); //  定义普通数据类型
-</script>
-
-reactive 基本使用
-<template>
-  <div>
-    <div>{{wapper.subText}}</div>
-    <div v-for="item in list" :key="item.id">{{item.content}}</div>
-  </div>
-</template>
-<script setup>
-const wapper = reactive({
-  subText: inner
-});
-const list = reactive([
-  {
-    id: 1,
-    content: "render"
-  },
-  {
-    …]]></summary>
-        <author>
-            <name>前端小张同学</name>
         </author>
     </entry>
     <entry>
