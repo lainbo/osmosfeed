@@ -34,7 +34,7 @@
           "description": "nonce可以用来决定哪些内联JS执行，popover可以无JS实现浮层弹出层交互效果。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/html-attribute-nonce-translate/",
           "publishedOn": "2023-08-10T15:24:42.000Z",
-          "wordCount": 1107,
+          "wordCount": 1106,
           "title": "查漏补缺，我仍未知道的HTML nonce和popover属性",
           "imageUrl": null
         },
@@ -64,7 +64,7 @@
           "description": "同样的布局效果，在2017年、2021年和2023年有着不同的实现，代码愈发的简洁高效，一起来看看CSS的发展对Web开发的帮助吧。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/07/css-image-aspect-ratio-layout/",
           "publishedOn": "2023-07-20T14:36:38.000Z",
-          "wordCount": 1199,
+          "wordCount": 1200,
           "title": "CSS高宽不等图片固定比例布局的三重进化",
           "imageUrl": null
         }
@@ -446,6 +446,16 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230812/t20230812_526377099.html",
+          "author": "国家预警信息发布中心",
+          "description": "奉节县气象台2023年8月12日23时24分发布“暴雨黄色预警信号”，预计8月12日23时至13日5时，兴隆镇、云雾土家族乡、青龙镇、太和土家族乡、吐祥镇、羊市镇、五马镇、安坪镇、甲高镇、康坪乡、公平镇、红土乡等街道（乡镇）累计雨量将达50毫米以上，最大小时雨强可达20-30毫米，并伴有雷电等强对流天气；注意防范强降水可能诱发的山体滑坡、泥石流、中小河流洪水、山洪、城乡积涝等次生灾害，以及雷电、大风和冰雹可能造成的不利影响。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20230812/t20230812_526377099.html",
+          "publishedOn": "2023-08-12T15:50:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市奉节县发布暴雨黄色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20230812/t20230812_526376718.html",
           "author": "国家预警信息发布中心",
@@ -2366,7 +2376,7 @@
           "description": "theme: channing-cyan\nhighlight: a11y-light\n前言\n在前端面试的过程中，前端工程化一直是考察面试者能力的一个重点，而在我们常用的项目打包工具中，无论是webpack还是rollup，都具备一项很强大的能力——tree-shaking，所以面试官也常常会问到tree-shaking的原理是什么，这时我们该如何回答呢？其实核心原理就是AST。\n在前端开发中，其实AST的应用有很多，比如我们前端项目的打包工具webpack、代码检查工具Eslint，代码转换工具babel都依赖了AST的语法分析和转换能力。\nAST简单介绍\nAST是Abstract Syntax Tree的缩写，这玩意儿的全称叫抽象语法树，它可以用来描述我们代码的语法结构。\n举个例子：\n// ast.js\nlet a = 1;\nfunction add() {}\n\n我这里创建了一个文件ast.js，可以把整个文件理解为一个File节点，存放程序体，而里面就是我们javascript的语法节点了，我们javascript语法节点的根节点是Program，而我们在里面定了了两个节点，第一个节点是let a = 1，解析为ast是VariableDeclaration，也就是变量声明节点，第二个节点是function add() {}，解析为ast是FunctionDeclaration，也就是函数声明节点。\n这里给大家推荐一个平台：AST Explorer，能很清晰看到JavaScript代码转化为AST后的结果，看下下面这张图就一目了然了：\n\nAST的作用\n那拿到了代码的ast信息我们能做什么呢？\n代码分析与转换。AST可以将我们的代码解析成一棵ast树，我们自然可以将这棵树进行处理和转换，这个最经典的应用莫过于babel了，将我们的高级语法ES6转换为ES5后，然后再把as…",
           "link": "https://juejin.cn/post/7265125368553685050",
           "publishedOn": "2023-08-09T09:15:31.000Z",
-          "wordCount": 3951,
+          "wordCount": null,
           "title": "面试官：tree-shaking的原理是什么？",
           "imageUrl": null
         },
@@ -2386,7 +2396,7 @@
           "description": "theme: smartblue\n就在8月7日开源鸿蒙 OpenHarmony 4.0 Beta2 发布，多平台开发框架 ArkUI-X 首发。\n首先介绍下啥是 ArkUI：\nArkTS 语言 - HarmonyOS应用开发官网\nArkTS 是华为自研的开发语言。它在TypeScript（简称TS）的基础上，匹配 ArkUI 框架，扩展了声明式 UI 、状态管理等相应的能力，让开发者以更简洁、更自然的方式开发跨端应用。\nArkUI-X 进一步将 ArkUI 扩展到了多个 OS 平台：目前支持 OpenHarmony、HarmonyOS、Android、iOS，后续会逐步增加更多平台支持。开发者基于一套主代码，就可以构建支持多平台应用。\n简单来说，ArkTS + ArkUI-X 对标的框架为 flutter，一次代码，编译为 native 全平台运行\n本文内容中会教大家如何用 ArkUI-X 开发一个 Android APP\nIDE 获取\nHUAWEI DevEco Studio\n首先需要下载支持 ArkUI-X 套件的华为开发工具 DevEco ，版本为 4.0 以上，目前可以下载预览版进行体验。下载地址：\nHUAWEI DevEco Studio 4.0 Beta2\n标题\n地址\n\n\n\n\nWindows x64\n下载地址\n\n\nMac（Intel）\n下载地址\n\n\nMac（Arm）\n下载地址\n\n\n\n安装过程很简单，这东西是基于 IDEA 做的，和 Android Studio 体验一致\n\nAndroid Studio\nArkUI-X 可以将 ArkTS 项目编译为一个 Android 项目，使用 Android Studio 可以将其打包为 APK。\nAndroid Studio 安装方法就不赘述了。下载地址：\nDownload Android Studio & App Too…",
           "link": "https://juejin.cn/post/7264996015806545983",
           "publishedOn": "2023-08-09T06:19:12.000Z",
-          "wordCount": 2232,
+          "wordCount": null,
           "title": "华为发布了跨平台开发的ArkUI-X，我不允许你学不会！",
           "imageUrl": null
         },
