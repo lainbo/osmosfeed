@@ -51,11 +51,43 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-13 datetime="2023-08-13T20:45:03.000Z">2023-08-13</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-13 datetime="2023-08-13T20:45:03.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-13 datetime="2023-08-13T23:20:07.000Z">2023-08-13</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-13 datetime="2023-08-13T23:20:07.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >省流</button>
+                  <a class="source-heading__link" href="https://shengliu.substack.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://shengliu.substack.com/p/firefox-android"
+                        open
+                      >
+                        <summary class="article-expander__title">FireFox Android 将完整支持扩展</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://shengliu.substack.com/p/firefox-android">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>省流@23-08-14 🍦 恰饭 🚀 新闻 FireFox Android 将完整支持扩展 microsoft/azurechatgpt: 部署可以从内网访问的 ChatGPT 🔬 科研 韦伯望远镜捕捉到有史以来最遥远的恒星图像，距离地球 280 亿光年 🍹 杂拌 WPS Office 远程代码执行漏洞 W3C 不支持谷歌的 WEI 提案 重型直升机吊装整个信号塔 SpaceX 星舰爆炸发动机测试中的 7 张最佳图像 完全在浏览器本地运行的 PDF 工具 ⚡ 速览 ChatGPT 自定义指令功能向所有用户开放</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -1640,6 +1672,105 @@ Barret李靖发表了动态：关于独立开发者进行海外收款，看了�
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7265692989610180627"
+                        open
+                      >
+                        <summary class="article-expander__title">古茗前端在 web 地图上的踩坑指南</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7265692989610180627">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: smartblue
+highlight: a11y-dark
+
+背景
+古茗是一家茶饮行业的连锁加盟企业，加盟就涉及到开店选址，一家奶茶店能否盈利，点位无疑是很重要的一个因素，如何保证点位的数量、质量，直观分析和感受点位之间的分布合理性、覆盖率、竞争关系，以及如何进行合理规划就成了一个刚性需求场景，而基于高德地图的可视化大盘可以很好的解决这些问题。
+接下来的内容将会从高德地图的使用到一些踩坑经验为小伙伴们分享一些填坑技巧和指南，希望对使用相关技术的小伙伴提供一个参考~
+引入方式
+js引入方式
+ 
+
+  const map &#x3D; new AMap.Map(&#x27;container&#x27;, {
+    center:[117.000923,36.675807], 
+    zoom:11 
+  }); 
+
+
+npm包引入方式
+
+先在项目中安装Loader npm  i  @amap/amap-jsapi-loader --save
+初始化
+import AMapLoader from &#x27;@amap/amap-jsapi-loader&#x27;;
+window._AMapSecurityConfig &#x3D; {
+  securityJsCode:&#x27;「您申请的安全密钥」&#x27;,
+}
+AMapLoader.load({
+  &quot;key&quot;: &quot;&quot;,              // 申请好的Web端开发者Key，首次调用 load 时必填
+  &quot;version&quot;: &quot;2.0&quot;,   // 指定要加载的 JS API 的版本，缺省时默认为 1.4.15
+  &quot;plugins&quot;: []…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;12
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7265625144764334121"
+                        open
+                      >
+                        <summary class="article-expander__title">神奇的 http-modular 魔法，让前端不用封装接口</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7265625144764334121">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>最近突发奇想，研究出了一个神奇的“编程魔法”，我把这个思想封装成了一个 Node.js 库，叫做 http-modular。
+这个想法的核心是，将服务端的 HTTP 接口转换成符合 ESM 规范的 JavaScript 代码，然后将它直接通过浏览器 import 进来，调用其中的函数，得到返回结果。
+有经验的同学应该大致上明白，这个其实类似于传统的 RPC，但是它的区别是，因为浏览器原生支持 ESM import，因此我们根本不用写任何前端侧的桥接代码，节省了前端的工作。
+光说可能你还体会不深，我们通过一个项目来理解。
+通过 http-modular 实现服务端KV存储
+假设我们要在码上掘金写一个应用，但是想将数据存储在数据库，我们可以通过 AirCode 写一个存储接口然后部署上线，再通过前端封装成 storage 的 API。
+过去的流程大概是这样：
+在 AirCode 写接口并调试上线
+在前端封装 Storage API，然后再 Storage API 中通过 fetch 或者 axios 调用服务端接口。
+但是，现在有了 http-modular，我们只需要步骤 1， 不需要步骤 2。
+具体怎么做呢？请看——
+首先我们在 AirCode 上创建一个项目，在项目中创建一个云函数 index.mjs。
+我们在 index.mjs 中添加如下代码：
+const table &#x3D; aircode.db.table(&#x27;storage&#x27;);
+
+async function setItem(key, value) {
+  return await table.where({key}).set({value}).upsert(true).save();
+}
+
+async function getItem(key) {
+  const res &#x3D; await table.where({…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >竹白 - TOP20</button>
                   <a class="source-heading__link" href="https://analy.zhubai.wiki">Open</a>
                 </h3>
@@ -1685,59 +1816,6 @@ Barret李靖发表了动态：关于独立开发者进行海外收款，看了�
   在 19 年到 20 年上半年，我看完了《自律的人生不孤独》、《当你的才华还撑不起你的梦想时》、《别在吃苦的年纪选择安逸》、《我不过低配的人生》等等此类书籍，没错，就是普遍所认为的 “鸡汤文”、“成功学” 类书籍。这些书籍只能起作用于一时，很难给我提供持续的动力，所以也就需要一直看一直打鸡血。在这个阶段中呢，主要还是为了逃避现实，没有勇气直面孤独、挫折、焦虑、虚无。要么想着摆脱，要么想着把它转变成一种动力，其实不过都是自我安慰罢了，它们最多是把我的空闲时间填满，让我觉得不在虚度光阴。  
     
   在 20 年上半年到 22 年上半年，这两年的时间里，我阅读了大量的技术类书籍，是我最为自信的阶段，我看完了市面上几乎所有的 Android 类书籍，也包括很多 Java、JVM、设计模式、计算机网络相关的书籍，我会把这些理论知识背的滚瓜烂熟，以至于现在面试我都丝毫不慌于这些。这个阶段说好听点呢是事业心爆棚的时候，说的难听点呢就是功利性阅读最强的阶段。我就像巴甫洛夫的狗一样，刺激着我想从书籍中索取一切，我会把知识推崇至无以复加的地步，认为只要我知道的够多，就会得到我想要的一切。由此也催生了我傲慢的读书情节，我不屑于看小说、散文等文学类作品，我认为它们对我…</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7265625144764334121"
-                        open
-                      >
-                        <summary class="article-expander__title">神奇的 http-modular 魔法，让前端不用封装接口</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7265625144764334121">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>最近突发奇想，研究出了一个神奇的“编程魔法”，我把这个思想封装成了一个 Node.js 库，叫做 http-modular。
-这个想法的核心是，将服务端的 HTTP 接口转换成符合 ESM 规范的 JavaScript 代码，然后将它直接通过浏览器 import 进来，调用其中的函数，得到返回结果。
-有经验的同学应该大致上明白，这个其实类似于传统的 RPC，但是它的区别是，因为浏览器原生支持 ESM import，因此我们根本不用写任何前端侧的桥接代码，节省了前端的工作。
-光说可能你还体会不深，我们通过一个项目来理解。
-通过 http-modular 实现服务端KV存储
-假设我们要在码上掘金写一个应用，但是想将数据存储在数据库，我们可以通过 AirCode 写一个存储接口然后部署上线，再通过前端封装成 storage 的 API。
-过去的流程大概是这样：
-在 AirCode 写接口并调试上线
-在前端封装 Storage API，然后再 Storage API 中通过 fetch 或者 axios 调用服务端接口。
-但是，现在有了 http-modular，我们只需要步骤 1， 不需要步骤 2。
-具体怎么做呢？请看——
-首先我们在 AirCode 上创建一个项目，在项目中创建一个云函数 index.mjs。
-我们在 index.mjs 中添加如下代码：
-const table &#x3D; aircode.db.table(&#x27;storage&#x27;);
-
-async function setItem(key, value) {
-  return await table.where({key}).set({value}).upsert(true).save();
-}
-
-async function getItem(key) {
-  const res &#x3D; await table.where({…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3851,6 +3929,49 @@ Code to Image 免费工具，帮您把代码段轻松转换为各种风格的图
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7265156603066335266"
+                        open
+                      >
+                        <summary class="article-expander__title">23年秋季来临，macbook pro 怎么买最划算</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7265156603066335266">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言
+我发现前端程序员和设计师，用 mac 笔记本办公的居多，以我们团队为例，10个前端有9个都是 macbook pro，特别是最近，身边两位同事更新了自己的装备，分别是：
+2021  macbook pro (M1 pro 14寸) 9000+（入手） / 14999（原价）
+2023  macbook pro (M1 pro 14寸) 13000+（入手） / 15999（原价）
+刚好今天群里有人问，怎么选购笔记本, 所以这里简单分享下，mac 笔记本该怎么选？怎么买更划算？
+
+选型号
+除非你是学生或者轻量使用，否则一律不建议选择 macbook air，无风扇、8g内存，是硬伤；因为实际工作的时候，启用的项目一多，内存根本不够用，于是你会发现虚拟内存占用巨高，硬盘疯狂 swap ，系统变得卡顿，还对硬盘寿命有影响。
+
+所以我推荐 macbook pro 14 / 16，起步 16 + 512g 的配置，对于大多数程序员是够用的，14的尺寸完美符合我心中的黄金尺寸，性能强大而又携带便捷；
+特别是现在 m2 pro 芯片出来后，21年的 m1 pro 系列降价很多，目前综合起来看，我推荐两款电脑：
+2021  macbook pro (M1 pro 14寸) 9000+（可入手） / 14999（原价）
+2023  macbook pro (M1 pro 14寸) 13000+（可入手） / 15999（原价）
+怎么买
+2021  macbook pro (M1 pro 14寸) ，同事前一段在拼多多百亿补贴，9000+ 拿下并且安全下车，如果有活动这个价格还是很香的，不过非百亿补贴的不建议，可能买到翻新机。
+2023  macbook pro (M1 pro 14寸) 的话，建议从官方渠道入手，比如官网、Apple Store 线下店，目前走教育优惠的话，折合下来可以 14000 出头的价格拿到，如果不是学生，可以这样操作：
+小红书发｜找帖，组一个大学生教育优惠搭子，用她的名额，你出电脑的钱，她出耳机的钱，比如官方送 1000 耳机款， 然后耳机你选的 airports 3代，自己补了 350，然后 1050 出给搭子，相当于电脑又省下 700，电脑在教育优惠价格的基础上再减 700，差不多 14000 左右。
+
+然后看了下京东自营也可以教育优惠，14199 拿下还送 耳机（能卖 650），更划算，就是需要教育认证下。
+最后还是我们的百亿补贴拼多多，13248 能拿到 ！！！
+总结
+买新电脑是很爽，不过物尽其用才更爽哦，拿到电脑先把环境配置起来吧～
+2022 我用 MacBook Pro 整一年 【感想 与 踩坑指南】
+建了个技术讨论群，欢迎加入 wx: 1032151090；
+文章更新平台：掘金、知乎、Github、公号【编码美学】。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -6574,91 +6695,6 @@ Hi，大家好我是 ssh，最近看了一期访谈：第 2 集 | 尤雨溪现�
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7264208575973621815"
-                        open
-                      >
-                        <summary class="article-expander__title">后端问为什么前端数值精度会丢失？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7264208575973621815">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: smartblue
-前言
-欢迎关注同名公众号《熊的猫》，文章会同步更新，也可快速加入前端交流群！
-相信各位前端小伙伴在日常工作中不免会涉及到使用 JavaScript 处理 数值 相关的操作，例如 数值计算、保留指定小数位、接口返回数值过大 等等，这些操作都有可能导致原本正常的数值在 JavaScript 中确表现得异常（即 精度丢失），这也是被很多开发者诟病的一点（你该不会还没踩过坑吧！），当然包括很多 后端开发者（不止一次的被问到这个问题）。
-
-本文主要包含 精度丢失场景、精度丢失原因、解决方案 等方面的内容，文中若有不正确的地方欢迎在评论区分享你的见解。
-精度丢失场景
-浮点数的计算
-数值计算在前端的应用还不算少，但涉及 浮点数 参与计算时可能会出现精度丢失，如下：
-加（ + ）
-正常计算：0.1 + 0.2 &#x3D; 0.3
-JavaScript 计算：0.1 + 0.2 &#x3D; 0.30000000000000004
-减（ - ）
-正常计算：1 - 0.9 &#x3D; 0.1
-JavaScript 计算：1 - 0.9 &#x3D; 0.09999999999999998
-乘（ * ）
-正常计算：0.0532 * 100 &#x3D; 5.32
-JavaScript 计算：0.0532 * 100 &#x3D; 5.319999999999999
-除（ / ）
-正常计算：0.3 / 6 &#x3D; 0.05
-JavaScript 计算：0.3 / 6 &#x3D; 0.049999999999999996
-超过最值
-所谓 超过最值（最大、最小值） 指的是超过了 Number.MIN_SAFE_INTEGER（- 9007199254740991），即 +（2^53 – 1） 或 Number.MAX_SAFE_INTEGER（+ 9007199254740991），即 -（2^53 – 1） 范围的值，项目中最常见的…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;14
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7264208575973605431"
-                        open
-                      >
-                        <summary class="article-expander__title">隔壁同事：卧槽？你对 useEffect 的理解怎么这么牛逼😡😡😡</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7264208575973605431">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: cyanosis
-highlight: atom-one-dark
-React 在构建用户界面整体遵循函数式的编程理念,即固定的输入有固定的输出,尤其是在推出函数式组件之后，更加强化了组件纯函数的理念。但实际业务中编写的组件不免要产生请求数据、订阅事件、手动操作 DOM 这些副作用 effect，这样难免让函数组件变得不那么纯,于是 React 提供 useEffect 和 useLayoutEffect 这样的 hook,给开发者提供专门管理副作用的方式。
-那么这篇文章我们就从 effect 的数据结构开始
-数据结构
-在之前的一篇文章中就已经讲解到,对于函数组件来说,其 fiber 上的 memorizedState 专门用来存储 hooks 链表,每一个 hook 对应链表中的每一个元素,最终与其他的 effect 链表形成环形链表。
-单个的 effect 对象包括以下几个属性,其中在代码中有如下定义:
-const effect: Effect &#x3D; {
-  tag,
-  create,
-  destroy,
-  deps,
-  // Circular
-  next: (null: any),
-};
-
-这里对每个属性详细讲解一下:
-create: 传入 useEffect 函数的第一个参数,即回调函数;
-destroy: 回调函数 return 的函数,在该 effect 销毁的时候执行;
-deps: 依赖项;
-next: 指向下一个 effect;
-tag: effect 的类型,区分是 useEffect 还是 useLayoutEffect;
-假设在我们的应用程序下面有如下代码:
-import React, { useEffect, useState, useLayoutEffect } from &quot;react&quot;;
-
-const App &#x3D; () &#x3D;&gt;…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;27
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -6700,39 +6736,6 @@ const App &#x3D; () &#x3D;&gt;…</span>
                               <img src="https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>省流@23-08-07 🍦 恰饭 我减肥。 🚀 新闻 树莓派月产能已达到 100 万台 🔬 科研 旅行者 2 号与地球的通信已完全恢复 🍹 杂拌 新的声学攻击可窃取击键数据，准确率高达 95% ⚡ 速览 Vim 之父 Bram Moolenaar 因病逝世 OpenAI 将推出大量 ChatGPT 功能更新 埃隆马斯克将 Twitter Blue 订阅会员改成 X Premium X 强行夺走用户运营 16 年的 @music 账号 TikTok 欧洲用户将可选择关闭个性化推荐算法 微软 Copilot 团队主管呼吁：用户和 AI 聊天时请礼貌用语</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >国家应急广播 - 重庆预警信息</button>
-                  <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230807/t20230807_526367582.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市合川区发布暴雨橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230807/t20230807_526367582.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>合川区气象台2023年8月7日7时05分发布“暴雨橙色预警信号”，预计未来3小时内，我区燕窝镇、二郎镇、龙凤镇、三庙镇等镇累计雨量将达50-80毫米，最大小时雨强可达40-60毫米，并伴有雷电、阵性大风和冰雹等强对流天气，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -8570,8 +8573,8 @@ GPL 规定，必须向使用者提供源码，并且使用者有权重新发布�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5849713954">
-        <time id="build-timestamp" datetime="2023-08-13T21:52:22.798Z">2023-08-13T21:52:22.798Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5850708799">
+        <time id="build-timestamp" datetime="2023-08-14T01:14:37.157Z">2023-08-14T01:14:37.157Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
