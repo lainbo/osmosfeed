@@ -44,7 +44,7 @@
           "description": "nonce可以用来决定哪些内联JS执行，popover可以无JS实现浮层弹出层交互效果。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/html-attribute-nonce-translate/",
           "publishedOn": "2023-08-10T15:24:42.000Z",
-          "wordCount": 1105,
+          "wordCount": 1106,
           "title": "查漏补缺，我仍未知道的HTML nonce和popover属性",
           "imageUrl": null
         },
@@ -74,7 +74,7 @@
           "description": "同样的布局效果，在2017年、2021年和2023年有着不同的实现，代码愈发的简洁高效，一起来看看CSS的发展对Web开发的帮助吧。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/07/css-image-aspect-ratio-layout/",
           "publishedOn": "2023-07-20T14:36:38.000Z",
-          "wordCount": 1200,
+          "wordCount": 1198,
           "title": "CSS高宽不等图片固定比例布局的三重进化",
           "imageUrl": null
         }
@@ -2196,7 +2196,7 @@
           "description": "theme: smartblue\n前言\n欢迎关注同名公众号《熊的猫》，文章会同步更新，也可快速加入前端交流群！\nH5 移动端 开发的必不可少的一个环节就是 移动端网页的适配，因为 UI 通常只会提供 大小固定的设计稿，而各种不同移动设备具有不同的页面分辨率和大小，所以适配的目的就是让一份设计稿在不同移动设备上表现出一致性。\n虽然现如今各种插件都可以帮助我们快速配置完成，例如 lib-flexible、postcss-pxtorem、postcss-px-to-viewport 等等，但不少小伙伴在被问及相关原理时却很难说清楚，那么本篇文章我们就一起来探究一下其中原理吧！！！\n\n文中有不当之处，欢迎在评论区指正！！！\nCSS 中的尺寸单位\n在了解具体的适配方案之前，我们先把 CSS 中适配会涉及到的相关尺寸单位进行一个了解吧，总结起来就是一句话：CSS 中的尺寸单位都是 相对长度单位，只是相对的目标不同。\npx 像素单位\npx 全称为 pixel（像素），它是相对于 屏幕显示器分辨率（桌面设定的分辨率，不是显示器的物理分辨率） 而言的，在 相同/不同 的设备上 1px 表示多个 设备像素。\n当 一个像素点越大 时, 呈现的图像就会 越模糊；当一个像素点越小时, 像素点就会 越密集, 呈现的图像就会 越清晰。\n\nem 相对单位\n好多人都认为 em 就是相对于 父元素 font-size，实际上在不同的 CSS 属性当中使用 em 其相对的目标也是不同，如下：\n用于 font-size 中则是相对于 父元素 font-size 大小\n\n用于 其他属性（如 width，height） 中使用是相对于 自身 font-size 大小\n\n值得注意的是，若 当前元素/父元素 的 font-size 未设置，由于 font-size 属性值可被继承的原因，可逐级向上查找，最终找不到则相对于…",
           "link": "https://juejin.cn/post/7266671630025031699",
           "publishedOn": "2023-08-14T00:30:49.000Z",
-          "wordCount": null,
+          "wordCount": 3599,
           "title": "谈谈 H5 移动端适配原理",
           "imageUrl": null
         },
@@ -2356,7 +2356,7 @@
           "description": "最近，群友分享了一个很有意思的效果：\n\n原效果的网址：frosted-glass。该效果的几个核心点：\n毛玻璃磨砂效果\n卡片的 3D 旋转跟随效果\n整体透明度和磨砂感、以及卡片的 3D 形态会随着用户移动鼠标而进行动态变化\n原效果实现的较为复杂，并且实际体验卡顿感较强。本文，我们就将尝试一步一步用更为简单的方式还原复现这个效果。\n构建基础骨架\n首先，我们快速实现整个效果的基础骨架。其核心代码如下：\n<div id=\"element\"></div>\n\nbody {\n    width: 100vw;\n    height: 100vh;\n    background: url(https://picsum.photos/id/242/1920/1080);\n}\n\ndiv {\n    width: 600px;\n    height: 300px;\n    background: #fff;\n    box-shadow: 0 20px 40px 1px rgba(0, 0, 0, 0.12);\n}\n\n基于上述代码，我们可以快速得到如下效果：\n\n这里，我们实现了一个白色背景的 div 元素，并且给 body 设置了一张背景图。\n接着，我们就一步一步实现上面说的 3 个关键点：\n毛玻璃磨砂效果\n3D 卡片效果\n整体透明度和磨砂感、以及卡片的 3D 形态会随着用户移动鼠标而进行动态变化\n实现毛玻璃磨砂效果\n毛玻璃磨砂效果，是最为简单的一步。在 CSS 中，我们如今可以使用 backdrop-filter 滤镜进行实现。\n毛玻璃效果是一种视觉效果，通常用于美化设计或增加隐私保护。它通过模糊化图像的某些区域来达到这种效果，使图像看起来有一层轻微的模糊，同时仍然清晰可见。毛玻璃效果可以应用于图像、文本、按钮等各种 UI 元素上，为用户提供更加优雅和良好的视觉体验。\nbackdrop-fi…",
           "link": "https://juejin.cn/post/7264531655654654015",
           "publishedOn": "2023-08-08T01:52:52.000Z",
-          "wordCount": 4250,
+          "wordCount": null,
           "title": "【动画进阶】神奇的 3D 磨砂玻璃透视效果",
           "imageUrl": null
         },
@@ -2802,6 +2802,22 @@
       "siteUrl": "https://shengliu.substack.com",
       "articles": [
         {
+          "id": "https://shengliu.substack.com/p/telegram-stories",
+          "author": "王铁柱",
+          "description": "省流@23-08-15 🍦 恰饭 🚀 新闻 Telegram Stories 不再仅限于付费用户 🔬 科研 中国科考队发布亚洲最高树等身照 🍹 杂拌 芬兰从国家公园拆除垃圾箱 ⚡ 速览 微软更改服务协议，增加对 AI 产品的限制 Stack Overflow 开始提供 AI 工具 🍨 后记 奇怪！挺平常的一天，但可关注的新闻却一下子少了这么多。今天真不是我偷懒，真没见其他值得关注的新闻。 联系作者：contact@tiezhu.wang 邮件订阅 | RSS订阅",
+          "link": "https://shengliu.substack.com/p/telegram-stories",
+          "publishedOn": "2023-08-14T23:20:43.000Z",
+          "wordCount": null,
+          "title": "Telegram Stories 不再仅限于付费用户",
+          "itunes": {},
+          "enclosure": {
+            "url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png",
+            "length": "0",
+            "type": "image/jpeg"
+          },
+          "imageUrl": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png"
+        },
+        {
           "id": "https://shengliu.substack.com/p/firefox-android",
           "author": "王铁柱",
           "description": "省流@23-08-14 🍦 恰饭 🚀 新闻 FireFox Android 将完整支持扩展 microsoft/azurechatgpt: 部署可以从内网访问的 ChatGPT 🔬 科研 韦伯望远镜捕捉到有史以来最遥远的恒星图像，距离地球 280 亿光年 🍹 杂拌 WPS Office 远程代码执行漏洞 W3C 不支持谷歌的 WEI 提案 重型直升机吊装整个信号塔 SpaceX 星舰爆炸发动机测试中的 7 张最佳图像 完全在浏览器本地运行的 PDF 工具 ⚡ 速览 ChatGPT 自定义指令功能向所有用户开放",
@@ -3097,22 +3113,6 @@
           "publishedOn": "2023-07-17T23:18:05.000Z",
           "wordCount": null,
           "title": "WormGPT：黑客专用GPT，没有道德限制",
-          "itunes": {},
-          "enclosure": {
-            "url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png",
-            "length": "0",
-            "type": "image/jpeg"
-          },
-          "imageUrl": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png"
-        },
-        {
-          "id": "https://shengliu.substack.com/p/chatglm2-6b-cybertruck",
-          "author": "王铁柱",
-          "description": "省流@23-07-17 🚀 大公司 & 新闻 ChatGLM2-6B 免费商用 特斯拉得州超级工厂下线首辆 Cybertruck 准量产车 Google 在 TTS 领域的最新探索：SoundStorm 🔬 科研 & 科普 印度“月船 3 号”飞船发射升空，时隔四年再次挑战登月 科学家基于家用 Wi-Fi 路由器实现“透视眼”，能隔墙看人 🔖 值得一览 互联网档案馆改进 Flash 模拟支持 ⚡ 快讯 AlmaLinux 不再 1:1 兼容 RHEL，未来致力于兼容 ABI 苹果 iOS / iPadOS 17 首个公测版新功能 / 新特性汇总：优化双卡双待等",
-          "link": "https://shengliu.substack.com/p/chatglm2-6b-cybertruck",
-          "publishedOn": "2023-07-16T23:20:58.000Z",
-          "wordCount": null,
-          "title": "ChatGLM2-6B 免费商用；特斯拉 Cybertruck 下线首辆准量产车",
           "itunes": {},
           "enclosure": {
             "url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png",
