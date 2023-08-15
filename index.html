@@ -942,7 +942,7 @@ K8sGPT 是一个扫描 kubernetes 集群、诊断和分类问题的工具。它�
                             <span class="media-object__text">
                               <span>一款面向 SEO 的 AI 自动化写作工具，BlogSEO，https://www.blogseo.ai，以后做市场营销推广都不用手写水文了，AI 直接帮你从标题到提纲到全文一口气生成……
 未来我们在互联网冲浪，将会看到两种奇怪的现象：有人利用 AI 扩充内容制造文章 vs 有人利用 AI 提取概要消费文章 🐶</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4243,6 +4243,8 @@ highlight: atom-one-dark
 集中回答一下评论区的问题：
 1、项目是原来某大厂的项目，是当时的外包团队写的，整体的代码是还行的。eslint、commitlint 之类的也是有的，只不过这些都是可以禁用的，作用全靠个人自觉。
 2、后来项目被我司收购，原来的人也转为我司员工，去支撑其他项目了。这个项目代码也就换成我们这批新来的维护了。很多代码是三几年前留下的确实没错，谁年轻的时候没写过烂代码，这是可以理解的。只不过同为三年前的代码，为啥有人写的简单清晰，拆分清楚，有的就这么脏乱差呢？…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4273,6 +4275,44 @@ CSS-in-JS 注水
 
 每个动态插入到页面中的样式同样以为 hash 作为唯一标识符。如果页面中已经存在该 hash 的 ，则说明 SSR 中做过 inline style 注入。那么  就不用再次创建…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7265254467897065506"
+                        open
+                      >
+                        <summary class="article-expander__title">Three.js 进阶之旅：实现王国之泪神庙能量光环 🛕</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7265254467897065506">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: smartblue
+
+摘要
+如封面图所示，本文将基于 Vue3 + Three.js + GLSL 的相关知识，实现游戏《塞尔达传说：王国之泪》中低配版神庙能量光环效果。通过本文的阅读和学习，你将学习到的知识点包括：在 Three.js 中创建螺旋上升曲线的多种方法、如何给模型添加动态渐变色的纹理材质、以及如何给能量光环添加发光效果、如何使用 AI 能力生成卡通风格全景 HDR 等。
+
+效果
+本文实现的效果如下图所示，页面由卡通风格 HDR 全景背景、简易的石头形状的神庙以及具有发光效果和旋转动画的能量光环构成，页面初次加载时镜头由远到近缓动拉近，使用鼠标可以对模型进行缩放和旋转操作。（本文重点实现内容是螺旋上升的发光能量环，至于神庙，为了页面完整我找了一个形状类似的石头模型来代替 😂）。
+
+预览图片使用的是 GIF，为了节约体积对其进行了压缩和减帧，建议通过以下预览链接访问页面，大屏浏览效果更佳啊 卓。
+👁‍🗨 在线预览地址：dragonir.github.io/zelda-shrine/
+本专栏系列代码托管在 Github 仓库【threejs-odessey】，后续所有目录也都将在此仓库中更新。
+🔗 代码仓库地址：git@github.com:dragonir/threejs-odessey.git
+
+原理
+在开始实现之前，我们先整理总结下本文中将应用到的知识点，该部分内容主要讨论如何实现神庙光环的外形和纹理材质的相关原理。首先我们来看看在游戏中的神庙截图，可以观察到，神庙光环是一个形态类似轻盈的气流的螺旋上升的圆弧，螺旋的底部圆的半径较大，顶部圆的半径较小，颜色是绿色和蓝色的渐变。
+
+螺旋上升的曲线
+对于螺旋上升的圆弧形状，我在实践过程中找到以下几种可行的实现方式。
+实现方式 ①：Line2
+在 Three.js 使用 Line 类绘制线条时，…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;15
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -6320,7 +6360,7 @@ Download Android Studio &amp; App Too…</span>
 实习
 以上就是我对于为什么选前端这条路，最真实的原因，后来自己面试去了杭州，第一个公司不在这里，然后跳槽之后就留在了现在这个公司，记得第一次需求，是一个很简单的指标看板，封装了一层一层又一层，结果被 code review 的时候捞出来一顿批，逻辑混乱、封装过度、请求触发过多、样式影响到了其他地方。没什么好办法，出问题就改，有问题就问，也不是谁都是一开始都一定会的，这和我后面带实习生的想法也是一样，有问题我会私下指出来，我可以陪着一起改代码结构，可以在有明显问题的时候一起看，但是有问题一定要改，对自己负责也是对团队负责。
 到大四…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -6919,43 +6959,6 @@ Download Android Studio &amp; App Too…</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7264920948751188008"
-                        open
-                      >
-                        <summary class="article-expander__title">程序员海外Remote工作探索和总结</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7264920948751188008">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>视频版
-去年开始学员想做远程的就越来越多了，我年底开始学面试英语，今年五月开始用chatgpt写了个英语简历海投，边面试边练英语，一大堆拒信后， 7月初开始有海外remote的offer，到今天拿到第一笔工资，证明这条路可行，并且不是骗子，可以辅导越来越多的学员可以选择全球的岗位，脱离内卷
-今天总结一下国内和海外前端面试的区别吧，欢迎讨论
-每个人想做远程的原因不同，可能想回老家，可能想脱离大厂内卷等等，就不讨论了，在哪些网站可以看到远程的工作机会之前视频聊过，至少Linkdin上每天推送的Remote岗位就足够
-欢迎加我，畅聊前端 &amp; 英语学习
-
-面试风格和要求
-
-写简历就是第一步，我其实比较挫，就用deepl翻译的中文简历，然后就开始投递了，我坚信没有什么事情是准备完美了再开始，而是直接开始，在面试中练习英语和熟悉面试风格，当然也是拒信无数
-我也感受到国内外面试风格的巨大差别，国内大厂如果想招一个司机，会要求这个司机基本功好，有三年驾龄，并且得会修发动机
-国外的要求是司机基本功好，有三年驾龄，并且有点幽默感，开车的过程中能聊天解闷
-国内的面试题大家都熟悉了，主要聊一下我遇见海外的面试风格和如何准备
-面试前经常直接丢你你个在线做算法题的链接，有点像国内的牛客网，leetcode的简单和中等难度足够了，基本都是原题，可以参考前端啃算法去刷，绝对足够了
-框架的使用，注意这里真的就是使用，没有所谓的优化和源码，我面了这么多家，一家问源码的都没有（其实我很擅长这个），Vue，React，Next.js，Nuxt 都是问api怎么用的，对于我来说比较简单了
-系统设计，这个我理解是国外版本的【八股文】，就是问你如何设计一个XX，不分前后端，也有专门的书可以看，感兴趣我可以分享
-行文面试，简称BQ，这个对我是难度最大的，其实就是英语的门槛，你需要描述大概一下问题
-
-你为啥要加入我们呀
-项…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7264898713646153780"
                         open
                       >
@@ -7042,7 +7045,7 @@ export default {
 
 // mixin2
 export d…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;12
+                                &ensp;<span class="article-reading-time">(&hairsp;10
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -9083,8 +9086,8 @@ GPL 规定，必须向使用者提供源码，并且使用者有权重新发布�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5869046693">
-        <time id="build-timestamp" datetime="2023-08-15T15:53:29.671Z">2023-08-15T15:53:29.671Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5870626295">
+        <time id="build-timestamp" datetime="2023-08-15T18:52:48.269Z">2023-08-15T18:52:48.269Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
