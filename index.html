@@ -2873,6 +2873,56 @@ em 相对单位
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7266589645461880884"
+                        open
+                      >
+                        <summary class="article-expander__title">后端：你JavaScript不是世界最好的语言吗？自己解决精度丢失问题好不好？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7266589645461880884">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言
+大家好，我是林三心，用最通俗易懂的话讲最难的知识点是我的座右铭，基础是进阶的前提是我的初心。
+
+JS 绕不开的精度丢失问题
+在 javascript 中，当我们进行运算时
+0.1 + 0.2
+
+你觉得输出是 0.3 吗？显然不是的，由于 javascript 存在精度丢失问题，导致了输出的不是你预期的
+
+至于为什么会精度丢失呢？我之前出过一篇文章专门讲了这个原因你知道 0.1+0.2 !&#x3D;&#x3D;0.3是进制问题，但你讲不出个所以然，是吧？🐶，感兴趣的朋友可以看看，由于这不是本文的重点，所以我在这就不过多讲解~
+解决精度丢失的方案？
+我会选择使用 decimal.js 这个库，文档在 文档，他的基本使用如下：
+// 先安装
+npm install decimal.js
+
+// 后使用
+const Decimal &#x3D; require(&#x27;decimal.js&#x27;);
+
+new Decimal(0.1).add(0.2) // 加法 输出 0.3
+new Decimal(0.1).sub(0.2) // 减法
+new Decimal(0.1).mul(0.2) // 乘法
+new Decimal(0.1).div(0.2) // 除法
+
+使用 decimal.js进行运算，能解决精度丢失的问题~
+不想手动！想自动！
+很烦啊！
+当我们拥有了decimal.js之后，每当我们进行运算的时候，就必须引入它进行使用，每一个页面都得重复这一操作，于是萌生了一个想法——我想自动！不想手动！
+思路
+那要怎么才能自动呢？由于前段时间群里很多人说想学习写 babel 插件，所以刚好，针对这个需求，我可以实现一个 babel 插件，它的功能是：将项目中 0.1 + 0.2 这种表达式，转换为 new Decimal(0.1).add(0.2)
+0.1 + 0.2
+// 转换为
+new Decimal…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7266417942182608955"
                         open
                       >
@@ -4504,6 +4554,177 @@ test!
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7265744160694911028"
+                        open
+                      >
+                        <summary class="article-expander__title">你还在傻傻的打开页面输用户名和密码？来我教你实现自动化</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7265744160694911028">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>背景
+Hello～，大家好! 本文和各位分享一个有趣的事情！
+我司主要的客户是银行，随着银行对信息安全越来越重视，我司积极配合银行防范信息安全，因此我司产品都从之前的外网开发引入了深信服的云桌面开发。由于笔者用的 Mac 电脑，云桌面 win7，天差地别的体验我就先忍了😭，但是从 Mac 电脑桌面到进入云桌面，需要登录一些莫名其妙的 VPN、网址，这个过程是令人反感的、重复的、也是非常恶心的，每天都要这样、要等待很久......🤮
+打开Mac上的xxxTrust并登录
+打开Chrome
+打开xxx网址
+输入用户名、密码（不能自动填充那种）
+点击登录
+进入云桌面资源页面，点击一个资源，会自动调起 Mac 上安装的一个什么 VDIxxx 的软件
+成功进入云桌面
+我丢，各位来说说，这个过程是不是很恶心。作为一个技术人，我们不能忍受这种机械式的操作，我们要去做出改变。不能让自己一直做这些重复的恶心操作，于是我就想着 能不能像我打开 Mac 桌面的一个应用那样，中间的步骤自动完成，直到进入云桌面？ 这就是笔者本文的主题。
+实现自动化
+其实笔者也没有一步到位——能不能像我打开 Mac 桌面的一个应用那样，中间的步骤自动完成，直到进入云桌面？。实现过程中，有一些新想法，接下来就分享一下我从开始有这个想法到实现的过程：
+Console 的 Snippets
+一开始： 我已经登录了 xxxTrust，笔者在浏览器已经打开了xxx网址，只是不想输密码，我就想起浏览器开发者工具 Console 的 Snippets，可以在里面写一些脚本，然后可以快捷执行：
+打开控制台 -&gt; 快捷键 command + p -&gt; 输入!，选择执行哪个 Snippets -&gt; 回车。看下效果：
+
+感觉还行是吧，那接着来，我们现在进入了资源管理的界面，接下来需要手动点击打开一个云桌面的资源，同样地，接着建一个 Snippets：
+看下效果：
+
+OK！成功进入，但是现在还需要我们手动去执行脚本，而且要执行两个。于是就有了新的想法。
+篡改猴
+能不能在对应的页面自动执行上面写好的脚本？
+此时笔者想到了一个 Chrome 插件 —— 篡改猴，也叫油猴脚本，简单理解它的作用就是可以在你指定的网页中执行你写入的脚本。那就装一个呗！（Chrome商店需要🪜，可直接使用Edge浏览器）
+打开管理面板，新建两个脚本：
+
+编辑：
+
+然后改一下设置，在 document-end 执行我们的脚本，此时可能还获取不到dom，因此使用 setTimeout。
+
+再来看下效果：
+
+鼠标一下没动哦！你以为这就完了？并没有，接着看。
+自动化打开应用
+能不能自动打开xxxTrust和Chrome，并自动打开登录的网址？
+咱们一开始就说了，在访问网址之前，还需要链接VPN、打开浏览器，那就来吧！
+在Mac上有两个东西可以完成自动操作：
+
+通过自动操作配置出来的，也支持转变成快捷指令。我理解这俩应该是差不多的东西，来看下我们如何实现：
+打开 xxxTrust
+通过 AppleScript，设置延时6秒，因为打开上面的 app 过后，有一个自动登录的过程，我们设置的长一点
+打开 Chrome
+打开登录网址
+配置自动化操作和快捷指令都是可视化的，很容易上手，在此不过多介绍，感兴趣的掘友可自行探索哦！至于AppleScript，我只能告诉你是 GPT 教我这么写的。
+最后一步就是把这个快捷指令发布到桌面：
+
+看下最终的效果：
+
+这不，又多了几分钟摸鱼时间！😂
+总结
+笔者通过真实的一个场景，借助 Snippets、篡改猴、快捷指令、自动操作 等工具实现自动化完成进入云桌面的一系列流程。笔者只实现了 Mac 的，windows 系统肯定也有类似的工具等待各位去探索（比如 python 脚本应该就能实现打开应用等操作）。
+除此之外呢，还想表达一个观点就是——我们应该把那些机械式的活交给机械去做，比如在平时的开发中，总是CRUD？能不能高效CRUD？对吧！把这些对自己能力提升没有意义的工作，想办法用程序去实现了，岂不是美滋滋！
+好了，本次分享就到此结束了，感谢阅读哦！
+如果本文对你有一点点帮助，点个赞支持一下吧，你的每一个【赞】都是我创作的最大动力 ^_^。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7265692989610180627"
+                        open
+                      >
+                        <summary class="article-expander__title">古茗前端在 web 地图上的踩坑指南</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7265692989610180627">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: smartblue
+highlight: a11y-dark
+
+背景
+古茗是一家茶饮行业的连锁加盟企业，加盟就涉及到开店选址，一家奶茶店能否盈利，点位无疑是很重要的一个因素，如何保证点位的数量、质量，直观分析和感受点位之间的分布合理性、覆盖率、竞争关系，以及如何进行合理规划就成了一个刚性需求场景，而基于高德地图的可视化大盘可以很好的解决这些问题。
+接下来的内容将会从高德地图的使用到一些踩坑经验为小伙伴们分享一些填坑技巧和指南，希望对使用相关技术的小伙伴提供一个参考~
+引入方式
+js引入方式
+ 
+
+  const map &#x3D; new AMap.Map(&#x27;container&#x27;, {
+    center:[117.000923,36.675807], 
+    zoom:11 
+  }); 
+
+
+npm包引入方式
+
+先在项目中安装Loader npm  i  @amap/amap-jsapi-loader --save
+初始化
+import AMapLoader from &#x27;@amap/amap-jsapi-loader&#x27;;
+window._AMapSecurityConfig &#x3D; {
+  securityJsCode:&#x27;「您申请的安全密钥」&#x27;,
+}
+AMapLoader.load({
+  &quot;key&quot;: &quot;&quot;,              // 申请好的Web端开发者Key，首次调用 load 时必填
+  &quot;version&quot;: &quot;2.0&quot;,   // 指定要加载的 JS API 的版本，缺省时默认为 1.4.15
+  &quot;plugins&quot;: []…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;13
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7265625144764334121"
+                        open
+                      >
+                        <summary class="article-expander__title">神奇的 http-modular 魔法，让前端不用封装接口</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7265625144764334121">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>最近突发奇想，研究出了一个神奇的“编程魔法”，我把这个思想封装成了一个 Node.js 库，叫做 http-modular。
+这个想法的核心是，将服务端的 HTTP 接口转换成符合 ESM 规范的 JavaScript 代码，然后将它直接通过浏览器 import 进来，调用其中的函数，得到返回结果。
+有经验的同学应该大致上明白，这个其实类似于传统的 RPC，但是它的区别是，因为浏览器原生支持 ESM import，因此我们根本不用写任何前端侧的桥接代码，节省了前端的工作。
+光说可能你还体会不深，我们通过一个项目来理解。
+通过 http-modular 实现服务端KV存储
+假设我们要在码上掘金写一个应用，但是想将数据存储在数据库，我们可以通过 AirCode 写一个存储接口然后部署上线，再通过前端封装成 storage 的 API。
+过去的流程大概是这样：
+在 AirCode 写接口并调试上线
+在前端封装 Storage API，然后再 Storage API 中通过 fetch 或者 axios 调用服务端接口。
+但是，现在有了 http-modular，我们只需要步骤 1， 不需要步骤 2。
+具体怎么做呢？请看——
+首先我们在 AirCode 上创建一个项目，在项目中创建一个云函数 index.mjs。
+我们在 index.mjs 中添加如下代码：
+const table &#x3D; aircode.db.table(&#x27;storage&#x27;);
+
+async function setItem(key, value) {
+  return await table.where({key}).set({value}).upsert(true).save();
+}
+
+async function getItem(key) {
+  const res &#x3D; await table.where({…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;12
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >Barret李靖的即刻动态</button>
                   <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
                 </h3>
@@ -4612,105 +4833,6 @@ Barret李靖发表了动态：关于独立开发者进行海外收款，看了�
 
 转发 @Vakee赖蕴琦: 今天和@Barret李靖 讨论了很多有意思的问题，非常棒，不是每个群体都像工程师这么有探索精神的，更不是每个工程师都像Barret这么有好奇心和思考力的🐒</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7265692989610180627"
-                        open
-                      >
-                        <summary class="article-expander__title">古茗前端在 web 地图上的踩坑指南</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7265692989610180627">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: smartblue
-highlight: a11y-dark
-
-背景
-古茗是一家茶饮行业的连锁加盟企业，加盟就涉及到开店选址，一家奶茶店能否盈利，点位无疑是很重要的一个因素，如何保证点位的数量、质量，直观分析和感受点位之间的分布合理性、覆盖率、竞争关系，以及如何进行合理规划就成了一个刚性需求场景，而基于高德地图的可视化大盘可以很好的解决这些问题。
-接下来的内容将会从高德地图的使用到一些踩坑经验为小伙伴们分享一些填坑技巧和指南，希望对使用相关技术的小伙伴提供一个参考~
-引入方式
-js引入方式
- 
-
-  const map &#x3D; new AMap.Map(&#x27;container&#x27;, {
-    center:[117.000923,36.675807], 
-    zoom:11 
-  }); 
-
-
-npm包引入方式
-
-先在项目中安装Loader npm  i  @amap/amap-jsapi-loader --save
-初始化
-import AMapLoader from &#x27;@amap/amap-jsapi-loader&#x27;;
-window._AMapSecurityConfig &#x3D; {
-  securityJsCode:&#x27;「您申请的安全密钥」&#x27;,
-}
-AMapLoader.load({
-  &quot;key&quot;: &quot;&quot;,              // 申请好的Web端开发者Key，首次调用 load 时必填
-  &quot;version&quot;: &quot;2.0&quot;,   // 指定要加载的 JS API 的版本，缺省时默认为 1.4.15
-  &quot;plugins&quot;: []…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7265625144764334121"
-                        open
-                      >
-                        <summary class="article-expander__title">神奇的 http-modular 魔法，让前端不用封装接口</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7265625144764334121">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>最近突发奇想，研究出了一个神奇的“编程魔法”，我把这个思想封装成了一个 Node.js 库，叫做 http-modular。
-这个想法的核心是，将服务端的 HTTP 接口转换成符合 ESM 规范的 JavaScript 代码，然后将它直接通过浏览器 import 进来，调用其中的函数，得到返回结果。
-有经验的同学应该大致上明白，这个其实类似于传统的 RPC，但是它的区别是，因为浏览器原生支持 ESM import，因此我们根本不用写任何前端侧的桥接代码，节省了前端的工作。
-光说可能你还体会不深，我们通过一个项目来理解。
-通过 http-modular 实现服务端KV存储
-假设我们要在码上掘金写一个应用，但是想将数据存储在数据库，我们可以通过 AirCode 写一个存储接口然后部署上线，再通过前端封装成 storage 的 API。
-过去的流程大概是这样：
-在 AirCode 写接口并调试上线
-在前端封装 Storage API，然后再 Storage API 中通过 fetch 或者 axios 调用服务端接口。
-但是，现在有了 http-modular，我们只需要步骤 1， 不需要步骤 2。
-具体怎么做呢？请看——
-首先我们在 AirCode 上创建一个项目，在项目中创建一个云函数 index.mjs。
-我们在 index.mjs 中添加如下代码：
-const table &#x3D; aircode.db.table(&#x27;storage&#x27;);
-
-async function setItem(key, value) {
-  return await table.where({key}).set({value}).upsert(true).save();
-}
-
-async function getItem(key) {
-  const res &#x3D; await table.where({…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;12
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -6078,44 +6200,6 @@ Code to Image 免费工具，帮您把代码段轻松转换为各种风格的图
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230809/t20230809_526372012.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市城口县发布暴雨橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230809/t20230809_526372012.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>城口县气象台2023年8月9日18时30分发布“暴雨橙色预警信号”，目前我县修齐镇已出现50毫米以上降雨，预计未来3小时，葛城街道、复兴街道、修齐镇、龙田乡、高燕镇等乡镇（街道）累计雨量将达50-80毫米，最大小时雨强可达40-60毫米，并伴有雷电、阵性大风和冰雹等强对流天气。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/lanseyj/20230809/t20230809_526371987.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市武隆区发布大风蓝色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/lanseyj/20230809/t20230809_526371987.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>武隆区气象台2023年8月9日18时20分发布“大风蓝色预警信号”，目前我区凤山街道等地区已出现7级以上大风，预计未来12小时大风将持续，凤山街道、芙蓉街道、仙女山街道、羊角街道、白马镇风力可达7级，局地阵风可达8级以上，并伴有雷电、短时强降水（20-30mm），请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -6436,85 +6520,6 @@ outline-offset为啥要如此计算，是因为我们圆弧是径向渐变生成
 最后在使用mask裁剪一下就是成了我们最中想要的效果了
 jcode</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7265156603066335266"
-                        open
-                      >
-                        <summary class="article-expander__title">23年秋季来临，macbook pro 怎么买最划算</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7265156603066335266">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-我发现前端程序员和设计师，用 mac 笔记本办公的居多，以我们团队为例，10个前端有9个都是 macbook pro，特别是最近，身边两位同事更新了自己的装备，分别是：
-2021  macbook pro (M1 pro 14寸) 9000+（入手） / 14999（原价）
-2023  macbook pro (M1 pro 14寸) 13000+（入手） / 15999（原价）
-刚好今天群里有人问，怎么选购笔记本, 所以这里简单分享下，mac 笔记本该怎么选？怎么买更划算？
-
-选型号
-除非你是学生或者轻量使用，否则一律不建议选择 macbook air，无风扇、8g内存，是硬伤；因为实际工作的时候，启用的项目一多，内存根本不够用，于是你会发现虚拟内存占用巨高，硬盘疯狂 swap ，系统变得卡顿，还对硬盘寿命有影响。
-
-所以我推荐 macbook pro 14 / 16，起步 16 + 512g 的配置，对于大多数程序员是够用的，14的尺寸完美符合我心中的黄金尺寸，性能强大而又携带便捷；
-特别是现在 m2 pro 芯片出来后，21年的 m1 pro 系列降价很多，目前综合起来看，我推荐两款电脑：
-2021  macbook pro (M1 pro 14寸) 9000+（可入手） / 14999（原价）
-2023  macbook pro (M1 pro 14寸) 13000+（可入手） / 15999（原价）
-怎么买
-2021  macbook pro (M1 pro 14寸) ，同事前一段在拼多多百亿补贴，9000+ 拿下并且安全下车，如果有活动这个价格还是很香的，不过非百亿补贴的不建议，可能买到翻新机。
-2023  macbook pro (M1 pro 14寸) 的话，建议从官方渠道入手，比如官网、Apple Store 线下店，目前走教育优惠的话，折合下来可以 14000 出头的价格拿到，如果不是学生，可以这样操作：
-小红书发｜找帖，组一个大学生教育优惠搭子，用她的名额，你出电脑的钱，她出耳机的钱，比如官方送 1000 耳机款， 然后耳机你选的 airports 3代，自己补了 350，然后 1050 出给搭子，相当于电脑又省下 700，电脑在教育优惠价格的基础上再减 700，差不多 14000 左右。
-
-然后看了下京东自营也可以教育优惠，14199 拿下还送 耳机（能卖 650），更划算，就是需要教育认证下。
-最后还是我们的百亿补贴拼多多，13248 能拿到 ！！！
-总结
-买新电脑是很爽，不过物尽其用才更爽哦，拿到电脑先把环境配置起来吧～
-2022 我用 MacBook Pro 整一年 【感想 与 踩坑指南】
-建了个技术讨论群，欢迎加入 wx: 1032151090；
-文章更新平台：掘金、知乎、Github、公号【编码美学】。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7265125368553685050"
-                        open
-                      >
-                        <summary class="article-expander__title">面试官：tree-shaking的原理是什么？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7265125368553685050">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: channing-cyan
-highlight: a11y-light
-前言
-在前端面试的过程中，前端工程化一直是考察面试者能力的一个重点，而在我们常用的项目打包工具中，无论是webpack还是rollup，都具备一项很强大的能力——tree-shaking，所以面试官也常常会问到tree-shaking的原理是什么，这时我们该如何回答呢？其实核心原理就是AST。
-在前端开发中，其实AST的应用有很多，比如我们前端项目的打包工具webpack、代码检查工具Eslint，代码转换工具babel都依赖了AST的语法分析和转换能力。
-AST简单介绍
-AST是Abstract Syntax Tree的缩写，这玩意儿的全称叫抽象语法树，它可以用来描述我们代码的语法结构。
-举个例子：
-// ast.js
-let a &#x3D; 1;
-function add() {}
-
-我这里创建了一个文件ast.js，可以把整个文件理解为一个File节点，存放程序体，而里面就是我们javascript的语法节点了，我们javascript语法节点的根节点是Program，而我们在里面定了了两个节点，第一个节点是let a &#x3D; 1，解析为ast是VariableDeclaration，也就是变量声明节点，第二个节点是function add() {}，解析为ast是FunctionDeclaration，也就是函数声明节点。
-这里给大家推荐一个平台：AST Explorer，能很清晰看到JavaScript代码转化为AST后的结果，看下下面这张图就一目了然了：
-
-AST的作用
-那拿到了代码的ast信息我们能做什么呢？
-代码分析与转换。AST可以将我们的代码解析成一棵ast树，我们自然可以将这棵树进行处理和转换，这个最经典的应用莫过于babel了，将我们的高级语法ES6转换为ES5后，然后再把as…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;15
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -8981,8 +8986,8 @@ GPL 规定，必须向使用者提供源码，并且使用者有权重新发布�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5877283139">
-        <time id="build-timestamp" datetime="2023-08-16T09:53:02.978Z">2023-08-16T09:53:02.978Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5879041444">
+        <time id="build-timestamp" datetime="2023-08-16T12:55:49.706Z">2023-08-16T12:55:49.706Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
