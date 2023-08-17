@@ -44,7 +44,7 @@
           "description": "nonce可以用来决定哪些内联JS执行，popover可以无JS实现浮层弹出层交互效果。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/html-attribute-nonce-translate/",
           "publishedOn": "2023-08-10T15:24:42.000Z",
-          "wordCount": 1111,
+          "wordCount": 1110,
           "title": "查漏补缺，我仍未知道的HTML nonce和popover属性",
           "imageUrl": null
         },
@@ -64,7 +64,7 @@
           "description": "没想到，以前有些不方便实现的排版和布局效果可以使用text-wrap:balance轻松实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/07/css-text-wrap-balance/",
           "publishedOn": "2023-07-25T07:03:30.000Z",
-          "wordCount": 968,
+          "wordCount": 978,
           "title": "5分钟快速了解text-wrap:balance的作用",
           "imageUrl": null
         },
@@ -74,7 +74,7 @@
           "description": "同样的布局效果，在2017年、2021年和2023年有着不同的实现，代码愈发的简洁高效，一起来看看CSS的发展对Web开发的帮助吧。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/07/css-image-aspect-ratio-layout/",
           "publishedOn": "2023-07-20T14:36:38.000Z",
-          "wordCount": 1198,
+          "wordCount": 1199,
           "title": "CSS高宽不等图片固定比例布局的三重进化",
           "imageUrl": null
         }
@@ -143,6 +143,16 @@
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/64de2637aac630c848d487b2",
+          "author": null,
+          "description": "程序员折腾三件套：日历、记账、待办。\n这三个软件无论哪里用起来不爽，爱折腾的程序员都会不由自主地搬起键盘敲一个新的出来。\n刚看到一款 APP，作者耗时 2 年多，将日历方向卷出了天际：https://v2ex.com/t/966033，总共开发 50 多款跟日历相关的插件，满足你的各种奇怪诉求😂",
+          "link": "https://m.okjike.com/originalPosts/64de2637aac630c848d487b2",
+          "publishedOn": "2023-08-17T13:52:55.000Z",
+          "wordCount": 406,
+          "title": "发布了: 程序员折腾三件套：日历、记账、待办。 这三个软件无论哪里用起来不爽，爱折腾的程序员都会不由自主地搬起键盘敲一个新的出来。 刚看到一款 APP，作者耗...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/64ddc8ca8d1799ce56c31dd8",
           "author": null,
           "description": "Chrome 在两年前就推出了 Record & Replay 的能力，https://developer.chrome.com/docs/devtools/recorder/，利用它可以将操作者在 Chrome 的行为路径 Record 下来，然后使用 Replay 进行浏览器层面的回放，记录包括页面跳转、内容输入、点击、鼠标移动等等。\n它的使用场景在于 UI Automation 测试，可以深度解耦质量和研发的工作，只需要在测试环节打开 Record 能力，就可以生成一个通过 JSON 来描述的用户操作路径文件，在业务后期发布时，再利用 Replay 进行回放，这个能力可以很大程度释放 QA 的生产力，避免上线前的重复性人工测试行为。录制 JSON 文件的工作甚至还可以交给研发或者产品来做，这个教学成本很低，也可以封装 Chrome 插件来实现，操作起来更便捷。\nChrome 自身可以根据每个 JSON 文件导出一个无头浏览器的自动化执行脚本，此外，Puppeteer 也推出了针对 Replay 的工具库，https://github.com/puppeteer/replay，它可以直接将 JSON 作为输入来执行。QA 要做的事情就是维护 JSON 文件，甚至可以在制定了简单的编码规范后，提前编写测试用例，让项目转换成 BDD 行为驱动开发，这很容易做到，例如要求研发在 DOM 上标注 data-testid 相关信息，也可以直接给研发代码提 PR 添加 ID 标注。\n写前端单测的业务已经比较稀少了，更别说繁重的 UI 自动化测试，在快速迭代的复杂业务场景下，没有测试用例，只会让项目质量持续恶化，测试工作量日积月累，越来越多。看到一个趋势是，QA 为了保障项目质量，同时研发又不愿意编写单元测试的情况下，UI 自动化测试的需求变得更加旺盛，这个解决方案或许可以帮助到处于这种状态的项目。",
@@ -158,7 +168,7 @@
           "description": "之前在美区 APP Store 上购买应用，都是在支付宝切换地区到美国后，购买礼品卡充值解决的，流程颇为繁琐，还有几次购买失败，也不知道是啥原因。关于如何用支付宝充礼品卡的相关帖子：https://x.com/Barret_China/status/1638223359375966208\n今天尝试用这张英国 Wise 卡绑定 APP Store 的支付方式，失败了😂，给出的理由是「付款方式被拒」，原因大概是账单地址不对，美区账号的账单地址默认是美国，但是这张卡的地址是英国，不予通过。\n又尝试申请了一个英国区的苹果账号，首次绑定支付方式也失败了，提示「不能认证支付信息」，正确的姿势是，找一个付费的 APP，点击购买，会进入到一个付费流程，在付费流程中会让你添加付款方式，并要求同意付款协议，关键就在这里，只有同意了协议，才能够成功添加付款方式，目前已经成功将这张卡绑定到了英国区的 APP Store，后续购买软件就顺畅多了。关于如何申请其他区的 APP Store 账号，可以看这个帖子：https://x.com/Barret_China/status/1638215085788372993\n另外有朋友留言说，可以使用 Dupay （https://dupay.one/web-app/register-h5?invitCode=795096&lang=zh-cn）新支持的英镑卡激活 Wise，这张卡是虚拟卡，开通流程也比较简单，我之前尝试开通过一张美国的。他说他使用英镑卡激活成功了，有需要的也可以尝试下，相比找淘宝付费处理，能自助当然更好啦😄\n即刻 - 记录我 遇见你",
           "link": "https://m.okjike.com/originalPosts/64dd9bcc58c9056cf4c6064b",
           "publishedOn": "2023-08-17T04:02:20.000Z",
-          "wordCount": 457,
+          "wordCount": 441,
           "title": "发布了: 之前在美区 APP Store 上购买应用，都是在支付宝切换地区到美国后，购买礼品卡充值解决的，流程颇为繁琐，还有几次购买失败，也不知道是啥原因。关于如...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -231,16 +241,6 @@
           "wordCount": 405,
           "title": "发布了: 参加了一个线下独立开发者交流会，八个人，其中两个在创业团队，一个离职 gap 期尝试独立开发，其他的都还在职，看来真实比例还没有很大，「独立开发」...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/64d5c4f2aac630c848114c9a",
-          "author": null,
-          "description": "好好吃饭，认真生活😋\n老板很热情，送了我们两碟自己吃的小菜，又把特制的豌豆酱拿了出来，吃完之后还每人送了个桃子🍑",
-          "link": "https://m.okjike.com/originalPosts/64d5c4f2aac630c848114c9a",
-          "publishedOn": "2023-08-11T05:19:46.000Z",
-          "wordCount": 397,
-          "title": "发布了: 好好吃饭，认真生活😋 老板很热情，送了我们两碟自己吃的小菜，又把特制的豌豆酱拿了出来，吃完之后还每人送了个桃子🍑",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FjCCwN1K0NJ5E__v3NJkIdYmU7Lcv3.jpeg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
         }
       ]
     },
@@ -2254,23 +2254,23 @@
       "siteUrl": "https://store.epicgames.com/zh-CN/free-games?lang=zh-CN",
       "articles": [
         {
-          "id": "https://store.epicgames.com/zh-CN/p/europa-universalis-iv",
-          "author": "Paradox Interactive",
-          "description": "Lead any nation from Renaissance to Revolution in a complex simulation of the early modern world. Master the art of war, diplomacy and trade to shape and change your nation’s history!",
-          "link": "https://store.epicgames.com/zh-CN/p/europa-universalis-iv",
-          "publishedOn": "2023-08-10T15:00:00.000Z",
+          "id": "https://store.epicgames.com/zh-CN/p/black-book",
+          "author": "Hypetrain Digital",
+          "description": "《Black Book》是一款以斯拉夫神话传说为基础的黑暗风格角色扮演冒险游戏，本作中你要扮演一位年轻的魔女。在基于卡片的战斗中与邪恶势力进行斗争，并探索这个人类和神话生物共存的世界。",
+          "link": "https://store.epicgames.com/zh-CN/p/black-book",
+          "publishedOn": "2023-08-17T15:00:00.000Z",
           "wordCount": null,
-          "title": "Europa Universalis IV",
+          "title": "《Black Book》",
           "imageUrl": null
         },
         {
-          "id": "https://store.epicgames.com/zh-CN/p/orwell-keeping-an-eye-on-you",
-          "author": "Osmotic Studios GmbH",
-          "description": "老大哥已经来了——他就是你。在游戏中获得至高权力。调查公民的生活，找到一系列恐怖袭击的幕后主使。但是请注意，你提供的信息会产生不同的后果……",
-          "link": "https://store.epicgames.com/zh-CN/p/orwell-keeping-an-eye-on-you",
-          "publishedOn": "2023-08-10T15:00:00.000Z",
+          "id": "https://store.epicgames.com/zh-CN/p/dodo-peak-159276",
+          "author": "Moving Pieces Interactive",
+          "description": "化身成一只渡渡鸟，冲过危险重重的重峦叠嶂，来找回自己走丢的宝宝。在带他们回家同时，还要注意辗转腾挪，躲避障碍和敌人！Dodo Peak是一款致敬经典街机的平台游戏，但是它又具备了现代游戏设计的特点。",
+          "link": "https://store.epicgames.com/zh-CN/p/dodo-peak-159276",
+          "publishedOn": "2023-08-17T15:00:00.000Z",
           "wordCount": null,
-          "title": "《Orwell: Keeping an Eye on You》",
+          "title": "Dodo Peak",
           "imageUrl": null
         }
       ]
@@ -2483,7 +2483,7 @@
           "description": "在线一键生成安卓证书 keystore 文件\n一般的打包工具都会有默认的安卓证书提供，但如果你需要上架需要用自己申请安卓证书 keystore 文件打包 apk\n现有方便方便的工具，直接在网页就可以申请安卓证书，秒搞定。\n首先打开这个网页\nhttp://www.applicationloader.net/appuploader/keystore.php\n输入别名，证书密码，组织名称，点击生成证书就好自动生成并且下载安卓证书 keystore 文件",
           "link": "https://juejin.cn/pin/7268191936660848692",
           "publishedOn": "2023-08-17T10:26:59.000Z",
-          "wordCount": 529,
+          "wordCount": 487,
           "title": "在线一键生成安卓证书 keystore 文件 一般的打包工具都会有默认的安卓证书提供，但如果你需要上架需要用自己申请安卓证书 keystore 文件打包 apk 现有方便方便的...",
           "imageUrl": null
         },
@@ -2493,7 +2493,7 @@
           "description": "老铁们，推荐一个我写的开发者工具 https://tooltool.net[呲牙]",
           "link": "https://juejin.cn/pin/7268164615203897384",
           "publishedOn": "2023-08-17T10:00:14.000Z",
-          "wordCount": 502,
+          "wordCount": 475,
           "title": "老铁们，推荐一个我写的开发者工具 https://tooltool.net[呲牙]",
           "imageUrl": null
         },
@@ -2533,7 +2533,7 @@
           "description": "有没有需要服务器的呢[害羞]",
           "link": "https://juejin.cn/pin/7267723121037115392",
           "publishedOn": "2023-08-16T07:15:39.000Z",
-          "wordCount": 495,
+          "wordCount": 467,
           "title": "有没有需要服务器的呢[害羞]",
           "imageUrl": null
         },
@@ -2543,7 +2543,7 @@
           "description": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件#\nSuperAGI 是一个可访问的开源系统，用于创建和部署智能代理。通过图形用户界面、操作控制台、并发代理和多种数据库配置选项，可以轻松进行 AI 代理开发和管理。SuperAGI 是一个自主人工智能框架，旨在让程序员更轻松地对这些代理进行编程。\n试用地址：https://superagi.com/",
           "link": "https://juejin.cn/pin/7267531776365281292",
           "publishedOn": "2023-08-16T02:58:22.000Z",
-          "wordCount": 522,
+          "wordCount": 494,
           "title": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件# SuperAGI 是一个可访问的开源系统，用于创建和部署智能代理。通过图形用户界面、操作控制台、并发代理和多种...",
           "imageUrl": null
         },
@@ -2573,7 +2573,7 @@
           "description": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件#\nK8sGPT 是一个扫描 kubernetes 集群、诊断和分类问题的工具。它将 SRE 经验编入其分析器中，并帮助提取最相关的信息。该工具适用于工作负载健康分析，查找其中的关键问题，同时帮助用户概览集群并使用 AI 深入分析，还为用户提供安全 CVE 审查。\n试用地址：https://k8sgpt.ai/",
           "link": "https://juejin.cn/pin/7267178812952936511",
           "publishedOn": "2023-08-15T02:51:10.000Z",
-          "wordCount": 539,
+          "wordCount": 511,
           "title": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件# K8sGPT 是一个扫描 kubernetes 集群、诊断和分类问题的工具。它将 SRE 经验编入其分析器中，并帮助提取最相...",
           "imageUrl": null
         },
@@ -2583,7 +2583,7 @@
           "description": "有没有需要服务器的呢[害羞]",
           "link": "https://juejin.cn/pin/7266992141934067746",
           "publishedOn": "2023-08-14T07:01:41.000Z",
-          "wordCount": 495,
+          "wordCount": 467,
           "title": "有没有需要服务器的呢[害羞]",
           "imageUrl": null
         },
@@ -2593,7 +2593,7 @@
           "description": "有没有需要服务器或大厂云代充呢[可怜]",
           "link": "https://juejin.cn/pin/7266778889660874787",
           "publishedOn": "2023-08-14T01:18:03.000Z",
-          "wordCount": 495,
+          "wordCount": 467,
           "title": "有没有需要服务器或大厂云代充呢[可怜]",
           "imageUrl": null
         },
@@ -2603,7 +2603,7 @@
           "description": "[7073670907851440160#新人报道#] \n    IDE/代码编辑器：像IntelliJ IDEA、Visual Studio Code和Sublime Text等IDE/代码编辑器提供了强大的代码编辑和调试功能，支持各种编程语言，使开发工作更加高效和舒适。\n    版本控制工具：如Git和SVN等。它们可以帮助开发团队进行协同开发、版本控制和代码管理，使代码更加可靠和可维护。\n    包管理工具：如Maven和npm等。它们可以帮助开发人员管理和构建项目的依赖关系，简化项目配置和构建过程。\n    调试工具：如Chrome开发者工具和Xcode调试器等。它们提供了强大的调试功能，帮助开发人员在开发过程中快速定位和修复代码问题。\n    API开发工具：如Postman和Swagger等。它们可以帮助开发人员创建、测试和调试API接口，简化API开发和测试流程。\n    设计工具：如Sketch和Adobe XD等。它们提供了丰富的设计功能，帮助开发人员设计和原型化用户界面，提升用户体验设计质量。\n    单元测试工具：如JUnit和pytest等。它们可以帮助开发人员编写和运行单元测试，验证代码的正确性和可靠性。\n    性能分析工具：如JProfiler和Chrome性能工具等。它们可以帮助开发人员分析和优化代码性能，提高应用程序的运行效率和响应速度。\n    文档生成工具：如Javadoc和Sphinx等。它们可以根据代码注释或文档源文件自动生成项目文档，提高代码文档化的效率和质量。\n    协作工具：如Slack、Microsoft Teams和Trello等。它们提供了团队协作和沟通的平台，帮助开发团队更好地协作和管理项目。",
           "link": "https://juejin.cn/pin/7266368395787501622",
           "publishedOn": "2023-08-13T02:22:50.000Z",
-          "wordCount": 511,
+          "wordCount": 506,
           "title": "[7073670907851440160#新人报道#] IDE/代码编辑器：像IntelliJ IDEA、Visual Studio Code和Sublime Text等IDE/代码编辑器提供了强大的代码编辑和调试功能，支持...",
           "imageUrl": null
         },
