@@ -44,7 +44,7 @@
           "description": "nonce可以用来决定哪些内联JS执行，popover可以无JS实现浮层弹出层交互效果。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/html-attribute-nonce-translate/",
           "publishedOn": "2023-08-10T15:24:42.000Z",
-          "wordCount": 1106,
+          "wordCount": 1110,
           "title": "查漏补缺，我仍未知道的HTML nonce和popover属性",
           "imageUrl": null
         },
@@ -54,7 +54,7 @@
           "description": "今天好好了解了下kbd、var、samp等HTML，发现以前表示前端源代码的方式简单且浅薄了。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/07/html-samp-element/",
           "publishedOn": "2023-07-31T14:31:18.000Z",
-          "wordCount": 979,
+          "wordCount": 978,
           "title": "HTML kbd、var、samp元素你使用过没？",
           "imageUrl": null
         },
@@ -74,7 +74,7 @@
           "description": "同样的布局效果，在2017年、2021年和2023年有着不同的实现，代码愈发的简洁高效，一起来看看CSS的发展对Web开发的帮助吧。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/07/css-image-aspect-ratio-layout/",
           "publishedOn": "2023-07-20T14:36:38.000Z",
-          "wordCount": 1199,
+          "wordCount": 1198,
           "title": "CSS高宽不等图片固定比例布局的三重进化",
           "imageUrl": null
         }
@@ -143,12 +143,22 @@
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/64ddc8ca8d1799ce56c31dd8",
+          "author": null,
+          "description": "Chrome 在两年前就推出了 Record & Replay 的能力，https://developer.chrome.com/docs/devtools/recorder/，利用它可以将操作者在 Chrome 的行为路径 Record 下来，然后使用 Replay 进行浏览器层面的回放，记录包括页面跳转、内容输入、点击、鼠标移动等等。\n它的使用场景在于 UI Automation 测试，可以深度解耦质量和研发的工作，只需要在测试环节打开 Record 能力，就可以生成一个通过 JSON 来描述的用户操作路径文件，在业务后期发布时，再利用 Replay 进行回放，这个能力可以很大程度释放 QA 的生产力，避免上线前的重复性人工测试行为。录制 JSON 文件的工作甚至还可以交给研发或者产品来做，这个教学成本很低，也可以封装 Chrome 插件来实现，操作起来更便捷。\nChrome 自身可以根据每个 JSON 文件导出一个无头浏览器的自动化执行脚本，此外，Puppeteer 也推出了针对 Replay 的工具库，https://github.com/puppeteer/replay，它可以直接将 JSON 作为输入来执行。QA 要做的事情就是维护 JSON 文件，甚至可以在制定了简单的编码规范后，提前编写测试用例，让项目转换成 BDD 行为驱动开发，这很容易做到，例如要求研发在 DOM 上标注 data-testid 相关信息，也可以直接给研发代码提 PR 添加 ID 标注。\n写前端单测的业务已经比较稀少了，更别说繁重的 UI 自动化测试，在快速迭代的复杂业务场景下，没有测试用例，只会让项目质量持续恶化，测试工作量日积月累，越来越多。看到一个趋势是，QA 为了保障项目质量，同时研发又不愿意编写单元测试的情况下，UI 自动化测试的需求变得更加旺盛，这个解决方案或许可以帮助到处于这种状态的项目。",
+          "link": "https://m.okjike.com/originalPosts/64ddc8ca8d1799ce56c31dd8",
+          "publishedOn": "2023-08-17T07:14:18.000Z",
+          "wordCount": 522,
+          "title": "发布了: Chrome 在两年前就推出了 Record & Replay 的能力，https://developer.chrome.com/docs/devtools/recorder/，利用它可以将操作者在 Chrome 的行为路径 R...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fl6J_e6yFdY-UA5fSS5Sv5xwqWZf?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/64dd9bcc58c9056cf4c6064b",
           "author": null,
           "description": "之前在美区 APP Store 上购买应用，都是在支付宝切换地区到美国后，购买礼品卡充值解决的，流程颇为繁琐，还有几次购买失败，也不知道是啥原因。关于如何用支付宝充礼品卡的相关帖子：https://x.com/Barret_China/status/1638223359375966208\n今天尝试用这张英国 Wise 卡绑定 APP Store 的支付方式，失败了😂，给出的理由是「付款方式被拒」，原因大概是账单地址不对，美区账号的账单地址默认是美国，但是这张卡的地址是英国，不予通过。\n又尝试申请了一个英国区的苹果账号，首次绑定支付方式也失败了，提示「不能认证支付信息」，正确的姿势是，找一个付费的 APP，点击购买，会进入到一个付费流程，在付费流程中会让你添加付款方式，并要求同意付款协议，关键就在这里，只有同意了协议，才能够成功添加付款方式，目前已经成功将这张卡绑定到了英国区的 APP Store，后续购买软件就顺畅多了。关于如何申请其他区的 APP Store 账号，可以看这个帖子：https://x.com/Barret_China/status/1638215085788372993\n另外有朋友留言说，可以使用 Dupay （https://dupay.one/web-app/register-h5?invitCode=795096&lang=zh-cn）新支持的英镑卡激活 Wise，这张卡是虚拟卡，开通流程也比较简单，我之前尝试开通过一张美国的。他说他使用英镑卡激活成功了，有需要的也可以尝试下，相比找淘宝付费处理，能自助当然更好啦😄\n即刻 - 记录我 遇见你",
           "link": "https://m.okjike.com/originalPosts/64dd9bcc58c9056cf4c6064b",
           "publishedOn": "2023-08-17T04:02:20.000Z",
-          "wordCount": 441,
+          "wordCount": 457,
           "title": "发布了: 之前在美区 APP Store 上购买应用，都是在支付宝切换地区到美国后，购买礼品卡充值解决的，流程颇为繁琐，还有几次购买失败，也不知道是啥原因。关于如...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -178,7 +188,7 @@
           "description": "看到一个把体验优化到极致的服务部署平台，Zeabur，https://zeabur.com，不需要考虑购买服务器，也不用考虑如何打包成镜像，只需要几次按钮点击，就可以把代码部署上线，流量过大的话，它还支持自动扩缩容，非常适合个人/小团队在产品初期时试水和把玩，资费是按照 Memory/vCPU 的服务时长按量收费，相比购买云服务划算太多。如果产品初期没啥流量，免费版也够用了。\n另外，它还支持社区常用服务/产品的一键部署，例如 Wordpress/ghost/Redis/MySQL 等等，如果你的服务用到了数据库，可以在同一个 Project 下一分钟完成数据库的部署，通过环境变量将数据库与项目打通，避免在多个平台跳来跳去。",
           "link": "https://m.okjike.com/originalPosts/64dc7ac5aac630c848ace247",
           "publishedOn": "2023-08-16T07:29:09.000Z",
-          "wordCount": 423,
+          "wordCount": 434,
           "title": "发布了: 看到一个把体验优化到极致的服务部署平台，Zeabur，https://zeabur.com，不需要考虑购买服务器，也不用考虑如何打包成镜像，只需要几次按钮点击，就可以...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FsKJOXLPAYcPTVG6-QSqb5qQDSMgv3.png?imageMogr2/auto-orient/format/jpeg/thumbnail/300x2000%3E/quality/70/interlace/1"
         },
@@ -231,16 +241,6 @@
           "wordCount": 397,
           "title": "发布了: 好好吃饭，认真生活😋 老板很热情，送了我们两碟自己吃的小菜，又把特制的豌豆酱拿了出来，吃完之后还每人送了个桃子🍑",
           "imageUrl": "https://cdnv2.ruguoapp.com/FjCCwN1K0NJ5E__v3NJkIdYmU7Lcv3.jpeg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/64d5ac49795eb418ab318186",
-          "author": null,
-          "description": "上次研究的是以个人身份注册，推友走通了美国公司注册流程，https://twitter.com/lai_jia_wei/status/1689633714358378496，可以对比着看看。\n开通以后，685 刀/年，如果有稳定的产品/服务对外提供，可以考虑注册，如果没有的话，先想一想要做啥吧😄\n另外，有朋友提醒我说，“美国对美国公司全球征税，搞不好某次去加拿大过境就被扣下了，可以选择爱尔兰或其他地区的公司”，申请了公司，一定要注意定期报税的问题。\nBarret李靖发表了动态：关于独立开发者进行海外收款，看了推友们提供的线索，大概捋清楚了逻辑，有些必不可少的东西是绕不过去的：\n\n1. 美国手机号码，可以去淘宝上买个 Paygo，3 刀/月，缺点是国内上网受限，也就收收短信，听听电话，最好打开 WiFi-calling，否则漫游费用还不低；也可以尝试下橙卡，10 刀/月，免翻墙上网\n\n2. 美国私人地址，它是一个可以收信件包裹的真实物理地址，在 Anytime Mailbox 上购买，9 刀/月，按年付便宜点（不知道是否还有其他推荐的平台）；拿到这个地址之前，需要先完成 1583 公证，否则人家不租给你，这个可以在 Fiverr 找中介代办，便宜的 25 刀，完成这个认证的另外一个好处是，可以收取金融相关的信件，例如账单、支票等\n\n3. 美国个人税号 ITIN，美国人自己用的是 SSN，非美国人可以去 IRS 申请 ITIN，有了这个东西就可以去申请美国的银行账户和信用卡了；看到 Fiverr 上报价 36 刀还包含上面提到的 1583 公证，算良心价么？\n\n4. 美国独立上网 IP，没有稳定的 IP 逃不过很多金融服务的风控系统，甚至连网页都无法打开\n\n另外，ITIN 需要至少三年内报税一次，否则会被作废。把 1583 公证和 ITIN 搞完，再加上办理好美国的银行账户，以及其他七七八八的学习和沟通，至少需要 2~3 个月时间，周期还是挺长的。\n\n这篇文章介绍得较为详细，看起来也还比较靠谱，可以参考参考：https://itangtalk.com/digital-migration/\n\n以上是个人玩法，看推友留言，似乎直接注册公司会简单一些，很多中介服务会打包解决各项耗时问题，等我再去研究研究，对比下哪个更省心。",
-          "link": "https://m.okjike.com/originalPosts/64d5ac49795eb418ab318186",
-          "publishedOn": "2023-08-11T03:34:33.000Z",
-          "wordCount": 485,
-          "title": "发布了: 上次研究的是以个人身份注册，推友走通了美国公司注册流程，https://twitter.com/lai_jia_wei/status/1689633714358378496，可以对比着看看。 开通以后...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         }
       ]
     },
@@ -430,6 +430,16 @@
           "imageUrl": "https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png"
         },
         {
+          "id": "https://workreview.zhubai.love/posts/2300328144202682368",
+          "author": "七白",
+          "description": "活得诸事不顺的人有三个共性：  \n    \n  1、缺乏见识——你会发现和一些人讲道理永远讲不通，“夏虫不可语冰”  \n    \n  2、缺乏爱——没有关爱别人的习惯，小家子气，不懂分享  \n    \n  3、缺乏规矩——踩到别人底线而不自知，最终感到别人对自己不友好，却不知原因，最终对人、对社会产生一种戾气  \n    \n  \n  《见识》吴军",
+          "link": "https://workreview.zhubai.love/posts/2300328144202682368",
+          "publishedOn": "2023-08-07T13:33:01.000Z",
+          "wordCount": 63,
+          "title": "Reading #149 活得诸事不顺的人的三个共性",
+          "imageUrl": "https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png"
+        },
+        {
           "id": "https://dex.zhubai.love/posts/2300297335311507456",
           "author": "dingyi @DEX周刊",
           "description": "本期封面来自       Brain Lovin      ，普通人看到的是完美的彩虹，而作为钓鱼佬的我，看到的是完美钓位……  \n    \n  \n    \n  请允许我先恰个饭：  \n            \n  \n    \n  上周 Twitter 上面进行了一场大型行为艺术，      起因是这个开发者发了一条「Thank you Javascript」的推文      ，配上了自己的普通奔驰爱车，然后无数国内外网友都跟着晒自己的车子，比如晒保时捷的      这个      和      这个      ，      晒劳力士的      ，      晒飞机的      ，      知名独立开发者晒马丁      ，       supabase 创始人晒跑车      ，      知名跑车玩家 Ruby on Rails 创始人也出来凑热闹      ……当然还有不少恶搞的，包括 Vue 作者尤雨溪发了一张自家邻居的兰博基尼，话说能在新加坡买这种车的都是巨富，比如币圈那些大佬投资人。截止目前发文已经有 2000 多引用转发了。不得不感叹和羡慕，在国外干着同样的工作，人人都可以买自己心爱的 BBA、路虎、保时捷、跑车，除了薪水因素，房子车太便宜才是根本原因。想想路虎最高级别的揽胜也才 10 万美金多一点，而刚毕业去大厂的同学年薪就有 18 万。在咱们这里，都是四五十岁非富即贵的大老板才开得起揽胜，而人家工作几年的小年轻就能拥有了……  \n    \n  上周其他热点内容包括：  \n    \n  \n      Figma 终于支持了设计文件内的颜色模式      ，顺便支持了 Display P3，Display P3 不是重点，文件内能切换才是重点，目前 P3 也就做移动端设计还能用用，如果只是做 Web 完全没必要，虽然各家浏览器早就支持了 color(dis…",
@@ -437,16 +447,6 @@
           "publishedOn": "2023-08-07T11:30:36.000Z",
           "wordCount": 63,
           "title": "#203",
-          "imageUrl": "https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png"
-        },
-        {
-          "id": "https://xiaoshu.zhubai.love/posts/2300132573080518656",
-          "author": "也树",
-          "description": "你好，我是小树。这是我为你写的第 75 封信。每期都会同步更新在微信公众号      一颗小树      和      竹白专栏      。现在有 317 位朋友订阅了这封信，也欢迎你。  \n        \n  1  \n    \n  有效 > 有效率  \n    \n  Productivity is for machines, not for people. There’s nothing meaningful about packing some number of work units into some amount of time or squeezing more into less.\n高效率适用于机器，而非人类。把一定数量的工作单元塞进一段时间或在更短时间内完成更多工作，并没有什么意义。  \n    \n  Machines can work 24/7; humans can’t.\n机器可以全天候工作，而人类则不能。  \n    \n  We don’t believe in busyness at Basecamp. We believe in effectiveness. How little can we do? How much can we cut out? Instead of adding to-dos, we add to-don’ts.\n在 Basecamp，我们不相信忙碌，而是追求高效率。我们关注的是如何做得更少？我们能削减多少工作？我们不是在增加待办事项，而是在增加不做的事情。  \n    \n  \n    \n  引用自       effective > productive      \n    \n  \n    \n  让自己变得效率更高，做的更多，不如想想那些事是不要做的。  \n    \n  2  \n    \n  对国内大模型来说：  \n    \n  \n  训练数据决定模型效果：大模型需要学习知识，在特定的业务场景下，中文可以用来学习的知识是很有限的，这是目前国内大模型的主要瓶颈之一。 当然，大模型还有很多其他的效果指标，但对国内来说目前都算是同一个起跑线。  \n    \n  算力决定用户规模上限：大模型的算力消耗更高，并且当前算力是有限的。算力规模的大小，决定了能够服务的用户规模的上线。  \n    \n  商业化程度决定能否赚钱：基于大模型的产品，应当是尽早开始收费，和传统的应用不同，大模型的边际成本并不会显著递减。  \n  \n    \n  3  \n    \n  自媒体成功的关键点是为关注者带来价值，而不是记录自己。  \n    \n  内容有两类表达：  \n    \n  \n  对自己的价值的：碎片化的思考、情绪、日常等等  \n    \n  对读者有价值的：体系化的内容、能带来认知提升或者能参考实操产生实际效果的  \n  \n    \n  很多时候，创作者的内容更偏向对自己有价值，而不是对读者有价值。  \n    \n  价值也分为情绪价值和真正的干货价值，情绪价值往往是满足读者的窥私欲，可能有奇效，比例不宜多。  \n    \n  4  \n    \n  现在互联网上的对立情绪很重，每次看到我不理解的情绪和观点，都会多想一句：ta 是否经历过什么我没经历过的？  \n    \n  每个人的认知都是由自己的经历塑造的，而经历只占世界上很小的一部分，用它来解释我们看到的所有事情注定是偏颇的。  \n    \n  但偏颇也有价值，思维的碰撞才能产生新的认知。  \n    \n  但就我而言，很多话题如果想不明白，就保持沉默。  \n    \n  碎碎念  \n        \n  8 月 1 号的时候，今年的跑量达到了 100 KM，达到一个小小的里程碑。  \n    \n  感觉自己开始慢慢从运动里获取到乐趣了。  \n    \n  题图是周末去看的现场演出，腿都要蹦断了，躁翻了。  \n    \n  \n    \n  谢谢你的关注，我们下期再见。👋🏻  \n      \n  往期推荐  \n    \n  \n      Indie Hacker，互联网打工人的下一个出路？      \n    \n      提升信噪比：过滤有价值信息的方法      \n    \n      提高生活的满足感      \n    \n      做好时间管理的几个建议      \n  \n    \n  \n    \n  你也可以在这里找到我：      即刻      、      Twitter      、微信公众号      一颗小树      。  \n    \n  \n    \n  如果你觉得这篇文章对你有用，欢迎分享给更多好友。",
-          "link": "https://xiaoshu.zhubai.love/posts/2300132573080518656",
-          "publishedOn": "2023-08-07T00:35:53.000Z",
-          "wordCount": 63,
-          "title": "7 月思维碎片",
           "imageUrl": "https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png"
         }
       ]
@@ -456,6 +456,26 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20230817/t20230817_526384026.html",
+          "author": "国家预警信息发布中心",
+          "description": "江津区气象台2023年8月17日17时发布“大风蓝色预警信号”，预计未来12小时，支坪镇、鼎山街道、珞璜镇、几江街道、圣泉街道、吴滩镇、德感街道、双福街道、油溪镇、龙华镇、先锋镇等镇街风力可达6级，局地阵风可达7级以上，并伴有雷雨天气，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20230817/t20230817_526384026.html",
+          "publishedOn": "2023-08-17T09:25:03.000Z",
+          "wordCount": 523,
+          "title": "重庆市江津区发布大风蓝色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230817/t20230817_526383817.html",
+          "author": "国家预警信息发布中心",
+          "description": "綦江区森林草原防灭火指挥部、綦江区应急管理局、綦江区林业局、綦江区气象局2023年8月17日15时30分联合发布“森林草原火险橙色预警信号”，我区老瀛山、长田、万隆、古剑山等重点林区已连续多日无明显降水，出现较高森林草原火险气象等级。预计8月17日到8月18日上述地区仍将持续较高森林草原火险气象等级，引发森林草原火灾的可能性大。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230817/t20230817_526383817.html",
+          "publishedOn": "2023-08-17T07:50:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市綦江区发布森林草原火险橙色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/csyj/20230817/t20230817_526383455.html",
           "author": "国家预警信息发布中心",
@@ -2291,6 +2311,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7267434484505739316",
+          "author": "花果山大圣",
+          "description": "视频版\n哈喽大家好，我是大圣，一个除了上班什么都喜欢的程序员，今天来聊一下我为什么要建议所有人反对996\n先科普一下，996是一种互联网常见的工作模式，就是早上9点上班，晚上9点下班，每周工作6天去掉午休一小时，每周工作时间是11＊6＝66，965是8＊5＝40如果加班工资算1.5倍，996相当于时薪直接腰斩\n之前我认为996只是变相降低50％，剥夺你学习的精力和时间，并且用晚餐＋免费打车来美化这种行为，还用奋斗是福报pua你，而且还实用末尾淘汰机制让你们内斗，而且996效率极低，我一天能注意力集中4个小时算高的了，我作为一个正常人类，没法集中注意力12个小时\n996的真实节奏就是9点或者10点到公司，开个早会泡个茶，看看邮件刷刷知乎摸摸鱼就吃午饭了，基本都是下午才能开始干活，但是很多会议就来了，其实整体效率并没有提高，都在假装忙碌在摸鱼，反而是晚饭后能集中注意力工作一会，长久对积极的工作态度是毁灭性的打击\n所以我一直都是立场鲜明的反对996，在996.icu崛起之前，我的程序员找工作黑名单就是Github最大的反996项目，996.icu作者之一被抓起来后，这个项目我就不再更新了\n\n\n但是你以为你的摸鱼行为老板不知道吗？你可以怀疑有钱人的人品，但是你不能怀疑他们的智商和能力，我自由职业一年后才意识到，996真正的伤害不是时薪的降低，而是对你发展机会的扼杀\n我做自由职业得自己搞钱，有些小机会，比如外包，行业小聚，大家基本都是工作晚上7点～10点或者周六的小聚，周日那些小甲方都会在家休息，饭局会促成一些意想不到的收入机会，晚上9点才放你走，有可能就是老板要把你晚上可能接触到商业机会的聚会干掉，成为彻底的打工人，哪怕你效率低\n一个年轻人进入到公司，前几年从啥也不懂，到掌握了代码，运营，产品等技能之一，六七点下班后，同学聚会，发小聚会，微信群线下聚会等，不同公司不同角色的人在一起交流，可能就会诞生新得机会，你的发小A可能是个设计，你会写代码，你同学他姑父公司需要做个小程序，这就可以成为你新的机会\n越过公司，直接和社会交易的机会，你成为老板的机会，哪怕很小，你也不会因为公司裁员而绝望，万一机会多了，你就会开始创业或者自由职业，所以老板一定要让你再公司待到9点，持续修炼垂直的技能，变成架构师，但是你没有接触到商务，或者叫靠自己获得收入的能力\n就像打篮球一样，投篮就是最重要的得分机会，你是一个很好大学的毕业生，爱学习能力强，但是老板只训练你的传球，篮板和抢断能力，本来你可以接触到投篮的时间夺走，让你待在公司继续训练过人和篮板，哪怕晚上你效率低摸鱼都可以，只要你不会投篮，成为他的潜在对手就可以\n\n所以996效率低老板是知道的，除了训练服从性之外，还让你成为彻底的打工人，哪怕上午摸鱼，晚上7点公司内部组织技术分享会学习都没关系，你只能持续训练你的传球技能，然后传球给你的老板，只有他自己能投篮\n我一直都是拒绝996的，我在百度当程序员那会，就一直思考，这个B班，是不是非上不可，后来发现可以周末出去讲课，教人写js，虽然课时费不高，还参与招生，但是我觉得我自己可以独立通过写代码获得收入，非常cool\n现在成为自由职业（无业游民），极客时间的Vue课到今天有3w人学过了，B站课堂也刚上了一个课，出版社也在合作，把【Vuejs设计与实现】录制成课程，这些都是工作时间饭点吃饭＆喝咖啡诞生的商业机会，或者我去参加平台组织的聚会谈成的，这是996没法参与的\n\n\n再次建议我的所有学员＆朋友不要加入996的公司，除了工资，健康和法律问题，还有被彻底剥夺了社交的机会，失去了多元发展的机会，我也建议所有的程序员，前端学学后端，后端学学前端，这俩是能开发出完整产品的技术，React或者Vue，加上一个Nest, 数据库用mongodb或者mysql，还有非常火的serverless，做一个全栈的应用，然后还可以写文章录视频，培养演讲能力\n\n然后看看《一人公司方法论》《商业百科》《增长黑客》《启示录》《运营之光》《优势谈判》综合入个门，日常除了喜欢造轮子之外，可以好好思考一下，你现在做的业务，到底是怎么赚到钱的这个能力其实真的很有用，说不定哪次聚会就有用，祝大家都能早日找到适合自己的商业机会，能够靠写代码这门手艺，直接和市场交易养活自己，那裁员和pua还有什么可怕的呢\n今天就聊到这，欢迎大家对视频点赞，这样会激励我做更多的视频 下期再见",
+          "link": "https://juejin.cn/post/7267434484505739316",
+          "publishedOn": "2023-08-15T14:02:11.000Z",
+          "wordCount": 639,
+          "title": "为什么我们要立场鲜明的反对996",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7267408057163055139",
           "author": "赫子子",
           "description": "从构思到上线的全过程，开发中遇到一些未知问题，也都通过查阅资料和源码一一解决，小记一下望对正在使用或即将使用Nextjs开发的你们有所帮助。\n那些年我开发过的博客\n就挺有意思，域名，技术栈和平台的折腾史\n2018年使用hexo搭建了个静态博客，部署在github pages\n2020年重新写了博客，vue，nodejs，mongodb三件套，使用nginx部署在云服务器上\n2023年云服务器过期了，再一次重写了博客，nextjs为基础框架，部署在vercel上\n背景\n因为日常开发离不开终端，正好也有重写博客的想法，打算开发一个不只是看的博客网站，所以模仿终端风格开发了Yucihent。\n技术栈\nnextjs 更多技术栈\n选用nextjs是因为next13更新且稳定了App Router和一些其他新特性。\n设计\n简约为主，首页为类终端风格，prompt样式参考了starship，也参考过ohmyzsh themes，选用starship因为觉得更好看。\n交互\n通过手动输入或点击列出的命令进行交互，目前可交互的命令有：\nhelp 查看更多\nlist和ls 列出可用命令\nclear 清空所有输出\nposts 列出所有文章\nabout 关于我\n后续会新增一些命令，增加交互的趣味。\n暗黑模式\n基于tailwind的dark mode和next-themes\n首先将tailwind的dark mode设置为class，目的是将暗黑模式的切换设置为手动，而不是跟随系统。\n// tailwind.config.js\n\nmodule.exports = {\n  darkMode: 'class'\n}\n\n新建ThemeProvider组件，用到next-themes提供的ThemeProvider，需要在文件顶部使用use client，因为createContext只在客户端组件使用。\n'u…",
@@ -2328,16 +2358,6 @@
           "publishedOn": "2023-08-14T08:14:11.000Z",
           "wordCount": 3330,
           "title": "写给前端同学的Nginx配置指南",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7266737898669260835",
-          "author": "Moment",
-          "description": "theme: cyanosis\nhighlight: atom-one-dark\n前几天的一场面试中，被面试官吐槽了一下，我在我项目中直接使用 Prettier 来做代码格式化，首先加载该依赖包就需要一定的成本了，况且格式化的过程中可能需要一些计算，会导致阻塞整个浏览器。\n在这里，我个人目前能想到的就两种方案，一种是使用网络请求的方式，也就是将这个问题抛给后端去处理，后端处理的话也是用相同的办法去做，只是最终把结果返回给前端。因为在浏览器的事件循环中，网络请求并不会阻塞 js 主线程。\n还有一个方法就是使用 web worker，将需要格式化或转换的代码交给 worker 去处理，处理完成之后最终把结果返回。\n什么是 Web Worker\nWeb Worker 是一种在浏览器中运行 JavaScript 代码的机制，它允许您在后台线程中执行一些任务，而不会阻塞主线程。主线程通常用于处理用户界面的交互和渲染，而 Web Worker 可以用于执行一些耗时的计算、网络请求、数据处理等任务，以提高应用的性能和响应速度。\n它的主要特点是能进行并行计算，他允许在后台同时运行多个线程，这些线程可以并行执行任务。这使得可以同时处理多个耗时的操作，而不会阻塞用户界面。\nWeb Worker 的使用\n首先，您需要创建一个单独的 JavaScript 文件，这将是我们的 Web Worker 文件。例如，我们可以创建一个名为 worker.js 的文件，并编写如下代码：\n// worker.js\n\nself.addEventListener(\"message\", (event) => {\n  // 在这里执行后台任务\n  const data = event.data;\n  const result = doSomeHeavyWork(data);\n  self.postMessage(res…",
-          "link": "https://juejin.cn/post/7266737898669260835",
-          "publishedOn": "2023-08-14T01:06:15.000Z",
-          "wordCount": 1882,
-          "title": "Web Worker没有使用场景？那只是你没有用到而已🐒🐒🐒",
           "imageUrl": null
         },
         {
@@ -2478,12 +2498,22 @@
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
         {
+          "id": "7268049978941227047",
+          "author": "Seal软件",
+          "description": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件#\nCodeSee 可视化您的代码库和服务，并自动化您的工作流程。当您深入研究代码库、规划功能或重构、编写代码以及完成代码审查时，CodeSee 为您提供有力支持。CodeSee 自动生成并更新代码图，并同步您的代码库。帮助您了解文件及文件夹如何链接，了解代码更改如何适应更大的架构等。\n尝试地址：https://www.codesee.io/",
+          "link": "https://juejin.cn/pin/7268049978941227047",
+          "publishedOn": "2023-08-17T06:17:06.000Z",
+          "wordCount": 518,
+          "title": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件# CodeSee 可视化您的代码库和服务，并自动化您的工作流程。当您深入研究代码库、规划功能或重构、编写代码以...",
+          "imageUrl": null
+        },
+        {
           "id": "7267926936641765433",
           "author": "师傅有妖气",
           "description": "jym,你们都在用什么富文本编辑器，求推荐[咖啡]",
           "link": "https://juejin.cn/pin/7267926936641765433",
           "publishedOn": "2023-08-17T02:43:06.000Z",
-          "wordCount": 494,
+          "wordCount": 497,
           "title": "jym,你们都在用什么富文本编辑器，求推荐[咖啡]",
           "imageUrl": null
         },
@@ -2573,7 +2603,7 @@
           "description": "[7073670907851440160#新人报道#] \n    IDE/代码编辑器：像IntelliJ IDEA、Visual Studio Code和Sublime Text等IDE/代码编辑器提供了强大的代码编辑和调试功能，支持各种编程语言，使开发工作更加高效和舒适。\n    版本控制工具：如Git和SVN等。它们可以帮助开发团队进行协同开发、版本控制和代码管理，使代码更加可靠和可维护。\n    包管理工具：如Maven和npm等。它们可以帮助开发人员管理和构建项目的依赖关系，简化项目配置和构建过程。\n    调试工具：如Chrome开发者工具和Xcode调试器等。它们提供了强大的调试功能，帮助开发人员在开发过程中快速定位和修复代码问题。\n    API开发工具：如Postman和Swagger等。它们可以帮助开发人员创建、测试和调试API接口，简化API开发和测试流程。\n    设计工具：如Sketch和Adobe XD等。它们提供了丰富的设计功能，帮助开发人员设计和原型化用户界面，提升用户体验设计质量。\n    单元测试工具：如JUnit和pytest等。它们可以帮助开发人员编写和运行单元测试，验证代码的正确性和可靠性。\n    性能分析工具：如JProfiler和Chrome性能工具等。它们可以帮助开发人员分析和优化代码性能，提高应用程序的运行效率和响应速度。\n    文档生成工具：如Javadoc和Sphinx等。它们可以根据代码注释或文档源文件自动生成项目文档，提高代码文档化的效率和质量。\n    协作工具：如Slack、Microsoft Teams和Trello等。它们提供了团队协作和沟通的平台，帮助开发团队更好地协作和管理项目。",
           "link": "https://juejin.cn/pin/7266368395787501622",
           "publishedOn": "2023-08-13T02:22:50.000Z",
-          "wordCount": 510,
+          "wordCount": 514,
           "title": "[7073670907851440160#新人报道#] IDE/代码编辑器：像IntelliJ IDEA、Visual Studio Code和Sublime Text等IDE/代码编辑器提供了强大的代码编辑和调试功能，支持...",
           "imageUrl": null
         },
@@ -2665,16 +2695,6 @@
           "publishedOn": "2023-08-07T09:36:38.000Z",
           "wordCount": 518,
           "title": "今天我们在 ProductHunt 中发布了产品，希望大家能帮忙点赞及传播一下，拜谢！https://www.producthunt.com/posts/aircode",
-          "imageUrl": null
-        },
-        {
-          "id": "7264117921231601721",
-          "author": "ljq",
-          "description": "致敬Vim之父，伟大的慈善家 & 传奇程序员 Bram Moolenaar，R.I.P🕯️🙏 ，几乎每天都在用的编辑器Vim，”编辑器之神”。https://github.com/brammool，享年62岁，去世前一个月还在对Vim做着更新、修改工作🫡",
-          "link": "https://juejin.cn/pin/7264117921231601721",
-          "publishedOn": "2023-08-06T12:28:49.000Z",
-          "wordCount": 553,
-          "title": "致敬Vim之父，伟大的慈善家 & 传奇程序员 Bram Moolenaar，R.I.P🕯️🙏 ，几乎每天都在用的编辑器Vim，”编辑器之神”。https://github.com/brammool，享年6...",
           "imageUrl": null
         }
       ]
