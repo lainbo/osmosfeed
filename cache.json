@@ -64,7 +64,7 @@
           "description": "同样的布局效果，在2017年、2021年和2023年有着不同的实现，代码愈发的简洁高效，一起来看看CSS的发展对Web开发的帮助吧。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/07/css-image-aspect-ratio-layout/",
           "publishedOn": "2023-07-20T14:36:38.000Z",
-          "wordCount": 1202,
+          "wordCount": 1199,
           "title": "CSS高宽不等图片固定比例布局的三重进化",
           "imageUrl": null
         }
@@ -2156,7 +2156,7 @@
           "description": "theme: orange\nhighlight: a11y-dark\n摘要：  本文将深入探讨 Vue 中的 nextTick 方法，首先介绍其背景和使用方式，然后解析其底层原理，最后探讨 nextTick 的常见使用场景。通过本文的阅读，您将对 Vue 中 nextTick 的工作原理有更深入的理解。（读完本文预计需要5分钟）\n1. nextTick 的背景\n在 Vue 中，DOM 更新是异步执行的，这意味着当我们修改了数据后，DOM 并不会立即更新，而是在下一个 tick（更新周期）时才会进行更新。Vue 提供了 nextTick 方法来处理在 DOM 更新完成后执行回调函数的需求。nextTick 方法可以将回调函数推入一个回调队列，在下一个 tick 时执行这些回调函数。\n2. nextTick 的使用\n在 Vue 实例上调用 $nextTick 方法，或者使用 Vue.nextTick 方法，都可以将回调函数添加到 nextTick 的队列中。下面是使用 nextTick 的简单示例：\n// 在 Vue 实例内部使用\nthis.$nextTick(() => {\n  // DOM 更新后执行的回调函数\n});\n\n// 使用全局方法\nVue.nextTick(() => {\n  // DOM 更新后执行的回调函数\n});\n\n使用$nextTick方法等待DOM更新完成：\n通过在Vue实例上调用$nextTick方法来等待DOM更新完成。\n在$nextTick的回调函数中执行需要在DOM更新后进行的操作。\n示例：\nnew Vue({\n  data() {\n    return {\n      message: 'Hello, Vue!',\n    };\n  },\n  methods: {\n    updateData() {\n      this.message = …",
           "link": "https://juejin.cn/post/7266374711823171636",
           "publishedOn": "2023-08-13T05:28:02.000Z",
-          "wordCount": 2535,
+          "wordCount": 3074,
           "title": "看完这篇nextTick就别再问别人了",
           "imageUrl": null
         },
