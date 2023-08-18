@@ -51,11 +51,63 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-18 datetime="2023-08-18T00:14:37.000Z">2023-08-18</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-18 datetime="2023-08-18T00:14:37.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-18 datetime="2023-08-18T02:06:28.000Z">2023-08-18</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-18 datetime="2023-08-18T02:06:28.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7268249031549091875"
+                        open
+                      >
+                        <summary class="article-expander__title">有没有需要服务器的吗[害羞]</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7268249031549091875">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>有没有需要服务器的吗[害羞]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7268224240108961853"
+                        open
+                      >
+                        <summary class="article-expander__title">xdm，专心搞副业了，回收手机和平板，可走平台，主打诚信和爽快。有需要先关的手机和平板的，也可以联系我哈，售后有保证！诚信经营！！！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7268224240108961853">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>xdm，专心搞副业了，回收手机和平板，可走平台，主打诚信和爽快。有需要先关的手机和平板的，也可以联系我哈，售后有保证！诚信经营！！！</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -370,7 +422,7 @@ CodeSee 可视化您的代码库和服务，并自动化您的工作流程。当
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>jym,你们都在用什么富文本编辑器，求推荐[咖啡]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -389,7 +441,7 @@ CodeSee 可视化您的代码库和服务，并自动化您的工作流程。当
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>有没有人需要大厂云代充值呢[害羞]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1108,6 +1160,54 @@ Apple pay，可以购物消费，也可以 ATM 直接提款，换汇时的汇率
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7267791228872671247"
+                        open
+                      >
+                        <summary class="article-expander__title">还不清楚webpack和vite原理？有这篇足够了！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7267791228872671247">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: simplicity-green
+highlight: a11y-dark
+前言
+每次用vite创建项目秒建好，前几天用vue-cli创建了一个项目，足足等了我一分钟，那为什么用 vite 比 webpack 要快呢，这篇文章带你梳理清楚它们的原理及不同之处！文章有一点长，看完绝对有收获！
+正文
+一、webpack基本使用
+webpack 的出现主要是解决浏览器里的 javascript 没有一个很好的方式去引入其它的文件这个问题的。
+话说肯定有小伙伴不记得 webpack 打包是咋使用的（清楚的话可以跳过这一小节），那么我以一个小 demo 来实现一下：
+1. 搭建基本目录结构
+我们在vue项目中初始化后全局安装 webpack 和 webpack-cli ：
+yarn add webpack webpack-cli -g
+创建vue所需的目录文件，以及webpack配置文件。
+目录结构如下：
+2. webpack.config.js配置文件编写
+不清楚webpack配置项的朋友可以进官方文档瞅一眼：webpack 中文文档
+看完之后，我们知道webpack主要包含的几个概念就开始编写配置文件了！
+（1）打包main.js
+代码如下：
+const path &#x3D; require(&#x27;path&#x27;)
+
+module.exports &#x3D; {
+  mode: &#x27;development&#x27;,  //设置开发模式
+  entry: path.resolve(__dirname, &#x27;./src/main.js&#x27;),   //打包入口
+  output: {   //打包到哪里去
+    path: path.resolve(__dirname, &#x27;dist&#x27;),
+    filename: &#x27;js/[name].js&#x27;,  //默认文件名main.js
+  }
+}
+
+为了方便我…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7267728538567114789"
                         open
                       >
@@ -1184,7 +1284,7 @@ watch(value, value &#x3D;&gt; console.log(value))
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>有没有需要服务器的呢[害羞]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1224,7 +1324,7 @@ SuperAGI 是一个可访问的开源系统，用于创建和部署智能代理�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>有没有需要云服务器的呢[害羞]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2825,6 +2925,41 @@ events {
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7266737898669260835"
+                        open
+                      >
+                        <summary class="article-expander__title">Web Worker没有使用场景？那只是你没有用到而已🐒🐒🐒</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7266737898669260835">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: cyanosis
+highlight: atom-one-dark
+前几天的一场面试中，被面试官吐槽了一下，我在我项目中直接使用 Prettier 来做代码格式化，首先加载该依赖包就需要一定的成本了，况且格式化的过程中可能需要一些计算，会导致阻塞整个浏览器。
+在这里，我个人目前能想到的就两种方案，一种是使用网络请求的方式，也就是将这个问题抛给后端去处理，后端处理的话也是用相同的办法去做，只是最终把结果返回给前端。因为在浏览器的事件循环中，网络请求并不会阻塞 js 主线程。
+还有一个方法就是使用 web worker，将需要格式化或转换的代码交给 worker 去处理，处理完成之后最终把结果返回。
+什么是 Web Worker
+Web Worker 是一种在浏览器中运行 JavaScript 代码的机制，它允许您在后台线程中执行一些任务，而不会阻塞主线程。主线程通常用于处理用户界面的交互和渲染，而 Web Worker 可以用于执行一些耗时的计算、网络请求、数据处理等任务，以提高应用的性能和响应速度。
+它的主要特点是能进行并行计算，他允许在后台同时运行多个线程，这些线程可以并行执行任务。这使得可以同时处理多个耗时的操作，而不会阻塞用户界面。
+Web Worker 的使用
+首先，您需要创建一个单独的 JavaScript 文件，这将是我们的 Web Worker 文件。例如，我们可以创建一个名为 worker.js 的文件，并编写如下代码：
+// worker.js
+
+self.addEventListener(&quot;message&quot;, (event) &#x3D;&gt; {
+  // 在这里执行后台任务
+  const data &#x3D; event.data;
+  const result &#x3D; doSomeHeavyWork(data);
+  self.postMessage(res…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7266721485811925033"
                         open
                       >
@@ -3594,7 +3729,7 @@ em 相对单位
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>有没有需要服务器的呢[害羞]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3613,7 +3748,7 @@ em 相对单位
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>有没有需要服务器或大厂云代充呢[可怜]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4232,6 +4367,59 @@ new Vue({
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7266315019293835301"
+                        open
+                      >
+                        <summary class="article-expander__title">scss这样写，你学会了吗？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7266315019293835301">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>scss在平常业务中肯定会使用，对于切图css写的实在是有点太多，但是在你写css的同时，你可以让css写得和别人有点不一样，那还是比较有意思的。本文是一篇关于scss的使用，希望在你的业务中带来思考和帮助
+主要会从scss下面几点来讲
+scss中的变量如何复用
+@extend复用样式
+如何动态灵活使用插值与for循环
+@mixin与@include减少重复样式编写
+占位符与scss函数的使用
+正文开始...
+@extend
+我们以一组标签为例子，在一组标签中，每一种标签的颜色背景属性不一样，但是宽度,高度属性是一样的
+import React, { useState } from &quot;react&quot;;
+import style from &quot;./index.module.scss&quot;;
+interface Props {}
+
+const Index: React.FC &#x3D; (props) &#x3D;&gt; {
+  const {} &#x3D; props;
+  const [tagData, setTagData] &#x3D; useState([
+    {
+      name: &quot;tag1&quot;,
+      value: &quot;tag1&quot;,
+    },
+    {
+      name: &quot;tag2&quot;,
+      value: &quot;tag2&quot;,
+    },
+    {
+      name: &quot;tag3&quot;,
+      value: &quot;tag3&quot;,
+    },
+  ]);
+  return (
+    
+tag
+ (
+          &lt;span className&#x3D;{v…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -4722,7 +4910,7 @@ new Vue({
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>有没有需要大厂云充值的呢？[可怜]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -5373,405 +5561,6 @@ test!
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374638.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市荣昌区发布高温橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374638.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>荣昌区气象台2023年8月11日11时27分发布“高温橙色预警信号”，预计8月11日13时至19时，我区全部镇街日最高气温将升至37℃以上。请以上各地注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374575.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市铜梁区发布高温橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374575.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>铜梁区气象台2023年8月11日10时40分发布“高温橙色预警信号”，预计11日12时至19时，蒲吕街道、巴川街道、东城街道、旧县街道、水口镇、白羊镇、二坪镇、华兴镇、安溪镇、大庙镇、虎峰镇、福果镇、石鱼镇、庆隆镇、侣俸镇、平滩镇、太平镇、少云镇、安居镇、维新镇、高楼镇等海拔400米以下地区日最高气温将升至37℃以上，请以上各地注意防范。防御指南：1.注意防中暑、防溺水；2.注意林区、景区、城镇、古镇古街、农事活动、祭祀等火灾防范；3.注意节约用电、用水和安全生产；4.缩短户外活动和露天作业时间；5.相关部门和乡镇街道按照职责，做好高温防范应对工作。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374576.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市万州区发布高温橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374576.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>万州区气象台2023年8月11日10时50分发布“高温橙色预警信号”，预计11日12时至20时，我区太龙镇、黄柏乡、长岭镇、高笋塘街道、新田镇、郭村镇、李河镇、高梁镇、大周镇、熊家镇、陈家坝街道、小周镇、龙都街道、周家坝街道、高峰街道、弹子镇、沙河街道、长滩镇、钟鼓楼街道、余家镇、武陵镇、天城街道、五桥街道、百安坝街道、太白街道、九池街道、牌楼街道、双河口街道、响水镇、甘宁镇、白羊镇等镇乡街道海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。注意防中暑、防溺水；注意林区、景区、城镇、古镇古街、农事活动、祭祀等火灾防范；注意节约用电、用水和安全生产；缩短户外活动和露天作业时间；相关部门和镇街按照职责，做好高温防范应对工作。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374562.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市奉节县发布高温橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374562.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>奉节县气象台2023年8月11日10时50分发布“高温橙色预警信号”，预计11日13时至19时，红土乡、青莲镇、公平镇、石岗乡、康乐镇、汾河镇、白帝镇、草堂镇、夔门街道、鱼复街道、永安街道、夔州街道、朱衣镇、康坪乡、安坪镇、永乐镇、鹤峰乡、甲高镇、羊市镇、大树镇海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374559.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市云阳县发布高温橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374559.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>云阳县气象台2023年8月11日11时发布“高温橙色预警信号”，预计11日13时至18时，全县海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374556.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市綦江区发布高温橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374556.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>綦江区气象台2023年8月11日10时50分发布“高温橙色预警信号”，预计11日12时至18时，永新镇、篆塘镇、安稳镇、石角镇、永城镇、三角镇、古南街道、通惠街道、文龙街道、三江街道日最高气温将升至37℃以上。请以上各地注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374546.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市永川区发布高温橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374546.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>永川区气象台2023年8月11日10时50分发布“高温橙色预警信号”，预计11日14时至17时，茶山竹海街道、陈食街道、临江镇、板桥镇、中山路街道、大安街道、金龙镇、南大街街道、宝峰镇、青峰镇、双石镇、胜利路街道、三教镇、红炉镇、永荣镇、松溉镇、朱沱镇、仙龙镇、五间镇、吉安镇、何埂镇、来苏镇、卫星湖街道海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374543.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市北碚区发布高温橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374543.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>北碚区气象台2023年8月11日10时50分发布“高温橙色预警信号”，预计11日12时至19时，天府镇、朝阳街道、澄江镇、东阳街道、三圣镇、柳荫镇、金刀峡镇、静观镇、施家梁镇、龙凤桥街道、歇马街道、蔡家岗街道、童家溪镇、复兴街道、天生街道、水土街道、北温泉街道海拔400米以下地区日最高气温将升至37℃以上，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374535.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市渝北区发布高温橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374535.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>渝北区气象台2023年8月11日10时40分发布“高温橙色预警信号”，预计11日12时至19时，石船镇、大盛镇、洛碛镇、龙兴镇、统景镇、大湾镇、双龙湖街道、茨竹镇、木耳镇、古路镇、仙桃街道、双凤桥街道、王家街道、兴隆镇、龙塔街道、龙溪街道、龙山街道、玉峰山镇、宝圣湖街道、两路街道、悦来街道、回兴街道海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374507.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市垫江县发布高温橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374507.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>垫江县气象台2023年8月11日10时30分发布“高温橙色预警信号”，预计11日12时至20时，我县桂溪街道、桂阳街道、新民镇、曹回镇、沙坪镇、周嘉镇、裴兴镇、五洞镇、白家镇、太平镇、永安镇、高安镇、杠家镇等乡镇（街道）日最高气温将升至37℃以上。请以上各地注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374506.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市涪陵区发布高温橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374506.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>涪陵区气象台2023年8月11日9时50分发布“高温橙色预警信号”，预计8月11日10时至13日20时，石沱镇、增福镇、新妙镇、大顺镇、龙潭镇、青羊镇、同乐镇、马武镇、蔺市街道、义和街道、李渡街道、马鞍街道、龙桥街道、荔枝街道、江北街道、百胜镇、江东街道、白涛街道、焦石镇、罗云镇、清溪镇、南沱镇、珍溪镇、崇义街道、敦仁街道海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。防御指南：1.注意防中暑、防溺水；2.注意林区、景区、城镇、古镇古街、农事活动、祭祀等火灾防范；3.注意节约用电、用水和安全生产；4.缩短户外活动和露天作业时间；5.相关部门和乡镇街道按照职责，做好高温防范应对工作。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374480.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市璧山区发布高温橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374480.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>璧山区气象台2023年8月11日10时30分发布“高温橙色预警信号”，预计11日13时至19时，青杠街道、大兴镇、正兴镇、来凤街道、丁家街道、广普镇、健龙镇、三合镇、八塘镇、七塘镇、河边镇、福禄镇、大路街道日最高气温将升至37℃以上。请以上各地注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374479.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市江津区发布高温橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374479.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>江津区气象台2023年8月11日10时20分发布“高温橙色预警信号”，预计11日13时至19时，贾嗣镇、支坪镇、杜市镇、鼎山街道、珞璜镇、夏坝镇、广兴镇、西湖镇、嘉平镇、中山镇、石门镇、油溪镇、龙华镇、几江街道、圣泉街道、先锋镇、吴滩镇、德感街道、双福街道、蔡家镇、永兴镇、塘河镇、慈云镇、朱杨镇、石蟆镇、白沙镇、李市镇等镇街海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374444.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市璧山区发布高温橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374444.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>璧山区气象台2023年8月11日10时15分发布“高温橙色预警信号”，预计10日13时至19时，八塘镇、七塘镇、大路街道、河边镇、璧城街道、福禄镇、大兴镇、璧泉街道、青杠街道、来凤街道、正兴镇、丁家街道、健龙镇、广普镇、三合镇日最高气温将升至37℃以上。请以上各地注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374427.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市万盛经开区发布高温橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374427.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>万盛经开区气象台2023年8月11日10时15分发布“高温橙色预警信号”，预计11日13时至19时，万盛街道、东林街道、万东镇、金桥镇、丛林镇、关坝镇、青年镇、南桐镇海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374388.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市沙坪坝区发布高温橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374388.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>沙坪坝区气象台2023年8月11日10时10分发布“高温橙色预警信号”，预计11日13时至20时，天星桥街道、磁器口街道、沙坪坝街道、小龙坎街道、土湾街道、联芳街道、土主街道、陈家桥街道、回龙坝镇、丰文街道、青木关镇、中梁镇、双碑街道、凤凰镇、覃家岗街道、歌乐山街道、新桥街道、山洞街道、渝碚路街道、石井坡街道、童家桥街道、井口街道海拔400米以下地区日最高气温将升至37℃以上，局地可达40℃。请以上各地做好防火、防中暑、防溺水和安全生产工作，注意节约用水用电。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374386.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市合川区发布高温橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374386.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>合川区气象台2023年8月11日10时10分继续发布“高温橙色预警信号”，预计11日13时至19时，我区全部镇街海拔400米以下地区日最高气温将升至37℃以上，其中渭沱镇、草街街道、云门街道、双槐镇、香龙镇、钱塘镇、小沔镇、南津街街道、合阳城街道部分区域最高气温可达39℃以上。请以上各地注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374370.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市巫溪县发布高温橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374370.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>巫溪县气象台2023年8月11日9时40分发布“高温橙色预警信号”，预计11日13时至19时，我县天元乡、土城镇、中梁乡、乌龙乡、鱼鳞乡、下堡镇、长桂乡、天星乡、大河乡、白鹿镇、徐家镇、宁厂镇、双阳乡、兰英乡、城厢镇、宁河街道、柏杨街道、凤凰镇、花台乡、蒲莲镇、田坝镇、红池坝镇、上磺镇、古路镇、峰灵镇等海拔400米以下地区日最高气温将升至37℃以上，其中柏杨街道、宁河街道、凤凰镇、白鹿镇、天星乡日最高气温可达40℃以上。请以上各地注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374360.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市丰都县发布高温橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374360.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>丰都县气象台2023年8月11日9时50分发布“高温橙色预警信号”，预计11日12时至18时，董家镇、许明寺镇、三元镇、仁沙镇、双龙镇、青龙乡、保合镇、社坛镇、兴龙镇、虎威镇、名山街道、树人镇、十直镇、龙孔镇、兴义镇、高家镇、双路镇、三合街道、湛普镇、包鸾镇、三建乡、龙河镇、江池镇海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374252.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市巴南区发布高温橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374252.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>巴南区气象台2023年8月11日09时20分发布“高温橙色预警信号”，预计11日11时至19时，我区李家沱街道、花溪街道、莲花街道、鱼洞街道、龙洲湾街道、南泉街道、界石镇、一品街道、惠民街道、南彭街道、二圣镇、木洞镇、双河口镇、麻柳嘴镇、丰盛镇、东温泉镇、姜家镇、天星寺镇、安澜镇、接龙镇、圣灯山镇、石龙镇海拔400米以下地区日最高气温将升至37℃以上，局地可达40℃。请以上各地注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374237.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市开州区发布高温橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230811/t20230811_526374237.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>开州区气象局2023年8月11日09时20分发布“高温橙色预警信号”：预计11日13时至19时，我区五通乡、巫山镇、岳溪镇、南门镇、长沙镇、赵家街道、竹溪镇、临江镇、铁桥镇、南雅镇、义和镇、中和镇、敦好镇、白鹤街道、文峰街道、汉丰街道、镇东街道、云枫街道、正安街道、渠口镇、金峰镇、厚坝镇、丰乐街道、和谦镇、温泉镇、郭家镇海拔400米以下地区最高气温将升至37℃以上。请以上各地注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -5886,91 +5675,6 @@ OK！成功进入，但是现在还需要我们手动去执行脚本，而且要
 好了，本次分享就到此结束了，感谢阅读哦！
 如果本文对你有一点点帮助，点个赞支持一下吧，你的每一个【赞】都是我创作的最大动力 ^_^。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7265692989610180627"
-                        open
-                      >
-                        <summary class="article-expander__title">古茗前端在 web 地图上的踩坑指南</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7265692989610180627">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: smartblue
-highlight: a11y-dark
-
-背景
-古茗是一家茶饮行业的连锁加盟企业，加盟就涉及到开店选址，一家奶茶店能否盈利，点位无疑是很重要的一个因素，如何保证点位的数量、质量，直观分析和感受点位之间的分布合理性、覆盖率、竞争关系，以及如何进行合理规划就成了一个刚性需求场景，而基于高德地图的可视化大盘可以很好的解决这些问题。
-接下来的内容将会从高德地图的使用到一些踩坑经验为小伙伴们分享一些填坑技巧和指南，希望对使用相关技术的小伙伴提供一个参考~
-引入方式
-js引入方式
- 
-
-  const map &#x3D; new AMap.Map(&#x27;container&#x27;, {
-    center:[117.000923,36.675807], 
-    zoom:11 
-  }); 
-
-
-npm包引入方式
-
-先在项目中安装Loader npm  i  @amap/amap-jsapi-loader --save
-初始化
-import AMapLoader from &#x27;@amap/amap-jsapi-loader&#x27;;
-window._AMapSecurityConfig &#x3D; {
-  securityJsCode:&#x27;「您申请的安全密钥」&#x27;,
-}
-AMapLoader.load({
-  &quot;key&quot;: &quot;&quot;,              // 申请好的Web端开发者Key，首次调用 load 时必填
-  &quot;version&quot;: &quot;2.0&quot;,   // 指定要加载的 JS API 的版本，缺省时默认为 1.4.15
-  &quot;plugins&quot;: []…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7265625144764334121"
-                        open
-                      >
-                        <summary class="article-expander__title">神奇的 http-modular 魔法，让前端不用封装接口</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7265625144764334121">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>最近突发奇想，研究出了一个神奇的“编程魔法”，我把这个思想封装成了一个 Node.js 库，叫做 http-modular。
-这个想法的核心是，将服务端的 HTTP 接口转换成符合 ESM 规范的 JavaScript 代码，然后将它直接通过浏览器 import 进来，调用其中的函数，得到返回结果。
-有经验的同学应该大致上明白，这个其实类似于传统的 RPC，但是它的区别是，因为浏览器原生支持 ESM import，因此我们根本不用写任何前端侧的桥接代码，节省了前端的工作。
-光说可能你还体会不深，我们通过一个项目来理解。
-通过 http-modular 实现服务端KV存储
-假设我们要在码上掘金写一个应用，但是想将数据存储在数据库，我们可以通过 AirCode 写一个存储接口然后部署上线，再通过前端封装成 storage 的 API。
-过去的流程大概是这样：
-在 AirCode 写接口并调试上线
-在前端封装 Storage API，然后再 Storage API 中通过 fetch 或者 axios 调用服务端接口。
-但是，现在有了 http-modular，我们只需要步骤 1， 不需要步骤 2。
-具体怎么做呢？请看——
-首先我们在 AirCode 上创建一个项目，在项目中创建一个云函数 index.mjs。
-我们在 index.mjs 中添加如下代码：
-const table &#x3D; aircode.db.table(&#x27;storage&#x27;);
-
-async function setItem(key, value) {
-  return await table.where({key}).set({value}).upsert(true).save();
-}
-
-async function getItem(key) {
-  const res &#x3D; await table.where({…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;12
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -6294,27 +5998,6 @@ async function getItem(key) {
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>bing AI用不了了，有没有解决办法啊</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7265307106576351266"
-                        open
-                      >
-                        <summary class="article-expander__title">#工欲善其事必先利其器# #开发工具推荐# #Seal软件# Code to Image 免费工具，帮您把代码段轻松转换为各种风格的图片~如果您常常需要进行对外演示或者正在经营自...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7265307106576351266">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>#工欲善其事必先利其器# #开发工具推荐# #Seal软件#
-Code to Image 免费工具，帮您把代码段轻松转换为各种风格的图片~如果您常常需要进行对外演示或者正在经营自己的技术博客，那么这个图片转换工具能帮助您大大提升博客和Slides质感，可以傻瓜式自定义图片背景、宽度、窗口模式以及编程语言，欢迎尝试！
-尝鲜网址：https://ray.so/</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -6742,39 +6425,6 @@ CSS-in-JS 注水
   17.空间组学公司“源星智造”获数千万元天使轮融资  
     
   18.AI全链路营销公司“奥创光年”获千万美元A轮融资</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7265180298689085501"
-                        open
-                      >
-                        <summary class="article-expander__title">这个工具真不错。。。https://app.warp.dev/referral/LQQX5N</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7265180298689085501">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>这个工具真不错。。。https://app.warp.dev/referral/LQQX5N</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -8847,8 +8497,8 @@ GPL 规定，必须向使用者提供源码，并且使用者有权重新发布�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5897646272">
-        <time id="build-timestamp" datetime="2023-08-18T01:14:34.269Z">2023-08-18T01:14:34.269Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5898589573">
+        <time id="build-timestamp" datetime="2023-08-18T03:52:36.849Z">2023-08-18T03:52:36.849Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
