@@ -79,7 +79,7 @@
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>大佬们，电脑小白，请问这个配置还有优化空间吗</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -342,7 +342,7 @@ LangChain 是一个用于开发由语言模型支持的应用程序的框架，�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>xdm，专心搞副业了，回收手机和平板，可走平台，主打诚信和爽快。有需要先关的手机和平板的，也可以联系我哈，售后有保证！诚信经营！！！</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2081,6 +2081,48 @@ SuperAGI 是一个可访问的开源系统，用于创建和部署智能代理�
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7267470426292486159"
+                        open
+                      >
+                        <summary class="article-expander__title">这个300万下载量的VSCode插件竟是这样开发的</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7267470426292486159">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>highlight: dracula
+theme: serene-rose
+今天，我准备在 VSCode 插件市场上寻找一个 PDF 阅读插件。找到一个下载量最高的插件，点击进去查看了详细信息，发现界面给我一种似曾相识的感觉。我查看了一下插件的源代码，果然发现它直接嵌入了 pdf.js 的 web 界面。开发这样一个插件其实并不复杂，只需要了解一些插件开发的知识，就能够实现它。接下来，我会分享一下我是如何开发这个插件的，虽然与源代码可能有一些不同，但基本原理是相同的。
+
+前面的文章已经详细介绍了如何创建插件项目，因此我们直接进入功能实现部分，重点是实现点击 PDF 文件后能够直接在插件中进行浏览。
+定义自定义编辑器
+默认情况下，VSCode 并不直接支持某些特殊文件类型的查看，但是您可以通过使用自定义编辑器 customEditors 来扩展其功能。
+通过 customEditors，您可以创建完全可自定义的读/写编辑器，以取代 VSCode 的标准文本编辑器，用于处理特定类型的资源。举例来说，在编辑 Markdown 文件时，您可以创建一个自定义编辑器，用于实时预览 Markdown 渲染的效果。
+对于 PDF 文件的预览，我们也可以使用 customEditors 功能。首先，在您的插件的 package.json 文件中进行定义：
+&quot;contributes&quot;: {
+  &quot;customEditors&quot;: [
+    {
+      &quot;viewType&quot;: &quot;dodo-reader.pdfEditor&quot;,
+      &quot;displayName&quot;: &quot;PDF Viewer&quot;,
+      &quot;selector&quot;: [
+        {
+          &quot;filenamePattern&quot;: &quot;*.pdf&quot;
+        }
+      ]
+    }
+  ]
+}
+
+注册…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -4639,7 +4681,7 @@ new Vue({
   methods: {
     updateData() {
       this.message &#x3D; …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                &ensp;<span class="article-reading-time">(&hairsp;8
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4946,43 +4988,6 @@ test!
         &quot;class&quot;: &quot;lightblue test&quot;,
         &quot;id&quot;: &quot;…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;29
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7265999062243213372"
-                        open
-                      >
-                        <summary class="article-expander__title">30分钟手写一遍源码带你搞明白vue3中的reactive和ref的本质区别</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7265999062243213372">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: serene-rose
-很多同学用vue3写业务溜的飞飞起，但是又始终不想打开vue源码仓库 vuejs/core 一探究竟，然而面试官们又很喜欢问你各种各样的vue的源码实现思想的问题，这让你很难受。好吧，没关系，接下来这篇文章将花费你30分钟的时间，带你一行一行的手写一份vue3中的 reactivity 源码，并成功运行起来的那一刻希望你能有所收获
-文章中的代码皆来自vue3的源码，或存在轻微变动，只为更好理解，尽量做到每一行都用大白话注解，让新手阅读也无压力。 文中的代码 地址在这里
-1. 准备工作
-创建一个 vue 项目（以下vue3统称vue）
-yarn create vite mini-vue --template vue
-
-（当然这是非必须的，也可以随意创建一个文件夹，我创建它是为了测试用）然后删除src下的一些非必要的目录，再创建一个reactivity文件夹
-
-为了方便理解，我们不使用ts，并且用取其精华去其一部分精华的的方式，接下来只写核心代码。附带将另一个API shallowReactive（浅层代理，只代理最多外层对象） 一起实现
-2. 从定义 reactive 函数开始
-src &gt;&gt; reactivity &gt;&gt; reactive.js
-
-哇，一上来就一整页的代码，还骗我说是一行一行敲！哈哈哈哈，别慌，代码我是一行一行敲的，你也可以跟着一行行敲完，每一行我都写上了注解。或者，直接点开上面的 地址 拉代码下来也行
-以上代码实现的主要功能：
-定义了reactive 和 shallowReactive 函数。 vue中的 shallowReactive 实现的是浅层代理的效果，这里也附带实现一下
-将接收到的参数用 proxy 代理
-被代理过的对象用 WeakMap 缓存起来，目的是防止代理过的对象再次被代理
-proxy对对象的代理函数，写…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -7771,110 +7776,10 @@ Elasticsearch 倒霉的地方在于，遇到的竞争对手是亚马逊，世界
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-21 datetime="2023-07-21T00:14:54.000Z">2023-07-21</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-21 datetime="2023-07-21T00:14:54.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >省流</button>
-                  <a class="source-heading__link" href="https://shengliu.substack.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://shengliu.substack.com/p/chatgpt-d52"
-                        open
-                      >
-                        <summary class="article-expander__title">ChatGPT 新增自定义说明功能；特斯拉自动驾驶技术将扩散</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://shengliu.substack.com/p/chatgpt-d52">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>省流@23-07-21 🚀 大公司 &amp; 新闻 ChatGPT 新增自定义说明功能 目前仅向 Plus 计划用户开放测试版。该功能允许添加用户希望 ChatGPT 在生成响应时考虑的首选项或要求，这样就不用每次对话开始时都重复一遍。 特斯拉将向其他汽车制造商授予全自动驾驶技术许可 🔬 科研 &amp; 科普 天文学家发现一颗不寻常的白矮星，一侧由氢组成，另一侧由氦组成 🔖 值得一览 Swordfish90/cool-retro-term (GitHub Repo) 一个终端模拟器，模仿旧阴极管屏幕的外观和感觉。</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >阮一峰的网络日志</button>
-                  <a class="source-heading__link" href="http://www.ruanyifeng.com/blog/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.ruanyifeng.com/blog/2023/07/weekly-issue-263.html"
-                        open
-                      >
-                        <summary class="article-expander__title">科技爱好者周刊（第 263 期）：开源软件如何赚钱？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.ruanyifeng.com/blog/2023/07/weekly-issue-263.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>这里记录每周值得分享的科技内容，周五发布。
-本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。
-封面图
-
-秘鲁首都利马是一个神奇的城市，建在面向太平洋的悬崖之上。要去海滩，还要下山。（via）
-开源软件如何赚钱？
-众所周知，开源软件很难赚钱，尤其是 GPL 许可证的代码。
-
-GPL 规定，必须向使用者提供源码，并且使用者有权重新发布源码。
-这就是说，别人可以免费分发你的软件，所以你无法靠出售软件获利。
-
-既然卖不了软件，那么能不能卖服务呢，出售代码的支持、定制、咨询服务？
-我一直认为是可以的。证据就是有一家软件公司，依靠软件支持服务，赚到了大钱，还上市了。
-这家公司就是红帽公司，它出售 Linux 企业级支持和咨询服务，1999年成功上市，2019年被 IBM 以340亿美元的高价收购。
-
-但是，这个成功故事在上个月嘎然而止。突然之间，所有人惊觉，软件客服的商业模式再也行不通了。
-下面我就来说说，到底发生了什么事。
-红帽的主要产品，就是它自己的 Linux 发行版，叫做 RHEL（Red Hat Enterprise Linux 的缩写）。它卖的是这个发行版的支持服务。
-
-根据 GPL 许可证，它必须免费提供源码，所以市场上有很多它的克隆版。那些不愿意买红帽服务的公司，就用克隆版，很多互联网大厂都这样做。
-以前，最流行的红帽克隆版是 CentOS。它甚至比红帽本身的使用量都要大。
-
-自从红帽被 IBM 收购以后，就觉得克隆版对生意的冲击太大了。它就收购了 CentOS，并在两年前把它停掉，改成自家的测试版，起名为 CentOS Stream，等于让社区帮它找 Bug。
-这件事让很多人不爽，但是红帽的源码是公开的，一个克隆版没了，那就再推其他克隆版。现在最流行的克隆版有两个：Alma Linux 和 …</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5910735866">
-        <time id="build-timestamp" datetime="2023-08-19T09:52:44.264Z">2023-08-19T09:52:44.264Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5911519728">
+        <time id="build-timestamp" datetime="2023-08-19T12:53:58.141Z">2023-08-19T12:53:58.141Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

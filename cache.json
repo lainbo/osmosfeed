@@ -34,7 +34,7 @@
           "description": "nonce可以用来决定哪些内联JS执行，popover可以无JS实现浮层弹出层交互效果。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/html-attribute-nonce-translate/",
           "publishedOn": "2023-08-10T15:24:42.000Z",
-          "wordCount": 1114,
+          "wordCount": 1115,
           "title": "查漏补缺，我仍未知道的HTML nonce和popover属性",
           "imageUrl": null
         },
@@ -113,16 +113,6 @@
           "publishedOn": "2023-07-28T00:04:01.000Z",
           "wordCount": null,
           "title": "科技爱好者周刊（第 264 期）：Elasticsearch 的启示",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.ruanyifeng.com/blog/2023/07/weekly-issue-263.html",
-          "author": null,
-          "description": "这里记录每周值得分享的科技内容，周五发布。\n本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。\n封面图\n\n秘鲁首都利马是一个神奇的城市，建在面向太平洋的悬崖之上。要去海滩，还要下山。（via）\n开源软件如何赚钱？\n众所周知，开源软件很难赚钱，尤其是 GPL 许可证的代码。\n\nGPL 规定，必须向使用者提供源码，并且使用者有权重新发布源码。\n这就是说，别人可以免费分发你的软件，所以你无法靠出售软件获利。\n\n既然卖不了软件，那么能不能卖服务呢，出售代码的支持、定制、咨询服务？\n我一直认为是可以的。证据就是有一家软件公司，依靠软件支持服务，赚到了大钱，还上市了。\n这家公司就是红帽公司，它出售 Linux 企业级支持和咨询服务，1999年成功上市，2019年被 IBM 以340亿美元的高价收购。\n\n但是，这个成功故事在上个月嘎然而止。突然之间，所有人惊觉，软件客服的商业模式再也行不通了。\n下面我就来说说，到底发生了什么事。\n红帽的主要产品，就是它自己的 Linux 发行版，叫做 RHEL（Red Hat Enterprise Linux 的缩写）。它卖的是这个发行版的支持服务。\n\n根据 GPL 许可证，它必须免费提供源码，所以市场上有很多它的克隆版。那些不愿意买红帽服务的公司，就用克隆版，很多互联网大厂都这样做。\n以前，最流行的红帽克隆版是 CentOS。它甚至比红帽本身的使用量都要大。\n\n自从红帽被 IBM 收购以后，就觉得克隆版对生意的冲击太大了。它就收购了 CentOS，并在两年前把它停掉，改成自家的测试版，起名为 CentOS Stream，等于让社区帮它找 Bug。\n这件事让很多人不爽，但是红帽的源码是公开的，一个克隆版没了，那就再推其他克隆版。现在最流行的克隆版有两个：Alma Linux 和 …",
-          "link": "http://www.ruanyifeng.com/blog/2023/07/weekly-issue-263.html",
-          "publishedOn": "2023-07-21T00:01:19.000Z",
-          "wordCount": null,
-          "title": "科技爱好者周刊（第 263 期）：开源软件如何赚钱？",
           "imageUrl": null
         }
       ]
@@ -1831,6 +1821,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7267470426292486159",
+          "author": "60岁咯",
+          "description": "highlight: dracula\ntheme: serene-rose\n今天，我准备在 VSCode 插件市场上寻找一个 PDF 阅读插件。找到一个下载量最高的插件，点击进去查看了详细信息，发现界面给我一种似曾相识的感觉。我查看了一下插件的源代码，果然发现它直接嵌入了 pdf.js 的 web 界面。开发这样一个插件其实并不复杂，只需要了解一些插件开发的知识，就能够实现它。接下来，我会分享一下我是如何开发这个插件的，虽然与源代码可能有一些不同，但基本原理是相同的。\n\n前面的文章已经详细介绍了如何创建插件项目，因此我们直接进入功能实现部分，重点是实现点击 PDF 文件后能够直接在插件中进行浏览。\n定义自定义编辑器\n默认情况下，VSCode 并不直接支持某些特殊文件类型的查看，但是您可以通过使用自定义编辑器 customEditors 来扩展其功能。\n通过 customEditors，您可以创建完全可自定义的读/写编辑器，以取代 VSCode 的标准文本编辑器，用于处理特定类型的资源。举例来说，在编辑 Markdown 文件时，您可以创建一个自定义编辑器，用于实时预览 Markdown 渲染的效果。\n对于 PDF 文件的预览，我们也可以使用 customEditors 功能。首先，在您的插件的 package.json 文件中进行定义：\n\"contributes\": {\n  \"customEditors\": [\n    {\n      \"viewType\": \"dodo-reader.pdfEditor\",\n      \"displayName\": \"PDF Viewer\",\n      \"selector\": [\n        {\n          \"filenamePattern\": \"*.pdf\"\n        }\n      ]\n    }\n  ]\n}\n\n注册…",
+          "link": "https://juejin.cn/post/7267470426292486159",
+          "publishedOn": "2023-08-15T18:56:28.000Z",
+          "wordCount": 1983,
+          "title": "这个300万下载量的VSCode插件竟是这样开发的",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7267434484505739316",
           "author": "花果山大圣",
           "description": "视频版\n哈喽大家好，我是大圣，一个除了上班什么都喜欢的程序员，今天来聊一下我为什么要建议所有人反对996\n先科普一下，996是一种互联网常见的工作模式，就是早上9点上班，晚上9点下班，每周工作6天去掉午休一小时，每周工作时间是11＊6＝66，965是8＊5＝40如果加班工资算1.5倍，996相当于时薪直接腰斩\n之前我认为996只是变相降低50％，剥夺你学习的精力和时间，并且用晚餐＋免费打车来美化这种行为，还用奋斗是福报pua你，而且还实用末尾淘汰机制让你们内斗，而且996效率极低，我一天能注意力集中4个小时算高的了，我作为一个正常人类，没法集中注意力12个小时\n996的真实节奏就是9点或者10点到公司，开个早会泡个茶，看看邮件刷刷知乎摸摸鱼就吃午饭了，基本都是下午才能开始干活，但是很多会议就来了，其实整体效率并没有提高，都在假装忙碌在摸鱼，反而是晚饭后能集中注意力工作一会，长久对积极的工作态度是毁灭性的打击\n所以我一直都是立场鲜明的反对996，在996.icu崛起之前，我的程序员找工作黑名单就是Github最大的反996项目，996.icu作者之一被抓起来后，这个项目我就不再更新了\n\n\n但是你以为你的摸鱼行为老板不知道吗？你可以怀疑有钱人的人品，但是你不能怀疑他们的智商和能力，我自由职业一年后才意识到，996真正的伤害不是时薪的降低，而是对你发展机会的扼杀\n我做自由职业得自己搞钱，有些小机会，比如外包，行业小聚，大家基本都是工作晚上7点～10点或者周六的小聚，周日那些小甲方都会在家休息，饭局会促成一些意想不到的收入机会，晚上9点才放你走，有可能就是老板要把你晚上可能接触到商业机会的聚会干掉，成为彻底的打工人，哪怕你效率低\n一个年轻人进入到公司，前几年从啥也不懂，到掌握了代码，运营，产品等技能之一，六七点下班后，同学聚会，发小聚会，微信群线下聚会等，不同公司不同角色的人在一起交流，可能就会诞生新得机会，你的发小A可能是个设计，你会写代码，你同学他姑父公司需要做个小程序，这就可以成为你新的机会\n越过公司，直接和社会交易的机会，你成为老板的机会，哪怕很小，你也不会因为公司裁员而绝望，万一机会多了，你就会开始创业或者自由职业，所以老板一定要让你再公司待到9点，持续修炼垂直的技能，变成架构师，但是你没有接触到商务，或者叫靠自己获得收入的能力\n就像打篮球一样，投篮就是最重要的得分机会，你是一个很好大学的毕业生，爱学习能力强，但是老板只训练你的传球，篮板和抢断能力，本来你可以接触到投篮的时间夺走，让你待在公司继续训练过人和篮板，哪怕晚上你效率低摸鱼都可以，只要你不会投篮，成为他的潜在对手就可以\n\n所以996效率低老板是知道的，除了训练服从性之外，还让你成为彻底的打工人，哪怕上午摸鱼，晚上7点公司内部组织技术分享会学习都没关系，你只能持续训练你的传球技能，然后传球给你的老板，只有他自己能投篮\n我一直都是拒绝996的，我在百度当程序员那会，就一直思考，这个B班，是不是非上不可，后来发现可以周末出去讲课，教人写js，虽然课时费不高，还参与招生，但是我觉得我自己可以独立通过写代码获得收入，非常cool\n现在成为自由职业（无业游民），极客时间的Vue课到今天有3w人学过了，B站课堂也刚上了一个课，出版社也在合作，把【Vuejs设计与实现】录制成课程，这些都是工作时间饭点吃饭＆喝咖啡诞生的商业机会，或者我去参加平台组织的聚会谈成的，这是996没法参与的\n\n\n再次建议我的所有学员＆朋友不要加入996的公司，除了工资，健康和法律问题，还有被彻底剥夺了社交的机会，失去了多元发展的机会，我也建议所有的程序员，前端学学后端，后端学学前端，这俩是能开发出完整产品的技术，React或者Vue，加上一个Nest, 数据库用mongodb或者mysql，还有非常火的serverless，做一个全栈的应用，然后还可以写文章录视频，培养演讲能力\n\n然后看看《一人公司方法论》《商业百科》《增长黑客》《启示录》《运营之光》《优势谈判》综合入个门，日常除了喜欢造轮子之外，可以好好思考一下，你现在做的业务，到底是怎么赚到钱的这个能力其实真的很有用，说不定哪次聚会就有用，祝大家都能早日找到适合自己的商业机会，能够靠写代码这门手艺，直接和市场交易养活自己，那裁员和pua还有什么可怕的呢\n今天就聊到这，欢迎大家对视频点赞，这样会激励我做更多的视频 下期再见",
@@ -1846,7 +1846,7 @@
           "description": "1、问题描述\n前几天又遇到个神奇Bug，公司某系统的页面出现点击按钮没有反应的问题，反馈问题的用户能稳定复现，技术团队无法复现。\n浏览器为 Chrome 115，控制台可见大量 iframe跨域 报错，具体情况如下：\n\n2、问题原因\n根据报错找到的异常代码如下：\n\n看到代码注释的日期我着实有点慌\n代码异常是 iframe 页面访问父页面时出现了跨域错误。由于系统近半年没有发版，也没有用户反馈相关问题，因此猜测是当年用的跨域方案失效导致异常。iframe 跨域 的解决方案可以参考 阮一峰博客，文章给出了4种方案：\n修改 document.domain\n片段识别符（fragment identifier）\nwindow.name\n跨文档通信API（Cross-document messaging）\n接着在错误代码的文件头部找到了跨域方案相关的代码，这里采用的方案是修改 document.domain。\n\n随后在 Chrome路线图 中找到了 document.domain改动 的信息。\n\n经过分析确定问题的原因是：Chrome115 禁用 document.domain setter 导致出现 iframe跨域 错误，进而出现点击按钮无反应的问题。\n2.1、无法复现的原因\n前面说过这个问题在反馈用户的电脑上必现，但开发团队始终无法复现，这其实是 Chrome 灰度发布策略造成的，从 Chrome 团队的沟通会话可以看出端倪。\n\n截图来自：https://groups.google.com/a/chromium.org/g/blink-dev/c/nrLl0IxSxSI/m/Sm4IH4yNAwAJ\n内容如下：\nHello all, it's been a while... The bug reports should now be resolved, and we'd like…",
           "link": "https://juejin.cn/post/7267417057440219191",
           "publishedOn": "2023-08-15T08:29:22.000Z",
-          "wordCount": 1455,
+          "wordCount": 1465,
           "title": "Chrome115 iframe跨域失败",
           "imageUrl": null
         },
@@ -1866,7 +1866,7 @@
           "description": "微信搜索 【大迁世界】, 我会第一时间和你分享前端行业趋势，学习途径等等。\n本文 GitHub  https://github.com/qq449245884/xiaozhi 已收录，有一线大厂面试完整考点、资料以及我的系列文章。\n快来免费体验ChatGpt plus版本的，我们出的钱 体验地址:https://chat.waixingyun.cn 可以加入网站底部技术群，一起找bug，另外新版作图神器已上线 https://cube.waixingyun.cn/home\n1.使用边框绘制一个三角形\n在某些情况下，例如在工具提示中添加箭头指针时，如果你只需要简单的三角形，那么加载图片可能会过度。\n仅使用CSS，您就可以通过边框创建一个三角形。\n这是一个相当老的技巧。理想情况下，你会在一个宽度和高度都为零的元素上设置边框。所有的边框颜色都是透明的，除了那个将形成箭头的边框。例如，要创建一个向上指的箭头，底部边框是有颜色的，而左边和右边是透明的。无需包括顶部边框。边框的宽度决定了箭头的大小。\n.upwards-arrow {\n    width: 0;\n    height: 0;\n    border-left: 20px solid transparent;\n    border-right: 20px solid transparent;\n\n    border-bottom: 20px solid crimson;\n}\n\n这将创建一个像下面所示的向上指的箭头：\n\n事例地址：https://codepen.io/chriscoyier/pen/DELgOJ\n2.交换元素的背景\nz-index 属性规定了元素如何堆叠在其他定位元素上。有时，你可能会设置一个 z-index 属性让子元素的层级较低，结果却发现它隐藏在其父元素的背景之后。为了防止这种情况，你可以在父元素上创建一…",
           "link": "https://juejin.cn/post/7267162307897589794",
           "publishedOn": "2023-08-15T00:21:11.000Z",
-          "wordCount": 2288,
+          "wordCount": 2250,
           "title": "让你兴奋不已的13个CSS技巧🤯",
           "imageUrl": null
         },
@@ -1876,7 +1876,7 @@
           "description": "上一篇文章我们讲了语言包的维护，今天继续讲讲语言包的自动翻译。\n翻译工作流\n我们这里讲的自动翻译指的是机器翻译，虽然机器翻译未必准确，但在它可以帮助我们快速实现原型，这在项目初期确实能很大地提升开发效率。\n我们可以将国际化翻译的工作流拆成以下三个阶段：\n\n开发阶段：前端开发需要提取和维护源语言包(Source Language)。比如将页面中的文案提取到 zh 语言包中。接着基于源语言机器翻译到其他语种。\nReview 阶段：这个阶段主要的参与者是专业翻译人员。他们会根据具体的产品需求上下文、以及对目标语种的了解，对机器翻译的结果进行校对。\n更新阶段：将校对后的语言包回写到项目中，更新和发布。\n这里有几个问题:\n一） 怎么选择源语言？\n如果从翻译的效果上看，英语通常是最好的源语言，以下是 ChatGPT 给出的几个原因：\n广泛使用：英语是全球最广泛的工作语言和交流语言，许多国家和地区都将其作为第二语言进行学习和使用。\n丰富的词汇：英语的词汇数量庞大，对各种概念和现象都有准确的描述，这使得从英语翻译到其他语言时可以更准确地表达原文的意思。\n国际化规范：许多国际化和本地化的标准和规范，如i18n，都是基于英语的，这意味着从英语翻译到其他语言的过程可以更好地遵循这些规范。\n世界范围内的资源：有大量的从英语到其他语言的翻译资源，这可以帮助翻译者更好地完成工作。\n然而作为英语非母语者，实施起来可能会比较麻烦: 一是从业者英语水平良莠不齐，二是我们的产品、需求、原型可能都是以中文为基准的。\n因此大部分情况下，我们不得不将中文作为源语言。\n二）Review 阶段有什么平台或者工具来支持？\nReview 阶段的主要参与者不是开发人员，所以我们需要提供一些简单、易用的工具或平台来支撑他们的校对工作。\n比如在我们公司采用的就是最为原始的烹饪方式 —— Excel 文件 ，这个下文会讲到。我们会…",
           "link": "https://juejin.cn/post/7267106485603483685",
           "publishedOn": "2023-08-14T23:55:47.000Z",
-          "wordCount": 1500,
+          "wordCount": 1493,
           "title": "前端国际化：懒人必备的自动翻译",
           "imageUrl": null
         },
@@ -1886,7 +1886,7 @@
           "description": "前言\n去年羊了个羊的爆火，引发了我对小游戏开发的兴趣，直到现在我依然感觉小游戏市场中存有后劲，哪怕没有一夜暴富的机会，也可小小盈利一把。之前苦于自身没有设计能力，无法独立完成游戏的开发工作，今年随着 AIGC 的浪潮，AI 图片生成让开发者能自主生成一些好看的图片用于游戏素材，受益于此，开发游戏的梦想终于可以得到实践了。\n本文将从以下4个方面介绍我开发并上线的第一款游戏，文章较长，感兴趣的小伙伴可以直接去阅读对应的模块\n1. 前端与游戏开发\n游戏开发一般是需要借助游戏引擎的，与前端童鞋们最常用的 html 不同，游戏引擎都是基于 canvas 来完成所有的界面操作的，这可能会让已经十分擅长写 css 的我们觉得游戏开发的布局很麻烦。我本次是使用 cocos-creator2.x 的版本来进行开发的，简单总结下使用 cocos-creator 的心得体会，让感兴趣的小伙伴能够快速了解两者的异同，轻松上手游戏开发。\n1.1. 相似点\n1.1.1. 生命周期主导的代码范式\ncocos-creator 与主流的 mvvm 框架如 react, vue 一样，也是有生命周期的概念的，虽然作用不尽相同，但是这种模式相当于确定了一种开发范式，让大家写的代码，即使没有注释，也更加容易被理解。\n比如 cocos-creator 的 onLoad()，就和 react 和 vue 的 mount(componentDidMount|mounted) 周期很像，尽管执行的顺序，机制不一样，但我们都会在这个生命周期里进行一些数据，元素初始化操作。\n一张 3 栏分割代码图，带你了解，代码范式的力量～，可以说掌握好 cocos 生命周期，你的游戏开发就算是入门啦。\n\n1.1.2. 组件化的思想\n在 cocos-creator、react 和 vue 中，都鼓励将界面元素或功能模块封装成独立的组件，以提…",
           "link": "https://juejin.cn/post/7267091417021218875",
           "publishedOn": "2023-08-14T09:54:24.000Z",
-          "wordCount": 1814,
+          "wordCount": 1783,
           "title": "历时两月，我发布了一款小游戏",
           "imageUrl": null
         },
@@ -1956,7 +1956,7 @@
           "description": "theme: vue-pro\n点击在线阅读，体验更好\n链接\n\n\n\n\n现代JavaScript高级小册\n链接\n\n\n深入浅出Dart\n链接\n\n\n现代TypeScript高级小册\n链接\n\n\nlinwu的算法笔记📒\n链接\n\n\n\n引言\n作为面试官，为什么我推荐微前端作为前端面试的亮点？\n作为面试官，为什么我推荐组件库作为前端面试的亮点？\n在前面两篇文章中得到反馈效果不错，今天继续出第三篇，以二次封装axios为例\n在我以往的面试中，听到候选人最多的就是项目中二次封装axios，但是当真正深入挖掘，往往得不到有用的信息。\n那么面试官是想听到什么样的亮点呢？这篇文章我们重点分析一下，并且也可以封装自己的axios请求库。\n需求\n在项目中，我们可能存在这些痛点：\n接口统一管理\n支持多host问题\n支持区分env\n支持restful风格\n支持取消请求\n支持接口错误重试\n支持缓存\n支持限流\n请求方法的统一封装\n\nexport class  Apis{\n\n  public common: RequestOptions;\n  // 默认的server配置\n  public base!: string;\n  // server服务的集合\n  public serverMap: ServerMap;\n  // 对象形式的请求方法集合\n  public apiMap: ApisMap;\n  // 挂载所有请求方法的集合对象\n  public apis: ApisInstance;\n  // axios实例化对象\n  public instance: AxiosInstance;\n\n  constructor(common?: RequestOptions, serverMap?: ServerMap, apiMap?: ApisMap) {\n  \n  }\n\n  public get<T extends…",
           "link": "https://juejin.cn/post/7266308603938062391",
           "publishedOn": "2023-08-13T05:29:43.000Z",
-          "wordCount": 3611,
+          "wordCount": 3654,
           "title": "基于Axios二次封装请求库,带你重构面试亮点",
           "imageUrl": null
         },
@@ -1966,7 +1966,7 @@
           "description": "theme: orange\nhighlight: a11y-dark\n摘要：  本文将深入探讨 Vue 中的 nextTick 方法，首先介绍其背景和使用方式，然后解析其底层原理，最后探讨 nextTick 的常见使用场景。通过本文的阅读，您将对 Vue 中 nextTick 的工作原理有更深入的理解。（读完本文预计需要5分钟）\n1. nextTick 的背景\n在 Vue 中，DOM 更新是异步执行的，这意味着当我们修改了数据后，DOM 并不会立即更新，而是在下一个 tick（更新周期）时才会进行更新。Vue 提供了 nextTick 方法来处理在 DOM 更新完成后执行回调函数的需求。nextTick 方法可以将回调函数推入一个回调队列，在下一个 tick 时执行这些回调函数。\n2. nextTick 的使用\n在 Vue 实例上调用 $nextTick 方法，或者使用 Vue.nextTick 方法，都可以将回调函数添加到 nextTick 的队列中。下面是使用 nextTick 的简单示例：\n// 在 Vue 实例内部使用\nthis.$nextTick(() => {\n  // DOM 更新后执行的回调函数\n});\n\n// 使用全局方法\nVue.nextTick(() => {\n  // DOM 更新后执行的回调函数\n});\n\n使用$nextTick方法等待DOM更新完成：\n通过在Vue实例上调用$nextTick方法来等待DOM更新完成。\n在$nextTick的回调函数中执行需要在DOM更新后进行的操作。\n示例：\nnew Vue({\n  data() {\n    return {\n      message: 'Hello, Vue!',\n    };\n  },\n  methods: {\n    updateData() {\n      this.message = …",
           "link": "https://juejin.cn/post/7266374711823171636",
           "publishedOn": "2023-08-13T05:28:02.000Z",
-          "wordCount": 2206,
+          "wordCount": 2535,
           "title": "看完这篇nextTick就别再问别人了",
           "imageUrl": null
         },
@@ -1989,16 +1989,6 @@
           "wordCount": 8551,
           "title": "从零开始实现一个玩具版浏览器渲染引擎",
           "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7265999062243213372",
-          "author": "一个大蜗牛",
-          "description": "theme: serene-rose\n很多同学用vue3写业务溜的飞飞起，但是又始终不想打开vue源码仓库 vuejs/core 一探究竟，然而面试官们又很喜欢问你各种各样的vue的源码实现思想的问题，这让你很难受。好吧，没关系，接下来这篇文章将花费你30分钟的时间，带你一行一行的手写一份vue3中的 reactivity 源码，并成功运行起来的那一刻希望你能有所收获\n文章中的代码皆来自vue3的源码，或存在轻微变动，只为更好理解，尽量做到每一行都用大白话注解，让新手阅读也无压力。 文中的代码 地址在这里\n1. 准备工作\n创建一个 vue 项目（以下vue3统称vue）\nyarn create vite mini-vue --template vue\n\n（当然这是非必须的，也可以随意创建一个文件夹，我创建它是为了测试用）然后删除src下的一些非必要的目录，再创建一个reactivity文件夹\n\n为了方便理解，我们不使用ts，并且用取其精华去其一部分精华的的方式，接下来只写核心代码。附带将另一个API shallowReactive（浅层代理，只代理最多外层对象） 一起实现\n2. 从定义 reactive 函数开始\nsrc >> reactivity >> reactive.js\n\n哇，一上来就一整页的代码，还骗我说是一行一行敲！哈哈哈哈，别慌，代码我是一行一行敲的，你也可以跟着一行行敲完，每一行我都写上了注解。或者，直接点开上面的 地址 拉代码下来也行\n以上代码实现的主要功能：\n定义了reactive 和 shallowReactive 函数。 vue中的 shallowReactive 实现的是浅层代理的效果，这里也附带实现一下\n将接收到的参数用 proxy 代理\n被代理过的对象用 WeakMap 缓存起来，目的是防止代理过的对象再次被代理\nproxy对对象的代理函数，写…",
-          "link": "https://juejin.cn/post/7265999062243213372",
-          "publishedOn": "2023-08-12T08:55:13.000Z",
-          "wordCount": 1926,
-          "title": "30分钟手写一遍源码带你搞明白vue3中的reactive和ref的本质区别",
-          "imageUrl": null
         }
       ]
     },
@@ -2013,7 +2003,7 @@
           "description": "大佬们，电脑小白，请问这个配置还有优化空间吗",
           "link": "https://juejin.cn/pin/7268671526718521378",
           "publishedOn": "2023-08-19T06:48:50.000Z",
-          "wordCount": 449,
+          "wordCount": 451,
           "title": "大佬们，电脑小白，请问这个配置还有优化空间吗",
           "imageUrl": null
         },
@@ -2023,7 +2013,7 @@
           "description": "图文介绍 Windows 系统下打包上传 IOS APP 流程\n现在很多伙伴跨平台开发应用，有些童鞋没有苹果机，本文将介绍，如何在 Windows 系统环境下直接上架 APP ，不用去搞虚拟机之类的了， Windows 下照样轻松打包上架 iOS APP 。\n下面从七个步骤进行详细介绍！\n1 、创建唯一标示符 App IDs\n2 、申请发布证书\n3 、申请发布描述文件\n4 、 iTunes Connect 创建 App 并填写信息\n5 、 Windows 下选择证书编译打包\n6 、 Windows 下上传 IPA 到 App Store\n7 、上传好 IPA 回到 iTunes Connect 提交审核\n上架只需要一个开发者账号，一个辅助工具 Appuploader ，一台 PC 电脑，在这里 Mac 电脑就可以不用了。\n转自https://www.applicationloader.net/",
           "link": "https://juejin.cn/pin/7268539701941583907",
           "publishedOn": "2023-08-18T10:11:12.000Z",
-          "wordCount": 607,
+          "wordCount": 606,
           "title": "图文介绍 Windows 系统下打包上传 IOS APP 流程 现在很多伙伴跨平台开发应用，有些童鞋没有苹果机，本文将介绍，如何在 Windows 系统环境下直接上架 APP ，不用...",
           "imageUrl": null
         },
@@ -2033,7 +2023,7 @@
           "description": "使用appuploader工具发布证书和描述性文件教程\n使用APPuploader工具发布证书和描述性文件教程\n之前用AppCan平台开发了一个应用，平台可以同时生成安卓版和苹果版，想着也把这应用上架到App Store试试，于是找同学借了个苹果开发者账号，但没那么简单，还要用到Mac电脑的钥匙串申请发布证书和上传ipa，可没有Mac，同学的大老远的也不方便拿过来用，然后捣鼓了个虚拟机，卡的我怀疑人生，后面找到了一个工具，在Windows环境下终于上传成功，把我的iOS app上架流程分享给各位。\n下面从七个步骤进行详细介绍！1、创建唯一标示符App IDs2、申请发布证书3、申请发布描述文件4、iTunes Connect创建App并填写信息5、AppCan选择证书编译打包6、Windows下上传IPA到App Store7、上传好IPA回到iTunes Connect提交审核\n上架只需要一个开发者账号，一个辅助工具Appuploader，一台PC电脑，在这里Mac电脑就可以不用了。\n不多说，进入步骤\n一、创建唯一标示符App IDs\nAPP IDs在后面创建发布文件，创建APP时都要用到。\n首先打开开发者中心ID，这个随便填，没有什么限制，最好是项目名称，这样方便自己辨识（不允许中文）\n第二项Bundle ID (App ID Suffix)，这是你App ID的后缀，需要仔细填写。用来标示我们的 app，使它有一个固定的身份，和你的程序直接相关。填写Explicit App ID 的格式为：com.company.appName，照着格式写，写个方便记的，后面很多地方要用到。\n二、申请发布证书\n这里就要用到不需要钥匙串在Windows直接创建证书的工具Appuploader.\n先下载安装http://appuploader.net/appuploader/download.php\n2.1打开程序，输入苹果开发者中心账号，登录。\n2.2选择Certification\n这样发布证书就创建好了，很简单吧。\n三、申请发布描述文件",
           "link": "https://juejin.cn/pin/7268539701941452835",
           "publishedOn": "2023-08-18T09:48:41.000Z",
-          "wordCount": 504,
+          "wordCount": 503,
           "title": "使用appuploader工具发布证书和描述性文件教程 使用APPuploader工具发布证书和描述性文件教程 之前用AppCan平台开发了一个应用，平台可以同时生成安卓版和苹果版...",
           "imageUrl": null
         },
@@ -2053,7 +2043,7 @@
           "description": "有没有需要大厂云代充值的呢[害羞]",
           "link": "https://juejin.cn/pin/7268540338443812916",
           "publishedOn": "2023-08-18T07:08:51.000Z",
-          "wordCount": 448,
+          "wordCount": 447,
           "title": "有没有需要大厂云代充值的呢[害羞]",
           "imageUrl": null
         },
@@ -2063,7 +2053,7 @@
           "description": "[7073670907851440160#新人报道#]",
           "link": "https://juejin.cn/pin/7268465587247628300",
           "publishedOn": "2023-08-18T05:49:04.000Z",
-          "wordCount": 452,
+          "wordCount": 455,
           "title": "[7073670907851440160#新人报道#]",
           "imageUrl": null
         },
@@ -2073,7 +2063,7 @@
           "description": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件#\nLangChain 是一个用于开发由语言模型支持的应用程序的框架，它支持数据感知，将语言模型连接到其他数据源，同时允许语言模型与其环境交互。利用大型语言模型的力量简化流程，切实增强用户构建和迭代产品的能力。\n官方网站：https://www.langchain.com/langsmith",
           "link": "https://juejin.cn/pin/7268314195299631145",
           "publishedOn": "2023-08-18T03:33:12.000Z",
-          "wordCount": 460,
+          "wordCount": 459,
           "title": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件# LangChain 是一个用于开发由语言模型支持的应用程序的框架，它支持数据感知，将语言模型连接到其他数据源，...",
           "imageUrl": null
         },
@@ -2083,7 +2073,7 @@
           "description": "有没有需要服务器的吗[害羞]",
           "link": "https://juejin.cn/pin/7268249031549091875",
           "publishedOn": "2023-08-18T02:06:28.000Z",
-          "wordCount": 447,
+          "wordCount": 446,
           "title": "有没有需要服务器的吗[害羞]",
           "imageUrl": null
         },
@@ -2093,7 +2083,7 @@
           "description": "xdm，专心搞副业了，回收手机和平板，可走平台，主打诚信和爽快。有需要先关的手机和平板的，也可以联系我哈，售后有保证！诚信经营！！！",
           "link": "https://juejin.cn/pin/7268224240108961853",
           "publishedOn": "2023-08-18T01:21:38.000Z",
-          "wordCount": 450,
+          "wordCount": 447,
           "title": "xdm，专心搞副业了，回收手机和平板，可走平台，主打诚信和爽快。有需要先关的手机和平板的，也可以联系我哈，售后有保证！诚信经营！！！",
           "imageUrl": null
         },
@@ -2103,7 +2093,7 @@
           "description": "在线一键生成安卓证书 keystore 文件\n一般的打包工具都会有默认的安卓证书提供，但如果你需要上架需要用自己申请安卓证书 keystore 文件打包 apk\n现有方便方便的工具，直接在网页就可以申请安卓证书，秒搞定。\n首先打开这个网页\nhttp://www.applicationloader.net/appuploader/keystore.php\n输入别名，证书密码，组织名称，点击生成证书就好自动生成并且下载安卓证书 keystore 文件",
           "link": "https://juejin.cn/pin/7268191936660848692",
           "publishedOn": "2023-08-17T10:26:59.000Z",
-          "wordCount": 479,
+          "wordCount": 478,
           "title": "在线一键生成安卓证书 keystore 文件 一般的打包工具都会有默认的安卓证书提供，但如果你需要上架需要用自己申请安卓证书 keystore 文件打包 apk 现有方便方便的...",
           "imageUrl": null
         },
@@ -2113,7 +2103,7 @@
           "description": "老铁们，推荐一个我写的开发者工具 https://tooltool.net[呲牙]",
           "link": "https://juejin.cn/pin/7268164615203897384",
           "publishedOn": "2023-08-17T10:00:14.000Z",
-          "wordCount": 449,
+          "wordCount": 448,
           "title": "老铁们，推荐一个我写的开发者工具 https://tooltool.net[呲牙]",
           "imageUrl": null
         },
@@ -2123,7 +2113,7 @@
           "description": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件#\nCodeSee 可视化您的代码库和服务，并自动化您的工作流程。当您深入研究代码库、规划功能或重构、编写代码以及完成代码审查时，CodeSee 为您提供有力支持。CodeSee 自动生成并更新代码图，并同步您的代码库。帮助您了解文件及文件夹如何链接，了解代码更改如何适应更大的架构等。\n尝试地址：https://www.codesee.io/",
           "link": "https://juejin.cn/pin/7268049978941227047",
           "publishedOn": "2023-08-17T06:17:06.000Z",
-          "wordCount": 467,
+          "wordCount": 466,
           "title": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件# CodeSee 可视化您的代码库和服务，并自动化您的工作流程。当您深入研究代码库、规划功能或重构、编写代码以...",
           "imageUrl": null
         },
@@ -2133,7 +2123,7 @@
           "description": "jym,你们都在用什么富文本编辑器，求推荐[咖啡]",
           "link": "https://juejin.cn/pin/7267926936641765433",
           "publishedOn": "2023-08-17T02:43:06.000Z",
-          "wordCount": 440,
+          "wordCount": 439,
           "title": "jym,你们都在用什么富文本编辑器，求推荐[咖啡]",
           "imageUrl": null
         },
@@ -2143,7 +2133,7 @@
           "description": "有没有人需要大厂云代充值呢[害羞]",
           "link": "https://juejin.cn/pin/7267921806596948020",
           "publishedOn": "2023-08-17T01:40:31.000Z",
-          "wordCount": 444,
+          "wordCount": 443,
           "title": "有没有人需要大厂云代充值呢[害羞]",
           "imageUrl": null
         },
@@ -2153,7 +2143,7 @@
           "description": "有没有需要服务器的呢[害羞]",
           "link": "https://juejin.cn/pin/7267723121037115392",
           "publishedOn": "2023-08-16T07:15:39.000Z",
-          "wordCount": 444,
+          "wordCount": 443,
           "title": "有没有需要服务器的呢[害羞]",
           "imageUrl": null
         },
@@ -2163,7 +2153,7 @@
           "description": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件#\nSuperAGI 是一个可访问的开源系统，用于创建和部署智能代理。通过图形用户界面、操作控制台、并发代理和多种数据库配置选项，可以轻松进行 AI 代理开发和管理。SuperAGI 是一个自主人工智能框架，旨在让程序员更轻松地对这些代理进行编程。\n试用地址：https://superagi.com/",
           "link": "https://juejin.cn/pin/7267531776365281292",
           "publishedOn": "2023-08-16T02:58:22.000Z",
-          "wordCount": 471,
+          "wordCount": 470,
           "title": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件# SuperAGI 是一个可访问的开源系统，用于创建和部署智能代理。通过图形用户界面、操作控制台、并发代理和多种...",
           "imageUrl": null
         },
@@ -2173,7 +2163,7 @@
           "description": "有没有需要云服务器的呢[害羞]",
           "link": "https://juejin.cn/pin/7267539993965854755",
           "publishedOn": "2023-08-16T01:32:33.000Z",
-          "wordCount": 444,
+          "wordCount": 443,
           "title": "有没有需要云服务器的呢[害羞]",
           "imageUrl": null
         },
@@ -2183,7 +2173,7 @@
           "description": "简单易用的 OpenAI Java SDK 1.8.0 已经完美支持 Stream 响应数据\nhttps://github.com/devlive-community/openai-java-sdk/releases/tag/1.8.0",
           "link": "https://juejin.cn/pin/7267441368061493282",
           "publishedOn": "2023-08-15T12:23:24.000Z",
-          "wordCount": 486,
+          "wordCount": 485,
           "title": "简单易用的 OpenAI Java SDK 1.8.0 已经完美支持 Stream 响应数据 https://github.com/devlive-community/openai-java-sdk/releases/tag/1.8.0",
           "imageUrl": null
         },
@@ -2193,7 +2183,7 @@
           "description": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件#\nK8sGPT 是一个扫描 kubernetes 集群、诊断和分类问题的工具。它将 SRE 经验编入其分析器中，并帮助提取最相关的信息。该工具适用于工作负载健康分析，查找其中的关键问题，同时帮助用户概览集群并使用 AI 深入分析，还为用户提供安全 CVE 审查。\n试用地址：https://k8sgpt.ai/",
           "link": "https://juejin.cn/pin/7267178812952936511",
           "publishedOn": "2023-08-15T02:51:10.000Z",
-          "wordCount": 488,
+          "wordCount": 487,
           "title": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件# K8sGPT 是一个扫描 kubernetes 集群、诊断和分类问题的工具。它将 SRE 经验编入其分析器中，并帮助提取最相...",
           "imageUrl": null
         },
@@ -2203,7 +2193,7 @@
           "description": "有没有需要服务器的呢[害羞]",
           "link": "https://juejin.cn/pin/7266992141934067746",
           "publishedOn": "2023-08-14T07:01:41.000Z",
-          "wordCount": 444,
+          "wordCount": 443,
           "title": "有没有需要服务器的呢[害羞]",
           "imageUrl": null
         }
@@ -2717,22 +2707,6 @@
           "publishedOn": "2023-07-23T23:30:39.000Z",
           "wordCount": null,
           "title": "ChatGPT for Android将于本周上线；Azure OpenAI 支持更改内容过滤级别",
-          "itunes": {},
-          "enclosure": {
-            "url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png",
-            "length": "0",
-            "type": "image/jpeg"
-          },
-          "imageUrl": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png"
-        },
-        {
-          "id": "https://shengliu.substack.com/p/chatgpt-d52",
-          "author": "王铁柱",
-          "description": "省流@23-07-21 🚀 大公司 & 新闻 ChatGPT 新增自定义说明功能 目前仅向 Plus 计划用户开放测试版。该功能允许添加用户希望 ChatGPT 在生成响应时考虑的首选项或要求，这样就不用每次对话开始时都重复一遍。 特斯拉将向其他汽车制造商授予全自动驾驶技术许可 🔬 科研 & 科普 天文学家发现一颗不寻常的白矮星，一侧由氢组成，另一侧由氦组成 🔖 值得一览 Swordfish90/cool-retro-term (GitHub Repo) 一个终端模拟器，模仿旧阴极管屏幕的外观和感觉。",
-          "link": "https://shengliu.substack.com/p/chatgpt-d52",
-          "publishedOn": "2023-07-21T00:14:54.000Z",
-          "wordCount": null,
-          "title": "ChatGPT 新增自定义说明功能；特斯拉自动驾驶技术将扩散",
           "itunes": {},
           "enclosure": {
             "url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png",
