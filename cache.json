@@ -34,7 +34,7 @@
           "description": "nonce可以用来决定哪些内联JS执行，popover可以无JS实现浮层弹出层交互效果。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/html-attribute-nonce-translate/",
           "publishedOn": "2023-08-10T15:24:42.000Z",
-          "wordCount": 1115,
+          "wordCount": 1116,
           "title": "查漏补缺，我仍未知道的HTML nonce和popover属性",
           "imageUrl": null
         },
@@ -1745,16 +1745,6 @@
           "wordCount": 523,
           "title": "重庆市云阳县发布暴雨黄色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230812/t20230812_526377099.html",
-          "author": "国家预警信息发布中心",
-          "description": "奉节县气象台2023年8月12日23时24分发布“暴雨黄色预警信号”，预计8月12日23时至13日5时，兴隆镇、云雾土家族乡、青龙镇、太和土家族乡、吐祥镇、羊市镇、五马镇、安坪镇、甲高镇、康坪乡、公平镇、红土乡等街道（乡镇）累计雨量将达50毫米以上，最大小时雨强可达20-30毫米，并伴有雷电等强对流天气；注意防范强降水可能诱发的山体滑坡、泥石流、中小河流洪水、山洪、城乡积涝等次生灾害，以及雷电、大风和冰雹可能造成的不利影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20230812/t20230812_526377099.html",
-          "publishedOn": "2023-08-12T15:50:04.000Z",
-          "wordCount": 523,
-          "title": "重庆市奉节县发布暴雨黄色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -1790,6 +1780,16 @@
       "feedUrl": "https://rsshub.app/juejin/trending/frontend/weekly",
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
+        {
+          "id": "https://juejin.cn/post/7268260939065491512",
+          "author": "魔术师卡颂",
+          "description": "大家好，我卡颂。\n当我们看一个开源项目时，基本都会看下他有多少star。虽然Github Star是一个虚荣指标，但却有实际意义，比如：\n很多开发者会关注Github Star增长趋势，更多的star会获得更多关注\nstar数量往往是技术选型的一个依据。即使你的团队最终没有使用一个star很多的开源库，但通常也不会使用一个star很少的库\n换个思路来看也许更能体现Github Star的价值 —— 软件开源并不意味着不赚钱，这只是一种产品开发策略。star数一定程度上反映了这种策略执行的是否成功。\n而策略执行是否成功又会影响投资人的投资决策，以及团队能否以更低成本（甚至白嫖）招募优秀的开发人员。\n有利益驱动就会有刷量、造假行为出现。既然微博僵尸粉都能影响广告主的投放决策，那Github Star造假就不足为奇了。\n那么，一个Github Star值多少钱？\n欢迎围观朋友圈、加入人类高质量前端交流群，带飞\nStar的售价\n网上已经有公开渠道购买Github Star，比如：GitHub24或Baddhi Shop（在这个网站，你能花钱刷各种网站的行为数据，甚至能刷IMDb电影评分）。\n\nStar的售价差异很大，比如：\n64刀可以买到1000个三无账号的star\n要买到100颗有活跃行为账号的star，可能得85刀\n\n如何识别刷Star\n之所以两者差异巨大，是因为鉴别难度不同。\n对于这个zadahmed/music_recommender仓库，可以明显看到有部分点赞者的账号是同一天注册的：\n\n再深究的话，会发现这些点赞账号还有很多共性，比如：\nFollowers < 1\nFollowing < 1\n个人公开仓库数量 < 4\n很多个人信息（比如邮箱、简介）为空\n这类共性让这些假账号很容易被识别，Github官方会定期清理这些账号。所以，如果你花钱刷了1000star，可能过一个月就都消失了。\n除了Github官方以外，还有些工具可以识别假账号，比如：\nastronomer\nfake-star-detector\n想想，如果自己的项目好不容易做出点名气，但被人扒出曾经刷star，那就尴尬了。\n识别高端造假\n但对于那些高价刷的star，这类检测机制就不太好用了。因为这类账号会模仿正常开发者的行为，光从行为数据上，很难将他们和正常开发者区分。\n这里开源编排平台dagster提供了一个检测思路 —— 他们使用一种被称为unsupervised clustering（无监督聚类）的机器学习技术。简单来讲，我们可以用一组行为特征来描述一个Github账号，比如：\n提交代码\n给其他仓库提PR\nstar某个项目\n修改个人简介\n这样就能将这个Github账号表示为高维向量空间中的一个点。那些向量空间中相近的点对应的Github账号，可以被归类为同类账号。\n基于以上原理，dagster成员新建了个仓库，并高价刷了star：\n\n这么做的目的是用那些点star的Github账号做聚类分析，标记出一个类。当完成聚类后，如果发现某个Github账号也属于这个类，那就可以怀疑这个账号也是假账号。\n那么，为什么假账号能够聚类呢？这是因为这些账号虽然在模仿正常开发者，但他们之间也有很多类似行为，比如：\n他们的行为可能都是同一个脚本在操作，那么在行为逻辑、行为执行的时间上比较类似\n他们都会给同一批仓库（服务的买主）点star\n举个例子，有两个Github账号，虽然他们之间并无交集（仓库的编程语言不同、开发者国籍不同...），但他们都在某几天做着同类的事（比如先浏览一些仓库，再发表评论，最后给某个仓库star），那么他们会被划分为同类。\n如果他们的同类中有实锤的假账号，那么他们大概率也是假账号。\n在下面的图表中，衡量了上述刷star的仓库（100% star都是刷的）中，点了star的那些Github账号的行为，其中：\n横轴是日期跨度\n纵轴是账号交互的仓库总数\n蓝色部分是所有用户\n红色部分是明确的假Github账号\n黄色部分是根据聚类，被怀疑的假账号\n\n由于已知这个仓库的所有star都是刷的，所以其实黄色部分的账号也都是假账号，通过聚类的方式他们被很好的识别出来了（和红色部分同类）。\n而对于完全没有刷star的项目（这里以dagster为例），点star的用户行为基本不会与假账号有交集：\n\n对于一个刷了star，同时又有实际参与者的项目，分析结果如下图：\n\n总结\n虽然star数是虚荣指标，但由于他是很多决策的参考依据，这就诞生了刷star的需求。\n比如，okcash是一款开源的加密货币，有578star。\n\n但是，经过上述dagster的方式检测后会发现，所有为okcash点star的账号中，疑似虚假刷star的账号占比达到97% 。相信这一结果会对这款加密货币的市场信心造成一定影响。\n如果你也想用dagster的方式检测其他开源库，可以参考这里。",
+          "link": "https://juejin.cn/post/7268260939065491512",
+          "publishedOn": "2023-08-18T01:42:23.000Z",
+          "wordCount": 1228,
+          "title": "一个 Github Star 值多少钱？",
+          "imageUrl": null
+        },
         {
           "id": "https://juejin.cn/post/7267791228872671247",
           "author": "zt_ever",
@@ -1836,7 +1836,7 @@
           "description": "视频版\n哈喽大家好，我是大圣，一个除了上班什么都喜欢的程序员，今天来聊一下我为什么要建议所有人反对996\n先科普一下，996是一种互联网常见的工作模式，就是早上9点上班，晚上9点下班，每周工作6天去掉午休一小时，每周工作时间是11＊6＝66，965是8＊5＝40如果加班工资算1.5倍，996相当于时薪直接腰斩\n之前我认为996只是变相降低50％，剥夺你学习的精力和时间，并且用晚餐＋免费打车来美化这种行为，还用奋斗是福报pua你，而且还实用末尾淘汰机制让你们内斗，而且996效率极低，我一天能注意力集中4个小时算高的了，我作为一个正常人类，没法集中注意力12个小时\n996的真实节奏就是9点或者10点到公司，开个早会泡个茶，看看邮件刷刷知乎摸摸鱼就吃午饭了，基本都是下午才能开始干活，但是很多会议就来了，其实整体效率并没有提高，都在假装忙碌在摸鱼，反而是晚饭后能集中注意力工作一会，长久对积极的工作态度是毁灭性的打击\n所以我一直都是立场鲜明的反对996，在996.icu崛起之前，我的程序员找工作黑名单就是Github最大的反996项目，996.icu作者之一被抓起来后，这个项目我就不再更新了\n\n\n但是你以为你的摸鱼行为老板不知道吗？你可以怀疑有钱人的人品，但是你不能怀疑他们的智商和能力，我自由职业一年后才意识到，996真正的伤害不是时薪的降低，而是对你发展机会的扼杀\n我做自由职业得自己搞钱，有些小机会，比如外包，行业小聚，大家基本都是工作晚上7点～10点或者周六的小聚，周日那些小甲方都会在家休息，饭局会促成一些意想不到的收入机会，晚上9点才放你走，有可能就是老板要把你晚上可能接触到商业机会的聚会干掉，成为彻底的打工人，哪怕你效率低\n一个年轻人进入到公司，前几年从啥也不懂，到掌握了代码，运营，产品等技能之一，六七点下班后，同学聚会，发小聚会，微信群线下聚会等，不同公司不同角色的人在一起交流，可能就会诞生新得机会，你的发小A可能是个设计，你会写代码，你同学他姑父公司需要做个小程序，这就可以成为你新的机会\n越过公司，直接和社会交易的机会，你成为老板的机会，哪怕很小，你也不会因为公司裁员而绝望，万一机会多了，你就会开始创业或者自由职业，所以老板一定要让你再公司待到9点，持续修炼垂直的技能，变成架构师，但是你没有接触到商务，或者叫靠自己获得收入的能力\n就像打篮球一样，投篮就是最重要的得分机会，你是一个很好大学的毕业生，爱学习能力强，但是老板只训练你的传球，篮板和抢断能力，本来你可以接触到投篮的时间夺走，让你待在公司继续训练过人和篮板，哪怕晚上你效率低摸鱼都可以，只要你不会投篮，成为他的潜在对手就可以\n\n所以996效率低老板是知道的，除了训练服从性之外，还让你成为彻底的打工人，哪怕上午摸鱼，晚上7点公司内部组织技术分享会学习都没关系，你只能持续训练你的传球技能，然后传球给你的老板，只有他自己能投篮\n我一直都是拒绝996的，我在百度当程序员那会，就一直思考，这个B班，是不是非上不可，后来发现可以周末出去讲课，教人写js，虽然课时费不高，还参与招生，但是我觉得我自己可以独立通过写代码获得收入，非常cool\n现在成为自由职业（无业游民），极客时间的Vue课到今天有3w人学过了，B站课堂也刚上了一个课，出版社也在合作，把【Vuejs设计与实现】录制成课程，这些都是工作时间饭点吃饭＆喝咖啡诞生的商业机会，或者我去参加平台组织的聚会谈成的，这是996没法参与的\n\n\n再次建议我的所有学员＆朋友不要加入996的公司，除了工资，健康和法律问题，还有被彻底剥夺了社交的机会，失去了多元发展的机会，我也建议所有的程序员，前端学学后端，后端学学前端，这俩是能开发出完整产品的技术，React或者Vue，加上一个Nest, 数据库用mongodb或者mysql，还有非常火的serverless，做一个全栈的应用，然后还可以写文章录视频，培养演讲能力\n\n然后看看《一人公司方法论》《商业百科》《增长黑客》《启示录》《运营之光》《优势谈判》综合入个门，日常除了喜欢造轮子之外，可以好好思考一下，你现在做的业务，到底是怎么赚到钱的这个能力其实真的很有用，说不定哪次聚会就有用，祝大家都能早日找到适合自己的商业机会，能够靠写代码这门手艺，直接和市场交易养活自己，那裁员和pua还有什么可怕的呢\n今天就聊到这，欢迎大家对视频点赞，这样会激励我做更多的视频 下期再见",
           "link": "https://juejin.cn/post/7267434484505739316",
           "publishedOn": "2023-08-15T14:02:11.000Z",
-          "wordCount": 994,
+          "wordCount": 1050,
           "title": "为什么我们要立场鲜明的反对996",
           "imageUrl": null
         },
@@ -1846,7 +1846,7 @@
           "description": "1、问题描述\n前几天又遇到个神奇Bug，公司某系统的页面出现点击按钮没有反应的问题，反馈问题的用户能稳定复现，技术团队无法复现。\n浏览器为 Chrome 115，控制台可见大量 iframe跨域 报错，具体情况如下：\n\n2、问题原因\n根据报错找到的异常代码如下：\n\n看到代码注释的日期我着实有点慌\n代码异常是 iframe 页面访问父页面时出现了跨域错误。由于系统近半年没有发版，也没有用户反馈相关问题，因此猜测是当年用的跨域方案失效导致异常。iframe 跨域 的解决方案可以参考 阮一峰博客，文章给出了4种方案：\n修改 document.domain\n片段识别符（fragment identifier）\nwindow.name\n跨文档通信API（Cross-document messaging）\n接着在错误代码的文件头部找到了跨域方案相关的代码，这里采用的方案是修改 document.domain。\n\n随后在 Chrome路线图 中找到了 document.domain改动 的信息。\n\n经过分析确定问题的原因是：Chrome115 禁用 document.domain setter 导致出现 iframe跨域 错误，进而出现点击按钮无反应的问题。\n2.1、无法复现的原因\n前面说过这个问题在反馈用户的电脑上必现，但开发团队始终无法复现，这其实是 Chrome 灰度发布策略造成的，从 Chrome 团队的沟通会话可以看出端倪。\n\n截图来自：https://groups.google.com/a/chromium.org/g/blink-dev/c/nrLl0IxSxSI/m/Sm4IH4yNAwAJ\n内容如下：\nHello all, it's been a while... The bug reports should now be resolved, and we'd like…",
           "link": "https://juejin.cn/post/7267417057440219191",
           "publishedOn": "2023-08-15T08:29:22.000Z",
-          "wordCount": 1465,
+          "wordCount": 1455,
           "title": "Chrome115 iframe跨域失败",
           "imageUrl": null
         },
@@ -1856,18 +1856,8 @@
           "description": "从构思到上线的全过程，开发中遇到一些未知问题，也都通过查阅资料和源码一一解决，小记一下望对正在使用或即将使用Nextjs开发的你们有所帮助。\n那些年我开发过的博客\n就挺有意思，域名，技术栈和平台的折腾史\n2018年使用hexo搭建了个静态博客，部署在github pages\n2020年重新写了博客，vue，nodejs，mongodb三件套，使用nginx部署在云服务器上\n2023年云服务器过期了，再一次重写了博客，nextjs为基础框架，部署在vercel上\n背景\n因为日常开发离不开终端，正好也有重写博客的想法，打算开发一个不只是看的博客网站，所以模仿终端风格开发了Yucihent。\n技术栈\nnextjs 更多技术栈\n选用nextjs是因为next13更新且稳定了App Router和一些其他新特性。\n设计\n简约为主，首页为类终端风格，prompt样式参考了starship，也参考过ohmyzsh themes，选用starship因为觉得更好看。\n交互\n通过手动输入或点击列出的命令进行交互，目前可交互的命令有：\nhelp 查看更多\nlist和ls 列出可用命令\nclear 清空所有输出\nposts 列出所有文章\nabout 关于我\n后续会新增一些命令，增加交互的趣味。\n暗黑模式\n基于tailwind的dark mode和next-themes\n首先将tailwind的dark mode设置为class，目的是将暗黑模式的切换设置为手动，而不是跟随系统。\n// tailwind.config.js\n\nmodule.exports = {\n  darkMode: 'class'\n}\n\n新建ThemeProvider组件，用到next-themes提供的ThemeProvider，需要在文件顶部使用use client，因为createContext只在客户端组件使用。\n'u…",
           "link": "https://juejin.cn/post/7267408057163055139",
           "publishedOn": "2023-08-15T05:36:38.000Z",
-          "wordCount": 2580,
+          "wordCount": 2533,
           "title": "这个交互式个人博客能让你眼前一亮✨👀 ？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7267162307897589794",
-          "author": "王大冶",
-          "description": "微信搜索 【大迁世界】, 我会第一时间和你分享前端行业趋势，学习途径等等。\n本文 GitHub  https://github.com/qq449245884/xiaozhi 已收录，有一线大厂面试完整考点、资料以及我的系列文章。\n快来免费体验ChatGpt plus版本的，我们出的钱 体验地址:https://chat.waixingyun.cn 可以加入网站底部技术群，一起找bug，另外新版作图神器已上线 https://cube.waixingyun.cn/home\n1.使用边框绘制一个三角形\n在某些情况下，例如在工具提示中添加箭头指针时，如果你只需要简单的三角形，那么加载图片可能会过度。\n仅使用CSS，您就可以通过边框创建一个三角形。\n这是一个相当老的技巧。理想情况下，你会在一个宽度和高度都为零的元素上设置边框。所有的边框颜色都是透明的，除了那个将形成箭头的边框。例如，要创建一个向上指的箭头，底部边框是有颜色的，而左边和右边是透明的。无需包括顶部边框。边框的宽度决定了箭头的大小。\n.upwards-arrow {\n    width: 0;\n    height: 0;\n    border-left: 20px solid transparent;\n    border-right: 20px solid transparent;\n\n    border-bottom: 20px solid crimson;\n}\n\n这将创建一个像下面所示的向上指的箭头：\n\n事例地址：https://codepen.io/chriscoyier/pen/DELgOJ\n2.交换元素的背景\nz-index 属性规定了元素如何堆叠在其他定位元素上。有时，你可能会设置一个 z-index 属性让子元素的层级较低，结果却发现它隐藏在其父元素的背景之后。为了防止这种情况，你可以在父元素上创建一…",
-          "link": "https://juejin.cn/post/7267162307897589794",
-          "publishedOn": "2023-08-15T00:21:11.000Z",
-          "wordCount": 2250,
-          "title": "让你兴奋不已的13个CSS技巧🤯",
           "imageUrl": null
         },
         {
@@ -1956,7 +1946,7 @@
           "description": "theme: vue-pro\n点击在线阅读，体验更好\n链接\n\n\n\n\n现代JavaScript高级小册\n链接\n\n\n深入浅出Dart\n链接\n\n\n现代TypeScript高级小册\n链接\n\n\nlinwu的算法笔记📒\n链接\n\n\n\n引言\n作为面试官，为什么我推荐微前端作为前端面试的亮点？\n作为面试官，为什么我推荐组件库作为前端面试的亮点？\n在前面两篇文章中得到反馈效果不错，今天继续出第三篇，以二次封装axios为例\n在我以往的面试中，听到候选人最多的就是项目中二次封装axios，但是当真正深入挖掘，往往得不到有用的信息。\n那么面试官是想听到什么样的亮点呢？这篇文章我们重点分析一下，并且也可以封装自己的axios请求库。\n需求\n在项目中，我们可能存在这些痛点：\n接口统一管理\n支持多host问题\n支持区分env\n支持restful风格\n支持取消请求\n支持接口错误重试\n支持缓存\n支持限流\n请求方法的统一封装\n\nexport class  Apis{\n\n  public common: RequestOptions;\n  // 默认的server配置\n  public base!: string;\n  // server服务的集合\n  public serverMap: ServerMap;\n  // 对象形式的请求方法集合\n  public apiMap: ApisMap;\n  // 挂载所有请求方法的集合对象\n  public apis: ApisInstance;\n  // axios实例化对象\n  public instance: AxiosInstance;\n\n  constructor(common?: RequestOptions, serverMap?: ServerMap, apiMap?: ApisMap) {\n  \n  }\n\n  public get<T extends…",
           "link": "https://juejin.cn/post/7266308603938062391",
           "publishedOn": "2023-08-13T05:29:43.000Z",
-          "wordCount": 3654,
+          "wordCount": 3611,
           "title": "基于Axios二次封装请求库,带你重构面试亮点",
           "imageUrl": null
         },
@@ -1966,7 +1956,7 @@
           "description": "theme: orange\nhighlight: a11y-dark\n摘要：  本文将深入探讨 Vue 中的 nextTick 方法，首先介绍其背景和使用方式，然后解析其底层原理，最后探讨 nextTick 的常见使用场景。通过本文的阅读，您将对 Vue 中 nextTick 的工作原理有更深入的理解。（读完本文预计需要5分钟）\n1. nextTick 的背景\n在 Vue 中，DOM 更新是异步执行的，这意味着当我们修改了数据后，DOM 并不会立即更新，而是在下一个 tick（更新周期）时才会进行更新。Vue 提供了 nextTick 方法来处理在 DOM 更新完成后执行回调函数的需求。nextTick 方法可以将回调函数推入一个回调队列，在下一个 tick 时执行这些回调函数。\n2. nextTick 的使用\n在 Vue 实例上调用 $nextTick 方法，或者使用 Vue.nextTick 方法，都可以将回调函数添加到 nextTick 的队列中。下面是使用 nextTick 的简单示例：\n// 在 Vue 实例内部使用\nthis.$nextTick(() => {\n  // DOM 更新后执行的回调函数\n});\n\n// 使用全局方法\nVue.nextTick(() => {\n  // DOM 更新后执行的回调函数\n});\n\n使用$nextTick方法等待DOM更新完成：\n通过在Vue实例上调用$nextTick方法来等待DOM更新完成。\n在$nextTick的回调函数中执行需要在DOM更新后进行的操作。\n示例：\nnew Vue({\n  data() {\n    return {\n      message: 'Hello, Vue!',\n    };\n  },\n  methods: {\n    updateData() {\n      this.message = …",
           "link": "https://juejin.cn/post/7266374711823171636",
           "publishedOn": "2023-08-13T05:28:02.000Z",
-          "wordCount": 2535,
+          "wordCount": 2206,
           "title": "看完这篇nextTick就别再问别人了",
           "imageUrl": null
         },
@@ -1997,6 +1987,16 @@
       "feedUrl": "https://rsshub.app/juejin/pins/6824710202000932877",
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
+        {
+          "id": "7268864810211819579",
+          "author": "小肚肚肚肚肚哦",
+          "description": "大家平时写文章时都用什么截图工具来做图呢？",
+          "link": "https://juejin.cn/pin/7268864810211819579",
+          "publishedOn": "2023-08-19T13:39:41.000Z",
+          "wordCount": 443,
+          "title": "大家平时写文章时都用什么截图工具来做图呢？",
+          "imageUrl": null
+        },
         {
           "id": "7268671526718521378",
           "author": "文侯",
@@ -2185,16 +2185,6 @@
           "publishedOn": "2023-08-15T02:51:10.000Z",
           "wordCount": 487,
           "title": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件# K8sGPT 是一个扫描 kubernetes 集群、诊断和分类问题的工具。它将 SRE 经验编入其分析器中，并帮助提取最相...",
-          "imageUrl": null
-        },
-        {
-          "id": "7266992141934067746",
-          "author": "小凯服务器大厂云",
-          "description": "有没有需要服务器的呢[害羞]",
-          "link": "https://juejin.cn/pin/7266992141934067746",
-          "publishedOn": "2023-08-14T07:01:41.000Z",
-          "wordCount": 443,
-          "title": "有没有需要服务器的呢[害羞]",
           "imageUrl": null
         }
       ]
