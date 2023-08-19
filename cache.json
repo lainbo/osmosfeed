@@ -34,7 +34,7 @@
           "description": "nonce可以用来决定哪些内联JS执行，popover可以无JS实现浮层弹出层交互效果。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/html-attribute-nonce-translate/",
           "publishedOn": "2023-08-10T15:24:42.000Z",
-          "wordCount": 1116,
+          "wordCount": 1114,
           "title": "查漏补缺，我仍未知道的HTML nonce和popover属性",
           "imageUrl": null
         },
@@ -44,7 +44,7 @@
           "description": "今天好好了解了下kbd、var、samp等HTML，发现以前表示前端源代码的方式简单且浅薄了。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/07/html-samp-element/",
           "publishedOn": "2023-07-31T14:31:18.000Z",
-          "wordCount": 983,
+          "wordCount": 982,
           "title": "HTML kbd、var、samp元素你使用过没？",
           "imageUrl": null
         },
@@ -54,7 +54,7 @@
           "description": "没想到，以前有些不方便实现的排版和布局效果可以使用text-wrap:balance轻松实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/07/css-text-wrap-balance/",
           "publishedOn": "2023-07-25T07:03:30.000Z",
-          "wordCount": 983,
+          "wordCount": 982,
           "title": "5分钟快速了解text-wrap:balance的作用",
           "imageUrl": null
         }
@@ -1765,26 +1765,6 @@
           "wordCount": 523,
           "title": "重庆市奉节县发布暴雨黄色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20230812/t20230812_526376718.html",
-          "author": "国家预警信息发布中心",
-          "description": "巫溪县气象台2023年8月12日16时发布“暴雨蓝色预警信号”，预计未来6小时，天元乡、土城镇、乌龙乡、鱼鳞乡、徐家镇、下堡镇、中梁乡、白鹿镇、长桂乡、天星乡、塘坊镇、菱角镇、古路镇、大河乡、宁厂镇、双阳乡、胜利乡、柏杨街道、宁河街道、城厢镇、凤凰镇等街道（乡镇）累计雨量将达50毫米以上，最大小时雨强可达10-20毫米，并伴有雷电、阵性大风和冰雹等强对流天气，请注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20230812/t20230812_526376718.html",
-          "publishedOn": "2023-08-12T08:15:04.000Z",
-          "wordCount": 523,
-          "title": "重庆市巫溪县发布暴雨蓝色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230812/t20230812_526376624.html",
-          "author": "国家预警信息发布中心",
-          "description": "秀山县气象台2023年8月12日14时40分发布“高温橙色预警信号”，预计12日15时至18时，我县龙池镇、溪口镇、洪安镇、官庄街道、乌杨街道、梅江镇、大溪乡、妙泉镇、海洋乡、石堤镇、中和街道、石耶镇、平凯街道、里仁镇、宋农镇、峨溶镇海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230812/t20230812_526376624.html",
-          "publishedOn": "2023-08-12T07:10:05.000Z",
-          "wordCount": 523,
-          "title": "重庆市秀山土家族苗族自治县发布高温橙色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -1826,7 +1806,7 @@
           "description": "theme: simplicity-green\nhighlight: a11y-dark\n前言\n每次用vite创建项目秒建好，前几天用vue-cli创建了一个项目，足足等了我一分钟，那为什么用 vite 比 webpack 要快呢，这篇文章带你梳理清楚它们的原理及不同之处！文章有一点长，看完绝对有收获！\n正文\n一、webpack基本使用\nwebpack 的出现主要是解决浏览器里的 javascript 没有一个很好的方式去引入其它的文件这个问题的。\n话说肯定有小伙伴不记得 webpack 打包是咋使用的（清楚的话可以跳过这一小节），那么我以一个小 demo 来实现一下：\n1. 搭建基本目录结构\n我们在vue项目中初始化后全局安装 webpack 和 webpack-cli ：\nyarn add webpack webpack-cli -g\n创建vue所需的目录文件，以及webpack配置文件。\n目录结构如下：\n2. webpack.config.js配置文件编写\n不清楚webpack配置项的朋友可以进官方文档瞅一眼：webpack 中文文档\n看完之后，我们知道webpack主要包含的几个概念就开始编写配置文件了！\n（1）打包main.js\n代码如下：\nconst path = require('path')\n\nmodule.exports = {\n  mode: 'development',  //设置开发模式\n  entry: path.resolve(__dirname, './src/main.js'),   //打包入口\n  output: {   //打包到哪里去\n    path: path.resolve(__dirname, 'dist'),\n    filename: 'js/[name].js',  //默认文件名main.js\n  }\n}\n\n为了方便我…",
           "link": "https://juejin.cn/post/7267791228872671247",
           "publishedOn": "2023-08-16T12:26:45.000Z",
-          "wordCount": 3209,
+          "wordCount": 3514,
           "title": "还不清楚webpack和vite原理？有这篇足够了！",
           "imageUrl": null
         },
@@ -1836,7 +1816,7 @@
           "description": "theme: channing-cyan\n前言\n有个挺常见的需求相信大家应该都遇到过，就是一个搜索框，边输入边提示，类似于下面这样：\n\n这玩意在前端也挺好实现的，就 v-model 然后 watch 再做个防抖请求接口呗！于是我：\n<template>\n  <input v-model=\"value\">\n</template>\n\n<script setup>\nimport { ref, watch } from 'vue';\n\nconst value = ref('')\nwatch(value, value => 请求接口(value))\n</script>\n\n这里先省略掉防抖，因为希望代码看起来更简洁、更让人专注 bug 所在位置、减少干扰，大家能明白意思就行。为了更好的向大家展示这个 bug 我们把请求接口换成更加经典的 console.log，每打印一次就代表请求了一次接口：\n<template>\n  <input v-model=\"value\">\n</template>\n\n<script setup>\nimport { ref, watch } from 'vue';\n\nconst value = ref('')\nwatch(value, value => console.log(value))\n</script>\n\n\n只要输入框里的值发生变化了，那么就会请求接口，就会像下面这样：\n\n我们想搜索黑粉，结果刚打出第一个字母就已经开始替我们搜索了，随着字符越输越多，黑粉也慢慢呈现在了我们的面前。\n中文输入法\n但就在产品走查的时候，她们用中文输入法输入的时候却发现没有随着字符的输入而进行搜索：\n\n可以看到我们输入了这么多字符，但控制台从始至终都没打印过，证明了根本就没有监听到输入框里的变化。刚开始的时候我还狡辩呢，说什么像这种带着下划线的代表没输入完不会进入到输入里，所以…",
           "link": "https://juejin.cn/post/7267728538567114789",
           "publishedOn": "2023-08-16T07:32:34.000Z",
-          "wordCount": 1894,
+          "wordCount": 1861,
           "title": "产品经理：能不能把 Vue 的中文输入法 bug 解决了？",
           "imageUrl": null
         },
@@ -1846,7 +1826,7 @@
           "description": "首发于公众号 前端从进阶到入院，欢迎关注。\nHi 大家好我是 ssh，在工作的时候，我经常会感觉到很头疼，觉得自己的时间被各种各样的事情浪费了，可能是没用的会议，写得很垃圾的文档，各种为了达到某些目的而做的 Code Review 和工程化建设等等，正巧看到这篇 Top 7 Things That Kill Developer Productivity，不敢私藏干货，赶紧来分享给大家，希望能共同避免：\n简介\n几周前，我突然发现：在工作 4 小时内，我的工作时间和有效的编码时间差了整整 2 小时。为了重回正轨，我决定主动减少阻碍，来缩小这个差距，争取能写更多代码，把无关的事情抛开。这个时间差越大，我的效率就越低。\n和其他行业的人相比，程序员在这方面遇到的困境更甚。这些障碍往往会导致码农信心下降、写代码和优化的时间变少，职业倦怠率更高。影响创造力和热情。\n根据本周 CodeTime 的全球平均编码时间，约 45%的总编码时间都是消极编码。时间和资金都在被浪费。\n低效的开发流程是罪魁祸首。\n1. 会议\n\n低效的会议是导致开发人员生产力下降的最不必要的因素之一。编程需要心流。平均而言，进入心流状态大约需要 30 分钟。但是由于乱七八糟会议，专注力就被打断了，码农必须重复这个过程。\n有时 10 分钟的会议硬拖到一个小时，这也很浪费时间。减少了用于实际编程和解决问题的时间。有些会议还需要码农无用的出席。如果这次会议和码农的专业知识无关，根本没必要让他们参会。\n2. 技术债(Fix it Later)\n\n技术债，简单来说就是“以后再修”的心态。先采用捷径实现，妄图后面有空再修改成更优的方式。\n最开始，先让功能可用就行，而优化留到以后。短期来看这可能行得通，因为它可以加快项目进度，你可能在 deadline 前完成。但是反复这么做就会留下大量待完成的工作。会使维护、扩展和优化软件变得更加困…",
           "link": "https://juejin.cn/post/7267578376050114614",
           "publishedOn": "2023-08-16T03:44:15.000Z",
-          "wordCount": 1377,
+          "wordCount": 1365,
           "title": "老板搞这些事情降低我写码生产力，我把他开除了",
           "imageUrl": null
         },
@@ -1856,7 +1836,7 @@
           "description": "视频版\n哈喽大家好，我是大圣，一个除了上班什么都喜欢的程序员，今天来聊一下我为什么要建议所有人反对996\n先科普一下，996是一种互联网常见的工作模式，就是早上9点上班，晚上9点下班，每周工作6天去掉午休一小时，每周工作时间是11＊6＝66，965是8＊5＝40如果加班工资算1.5倍，996相当于时薪直接腰斩\n之前我认为996只是变相降低50％，剥夺你学习的精力和时间，并且用晚餐＋免费打车来美化这种行为，还用奋斗是福报pua你，而且还实用末尾淘汰机制让你们内斗，而且996效率极低，我一天能注意力集中4个小时算高的了，我作为一个正常人类，没法集中注意力12个小时\n996的真实节奏就是9点或者10点到公司，开个早会泡个茶，看看邮件刷刷知乎摸摸鱼就吃午饭了，基本都是下午才能开始干活，但是很多会议就来了，其实整体效率并没有提高，都在假装忙碌在摸鱼，反而是晚饭后能集中注意力工作一会，长久对积极的工作态度是毁灭性的打击\n所以我一直都是立场鲜明的反对996，在996.icu崛起之前，我的程序员找工作黑名单就是Github最大的反996项目，996.icu作者之一被抓起来后，这个项目我就不再更新了\n\n\n但是你以为你的摸鱼行为老板不知道吗？你可以怀疑有钱人的人品，但是你不能怀疑他们的智商和能力，我自由职业一年后才意识到，996真正的伤害不是时薪的降低，而是对你发展机会的扼杀\n我做自由职业得自己搞钱，有些小机会，比如外包，行业小聚，大家基本都是工作晚上7点～10点或者周六的小聚，周日那些小甲方都会在家休息，饭局会促成一些意想不到的收入机会，晚上9点才放你走，有可能就是老板要把你晚上可能接触到商业机会的聚会干掉，成为彻底的打工人，哪怕你效率低\n一个年轻人进入到公司，前几年从啥也不懂，到掌握了代码，运营，产品等技能之一，六七点下班后，同学聚会，发小聚会，微信群线下聚会等，不同公司不同角色的人在一起交流，可能就会诞生新得机会，你的发小A可能是个设计，你会写代码，你同学他姑父公司需要做个小程序，这就可以成为你新的机会\n越过公司，直接和社会交易的机会，你成为老板的机会，哪怕很小，你也不会因为公司裁员而绝望，万一机会多了，你就会开始创业或者自由职业，所以老板一定要让你再公司待到9点，持续修炼垂直的技能，变成架构师，但是你没有接触到商务，或者叫靠自己获得收入的能力\n就像打篮球一样，投篮就是最重要的得分机会，你是一个很好大学的毕业生，爱学习能力强，但是老板只训练你的传球，篮板和抢断能力，本来你可以接触到投篮的时间夺走，让你待在公司继续训练过人和篮板，哪怕晚上你效率低摸鱼都可以，只要你不会投篮，成为他的潜在对手就可以\n\n所以996效率低老板是知道的，除了训练服从性之外，还让你成为彻底的打工人，哪怕上午摸鱼，晚上7点公司内部组织技术分享会学习都没关系，你只能持续训练你的传球技能，然后传球给你的老板，只有他自己能投篮\n我一直都是拒绝996的，我在百度当程序员那会，就一直思考，这个B班，是不是非上不可，后来发现可以周末出去讲课，教人写js，虽然课时费不高，还参与招生，但是我觉得我自己可以独立通过写代码获得收入，非常cool\n现在成为自由职业（无业游民），极客时间的Vue课到今天有3w人学过了，B站课堂也刚上了一个课，出版社也在合作，把【Vuejs设计与实现】录制成课程，这些都是工作时间饭点吃饭＆喝咖啡诞生的商业机会，或者我去参加平台组织的聚会谈成的，这是996没法参与的\n\n\n再次建议我的所有学员＆朋友不要加入996的公司，除了工资，健康和法律问题，还有被彻底剥夺了社交的机会，失去了多元发展的机会，我也建议所有的程序员，前端学学后端，后端学学前端，这俩是能开发出完整产品的技术，React或者Vue，加上一个Nest, 数据库用mongodb或者mysql，还有非常火的serverless，做一个全栈的应用，然后还可以写文章录视频，培养演讲能力\n\n然后看看《一人公司方法论》《商业百科》《增长黑客》《启示录》《运营之光》《优势谈判》综合入个门，日常除了喜欢造轮子之外，可以好好思考一下，你现在做的业务，到底是怎么赚到钱的这个能力其实真的很有用，说不定哪次聚会就有用，祝大家都能早日找到适合自己的商业机会，能够靠写代码这门手艺，直接和市场交易养活自己，那裁员和pua还有什么可怕的呢\n今天就聊到这，欢迎大家对视频点赞，这样会激励我做更多的视频 下期再见",
           "link": "https://juejin.cn/post/7267434484505739316",
           "publishedOn": "2023-08-15T14:02:11.000Z",
-          "wordCount": 1050,
+          "wordCount": 994,
           "title": "为什么我们要立场鲜明的反对996",
           "imageUrl": null
         },
@@ -1866,7 +1846,7 @@
           "description": "1、问题描述\n前几天又遇到个神奇Bug，公司某系统的页面出现点击按钮没有反应的问题，反馈问题的用户能稳定复现，技术团队无法复现。\n浏览器为 Chrome 115，控制台可见大量 iframe跨域 报错，具体情况如下：\n\n2、问题原因\n根据报错找到的异常代码如下：\n\n看到代码注释的日期我着实有点慌\n代码异常是 iframe 页面访问父页面时出现了跨域错误。由于系统近半年没有发版，也没有用户反馈相关问题，因此猜测是当年用的跨域方案失效导致异常。iframe 跨域 的解决方案可以参考 阮一峰博客，文章给出了4种方案：\n修改 document.domain\n片段识别符（fragment identifier）\nwindow.name\n跨文档通信API（Cross-document messaging）\n接着在错误代码的文件头部找到了跨域方案相关的代码，这里采用的方案是修改 document.domain。\n\n随后在 Chrome路线图 中找到了 document.domain改动 的信息。\n\n经过分析确定问题的原因是：Chrome115 禁用 document.domain setter 导致出现 iframe跨域 错误，进而出现点击按钮无反应的问题。\n2.1、无法复现的原因\n前面说过这个问题在反馈用户的电脑上必现，但开发团队始终无法复现，这其实是 Chrome 灰度发布策略造成的，从 Chrome 团队的沟通会话可以看出端倪。\n\n截图来自：https://groups.google.com/a/chromium.org/g/blink-dev/c/nrLl0IxSxSI/m/Sm4IH4yNAwAJ\n内容如下：\nHello all, it's been a while... The bug reports should now be resolved, and we'd like…",
           "link": "https://juejin.cn/post/7267417057440219191",
           "publishedOn": "2023-08-15T08:29:22.000Z",
-          "wordCount": 1465,
+          "wordCount": 1455,
           "title": "Chrome115 iframe跨域失败",
           "imageUrl": null
         },
@@ -1876,7 +1856,7 @@
           "description": "从构思到上线的全过程，开发中遇到一些未知问题，也都通过查阅资料和源码一一解决，小记一下望对正在使用或即将使用Nextjs开发的你们有所帮助。\n那些年我开发过的博客\n就挺有意思，域名，技术栈和平台的折腾史\n2018年使用hexo搭建了个静态博客，部署在github pages\n2020年重新写了博客，vue，nodejs，mongodb三件套，使用nginx部署在云服务器上\n2023年云服务器过期了，再一次重写了博客，nextjs为基础框架，部署在vercel上\n背景\n因为日常开发离不开终端，正好也有重写博客的想法，打算开发一个不只是看的博客网站，所以模仿终端风格开发了Yucihent。\n技术栈\nnextjs 更多技术栈\n选用nextjs是因为next13更新且稳定了App Router和一些其他新特性。\n设计\n简约为主，首页为类终端风格，prompt样式参考了starship，也参考过ohmyzsh themes，选用starship因为觉得更好看。\n交互\n通过手动输入或点击列出的命令进行交互，目前可交互的命令有：\nhelp 查看更多\nlist和ls 列出可用命令\nclear 清空所有输出\nposts 列出所有文章\nabout 关于我\n后续会新增一些命令，增加交互的趣味。\n暗黑模式\n基于tailwind的dark mode和next-themes\n首先将tailwind的dark mode设置为class，目的是将暗黑模式的切换设置为手动，而不是跟随系统。\n// tailwind.config.js\n\nmodule.exports = {\n  darkMode: 'class'\n}\n\n新建ThemeProvider组件，用到next-themes提供的ThemeProvider，需要在文件顶部使用use client，因为createContext只在客户端组件使用。\n'u…",
           "link": "https://juejin.cn/post/7267408057163055139",
           "publishedOn": "2023-08-15T05:36:38.000Z",
-          "wordCount": 2533,
+          "wordCount": 2580,
           "title": "这个交互式个人博客能让你眼前一亮✨👀 ？",
           "imageUrl": null
         },
@@ -1886,7 +1866,7 @@
           "description": "微信搜索 【大迁世界】, 我会第一时间和你分享前端行业趋势，学习途径等等。\n本文 GitHub  https://github.com/qq449245884/xiaozhi 已收录，有一线大厂面试完整考点、资料以及我的系列文章。\n快来免费体验ChatGpt plus版本的，我们出的钱 体验地址:https://chat.waixingyun.cn 可以加入网站底部技术群，一起找bug，另外新版作图神器已上线 https://cube.waixingyun.cn/home\n1.使用边框绘制一个三角形\n在某些情况下，例如在工具提示中添加箭头指针时，如果你只需要简单的三角形，那么加载图片可能会过度。\n仅使用CSS，您就可以通过边框创建一个三角形。\n这是一个相当老的技巧。理想情况下，你会在一个宽度和高度都为零的元素上设置边框。所有的边框颜色都是透明的，除了那个将形成箭头的边框。例如，要创建一个向上指的箭头，底部边框是有颜色的，而左边和右边是透明的。无需包括顶部边框。边框的宽度决定了箭头的大小。\n.upwards-arrow {\n    width: 0;\n    height: 0;\n    border-left: 20px solid transparent;\n    border-right: 20px solid transparent;\n\n    border-bottom: 20px solid crimson;\n}\n\n这将创建一个像下面所示的向上指的箭头：\n\n事例地址：https://codepen.io/chriscoyier/pen/DELgOJ\n2.交换元素的背景\nz-index 属性规定了元素如何堆叠在其他定位元素上。有时，你可能会设置一个 z-index 属性让子元素的层级较低，结果却发现它隐藏在其父元素的背景之后。为了防止这种情况，你可以在父元素上创建一…",
           "link": "https://juejin.cn/post/7267162307897589794",
           "publishedOn": "2023-08-15T00:21:11.000Z",
-          "wordCount": 2250,
+          "wordCount": 2288,
           "title": "让你兴奋不已的13个CSS技巧🤯",
           "imageUrl": null
         },
@@ -1906,7 +1886,7 @@
           "description": "前言\n去年羊了个羊的爆火，引发了我对小游戏开发的兴趣，直到现在我依然感觉小游戏市场中存有后劲，哪怕没有一夜暴富的机会，也可小小盈利一把。之前苦于自身没有设计能力，无法独立完成游戏的开发工作，今年随着 AIGC 的浪潮，AI 图片生成让开发者能自主生成一些好看的图片用于游戏素材，受益于此，开发游戏的梦想终于可以得到实践了。\n本文将从以下4个方面介绍我开发并上线的第一款游戏，文章较长，感兴趣的小伙伴可以直接去阅读对应的模块\n1. 前端与游戏开发\n游戏开发一般是需要借助游戏引擎的，与前端童鞋们最常用的 html 不同，游戏引擎都是基于 canvas 来完成所有的界面操作的，这可能会让已经十分擅长写 css 的我们觉得游戏开发的布局很麻烦。我本次是使用 cocos-creator2.x 的版本来进行开发的，简单总结下使用 cocos-creator 的心得体会，让感兴趣的小伙伴能够快速了解两者的异同，轻松上手游戏开发。\n1.1. 相似点\n1.1.1. 生命周期主导的代码范式\ncocos-creator 与主流的 mvvm 框架如 react, vue 一样，也是有生命周期的概念的，虽然作用不尽相同，但是这种模式相当于确定了一种开发范式，让大家写的代码，即使没有注释，也更加容易被理解。\n比如 cocos-creator 的 onLoad()，就和 react 和 vue 的 mount(componentDidMount|mounted) 周期很像，尽管执行的顺序，机制不一样，但我们都会在这个生命周期里进行一些数据，元素初始化操作。\n一张 3 栏分割代码图，带你了解，代码范式的力量～，可以说掌握好 cocos 生命周期，你的游戏开发就算是入门啦。\n\n1.1.2. 组件化的思想\n在 cocos-creator、react 和 vue 中，都鼓励将界面元素或功能模块封装成独立的组件，以提…",
           "link": "https://juejin.cn/post/7267091417021218875",
           "publishedOn": "2023-08-14T09:54:24.000Z",
-          "wordCount": 1783,
+          "wordCount": 1814,
           "title": "历时两月，我发布了一款小游戏",
           "imageUrl": null
         },
@@ -1916,7 +1896,7 @@
           "description": "theme: vue-pro\n点击在线阅读，体验更好\n链接\n\n\n\n\n现代JavaScript高级小册\n链接\n\n\n深入浅出Dart\n链接\n\n\n现代TypeScript高级小册\n链接\n\n\nlinwu的算法笔记📒\n链接\n\n\n\nnginx.conf配置\n找到Nginx的安装目录下的nginx.conf文件，该文件负责Nginx的基础功能配置。\n配置文件概述\nNginx的主配置文件(conf/nginx.conf)按以下结构组织：\n配置块\n功能描述\n\n\n\n\n全局块\n与Nginx运行相关的全局设置\n\n\nevents块\n与网络连接有关的设置\n\n\nhttp块\n代理、缓存、日志、虚拟主机等的配置\n\n\nserver块\n虚拟主机的参数设置（一个http块可包含多个server块）\n\n\nlocation块\n定义请求路由及页面处理方式\n\n\n\n\n配置文件示例\n一个比较全的配置文件示例如下。\n# 全局段配置\n# ------------------------------\n\n# 指定运行nginx的用户或用户组，默认为nobody。\n#user administrator administrators;\n\n# 设置工作进程数，通常设置为等于CPU核心数。\n#worker_processes 2;\n\n# 指定nginx进程的PID文件存放位置。\n#pid /nginx/pid/nginx.pid;\n\n# 指定错误日志的存放路径和日志级别。\nerror_log log/error.log debug;\n\n# events段配置信息\n# ------------------------------\nevents {\n    # 设置网络连接序列化，用于防止多个进程同时接受到新连接的情况，这种情况称为\"惊群\"。\n    accept_mutex on;\n\n    # 设置一个进程是否可以同时接受多个新连接。\n…",
           "link": "https://juejin.cn/post/7267003603095879714",
           "publishedOn": "2023-08-14T08:14:11.000Z",
-          "wordCount": 2451,
+          "wordCount": 2471,
           "title": "写给前端同学的Nginx配置指南",
           "imageUrl": null
         },
@@ -1926,7 +1906,7 @@
           "description": "theme: cyanosis\nhighlight: atom-one-dark\n前几天的一场面试中，被面试官吐槽了一下，我在我项目中直接使用 Prettier 来做代码格式化，首先加载该依赖包就需要一定的成本了，况且格式化的过程中可能需要一些计算，会导致阻塞整个浏览器。\n在这里，我个人目前能想到的就两种方案，一种是使用网络请求的方式，也就是将这个问题抛给后端去处理，后端处理的话也是用相同的办法去做，只是最终把结果返回给前端。因为在浏览器的事件循环中，网络请求并不会阻塞 js 主线程。\n还有一个方法就是使用 web worker，将需要格式化或转换的代码交给 worker 去处理，处理完成之后最终把结果返回。\n什么是 Web Worker\nWeb Worker 是一种在浏览器中运行 JavaScript 代码的机制，它允许您在后台线程中执行一些任务，而不会阻塞主线程。主线程通常用于处理用户界面的交互和渲染，而 Web Worker 可以用于执行一些耗时的计算、网络请求、数据处理等任务，以提高应用的性能和响应速度。\n它的主要特点是能进行并行计算，他允许在后台同时运行多个线程，这些线程可以并行执行任务。这使得可以同时处理多个耗时的操作，而不会阻塞用户界面。\nWeb Worker 的使用\n首先，您需要创建一个单独的 JavaScript 文件，这将是我们的 Web Worker 文件。例如，我们可以创建一个名为 worker.js 的文件，并编写如下代码：\n// worker.js\n\nself.addEventListener(\"message\", (event) => {\n  // 在这里执行后台任务\n  const data = event.data;\n  const result = doSomeHeavyWork(data);\n  self.postMessage(res…",
           "link": "https://juejin.cn/post/7266737898669260835",
           "publishedOn": "2023-08-14T01:06:15.000Z",
-          "wordCount": 1940,
+          "wordCount": 2046,
           "title": "Web Worker没有使用场景？那只是你没有用到而已🐒🐒🐒",
           "imageUrl": null
         },
@@ -1936,7 +1916,7 @@
           "description": "highlight: a11y-dark\ntheme: smartblue\n写在前面\n大家好，我是 一尾流莺，又来给大家分享真实面经了。\n简单介绍一下自己的情况，方便大家和自身情况做对比，更好的知道自己的定位是什么，自己理想的公司和职位是什么样的。\n本人今年 25 岁，1998 年生日，毕业学校是 大连大学，一所普通统招全日制二本大学，专业是 软件工程 ，2020 年开始进入第一家公司进行实习，没有校外机构培训经历，只会 Vue 技术栈，截止 2023 年 7 月，工作经验满 3 年（很多公司都是按照你毕业时间算的，实习不算入工作经验）👉👉在线简历。\n一年前的时候给大家分享过一篇面经，深受大家的喜爱，也对很多小伙伴起到了鼓励和帮助的作用，写第一篇面经的时候，我所在的城市是大连，工作经验 1.5 年，期望薪资 8-10K，最终薪资 10K 。\n👉👉 第一篇面经-点击阅读\n\n写第二篇面经的时候，也就是本文，我所在的城市是北京，工作经验 3 年，期望薪资 16-20K，最终薪资公司不让透露，但是在期望薪资的范围里。\n面试题没有统一的标准，不同的城市，不同的公司，不同的面试官，不同的求职者给出的面试题都是不一样的，而我也只是把我真实被问到的问题分享出来，仅供参考。\n而每个人的经验，能力也都不一样，所以不要觉得 这么简单是在招实习生吗 或者 这么难是在招架构师吗，还是那句话，我只是把问题分享出来，至于我遇到的那些面试官为什么要问这么简单或者这么难的问题，你应该去问他们，而不是来问我。\n所以大家可以根据我的情况，结合自身的实际情况，来对自己做一个最终的判断，还是那句话，仅供参考。\n本文的目的也只是给大家提供思路和参考，而不是讨论面试题的难易程度。\n至于我为什么选择中小厂，那肯定是大厂我不配😂😂。\n至于为什么我这么快又换了一家公司，甚至换了城市，感兴趣的小伙伴可以在我的年中总…",
           "link": "https://juejin.cn/post/7266721485811925033",
           "publishedOn": "2023-08-14T01:04:04.000Z",
-          "wordCount": 6479,
+          "wordCount": 6447,
           "title": "【🐰中小厂前端面经】三年工作经验求职时会被问些什么?",
           "imageUrl": null
         },
@@ -1946,7 +1926,7 @@
           "description": "theme: smartblue\n前言\n欢迎关注同名公众号《熊的猫》，文章会同步更新，也可快速加入前端交流群！\nH5 移动端 开发的必不可少的一个环节就是 移动端网页的适配，因为 UI 通常只会提供 大小固定的设计稿，而各种不同移动设备具有不同的页面分辨率和大小，所以适配的目的就是让一份设计稿在不同移动设备上表现出一致性。\n虽然现如今各种插件都可以帮助我们快速配置完成，例如 lib-flexible、postcss-pxtorem、postcss-px-to-viewport 等等，但不少小伙伴在被问及相关原理时却很难说清楚，那么本篇文章我们就一起来探究一下其中原理吧！！！\n\n文中有不当之处，欢迎在评论区指正！！！\nCSS 中的尺寸单位\n在了解具体的适配方案之前，我们先把 CSS 中适配会涉及到的相关尺寸单位进行一个了解吧，总结起来就是一句话：CSS 中的尺寸单位都是 相对长度单位，只是相对的目标不同。\npx 像素单位\npx 全称为 pixel（像素），它是相对于 屏幕显示器分辨率（桌面设定的分辨率，不是显示器的物理分辨率） 而言的，在 相同/不同 的设备上 1px 表示多个 设备像素。\n当 一个像素点越大 时, 呈现的图像就会 越模糊；当一个像素点越小时, 像素点就会 越密集, 呈现的图像就会 越清晰。\n\nem 相对单位\n好多人都认为 em 就是相对于 父元素 font-size，实际上在不同的 CSS 属性当中使用 em 其相对的目标也是不同，如下：\n用于 font-size 中则是相对于 父元素 font-size 大小\n\n用于 其他属性（如 width，height） 中使用是相对于 自身 font-size 大小\n\n值得注意的是，若 当前元素/父元素 的 font-size 未设置，由于 font-size 属性值可被继承的原因，可逐级向上查找，最终找不到则相对于…",
           "link": "https://juejin.cn/post/7266671630025031699",
           "publishedOn": "2023-08-14T00:30:49.000Z",
-          "wordCount": 2422,
+          "wordCount": 2806,
           "title": "谈谈 H5 移动端适配原理",
           "imageUrl": null
         },
@@ -1956,7 +1936,7 @@
           "description": "前言\n大家好，我是林三心，用最通俗易懂的话讲最难的知识点是我的座右铭，基础是进阶的前提是我的初心。\n\nJS 绕不开的精度丢失问题\n在 javascript 中，当我们进行运算时\n0.1 + 0.2\n\n你觉得输出是 0.3 吗？显然不是的，由于 javascript 存在精度丢失问题，导致了输出的不是你预期的\n\n至于为什么会精度丢失呢？我之前出过一篇文章专门讲了这个原因你知道 0.1+0.2 !==0.3是进制问题，但你讲不出个所以然，是吧？🐶，感兴趣的朋友可以看看，由于这不是本文的重点，所以我在这就不过多讲解~\n解决精度丢失的方案？\n我会选择使用 decimal.js 这个库，文档在 文档，他的基本使用如下：\n// 先安装\nnpm install decimal.js\n\n// 后使用\nconst Decimal = require('decimal.js');\n\nnew Decimal(0.1).add(0.2) // 加法 输出 0.3\nnew Decimal(0.1).sub(0.2) // 减法\nnew Decimal(0.1).mul(0.2) // 乘法\nnew Decimal(0.1).div(0.2) // 除法\n\n使用 decimal.js进行运算，能解决精度丢失的问题~\n不想手动！想自动！\n很烦啊！\n当我们拥有了decimal.js之后，每当我们进行运算的时候，就必须引入它进行使用，每一个页面都得重复这一操作，于是萌生了一个想法——我想自动！不想手动！\n思路\n那要怎么才能自动呢？由于前段时间群里很多人说想学习写 babel 插件，所以刚好，针对这个需求，我可以实现一个 babel 插件，它的功能是：将项目中 0.1 + 0.2 这种表达式，转换为 new Decimal(0.1).add(0.2)\n0.1 + 0.2\n// 转换为\nnew Decimal…",
           "link": "https://juejin.cn/post/7266589645461880884",
           "publishedOn": "2023-08-13T14:02:42.000Z",
-          "wordCount": 2156,
+          "wordCount": 2148,
           "title": "后端：你JavaScript不是世界最好的语言吗？自己解决精度丢失问题好不好？",
           "imageUrl": null
         },
@@ -1966,7 +1946,7 @@
           "description": "WebRTC 系列教程分为三篇进行介绍，本篇为第一篇，下一篇WebRTC实战 | 快速搭建1对1音视频通话。\n本文是针对小白的 WebRTC 快速入门课，如果你还之前还不了解 WebRTC，希望你能认真阅读本文，实现对 WebRTC 的零的突破 💪。如果感兴趣，不妨动动手指跟着我一起实践下。\n👉🏻 在线体验地址\n👉🏻 完整代码地址\n什么是 WebRTC\nWebRTC（Web Real-Time Communications）是一项实时通讯技术，它允许网络应用或者站点，在不借助中间媒介的情况下，建立浏览器之间点对点（Peer-to-Peer）的连接，实现视频流和（或）音频流或者其他任意数据的传输。WebRTC 包含的这些标准使用户在无需安装任何插件或者第三方的软件的情况下，创建点对点（Peer-to-Peer）的数据分享和电话会议成为可能。\n实时通信和即时通信的区别\nIM 即时通信，就是通过文字聊天、语音消息发送、文件传输等方式通信，考虑的是可靠性；\nRTC 实时通信：音视频通话、电话会议，考虑的是低延时。\nWebRTC 发展史\n2011 年开始， Google 先后收购 GIPS 和 On2，组成 GIPS 音视频引擎 + VPx 系列视频编解码器，并将其代码开源，WebRTC 项目应运而生。\n2012 年，Google 将 WebRTC 集成到 Chrome 浏览器中。于是我们就可以愉快的在浏览器之间进行音视频通信。\n当前除了 IE 之外的浏览器都已支持 WebRTC。\n\nWebRTC 应用场景\nWebRTC 的能力使其适用于各种实时通信场景：\n点对点通讯：WebRTC 支持浏览器之间进行音视频通话，例如语音通话、视频通话等；\n电话会议：WebRTC 可以支持多人音视频会议，例如腾讯会议、钉钉会议等；\n屏幕共享：WebRTC 不仅可以传输音视频流，还可以用于实时…",
           "link": "https://juejin.cn/post/7266417942182608955",
           "publishedOn": "2023-08-13T12:37:58.000Z",
-          "wordCount": 4049,
+          "wordCount": 3229,
           "title": "WebRTC这么火🔥，前端靓仔，请收下这篇入门教程",
           "imageUrl": null
         },
@@ -1976,7 +1956,7 @@
           "description": "theme: vue-pro\n点击在线阅读，体验更好\n链接\n\n\n\n\n现代JavaScript高级小册\n链接\n\n\n深入浅出Dart\n链接\n\n\n现代TypeScript高级小册\n链接\n\n\nlinwu的算法笔记📒\n链接\n\n\n\n引言\n作为面试官，为什么我推荐微前端作为前端面试的亮点？\n作为面试官，为什么我推荐组件库作为前端面试的亮点？\n在前面两篇文章中得到反馈效果不错，今天继续出第三篇，以二次封装axios为例\n在我以往的面试中，听到候选人最多的就是项目中二次封装axios，但是当真正深入挖掘，往往得不到有用的信息。\n那么面试官是想听到什么样的亮点呢？这篇文章我们重点分析一下，并且也可以封装自己的axios请求库。\n需求\n在项目中，我们可能存在这些痛点：\n接口统一管理\n支持多host问题\n支持区分env\n支持restful风格\n支持取消请求\n支持接口错误重试\n支持缓存\n支持限流\n请求方法的统一封装\n\nexport class  Apis{\n\n  public common: RequestOptions;\n  // 默认的server配置\n  public base!: string;\n  // server服务的集合\n  public serverMap: ServerMap;\n  // 对象形式的请求方法集合\n  public apiMap: ApisMap;\n  // 挂载所有请求方法的集合对象\n  public apis: ApisInstance;\n  // axios实例化对象\n  public instance: AxiosInstance;\n\n  constructor(common?: RequestOptions, serverMap?: ServerMap, apiMap?: ApisMap) {\n  \n  }\n\n  public get<T extends…",
           "link": "https://juejin.cn/post/7266308603938062391",
           "publishedOn": "2023-08-13T05:29:43.000Z",
-          "wordCount": 3654,
+          "wordCount": 3611,
           "title": "基于Axios二次封装请求库,带你重构面试亮点",
           "imageUrl": null
         },
@@ -1986,7 +1966,7 @@
           "description": "theme: orange\nhighlight: a11y-dark\n摘要：  本文将深入探讨 Vue 中的 nextTick 方法，首先介绍其背景和使用方式，然后解析其底层原理，最后探讨 nextTick 的常见使用场景。通过本文的阅读，您将对 Vue 中 nextTick 的工作原理有更深入的理解。（读完本文预计需要5分钟）\n1. nextTick 的背景\n在 Vue 中，DOM 更新是异步执行的，这意味着当我们修改了数据后，DOM 并不会立即更新，而是在下一个 tick（更新周期）时才会进行更新。Vue 提供了 nextTick 方法来处理在 DOM 更新完成后执行回调函数的需求。nextTick 方法可以将回调函数推入一个回调队列，在下一个 tick 时执行这些回调函数。\n2. nextTick 的使用\n在 Vue 实例上调用 $nextTick 方法，或者使用 Vue.nextTick 方法，都可以将回调函数添加到 nextTick 的队列中。下面是使用 nextTick 的简单示例：\n// 在 Vue 实例内部使用\nthis.$nextTick(() => {\n  // DOM 更新后执行的回调函数\n});\n\n// 使用全局方法\nVue.nextTick(() => {\n  // DOM 更新后执行的回调函数\n});\n\n使用$nextTick方法等待DOM更新完成：\n通过在Vue实例上调用$nextTick方法来等待DOM更新完成。\n在$nextTick的回调函数中执行需要在DOM更新后进行的操作。\n示例：\nnew Vue({\n  data() {\n    return {\n      message: 'Hello, Vue!',\n    };\n  },\n  methods: {\n    updateData() {\n      this.message = …",
           "link": "https://juejin.cn/post/7266374711823171636",
           "publishedOn": "2023-08-13T05:28:02.000Z",
-          "wordCount": 2535,
+          "wordCount": 2206,
           "title": "看完这篇nextTick就别再问别人了",
           "imageUrl": null
         },
@@ -1996,7 +1976,7 @@
           "description": "scss在平常业务中肯定会使用，对于切图css写的实在是有点太多，但是在你写css的同时，你可以让css写得和别人有点不一样，那还是比较有意思的。本文是一篇关于scss的使用，希望在你的业务中带来思考和帮助\n主要会从scss下面几点来讲\nscss中的变量如何复用\n@extend复用样式\n如何动态灵活使用插值与for循环\n@mixin与@include减少重复样式编写\n占位符与scss函数的使用\n正文开始...\n@extend\n我们以一组标签为例子，在一组标签中，每一种标签的颜色背景属性不一样，但是宽度,高度属性是一样的\nimport React, { useState } from \"react\";\nimport style from \"./index.module.scss\";\ninterface Props {}\n\nconst Index: React.FC<Props> = (props) => {\n  const {} = props;\n  const [tagData, setTagData] = useState([\n    {\n      name: \"tag1\",\n      value: \"tag1\",\n    },\n    {\n      name: \"tag2\",\n      value: \"tag2\",\n    },\n    {\n      name: \"tag3\",\n      value: \"tag3\",\n    },\n  ]);\n  return (\n    <div className={style[\"set-app\"]}>\n      <h1>tag</h1>\n      <div className=\"tag-wrap\">\n        {tagData.map((v) => (\n          <span className={v…",
           "link": "https://juejin.cn/post/7266315019293835301",
           "publishedOn": "2023-08-13T01:10:39.000Z",
-          "wordCount": 2092,
+          "wordCount": 1791,
           "title": "scss这样写，你学会了吗？",
           "imageUrl": null
         },
@@ -2006,7 +1986,7 @@
           "description": "前言\n浏览器渲染原理作为前端必须要了解的知识点之一，在面试中经常会被问到。在一些前端书籍或者培训课程里也会经常被提及，比如 MDN 文档中就有渲染原理的相关描述。\n作为一名工作多年的前端，我对于渲染原理自然也是了解的，但是对于它的理解只停留在理论知识层面。所以我决定自己动手实现一个玩具版的渲染引擎。\n渲染引擎是浏览器的一部分，它负责将网页内容（HTML、CSS、JavaScript 等）转化为用户可阅读、观看、听到的形式。但是要独自实现一个完整的渲染引擎工作量实在太大了，而且也很困难。于是我决定退一步，打算实现一个玩具版的渲染引擎。刚好 Github 上有一个开源的用 Rust 写的玩具版渲染引擎 robinson，于是决定模仿其源码自己用 JavaScript 实现一遍，并且也在 Github 上开源了 从零开始实现一个玩具版浏览器渲染引擎。\n这个玩具版的渲染引擎一共分为五个阶段：\n\n分别是：\n解析 HTML，生成 DOM 树\n解析 CSS，生成 CSS 规则集合\n生成 Style 树\n生成布局树\n绘制\n每个阶段的代码我在仓库上都用一个分支来表示。由于直接看整个渲染引擎的代码可能会比较困难，所以我建议大家从第一个分支开始进行学习，从易到难，这样学习效果更好。\n\n现在我们先看一下如何编写一个 HTML 解析器。\nHTML 解析器\nHTML 解析器的作用就是将一连串的 HTML 文本解析为 DOM 树。比如将这样的 HTML 文本：\n<div class=\"lightblue test\" id=\" div \" data-index=\"1\">test!</div>\n\n解析为一个 DOM 树：\n{\n    \"tagName\": \"div\",\n    \"attributes\": {\n        \"class\": \"lightblue test\",\n        \"id\": \"…",
           "link": "https://juejin.cn/post/7266336495031402532",
           "publishedOn": "2023-08-12T16:34:14.000Z",
-          "wordCount": 8581,
+          "wordCount": 8551,
           "title": "从零开始实现一个玩具版浏览器渲染引擎",
           "imageUrl": null
         },
@@ -2016,7 +1996,7 @@
           "description": "theme: serene-rose\n很多同学用vue3写业务溜的飞飞起，但是又始终不想打开vue源码仓库 vuejs/core 一探究竟，然而面试官们又很喜欢问你各种各样的vue的源码实现思想的问题，这让你很难受。好吧，没关系，接下来这篇文章将花费你30分钟的时间，带你一行一行的手写一份vue3中的 reactivity 源码，并成功运行起来的那一刻希望你能有所收获\n文章中的代码皆来自vue3的源码，或存在轻微变动，只为更好理解，尽量做到每一行都用大白话注解，让新手阅读也无压力。 文中的代码 地址在这里\n1. 准备工作\n创建一个 vue 项目（以下vue3统称vue）\nyarn create vite mini-vue --template vue\n\n（当然这是非必须的，也可以随意创建一个文件夹，我创建它是为了测试用）然后删除src下的一些非必要的目录，再创建一个reactivity文件夹\n\n为了方便理解，我们不使用ts，并且用取其精华去其一部分精华的的方式，接下来只写核心代码。附带将另一个API shallowReactive（浅层代理，只代理最多外层对象） 一起实现\n2. 从定义 reactive 函数开始\nsrc >> reactivity >> reactive.js\n\n哇，一上来就一整页的代码，还骗我说是一行一行敲！哈哈哈哈，别慌，代码我是一行一行敲的，你也可以跟着一行行敲完，每一行我都写上了注解。或者，直接点开上面的 地址 拉代码下来也行\n以上代码实现的主要功能：\n定义了reactive 和 shallowReactive 函数。 vue中的 shallowReactive 实现的是浅层代理的效果，这里也附带实现一下\n将接收到的参数用 proxy 代理\n被代理过的对象用 WeakMap 缓存起来，目的是防止代理过的对象再次被代理\nproxy对对象的代理函数，写…",
           "link": "https://juejin.cn/post/7265999062243213372",
           "publishedOn": "2023-08-12T08:55:13.000Z",
-          "wordCount": 1861,
+          "wordCount": 1926,
           "title": "30分钟手写一遍源码带你搞明白vue3中的reactive和ref的本质区别",
           "imageUrl": null
         }
@@ -2027,6 +2007,16 @@
       "feedUrl": "https://rsshub.app/juejin/pins/6824710202000932877",
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
+        {
+          "id": "7268671526718521378",
+          "author": "文侯",
+          "description": "大佬们，电脑小白，请问这个配置还有优化空间吗",
+          "link": "https://juejin.cn/pin/7268671526718521378",
+          "publishedOn": "2023-08-19T06:48:50.000Z",
+          "wordCount": 449,
+          "title": "大佬们，电脑小白，请问这个配置还有优化空间吗",
+          "imageUrl": null
+        },
         {
           "id": "7268539701941583907",
           "author": "小马学习iOS开发",
@@ -2215,16 +2205,6 @@
           "publishedOn": "2023-08-14T07:01:41.000Z",
           "wordCount": 444,
           "title": "有没有需要服务器的呢[害羞]",
-          "imageUrl": null
-        },
-        {
-          "id": "7266778889660874787",
-          "author": "小凯服务器大厂云",
-          "description": "有没有需要服务器或大厂云代充呢[可怜]",
-          "link": "https://juejin.cn/pin/7266778889660874787",
-          "publishedOn": "2023-08-14T01:18:03.000Z",
-          "wordCount": 444,
-          "title": "有没有需要服务器或大厂云代充呢[可怜]",
           "imageUrl": null
         }
       ]
