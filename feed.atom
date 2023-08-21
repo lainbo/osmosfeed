@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-08-20T21:52:33.101Z</id>
+    <id>urn:2023-08-21T01:14:49.561Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-08-20T21:52:33.101Z</updated>
+    <updated>2023-08-21T01:14:49.561Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -83,6 +83,56 @@
 深度学习, 就是叠加了很多层的神经网络.]]></summary>
         <author>
             <name>李继刚的即刻动态</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[只会Vue的我，用两天学会了react，这个方法您也可以]]></title>
+        <id>https://juejin.cn/post/7268844150233219107</id>
+        <link href="https://juejin.cn/post/7268844150233219107"/>
+        <updated>2023-08-19T13:47:01.000Z</updated>
+        <summary type="html"><![CDATA[背景
+由于工作需要学习react框架；最开始看文档的时候感觉还挺难的。但当我看了半天文档以后才发现，原来react这样学才是最快的；前提是同学们会vue一类的框架哈。
+该方法适用于会vue的同学们食用
+我们在学习以前先去想一想，在vue中我们常用的方法是什么，我们遇到一些场景时在vue中是怎么做的。
+当我们想到这儿的时候就会发现，对啊；既然vue是这样做的，那么react中是怎么做的呢？别急，我们一步一步对比着来。
+这样岂不是更能理解哦！下面就让我们开始吧！
+冲冲冲。。。
+Vue梳理
+在开始之前，我们先来梳理一下我们在vue中常用的API或者场景有哪些。
+以下这几种就是我们常见的一些功能，主要是列表渲染、表单输入和一些计算属性等等；我们只需要根据原有的需要的功能去学习即可。
+组件传值
+获取DOM
+列表渲染
+条件渲染
+class
+计算属性
+监听器
+表单输入
+模板
+vue/react对比学习
+组件传值
+vue
+// 父组件
+<GoodsList v-if="!isGoodsIdShow" :goodsList="goodsList"/>
+// 子组件 -- 通过props获取即可
+props: {
+    goodsList:{
+      type:Array,
+      default:function(){
+        return []
+      }
+    }
+  }
+
+react
+// 父组件
+export default function tab(props:any) {
+    const [serverUrl, setServerUrl] = useState<string | undefined>('https://');
+    console.log(props);
+// 父组件接收子组件的值并修改
+    const changeMsg = (…]]></summary>
+        <author>
+            <name>雾恋</name>
         </author>
     </entry>
     <entry>
@@ -3367,35 +3417,6 @@ theme: smartblue
 至于为什么我这么快又换了一家公司，甚至换了城市，感兴趣的小伙伴可以在我的年中总…]]></summary>
         <author>
             <name>一尾流莺</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[谈谈 H5 移动端适配原理]]></title>
-        <id>https://juejin.cn/post/7266671630025031699</id>
-        <link href="https://juejin.cn/post/7266671630025031699"/>
-        <updated>2023-08-14T00:30:49.000Z</updated>
-        <summary type="html"><![CDATA[theme: smartblue
-前言
-欢迎关注同名公众号《熊的猫》，文章会同步更新，也可快速加入前端交流群！
-H5 移动端 开发的必不可少的一个环节就是 移动端网页的适配，因为 UI 通常只会提供 大小固定的设计稿，而各种不同移动设备具有不同的页面分辨率和大小，所以适配的目的就是让一份设计稿在不同移动设备上表现出一致性。
-虽然现如今各种插件都可以帮助我们快速配置完成，例如 lib-flexible、postcss-pxtorem、postcss-px-to-viewport 等等，但不少小伙伴在被问及相关原理时却很难说清楚，那么本篇文章我们就一起来探究一下其中原理吧！！！
-
-文中有不当之处，欢迎在评论区指正！！！
-CSS 中的尺寸单位
-在了解具体的适配方案之前，我们先把 CSS 中适配会涉及到的相关尺寸单位进行一个了解吧，总结起来就是一句话：CSS 中的尺寸单位都是 相对长度单位，只是相对的目标不同。
-px 像素单位
-px 全称为 pixel（像素），它是相对于 屏幕显示器分辨率（桌面设定的分辨率，不是显示器的物理分辨率） 而言的，在 相同/不同 的设备上 1px 表示多个 设备像素。
-当 一个像素点越大 时, 呈现的图像就会 越模糊；当一个像素点越小时, 像素点就会 越密集, 呈现的图像就会 越清晰。
-
-em 相对单位
-好多人都认为 em 就是相对于 父元素 font-size，实际上在不同的 CSS 属性当中使用 em 其相对的目标也是不同，如下：
-用于 font-size 中则是相对于 父元素 font-size 大小
-
-用于 其他属性（如 width，height） 中使用是相对于 自身 font-size 大小
-
-值得注意的是，若 当前元素/父元素 的 font-size 未设置，由于 font-size 属性值可被继承的原因，可逐级向上查找，最终找不到则相对于…]]></summary>
-        <author>
-            <name>熊的猫</name>
         </author>
     </entry>
     <entry>

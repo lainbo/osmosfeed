@@ -34,7 +34,7 @@
           "description": "nonce可以用来决定哪些内联JS执行，popover可以无JS实现浮层弹出层交互效果。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/html-attribute-nonce-translate/",
           "publishedOn": "2023-08-10T15:24:42.000Z",
-          "wordCount": 1116,
+          "wordCount": 1114,
           "title": "查漏补缺，我仍未知道的HTML nonce和popover属性",
           "imageUrl": null
         },
@@ -44,7 +44,7 @@
           "description": "今天好好了解了下kbd、var、samp等HTML，发现以前表示前端源代码的方式简单且浅薄了。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/07/html-samp-element/",
           "publishedOn": "2023-07-31T14:31:18.000Z",
-          "wordCount": 984,
+          "wordCount": 982,
           "title": "HTML kbd、var、samp元素你使用过没？",
           "imageUrl": null
         },
@@ -54,7 +54,7 @@
           "description": "没想到，以前有些不方便实现的排版和布局效果可以使用text-wrap:balance轻松实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/07/css-text-wrap-balance/",
           "publishedOn": "2023-07-25T07:03:30.000Z",
-          "wordCount": 984,
+          "wordCount": 982,
           "title": "5分钟快速了解text-wrap:balance的作用",
           "imageUrl": null
         }
@@ -1758,6 +1758,16 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
+          "id": "https://juejin.cn/post/7268844150233219107",
+          "author": "雾恋",
+          "description": "背景\n由于工作需要学习react框架；最开始看文档的时候感觉还挺难的。但当我看了半天文档以后才发现，原来react这样学才是最快的；前提是同学们会vue一类的框架哈。\n该方法适用于会vue的同学们食用\n我们在学习以前先去想一想，在vue中我们常用的方法是什么，我们遇到一些场景时在vue中是怎么做的。\n当我们想到这儿的时候就会发现，对啊；既然vue是这样做的，那么react中是怎么做的呢？别急，我们一步一步对比着来。\n这样岂不是更能理解哦！下面就让我们开始吧！\n冲冲冲。。。\nVue梳理\n在开始之前，我们先来梳理一下我们在vue中常用的API或者场景有哪些。\n以下这几种就是我们常见的一些功能，主要是列表渲染、表单输入和一些计算属性等等；我们只需要根据原有的需要的功能去学习即可。\n组件传值\n获取DOM\n列表渲染\n条件渲染\nclass\n计算属性\n监听器\n表单输入\n模板\nvue/react对比学习\n组件传值\nvue\n// 父组件\n<GoodsList v-if=\"!isGoodsIdShow\" :goodsList=\"goodsList\"/>\n// 子组件 -- 通过props获取即可\nprops: {\n    goodsList:{\n      type:Array,\n      default:function(){\n        return []\n      }\n    }\n  }\n\nreact\n// 父组件\nexport default function tab(props:any) {\n    const [serverUrl, setServerUrl] = useState<string | undefined>('https://');\n    console.log(props);\n// 父组件接收子组件的值并修改\n    const changeMsg = (…",
+          "link": "https://juejin.cn/post/7268844150233219107",
+          "publishedOn": "2023-08-19T13:47:01.000Z",
+          "wordCount": 1483,
+          "title": "只会Vue的我，用两天学会了react，这个方法您也可以",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7268533072995598347",
           "author": "三一习惯",
           "description": "时间过得真快，从20年9月加入美团，转眼已经三年了。在美团的这几年，我应该有接近一半的时间，在做前端工程化相关的工作。\n三年，正好合同已经到期，也到了离开的时候，最近相对不忙，正好回顾一下自己做前端工程化的一些思考与踩过的坑。\n对前端工程的理解\n前端技术的演进\n在谈前端工程这个概念之前，我们先回顾一下2000年以后前端技术的演进，主要分四个阶段：\n页面开发阶段（2000~2009） ：在ECMAScript 2009发布之前，很多前端工作都是以单页面开发为主，需要重点解决兼容性问题，靠工具库提高效率，代表技术如：jQuery、ExtJS等。\n模块化开发阶段（2009~2015） ：以模块化开发为主，要解决性能问题，靠构建工具和UI框架提高效率，特别是基于Node.js的各种前端工具，代表技术如：Angular、React、Less、Gulp等。\n应用开发阶段（2015~2022） ：以应用开发为主，要解决工程化问题，靠自动化工具和跨平台提高效率，代表技术如：Webpack、React Native、Flutter等。\n智能辅助开发阶段（2022以后） ：将前端工程化与 AI 结合，将重复冗余的流程通过智能化实现开发提效，实现智能代码生成、评审、智能编写单测、代码语言转化等。\n软件工程的三要素\n同时，我们也需要了解一下软件工程的概念。1983年IEEE是这么定义的：软件工程是软件开发、运行、维护和修复软件的系统方法。\n基于此，软件界一些前辈提出了软件工程的三要素：\n方法：是完成软件开发的各项任务的技术方法，为软件开发提供“如何做”的技术。\n工具：为运用方法而提供的自动的或半自动的软件工程的支撑环境。\n过程：是为了获得高质量的软件所需要完成的一系列任务的框架。\n前端工程化的定义\n前端工程化这个词，是国内前端圈子2018年前后才出现的，大概的意思是将（后端已经比较成熟的）许多软件…",
@@ -1918,16 +1928,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7266671630025031699",
-          "author": "熊的猫",
-          "description": "theme: smartblue\n前言\n欢迎关注同名公众号《熊的猫》，文章会同步更新，也可快速加入前端交流群！\nH5 移动端 开发的必不可少的一个环节就是 移动端网页的适配，因为 UI 通常只会提供 大小固定的设计稿，而各种不同移动设备具有不同的页面分辨率和大小，所以适配的目的就是让一份设计稿在不同移动设备上表现出一致性。\n虽然现如今各种插件都可以帮助我们快速配置完成，例如 lib-flexible、postcss-pxtorem、postcss-px-to-viewport 等等，但不少小伙伴在被问及相关原理时却很难说清楚，那么本篇文章我们就一起来探究一下其中原理吧！！！\n\n文中有不当之处，欢迎在评论区指正！！！\nCSS 中的尺寸单位\n在了解具体的适配方案之前，我们先把 CSS 中适配会涉及到的相关尺寸单位进行一个了解吧，总结起来就是一句话：CSS 中的尺寸单位都是 相对长度单位，只是相对的目标不同。\npx 像素单位\npx 全称为 pixel（像素），它是相对于 屏幕显示器分辨率（桌面设定的分辨率，不是显示器的物理分辨率） 而言的，在 相同/不同 的设备上 1px 表示多个 设备像素。\n当 一个像素点越大 时, 呈现的图像就会 越模糊；当一个像素点越小时, 像素点就会 越密集, 呈现的图像就会 越清晰。\n\nem 相对单位\n好多人都认为 em 就是相对于 父元素 font-size，实际上在不同的 CSS 属性当中使用 em 其相对的目标也是不同，如下：\n用于 font-size 中则是相对于 父元素 font-size 大小\n\n用于 其他属性（如 width，height） 中使用是相对于 自身 font-size 大小\n\n值得注意的是，若 当前元素/父元素 的 font-size 未设置，由于 font-size 属性值可被继承的原因，可逐级向上查找，最终找不到则相对于…",
-          "link": "https://juejin.cn/post/7266671630025031699",
-          "publishedOn": "2023-08-14T00:30:49.000Z",
-          "wordCount": 2806,
-          "title": "谈谈 H5 移动端适配原理",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7266589645461880884",
           "author": "Sunshine_Lin",
           "description": "前言\n大家好，我是林三心，用最通俗易懂的话讲最难的知识点是我的座右铭，基础是进阶的前提是我的初心。\n\nJS 绕不开的精度丢失问题\n在 javascript 中，当我们进行运算时\n0.1 + 0.2\n\n你觉得输出是 0.3 吗？显然不是的，由于 javascript 存在精度丢失问题，导致了输出的不是你预期的\n\n至于为什么会精度丢失呢？我之前出过一篇文章专门讲了这个原因你知道 0.1+0.2 !==0.3是进制问题，但你讲不出个所以然，是吧？🐶，感兴趣的朋友可以看看，由于这不是本文的重点，所以我在这就不过多讲解~\n解决精度丢失的方案？\n我会选择使用 decimal.js 这个库，文档在 文档，他的基本使用如下：\n// 先安装\nnpm install decimal.js\n\n// 后使用\nconst Decimal = require('decimal.js');\n\nnew Decimal(0.1).add(0.2) // 加法 输出 0.3\nnew Decimal(0.1).sub(0.2) // 减法\nnew Decimal(0.1).mul(0.2) // 乘法\nnew Decimal(0.1).div(0.2) // 除法\n\n使用 decimal.js进行运算，能解决精度丢失的问题~\n不想手动！想自动！\n很烦啊！\n当我们拥有了decimal.js之后，每当我们进行运算的时候，就必须引入它进行使用，每一个页面都得重复这一操作，于是萌生了一个想法——我想自动！不想手动！\n思路\n那要怎么才能自动呢？由于前段时间群里很多人说想学习写 babel 插件，所以刚好，针对这个需求，我可以实现一个 babel 插件，它的功能是：将项目中 0.1 + 0.2 这种表达式，转换为 new Decimal(0.1).add(0.2)\n0.1 + 0.2\n// 转换为\nnew Decimal…",
@@ -1980,7 +1980,7 @@
           "description": "大佬们，电脑小白，请问这个配置还有优化空间吗",
           "link": "https://juejin.cn/pin/7268671526718521378",
           "publishedOn": "2023-08-19T06:48:50.000Z",
-          "wordCount": 454,
+          "wordCount": 455,
           "title": "大佬们，电脑小白，请问这个配置还有优化空间吗",
           "imageUrl": null
         },
@@ -2020,7 +2020,7 @@
           "description": "有没有需要大厂云代充值的呢[害羞]",
           "link": "https://juejin.cn/pin/7268540338443812916",
           "publishedOn": "2023-08-18T07:08:51.000Z",
-          "wordCount": 450,
+          "wordCount": 451,
           "title": "有没有需要大厂云代充值的呢[害羞]",
           "imageUrl": null
         },
@@ -2050,7 +2050,7 @@
           "description": "有没有需要服务器的吗[害羞]",
           "link": "https://juejin.cn/pin/7268249031549091875",
           "publishedOn": "2023-08-18T02:06:28.000Z",
-          "wordCount": 449,
+          "wordCount": 450,
           "title": "有没有需要服务器的吗[害羞]",
           "imageUrl": null
         },
