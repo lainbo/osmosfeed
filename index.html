@@ -51,11 +51,42 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-22 datetime="2023-08-22T13:45:50.000Z">2023-08-22</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-22 datetime="2023-08-22T13:45:50.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-22 datetime="2023-08-22T18:00:00.000Z">2023-08-22</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-22 datetime="2023-08-22T18:00:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Epic Games Store - Free Games</button>
+                  <a class="source-heading__link" href="https://store.epicgames.com/zh-CN/free-games?lang&#x3D;zh-CN">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://store.epicgames.com/zh-CN/p/destiny-2"
+                        open
+                      >
+                        <summary class="article-expander__title">《命运2》：Bungie 30 周年纪念组合包</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://store.epicgames.com/zh-CN/p/destiny-2">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>《命运2》是发生在一个独立进化的世界中的一款免费的大型多人线上动作游戏。你可以在任何时间与任何地点和你的朋友们进行游戏。</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -3910,6 +3941,62 @@ svelte我自己会一些，但是在国内几乎没有机会在公司中进行�
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7268315693191413795"
+                        open
+                      >
+                        <summary class="article-expander__title">图解串一串 webpack 的历史和核心功能</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7268315693191413795">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>提到打包工具，可能你会首先想到 webpack。
+那没有 webpack 之前，都是怎么打包的呢？
+webpack 都有哪些功能？为什么这么设计呢？
+这篇文章我们就来一起探究一下。
+其实之前都不打包的，就是 js、css 分别用对应的工具编译下，然后在 html 里引入。
+比如 js 用 babel 编译，再用 terser 压缩、css 用 sass 或者 less 编译，再用 postcss 做添加兼容性前缀等处理：
+
+当然，现在也有很多场景是不打包的，比如 node 环境，就只需要编译：
+这是一个 nest 应用：
+
+执行 build 之后的产物是这样的：
+
+对每个 ts 文件用 tsc 做了编译，然后产生了 dts 和 sourcemap。
+它并没有包含 node_modules，也没有打包，只是对 src 下的做了语法的编译：
+之前是这样的：
+
+现在变成了这样：
+
+那运行时用到的依赖咋办呢？
+手动安装一遍啊。
+比如这个 nest 应用的 dockerfile 是这样的：
+
+把 package.json 复制到 docker 容器内，然后执行 npm install，之后把其他文件复制过去，执行 npm run build。
+这样编译后的代码和对应的依赖都有了，通过 node 跑起来就行。
+也就是说 node 场景下，只编译不打包。
+
+当然，nest 也是支持 webpack 打包的，切换下模式就行：
+我把根目录 nest-cli.json 里改为了用 webpack 编译：
+
+再次 build 就只会产生一个文件：
+
+把模块打包到了一起：
+
+node 执行这个文件也是一样的效果。
+node 环境下可以不打包，打包只是为了提升一些加载速度。
+但是浏览器环境就是必须要打包的了。
+因为会有很多的模块，如果不打包，运行时需要一个个加载，会很慢。
+前面讲到了手动编译各种资源…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7268260939065491512"
                         open
                       >
@@ -4456,38 +4543,6 @@ LangChain 是一个用于开发由语言模型支持的应用程序的框架，�
   from 雯子  
     
   下周三见</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://tunan.zhubai.love/posts/2303975088845979648"
-                        open
-                      >
-                        <summary class="article-expander__title">第50篇-拉康精神分析学习笔记（五）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://tunan.zhubai.love/posts/2303975088845979648">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>1、为什么行星不说话？  
-    
-  一个很厉害的学者回答——因为它们没有嘴。拉康乍一听有点失望，但是他说当你失望时那太好了，证明了它是一个真正的答案，而这个答案是你不盼望得到的。恒星碰巧也没有嘴，而且是不朽的，属于另一种秩序，人们不能说它是真的（true),它是实在的（real)；    如果不存在被赋予了一种能够给象征界以话语的装置，即人，从而使它被注意到，那么就没人会这样思考，从这词语的真正意义去思考。  
-    
-  OS：如果一个事物，在象征层面多了一层意义，那么就没有人从这个问题本身思考。人们大多时候会回答恒星没有同伴、恒星孤单、恒星没有时间，但不会说恒星没有嘴。从最实在的角度来看，说话需要一个根本的、本质的器官，就是嘴，没有人会联想到是因为恒星没有嘴，因为【说话】被赋予了太多的含义。成为了一种象征。  
-    
-  
-
-2、如果这个行星不说话，那不仅是因为它是实在的，而且是因为它没有时间，从字面上看——它没有这个维度。为什么？因为它是圆的。这就是整合——无论一个圆形模型做什么，它总是与它自己一样的。分析的目的是使它很好地圆着（well-rounded），    这个自我，给它一个球形的形状，它将在这个球形中，明确地整合它所有不连贯的零碎状态，它分散的肢体，它的前生殖阶段，它的部分驱力，它自我的混乱，它们是无数的且破碎的。一场通往胜利的自我的竞赛——有多少客体就有多少自我。  
-    
-  
-3、自我  
-    
-  自我是构成客体的绝对基本形式。特别是，由于结构上的原因，它，以镜像的他者的形式，来感知我们所称的它的同类。这种形式的他者与自我有着密切的联系，它可以附加在自我之上，我们把它写成a&#x27;；
-因此，有一个镜子的平面，即自我和同质他者的对称世界。我们将不得不区分另一个层面，我们称其为语言之墙（wall of language）;大他者在语言之墙的…</span>
                             </span>
                           </div>
                         </a>
@@ -6485,47 +6540,6 @@ theme: serene-rose
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7267434484505739316"
-                        open
-                      >
-                        <summary class="article-expander__title">为什么我们要立场鲜明的反对996</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7267434484505739316">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>视频版
-哈喽大家好，我是大圣，一个除了上班什么都喜欢的程序员，今天来聊一下我为什么要建议所有人反对996
-先科普一下，996是一种互联网常见的工作模式，就是早上9点上班，晚上9点下班，每周工作6天去掉午休一小时，每周工作时间是11＊6＝66，965是8＊5＝40如果加班工资算1.5倍，996相当于时薪直接腰斩
-之前我认为996只是变相降低50％，剥夺你学习的精力和时间，并且用晚餐＋免费打车来美化这种行为，还用奋斗是福报pua你，而且还实用末尾淘汰机制让你们内斗，而且996效率极低，我一天能注意力集中4个小时算高的了，我作为一个正常人类，没法集中注意力12个小时
-996的真实节奏就是9点或者10点到公司，开个早会泡个茶，看看邮件刷刷知乎摸摸鱼就吃午饭了，基本都是下午才能开始干活，但是很多会议就来了，其实整体效率并没有提高，都在假装忙碌在摸鱼，反而是晚饭后能集中注意力工作一会，长久对积极的工作态度是毁灭性的打击
-所以我一直都是立场鲜明的反对996，在996.icu崛起之前，我的程序员找工作黑名单就是Github最大的反996项目，996.icu作者之一被抓起来后，这个项目我就不再更新了
-
-
-但是你以为你的摸鱼行为老板不知道吗？你可以怀疑有钱人的人品，但是你不能怀疑他们的智商和能力，我自由职业一年后才意识到，996真正的伤害不是时薪的降低，而是对你发展机会的扼杀
-我做自由职业得自己搞钱，有些小机会，比如外包，行业小聚，大家基本都是工作晚上7点～10点或者周六的小聚，周日那些小甲方都会在家休息，饭局会促成一些意想不到的收入机会，晚上9点才放你走，有可能就是老板要把你晚上可能接触到商业机会的聚会干掉，成为彻底的打工人，哪怕你效率低
-一个年轻人进入到公司，前几年从啥也不懂，到掌握了代码，运营，产品等技能之一，六七点下班后，同学聚会，发小聚会，微信群线下聚会等，不同公司不同角色的人在一起交流，可能就会诞生新得机会，你的发小A可能是个设计，你会写代码，你同学他姑父公司需要做个小程序，这就可以成为你新的机会
-越过公司，直接和社会交易的机会，你成为老板的机会，哪怕很小，你也不会因为公司裁员而绝望，万一机会多了，你就会开始创业或者自由职业，所以老板一定要让你再公司待到9点，持续修炼垂直的技能，变成架构师，但是你没有接触到商务，或者叫靠自己获得收入的能力
-就像打篮球一样，投篮就是最重要的得分机会，你是一个很好大学的毕业生，爱学习能力强，但是老板只训练你的传球，篮板和抢断能力，本来你可以接触到投篮的时间夺走，让你待在公司继续训练过人和篮板，哪怕晚上你效率低摸鱼都可以，只要你不会投篮，成为他的潜在对手就可以
-
-所以996效率低老板是知道的，除了训练服从性之外，还让你成为彻底的打工人，哪怕上午摸鱼，晚上7点公司内部组织技术分享会学习都没关系，你只能持续训练你的传球技能，然后传球给你的老板，只有他自己能投篮
-我一直都是拒绝996的，我在百度当程序员那会，就一直思考，这个B班，是不是非上不可，后来发现可以周末出去讲课，教人写js，虽然课时费不高，还参与招生，但是我觉得我自己可以独立通过写代码获得收入，非常cool
-现在成为自由职业（无业游民），极客时间的Vue课到今天有3w人学过了，B站课堂也刚上了一个课，出版社也在合作，把【Vuejs设计与实现】录制成课程，这些都是工作时间饭点吃饭＆喝咖啡诞生的商业机会，或者我去参加平台组织的聚会谈成的，这是996没法参与的
-
-
-再次建议我的所有学员＆朋友不要加入996的公司，除了工资，健康和法律问题，还有被彻底剥夺了社交的机会，失去了多元发展的机会，我也建议所有的程序员，前端学学后端，后端学学前端，这俩是能开发出完整产品的技术，React或者Vue，加上一个Nest, 数据库用mongodb或者mysql，还有非常火的serverless，做一个全栈的应用，然后还可以写文章录视频，培养演讲能力
-
-然后看看《一人公司方法论》《商业百科》《增长黑客》《启示录》《运营之光》《优势谈判》综合入个门，日常除了喜欢造轮子之外，可以好好思考一下，你现在做的业务，到底是怎么赚到钱的这个能力其实真的很有用，说不定哪次聚会就有用，祝大家都能早日找到适合自己的商业机会，能够靠写代码这门手艺，直接和市场交易养活自己，那裁员和pua还有什么可怕的呢
-今天就聊到这，欢迎大家对视频点赞，这样会激励我做更多的视频 下期再见</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7267417057440219191"
                         open
                       >
@@ -6774,6 +6788,34 @@ Hello all, it&#x27;s been a while... The bug reports should now be resolved, and
   许多学者认为，推迟成年是对新现实的一种反应。一切都在变化，从能力和工作（其中一些正在消失，而另一些正在发展）到人际关系。  
     
   人们发现了许多新的「生活方式」。成年的替代模式已经发展。人们的生活历程变得不可预测。例如，人们获得学位，工作，然后再次学习并改变他们的职业。人们可以离开父母的家，但随后回来延长…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://dex.zhubai.love/posts/2303068801174294528"
+                        open
+                      >
+                        <summary class="article-expander__title">#204</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://dex.zhubai.love/posts/2303068801174294528">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>本期封面来自       Grif      ，最近他和工作室 Tendril 合作给奔驰做设计和拍宣传照。  
+    
+  
+      
+  
+    
+  国内政策越来越紧的同时，经济下行还在不断加速。独立开发者与日俱增，讨论也变多的背后，是不少同行都被裁员，被迫做起了独立开发者，还有不少设计师也开始摸索自己的副业了，做视频、小红书、做 app……也许以后大家都是自由职业者了。再加上最近 Twitter 给用户打钱这事让国内用户有点抓狂了，又眼红别人赚钱又拿不到资格，于是      海外公司和 Stripe 注册      突然就成了热门。人人都想躺着赚钱，有自己的被动收入。可不嘛，      靠打工上班的日子太不稳定了，岁数越大恐惧感越深      。哦对了，想看到自己发的 Twitter 值多少钱，可以安装      这个浏览器插件      。  
+    
+      上周 Slack 宣布了大改版      ，新的设计怎么说呢，看到有人评价有一种非常 2010 年的感觉哈哈哈，就是看起来整体都还好，就是没有特别精致的感觉。但我个人认为还是比飞书好太多了，后者真是用起来各种别扭。  
+    
+  上周还看到 Designjoy 的       Brett 说自己同时在跟进 20 个客户      ，如果是真的简直不敢想象，一家订阅制设计工作室，只有一个人，且不说设计任务能不能按时完成，光是沟通成本就要消耗多少精力了，但也有可能都是非常小的 landing page 这种不太需要沟通，或者排期排到了很久以后。</span>
                             </span>
                           </div>
                         </a>
@@ -7260,6 +7302,8 @@ export function createPromise(): [Promise, (value: T) &#x3D;&gt; void, (reason?:
 下面是分步的解析
 首先，这段代码是一个用于创建 Promise 的函数。它返回一个包含 Promise 及其 resolve 和 reject 函数的数组。让我们一步步来理解它。
 export function crea…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;12
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -8773,8 +8817,8 @@ Elasticsearch 倒霉的地方在于，遇到的竞争对手是亚马逊，世界
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5941137683">
-        <time id="build-timestamp" datetime="2023-08-22T15:53:15.225Z">2023-08-22T15:53:15.225Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5942874795">
+        <time id="build-timestamp" datetime="2023-08-22T18:52:22.319Z">2023-08-22T18:52:22.319Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
