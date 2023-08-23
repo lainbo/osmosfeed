@@ -138,7 +138,7 @@
           "description": "好多软件和网页都不支持直接粘贴图片，必须将图片存到本地，然后点击上传。以前经常把图片缓存到聊天软件的某个窗口（用的最多的就是微信文件传输助手），然后另存为文件，步骤长到不能忍。\n借着 ChatGPT 副驾驶帮忙写了一个 Alfred workflow，以后只需要一个快捷键就可以轻松将剪贴板的图片粘贴为文件啦😄，Workflow 下载和源码地址：https://github.com/barretlee/alfred-workflow-paste-image-to-file",
           "link": "https://m.okjike.com/originalPosts/64e5b5611e74dff792c78cb1",
           "publishedOn": "2023-08-23T07:29:37.000Z",
-          "wordCount": 406,
+          "wordCount": 416,
           "title": "发布了: 好多软件和网页都不支持直接粘贴图片，必须将图片存到本地，然后点击上传。以前经常把图片缓存到聊天软件的某个窗口（用的最多的就是微信文件传输助手）...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FpI_3PX0XNo7cLnEUGJD0Zw41RRzv3.png?imageMogr2/auto-orient/format/jpeg/thumbnail/300x2000%3E/quality/70/interlace/1"
         },
@@ -168,7 +168,7 @@
           "description": "爱沙尼亚的“数字居民”身份证审核通过了✌🏻，前天还让我补充「无犯罪记录证明」，差点以为被驳回，看来申请的时候用 ChatGPT 写小作文还是有用的。除了能快速在线申请一张海外的银行卡，偶尔转账使用外，也不知道还有啥其他用处，先备着吧。",
           "link": "https://m.okjike.com/originalPosts/64e56e9f1f93fd49b389bdb7",
           "publishedOn": "2023-08-23T02:27:43.000Z",
-          "wordCount": 402,
+          "wordCount": 403,
           "title": "发布了: 爱沙尼亚的“数字居民”身份证审核通过了✌🏻，前天还让我补充「无犯罪记录证明」，差点以为被驳回，看来申请的时候用 ChatGPT 写小作文还是有用的。...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FrF_44gj0pe9nkDNRdX7p3ClJJ2-v3.png?imageMogr2/auto-orient/format/jpeg/thumbnail/300x2000%3E/quality/70/interlace/1"
         },
@@ -228,7 +228,7 @@
           "description": "Airbnb 在公司里宣布：不再设置产品经理岗位。\n不再雇产品经理了",
           "link": "https://m.okjike.com/originalPosts/64e3fdd362e51d2dc7ba8eca",
           "publishedOn": "2023-08-22T00:14:11.000Z",
-          "wordCount": 409,
+          "wordCount": 403,
           "title": "发布了: Airbnb 在公司里宣布：不再设置产品经理岗位。",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         }
@@ -2683,7 +2683,7 @@
           "description": "theme: juejin\n先看一下官网效果：https://ys.mihoyo.com/main/map\n概念\n每次当滚动鼠标滚轮的时候，页面会进行一整页的滚动，这就是全屏滚动。\n要求\n当窗口大小变化时，全屏滚动效果不会发生变化，即需要做到自适应，不受到高度宽度的影响。\n当点击指示器也可以进行页面切换。\n原理\n\n最外层容器：就是我们的窗口，视角能看到的。\n内层容器： 用来存放我们需要滚动内容的容器。\n滚动元素： 就是我们看到的一张张照片。\n首先对最外侧容器的overflow：hidden；这样保证不会溢出。\n其次对内层容器进行滚动，每次滚动的高度就是窗口的高度，但是需要动态计算窗口的高度。\n最后只需要判断上一页还是下一页来计算index，通过index ✖ 页面高度，来进行滚动即可。\n代码实现\nHTML代码\n大家可以结合html结构，去理解 js 代码\n<template>\n  <!-- 最外层容器 -->\n  <div class=\"outer-box\" ref=\"fullPage\">\n    <!-- 内层容器 -->\n    <div ref=\"element\" :class=\"{ activeTranstion: isTranstion }\" class=\"inner-box\" @mousewheel=\"mousewheel\">\n      <!-- 滚动显示的元素 -->\n      <div\n        v-for=\"item in ysImage\"\n        :style=\"{ backgroundImage: `url(${item.backgroundImage})` }\"\n        class=\"scroll-element\"\n      ></div>\n    </div>\n    <!-- 指示器 -->\n    <ul class…",
           "link": "https://juejin.cn/post/7268123683222061093",
           "publishedOn": "2023-08-17T10:15:13.000Z",
-          "wordCount": 2472,
+          "wordCount": 3317,
           "title": "我使用 Vue 实现了原神官网的全屏滚动效果",
           "imageUrl": null
         },
