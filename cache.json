@@ -44,7 +44,7 @@
           "description": "nonce可以用来决定哪些内联JS执行，popover可以无JS实现浮层弹出层交互效果。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/html-attribute-nonce-translate/",
           "publishedOn": "2023-08-10T15:24:42.000Z",
-          "wordCount": 1112,
+          "wordCount": 1113,
           "title": "查漏补缺，我仍未知道的HTML nonce和popover属性",
           "imageUrl": null
         },
@@ -123,12 +123,22 @@
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/64e770ff0c915376a20ddd05",
+          "author": null,
+          "description": "看到一个做的比较专业的 AI Chatbot，MindOS，https://mindos.com，平台提供了一系列 AI 伴侣可以直接对话，比较突出的是，它具备较为强大的 AI 副驾驶定制化能力，包括 APIs、Workflows、Knowledge 和 Memory。\nAPIs 是一系列集成的三方接口，包括 Google 内容搜索、天气查询、Youtube 视频查询等，甚至还包括 LLM as a Service 的服务接入，也支持自定义接入。\nWorkflows 有点像一个低代码编辑器，允许定义各种 Nodes 节点，例如抓取、分析和处理数据等，包括对数据的重新排列组合，还支持编程方式处理数据，每个 Node 都是一个 Prompt 驱动的任务执行器。\nKnowledge 解决了幻觉问题，而 Memory 可以用来缓存和读取数据，它有点类似一个 Prompt 驱动的 Database。\n这些东西组合起来可玩性就比较强了，例如可以让它从 Github Trending 上抓取今日最热的 Top5 内容，将内容分析出来之后，为每条内容配上从 Google 抓取的题图，然后使用 Markdown 格式生成一篇日报。这个操作对程序员来说或许不复杂，但工具可以做到降低门槛，让普通人也玩得转，并且提升了工具的制作效率，这个价值就比较大了。",
+          "link": "https://m.okjike.com/originalPosts/64e770ff0c915376a20ddd05",
+          "publishedOn": "2023-08-24T15:02:23.000Z",
+          "wordCount": 518,
+          "title": "发布了: 看到一个做的比较专业的 AI Chatbot，MindOS，https://mindos.com，平台提供了一系列 AI 伴侣可以直接对话，比较突出的是，它具备较为强大的 AI 副驾驶...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fp-301y4RdORQXLM3K1WOF9wMta2v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/64e5b5611e74dff792c78cb1",
           "author": null,
           "description": "好多软件和网页都不支持直接粘贴图片，必须将图片存到本地，然后点击上传。以前经常把图片缓存到聊天软件的某个窗口（用的最多的就是微信文件传输助手），然后另存为文件，步骤长到不能忍。\n借着 ChatGPT 副驾驶帮忙写了一个 Alfred workflow，以后只需要一个快捷键就可以轻松将剪贴板的图片粘贴为文件啦😄，Workflow 下载和源码地址：https://github.com/barretlee/alfred-workflow-paste-image-to-file",
           "link": "https://m.okjike.com/originalPosts/64e5b5611e74dff792c78cb1",
           "publishedOn": "2023-08-23T07:29:37.000Z",
-          "wordCount": 416,
+          "wordCount": 454,
           "title": "发布了: 好多软件和网页都不支持直接粘贴图片，必须将图片存到本地，然后点击上传。以前经常把图片缓存到聊天软件的某个窗口（用的最多的就是微信文件传输助手）...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FpI_3PX0XNo7cLnEUGJD0Zw41RRzv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -158,7 +168,7 @@
           "description": "爱沙尼亚的“数字居民”身份证审核通过了✌🏻，前天还让我补充「无犯罪记录证明」，差点以为被驳回，看来申请的时候用 ChatGPT 写小作文还是有用的。除了能快速在线申请一张海外的银行卡，偶尔转账使用外，也不知道还有啥其他用处，先备着吧。",
           "link": "https://m.okjike.com/originalPosts/64e56e9f1f93fd49b389bdb7",
           "publishedOn": "2023-08-23T02:27:43.000Z",
-          "wordCount": 402,
+          "wordCount": 456,
           "title": "发布了: 爱沙尼亚的“数字居民”身份证审核通过了✌🏻，前天还让我补充「无犯罪记录证明」，差点以为被驳回，看来申请的时候用 ChatGPT 写小作文还是有用的。...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FrF_44gj0pe9nkDNRdX7p3ClJJ2-v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -168,7 +178,7 @@
           "description": "Node.js 内存飙涨以及 OOM 的问题，只要业务流量稍微复杂，一般都会遇到。如果是堆内内存，在 OOM 之前可以打一个 Heap Profiling 进行分析，如果是 OOM 之后，可以利用 llnode 对 corefile 进行分析，但如果是堆外内存飙涨呢？这一块内存通过 Chrome Devtool 工具是分析不出来的。\n一年前看到内网有个团队做了个工具，叫做 andb，目前已经开源了，https://github.com/noslate-project/andb，使用它可以帮助我们找到堆外内存的泄漏源，分析起来尽管也不是很轻松，但在频繁 OOM 的场景下，还是有着不可缺失的重要价值的。它的内存分析思路大概是这样的：\n1）找到 RSS 区的内存，通过 list 指令将每个内存 block 都打印出来，可以看到对应的地址区间以及大小\n2）找到大内存地址块，使用 walk 指令打印详细的对象占用情况\n3）通过 find ref 相关操作，一步步将大对象的父对象引用给挖掘出来，最后大概率可以找到业务代码的异常位置\n这个操作是耗耐心，需要一个个地去向上排查内存引用堆栈，直到溯源到业务逻辑代码，在工具的体验上，我觉得还有机会做到可视化+自动化分析的，跟他们提过这个问题，只不过当下 Node.js 在业务的地位这几年肉眼可见地坍缩，人力投入也得不到保障，再加上这个工具场景偏小，真的要把体验做起来，还是有难度的。\n如果你的业务是 Node.js 支撑，而且流量比较大，经常看到部分机器的内存在抖动，可以尝试下 andb，它有 lldb 和 gdb 两种模式，无论是堆内内存还是堆外内存的分析体验，相比市面上开源的其他工具，还是要好上不少的。",
           "link": "https://m.okjike.com/originalPosts/64e56ca758c9056cf4721ec2",
           "publishedOn": "2023-08-23T02:19:19.000Z",
-          "wordCount": 479,
+          "wordCount": 517,
           "title": "发布了: Node.js 内存飙涨以及 OOM 的问题，只要业务流量稍微复杂，一般都会遇到。如果是堆内内存，在 OOM 之前可以打一个 Heap Profiling 进行分析，如果是 OOM...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FgCTvi5043d6y13RwD-CdOGeMg6_v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -188,7 +198,7 @@
           "description": "看到有人推荐了 Call Annie 这个产品，体验了一把，我觉得做的也非常赞，打开软件就是一个 AI  英语学习伴侣，跟你视频对话，声情并茂，而且十分照顾你的感受，如果你不喜欢 Annie，还可以更换成其他角色。跟 AI 聊天可以敞开了聊，反正也没人听到😄，另外，这个软件是免费的。",
           "link": "https://m.okjike.com/originalPosts/64e4907a05aec6e050675442",
           "publishedOn": "2023-08-22T10:39:54.000Z",
-          "wordCount": 418,
+          "wordCount": 456,
           "title": "发布了: 看到有人推荐了 Call Annie 这个产品，体验了一把，我觉得做的也非常赞，打开软件就是一个 AI 英语学习伴侣，跟你视频对话，声情并茂，而且十分照顾你的...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fgxu4zwJWex1CRpPbYDsfsg46s_Dv3.jpeg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
         },
@@ -198,7 +208,7 @@
           "description": "不知道在申请这个爱沙尼亚「数字居民」时，哪个表单信息填写触发了敏感审查，给我回了一封邮件，让我补充一堆东西，包括：\n1）英文的简历，之前我直接给的中文的 Link\n2）犯罪记录证明 or 无犯罪记录证明\n3）在爱沙尼亚认识的联系人\n4）打算在爱沙尼亚开公司的话，需要填当地的合伙人信息\n以及其他几个资料。我估摸着是申请理由选了开公司，之前同事选的是开源社区贡献者相关身份，没这么麻烦。2 还好，杭州这边线上就能办，3 和 4 直接就懵逼了🤒，感觉有一定的概率申请不通过……\n\n转发 @Barret李靖: 在申请海外银行账户的时候，看到有推友推荐了爱沙尼亚的「数字居民」，研究了下，感觉还是挺有意思的。\n爱沙尼亚是欧洲的一个小国家，也是全球第一个落实数字游民签证的国家，申请通过后，会获得一个爱沙尼亚的数字居民 ID，使用这个 ID 可以在线完成海外公司的注册、银行卡的申请等，对独立开发者比较友好。\n而申请也是比较简单的，直接上官网按照流程填写表单就行了，https://www.e-resident.gov.ee，需要准备的内容大概是：\n1）你的个人简历，也可以是自己的社交媒体链接，例如 Twitter/Linkedin/Github 等\n2）用于表单填写的其他信息，如护照、个人照片等\n3）一张 Visa/Master 银行卡，最后填写完成需要缴费 100 欧元，送到北京需要外加 20 欧元邮费\n唯一需要注意的是，表单会询问你申请的目的，让你成为爱沙尼亚的数字居民，肯定还是希望你能够为这个国家带来一些经济贡献的。一般 3~8 周会完成审核和发证，需要亲自去一趟北京爱沙尼亚大使馆申领证件，证件的有效期是五年，五年后需要续签。\n在网上检索相关信息的时候，看到有朋友踩了个坑，跑北京一趟结果忘记了带护照……我已经提交了申请，看看能不能申请通过😄",
           "link": "https://m.okjike.com/reposts/64e43ffeba30ac5540171d60",
           "publishedOn": "2023-08-22T04:56:30.000Z",
-          "wordCount": 422,
+          "wordCount": 454,
           "title": "转发了: 不知道在申请这个爱沙尼亚「数字居民」时，哪个表单信息填写触发了敏感审查，给我回了一封邮件，让我补充一堆东西，包括： 1）英文的简历，之前我直接给...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -210,17 +220,7 @@
           "publishedOn": "2023-08-22T02:29:12.000Z",
           "wordCount": 434,
           "title": "发布了: 最近看到一款 AI Driven 的英语口语学习 APP，ELSA，https://elsaspeak.onelink.me/rEuf/cwm4yjvr，体验了一周，还是很不错的。 跟其他英语学习 APP 不...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FkPMD7MndDsz-FUQPHTV_5HUXz8Hv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/64e3fdd362e51d2dc7ba8eca",
-          "author": null,
-          "description": "Airbnb 在公司里宣布：不再设置产品经理岗位。\n不再雇产品经理了",
-          "link": "https://m.okjike.com/originalPosts/64e3fdd362e51d2dc7ba8eca",
-          "publishedOn": "2023-08-22T00:14:11.000Z",
-          "wordCount": 410,
-          "title": "发布了: Airbnb 在公司里宣布：不再设置产品经理岗位。",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+          "imageUrl": "https://cdnv2.ruguoapp.com/FkPMD7MndDsz-FUQPHTV_5HUXz8Hv3.png?imageMogr2/auto-orient/format/jpeg/thumbnail/300x2000%3E/quality/70/interlace/1"
         }
       ]
     },
@@ -229,6 +229,16 @@
       "feedUrl": "https://rsshub.app/jike/user/752D3103-1107-43A0-BA49-20EC29D09E36",
       "siteUrl": "https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36",
       "articles": [
+        {
+          "id": "https://m.okjike.com/originalPosts/64e75b9eef2a3efae7faa77c",
+          "author": null,
+          "description": "李想： \n品牌向外，跟用户取得共识；\n文化向内，跟团队取得共识。",
+          "link": "https://m.okjike.com/originalPosts/64e75b9eef2a3efae7faa77c",
+          "publishedOn": "2023-08-24T13:31:10.000Z",
+          "wordCount": 451,
+          "title": "发布了: 李想： 品牌向外，跟用户取得共识； 文化向内，跟团队取得共识。",
+          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+        },
         {
           "id": "https://m.okjike.com/originalPosts/64e74b800c915376a209b928",
           "author": null,
@@ -318,16 +328,6 @@
           "wordCount": 635,
           "title": "转发了: https://www.bilibili.com/video/BV1gu4y197jR/?buvid=Y14CB8176DA4902E420F8ABD55C95EAF673A&is_story_h5=false&mid=GILoWX%2Bqn156Oh0GoMn7iA%3D%3D&p...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/64e2d33f96f1897a9e1a3e5c",
-          "author": null,
-          "description": "# Role\n背书侠\n## Profile\n- author: 李继刚\n- version: 0.3\n- language: 中文\n- description: 专注于整理大段文本，转换成利于大脑记忆的样式。\n## Attention\n我即将高考, 海量知识对我是个严重负担. 我对你有非常高的期望，我认为你完全可以做到更好。基于高标准，希望你能好好思考并输出, 帮助我快速记忆。\n## Background\n擅长整理知识的背书侠，拥有神经科学博士学位，熟知大脑记忆的工作原理。\n## Constraints\n- 删除文本中不重要的语句, 只保留核心信息。\n- 将每句文本单独放一行。\n- 将每一句话的核心总结成一个关键词, 放在句子开头, 并用冒号分隔。\n## Definition:\n- 关键词定义: 将每一句话的核心总结成一个关键词, 放在句子开头并加粗显示, 用冒号进行分隔。如\" **主题** : 这是主题描述\"\n## Example:\n输入:\n---\n要始终代表中国先進社會生產力的發展要求； 要始终代表中国先进文化的前进方向； 要始终代表中国最广大人民的根本利益。\n---\n输出:\n---\n三个代表:\n**代表** : 中国先进社会生产力的发展要求\n**代表** : 中国先进文化的前进方向\n**代表** : 中国最广大人民的根本利益\n---\n## Goals\n- 整理大段文本, 转换成利于大脑记忆的样式\n## Skills\n- 理解知识的结构, 擅长提炼重点\n- 良好审美, 擅长文字排版\n- 擅长通过总结, 让人快速记忆大段文字\n## Tone\n专业 准确 清晰\n## Value\n- 重视信息精准\n- 强调记忆效率\n## Workflow\n- 输入: 用户输入需记忆的文本\n- 思考:\n  + 删除: 评估文本的核心主要信息, 删除不重要的冗余信息\n  + 排版: 将清洗后的核心信息, 进行美化排版, 方便阅读和记忆\n  + 关键词: 在句子开头加上关键词前缀, 该关键词是整句的进一步总结, 以冒号分隔\n  + 数字总结: 尽量将上述结果用数字来表示, 如\"三个代表\", \"四个意识\"\n## Initialization\n我是背书侠，拥有神经科学博士学位，熟知大脑记忆的工作原理。我会将大段文本进行整理和排版，转换成利于大脑记忆的样式。请提供文本让我开始工作吧！",
-          "link": "https://m.okjike.com/originalPosts/64e2d33f96f1897a9e1a3e5c",
-          "publishedOn": "2023-08-21T03:00:15.000Z",
-          "wordCount": 668,
-          "title": "发布了: # Role 背书侠 ## Profile - author: 李继刚 - version: 0.3 - language: 中文 - description: 专注于整理大段文本，转换成利于大脑记忆的样式。 ## Att...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fgn_bbVKWi8TUOrEp0PybmdAfCBqv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
         }
       ]
     },
@@ -543,6 +543,56 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230824/t20230824_526394653.html",
+          "author": "国家预警信息发布中心",
+          "description": "璧山区气象台2023年8月24日21时50分发布“雷电黄色预警信号”，预计8月24日21时至25日20时，八塘镇、七塘镇、大路街道、河边镇、福禄镇、璧城街道、青杠街道、大兴镇、璧泉街道、正兴镇、来凤街道、广普镇、三合镇、丁家街道、健龙镇将出现雷雨天气，局地伴有短时强降水、阵性大风、冰雹等强对流天气，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20230824/t20230824_526394653.html",
+          "publishedOn": "2023-08-24T14:15:03.000Z",
+          "wordCount": 523,
+          "title": "重庆市璧山区发布雷电黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230824/t20230824_526394624.html",
+          "author": "国家预警信息发布中心",
+          "description": "巴南区气象台2023年8月24日20时50分发布“暴雨橙色预警信号”，目前我区圣灯山镇、安澜镇、一品街道、接龙镇等镇街已出现23-45毫米强降雨。预计未来3小时强降雨仍将持续，圣灯山镇、安澜镇、一品街道、接龙镇、莲花街道、花溪街道、李家沱街道、龙洲湾街道、接龙镇、鱼洞街道、南彭街道、南泉街道、惠民街道、二圣镇、姜家镇、东温泉镇、石龙镇、石滩镇、天星寺镇、界石镇等街道（乡镇）累计雨量将达50-70毫米，最大小时雨强可达30-50毫米，并伴有雷电、阵性大风等强对流天气，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230824/t20230824_526394624.html",
+          "publishedOn": "2023-08-24T13:10:09.000Z",
+          "wordCount": 523,
+          "title": "重庆市巴南区发布暴雨橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230824/t20230824_526394621.html",
+          "author": "国家预警信息发布中心",
+          "description": "江津区气象台2023年8月24日20时50分升级发布“暴雨橙色预警信号”，目前我区蔡家镇、杜市镇、支坪镇已达暴雨，预计未来3小时，先锋镇、支坪镇、贾嗣镇、杜市镇、西湖镇、珞璜镇、夏坝镇、石蟆镇、德感街道、双福街道、几江街道、圣泉街道、鼎山街道、吴滩镇、龙华镇等镇街累计雨量将达50-90毫米，最大小时雨强可达50-80毫米，并伴有雷电、阵性大风等强对流天气，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230824/t20230824_526394621.html",
+          "publishedOn": "2023-08-24T13:10:08.000Z",
+          "wordCount": 523,
+          "title": "重庆市江津区发布暴雨橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20230824/t20230824_526394593.html",
+          "author": "国家预警信息发布中心",
+          "description": "巴南区气象台2023年8月24日20时20分发布“大风蓝色预警信号”，预计8月24日20时至25日8时，安澜镇、圣灯山镇、接龙镇、石滩镇、石龙镇、丰盛镇、姜家镇、东温泉镇、双河口镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、鱼洞街道、一品街道、南彭街道、界石镇风力可达6级，局地阵风可达7级以上，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20230824/t20230824_526394593.html",
+          "publishedOn": "2023-08-24T12:40:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市巴南区发布大风蓝色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230824/t20230824_526394538.html",
+          "author": "国家预警信息发布中心",
+          "description": "綦江区气象台2023年8月24日19时50分更新发布“暴雨橙色预警信号”，我区三江街道、东溪镇累计降水已达50毫米以上，预计未来3小时，郭扶镇、石角镇、古南街道、通惠街道、文龙街道、新盛街道、横山镇、三角镇、永城镇、隆盛镇、永新镇、篆塘镇、中峰镇等镇街累计雨量将达50-80毫米，最大小时雨强可达30-50毫米，并伴有雷电、阵性大风等强对流天气，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230824/t20230824_526394538.html",
+          "publishedOn": "2023-08-24T12:10:04.000Z",
+          "wordCount": 523,
+          "title": "重庆市綦江区发布暴雨橙色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230824/t20230824_526394502.html",
           "author": "国家预警信息发布中心",
@@ -2221,6 +2271,16 @@
       "siteUrl": "https://store.epicgames.com/zh-CN/free-games?lang=zh-CN",
       "articles": [
         {
+          "id": "https://store.epicgames.com/zh-CN/p/homeworld-deserts-of-kharak",
+          "author": "Gearbox Publishing",
+          "description": "Homeworld: Deserts of Kharak",
+          "link": "https://store.epicgames.com/zh-CN/p/homeworld-deserts-of-kharak",
+          "publishedOn": "2023-08-24T15:00:00.000Z",
+          "wordCount": null,
+          "title": "Homeworld: Deserts of Kharak",
+          "imageUrl": null
+        },
+        {
           "id": "https://store.epicgames.com/zh-CN/p/destiny-2",
           "author": "Bungie",
           "description": "《命运2》是发生在一个独立进化的世界中的一款免费的大型多人线上动作游戏。你可以在任何时间与任何地点和你的朋友们进行游戏。",
@@ -2228,26 +2288,6 @@
           "publishedOn": "2023-08-22T18:00:00.000Z",
           "wordCount": null,
           "title": "《命运2》：Bungie 30 周年纪念组合包",
-          "imageUrl": null
-        },
-        {
-          "id": "https://store.epicgames.com/zh-CN/p/black-book",
-          "author": "Hypetrain Digital",
-          "description": "《Black Book》是一款以斯拉夫神话传说为基础的黑暗风格角色扮演冒险游戏，本作中你要扮演一位年轻的魔女。在基于卡片的战斗中与邪恶势力进行斗争，并探索这个人类和神话生物共存的世界。",
-          "link": "https://store.epicgames.com/zh-CN/p/black-book",
-          "publishedOn": "2023-08-17T15:00:00.000Z",
-          "wordCount": null,
-          "title": "《Black Book》",
-          "imageUrl": null
-        },
-        {
-          "id": "https://store.epicgames.com/zh-CN/p/dodo-peak-159276",
-          "author": "Moving Pieces Interactive",
-          "description": "化身成一只渡渡鸟，冲过危险重重的重峦叠嶂，来找回自己走丢的宝宝。在带他们回家同时，还要注意辗转腾挪，躲避障碍和敌人！Dodo Peak是一款致敬经典街机的平台游戏，但是它又具备了现代游戏设计的特点。",
-          "link": "https://store.epicgames.com/zh-CN/p/dodo-peak-159276",
-          "publishedOn": "2023-08-17T15:00:00.000Z",
-          "wordCount": null,
-          "title": "Dodo Peak",
           "imageUrl": null
         }
       ]
@@ -2313,7 +2353,7 @@
           "description": "Why Docker?\nDocker 容器化技术是当今最重要的基础设施之一，或者说它已经成为服务程序 的标准化运行环境。\n先不谈它相比传统的虚拟化技术有多少优势，站在软件工程角度，笔者认为，Docker 有两个重要的意义：\n\n一）提供一致性的运行环境。让我们的程序在一致性的环境中运行：不管是开发环境、测试环境、还是生产环境；不管是开发时、构建时、还是运行时。\n比如开发时可以使用 Docker Dev Environments, 可以配合 VsCode Remote 开发，从而实现跳槽时或者换设备，可以快速 Setup 自己的开发环境。有兴趣的可以看看掘友写的 Docker化一个前端基础开发环境：简洁高效的选择\n构建时，现在 CI/CD 平台都是基于 Docker 来提供多样化的构建环境需求。\n运行时，‘巨轮’ K8S 已经是云时代的重要基础设施。\n\n二）标准化的服务程序封装技术。\n在没有容器之前，使用不同编程语言或框架编写的程序，部署和运行的方式千差万别。比如 Java 会生成 jar 包或者war 包，运行环境需要预装指定版本的 JDK…\n而现在，容器镜像成为了标准的服务程序封装技术。镜像中包含了程序以及程序对运行环境的依赖。\n\n不管前后端应用都可以使用镜像的形式进行分发和流通。这应该就是 Docker Logo，那条鲸鱼驮着货运箱的解释吧：就像我们平时下载、传递 Zip 文件一样， 镜像是云时代’通用货币’，可以在研发的不同环节、区域中流通。\n这种标准化的打包格式、轻量化的运行时，不仅给开发者和运维带来便利， 也催生了强大的容器管理工具比如 K8S,  K8S 现在已经是容器和集群管理的标准。\n那 Docker 之于前端意义是啥？\nDocker 对前端的意义也很重大。 实际上，Docker 的世界里，并不区分什么前端、后端，没有人说只适合后端、不适合前端 … 在运维的眼…",
           "link": "https://juejin.cn/post/7269668219488354361",
           "publishedOn": "2023-08-21T10:46:23.000Z",
-          "wordCount": 3618,
+          "wordCount": 3778,
           "title": "使用 Docker 实现前端应用的标准化构建、部署和运行",
           "imageUrl": null
         },
@@ -2413,7 +2453,7 @@
           "description": "theme: condensed-night-purple\n年中总结\n看到掘金有这个年中总结的话题，感觉自己今年的职业变化是较大的，于是就想着来写一篇年中总结，我个人的参考性是不强的，但是可以提供给大家一些思考\n个人介绍\n在开始前可以大致说一下我是做什么的，大家可能会说，那你肯定是做程序员的呗，大概率就是前端\n我现在的职业就是我名片的那样，一个咖啡学徒，并不是调侃，是的确在做这个，的确在端盘子\n而在之前我的确是从事互联网工作的，而且基本上是一个码农\n主要从事过webgl、前端、全栈\n\n当然，别的名片因为换手机有点找不到了，反正大致是做这些的\n然后就是技术栈\n技术栈\n技术栈这里我分为前端和后端，但是我个人是偏前端为主的\n前端\n前端的话，其实我是以vue为主的，因为这是我第一个接触到的前端框架，当然，不包括jQuery（因为我觉得它更像一个库）\n其次的话，就是React，React是个很优秀的框架，但是只是我个人不太喜欢而已，哈哈哈哈，但是工作中也是经常用\nangular我用的比较少了，所以不算是我的技术栈\nsvelte我自己会一些，但是在国内几乎没有机会在公司中进行使用，并且我也在思考写一篇svelte的文章\n\n当然，也在行动中\n3D的话，我用的最多的是threejs，相信大家可能也是这个用的较多，大部分我就是画一些模型，还有一些场景，比如地铁站、车站、车间等，类似于智慧城市吧~\n然后我最近有一个3D的项目，我也在研究是否开源。敬请期待吧~\n还有小程序，我真的很讨厌这个东西，反正大家会懂的吧~我也不多说了，我用的是原生的小程序和uni\n然后我也会开源一个小程序的项目，我觉得算是比较全面的，因为我现在在思考把后端的东西全抽离出去，只保留前端，所以近期还需要更改~\n大屏的话，大家接触的肯定比较多了，就是echarts那些，也不多说了\n另外是nodejs，我在这里把它放在了前端的范…",
           "link": "https://juejin.cn/post/7268539925095235644",
           "publishedOn": "2023-08-18T09:03:32.000Z",
-          "wordCount": 854,
+          "wordCount": 905,
           "title": "2023年中总结，从前端到盘子端",
           "imageUrl": null
         },
@@ -2443,7 +2483,7 @@
           "description": "背景\n最近领导安排了一个任务，优化目前web端的流程引擎，目前是配置了300多个组件，页面展示慢，并且输入框的在进行输入的时候，有明显的卡顿，页面在用着用着就会浏览器崩溃\n基本的流程图\ngraph TD\n调用接口拿到配置 --> 前端组装数据option --> 调用渲染器 -->for循环展示组件-->页面展示\n\n问题点主要有以下三点\n展示慢，初次页面加载缓慢\nelementui的input组件会输入卡顿\n内存占用过多，经常在使用的过程中浏览器崩溃，下面的截图是现场反馈的\n\n先看结果\n优化前后的gif对比\n优化前的gif 首屏预计在13秒\n\n优化后的gif 首屏预计在1秒\n\n输入卡顿和内存占用的问题也排查出来了，这个会在下方的文章中进行说明\n排查问题思路\n检查接口的响应时间\n接口响应100ms左右，不用做什么优化\n页面的展示逻辑\n这个页面的展示逻辑是从后台拿一个接口拿到配置后，前端组装数据（我们暂且称它为option），传给渲染器组件，渲染器去把这个页面渲染出来\n优化方向\n拿到这个页面大致要从下方几个点来解决，大概有以下7点（当然下面这些点不是一次就可以发现的，需要用chrome的Devtool和vueDevTool经过分析后才知道，可以看这个 \n用vueDevtools和Performance进行性能排查分享\n前端的option是否过大，是否可以精简\noption是配置项，300多个组件，而且还存储了组件的联动关系,这个对象很大，我们是否可以绕过vue的data的get和set检测，使用Object.freeze(option)。如果不太懂这个的话可以看下Object.freeze的MDN文档\n组件渲染次数是否过多，进行了无用的渲染\n当联动事件的时候检测事件触发是否合理，是否有及时的移除事件的监听\n输入框的卡顿这个用vue.lazy延迟更新是否可以解决\n内存占用过多，是…",
           "link": "https://juejin.cn/post/7268173090915549238",
           "publishedOn": "2023-08-17T13:13:57.000Z",
-          "wordCount": 909,
+          "wordCount": 981,
           "title": "低代码的前端性能优化",
           "imageUrl": null
         },
@@ -2464,6 +2504,16 @@
       "feedUrl": "https://rsshub.app/juejin/pins/6824710202000932877",
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
+        {
+          "id": "7270822762721263673",
+          "author": "F4lc0n",
+          "description": "有没有朋友碰见PyCharm进入debug之后无法退出的情况[流泪]",
+          "link": "https://juejin.cn/pin/7270822762721263673",
+          "publishedOn": "2023-08-24T12:31:44.000Z",
+          "wordCount": 509,
+          "title": "有没有朋友碰见PyCharm进入debug之后无法退出的情况[流泪]",
+          "imageUrl": null
+        },
         {
           "id": "7270798933444853816",
           "author": "简单不容易",
@@ -2652,16 +2702,6 @@
           "publishedOn": "2023-08-17T01:40:31.000Z",
           "wordCount": 507,
           "title": "有没有人需要大厂云代充值呢[害羞]",
-          "imageUrl": null
-        },
-        {
-          "id": "7267723121037115392",
-          "author": "小凯服务器大厂云",
-          "description": "有没有需要服务器的呢[害羞]",
-          "link": "https://juejin.cn/pin/7267723121037115392",
-          "publishedOn": "2023-08-16T07:15:39.000Z",
-          "wordCount": 507,
-          "title": "有没有需要服务器的呢[害羞]",
           "imageUrl": null
         }
       ]
