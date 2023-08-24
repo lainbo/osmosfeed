@@ -44,7 +44,7 @@
           "description": "nonce可以用来决定哪些内联JS执行，popover可以无JS实现浮层弹出层交互效果。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/html-attribute-nonce-translate/",
           "publishedOn": "2023-08-10T15:24:42.000Z",
-          "wordCount": 1114,
+          "wordCount": 1112,
           "title": "查漏补缺，我仍未知道的HTML nonce和popover属性",
           "imageUrl": null
         },
@@ -54,7 +54,7 @@
           "description": "今天好好了解了下kbd、var、samp等HTML，发现以前表示前端源代码的方式简单且浅薄了。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/07/html-samp-element/",
           "publishedOn": "2023-07-31T14:31:18.000Z",
-          "wordCount": 981,
+          "wordCount": 979,
           "title": "HTML kbd、var、samp元素你使用过没？",
           "imageUrl": null
         }
@@ -128,7 +128,7 @@
           "description": "现在 AI 工具对用户来说，最大的体验问题是，每个产品都有自己擅长的地方，但每个产品都要单独收一次费，这让人郁闷😅",
           "link": "https://m.okjike.com/originalPosts/64e78c4aef2a3efae7ffbe25",
           "publishedOn": "2023-08-24T16:58:50.000Z",
-          "wordCount": 438,
+          "wordCount": 440,
           "title": "发布了: 现在 AI 工具对用户来说，最大的体验问题是，每个产品都有自己擅长的地方，但每个产品都要单独收一次费，这让人郁闷😅",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -148,7 +148,7 @@
           "description": "好多软件和网页都不支持直接粘贴图片，必须将图片存到本地，然后点击上传。以前经常把图片缓存到聊天软件的某个窗口（用的最多的就是微信文件传输助手），然后另存为文件，步骤长到不能忍。\n借着 ChatGPT 副驾驶帮忙写了一个 Alfred workflow，以后只需要一个快捷键就可以轻松将剪贴板的图片粘贴为文件啦😄，Workflow 下载和源码地址：https://github.com/barretlee/alfred-workflow-paste-image-to-file",
           "link": "https://m.okjike.com/originalPosts/64e5b5611e74dff792c78cb1",
           "publishedOn": "2023-08-23T07:29:37.000Z",
-          "wordCount": 454,
+          "wordCount": 416,
           "title": "发布了: 好多软件和网页都不支持直接粘贴图片，必须将图片存到本地，然后点击上传。以前经常把图片缓存到聊天软件的某个窗口（用的最多的就是微信文件传输助手）...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FpI_3PX0XNo7cLnEUGJD0Zw41RRzv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -168,7 +168,7 @@
           "description": "哈哈哈",
           "link": "https://m.okjike.com/originalPosts/64e5765e7d10e1210fae6933",
           "publishedOn": "2023-08-23T03:00:46.000Z",
-          "wordCount": 434,
+          "wordCount": 396,
           "title": "发布了: 哈哈哈",
           "imageUrl": "https://cdnv2.ruguoapp.com/Ft_Pb-PPAvoVA2Cx8R-xLblL6Iszv3.jpeg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
         },
@@ -188,7 +188,7 @@
           "description": "Node.js 内存飙涨以及 OOM 的问题，只要业务流量稍微复杂，一般都会遇到。如果是堆内内存，在 OOM 之前可以打一个 Heap Profiling 进行分析，如果是 OOM 之后，可以利用 llnode 对 corefile 进行分析，但如果是堆外内存飙涨呢？这一块内存通过 Chrome Devtool 工具是分析不出来的。\n一年前看到内网有个团队做了个工具，叫做 andb，目前已经开源了，https://github.com/noslate-project/andb，使用它可以帮助我们找到堆外内存的泄漏源，分析起来尽管也不是很轻松，但在频繁 OOM 的场景下，还是有着不可缺失的重要价值的。它的内存分析思路大概是这样的：\n1）找到 RSS 区的内存，通过 list 指令将每个内存 block 都打印出来，可以看到对应的地址区间以及大小\n2）找到大内存地址块，使用 walk 指令打印详细的对象占用情况\n3）通过 find ref 相关操作，一步步将大对象的父对象引用给挖掘出来，最后大概率可以找到业务代码的异常位置\n这个操作是耗耐心，需要一个个地去向上排查内存引用堆栈，直到溯源到业务逻辑代码，在工具的体验上，我觉得还有机会做到可视化+自动化分析的，跟他们提过这个问题，只不过当下 Node.js 在业务的地位这几年肉眼可见地坍缩，人力投入也得不到保障，再加上这个工具场景偏小，真的要把体验做起来，还是有难度的。\n如果你的业务是 Node.js 支撑，而且流量比较大，经常看到部分机器的内存在抖动，可以尝试下 andb，它有 lldb 和 gdb 两种模式，无论是堆内内存还是堆外内存的分析体验，相比市面上开源的其他工具，还是要好上不少的。",
           "link": "https://m.okjike.com/originalPosts/64e56ca758c9056cf4721ec2",
           "publishedOn": "2023-08-23T02:19:19.000Z",
-          "wordCount": 517,
+          "wordCount": 479,
           "title": "发布了: Node.js 内存飙涨以及 OOM 的问题，只要业务流量稍微复杂，一般都会遇到。如果是堆内内存，在 OOM 之前可以打一个 Heap Profiling 进行分析，如果是 OOM...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FgCTvi5043d6y13RwD-CdOGeMg6_v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -198,7 +198,7 @@
           "description": "好几次在工具网站上看到了系列产品的月访问量、平均访问时长、跳出率等信息，很好奇数据是从哪里来的，研究了一下，找到了源头是 www.similarweb.com\n那 similarweb 的数据又是从哪里来的呢？可以简单理解为抽样分析 + 算法预测，只不过这里的抽样量级很恐怖，它每天会从全网各个渠道拿到 10 亿规模的数据，然后进行算法建模，推导出每个网站的各类数据指标的变化趋势，同时它有接入数以百万计的 Google Analysis 站长数据，这个数据一部分会作为算法的对照组，用于矫正分析结果，也是对算法模型的数据补充。\nsimilarweb 有一个很强的能力，就是能够根据当前网站找到同类别下的相似网站，最近在研究一些 AI 产品的时候，用的比较多，本来以为 A 产品已经做的非常好了，利用 similarweb 一查，一下子又看到了好多其他新鲜的产品，只不过其准确性上还是有待提升（可能因为我不是付费版）。之前推荐的 toolify.ai 这个 AI 工具聚合网站就是基于 similarweb 的 API 搭建起来的，很不错。",
           "link": "https://m.okjike.com/originalPosts/64e499341e74dff792af68e7",
           "publishedOn": "2023-08-22T11:17:08.000Z",
-          "wordCount": 446,
+          "wordCount": 484,
           "title": "发布了: 好几次在工具网站上看到了系列产品的月访问量、平均访问时长、跳出率等信息，很好奇数据是从哪里来的，研究了一下，找到了源头是 www.similarweb.com 那...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FoUOsJlRj3jhEGacqn8hVFRSgcmdv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -218,7 +218,7 @@
           "description": "不知道在申请这个爱沙尼亚「数字居民」时，哪个表单信息填写触发了敏感审查，给我回了一封邮件，让我补充一堆东西，包括：\n1）英文的简历，之前我直接给的中文的 Link\n2）犯罪记录证明 or 无犯罪记录证明\n3）在爱沙尼亚认识的联系人\n4）打算在爱沙尼亚开公司的话，需要填当地的合伙人信息\n以及其他几个资料。我估摸着是申请理由选了开公司，之前同事选的是开源社区贡献者相关身份，没这么麻烦。2 还好，杭州这边线上就能办，3 和 4 直接就懵逼了🤒，感觉有一定的概率申请不通过……\n\n转发 @Barret李靖: 在申请海外银行账户的时候，看到有推友推荐了爱沙尼亚的「数字居民」，研究了下，感觉还是挺有意思的。\n爱沙尼亚是欧洲的一个小国家，也是全球第一个落实数字游民签证的国家，申请通过后，会获得一个爱沙尼亚的数字居民 ID，使用这个 ID 可以在线完成海外公司的注册、银行卡的申请等，对独立开发者比较友好。\n而申请也是比较简单的，直接上官网按照流程填写表单就行了，https://www.e-resident.gov.ee，需要准备的内容大概是：\n1）你的个人简历，也可以是自己的社交媒体链接，例如 Twitter/Linkedin/Github 等\n2）用于表单填写的其他信息，如护照、个人照片等\n3）一张 Visa/Master 银行卡，最后填写完成需要缴费 100 欧元，送到北京需要外加 20 欧元邮费\n唯一需要注意的是，表单会询问你申请的目的，让你成为爱沙尼亚的数字居民，肯定还是希望你能够为这个国家带来一些经济贡献的。一般 3~8 周会完成审核和发证，需要亲自去一趟北京爱沙尼亚大使馆申领证件，证件的有效期是五年，五年后需要续签。\n在网上检索相关信息的时候，看到有朋友踩了个坑，跑北京一趟结果忘记了带护照……我已经提交了申请，看看能不能申请通过😄",
           "link": "https://m.okjike.com/reposts/64e43ffeba30ac5540171d60",
           "publishedOn": "2023-08-22T04:56:30.000Z",
-          "wordCount": 422,
+          "wordCount": 454,
           "title": "转发了: 不知道在申请这个爱沙尼亚「数字居民」时，哪个表单信息填写触发了敏感审查，给我回了一封邮件，让我补充一堆东西，包括： 1）英文的简历，之前我直接给...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         }
