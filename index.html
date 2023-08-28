@@ -1269,6 +1269,64 @@ function replaceIconData(sourceBuffer: Buffer, iconBuffer: Buffer): Buffer {
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7271139265442021391"
+                        open
+                      >
+                        <summary class="article-expander__title">基于 Axios 封装一个完美的双 token 无感刷新</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7271139265442021391">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>用户登录之后，会返回一个用户的标识，之后带上这个标识请求别的接口，就能识别出该用户。
+标识登录状态的方案有两种： session 和 jwt。
+session 是通过 cookie 返回一个 id，关联服务端内存里保存的 session 对象，请求时服务端取出 cookie 里 id 对应的 session 对象，就可以拿到用户信息。
+
+jwt 不在服务端存储，会直接把用户信息放到 token 里返回，每次请求带上这个 token，服务端就能从中取出用户信息。
+
+这个 token 一般是放在一个叫 authorization 的 header 里。
+这两种方案一个服务端存储，通过 cookie 携带标识，一个在客户端存储，通过 header 携带标识。
+session 的方案默认不支持分布式，因为是保存在一台服务器的内存的，另一台服务器没有。
+
+jwt 的方案天然支持分布式，因为信息保存在 token 里，只要从中取出来就行。
+
+所以 jwt 的方案用的还是很多的。
+服务端把用户信息放入 token 里，设置一个过期时间，客户端请求的时候通过 authorization 的 header 携带 token，服务端验证通过，就可以从中取到用户信息。
+但是这样有个问题：
+token 是有过期时间的，比如 3 天，那过期后再访问就需要重新登录了。
+这样体验并不好。
+想想你在用某个 app 的时候，用着用着突然跳到登录页了，告诉你需要重新登录了。
+是不是体验很差？
+所以要加上续签机制，也就是延长 token 过期时间。
+主流的方案是通过双 token，一个 access_token、一个 refresh_token。
+登录成功之后，返回这两个 token：
+
+访问接口时带上 access_token 访问：
+
+当 access_token 过期时，通过 refresh_token …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;12
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >沸点 - 开发工具推荐</button>
                   <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
                 </h3>
@@ -1725,51 +1783,6 @@ function replaceIconData(sourceBuffer: Buffer, iconBuffer: Buffer): Buffer {
   21. 新材料研发商“中微纳维”获千万元级天使轮投资  
     
   22.天然石墨负极厂商“新泰和”获超亿元融资</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7270971101014638633"
-                        open
-                      >
-                        <summary class="article-expander__title">28 岁退休的字节跳动程序员郭宇，现在过的怎么样了？谈谈投资、生活、财富自由、苦恼</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7270971101014638633">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>首发于公众号 前端从进阶到入院，欢迎关注。
-本文内容来自访谈视频：
-「郭宇谈财富、投资起源于地铁站门口开户、因为工作太累开始变成「酒店玩家」、财富带来的苦恼是面对不确定」
-一、简介
-本期节目，我们有幸邀请到了 28 岁便宣布“退休”的程序员郭宇。郭宇 2008 年进入大学学习政治学，但自学编程，2011 年加入支付宝，担任前端开发工作。2013 年，郭宇离开支付宝，加入字节跳动，继续从事前端开发，并见证了抖音的兴起。2020 年，在字节跳动工作近 7 年后，郭宇正式宣布“退休”。
-郭宇的“28 岁退休”故事在互联网上广为流传，许多人好奇一个普通程序员如何在这样年轻的时候就获得“财富自由”。我们在本次节目中，将与郭宇深入探讨他的成长历程、投资理念以及对财富的思考。
-
-二、成长历程
-1、走上编程之路
-郭宇 2008 年进入大学学习政治学专业，但并不满意就业前景。家庭条件一般的他，爸爸一直在生病，卧病在床差不多快十几年了，然后成了植物人，他觉得必须以后做点什么事情，自己可以至少挣钱养家或者是让他自己独立出来。于是，郭宇在大一开始自学编程。他回忆道：
-“08 年的时候开始为我以前在深圳高级中学做的那个社团做网站，就是刚刚考完高考的第三天，那时候开始学写代码，知道大家那时候还在兼容 IE 5.5，然后当时买了一本书，就是作者是百度的一个前端工程师，他叫《Web 标准化设计》，那个时候大家还在讨论 Web 标准化设计，就是不要用 table，用 DIV 去布局，就是在讨论这些东西。现在听起来不可思议。”
-在自学编程两年后，郭宇获得了支付宝的实习 offer，并最终转正，成为支付宝的前端工程师。
-2、北上求职
-2013 年，郭宇决定离开支付宝，他提到的原因包括：
-(1)那时候支付宝的工作生活太过悠闲，不利于年轻人进一步发展，在微信出来之后，支付宝才感受到压力，开始全民移动化、开卷的时代。…</span>
                             </span>
                           </div>
                         </a>
@@ -2410,6 +2423,46 @@ Knowledge 解决了幻觉问题，而 Memory 可以用来缓存和读取数据�
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7270685165201539109"
+                        open
+                      >
+                        <summary class="article-expander__title">高阶摸鱼指南 - 自己开发vscode插件悄无声息地摸鱼</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7270685165201539109">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>想法
+作为前端开发者，大多数人都使用 VSCode，并且可能会找一些在 VSCode 中可以摸鱼的插件。我也尝试了一些：
+Zhihu On VSCode，知乎摸鱼。
+daily anime，追番插件。
+韭菜盒子，看股票、基金、期货实时数据。
+电影集，看热映电影。
+
+除此之外，还有许多其他的插件，比如听音乐、看小说、刷力扣、浏览掘金等等。甚至有人开发了一个类似小霸王游戏机的插件。
+
+VSCode本身是基于 Node.js 和浏览器的应用程序，因此，熟悉前端开发的同学可以想到，在 VSCode 中可以实现几乎所有 Node.js 和浏览器能做的事情。上面提到的摸鱼插件有着很好的想法，功能和代码也做得不错，但它们忽略了一个重要的点：
+摸鱼需要保持隐蔽性
+这些摸鱼插件占用了大量的屏幕空间，有些甚至将整个屏幕占满。既然如此，为什么不直接打开浏览器，直接摸鱼呢？
+最好的摸鱼插件是什么？
+我认为扩展商店中的这些摸鱼插件，整活已经大于摸鱼，我更需要的是真正的安全的摸鱼方案，那么一个完美的摸鱼插件究竟需要哪些特点呢？
+绝对的隐蔽性，不能让同事和老板一眼就察觉到你在摸鱼。
+专属的阅读内容，每个人喜欢的平台和内容都不同。例如，我喜欢浏览头条和知乎，而其他人可能更喜欢浏览掘金或小红书，只有喜欢的内容才能让摸鱼更加舒适。
+丝滑的操控，在保持隐蔽的同时，能够在别人专注查看你屏幕内容的时候，瞬间隐藏摸鱼的内容。这绝对不能只依赖于快捷键，因为如果你突然按下键盘，就会引起巨大的摸鱼嫌疑。
+然而，是否存在这样一款插件能够满足上述3个要求呢？
+答案是：并没有！
+那么我们该怎么办呢？那就是自己开发插件。
+我的专用摸鱼插件
+我个人非常喜欢浏览头条，无论是在马桶上、吃饭时、躺在床上甚至是在梦中，我都会刷头条。只有在写代码的时候无法刷到。因此，为了满足我的一边摸鱼一边写代码的需求，我开发了一款专用的摸鱼插件。在这里，我…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -4268,118 +4321,6 @@ Python Function 可以部署在 Azure 上，有点类似 Serverless function，�
   
     
   Anyway.Now 为你提供设计相关行业的新闻资讯、网摘推荐等内容。你也可以通过       RSS       或者       Telegram 频道      订阅，但同样推荐在      官网      上浏览以获得更好的阅读体验。设计、生活美学、数码科技为主题的播客       Anyway.FM       也开启了播客会员服务       Anyway.Member      ，欢迎关注~</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://oracle.zhubai.love/posts/2305577292715491328"
-                        open
-                      >
-                        <summary class="article-expander__title">【0822早报】祝我伟大的母亲生日快乐的周二</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://oracle.zhubai.love/posts/2305577292715491328">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>确实是个特别的日子。  
-      
-  @国内国外  
-    
-  1.三部门发布《关于推动商务信用体系建设高质量发展的指导意见》  
-    
-  2.李强会见美中贸易全国委员会成立50周年访华团  
-    
-  3.财政部：1-7月全国一般公共预算收入139334亿元，同比增长  
-    
-  4.海关总署发布《关于防止猴痘疫情传入我国的公告》  
-    
-  5.国家广电总局等部门专项整治力克电视“套娃”收费现象等问题  
-    
-  6.中消协：网约车聚合平台不得以不正当价格行为扰乱市场秩序  
-    
-  7.中国气象局：探索气候生态产品价值实现机制  
-    
-  8.多城拟降低二套房首付比例，有银行称已跟进执行  
-    
-  9.北京将严禁使用AI生成处方  
-    
-  10.长三角成首个区域性遥感数据开放共享地区  
-    
-  11.国台办：海关总署决定自即日起暂停中国台湾地区芒果输入大陆  
-    
-  12.七夕前廉价求婚钻戒月销10万  
-    
-  13.Sensor Tower：1-7月模拟手游内购收入接近27亿美元，美国市场占比达43%  
-    
-  14.美国30年期国债收益率创2011年以来新高  
-    
-  15.美联储：美国工人跳槽的年薪要求达到将近8万美元，创历史新高  
-    
-  16.美国法官最新裁定：纯AI生成的艺术作品不受版权保护  
-    
-  17.英国计划斥资1.3亿美元购买数千颗高性能人工智能芯片  
-    
-  18.英国大企业CEO去年加薪16%，但薪资仍低于疫情前峰值  
-    
-  19.日本宣布：计划最早于8月24日开始核污染水排海  
-      
-  @商业  
-    
-  1.快手自研大模型“快意”亮相  
-    
-  2.东方甄选入驻淘宝直播，最快本月底开播  
-    
-  3.顺丰控股向港交所递交上市申请  
-    
-  4.B站新设动画、影娱、纪录片一级部门  
-    
-  5.《中国好声音》母公司星空华文跌超30%  
-    
-  6.张庭夫妇成立餐饮公司  
-    
-  7.海南机场：上半年净利润5.83亿元，同比增长807.55%  
-    
-  8.北京、上海办事处回应“高盛（中国）办公室所有人被带走”：正常营业  
-    
-  9.亚马逊重启货运服务，与联邦快递和联合包裹竞争  
-    
-  10.特斯拉新款Model3或已移除所有雷达，新款售价预计20万左右  
-    
-  11.特斯拉100GB数据泄露原因查明：内部不法行为，影响逾7.5万人  
-    
-  12.马斯克承认X可能失败，用户嘲讽：把你所做的都反过来做一遍  
-    
-  13.YouTube将与环球音乐集团合作探索生成式AI时代的音乐未来  
-    
-  14.Threads的日活数量下降到1000万  
-    
-  15.赛百味正在就出售给Roark Capital进行深入谈判  
-    
-  16.花旗考虑拆分机构客户事业群，或成15年来最大的组织调整  
-    
-  17.塔塔寻求与英国电池厂合作以供应捷豹路虎电动汽车  
-    
-  18.ARM向美国证交会提交IPO申请  
-    
-  19.日产在华合资公司旗下自主品牌将使用东风纯电平台  
-    
-  20.韩国SK电讯宣布战略投资AICC开发商  
-    
-  21.纳米材料技术平台开发商“墨格微流”获种子轮融资  
-    
-  22.AI医疗企业“杉木SHANMU”获千万元级天使+轮融资  
-    
-  23. 压力管道监测检测技术提供商“精仪精测”获数千万元A轮融资、  
-    
-  24.集成电路芯片研发商“北极雄芯”获超亿元融资  
-    
-  25.工业AI预测性维护公司“频率探索”获数千万元A轮融资  
-    
-  26.综合型实验动物平台公司“净拓生物”获千万元级Pre-A轮融资</span>
                             </span>
                           </div>
                         </a>
@@ -7291,6 +7232,38 @@ https://github.com/devlive-community/openai-java-sdk/releases/tag/1.9.0</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://yzhu1015.zhubai.love/posts/2305273228933148672"
+                        open
+                      >
+                        <summary class="article-expander__title">Vol.15 Meow Wolf：商业多巴胺，霓虹迷幻剂</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://yzhu1015.zhubai.love/posts/2305273228933148672">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>关于Meow Wolf早有耳闻但没有很深入的了解，前一阵刷到Meow Wolf在达拉斯葡萄藤市项目的一段      游览视频      ，再一次被他们的想象力震撼，同时也惊讶于Meow Wolf居然开进了一家正儿八经的购物中心。在走出疫情阴霾之后，Meow Wolf又一次踩下油门，似乎离建立一个「体验经济时代的娱乐帝国」越来越近了。  
+    
+  Meow Wolf的创业故事已经有很多介绍，但是在收集信息的过程中还有一些好奇：在宏观上，为什么圣达菲可以孕育出有如此独特气质的团体、Meow Wolf的成功如何影响圣达菲的创意产业；在战略层面，Meow Wolf是如何选择扩张的城市、如何与本地社区合作；最后在产品的尺度，Meow Wolf如何通过空间叙事、对于空间有哪些偏好、以及它有多赚钱。  
+    
+  
+    
+  🪅 为什么是圣达菲  
+    
+  先云参观一下圣达菲  
+    
+  其实之前从来没有听说过圣达菲（Santa Fe）这座城市，对新墨西哥州的全部印象也都来自《绝命毒师》👨‍🏫，所以在案头研究之前先在谷歌地球上空降圣达菲。  
+        
+  圣达菲的历史可以追溯到17世纪，是一座由西班牙殖民者建立的城市，这也影响了圣达菲的人口结构和城市风貌。作为新墨西哥州的首府，圣达菲仅有8.8万人口（2021年统计数字），其中有      47%      是西班牙裔，平均年龄40岁。在1956年，州政府发布法令，规定圣达菲的城市风貌必须在一定程度上保留土坯风格，即      Pueblo      风格。独特的风貌和悠久的历史使圣达菲成为小有名气的旅游城市。  
+        
+  在旅游业方面，圣达菲每年接待大约      200万名游客      ，直接和间接带来大约10亿美元的收入。尽管绝对规模并不算大，但旅游业还是圣达菲重要的经济驱动…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://flyhink.zhubai.love/posts/2305270084694130688"
                         open
                       >
@@ -7479,6 +7452,60 @@ const width &#x3D; win…</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7269640045044252712"
+                        open
+                      >
+                        <summary class="article-expander__title">前端食堂技术周刊第 95 期：Fresh 1.4、Rollup 迁移至 SWC计划、RSC Devtools、使用开源库的边界、AI 帮你讲论文</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7269640045044252712">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: fancy
+highlight: github-gist
+美味值：🌟🌟🌟🌟🌟
+口味：冰葡美式
+食堂技术周刊仓库地址：https://github.com/Geekhyt/weekly
+大家好，我是童欧巴。欢迎来到前端食堂技术周刊，我们先来看下上周的技术资讯。
+技术资讯
+Fresh 1.4 发布
+H3 1.8 发布
+TypeScript 将代码格式化工具迁移到 dprint
+Rollup 迁移到 SWC 计划
+国产 AI 辅助编码工具 CodeGeeX
+如何让 AI 帮你讲解论文？
+下面我们来看技术资料。
+技术资料
+1. React 服务器组件 Devtools
+作者描述了 RSC 开发工具的缺失，并分享了如何利用 RSC 的数据格式来创建开发工具，包括可视化工具和浏览器扩展。
+2. 因为 React 你忘记了（或者从来不知道）的事情
+文章探讨了 React 在前端开发中的地位，指出与其他现代框架的差距。作者认为 React 已经落后，而其他框架如 Vue、Svelte 和 Preact 提供了更高效和简洁的解决方案。
+3. 使用 Next.js、Langchain 和 OpenAI 构建 AI 聊天机器人
+如何使用 Next.js、Langchain、OpenAI LLMs 和 Vercel AI SDK 构建 AI 聊天机器人，内容涵盖了从设置模板、实现结构化输出、自主 AI 代理到检索增强生成的步骤。
+4. “骷髅小队”现在瞄准了 NPM
+文章揭示了“Skeleton Squad”从 PyPI 扩展到 npm 生态系统的最新动态。这个威胁团队最初在 PyPI 生态系统中发布了大量恶意包。现在，他们将矛头对准了 npm，对开发者和用户构成安全风险。
+5. 手撸和使用开源库的边界
+本文探讨了自行编写函数与使用开源模块之间的平衡。提出了在考虑使用第三方 JavaScript 模块时的一些关键考虑因素，如维护成本、包大小、是否有标准 API 和必要的代码审查。
+6. 深入理解 JavaScript 和 React 中的闭包
+文章深入探讨了闭包的定义、特点和在现代编程中的应用，强调了其在数据封装和函数创建中的关键作用。
+7. CSS 单位概述
+文章详细探讨了 CSS 的多种尺寸单位，包括绝对单位、字体相对单位、视口相对单位和容器相对单位。作者解释了每种单位的特点、应用场景和如何在不同情境中选择合适的单位。
+❤️爱心三连击
+1.如果你觉得食堂酒菜还合胃口，就点个赞支持下吧，你的赞是我最大的动力。
+2.关注公众号前端食堂，吃好每一顿饭！
+3.点赞、评论、转发 &#x3D;&#x3D;&#x3D; 催更！
+
+好了，以上就是本期的食堂周刊，观众老爷们如果觉得还不错，一键三连是对食堂老板最大的支持。
+你的前端食堂，吃好每一顿饭，我们下期见。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7269668219488354361"
                         open
                       >
@@ -7504,115 +7531,6 @@ Docker 容器化技术是当今最重要的基础设施之一，或者说它已�
 那 Docker 之于前端意义是啥？
 Docker 对前端的意义也很重大。 实际上，Docker 的世界里，并不区分什么前端、后端，没有人说只适合后端、不适合前端 … 在运维的眼…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;12
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7269385060611997711"
-                        open
-                      >
-                        <summary class="article-expander__title">让我摸个鱼吧！纯JS复刻B站首页头图 - 海洋视差效果</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7269385060611997711">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>highlight: a11y-dark
-最近发现 B 站的首页头图的交互效果非常有趣，如下图所示，当鼠标在画面中左右滑动时，海洋生物会栩栩如生地动起来，这可比刷视频得劲多了啊：
-
-这是使用多张具有不同视角的图片，通过透视、位移等处理方式来实现的视差效果，在佩服 UI 与前端对网页交互效果方面的努力和探索之外，我也沉浸在这片“海洋”中疯狂摸鱼：尝试使用原生 JS 来复刻它，最终实现了非常还原的效果：
-
-可点击图片进入 码上掘金 中体验完整效果。
-本文将一步步介绍整个制作思路，并详解其中相关知识点，干货非常多，搬好你的小板凳，咱们话不多说直接开摸吧。
-
-准备工作
-打开浏览器控制台，查看B站头图的 HTML 结构：
-
-不难看出，我们接下来的思路就是把 banner 中所有的图片用一个 .layer 的 div 包住堆叠起来，然后编写鼠标事件对每张图片应用相应的变换(transform)操作，由于接下来的操作我们都用 JS 来完成，所以布局很简单，只需要一个 div 来充当容器：
-loading...
-
-把图片素材通过 JS 添加进容器中，我们创建一个数组来描述这些图片，数据的结构暂时如下所示：
-const barnerImagesData &#x3D; [
-  {
-    url: &#x27;https://xxxx/abcdegfsa.webp&#x27;,
-  },
-  {
-    url: &#x27;https://xxxx/dsaasdsaasdds.webp&#x27;,
-  }, ...........
-]
-
-注：完整数据在 https://code.juejin.cn/api/raw/7267103634863702050?id&#x3D;7267103634863751202 ，这里包含了后续全部代码所需的内容
-然后我们把 barnerImagesData 循环并添加到容器中：…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7269407929592643643"
-                        open
-                      >
-                        <summary class="article-expander__title">推荐 5 个让 VS Code 更好用的设置</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7269407929592643643">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: healer-readable
-1. 学习并自定义快捷键
-在 VS Code 中，快捷键可以说是最重要的提效手段。合理利用快捷键，你的编码效率可以至少提高一倍。首先，你需要学习一些 VS Code 中最常用和最重要的快捷键组合:
-Ctrl/Command + P 快速查找和打开文件，不用再在目录层级中逐个点击寻找
-Shift + Ctrl/Command + P  访问命令面板，可以快速跳转到各种设置和工具
-Ctrl/Command + J 显示/隐藏终端面板
-Ctrl/Command + | 拆分编辑器，实现多文件并排编辑
-Shift + Ctrl/Command + F 全局搜索，可以快速在整个工程中查找文本
-这些快捷键可以极大提高你的编码效率，需要花时间熟练掌握。
-之后，你可以根据自己的使用习惯，自定义一些快捷键组合。例如：
-文件目录快捷键，我会自定义为 Shift + Ctrl/Command + E
-Git 操作面板我会自定义为 Shift + Ctrl/Command + G
-自定义快捷键可以让你更好地记忆和利用这些提效功能
-2. 安装优化界面主题
-VS Code 提供了丰富的主题扩展，可以让你对编辑器的颜色、字体等界面样式进行自定义。对我来说，一个好的VS Code主题，最重要的是不同功能区域之间要有清晰的视觉区分。具体来说，通过为不同区域添加边框、背景等元素，可以让导航栏、侧边栏、编辑器等区域明确分开，不会出现视觉混乱的情况。
-这样可以帮助我更快定位到需要的功能区域，减少视觉搜索时间，从而提高工作效率。将功能区分明确划分开来，是我选择一款VS Code主题最首要的考虑点。
-我比较喜欢的一个主题是 Moegi Theme，这款主题拥有色调柔和、功能区块明显的样式。它同时支持日间和夜间两种模式，可以自动切换到系统设置的模式。由 Diu 设计开发并开源 moegi-design/vscode-theme
-
-3. 安装提升编码效率的插件
-VS Code 最大的优势之一就是拥有非常强大的扩展插件生态。针对各种语言和工作流程，都有插件可以安装来增强功能和效率。
-这里我推荐几款通用的、可以提效的插件:
-Smart Clicks: 通过双击来快速选择或扩展选择范围，可以避免长时间拖动鼠标进行选择
-Error Lens: 可以在代码末尾（内联）实时显示错误和警告标记，让你更快定位到代码问题
-GitLens: 显示代码行修改记录和历史，辅助 Git 开发
-Pretty TypeScript Errors: 帮助开发者更好的阅读 TypeScript 错误
-根据自己的需求，安装 1-2 款常用的插件，就可以获得显著的提效体验。
-4. 个性化设置
-通过修改 settings.json 文件，你可以对 VS Code 进行更深层次的个性化配置。
-例如，我会设置工作台默认采用暗黑模式，并跟随系统切换:
-  &quot;workbench.preferredDarkColorTheme&quot;: &quot;Moegi Dark&quot;，
-  &quot;workbench.preferredLightColorTheme&quot;: &quot;Moegi Light&quot;，
-
-将侧边栏放在编辑器的右侧，这样可以减少因代码过长而滑动横轴的机会：
- &quot;workbench.sideBar.location&quot;: &quot;right&quot;
-
-另外，我习惯 Git Diff 对比采用上下样式，所以会进行如下设置:
-  &quot;diffEditor.renderSideBySide&quot;: false 
-
-👉 查看更多关于我的 VS Code 配置
-搜索并设置一些对个人使用习惯有帮助的配置选项，可以让 VS Code 的默认行为更加智能。
-5. 利用快捷键提示学习快捷键
-即使掌握了许多快捷键，时不时你还会需要用到一些不常用的命令面板或设置菜单。我们并不需要死记所有的快捷键，而是可以利用 VS Code 提供的快捷键提示功能。
-在控制面板 Shift + Ctrl/Command + P 中，输入要查找的命令或功能名称，VS Code 会显示该命令对应的快捷键组合。记下该快捷键，日积月累，你就掌握了更多提效的快捷键。
-例如，输入 snippets ，就可以找到搜索代码片段的快捷键为 Shift + Ctrl/Command + R
-总结
-通过对上述 5 个方面的设置调整，你可以显著提升 VS Code 的使用体验，优化界面显示，增强编辑功能，自定义个性化行为。这样，VS Code 就真正成为一个智能、高效、容易上手的编辑器。注意力不再被界面和操作瓶颈分散，而可以更专注于编码和创作。
-首发于我的个人博客 leonfong.me</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -9384,8 +9302,8 @@ WiFi 使用的频率是 2.4 GHz 和 5 GHz，最多再加上 6 GHz。而光的频
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5995379879">
-        <time id="build-timestamp" datetime="2023-08-28T03:52:28.943Z">2023-08-28T03:52:28.943Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/5996602808">
+        <time id="build-timestamp" datetime="2023-08-28T06:52:37.888Z">2023-08-28T06:52:37.888Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
