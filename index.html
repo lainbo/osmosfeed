@@ -51,6 +51,54 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-31 datetime="2023-08-31T00:12:34.000Z">2023-08-31</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-31 datetime="2023-08-31T00:12:34.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >李继刚的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/64efdaf278d0704d44946d39"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 一条动态</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/64efdaf278d0704d44946d39">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FgTsychTzFeav0CLu81E-fEaTBFwv3.png?imageMogr2/auto-orient/crop/!x1950a0a0/thumbnail/x300" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>即刻App，享受探索、表达和创造</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-30 datetime="2023-08-30T15:47:30.000Z">2023-08-30</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-30 datetime="2023-08-30T15:47:30.000Z"></time>
           </button>
@@ -629,6 +677,60 @@ Tools4dev 是一款“免费的一体化工具箱”解决方案，旨在改善�
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7272564663116759074"
+                        open
+                      >
+                        <summary class="article-expander__title">推送数据？也许你不需要 WebSocket</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7272564663116759074">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>提到推送数据，大家可能会首先想到 WebSocket。
+确实，WebSocket 能双向通信，自然也能做服务器到浏览器的消息推送。
+但如果只是单向推送消息的话，HTTP 就有这种功能，它就是 Server Send Event。
+WebSocket 的通信过程是这样的：
+
+首先通过 http 切换协议，服务端返回 101 的状态码后，就代表协议切换成功。
+之后就是 WebSocket 格式数据的通信了，一方可以随时向另一方推送消息。
+而 HTTP 的 Server Send Event 是这样的：
+
+服务端返回的 Content-Type 是 text/event-stream，这是一个流，可以多次返回内容。
+Sever Send Event 就是通过这种消息来随时推送数据。
+可能你是第一次听说 SSE，但你肯定用过基于它的应用。
+比如你用的 CICD 平台，它的日志是实时打印的。
+那它是如何实时传输构建日志的呢？
+明显需要一段一段的传输，这种一般就是用 SSE 来推送数据。
+再比如说 ChatGPT，它回答一个问题不是一次性给你全部的，而是一部分一部分的加载回答。
+这也是基于 SSE。
+
+
+知道了什么是 SSE 以及它的应用，我们来自己实现一下吧：
+创建 nest 项目：
+npx nest new sse-test
+
+
+把它跑起来：
+npm run start:dev
+
+
+访问 http://localhost:3000 可以看到 hello world，代表服务器跑成功了：
+
+然后在 AppController 添加一个 stream 接口：
+
+这里不是通过  @Get、@Post 等装饰器标识，而是通过 @Sse 标识这是一个 event stream 类型的接口。
+@Sse(&#x27;stream&#x27;)
+stream() {
+    return new Observable…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7272290608655941651"
                         open
                       >
@@ -860,88 +962,6 @@ const removeMultipleElement &#x3D; (rowIndexs)&#x3D;&gt;{
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7272196864510279737"
-                        open
-                      >
-                        <summary class="article-expander__title">【必备】15 个前端开发、写作神器 ~</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7272196864510279737">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>最近在整理 Chrome 浏览器中的标签分类，特地把自己认为最有价值的一些前端开发和写作工具分享给大家！
-之前整理过两篇：
-这 12 个基于 AI 的 VSCode “杀手级” 生产力插件，了解一下？
-我收藏的这 100 + 个”杀手级“网站，你用过几个？
-1、getdevkit
-专门为开发人员准备的 GPT（基于 GPT3.5）！
-
-2、arc 浏览器
-一个号称 Chrome 平替的新浏览器！不试试？主要有以下几个优点：
-对标签过载问题提出了新颖的方案
-交互设计细致入微，重引导而非强迫
-网页修改功能有黑客精神和早期浏览器遗风
-非常美貌（取决于你的偏好）
-
-详细介绍可以参考这篇：Arc: 一个试图改变历史的浏览器
-3、vs-browser
-在 VS Code 中内建的浏览器，简单的调试基本够用了。
-
-4、starship
-轻量、迅速、可无限定制的高颜值终端！
-快：  很快 —— 真的真的非常快！ 🚀
-定制化：  可定制各种各样的提示符。
-通用：  适用于任何 Shell、任何操作系统。
-智能：  一目了然地显示相关信息。
-功能丰富：  支持所有你喜欢的工具。
-易用：  安装快速 —— 几分钟就可上手。
-
-5、bundlephobia 
-每当你想使用一个新的库或者包时，一定要看看这个包的 bundle size！避免把一个 拖油瓶 引入到项目里面。
-
-6、coolors
-开发通常比较缺乏设计和审美，这个网站可以帮你搞定色彩搭配，不至于做出丑陋的“万紫千红”。
-
-7、ray.so
-代码美化就靠它了！写作中，大多数的卡片式代码图片皆来自于此：
-
-其实还有一个：carbon，也挺好看。
-8、excalidraw
-文章写作中的插图神器！
-
-9、dbdiagram
-ER 图神器！
-
-10、drawio
-流程图神器！功能强大且免费~
-
-11、dribble + behance
-dribble
-大量优质的UI资源，你不再需要UI了~
-
-behance
-媲美 dribble 的又一个设计资源，你真的不再需要UI了~
-
-12、regexgpt
-正则神器，知己一步到位，帮你把工具函数都写好，再也不用学正则了！
-
-13、omni
-浏览器高效神器！只需在 Mac 上按 ⌘+Shift+K 或在 Windows 上按 Ctrl+Shift+K。使用简单的命令界面管理选项卡、书签、浏览器历史记录、执行各种操作。
-
-14、json-generator
-批量生成 json 格式的 mock 数据，测试必备！
-
-15、mocks-server
-这个神器可以让你轻松测试前端很多场景都需要的 CRUD！</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -3259,72 +3279,6 @@ const value2 &#x3D; obj?.xyz?.[0]?.fn?.();
   21. 新材料研发商“中微纳维”获千万元级天使轮投资  
     
   22.天然石墨负极厂商“新泰和”获超亿元融资</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >李继刚的即刻动态</button>
-                  <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/64e8439315391e4bc798e2b4"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 背景: 本地有一些 Prompt, 每个 Prompt 单独放在一个文件中, 统一放在一个目录存放. 需求: Prompt 通常写的比较长, 想在笔记中以非常方便地方式快速地调...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/64e8439315391e4bc798e2b4">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FqZ4tbSY_F9Cy0ioTubHx7kEqfuDv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>背景:
-本地有一些 Prompt, 每个 Prompt 单独放在一个文件中, 统一放在一个目录存放.
-需求:
-Prompt 通常写的比较长, 想在笔记中以非常方便地方式快速地调起任意一个 Prompt 进行使用
-解法:
-写一个函数, 主要功能是解析输入 [A:B] , 将 A 作为文件名, 读取文件内容作为 Prompt, B 作为用户输入, 拼在一起, 调用 GPT 的 API.
-示例: 感谢Eli 的 Emacs Lisp代码支持
-(defvar eli/gptel-quick-prompts-directory org-roam-directory)
-(defun eli/gptel-quick-query (beg end)
-  (interactive &quot;r&quot;)
-  (let* ((prompt (string-split (buffer-substring-no-properties beg end)
-                               &quot;:&quot; t &quot; &quot;))
-         (gptel--system-message
-          (with-temp-buffer
-            (insert-file-contents
-             (file-name-concat eli/gptel-quick-prompts-directory
-                               (file-name-with-extension
-                                (car prompt) &quot;.org&quot;)))
-            (goto-char (point-min))
-            (org-next-visible-heading 1)
-            (let* ((elt (org-element-at-point))
-                   (beg (org-element-property :contents-begin elt))
-                   (end (org-element-property :contents-end elt)))
-              (buffer-substring-no-properties beg end))))
-         (user-prompt (cadr prompt)))
-    (gptel-request user-prompt :stream t)
-    (deactivate-mark)))
-(defun eli/gptel-quick-select-prompt ()
-  &quot;Select a prompt.&quot;
-  (interactive)
-  (let* ((full-path (read-file-name &quot;Select: &quot; eli/gptel-quick-prompts-directory))
-         (filename (file-name-base full-path)))
-    (insert filename)))</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -6150,8 +6104,8 @@ WiFi 使用的频率是 2.4 GHz 和 5 GHz，最多再加上 6 GHz。而光的频
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6030426384">
-        <time id="build-timestamp" datetime="2023-08-30T21:52:21.249Z">2023-08-30T21:52:21.249Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6031844691">
+        <time id="build-timestamp" datetime="2023-08-31T01:14:42.143Z">2023-08-31T01:14:42.143Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
