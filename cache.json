@@ -44,7 +44,7 @@
           "description": "一开始看到registerProtocolHandler()方法老激动了，以为又发现了个好玩具，谁知深入体验了一番之后……呵呵~",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-registerprotocolhandler/",
           "publishedOn": "2023-08-30T15:02:58.000Z",
-          "wordCount": 967,
+          "wordCount": 965,
           "title": "一言难尽的registerProtocolHandler()方法",
           "imageUrl": null
         },
@@ -54,7 +54,7 @@
           "description": "一个看似简单的HTML属性的底下，可能是一座巨大的冰山，referrer及其相关特性就是如此。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/web-referer-image-policy/",
           "publishedOn": "2023-08-29T15:53:49.000Z",
-          "wordCount": 1072,
+          "wordCount": 1071,
           "title": "Web referrer策略详解与防盗链图片的显示",
           "imageUrl": null
         },
@@ -64,7 +64,7 @@
           "description": "Performance和PerformanceObserver，用户 Timing API，哦，学不完，根本学不完，这两周抽时间好好研究了一番，终于了解了个大概了🙊，特此记录下。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-performanceobserver-api/",
           "publishedOn": "2023-08-27T08:34:24.000Z",
-          "wordCount": 1292,
+          "wordCount": 1290,
           "title": "狠狠地研究了下 PerformanceObserver API",
           "imageUrl": null
         },
@@ -74,7 +74,7 @@
           "description": "nonce可以用来决定哪些内联JS执行，popover可以无JS实现浮层弹出层交互效果。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/html-attribute-nonce-translate/",
           "publishedOn": "2023-08-10T15:24:42.000Z",
-          "wordCount": 1111,
+          "wordCount": 1109,
           "title": "查漏补缺，我仍未知道的HTML nonce和popover属性",
           "imageUrl": null
         }
@@ -143,12 +143,22 @@
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/64f024796e5e990f20df1c5c",
+          "author": null,
+          "description": "同事把他差点被骗子骗十几万的经历给分享了出来，https://mp.weixin.qq.com/s/qWc_FkbbZYXuVR7pS9A3FA，明明是自己收钱，最后却变成向骗子转账，也是不知道该说啥了。回头再看，整个过程漏洞百出，有几个教训值得分享下：\n1）私人手机号码来电，八成就是骗子了，你可以要求对方通过公司座机打过来，这一步可以挡掉大部分的无妄之灾\n2）引导安装软件，不是 APP Store 的正规通道软件，还需要信任证书，要知道最高权限的证书可以远程直接抹掉手机的所有数据，更别说查看你的数据了\n3）直播录屏，把所有的银行卡操作暴露在骗子眼前，甚至 1Password 密码都暴露出来，只能说太大方\n4）行骗域名是一串奇怪的数字，后缀还是 .icu 结尾，骗子也是够幽默的，这是专骗程序员的域名么？\n5）蚂蚁的老员工，还被骗子 PS 的一张蚂蚁工牌给骗了，竟然没有想到去内网求证一下😂\n骗子都是急人之所急，对人性和情绪有着极度的掌控，被骗者一旦陷进去，想爬出来就难了。小区的教授、公司的技术专家、社交媒体的名人，都是身边真实发生的事件，骗子正在把目光瞄准到知识分子身上。\n需要引以为戒，也许下一个就是自己了……",
+          "link": "https://m.okjike.com/originalPosts/64f024796e5e990f20df1c5c",
+          "publishedOn": "2023-08-31T05:26:17.000Z",
+          "wordCount": 494,
+          "title": "发布了: 同事把他差点被骗子骗十几万的经历给分享了出来，https://mp.weixin.qq.com/s/qWc_FkbbZYXuVR7pS9A3FA，明明是自己收钱，最后却变成向骗子转账，也是不...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/64ef6492c70326f2ebd36783",
           "author": null,
           "description": "iPhone 跟 Mac 之间的跨设备粘贴坏了快一个月了，这一个月每次复制粘贴都是通过 IM 给自己私信，有点忍无可忍。晚上折腾了差不多一个小时，终于找到一个可以恢复的路径：\n1）关闭手机和电脑的蓝牙、WiFi 和接力\n2）手机和电脑都关机，然后都开机\n3）打开手机和电脑的蓝牙、WiFi 和接力\n这个方法的实质是重新启动了所有的连接，并重新建立了新的链接。关闭蓝牙、WiFi 和接力意味着断开了所有的现有连接，包括可能存在的错误连接；重新打开所有的连接时，设备将会重新扫描附近的设备，并建立新的稳定的连接。\n印象中在出现问题之前，跨设备粘贴会 loading 很长的时间，然后慢慢地，就无法进行跨设备粘贴了，也不知道有啥专业的工具可以直接找到是哪个环节出了问题😢",
           "link": "https://m.okjike.com/originalPosts/64ef6492c70326f2ebd36783",
           "publishedOn": "2023-08-30T15:47:30.000Z",
-          "wordCount": 492,
+          "wordCount": 501,
           "title": "发布了: iPhone 跟 Mac 之间的跨设备粘贴坏了快一个月了，这一个月每次复制粘贴都是通过 IM 给自己私信，有点忍无可忍。晚上折腾了差不多一个小时，终于找到一个...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -231,16 +241,6 @@
           "wordCount": 463,
           "title": "发布了: 推荐一个宝藏博主，内容质量都很高：https://www.weibo.com/u/2166767661",
           "imageUrl": "https://cdnv2.ruguoapp.com/FvX7osNubiRGInXzh_q3cmu5M8qhv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/64e8058415391e4bc79181f0",
-          "author": null,
-          "description": "最怕的不是聪明人懒惰，最怕的是笨蛋勤奋。因为笨蛋不懂人性，不会选择，就很容易掉进坑里，勤奋的结果也是在泥坑里勤奋自救。",
-          "link": "https://m.okjike.com/originalPosts/64e8058415391e4bc79181f0",
-          "publishedOn": "2023-08-25T01:36:04.000Z",
-          "wordCount": 438,
-          "title": "发布了: 最怕的不是聪明人懒惰，最怕的是笨蛋勤奋。因为笨蛋不懂人性，不会选择，就很容易掉进坑里，勤奋的结果也是在泥坑里勤奋自救。",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         }
       ]
     },
@@ -285,7 +285,7 @@
           "description": "即刻App，享受探索、表达和创造",
           "link": "https://m.okjike.com/originalPosts/64efdaf278d0704d44946d39",
           "publishedOn": "2023-08-31T00:12:34.000Z",
-          "wordCount": 454,
+          "wordCount": 455,
           "title": "发布了: 一条动态",
           "imageUrl": "https://cdnv2.ruguoapp.com/FgTsychTzFeav0CLu81E-fEaTBFwv3.png?imageMogr2/auto-orient/crop/!x1950a0a0/thumbnail/x300"
         },
@@ -1003,7 +1003,7 @@
           "description": "不要慌。暂停维护（其实我半年前就没再解答问题了），但仍可以继续使用。跟先前一样。\n开始\n我是开源富文本编辑器 wangEditor 作者 王福朋（前端双越老师）。目前暂无精力维护 wangEditor，最近行业形式也不太好，先努力搞钱吧~\n其实早在半年之前，我就没怎么解答问题，当时也没法确定未来是否继续维护，现在基本已经确定了。\n至此国内的开源富文本编辑器，其他几款早就不维护了，我这还算是坚持时间比较长的。PS：像腾讯文档、语雀、飞书、石墨等优秀的编辑器产品，都不算开源的。\n当然，如果有哪位同仁想要承接这份重担，想要接手 wangEditor 的维护，那我特别欢迎。可先看文章最后的要求，再联系我。\nwangEditor 现状\n\n官网、文档和 demo https://www.wangeditor.com/\n最早是在 2014 年我开始尝试做 wangEditor，后面逐步升级过很多个版本，目前是 v5 版本。\n目前 wangEditor 的一些现状还是可以的，已经得到了广大用户的持续支持。\ngithub stars 16k\nnpm 周下载量（v4 13k , v5 15k ）\n官网每日 uv: 2k\n当然，由于一段时间没有解答问题，现在积累了 500+ issues\n我为何不再维护了？\n都成年人了，什么事儿都考虑个成本和收益。至于情怀...\n先说成本\n第一是日常的解答问题。大家在使用过程中，难免会遇到各种问题，用其他产品、工具也一样。\n而且，这会消耗我的很多正向情绪，因为有些人压根就不看文档，有些人光说“报错”连个错误信息都不贴...\n第二是编辑器遇到的一些 bug 和功能优化。只要是有人用，那就一定有 bug ，这个难免的。\n所以，想维护一个很多人在使用的开源产品，成本还是挺高的。\n再说收益\n做开源产品，即便是已经有不少用户的，想通过这个赚钱也是很难的。下文会详细说。\n做…",
           "link": "https://juejin.cn/post/7272735633458413602",
           "publishedOn": "2023-08-30T06:41:35.000Z",
-          "wordCount": 1197,
+          "wordCount": 1098,
           "title": "开源富文本编辑器 wangEditor 暂停维护 （但仍可继续使用）",
           "imageUrl": null
         },
@@ -1013,8 +1013,18 @@
           "description": "提到推送数据，大家可能会首先想到 WebSocket。\n确实，WebSocket 能双向通信，自然也能做服务器到浏览器的消息推送。\n但如果只是单向推送消息的话，HTTP 就有这种功能，它就是 Server Send Event。\nWebSocket 的通信过程是这样的：\n\n首先通过 http 切换协议，服务端返回 101 的状态码后，就代表协议切换成功。\n之后就是 WebSocket 格式数据的通信了，一方可以随时向另一方推送消息。\n而 HTTP 的 Server Send Event 是这样的：\n\n服务端返回的 Content-Type 是 text/event-stream，这是一个流，可以多次返回内容。\nSever Send Event 就是通过这种消息来随时推送数据。\n可能你是第一次听说 SSE，但你肯定用过基于它的应用。\n比如你用的 CICD 平台，它的日志是实时打印的。\n那它是如何实时传输构建日志的呢？\n明显需要一段一段的传输，这种一般就是用 SSE 来推送数据。\n再比如说 ChatGPT，它回答一个问题不是一次性给你全部的，而是一部分一部分的加载回答。\n这也是基于 SSE。\n\n\n知道了什么是 SSE 以及它的应用，我们来自己实现一下吧：\n创建 nest 项目：\nnpx nest new sse-test\n\n\n把它跑起来：\nnpm run start:dev\n\n\n访问 http://localhost:3000 可以看到 hello world，代表服务器跑成功了：\n\n然后在 AppController 添加一个 stream 接口：\n\n这里不是通过  @Get、@Post 等装饰器标识，而是通过 @Sse 标识这是一个 event stream 类型的接口。\n@Sse('stream')\nstream() {\n    return new Observable…",
           "link": "https://juejin.cn/post/7272564663116759074",
           "publishedOn": "2023-08-29T12:48:47.000Z",
-          "wordCount": 1774,
+          "wordCount": 1730,
           "title": "推送数据？也许你不需要 WebSocket",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7272395084259377212",
+          "author": "北岛贰",
+          "description": "theme: vuepress\nhighlight: atom-one-dark\n版权声明：本人文章仅在掘金平台发布，请勿抄袭搬运，转载请注明作者及原文链接 🦉\n阅读提示：网页版带有主题和代码高亮，阅读体验更佳 🍉\n前言\n选择公司，就是在选自己未来的命运。\n遇到一家好公司，你未来的职业道路，生活水平，工作热情，技术提升都是积极生长的。\n但遇到一家烂公司，你未来的一年甚至几年，都将处在水深火热之中。\n有时候仅仅是自己的一点犹豫，或者是自己的一点不察，就进入了一家烂公司，导致自己的职业履历横添污渍。\n很不幸，我曾经如此，我有朋友更是如此。\n于是就有了这篇文章，该如何挑选一家好公司？特别是在面试、沟通过程中就识别出烂公司，这些个人经验，也许能帮到你。\n顺带讲讲朋友的故事，他的悲惨遭遇也许能让你知道找一家好公司的重要性。\n一、朋友来成都，连遇两家垃圾公司\n21 年底，我和当时的朋友一起从上一家公司离职，未来的发展城市都定在成都。\n22 年年初过完初七我就立马回到昆明的出租屋，开始着手复习，准备面试，直觉告诉我，越早越好，也许市场马上就会变化，那时还在疫情封控之中，我有种很不安的感觉。\n我运气比较好，简历被捞到，两家都是成都比较不错的中小公司，面试都到了最后环节，都发了 offer。\n第一家，HR 讲话温柔和气，技术面时面试官给人的感觉也算真诚，给的薪资也很 OK。\n第二家是某银行数字科技部，流程非常慢，HR 的处理就是懒懒散散，一点也不积极，整个面试时间跨度比较大。二面是个老头，好像是大领导，但不是技术 leader。这些流程隐隐让我觉得很不专业，很不 OK，薪资定得也不是很好，但其实第二家给 offer 时，第一家已经催我入职了，我一看薪资定得不如预期，基本就没走后续流程了。最后的发 offer 流程也就没有参与。\n两家的网上评价我都去搜了，还查了两家的工商信息，综合来看，第…",
+          "link": "https://juejin.cn/post/7272395084259377212",
+          "publishedOn": "2023-08-29T07:10:52.000Z",
+          "wordCount": 1650,
+          "title": "金九银十招聘季，IT 打工人，该怎么识别烂公司好公司？",
           "imageUrl": null
         },
         {
@@ -1023,7 +1033,7 @@
           "description": "微信搜索 【大迁世界】, 我会第一时间和你分享前端行业趋势，学习途径等等。\n本文 GitHub  https://github.com/qq449245884/xiaozhi 已收录，有一线大厂面试完整考点、资料以及我的系列文章。\n快来免费体验ChatGpt plus版本的，我们出的钱 体验地址:https://chat.waixingyun.cn 可以加入网站底部技术群，一起找bug，另外新版作图神器，ChatGPT4 已上线 https://cube.waixingyun.cn/home\n该篇文章讨论了日本网站外观与设计的独特之处。作者指出日本网站设计与西方设计存在明显差异。文章首先强调了日本网站的视觉风格，包括丰富的色彩、可爱的角色和复杂的排版。作者解释了这种风格背后的文化和历史因素，包括日本的印刷传统和动漫文化。\n文章还讨论了日本网站的信息密集型布局，这种布局适应了日本语言的特点，使得页面能够容纳大量文字和图像。此外，文章提到了日本网站的功能丰富性，如弹出式窗口和互动元素，以及这些元素在用户体验方面的作用。\n作者强调了日本网站在技术和创新方面的进步，尽管在过去存在技术限制。最后，文章提出了一些关于如何将日本网站设计的元素应用到其他文化中的建议。\n下面是正文~~~\n多年来，我朋友与日本的网站有过许多接触——无论是研究签证要求、计划旅行，还是简单地在线订购东西。而我花了很长时间才适应这些网站上的大段文字、大量使用鲜艳颜色和10多种不同字体的设计，这些网站就像是直接冲着你扔过来的。\n\n虽然有许多网站都采用了更简约、易于导航的设计，适应了西方网站的用户，但是值得探究的是为什么这种更复杂的风格在日本仍然盛行。\n只是为了明确起见，这些不是过去的遗迹，而是维护的网站，许多情况下，它们最后一次更新是在2023年。\n\n我们可以从几个角度来分析这种设计方法：\n字体和前端网站开发限制\n技…",
           "link": "https://juejin.cn/post/7272290608655941651",
           "publishedOn": "2023-08-29T00:39:23.000Z",
-          "wordCount": 899,
+          "wordCount": 890,
           "title": "为什么日本的网站看起来如此不同",
           "imageUrl": null
         },
@@ -1033,7 +1043,7 @@
           "description": "前言\n测试发现了一个问题，简单描述问题就是通过函数删除一个数组中多个元素，传入的参数是一个数组索引。\n然后发现实际效果有时删除的不是想要的内容。\n欢迎关注公众号《前端界》，文章会同步更新，也可快速加入前端交流群！\n具体 Bug 代码实现:\nconst arr = [1,2,3,4,5,6,7];\nconst removeData = (rowIndexs:Array<number>)=>{\n    if(Array.isArray(rowIndexs)){\n        rowIndex.forEach((index)=>{\n            arr.splice(index,1)\n        })\n    }\n}\nremoveData([1,4]); \nconsole.log(arr); // 输出结果 [1,3,4,5,7]\n// 期望输出结果 [1,3,4,6,7]\n\n上面代码出现问题的原因是 splice 会改变原始数组的，然后导致索引偏移，不知道有没有同学出过类似问题。\n因为这个 bug 我发现有些同学基础该是比较差，导致一些不必要的问题，于是把它变成了一道基础面试题，注意考基础，同时删除数组中的多个元素利用索引数组有多少种方式，把可以想到的方法都写一下哦(其实不是为了难为人，知识想考察一下面试者javaScript的基础编写能力) 接下来介绍这几种方法，欢迎补充\n方法一：先倒序后删除\n这种方式将参数索引数组按照从大到小排序，避免了删除元素导致的索引偏移\nconst arr = [1,2,3,4,5,6];\nconst removeMultipleElement = (rowIndexs)=>{\n    // 先倒序\n    if(Array.isArray(rowIndexs)){\n        rowIndexs = rowIndexs.sort…",
           "link": "https://juejin.cn/post/7272290608655859731",
           "publishedOn": "2023-08-29T00:10:43.000Z",
-          "wordCount": 1283,
+          "wordCount": 1267,
           "title": "前端实习生的这个 bug 被用做了一道基础面试题",
           "imageUrl": null
         },
@@ -1043,7 +1053,7 @@
           "description": "最近在整理 Chrome 浏览器中的标签分类，特地把自己认为最有价值的一些前端开发和写作工具分享给大家！\n之前整理过两篇：\n这 12 个基于 AI 的 VSCode “杀手级” 生产力插件，了解一下？\n我收藏的这 100 + 个”杀手级“网站，你用过几个？\n1、getdevkit\n专门为开发人员准备的 GPT（基于 GPT3.5）！\n\n2、arc 浏览器\n一个号称 Chrome 平替的新浏览器！不试试？主要有以下几个优点：\n对标签过载问题提出了新颖的方案\n交互设计细致入微，重引导而非强迫\n网页修改功能有黑客精神和早期浏览器遗风\n非常美貌（取决于你的偏好）\n\n详细介绍可以参考这篇：Arc: 一个试图改变历史的浏览器\n3、vs-browser\n在 VS Code 中内建的浏览器，简单的调试基本够用了。\n\n4、starship\n轻量、迅速、可无限定制的高颜值终端！\n快：  很快 —— 真的真的非常快！ 🚀\n定制化：  可定制各种各样的提示符。\n通用：  适用于任何 Shell、任何操作系统。\n智能：  一目了然地显示相关信息。\n功能丰富：  支持所有你喜欢的工具。\n易用：  安装快速 —— 几分钟就可上手。\n\n5、bundlephobia \n每当你想使用一个新的库或者包时，一定要看看这个包的 bundle size！避免把一个 拖油瓶 引入到项目里面。\n\n6、coolors\n开发通常比较缺乏设计和审美，这个网站可以帮你搞定色彩搭配，不至于做出丑陋的“万紫千红”。\n\n7、ray.so\n代码美化就靠它了！写作中，大多数的卡片式代码图片皆来自于此：\n\n其实还有一个：carbon，也挺好看。\n8、excalidraw\n文章写作中的插图神器！\n\n9、dbdiagram\nER 图神器！\n\n10、drawio\n流程图神器！功能强大且免费~\n\n11、dribble + behance\ndribble\n大量优质的UI资源，你不再需要UI了~\n\nbehance\n媲美 dribble 的又一个设计资源，你真的不再需要UI了~\n\n12、regexgpt\n正则神器，知己一步到位，帮你把工具函数都写好，再也不用学正则了！\n\n13、omni\n浏览器高效神器！只需在 Mac 上按 ⌘+Shift+K 或在 Windows 上按 Ctrl+Shift+K。使用简单的命令界面管理选项卡、书签、浏览器历史记录、执行各种操作。\n\n14、json-generator\n批量生成 json 格式的 mock 数据，测试必备！\n\n15、mocks-server\n这个神器可以让你轻松测试前端很多场景都需要的 CRUD！",
           "link": "https://juejin.cn/post/7272196864510279737",
           "publishedOn": "2023-08-28T10:29:52.000Z",
-          "wordCount": 1120,
+          "wordCount": 1122,
           "title": "【必备】15 个前端开发、写作神器 ~",
           "imageUrl": null
         },
@@ -1063,7 +1073,7 @@
           "description": "theme: devui-blue\n前言\n最近项目中遇到天气预报展示的功能需求，调研后最终选择接入和风天气api，功能亮点如下：\n非商业用户 1000次/天 到 SDK 无限量访问\n按坐标、城市名称、格点方式定位并展示对应天气信息\n实时、三日、七日天气预报\n灾害极端天气预警信息\n全国空气质量信息\n热带台风信息\n天文气象数据（日出、日落、月相、太阳角度等）\n订阅模式\n有三种订阅模式：\n免费订阅\n标准订阅\n高级订阅\n对比如下\n\n大家可以根据自己需求接入对应的模式即可，下面笔者接入的是免费订阅。\n接入\n首先我们需要注册并登录和风天气管理端（地址），然后创建项目获取到key\n\n获取近7日天气预报\n拿到key之后，调用接口就很简单了。这里举个功能使用例子，如获取近7天天气预报：\nhttps://api.qweather.com/v7/weather/7d?[请求参数]\n\n请求参数包括必选和可选参数，参数之间使用&进行分隔。\nlocation(必选) 需要查询地区的LocationID或以英文逗号分隔的经度,纬度坐标（十进制，最多支持小数点后两位），LocationID可通过城市搜索服务获取。例如 location=101010100 或 location=116.41,39.92\nkey(必选)用户认证key，请参考如何获取你的KEY。支持数字签名方式进行认证。例如 key=123456789ABC\n更详细信息可以直接查阅文档-> 传送门\n使用天气图标\n接下来讲解下如何在小程序中引入并使用天气图标。\n我们先打开下天气图标下载官网->传送门\n\n接着点击下载，将图标文件下载到本地，解压后我们只需用到两个文件：\n\n\n接着在页面中引入这两个文件：\n<style>\n@import './static/font/qweather-icons.css';\n\n@font-face {\n  font-family: 'qweather-icons';\n  src: url('./static/font/qweather-icons.ttf')\n    format('truetype');\n}\n\n.QWeather {\n  font-family: 'qweather-icons';\n  font-size: 20px;\n}\n</style>\n\n\n接着打开qweather-icons.css文件，我们将第一部分默认引入字体代码路径去掉（上面已经引入过了）\n\n页面中使用\n <text class=\"QWeather\"\n        :class=\"[isNight ? 'qi-' + item.iconNight : 'qi-' + item.iconDay]\"\n ></text>\n\n这里需要注意的是：\n接口返回的图标字段没有qi字段，我们需要在类名中加上前缀【qi-】。\n返回的图标分白天跟晚上，我们需要判断下当前时间是白天还是晚上，然后分别取iconDay和iconNight字段\n看下效果吧\n\n扫码体验\n评论区可扫码体验哦~",
           "link": "https://juejin.cn/post/7272025820967895076",
           "publishedOn": "2023-08-28T05:40:38.000Z",
-          "wordCount": 1015,
+          "wordCount": 1001,
           "title": "小程序中免费接入和风天气api",
           "imageUrl": null
         },
@@ -1073,7 +1083,7 @@
           "description": "WebRTC 系列教程分为三篇进行介绍，本篇为第三篇\nWebRTC 这么火 🔥，前端靓仔，请收下这篇入门教程\nWebRTC 实战 | 快速搭建 1 对 1 音视频通话。\n我们在第一篇主要学习了 WebRTC 的相关概念以及通信的过程，这是 WebRTC 的基础，读完第一篇那么你对 WebRTC 也有了一定的概念；于是第二篇我们立马来了一对一的实战，来巩固大家的学习成果，看评论也有人跟着实现了一遍 👍。\n这是第三篇也是最后一篇关于 WebRTC 的介绍和使用，这节相对简单，即使用第三方 SDK 来搭建多人视频会议。这里我们用的是 LiveKit。\n这时候有人会问：用 LiveKit 是基于什么原因啊？\n哈哈，我也不懂啊，也刚入门两周而已，我都不知道有哪些可以用的第三方框架。虽然一对一的音视频通讯顺利完成，也得到了 leader 的口头奖励。但领导又想最快看到多人视频会议，于是发个沸点，问问万能的掘友们...\n\n果然，有问题上掘金就对了！ 很感谢这位 jy @威猛 de 小狮子 🙏。\n另外，如果各位万能的jy，有更好用的框架，麻烦在评论区吱一声。趁着现在还没用起来，早点给它换掉。\n再了解 LiveKit 前，我们先来了解下多人音视频实时通讯的架构。\n多人音视频三大架构\nMesh\nMesh 架构是利用 Webrtc 对等连接，在参与会议的各方之间两两 P2P 连接，即 P2P2P2P，形成一个网状结构。\n\n优势 👆\n实现简单，只需要 ICE 服务器用于实现 P2P 穿越就行；\n不需要服务器中转数据，节省开发和成本；\n充分利用了客户端的带宽资源。\n缺陷 👇\n每端都需要将自己的媒体流发送到其他各端，并从其他各端获取流，占用带宽较多，参与人越多，占用的带宽就越大，所以对带宽的要求极高，Mesh 架构在真实的应用场景中几乎没有人使用。\nMCU\nMCU（Multipoint Co…",
           "link": "https://juejin.cn/post/7271974618565705785",
           "publishedOn": "2023-08-28T00:38:10.000Z",
-          "wordCount": 1792,
+          "wordCount": 1823,
           "title": "刚学WebRTC两天，领导让搭建多人视频会议，怎么整？",
           "imageUrl": null
         },
@@ -1083,7 +1093,7 @@
           "description": "theme: condensed-night-purple\n前言\n为什么要写这么一篇文章，原因是今天下午水群的时候，有个小伙伴分享自己的面试题，其中一个是foreach和map的区别，其实是蛮简单，蛮基础的一道题，但是他是这么回答的\n一个会改变原数组，一个不会\n我当场就懵了，我以为是整活，谁知道是认真的，并且给我发了一篇文章\n\n我看完更蚌埠住了，那么多对的文章，你偏偏挑个错的\n然后我发现，真的很多人都这么认为的，那这真的是一件很可怕的事情，明明你自己试一下就知道了，甚至有不少文章都是这么写的，但是我也看到了不错的文章，写的已经不错了\n那么咱们，就这个简单的问题，咱们浅浅地说一下~\n区别\nmap会返回一个新的数组，而forEach不会\n简单的区别我们可以在MDN上看看\n\n\n简单来说什么意思，map会返回一个新的数组，而forEach不会，实际上是因为forEach不会返回任何值（实际上返回的是undefined），而map 是有返回值的，是一个新数组\n我们可以简单手写一下，看的会更直观一些\nmap\nfunction myMap(array, callback) {\n  const result = [];\n\n  for (let i = 0; i < array.length; i++) {\n    result.push(callback(array[i], i, array));\n  }\n\n  return result;\n}\n\nforEach\nfunction myForEach(array, callback) {\n  for (let i = 0; i < array.length; i++) {\n    callback(array[i], i, array);\n  }\n}\n\n再简单点对比\nforEach 和 map 的实现原理相似。它们都是通过遍历数组，对数组的…",
           "link": "https://juejin.cn/post/7271846986998054971",
           "publishedOn": "2023-08-27T13:57:25.000Z",
-          "wordCount": 2042,
+          "wordCount": 2030,
           "title": "面试：问js的forEach和map的区别",
           "imageUrl": null
         },
@@ -1093,7 +1103,7 @@
           "description": "theme: cyanosis\n为什么别人的 hooks 里面有那么多的 ref\n前言\n最近因为一些原因对useCallback有了一些新的认知，然后遇到一个朋友说他面试的时候被问到如何实现一个倒计时的hooks的时候，想到了这个问题，突然的茅塞顿开，对react 中的hooks有了新的了解，所以有了这篇文章，记录一下我个人的想法。\n在学习一些开源的库的时候，很容易发现开源库中 hooks 里面会写很多的 ref 来存储hooks的参数。\n使用了 ref 之后，使用变量的地方就需要 .current 才能拿到变量的值，这比我直接使用变量肯定是变得麻烦了。对于有代码洁癖的人来说，这肯定是很别扭的。\n但是在开源库的 hooks 中频繁的使用了 ref，这肯定不是一个毫无原因的点，那么究竟是什么原因，让开源库也不得不使用 .current 去获取变量呢？\nuseCallback\n先跑个题，什么时候我们需要使用 useCallback 呢？\n每个人肯定有每个人心中的答案，我来讲讲我的心路历程吧。\n第一阶段-这是个啥\n刚开始学react的时候，写函数式组件，我们定义函数的时候，肯定是不会有意识的把这个函数使用 useCallback 包裹。就这样写了一段时间的代码。\n突然有一天我们遇到了一个问题，useEffect无限调用，找了半天原因，原来是因为我们还不是很清楚useEffect依赖的概念，把使用到的所有的变量一股脑的塞到了依赖数组里面，碰巧，我们这次的依赖数组里面有一个函数，在react每一次渲染的时候，函数都被重新创建了，导致我们的依赖每一次都是新的，然后就触发了无限调用。\n百度了一圈，原来使用 useCallback 缓存一下这个函数就可以了，这样useEffect中的依赖就不会每一次都是一个新值了。\n小总结： 在这个阶段，我们第一次使用 useCallback ，了解到了它…",
           "link": "https://juejin.cn/post/7271643757640007680",
           "publishedOn": "2023-08-27T11:59:02.000Z",
-          "wordCount": 1152,
+          "wordCount": 1157,
           "title": "为什么别人的 hooks 里面有那么多的 ref",
           "imageUrl": null
         },
@@ -1103,7 +1113,7 @@
           "description": "喜大普奔\n8 月 21 日，在某 gov.cn 官网上有一篇文章作出以下报告：\n国内首款适配国产操作系统、自主可控的集成开发环境工具 CEC-IDE；国内首款数据安全极限生存保障产品——数据安全守护软硬件一体化产品；国内首款国密指纹认证鼠标……\n\n在《喜大普奔：全新自主研发的超强 CEC-IDE ，打破国外垄断》一文中有简要叙述。\n网友挖掘\n8 月 24 日，众多网友经过文件分析并在 vscode 官方仓库创建了编号为 #191279 和 #191229 的 issues，引来网友在该帖进行大量讨论。大量证据都在表明 CEC-IDE 涉嫌造假。\n\n8 月 25 日，CEC-IDE 官网已无法访问。\n\nimport * as fs from \"fs-extra\";\n\nconst sourceExePath = \"path/to/vscode.exe\";\nconst iconFilePath = \"path/to/new-icon.ico\";\n\nconst sourceExeBuffer = fs.readFileSync(sourceExePath);\nconst iconFileBuffer = fs.readFileSync(iconFilePath);\n\nconst targetExeBuffer = replaceIconData(sourceExeBuffer, iconFileBuffer);\n\nfs.writeFileSync(\"path/to/output.exe\", targetExeBuffer);\n\nfunction replaceIconData(sourceBuffer: Buffer, iconBuffer: Buffer): Buffer {\n  const targetBuffer = sourceBuffer.clone();\n  const…",
           "link": "https://juejin.cn/post/7271613128361082941",
           "publishedOn": "2023-08-27T05:26:37.000Z",
-          "wordCount": 1446,
+          "wordCount": 1428,
           "title": "我也惊呆了！关于数字广东对于 CEC-IDE 重大事件的道歉声明网友解读",
           "imageUrl": null
         },
@@ -1113,8 +1123,18 @@
           "description": "theme: awesome-green\n很多使用mac做研发的小伙伴应该都会遇到类似的问题：\n配置环境变量，可是每次重启终端后都生效；需要重新执行 : source ~/.bash_profile\n这是因为你是在bash中配置的环境变量，而当前系统是使用的是shell\n你可以通过在终端输入：echo $SHELL来查看当前使用的shell，输出是/bin/zsh，说明使用的是zsh\n解决办法\n打开终端：你可以在“应用程序”文件夹的“实用工具”子文件夹中找到终端应用，也可以使用Spotlight搜索来找到它。\n输入以下命令并按下回车键，进入你的主目录：\nbashCopy code\ncd ~\n\n显示隐藏文件，输入以下命令查看主目录中的隐藏文件：\nbashCopy code\nls -a\n\n如果已经存在 .zshrc 文件，你会在列表中看到它。如果没有，请继续下一步创建它。\n如果 .zshrc 文件不存在，你可以使用以下命令创建它：\nbashCopy code\ntouch .zshrc\n\n现在，使用文本编辑器（在这里使用 vi）打开 .zshrc 文件：\nCopy code\nvi .zshrc\n\n按下 i 键，进入编辑模式。在文件的末尾添加以下内容：\nbashCopy code\nsource ~/.bash_profile\n\n按下 Esc 键，然后输入 :wq 并按下回车键，保存文件并退出 vi 编辑器。\n: 进入命令模式\nw 表示写入（保存）\nq 表示退出\nwq 表示写入并退出\n现在你已经成功将 source ~/.bash_profile 添加到 .zshrc 文件中。\n这时候你就会发现再也不用每次重启电脑或终端都需要重新source ~/.bash_profile才能生效了",
           "link": "https://juejin.cn/post/7271287156571832359",
           "publishedOn": "2023-08-26T14:26:05.000Z",
-          "wordCount": 1073,
+          "wordCount": 1041,
           "title": "一招教你永久解决每次打开mac每次都要source ~/.bash_profile（过程超详细）",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7271518821809553469",
+          "author": "Byron_Yan",
+          "description": "theme: channing-cyan\n效果\n\n优点\n避免了 el-form-item 规则提示信息过长换行显示不全问题\n聚焦直接显示规则状态变化，得以及时提醒用户输入\n输入过程中，直观感受到所有规则以及校验情况\n失焦隐藏提示，样式仍存在提示用户\n直接触发表单校验，只有样式变化，整体画面更简洁\n需求\n聚焦组件显示提示，失焦隐藏（非必填情况聚焦不显示，不满足规则再显示）\n首次聚焦，基于当前组件值展示校验结果\n值变化，每个规则都要对只进行校验\n存在任意一个规则错误，红框展示，全部正确，蓝框展示\n解析思路\n先说个题外话，在满足需求下，封装组件还有几个技术要求\n\n原有页面替换使用方便\n使用习惯尽量保持不变\n原有功能不缺失\nUI 大大这需求，明显是针对 el-form-item 组件；先看看如何满足技术要求\n\n封装一个组件承接规则校验和提示处理（不满足）\n在 el-form-item 基础上进行改造，并命名为新组件，替换使用（满足）\n解析需求\n\n采用 el-popover 进行提示，非必填情况通过 disabled 处理\n首次聚焦主动触发规则校验函数\n值变化，触发规则校验，直接复用 el-form-item 逻辑\n状态变化直接复用 el-form-item 逻辑\n实现\nel-form-item 改造\n采用继承重写部分功能，达到低成本实现需求\n\n通过设置 extends：FormItem、name：form-item-tip，让 form-item-tip 拥有 FormItem 能力\nscript 中选项 API，与 FormItem 一致的名称会被覆盖，不一致的会被合并处理\ntemplate 只能被覆盖，无法被合并处理\n<template>\n  <div class=\"el-form-item\">\n    .....\n  </div>\n</template>\n<script>\ni…",
+          "link": "https://juejin.cn/post/7271518821809553469",
+          "publishedOn": "2023-08-26T08:04:56.000Z",
+          "wordCount": 2216,
+          "title": "UI大大：element表单交互不太行，按照我设计的实现一下",
           "imageUrl": null
         },
         {
@@ -1123,7 +1143,7 @@
           "description": "用户登录之后，会返回一个用户的标识，之后带上这个标识请求别的接口，就能识别出该用户。\n标识登录状态的方案有两种： session 和 jwt。\nsession 是通过 cookie 返回一个 id，关联服务端内存里保存的 session 对象，请求时服务端取出 cookie 里 id 对应的 session 对象，就可以拿到用户信息。\n\njwt 不在服务端存储，会直接把用户信息放到 token 里返回，每次请求带上这个 token，服务端就能从中取出用户信息。\n\n这个 token 一般是放在一个叫 authorization 的 header 里。\n这两种方案一个服务端存储，通过 cookie 携带标识，一个在客户端存储，通过 header 携带标识。\nsession 的方案默认不支持分布式，因为是保存在一台服务器的内存的，另一台服务器没有。\n\njwt 的方案天然支持分布式，因为信息保存在 token 里，只要从中取出来就行。\n\n所以 jwt 的方案用的还是很多的。\n服务端把用户信息放入 token 里，设置一个过期时间，客户端请求的时候通过 authorization 的 header 携带 token，服务端验证通过，就可以从中取到用户信息。\n但是这样有个问题：\ntoken 是有过期时间的，比如 3 天，那过期后再访问就需要重新登录了。\n这样体验并不好。\n想想你在用某个 app 的时候，用着用着突然跳到登录页了，告诉你需要重新登录了。\n是不是体验很差？\n所以要加上续签机制，也就是延长 token 过期时间。\n主流的方案是通过双 token，一个 access_token、一个 refresh_token。\n登录成功之后，返回这两个 token：\n\n访问接口时带上 access_token 访问：\n\n当 access_token 过期时，通过 refresh_token …",
           "link": "https://juejin.cn/post/7271139265442021391",
           "publishedOn": "2023-08-25T13:56:26.000Z",
-          "wordCount": 3521,
+          "wordCount": 3465,
           "title": "基于 Axios 封装一个完美的双 token 无感刷新",
           "imageUrl": null
         },
@@ -1133,7 +1153,7 @@
           "description": "theme: channing-cyan\nhighlight: an-old-hope\n今天，我们要实现一个很常见并且简单的功能：将手机号中间的几位数变成****\n这个功能其实很常见，比如我们微信的账号安全里面显示的手机号、掘金的账号设置里面显示的手机号、支付宝里面的证件号码、各大银行的App卡号.....还有很多有关系到我们私密的地方，在此就不一一例举了，看似简单的功能，我们该如何实现呢？\n其实实现的方法有很多，在这里作者将使用js的方式来实现，如有不正确或者需要修改的地方，请多多指教，有更好的方法也可以留言~\n下面所使用到的方法，相信学习过javaScript的小伙伴们都非常熟悉，但是你还记得他们的用法嘛？下面作者会对使用到的方法进行简单回顾，不太记得的小伙伴要去回顾一下了呢~\n好了，废话少说，开始进入正题。\n1. 第一种，使用字符串和数组中常见的几个方法。字符串方法：split()。数组方法：splice()，join()。\n在实现之前，我们先一起来回顾一下这几个方法：\nsplit()： 将一个字符串拆分为一个子字符串数组，并返回该数组。\n注释：该方法返回新数组，不会更改原始字符串。\n注意：如果(\"\")用作分隔符，则会对字符串进行逐个字符拆分。\nhttps://www.w3school.com.cn/jsref/jsref_obj_string.asp\n下面是一个例子\nconst str = “hello”\nlet arr = str.split(\"\");\nconsole.log(arr); // h,e,l,l,o\n\nsplice()：方法向数组添加或从数组中删除项目，并返回删除的项目。\n注释：splice() 该方法会改变原始数组。https://www.w3school.com.cn/jsref/jsref_obj_array.asp\n下面是一个例子：\ncons…",
           "link": "https://juejin.cn/post/7271058595444752443",
           "publishedOn": "2023-08-25T06:37:32.000Z",
-          "wordCount": 1363,
+          "wordCount": 1357,
           "title": "用js如何实现将手机号中间的几位数字变成****",
           "imageUrl": null
         },
@@ -1143,28 +1163,8 @@
           "description": "上面这个错误，相信前端开发工程师应该经常遇到吧，要么是自己考虑不全造成的，要么是后端开发人员丢失数据或者传输错误数据类型造成的。因此对数据访问时的非空判断就变成了一件很繁琐且重要的事情，下面就介绍ES6一些新的语法来方便我们开发。\n1. 可选链操作符 (Optional Chaining Operator - ?.):\n可选链操作符允许您在访问对象属性或调用函数时，检查中间的属性是否存在或为 null/undefined。如果中间的属性不存在或为空，表达式将短路返回 undefined，而不会引发错误。\n1.1 用法示例：\nconst obj = {\n foo: {\n   bar: {\n     baz: 42\n   }\n },\n xyz: []\n};\n\n\n// 使用可选链操作符\nconst value1 = obj?.foo?.bar?.baz; // 如果任何中间属性不存在或为空，value 将为 undefined\n//除了对属性的检查，还可以用于对数组下标及函数的检查\nconst value2 = obj?.xyz?.[0]?.fn?.();\n   \n// 传统写法\n const value1 = obj && obj.foo && obj.foo.bar && obj.foo.bar.baz; // 需要手动检查每个属性\n const value2 = obj && obj.xyz && obj.xyz[0] && obj.xyz[0].fn && obj.xyz[0].fn();\n\n1.2 使用场景：\n链式访问对象属性，而不必手动检查每个属性是否存在。\n调用可能不存在的函数。\n2. 空值合并操作符 (Nullish Coalescing Operator - ??):\n空值合并操作符用于选择性地提供默认值，仅当变量的值为 null 或 undefined 时，才…",
           "link": "https://juejin.cn/post/7270900584466513974",
           "publishedOn": "2023-08-25T03:21:39.000Z",
-          "wordCount": 1424,
+          "wordCount": 1414,
           "title": "js中?.、??、??=的用法及使用场景",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7270685165201539109",
-          "author": "codexu",
-          "description": "想法\n作为前端开发者，大多数人都使用 VSCode，并且可能会找一些在 VSCode 中可以摸鱼的插件。我也尝试了一些：\nZhihu On VSCode，知乎摸鱼。\ndaily anime，追番插件。\n韭菜盒子，看股票、基金、期货实时数据。\n电影集，看热映电影。\n\n除此之外，还有许多其他的插件，比如听音乐、看小说、刷力扣、浏览掘金等等。甚至有人开发了一个类似小霸王游戏机的插件。\n\nVSCode本身是基于 Node.js 和浏览器的应用程序，因此，熟悉前端开发的同学可以想到，在 VSCode 中可以实现几乎所有 Node.js 和浏览器能做的事情。上面提到的摸鱼插件有着很好的想法，功能和代码也做得不错，但它们忽略了一个重要的点：\n摸鱼需要保持隐蔽性\n这些摸鱼插件占用了大量的屏幕空间，有些甚至将整个屏幕占满。既然如此，为什么不直接打开浏览器，直接摸鱼呢？\n最好的摸鱼插件是什么？\n我认为扩展商店中的这些摸鱼插件，整活已经大于摸鱼，我更需要的是真正的安全的摸鱼方案，那么一个完美的摸鱼插件究竟需要哪些特点呢？\n绝对的隐蔽性，不能让同事和老板一眼就察觉到你在摸鱼。\n专属的阅读内容，每个人喜欢的平台和内容都不同。例如，我喜欢浏览头条和知乎，而其他人可能更喜欢浏览掘金或小红书，只有喜欢的内容才能让摸鱼更加舒适。\n丝滑的操控，在保持隐蔽的同时，能够在别人专注查看你屏幕内容的时候，瞬间隐藏摸鱼的内容。这绝对不能只依赖于快捷键，因为如果你突然按下键盘，就会引起巨大的摸鱼嫌疑。\n然而，是否存在这样一款插件能够满足上述3个要求呢？\n答案是：并没有！\n那么我们该怎么办呢？那就是自己开发插件。\n我的专用摸鱼插件\n我个人非常喜欢浏览头条，无论是在马桶上、吃饭时、躺在床上甚至是在梦中，我都会刷头条。只有在写代码的时候无法刷到。因此，为了满足我的一边摸鱼一边写代码的需求，我开发了一款专用的摸鱼插件。在这里，我…",
-          "link": "https://juejin.cn/post/7270685165201539109",
-          "publishedOn": "2023-08-24T06:35:39.000Z",
-          "wordCount": 2159,
-          "title": "高阶摸鱼指南 - 自己开发vscode插件悄无声息地摸鱼",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7270648629378367528",
-          "author": "掘一",
-          "description": "theme: cyanosis\n简介\n大家好，今天要给大家带来一个Super Cool的玩意儿😎！\n在本篇技术文章中，将介绍如何使用HTML、CSS和JavaScript创建一个独特而引人注目的\"文字(字母&数字)\"雨🌨️动画效果。通过该动画，展现出的是一系列随机字符将从云朵中下落像是将文字变成雨滴从天而降，营造出与众不同的视觉效果；\n\nHTML\n创建一个基本的HTML结构，这段HTML代码定义了一个容器，其中包含了\"云朵\"和\"雨滴\"(即文字元素)。基本结构如下：\n首先是类名为container的容器，表示整个动画的容器；\n其次是类名为cloud的容器，表示云朵的容器；\n接着是cloud容器中的文字元素，表示雨滴(即文字元素)；\n然后引入外部创建的css和js文件，可以先定义几个text容器，用于调整样式；\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Text Rain Animation</title>\n\n  <link rel=\"stylesheet\" href=\"./css/style.css\">\n</head>\n<body>\n  <div class=\"container\">\n    <div class=\"cloud\">\n      <!-- <div class=\"text\">a</div> -->\n      <!-- <div class=\"text\">b</div> -->\n      <!-- <div class=\"text\">c</div> -->\n      <!-- 雨滴将会在这里出现 -->\n …",
-          "link": "https://juejin.cn/post/7270648629378367528",
-          "publishedOn": "2023-08-24T06:14:12.000Z",
-          "wordCount": 1989,
-          "title": "当文字成为雨滴：HTML、CSS、JS创作炫酷的\"文字雨\"动画！",
           "imageUrl": null
         },
         {
@@ -1173,7 +1173,7 @@
           "description": "theme: smartblue\n为什么推荐使用ref而不是reactive\nreactive本身具有很大局限性导致使用过程需要额外注意,如果忽视这些问题将对开发造成不小的麻烦;ref更像是vue2时代option api的data的替代,可以存放任何数据类型,而reactive声明的数据类型只能是对象;\n先抛出结论,再详细说原因:非必要不用reactive! (官方文档也有对应的推荐)\n官方原文:建议使用 ref() 作为声明响应式状态的主要 API。\n最懂Vue的人都这么说了:推荐ref!!!!!!\n\nreactive和 ref 对比\nreactive\nref\n\n\n\n\n❌只支持对象和数组(引用数据类型)\n✅支持基本数据类型+引用数据类型\n\n\n✅在 <script> 和 <template> 中无差别使用\n❌在 <script> 和 <template> 使用方式不同(script中要.value)\n\n\n❌重新分配一个新对象会丢失响应性\n✅重新分配一个新对象不会失去响应\n\n\n能直接访问属性\n需要使用 .value 访问属性\n\n\n❌将对象传入函数时,失去响应\n✅传入函数时,不会失去响应\n\n\n❌解构时会丢失响应性,需使用toRefs\n❌解构对象时会丢失响应性,需使用toRefs\n\n\n\n\nref 用于将基本类型的数据（如字符串、数字，布尔值等）和引用数据类型(对象) 转换为响应式数据。使用 ref 定义的数据可以通过 .value 属性访问和修改。\nreactive 用于将对象转换为响应式数据，包括复杂的嵌套对象和数组。使用 reactive 定义的数据可以直接访问和修改属性。\n原因1:reactive有限的值类型\nreactive只能声明引用数据类型(对象)\nlet  obj = reactive({\n   name: '小明',\n   age : 18\n})\n\nref既能声…",
           "link": "https://juejin.cn/post/7270519061208154112",
           "publishedOn": "2023-08-24T02:29:46.000Z",
-          "wordCount": 1464,
+          "wordCount": 1436,
           "title": "Vue3为什么推荐使用ref而不是reactive",
           "imageUrl": null
         },
@@ -1183,7 +1183,7 @@
           "description": "theme: vue-pro\n学习服务端 Web 框架最好的方式，就是从头写一个 Web 框架。与其按部就班的学习，开发框架本身更高效！\n如果你是一名前端开发，学习 Web 框架技术可以帮助你理解 Web 应用的整体架构，跨入全栈工程师的赛道，获得更多机会。当然，如果你是后端开发，Web 框架开发应该是你的必学内容了。\n开发 Web 框架就像造轮子，关键是如何让轮子既有用又有趣。\n\n掘金小册联合作者「曾振中」创作了《TypeScript 框架开发实战》这本小册，基于 TypeScript，再现了一个开源 Web 框架从 0 到 1 的开发过程，完成 30+ TypeScript 装饰器和框架核心、路由、数据三大模块，助你快速掌握服务端开发精髓！\n\n曾振中，前虎牙直播研发效能组技术经理，现任职某海外直播 App 技术负责人，关注技术管理、全栈开发以及研发效能等领域。开发并长期维护 SpeedPHP、k、TypeSpeed 等开源 Web 框架及社群。\nWeb 框架包括哪些部分？\n假设，我们从浏览器开始访问某个页面地址，那这个访问请求发送到 Web 框架之后，会先到达 API 路由，再经由路由功能指向不同的页面代码。\n当某个页面代码被执行时，通常会先读取或者写入数据库，修改和存储业务状态数据，完成特定业务需求，然后返回给浏览器具体的数据。\n在此基础上，还需要一套针对对象进行管理的核心机制来协调这些对象的生产和使用，类似前面提到的 Database 对于数据库连接对象的管理。\n因此，Web 框架的主要组成部分包括核心对象管理、路由功能和数据读写。\n核心对象管理是 Web 框架运行和扩展的基础逻辑。它提供了一整套方法，规定了如何创建和使用对象，无论对象来自于框架内部或是框架使用者编写的对象。\n路由功能将浏览器的访问地址与页面代码关联起来。作为程序的功能入口，大部分 Web 程序的功…",
           "link": "https://juejin.cn/post/7267800436260782121",
           "publishedOn": "2023-08-16T08:53:12.000Z",
-          "wordCount": 1059,
+          "wordCount": 1084,
           "title": "🔥小册上新 | TypeScript 框架开发实战",
           "imageUrl": null
         }
@@ -1194,6 +1194,16 @@
       "feedUrl": "https://rsshub.app/juejin/pins/6824710202000932877",
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
+        {
+          "id": "7273096710826295348",
+          "author": "Seal软件",
+          "description": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件#\nAI Code Translator 是一款功能强大的在线工具，可以将代码从一种编程语言无缝翻译为另一种编程语言。无论您是想将 Python 代码转换为 Java 还是将 JavaScript 代码转换为 C++，AI Code Translator 都能满足您的需求。\n立即尝试：https://ai-code-translator.com/",
+          "link": "https://juejin.cn/pin/7273096710826295348",
+          "publishedOn": "2023-08-31T06:09:00.000Z",
+          "wordCount": 593,
+          "title": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件# AI Code Translator 是一款功能强大的在线工具，可以将代码从一种编程语言无缝翻译为另一种编程语言。无论您...",
+          "imageUrl": null
+        },
         {
           "id": "7273043415427940392",
           "author": "qianmoq",
@@ -1210,7 +1220,7 @@
           "description": "免注册 无限使用的ChatGPT https://sunmier.com/#/",
           "link": "https://juejin.cn/pin/7272869799960035391",
           "publishedOn": "2023-08-30T06:19:56.000Z",
-          "wordCount": 536,
+          "wordCount": 533,
           "title": "免注册 无限使用的ChatGPT https://sunmier.com/#/",
           "imageUrl": null
         },
@@ -1220,7 +1230,7 @@
           "description": "[7073670907851440160#新人报道#]",
           "link": "https://juejin.cn/pin/7272714715020640310",
           "publishedOn": "2023-08-30T02:46:35.000Z",
-          "wordCount": 514,
+          "wordCount": 516,
           "title": "[7073670907851440160#新人报道#]",
           "imageUrl": null
         },
@@ -1250,7 +1260,7 @@
           "description": "https://github.com/devlive-community/datacap                    全平台数据中台系统\nhttps://github.com/devlive-community/authx                        全平台权限管理系统\nhttps://github.com/devlive-community/openai-java-sdk      多平台开放 AI SDK\n欢迎大家贡献代码",
           "link": "https://juejin.cn/pin/7272564663115890722",
           "publishedOn": "2023-08-29T10:21:27.000Z",
-          "wordCount": 539,
+          "wordCount": 536,
           "title": "https://github.com/devlive-community/datacap 全平台数据中台系统 https://github.com/devlive-community/authx 全平台权限管理系统 https://github.com/devli...",
           "imageUrl": null
         },
@@ -1290,7 +1300,7 @@
           "description": "推荐一个比浏览器自带好用的翻译插件",
           "link": "https://juejin.cn/pin/7272508420270669860",
           "publishedOn": "2023-08-29T01:18:37.000Z",
-          "wordCount": 546,
+          "wordCount": 543,
           "title": "推荐一个比浏览器自带好用的翻译插件",
           "imageUrl": null
         },
@@ -1383,16 +1393,6 @@
           "wordCount": 566,
           "title": "泰裤辣，我国终于有首款自主研发的国产IDE了 但是奇怪怎么官网打不开了。。。",
           "imageUrl": null
-        },
-        {
-          "id": "7271070291689783350",
-          "author": "我圆滚滚",
-          "description": "CEC-IDE是个什么东西，jym有知道的吗",
-          "link": "https://juejin.cn/pin/7271070291689783350",
-          "publishedOn": "2023-08-25T09:18:44.000Z",
-          "wordCount": 530,
-          "title": "CEC-IDE是个什么东西，jym有知道的吗",
-          "imageUrl": null
         }
       ]
     },
@@ -1407,7 +1407,7 @@
           "description": "显然不合理。但是你不能直接跟老板说“不”。 推友私信问我的问题，因为属于常见问题，经过跟推友确认，我隐掉隐私信 …\n  老板要求设计师把日活用户数作为 KPI 考核指标，合理吗？又该怎么跟老板沟通？ 查看全文 »",
           "link": "https://nishuang.net/%e8%80%81%e6%9d%bf%e8%a6%81%e6%b1%82%e8%ae%be%e8%ae%a1%e5%b8%88%e6%8a%8a%e6%97%a5%e6%b4%bb%e4%bd%9c%e4%b8%ba-kpi-%e8%80%83%e6%a0%b8%e6%8c%87%e6%a0%87-%e5%90%88%e7%90%86%e5%90%97/",
           "publishedOn": "2023-08-10T14:52:39.000Z",
-          "wordCount": 407,
+          "wordCount": 442,
           "title": "老板要求设计师把日活用户数作为 KPI 考核指标，合理吗？又该怎么跟老板沟通？",
           "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/08/FpEyIKdXgAELY1Q.jpeg"
         },
@@ -1487,7 +1487,7 @@
           "description": "Scandinavian heavy metal: Why Earth’s happiest pl …\n  倪爽的阅读分享 – 2023年8月3日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b48%e6%9c%883%e6%97%a5/",
           "publishedOn": "2023-08-04T00:15:43.000Z",
-          "wordCount": 350,
+          "wordCount": 392,
           "title": "倪爽的阅读分享 – 2023年8月3日",
           "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/08/Meshuggah_-_Rock_am_Ring_2018-6418.jpg"
         },
@@ -1497,7 +1497,7 @@
           "description": "前 Facebook 设计副总裁 Julie Zhuo 的发表了一篇热情而深刻的文章：“更高层次的设计。一篇长 …\n  更高层次的设计（翻译稿） 查看全文 »",
           "link": "https://nishuang.net/%e6%9b%b4%e9%ab%98%e5%b1%82%e6%ac%a1%e7%9a%84%e8%ae%be%e8%ae%a1%ef%bc%88%e7%bf%bb%e8%af%91%e7%a8%bf%ef%bc%89/",
           "publishedOn": "2023-08-02T22:22:58.000Z",
-          "wordCount": 389,
+          "wordCount": 431,
           "title": "更高层次的设计（翻译稿）",
           "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/08/918ede5a-bb31-4c6c-b4e4-27f8155d2a25_1024x1024.webp"
         },
