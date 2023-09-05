@@ -44,7 +44,7 @@
           "description": "一开始看到registerProtocolHandler()方法老激动了，以为又发现了个好玩具，谁知深入体验了一番之后……呵呵~",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-registerprotocolhandler/",
           "publishedOn": "2023-08-30T15:02:58.000Z",
-          "wordCount": 969,
+          "wordCount": 971,
           "title": "一言难尽的registerProtocolHandler()方法",
           "imageUrl": null
         },
@@ -54,7 +54,7 @@
           "description": "一个看似简单的HTML属性的底下，可能是一座巨大的冰山，referrer及其相关特性就是如此。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/web-referer-image-policy/",
           "publishedOn": "2023-08-29T15:53:49.000Z",
-          "wordCount": 1094,
+          "wordCount": 1095,
           "title": "Web referrer策略详解与防盗链图片的显示",
           "imageUrl": null
         },
@@ -64,7 +64,7 @@
           "description": "Performance和PerformanceObserver，用户 Timing API，哦，学不完，根本学不完，这两周抽时间好好研究了一番，终于了解了个大概了🙊，特此记录下。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-performanceobserver-api/",
           "publishedOn": "2023-08-27T08:34:24.000Z",
-          "wordCount": 1293,
+          "wordCount": 1294,
           "title": "狠狠地研究了下 PerformanceObserver API",
           "imageUrl": null
         },
@@ -74,7 +74,7 @@
           "description": "nonce可以用来决定哪些内联JS执行，popover可以无JS实现浮层弹出层交互效果。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/html-attribute-nonce-translate/",
           "publishedOn": "2023-08-10T15:24:42.000Z",
-          "wordCount": 1112,
+          "wordCount": 1114,
           "title": "查漏补缺，我仍未知道的HTML nonce和popover属性",
           "imageUrl": null
         }
@@ -143,6 +143,16 @@
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/64f68f293c00b8f53d54e1a9",
+          "author": null,
+          "description": "Montaigne，https://montaigne.io，是一个可以将你的本地 Apple Notes 文件夹直接变成一个在线网站的工具，这比 Github Pages 发布个人博客更快、更酷。你需要做的就是在本地创建一个包含子域名的文件夹，例如 barretlee.montaigne.io 作为文件夹名，然后把文件夹的权限分享给工具作者，后续该文件夹下的所有内容的发布都会被同步到这个子域名下。\n作者并没有介绍他是如何实现的，Apple 也没有开放官方的 API 可以直接获取 Notes 的数据，我想到两个方案可以完成这个工作。\n1. 抓取 iCloud 数据\n通过类似爬虫的方式，使用 iCloud 的 Web 接口，可以获取到 Apple Notes 的数据，有一个开源库 iCloud-API 可以参考：https://github.com/MauriceConrad/iCloud-API，这种方式的适配成本比较高，苹果稍稍改版，就需要进行一次适配，另外也存在一定的风险，通过这种方式获取 Apple 的数据是违反使用协议的，一旦被感知可能会面临账号处罚的风险。\n2. 使用 AppleScript 抓取\nApple 提供了一门 AppleScript 语言，它可以像按键精灵一样，操作 Apple 系统上的所有程序，而且针对系统内置的程序，还提供了原生访问指令，例如读取 Notes 中有多少条笔记，可以直接在你的命令行执行：\nosascript -e '\n  tell application \"Notes\"\n      set noteCount to count of notes\n  end tell\n  log noteCount\n'\n有人就使用 AppleScript 封装了一个工具，可以将 Apple Notes 导出到 SQLite 里头，https://github.com/dogsheep/apple-notes-to-sqlite，有了数据，实现一个自动发布到线上的程序就不是什么难事儿了。\n方案一有风险，方案二需要有一个长期在线的 Mac 环境（AWS 提供了类似的服务），不知道还有没有更加环保、高效的方案，可以更轻便地拿到数据。",
+          "link": "https://m.okjike.com/originalPosts/64f68f293c00b8f53d54e1a9",
+          "publishedOn": "2023-09-05T02:15:05.000Z",
+          "wordCount": 614,
+          "title": "发布了: Montaigne，https://montaigne.io，是一个可以将你的本地 Apple Notes 文件夹直接变成一个在线网站的工具，这比 Github Pages 发布个人博客更快、更酷。...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FqYQrzg1xvT_CQaULeR5OSyStfYTv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/64f57b5def2a3efae7383421",
           "author": null,
           "description": "茅咖的正确点单方式",
@@ -158,7 +168,7 @@
           "description": "推荐一篇好文：《每个人每天都只有24小时，希望我的选择真的是我的选择》，https://justinyan.me/post/5790，文章信息量比较大，作者以自我成长为线索，将自己近些年读过的好书以深度思考的方式总结和输出，比较有启发。\n文章提到的书籍，我也读过一部分，在我最焦虑的一年，我读了大概十本关于「心灵成长、内观自己」的书籍，很大程度修正了我的人生观和价值观。\n文章中提到的书籍及豆瓣评分：\n- 《工作、消费主义和新穷人》，8.3\n- 《被讨厌的勇气》，8.6\n- 《手机大脑》，7.2\n- 《娱乐至死》，8.5\n- 《贪婪的多巴胺》，7.8\n- 《每周工作4小时》，7.8\n- 《毫无意义的工作》，7.7\n- 《逃避自由》，9.3\n- 《追究幸福》，8.0\n- 《直视骄阳：征服死亡恐惧》，8.8\n- 《最优解人生》，8.1\n- 《“活在当下”指南》，7.2\n- 《人生十二法则》，7.6\n- 《当下的力量》，8.4\n- 《清醒地活》，8.9\n- 《观呼吸》，9.0\n- 《正见》，8.9\n- 《西藏生死书》，8.7\n再推荐另外几本对我个人影响比较大的书籍：\n- 《理解人性》，8.4，读完《被讨厌的勇气》再看看这本会很有感触\n- 《福格行为模型》，8.7，看透行动的本质\n- 《当呼吸化为空气》，9.1，看一个生死边界的人如何理解人生\n每本经典好书，都值得来来回回反复阅读，相比阅读十本信息量稀疏的书籍，前者效果会更好。",
           "link": "https://m.okjike.com/originalPosts/64f575e48425e0dd3bbca006",
           "publishedOn": "2023-09-04T06:15:00.000Z",
-          "wordCount": 485,
+          "wordCount": 480,
           "title": "发布了: 推荐一篇好文：《每个人每天都只有24小时，希望我的选择真的是我的选择》，https://justinyan.me/post/5790，文章信息量比较大，作者以自我成长为线索，...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -231,16 +241,6 @@
           "wordCount": 464,
           "title": "转发了: 写了一个脚本，探测内容中的链接是否包含色情信息，https://github.com/barretlee/blog/blob/master/scripts/detect-sensitive-content.js 首先将博客里...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/64f1ae0e8425e0dd3b6b38cc",
-          "author": null,
-          "description": "公安和网信办给我来电，说我的个人博客涉黄，要求立即处理，满脸黑线……\n按照指示，看了下，是 2013 年写的博客文章里引用了一篇 2009 年的外链，这个外链以前也是个博客，由于域名没有续费，被抢注，现在已经是黄色网站了。\n只能说，锅从天上来。在中国，只要涉及公开内容，主体人就有极大风险。考虑初犯且没有恶意情节，本次让我写保证书和内容处置情况反馈表，不允许再犯🤒",
-          "link": "https://m.okjike.com/originalPosts/64f1ae0e8425e0dd3b6b38cc",
-          "publishedOn": "2023-09-01T09:25:34.000Z",
-          "wordCount": 540,
-          "title": "发布了: 公安和网信办给我来电，说我的个人博客涉黄，要求立即处理，满脸黑线…… 按照指示，看了下，是 2013 年写的博客文章里引用了一篇 2009 年的外链，这个...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FtvGrNP-KGewtrvwXPejKIP1pKE4v3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
         }
       ]
     },
@@ -250,12 +250,22 @@
       "siteUrl": "https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/64f6c2f52a0c03ca1385ff73",
+          "author": null,
+          "description": "# Role\n马屁精\n## Profile\n- author: 李继刚\n- version: 0.2\n- LLM: GPT-4\n- Plugin: none\n- description: 专门从事拍马屁的艺术，通过精准的措词和独特的角度，让人感到如沐春风。\n## Attention\n尽量挖掘出对方的优点，措词精准，让人感到愉悦和自信。\n## Background\n由于现代社交中经常需要赞美和吹捧，但很多人做得不够精致，因此需要一个擅长这一领域的专家。\n## Constraints\n- 不能进行无脑的夸赞，必须找到对方的真正优点\n- 不能过度吹捧，以免让人感到不舒服或虚假\n- 不要使用\"您\", 使用\"你\"就好. 用平视的角度来夸赞, 不要仰视.\n## Example:\n- 小张带着女朋友回家,正好隔壁老王来串门儿,他看到后就夸了一句, \"你这小子真有眼光,跟你爸一样。\"\n- 添加完好友, 给对方发出一句夸赞: 你是我眼中理工男和文艺中年的微妙平衡，堪为精神上的“中年男性典范”.\n## Goals\n- 通过精准的措词和独特的角度，找出并强调对方的优点, 让对方感到愉悦和自信\n## Skills\n- 观察力：准确地找出对方的优点\n- 文字表达能力：用精准和富有感染力的语言进行赞美\n## Tone\n- 高雅而不做作\n- 充满阳光，给人信心\n## Value\n- 诚实：不进行无脑和虚假的夸赞\n- 尊重：认真对待每一次的赞美机会，不轻浮\n- 真诚：语气要诚恳，不要过度夸张的表达，不要太多语气词（呢、呀、啊、哇）\n- 具体：要从用户提供的信息中挖掘出需要被夸赞的人的某种独特的特征，对它的独特性进行针对性的夸赞\n- 信服：夸赞要符合逻辑，否则就会显得虚假\n## Workflow\n- 输入: 用户输入基本事项信息\n- 思考: 观察和分析用户提供的信息，通过你那清奇的思考角度, 找到其中值得夸赞的优点\n- 马屁: 通过精准的措词和真诚的语气进行赞美\n## Initialization\n开场白如下:\n\"谁说拍马屁就不能登大雅之堂, 你试试我能不能把你拍舒服了~~.  来, 随便给我说点你的事情听听\"",
+          "link": "https://m.okjike.com/originalPosts/64f6c2f52a0c03ca1385ff73",
+          "publishedOn": "2023-09-05T05:56:05.000Z",
+          "wordCount": 565,
+          "title": "发布了: # Role 马屁精 ## Profile - author: 李继刚 - version: 0.2 - LLM: GPT-4 - Plugin: none - description: 专门从事拍马屁的艺术，通过精准的措词和独特...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fk7JM-HbBWSMflv9SF4vJmVEC0s8v3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/64f69f3e2a0c03ca1381ee8c",
           "author": null,
           "description": "ai 的发展太快，后面我努力聚焦于一个小点：\n帮助完全不会编程的普通人写好prompt。\n吃到ai 发展红利。",
           "link": "https://m.okjike.com/originalPosts/64f69f3e2a0c03ca1381ee8c",
           "publishedOn": "2023-09-05T03:23:42.000Z",
-          "wordCount": 457,
+          "wordCount": 459,
           "title": "发布了: ai 的发展太快，后面我努力聚焦于一个小点： 帮助完全不会编程的普通人写好prompt。 吃到ai 发展红利。",
           "imageUrl": "https://cdnv2.ruguoapp.com/FvWCkr9SqqshKBKRgWNDjPPvdt5Wv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -338,16 +348,6 @@
           "wordCount": 642,
           "title": "发布了: 读科普书籍时, 经常会读到类似\"你可以忘掉上面的所有数学公式讨论, 只要记住一句话: XXX.\" 过了一段时间, 回想该书, 确实只能想到那句话. 公式有那么多,...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fnw7rD0wV420i46qi6nKFjQbV9JPv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/64f21a59757144eb9ad74e3e",
-          "author": null,
-          "description": "读书是一个接收作者信息的事情.\n按信息论的角度, 你接收一段信息的快慢, 取决于这段信息对你来说, 有多少不确定性.\n如果读了上句, 就知道下句, 就会读得非常快; 如果读到哪一句都一惊一乍, 全是新信息, 就会读得非常慢.\n所以, 读书速度的快慢, 取决于你之前读过多少书.",
-          "link": "https://m.okjike.com/originalPosts/64f21a59757144eb9ad74e3e",
-          "publishedOn": "2023-09-01T17:07:37.000Z",
-          "wordCount": 462,
-          "title": "发布了: 读书是一个接收作者信息的事情. 按信息论的角度, 你接收一段信息的快慢, 取决于这段信息对你来说, 有多少不确定性. 如果读了上句, 就知道下句, 就会读得...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         }
       ]
     },
@@ -374,16 +374,6 @@
           "publishedOn": "2023-09-04T01:10:12.000Z",
           "wordCount": 63,
           "title": "【0904早报】总之形势一片大好的周一",
-          "imageUrl": "https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png"
-        },
-        {
-          "id": "https://space.zhubai.love/posts/2310165074893045760",
-          "author": "WhyLiam",
-          "description": "对人类而言，无知是不可避免的，但问题在于我们常常没有意识到自己的无知。我们的无知会塑造我们的生活，使我们在某些领域感到无助。然而，有时候无知也可以让我们更快乐，因为知道得越少，欲望也就越少。  \n    \n  企业家精神不是因为成为企业家才有，而是在成为企业家之前就已经具备。企业家的决策是发现和创造的过程，而不是给定数据下的解方程。他们不是在现有约束条件下求解，而是改变约束条件本身  \n    \n  很多时候，我们会试图逃避此刻正在发生的事情，这似乎是人类的主要职业。要练习不逃避，可以减少手机使用时间，远离电脑，花更多时间思考困难的任务，推迟电子邮件和即时消息的回复等。当我们切断逃避的路径时，我们开始面对那些我们不想面对的事物。  \n  \n      \n  一个状态：谈谈「我们的无知」  \n        \n  无知绝非幸事，但它也不必然是痛苦的。对人类而言，无知是不可避免的，这是我们的本来状态。对任何人来说，这世界都有太多的复杂性待理解。无知可能会令人沮丧，但问题并不在于无知本身，而是我们身陷其中却浑然不觉。  \n    \n  戴维·邓宁说，    「我们不善于看到自己的未知」    。（We’re not very good」: David Dunning in interview with Errol Morris, New York Times Opinionator, June 20, 2010.）  \n    \n  邓宁说，当问题发生时，唯一的办法就是用你自己的知识来评估你到底了解多少。这时候专业和无知就表现无遗，专业意味着你具备某些能力，而且还知道这些能力是由什么构成的，无知则说明你两者皆无。为此，邓宁提出了著名的「邓宁–克鲁格效应（Dunning-Kruger effect 简称「达克效应」）」，意即    表现最差的人也总是最高估自身能力    。  \n …",
-          "link": "https://space.zhubai.love/posts/2310165074893045760",
-          "publishedOn": "2023-09-03T17:01:28.000Z",
-          "wordCount": 63,
-          "title": "L35: 无知是不可避免的",
           "imageUrl": "https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png"
         },
         {
@@ -517,6 +507,16 @@
           "imageUrl": "https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png"
         },
         {
+          "id": "https://river.zhubai.love/posts/2307769929677881344",
+          "author": "何弦",
+          "description": "You can’t connect the dots looking forward; you can only connect them looking backward. So you have to trust that the dots will somehow connect in your future. You have to trust in something — your gut, destiny, life, karma, whatever. This approach has never let me down, and it has made all the difference in my life.   \n    \n  Steve Jobs  \n    \n  这段话来自于苹果公司创始人Steve Jobs在2005年斯坦福大学毕业典礼上的演讲。我20岁左右第一次看这个演讲视频时，印象最深的其实是那句：  \n    \n  If today were the last day of my life, would I want to do what I am about to do today?  \n    \n  到了30岁，让我觉得更有共鸣的却是他在演讲中“连点成线”的概念：  \n    \n  你不能朝前看去把点连起来；你只能向后看去把点连起来。所以你必须相信，这些点将来会以某种方式连在一起。你必须相信某些东西——你的直觉、命运、生活、因果报应、无论什么。这种思路从没有让我失望，而且它为我的人生带来了本质的不同。  \n    \n  他在演讲中分享了自己在大学时期遵循自己的内心，退学并且参加了一门书法课的故事。而这些没有被计划的意外事件却对他后来设计Macintosh计算机产生了重要影响。  \n    \n  None of this had even…",
+          "link": "https://river.zhubai.love/posts/2307769929677881344",
+          "publishedOn": "2023-08-28T02:24:01.000Z",
+          "wordCount": 63,
+          "title": "20230828 允许奇迹发生",
+          "imageUrl": "https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png"
+        },
+        {
           "id": "https://oracle.zhubai.love/posts/2307752179789946880",
           "author": "靳斯羽",
           "description": "什么时候能让老爷们知道，是真没钱了，不是不花钱。  \n      \n  @国内国外  \n    \n  1.两部门：8月28日起，证券交易印花税实施减半征收  \n    \n  2.港交所：沪股通及深股通下交易印花税调整  \n    \n  3.香港特区政府成立小组研究如何增加股票市场流动性  \n    \n  4.证监会进一步规范股份减持行为  \n    \n  5.中办、国办：深入实施国家重点研发计划青年科学家项目  \n    \n  6.中央气象台8月27日10时继续发布暴雨黄色预警  \n    \n  7.国家统计局：1-7月份全国规模以上工业企业利润下降  \n    \n  8.乘联会崔东树：7月汽车行业利润407亿元，同比下降  \n    \n  9.福建首条全自动运行地铁线开通：可自动唤醒、出入站  \n    \n  10.武汉自主研发脑机接口技术实现新突破  \n    \n  11.三亚市场监管局开展日本核辐射食品检查  \n    \n  12.李家超：香港特区政府正就搞活夜经济进行研究工作  \n    \n  13.美国商务部部长雷蒙多抵达北京  \n    \n  14.美联储9月会议维持利率不变的概率为80.5%  \n    \n  15.俄联邦侦查委员会：确认普里戈任在特维尔州飞机失事事件中遇难  \n    \n  16.欧委会被曝将调查宁德时代匈牙利电池厂，或涉欧盟地下水法令  \n    \n  17.日本水产品价格暴跌，部分产地鲍鱼价格较去年同期降价30%  \n    \n  18.日本民众举行集会，要求停止福岛第一核电站核污染水排海  \n    \n  19.泰国大米出口价格飙升  \n    \n  20.中国女排U21世锦赛夺冠  \n    \n  21.人造太阳中国环流三号取得重大科研进展  \n    \n  22.全国首座“零海拔天文观测站” ——慕士塔格天文观测站交付  \n    \n  23.真实空间测量首次检测到量子纠缠波  \n      \n  @商业  \n    \n  1.小鹏汽车：拟58.35亿元收购滴滴智能汽车开发业务资产  \n    \n  2.滴滴出行：小鹏汽车拟打造A级智能电动汽车MONA，预计2024年量产  \n    \n  3.刘庆峰：华为 GPU 已可对标英伟达  \n    \n  4.武林外传官方账号发布声明称浙江卫视恶意侵权  \n    \n  5.Rokid发布人机交互AR新品“Rokid AR Studio”  \n    \n  6.光线传媒：上半年实现营收6.05亿元 归母净利润2.03亿元  \n    \n  7.呷哺呷哺：上半年收入同比增加32%，同比扭亏为盈  \n    \n  8.青岛啤酒：上半年实现营业收入215.92亿元 净利润34.26亿元  \n    \n  9.涪陵榨菜：上半年营收13.37亿元 净利润4.7亿元  \n    \n  10.中国恒大：上半年收入为1281.8亿元，净亏损392.5亿元  \n    \n  11.中国石化：2023年上半年实现营业收入15936.82亿元 归母净利润351.11亿元  \n    \n  12.中国烟草总公司澄清：“卷烟9月1日起涨价”为虚假信息  \n    \n  13.马斯克推出招聘平台欲对标LinkedIn  \n    \n  14.生物育种及生命科技智能自动化企业“瀚辰光翼”获超3亿元B+轮融资",
@@ -563,6 +563,26 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230905/t20230905_526408649.html",
+          "author": "国家预警信息发布中心",
+          "description": "开州区气象局2023年9月5日12时50分发布“高温橙色预警信号”，预计5日13时至19时，关面乡、谭家镇、和谦镇、温泉镇、郭家镇、白鹤街道、丰乐街道、文峰街道、汉丰街道、云枫街道、镇东街道、正安街道、竹溪镇、临江镇、中和镇、南雅镇、铁桥镇、巫山镇、岳溪镇、南门镇、长沙镇、赵家街道、渠口镇、厚坝镇、金峰镇海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230905/t20230905_526408649.html",
+          "publishedOn": "2023-09-05T04:54:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市开州区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230905/t20230905_526408611.html",
+          "author": "国家预警信息发布中心",
+          "description": "铜梁区气象台2023年9月5日11时40分发布“高温橙色预警信号”，预计9月5日13时至18时，旧县街道、白羊镇、安居镇、石鱼镇、华兴镇、土桥镇、南城街道、庆隆镇、永嘉镇、安溪镇等海拔400米以下地区日最高气温将升至37℃以上，请以上各地注意防范。防御指南：1.注意防中暑、防溺水；2.注意林区、景区、城镇、古镇古街、农事活动、祭祀等火灾防范；3.注意节约用电、用水和安全生产；4.缩短户外活动和露天作业时间；5.相关部门和乡镇街道按照职责，做好高温防范应对工作。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230905/t20230905_526408611.html",
+          "publishedOn": "2023-09-05T03:51:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市铜梁区发布高温橙色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/csyj/20230905/t20230905_526408584.html",
           "author": "国家预警信息发布中心",
@@ -1058,6 +1078,26 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
+          "id": "https://juejin.cn/post/7274544460104482873",
+          "author": "荒山",
+          "description": "今年 MidJourney 的大火，给我们开了很多眼界，它竟然连一个就是它连正经的网站没有，核心的交互都在 Discord 上完成\n\n还有前阵子在 X 看到这些帖子，受到一些启发：\n\n\n很多程序员都喜欢造轮子，事事都想自己亲力亲为，其实大可不必。仔细想想对于用户来说、对于自己来说什么才是最重要的？\n\n如何按照 DDD 说法，我们最应该重视的是系统的核心域，这是我们资源应该集中投入的地方，而对于通用域和支撑域，能外包出去就外包出去，能用现成的就用现成的。\n比如像 Midjourney 来说，核心域就是文生图，像用户、社区、付费等通用子域，利用现成的 SaaS 服务既能节省成本，可能还能出奇招。\n那我这篇文章到底想讲什么？就是想告诉大家🤫 ：不要造轮子、不要造轮子、不要造轮子，怎么简单怎么来。\n把精力放在有价值的事情上，支撑域和通用域尽量外包，它们可能比你想象的要专业。不管是商业的SaaS ，还是开源方案我们都有很多选择。\n我先讲讲我的经历，关于 DDD 领域建模。在公司 DDD 的推广前期，很多开发者都使用 ProcessOn 这样的画图工具，按照建模约定拖拖拽拽画图， 例如下面：\n\n原本 Java 语法就比较啰嗦，引入 DDD 后，类变多了，样板代码更是直线上升。后面我们就想，能不能画完图就能生成模板代码呢？\n于是一班人就想要开发一个可视化建模工具，还有对应的代码生成器。\n如果从零开发这套建模编辑器，工程量可想而知，比如基于 AntV G6 (内部有一套流程编排可视化引擎，使用的就是 G6) 这些方案。\n后面我就提议，为啥不用现有的画图工具呢，为啥要造轮子呢？比如开源画图工具。经过调研之后，我们发现 draw.io 基本能够满足产品 MVP 的需求。\ndraw.io 支持自定义组件：\n\n这些组件支持很多控制参数，可以在绘制上提供一些基本约束：\n\n另外组件还支持自定义数据：…",
+          "link": "https://juejin.cn/post/7274544460104482873",
+          "publishedOn": "2023-09-04T06:10:52.000Z",
+          "wordCount": 1203,
+          "title": "不要造轮子",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7274149231367798803",
+          "author": "前端阿彬",
+          "description": "highlight: atelier-estuary-light\ntheme: devui-blue\n\n🌻 前言\n其实写本文的初衷只是想分享一个css新特性【scroll-timeline】😂,但是我想要体现出它的强大效果，此时正好想到了之前看到过钉钉的首页动画，就是滚动页面然后进行一系列动画的，所以我决定实现一下这个效果。（见上方动图，只是实现了大体效果，细节没有优化，各位看官多多担待🙈）\n它是干什么用的呢？\n“用滚动区域的滚动动作驱动动画的进度”。\n可能有些同学还不太懂，我再稍加解释。我们以往的animation都是以时间作为动画的时间线的，比如我们需要设置动画的总时长animation-duration为 n 秒，那么动画在进行 n 秒后，就会处于 100% 的状态。\n而当我们使用了scroll-timeline之后，以滚动动作驱动动画的进度，那么就是我们在滚动区域滚到底时，动画就会处于100%状态，即滚动了百分之多少，动画就会进行百分之多少。还不明白可以体验下方的小demo👇👇👇\njcode\n以前如果要实现这种效果，往往得监听 scroll 事件，用js动画实现，总体来说非常复杂，但是有了这个新特性之后，为css的创造性又提升了一个台阶。\n🛠 API 使用方法\n1️⃣ 首先我们需要在滚动区域上定义一个滚动时间线，滚动时间线需要设置两个值：\nscroll-timeline-name: 命名的滚动进度时间线的名称；\nscroll-timeline-axis: 以哪个方向的滚动条驱动动画，即滚动方向；\n可选的滚动方向有：\nblock: 滚动条元素块轴上的滚动条，该轴垂直于一行中的文本流的方向。对于水平书写模式，如标准英语，这与y相同，而对于垂直书写模式，它与x相同。这是默认值。\ninline: 滚动条元素的内联轴上的滚动条，该轴与一行中的文本流平行。对于水平…",
+          "link": "https://juejin.cn/post/7274149231367798803",
+          "publishedOn": "2023-09-04T02:30:01.000Z",
+          "wordCount": 1851,
+          "title": "🥳🥳🥳 “钉钉官网首页的炫酷动效” 被我用css新特性轻松破解啦～",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7273803674789953575",
           "author": "不知名小瑜",
           "description": "大文件分片\n大家好, 我今天是华为冲锋战神遥遥领先瑜, 在网上看了大半天mate60 现在耳朵里都是遥遥领先, 所以一鼓作气给大家分享一篇大文件分片+webWorker的文章, 通过写作这篇文章, 自己也学习到了不少知识, 比如通过js获取电脑cpu线程, 那么话不多说直接开始\n1. 初始化, 搭设架子\n<!DOCTYPE html>\n<html lang=\"zh-CN\">\n\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\" />\n  <title>大文件分片</title>\n  <style></style>\n</head>\n\n<body>\n  <input type=\"file\" id=\"fileRef\" />\n  <script type=\"module\" src=\"./main.js\">\n\n\n  </script>\n</body>\n\n</html>\n\n2. 读取单个文件的分片, 并进行加密\n这里使用的是SparkMD5进行加密, 可自行下载并导入\nimport { createChunks } from './createChunks'\n// 规定每次切片的文件大小\nconst CHUNK_SIZE = 1024 * 1024 * 5 // 5MB\n\nexport async function cutFile (file) {\n  // 生成每一个切片, 分片是耗时的所以是异步操作\n  const chunk = await createChunks(file, 1, CHUNK_SIZE)\n…",
@@ -1098,22 +1138,12 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7273304959538872377",
-          "author": "阿李贝斯",
-          "description": "theme: channing-cyan\n前言\n本篇文章是笔者在使用 vue3 + vite 实际开发过程中的一些经验分享，涵盖 vite 构建优化配置项的实践，以及一些开发中实用技巧的分享。\ngzip 压缩\n未开启压缩时：通过vite打包之后，vite会提示开启 gzip压缩之后的文件大小，可以看到文件体积将会显著下降\n\n接下来，我们使用 vite-plugin-compression 进行 gzip 压缩\nimport viteCompression from 'vite-plugin-compression'\nexport default defineConfig({\n  plugins: [\n    viteCompression(),\n  ],\n})\n\n通过 gzip 压缩之后，文件会被转化为 gz 压缩包，体积会明显减少，虽然是压缩包格式，但浏览器解压时间非常快，几乎可以忽略。所以开启 gzip 压缩 是有必要尝试的。\n\n动态导入\n使用动态导入，在 webpack 或 vite 这样的打包工具之中，都会自动开启代码分割。\n路由懒加载\nvue-router 路由懒加载\nVue Router 支持开箱即用的动态导入，这意味着你可以用动态导入代替静态导入：\n// 将\n// import UserDetails from './views/UserDetails.vue'\n// 替换成\nconst UserDetails = () => import('./views/UserDetails.vue')\n\nconst router = createRouter({\n  // ...\n  routes: [{ path: '/users/:id', component: UserDetails }],\n})\n\n异步导入组件\nimport { defineAsyncComp…",
-          "link": "https://juejin.cn/post/7273304959538872377",
-          "publishedOn": "2023-08-31T10:22:59.000Z",
-          "wordCount": 1937,
-          "title": "vue3 + vite 性能优化与开发经验分享",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7273131870103601163",
           "author": "李瑞丰_liruifengv",
           "description": "昨天，Astro 给我发了 250 美金的社区奖励！请看下图，没想到参与开源还有钱拿，简直太爽了。\nAstro 会把开源的捐赠，每个月拿出一部分给优秀的贡献者做奖励，而我很荣幸获得了250 美金！！！\n\n起因\n从去年开始，我就开始参与 Astro 的项目贡献，提交了一些代码，后来开始参与 Astro 中文文档的维护和翻译。\n但是，Astro 的团队更新太快了，业余参与的我根本没有那么多的精力，中文文档还要200多页未翻译。\n组织社区参与翻译\n于是，我组织了一波社区的同学来参与 Astro 的中文文档翻译：\n\n社区的同学非常热情，来了很多同学，在我们的努力下，一个多月的时间就把 Astro 中文文档全部翻译完成了！！！\n\n社区力量太强大了，感谢所有参与翻译的小伙伴，感谢 webworker 播客的辛宝帮忙转发宣传，介绍了印记中文的大佬跟我认识，给了我很多建议，翻译流程规范也参考了印记中文。同时，还有沈青川大佬一开始建议做这件事并帮忙转发，我才开始组织人手。\n也感谢 Astro 团队的大力支持，Astro 团队真的非常棒。\n帽子和贴纸\nAstro 还给一些译者赠送了一个 Astro logo 的帽子和定制贴纸。（贴纸的中文翻译也询问了我的意见。）\n\n\nAstro v3.0 已发布 🚀🚀🚀\nAstro v3.0 昨天正式发布了，感兴趣的同学可以阅读官方公告。\n想要开发自己的个人网站的，可以使用 Astro 试一试，或许你会爱上它。\n有文档网站的需求的，可以尝试 基于 Astro 的 Starlight。",
           "link": "https://juejin.cn/post/7273131870103601163",
           "publishedOn": "2023-08-31T09:03:28.000Z",
-          "wordCount": 906,
+          "wordCount": null,
           "title": "Astro 给我发了 250 美金，做开源还有钱拿，太爽了！",
           "imageUrl": null
         },
@@ -1173,7 +1203,7 @@
           "description": "theme: smartblue\n当我写自己第一个开源项目后，才知道写开源真的很累\n一次突然的头脑发热，便有了这次文章中的开源项目；现在回想起来自己也有些感到不可思议，一直都是受益于开源社区的我，也有一天想着并行动着为开源添砖加瓦；在此，感谢所有的开源作者们，开源真的很伟大；\n一、契机\n平时工作中，写后台项目时，或多或少的都会接触到若依后台管理系统，它无论在生态上还是设计上，都算是国内优秀的开源后台管理项目了；平时工作和日常中，或多或少都使用过和借鉴过它，接触多了，也对其作者有了些好奇，很好奇为什么他能够三四年时间孜孜不倦的更新维护着若依；所有的这些直到我自己写开源项目时，便明白了，开源项目就好像自己的孩子，凝结着你的付出，陪伴着你每个日日夜夜，一次一次的推翻重写，一次一次的否定之前的构思，只想让它更好一些；这些都是工作所不能比拟的，或许这就是让无数开源作者孜孜不倦下去的动力源泉；\n二、Leno Admin\n若依有着很多的扩展，但我发现似乎没有前端React、后端nodejs的技术生态，所以便想着借鉴若依写一个前端React，后端nodejs（koa）的后台管理项目，名字叫做Leno admin，为什么叫这个名字，只是因为我的电脑品牌是联想，所以接截取了前几个字母，实在是名字难想😂；\n后端选择用koa，也因为我的本职工作是一名前端开发，后端语言暂时只会nodejs，同时也是想为国内nodejs的生态圈做一丝丝微薄的贡献，国内的nodejs对比国外有一点天差地别，需要更多的国内js们添砖加瓦；\n2-1、简要\nLenoAdmin是一个 nodejs 快速开发平台，基于（koa、Sequelize、ioredis、Jwt、React），内置模块如：部门管理、角色用户、菜单及按钮授权、系统参数、日志管理、代码生成等。\n演示地址\n文档地址\n源码gitee地址\n源码github地址\n交流QQ群：913365274\n2-2、技术栈描述\n前端技术：TS、webpack5、ReactHooks、mobx、antd、socket.io、axios等\n后端技术：Koa、TS、sequelize、exceljs、joi、jwt、ioredis等\n2-3、功能描述\n项目包含：用户管理、角色管理、菜单管理、部门管理、岗位管理、字典管理、定时任务、代码生成等功能，v1.0.0版本实现了若依的大部分功能，但是还是有少部分未实现，会在后续版本中进行迭代更新...\n2-4、项目演示图片\n登录页\n首页\n用户管理\n字典管理\n字典管理\n代码生成\n个人中心\n布局设置\n如果还有想详细体验的，可以到预览地址进行访问（不过个人的服务器性能比较一般，访问体验可能会随着人数而降低）；推荐自行拉取代码进行本地运行查看~😊\n三、其它\n3-1、以后的构想\n想发布一个LenoAdmin的Electron版本；\n增加表单构建和系统接口文档自动生成的功能；\n增加国际化配置\n3-2、寻找伙伴\n在此也希望有愿意一起携手完善和丰富LenoAdmin的小伙伴加入，如果你也有开源的想法，欢迎加上面的QQ群，私聊我；\n也希望感兴趣的小伙伴能够加入群中，大家平时也可以在其中交流技术，互相学习等，谢谢~😘\n四、结语\n我的第一次开源对我个人来说也是一次奇妙的探险，就像游戏中打怪升级一样，很有乐趣但是也很累；感谢当时脑袋发热的自己😂；\n项目中可能会有许多不完善的地方，欢迎大家到我的项目地址中issues，个人一有时间，便会定期查看，修复项目中的问题，代码在一些地方的结构设计问题，也因为个人的能力有限，无法做到完美，后期也会随着技术的提升，针对一些不合理的地方进行重构。",
           "link": "https://juejin.cn/post/7273018561961459712",
           "publishedOn": "2023-08-30T08:01:32.000Z",
-          "wordCount": 833,
+          "wordCount": null,
           "title": "当我写自己第一个开源项目后，才知道写开源真的很累",
           "imageUrl": null
         },
@@ -1245,16 +1275,6 @@
           "publishedOn": "2023-08-29T00:39:23.000Z",
           "wordCount": 888,
           "title": "为什么日本的网站看起来如此不同",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7272196864510279737",
-          "author": "_你当像鸟飞往你的山",
-          "description": "最近在整理 Chrome 浏览器中的标签分类，特地把自己认为最有价值的一些前端开发和写作工具分享给大家！\n之前整理过两篇：\n这 12 个基于 AI 的 VSCode “杀手级” 生产力插件，了解一下？\n我收藏的这 100 + 个”杀手级“网站，你用过几个？\n1、getdevkit\n专门为开发人员准备的 GPT（基于 GPT3.5）！\n\n2、arc 浏览器\n一个号称 Chrome 平替的新浏览器！不试试？主要有以下几个优点：\n对标签过载问题提出了新颖的方案\n交互设计细致入微，重引导而非强迫\n网页修改功能有黑客精神和早期浏览器遗风\n非常美貌（取决于你的偏好）\n\n详细介绍可以参考这篇：Arc: 一个试图改变历史的浏览器\n3、vs-browser\n在 VS Code 中内建的浏览器，简单的调试基本够用了。\n\n4、starship\n轻量、迅速、可无限定制的高颜值终端！\n快：  很快 —— 真的真的非常快！ 🚀\n定制化：  可定制各种各样的提示符。\n通用：  适用于任何 Shell、任何操作系统。\n智能：  一目了然地显示相关信息。\n功能丰富：  支持所有你喜欢的工具。\n易用：  安装快速 —— 几分钟就可上手。\n\n5、bundlephobia \n每当你想使用一个新的库或者包时，一定要看看这个包的 bundle size！避免把一个 拖油瓶 引入到项目里面。\n\n6、coolors\n开发通常比较缺乏设计和审美，这个网站可以帮你搞定色彩搭配，不至于做出丑陋的“万紫千红”。\n\n7、ray.so\n代码美化就靠它了！写作中，大多数的卡片式代码图片皆来自于此：\n\n其实还有一个：carbon，也挺好看。\n8、excalidraw\n文章写作中的插图神器！\n\n9、dbdiagram\nER 图神器！\n\n10、drawio\n流程图神器！功能强大且免费~\n\n11、dribble + behance\ndribble\n大量优质的UI资源，你不再需要UI了~\n\nbehance\n媲美 dribble 的又一个设计资源，你真的不再需要UI了~\n\n12、regexgpt\n正则神器，知己一步到位，帮你把工具函数都写好，再也不用学正则了！\n\n13、omni\n浏览器高效神器！只需在 Mac 上按 ⌘+Shift+K 或在 Windows 上按 Ctrl+Shift+K。使用简单的命令界面管理选项卡、书签、浏览器历史记录、执行各种操作。\n\n14、json-generator\n批量生成 json 格式的 mock 数据，测试必备！\n\n15、mocks-server\n这个神器可以让你轻松测试前端很多场景都需要的 CRUD！",
-          "link": "https://juejin.cn/post/7272196864510279737",
-          "publishedOn": "2023-08-28T10:29:52.000Z",
-          "wordCount": 1145,
-          "title": "【必备】15 个前端开发、写作神器 ~",
           "imageUrl": null
         }
       ]
