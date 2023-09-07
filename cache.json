@@ -54,7 +54,7 @@
           "description": "一开始看到registerProtocolHandler()方法老激动了，以为又发现了个好玩具，谁知深入体验了一番之后……呵呵~",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-registerprotocolhandler/",
           "publishedOn": "2023-08-30T15:02:58.000Z",
-          "wordCount": 992,
+          "wordCount": 991,
           "title": "一言难尽的registerProtocolHandler()方法",
           "imageUrl": null
         },
@@ -84,7 +84,7 @@
           "description": "nonce可以用来决定哪些内联JS执行，popover可以无JS实现浮层弹出层交互效果。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/html-attribute-nonce-translate/",
           "publishedOn": "2023-08-10T15:24:42.000Z",
-          "wordCount": 1116,
+          "wordCount": 1117,
           "title": "查漏补缺，我仍未知道的HTML nonce和popover属性",
           "imageUrl": null
         }
@@ -148,7 +148,7 @@
           "description": "调用境外 ChatGPT 接口，好大的胆子🐶",
           "link": "https://m.okjike.com/originalPosts/64f9d3fc3c00b8f53da442b2",
           "publishedOn": "2023-09-07T13:45:32.000Z",
-          "wordCount": 444,
+          "wordCount": 448,
           "title": "发布了: 调用境外 ChatGPT 接口，好大的胆子🐶",
           "imageUrl": "https://cdnv2.ruguoapp.com/FjGOAJ2uJyh-H85gsgbh0dE6EV_Yv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
         },
@@ -1903,7 +1903,7 @@
           "description": "10 个 css 代码片段\n以下这 10 个常用的 css 代码片段值得收藏，都可以用于平常的业务代码当中。\n1. 点点点加载中效果\n这是一个兼容性不错的用户体验很棒的点点点加载效果，实现思路如下:\n使用自定义的标签元素 dot。\n将 dot 元素设置为内联元素(display:inline-block),并设置溢出隐藏(overflow:hidden)，高度设置为 1em。\n使用:before 伪元素结合\\AUnicode 字符插入内容，并且使用 white-space:pre-wrap 保留换行效果，使用 css 动画。\n使用 transform 和 translate 为...添加动画效果。\nhtml 代码如下:\n<div class=\"loading\">正在加载中<dot>...</dot></div>\n\ncss 代码如下:\n.loading {\n  /**这里写自己自定义的样式 */\n}\n.loading > dot {\n  height: 1em;\n  overflow: hidden;\n  display: inline-block;\n  text-align: left;\n  vertical-align: -0.25em;\n  line-height: 1;\n}\n/* 核心代码 */\n.loading > dot:before {\n  display: block;\n  /* 这行代码最重要 */\n  content: '...\\A..\\A.';\n  /* 值是Pre也是一样的效果 */\n  white-space: pre-wrap;\n  animation: dot 3s infinite step-start both;\n}\n@keyframes dot {\n  33% {\n    transform: translateY(-2em);\n  }\n …",
           "link": "https://juejin.cn/post/7274789845754544163",
           "publishedOn": "2023-09-04T13:53:47.000Z",
-          "wordCount": 4315,
+          "wordCount": 4340,
           "title": "10 个 效果不错的值得收藏的 css 代码片段",
           "imageUrl": null
         },
@@ -2003,7 +2003,7 @@
           "description": "title: heartbeat\ntitleTemplate: chat\ntheme: channing-cyan\n前言\n我们先来看一下心跳检测机制？\n心跳检测机制是一种用于检测系统、应用程序或网络连接状态的技术。基本原理是定期发送小型数据包（称为心跳包或心跳消息）以确认远程设备或连接仍然处于活动状态。如果一段时间内没有收到心跳响应，系统就会认为连接已断开或设备不再可用。本文将用来实现多人聊天室在线人数的统计。\n心跳机制几个关键概念\n心跳包：数据包 => 通常是一个标识或消息\n心跳间隔：心跳包发送的时间间隔\n心跳响应：客户端或者服务器接收心跳包时，做出的响应\n维护状态：心跳检测机制通常在服务器端维护状态\n超时处理：心跳检测机制认定为不活跃、超时并做处理(自动重连机制)\n为什么需要心跳机制？\n检测连接状态\n维护连接性\n管理在线状态\n检测系统、设备健康状况\n减少资源浪费\n体验地址\n聊天室的搭建教程\n体验地址传送门在---->这里👻👻👻\n效果展示\n\n整体实现思路\n这里以多人聊天室的中心跳检测机制为例。\n客户端和服务器端建立连接(websocket)\n在客户端定期轮询向服务器端发送心跳包 ping\n服务器端接收心跳包并做出响应 pong\n服务器端维护 ping 的客户端列表，返回活跃的客户端数\n客户端接收到心跳响应，更新自己状态，如心跳包异常，则做异常处理\n\n前端部分\n聊天室的搭建参考文章：即时通讯轻松实现：WebSocket、Vue 3 和 Node.js 缔造的多人实时交流平台,挺详细的嘞！\n客户端发出建立连接 new WebSocket(socketUrl)\n添加连接状态、消息接收、错误信息、关闭等事件监听\n在socket.onopen 建立连接之后开始定期发送心跳包ping\n建立连接\nlet socket = null; \n/**\n * 建立连接\n */\nconst …",
           "link": "https://juejin.cn/post/7273756059495071779",
           "publishedOn": "2023-09-02T08:48:04.000Z",
-          "wordCount": 2499,
+          "wordCount": 2449,
           "title": "WebSocket聊天室在线状态管理：心跳检测机制（附源码）",
           "imageUrl": null
         },
@@ -2013,7 +2013,7 @@
           "description": "前言\n有时候我们需要在线上debugger的时候，可能萌生的几个解决方案\n如果你的环境部署了生产log日志功能，那么恭喜你，这样我们可以快速定位报错的位置，比如Sentry\n此外，如果作为一个前端开发人员，除了在页面source面板，rewrite可以解决这个问题\n或许我们可以借助一些抓包工具快速便捷的解决这些问题\ncharles魔法\n某一天你的同事突然拿着你的电脑，他想通过百度去搜索一些东西，可是他会很好奇，为什么每次打开www.baidu.com 的时候总是会link到一个奇怪的链接，那么可能会是这样\n\n其实这就是我们今天所说的一个关于charles常用的功能，那就是map-remote，通过配置不同domain去映射做到了重定向\n\nmap-remote\n我这里写一个测试一个小demo，比如我们线上地址是http://47.103.9.52/charles-tutorial/\n当然这是我自己部署的一个小项目，某一次线上项目出现一个小问题，本地关联的代码\n那么我想远端直接关联到我本地，那么我可以先通过执行下面shell命令\npnpm install\npnpm run build:dev\npnpm run preview\n\n此时本地应该跑了一个静态访问地址，像这样\n\n此时我们做一个charles map-remote\n\n此时再次访问 http://47.103.9.52/charles-tutorial/ 你会发现本地charles代理到了本地4173这个端口上\n\n为了验证是否生效\n那么我加了一行代码，看图示\n\n紧接着执行pnpm run build:dev,我们再次刷新页面，果然页面改动了，那么此时你可以愉快的定位到需要修改的代码进行debugger\n\nmap-local为了解决什么呢\n如果我们频繁的去build整个页面就会显得效率比较低下，可不可以只是定向的修改部分代码，只重定向我们本地的已知代码呢？\n答案是当然可以，\n\n我们现在只是想快速替换现有的bundle.js, 此时我们改变了一点内容，请参照shop/index.js\n\n重新执行pnpm run build:shop, 此时我们刷新页面\n\nrewrite 使用技巧\n\n新加一个按钮触发请求\n1. 那么rewrite到底能干嘛呢\n首先啊 可以修改请求相关的；包括请求头、请求体等\n可以远程映射domain访问\n我们这里只讲一个修改请求方面的\n\n那么这么设置我们希望给https://www.fastmock.site/mock/3277f26b72e3b8aa6de012d30c06ce3f/api/api/getTargetDevice 增加一个请求参数 ?author=chrisworkalx\n试着重新点击这个按钮\n试着看下我们的network面板\n\n的确是增加了这个参数\n总结\n这些只是charles的冰山一角\n其实还有一些请求阻断，转发都可以通过charles代理实现\n包括一些更高级的更复杂的功能\n这里是源码链接，更多的问题欢迎交流源码链接",
           "link": "https://juejin.cn/post/7273775338420961314",
           "publishedOn": "2023-09-02T08:44:58.000Z",
-          "wordCount": 850,
+          "wordCount": 876,
           "title": "神奇的抓包工具-Charles",
           "imageUrl": null
         },
@@ -2033,7 +2033,7 @@
           "description": "theme: serene-rose\nhighlight: dracula\n不知道你有没有发现Bing AI聊天有个输入提示功能，在用户输入部分内容时后面会给出灰色提示文案。用户只要按下tab键就可以快速添加提示的后续内容。我将这个功能称为幽灵建议。接下来我将用Vue框架来实现这个功能。\n\n布局样式\n布局使用label标签作为容器，这样即使建议内容在上层，也不会影响输入框的输入。\n<label class=\"container\">\n  <textarea></textarea>\n  <div class=\"ghost-content\"></div>\n</label>\n\n样式需要确保输入框与建议内容容器除了颜色外都要一致。建议内容可以通过z-index: -1置于输入框底部，但要注意输入框必须是透明背景。\n.container {\n  position: relative;\n  display: block;\n  width: 300px;\n  height: 200px;\n  font-size: 14px;\n  line-height: 21px;\n}\n.container textarea {\n  width: 100%;\n  height: 100%;\n  padding: 0;\n  border: 0;\n  font: inherit;\n  color: #212121;\n  background-color: #fff;\n  outline: none;\n}\n.ghost-content {\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 0;\n  bottom: 0;\n  color: #212121;\n  opacity: 0.3;\n}\n\n显示逻辑\n显示逻辑比较简单，当输入框中显示输入内容时，找到匹配的内…",
           "link": "https://juejin.cn/post/7273674732448120895",
           "publishedOn": "2023-09-01T13:39:14.000Z",
-          "wordCount": 1395,
+          "wordCount": 1412,
           "title": "Vue实现一个textarea幽灵建议功能",
           "imageUrl": null
         },
@@ -2053,7 +2053,7 @@
           "description": "theme: channing-cyan\n前言\n本篇文章是笔者在使用 vue3 + vite 实际开发过程中的一些经验分享，涵盖 vite 构建优化配置项的实践，以及一些开发中实用技巧的分享。\ngzip 压缩\n未开启压缩时：通过vite打包之后，vite会提示开启 gzip压缩之后的文件大小，可以看到文件体积将会显著下降\n\n接下来，我们使用 vite-plugin-compression 进行 gzip 压缩\nimport viteCompression from 'vite-plugin-compression'\nexport default defineConfig({\n  plugins: [\n    viteCompression(),\n  ],\n})\n\n通过 gzip 压缩之后，文件会被转化为 gz 压缩包，体积会明显减少，虽然是压缩包格式，但浏览器解压时间非常快，几乎可以忽略。所以开启 gzip 压缩 是有必要尝试的。\n\n动态导入\n使用动态导入，在 webpack 或 vite 这样的打包工具之中，都会自动开启代码分割。\n路由懒加载\nvue-router 路由懒加载\nVue Router 支持开箱即用的动态导入，这意味着你可以用动态导入代替静态导入：\n// 将\n// import UserDetails from './views/UserDetails.vue'\n// 替换成\nconst UserDetails = () => import('./views/UserDetails.vue')\n\nconst router = createRouter({\n  // ...\n  routes: [{ path: '/users/:id', component: UserDetails }],\n})\n\n异步导入组件\nimport { defineAsyncComp…",
           "link": "https://juejin.cn/post/7273304959538872377",
           "publishedOn": "2023-08-31T10:22:59.000Z",
-          "wordCount": 1933,
+          "wordCount": 1928,
           "title": "vue3 + vite 性能优化与开发经验分享",
           "imageUrl": null
         }
