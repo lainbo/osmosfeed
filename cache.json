@@ -54,7 +54,7 @@
           "description": "一开始看到registerProtocolHandler()方法老激动了，以为又发现了个好玩具，谁知深入体验了一番之后……呵呵~",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-registerprotocolhandler/",
           "publishedOn": "2023-08-30T15:02:58.000Z",
-          "wordCount": 989,
+          "wordCount": 987,
           "title": "一言难尽的registerProtocolHandler()方法",
           "imageUrl": null
         },
@@ -74,7 +74,7 @@
           "description": "Performance和PerformanceObserver，用户 Timing API，哦，学不完，根本学不完，这两周抽时间好好研究了一番，终于了解了个大概了🙊，特此记录下。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-performanceobserver-api/",
           "publishedOn": "2023-08-27T08:34:24.000Z",
-          "wordCount": 1296,
+          "wordCount": 1297,
           "title": "狠狠地研究了下 PerformanceObserver API",
           "imageUrl": null
         },
@@ -84,7 +84,7 @@
           "description": "nonce可以用来决定哪些内联JS执行，popover可以无JS实现浮层弹出层交互效果。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/html-attribute-nonce-translate/",
           "publishedOn": "2023-08-10T15:24:42.000Z",
-          "wordCount": 1112,
+          "wordCount": 1111,
           "title": "查漏补缺，我仍未知道的HTML nonce和popover属性",
           "imageUrl": null
         }
@@ -218,7 +218,7 @@
           "description": "Montaigne，https://montaigne.io，是一个可以将你的本地 Apple Notes 文件夹直接变成一个在线网站的工具，这比 Github Pages 发布个人博客更快、更酷。你需要做的就是在本地创建一个包含子域名的文件夹，例如 barretlee.montaigne.io 作为文件夹名，然后把文件夹的权限分享给工具作者，后续该文件夹下的所有内容的发布都会被同步到这个子域名下。\n作者并没有介绍他是如何实现的，Apple 也没有开放官方的 API 可以直接获取 Notes 的数据，我想到两个方案可以完成这个工作。\n1. 抓取 iCloud 数据\n通过类似爬虫的方式，使用 iCloud 的 Web 接口，可以获取到 Apple Notes 的数据，有一个开源库 iCloud-API 可以参考：https://github.com/MauriceConrad/iCloud-API，这种方式的适配成本比较高，苹果稍稍改版，就需要进行一次适配，另外也存在一定的风险，通过这种方式获取 Apple 的数据是违反使用协议的，一旦被感知可能会面临账号处罚的风险。\n2. 使用 AppleScript 抓取\nApple 提供了一门 AppleScript 语言，它可以像按键精灵一样，操作 Apple 系统上的所有程序，而且针对系统内置的程序，还提供了原生访问指令，例如读取 Notes 中有多少条笔记，可以直接在你的命令行执行：\nosascript -e '\n  tell application \"Notes\"\n      set noteCount to count of notes\n  end tell\n  log noteCount\n'\n有人就使用 AppleScript 封装了一个工具，可以将 Apple Notes 导出到 SQLite 里头，https://github.com/dogsheep/apple-notes-to-sqlite，有了数据，实现一个自动发布到线上的程序就不是什么难事儿了。\n方案一有风险，方案二需要有一个长期在线的 Mac 环境（AWS 提供了类似的服务），不知道还有没有更加环保、高效的方案，可以更轻便地拿到数据。",
           "link": "https://m.okjike.com/originalPosts/64f68f293c00b8f53d54e1a9",
           "publishedOn": "2023-09-05T02:15:05.000Z",
-          "wordCount": 668,
+          "wordCount": 654,
           "title": "发布了: Montaigne，https://montaigne.io，是一个可以将你的本地 Apple Notes 文件夹直接变成一个在线网站的工具，这比 Github Pages 发布个人博客更快、更酷。...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FqYQrzg1xvT_CQaULeR5OSyStfYTv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -248,7 +248,7 @@
           "description": "Pulse 是一款利用 AI 还原低分辨率图像细节的工具，https://github.com/adamian98/pulse，严格来说，不能叫做还原，而是扩充，对于图像缺失的信息，AI 是无法做到准确还原的，它的用途在于探索图像中缺失信息的可能性，然后逐一还原成清晰图像，例如，用户输入一张 16x16 分辨率的图像，利用 Pulse 可以输出一组 1024x1024 分辨率的图像\n相关论文在这里：https://arxiv.org/pdf/2003.03808.pdf，背后用到的是 StyleGan 这个图像生成模型，https://github.com/NVlabs/stylegan，可以想象一下，应用场景还是蛮丰富的。",
           "link": "https://m.okjike.com/originalPosts/64f5572f80042815f260eaa4",
           "publishedOn": "2023-09-04T04:03:59.000Z",
-          "wordCount": 473,
+          "wordCount": 483,
           "title": "发布了: Pulse 是一款利用 AI 还原低分辨率图像细节的工具，https://github.com/adamian98/pulse，严格来说，不能叫做还原，而是扩充，对于图像缺失的信息，AI ...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fke5TKUnN_UCDffoql7tmtJxiYU4v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         }
@@ -583,6 +583,16 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412366.html",
+          "author": "国家预警信息发布中心",
+          "description": "巴南区气象台2023年9月8日10时50分发布“高温橙色预警信号”，预计9月8日13时至19时，姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412366.html",
+          "publishedOn": "2023-09-08T06:59:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市巴南区发布高温橙色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412257.html",
           "author": "国家预警信息发布中心",
@@ -2068,12 +2078,22 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
+          "id": "https://juejin.cn/post/7275943591410483258",
+          "author": "阿李贝斯",
+          "description": "theme: awesome-green\n前言\n前端本地化存储算是一个老生常谈的话题了，我们对于 cookies、Web Storage（sessionStorage、localStorage）的使用已经非常熟悉，在面试与实际操作之中也会经常遇到相关的问题，但这些本地化存储的方式还存在一些缺陷，比较明显的缺点如下：\n存储量小：即使是web storage的存储量最大也只有 5M\n存取不方便：存入的内容会经过序列化，当存入非字符串的时候，取值的时候需要通过反序列化。\n当我们的存储量比较大的时候，我们一定会想到我们的 indexedDB，让我们在浏览器中也可以使用数据库这种形式来玩转本地化存储，然而 indexedDB 的使用是比较繁琐而复杂的，有一定的学习成本，但 localForage 的出现几乎抹平了这个缺陷，让我们轻松无负担的在浏览器中使用 indexedDB。\n什么是 indexedDB\nIndexedDB 是一种底层 API，用于在客户端存储大量的结构化数据（也包括文件/二进制大型对象）。\n存取方便\nIndexedDB 是一个基于 JavaScript 的面向对象数据库。IndexedDB 允许你存储和检索用键索引的对象；可以存储结构化克隆算法支持的任何对象。\n之前我们使用 webStorage 存储对象或数组的时候，还需要先经过先序列化为字符串，取值的时候需要经过反序列化，那indexedDB就比较完美的解决了这个问题，可以轻松存取对象或数组等结构化克隆算法支持的任何对象。\n以 https://stackblitz.com/ 网站为例，我们来看看对象存到 indexedDB 的表现\n\n异步存取\n我相信你肯定会思考一个问题：localStorage如果存储内容多的话会消耗内存空间，会导致页面变卡。那么 IndexedDB 存储量过多的话会导致页面变卡吗？\n不会有太大…",
+          "link": "https://juejin.cn/post/7275943591410483258",
+          "publishedOn": "2023-09-07T11:02:54.000Z",
+          "wordCount": 1570,
+          "title": "对不起 localStorage，现在我爱上 localForage了！",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7275549753693749304",
           "author": "pany",
           "description": "有些人一不仔细看文章，二甚至压根就没写过 TS，就在评论区非理性讨论。\n建议大家合理发表自己的意见和观点，而不是类似这样的张口就来：“推荐用 TS 就是你 JS 不行”\nHello，诸位前端工程师，今天由我来从一个 CRUD 开发工程师的角度聊一聊这个 “敏感” 的话题。\n有一个现象\n就是你不难发现，大多数能力比你强的前端工程师，要么在鼓励大家用 TS，要么就是自己的开源项目采用了 TS。\n而这种现象通常会在技术领域会传播下来，普及给所有程序员。就像 Vue/React 等框架都有大厂开始大量使用后，再慢慢普及到小厂，最后几乎所有程序员都被普及到了（毕竟你不会就找不到工作了）。\n而大厂尝试使用一门技术，并且成功落地之后并没有抛弃它，而是在更多的项目中使用，这种时候基本上就可以说这门技术的优点是比较明显的，被普及的概率也就非常大了。\n正好，TS 就符合这个现象和普及规律。\n也就是说，按照这个规律我们其实可以得出一个简单的结论：前端项目中使用 TS 是优大于弊的，并且以后 TS 会被普及\n有一个误区\n\n\n\n这种评论见多了，起初我真的很想回复一些什么来反驳反驳，后来想一想，其实就是他们当前（当前当前，注意我的用词，我并不是想一杆子打死所有反对使用 TS 的人，也并没有说他们以后不会成长）太菜了...\n因为我实在是想不明白 TS 降低开发效率是怎么得出来的？\n如果你说你玩上了类型体操，开发效率降低了，那我想说的是，能力不够是可以不玩类型体操的，能够玩上类型体操的也不会吐出这么低级的槽，CRUD 也完全不需要类型体操\n如果你说你初始化一个项目，进行各种 TS 配置和导包，出现大量报错不知所措，那说明你还不具备从零搭建一个TS 项目的能力，本质上还是你 TS 以及生态不熟悉，那你可以选择去开源社区找一个模板，等使用熟悉后再试着自己搭建，不要一开始就磨灭了自己的兴致\n如果你觉得你定义一个 const a = 1，也要写成 const a: number = 1 是降低了开发效率，那其实是你还不习惯罢了，毕竟我刚学 TS 的第一天也有这种心理\n或者这样，假设你们说的都是事实，就是 TS 降低了开发效率。但是 TS 没有优点吗？TS 的优点就没有一个能打赢 “降低开发效率” 这个假设吗？\n我觉得应该是有的吧，说几个 CRUD 时就能体会到的：\n一个变量原本是 string 类型，但是在某一处给这个变量赋值的时候，赋值成了 number 类型，你开发时发现程序无论如何都跑不对，定位半天发现原来是类型错误\n还是这个变量，你赋值错了，但是由于对应功能不常用，上线前没有测试出来，导致出现了严重生产环境问题，你即将被追责\n后期维护时，不用再到处翻找上下文就能立即知道变量类型\n几乎不会再出现 ReferenceError： “x” is not defined\n就这三个比较常见的点，哪一个带来的问题不能打赢 “降低开发效率”？就难道 ReferenceError： “x” is not defined 时你不需要花费时间定位问题吗？更别说出现生成环境问题了\n有需求就有市场\n\n\n随意截取了其他 TS 文章下的两则评论，类似的不支持 TS 的评论还有很多，几乎每一篇相关文章下面都会见到。\n但是事实是，从 TS 出现，到现在的高热度和高采用，足以说明它在市场上是有足够多的需求的，并不会因为所谓的 “TS 没有 JS 灵活” 或 “JS 是弱类型，比 TS 更优势” 等观点左右它的需求量。\n意思就是你必须使用 TS 吗？\n那也当然不是，你可以继续使用 JS，就像现在你依旧可以使用 JQ。\n但...\n你真的有不学习、不使用 TS 的资本吗？将好像 JQ 时代过渡到 Vue/React 时代的时候一样，多少人嚷着 JQ 更优秀、市场占有率更高，操作 DOM 多么的灵活，Vue 等框架心智负担多么的大，学 Vue 前必须先学习 JQ 等等... 现在在看看呢？你还能再招聘 JD 上看见只要求你会 JQ 的岗位吗？\n所以说啊，哪怕只是为了你的饭碗，你也应该去学一学 TS、用一用 TS。\n不要做低级程序员\n优秀的程序员总是在技术普及之前就研究它的思想，总结它的优缺点，尝试将其落地。\n大众程序员总是在普及的时候才开始学。\n而最低级的程序员只有等自己找不到工作了才会被迫开始学。\n善意的提醒\n随着 Vue3 的普及，开源社区优秀的模板都是拥抱的 TS 的（React 那就更早了），而大多数公司的项目都是基于这些模板进行开发的。如果不出意外的话，招聘 JD 上会出现越来越多的 TS 字样。\n还是那句话，哪怕只是为了自己饭碗。",
           "link": "https://juejin.cn/post/7275549753693749304",
           "publishedOn": "2023-09-06T10:54:28.000Z",
-          "wordCount": 1050,
+          "wordCount": 1036,
           "title": "前端项目到底需不需要 TypeScript ？",
           "imageUrl": null
         },
@@ -2083,17 +2103,17 @@
           "description": "theme: juejin\n2023 年 08 月我正式从深圳公司离职，从 7 月初开始投武汉的公司，截止 8 月底，2 个月时间有 5 个面试 3 个 offer：一个自研的 22k、两个外包一个 17k，一个 18k。最终选了一家离我比较近的 18k offer，但遗憾的是刚去第一天就发现坑太深，还是决定放弃这家公司，目前失业在家，这里和大家聊一聊最近从深圳回武汉找工作的经历。\n基本情况\n先大致介绍下我的基本情况：大专学历，30+，从 17 年开始做全职前端开发，到现在有 6-7 年了，属于一年工作经验用 5 年的那种，Vue 一把梭，技术一般。进不了中、大厂，只能在外包混混日子。\n时间回到两年前，2021 年 8 月前端行情好的时候，我凭运气找到了一家深圳二线互联网公司的前端外包岗位，offer 是 25k * 12，到今年 8 月正好呆了两年左右，为了说明真实性，下面附上我 2022 年度个税 App 收入纳税截图。\n\n声明\n本人在网上冲浪时从未公开过这家我呆了两年的公司，出于薪资保密原则，如果有人认出我，知道我所在的这家公司，还请不要透露公司名字，万分感谢！\n另外，为了避免纠纷，后面面试的公司，我都会进行匿名处理，如果有人猜到公司名称，评论还请使用化名，希望大家能理解。\n深圳回武汉\n从 21 年入职这家公司开始，这两年前端行情越来越差，目前我这个学历、技术水平比较难找到 25k 以上的工作。我有考虑过要不要先苟在这家公司，毕竟这个工作工资还可以，leader、同事、工作氛围都不错。但由于各方面原因，最终还是决定回武汉。\n工作方面：我做的大多是技术需求，做的比较无聊，成就感较低；另外，新需求越来越少，蛋糕就这么大，僧多粥少，发挥空间较小。\n生活方面：我时常在反思，我是不是一个精致的利己主义者？这些年基本就过年回家，回家也呆不了几天，在照顾父母、关心家人这方面我是做的…",
           "link": "https://juejin.cn/post/7275225948453568552",
           "publishedOn": "2023-09-05T23:18:06.000Z",
-          "wordCount": 1629,
+          "wordCount": 1680,
           "title": "25k大专前端外包从深圳回武汉能拿多少？",
           "imageUrl": null
         },
         {
           "id": "https://juejin.cn/post/7275141653420425277",
-          "author": "炫饭第一名",
+          "author": "FE_Reese",
           "description": "theme: orange\nhighlight: a11y-dark\nh5是怎么和微信小程序通信的？不同H5页面怎么通信的？webview是谁提供的？\nweb-view 是往小程序中嵌入h5的容器。会自动铺满整个小程序页面。微信小程序和 uni-app 都提供了 web-view 组件。\n由于简历上有一段实习是移动端h5开发，让面试官误以为我做过微信小程序的内嵌h5页面，但其实实习中都是公司框架写的代码，页面也是直接嵌入公司的app中的，我并没有微信小程序开发的经验，现在整理答案也是死记硬背，mark一下看到的一篇讲的比较清楚的文章，以后学小程序了再来回顾。\n微信小程序web-view与H5 通信方式探索 - 掘金 (juejin.cn)\nh5 页面间通信其实就是前端跨页面通信（吧？）当时第一反应回答的是使用LocalStorage, 面试官又提出用户修改个人信息后返回页面更新信息的情况，回答的是我之前做表单有类似的场景，是向后端提交后在后端更新了数据，回退到原先的页面的时候在 created/activated 的时候获取数据。\n面试官：前端跨页面通信，你知道哪些方法？ - 掘金 (juejin.cn)\n什么是微任务？什么是宏任务？\n如果说哪些操作是宏任务，哪些操作是微任务，那大部分同学都是比较清楚的：\n宏任务：script（整体代码）/setTimout/setInterval/setImmediate(node 独有)/requestAnimationFrame(浏览器独有)/IO/UI render（浏览器独有）\n微任务：process.nextTick(node 独有)/Promise.then()/Object.observe/MutationObserver\n\n这里面试官还追问了一句，Promise本身是微任务吗？\n那这两者有具体的定义吗？老规矩，直接 mdn…",
           "link": "https://juejin.cn/post/7275141653420425277",
           "publishedOn": "2023-09-05T07:01:13.000Z",
-          "wordCount": 1427,
+          "wordCount": 1349,
           "title": "现在小厂实习都问的这么难了吗😱「万物心选一面（北京+电商)(vue+小程序)」",
           "imageUrl": null
         },
@@ -2103,7 +2123,7 @@
           "description": "theme: cyanosis\nhighlight: atom-one-dark\n从今年二月份开始到现在，笔者一直在维护者两个项目，其中一个项目是从 2 月份开始新建文档，到了三月份的时候准备一些春招面试，搁置了一些，到了四月份之后又断断续续进行开发了，直到 6 月中旬才开发出了一个完整版的。\n第一个项目是一个前端脚手架，而第二个项目是基于第一个项目开发的，从七月底开始新建文件夹，也是因为一些面试的原因，断断续续的开发了一个多月，目前也是进入了一个能使用的状态，它是一个在线代码编辑器。\n在开始之前，先来贴上这两个项目的地址吧：\n前端脚手架 create-neat\n在线协同代码编辑器\n那么接下来就分别介绍一下这两个项目的基本架构以及未来会做一些什么样的事情吧!\n前端脚手架 create-neat\n这个项目产生的背景就是在刚开始学习 React 的时候，使用的脚手架就是 create-react-app，虽然这个脚手架提供的零配置、开箱即用很适合新手，但是要想对其进行扩展就非常麻烦。要想对其进行扩展你必须 eject 或者 使用 carco 进行配置。\n还有另外一个问题就是尽管 Typescript 已经流行了很久，但是要从零设计一个 Typescript 库依旧麻烦，本人也曾有过从零搭建一个 React 组件库的想法，但是对一堆陌生的配置望而生畏。\nCreate-Neat 就是为了解决这些问题应运而生的，解决以上所有问题，开箱即用，零配置。\n具体一些更详细的信息直接看 Github 文档吧。\n技术选型\nmonorepo 策略\n首先项目采用的是 pnpm+monorepo 的策略开发的，至于 pnpm 有多好用就应该不用我说了，为什么采用 monorepo 的架构呢？\n下图是整个项目中用到的一些子包，如下图所示：\n\nutils 包为一个公告模块包的，它是使用 ts 去编写的，然…",
           "link": "https://juejin.cn/post/7274883755478712378",
           "publishedOn": "2023-09-05T02:21:16.000Z",
-          "wordCount": 1382,
+          "wordCount": 1400,
           "title": "作为一名应届生，同时维护两个开源项目是一种什么样的体验🚀🚀🚀",
           "imageUrl": null
         },
@@ -2113,7 +2133,7 @@
           "description": "仅需2行代码，就能实现上图中的优化效果，让JS文件的加载耗时从1.4秒减少到0.4秒，大幅减少951ms（-67%），代码实现也非常简单方便，一起学起来吧~\n资源优先级提示：预取回 Prefetch，预加载 Preload 和预连接 Preconnect\n资源优先级提示是浏览器平台为控制资源加载时机而设计的一系列API，主要包括：\n1. 四类资源优先级提示\n1. 预取回 Prefetch\n用于提示浏览器在CPU和网络带宽空闲时，预先下载指定URL的JS，图片等各类资源，存储到浏览器本地缓存中，从而减少该资源文件后续加载的耗时，优化用户体验。\n具体使用方式是将link标签的rel属性设为prefetch，并将href属性设为目标资源URL，例如 <link rel=\"prefetch\" href=\"https://github.com/JuniorTour/juniortour.js\" />。\n该标签插入DOM后，将触发一次href属性值对应URL的请求，并将响应保存到本地的prefetch cache中，同时不会解析、运行该资源。\n可以预取回的资源有很多：JS、CSS、各种格式的图片、各种格式的音频、WASM文件、字体文件、甚至HTML文档本身都可实施 prefetch，预先缓存。\n命中预取回缓存的请求，在开发者工具中的Network标签中的Size列，会有独特的(prefetch cache)标记：\nDEMO：https://output.jsbin.com/cuxerej\n\ncrossorigin属性是浏览器同源策略的一部分，用于对link、script、img等元素指定是否允许以跨域资源共享模式加载目标资源。\n默认情况下，JS脚本、图片等部分静态资源不受同源策略的限制，可以从任何跨域域名加载第三方JS文件、图片文件。\n这样的规则有明显的安全风险，例如：\n第三方JS文件…",
           "link": "https://juejin.cn/post/7274889579076108348",
           "publishedOn": "2023-09-04T15:08:27.000Z",
-          "wordCount": 1889,
+          "wordCount": 1933,
           "title": "1.4秒到0.4秒-2行代码让JS加载耗时减少67%",
           "imageUrl": null
         },
@@ -2133,7 +2153,7 @@
           "description": "今年 MidJourney 的大火，给我们开了很多眼界，它竟然连一个就是它连正经的网站没有，核心的交互都在 Discord 上完成\n\n还有前阵子在 X 看到这些帖子，受到一些启发：\n\n\n很多程序员都喜欢造轮子，事事都想自己亲力亲为，其实大可不必。仔细想想对于用户来说、对于自己来说什么才是最重要的？\n\n如何按照 DDD 说法，我们最应该重视的是系统的核心域，这是我们资源应该集中投入的地方，而对于通用域和支撑域，能外包出去就外包出去，能用现成的就用现成的。\n比如像 Midjourney 来说，核心域就是文生图，像用户、社区、付费等通用子域，利用现成的 SaaS 服务既能节省成本，可能还能出奇招。\n那我这篇文章到底想讲什么？就是想告诉大家🤫 ：不要造轮子、不要造轮子、不要造轮子，怎么简单怎么来。\n把精力放在有价值的事情上，支撑域和通用域尽量外包，它们可能比你想象的要专业。不管是商业的SaaS ，还是开源方案我们都有很多选择。\n我先讲讲我的经历，关于 DDD 领域建模。在公司 DDD 的推广前期，很多开发者都使用 ProcessOn 这样的画图工具，按照建模约定拖拖拽拽画图， 例如下面：\n\n原本 Java 语法就比较啰嗦，引入 DDD 后，类变多了，样板代码更是直线上升。后面我们就想，能不能画完图就能生成模板代码呢？\n于是一班人就想要开发一个可视化建模工具，还有对应的代码生成器。\n如果从零开发这套建模编辑器，工程量可想而知，比如基于 AntV G6 (内部有一套流程编排可视化引擎，使用的就是 G6) 这些方案。\n后面我就提议，为啥不用现有的画图工具呢，为啥要造轮子呢？比如开源画图工具。经过调研之后，我们发现 draw.io 基本能够满足产品 MVP 的需求。\ndraw.io 支持自定义组件：\n\n这些组件支持很多控制参数，可以在绘制上提供一些基本约束：\n\n另外组件还支持自定义数据：…",
           "link": "https://juejin.cn/post/7274544460104482873",
           "publishedOn": "2023-09-04T06:10:52.000Z",
-          "wordCount": 1193,
+          "wordCount": 1218,
           "title": "不要造轮子",
           "imageUrl": null
         },
@@ -2143,7 +2163,7 @@
           "description": "highlight: atelier-estuary-light\ntheme: devui-blue\n\n🌻 前言\n其实写本文的初衷只是想分享一个css新特性【scroll-timeline】😂,但是我想要体现出它的强大效果，此时正好想到了之前看到过钉钉的首页动画，就是滚动页面然后进行一系列动画的，所以我决定实现一下这个效果。（见上方动图，只是实现了大体效果，细节没有优化，各位看官多多担待🙈）\n它是干什么用的呢？\n“用滚动区域的滚动动作驱动动画的进度”。\n可能有些同学还不太懂，我再稍加解释。我们以往的animation都是以时间作为动画的时间线的，比如我们需要设置动画的总时长animation-duration为 n 秒，那么动画在进行 n 秒后，就会处于 100% 的状态。\n而当我们使用了scroll-timeline之后，以滚动动作驱动动画的进度，那么就是我们在滚动区域滚到底时，动画就会处于100%状态，即滚动了百分之多少，动画就会进行百分之多少。还不明白可以体验下方的小demo👇👇👇\njcode\n以前如果要实现这种效果，往往得监听 scroll 事件，用js动画实现，总体来说非常复杂，但是有了这个新特性之后，为css的创造性又提升了一个台阶。\n🛠 API 使用方法\n1️⃣ 首先我们需要在滚动区域上定义一个滚动时间线，滚动时间线需要设置两个值：\nscroll-timeline-name: 命名的滚动进度时间线的名称；\nscroll-timeline-axis: 以哪个方向的滚动条驱动动画，即滚动方向；\n可选的滚动方向有：\nblock: 滚动条元素块轴上的滚动条，该轴垂直于一行中的文本流的方向。对于水平书写模式，如标准英语，这与y相同，而对于垂直书写模式，它与x相同。这是默认值。\ninline: 滚动条元素的内联轴上的滚动条，该轴与一行中的文本流平行。对于水平…",
           "link": "https://juejin.cn/post/7274149231367798803",
           "publishedOn": "2023-09-04T02:30:01.000Z",
-          "wordCount": 1894,
+          "wordCount": 1856,
           "title": "🥳🥳🥳 “钉钉官网首页的炫酷动效” 被我用css新特性轻松破解啦～",
           "imageUrl": null
         },
@@ -2153,7 +2173,7 @@
           "description": "theme: smartblue\n前言\n欢迎关注同名公众号《熊的猫》，文章会同步更新，也可快速加入前端交流群！\n最近在协助小伙伴解决问题时，在项目中都会遇到一些 “砍树型” 的写法，这些写法容易让后续 简单 的需求变得 复杂，都说 \"前人栽树后人乘凉\"，但项目中有些写法是真的让后人乘不了凉的，甚至还得被迫加入 “砍树队伍”。\n本篇文章就列举一些，在 vue 项目中的 “砍树型” 的写法，以及分析一下如何写才更合适 “栽树”，如果你有更好的方案，欢迎在评论区分享！！！\n\n砍树 & 栽树\n由于项目源码不便于直接展示，下面会使用同等的代码实例来替代。\n其项目技术栈为：vue2 + vue-class-component + vue-property-decorator + typescript。\n滥用 watch\n砍树型写法\n@Watch('person', { deep: true })\ndoSomething(){}\n\n@Watch('person.name', { deep: true })\ndoSomething(){}\n\n@Watch('person.age', { deep: true })\ndoSomething(){}\n\n@Watch('person.hobbies', { deep: true })\ndoSomething(){}\n\n第一次看到这个写法我有点迷茫，但想了想好像也不难理解：\n首先 person.x 的部分监听 是为了处理针对不同属性值发生修改时要执行的特定逻辑\n而针对 person 的整体监听 是为了执行属于公共部分的逻辑\n因此，上面的写法就只是相当于只是少写了几个 if 的条件分支罢了，更何况还都用了深度监听，而实际上这种 简化方式 在 vue 内部会实例化出多个 Watcher 实例，如下：\n\n\n\n栽树型写法\n针对上述写法，如果说后续需要追加不…",
           "link": "https://juejin.cn/post/7274163003158724608",
           "publishedOn": "2023-09-04T00:35:29.000Z",
-          "wordCount": 2930,
+          "wordCount": 2940,
           "title": "前人在 vue 项目中的 “砍树型“ 写法，让后人乘不了凉！",
           "imageUrl": null
         },
@@ -2163,7 +2183,7 @@
           "description": "温馨Tips：阅读本文大约需要 7 分钟，可以细细阅读～\n背景\n古茗是茶饮连锁品牌，所以我们会有很多业务围绕着加盟商展开，比如供应链、报货、财务、机料、上传下达等等，在这不一一列举了，前面的可能比较好理解，那上传下达是什么呢？其实就是古茗总部和门店沟通、信息传达的一种方式，本文就围绕着上传下达这个业务展开给大家介绍下我们技术实现的演进和落地。\n上传下达\n上传下达，分为门店上传和总部下达：\n门店上传：简单理解就是门店给总部反馈消息、申请售后等等的渠道；\n总部下达：简而言之是总部给门店下发的消息、任务、公告等等；\n门店上传的主要承载形式是工单，但上传的工单的来源还有其他，比如人工客服；总部下达是总部下发给门店的任务，其实交互形式也类似工单，我们在业务上没有给他划分到工单，但在前端来说技术方案其实是相通的。\n\n工单系统的演进\n\n在最开始时期简单粗暴：来一工单撸一个页面；但业务在发展，面对越来越多工单这种方式已经满足不了诉求，而且开发效率低，维护困难。\n接下来我们探索了表单模型描述+渲染的方案，表单模型在三方平台简道云进行维护，简道云提供了可视化搭建表单的能力，前端获取到表单模型描述后在我们的页面进行渲染，但这种方案也逐步暴露了缺陷：\n简道云表单模型对于前端来说很冗余，比如说简道云表单模型会有几十个字段，但需要用户填写的可能只需要几个字段。\n表单校验麻烦。\n简道云表单模型描述不了联动，比如在选择A时C字段显示，在选择B时C字段隐藏。\n前端实现渲染不优雅，会有很多if else的逻辑。\n所以我们需要一个支持联动、高性能、校验能力强、优雅的表单解决方案，这时候Formily进入了我们的视野，经过调研发现Formily完全满足我们的诉求，所以我们目前的表单解决方案就是Formily，并由Formily为核心打造了古茗的工单开发生态。\nFormily工单生态\nFormily\nFormily…",
           "link": "https://juejin.cn/post/7274146202496581690",
           "publishedOn": "2023-09-04T00:07:10.000Z",
-          "wordCount": 2154,
+          "wordCount": 2149,
           "title": "Formily 在古茗工单系统中的实践落地",
           "imageUrl": null
         },
@@ -2173,7 +2193,7 @@
           "description": "theme: smartblue\n前言\n这天刚到公司，测试同事又在群里@我：\n为什么页面鼠标一滑过，布局就错乱了？\n\n同时还给发了一段bug复现视频，我本地跑个例子模拟下\n\n可以看到，鼠标没滑过是正常的，鼠标一滑过图片就换行了，鼠标移出又正常了。\n正文\n首先说下我们的产品逻辑，我们产品的需求是：要滚动的页面，滚动条不应该占据空间，而是悬浮在滚动页面上面，而且滚动条只在滚动的时候展示。\n我们的代码是这样写：\n  <style>\n  .box {\n    width: 630px;\n    display: flex;\n    flex-wrap: wrap;\n    overflow: hidden;  /* 注意⚠️ */\n    height: 50vh;\n    box-shadow: 0 0 5px rgba(93, 96, 93, 0.5);\n  }\n  .box:hover {\n    overflow: overlay; /* 注意⚠️ */\n  }\n  .box .item {\n   width: 200px;\n   height: 200px;\n   margin-right: 10px;\n   margin-bottom: 10px;\n  }\n  img {\n   width: 100%;\n   height: 100%;\n  }\n  </style>\n  <div class=\"box\">\n    <div class=\"item\">\n      <img src=\"https://p6.itc.cn/q_70/images03/20210422/229df67605934f719b5e2efe6f171d5f.jpeg\" alt=\"\">\n    </div>\n    <div class=\"item\">\n      <img src=\"https://…",
           "link": "https://juejin.cn/post/7273875079658209319",
           "publishedOn": "2023-09-03T15:21:44.000Z",
-          "wordCount": 1158,
+          "wordCount": 1154,
           "title": "为什么我的页面鼠标一滑过，布局就错乱了？",
           "imageUrl": null
         },
@@ -2183,7 +2203,7 @@
           "description": "拖拽是常见的需求，在 react 里我们会用 react-dnd 来做。\n不管是简单的拖拽，比如拖拽排序，或者复杂的拖拽，比如低代码编辑器，react-dnd 都可以搞定。\n这篇文章我们就来用 react-dnd 来实现一下这些功能吧。\n我们这篇文章会实现 3 个案例：\n入门案例：\n\n拖拽排序：\n\n低代码编辑器：\n\n我们先入个门：\nnpx create-react-app --template=typescript react-dnd-test\n\n新建个 react 项目\n\n安装 react-dnd 相关的包：\nnpm install react-dnd react-dnd-html5-backend\n\n然后改一下 App.tsx\nimport './App.css';\n\nfunction Box() {\n  return <div className='box'></div>\n}\n\nfunction Container() {\n  return <div className=\"container\"></div>\n}\n\nfunction App() {\n  return <div>\n    <Container></Container>\n    <Box></Box>\n  </div>\n}\n\nexport default App;\n\ncss 部分如下：\n.box {\n  width: 50px;\n  height: 50px;\n  background: blue;\n  margin: 10px;\n}\n\n.container {\n  width: 300px;\n  height: 300px;\n  border: 1px solid #000;\n}\n\n把它跑起来：\nnpm run start\n\n是这样的：\n\n现在我们想把 box 拖拽到 container 里，用 reac…",
           "link": "https://juejin.cn/post/7274140856034017332",
           "publishedOn": "2023-09-03T11:50:17.000Z",
-          "wordCount": 8711,
+          "wordCount": 8642,
           "title": "react-dnd 从入门到手写低代码编辑器",
           "imageUrl": null
         },
@@ -2233,7 +2253,7 @@
           "description": "theme: condensed-night-purple\n前言\n好久没面试了，最近看一些厂开始招人了，于是投了投，没想着过，主要是抱着学习的态度，看看自己哪里不足，没想到自己这么不足。。。\n最近面了个试，某大厂，具体是哪个厂大家可以自行猜测，我看看有没有对的，哈哈哈哈\n目前是三面，但是估计止步于三面了，然后我稍微整理了一下面试题，但是这里只说出我的思考，而不说出答案，至于为啥不写答案，我只能说，我自己不会。。。有些内容我需要进行学习，然后系统地、简单易懂地分享给大家\n我说一下我自身的情况：主要技术栈是vue全家桶，算是能深挖的那种，其他的，react、webpack、vite、less、sass、tailwindcss、unocss、Nuxt、node等系列都会，但是说实话我是没法手写出来的，只停留在会用的程度，webgl、canvas等可视化方向还可以，毕竟我之前就是做这个的，算法还算可以，不说精通，但是一般题是可以做出来的，然后在基础方面，也就是js、css这块，我只能说了解吧，因为见过css大神，coco这种的，就感觉自己css从熟悉变成了听说。\n反正大概的就那样吧，会的比较多，比较杂，但是很多都不精通（不去看源码这种），关键的来了，我对于浏览器这块比较薄弱，计网、操作系统对我来说像噩梦一样，我觉得是我经验少吧，没能在工作中接触到这几个层面，所以我就是真的能答出来，也就是硬背的，并且不能举一反三，这也导致了这次面试的惨败\n下面我说一下面试吧\n注意，公司的技术栈主要是React（umi）这块，vue很少很少，然后会用node写一些中间件，大部分都是大前端\n然后算法问题的话，也不在这里说，主要说一些口述的问题\n一面\n一面是对我来说最友好的一面了，基本上都是简单的一些基础问题\n面试官主要是react技术栈，然后我和他说了，我主要是vue的，vue的原理可以，但是问我rea…",
           "link": "https://juejin.cn/post/7273682292538933306",
           "publishedOn": "2023-09-01T15:01:46.000Z",
-          "wordCount": 872,
+          "wordCount": 852,
           "title": "八百年不面试，一面试就面得一塌糊涂",
           "imageUrl": null
         },
@@ -2243,7 +2263,7 @@
           "description": "theme: serene-rose\nhighlight: dracula\n不知道你有没有发现Bing AI聊天有个输入提示功能，在用户输入部分内容时后面会给出灰色提示文案。用户只要按下tab键就可以快速添加提示的后续内容。我将这个功能称为幽灵建议。接下来我将用Vue框架来实现这个功能。\n\n布局样式\n布局使用label标签作为容器，这样即使建议内容在上层，也不会影响输入框的输入。\n<label class=\"container\">\n  <textarea></textarea>\n  <div class=\"ghost-content\"></div>\n</label>\n\n样式需要确保输入框与建议内容容器除了颜色外都要一致。建议内容可以通过z-index: -1置于输入框底部，但要注意输入框必须是透明背景。\n.container {\n  position: relative;\n  display: block;\n  width: 300px;\n  height: 200px;\n  font-size: 14px;\n  line-height: 21px;\n}\n.container textarea {\n  width: 100%;\n  height: 100%;\n  padding: 0;\n  border: 0;\n  font: inherit;\n  color: #212121;\n  background-color: #fff;\n  outline: none;\n}\n.ghost-content {\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 0;\n  bottom: 0;\n  color: #212121;\n  opacity: 0.3;\n}\n\n显示逻辑\n显示逻辑比较简单，当输入框中显示输入内容时，找到匹配的内…",
           "link": "https://juejin.cn/post/7273674732448120895",
           "publishedOn": "2023-09-01T13:39:14.000Z",
-          "wordCount": 1395,
+          "wordCount": 1422,
           "title": "Vue实现一个textarea幽灵建议功能",
           "imageUrl": null
         },
@@ -2253,18 +2273,8 @@
           "description": "theme: channing-cyan\n本来给予公司很大期盼，结果一年多还是工资拖拖拉拉几个月发一次。现在开始准备一下了，俗话说：不管在哪里还是自己靠得住。\n类型转换\n数据类型\njs基本类型：undefined、null、Boolean、String、Number、Symbol、BigInt（es10）\n装箱与拆箱\n包装类（对象引用类型）和原始值之间的相互转换，值类型->包装类（装箱），包装类->值类型 （拆箱）。\n\n值类型在栈内存中存储，引用类型在堆内存中存储。\n\njs作为面向对象语言在类型方面做出妥协，为部分基础类型系统中的“值类型”设定对应的包装类，通过包装类，将“值类型数据”作为对象来处理。\n\n显式装箱：\n const a = new String(\"d\");\n const b = Number(1)\n\n隐式装箱\n    const a = \"aaa\";\n    a.substring(0, 1);\n    // 相当于\n    const a = new String(\"aaa\");\n    a.substing(0, 1);\n\n部分特殊例子\n    if(\"0\") console.log(\"123\");//123\n    ({}) + 1 = // [object Object]1' //加号与-/*符号不一样\n    [] == ![] // true 先执行![] = false然后false转化为零 ，然后[]转为0，比布尔类型比较会先转换为数字\n\ninstanceof和-typeof实现\ninstanceof主要用于判断对象类型\nfunction new_instance_of(leftVaule, rightVaule) { \n    let rightProto = rightVaule.prototype; // 取右表达式的 prototype…",
           "link": "https://juejin.cn/post/7273497292481740836",
           "publishedOn": "2023-09-01T07:53:40.000Z",
-          "wordCount": 1907,
+          "wordCount": 1932,
           "title": "es6基础知识巩固",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7273304959538872377",
-          "author": "阿李贝斯",
-          "description": "theme: channing-cyan\n前言\n本篇文章是笔者在使用 vue3 + vite 实际开发过程中的一些经验分享，涵盖 vite 构建优化配置项的实践，以及一些开发中实用技巧的分享。\ngzip 压缩\n未开启压缩时：通过vite打包之后，vite会提示开启 gzip压缩之后的文件大小，可以看到文件体积将会显著下降\n\n接下来，我们使用 vite-plugin-compression 进行 gzip 压缩\nimport viteCompression from 'vite-plugin-compression'\nexport default defineConfig({\n  plugins: [\n    viteCompression(),\n  ],\n})\n\n通过 gzip 压缩之后，文件会被转化为 gz 压缩包，体积会明显减少，虽然是压缩包格式，但浏览器解压时间非常快，几乎可以忽略。所以开启 gzip 压缩 是有必要尝试的。\n\n动态导入\n使用动态导入，在 webpack 或 vite 这样的打包工具之中，都会自动开启代码分割。\n路由懒加载\nvue-router 路由懒加载\nVue Router 支持开箱即用的动态导入，这意味着你可以用动态导入代替静态导入：\n// 将\n// import UserDetails from './views/UserDetails.vue'\n// 替换成\nconst UserDetails = () => import('./views/UserDetails.vue')\n\nconst router = createRouter({\n  // ...\n  routes: [{ path: '/users/:id', component: UserDetails }],\n})\n\n异步导入组件\nimport { defineAsyncComp…",
-          "link": "https://juejin.cn/post/7273304959538872377",
-          "publishedOn": "2023-08-31T10:22:59.000Z",
-          "wordCount": 1933,
-          "title": "vue3 + vite 性能优化与开发经验分享",
           "imageUrl": null
         }
       ]
@@ -2280,7 +2290,7 @@
           "description": "跨平台APP开发者上架苹果应用appuploder",
           "link": "https://juejin.cn/pin/7275943591398277175",
           "publishedOn": "2023-09-07T08:25:36.000Z",
-          "wordCount": 583,
+          "wordCount": 591,
           "title": "跨平台APP开发者上架苹果应用appuploder",
           "imageUrl": null
         },
@@ -2290,7 +2300,7 @@
           "description": "[7073670907851440160#新人报道#] \n这个工具真不错。。。ipaguard",
           "link": "https://juejin.cn/pin/7275932720633528381",
           "publishedOn": "2023-09-07T08:16:12.000Z",
-          "wordCount": 556,
+          "wordCount": 564,
           "title": "[7073670907851440160#新人报道#] 这个工具真不错。。。ipaguard",
           "imageUrl": null
         },
@@ -2300,7 +2310,7 @@
           "description": "idea支持自动切换输入法了，写代码如丝般顺滑，详细教程请看：https://juejin.cn/post/7204060150705258555",
           "link": "https://juejin.cn/pin/7275550540611158079",
           "publishedOn": "2023-09-06T04:55:26.000Z",
-          "wordCount": 538,
+          "wordCount": 543,
           "title": "idea支持自动切换输入法了，写代码如丝般顺滑，详细教程请看：https://juejin.cn/post/7204060150705258555",
           "imageUrl": null
         },
@@ -2310,7 +2320,7 @@
           "description": "https://github.com/devlive-community/datacap          全平台数据中台系统\nhttps://github.com/devlive-community/authx            全平台权限管理系统\nhttps://github.com/devlive-community/openai-java-sdk  多平台开放 AI SDK\n欢迎大家贡献代码",
           "link": "https://juejin.cn/pin/7275214254097596468",
           "publishedOn": "2023-09-06T02:21:25.000Z",
-          "wordCount": 540,
+          "wordCount": 545,
           "title": "https://github.com/devlive-community/datacap 全平台数据中台系统 https://github.com/devlive-community/authx 全平台权限管理系统 https://github.com/devli...",
           "imageUrl": null
         },
@@ -2320,7 +2330,7 @@
           "description": "[7073670907851440160#新人报道#] \n开发框架\nvue.js ★56380 - 流行的轻量高效的前端组件化方案\nvue-admin ★4612 - Vue管理面板框架\nquasar ★2353 - 响应式网站和混合移动应用程序\nelectron-vue ★2085 - Electron及VueJS快速启动样板\nvue-element-admin ★1986 - vue2管理系统模板\nvuepack ★1618 - 现代VueJS启动器\nN3-components ★656 - 快速构建页面和应用\nVueThink ★373 - 前后端分离框架\nvue-2.0-boilerplate ★358 - Vue2单页应用样板​\nvue-spa-template ★344 - 前后端分离后的单页应用开发\nFramework7-Vue ★283 - VueJS与Framework7结合\nvue-bulma ★215 - 轻量级高性能MVVM Admin UI框架\nvuetiful ★189 - 创建业务及管理应用程序\nvue-stack-2.0 ★155 - Vue2项目样板\nvue2-admin-lte ★154 - vue2版本的adminLTE\njspangAdmin ★140 - 基于Vue2的后台管理系统\nvue-fullstack ★140 - 实时的用户友好的后台系统\nvue-paper-dashboard ★120 - Vue的Tim Paper 仪表盘\nvue-webgulp ★113 - 仿VueJS Vue loader示例\nvue-element-starter ★83 - vue启动页\nvuemin ★17 - 基于Vue的企业级前端开发框架\nvue-team-template ★12 - 一种构建vue项目的选择方案",
           "link": "https://juejin.cn/pin/7274940764517531703",
           "publishedOn": "2023-09-05T08:13:34.000Z",
-          "wordCount": 761,
+          "wordCount": 769,
           "title": "[7073670907851440160#新人报道#] 开发框架 vue.js ★56380 - 流行的轻量高效的前端组件化方案 vue-admin ★4612 - Vue管理面板框架 quasar ★2353 - 响应式网站...",
           "imageUrl": null
         },
@@ -2330,7 +2340,7 @@
           "description": "10$ 上车 copilot[呲牙][呲牙]",
           "link": "https://juejin.cn/pin/7273737312973619260",
           "publishedOn": "2023-09-02T02:13:15.000Z",
-          "wordCount": 548,
+          "wordCount": 553,
           "title": "10$ 上车 copilot[呲牙][呲牙]",
           "imageUrl": null
         },
@@ -2340,7 +2350,7 @@
           "description": "新鲜事，发现一个在线二维码生成器。https://qrcode.gitapp.cn",
           "link": "https://juejin.cn/pin/7273693149628842024",
           "publishedOn": "2023-09-02T00:59:45.000Z",
-          "wordCount": 526,
+          "wordCount": 534,
           "title": "新鲜事，发现一个在线二维码生成器。https://qrcode.gitapp.cn",
           "imageUrl": null
         },
@@ -2350,7 +2360,7 @@
           "description": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件#\nAI Code Translator 是一款功能强大的在线工具，可以将代码从一种编程语言无缝翻译为另一种编程语言。无论您是想将 Python 代码转换为 Java 还是将 JavaScript 代码转换为 C++，AI Code Translator 都能满足您的需求。\n立即尝试：https://ai-code-translator.com/",
           "link": "https://juejin.cn/pin/7273096710826295348",
           "publishedOn": "2023-08-31T06:09:00.000Z",
-          "wordCount": 590,
+          "wordCount": 598,
           "title": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件# AI Code Translator 是一款功能强大的在线工具，可以将代码从一种编程语言无缝翻译为另一种编程语言。无论您...",
           "imageUrl": null
         },
@@ -2360,7 +2370,7 @@
           "description": "https://github.com/devlive-community/datacap          全平台数据中台系统\nhttps://github.com/devlive-community/authx            全平台权限管理系统\nhttps://github.com/devlive-community/openai-java-sdk  多平台开放 AI SDK\n欢迎大家贡献代码",
           "link": "https://juejin.cn/pin/7273043415427940392",
           "publishedOn": "2023-08-31T02:17:40.000Z",
-          "wordCount": 548,
+          "wordCount": 556,
           "title": "https://github.com/devlive-community/datacap 全平台数据中台系统 https://github.com/devlive-community/authx 全平台权限管理系统 https://github.com/devli...",
           "imageUrl": null
         },
@@ -2370,7 +2380,7 @@
           "description": "免注册 无限使用的ChatGPT https://sunmier.com/#/",
           "link": "https://juejin.cn/pin/7272869799960035391",
           "publishedOn": "2023-08-30T06:19:56.000Z",
-          "wordCount": 536,
+          "wordCount": 544,
           "title": "免注册 无限使用的ChatGPT https://sunmier.com/#/",
           "imageUrl": null
         },
@@ -2380,7 +2390,7 @@
           "description": "[7073670907851440160#新人报道#]",
           "link": "https://juejin.cn/pin/7272714715020640310",
           "publishedOn": "2023-08-30T02:46:35.000Z",
-          "wordCount": 523,
+          "wordCount": 531,
           "title": "[7073670907851440160#新人报道#]",
           "imageUrl": null
         },
@@ -2390,7 +2400,7 @@
           "description": "sphere-collision，一个在Canvas上实现球体碰撞和球体交互，高可用、高扩展的库，最新发布了v1.1.8版本，整体优化了碰撞算法，大家赶紧来体验吧[呲牙]",
           "link": "https://juejin.cn/pin/7272740867931275305",
           "publishedOn": "2023-08-30T02:38:37.000Z",
-          "wordCount": 524,
+          "wordCount": 532,
           "title": "sphere-collision，一个在Canvas上实现球体碰撞和球体交互，高可用、高扩展的库，最新发布了v1.1.8版本，整体优化了碰撞算法，大家赶紧来体验吧[呲牙]",
           "imageUrl": null
         },
@@ -2400,7 +2410,7 @@
           "description": "再给你安利一款免费代码生成器\nhttps://juejin.cn/post/7272250890596679716?share_token=117c1ba3-34e2-4305-9e69-58cbf8cdf1e3",
           "link": "https://juejin.cn/pin/7272626241672855589",
           "publishedOn": "2023-08-29T15:41:43.000Z",
-          "wordCount": 529,
+          "wordCount": 537,
           "title": "再给你安利一款免费代码生成器 https://juejin.cn/post/7272250890596679716?share_token=117c1ba3-34e2-4305-9e69-58cbf8cdf1e3",
           "imageUrl": null
         },
@@ -2410,7 +2420,7 @@
           "description": "https://github.com/devlive-community/datacap                    全平台数据中台系统\nhttps://github.com/devlive-community/authx                        全平台权限管理系统\nhttps://github.com/devlive-community/openai-java-sdk      多平台开放 AI SDK\n欢迎大家贡献代码",
           "link": "https://juejin.cn/pin/7272564663115890722",
           "publishedOn": "2023-08-29T10:21:27.000Z",
-          "wordCount": 548,
+          "wordCount": 556,
           "title": "https://github.com/devlive-community/datacap 全平台数据中台系统 https://github.com/devlive-community/authx 全平台权限管理系统 https://github.com/devli...",
           "imageUrl": null
         },
@@ -2420,7 +2430,7 @@
           "description": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件#\nTools4dev 是一款“免费的一体化工具箱”解决方案，旨在改善和简化开发人员的日常开发体验，增强开发人员技能并简化开发工作流程。Tools4dev 由开发人员设计，专为开发人员服务。\n官方网站：https://www.tools4dev.xyz/",
           "link": "https://juejin.cn/pin/7272417917186310156",
           "publishedOn": "2023-08-29T07:04:56.000Z",
-          "wordCount": 551,
+          "wordCount": 559,
           "title": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件# Tools4dev 是一款“免费的一体化工具箱”解决方案，旨在改善和简化开发人员的日常开发体验，增强开发人员技...",
           "imageUrl": null
         },
@@ -2430,7 +2440,7 @@
           "description": "ht-vue-webpack-plugin插件经过这几天的测试，逐步趋于稳定，目前vue2版本已经在公司项目使用，vueCli替换开始逐步进行中了。欢迎大家对该项目进行支持，并且进行使用。关于webpack配置我对外完全暴露，可进行全面的修改。",
           "link": "https://juejin.cn/pin/7272401536729825338",
           "publishedOn": "2023-08-29T06:24:02.000Z",
-          "wordCount": 529,
+          "wordCount": 537,
           "title": "ht-vue-webpack-plugin插件经过这几天的测试，逐步趋于稳定，目前vue2版本已经在公司项目使用，vueCli替换开始逐步进行中了。欢迎大家对该项目进行支持，并且进...",
           "imageUrl": null
         },
@@ -2440,7 +2450,7 @@
           "description": "jym 互关一下呀 我看到都会回关的~~",
           "link": "https://juejin.cn/pin/7272395084258852924",
           "publishedOn": "2023-08-29T06:21:06.000Z",
-          "wordCount": 548,
+          "wordCount": 556,
           "title": "jym 互关一下呀 我看到都会回关的~~",
           "imageUrl": null
         },
@@ -2450,7 +2460,7 @@
           "description": "推荐一个比浏览器自带好用的翻译插件",
           "link": "https://juejin.cn/pin/7272508420270669860",
           "publishedOn": "2023-08-29T01:18:37.000Z",
-          "wordCount": 545,
+          "wordCount": 553,
           "title": "推荐一个比浏览器自带好用的翻译插件",
           "imageUrl": null
         },
@@ -2460,7 +2470,7 @@
           "description": "你也可以实现一个create-react-app脚手架",
           "link": "https://juejin.cn/pin/7272266741346091027",
           "publishedOn": "2023-08-28T14:26:47.000Z",
-          "wordCount": 527,
+          "wordCount": 535,
           "title": "你也可以实现一个create-react-app脚手架",
           "imageUrl": null
         },
@@ -2470,7 +2480,7 @@
           "description": "JYM，理性讨论，你们平时会动LICENSE吗？",
           "link": "https://juejin.cn/pin/7271974618566246457",
           "publishedOn": "2023-08-28T01:38:50.000Z",
-          "wordCount": 545,
+          "wordCount": 553,
           "title": "JYM，理性讨论，你们平时会动LICENSE吗？",
           "imageUrl": null
         }
@@ -2497,9 +2507,9 @@
           "description": "South Pole Electrical Infrastructure – brr 南极电力基础设 …\n  倪爽的阅读分享 – 2023年9月7日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b49%e6%9c%887%e6%97%a5/",
           "publishedOn": "2023-09-07T01:38:09.000Z",
-          "wordCount": null,
+          "wordCount": 456,
           "title": "倪爽的阅读分享 – 2023年9月7日",
-          "imageUrl": null
+          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/ross-island-wind-farm-01.jpeg"
         },
         {
           "id": "https://nishuang.net/?p=29934",
@@ -2517,9 +2527,9 @@
           "description": "Spotify considered axing white noise podcasts to save $ …\n  倪爽的阅读分享 – 2023年9月5日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b49%e6%9c%885%e6%97%a5/",
           "publishedOn": "2023-09-06T19:24:56.000Z",
-          "wordCount": null,
+          "wordCount": 446,
           "title": "倪爽的阅读分享 – 2023年9月5日",
-          "imageUrl": null
+          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/UvdigRr3jSDF9L7weXoZhB.jpg.jpg"
         },
         {
           "id": "https://nishuang.net/?p=29928",
@@ -2527,9 +2537,9 @@
           "description": "Google Maps testing new colors that look a lot like App …\n  倪爽的阅读分享 – 2023年9月4日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b49%e6%9c%884%e6%97%a5/",
           "publishedOn": "2023-09-04T04:28:44.000Z",
-          "wordCount": null,
+          "wordCount": 407,
           "title": "倪爽的阅读分享 – 2023年9月4日",
-          "imageUrl": null
+          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/Koenigsegg-Regera.jpeg"
         },
         {
           "id": "https://nishuang.net/?p=29924",
@@ -2537,9 +2547,9 @@
           "description": "Why note-taking apps don’t make us smarter 为什么记笔记的 …\n  倪爽的阅读分享 – 2023年9月3日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b49%e6%9c%882%e6%97%a5-2/",
           "publishedOn": "2023-09-03T17:05:02.000Z",
-          "wordCount": null,
+          "wordCount": 469,
           "title": "倪爽的阅读分享 – 2023年9月3日",
-          "imageUrl": null
+          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/drone-with-camera-1024x697.jpeg"
         },
         {
           "id": "https://nishuang.net/?p=29921",
@@ -2547,9 +2557,9 @@
           "description": "Dark Mode: How Users Think About It and Issues to Avoid …\n  倪爽的阅读分享 – 2023年9月2日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b49%e6%9c%882%e6%97%a5/",
           "publishedOn": "2023-09-02T05:28:46.000Z",
-          "wordCount": null,
+          "wordCount": 393,
           "title": "倪爽的阅读分享 – 2023年9月2日",
-          "imageUrl": null
+          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/Figure1a-Hauptbild.jpeg"
         },
         {
           "id": "https://nishuang.net/?p=29917",
@@ -2557,9 +2567,9 @@
           "description": "在她鏡頭下的世界｜名副其實的「色彩大師」 – Inner  蜷川实花的作品充满了鲜艳的色彩和独特的 …\n  倪爽的阅读分享 – 2023年9月1日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b49%e6%9c%881%e6%97%a5/",
           "publishedOn": "2023-09-01T19:37:52.000Z",
-          "wordCount": null,
+          "wordCount": 399,
           "title": "倪爽的阅读分享 – 2023年9月1日",
-          "imageUrl": null
+          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/Mika04.jpeg"
         },
         {
           "id": "https://nishuang.net/?p=29914",
@@ -2567,9 +2577,9 @@
           "description": "播客 | 中文打字机：一个世纪的汉字突围史 – 少数派 《中文打字机：一个世纪的汉字突围史》是一本 …\n  倪爽的阅读分享 – 2023年8月30日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b48%e6%9c%8830%e6%97%a5/",
           "publishedOn": "2023-08-30T19:34:35.000Z",
-          "wordCount": null,
+          "wordCount": 412,
           "title": "倪爽的阅读分享 – 2023年8月30日",
-          "imageUrl": null
+          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/copy-of-ikea-2021-catalog-on-tab.jpeg"
         },
         {
           "id": "https://nishuang.net/?p=29911",
@@ -2577,9 +2587,9 @@
           "description": "The Style Guide for America’s Highways: The Manual on U …\n  倪爽的阅读分享 – 2023年8月26日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b48%e6%9c%8826%e6%97%a5/",
           "publishedOn": "2023-08-26T19:30:03.000Z",
-          "wordCount": null,
+          "wordCount": 399,
           "title": "倪爽的阅读分享 – 2023年8月26日",
-          "imageUrl": null
+          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/shs-251.png"
         },
         {
           "id": "https://nishuang.net/?p=29908",
@@ -2587,9 +2597,9 @@
           "description": "The World’s Workers Are Donning Cooling Vests to Battle …\n  倪爽的阅读分享 – 2023年8月23日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b48%e6%9c%8823%e6%97%a5/",
           "publishedOn": "2023-08-23T19:27:13.000Z",
-          "wordCount": null,
+          "wordCount": 450,
           "title": "倪爽的阅读分享 – 2023年8月23日",
-          "imageUrl": null
+          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/54808-110934-000-lead-Vision-Pro.jpeg"
         },
         {
           "id": "https://nishuang.net/?p=29905",
@@ -2597,9 +2607,9 @@
           "description": "Rachel Zegler Snow White remake really doesn’t wa …\n  倪爽的阅读分享 – 2023年8月21日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b48%e6%9c%8821%e6%97%a5/",
           "publishedOn": "2023-08-21T19:24:12.000Z",
-          "wordCount": null,
+          "wordCount": 398,
           "title": "倪爽的阅读分享 – 2023年8月21日",
-          "imageUrl": null
+          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/2967.jpeg"
         },
         {
           "id": "https://nishuang.net/?p=29902",
@@ -2607,9 +2617,9 @@
           "description": "This Was Steve Jobs’s Most Controversial Legacy. It Was …\n  倪爽的阅读分享 – 2023年8月20日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b48%e6%9c%8820%e6%97%a5/",
           "publishedOn": "2023-08-20T19:16:46.000Z",
-          "wordCount": null,
+          "wordCount": 434,
           "title": "倪爽的阅读分享 – 2023年8月20日",
-          "imageUrl": null
+          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/getty_101921559_20001333181884391423_457986_kno4oh-1.webp"
         },
         {
           "id": "https://nishuang.net/?p=29899",
@@ -2617,9 +2627,9 @@
           "description": "How to Achieve Big, Hairy, Audacious Goals: Don’t Be SM …\n  倪爽的阅读分享 – 2023年8月19日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b48%e6%9c%8819%e6%97%a5/",
           "publishedOn": "2023-08-19T19:14:37.000Z",
-          "wordCount": null,
+          "wordCount": 426,
           "title": "倪爽的阅读分享 – 2023年8月19日",
-          "imageUrl": null
+          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/Easy-Resize.com_-1024x667-1.jpg"
         },
         {
           "id": "https://nishuang.net/?p=29895",
@@ -2627,9 +2637,9 @@
           "description": "Facts: Why is there empty space in Cup Noodles? 事实 …\n  倪爽的阅读分享 – 2023年8月16日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b48%e6%9c%8816%e6%97%a5/",
           "publishedOn": "2023-08-16T19:11:20.000Z",
-          "wordCount": null,
+          "wordCount": 422,
           "title": "倪爽的阅读分享 – 2023年8月16日",
-          "imageUrl": null
+          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/handmaidens-tale.jpeg"
         },
         {
           "id": "https://nishuang.net/?p=29891",
@@ -2637,9 +2647,9 @@
           "description": "adidas Immortalizes the Homer Simpson Bush Meme With a  …\n  倪爽的阅读分享 – 2023年8月13日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b48%e6%9c%8813%e6%97%a5/",
           "publishedOn": "2023-08-13T19:07:01.000Z",
-          "wordCount": null,
+          "wordCount": 415,
           "title": "倪爽的阅读分享 – 2023年8月13日",
-          "imageUrl": null
+          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/simpson.jpg"
         },
         {
           "id": "https://nishuang.net/?p=29886",
@@ -2647,9 +2657,9 @@
           "description": "Spotify integrates with Patreon to stream subscriber-on …\n  倪爽的阅读分享 – 2023年8月11日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b48%e6%9c%8811%e6%97%a5/",
           "publishedOn": "2023-08-11T19:03:02.000Z",
-          "wordCount": null,
+          "wordCount": 438,
           "title": "倪爽的阅读分享 – 2023年8月11日",
-          "imageUrl": null
+          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/bp1410102-mbret.jpeg"
         },
         {
           "id": "https://nishuang.net/?p=29718",
@@ -2657,9 +2667,9 @@
           "description": "显然不合理。但是你不能直接跟老板说“不”。 推友私信问我的问题，因为属于常见问题，经过跟推友确认，我隐掉隐私信 …\n  老板要求设计师把日活用户数作为 KPI 考核指标，合理吗？又该怎么跟老板沟通？ 查看全文 »",
           "link": "https://nishuang.net/%e8%80%81%e6%9d%bf%e8%a6%81%e6%b1%82%e8%ae%be%e8%ae%a1%e5%b8%88%e6%8a%8a%e6%97%a5%e6%b4%bb%e4%bd%9c%e4%b8%ba-kpi-%e8%80%83%e6%a0%b8%e6%8c%87%e6%a0%87-%e5%90%88%e7%90%86%e5%90%97/",
           "publishedOn": "2023-08-10T14:52:39.000Z",
-          "wordCount": null,
+          "wordCount": 407,
           "title": "老板要求设计师把日活用户数作为 KPI 考核指标，合理吗？又该怎么跟老板沟通？",
-          "imageUrl": null
+          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/08/FpEyIKdXgAELY1Q.jpeg"
         },
         {
           "id": "https://nishuang.net/?p=29735",
@@ -2667,9 +2677,9 @@
           "description": "RAD is a new system to help the visually impaired play  …\n  倪爽的阅读分享 – 2023年8月10日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b48%e6%9c%8810%e6%97%a5/",
           "publishedOn": "2023-08-10T13:28:00.000Z",
-          "wordCount": null,
+          "wordCount": 420,
           "title": "倪爽的阅读分享 – 2023年8月10日",
-          "imageUrl": null
+          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/08/1691595194829-jpa-505098591i000002.jpeg"
         },
         {
           "id": "https://nishuang.net/?p=29738",
@@ -2677,9 +2687,9 @@
           "description": "The exclusive network behind India’s global tech succes …\n  倪爽的阅读分享 – 2023年8月9日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b48%e6%9c%889%e6%97%a5/",
           "publishedOn": "2023-08-10T13:04:23.000Z",
-          "wordCount": null,
+          "wordCount": 485,
           "title": "倪爽的阅读分享 – 2023年8月9日",
-          "imageUrl": null
+          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/08/Slide5-2048x1152-1-1024x576.jpeg"
         }
       ]
     },
