@@ -54,7 +54,7 @@
           "description": "一开始看到registerProtocolHandler()方法老激动了，以为又发现了个好玩具，谁知深入体验了一番之后……呵呵~",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-registerprotocolhandler/",
           "publishedOn": "2023-08-30T15:02:58.000Z",
-          "wordCount": 987,
+          "wordCount": 988,
           "title": "一言难尽的registerProtocolHandler()方法",
           "imageUrl": null
         },
@@ -317,7 +317,7 @@
           "publishedOn": "2023-09-07T02:52:38.000Z",
           "wordCount": 451,
           "title": "发布了: 心安则理得。",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fny5Jrw04Q3jPCZKplpYK7GD_7vTv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fubmaam8-JA6hlQWKv7SBF39kjdZv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
         },
         {
           "id": "https://m.okjike.com/originalPosts/64f8a1cc0740d5cd6eac4754",
@@ -2090,7 +2090,7 @@
         {
           "id": "https://juejin.cn/post/7275549753693749304",
           "author": "pany",
-          "description": "有些人一不仔细看文章，二甚至压根就没写过 TS，就在评论区非理性讨论。\n建议大家合理发表自己的意见和观点，而不是类似这样的张口就来：“推荐用 TS 就是你 JS 不行”\nHello，诸位前端工程师，今天由我来从一个 CRUD 开发工程师的角度聊一聊这个 “敏感” 的话题。\n有一个现象\n就是你不难发现，大多数能力比你强的前端工程师，要么在鼓励大家用 TS，要么就是自己的开源项目采用了 TS。\n而这种现象通常会在技术领域会传播下来，普及给所有程序员。就像 Vue/React 等框架都有大厂开始大量使用后，再慢慢普及到小厂，最后几乎所有程序员都被普及到了（毕竟你不会就找不到工作了）。\n而大厂尝试使用一门技术，并且成功落地之后并没有抛弃它，而是在更多的项目中使用，这种时候基本上就可以说这门技术的优点是比较明显的，被普及的概率也就非常大了。\n正好，TS 就符合这个现象和普及规律。\n也就是说，按照这个规律我们其实可以得出一个简单的结论：前端项目中使用 TS 是优大于弊的，并且以后 TS 会被普及\n有一个误区\n\n\n\n这种评论见多了，起初我真的很想回复一些什么来反驳反驳，后来想一想，其实就是他们当前（当前当前，注意我的用词，我并不是想一杆子打死所有反对使用 TS 的人，也并没有说他们以后不会成长）太菜了...\n因为我实在是想不明白 TS 降低开发效率是怎么得出来的？\n如果你说你玩上了类型体操，开发效率降低了，那我想说的是，能力不够是可以不玩类型体操的，能够玩上类型体操的也不会吐出这么低级的槽，CRUD 也完全不需要类型体操\n如果你说你初始化一个项目，进行各种 TS 配置和导包，出现大量报错不知所措，那说明你还不具备从零搭建一个TS 项目的能力，本质上还是你 TS 以及生态不熟悉，那你可以选择去开源社区找一个模板，等使用熟悉后再试着自己搭建，不要一开始就磨灭了自己的兴致\n如果你觉得你定义一个 const a = 1，也要写成 const a: number = 1 是降低了开发效率，那其实是你还不习惯罢了，毕竟我刚学 TS 的第一天也有这种心理\n或者这样，假设你们说的都是事实，就是 TS 降低了开发效率。但是 TS 没有优点吗？TS 的优点就没有一个能打赢 “降低开发效率” 这个假设吗？\n我觉得应该是有的吧，说几个 CRUD 时就能体会到的：\n一个变量原本是 string 类型，但是在某一处给这个变量赋值的时候，赋值成了 number 类型，你开发时发现程序无论如何都跑不对，定位半天发现原来是类型错误\n还是这个变量，你赋值错了，但是由于对应功能不常用，上线前没有测试出来，导致出现了严重生产环境问题，你即将被追责\n后期维护时，不用再到处翻找上下文就能立即知道变量类型\n几乎不会再出现 ReferenceError： “x” is not defined\n就这三个比较常见的点，哪一个带来的问题不能打赢 “降低开发效率”？就难道 ReferenceError： “x” is not defined 时你不需要花费时间定位问题吗？更别说出现生成环境问题了\n有需求就有市场\n\n\n随意截取了其他 TS 文章下的两则评论，类似的不支持 TS 的评论还有很多，几乎每一篇相关文章下面都会见到。\n但是事实是，从 TS 出现，到现在的高热度和高采用，足以说明它在市场上是有足够多的需求的，并不会因为所谓的 “TS 没有 JS 灵活” 或 “JS 是弱类型，比 TS 更优势” 等观点左右它的需求量。\n意思就是你必须使用 TS 吗？\n那也当然不是，你可以继续使用 JS，就像现在你依旧可以使用 JQ。\n但...\n你真的有不学习、不使用 TS 的资本吗？将好像 JQ 时代过渡到 Vue/React 时代的时候一样，多少人嚷着 JQ 更优秀、市场占有率更高，操作 DOM 多么的灵活，Vue 等框架心智负担多么的大，学 Vue 前必须先学习 JQ 等等... 现在在看看呢？你还能再招聘 JD 上看见只要求你会 JQ 的岗位吗？\n所以说啊，哪怕只是为了你的饭碗，你也应该去学一学 TS、用一用 TS。\n不要做低级程序员\n优秀的程序员总是在技术普及之前就研究它的思想，总结它的优缺点，尝试将其落地。\n大众程序员总是在普及的时候才开始学。\n而最低级的程序员只有等自己找不到工作了才会被迫开始学。\n善意的提醒\n随着 Vue3 的普及，开源社区优秀的模板都是拥抱的 TS 的（React 那就更早了），而大多数公司的项目都是基于这些模板进行开发的。如果不出意外的话，招聘 JD 上会出现越来越多的 TS 字样。\n还是那句话，哪怕只是为了自己饭碗。",
+          "description": "有些人一不仔细看文章，二甚至压根就没写过 TS，就在评论区非理性讨论。\n建议大家合理发表自己的意见和观点，而不是类似这样的张口就来：“推荐用 TS 就是你 JS 不行”\nHello，诸位前端工程师，今天由我来从一个 CRUD 开发工程师的角度聊一聊这个 “敏感” 的话题。\n有一个现象\n就是你不难发现，大多数能力比你强的前端工程师，要么在鼓励大家用 TS，要么就是自己的开源项目采用了 TS。\n而这种现象通常会在技术领域会传播下来，普及给所有程序员。就像 Vue/React 等框架都有大厂开始大量使用后，再慢慢普及到小厂，最后几乎所有程序员都被普及到了（毕竟你不会就找不到工作了）。\n而大厂尝试使用一门技术，并且成功落地之后并没有抛弃它，而是在更多的项目中使用，这种时候基本上就可以说这门技术的优点是比较明显的，被普及的概率也就非常大了。\n正好，TS 就符合这个现象和普及规律。\n也就是说，按照这个规律我们其实可以得出一个简单的结论：前端项目中使用 TS 是优大于弊的，并且以后 TS 会被普及\n有一个误区\n\n\n\n这种评论见多了，起初我真的很想回复一些什么来反驳反驳，后来想一想，其实就是他们当前（当前当前，注意我的用词，我并不是想一杆子打死所有反对使用 TS 的人，也并没有说他们以后不会成长）太菜了...\n因为我实在是想不明白 TS 降低开发效率是怎么得出来的？\n如果你说你玩上了类型体操，开发效率降低了，那我想说的是，能力不够是可以不玩类型体操的，能够玩上类型体操的也不会吐出这么低级的槽，CRUD 也完全不需要类型体操\n如果你说你初始化一个项目，进行各种 TS 配置和导包，出现大量报错不知所措，那说明你还不具备从零搭建一个TS 项目的能力，本质上还是你 TS 以及生态不熟悉，那你可以选择去开源社区找一个模板，等使用熟悉后再试着自己搭建，不要一开始就磨灭了自己的兴致\n如果你觉得你定义一个 fn(x)，也要写成 fn(x: number) 是降低了开发效率，那其实是你还不习惯罢了，毕竟我刚学 TS 的第一天也有这种心理\n或者这样，假设你们说的都是事实，就是 TS 降低了开发效率。但是 TS 没有优点吗？TS 的优点就没有一个能打赢 “降低开发效率” 这个假设吗？\n我觉得应该是有的吧，说几个 CRUD 时就能体会到的：\n一个变量原本是 string 类型，但是在某一处给这个变量赋值的时候，赋值成了 number 类型，你开发时发现程序无论如何都跑不对，定位半天发现原来是类型错误\n还是这个变量，你赋值错了，但是由于对应功能不常用，上线前没有测试出来，导致出现了严重生产环境问题，你即将被追责\n后期维护时，不用再到处翻找上下文就能立即知道变量类型\n几乎不会再出现 ReferenceError： “x” is not defined\n就这三个比较常见的点，哪一个带来的问题不能打赢 “降低开发效率”？就难道 ReferenceError： “x” is not defined 时你不需要花费时间定位问题吗？更别说出现生成环境问题了\n有需求就有市场\n\n\n随意截取了其他 TS 文章下的两则评论，类似的不支持 TS 的评论还有很多，几乎每一篇相关文章下面都会见到。\n但是事实是，从 TS 出现，到现在的高热度和高采用，足以说明它在市场上是有足够多的需求的，并不会因为所谓的 “TS 没有 JS 灵活” 或 “JS 是弱类型，比 TS 更优势” 等观点左右它的需求量。\n意思就是你必须使用 TS 吗？\n那也当然不是，你可以继续使用 JS，就像现在你依旧可以使用 JQ。\n但...\n你真的有不学习、不使用 TS 的资本吗？将好像 JQ 时代过渡到 Vue/React 时代的时候一样，多少人嚷着 JQ 更优秀、市场占有率更高，操作 DOM 多么的灵活，Vue 等框架心智负担多么的大，学 Vue 前必须先学习 JQ 等等... 现在在看看呢？你还能再招聘 JD 上看见只要求你会 JQ 的岗位吗？\n所以说啊，哪怕只是为了你的饭碗，你也应该去学一学 TS、用一用 TS。\n不要做低级程序员\n优秀的程序员总是在技术普及之前就研究它的思想，总结它的优缺点，尝试将其落地。\n大众程序员总是在普及的时候才开始学。\n而最低级的程序员只有等自己找不到工作了才会被迫开始学。\n善意的提醒\n随着 Vue3 的普及，开源社区优秀的模板都是拥抱的 TS 的（React 那就更早了），而大多数公司的项目都是基于这些模板进行开发的。如果不出意外的话，招聘 JD 上会出现越来越多的 TS 字样。\n还是那句话，哪怕只是为了自己饭碗。",
           "link": "https://juejin.cn/post/7275549753693749304",
           "publishedOn": "2023-09-06T10:54:28.000Z",
           "wordCount": 1036,
@@ -2109,7 +2109,7 @@
         },
         {
           "id": "https://juejin.cn/post/7275141653420425277",
-          "author": "FE_Reese",
+          "author": "FrontEnd_Reese",
           "description": "theme: orange\nhighlight: a11y-dark\nh5是怎么和微信小程序通信的？不同H5页面怎么通信的？webview是谁提供的？\nweb-view 是往小程序中嵌入h5的容器。会自动铺满整个小程序页面。微信小程序和 uni-app 都提供了 web-view 组件。\n由于简历上有一段实习是移动端h5开发，让面试官误以为我做过微信小程序的内嵌h5页面，但其实实习中都是公司框架写的代码，页面也是直接嵌入公司的app中的，我并没有微信小程序开发的经验，现在整理答案也是死记硬背，mark一下看到的一篇讲的比较清楚的文章，以后学小程序了再来回顾。\n微信小程序web-view与H5 通信方式探索 - 掘金 (juejin.cn)\nh5 页面间通信其实就是前端跨页面通信（吧？）当时第一反应回答的是使用LocalStorage, 面试官又提出用户修改个人信息后返回页面更新信息的情况，回答的是我之前做表单有类似的场景，是向后端提交后在后端更新了数据，回退到原先的页面的时候在 created/activated 的时候获取数据。\n面试官：前端跨页面通信，你知道哪些方法？ - 掘金 (juejin.cn)\n什么是微任务？什么是宏任务？\n如果说哪些操作是宏任务，哪些操作是微任务，那大部分同学都是比较清楚的：\n宏任务：script（整体代码）/setTimout/setInterval/setImmediate(node 独有)/requestAnimationFrame(浏览器独有)/IO/UI render（浏览器独有）\n微任务：process.nextTick(node 独有)/Promise.then()/Object.observe/MutationObserver\n\n这里面试官还追问了一句，Promise本身是微任务吗？\n那这两者有具体的定义吗？老规矩，直接 mdn…",
           "link": "https://juejin.cn/post/7275141653420425277",
           "publishedOn": "2023-09-05T07:01:13.000Z",
@@ -2143,7 +2143,7 @@
           "description": "10 个 css 代码片段\n以下这 10 个常用的 css 代码片段值得收藏，都可以用于平常的业务代码当中。\n1. 点点点加载中效果\n这是一个兼容性不错的用户体验很棒的点点点加载效果，实现思路如下:\n使用自定义的标签元素 dot。\n将 dot 元素设置为内联元素(display:inline-block),并设置溢出隐藏(overflow:hidden)，高度设置为 1em。\n使用:before 伪元素结合\\AUnicode 字符插入内容，并且使用 white-space:pre-wrap 保留换行效果，使用 css 动画。\n使用 transform 和 translate 为...添加动画效果。\nhtml 代码如下:\n<div class=\"loading\">正在加载中<dot>...</dot></div>\n\ncss 代码如下:\n.loading {\n  /**这里写自己自定义的样式 */\n}\n.loading > dot {\n  height: 1em;\n  overflow: hidden;\n  display: inline-block;\n  text-align: left;\n  vertical-align: -0.25em;\n  line-height: 1;\n}\n/* 核心代码 */\n.loading > dot:before {\n  display: block;\n  /* 这行代码最重要 */\n  content: '...\\A..\\A.';\n  /* 值是Pre也是一样的效果 */\n  white-space: pre-wrap;\n  animation: dot 3s infinite step-start both;\n}\n@keyframes dot {\n  33% {\n    transform: translateY(-2em);\n  }\n …",
           "link": "https://juejin.cn/post/7274789845754544163",
           "publishedOn": "2023-09-04T13:53:47.000Z",
-          "wordCount": 4315,
+          "wordCount": 4348,
           "title": "10 个 效果不错的值得收藏的 css 代码片段",
           "imageUrl": null
         },
@@ -2193,7 +2193,7 @@
           "description": "theme: smartblue\n前言\n这天刚到公司，测试同事又在群里@我：\n为什么页面鼠标一滑过，布局就错乱了？\n\n同时还给发了一段bug复现视频，我本地跑个例子模拟下\n\n可以看到，鼠标没滑过是正常的，鼠标一滑过图片就换行了，鼠标移出又正常了。\n正文\n首先说下我们的产品逻辑，我们产品的需求是：要滚动的页面，滚动条不应该占据空间，而是悬浮在滚动页面上面，而且滚动条只在滚动的时候展示。\n我们的代码是这样写：\n  <style>\n  .box {\n    width: 630px;\n    display: flex;\n    flex-wrap: wrap;\n    overflow: hidden;  /* 注意⚠️ */\n    height: 50vh;\n    box-shadow: 0 0 5px rgba(93, 96, 93, 0.5);\n  }\n  .box:hover {\n    overflow: overlay; /* 注意⚠️ */\n  }\n  .box .item {\n   width: 200px;\n   height: 200px;\n   margin-right: 10px;\n   margin-bottom: 10px;\n  }\n  img {\n   width: 100%;\n   height: 100%;\n  }\n  </style>\n  <div class=\"box\">\n    <div class=\"item\">\n      <img src=\"https://p6.itc.cn/q_70/images03/20210422/229df67605934f719b5e2efe6f171d5f.jpeg\" alt=\"\">\n    </div>\n    <div class=\"item\">\n      <img src=\"https://…",
           "link": "https://juejin.cn/post/7273875079658209319",
           "publishedOn": "2023-09-03T15:21:44.000Z",
-          "wordCount": 1154,
+          "wordCount": null,
           "title": "为什么我的页面鼠标一滑过，布局就错乱了？",
           "imageUrl": null
         },
@@ -2203,7 +2203,7 @@
           "description": "拖拽是常见的需求，在 react 里我们会用 react-dnd 来做。\n不管是简单的拖拽，比如拖拽排序，或者复杂的拖拽，比如低代码编辑器，react-dnd 都可以搞定。\n这篇文章我们就来用 react-dnd 来实现一下这些功能吧。\n我们这篇文章会实现 3 个案例：\n入门案例：\n\n拖拽排序：\n\n低代码编辑器：\n\n我们先入个门：\nnpx create-react-app --template=typescript react-dnd-test\n\n新建个 react 项目\n\n安装 react-dnd 相关的包：\nnpm install react-dnd react-dnd-html5-backend\n\n然后改一下 App.tsx\nimport './App.css';\n\nfunction Box() {\n  return <div className='box'></div>\n}\n\nfunction Container() {\n  return <div className=\"container\"></div>\n}\n\nfunction App() {\n  return <div>\n    <Container></Container>\n    <Box></Box>\n  </div>\n}\n\nexport default App;\n\ncss 部分如下：\n.box {\n  width: 50px;\n  height: 50px;\n  background: blue;\n  margin: 10px;\n}\n\n.container {\n  width: 300px;\n  height: 300px;\n  border: 1px solid #000;\n}\n\n把它跑起来：\nnpm run start\n\n是这样的：\n\n现在我们想把 box 拖拽到 container 里，用 reac…",
           "link": "https://juejin.cn/post/7274140856034017332",
           "publishedOn": "2023-09-03T11:50:17.000Z",
-          "wordCount": 8642,
+          "wordCount": 8667,
           "title": "react-dnd 从入门到手写低代码编辑器",
           "imageUrl": null
         },
@@ -2213,7 +2213,7 @@
           "description": "大文件分片\n大家好, 我今天是华为冲锋战神遥遥领先瑜, 在网上看了大半天mate60 现在耳朵里都是遥遥领先, 所以一鼓作气给大家分享一篇大文件分片+webWorker的文章, 通过写作这篇文章, 自己也学习到了不少知识, 比如通过js获取电脑cpu线程, 那么话不多说直接开始\n1. 初始化, 搭设架子\n<!DOCTYPE html>\n<html lang=\"zh-CN\">\n\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\" />\n  <title>大文件分片</title>\n  <style></style>\n</head>\n\n<body>\n  <input type=\"file\" id=\"fileRef\" />\n  <script type=\"module\" src=\"./main.js\">\n\n\n  </script>\n</body>\n\n</html>\n\n2. 读取单个文件的分片, 并进行加密\n这里使用的是SparkMD5进行加密, 可自行下载并导入\nimport { createChunks } from './createChunks'\n// 规定每次切片的文件大小\nconst CHUNK_SIZE = 1024 * 1024 * 5 // 5MB\n\nexport async function cutFile (file) {\n  // 生成每一个切片, 分片是耗时的所以是异步操作\n  const chunk = await createChunks(file, 1, CHUNK_SIZE)\n…",
           "link": "https://juejin.cn/post/7273803674789953575",
           "publishedOn": "2023-09-02T18:01:14.000Z",
-          "wordCount": 3391,
+          "wordCount": 3404,
           "title": "Web Worker(遥遥领先的速度)+大文件分片",
           "imageUrl": null
         },
@@ -2223,7 +2223,7 @@
           "description": "前言\n下面20道题是笔者最近在面试里遇到的和在牛客看到的，希望对大家有帮助~\n1. LRU算法（快手）\n\nvar LRUCache = function (capacity) {\n  this.catch = new Map()  //初始化map数据结构\n  this.capacity = capacity  //容量\n};\n\nLRUCache.prototype.get = function (key) {\n  if (this.catch.has(key)) {   //map中有这个元素\n    let value = this.catch.get(key);  //调用map的get方法获取元素\n    //更新key=>value\n    this.catch.delete(key);  //删除之前的元素\n    this.catch.set(key, value);  //将新获取的相同的元素以键值对推入map中\n\n    return value   //返回关键字的值\n  }\n  return -1  //map中没有这个元素返回-1\n};\n\nLRUCache.prototype.put = function (key, value) {\n  if (this.catch.has(key)) {  //有这个元素\n    this.catch.delete(key);  //删除\n  }\n\n  //判断有没有达到存储的阈值\n  if (this.catch.size >= this.capacity) {\n    //移除谁 再放新值  \n    //m.keys().next()拿到首位的键值对\n    this.catch.delete(this.catch.keys().next().value)\n  }\n  this.catch.set(key,…",
           "link": "https://juejin.cn/post/7273775338421452834",
           "publishedOn": "2023-09-02T12:08:56.000Z",
-          "wordCount": 5597,
+          "wordCount": 5598,
           "title": "分享20个遇到的大厂算法题和手写题",
           "imageUrl": null
         },
@@ -2233,7 +2233,7 @@
           "description": "title: heartbeat\ntitleTemplate: chat\ntheme: channing-cyan\n前言\n我们先来看一下心跳检测机制？\n心跳检测机制是一种用于检测系统、应用程序或网络连接状态的技术。基本原理是定期发送小型数据包（称为心跳包或心跳消息）以确认远程设备或连接仍然处于活动状态。如果一段时间内没有收到心跳响应，系统就会认为连接已断开或设备不再可用。本文将用来实现多人聊天室在线人数的统计。\n心跳机制几个关键概念\n心跳包：数据包 => 通常是一个标识或消息\n心跳间隔：心跳包发送的时间间隔\n心跳响应：客户端或者服务器接收心跳包时，做出的响应\n维护状态：心跳检测机制通常在服务器端维护状态\n超时处理：心跳检测机制认定为不活跃、超时并做处理(自动重连机制)\n为什么需要心跳机制？\n检测连接状态\n维护连接性\n管理在线状态\n检测系统、设备健康状况\n减少资源浪费\n体验地址\n聊天室的搭建教程\n体验地址传送门在---->这里👻👻👻\n效果展示\n\n整体实现思路\n这里以多人聊天室的中心跳检测机制为例。\n客户端和服务器端建立连接(websocket)\n在客户端定期轮询向服务器端发送心跳包 ping\n服务器端接收心跳包并做出响应 pong\n服务器端维护 ping 的客户端列表，返回活跃的客户端数\n客户端接收到心跳响应，更新自己状态，如心跳包异常，则做异常处理\n\n前端部分\n聊天室的搭建参考文章：即时通讯轻松实现：WebSocket、Vue 3 和 Node.js 缔造的多人实时交流平台,挺详细的嘞！\n客户端发出建立连接 new WebSocket(socketUrl)\n添加连接状态、消息接收、错误信息、关闭等事件监听\n在socket.onopen 建立连接之后开始定期发送心跳包ping\n建立连接\nlet socket = null; \n/**\n * 建立连接\n */\nconst …",
           "link": "https://juejin.cn/post/7273756059495071779",
           "publishedOn": "2023-09-02T08:48:04.000Z",
-          "wordCount": 2449,
+          "wordCount": 2440,
           "title": "WebSocket聊天室在线状态管理：心跳检测机制（附源码）",
           "imageUrl": null
         },
@@ -2243,7 +2243,7 @@
           "description": "前言\n有时候我们需要在线上debugger的时候，可能萌生的几个解决方案\n如果你的环境部署了生产log日志功能，那么恭喜你，这样我们可以快速定位报错的位置，比如Sentry\n此外，如果作为一个前端开发人员，除了在页面source面板，rewrite可以解决这个问题\n或许我们可以借助一些抓包工具快速便捷的解决这些问题\ncharles魔法\n某一天你的同事突然拿着你的电脑，他想通过百度去搜索一些东西，可是他会很好奇，为什么每次打开www.baidu.com 的时候总是会link到一个奇怪的链接，那么可能会是这样\n\n其实这就是我们今天所说的一个关于charles常用的功能，那就是map-remote，通过配置不同domain去映射做到了重定向\n\nmap-remote\n我这里写一个测试一个小demo，比如我们线上地址是http://47.103.9.52/charles-tutorial/\n当然这是我自己部署的一个小项目，某一次线上项目出现一个小问题，本地关联的代码\n那么我想远端直接关联到我本地，那么我可以先通过执行下面shell命令\npnpm install\npnpm run build:dev\npnpm run preview\n\n此时本地应该跑了一个静态访问地址，像这样\n\n此时我们做一个charles map-remote\n\n此时再次访问 http://47.103.9.52/charles-tutorial/ 你会发现本地charles代理到了本地4173这个端口上\n\n为了验证是否生效\n那么我加了一行代码，看图示\n\n紧接着执行pnpm run build:dev,我们再次刷新页面，果然页面改动了，那么此时你可以愉快的定位到需要修改的代码进行debugger\n\nmap-local为了解决什么呢\n如果我们频繁的去build整个页面就会显得效率比较低下，可不可以只是定向的修改部分代码，只重定向我们本地的已知代码呢？\n答案是当然可以，\n\n我们现在只是想快速替换现有的bundle.js, 此时我们改变了一点内容，请参照shop/index.js\n\n重新执行pnpm run build:shop, 此时我们刷新页面\n\nrewrite 使用技巧\n\n新加一个按钮触发请求\n1. 那么rewrite到底能干嘛呢\n首先啊 可以修改请求相关的；包括请求头、请求体等\n可以远程映射domain访问\n我们这里只讲一个修改请求方面的\n\n那么这么设置我们希望给https://www.fastmock.site/mock/3277f26b72e3b8aa6de012d30c06ce3f/api/api/getTargetDevice 增加一个请求参数 ?author=chrisworkalx\n试着重新点击这个按钮\n试着看下我们的network面板\n\n的确是增加了这个参数\n总结\n这些只是charles的冰山一角\n其实还有一些请求阻断，转发都可以通过charles代理实现\n包括一些更高级的更复杂的功能\n这里是源码链接，更多的问题欢迎交流源码链接",
           "link": "https://juejin.cn/post/7273775338420961314",
           "publishedOn": "2023-09-02T08:44:58.000Z",
-          "wordCount": 876,
+          "wordCount": 898,
           "title": "神奇的抓包工具-Charles",
           "imageUrl": null
         },
@@ -2273,7 +2273,7 @@
           "description": "theme: channing-cyan\n本来给予公司很大期盼，结果一年多还是工资拖拖拉拉几个月发一次。现在开始准备一下了，俗话说：不管在哪里还是自己靠得住。\n类型转换\n数据类型\njs基本类型：undefined、null、Boolean、String、Number、Symbol、BigInt（es10）\n装箱与拆箱\n包装类（对象引用类型）和原始值之间的相互转换，值类型->包装类（装箱），包装类->值类型 （拆箱）。\n\n值类型在栈内存中存储，引用类型在堆内存中存储。\n\njs作为面向对象语言在类型方面做出妥协，为部分基础类型系统中的“值类型”设定对应的包装类，通过包装类，将“值类型数据”作为对象来处理。\n\n显式装箱：\n const a = new String(\"d\");\n const b = Number(1)\n\n隐式装箱\n    const a = \"aaa\";\n    a.substring(0, 1);\n    // 相当于\n    const a = new String(\"aaa\");\n    a.substing(0, 1);\n\n部分特殊例子\n    if(\"0\") console.log(\"123\");//123\n    ({}) + 1 = // [object Object]1' //加号与-/*符号不一样\n    [] == ![] // true 先执行![] = false然后false转化为零 ，然后[]转为0，比布尔类型比较会先转换为数字\n\ninstanceof和-typeof实现\ninstanceof主要用于判断对象类型\nfunction new_instance_of(leftVaule, rightVaule) { \n    let rightProto = rightVaule.prototype; // 取右表达式的 prototype…",
           "link": "https://juejin.cn/post/7273497292481740836",
           "publishedOn": "2023-09-01T07:53:40.000Z",
-          "wordCount": 1932,
+          "wordCount": null,
           "title": "es6基础知识巩固",
           "imageUrl": null
         }
@@ -2300,7 +2300,7 @@
           "description": "[7073670907851440160#新人报道#] \n这个工具真不错。。。ipaguard",
           "link": "https://juejin.cn/pin/7275932720633528381",
           "publishedOn": "2023-09-07T08:16:12.000Z",
-          "wordCount": 564,
+          "wordCount": 562,
           "title": "[7073670907851440160#新人报道#] 这个工具真不错。。。ipaguard",
           "imageUrl": null
         },
@@ -2330,7 +2330,7 @@
           "description": "[7073670907851440160#新人报道#] \n开发框架\nvue.js ★56380 - 流行的轻量高效的前端组件化方案\nvue-admin ★4612 - Vue管理面板框架\nquasar ★2353 - 响应式网站和混合移动应用程序\nelectron-vue ★2085 - Electron及VueJS快速启动样板\nvue-element-admin ★1986 - vue2管理系统模板\nvuepack ★1618 - 现代VueJS启动器\nN3-components ★656 - 快速构建页面和应用\nVueThink ★373 - 前后端分离框架\nvue-2.0-boilerplate ★358 - Vue2单页应用样板​\nvue-spa-template ★344 - 前后端分离后的单页应用开发\nFramework7-Vue ★283 - VueJS与Framework7结合\nvue-bulma ★215 - 轻量级高性能MVVM Admin UI框架\nvuetiful ★189 - 创建业务及管理应用程序\nvue-stack-2.0 ★155 - Vue2项目样板\nvue2-admin-lte ★154 - vue2版本的adminLTE\njspangAdmin ★140 - 基于Vue2的后台管理系统\nvue-fullstack ★140 - 实时的用户友好的后台系统\nvue-paper-dashboard ★120 - Vue的Tim Paper 仪表盘\nvue-webgulp ★113 - 仿VueJS Vue loader示例\nvue-element-starter ★83 - vue启动页\nvuemin ★17 - 基于Vue的企业级前端开发框架\nvue-team-template ★12 - 一种构建vue项目的选择方案",
           "link": "https://juejin.cn/pin/7274940764517531703",
           "publishedOn": "2023-09-05T08:13:34.000Z",
-          "wordCount": 769,
+          "wordCount": 767,
           "title": "[7073670907851440160#新人报道#] 开发框架 vue.js ★56380 - 流行的轻量高效的前端组件化方案 vue-admin ★4612 - Vue管理面板框架 quasar ★2353 - 响应式网站...",
           "imageUrl": null
         },
@@ -2390,7 +2390,7 @@
           "description": "[7073670907851440160#新人报道#]",
           "link": "https://juejin.cn/pin/7272714715020640310",
           "publishedOn": "2023-08-30T02:46:35.000Z",
-          "wordCount": 531,
+          "wordCount": 529,
           "title": "[7073670907851440160#新人报道#]",
           "imageUrl": null
         },
