@@ -54,7 +54,7 @@
           "description": "一开始看到registerProtocolHandler()方法老激动了，以为又发现了个好玩具，谁知深入体验了一番之后……呵呵~",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-registerprotocolhandler/",
           "publishedOn": "2023-08-30T15:02:58.000Z",
-          "wordCount": 987,
+          "wordCount": 989,
           "title": "一言难尽的registerProtocolHandler()方法",
           "imageUrl": null
         },
@@ -74,7 +74,7 @@
           "description": "Performance和PerformanceObserver，用户 Timing API，哦，学不完，根本学不完，这两周抽时间好好研究了一番，终于了解了个大概了🙊，特此记录下。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-performanceobserver-api/",
           "publishedOn": "2023-08-27T08:34:24.000Z",
-          "wordCount": 1298,
+          "wordCount": 1297,
           "title": "狠狠地研究了下 PerformanceObserver API",
           "imageUrl": null
         },
@@ -84,7 +84,7 @@
           "description": "nonce可以用来决定哪些内联JS执行，popover可以无JS实现浮层弹出层交互效果。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/html-attribute-nonce-translate/",
           "publishedOn": "2023-08-10T15:24:42.000Z",
-          "wordCount": 1113,
+          "wordCount": 1112,
           "title": "查漏补缺，我仍未知道的HTML nonce和popover属性",
           "imageUrl": null
         }
@@ -2113,7 +2113,7 @@
           "description": "theme: orange\nhighlight: a11y-dark\nh5是怎么和微信小程序通信的？不同H5页面怎么通信的？webview是谁提供的？\nweb-view 是往小程序中嵌入h5的容器。会自动铺满整个小程序页面。微信小程序和 uni-app 都提供了 web-view 组件。\n由于简历上有一段实习是移动端h5开发，让面试官误以为我做过微信小程序的内嵌h5页面，但其实实习中都是公司框架写的代码，页面也是直接嵌入公司的app中的，我并没有微信小程序开发的经验，现在整理答案也是死记硬背，mark一下看到的一篇讲的比较清楚的文章，以后学小程序了再来回顾。\n微信小程序web-view与H5 通信方式探索 - 掘金 (juejin.cn)\nh5 页面间通信其实就是前端跨页面通信（吧？）当时第一反应回答的是使用LocalStorage, 面试官又提出用户修改个人信息后返回页面更新信息的情况，回答的是我之前做表单有类似的场景，是向后端提交后在后端更新了数据，回退到原先的页面的时候在 created/activated 的时候获取数据。\n面试官：前端跨页面通信，你知道哪些方法？ - 掘金 (juejin.cn)\n什么是微任务？什么是宏任务？\n如果说哪些操作是宏任务，哪些操作是微任务，那大部分同学都是比较清楚的：\n宏任务：script（整体代码）/setTimout/setInterval/setImmediate(node 独有)/requestAnimationFrame(浏览器独有)/IO/UI render（浏览器独有）\n微任务：process.nextTick(node 独有)/Promise.then()/Object.observe/MutationObserver\n\n这里面试官还追问了一句，Promise本身是微任务吗？\n那这两者有具体的定义吗？老规矩，直接 mdn…",
           "link": "https://juejin.cn/post/7275141653420425277",
           "publishedOn": "2023-09-05T07:01:13.000Z",
-          "wordCount": null,
+          "wordCount": 1349,
           "title": "现在小厂实习都问的这么难了吗😱「万物心选一面（北京+电商)(vue+小程序)」",
           "imageUrl": null
         },
@@ -2133,7 +2133,7 @@
           "description": "仅需2行代码，就能实现上图中的优化效果，让JS文件的加载耗时从1.4秒减少到0.4秒，大幅减少951ms（-67%），代码实现也非常简单方便，一起学起来吧~\n资源优先级提示：预取回 Prefetch，预加载 Preload 和预连接 Preconnect\n资源优先级提示是浏览器平台为控制资源加载时机而设计的一系列API，主要包括：\n1. 四类资源优先级提示\n1. 预取回 Prefetch\n用于提示浏览器在CPU和网络带宽空闲时，预先下载指定URL的JS，图片等各类资源，存储到浏览器本地缓存中，从而减少该资源文件后续加载的耗时，优化用户体验。\n具体使用方式是将link标签的rel属性设为prefetch，并将href属性设为目标资源URL，例如 <link rel=\"prefetch\" href=\"https://github.com/JuniorTour/juniortour.js\" />。\n该标签插入DOM后，将触发一次href属性值对应URL的请求，并将响应保存到本地的prefetch cache中，同时不会解析、运行该资源。\n可以预取回的资源有很多：JS、CSS、各种格式的图片、各种格式的音频、WASM文件、字体文件、甚至HTML文档本身都可实施 prefetch，预先缓存。\n命中预取回缓存的请求，在开发者工具中的Network标签中的Size列，会有独特的(prefetch cache)标记：\nDEMO：https://output.jsbin.com/cuxerej\n\ncrossorigin属性是浏览器同源策略的一部分，用于对link、script、img等元素指定是否允许以跨域资源共享模式加载目标资源。\n默认情况下，JS脚本、图片等部分静态资源不受同源策略的限制，可以从任何跨域域名加载第三方JS文件、图片文件。\n这样的规则有明显的安全风险，例如：\n第三方JS文件…",
           "link": "https://juejin.cn/post/7274889579076108348",
           "publishedOn": "2023-09-04T15:08:27.000Z",
-          "wordCount": null,
+          "wordCount": 1933,
           "title": "1.4秒到0.4秒-2行代码让JS加载耗时减少67%",
           "imageUrl": null
         },
@@ -2153,7 +2153,7 @@
           "description": "theme: fancy\nhighlight: github-gist\n美味值：🌟🌟🌟🌟🌟\n口味：栀子椰椰\n食堂技术周刊仓库地址：https://github.com/Geekhyt/weekly\n大家好，我是童欧巴。欢迎来到前端食堂技术周刊，我们先来看下上周的技术资讯。\n技术资讯\nAstro 3.0 发布，第一个支持 View Transitions API 的框架。\n8 月登陆 Web 平台的新功能\nElectron 26.0.0\n下面我们来看技术资料。\n技术资料\n1. 在政采云如何写前端技术方案文档\n社区里写前端技术方案文档质量比较好的一篇文章，大家手里有更好的可以贴到评论区交流。\n2. TypeScript 中的数组类型\n关于 TypeScript 数组类型的深入讨论。\n3. 发挥 Web Components 的优势\n使用 Web Components 要注意，在 SSR 和可访问性方面，Web Components 还不是很完善，我们要避开这些，发挥 Web Components 的其他优势。\n4. 理想的视口并不存在\n你永远无法预测你的网站将在什么条件下被用户访问，并且你对此几乎没有控制权。\n5. Astro View Transitions\n本文介绍了关于 Chrome 和 Astro 使用 View Transitions API 的旅程。\n6. 一文搞懂前端各种调试方法的原理\n本文概述了浏览器断点调试的基本原理，同时介绍了 VSCode Web 代码断点调试能力，详细介绍了各模块中各 CDP 消息通信逻辑。\n❤️爱心三连击\n1.如果你觉得食堂酒菜还合胃口，就点个赞支持下吧，你的赞是我最大的动力。\n2.关注公众号前端食堂，吃好每一顿饭！\n3.点赞、评论、转发 === 催更！\n\n好了，以上就是本期的食堂周刊，观众老爷们如果觉得还不错，一键三连是对食堂老板最大的支持。\n你的前端食堂，吃好每一顿饭，我们下期见。",
           "link": "https://juejin.cn/post/7274771281002332175",
           "publishedOn": "2023-09-04T12:30:37.000Z",
-          "wordCount": 1176,
+          "wordCount": 1113,
           "title": "前端食堂技术周刊第 97 期：Astro 3.0、8 月登陆 Web 平台的新功能、前端技术方案文档、理想的视口并不存在",
           "imageUrl": null
         },
@@ -2243,7 +2243,7 @@
           "description": "title: heartbeat\ntitleTemplate: chat\ntheme: channing-cyan\n前言\n我们先来看一下心跳检测机制？\n心跳检测机制是一种用于检测系统、应用程序或网络连接状态的技术。基本原理是定期发送小型数据包（称为心跳包或心跳消息）以确认远程设备或连接仍然处于活动状态。如果一段时间内没有收到心跳响应，系统就会认为连接已断开或设备不再可用。本文将用来实现多人聊天室在线人数的统计。\n心跳机制几个关键概念\n心跳包：数据包 => 通常是一个标识或消息\n心跳间隔：心跳包发送的时间间隔\n心跳响应：客户端或者服务器接收心跳包时，做出的响应\n维护状态：心跳检测机制通常在服务器端维护状态\n超时处理：心跳检测机制认定为不活跃、超时并做处理(自动重连机制)\n为什么需要心跳机制？\n检测连接状态\n维护连接性\n管理在线状态\n检测系统、设备健康状况\n减少资源浪费\n体验地址\n聊天室的搭建教程\n体验地址传送门在---->这里👻👻👻\n效果展示\n\n整体实现思路\n这里以多人聊天室的中心跳检测机制为例。\n客户端和服务器端建立连接(websocket)\n在客户端定期轮询向服务器端发送心跳包 ping\n服务器端接收心跳包并做出响应 pong\n服务器端维护 ping 的客户端列表，返回活跃的客户端数\n客户端接收到心跳响应，更新自己状态，如心跳包异常，则做异常处理\n\n前端部分\n聊天室的搭建参考文章：即时通讯轻松实现：WebSocket、Vue 3 和 Node.js 缔造的多人实时交流平台,挺详细的嘞！\n客户端发出建立连接 new WebSocket(socketUrl)\n添加连接状态、消息接收、错误信息、关闭等事件监听\n在socket.onopen 建立连接之后开始定期发送心跳包ping\n建立连接\nlet socket = null; \n/**\n * 建立连接\n */\nconst …",
           "link": "https://juejin.cn/post/7273756059495071779",
           "publishedOn": "2023-09-02T08:48:04.000Z",
-          "wordCount": 2440,
+          "wordCount": null,
           "title": "WebSocket聊天室在线状态管理：心跳检测机制（附源码）",
           "imageUrl": null
         },
