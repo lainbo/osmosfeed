@@ -54,7 +54,7 @@
           "description": "一开始看到registerProtocolHandler()方法老激动了，以为又发现了个好玩具，谁知深入体验了一番之后……呵呵~",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-registerprotocolhandler/",
           "publishedOn": "2023-08-30T15:02:58.000Z",
-          "wordCount": 990,
+          "wordCount": 988,
           "title": "一言难尽的registerProtocolHandler()方法",
           "imageUrl": null
         },
@@ -158,7 +158,7 @@
           "description": "调用境外 ChatGPT 接口，好大的胆子🐶",
           "link": "https://m.okjike.com/originalPosts/64f9d3fc3c00b8f53da442b2",
           "publishedOn": "2023-09-07T13:45:32.000Z",
-          "wordCount": 468,
+          "wordCount": 476,
           "title": "发布了: 调用境外 ChatGPT 接口，好大的胆子🐶",
           "imageUrl": "https://cdnv2.ruguoapp.com/FjGOAJ2uJyh-H85gsgbh0dE6EV_Yv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
         },
@@ -218,7 +218,7 @@
           "description": "Montaigne，https://montaigne.io，是一个可以将你的本地 Apple Notes 文件夹直接变成一个在线网站的工具，这比 Github Pages 发布个人博客更快、更酷。你需要做的就是在本地创建一个包含子域名的文件夹，例如 barretlee.montaigne.io 作为文件夹名，然后把文件夹的权限分享给工具作者，后续该文件夹下的所有内容的发布都会被同步到这个子域名下。\n作者并没有介绍他是如何实现的，Apple 也没有开放官方的 API 可以直接获取 Notes 的数据，我想到两个方案可以完成这个工作。\n1. 抓取 iCloud 数据\n通过类似爬虫的方式，使用 iCloud 的 Web 接口，可以获取到 Apple Notes 的数据，有一个开源库 iCloud-API 可以参考：https://github.com/MauriceConrad/iCloud-API，这种方式的适配成本比较高，苹果稍稍改版，就需要进行一次适配，另外也存在一定的风险，通过这种方式获取 Apple 的数据是违反使用协议的，一旦被感知可能会面临账号处罚的风险。\n2. 使用 AppleScript 抓取\nApple 提供了一门 AppleScript 语言，它可以像按键精灵一样，操作 Apple 系统上的所有程序，而且针对系统内置的程序，还提供了原生访问指令，例如读取 Notes 中有多少条笔记，可以直接在你的命令行执行：\nosascript -e '\n  tell application \"Notes\"\n      set noteCount to count of notes\n  end tell\n  log noteCount\n'\n有人就使用 AppleScript 封装了一个工具，可以将 Apple Notes 导出到 SQLite 里头，https://github.com/dogsheep/apple-notes-to-sqlite，有了数据，实现一个自动发布到线上的程序就不是什么难事儿了。\n方案一有风险，方案二需要有一个长期在线的 Mac 环境（AWS 提供了类似的服务），不知道还有没有更加环保、高效的方案，可以更轻便地拿到数据。",
           "link": "https://m.okjike.com/originalPosts/64f68f293c00b8f53d54e1a9",
           "publishedOn": "2023-09-05T02:15:05.000Z",
-          "wordCount": 654,
+          "wordCount": 668,
           "title": "发布了: Montaigne，https://montaigne.io，是一个可以将你的本地 Apple Notes 文件夹直接变成一个在线网站的工具，这比 Github Pages 发布个人博客更快、更酷。...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FqYQrzg1xvT_CQaULeR5OSyStfYTv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -583,6 +583,166 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412140.html",
+          "author": "国家预警信息发布中心",
+          "description": "武隆区气象台2023年9月8日11时发布“高温橙色预警信号”，预计8日13时至19时，鸭江镇、平桥镇、白马镇、长坝镇、羊角街道、凤山街道、芙蓉街道、石桥乡、江口镇、黄莺乡、火炉镇、沧沟乡等乡镇街道海拔400米以下地区日最高气温将升至37℃以上。请各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412140.html",
+          "publishedOn": "2023-09-08T03:23:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市武隆区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412126.html",
+          "author": "国家预警信息发布中心",
+          "description": "璧山区气象台2023年9月8日11时10分发布“高温橙色预警信号”，预计8日13时至19时，八塘镇、七塘镇、大路街道、河边镇、璧城街道、福禄镇、大兴镇、璧泉街道、青杠街道、正兴镇、来凤街道、丁家街道、健龙镇、广普镇、三合镇日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412126.html",
+          "publishedOn": "2023-09-08T03:19:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市璧山区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412118.html",
+          "author": "国家预警信息发布中心",
+          "description": "万盛经开区气象台2023年9月8日11时发布“高温橙色预警信号”，预计8日13时至19时，万东镇、东林街道、万盛街道、金桥镇、丛林镇、关坝镇、青年镇、南桐镇海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412118.html",
+          "publishedOn": "2023-09-08T03:14:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市万盛经开区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412062.html",
+          "author": "国家预警信息发布中心",
+          "description": "长寿区气象台2023年9月8日10时30分发布“高温橙色预警信号”，预计8日14时至18时，凤城街道、江南街道、晏家街道、菩提街道、渡舟街道、但渡镇、长寿湖镇、葛兰镇、洪湖镇、石堰镇、海棠镇、云台镇等街镇日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412062.html",
+          "publishedOn": "2023-09-08T02:49:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市长寿区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412063.html",
+          "author": "国家预警信息发布中心",
+          "description": "渝北区气象台2023年9月8日10时20分发布“高温橙色预警信号”，预计9月8日12时至19时，石船镇、大盛镇、龙兴镇、统景镇、大湾镇、茨竹镇、木耳镇、古路镇、兴隆镇、洛碛镇、双龙湖街道、仙桃街道、双凤桥街道、王家街道、龙塔街道、龙溪街道、龙山街道、玉峰山镇、宝圣湖街道、两路街道、悦来街道、回兴街道海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412063.html",
+          "publishedOn": "2023-09-08T02:49:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市渝北区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412058.html",
+          "author": "国家预警信息发布中心",
+          "description": "涪陵区气象台2023年9月8日10时30分发布“高温橙色预警信号”，预计9月8日13时至19时，敦仁街道、白涛街道、珍溪镇、焦石镇、清溪镇、南沱镇、罗云镇、江东街道、龙桥街道、石沱镇、马鞍街道、百胜镇、崇义街道、义和街道、江北街道、李渡街道、增福镇、青羊镇、大顺镇、马武镇、新妙镇、荔枝街道、蔺市街道海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。防御指南：注意防中暑、防溺水；注意林区、景区、城镇、古镇古街、农事活动、祭祀等火灾防范；注意节约用电、用水和安全生产；缩短户外活动和露天作业时间；相关部门和乡镇街道按照职责，做好高温防范应对工作。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412058.html",
+          "publishedOn": "2023-09-08T02:40:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市涪陵区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412046.html",
+          "author": "国家预警信息发布中心",
+          "description": "永川区气象台2023年9月8日10时30分发布“高温橙色预警信号”，预计8日14时至19时，我区茶山竹海街道、陈食街道、临江镇、板桥镇、中山路街道、大安街道、金龙镇、南大街街道、宝峰镇、青峰镇、双石镇、胜利路街道、三教镇、红炉镇、永荣镇、松溉镇、朱沱镇、仙龙镇、五间镇、吉安镇、何埂镇、来苏镇、卫星湖街道海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412046.html",
+          "publishedOn": "2023-09-08T02:36:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市永川区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412043.html",
+          "author": "国家预警信息发布中心",
+          "description": "忠县气象台2023年9月8日10时10分发布“高温橙色预警信号”，预计8日12时至19时，新生街道、乌杨街道、任家镇、涂井乡、东溪镇、三汇镇、白石镇、洋渡镇、兴峰乡、汝溪镇、磨子土家族乡、石宝镇、黄金镇、永丰镇、拔山镇、双桂镇、新立镇、复兴镇、金鸡镇等乡镇（街道）日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412043.html",
+          "publishedOn": "2023-09-08T02:32:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市忠县发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412034.html",
+          "author": "国家预警信息发布中心",
+          "description": "綦江区气象台2023年9月8日10时10分发布“高温橙色预警信号”，预计8日12时至18时，永新镇、石角镇、新盛街道、三江街道、古南街道、文龙街道、通惠街道、赶水镇、篆塘镇、三角镇海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412034.html",
+          "publishedOn": "2023-09-08T02:28:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市綦江区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412033.html",
+          "author": "国家预警信息发布中心",
+          "description": "云阳县气象台2023年9月8日10时20分发布“高温橙色预警信号”，预计8日13时至18时，全县海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412033.html",
+          "publishedOn": "2023-09-08T02:25:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市云阳县发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412016.html",
+          "author": "国家预警信息发布中心",
+          "description": "北碚区气象台2023年9月8日10时发布“高温橙色预警信号”，预计8日11时至20时，天府镇、朝阳街道、澄江镇、东阳街道、三圣镇、柳荫镇、金刀峡镇、静观镇、施家梁镇、龙凤桥街道、歇马街道、蔡家岗街道、童家溪镇、复兴街道、天生街道、水土街道、北温泉街道海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412016.html",
+          "publishedOn": "2023-09-08T02:17:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市北碚区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412005.html",
+          "author": "国家预警信息发布中心",
+          "description": "合川区气象台2023年9月8日10时05分发布“高温橙色预警信号”，预计9月8日13时至19时，我区全部镇街海拔400米以下地区日最高气温将升至37℃以上，其中草街街道、渭沱镇部分区域可达39℃。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526412005.html",
+          "publishedOn": "2023-09-08T02:12:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市合川区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526411998.html",
+          "author": "国家预警信息发布中心",
+          "description": "万州区气象台2023年9月8日09时50分发布“高温橙色预警信号”，预计8日12时至19时，高笋塘街道、钟鼓楼街道、太白街道、沙河街道、天城街道、双河口街道、陈家坝街道、龙都街道、周家坝街道、长岭镇、长滩镇、新田镇、分水镇、太龙镇、弹子镇、龙驹镇、黄柏乡、武陵镇等地海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。注意防中暑、防溺水；注意林区、景区、城镇、古镇古街、农事活动、祭祀等火灾防范；注意节约用电、用水和安全生产；缩短户外活动和露天作业时间；相关部门和乡镇街道按照职责，做好高温防范应对工作。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526411998.html",
+          "publishedOn": "2023-09-08T02:06:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市万州区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526411984.html",
+          "author": "国家预警信息发布中心",
+          "description": "开州区气象局2023年9月8日09时50分发布“高温橙色预警信号”，预计8日12时至19时，巫山镇、铁桥镇、岳溪镇、南门镇、长沙镇、赵家街道、临江镇、竹溪镇、南雅镇、中和镇、义和镇、正安街道、云枫街道、汉丰街道、文峰街道、丰乐街道、白鹤街道、渠口镇、厚坝镇、金峰镇、郭家镇、敦好镇、温泉镇、谭家镇、和谦镇、关面乡海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526411984.html",
+          "publishedOn": "2023-09-08T01:57:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市开州区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526411969.html",
+          "author": "国家预警信息发布中心",
+          "description": "丰都县气象台2023年9月8日9时30分发布“高温橙色预警信号”，预计8日13时至19时，许明寺镇、董家镇、双龙镇、青龙乡、三元镇、仁沙镇、兴龙镇、社坛镇、保合镇、十直镇、名山街道、树人镇、湛普镇、虎威镇、三合街道、包鸾镇、双路镇、兴义镇、高家镇、龙孔镇、三建乡、江池镇海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526411969.html",
+          "publishedOn": "2023-09-08T01:49:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市丰都县发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526411944.html",
+          "author": "国家预警信息发布中心",
+          "description": "沙坪坝区气象台2023年9月8日09时30分发布“高温橙色预警信号”，预计8日14时至19时，天星桥街道、磁器口街道、沙坪坝街道、小龙坎街道、土湾街道、联芳街道、土主街道、陈家桥街道、回龙坝镇、丰文街道、青木关镇、中梁镇、双碑街道、凤凰镇、覃家岗街道、歌乐山街道、新桥街道、山洞街道、渝碚路街道、石井坡街道、童家桥街道、井口街道海拔400米以下地区日最高气温将升至37℃以上。请以上各地做好防火、防中暑、防溺水和安全生产工作，注意节约用水用电。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526411944.html",
+          "publishedOn": "2023-09-08T01:36:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市沙坪坝区发布高温橙色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/csyj/20230908/t20230908_526411890.html",
           "author": "国家预警信息发布中心",
@@ -2003,7 +2163,7 @@
           "description": "大文件分片\n大家好, 我今天是华为冲锋战神遥遥领先瑜, 在网上看了大半天mate60 现在耳朵里都是遥遥领先, 所以一鼓作气给大家分享一篇大文件分片+webWorker的文章, 通过写作这篇文章, 自己也学习到了不少知识, 比如通过js获取电脑cpu线程, 那么话不多说直接开始\n1. 初始化, 搭设架子\n<!DOCTYPE html>\n<html lang=\"zh-CN\">\n\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\" />\n  <title>大文件分片</title>\n  <style></style>\n</head>\n\n<body>\n  <input type=\"file\" id=\"fileRef\" />\n  <script type=\"module\" src=\"./main.js\">\n\n\n  </script>\n</body>\n\n</html>\n\n2. 读取单个文件的分片, 并进行加密\n这里使用的是SparkMD5进行加密, 可自行下载并导入\nimport { createChunks } from './createChunks'\n// 规定每次切片的文件大小\nconst CHUNK_SIZE = 1024 * 1024 * 5 // 5MB\n\nexport async function cutFile (file) {\n  // 生成每一个切片, 分片是耗时的所以是异步操作\n  const chunk = await createChunks(file, 1, CHUNK_SIZE)\n…",
           "link": "https://juejin.cn/post/7273803674789953575",
           "publishedOn": "2023-09-02T18:01:14.000Z",
-          "wordCount": null,
+          "wordCount": 3391,
           "title": "Web Worker(遥遥领先的速度)+大文件分片",
           "imageUrl": null
         },
@@ -2023,7 +2183,7 @@
           "description": "title: heartbeat\ntitleTemplate: chat\ntheme: channing-cyan\n前言\n我们先来看一下心跳检测机制？\n心跳检测机制是一种用于检测系统、应用程序或网络连接状态的技术。基本原理是定期发送小型数据包（称为心跳包或心跳消息）以确认远程设备或连接仍然处于活动状态。如果一段时间内没有收到心跳响应，系统就会认为连接已断开或设备不再可用。本文将用来实现多人聊天室在线人数的统计。\n心跳机制几个关键概念\n心跳包：数据包 => 通常是一个标识或消息\n心跳间隔：心跳包发送的时间间隔\n心跳响应：客户端或者服务器接收心跳包时，做出的响应\n维护状态：心跳检测机制通常在服务器端维护状态\n超时处理：心跳检测机制认定为不活跃、超时并做处理(自动重连机制)\n为什么需要心跳机制？\n检测连接状态\n维护连接性\n管理在线状态\n检测系统、设备健康状况\n减少资源浪费\n体验地址\n聊天室的搭建教程\n体验地址传送门在---->这里👻👻👻\n效果展示\n\n整体实现思路\n这里以多人聊天室的中心跳检测机制为例。\n客户端和服务器端建立连接(websocket)\n在客户端定期轮询向服务器端发送心跳包 ping\n服务器端接收心跳包并做出响应 pong\n服务器端维护 ping 的客户端列表，返回活跃的客户端数\n客户端接收到心跳响应，更新自己状态，如心跳包异常，则做异常处理\n\n前端部分\n聊天室的搭建参考文章：即时通讯轻松实现：WebSocket、Vue 3 和 Node.js 缔造的多人实时交流平台,挺详细的嘞！\n客户端发出建立连接 new WebSocket(socketUrl)\n添加连接状态、消息接收、错误信息、关闭等事件监听\n在socket.onopen 建立连接之后开始定期发送心跳包ping\n建立连接\nlet socket = null; \n/**\n * 建立连接\n */\nconst …",
           "link": "https://juejin.cn/post/7273756059495071779",
           "publishedOn": "2023-09-02T08:48:04.000Z",
-          "wordCount": 2449,
+          "wordCount": 2499,
           "title": "WebSocket聊天室在线状态管理：心跳检测机制（附源码）",
           "imageUrl": null
         },
@@ -2043,7 +2203,7 @@
           "description": "theme: condensed-night-purple\n前言\n好久没面试了，最近看一些厂开始招人了，于是投了投，没想着过，主要是抱着学习的态度，看看自己哪里不足，没想到自己这么不足。。。\n最近面了个试，某大厂，具体是哪个厂大家可以自行猜测，我看看有没有对的，哈哈哈哈\n目前是三面，但是估计止步于三面了，然后我稍微整理了一下面试题，但是这里只说出我的思考，而不说出答案，至于为啥不写答案，我只能说，我自己不会。。。有些内容我需要进行学习，然后系统地、简单易懂地分享给大家\n我说一下我自身的情况：主要技术栈是vue全家桶，算是能深挖的那种，其他的，react、webpack、vite、less、sass、tailwindcss、unocss、Nuxt、node等系列都会，但是说实话我是没法手写出来的，只停留在会用的程度，webgl、canvas等可视化方向还可以，毕竟我之前就是做这个的，算法还算可以，不说精通，但是一般题是可以做出来的，然后在基础方面，也就是js、css这块，我只能说了解吧，因为见过css大神，coco这种的，就感觉自己css从熟悉变成了听说。\n反正大概的就那样吧，会的比较多，比较杂，但是很多都不精通（不去看源码这种），关键的来了，我对于浏览器这块比较薄弱，计网、操作系统对我来说像噩梦一样，我觉得是我经验少吧，没能在工作中接触到这几个层面，所以我就是真的能答出来，也就是硬背的，并且不能举一反三，这也导致了这次面试的惨败\n下面我说一下面试吧\n注意，公司的技术栈主要是React（umi）这块，vue很少很少，然后会用node写一些中间件，大部分都是大前端\n然后算法问题的话，也不在这里说，主要说一些口述的问题\n一面\n一面是对我来说最友好的一面了，基本上都是简单的一些基础问题\n面试官主要是react技术栈，然后我和他说了，我主要是vue的，vue的原理可以，但是问我rea…",
           "link": "https://juejin.cn/post/7273682292538933306",
           "publishedOn": "2023-09-01T15:01:46.000Z",
-          "wordCount": null,
+          "wordCount": 872,
           "title": "八百年不面试，一面试就面得一塌糊涂",
           "imageUrl": null
         },
@@ -2073,7 +2233,7 @@
           "description": "theme: channing-cyan\n前言\n本篇文章是笔者在使用 vue3 + vite 实际开发过程中的一些经验分享，涵盖 vite 构建优化配置项的实践，以及一些开发中实用技巧的分享。\ngzip 压缩\n未开启压缩时：通过vite打包之后，vite会提示开启 gzip压缩之后的文件大小，可以看到文件体积将会显著下降\n\n接下来，我们使用 vite-plugin-compression 进行 gzip 压缩\nimport viteCompression from 'vite-plugin-compression'\nexport default defineConfig({\n  plugins: [\n    viteCompression(),\n  ],\n})\n\n通过 gzip 压缩之后，文件会被转化为 gz 压缩包，体积会明显减少，虽然是压缩包格式，但浏览器解压时间非常快，几乎可以忽略。所以开启 gzip 压缩 是有必要尝试的。\n\n动态导入\n使用动态导入，在 webpack 或 vite 这样的打包工具之中，都会自动开启代码分割。\n路由懒加载\nvue-router 路由懒加载\nVue Router 支持开箱即用的动态导入，这意味着你可以用动态导入代替静态导入：\n// 将\n// import UserDetails from './views/UserDetails.vue'\n// 替换成\nconst UserDetails = () => import('./views/UserDetails.vue')\n\nconst router = createRouter({\n  // ...\n  routes: [{ path: '/users/:id', component: UserDetails }],\n})\n\n异步导入组件\nimport { defineAsyncComp…",
           "link": "https://juejin.cn/post/7273304959538872377",
           "publishedOn": "2023-08-31T10:22:59.000Z",
-          "wordCount": null,
+          "wordCount": 1933,
           "title": "vue3 + vite 性能优化与开发经验分享",
           "imageUrl": null
         }
@@ -2100,7 +2260,7 @@
           "description": "[7073670907851440160#新人报道#] \n这个工具真不错。。。ipaguard",
           "link": "https://juejin.cn/pin/7275932720633528381",
           "publishedOn": "2023-09-07T08:16:12.000Z",
-          "wordCount": 554,
+          "wordCount": 560,
           "title": "[7073670907851440160#新人报道#] 这个工具真不错。。。ipaguard",
           "imageUrl": null
         },
@@ -2130,7 +2290,7 @@
           "description": "[7073670907851440160#新人报道#] \n开发框架\nvue.js ★56380 - 流行的轻量高效的前端组件化方案\nvue-admin ★4612 - Vue管理面板框架\nquasar ★2353 - 响应式网站和混合移动应用程序\nelectron-vue ★2085 - Electron及VueJS快速启动样板\nvue-element-admin ★1986 - vue2管理系统模板\nvuepack ★1618 - 现代VueJS启动器\nN3-components ★656 - 快速构建页面和应用\nVueThink ★373 - 前后端分离框架\nvue-2.0-boilerplate ★358 - Vue2单页应用样板​\nvue-spa-template ★344 - 前后端分离后的单页应用开发\nFramework7-Vue ★283 - VueJS与Framework7结合\nvue-bulma ★215 - 轻量级高性能MVVM Admin UI框架\nvuetiful ★189 - 创建业务及管理应用程序\nvue-stack-2.0 ★155 - Vue2项目样板\nvue2-admin-lte ★154 - vue2版本的adminLTE\njspangAdmin ★140 - 基于Vue2的后台管理系统\nvue-fullstack ★140 - 实时的用户友好的后台系统\nvue-paper-dashboard ★120 - Vue的Tim Paper 仪表盘\nvue-webgulp ★113 - 仿VueJS Vue loader示例\nvue-element-starter ★83 - vue启动页\nvuemin ★17 - 基于Vue的企业级前端开发框架\nvue-team-template ★12 - 一种构建vue项目的选择方案",
           "link": "https://juejin.cn/pin/7274940764517531703",
           "publishedOn": "2023-09-05T08:13:34.000Z",
-          "wordCount": 759,
+          "wordCount": 765,
           "title": "[7073670907851440160#新人报道#] 开发框架 vue.js ★56380 - 流行的轻量高效的前端组件化方案 vue-admin ★4612 - Vue管理面板框架 quasar ★2353 - 响应式网站...",
           "imageUrl": null
         },
@@ -2190,7 +2350,7 @@
           "description": "[7073670907851440160#新人报道#]",
           "link": "https://juejin.cn/pin/7272714715020640310",
           "publishedOn": "2023-08-30T02:46:35.000Z",
-          "wordCount": 521,
+          "wordCount": 527,
           "title": "[7073670907851440160#新人报道#]",
           "imageUrl": null
         },
