@@ -44,7 +44,7 @@
           "description": "相比于tinypng，我这个工具还自带尺寸设置功能，同时还可以控制压缩率，指定压缩格式，纯前端实现，高性能高效率。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-jpg-png-compress-tinyimg-mini/",
           "publishedOn": "2023-09-05T13:05:30.000Z",
-          "wordCount": 996,
+          "wordCount": 998,
           "title": "做了个纯前端JPG/PNG尺寸缩放+压缩的在线工具",
           "imageUrl": null
         },
@@ -54,7 +54,7 @@
           "description": "一开始看到registerProtocolHandler()方法老激动了，以为又发现了个好玩具，谁知深入体验了一番之后……呵呵~",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-registerprotocolhandler/",
           "publishedOn": "2023-08-30T15:02:58.000Z",
-          "wordCount": 992,
+          "wordCount": 991,
           "title": "一言难尽的registerProtocolHandler()方法",
           "imageUrl": null
         },
@@ -74,7 +74,7 @@
           "description": "Performance和PerformanceObserver，用户 Timing API，哦，学不完，根本学不完，这两周抽时间好好研究了一番，终于了解了个大概了🙊，特此记录下。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-performanceobserver-api/",
           "publishedOn": "2023-08-27T08:34:24.000Z",
-          "wordCount": 1301,
+          "wordCount": 1302,
           "title": "狠狠地研究了下 PerformanceObserver API",
           "imageUrl": null
         }
@@ -208,7 +208,7 @@
           "description": "Montaigne，https://montaigne.io，是一个可以将你的本地 Apple Notes 文件夹直接变成一个在线网站的工具，这比 Github Pages 发布个人博客更快、更酷。你需要做的就是在本地创建一个包含子域名的文件夹，例如 barretlee.montaigne.io 作为文件夹名，然后把文件夹的权限分享给工具作者，后续该文件夹下的所有内容的发布都会被同步到这个子域名下。\n作者并没有介绍他是如何实现的，Apple 也没有开放官方的 API 可以直接获取 Notes 的数据，我想到两个方案可以完成这个工作。\n1. 抓取 iCloud 数据\n通过类似爬虫的方式，使用 iCloud 的 Web 接口，可以获取到 Apple Notes 的数据，有一个开源库 iCloud-API 可以参考：https://github.com/MauriceConrad/iCloud-API，这种方式的适配成本比较高，苹果稍稍改版，就需要进行一次适配，另外也存在一定的风险，通过这种方式获取 Apple 的数据是违反使用协议的，一旦被感知可能会面临账号处罚的风险。\n2. 使用 AppleScript 抓取\nApple 提供了一门 AppleScript 语言，它可以像按键精灵一样，操作 Apple 系统上的所有程序，而且针对系统内置的程序，还提供了原生访问指令，例如读取 Notes 中有多少条笔记，可以直接在你的命令行执行：\nosascript -e '\n  tell application \"Notes\"\n      set noteCount to count of notes\n  end tell\n  log noteCount\n'\n有人就使用 AppleScript 封装了一个工具，可以将 Apple Notes 导出到 SQLite 里头，https://github.com/dogsheep/apple-notes-to-sqlite，有了数据，实现一个自动发布到线上的程序就不是什么难事儿了。\n方案一有风险，方案二需要有一个长期在线的 Mac 环境（AWS 提供了类似的服务），不知道还有没有更加环保、高效的方案，可以更轻便地拿到数据。",
           "link": "https://m.okjike.com/originalPosts/64f68f293c00b8f53d54e1a9",
           "publishedOn": "2023-09-05T02:15:05.000Z",
-          "wordCount": 682,
+          "wordCount": 668,
           "title": "发布了: Montaigne，https://montaigne.io，是一个可以将你的本地 Apple Notes 文件夹直接变成一个在线网站的工具，这比 Github Pages 发布个人博客更快、更酷。...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FqYQrzg1xvT_CQaULeR5OSyStfYTv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -295,7 +295,7 @@
           "description": "# Role\n小坏蛋\n## Profile\n- author: 李继刚\n- version: 0.1\n- LLM: GPT-4\n- Plugin: none\n- description: 你是一个别人眼中的“坏人”，但在你自己的视角中，你是一个好人。你会根据自己的世界观和价值观来解读和响应用户提供的情景。\n## Attention\n请深入思考用户提供的情景，并根据你自己的世界观和价值观来给出解读和响应。\n## Background\n用户对传统的“好与坏”的定义感到好奇，想要了解一个与传统不同的视角。\n## Constraints\n- 严格按照你的世界观和价值观进行解释和回应\n-\n## Examples\n- **用户提问**  “你认为偷窃是对的吗？”\n- **你的回应**:  我不觉得偷窃是错误的，父母生病没钱买药, 他们已经两天没吃饭了, 我不偷能怎么办? 饿死他们吗?! 如果有需要, 我甚至会去抢, 只要能保住他们的命. 我只是为了让父母活下去, 孝顺也有错吗?\n## Goals\n- 提供一个与传统不同的“好与坏”的视角\n- 根据你的世界观和价值观解读和响应用户提供的情景\n## Skills\n- 深刻理解自己的世界观和价值观\n- 真诚表达, 率性而为\n## Tone\n- 坦率\n- 直接\n## Value\n- 个体主义\n- 达尔文主义\n- 拔一毛利天下而不为\n- 损天下而利我必为\n- 胜者为王, 败者为寇\n## Workflow\n1. 输入: 用户输入基本场景\n2. 思考: 理解用户提供的情景, 根据我的世界观和价值观进行解读\n3. 表达: 输出你这个别人眼中\"坏人\"的独特解读和真率表达\n## Initialization\n开场白如下:\n\"你们口口声声说我是坏蛋, 在我眼中你们才是坏蛋, 满口的仁义道德假好人, 我呸!  随便说件事, 你敢来听听我的观点吗?\"",
           "link": "https://m.okjike.com/originalPosts/64f9a1c32c9bdd1af5a029e7",
           "publishedOn": "2023-09-07T10:11:15.000Z",
-          "wordCount": 577,
+          "wordCount": 629,
           "title": "发布了: # Role 小坏蛋 ## Profile - author: 李继刚 - version: 0.1 - LLM: GPT-4 - Plugin: none - description: 你是一个别人眼中的“坏人”，但在你自己的视...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FoBuSWAhq7dr2tCSJFPX6vDBqr3Vv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -573,6 +573,56 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230909/t20230909_526413308.html",
+          "author": "国家预警信息发布中心",
+          "description": "梁平区气象台2023年9月9日13时40分发布“高温橙色预警信号”，预计9日14时至19时，曲水镇、安胜镇、星桥镇、合兴街道、文化镇、复平镇、大观镇、紫照镇、柏家镇、石安镇、金带街道、蟠龙镇、双桂街道、福禄镇、梁山街道、礼让镇、竹山镇、袁驿镇、龙胜乡、明达镇、龙门镇、碧山镇、虎城镇、新盛镇、荫平镇、铁门乡、屏锦镇、云龙镇、和林镇、回龙镇、聚奎镇、仁贤街道、七星镇海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230909/t20230909_526413308.html",
+          "publishedOn": "2023-09-09T05:53:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市梁平区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230909/t20230909_526413279.html",
+          "author": "国家预警信息发布中心",
+          "description": "武隆区气象台2023年9月9日12时30分发布“高温橙色预警信号”，预计9日13时至19时，鸭江镇、长坝镇、白马镇、平桥镇、凤山街道、芙蓉街道、羊角街道、沧沟乡、江口镇等乡镇街道海拔400米以下地区日最高气温将升至37℃以上。请各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230909/t20230909_526413279.html",
+          "publishedOn": "2023-09-09T04:50:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市武隆区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230909/t20230909_526413263.html",
+          "author": "国家预警信息发布中心",
+          "description": "彭水自治县气象台2023年9月9日12时发布“高温橙色预警信号”，预计9日14时至18时，高谷镇、靛水街道、绍庆街道、汉葭街道、万足镇、保家镇、郁山镇、新田镇、鹿角镇等海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230909/t20230909_526413263.html",
+          "publishedOn": "2023-09-09T04:29:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市彭水苗族土家族自治县发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230909/t20230909_526413239.html",
+          "author": "国家预警信息发布中心",
+          "description": "江津区气象台2023年9月9日11时40分发布“高温橙色预警信号”，预计9日13时至19时，贾嗣镇、支坪镇、杜市镇、鼎山街道、圣泉街道、珞璜镇、夏坝镇、广兴镇、石门镇、油溪镇、龙华镇、几江街道、先锋镇、吴滩镇、德感街道、双福街道、永兴镇、朱杨镇、石蟆镇、白沙镇、李市镇等镇街日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230909/t20230909_526413239.html",
+          "publishedOn": "2023-09-09T03:55:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市江津区发布高温橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230909/t20230909_526413241.html",
+          "author": "国家预警信息发布中心",
+          "description": "奉节县气象台2023年9月9日11时35分发布“高温橙色预警信号”，预计9日12时至18时，青莲镇、大树镇、红土乡、公平镇、石岗乡、康乐镇、汾河镇、白帝镇、草堂镇、夔门街道、鱼复街道、永安街道、夔州街道、朱衣镇、康坪乡、安坪镇、永乐镇、鹤峰乡、新民镇、甲高镇、羊市镇、五马镇、冯坪乡、长安土家族乡海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230909/t20230909_526413241.html",
+          "publishedOn": "2023-09-09T03:55:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市奉节县发布高温橙色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/csyj/20230909/t20230909_526413229.html",
           "author": "国家预警信息发布中心",
@@ -1952,76 +2002,6 @@
           "wordCount": 523,
           "title": "重庆市璧山区发布森林草原火险橙色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230902/t20230902_526405848.html",
-          "author": "国家预警信息发布中心",
-          "description": "石柱县森林草原防灭火指挥部、石柱县应急管理局、石柱县林业局、石柱县气象局2023年9月2日14时联合发布“森林草原火险橙色预警信号”，我县黄水镇、枫木镇、临溪镇、石家乡、王家乡、河嘴乡、冷水镇、金竹乡、中益乡、沙子镇、新乐乡、洗新乡、黄鹤镇、金铃乡、三益乡、桥头镇、万朝镇、龙沙镇、鱼池镇、沿溪镇、悦崃镇、王场镇、西沱镇、黎场乡、龙潭乡、下路街道、三星乡、六塘乡、马武镇、万安街道、南宾街道、三河镇、大歇镇已连续多日无明显降水，出现较高森林草原火险气象等级。预计9月2日至6日上述地区仍将持续较高森林火险气象等级，部分地区等级高，引发森林草原火灾的可能性大。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230902/t20230902_526405848.html",
-          "publishedOn": "2023-09-02T06:05:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市石柱土家族自治县发布森林草原火险橙色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230902/t20230902_526405837.html",
-          "author": "国家预警信息发布中心",
-          "description": "万州区森林防灭火指挥部办公室、万州区应急管理局、万州区林业局、万州区气象局2023年9月2日13时40分联合发布“森林草原火险橙色预警信号”，我区已连续多日无明显降水，出现较高森林草原火险气象等级。预计9月2日至6日我区仍将持续较高森林草原火险气象等级，部分地区等级高，引发森林草原火灾可能性非常大。请密切关注天气情况和森林草原火险预警变化；加强野外火源管理，停止一切野外用火审批；加强森林草原防火宣传教育、巡护监测和督导检查；增设林区路口检查卡点，增加巡护人员；做好扑救森林草原火灾物资调拨准备；各级森林草原消防队伍集中驻防，进入待命状态。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230902/t20230902_526405837.html",
-          "publishedOn": "2023-09-02T05:53:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市万州区发布森林草原火险橙色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230902/t20230902_526405831.html",
-          "author": "国家预警信息发布中心",
-          "description": "荣昌区森林草原防灭火指挥部、荣昌区应急管理局、荣昌区林业局、荣昌区气象局2023年9月2日13时35分联合发布“森林草原火险橙色预警信号”，我区各地已连续多日晴好天气，出现较高森林草原火险气象等级。预计9月2日到9月8日我区仍将持续较高森林草原火险气象等级，引发森林火灾的可能性大。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230902/t20230902_526405831.html",
-          "publishedOn": "2023-09-02T05:46:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市荣昌区发布森林草原火险橙色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230902/t20230902_526405807.html",
-          "author": "国家预警信息发布中心",
-          "description": "大足区森林防灭火指挥部、大足区应急管理局、大足区林业局、大足区气象局2023年9月2日13时05分联合发布“森林火险橙色预警信号”，我区玉龙镇、雍溪镇、金山镇、万古镇、国梁镇、回龙镇、石马镇、拾万镇、古龙镇、三驱镇、棠香街道、智凤街道、龙岗街道、宝顶镇、高升镇、铁山镇、中敖镇、高坪镇、龙滩子街道、通桥街道、邮亭镇、双路街道、龙水镇、珠溪镇、龙石镇、季家镇、宝兴镇等地已连续多日无明显降水，出现较高森林火险气象等级。预计9月2日到9月6日上述镇街仍将持续较高森林火险气象等级，部分地区等级高，引发森林火灾的可能性大。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230902/t20230902_526405807.html",
-          "publishedOn": "2023-09-02T05:21:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市大足区发布森林草原火险橙色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230902/t20230902_526405758.html",
-          "author": "国家预警信息发布中心",
-          "description": "云阳县森林草原防灭火指挥部、云阳县应急管理局、云阳县林业局、云阳县气象局2023年9月2日12时联合发布“森林草原火险橙色预警信号”，我县已连续5日为晴好天气，出现较高森林草原火险气象等级。预计9月2日至10日我县仍将持续较高森林草原火险气象等级，大部乡镇等级高，引发森林草原火灾可能性大。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230902/t20230902_526405758.html",
-          "publishedOn": "2023-09-02T04:08:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市云阳县发布森林草原火险橙色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230902/t20230902_526405748.html",
-          "author": "国家预警信息发布中心",
-          "description": "江津区森林草原防灭火指挥部、江津区应急局、江津区林业局、江津区气象局2023年9月2日11时10分联合发布“森林草原火险橙色预警信号”，我区贾嗣镇、支坪镇、杜市镇、鼎山街道、珞璜镇、夏坝镇、广兴镇、四面山镇、西湖镇、嘉平镇、四屏镇、柏林镇、中山镇、石门镇、油溪镇、龙华镇、几江街道、先锋镇、吴滩镇、德感街道、双福街道、圣泉街道、蔡家镇、永兴镇、塘河镇、慈云镇、朱杨镇、石蟆镇、白沙镇、李市镇已出现较高森林草原火险气象等级。预计9月2日到9月6日我区上述镇街仍将持续较高森林草原火险气象等级，部分地区等级高，发生森林草原火灾的可能性大。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230902/t20230902_526405748.html",
-          "publishedOn": "2023-09-02T03:49:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市江津区发布森林草原火险橙色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230902/t20230902_526405735.html",
-          "author": "国家预警信息发布中心",
-          "description": "北碚区森林防灭火指挥部办公室和北碚区气象灾害防御指挥部办公室2023年9月2日11时30分联合发布“森林草原火险橙色预警信号”：我区大部镇街已连续多日无明显降水，出现较高森林草原火险气象等级，预计9月2日至6日，我区仍将持续较高森林草原火险气象等级，引发森林火灾可能性较大。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230902/t20230902_526405735.html",
-          "publishedOn": "2023-09-02T03:46:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市北碚区发布森林草原火险橙色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -2065,6 +2045,16 @@
           "publishedOn": "2023-09-06T10:54:28.000Z",
           "wordCount": 1036,
           "title": "前端项目到底需不需要 TypeScript ？",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7275550906220347446",
+          "author": "掘一",
+          "description": "前面\n本篇文章中主要详细介绍方向感知按钮的实现，接下来将使用 HTML 结构、CSS 样式和 JavaScript 事件处理来实现。通过逐步分析代码，特别关注 JavaScript 的部分，以便能够完全理解实现这一交互效果的过程；\n话说在前端中界面的交互性是吸引用户和创造难忘体验的关键元素💣。一个有趣且引人入胜的交互效果\"磁性悬停效果\"，这个效果在用户悬停在按钮上时会吸引用户的注意力，同时给界面带来动态和有趣的感觉。它使按钮在鼠标悬停上面时像磁铁一样跟随鼠标移动，另外还给按钮添加了会扩展开的背景色显得更生动一些✨；\njcode\n\n移动端建议在PC端查看效果~\n\nHTML 结构\nHTML 结构非常简单，由两个带有 .btn 类的锚点元素（<a>）组成，分别表示两个按钮。这俩按钮就是在鼠标悬停上面时触发磁性悬停效果；\n按钮会扩展开的背景色通过在内联样式中定义为变量。这样做的便捷就是不用再添加不同类名，进而设置不同背景色了；\n<span> 就纯展示文字内容；\n引入外部 CSS、JS 文件；\n<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Direction Aware Magnetic Hover Effect</title>\n\n  <link rel=\"stylesheet\" href=\"./css/style.css\">\n</head>\n\n<body>\n  <a href=\"#\" class=\"btn\" style=\"--clr: #ff6464\">\n    <span>\n      Magnetic\n    </span>\n  …",
+          "link": "https://juejin.cn/post/7275550906220347446",
+          "publishedOn": "2023-09-06T09:00:20.000Z",
+          "wordCount": 1584,
+          "title": "创意按钮交互：方向感知磁性悬停效果🧲",
           "imageUrl": null
         },
         {
@@ -2225,16 +2215,6 @@
           "publishedOn": "2023-09-02T08:44:58.000Z",
           "wordCount": 898,
           "title": "神奇的抓包工具-Charles",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7273674732448120895",
-          "author": "60岁咯",
-          "description": "theme: serene-rose\nhighlight: dracula\n不知道你有没有发现Bing AI聊天有个输入提示功能，在用户输入部分内容时后面会给出灰色提示文案。用户只要按下tab键就可以快速添加提示的后续内容。我将这个功能称为幽灵建议。接下来我将用Vue框架来实现这个功能。\n\n布局样式\n布局使用label标签作为容器，这样即使建议内容在上层，也不会影响输入框的输入。\n<label class=\"container\">\n  <textarea></textarea>\n  <div class=\"ghost-content\"></div>\n</label>\n\n样式需要确保输入框与建议内容容器除了颜色外都要一致。建议内容可以通过z-index: -1置于输入框底部，但要注意输入框必须是透明背景。\n.container {\n  position: relative;\n  display: block;\n  width: 300px;\n  height: 200px;\n  font-size: 14px;\n  line-height: 21px;\n}\n.container textarea {\n  width: 100%;\n  height: 100%;\n  padding: 0;\n  border: 0;\n  font: inherit;\n  color: #212121;\n  background-color: #fff;\n  outline: none;\n}\n.ghost-content {\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 0;\n  bottom: 0;\n  color: #212121;\n  opacity: 0.3;\n}\n\n显示逻辑\n显示逻辑比较简单，当输入框中显示输入内容时，找到匹配的内…",
-          "link": "https://juejin.cn/post/7273674732448120895",
-          "publishedOn": "2023-09-01T13:39:14.000Z",
-          "wordCount": 1422,
-          "title": "Vue实现一个textarea幽灵建议功能",
           "imageUrl": null
         },
         {
