@@ -1336,6 +1336,118 @@ Scrum 开发
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7275978708644151354"
+                        open
+                      >
+                        <summary class="article-expander__title">看完这位小哥的GitHub，我沉默了</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7275978708644151354">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>就在昨天，一个名为win12的开源项目一度冲上了GitHub的Trending热榜。
+
+而且最近项目的Star量也在飙升，目前已经获得了2.2k+的Star标星。
+
+出于好奇，点进去看了看。好家伙，项目README里写道这是一个14岁的初中生所打造的开源项目。
+即：在网页端实现了Windows 12的UI界面和交互效果。
+这里也放几张图片感受一下。
+登录页面
+
+开始菜单
+
+资源管理器
+
+设置
+
+终端命令行
+
+AI Copilot
+
+其他应用
+
+这个项目的灵感来源于作者之前看到 Windows 12 概念版后深受启发，于是决定做一个Windows12网页版（就像之前的 Windows 11 网页版一样），可以让用户在网络上预先体验 Windows 12。
+可以看到，这个项目是一个前端开源项目，而且由标准前端技术（HTML，JS，CSS）来实现，下载代码，无需安装，打开desktop.html即可。
+
+项目包含：
+精美的UI设计
+流畅丰富的动画
+各种高级的功能（相较于网页版）
+不仅如此，作者团队对于该项目的后续发展还做了不少规划和畅想。
+项目规划
+
+项目畅想
+
+刚上面也说了，项目README里写道该项目的作者是一位14岁的初中生，网名叫星源，曾获得CSP普及组一等奖和蓝桥杯国赛三等奖。
+作者出生于2009年，在成都上的小学和初中，目前刚上初三。
+这样来看的话，虽说作者年龄很小，不过接触计算机和编程应该非常早，而且对计算机领域的知识和技术应该有着非常浓厚的兴趣。
+从作者的个人主页里能看到，技术栈这块涉猎得还挺广泛。
+
+作者自己表示如今上初三了，对于win12这个项目也不会做什么功能的更新了，后续的维护更新将交给其他贡献者成员。
+
+文章的结尾也附上Windows 12网页版体验地址：tjy-gitnub.github.io/win12/desktop.html，感兴趣的同学可以自行体验。
+聊到这里不得不说，人与人之间的差距确实挺大的。就像这位小哥，才14岁就已经精通前端技术了。
+而14岁的我，当年在干嘛呢？
+我想了又想。。
+额，我好像在网吧里玩红警。。（手动doge）
+注：本文在GitHub开源仓库「编程之路」 https://github.com/rd2coding/Road2Coding 中已经收录，里面有我整理的6大编程方向(岗位)的自学路线+知识点大梳理、面试考点、我的简历、几本硬核pdf笔记，以及程序员生活和感悟，欢迎star。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7275943591410483258"
+                        open
+                      >
+                        <summary class="article-expander__title">对不起 localStorage，现在我爱上 localForage了！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7275943591410483258">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: awesome-green
+前言
+前端本地化存储算是一个老生常谈的话题了，我们对于 cookies、Web Storage（sessionStorage、localStorage）的使用已经非常熟悉，在面试与实际操作之中也会经常遇到相关的问题，但这些本地化存储的方式还存在一些缺陷，比较明显的缺点如下：
+存储量小：即使是web storage的存储量最大也只有 5M
+存取不方便：存入的内容会经过序列化，当存入非字符串的时候，取值的时候需要通过反序列化。
+当我们的存储量比较大的时候，我们一定会想到我们的 indexedDB，让我们在浏览器中也可以使用数据库这种形式来玩转本地化存储，然而 indexedDB 的使用是比较繁琐而复杂的，有一定的学习成本，但 localForage 的出现几乎抹平了这个缺陷，让我们轻松无负担的在浏览器中使用 indexedDB。
+什么是 indexedDB
+IndexedDB 是一种底层 API，用于在客户端存储大量的结构化数据（也包括文件/二进制大型对象）。
+存取方便
+IndexedDB 是一个基于 JavaScript 的面向对象数据库。IndexedDB 允许你存储和检索用键索引的对象；可以存储结构化克隆算法支持的任何对象。
+之前我们使用 webStorage 存储对象或数组的时候，还需要先经过先序列化为字符串，取值的时候需要经过反序列化，那indexedDB就比较完美的解决了这个问题，可以轻松存取对象或数组等结构化克隆算法支持的任何对象。
+以 https://stackblitz.com/ 网站为例，我们来看看对象存到 indexedDB 的表现
+
+异步存取
+我相信你肯定会思考一个问题：localStorage如果存储内容多的话会消耗内存空间，会导致页面变卡。那么 IndexedDB 存储量过多的话会导致页面变卡吗？
+不会有太大…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >李继刚的即刻动态</button>
                   <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
                 </h3>
@@ -1722,54 +1834,6 @@ GPT 读过很多书, 那就让它来从多角度理解问题表述一下.
                             <span class="media-object__text">
                               <span>Google I/O Connect</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7275943591410483258"
-                        open
-                      >
-                        <summary class="article-expander__title">对不起 localStorage，现在我爱上 localForage了！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7275943591410483258">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: awesome-green
-前言
-前端本地化存储算是一个老生常谈的话题了，我们对于 cookies、Web Storage（sessionStorage、localStorage）的使用已经非常熟悉，在面试与实际操作之中也会经常遇到相关的问题，但这些本地化存储的方式还存在一些缺陷，比较明显的缺点如下：
-存储量小：即使是web storage的存储量最大也只有 5M
-存取不方便：存入的内容会经过序列化，当存入非字符串的时候，取值的时候需要通过反序列化。
-当我们的存储量比较大的时候，我们一定会想到我们的 indexedDB，让我们在浏览器中也可以使用数据库这种形式来玩转本地化存储，然而 indexedDB 的使用是比较繁琐而复杂的，有一定的学习成本，但 localForage 的出现几乎抹平了这个缺陷，让我们轻松无负担的在浏览器中使用 indexedDB。
-什么是 indexedDB
-IndexedDB 是一种底层 API，用于在客户端存储大量的结构化数据（也包括文件/二进制大型对象）。
-存取方便
-IndexedDB 是一个基于 JavaScript 的面向对象数据库。IndexedDB 允许你存储和检索用键索引的对象；可以存储结构化克隆算法支持的任何对象。
-之前我们使用 webStorage 存储对象或数组的时候，还需要先经过先序列化为字符串，取值的时候需要经过反序列化，那indexedDB就比较完美的解决了这个问题，可以轻松存取对象或数组等结构化克隆算法支持的任何对象。
-以 https://stackblitz.com/ 网站为例，我们来看看对象存到 indexedDB 的表现
-
-异步存取
-我相信你肯定会思考一个问题：localStorage如果存储内容多的话会消耗内存空间，会导致页面变卡。那么 IndexedDB 存储量过多的话会导致页面变卡吗？
-不会有太大…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2691,8 +2755,6 @@ HTML 结构非常简单，由两个带有 .btn 类的锚点元素（）组成，
       Magnetic
     
   …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4554,6 +4616,42 @@ html 代码如下:
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7274825810280710199"
+                        open
+                      >
+                        <summary class="article-expander__title">面试被跨域问麻了，这次一定搞明白！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7274825810280710199">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>跨源资源共享（Cross-Origin Resource Sharing，CORS）
+是一种基于 HTTP 头的机制（划重点），该机制通过允许服务器标示除了它自己以外的其他源（域、协议或端口），使得浏览器允许这些源访问加载自己的资源。
+跨源 HTTP 请求的一个例子：运行在 https://domain-a.com 的 JavaScript 代码使用 XMLHttpRequest 来发起一个到 https://domain-b.com/data.json 的请求。
+
+出于安全性，浏览器限制脚本内发起的跨源 HTTP 请求。例如，XMLHttpRequest 和 Fetch API 遵循同源策略。这意味着使用这些 API 的 Web 应用程序只能从加载应用程序的同一个域请求 HTTP 资源，除非响应报文包含了正确 CORS 响应头。
+CORS 响应头
+前面提到 CORS 是一种基于 HTTP 头的机制，这些 HTTP 头决定了浏览器是否阻止前端 JavaScript 代码获取跨域资源请求的响应
+因此想要了解跨域必须先了解有哪些相关的 header、
+Access-Control-Allow-Origin
+指示响应的资源是否可以被给定的来源共享。
+有效值 ：* |  | null
+对于不包含凭据的请求，服务器会以“*”作为通配符，从而允许任意来源的请求代码都具有访问资源的权限。
+尝试使用通配符来响应包含凭据的请求会导致报错。
+凭据（Credentials） 通常是指 Cookie、HTTP 认证、TLS 客户端证书等敏感信息
+指定一个来源（只能指定一个）。如果服务器支持多个来源的客户端，其必须以与指定客户端匹配的来源来响应请求。
+Access-Control-Allow-Credentials
+指示当前请求的凭证标记为 true 时，是否可以公开对该请求响应。
+…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7274771281002332175"
                         open
                       >
@@ -5431,6 +5529,8 @@ npm run start
 是这样的：
 
 现在我们想把 box 拖拽到 container 里，用 reac…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;29
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5572,57 +5672,6 @@ export async function cutFile (file) {
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7273775338421452834"
-                        open
-                      >
-                        <summary class="article-expander__title">分享20个遇到的大厂算法题和手写题</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7273775338421452834">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-下面20道题是笔者最近在面试里遇到的和在牛客看到的，希望对大家有帮助~
-1. LRU算法（快手）
-
-var LRUCache &#x3D; function (capacity) {
-  this.catch &#x3D; new Map()  //初始化map数据结构
-  this.capacity &#x3D; capacity  //容量
-};
-
-LRUCache.prototype.get &#x3D; function (key) {
-  if (this.catch.has(key)) {   //map中有这个元素
-    let value &#x3D; this.catch.get(key);  //调用map的get方法获取元素
-    //更新key&#x3D;&gt;value
-    this.catch.delete(key);  //删除之前的元素
-    this.catch.set(key, value);  //将新获取的相同的元素以键值对推入map中
-
-    return value   //返回关键字的值
-  }
-  return -1  //map中没有这个元素返回-1
-};
-
-LRUCache.prototype.put &#x3D; function (key, value) {
-  if (this.catch.has(key)) {  //有这个元素
-    this.catch.delete(key);  //删除
-  }
-
-  //判断有没有达到存储的阈值
-  if (this.catch.size &gt;&#x3D; this.capacity) {
-    //移除谁 再放新值  
-    //m.keys().next()拿到首位的键值对
-    this.catch.delete(this.catch.keys().next().value)
-  }
-  this.catch.set(key,…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;19
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7273756059495071779"
                         open
                       >
@@ -5673,79 +5722,6 @@ let socket &#x3D; null;
  */
 const …</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7273775338420961314"
-                        open
-                      >
-                        <summary class="article-expander__title">神奇的抓包工具-Charles</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7273775338420961314">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-有时候我们需要在线上debugger的时候，可能萌生的几个解决方案
-如果你的环境部署了生产log日志功能，那么恭喜你，这样我们可以快速定位报错的位置，比如Sentry
-此外，如果作为一个前端开发人员，除了在页面source面板，rewrite可以解决这个问题
-或许我们可以借助一些抓包工具快速便捷的解决这些问题
-charles魔法
-某一天你的同事突然拿着你的电脑，他想通过百度去搜索一些东西，可是他会很好奇，为什么每次打开www.baidu.com 的时候总是会link到一个奇怪的链接，那么可能会是这样
-
-其实这就是我们今天所说的一个关于charles常用的功能，那就是map-remote，通过配置不同domain去映射做到了重定向
-
-map-remote
-我这里写一个测试一个小demo，比如我们线上地址是http://47.103.9.52/charles-tutorial/
-当然这是我自己部署的一个小项目，某一次线上项目出现一个小问题，本地关联的代码
-那么我想远端直接关联到我本地，那么我可以先通过执行下面shell命令
-pnpm install
-pnpm run build:dev
-pnpm run preview
-
-此时本地应该跑了一个静态访问地址，像这样
-
-此时我们做一个charles map-remote
-
-此时再次访问 http://47.103.9.52/charles-tutorial/ 你会发现本地charles代理到了本地4173这个端口上
-
-为了验证是否生效
-那么我加了一行代码，看图示
-
-紧接着执行pnpm run build:dev,我们再次刷新页面，果然页面改动了，那么此时你可以愉快的定位到需要修改的代码进行debugger
-
-map-local为了解决什么呢
-如果我们频繁的去build整个页面就会显得效率比较低下，可不可以只是定向的修改部分代码，只重定向我们本地的已知代码呢？
-答案是当然可以，
-
-我们现在只是想快速替换现有的bundle.js, 此时我们改变了一点内容，请参照shop/index.js
-
-重新执行pnpm run build:shop, 此时我们刷新页面
-
-rewrite 使用技巧
-
-新加一个按钮触发请求
-1. 那么rewrite到底能干嘛呢
-首先啊 可以修改请求相关的；包括请求头、请求体等
-可以远程映射domain访问
-我们这里只讲一个修改请求方面的
-
-那么这么设置我们希望给https://www.fastmock.site/mock/3277f26b72e3b8aa6de012d30c06ce3f/api/api/getTargetDevice 增加一个请求参数 ?author&#x3D;chrisworkalx
-试着重新点击这个按钮
-试着看下我们的network面板
-
-的确是增加了这个参数
-总结
-这些只是charles的冰山一角
-其实还有一些请求阻断，转发都可以通过charles代理实现
-包括一些更高级的更复杂的功能
-这里是源码链接，更多的问题欢迎交流源码链接</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -8577,114 +8553,12 @@ Tools4dev 是一款“免费的一体化工具箱”解决方案，旨在改善�
                 </section>
               </section>
             </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >阮一峰的网络日志</button>
-                  <a class="source-heading__link" href="http://www.ruanyifeng.com/blog/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.ruanyifeng.com/blog/2023/08/weekly-issue-266.html"
-                        open
-                      >
-                        <summary class="article-expander__title">科技爱好者周刊（第 266 期）：自己做双语 EPUB 电子书</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.ruanyifeng.com/blog/2023/08/weekly-issue-266.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>这里记录每周值得分享的科技内容，周五发布。
-本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。
-封面图
-
-四川省德阳市使用锈钢板，搭建了一个名为&quot;齿轮花园&quot;的小园林。每个模块都做成正六边形，象征一个齿轮，比喻德阳这个老工业城市的绿色转型。（via）
-自己做双语 EPUB 电子书
-周刊的《工具》部分，每周都有一些很有用的软件，有些对我的帮助也很大。
-《周刊（第254期）》有一个作者自荐的&quot;沉浸式翻译&quot;，就特别有用。
-
-它是一个浏览器插件，主要功能是网页翻译，还可以指定翻译引擎。
-
-但是，对于我最有用的是另一个功能----制作双语 EPUB 电子书。今天就说说这个功能。
-
-很多我想看的国外图书资料，都没有中文版。如果去啃英文原版，就会读得很慢。这时，我们不妨自己动手，生成一个机器翻译版。先读机器译文，如果不顺，再读原文。
-举例来说，上个月美国出版了约翰·罗梅洛（John Romero）的自传《DOOM Guy》。
-
-他是经典电子游戏《DOOM》（毁灭战士）的创造者之一。我自从读了《DOOM 启示录》，就对这个人很感兴趣。
-但是，此书没有中文版。我就用&quot;沉浸式翻译&quot;，自己做了一本双语对照的 EPUB 电子书。
-
-制作过程非常简单，导入原始 EPUB 文件，启用页面翻译，然后导出就可以了，只花费几分钟。
-
-市面上其他电子书翻译软件，都不如它简单好用，而且它还是免费的。
-我已经用它读了好几本原版书，觉得效果不错，很符合我的需要。
-不过，它要求原始电子书必须是 EPUB 格式。如果你的资料不是这个格式，可以先用 Calibre 转成 EPUB。
-
-其他格式的文档（HTML、TXT、Markdown 等等），可以通过 Calibre 左上角的&quot;Add books&quot;按钮导入，然后按下&quot;Convert books&quot;按…</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-10 datetime="2023-08-10T23:20:06.000Z">2023-08-10</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-10 datetime="2023-08-10T23:20:06.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >省流</button>
-                  <a class="source-heading__link" href="https://shengliu.substack.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://shengliu.substack.com/p/c70"
-                        open
-                      >
-                        <summary class="article-expander__title">延时摄影：香烟在土壤中滞留了一整年</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://shengliu.substack.com/p/c70">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>省流@23-08-11 🍦 恰饭 喝西北风。 🚀 新闻 Claude Instant 1.2 版本发布 🔬 科研 美国 FDA 批准首个口服治疗产后抑郁症的药物 🍹 杂拌 延时摄影：香烟在土壤中滞留了一整年 ⚡ 速览 X 将推出视频通话 Chrome 正在弃用 &quot;unload&quot; 事件 Vim 项目的未来 亚马逊拥有全球一半以上的 Arm 服务器 CPU 搜狗输入法存在容易暴露输入内容的漏洞 Google 推出适用于 Google 文档和 Google 云端硬盘的电子签名 iPhone 15 Pro 外壳泄露证实，静音开关将被操作按钮取代</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
         </ul>
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6130220476">
-        <time id="build-timestamp" datetime="2023-09-09T09:52:45.046Z">2023-09-09T09:52:45.046Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6131015727">
+        <time id="build-timestamp" datetime="2023-09-09T12:54:48.756Z">2023-09-09T12:54:48.756Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
