@@ -44,7 +44,7 @@
           "description": "相比于tinypng，我这个工具还自带尺寸设置功能，同时还可以控制压缩率，指定压缩格式，纯前端实现，高性能高效率。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-jpg-png-compress-tinyimg-mini/",
           "publishedOn": "2023-09-05T13:05:30.000Z",
-          "wordCount": 998,
+          "wordCount": 995,
           "title": "做了个纯前端JPG/PNG尺寸缩放+压缩的在线工具",
           "imageUrl": null
         },
@@ -54,7 +54,7 @@
           "description": "一开始看到registerProtocolHandler()方法老激动了，以为又发现了个好玩具，谁知深入体验了一番之后……呵呵~",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-registerprotocolhandler/",
           "publishedOn": "2023-08-30T15:02:58.000Z",
-          "wordCount": 994,
+          "wordCount": 992,
           "title": "一言难尽的registerProtocolHandler()方法",
           "imageUrl": null
         },
@@ -64,7 +64,7 @@
           "description": "一个看似简单的HTML属性的底下，可能是一座巨大的冰山，referrer及其相关特性就是如此。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/web-referer-image-policy/",
           "publishedOn": "2023-08-29T15:53:49.000Z",
-          "wordCount": 1101,
+          "wordCount": 1096,
           "title": "Web referrer策略详解与防盗链图片的显示",
           "imageUrl": null
         },
@@ -74,7 +74,7 @@
           "description": "Performance和PerformanceObserver，用户 Timing API，哦，学不完，根本学不完，这两周抽时间好好研究了一番，终于了解了个大概了🙊，特此记录下。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-performanceobserver-api/",
           "publishedOn": "2023-08-27T08:34:24.000Z",
-          "wordCount": 1305,
+          "wordCount": 1302,
           "title": "狠狠地研究了下 PerformanceObserver API",
           "imageUrl": null
         }
@@ -245,7 +245,7 @@
           "description": "为什么同一条优质消息被不同人转发，会有巨大的点赞差异？\n第一反应是大v的粉丝数量多，点赞比相同前提下，大v转发后的点赞数自然就高。\n后来想到了《成功公式》这本书中讲的一个逻辑：未来成功 = 流行度 * 适应度\n流行度即第一反应所说的那条逻辑链，适应度是指消息本身的优秀内质在网络中的适应程度。\n如果转发内容基本一致，那主要是流行度在起作用； 如果转发内容有差异，那适应度也会发挥作用。\n带来启发是什么？ 如果你要转发一条优质消息，最好发表一些你的真知灼见comments，提升适应度。 否则，你就是单纯的拼之前积累的欢迎度了。",
           "link": "https://m.okjike.com/originalPosts/64fe003b4101002b06f28dad",
           "publishedOn": "2023-09-10T17:43:23.000Z",
-          "wordCount": 455,
+          "wordCount": 457,
           "title": "发布了: 为什么同一条优质消息被不同人转发，会有巨大的点赞差异？ 第一反应是大v的粉丝数量多，点赞比相同前提下，大v转发后的点赞数自然就高。 后来想到了《成...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -2223,7 +2223,7 @@
           "description": "扫码登录是常见的功能，基本各种网站都支持。\n比如掘金的登录就支持 APP 扫码的方式：\n\n如果你 APP 没登录，扫码后会跳到登录页面：\n\n登录之后，会进入确认界面，你可以选择授权登录或者取消：\n\n这边确认之后，pc 网站就登录了。\n知乎，b 站等也是这样的：\n\n\n有没有感觉很神奇，为什么一扫二维码，然后确认下，那边就自动登录了呢？\n其实原理也很简单。\n我们先用解析工具解码下二维码的内容：\n\n\n可以看到，二维码的内容是一个 url，如果在手机浏览器打开，是这样的：\n\n会让你下载 APP。\n而在 APP 里打开，就是登录确认界面了：\n\n那确认的是哪个二维码呢？\n\n二维码这里是有个唯一 id 的，通过这个 id 就知道是哪个二维码。\n这个二维码有 5 个状态：\n未扫描\n已扫描，等待用户确认\n已扫描，用户同意授权\n已扫描，用户取消授权\n已过期\n最开始是未扫描状态：\n\n扫码后会进入等待用户确认状态：\n\n确认后会进入同意授权状态：\n\n取消的话会进入取消授权状态：\n\n长时间不操作会进入过期状态：\n\n也就是说，扫码后进行不同的操作就是修改这个 id 对应的二维码的状态。\n另一边修改了状态，这边是怎么知道二维码状态变了呢？\nwebsocket 么？\n不用，一般都是轮询来做。\n比如掘金：\n二维码出现后，会有一个每秒一次的轮询请求来查询二维码状态：\n最开始是 new：\n\n扫码后会变成 scanned：\n\n知乎也是一样：\n\n\n这时候，手机会进入登录确认页面：\nbilibili 的登录确认页面：\n\n知乎的登录确认页面：\n\n这边点击确认登录或者取消之后，会发请求修改 id 对应的二维码的状态。\n那边一直在轮询，自然就知道了二维码状态的变更。\n也就是这样的：\n\n服务端有个 qrcode/generate 接口，会生成一个随机的二维码 id，存到 redis 里，并返回二维码。\n还有个 qrcode/c…",
           "link": "https://juejin.cn/post/7276266802824511540",
           "publishedOn": "2023-09-08T10:40:41.000Z",
-          "wordCount": 4471,
+          "wordCount": null,
           "title": "Nest 实现扫码登录",
           "imageUrl": null
         },
@@ -2243,7 +2243,7 @@
           "description": "theme: awesome-green\n前言\n前端本地化存储算是一个老生常谈的话题了，我们对于 cookies、Web Storage（sessionStorage、localStorage）的使用已经非常熟悉，在面试与实际操作之中也会经常遇到相关的问题，但这些本地化存储的方式还存在一些缺陷，比较明显的缺点如下：\n存储量小：即使是web storage的存储量最大也只有 5M\n存取不方便：存入的内容会经过序列化，当存入非字符串的时候，取值的时候需要通过反序列化。\n当我们的存储量比较大的时候，我们一定会想到我们的 indexedDB，让我们在浏览器中也可以使用数据库这种形式来玩转本地化存储，然而 indexedDB 的使用是比较繁琐而复杂的，有一定的学习成本，但 localForage 的出现几乎抹平了这个缺陷，让我们轻松无负担的在浏览器中使用 indexedDB。\n什么是 indexedDB\nIndexedDB 是一种底层 API，用于在客户端存储大量的结构化数据（也包括文件/二进制大型对象）。\n存取方便\nIndexedDB 是一个基于 JavaScript 的面向对象数据库。IndexedDB 允许你存储和检索用键索引的对象；可以存储结构化克隆算法支持的任何对象。\n之前我们使用 webStorage 存储对象或数组的时候，还需要先经过先序列化为字符串，取值的时候需要经过反序列化，那indexedDB就比较完美的解决了这个问题，可以轻松存取对象或数组等结构化克隆算法支持的任何对象。\n以 https://stackblitz.com/ 网站为例，我们来看看对象存到 indexedDB 的表现\n\n异步存取\n我相信你肯定会思考一个问题：localStorage如果存储内容多的话会消耗内存空间，会导致页面变卡。那么 IndexedDB 存储量过多的话会导致页面变卡吗？\n不会有太大…",
           "link": "https://juejin.cn/post/7275943591410483258",
           "publishedOn": "2023-09-07T11:02:54.000Z",
-          "wordCount": 1570,
+          "wordCount": 1549,
           "title": "对不起 localStorage，现在我爱上 localForage了！",
           "imageUrl": null
         },
@@ -2253,7 +2253,7 @@
           "description": "有些人一不仔细看文章，二甚至压根就没写过 TS，就在评论区非理性讨论。\n建议大家合理发表自己的意见和观点，而不是类似这样的张口就来：“推荐用 TS 就是你 JS 不行”\nHello，诸位前端工程师，今天由我来从一个 CRUD 开发工程师的角度聊一聊这个 “敏感” 的话题。\n有一个现象\n就是你不难发现，大多数能力比你强的前端工程师，要么在鼓励大家用 TS，要么就是自己的开源项目采用了 TS。\n而这种现象通常会在技术领域会传播下来，普及给所有程序员。就像 Vue/React 等框架都有大厂开始大量使用后，再慢慢普及到小厂，最后几乎所有程序员都被普及到了（毕竟你不会就找不到工作了）。\n而大厂尝试使用一门技术，并且成功落地之后并没有抛弃它，而是在更多的项目中使用，这种时候基本上就可以说这门技术的优点是比较明显的，被普及的概率也就非常大了。\n正好，TS 就符合这个现象和普及规律。\n也就是说，按照这个规律我们其实可以得出一个简单的结论：前端项目中使用 TS 是优大于弊的，并且以后 TS 会被普及\n有一个误区\n\n\n\n这种评论见多了，起初我真的很想回复一些什么来反驳反驳，后来想一想，其实就是他们当前（当前当前，注意我的用词，我并不是想一杆子打死所有反对使用 TS 的人，也并没有说他们以后不会成长）太菜了...\n因为我实在是想不明白 TS 降低开发效率是怎么得出来的？\n如果你说你玩上了类型体操，开发效率降低了，那我想说的是，能力不够是可以不玩类型体操的，能够玩上类型体操的也不会吐出这么低级的槽，CRUD 也完全不需要类型体操\n如果你说你初始化一个项目，进行各种 TS 配置和导包，出现大量报错不知所措，那说明你还不具备从零搭建一个TS 项目的能力，本质上还是你 TS 以及生态不熟悉，那你可以选择去开源社区找一个模板，等使用熟悉后再试着自己搭建，不要一开始就磨灭了自己的兴致\n如果你觉得你定义一个 fn(x)，也要写成 fn(x: number) 是降低了开发效率，那其实是你还不习惯罢了，毕竟我刚学 TS 的第一天也有这种心理\n或者这样，假设你们说的都是事实，就是 TS 降低了开发效率。但是 TS 没有优点吗？TS 的优点就没有一个能打赢 “降低开发效率” 这个假设吗？\n我觉得应该是有的吧，说几个 CRUD 时就能体会到的：\n一个变量原本是 string 类型，但是在某一处给这个变量赋值的时候，赋值成了 number 类型，你开发时发现程序无论如何都跑不对，定位半天发现原来是类型错误\n还是这个变量，你赋值错了，但是由于对应功能不常用，上线前没有测试出来，导致出现了严重生产环境问题，你即将被追责\n后期维护时，不用再到处翻找上下文就能立即知道变量类型\n几乎不会再出现 ReferenceError： “x” is not defined\n就这三个比较常见的点，哪一个带来的问题不能打赢 “降低开发效率”？就难道 ReferenceError： “x” is not defined 时你不需要花费时间定位问题吗？更别说出现生成环境问题了\n有需求就有市场\n\n\n随意截取了其他 TS 文章下的两则评论，类似的不支持 TS 的评论还有很多，几乎每一篇相关文章下面都会见到。\n但是事实是，从 TS 出现，到现在的高热度和高采用，足以说明它在市场上是有足够多的需求的，并不会因为所谓的 “TS 没有 JS 灵活” 或 “JS 是弱类型，比 TS 更优势” 等观点左右它的需求量。\n意思就是你必须使用 TS 吗？\n那也当然不是，你可以继续使用 JS，就像现在你依旧可以使用 JQ。\n但...\n你真的有不学习、不使用 TS 的资本吗？将好像 JQ 时代过渡到 Vue/React 时代的时候一样，多少人嚷着 JQ 更优秀、市场占有率更高，操作 DOM 多么的灵活，Vue 等框架心智负担多么的大，学 Vue 前必须先学习 JQ 等等... 现在在看看呢？你还能再招聘 JD 上看见只要求你会 JQ 的岗位吗？\n所以说啊，哪怕只是为了你的饭碗，你也应该去学一学 TS、用一用 TS。\n不要做低级程序员\n优秀的程序员总是在技术普及之前就研究它的思想，总结它的优缺点，尝试将其落地。\n大众程序员总是在普及的时候才开始学。\n而最低级的程序员只有等自己找不到工作了才会被迫开始学。\n善意的提醒\n随着 Vue3 的普及，开源社区优秀的模板都是拥抱的 TS 的（React 那就更早了），而大多数公司的项目都是基于这些模板进行开发的。如果不出意外的话，招聘 JD 上会出现越来越多的 TS 字样。\n还是那句话，哪怕只是为了自己饭碗。",
           "link": "https://juejin.cn/post/7275549753693749304",
           "publishedOn": "2023-09-06T10:54:28.000Z",
-          "wordCount": null,
+          "wordCount": 1036,
           "title": "前端项目到底需不需要 TypeScript ？",
           "imageUrl": null
         },
@@ -2270,10 +2270,10 @@
         {
           "id": "https://juejin.cn/post/7275533017309446181",
           "author": "阿阿阿阿阿阿杰",
-          "description": "theme: channing-cyan\nhighlight: atom-one-light\n开发中经常会遇到文字很长的场景，如果全部展示就会占很大的空间（宽度），视觉上会很丑，甚至在某些固定宽度下会默认换行，举个前段时间开发的示例：\n\n我们常见的解决方式是：\n添加 css 截断文字，这很简单，  但是要注意，块级元素（inline-block、block）才会生效。\n    .text-truncate {\n      text-overflow: ellipsis;\n      white-space: nowrap;\n      overflow: hidden;\n    }\n\n添加上 tooltip，悬浮上可以看到全部（本人用的是 angular + ng-zorro 组件库）\n    <div \n    nz-tooltip \n        [nzTooltipTitle]=\"tooltipTitle\" \n        [nzTooltipPlacement]=\"nfTooltipPlacement\"\n    >\n    {{ text }}\n    </div>\n\n看效果：\n\nOK，已解决，结束。\n当然，开个玩笑，抖个机灵，别走，后面才是正文。\n问题\n前面看似已经解决了文本长，既满足美观，又可以看到完整信息的目的了，但我并不满足于此，我想更友好一些（如下图）\n\n当文本过长时才有悬浮显示 tooltip，如果默认宽度足够展示文字了，那么就不触发 tooltip 逻辑\n在可拖拽容器宽度场景下（表格拖拽列宽），实时的更新为“第一条”的效果\n当文字内容发生变化时（通常正常逻辑不会出现，从控制台修改文本可以触发），实时更新为“第一条”的效果\n满足以上动态变化的场景就需要费点脑筋了。\n解决\n核心有两点：\n截断的临界点：判断文本宽度超过了容器宽度\n触发时机：当容器宽度或文…",
+          "description": "解决长文本动态展示 tooltip 的优雅方式",
           "link": "https://juejin.cn/post/7275533017309446181",
           "publishedOn": "2023-09-06T08:40:01.000Z",
-          "wordCount": null,
+          "wordCount": 1918,
           "title": "解决长文本动态展示 tooltip 的优雅方式",
           "imageUrl": null
         },
@@ -2283,24 +2283,24 @@
           "description": "theme: juejin\n2023 年 08 月我正式从深圳公司离职，从 7 月初开始投武汉的公司，截止 8 月底，2 个月时间有 5 个面试 3 个 offer：一个自研的 22k、两个外包一个 17k，一个 18k。最终选了一家离我比较近的 18k offer，但遗憾的是刚去第一天就发现坑太深，还是决定放弃这家公司，目前失业在家，这里和大家聊一聊最近从深圳回武汉找工作的经历。\n基本情况\n先大致介绍下我的基本情况：大专学历，30+，从 17 年开始做全职前端开发，到现在有 6-7 年了，属于一年工作经验用 5 年的那种，Vue 一把梭，技术一般。进不了中、大厂，只能在外包混混日子。\n时间回到两年前，2021 年 8 月前端行情好的时候，我凭运气找到了一家深圳二线互联网公司的前端外包岗位，offer 是 25k * 12，到今年 8 月正好呆了两年左右，为了说明真实性，下面附上我 2022 年度个税 App 收入纳税截图。\n\n声明\n本人在网上冲浪时从未公开过这家我呆了两年的公司，出于薪资保密原则，如果有人认出我，知道我所在的这家公司，还请不要透露公司名字，万分感谢！\n另外，为了避免纠纷，后面面试的公司，我都会进行匿名处理，如果有人猜到公司名称，评论还请使用化名，希望大家能理解。\n深圳回武汉\n从 21 年入职这家公司开始，这两年前端行情越来越差，目前我这个学历、技术水平比较难找到 25k 以上的工作。我有考虑过要不要先苟在这家公司，毕竟这个工作工资还可以，leader、同事、工作氛围都不错。但由于各方面原因，最终还是决定回武汉。\n工作方面：我做的大多是技术需求，做的比较无聊，成就感较低；另外，新需求越来越少，蛋糕就这么大，僧多粥少，发挥空间较小。\n生活方面：我时常在反思，我是不是一个精致的利己主义者？这些年基本就过年回家，回家也呆不了几天，在照顾父母、关心家人这方面我是做的…",
           "link": "https://juejin.cn/post/7275225948453568552",
           "publishedOn": "2023-09-05T23:18:06.000Z",
-          "wordCount": 1680,
+          "wordCount": null,
           "title": "25k大专前端外包从深圳回武汉能拿多少？",
           "imageUrl": null
         },
         {
           "id": "https://juejin.cn/post/7275225666030026809",
           "author": "掘金酱",
-          "description": "theme: channing-cyan\n技术无止境 创作不间断\n🎉 创作者训练营第一期招募了很多新手创作者，欢迎大家加入掘金创作者大家庭！\n紧接着第二期活动说来就来了，本次活动我们面向全站所有的创作者们，新手创作者可以和资深创作者们学习技术创作的方法、技巧喔，同时本次官方也推出了 【创作指南+群内定向指导建议】 福利～\n相信有掘金官方的指导，每位创作者的内容质量都能up！up！up！⛽️\n✏️ 官方创作指南（持续更新）\n标题\n简介\n作者\n\n\n\n\n🔗 如何从 0 到 1 写好技术文章\n有想法想沉淀，动笔前却犯了难？本篇文章将通过五个步骤教你写一篇技术文章。\nPDI技术写作团队\n\n\n🔗 如何写作系列教程\n《如何写作通用教程》将写作拆解成五个部分，总结了在写作前、写作中和写作后三个阶段需要注意的写作要点和技巧，通读整个系列文档，可以帮助你初步搭建系统的基础写作知识。\nPDI技术写作团队\n\n\n\n🌟 活动信息\n活动时间：9月6日-9月30日\n参与人群：不限制\n🎮 参与步骤：\n发布 1 篇合格文章可以获得 1 积分，依次累加\n发布 1 篇被推荐文章可以获得 10 积分，依次累加\n发布 1 篇阅读量 ≥1000 的文章可以额外获得 10 积分，依次累加（阅读量按照周为维度统计，必须是被推荐文章）\n积分排行榜 top.1-top.10，可获得「稀土掘金创作达人证书」*1\n🎁 活动奖品\n\n\n\n\n\n\n\n\n畅宝森 塑料早餐杯带勺 营养燕麦牛奶杯早餐杯 可加热隔热 500ml\n稀土掘金who cares系列手机支架\ncode&life系列渔夫帽\ncode&life系列飞盘\n\n\n兑换：3积分\n兑换：2积分\n兑换：12积分\n兑换：10积分\n\n\n\n\n\n\n\n\n创意宇航员小夜灯摆件\n抖音文创 便携简约休闲胸包尼龙防泼水运动斜挎包\n抖音集团 经典商务风大尺寸单肩帆布包\n抖音文创 小助手系列桌垫大鼠标垫黑色\n\n\n兑换： 8 积分\n兑换：22积分\n兑换：26积分\n兑换：20积分\n\n\n\n\n\n\n\n\n康佳（KONKA）电烤箱 家用一机多能迷你小烤箱\n字节跳动Life Plus晴雨两用伞\n抖音文创 氛围空间落日灯加湿器\n抖音文创「重新介绍我自己」系列工卡 情绪劳动者\n\n\n兑换：48积分\n兑换：40积分\n兑换：45积分\n兑换：16积分\n\n\n\n🏁 活动规则\n投稿方式：\n发布技术文章，选择  #创作者训练营 话题，即投稿成功\n统计方式：\n用户可将需要指导的文章贴在该表格内，运营同学会给出反馈和修改建议。每周的积分和排名也会在该表内更新 创作者训练营第二期反馈\n3. 投稿文章要求：\n文章要求原创，内容符合掘金社区的内容标准和规范， 正文字数不得少于700字，不得有打广告、加二维码引流和凑字数行为。\n如果发现有一篇非原创文章，立刻取消该作者的所有获奖资格。注：全文超过 50% 与他人创作的内容重复都视为非原创 （包括直接抄袭转载、大篇幅摘抄书籍、网络文章、产品官方文档等） 。\n确保文章的完整性，一篇文章如字数过多可拆成上、中、下三篇，必须上下文连贯，有头有尾，如故意将一篇文章上文不接下文的拆成多篇文章，则取消获奖资格。\n👀 特别说明：\n学习笔记可以参加活动，但自己原创的思考、总结、观点段落篇幅须大于 50% ，如果不符合 50% 的篇幅要求，也视作非原创，当天更文不计数；\n文章不能只贴代码，要有自己的分析思考，代码文字比不得超过 60%，否则当天更文不计数；\n工具汇总类、软件测评类不计入活动；\n跟着chagpt学习、chatgpt 代写文章、AI绘画仅图片罗列等文章均不计入；\n活动期间，作者如果有刷阅读量、刷赞、刷评论等严重违反社区规范的行为，直接取消获奖资格（注：文章的点赞量大于阅读量也会判定为刷量）；\n删除旧文章重新发布参加活动的行为、注册多个小号参加活动的行为，社区坚决抵制，一经发现取消获奖资格；\n优质文章有机会获得官方加量曝光，低质文章将会被系统打压、减少曝光，详情可以阅读如下文档 （1）掘金签约作者品控文档（优质内容标杆）； （2）【掘金社区规则更新】什么样的文章不会被推荐？\n🎈优质文章浅析：\n对读者有帮助的文章，包括但不限于知识点解读、BUG的解决思路、需求的实现过程等，优质文章整体来讲定义较为抽象，但有两点硬性要求如下：\n思路清晰，文章有一个主要输出的观点\n结构清晰，应该有头有尾，完整的讲清楚自己的观点\n☎️ 加群交流\n参加活动的掘友添加掘金酱为好友，回复关键词「训练营」入群。重要消息不错过，大家互相鼓励，也可以在群内咨询哦～",
+          "description": "✏️ 学习如何技术写作，建设个人影响力 | 创作者训练第二期",
           "link": "https://juejin.cn/post/7275225666030026809",
           "publishedOn": "2023-09-05T13:50:49.000Z",
-          "wordCount": 1172,
+          "wordCount": 1136,
           "title": "✏️ 学习如何技术写作，建设个人影响力 | 创作者训练第二期",
           "imageUrl": null
         },
         {
           "id": "https://juejin.cn/post/7275141653420425277",
           "author": "FrontEnd_Reese",
-          "description": "theme: orange\nhighlight: a11y-dark\nh5是怎么和微信小程序通信的？不同H5页面怎么通信的？webview是谁提供的？\nweb-view 是往小程序中嵌入h5的容器。会自动铺满整个小程序页面。微信小程序和 uni-app 都提供了 web-view 组件。\n由于简历上有一段实习是移动端h5开发，让面试官误以为我做过微信小程序的内嵌h5页面，但其实实习中都是公司框架写的代码，页面也是直接嵌入公司的app中的，我并没有微信小程序开发的经验，现在整理答案也是死记硬背，mark一下看到的一篇讲的比较清楚的文章，以后学小程序了再来回顾。\n微信小程序web-view与H5 通信方式探索 - 掘金 (juejin.cn)\nh5 页面间通信其实就是前端跨页面通信（吧？）当时第一反应回答的是使用LocalStorage, 面试官又提出用户修改个人信息后返回页面更新信息的情况，回答的是我之前做表单有类似的场景，是向后端提交后在后端更新了数据，回退到原先的页面的时候在 created/activated 的时候获取数据。\n面试官：前端跨页面通信，你知道哪些方法？ - 掘金 (juejin.cn)\n什么是微任务？什么是宏任务？\n如果说哪些操作是宏任务，哪些操作是微任务，那大部分同学都是比较清楚的：\n宏任务：script（整体代码）/setTimout/setInterval/setImmediate(node 独有)/requestAnimationFrame(浏览器独有)/IO/UI render（浏览器独有）\n微任务：process.nextTick(node 独有)/Promise.then()/Object.observe/MutationObserver\n\n这里面试官还追问了一句，Promise本身是微任务吗？\n那这两者有具体的定义吗？老规矩，直接 mdn…",
+          "description": "现在小厂实习都问的这么难了吗😱「万物心选一面(vue+小程序)」",
           "link": "https://juejin.cn/post/7275141653420425277",
           "publishedOn": "2023-09-05T07:01:13.000Z",
           "wordCount": 1452,
@@ -2323,7 +2323,7 @@
           "description": "仅需2行代码，就能实现上图中的优化效果，让JS文件的加载耗时从1.4秒减少到0.4秒，大幅减少951ms（-67%），代码实现也非常简单方便，一起学起来吧~\n资源优先级提示：预取回 Prefetch，预加载 Preload 和预连接 Preconnect\n资源优先级提示是浏览器平台为控制资源加载时机而设计的一系列API，主要包括：\n1. 四类资源优先级提示\n1. 预取回 Prefetch\n用于提示浏览器在CPU和网络带宽空闲时，预先下载指定URL的JS，图片等各类资源，存储到浏览器本地缓存中，从而减少该资源文件后续加载的耗时，优化用户体验。\n具体使用方式是将link标签的rel属性设为prefetch，并将href属性设为目标资源URL，例如 <link rel=\"prefetch\" href=\"https://github.com/JuniorTour/juniortour.js\" />。\n该标签插入DOM后，将触发一次href属性值对应URL的请求，并将响应保存到本地的prefetch cache中，同时不会解析、运行该资源。\n可以预取回的资源有很多：JS、CSS、各种格式的图片、各种格式的音频、WASM文件、字体文件、甚至HTML文档本身都可实施 prefetch，预先缓存。\n命中预取回缓存的请求，在开发者工具中的Network标签中的Size列，会有独特的(prefetch cache)标记：\nDEMO：https://output.jsbin.com/cuxerej\n\ncrossorigin属性是浏览器同源策略的一部分，用于对link、script、img等元素指定是否允许以跨域资源共享模式加载目标资源。\n默认情况下，JS脚本、图片等部分静态资源不受同源策略的限制，可以从任何跨域域名加载第三方JS文件、图片文件。\n这样的规则有明显的安全风险，例如：\n第三方JS文件…",
           "link": "https://juejin.cn/post/7274889579076108348",
           "publishedOn": "2023-09-04T15:08:27.000Z",
-          "wordCount": 1925,
+          "wordCount": null,
           "title": "1.4秒到0.4秒-2行代码让JS加载耗时减少67%-《现代前端工程体验优化》-第二章-第一节",
           "imageUrl": null
         },
@@ -2338,12 +2338,22 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7274825810280710199",
+          "author": "Ginlon",
+          "description": "跨源资源共享（Cross-Origin Resource Sharing，CORS）\n是一种基于 HTTP 头的机制（划重点），该机制通过允许服务器标示除了它自己以外的其他源（域、协议或端口），使得浏览器允许这些源访问加载自己的资源。\n跨源 HTTP 请求的一个例子：运行在 https://domain-a.com 的 JavaScript 代码使用 XMLHttpRequest 来发起一个到 https://domain-b.com/data.json 的请求。\n\n出于安全性，浏览器限制脚本内发起的跨源 HTTP 请求。例如，XMLHttpRequest 和 Fetch API 遵循同源策略。这意味着使用这些 API 的 Web 应用程序只能从加载应用程序的同一个域请求 HTTP 资源，除非响应报文包含了正确 CORS 响应头。\nCORS 响应头\n前面提到 CORS 是一种基于 HTTP 头的机制，这些 HTTP 头决定了浏览器是否阻止前端 JavaScript 代码获取跨域资源请求的响应\n因此想要了解跨域必须先了解有哪些相关的 header、\nAccess-Control-Allow-Origin\n指示响应的资源是否可以被给定的来源共享。\n有效值 ：* | <origin> | null\n对于不包含凭据的请求，服务器会以“*”作为通配符，从而允许任意来源的请求代码都具有访问资源的权限。\n尝试使用通配符来响应包含凭据的请求会导致报错。\n凭据（Credentials） 通常是指 Cookie、HTTP 认证、TLS 客户端证书等敏感信息\n指定一个来源（只能指定一个）。如果服务器支持多个来源的客户端，其必须以与指定客户端匹配的来源来响应请求。\nAccess-Control-Allow-Credentials\n指示当前请求的凭证标记为 true 时，是否可以公开对该请求响应。\n…",
+          "link": "https://juejin.cn/post/7274825810280710199",
+          "publishedOn": "2023-09-04T12:34:43.000Z",
+          "wordCount": 2999,
+          "title": "面试被跨域问麻了，这次一定搞明白！",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7274771281002332175",
           "author": "童欧巴",
           "description": "theme: fancy\nhighlight: github-gist\n美味值：🌟🌟🌟🌟🌟\n口味：栀子椰椰\n食堂技术周刊仓库地址：https://github.com/Geekhyt/weekly\n大家好，我是童欧巴。欢迎来到前端食堂技术周刊，我们先来看下上周的技术资讯。\n技术资讯\nAstro 3.0 发布，第一个支持 View Transitions API 的框架。\n8 月登陆 Web 平台的新功能\nElectron 26.0.0\n下面我们来看技术资料。\n技术资料\n1. 在政采云如何写前端技术方案文档\n社区里写前端技术方案文档质量比较好的一篇文章，大家手里有更好的可以贴到评论区交流。\n2. TypeScript 中的数组类型\n关于 TypeScript 数组类型的深入讨论。\n3. 发挥 Web Components 的优势\n使用 Web Components 要注意，在 SSR 和可访问性方面，Web Components 还不是很完善，我们要避开这些，发挥 Web Components 的其他优势。\n4. 理想的视口并不存在\n你永远无法预测你的网站将在什么条件下被用户访问，并且你对此几乎没有控制权。\n5. Astro View Transitions\n本文介绍了关于 Chrome 和 Astro 使用 View Transitions API 的旅程。\n6. 一文搞懂前端各种调试方法的原理\n本文概述了浏览器断点调试的基本原理，同时介绍了 VSCode Web 代码断点调试能力，详细介绍了各模块中各 CDP 消息通信逻辑。\n❤️爱心三连击\n1.如果你觉得食堂酒菜还合胃口，就点个赞支持下吧，你的赞是我最大的动力。\n2.关注公众号前端食堂，吃好每一顿饭！\n3.点赞、评论、转发 === 催更！\n\n好了，以上就是本期的食堂周刊，观众老爷们如果觉得还不错，一键三连是对食堂老板最大的支持。\n你的前端食堂，吃好每一顿饭，我们下期见。",
           "link": "https://juejin.cn/post/7274771281002332175",
           "publishedOn": "2023-09-04T12:30:37.000Z",
-          "wordCount": null,
+          "wordCount": 1113,
           "title": "前端食堂技术周刊第 97 期：Astro 3.0、8 月登陆 Web 平台的新功能、前端技术方案文档、理想的视口并不存在",
           "imageUrl": null
         },
@@ -2368,23 +2378,13 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7274163003158724608",
-          "author": "熊的猫",
-          "description": "theme: smartblue\n前言\n欢迎关注同名公众号《熊的猫》，文章会同步更新，也可快速加入前端交流群！\n最近在协助小伙伴解决问题时，在项目中都会遇到一些 “砍树型” 的写法，这些写法容易让后续 简单 的需求变得 复杂，都说 \"前人栽树后人乘凉\"，但项目中有些写法是真的让后人乘不了凉的，甚至还得被迫加入 “砍树队伍”。\n本篇文章就列举一些，在 vue 项目中的 “砍树型” 的写法，以及分析一下如何写才更合适 “栽树”，如果你有更好的方案，欢迎在评论区分享！！！\n\n砍树 & 栽树\n由于项目源码不便于直接展示，下面会使用同等的代码实例来替代。\n其项目技术栈为：vue2 + vue-class-component + vue-property-decorator + typescript。\n滥用 watch\n砍树型写法\n@Watch('person', { deep: true })\ndoSomething(){}\n\n@Watch('person.name', { deep: true })\ndoSomething(){}\n\n@Watch('person.age', { deep: true })\ndoSomething(){}\n\n@Watch('person.hobbies', { deep: true })\ndoSomething(){}\n\n第一次看到这个写法我有点迷茫，但想了想好像也不难理解：\n首先 person.x 的部分监听 是为了处理针对不同属性值发生修改时要执行的特定逻辑\n而针对 person 的整体监听 是为了执行属于公共部分的逻辑\n因此，上面的写法就只是相当于只是少写了几个 if 的条件分支罢了，更何况还都用了深度监听，而实际上这种 简化方式 在 vue 内部会实例化出多个 Watcher 实例，如下：\n\n\n\n栽树型写法\n针对上述写法，如果说后续需要追加不…",
-          "link": "https://juejin.cn/post/7274163003158724608",
-          "publishedOn": "2023-09-04T00:35:29.000Z",
-          "wordCount": 2940,
-          "title": "前人在 vue 项目中的 “砍树型“ 写法，让后人乘不了凉！",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7274146202496581690",
-          "author": "古茗前端团队",
-          "description": "温馨Tips：阅读本文大约需要 7 分钟，可以细细阅读～\n背景\n古茗是茶饮连锁品牌，所以我们会有很多业务围绕着加盟商展开，比如供应链、报货、财务、机料、上传下达等等，在这不一一列举了，前面的可能比较好理解，那上传下达是什么呢？其实就是古茗总部和门店沟通、信息传达的一种方式，本文就围绕着上传下达这个业务展开给大家介绍下我们技术实现的演进和落地。\n上传下达\n上传下达，分为门店上传和总部下达：\n门店上传：简单理解就是门店给总部反馈消息、申请售后等等的渠道；\n总部下达：简而言之是总部给门店下发的消息、任务、公告等等；\n门店上传的主要承载形式是工单，但上传的工单的来源还有其他，比如人工客服；总部下达是总部下发给门店的任务，其实交互形式也类似工单，我们在业务上没有给他划分到工单，但在前端来说技术方案其实是相通的。\n\n工单系统的演进\n\n在最开始时期简单粗暴：来一工单撸一个页面；但业务在发展，面对越来越多工单这种方式已经满足不了诉求，而且开发效率低，维护困难。\n接下来我们探索了表单模型描述+渲染的方案，表单模型在三方平台简道云进行维护，简道云提供了可视化搭建表单的能力，前端获取到表单模型描述后在我们的页面进行渲染，但这种方案也逐步暴露了缺陷：\n简道云表单模型对于前端来说很冗余，比如说简道云表单模型会有几十个字段，但需要用户填写的可能只需要几个字段。\n表单校验麻烦。\n简道云表单模型描述不了联动，比如在选择A时C字段显示，在选择B时C字段隐藏。\n前端实现渲染不优雅，会有很多if else的逻辑。\n所以我们需要一个支持联动、高性能、校验能力强、优雅的表单解决方案，这时候Formily进入了我们的视野，经过调研发现Formily完全满足我们的诉求，所以我们目前的表单解决方案就是Formily，并由Formily为核心打造了古茗的工单开发生态。\nFormily工单生态\nFormily\nFormily…",
-          "link": "https://juejin.cn/post/7274146202496581690",
-          "publishedOn": "2023-09-04T00:07:10.000Z",
-          "wordCount": 2149,
-          "title": "Formily 在古茗工单系统中的实践落地",
+          "id": "https://juejin.cn/post/7274257088267599927",
+          "author": "Chokcoco",
+          "description": "现代 CSS 解决方案：数学函数 Round",
+          "link": "https://juejin.cn/post/7274257088267599927",
+          "publishedOn": "2023-09-04T02:04:35.000Z",
+          "wordCount": null,
+          "title": "现代 CSS 解决方案：数学函数 Round",
           "imageUrl": null
         },
         {
@@ -2400,10 +2400,10 @@
         {
           "id": "https://juejin.cn/post/7273756059495071779",
           "author": "程序员小易",
-          "description": "title: heartbeat\ntitleTemplate: chat\ntheme: channing-cyan\n前言\n我们先来看一下心跳检测机制？\n心跳检测机制是一种用于检测系统、应用程序或网络连接状态的技术。基本原理是定期发送小型数据包（称为心跳包或心跳消息）以确认远程设备或连接仍然处于活动状态。如果一段时间内没有收到心跳响应，系统就会认为连接已断开或设备不再可用。本文将用来实现多人聊天室在线人数的统计。\n心跳机制几个关键概念\n心跳包：数据包 => 通常是一个标识或消息\n心跳间隔：心跳包发送的时间间隔\n心跳响应：客户端或者服务器接收心跳包时，做出的响应\n维护状态：心跳检测机制通常在服务器端维护状态\n超时处理：心跳检测机制认定为不活跃、超时并做处理(自动重连机制)\n为什么需要心跳机制？\n检测连接状态\n维护连接性\n管理在线状态\n检测系统、设备健康状况\n减少资源浪费\n体验地址\n聊天室的搭建教程\n体验地址传送门在---->这里👻👻👻\n效果展示\n\n整体实现思路\n这里以多人聊天室的中心跳检测机制为例。\n客户端和服务器端建立连接(websocket)\n在客户端定期轮询向服务器端发送心跳包 ping\n服务器端接收心跳包并做出响应 pong\n服务器端维护 ping 的客户端列表，返回活跃的客户端数\n客户端接收到心跳响应，更新自己状态，如心跳包异常，则做异常处理\n\n前端部分\n聊天室的搭建参考文章：即时通讯轻松实现：WebSocket、Vue 3 和 Node.js 缔造的多人实时交流平台,挺详细的嘞！\n客户端发出建立连接 new WebSocket(socketUrl)\n添加连接状态、消息接收、错误信息、关闭等事件监听\n在socket.onopen 建立连接之后开始定期发送心跳包ping\n建立连接\nlet socket = null; \n/**\n * 建立连接\n */\nconst …",
+          "description": "WebSocket聊天室在线状态管理：心跳检测机制（附源码）",
           "link": "https://juejin.cn/post/7273756059495071779",
           "publishedOn": "2023-09-02T08:48:04.000Z",
-          "wordCount": 2440,
+          "wordCount": null,
           "title": "WebSocket聊天室在线状态管理：心跳检测机制（附源码）",
           "imageUrl": null
         },
@@ -2430,7 +2430,7 @@
           "description": "一直习惯navicat，但是因为某种原因要换[看]，试了好几个软件，一开始用sqlstudio，看网上蛮多推荐什么界面好啊导入导出快啊……打开一个三千多条数据的表……用了几十秒，没开玩笑，我甚至录了视频[泪奔]；看看能不能习惯DBeaver吧[听歌]",
           "link": "https://juejin.cn/pin/7276408879364767804",
           "publishedOn": "2023-09-09T08:57:09.000Z",
-          "wordCount": 514,
+          "wordCount": 516,
           "title": "一直习惯navicat，但是因为某种原因要换[看]，试了好几个软件，一开始用sqlstudio，看网上蛮多推荐什么界面好啊导入导出快啊……打开一个三千多条数据的表……用...",
           "imageUrl": null
         },
@@ -2440,7 +2440,7 @@
           "description": "伙计们，有什么navicat的替代品吗，我们公司被发律师函了[流汗]",
           "link": "https://juejin.cn/pin/7276363520555122744",
           "publishedOn": "2023-09-09T02:04:31.000Z",
-          "wordCount": 514,
+          "wordCount": 516,
           "title": "伙计们，有什么navicat的替代品吗，我们公司被发律师函了[流汗]",
           "imageUrl": null
         },
@@ -2450,7 +2450,7 @@
           "description": "xdm 你们在测试软件的时候都用哪些工具啊[呲牙][呲牙][呲牙][呲牙]",
           "link": "https://juejin.cn/pin/7276273705105555475",
           "publishedOn": "2023-09-08T23:42:09.000Z",
-          "wordCount": 515,
+          "wordCount": 517,
           "title": "xdm 你们在测试软件的时候都用哪些工具啊[呲牙][呲牙][呲牙][呲牙]",
           "imageUrl": null
         },
@@ -2470,7 +2470,7 @@
           "description": "[7073670907851440160#新人报道#] \n这个工具真不错。。。ipaguard",
           "link": "https://juejin.cn/pin/7275932720633528381",
           "publishedOn": "2023-09-07T08:16:12.000Z",
-          "wordCount": 557,
+          "wordCount": 550,
           "title": "[7073670907851440160#新人报道#] 这个工具真不错。。。ipaguard",
           "imageUrl": null
         },
@@ -2480,7 +2480,7 @@
           "description": "idea支持自动切换输入法了，写代码如丝般顺滑，详细教程请看：https://juejin.cn/post/7204060150705258555",
           "link": "https://juejin.cn/pin/7275550540611158079",
           "publishedOn": "2023-09-06T04:55:26.000Z",
-          "wordCount": 521,
+          "wordCount": 522,
           "title": "idea支持自动切换输入法了，写代码如丝般顺滑，详细教程请看：https://juejin.cn/post/7204060150705258555",
           "imageUrl": null
         },
@@ -2500,7 +2500,7 @@
           "description": "[7073670907851440160#新人报道#] \n开发框架\nvue.js ★56380 - 流行的轻量高效的前端组件化方案\nvue-admin ★4612 - Vue管理面板框架\nquasar ★2353 - 响应式网站和混合移动应用程序\nelectron-vue ★2085 - Electron及VueJS快速启动样板\nvue-element-admin ★1986 - vue2管理系统模板\nvuepack ★1618 - 现代VueJS启动器\nN3-components ★656 - 快速构建页面和应用\nVueThink ★373 - 前后端分离框架\nvue-2.0-boilerplate ★358 - Vue2单页应用样板​\nvue-spa-template ★344 - 前后端分离后的单页应用开发\nFramework7-Vue ★283 - VueJS与Framework7结合\nvue-bulma ★215 - 轻量级高性能MVVM Admin UI框架\nvuetiful ★189 - 创建业务及管理应用程序\nvue-stack-2.0 ★155 - Vue2项目样板\nvue2-admin-lte ★154 - vue2版本的adminLTE\njspangAdmin ★140 - 基于Vue2的后台管理系统\nvue-fullstack ★140 - 实时的用户友好的后台系统\nvue-paper-dashboard ★120 - Vue的Tim Paper 仪表盘\nvue-webgulp ★113 - 仿VueJS Vue loader示例\nvue-element-starter ★83 - vue启动页\nvuemin ★17 - 基于Vue的企业级前端开发框架\nvue-team-template ★12 - 一种构建vue项目的选择方案",
           "link": "https://juejin.cn/pin/7274940764517531703",
           "publishedOn": "2023-09-05T08:13:34.000Z",
-          "wordCount": 762,
+          "wordCount": 755,
           "title": "[7073670907851440160#新人报道#] 开发框架 vue.js ★56380 - 流行的轻量高效的前端组件化方案 vue-admin ★4612 - Vue管理面板框架 quasar ★2353 - 响应式网站...",
           "imageUrl": null
         },
@@ -2560,7 +2560,7 @@
           "description": "[7073670907851440160#新人报道#]",
           "link": "https://juejin.cn/pin/7272714715020640310",
           "publishedOn": "2023-08-30T02:46:35.000Z",
-          "wordCount": 524,
+          "wordCount": 517,
           "title": "[7073670907851440160#新人报道#]",
           "imageUrl": null
         },
@@ -2790,253 +2790,6 @@
           "wordCount": 415,
           "title": "倪爽的阅读分享 – 2023年8月13日",
           "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/simpson.jpg"
-        }
-      ]
-    },
-    {
-      "title": "省流",
-      "feedUrl": "https://shengliu.substack.com/feed?utm_source=substack&utm_medium=email",
-      "siteUrl": "https://shengliu.substack.com",
-      "articles": [
-        {
-          "id": "https://shengliu.substack.com/p/chrome-15-vs-code-copilot",
-          "author": "王铁柱",
-          "description": "VS Code 新版本内置了一个端口转发功能，以便从互联网访问本地的某个端口。",
-          "link": "https://shengliu.substack.com/p/chrome-15-vs-code-copilot",
-          "publishedOn": "2023-09-07T23:20:06.000Z",
-          "wordCount": null,
-          "title": "Chrome 15 岁生日 🎂；VS Code 端口转发 🧑‍💻；微软的 Copilot 版权承诺 ©️；",
-          "itunes": {},
-          "enclosure": {
-            "url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png",
-            "length": "0",
-            "type": "image/jpeg"
-          },
-          "imageUrl": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png"
-        },
-        {
-          "id": "https://shengliu.substack.com/p/openai",
-          "author": "王铁柱",
-          "description": "OpenAI 将于 11 月 6 日在旧金山举行第一届开发者大会 OpenAI DevDay，注册通道将在未来几周内开放，届时也将提供现场直播。",
-          "link": "https://shengliu.substack.com/p/openai",
-          "publishedOn": "2023-09-06T23:20:05.000Z",
-          "wordCount": null,
-          "title": "OpenAI 首届开发者大会 🧑‍💻；微信上线「腾讯混元助手」小程序 🤖；高空风能 🪁；",
-          "itunes": {},
-          "enclosure": {
-            "url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png",
-            "length": "0",
-            "type": "image/jpeg"
-          },
-          "imageUrl": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png"
-        },
-        {
-          "id": "https://shengliu.substack.com/p/android",
-          "author": "王铁柱",
-          "description": "省流@23-09-06 (七月二十二） 🍦 恰饭 🚀 新闻 Google 发布 Android 品牌标识外观更新 android 开头的 A 大写了，并发布了 Android 机器人的 3D 版。 🔬 科研 基于激光实现非接触式医学超声成像 传统的超声波需要医生将探头使劲摁在病人皮肤上，并依靠医生的经验来回移动，以获得想要的部位的成像，这影响了成像的准确性。麻省理工学院的一个团队基于激光实现了一个非接触式的医学超声成像系统，有望实现更准确的超声成像。 诱导癌细胞转化为健康细胞 一个关于癌症治疗的新方向。",
-          "link": "https://shengliu.substack.com/p/android",
-          "publishedOn": "2023-09-05T23:18:21.000Z",
-          "wordCount": null,
-          "title": "Android 品牌更新 🌟；激光医学超声 🧑‍🔬；送外卖一个月的体验 🏍️；",
-          "itunes": {},
-          "enclosure": {
-            "url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png",
-            "length": "0",
-            "type": "image/jpeg"
-          },
-          "imageUrl": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png"
-        },
-        {
-          "id": "https://shengliu.substack.com/p/28-css-loaders",
-          "author": "王铁柱",
-          "description": "昨日，首批 8 家 AI 大模型备案通过，其中包括百度文心一言。",
-          "link": "https://shengliu.substack.com/p/28-css-loaders",
-          "publishedOn": "2023-08-31T23:20:08.000Z",
-          "wordCount": null,
-          "title": "文心一言向全社会开放 🤖；罕见氧同位素氧-28 ⚛️；CSS Loaders 🔃",
-          "itunes": {},
-          "enclosure": {
-            "url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png",
-            "length": "0",
-            "type": "image/jpeg"
-          },
-          "imageUrl": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png"
-        },
-        {
-          "id": "https://shengliu.substack.com/p/chatgpt-2cf",
-          "author": "王铁柱",
-          "description": "省流@23-08-30（七月十五） 🍦 恰饭 🚀 新闻 ChatGPT 企业版发布，ChatGPT 迄今为止最强大的版本 无限制访问 GPT-4（无使用上限） 性能更好的 GPT-4（速度提高 2 倍） 无限制地访问高级数据分析（以前称为代码解释器） 32k 令牌上下文窗口，用于 4 倍长的输入、文件或后续操作 可共享的聊天模板，供您的公司协作和构建通用工作流程 🔬 科研 华中科技大学团队打造出“万物不粘”的超滑马桶，节水又卫生 月船三号记录的月球表面温度变化 印度第一个太阳研究任务于 9 月 2 日启动",
-          "link": "https://shengliu.substack.com/p/chatgpt-2cf",
-          "publishedOn": "2023-08-29T23:20:04.000Z",
-          "wordCount": null,
-          "title": "ChatGPT 企业版发布🤖；超滑马桶🚽；前端好难🧑‍💻；",
-          "itunes": {},
-          "enclosure": {
-            "url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png",
-            "length": "0",
-            "type": "image/jpeg"
-          },
-          "imageUrl": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png"
-        },
-        {
-          "id": "https://shengliu.substack.com/p/git-terraform",
-          "author": "王铁柱",
-          "description": "通过增加一条提交信息，你可以在 Git 提交中提及共同作者。",
-          "link": "https://shengliu.substack.com/p/git-terraform",
-          "publishedOn": "2023-08-27T23:20:02.000Z",
-          "wordCount": null,
-          "title": "史上首张月球南极照片 🌕；共同创作 Git 提交 📝；Terraform 分叉 🧑‍💻；",
-          "itunes": {},
-          "enclosure": {
-            "url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png",
-            "length": "0",
-            "type": "image/jpeg"
-          },
-          "imageUrl": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png"
-        },
-        {
-          "id": "https://shengliu.substack.com/p/meta-code-llama",
-          "author": "王铁柱",
-          "description": "省流@23-08-25（七月初十） 🍦 恰饭 美团外卖红包 | 饿了么红包 🚀 新闻 Meta 推出 Code Llama 编码大模型 可免费商用。 🔬 科研 一只年幼的北极狐跋涉了 6400 千米 🍹 杂拌 在联想笔记本电脑上使用廉价逻辑分析仪绕过 Bitlocker 俄坠机事故遇难者名单中包括瓦格纳集团创始人普里戈任 你终于可以购买乐高的盲文积木了 ⚡ 速览 Android 和 iOS 版 Gmail 现在可以翻译电子邮件 微信图片消息可支持带货功能 iOS Chrome Beta 新特性：地址栏可设置挪到底部",
-          "link": "https://shengliu.substack.com/p/meta-code-llama",
-          "publishedOn": "2023-08-24T23:20:03.000Z",
-          "wordCount": null,
-          "title": "Meta 推出 Code Llama 编码大模型",
-          "itunes": {},
-          "enclosure": {
-            "url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png",
-            "length": "0",
-            "type": "image/jpeg"
-          },
-          "imageUrl": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png"
-        },
-        {
-          "id": "https://shengliu.substack.com/p/com",
-          "author": "王铁柱",
-          "description": "省流@23-08-24（七月初九） 🍦 恰饭 美团外卖红包 | 饿了么红包 🚀 新闻 .COM 域名涨价 腾讯的公告 🔬 科研 拼上 24 条染色体最后一块拼图：人类 Y 染色体的组装和分析完成 麻省理工学院的工程师使用剪纸制造超强、轻质的结构 印度宣布“月船三号”成功登月 🍹 杂拌 俄罗斯国家航天集团透露月球探测器坠毁原因 ⚡ 速览 Salesforce 领投 Hugging Face 新一轮融资，预计筹集 2 亿美元 李彦宏：年底将推出文心大模型 4.0 Adobe Express 正式发布！免费可玩，一个程序就能设计图像、PDF 和视频",
-          "link": "https://shengliu.substack.com/p/com",
-          "publishedOn": "2023-08-23T23:20:05.000Z",
-          "wordCount": null,
-          "title": ".COM 域名涨价",
-          "itunes": {},
-          "enclosure": {
-            "url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png",
-            "length": "0",
-            "type": "image/jpeg"
-          },
-          "imageUrl": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png"
-        },
-        {
-          "id": "https://shengliu.substack.com/p/gpt-35-turbo-api",
-          "author": "王铁柱",
-          "description": "省流@23-08-23（七月初八 · 处暑） 🍦 恰饭 美团外卖红包 | 饿了么红包 🚀 新闻 GPT-3.5 Turbo 新增微调 API 你可以通过 API 上传自己的数据，然后创建微调任务，然后使用微调后的模型。GPT-4 的微调接口也将在今年秋天推出。 Meta 推出 SeamlessM4T，一种用于语音和文本翻译的多模式 AI 模型 支持多达 100 种语言的语音到文本、语音到语音、文本到语音和文本到文本的翻译。 视频版 ControlNet 中文介绍：ControlNet 开源，靠提示词精准换画风",
-          "link": "https://shengliu.substack.com/p/gpt-35-turbo-api",
-          "publishedOn": "2023-08-22T23:25:32.000Z",
-          "wordCount": null,
-          "title": "GPT-3.5 Turbo 新增微调 API",
-          "itunes": {},
-          "enclosure": {
-            "url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png",
-            "length": "0",
-            "type": "image/jpeg"
-          },
-          "imageUrl": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png"
-        },
-        {
-          "id": "https://shengliu.substack.com/p/25",
-          "author": "王铁柱",
-          "description": "省流@23-08-22（七夕） 🍦 恰饭 美团外卖红包 | 饿了么红包 🚀 新闻 俄罗斯“月球-25”号探测器撞月失联 🔬 科研 基因编辑猪肾脏在人体内正常工作超过一个月 🍹 杂拌 WinRAR 高危漏洞允许黑客在用户打开压缩文件时运行程序 ⚡ 速览 Debian 支持龙芯 LoongArch 架构 Apple Watch 史上最大的一次升级，要来了 Android 运行时 (ART) 更新使应用启动速度提高了 30% Twitter 改名 X 后应用商店下载排名大幅下降 Meta 或将会在本周推出网页版 Threads",
-          "link": "https://shengliu.substack.com/p/25",
-          "publishedOn": "2023-08-21T23:20:07.000Z",
-          "wordCount": null,
-          "title": "俄罗斯“月球-25”号探测器撞月失联",
-          "itunes": {},
-          "enclosure": {
-            "url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png",
-            "length": "0",
-            "type": "image/jpeg"
-          },
-          "imageUrl": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png"
-        },
-        {
-          "id": "https://shengliu.substack.com/p/iphone-15-35w",
-          "author": "王铁柱",
-          "description": "省流@23-08-18（七月初三） 🍦 恰饭 美团外卖红包 | 饿了么红包 🚀 新闻 传闻 iPhone 15 支持高达 35W 的更快充电 🔬 科研 国际首套300兆瓦先进压缩空气储能系统再突破 核心部件膨胀机完成集成测试，顺利下线。 科学家称，澳大利亚东南部有一个直径 520 公里的小行星陨石坑 🍹 杂拌 Debian 诞生 30 周年 图表：Netflix 占全球互联网流量的 15% Dropbox 如何将 JavaScript 包的大小减少 33% Mozilla 基金会 - 签署我们的请愿书，阻止法国强迫 Mozilla Firefox 等浏览器审查网站",
-          "link": "https://shengliu.substack.com/p/iphone-15-35w",
-          "publishedOn": "2023-08-17T23:20:59.000Z",
-          "wordCount": null,
-          "title": "传闻 iPhone 15 支持高达 35W 的更快充电",
-          "itunes": {},
-          "enclosure": {
-            "url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png",
-            "length": "0",
-            "type": "image/jpeg"
-          },
-          "imageUrl": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png"
-        },
-        {
-          "id": "https://shengliu.substack.com/p/lk-99-c1a",
-          "author": "王铁柱",
-          "description": "省流@23-08-17（七月初二） 🍦 恰饭 美团：美团外卖红包，肯德基辣堡+可乐：￥14.9，麦当劳辣堡+可乐：￥14.9，瑞幸生椰拿铁：￥9.9。 饿了么：饿了么红包。 🚀 新闻 Chrome 116 新增文档画中画功能 可以在画中画窗口显示任意 HTML 内容。 🔬 科研 LK-99 不是超导体 一篇关于近期 LK-99 的内容总结。 🍹 杂拌 在 Windows 任务管理器界面按 CTRL 键，可让进程们停止上下移动 根据随机数据重置系统时钟的 Windows 功能正在造成严重破坏",
-          "link": "https://shengliu.substack.com/p/lk-99-c1a",
-          "publishedOn": "2023-08-16T23:20:03.000Z",
-          "wordCount": null,
-          "title": "LK-99 不是超导体",
-          "itunes": {},
-          "enclosure": {
-            "url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png",
-            "length": "0",
-            "type": "image/jpeg"
-          },
-          "imageUrl": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png"
-        },
-        {
-          "id": "https://shengliu.substack.com/p/tco",
-          "author": "王铁柱",
-          "description": "省流@23-08-16（七月初一） 🍦 恰饭 这次真的恰饭了。没人投喂，我要自力更生啦。 点外卖前先领个红包吧： 美团外卖红包，肯德基辣堡+可乐：￥14.9，麦当劳辣堡+可乐：￥14.9，瑞幸生椰拿铁：￥9.9。 以及饿了么红包。 🚀 新闻 谷歌浏览器将通过内置生成人工智能为您总结整篇文章 🔬 科研 小行星 ZTm0038 撞击地球的概率大于 3% 🍹 杂拌 t.co 正在为某些域名添加五秒延迟 摄影师用自己照片被告侵权 索赔八万！视觉中国回应：我们有完整的销售权利 ⚡ 速览 微信公众号新增图片修改功能，最多可删除或替换 3 张",
-          "link": "https://shengliu.substack.com/p/tco",
-          "publishedOn": "2023-08-15T23:20:15.000Z",
-          "wordCount": null,
-          "title": "t.co 正在为某些域名添加五秒延迟",
-          "itunes": {},
-          "enclosure": {
-            "url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png",
-            "length": "0",
-            "type": "image/jpeg"
-          },
-          "imageUrl": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png"
-        },
-        {
-          "id": "https://shengliu.substack.com/p/telegram-stories",
-          "author": "王铁柱",
-          "description": "省流@23-08-15 🍦 恰饭 🚀 新闻 Telegram Stories 不再仅限于付费用户 🔬 科研 中国科考队发布亚洲最高树等身照 🍹 杂拌 芬兰从国家公园拆除垃圾箱 ⚡ 速览 微软更改服务协议，增加对 AI 产品的限制 Stack Overflow 开始提供 AI 工具 🍨 后记 奇怪！挺平常的一天，但可关注的新闻却一下子少了这么多。今天真不是我偷懒，真没见其他值得关注的新闻。 联系作者：contact@tiezhu.wang 邮件订阅 | RSS订阅",
-          "link": "https://shengliu.substack.com/p/telegram-stories",
-          "publishedOn": "2023-08-14T23:20:43.000Z",
-          "wordCount": null,
-          "title": "Telegram Stories 不再仅限于付费用户",
-          "itunes": {},
-          "enclosure": {
-            "url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png",
-            "length": "0",
-            "type": "image/jpeg"
-          },
-          "imageUrl": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png"
-        },
-        {
-          "id": "https://shengliu.substack.com/p/firefox-android",
-          "author": "王铁柱",
-          "description": "省流@23-08-14 🍦 恰饭 🚀 新闻 FireFox Android 将完整支持扩展 microsoft/azurechatgpt: 部署可以从内网访问的 ChatGPT 🔬 科研 韦伯望远镜捕捉到有史以来最遥远的恒星图像，距离地球 280 亿光年 🍹 杂拌 WPS Office 远程代码执行漏洞 W3C 不支持谷歌的 WEI 提案 重型直升机吊装整个信号塔 SpaceX 星舰爆炸发动机测试中的 7 张最佳图像 完全在浏览器本地运行的 PDF 工具 ⚡ 速览 ChatGPT 自定义指令功能向所有用户开放",
-          "link": "https://shengliu.substack.com/p/firefox-android",
-          "publishedOn": "2023-08-13T23:20:07.000Z",
-          "wordCount": null,
-          "title": "FireFox Android 将完整支持扩展",
-          "itunes": {},
-          "enclosure": {
-            "url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png",
-            "length": "0",
-            "type": "image/jpeg"
-          },
-          "imageUrl": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cba9513-45bc-414a-a656-cb6c7333062c_1024x1024.png"
         }
       ]
     }
