@@ -44,7 +44,7 @@
           "description": "一开始看到registerProtocolHandler()方法老激动了，以为又发现了个好玩具，谁知深入体验了一番之后……呵呵~",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-registerprotocolhandler/",
           "publishedOn": "2023-08-30T15:02:58.000Z",
-          "wordCount": 995,
+          "wordCount": 992,
           "title": "一言难尽的registerProtocolHandler()方法",
           "imageUrl": null
         },
@@ -64,7 +64,7 @@
           "description": "Performance和PerformanceObserver，用户 Timing API，哦，学不完，根本学不完，这两周抽时间好好研究了一番，终于了解了个大概了🙊，特此记录下。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-performanceobserver-api/",
           "publishedOn": "2023-08-27T08:34:24.000Z",
-          "wordCount": 1302,
+          "wordCount": 1303,
           "title": "狠狠地研究了下 PerformanceObserver API",
           "imageUrl": null
         }
@@ -178,7 +178,7 @@
           "description": "我很好奇 CleanMyMac 是怎么知道我生日的，我应该没有给他提交过我的生日信息呀😢",
           "link": "https://m.okjike.com/originalPosts/64fea1d115391e4bc7916733",
           "publishedOn": "2023-09-11T05:12:49.000Z",
-          "wordCount": 470,
+          "wordCount": 474,
           "title": "发布了: 我很好奇 CleanMyMac 是怎么知道我生日的，我应该没有给他提交过我的生日信息呀😢",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fto7bNOYXFR6S_pgZ0Dh6Fap-gXlv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -229,6 +229,16 @@
       "feedUrl": "https://rsshub.app/jike/user/752D3103-1107-43A0-BA49-20EC29D09E36",
       "siteUrl": "https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36",
       "articles": [
+        {
+          "id": "https://m.okjike.com/originalPosts/650045cf02edc16158c56d28",
+          "author": null,
+          "description": "# Role\nUnicode 字符映射转换器\n## Profile\n- author: 李继刚\n- version: 0.2\n- LLM: GPT-4\n- Plugin: none\n- description: 将用户输入的字符串逐一映射到 Unicode 区间 U+1D400 到 U+1D420。\n## Attention\n请准确地将用户输入的字符串的字符映射到指定的 Unicode 区间。\n## Background\n在微信或者 X 发送英文, 想对某些单词加粗显示.\n## Constraints\n- 不提供任何解释或说明。\n- 只输出转换后的结果。\n## Examples\n- 用户输入：AB，输出：𝐀𝐁\n## Goals\n- 准确地将字符映射到 Unicode 区间 U+1D400 到 U+1D420。\n## Skills\n- 精确字符到 Unicode 的映射技能。\n- 优秀的中英文翻译能力\n## Value\n- 准确性：准确地进行字符到 Unicode 的映射。\n## Workflow\n1. 输入: 通过开场白引导用户输入想要转换的字符\n2. 判断: 判断用户输入的字符是否为英文\n   if (输入字符为中文)\n      那么, 将用户输入整句翻译成英文, 传递给 <转换> 步骤\n   else\n      直接将用户输入传递给<转换>步骤\n3. 转换: 将 <判断> 步骤的结果中的每一个字符映射到 Unicode 区间 U+1D400 到 U+1D420\n4. 输出: 输出转换后的结果, 没有任何解释说明, 直接输出结果.\n## Initialization\n开场白如下:\n\"请输入你想要进行转换的英文字符串 >_: \"",
+          "link": "https://m.okjike.com/originalPosts/650045cf02edc16158c56d28",
+          "publishedOn": "2023-09-12T11:04:47.000Z",
+          "wordCount": 635,
+          "title": "发布了: # Role Unicode 字符映射转换器 ## Profile - author: 李继刚 - version: 0.2 - LLM: GPT-4 - Plugin: none - description: 将用户输入的字符串逐一映射...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FiEHKChvncqnsOrKuU9hSLfA6RR6v3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
+        },
         {
           "id": "https://m.okjike.com/originalPosts/6500051602edc16158be3b95",
           "author": null,
@@ -317,16 +327,6 @@
           "publishedOn": "2023-09-10T08:41:35.000Z",
           "wordCount": 552,
           "title": "发布了: 刚才接到了招商银行的 AI 外呼电话, 推销贷款. 由此对一个公司业务的商业化收入构成推演: - 收入 = 存量客户贡献 + 增量客户贡献 存量客户贡献 = 单业务...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
-        },
-        {
-          "id": "https://m.okjike.com/reposts/64fd76ce05145f31e56f4d3c",
-          "author": null,
-          "description": "结构化prompt，将想法结构化表达的工具。 \n手指月，你要看的是月，而不是那根手指。\n\n转发 @云中江树: 结构化提示词的格式\n使用格式来区分提示词的各个部分是提示词编写的常用技巧。但格式化只是结构化提示词的一部分。\n为什么是结构化提示词而不是格式化提示词呢？\n对格式化提示词的提法而言：格式是目的，只表明了提示词的内容组织格式，而提示词更关键的思维和语义结构却被忽略了。\n对结构化提示词的提法而言：格式只是组织思维和语义结构的手段，不是目的！\n结构化提示词的设计重在思维和语义结构的组织，重在将诸多提示词技术有机融入提示词（例如面向角色的提示词设计），格式化只是其中一种技术，并不绑定于某种具体的格式！\n因此关于结构化提示词的各种格式之争可休矣~\nJson, Yaml 等格式对软件开发者更友好，而 Markdown 等格式对大众更友好。\n理论上可以使用任意格式来编写结构化提示词，甚至你可以自定义一套格式规则来描述提示词。\n实践中，若某些模型有推荐使用的官方格式，则使用官方格式，由于官方会对推荐格式进行针对性优化，所以推荐格式表现会更好。\n比如 Claude 模型，官方针对 XML 格式进行了专门优化，在 XML 格式下表现会更好。以下是一个例子：\nHuman: We want to de-identify some text by removing all personally identifiable information from this text so that it can be shared safely with external contractors.\nIt's very important that PII such as names, phone numbers, and home and email addresses get replaced with XXX.\nHere is the text, inside  XML tags.\n\n{{TEXT}}\n\nPlease put your de-identified version of the text with PII removed in  XML tags.\nAssistant:\n对于 GPT 模型，目前没有官方推荐格式，本书作者推荐使用常用的一些格式如 Json， Markdown 等编写提示词。原因有下面几点：\n1. 便于模型理解：大模型的训练语料数据中常见格式数据较多，对常用格式理解顺畅\n2. 便于人的阅读理解：常见格式了解掌握的人更多，不必单独学习语法结构",
-          "link": "https://m.okjike.com/reposts/64fd76ce05145f31e56f4d3c",
-          "publishedOn": "2023-09-10T07:57:02.000Z",
-          "wordCount": 587,
-          "title": "转发了: 结构化prompt，将想法结构化表达的工具。 手指月，你要看的是月，而不是那根手指。",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
         {
@@ -553,6 +553,16 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230912/t20230912_526417365.html",
+          "author": "国家预警信息发布中心",
+          "description": "云阳县气象台2023年9月12日17时40分更新发布“大雾黄色预警信号”，预计9月12日18时至13日12时，全县各乡镇（街道）将出现能见度小于500米的大雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20230912/t20230912_526417365.html",
+          "publishedOn": "2023-09-12T09:58:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市云阳县发布大雾黄色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230912/t20230912_526416849.html",
           "author": "国家预警信息发布中心",
@@ -2523,7 +2533,7 @@
           "description": "highlight: androidstudio\n前言\n今天聊点简单的，最近在整理面试题的时候，看到css部分，感觉自己有段时间没有切页面了，正好趁着这个机会好好复习一下，加深一下印象。\n如何实现三栏布局 中间自适应？这也是在前端面试官经常会问到的，当你被问到这个它的时候，你的脑子里应该想到什么？给你3秒钟的时间...那必然是最最经典的圣杯、双飞翼布局，这就是实现这个问题最优雅的方式。\n既然是三栏布局，我们先创建3个容器：left + middle + right\n\n接下来就是实现三栏布局的效果，我们先聊一个最简单最好想的方法，使用弹性\n先给left和right都设置200px的宽度，再给它们的父容器container设置属性display: flex;这样这三个容器就会自动去到同一行，再给middle容器设置flex：1，这样中间这个容器的宽度就能一直得到全部宽度减去左右两边容器宽度，这个宽度会随着窗口的大小而变化，代码和效果图如下：\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Document</title>\n  <style>\n    *{\n      margin: 0;\n      padding: 0;\n    }\n    div{\n      height: 100px;\n    }\n    .container{\n      display: flex;\n    }\n    .left,.right{\n…",
           "link": "https://juejin.cn/post/7276398869734817832",
           "publishedOn": "2023-09-09T06:14:05.000Z",
-          "wordCount": 1629,
+          "wordCount": 1748,
           "title": "面试官：如何实现三栏布局，中间自适应",
           "imageUrl": null
         },
@@ -2533,7 +2543,7 @@
           "description": "theme: serene-rose\n以往，面试官：“你自己开发过 Webpack 的插件吗？”\n现在，面试官：“你自己开发过 Vite 的插件吗？”\n如果你还在纠结 Webpack 的插件该开发姿势的话，点我这篇文章# 手把手带你开发webpack5.x - plugin（保姆教程）。\n写 Vue 的朋友肯定最爱 Vite，当然写 React 的朋友肯定也爱，反正我爱，毕竟谁不希望自己快一点呢>_<\n关于 Vite 你肯定需要知道的两点就是， 1. Vite 的原理是什么，为什么它这么快？ 2. Vite 的插件是如何开发出来的，原理下一篇来唠，本篇文章先聊后者， Vite 插件的开发，手摸手，带你又快又稳的get它。\n1. Vite 中的钩子\nVite 作为一个单纯的构建工具，根 Webpack 一样，其提供了很多 生命周期 钩子，这些钩子主要是在 Vite 从开始构建，到结束构建的过程中 提供给程序员使用的。旨在让你可以在构建中途的某个时间点，定制化一些功能\nVite 是基于 Rollup 这个构建工具来封装的，所以 Vite 中的一部分钩子其实就是Rollup 中的钩子（不知道Rollup的朋友不要有心理负担，一样能看的明白）\nVite 的钩子主要分为两类：\n通用钩子（也就是沿用了Rollup的钩子）\n独有的钩子\n！！！了解这些钩子函数的执行时间节点非常重要，强烈建议你跟着文章按顺序过一遍再看后面的代码实操\n在介绍这些钩子函数执行效果之前，我们先用一张图先大体介绍一下 Vite 的基本工作流程\n\n知道 Vite 是靠 Http 服务不断向浏览器发送整个项目需要的各个文件资源后，再来看它的钩子们\n通用钩子：\noptions 这是构建阶段的第一个钩子，通常用于插件开发中的参数阅读选项\n// 举了例子，当名为myPlugin的插件生效时，给它传递的参数便可以在该插件源码中…",
           "link": "https://juejin.cn/post/7276260308515389480",
           "publishedOn": "2023-09-08T14:05:09.000Z",
-          "wordCount": 1453,
+          "wordCount": 1535,
           "title": "20分钟掌握 Vite 插件开发",
           "imageUrl": null
         },
@@ -2543,7 +2553,7 @@
           "description": "近期接手的需求比较多，各个需求之间又不是线性关系（一个完事儿再开始另一个），往往经常出现一个还没完全结束，另一个就开始了...\n在这种场景下，我通常会采用 “空间换时间” 的方法，即对于项目A，我会拉取3 ~ 4份在本地，每一份对应一个分支，这样可以比较快速的切换项目并调试。\n当然，这只是个人的一种习惯，不是所有人都习惯这样，你若是喜欢在一个项目里频繁的切换分支，倒也何尝不是一种方法，但我不觉得这是一种好的方法。\n慢慢的，我经常不确定自己应该要打开哪个项目了，比如对于项目A，我本地有3 ~ 4份，切换时，我会使用 Control + R，调出顶部弹窗，在这里进行切换，就像下面这样：\n\n此时，我可以看到项目名称+项目路径，但是我看不到每个项目对应的分支名，这个对我来说无疑是一个巨大的痛点，我需要去到我的目标分支对应的项目中，但是很遗憾，我不能每次都可以很幸运的选到我想要的项目，经常会打开好几个我不需要的项目，这让我很头疼，每次切换前都祈祷这一次一定对！哈哈哈。\n所以，我的诉求就来了，我希望在查看这个目录的时候，能够多一项就是【分支名】，这样我可以很好的分辨出我要去哪个项目。\n所以，我大概花了2-3个小时完成了这件事，这件事已经在我脑海里1年多了，也尝试思考不同的解法，终于在这次找到了最优雅的解决方案~\n下面是增强后的效果：\n\n可以清楚的看到，在保留了原始功能的基础上，很得体的展现了项目对应的分支名！你可以一目了然的看到所有分支，当然，这些数据在你每次呼出侧边栏的时候，都是最新的！\nOK！你可以从这个链接进去安装这个插件，安装好之后，它会替代你原来的Control + R这个快捷键，你就不会再看到顶部的弹窗了，取而代之的是右侧这个还算美观的小侧边栏。\n插件商店链接：https://marketplace.visualstudio.com/items?itemName=xicunyang.show-project-with-git-branch\n下面是一些实现思路，如果你不感兴趣的话，看到这里就可以了！\n重点思路\n插件实现的其中最重要的一环是：“获取vscode弹窗里的项目列表”\n注意！这个列表不是固定死的，而是会将我们最新打开的项目放在最前面。这个列表是我非常需要的，因为不从这里获取的话，我很难统计到用户使用的是哪些工程，如果这些工程让用户手动录入，简直是太蠢了，但如果是我自己去扫描，也不是一个好方法，所以，这个列表是我最最重要的资源。\n那么如何获取这个列表的数据呢？\n简洁明了，直接去看vscode的源码吧，肯定能找着hahaha！\n但是，如何入手去看呢？那么老多代码，不好下手... 对！通过关键字去搜索！\n可以看到，弹窗内容里有这个关键字：\n\n咱们就从这里开始，直接从vscode源码里搜“选中以打开(按 Cmd 键”，会发现搜不到，这也正常，因为vscode源码里本来就没把中文内置进去，中文的表现是插件实现的，我们找到中文插件：\n\n然后顺利的得到了仓库地址，打开仓库就看到了源码，在源码里全局搜索，我们得到了一个关键的信息：openRecentPlaceholderMac\n\n这里大家都可以理解，这是做了国际化，真正在vscode源码里的应该是 openRecentPlaceholderMac ，所以我们去vscode源码里搜 openRecentPlaceholderMac 试一试\n耶，果然搜到了！\n\n按下面数字的顺序，我们可以反推出，数据来自于：workspacesService.getRecentlyOpened()\n\n现在我就担心一点，如果这个方法只是vscode内部使用的，没有对外部插件暴露的话，那就比较麻烦了，如果对外暴露了，我直接调用就可以拿到一样的数据了。\n最后经过不断的搜索和查询调用链（这是一个漫长的过程），最终找到了这里：\n\n看语义是注册了一个命令，命令的功能就是调用最近打开过的文件，并返回。\n所以，看到这里，仿佛就看到了曙光，我迫不及待的搭建了一个插件工程，调用，成功！\n\n至此，几乎就成功了一大半了，还有些细节就是获取对应目录的git分支，我问了下ChatGPT，得到了一个还不错的方法：\n\nOK！剩下的就是页面的搭建和消息传递，就不多做赘述了，大部分在谷歌上都可以搜到。\n以上，就是这次开发小插件的心得，试用了一天，感觉还是不错的，有同样痛点的同学可以使用试试哈！\nGit仓库地址：https://github.com/xicunyang/show-project-with-git-branch",
           "link": "https://juejin.cn/post/7276260308515274792",
           "publishedOn": "2023-09-08T13:06:28.000Z",
-          "wordCount": 968,
+          "wordCount": 924,
           "title": "VSCode插件：简单增强 VSCode 的 Control + R",
           "imageUrl": null
         },
@@ -2553,7 +2563,7 @@
           "description": "扫码登录是常见的功能，基本各种网站都支持。\n比如掘金的登录就支持 APP 扫码的方式：\n\n如果你 APP 没登录，扫码后会跳到登录页面：\n\n登录之后，会进入确认界面，你可以选择授权登录或者取消：\n\n这边确认之后，pc 网站就登录了。\n知乎，b 站等也是这样的：\n\n\n有没有感觉很神奇，为什么一扫二维码，然后确认下，那边就自动登录了呢？\n其实原理也很简单。\n我们先用解析工具解码下二维码的内容：\n\n\n可以看到，二维码的内容是一个 url，如果在手机浏览器打开，是这样的：\n\n会让你下载 APP。\n而在 APP 里打开，就是登录确认界面了：\n\n那确认的是哪个二维码呢？\n\n二维码这里是有个唯一 id 的，通过这个 id 就知道是哪个二维码。\n这个二维码有 5 个状态：\n未扫描\n已扫描，等待用户确认\n已扫描，用户同意授权\n已扫描，用户取消授权\n已过期\n最开始是未扫描状态：\n\n扫码后会进入等待用户确认状态：\n\n确认后会进入同意授权状态：\n\n取消的话会进入取消授权状态：\n\n长时间不操作会进入过期状态：\n\n也就是说，扫码后进行不同的操作就是修改这个 id 对应的二维码的状态。\n另一边修改了状态，这边是怎么知道二维码状态变了呢？\nwebsocket 么？\n不用，一般都是轮询来做。\n比如掘金：\n二维码出现后，会有一个每秒一次的轮询请求来查询二维码状态：\n最开始是 new：\n\n扫码后会变成 scanned：\n\n知乎也是一样：\n\n\n这时候，手机会进入登录确认页面：\nbilibili 的登录确认页面：\n\n知乎的登录确认页面：\n\n这边点击确认登录或者取消之后，会发请求修改 id 对应的二维码的状态。\n那边一直在轮询，自然就知道了二维码状态的变更。\n也就是这样的：\n\n服务端有个 qrcode/generate 接口，会生成一个随机的二维码 id，存到 redis 里，并返回二维码。\n还有个 qrcode/c…",
           "link": "https://juejin.cn/post/7276266802824511540",
           "publishedOn": "2023-09-08T10:40:41.000Z",
-          "wordCount": 4471,
+          "wordCount": null,
           "title": "Nest 实现扫码登录",
           "imageUrl": null
         },
@@ -2563,7 +2573,7 @@
           "description": "theme: condensed-night-purple\n在ElementUI的世界中，不仅有基础的组件和功能，还有一些让你眼前一亮、*得不能再*的高级技巧和窍门。本文将揭示这些技巧，让你在前端开发的舞台上独领风骚。无论你是一个勇敢的创新者还是一个喜欢调皮捣蛋的开发者，这些技巧都将让你的ElementUI应用更加酷炫和有趣！\n直接进入正题\nel-scrollbar滚动条\n参数\n说明\n类型\n可选值\n\n\n\n\nnative\n是否采用原生滚动。即只是隐藏原生滚动条，但并没有使用自定义的滚动条）\nBoolean\n-\n\n\nwrapStyle\n容器样式\nObject\n-\n\n\nwrapClass\n容器样式名\nObject\n-\n\n\nviewClass\n展示视图的样式名\nObject\n-\n\n\nviewStyle\n展示视图的样式\nObject\n-\n\n\nnoresize\n容器大小是否不可变。如果 container 尺寸不会发生变化，最好设置它可以优化性能\nBoolean\n-\n\n\ntag\n渲染容器的标签。view容器用那种标签渲染，默认为div\nString\n-\n\n\n\n自定义滚动条的原理\n\nwarp：滚动的可显示区域，滚动内容就是在这个区域中滚动；\nview：实际的滚动内容，超出warp可显示区域的内容将被隐藏；\ntrack：滚动条的滚动滑块；\nthumb：上下滚动的轨迹。\n<el-scrollbar>\n    <li v-for=\"user in userList\" :key=\"user.id\">{{user.name}}</li>\n</el-scrollbar>\n\n管理弹出层的z-index：PopupManager\nElementUI的弹出层在元素定位上，都有两种实现方式，分别是：\nappend-to-body：此模式下，弹出层会被放在<body>元素上，通过position: fixed…",
           "link": "https://juejin.cn/post/7276113864123318335",
           "publishedOn": "2023-09-08T08:52:56.000Z",
-          "wordCount": 1424,
+          "wordCount": 1499,
           "title": "`ElementUI` 中的奇技淫巧（2023）",
           "imageUrl": null
         },
@@ -2573,7 +2583,7 @@
           "description": "就在昨天，一个名为win12的开源项目一度冲上了GitHub的Trending热榜。\n\n而且最近项目的Star量也在飙升，目前已经获得了2.2k+的Star标星。\n\n出于好奇，点进去看了看。好家伙，项目README里写道这是一个14岁的初中生所打造的开源项目。\n即：在网页端实现了Windows 12的UI界面和交互效果。\n这里也放几张图片感受一下。\n登录页面\n\n开始菜单\n\n资源管理器\n\n设置\n\n终端命令行\n\nAI Copilot\n\n其他应用\n\n这个项目的灵感来源于作者之前看到 Windows 12 概念版后深受启发，于是决定做一个Windows12网页版（就像之前的 Windows 11 网页版一样），可以让用户在网络上预先体验 Windows 12。\n可以看到，这个项目是一个前端开源项目，而且由标准前端技术（HTML，JS，CSS）来实现，下载代码，无需安装，打开desktop.html即可。\n\n项目包含：\n精美的UI设计\n流畅丰富的动画\n各种高级的功能（相较于网页版）\n不仅如此，作者团队对于该项目的后续发展还做了不少规划和畅想。\n项目规划\n\n项目畅想\n\n刚上面也说了，项目README里写道该项目的作者是一位14岁的初中生，网名叫星源，曾获得CSP普及组一等奖和蓝桥杯国赛三等奖。\n作者出生于2009年，在成都上的小学和初中，目前刚上初三。\n这样来看的话，虽说作者年龄很小，不过接触计算机和编程应该非常早，而且对计算机领域的知识和技术应该有着非常浓厚的兴趣。\n从作者的个人主页里能看到，技术栈这块涉猎得还挺广泛。\n\n作者自己表示如今上初三了，对于win12这个项目也不会做什么功能的更新了，后续的维护更新将交给其他贡献者成员。\n\n文章的结尾也附上Windows 12网页版体验地址：tjy-gitnub.github.io/win12/desktop.html，感兴趣的同学可以自行体验。\n聊到这里不得不说，人与人之间的差距确实挺大的。就像这位小哥，才14岁就已经精通前端技术了。\n而14岁的我，当年在干嘛呢？\n我想了又想。。\n额，我好像在网吧里玩红警。。（手动doge）\n注：本文在GitHub开源仓库「编程之路」 https://github.com/rd2coding/Road2Coding 中已经收录，里面有我整理的6大编程方向(岗位)的自学路线+知识点大梳理、面试考点、我的简历、几本硬核pdf笔记，以及程序员生活和感悟，欢迎star。",
           "link": "https://juejin.cn/post/7275978708644151354",
           "publishedOn": "2023-09-07T23:13:39.000Z",
-          "wordCount": 770,
+          "wordCount": 825,
           "title": "看完这位小哥的GitHub，我沉默了",
           "imageUrl": null
         },
@@ -2603,8 +2613,18 @@
           "description": "有些人一不仔细看文章，二甚至压根就没写过 TS，就在评论区非理性讨论。\n建议大家合理发表自己的意见和观点，而不是类似这样的张口就来：“推荐用 TS 就是你 JS 不行”\nHello，诸位前端工程师，今天由我来从一个 CRUD 开发工程师的角度聊一聊这个 “敏感” 的话题。\n有一个现象\n就是你不难发现，大多数能力比你强的前端工程师，要么在鼓励大家用 TS，要么就是自己的开源项目采用了 TS。\n而这种现象通常会在技术领域会传播下来，普及给所有程序员。就像 Vue/React 等框架都有大厂开始大量使用后，再慢慢普及到小厂，最后几乎所有程序员都被普及到了（毕竟你不会就找不到工作了）。\n而大厂尝试使用一门技术，并且成功落地之后并没有抛弃它，而是在更多的项目中使用，这种时候基本上就可以说这门技术的优点是比较明显的，被普及的概率也就非常大了。\n正好，TS 就符合这个现象和普及规律。\n也就是说，按照这个规律我们其实可以得出一个简单的结论：前端项目中使用 TS 是优大于弊的，并且以后 TS 会被普及\n有一个误区\n\n\n\n这种评论见多了，起初我真的很想回复一些什么来反驳反驳，后来想一想，其实就是他们当前（当前当前，注意我的用词，我并不是想一杆子打死所有反对使用 TS 的人，也并没有说他们以后不会成长）太菜了...\n因为我实在是想不明白 TS 降低开发效率是怎么得出来的？\n如果你说你玩上了类型体操，开发效率降低了，那我想说的是，能力不够是可以不玩类型体操的，能够玩上类型体操的也不会吐出这么低级的槽，CRUD 也完全不需要类型体操\n如果你说你初始化一个项目，进行各种 TS 配置和导包，出现大量报错不知所措，那说明你还不具备从零搭建一个TS 项目的能力，本质上还是你 TS 以及生态不熟悉，那你可以选择去开源社区找一个模板，等使用熟悉后再试着自己搭建，不要一开始就磨灭了自己的兴致\n如果你觉得你定义一个 fn(x)，也要写成 fn(x: number) 是降低了开发效率，那其实是你还不习惯罢了，毕竟我刚学 TS 的第一天也有这种心理\n或者这样，假设你们说的都是事实，就是 TS 降低了开发效率。但是 TS 没有优点吗？TS 的优点就没有一个能打赢 “降低开发效率” 这个假设吗？\n我觉得应该是有的吧，说几个 CRUD 时就能体会到的：\n一个变量原本是 string 类型，但是在某一处给这个变量赋值的时候，赋值成了 number 类型，你开发时发现程序无论如何都跑不对，定位半天发现原来是类型错误\n还是这个变量，你赋值错了，但是由于对应功能不常用，上线前没有测试出来，导致出现了严重生产环境问题，你即将被追责\n后期维护时，不用再到处翻找上下文就能立即知道变量类型\n几乎不会再出现 ReferenceError： “x” is not defined\n就这三个比较常见的点，哪一个带来的问题不能打赢 “降低开发效率”？就难道 ReferenceError： “x” is not defined 时你不需要花费时间定位问题吗？更别说出现生成环境问题了\n有需求就有市场\n\n\n随意截取了其他 TS 文章下的两则评论，类似的不支持 TS 的评论还有很多，几乎每一篇相关文章下面都会见到。\n但是事实是，从 TS 出现，到现在的高热度和高采用，足以说明它在市场上是有足够多的需求的，并不会因为所谓的 “TS 没有 JS 灵活” 或 “JS 是弱类型，比 TS 更优势” 等观点左右它的需求量。\n意思就是你必须使用 TS 吗？\n那也当然不是，你可以继续使用 JS，就像现在你依旧可以使用 JQ。\n但...\n你真的有不学习、不使用 TS 的资本吗？将好像 JQ 时代过渡到 Vue/React 时代的时候一样，多少人嚷着 JQ 更优秀、市场占有率更高，操作 DOM 多么的灵活，Vue 等框架心智负担多么的大，学 Vue 前必须先学习 JQ 等等... 现在在看看呢？你还能再招聘 JD 上看见只要求你会 JQ 的岗位吗？\n所以说啊，哪怕只是为了你的饭碗，你也应该去学一学 TS、用一用 TS。\n不要做低级程序员\n优秀的程序员总是在技术普及之前就研究它的思想，总结它的优缺点，尝试将其落地。\n大众程序员总是在普及的时候才开始学。\n而最低级的程序员只有等自己找不到工作了才会被迫开始学。\n善意的提醒\n随着 Vue3 的普及，开源社区优秀的模板都是拥抱的 TS 的（React 那就更早了），而大多数公司的项目都是基于这些模板进行开发的。如果不出意外的话，招聘 JD 上会出现越来越多的 TS 字样。\n还是那句话，哪怕只是为了自己饭碗。",
           "link": "https://juejin.cn/post/7275549753693749304",
           "publishedOn": "2023-09-06T10:54:28.000Z",
-          "wordCount": 1036,
+          "wordCount": 1046,
           "title": "前端项目到底需不需要 TypeScript ？",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7275576084128350248",
+          "author": "盏灯",
+          "description": "theme: condensed-night-purple\n写在前面\n看B站这个动画banner好几个版本了，不知道是一个月更新一次新版动画，还是多少天更新一次（没有天天去看，但估算是一月更新一版UI，以后注意观察）。刚看到的时候很感兴趣，不像视频素材或者gif素材，就放一个视频上去，或者放一个动态画上去，这个是根据鼠标动而一个小范围地有规律有弧度地动，很少看过。\n只是看过一些比如视觉差的类似这样的根据鼠标动而动的动画，\n举例说明：\n1、先前的github404动画图片层第轴动特效页面（最近改版了，没有动画效果了，以前我写有一篇文章就是关于github星球大战为主题的404错误页面，对鼠标哦🖱活动作出回应的相关代码，3d元素点睛）；\ngithub 404:\n\n2、视差引擎 parallax : [例子] (https://matthew.wagerfield.com/parallax/) 对光标的位置做出相应的反应。\nparallax :\n\n3、滚动动画（视差、动画、交互） ScrollMagic\n多伦多24小时环保干洗店、修鞋、洗衣叠服服务网站Alfred\n\n苹果vision产品页面\n\n太多这种类似视觉差效果的产品图了，就不一一举例了，有兴趣的伙伴自行搜索🔍...\n前面讲到B站的首页的最上面一栏的根据鼠标的响应鼠标位置的视差效果。有的伙伴可能不怎么常去B站看（可能偶尔或者更多的是用手机端看），这边我贴一下效果，如下：\n\n确实是想看一下是怎么做的。然后我就去搜，结果你可以去看看，印象很深的是一个人讲过（这里我就不讲了，可以搜搜看），反正就是提出了问题，问了观众是怎么做的，然后最后的结论是就是根据鼠标移动而移动。\n\"Talk is cheap, show me the code. —— Linus Torvalds\" （直接翻译就是说话容易，给我展示代码），这个人的一句名…",
+          "link": "https://juejin.cn/post/7275576084128350248",
+          "publishedOn": "2023-09-06T10:32:35.000Z",
+          "wordCount": 1536,
+          "title": "📢 🔥🔥🔥前端开发，实现B站首页动态banner",
           "imageUrl": null
         },
         {
@@ -2623,7 +2643,7 @@
           "description": "theme: channing-cyan\nhighlight: atom-one-light\n开发中经常会遇到文字很长的场景，如果全部展示就会占很大的空间（宽度），视觉上会很丑，甚至在某些固定宽度下会默认换行，举个前段时间开发的示例：\n\n我们常见的解决方式是：\n添加 css 截断文字，这很简单，  但是要注意，块级元素（inline-block、block）才会生效。\n    .text-truncate {\n      text-overflow: ellipsis;\n      white-space: nowrap;\n      overflow: hidden;\n    }\n\n添加上 tooltip，悬浮上可以看到全部（本人用的是 angular + ng-zorro 组件库）\n    <div \n    nz-tooltip \n        [nzTooltipTitle]=\"tooltipTitle\" \n        [nzTooltipPlacement]=\"nfTooltipPlacement\"\n    >\n    {{ text }}\n    </div>\n\n看效果：\n\nOK，已解决，结束。\n当然，开个玩笑，抖个机灵，别走，后面才是正文。\n问题\n前面看似已经解决了文本长，既满足美观，又可以看到完整信息的目的了，但我并不满足于此，我想更友好一些（如下图）\n\n当文本过长时才有悬浮显示 tooltip，如果默认宽度足够展示文字了，那么就不触发 tooltip 逻辑\n在可拖拽容器宽度场景下（表格拖拽列宽），实时的更新为“第一条”的效果\n当文字内容发生变化时（通常正常逻辑不会出现，从控制台修改文本可以触发），实时更新为“第一条”的效果\n满足以上动态变化的场景就需要费点脑筋了。\n解决\n核心有两点：\n截断的临界点：判断文本宽度超过了容器宽度\n触发时机：当容器宽度或文…",
           "link": "https://juejin.cn/post/7275533017309446181",
           "publishedOn": "2023-09-06T08:40:01.000Z",
-          "wordCount": 1918,
+          "wordCount": 1900,
           "title": "解决长文本动态展示 tooltip 的优雅方式",
           "imageUrl": null
         },
@@ -2633,8 +2653,18 @@
           "description": "theme: juejin\n2023 年 08 月我正式从深圳公司离职，从 7 月初开始投武汉的公司，截止 8 月底，2 个月时间有 5 个面试 3 个 offer：一个自研的 22k、两个外包一个 17k，一个 18k。最终选了一家离我比较近的 18k offer，但遗憾的是刚去第一天就发现坑太深，还是决定放弃这家公司，目前失业在家，这里和大家聊一聊最近从深圳回武汉找工作的经历。\n基本情况\n先大致介绍下我的基本情况：大专学历，30+，从 17 年开始做全职前端开发，到现在有 6-7 年了，属于一年工作经验用 5 年的那种，Vue 一把梭，技术一般。进不了中、大厂，只能在外包混混日子。\n时间回到两年前，2021 年 8 月前端行情好的时候，我凭运气找到了一家深圳二线互联网公司的前端外包岗位，offer 是 25k * 12，到今年 8 月正好呆了两年左右，为了说明真实性，下面附上我 2022 年度个税 App 收入纳税截图。\n\n声明\n本人在网上冲浪时从未公开过这家我呆了两年的公司，出于薪资保密原则，如果有人认出我，知道我所在的这家公司，还请不要透露公司名字，万分感谢！\n另外，为了避免纠纷，后面面试的公司，我都会进行匿名处理，如果有人猜到公司名称，评论还请使用化名，希望大家能理解。\n深圳回武汉\n从 21 年入职这家公司开始，这两年前端行情越来越差，目前我这个学历、技术水平比较难找到 25k 以上的工作。我有考虑过要不要先苟在这家公司，毕竟这个工作工资还可以，leader、同事、工作氛围都不错。但由于各方面原因，最终还是决定回武汉。\n工作方面：我做的大多是技术需求，做的比较无聊，成就感较低；另外，新需求越来越少，蛋糕就这么大，僧多粥少，发挥空间较小。\n生活方面：我时常在反思，我是不是一个精致的利己主义者？这些年基本就过年回家，回家也呆不了几天，在照顾父母、关心家人这方面我是做的…",
           "link": "https://juejin.cn/post/7275225948453568552",
           "publishedOn": "2023-09-05T23:18:06.000Z",
-          "wordCount": 1680,
+          "wordCount": 1689,
           "title": "25k大专前端外包从深圳回武汉能拿多少？",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7275220813619298367",
+          "author": "codinglin",
+          "description": "theme: juejin\nhighlight: a11y-dark\n前言\n如何判断一个对象为空是我们在开发中经常会遇到的问题，今天我们来聊聊几种经常使用的方法，以及在不同的场景下我们如何去使用。\n1. JSON.stringify\nJSON.stringify 方法可以使对象序列化，转为相应的 JSON 格式。\nconst obj = {};\n\nconsole.log(JSON.stringify(obj) === '{}')  // true\n\n缺点：如果存在 undefined、任意的函数以及 symbol 值，在序列化过程中会被忽略（出现在非数组对象的属性值中时）或者被转换成 null（出现在数组中时）。更多\n如下示例：\nconst obj = {\n  a: undefined,\n  b: function() {},\n  c: Symbol()\n}\n\nconsole.log(JSON.stringify(obj) === '{}')  // true\n\n2. for in 配合 hasOwnProperty\n使用 for in 对当前对象进行遍历：\nconst obj = {}\nObject.prototype.a = 1\n\nfunction isEmptyObj(obj) {\n  let flag = true\n  for (let o in obj) {\n    flag = false\n    break\n  }\n  return flag\n}\n\nconsole.log(isEmptyObj(obj))  // false\n\n由于 for in 在进行对象遍历时，会遍历对象原型上的属性，而我们只希望得到其自身的属性，这时可以使用 hasOwnProperty 来实现，如下：\nconst obj = {}\nObject.prototype.a = 1\n\nfun…",
+          "link": "https://juejin.cn/post/7275220813619298367",
+          "publishedOn": "2023-09-05T15:52:13.000Z",
+          "wordCount": 1843,
+          "title": "js 如何判断对象自身为空？",
           "imageUrl": null
         },
         {
@@ -2643,7 +2673,7 @@
           "description": "theme: channing-cyan\n技术无止境 创作不间断\n🎉 创作者训练营第一期招募了很多新手创作者，欢迎大家加入掘金创作者大家庭！\n紧接着第二期活动说来就来了，本次活动我们面向全站所有的创作者们，新手创作者可以和资深创作者们学习技术创作的方法、技巧喔，同时本次官方也推出了 【创作指南+群内定向指导建议】 福利～\n相信有掘金官方的指导，每位创作者的内容质量都能up！up！up！⛽️\n✏️ 官方创作指南（持续更新）\n标题\n简介\n作者\n\n\n\n\n🔗 如何从 0 到 1 写好技术文章\n有想法想沉淀，动笔前却犯了难？本篇文章将通过五个步骤教你写一篇技术文章。\nPDI技术写作团队\n\n\n🔗 如何写作系列教程\n《如何写作通用教程》将写作拆解成五个部分，总结了在写作前、写作中和写作后三个阶段需要注意的写作要点和技巧，通读整个系列文档，可以帮助你初步搭建系统的基础写作知识。\nPDI技术写作团队\n\n\n\n🌟 活动信息\n活动时间：9月6日-9月30日\n参与人群：不限制\n🎮 参与步骤：\n发布 1 篇合格文章可以获得 1 积分，依次累加\n发布 1 篇被推荐文章可以获得 10 积分，依次累加\n发布 1 篇阅读量 ≥1000 并且被官方推荐的文章可以额外获得 10 积分，依次累加（阅读量按照周为维度统计，必须是被推荐文章）\n积分排行榜 top.1-top.10，可获得「稀土掘金创作达人证书」*1\n🎁 活动奖品（为了保证每个商品的公平性，单个商品最多兑换3次/人）\n\n\n\n\n\n\n\n\n畅宝森 塑料早餐杯带勺 营养燕麦牛奶杯早餐杯 可加热隔热 500ml\n稀土掘金who cares系列手机支架\ncode&life系列渔夫帽\ncode&life系列飞盘\n\n\n兑换：3积分\n兑换：2积分\n兑换：12积分\n兑换：10积分\n\n\n\n\n\n\n\n\n创意宇航员小夜灯摆件\n抖音文创 便携简约休闲胸包尼龙防泼水运动斜挎包\n抖音集团 经典商务风大尺寸单肩帆布包\n抖音文创 小助手系列桌垫大鼠标垫黑色\n\n\n兑换： 8 积分\n兑换：22积分\n兑换：26积分\n兑换：20积分\n\n\n\n\n\n\n\n\n康佳（KONKA）电烤箱 家用一机多能迷你小烤箱\n字节跳动Life Plus晴雨两用伞\n抖音文创 氛围空间落日灯加湿器\n抖音文创「重新介绍我自己」系列工卡 情绪劳动者\n\n\n兑换：48积分\n兑换：40积分\n兑换：45积分\n兑换：16积分\n\n\n\n🏁 活动规则\n投稿方式：\n发布技术文章，选择  #创作者训练营 话题，即投稿成功\n统计方式：\n用户可将需要指导的文章贴在该表格内，运营同学会给出反馈和修改建议。每周的积分和排名也会在该表内更新 创作者训练营第二期反馈\n3. 投稿文章要求：\n文章要求原创技术文章，内容符合掘金社区的内容标准和规范；\n正文字数不得少于700字；\n不得有打广告、加二维码引流和凑字数行为。\n如果发现有一篇非原创文章，立刻取消该作者的所有获奖资格。注：全文超过 50% 与他人创作的内容重复都视为非原创 （包括直接抄袭转载、大篇幅摘抄书籍、网络文章、产品官方文档等） 。\n确保文章的完整性，一篇文章如字数过多可拆成上、中、下三篇，必须上下文连贯，有头有尾，如故意将一篇文章上文不接下文的拆成多篇文章，则取消获奖资格。\n👀 特别说明：\n学习笔记可以参加活动，但自己原创的思考、总结、观点段落篇幅须大于 50% ，如果不符合 50% 的篇幅要求，也视作非原创，当天更文不计数；\n文章不能只贴代码，要有自己的分析思考，代码文字比不得超过 60%，否则当天更文不计数；\n工具汇总类、软件测评类不计入活动；\n跟着chagpt学习、chatgpt 代写文章、AI绘画仅图片罗列等文章均不计入；\n活动期间，作者如果有刷阅读量、刷赞、刷评论等严重违反社区规范的行为，直接取消获奖资格（注：文章的点赞量大于阅读量也会判定为刷量）； 多个小号、恶意刷量、同一ip地址多次刷量等恶意作弊行为取消获奖资格；\n删除旧文章重新发布参加活动的行为、注册多个小号参加活动的行为，社区坚决抵制，一经发现取消获奖资格；\n优质文章有机会获得官方加量曝光，低质文章将会被系统打压、减少曝光，详情可以阅读如下文档 （1）掘金签约作者品控文档（优质内容标杆）； （2）【掘金社区规则更新】什么样的文章不会被推荐？\n🎈优质文章浅析：\n对读者有帮助的文章，包括但不限于知识点解读、BUG的解决思路、需求的实现过程等，优质文章整体来讲定义较为抽象，但有两点硬性要求如下：\n思路清晰，文章有一个主要输出的观点\n结构清晰，应该有头有尾，完整的讲清楚自己的观点\n☎️ 加群交流\n参加活动的掘友添加掘金酱为好友，回复关键词「训练营」入群。重要消息不错过，大家互相鼓励，也可以在群内咨询哦～",
           "link": "https://juejin.cn/post/7275225666030026809",
           "publishedOn": "2023-09-05T13:50:49.000Z",
-          "wordCount": 1173,
+          "wordCount": null,
           "title": "✏️ 学习如何技术写作，建设个人影响力 | 创作者训练第二期",
           "imageUrl": null
         },
@@ -2653,7 +2683,7 @@
           "description": "theme: orange\nhighlight: a11y-dark\nh5是怎么和微信小程序通信的？不同H5页面怎么通信的？webview是谁提供的？\nweb-view 是往小程序中嵌入h5的容器。会自动铺满整个小程序页面。微信小程序和 uni-app 都提供了 web-view 组件。\n由于简历上有一段实习是移动端h5开发，让面试官误以为我做过微信小程序的内嵌h5页面，但其实实习中都是公司框架写的代码，页面也是直接嵌入公司的app中的，我并没有微信小程序开发的经验，现在整理答案也是死记硬背，mark一下看到的一篇讲的比较清楚的文章，以后学小程序了再来回顾。\n微信小程序web-view与H5 通信方式探索 - 掘金 (juejin.cn)\nh5 页面间通信其实就是前端跨页面通信（吧？）当时第一反应回答的是使用LocalStorage, 面试官又提出用户修改个人信息后返回页面更新信息的情况，回答的是我之前做表单有类似的场景，是向后端提交后在后端更新了数据，回退到原先的页面的时候在 created/activated 的时候获取数据。\n面试官：前端跨页面通信，你知道哪些方法？ - 掘金 (juejin.cn)\n什么是微任务？什么是宏任务？\n如果说哪些操作是宏任务，哪些操作是微任务，那大部分同学都是比较清楚的：\n宏任务：script（整体代码）/setTimout/setInterval/setImmediate(node 独有)/requestAnimationFrame(浏览器独有)/IO/UI render（浏览器独有）\n微任务：process.nextTick(node 独有)/Promise.then()/Object.observe/MutationObserver\n\n这里面试官还追问了一句，Promise本身是微任务吗？\n那这两者有具体的定义吗？老规矩，直接 mdn…",
           "link": "https://juejin.cn/post/7275141653420425277",
           "publishedOn": "2023-09-05T07:01:13.000Z",
-          "wordCount": 1452,
+          "wordCount": 1392,
           "title": "现在小厂实习都问的这么难了吗😱「万物心选一面(vue+小程序)」",
           "imageUrl": null
         },
@@ -2663,28 +2693,8 @@
           "description": "theme: cyanosis\nhighlight: atom-one-dark\n从今年二月份开始到现在，笔者一直在维护者两个项目，其中一个项目是从 2 月份开始新建文档，到了三月份的时候准备一些春招面试，搁置了一些，到了四月份之后又断断续续进行开发了，直到 6 月中旬才开发出了一个完整版的。\n第一个项目是一个前端脚手架，而第二个项目是基于第一个项目开发的，从七月底开始新建文件夹，也是因为一些面试的原因，断断续续的开发了一个多月，目前也是进入了一个能使用的状态，它是一个在线代码编辑器。\n在开始之前，先来贴上这两个项目的地址吧：\n前端脚手架 create-neat\n在线协同代码编辑器\n那么接下来就分别介绍一下这两个项目的基本架构以及未来会做一些什么样的事情吧!\n前端脚手架 create-neat\n这个项目产生的背景就是在刚开始学习 React 的时候，使用的脚手架就是 create-react-app，虽然这个脚手架提供的零配置、开箱即用很适合新手，但是要想对其进行扩展就非常麻烦。要想对其进行扩展你必须 eject 或者 使用 carco 进行配置。\n还有另外一个问题就是尽管 Typescript 已经流行了很久，但是要从零设计一个 Typescript 库依旧麻烦，本人也曾有过从零搭建一个 React 组件库的想法，但是对一堆陌生的配置望而生畏。\nCreate-Neat 就是为了解决这些问题应运而生的，解决以上所有问题，开箱即用，零配置。\n具体一些更详细的信息直接看 Github 文档吧。\n技术选型\nmonorepo 策略\n首先项目采用的是 pnpm+monorepo 的策略开发的，至于 pnpm 有多好用就应该不用我说了，为什么采用 monorepo 的架构呢？\n下图是整个项目中用到的一些子包，如下图所示：\n\nutils 包为一个公告模块包的，它是使用 ts 去编写的，然…",
           "link": "https://juejin.cn/post/7274883755478712378",
           "publishedOn": "2023-09-05T02:21:16.000Z",
-          "wordCount": 1400,
+          "wordCount": 1432,
           "title": "作为一名应届生，同时维护两个开源项目是一种什么样的体验🚀🚀🚀",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7274889579076108348",
-          "author": "少游_JuniorTour",
-          "description": "仅需2行代码，就能实现上图中的优化效果，让JS文件的加载耗时从1.4秒减少到0.4秒，大幅减少951ms（-67%），代码实现也非常简单方便，一起学起来吧~\n资源优先级提示：预取回 Prefetch，预加载 Preload 和预连接 Preconnect\n资源优先级提示是浏览器平台为控制资源加载时机而设计的一系列API，主要包括：\n1. 四类资源优先级提示\n1. 预取回 Prefetch\n用于提示浏览器在CPU和网络带宽空闲时，预先下载指定URL的JS，图片等各类资源，存储到浏览器本地缓存中，从而减少该资源文件后续加载的耗时，优化用户体验。\n具体使用方式是将link标签的rel属性设为prefetch，并将href属性设为目标资源URL，例如 <link rel=\"prefetch\" href=\"https://github.com/JuniorTour/juniortour.js\" />。\n该标签插入DOM后，将触发一次href属性值对应URL的请求，并将响应保存到本地的prefetch cache中，同时不会解析、运行该资源。\n可以预取回的资源有很多：JS、CSS、各种格式的图片、各种格式的音频、WASM文件、字体文件、甚至HTML文档本身都可实施 prefetch，预先缓存。\n命中预取回缓存的请求，在开发者工具中的Network标签中的Size列，会有独特的(prefetch cache)标记：\nDEMO：https://output.jsbin.com/cuxerej\n\ncrossorigin属性是浏览器同源策略的一部分，用于对link、script、img等元素指定是否允许以跨域资源共享模式加载目标资源。\n默认情况下，JS脚本、图片等部分静态资源不受同源策略的限制，可以从任何跨域域名加载第三方JS文件、图片文件。\n这样的规则有明显的安全风险，例如：\n第三方JS文件…",
-          "link": "https://juejin.cn/post/7274889579076108348",
-          "publishedOn": "2023-09-04T15:08:27.000Z",
-          "wordCount": 1991,
-          "title": "1.4秒到0.4秒-2行代码让JS加载耗时减少67%-《现代前端工程体验优化》-第二章-第一节",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7274789845754544163",
-          "author": "夕水",
-          "description": "10 个 css 代码片段\n以下这 10 个常用的 css 代码片段值得收藏，都可以用于平常的业务代码当中。\n1. 点点点加载中效果\n这是一个兼容性不错的用户体验很棒的点点点加载效果，实现思路如下:\n使用自定义的标签元素 dot。\n将 dot 元素设置为内联元素(display:inline-block),并设置溢出隐藏(overflow:hidden)，高度设置为 1em。\n使用:before 伪元素结合\\AUnicode 字符插入内容，并且使用 white-space:pre-wrap 保留换行效果，使用 css 动画。\n使用 transform 和 translate 为...添加动画效果。\nhtml 代码如下:\n<div class=\"loading\">正在加载中<dot>...</dot></div>\n\ncss 代码如下:\n.loading {\n  /**这里写自己自定义的样式 */\n}\n.loading > dot {\n  height: 1em;\n  overflow: hidden;\n  display: inline-block;\n  text-align: left;\n  vertical-align: -0.25em;\n  line-height: 1;\n}\n/* 核心代码 */\n.loading > dot:before {\n  display: block;\n  /* 这行代码最重要 */\n  content: '...\\A..\\A.';\n  /* 值是Pre也是一样的效果 */\n  white-space: pre-wrap;\n  animation: dot 3s infinite step-start both;\n}\n@keyframes dot {\n  33% {\n    transform: translateY(-2em);\n  }\n …",
-          "link": "https://juejin.cn/post/7274789845754544163",
-          "publishedOn": "2023-09-04T13:53:47.000Z",
-          "wordCount": null,
-          "title": "10 个 效果不错的值得收藏的 css 代码片段",
           "imageUrl": null
         }
       ]
@@ -2710,7 +2720,7 @@
           "description": "高效的Redis数据迁移！NineData提供高效、安全的不停机数据迁移方案，支持Redis等多种数据库的迁移复制。通过全量复制和增量日志复制技术，NineData保证了数据迁移的稳定性和可靠性。无需停机，简单易用的配置过程，使得迁移任务自动化完成。不仅提供了强大的迁移能力，还提供了观测、干预、诊断和限流等功能，保障了迁移过程的稳定性。NineData已在多个行业得到广泛应用，并提供企业专属集群模式以满足数据安全合规需求。",
           "link": "https://juejin.cn/pin/7277786839841488954",
           "publishedOn": "2023-09-12T09:20:00.000Z",
-          "wordCount": 545,
+          "wordCount": 546,
           "title": "高效的Redis数据迁移！NineData提供高效、安全的不停机数据迁移方案，支持Redis等多种数据库的迁移复制。通过全量复制和增量日志复制技术，NineData保证了数据迁...",
           "imageUrl": null
         },
@@ -2720,7 +2730,7 @@
           "description": "你们都用什么系统和什么电脑做开发",
           "link": "https://juejin.cn/pin/7277441492603043880",
           "publishedOn": "2023-09-12T03:21:30.000Z",
-          "wordCount": 529,
+          "wordCount": 511,
           "title": "你们都用什么系统和什么电脑做开发",
           "imageUrl": null
         },
@@ -2740,7 +2750,7 @@
           "description": "[7201047520812728355#周末怎么过#] 求一个看NBA直播的软件！！！",
           "link": "https://juejin.cn/pin/7277483626775216147",
           "publishedOn": "2023-09-11T09:23:46.000Z",
-          "wordCount": 529,
+          "wordCount": 526,
           "title": "[7201047520812728355#周末怎么过#] 求一个看NBA直播的软件！！！",
           "imageUrl": null
         },
@@ -2780,7 +2790,7 @@
           "description": "xdm 你们在测试软件的时候都用哪些工具啊[呲牙][呲牙][呲牙][呲牙]",
           "link": "https://juejin.cn/pin/7276273705105555475",
           "publishedOn": "2023-09-08T23:42:09.000Z",
-          "wordCount": 533,
+          "wordCount": 515,
           "title": "xdm 你们在测试软件的时候都用哪些工具啊[呲牙][呲牙][呲牙][呲牙]",
           "imageUrl": null
         },
@@ -2840,7 +2850,7 @@
           "description": "10$ 上车 copilot[呲牙][呲牙]",
           "link": "https://juejin.cn/pin/7273737312973619260",
           "publishedOn": "2023-09-02T02:13:15.000Z",
-          "wordCount": 552,
+          "wordCount": 534,
           "title": "10$ 上车 copilot[呲牙][呲牙]",
           "imageUrl": null
         },
@@ -2860,7 +2870,7 @@
           "description": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件#\nAI Code Translator 是一款功能强大的在线工具，可以将代码从一种编程语言无缝翻译为另一种编程语言。无论您是想将 Python 代码转换为 Java 还是将 JavaScript 代码转换为 C++，AI Code Translator 都能满足您的需求。\n立即尝试：https://ai-code-translator.com/",
           "link": "https://juejin.cn/pin/7273096710826295348",
           "publishedOn": "2023-08-31T06:09:00.000Z",
-          "wordCount": 593,
+          "wordCount": 575,
           "title": "#工欲善其事必先利其器# #开发工具推荐# #Seal软件# AI Code Translator 是一款功能强大的在线工具，可以将代码从一种编程语言无缝翻译为另一种编程语言。无论您...",
           "imageUrl": null
         },
