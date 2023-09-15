@@ -1,10 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-09-14T21:52:57.376Z</id>
+    <id>urn:2023-09-15T01:15:16.264Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-09-14T21:52:57.376Z</updated>
+    <updated>2023-09-15T01:15:16.264Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[科技爱好者周刊（第 271 期）：非线性的世界，线性的你]]></title>
+        <id>http://www.ruanyifeng.com/blog/2023/09/weekly-issue-271.html</id>
+        <link href="http://www.ruanyifeng.com/blog/2023/09/weekly-issue-271.html"/>
+        <updated>2023-09-15T00:04:11.000Z</updated>
+        <summary type="html"><![CDATA[这里记录每周值得分享的科技内容，周五发布。
+本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。
+封面图
+
+五菱汽车有一款概念车型，将"宏光 mini EV"改成了六轮的小货车，配备一个非常迷你的车斗。虽然不一定实用，但是看上去相当可爱，可惜只有样车，不确实是否投产。（via）
+非线性的世界，线性的你
+纳瓦尔（Naval Ravikant）是一位美国风险投资家，写过一组系列文章《如何致富》（How to get rich），非常出名。
+
+他的文章后来结集出版，成了畅销书。国内引进了，中文书名叫做《纳瓦尔宝典：财富与幸福指南》，在豆瓣被列为"2022年度商业经管图书第一名"。
+
+周刊摘录过他的很多言论，很有启发。我把它们放在一起，大家再看看。
+既懂得制造，又懂得销售，你就是无敌的。(第 94 期)
+小心，尝到自由的滋味，可能会让你失业。（第 105 期）
+致富关键是找到"个人-市场-产品"这三者交叉的那个点。（第 107 期）
+做你喜欢的事，直到你喜欢去做。（第 184 期）
+如果你有原创性，就可以避开竞争。基本上，如果你与别人发生竞争，那是因为你们在做同样的事情。（第 258 期）
+今天我想分享，他去年的一个访谈，与美国最红的播客主持人 Joe Rogan 对谈。
+
+他说了一段话，发人深思。
+"新人企业家的常见错误，就是认为结果是可预测的。如果我长期努力工作，就应该会得到某种成果。"
+"实际上，你的成果是不可预测的。你工作多么努力并不重要，重要的是你在做什么、与谁一起工作、以及在哪里工作。 "
+他的意思是，很多人有一个思维误区：他们认为"努力"与"成果"是正比例关系，工作越努力，越可能获得好成果。
+实际上根本不是这样，努力与成果之间，没有必然关系。
+"你每天都会看到，那些赚最多钱的人，工作时间根本不长…]]></summary>
+        <author>
+            <name>阮一峰的网络日志</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[发布了: 〝领导的本质，就是在不确定的世界中给人提供确定感的人。”]]></title>
         <id>https://m.okjike.com/originalPosts/65033d732c9bdd1af57bf75a</id>
@@ -1145,6 +1178,45 @@ object-fit: contain;：被替换的内容在保持其宽高比的同时，将被
   机械表工作原理       https://ciechanow.ski/mechanical-watch/]]></summary>
         <author>
             <name>不合时宜</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[改变axios的用法后，我的工作效率提升了3倍]]></title>
+        <id>https://juejin.cn/post/7277029942298329125</id>
+        <link href="https://juejin.cn/post/7277029942298329125"/>
+        <updated>2023-09-11T04:09:31.000Z</updated>
+        <summary type="html"><![CDATA[theme: smartblue
+实际场景下的请求问题
+作为前端开发，网络请求肯定是我们经常要面对的事情，在前端请求中，axios和fetch API应该是我们最常用的请求工具了，它们在发送请求和接收响应数据已经做到了足够简单。
+但在实际项目中，为了达到更好的用户体验，我们还需要考虑下面这几个因素：
+展示加载中的请求状态
+展示请求错误状态
+展示上传/下载文件的进度信息
+上面这些都需要我们编写额外的代码，增加了不少的工作量，你的请求代码可能是下面这样的，我们以vue3代码为示例。
+const loading = ref(false);  
+const data = ref({});  
+const error = ref(null);  
+const request = async () => { 
+  try {  
+    loading.value = true;  
+    data.value = await axios.get('/xxx');  
+  } catch (e) {  
+    error.value = e;  
+  }
+  loading.value = false;  
+};
+onMounted(request);
+
+如果面对大量的api，这工作量可想而知，想到这时就有点头疼啊。有没有一种方法可以自动帮我处理这些逻辑，让请求代码看起来更简洁呢？
+解决
+我们可以用封装的思路，把上面这些都封装为一个简单的use hook，就可以很好地解决了，封装后的代码大概是下面这样的。
+export const useRequest = (url) => {
+  const loading = ref(false);
+  const data = ref({});
+  const error = ref(null);
+  const request = asyn…]]></summary>
+        <author>
+            <name>古韵</name>
         </author>
     </entry>
     <entry>
@@ -2743,61 +2815,6 @@ Scrum 开发
 由于每个步骤都需要…]]></summary>
         <author>
             <name>阮一峰的网络日志</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[看完这位小哥的GitHub，我沉默了]]></title>
-        <id>https://juejin.cn/post/7275978708644151354</id>
-        <link href="https://juejin.cn/post/7275978708644151354"/>
-        <updated>2023-09-07T23:13:39.000Z</updated>
-        <summary type="html"><![CDATA[就在昨天，一个名为win12的开源项目一度冲上了GitHub的Trending热榜。
-
-而且最近项目的Star量也在飙升，目前已经获得了2.2k+的Star标星。
-
-出于好奇，点进去看了看。好家伙，项目README里写道这是一个14岁的初中生所打造的开源项目。
-即：在网页端实现了Windows 12的UI界面和交互效果。
-这里也放几张图片感受一下。
-登录页面
-
-开始菜单
-
-资源管理器
-
-设置
-
-终端命令行
-
-AI Copilot
-
-其他应用
-
-这个项目的灵感来源于作者之前看到 Windows 12 概念版后深受启发，于是决定做一个Windows12网页版（就像之前的 Windows 11 网页版一样），可以让用户在网络上预先体验 Windows 12。
-可以看到，这个项目是一个前端开源项目，而且由标准前端技术（HTML，JS，CSS）来实现，下载代码，无需安装，打开desktop.html即可。
-
-项目包含：
-精美的UI设计
-流畅丰富的动画
-各种高级的功能（相较于网页版）
-不仅如此，作者团队对于该项目的后续发展还做了不少规划和畅想。
-项目规划
-
-项目畅想
-
-刚上面也说了，项目README里写道该项目的作者是一位14岁的初中生，网名叫星源，曾获得CSP普及组一等奖和蓝桥杯国赛三等奖。
-作者出生于2009年，在成都上的小学和初中，目前刚上初三。
-这样来看的话，虽说作者年龄很小，不过接触计算机和编程应该非常早，而且对计算机领域的知识和技术应该有着非常浓厚的兴趣。
-从作者的个人主页里能看到，技术栈这块涉猎得还挺广泛。
-
-作者自己表示如今上初三了，对于win12这个项目也不会做什么功能的更新了，后续的维护更新将交给其他贡献者成员。
-
-文章的结尾也附上Windows 12网页版体验地址：tjy-gitnub.github.io/win12/desktop.html，感兴趣的同学可以自行体验。
-聊到这里不得不说，人与人之间的差距确实挺大的。就像这位小哥，才14岁就已经精通前端技术了。
-而14岁的我，当年在干嘛呢？
-我想了又想。。
-额，我好像在网吧里玩红警。。（手动doge）
-注：本文在GitHub开源仓库「编程之路」 https://github.com/rd2coding/Road2Coding 中已经收录，里面有我整理的6大编程方向(岗位)的自学路线+知识点大梳理、面试考点、我的简历、几本硬核pdf笔记，以及程序员生活和感悟，欢迎star。]]></summary>
-        <author>
-            <name>CodeSheep</name>
         </author>
     </entry>
     <entry>

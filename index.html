@@ -51,6 +51,74 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-15 datetime="2023-09-15T00:04:11.000Z">2023-09-15</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-15 datetime="2023-09-15T00:04:11.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >阮一峰的网络日志</button>
+                  <a class="source-heading__link" href="http://www.ruanyifeng.com/blog/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.ruanyifeng.com/blog/2023/09/weekly-issue-271.html"
+                        open
+                      >
+                        <summary class="article-expander__title">科技爱好者周刊（第 271 期）：非线性的世界，线性的你</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.ruanyifeng.com/blog/2023/09/weekly-issue-271.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>这里记录每周值得分享的科技内容，周五发布。
+本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。
+封面图
+
+五菱汽车有一款概念车型，将&quot;宏光 mini EV&quot;改成了六轮的小货车，配备一个非常迷你的车斗。虽然不一定实用，但是看上去相当可爱，可惜只有样车，不确实是否投产。（via）
+非线性的世界，线性的你
+纳瓦尔（Naval Ravikant）是一位美国风险投资家，写过一组系列文章《如何致富》（How to get rich），非常出名。
+
+他的文章后来结集出版，成了畅销书。国内引进了，中文书名叫做《纳瓦尔宝典：财富与幸福指南》，在豆瓣被列为&quot;2022年度商业经管图书第一名&quot;。
+
+周刊摘录过他的很多言论，很有启发。我把它们放在一起，大家再看看。
+既懂得制造，又懂得销售，你就是无敌的。(第 94 期)
+小心，尝到自由的滋味，可能会让你失业。（第 105 期）
+致富关键是找到&quot;个人-市场-产品&quot;这三者交叉的那个点。（第 107 期）
+做你喜欢的事，直到你喜欢去做。（第 184 期）
+如果你有原创性，就可以避开竞争。基本上，如果你与别人发生竞争，那是因为你们在做同样的事情。（第 258 期）
+今天我想分享，他去年的一个访谈，与美国最红的播客主持人 Joe Rogan 对谈。
+
+他说了一段话，发人深思。
+&quot;新人企业家的常见错误，就是认为结果是可预测的。如果我长期努力工作，就应该会得到某种成果。&quot;
+&quot;实际上，你的成果是不可预测的。你工作多么努力并不重要，重要的是你在做什么、与谁一起工作、以及在哪里工作。 &quot;
+他的意思是，很多人有一个思维误区：他们认为&quot;努力&quot;与&quot;成果&quot;是正比例关系，工作越努力，越可能获得好成果。
+实际上根本不是这样，努力与成果之间，没有必然关系。
+&quot;你每天都会看到，那些赚最多钱的人，工作时间根本不长…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-14 datetime="2023-09-14T17:05:55.000Z">2023-09-14</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-14 datetime="2023-09-14T17:05:55.000Z"></time>
           </button>
@@ -2270,6 +2338,54 @@ object-fit: contain;：被替换的内容在保持其宽高比的同时，将被
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7277029942298329125"
+                        open
+                      >
+                        <summary class="article-expander__title">改变axios的用法后，我的工作效率提升了3倍</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7277029942298329125">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: smartblue
+实际场景下的请求问题
+作为前端开发，网络请求肯定是我们经常要面对的事情，在前端请求中，axios和fetch API应该是我们最常用的请求工具了，它们在发送请求和接收响应数据已经做到了足够简单。
+但在实际项目中，为了达到更好的用户体验，我们还需要考虑下面这几个因素：
+展示加载中的请求状态
+展示请求错误状态
+展示上传/下载文件的进度信息
+上面这些都需要我们编写额外的代码，增加了不少的工作量，你的请求代码可能是下面这样的，我们以vue3代码为示例。
+const loading &#x3D; ref(false);  
+const data &#x3D; ref({});  
+const error &#x3D; ref(null);  
+const request &#x3D; async () &#x3D;&gt; { 
+  try {  
+    loading.value &#x3D; true;  
+    data.value &#x3D; await axios.get(&#x27;/xxx&#x27;);  
+  } catch (e) {  
+    error.value &#x3D; e;  
+  }
+  loading.value &#x3D; false;  
+};
+onMounted(request);
+
+如果面对大量的api，这工作量可想而知，想到这时就有点头疼啊。有没有一种方法可以自动帮我处理这些逻辑，让请求代码看起来更简洁呢？
+解决
+我们可以用封装的思路，把上面这些都封装为一个简单的use hook，就可以很好地解决了，封装后的代码大概是下面这样的。
+export const useRequest &#x3D; (url) &#x3D;&gt; {
+  const loading &#x3D; ref(false);
+  const data &#x3D; ref({});
+  const error &#x3D; ref(null);
+  const request &#x3D; asyn…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7277089907973603388"
                         open
                       >
@@ -2973,8 +3089,6 @@ K -- 否 --&gt; C
 接口设计
 根据上面分析出来的流程图，我们了解到
 登录二维…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3328,6 +3442,8 @@ command + 1/2/3     #选中不同的拆分栏…</span>
     
     
 …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4384,8 +4500,6 @@ bilibili 的登录确认页面：
 
 服务端有个 qrcode/generate 接口，会生成一个随机的二维码 id，存到 redis 里，并返回二维码。
 还有个 qrcode/c…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;15
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5046,118 +5160,6 @@ Scrum 开发
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7275978708644151354"
-                        open
-                      >
-                        <summary class="article-expander__title">看完这位小哥的GitHub，我沉默了</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7275978708644151354">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>就在昨天，一个名为win12的开源项目一度冲上了GitHub的Trending热榜。
-
-而且最近项目的Star量也在飙升，目前已经获得了2.2k+的Star标星。
-
-出于好奇，点进去看了看。好家伙，项目README里写道这是一个14岁的初中生所打造的开源项目。
-即：在网页端实现了Windows 12的UI界面和交互效果。
-这里也放几张图片感受一下。
-登录页面
-
-开始菜单
-
-资源管理器
-
-设置
-
-终端命令行
-
-AI Copilot
-
-其他应用
-
-这个项目的灵感来源于作者之前看到 Windows 12 概念版后深受启发，于是决定做一个Windows12网页版（就像之前的 Windows 11 网页版一样），可以让用户在网络上预先体验 Windows 12。
-可以看到，这个项目是一个前端开源项目，而且由标准前端技术（HTML，JS，CSS）来实现，下载代码，无需安装，打开desktop.html即可。
-
-项目包含：
-精美的UI设计
-流畅丰富的动画
-各种高级的功能（相较于网页版）
-不仅如此，作者团队对于该项目的后续发展还做了不少规划和畅想。
-项目规划
-
-项目畅想
-
-刚上面也说了，项目README里写道该项目的作者是一位14岁的初中生，网名叫星源，曾获得CSP普及组一等奖和蓝桥杯国赛三等奖。
-作者出生于2009年，在成都上的小学和初中，目前刚上初三。
-这样来看的话，虽说作者年龄很小，不过接触计算机和编程应该非常早，而且对计算机领域的知识和技术应该有着非常浓厚的兴趣。
-从作者的个人主页里能看到，技术栈这块涉猎得还挺广泛。
-
-作者自己表示如今上初三了，对于win12这个项目也不会做什么功能的更新了，后续的维护更新将交给其他贡献者成员。
-
-文章的结尾也附上Windows 12网页版体验地址：tjy-gitnub.github.io/win12/desktop.html，感兴趣的同学可以自行体验。
-聊到这里不得不说，人与人之间的差距确实挺大的。就像这位小哥，才14岁就已经精通前端技术了。
-而14岁的我，当年在干嘛呢？
-我想了又想。。
-额，我好像在网吧里玩红警。。（手动doge）
-注：本文在GitHub开源仓库「编程之路」 https://github.com/rd2coding/Road2Coding 中已经收录，里面有我整理的6大编程方向(岗位)的自学路线+知识点大梳理、面试考点、我的简历、几本硬核pdf笔记，以及程序员生活和感悟，欢迎star。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7275943591410483258"
-                        open
-                      >
-                        <summary class="article-expander__title">对不起 localStorage，现在我爱上 localForage了！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7275943591410483258">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: awesome-green
-前言
-前端本地化存储算是一个老生常谈的话题了，我们对于 cookies、Web Storage（sessionStorage、localStorage）的使用已经非常熟悉，在面试与实际操作之中也会经常遇到相关的问题，但这些本地化存储的方式还存在一些缺陷，比较明显的缺点如下：
-存储量小：即使是web storage的存储量最大也只有 5M
-存取不方便：存入的内容会经过序列化，当存入非字符串的时候，取值的时候需要通过反序列化。
-当我们的存储量比较大的时候，我们一定会想到我们的 indexedDB，让我们在浏览器中也可以使用数据库这种形式来玩转本地化存储，然而 indexedDB 的使用是比较繁琐而复杂的，有一定的学习成本，但第三方库 localForage 的出现几乎抹平了这个缺陷，让我们轻松无负担的在浏览器中使用 indexedDB。
-截止今天，localForage 在 github 的 star 已经22.8k了，可以说 localForage 和 indexedDB 算是相互成就了。
-什么是 indexedDB
-IndexedDB 是一种底层 API，用于在客户端存储大量的结构化数据（也包括文件/二进制大型对象）。
-存取方便
-IndexedDB 是一个基于 JavaScript 的面向对象数据库。IndexedDB 允许你存储和检索用键索引的对象；可以存储结构化克隆算法支持的任何对象。
-之前我们使用 webStorage 存储对象或数组的时候，还需要先经过先序列化为字符串，取值的时候需要经过反序列化，那indexedDB就比较完美的解决了这个问题，可以轻松存取对象或数组等结构化克隆算法支持的任何对象。
-以 https://stackblitz.com/ 网站为例，我们来看看对象存到 indexedDB 的表现
-
-异步存取
-我相信…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >竹白 - TOP20</button>
                   <a class="source-heading__link" href="https://analy.zhubai.wiki">Open</a>
                 </h3>
@@ -5357,6 +5359,54 @@ IndexedDB 是一个基于 JavaScript 的面向对象数据库。IndexedDB 允许
   19.高性能网络芯片研发商“篆芯半导体”获近 3 亿元A1轮融资  
     
   20.钠电正极材料研发商“SIMT钠远新材”获数千万元天使轮融资</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7275943591410483258"
+                        open
+                      >
+                        <summary class="article-expander__title">对不起 localStorage，现在我爱上 localForage了！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7275943591410483258">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: awesome-green
+前言
+前端本地化存储算是一个老生常谈的话题了，我们对于 cookies、Web Storage（sessionStorage、localStorage）的使用已经非常熟悉，在面试与实际操作之中也会经常遇到相关的问题，但这些本地化存储的方式还存在一些缺陷，比较明显的缺点如下：
+存储量小：即使是web storage的存储量最大也只有 5M
+存取不方便：存入的内容会经过序列化，当存入非字符串的时候，取值的时候需要通过反序列化。
+当我们的存储量比较大的时候，我们一定会想到我们的 indexedDB，让我们在浏览器中也可以使用数据库这种形式来玩转本地化存储，然而 indexedDB 的使用是比较繁琐而复杂的，有一定的学习成本，但第三方库 localForage 的出现几乎抹平了这个缺陷，让我们轻松无负担的在浏览器中使用 indexedDB。
+截止今天，localForage 在 github 的 star 已经22.8k了，可以说 localForage 和 indexedDB 算是相互成就了。
+什么是 indexedDB
+IndexedDB 是一种底层 API，用于在客户端存储大量的结构化数据（也包括文件/二进制大型对象）。
+存取方便
+IndexedDB 是一个基于 JavaScript 的面向对象数据库。IndexedDB 允许你存储和检索用键索引的对象；可以存储结构化克隆算法支持的任何对象。
+之前我们使用 webStorage 存储对象或数组的时候，还需要先经过先序列化为字符串，取值的时候需要经过反序列化，那indexedDB就比较完美的解决了这个问题，可以轻松存取对象或数组等结构化克隆算法支持的任何对象。
+以 https://stackblitz.com/ 网站为例，我们来看看对象存到 indexedDB 的表现
+
+异步存取
+我相信…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -7411,8 +7461,8 @@ vue-team-template ★12 - 一种构建vue项目的选择方案</span>
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6191242918">
-        <time id="build-timestamp" datetime="2023-09-14T21:52:57.345Z">2023-09-14T21:52:57.345Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6192670673">
+        <time id="build-timestamp" datetime="2023-09-15T01:15:16.221Z">2023-09-15T01:15:16.221Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
