@@ -1621,6 +1621,57 @@ https://github.com/devlive-community/openai-java-sdk  多平台开放 AI SDK
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7277799790296416290"
+                        open
+                      >
+                        <summary class="article-expander__title">用lodash开发前端，真香！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7277799790296416290">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: channing-cyan
+前言
+在日常的前端开发中，总是涉及到对数据的处理，比如后端返给你一坨数据，你需要进行处理并回显到页面上，又或者提交form表单到服务端时，你需要将数据处理成后端接口定义的数据结构，而这些都离不开数据处理。
+那数据处理有什么好用的工具库吗？lodash当之无愧。
+lodash使用
+使用:
+// 浏览器环境
+
+// npm
+npm i --save lodash
+
+接下来给大家介绍下我平时开发用lodash最最最常用的一些方法。
+一、数组类
+1、_.compact(array)
+作用：剔除掉数组中的假值（假值包括false, null,0, &quot;&quot;, undefined, 和 NaN这5个）元素，并返回一个新数组。
+使用示例：
+const _ &#x3D; require(&#x27;lodash&#x27;)
+console.log(_.compact([0, 1, false, 2, &#x27;&#x27;, 3, undefined, 4, null, 5]));
+// 输出 [ 1, 2, 3, 4, 5 ]
+
+项目中的应用：剔除数组中的一些脏数据。
+2、_.difference(array, [values])
+作用：过滤掉数组中的指定元素，并返回一个新数组
+使用示例：
+const _ &#x3D; require(&#x27;lodash&#x27;)
+console.log(_.difference([1, 2, 3], [2, 4]))
+// 输出 [ 1, 3 ]
+const arr &#x3D; [1, 2], obj &#x3D; { a: 1 }
+console.log(_.difference([1, arr, [3, 4], obj, { a: 2 }], [1, arr, obj]))
+// 输出 [ 1, 3 ]
+
+类似方法：
+_.pul…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7277797749886009398"
                         open
                       >
@@ -2405,46 +2456,37 @@ console.log(person.name); // Joseph Stevens
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7277395904218316800"
+                        data-accordion-key="https://juejin.cn/post/7277490138518159379"
                         open
                       >
-                        <summary class="article-expander__title">前端食堂技术周刊第 98 期：Bun 1.0、Turbo 放弃 TS、Biome 另起炉灶、Bundler 的设计取舍、Node 最佳实践</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7277395904218316800">
+                        <summary class="article-expander__title">做了几年前端，别跟我说没配置过webpack</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7277490138518159379">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>theme: fancy
-highlight: github-gist
-美味值：🌟🌟🌟🌟🌟
-口味：烤肉战车
-食堂技术周刊仓库地址：https://github.com/Geekhyt/weekly
-大家好，我是童欧巴。欢迎来到前端食堂技术周刊，我们先来看下上周的技术资讯。
-技术资讯
-Bun 1.0 发布，他踏着七彩祥云来了。
-Turbo 将放弃 TypeScript，上一个是 Svelte，下一个是谁？
-Deno 9 月更新，Deno KV 处于公测阶段，Deno Deploy 上原生支持 npm。
-VS Code 发布 August 2023 (version 1.82)
-Biome 另起炉灶，Rome 中道崩殂。
-在 SvelteKit 1.24 中解锁 view transitions
-下面我们来看技术资料。
-技术资料
-1. Bundler 的设计取舍
-作者全面对比了市面上流行 Bundler 的优缺点，并给出了 Rspack 的设计初衷与思考过程，深度好文。
-2. Node.js 最佳实践
-Node.js 最佳实践 2023 版本发布，增加新的推荐库和最佳实践。
-3. 选择最佳的 Node.js Docker 映像
-本文深入研究了如何选择最佳的 Node.js Docker 镜像，包括安全性、镜像大小和可维护性等关键因素。
-4. Node.js 原生支持 .env 文件
-和 dotenv 说再见。
-5. 四种常见的代码覆盖率
-了解什么是代码覆盖率，并探索四种常见的衡量方法。
-❤️爱心三连击
-1.如果你觉得食堂酒菜还合胃口，就点个赞支持下吧，你的赞是我最大的动力。
-2.关注公众号前端食堂，吃好每一顿饭！
-3.点赞、评论、转发 &#x3D;&#x3D;&#x3D; 催更！
+                              <span>theme: cyanosis
+引言
+webpack中文官网：https://webpack.docschina.org/concepts/
+webpack是一个javascript常用的静态模块打包工具，通过配置webpack，可以实现包括压缩文件，解析不同文件格式等强大的功能，作者发现很多同学对webpack的认知都停留在入口出口以及简单的loader和plugin配置上，对webpack的核心原理都一知半解。本文期望通过更深层的解读，让读者能更彻底地理解这个打包工具的来龙去脉。
+为什么要用webpack
+在webpack等打包工具出世之前，我们普通的H5项目是怎么处理错综复杂的脚本呢？
+第一种方式：引用不同的脚本去使用不同的功能，但脚本太多的时候会导致网络瓶颈
+第二种方式：使用一个大型js文件去引入所有代码，但这样会严重影响可读性，可维护性，作用域。
+举个栗子：
+由于浏览器不能直接解析less文件，我们可通过引入转换的插件（file watcher）把less实时转换为css并引入，但项目里面会多出一个map跟css文件，造成项目文件的臃肿。
+用官方文档的说法：
+node.js诞生可以让Javasrcipt在浏览器环境之外使用，而webpack运行在node.js中。CommonJS的require机制允许在文件中引用某个模块，如此一来就可以解决作用域的问题。
+    const HtmlWebpackPlugin &#x3D; require(&#x27;html-webpack-plugin&#x27;)
 
-好了，以上就是本期的食堂周刊，观众老爷们如果觉得还不错，一键三连是对食堂老板最大的支持。
-你的前端食堂，吃好每一顿饭，我们下期见。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
+webpack 关心性能和加载时间；它始终在改进或添加新功能，例如：异步地加载 chunk 和预取，以便为你的项目和用户提供最佳体验
+核心概念
+webpack有7个核心概念：
+入口（entry）
+输出（output）
+loader
+插件（plugin）
+模式（mode）
+浏览器兼容性（br…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;10
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2532,8 +2574,6 @@ img {
 使用 object-fit，其中 cover 属性和 container属性都可以保持宽高比不变，其区别在于
 object-fit: cover;：被替换的内容在保持其宽高比的同时填充元素的整个内容框。如果对象的宽高比与容器不同，那么该对象将被剪裁以填充容器。（容器内不会留下任何空白）
 object-fit: contain;：被替换的内容在保持其宽高比的同时，将被缩放，并尽可能地将其内容在填充元素的内容框中。在保持宽高比的同时缩放图片，意味着某些方向上可能…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4746,88 +4786,6 @@ Git仓库地址：https://github.com/xicunyang/show-project-with-git-branch</spa
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7276266802824511540"
-                        open
-                      >
-                        <summary class="article-expander__title">Nest 实现扫码登录</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7276266802824511540">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>扫码登录是常见的功能，基本各种网站都支持。
-比如掘金的登录就支持 APP 扫码的方式：
-
-如果你 APP 没登录，扫码后会跳到登录页面：
-
-登录之后，会进入确认界面，你可以选择授权登录或者取消：
-
-这边确认之后，pc 网站就登录了。
-知乎，b 站等也是这样的：
-
-
-有没有感觉很神奇，为什么一扫二维码，然后确认下，那边就自动登录了呢？
-其实原理也很简单。
-我们先用解析工具解码下二维码的内容：
-
-
-可以看到，二维码的内容是一个 url，如果在手机浏览器打开，是这样的：
-
-会让你下载 APP。
-而在 APP 里打开，就是登录确认界面了：
-
-那确认的是哪个二维码呢？
-
-二维码这里是有个唯一 id 的，通过这个 id 就知道是哪个二维码。
-这个二维码有 5 个状态：
-未扫描
-已扫描，等待用户确认
-已扫描，用户同意授权
-已扫描，用户取消授权
-已过期
-最开始是未扫描状态：
-
-扫码后会进入等待用户确认状态：
-
-确认后会进入同意授权状态：
-
-取消的话会进入取消授权状态：
-
-长时间不操作会进入过期状态：
-
-也就是说，扫码后进行不同的操作就是修改这个 id 对应的二维码的状态。
-另一边修改了状态，这边是怎么知道二维码状态变了呢？
-websocket 么？
-不用，一般都是轮询来做。
-比如掘金：
-二维码出现后，会有一个每秒一次的轮询请求来查询二维码状态：
-最开始是 new：
-
-扫码后会变成 scanned：
-
-知乎也是一样：
-
-
-这时候，手机会进入登录确认页面：
-bilibili 的登录确认页面：
-
-知乎的登录确认页面：
-
-这边点击确认登录或者取消之后，会发请求修改 id 对应的二维码的状态。
-那边一直在轮询，自然就知道了二维码状态的变更。
-也就是这样的：
-
-服务端有个 qrcode/generate 接口，会生成一个随机的二维码 id，存到 redis 里，并返回二维码。
-还有个 qrcode/c…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;15
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7276030484596637737"
                         open
                       >
@@ -6759,8 +6717,8 @@ Scrum 开发
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6196573289">
-        <time id="build-timestamp" datetime="2023-09-15T09:52:51.973Z">2023-09-15T09:52:51.973Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6198316403">
+        <time id="build-timestamp" datetime="2023-09-15T12:56:16.927Z">2023-09-15T12:56:16.927Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
