@@ -51,8 +51,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-16 datetime="2023-09-16T07:25:41.000Z">2023-09-16</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-16 datetime="2023-09-16T07:25:41.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-16 datetime="2023-09-16T14:28:46.000Z">2023-09-16</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-16 datetime="2023-09-16T14:28:46.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -67,6 +67,33 @@
                   <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/6505bb9e8425e0dd3b32e6d7"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 现在你可以通过浏览器直接起一个 PHP/Node.js 环境跑后端程序了，这是 Google I/O 2023 提到的一个 WebAssembly 实践，将 WordPress 直接运行在浏览器，...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6505bb9e8425e0dd3b32e6d7">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FrxOz7bsCS4VMnIUIsTtuTP83B1Mv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>现在你可以通过浏览器直接起一个 PHP/Node.js 环境跑后端程序了，这是 Google I/O 2023 提到的一个 WebAssembly 实践，将 WordPress 直接运行在浏览器，包括后端和数据库：web.dev/wordpress-playground，效果如图一所示。
+这项实践颇有意义，以前大家可能见过各种 WebOS 的网页版 Demo，例如运行在 Web 上的操作系统、 Bash 环境、单机游戏，那些其实都是通过 JavaScript 来模拟实现的，现在基于 WASM 我们有机会实现一个纯浏览器的运行环境，它可以为程序提供 POSIX 接口，例如处理文件、进程、信号等等。
+这就带来了比较多的想象空间，例如大家熟悉的 Github Workspace，对于简单类型的 Node.js 应用就没必要起一个昂贵的后端容器了，前后端代码都可以在浏览器直接执行。实际上，StackBlitz 的 CodeFlow 就已经在商业化中投入使用了这样的方式。
+再例如，新手学编程就不需要配置复杂的本地环境了，基于 WASM 的浏览器环境便是一个最好的 Playground，所有的依赖通过一个远程下发的 .wasm 文件就可以搞定；再例如，对于无状态的云函数，也可以在端上直接运行一个轻量级的 WASM 环境。充分利用端的计算能力，通过软件分发和服务分发的形式提升端侧体验，同时也可以一定程度降低云的成本。
+以 WordPress 为例，图二演示了大致的实现原理：使用 Service Worker 拦截请求，然后将处理任务转发给 Worker 进程，Worker 中调用 WASM 提供的能力进行处理。整体看起来就像是在 Client 侧部署了一个 Server，又一个新形态的 BFF（Backend for Frontend） 层，😄
+借助 WASM 暴露系统能力给 JS 还是存在一定局限性的，例如对于 TCP/UDP 流量的处理，目前就做不到，倒是可以考虑通过 Websocket 包装 TCP/UDP 流量，然后再转发到代理服务器上进行处理；再例如在 high-level 的 JavaScript 中无法处理 low-level 的 C/C++ 网络请求，JS 是异步循环，而 C/C++ 执行的请求是同步的，天然就会出问题，不过社区也有人搞了一个 Asyncify 来实现兼容，算的上一个能力补偿库。类似的问题还比较多，需要靠更丰富的应用层的发展来驱动解决。
+实际上，WASM 并不单单为 Web 设计，它也可以跑在各种 IoT 设备和后端环境中，也就是说，使用 Node.js 调用一个使用 WASM 包装的 PHP 应用能力将会变成一件十分轻松的事情。按照这个思路来看，未来软件的分发就变得更加简单了，它将不再受到语言的限制。
+还是很值得投入研究的，感兴趣的朋友可以进来看看。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -1061,27 +1088,6 @@ CEO 助理秘书
                             <span class="media-object__text">
                               <span>看到一个分析，说话喜欢“内个…内个…那个…那个…”作为连接词的，都是脑子转太快，输出功率过高，嘴巴跟不上🤣</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/650128f73c00b8f53d46f15e"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 四年前写了一个自动化工具，可以将内容一键发布到 Twitter/Weibo/Zhihu/Linkedin/掘金等平台，也支持一键删除刚才发布的内容，甚至还使用 Auto.js 兼容...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/650128f73c00b8f53d46f15e">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FhXd1Z6yTTDGkbdeoO2juqXfvDHav3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>四年前写了一个自动化工具，可以将内容一键发布到 Twitter/Weibo/Zhihu/Linkedin/掘金等平台，也支持一键删除刚才发布的内容，甚至还使用 Auto.js 兼容了在安卓设备自动发布微信朋友圈。
-原理比较简单，就是利用 Puppeteer/Auto.js 等自动化框架模拟人来操作，这样就可以不用担心 API 的限制问题了。需要处理的细节非常多，随着几个平台的 UI 改版，已经没维护了……</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4446,8 +4452,6 @@ OK！你可以从这个链接进去安装这个插件，安装好之后，它会
 OK！剩下的就是页面的搭建和消息传递，就不多做赘述了，大部分在谷歌上都可以搜到。
 以上，就是这次开发小插件的心得，试用了一天，感觉还是不错的，有同样痛点的同学可以使用试试哈！
 Git仓库地址：https://github.com/xicunyang/show-project-with-git-branch</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -6168,8 +6172,8 @@ Scrum 开发
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6208269782">
-        <time id="build-timestamp" datetime="2023-09-16T15:53:00.154Z">2023-09-16T15:53:00.154Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6209066062">
+        <time id="build-timestamp" datetime="2023-09-16T18:53:08.051Z">2023-09-16T18:53:08.051Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

@@ -34,7 +34,7 @@
           "description": "自己体验了下，出乎意料，HTML elementtiming属性在性能监控这块，比预想的要实用的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/html-elementtiming-attribute/",
           "publishedOn": "2023-09-15T15:58:22.000Z",
-          "wordCount": 954,
+          "wordCount": 955,
           "title": "HTML elementtiming属性初体验记录",
           "imageUrl": null
         },
@@ -64,7 +64,7 @@
           "description": "一开始看到registerProtocolHandler()方法老激动了，以为又发现了个好玩具，谁知深入体验了一番之后……呵呵~",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-registerprotocolhandler/",
           "publishedOn": "2023-08-30T15:02:58.000Z",
-          "wordCount": 992,
+          "wordCount": 990,
           "title": "一言难尽的registerProtocolHandler()方法",
           "imageUrl": null
         },
@@ -74,7 +74,7 @@
           "description": "一个看似简单的HTML属性的底下，可能是一座巨大的冰山，referrer及其相关特性就是如此。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/web-referer-image-policy/",
           "publishedOn": "2023-08-29T15:53:49.000Z",
-          "wordCount": 1097,
+          "wordCount": 1096,
           "title": "Web referrer策略详解与防盗链图片的显示",
           "imageUrl": null
         },
@@ -142,6 +142,16 @@
       "feedUrl": "https://rsshub.app/jike/user/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
+        {
+          "id": "https://m.okjike.com/originalPosts/6505bb9e8425e0dd3b32e6d7",
+          "author": null,
+          "description": "现在你可以通过浏览器直接起一个 PHP/Node.js 环境跑后端程序了，这是 Google I/O 2023 提到的一个 WebAssembly 实践，将 WordPress 直接运行在浏览器，包括后端和数据库：web.dev/wordpress-playground，效果如图一所示。\n这项实践颇有意义，以前大家可能见过各种 WebOS 的网页版 Demo，例如运行在 Web 上的操作系统、 Bash 环境、单机游戏，那些其实都是通过 JavaScript 来模拟实现的，现在基于 WASM 我们有机会实现一个纯浏览器的运行环境，它可以为程序提供 POSIX 接口，例如处理文件、进程、信号等等。\n这就带来了比较多的想象空间，例如大家熟悉的 Github Workspace，对于简单类型的 Node.js 应用就没必要起一个昂贵的后端容器了，前后端代码都可以在浏览器直接执行。实际上，StackBlitz 的 CodeFlow 就已经在商业化中投入使用了这样的方式。\n再例如，新手学编程就不需要配置复杂的本地环境了，基于 WASM 的浏览器环境便是一个最好的 Playground，所有的依赖通过一个远程下发的 .wasm 文件就可以搞定；再例如，对于无状态的云函数，也可以在端上直接运行一个轻量级的 WASM 环境。充分利用端的计算能力，通过软件分发和服务分发的形式提升端侧体验，同时也可以一定程度降低云的成本。\n以 WordPress 为例，图二演示了大致的实现原理：使用 Service Worker 拦截请求，然后将处理任务转发给 Worker 进程，Worker 中调用 WASM 提供的能力进行处理。整体看起来就像是在 Client 侧部署了一个 Server，又一个新形态的 BFF（Backend for Frontend） 层，😄\n借助 WASM 暴露系统能力给 JS 还是存在一定局限性的，例如对于 TCP/UDP 流量的处理，目前就做不到，倒是可以考虑通过 Websocket 包装 TCP/UDP 流量，然后再转发到代理服务器上进行处理；再例如在 high-level 的 JavaScript 中无法处理 low-level 的 C/C++ 网络请求，JS 是异步循环，而 C/C++ 执行的请求是同步的，天然就会出问题，不过社区也有人搞了一个 Asyncify 来实现兼容，算的上一个能力补偿库。类似的问题还比较多，需要靠更丰富的应用层的发展来驱动解决。\n实际上，WASM 并不单单为 Web 设计，它也可以跑在各种 IoT 设备和后端环境中，也就是说，使用 Node.js 调用一个使用 WASM 包装的 PHP 应用能力将会变成一件十分轻松的事情。按照这个思路来看，未来软件的分发就变得更加简单了，它将不再受到语言的限制。\n还是很值得投入研究的，感兴趣的朋友可以进来看看。",
+          "link": "https://m.okjike.com/originalPosts/6505bb9e8425e0dd3b32e6d7",
+          "publishedOn": "2023-09-16T14:28:46.000Z",
+          "wordCount": 618,
+          "title": "发布了: 现在你可以通过浏览器直接起一个 PHP/Node.js 环境跑后端程序了，这是 Google I/O 2023 提到的一个 WebAssembly 实践，将 WordPress 直接运行在浏览器，...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FrxOz7bsCS4VMnIUIsTtuTP83B1Mv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
         {
           "id": "https://m.okjike.com/originalPosts/65055875f21549bc73bfa6df",
           "author": null,
@@ -231,16 +241,6 @@
           "wordCount": 428,
           "title": "发布了: 看到一个分析，说话喜欢“内个…内个…那个…那个…”作为连接词的，都是脑子转太快，输出功率过高，嘴巴跟不上🤣",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/650128f73c00b8f53d46f15e",
-          "author": null,
-          "description": "四年前写了一个自动化工具，可以将内容一键发布到 Twitter/Weibo/Zhihu/Linkedin/掘金等平台，也支持一键删除刚才发布的内容，甚至还使用 Auto.js 兼容了在安卓设备自动发布微信朋友圈。\n原理比较简单，就是利用 Puppeteer/Auto.js 等自动化框架模拟人来操作，这样就可以不用担心 API 的限制问题了。需要处理的细节非常多，随着几个平台的 UI 改版，已经没维护了……",
-          "link": "https://m.okjike.com/originalPosts/650128f73c00b8f53d46f15e",
-          "publishedOn": "2023-09-13T03:13:59.000Z",
-          "wordCount": 464,
-          "title": "发布了: 四年前写了一个自动化工具，可以将内容一键发布到 Twitter/Weibo/Zhihu/Linkedin/掘金等平台，也支持一键删除刚才发布的内容，甚至还使用 Auto.js 兼容...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FhXd1Z6yTTDGkbdeoO2juqXfvDHav3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         }
       ]
     },
@@ -1473,7 +1473,7 @@
           "description": "近期接手的需求比较多，各个需求之间又不是线性关系（一个完事儿再开始另一个），往往经常出现一个还没完全结束，另一个就开始了...\n在这种场景下，我通常会采用 “空间换时间” 的方法，即对于项目A，我会拉取3 ~ 4份在本地，每一份对应一个分支，这样可以比较快速的切换项目并调试。\n当然，这只是个人的一种习惯，不是所有人都习惯这样，你若是喜欢在一个项目里频繁的切换分支，倒也何尝不是一种方法，但我不觉得这是一种好的方法。\n慢慢的，我经常不确定自己应该要打开哪个项目了，比如对于项目A，我本地有3 ~ 4份，切换时，我会使用 Control + R，调出顶部弹窗，在这里进行切换，就像下面这样：\n\n此时，我可以看到项目名称+项目路径，但是我看不到每个项目对应的分支名，这个对我来说无疑是一个巨大的痛点，我需要去到我的目标分支对应的项目中，但是很遗憾，我不能每次都可以很幸运的选到我想要的项目，经常会打开好几个我不需要的项目，这让我很头疼，每次切换前都祈祷这一次一定对！哈哈哈。\n所以，我的诉求就来了，我希望在查看这个目录的时候，能够多一项就是【分支名】，这样我可以很好的分辨出我要去哪个项目。\n所以，我大概花了2-3个小时完成了这件事，这件事已经在我脑海里1年多了，也尝试思考不同的解法，终于在这次找到了最优雅的解决方案~\n下面是增强后的效果：\n\n可以清楚的看到，在保留了原始功能的基础上，很得体的展现了项目对应的分支名！你可以一目了然的看到所有分支，当然，这些数据在你每次呼出侧边栏的时候，都是最新的！\nOK！你可以从这个链接进去安装这个插件，安装好之后，它会替代你原来的Control + R这个快捷键，你就不会再看到顶部的弹窗了，取而代之的是右侧这个还算美观的小侧边栏。\n插件商店链接：https://marketplace.visualstudio.com/items?itemName=xicunyang.show-project-with-git-branch\n下面是一些实现思路，如果你不感兴趣的话，看到这里就可以了！\n重点思路\n插件实现的其中最重要的一环是：“获取vscode弹窗里的项目列表”\n注意！这个列表不是固定死的，而是会将我们最新打开的项目放在最前面。这个列表是我非常需要的，因为不从这里获取的话，我很难统计到用户使用的是哪些工程，如果这些工程让用户手动录入，简直是太蠢了，但如果是我自己去扫描，也不是一个好方法，所以，这个列表是我最最重要的资源。\n那么如何获取这个列表的数据呢？\n简洁明了，直接去看vscode的源码吧，肯定能找着hahaha！\n但是，如何入手去看呢？那么老多代码，不好下手... 对！通过关键字去搜索！\n可以看到，弹窗内容里有这个关键字：\n\n咱们就从这里开始，直接从vscode源码里搜“选中以打开(按 Cmd 键”，会发现搜不到，这也正常，因为vscode源码里本来就没把中文内置进去，中文的表现是插件实现的，我们找到中文插件：\n\n然后顺利的得到了仓库地址，打开仓库就看到了源码，在源码里全局搜索，我们得到了一个关键的信息：openRecentPlaceholderMac\n\n这里大家都可以理解，这是做了国际化，真正在vscode源码里的应该是 openRecentPlaceholderMac ，所以我们去vscode源码里搜 openRecentPlaceholderMac 试一试\n耶，果然搜到了！\n\n按下面数字的顺序，我们可以反推出，数据来自于：workspacesService.getRecentlyOpened()\n\n现在我就担心一点，如果这个方法只是vscode内部使用的，没有对外部插件暴露的话，那就比较麻烦了，如果对外暴露了，我直接调用就可以拿到一样的数据了。\n最后经过不断的搜索和查询调用链（这是一个漫长的过程），最终找到了这里：\n\n看语义是注册了一个命令，命令的功能就是调用最近打开过的文件，并返回。\n所以，看到这里，仿佛就看到了曙光，我迫不及待的搭建了一个插件工程，调用，成功！\n\n至此，几乎就成功了一大半了，还有些细节就是获取对应目录的git分支，我问了下ChatGPT，得到了一个还不错的方法：\n\nOK！剩下的就是页面的搭建和消息传递，就不多做赘述了，大部分在谷歌上都可以搜到。\n以上，就是这次开发小插件的心得，试用了一天，感觉还是不错的，有同样痛点的同学可以使用试试哈！\nGit仓库地址：https://github.com/xicunyang/show-project-with-git-branch",
           "link": "https://juejin.cn/post/7276260308515274792",
           "publishedOn": "2023-09-08T13:06:28.000Z",
-          "wordCount": 981,
+          "wordCount": null,
           "title": "VSCode插件：简单增强 VSCode 的 Control + R",
           "imageUrl": null
         },
