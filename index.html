@@ -2977,6 +2977,65 @@ tree 命令可以输出目录的树形结构
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7277065056575848448"
+                        open
+                      >
+                        <summary class="article-expander__title">如何在上班时间利用终端控制台摸鱼🧐🧐🧐</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7277065056575848448">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: cyanosis
+highlight: atom-one-dark
+作为一个资深的摸鱼小能手，班我们每天要上，终端也是我们也要每天要用到的，那么有什么办法可以在控制台终端中去摸鱼呢，那么在接下来的文章中我们就来看看它可以做到怎么样摸鱼。
+简介
+在我们开发的项目中，几乎有很多项目要都是使用 webpack 作为构建工具来进行开发的，在它进行构建的时候，会有一些信息会输出在控制台上面，如下图所示：
+
+爱瞎折腾的朋友们可能就会想了，为什么 create-react-pp 也是用的 webpack 作为构建工具，为什么我的输出和它的输出是不一样的呢？
+
+compiler
+通过查阅文档，我发现了问题所在，原来在 webpack 中它提供了一个 compiler 钩子，它用来监控文件系统的 监听(watching) 机制，并且在文件修改时重新编译。 当处于监听模式(watch mode)时， compiler 会触发诸如 watchRun, watchClose 和 invalid 等额外的事件。
+done 钩子就是当我们的代码被编译完成的时候被调用的。
+如何调用 done 钩子
+要想调用我们的 done 钩子，首先我们要引入 webpack 包，并把 webpack 配置传递给 webpack 函数，如下图所示：
+
+接下来我们看看终端输出：
+
+这些就是我们的一些 webpack 配置，在这个 compiler 对象上，它存在一个 hooks 对象，如下代码所示：
+compiler.hooks.done.tap(&quot;done&quot;, async (stats) &#x3D;&gt; {
+  console.log(11111111111111);
+});
+
+它会在代码编译完成阶段调用该回调函数:
+
+咦，你会发现了，代码编译执行完成，我的终端上的输出会这么干净，是因为在输出控制台之前， 已经被我调用了一个函数清空了。
+通过这个函数，你可以情况控制台上的一些输出信息，如下代码所示：
+function clearConsole() {
+  process.stdout.write(
+    process.platform &#x3D;&#x3D;&#x3D; &quot;win32&quot; ? &quot;\x1B[2J\x1B[0f&quot; : &quot;\x1B[2J\x1B[3J\x1B[H&quot;
+  );
+}
+
+再调用以下，你会发现控制台上面很干净的，图下图所示：
+
+要想这一些个性化的输出,我们直接在这个回调函数中打印输出就可以了，如果你要你输出的信息和项目中的信息有关，你可以利用 stats 这个参数：
+
+大概就这样子，如果你想更好玩的话，你可以使用一些网络请求库，去获取一些网络资源：
+
+去获取这些资源都是可以的呀。
+总结
+如果你的项目是使用的 webpack，并且要想在项目的开发中自定义，你可以通过 compiler.hooks 的方式去监听不同的钩子，然后通过不同的方式来实现不同的信息输出。
+源代码地址</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -4003,47 +4062,6 @@ command + K command + F   #格式化选中代码
 command + shift + n #新建窗口
 command + 1/2/3     #选中不同的拆分栏…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7276694924137463842"
-                        open
-                      >
-                        <summary class="article-expander__title">产品：请给我实现一个在web端截屏的功能！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7276694924137463842">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: channing-cyan
-一、故事的开始
-最近产品又开始整活了，本来是毫无压力的一周，可以小摸一下鱼的，但是突然有一天跟我说要做一个在网页端截屏的功能。
-作为一个工作多年的前端，早已学会了尽可能避开麻烦的需求，只做增删改查就行！
-我立马开始了我的反驳，我的理由是市面上截屏的工具有很多的，微信截图、Snipaste都可以做到的，自己实现的话，一是比较麻烦，而是性能也不会很好，没有必要，把更多的时间放在核心业务更合理！
-结果产品跟我说因为公司内部有个可以用来解析图片，生成文本OCR的算法模型，web端需要支持截取网页中部分然后交给模型去训练，微信以及其他的截图工具虽然可以截图，但需要先保存到本地，再上传给模型才行。
-网页端支持截图后可以在在截屏的同时直接上传给模型，减少中间过程，提升业务效率。
-我一听这产品小嘴巴巴的说的还挺有道理，没有办法，只能接了这个需求，从此命运的齿轮开始转动，开始了我漫长而又曲折的思考。
-二、我的思考
-在实现任何需求的时候，我都会在自己的脑子中大概思考一下，评估一下它的难度如何。我发现web端常见的需求是在一张图片上截图，这个还是比较容易的，只需要准备一个canvas，然后利用canvas的方法 drawImage就可以截取这个图片的某个部分了。
-示例如下：
-
-
-
-    截取图片部分示例
-
-
-    
-    
-截取图片部分
-    
-    
-…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -6150,8 +6168,8 @@ Scrum 开发
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6207477179">
-        <time id="build-timestamp" datetime="2023-09-16T12:54:51.984Z">2023-09-16T12:54:51.984Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6208269782">
+        <time id="build-timestamp" datetime="2023-09-16T15:53:00.154Z">2023-09-16T15:53:00.154Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
