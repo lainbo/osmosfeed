@@ -1219,6 +1219,51 @@ CEO 助理秘书
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7278238985448177704"
+                        open
+                      >
+                        <summary class="article-expander__title">写css没灵感，那是你没用到这几个开源库</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7278238985448177704">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>你是否遇到过写css没灵感，写不出酷炫的效果，那这篇文章你一定要看完。知道这几个开源库，它能让你写出炸天的效果并且有效地增加你的摸鱼时长。
+1.CSS Inspiration
+网址：
+https://chokcoco.github.io/CSS-Inspiration/#/
+
+
+CSS Inspiration 上面有各种天马行空的css教程，涵盖了css的许多常见的特效。以分类的形式展示不同的css属性或者不同的课题，例如布局方式、border、伪元素、滤镜、背景3D等。这些都是css里面十分重要的知识点，不管是用于学习还是项目中实际运用都是不错的选择。
+当然你也可以用来巩固基础知识，可以利用此项目来制作一些常用的特效，可以看到有上百个经典案例供我们参考，重点是提供源代码，复制粘贴即可使用。
+
+2.Neumorphism
+地址：
+https://neumorphism.io/
+
+Neumorphism属于新拟态ui风格，是目前比较新颖的一种前端css设计风格。它的格调简单，基本颜色比较浅，如米白、浅灰、浅蓝等。再利用阴影呈现出凹凸效果，看起来很简单舒适且有3D效果，因此我们可以通过拟态设计出很多优美的页面，拖动效果控制条即可秒生成css样式。
+
+3.AnimXYZ
+地址：
+https://animxyz.com/
+
+如果说你热衷于动画，那animxyz绝对是你的不二之选。你可以使用animxyz组合和混合不同的动画来创建自己的高度可定制的css动画，而无需编写一个单一的关键帧。
+
+相比于animate css，它的强大之处在于你可以在这里根据自己的想法来手动配置动画。实现的动画代码实例，我们可以复制迁移到项目中使用。
+4.CodePen
+
+
+最后要推荐的则是我最常用也是我最推荐的，它就是codepen。codepen是一个完全免费的前端代码托管服务，上面云集了各路大神，拥有全世界前端达人经典项目进行展示，让你从中获取到很多的创作灵感。
+它可以实现即时预览，你甚至可以在线修改并及时预览别人的作品。支持多种主流预处理器，快速添加外部资源文件，只需在输入框里输入库名，codepen就会从cdn上寻找匹配的css或js库。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7278104060237398052"
                         open
                       >
@@ -2926,65 +2971,6 @@ tree 命令可以输出目录的树形结构
 │   │   ├── index-9f680dd7.css
 │   │ …</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;11
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7277065056575848448"
-                        open
-                      >
-                        <summary class="article-expander__title">如何在上班时间利用终端控制台摸鱼🧐🧐🧐</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7277065056575848448">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: cyanosis
-highlight: atom-one-dark
-作为一个资深的摸鱼小能手，班我们每天要上，终端也是我们也要每天要用到的，那么有什么办法可以在控制台终端中去摸鱼呢，那么在接下来的文章中我们就来看看它可以做到怎么样摸鱼。
-简介
-在我们开发的项目中，几乎有很多项目要都是使用 webpack 作为构建工具来进行开发的，在它进行构建的时候，会有一些信息会输出在控制台上面，如下图所示：
-
-爱瞎折腾的朋友们可能就会想了，为什么 create-react-pp 也是用的 webpack 作为构建工具，为什么我的输出和它的输出是不一样的呢？
-
-compiler
-通过查阅文档，我发现了问题所在，原来在 webpack 中它提供了一个 compiler 钩子，它用来监控文件系统的 监听(watching) 机制，并且在文件修改时重新编译。 当处于监听模式(watch mode)时， compiler 会触发诸如 watchRun, watchClose 和 invalid 等额外的事件。
-done 钩子就是当我们的代码被编译完成的时候被调用的。
-如何调用 done 钩子
-要想调用我们的 done 钩子，首先我们要引入 webpack 包，并把 webpack 配置传递给 webpack 函数，如下图所示：
-
-接下来我们看看终端输出：
-
-这些就是我们的一些 webpack 配置，在这个 compiler 对象上，它存在一个 hooks 对象，如下代码所示：
-compiler.hooks.done.tap(&quot;done&quot;, async (stats) &#x3D;&gt; {
-  console.log(11111111111111);
-});
-
-它会在代码编译完成阶段调用该回调函数:
-
-咦，你会发现了，代码编译执行完成，我的终端上的输出会这么干净，是因为在输出控制台之前， 已经被我调用了一个函数清空了。
-通过这个函数，你可以情况控制台上的一些输出信息，如下代码所示：
-function clearConsole() {
-  process.stdout.write(
-    process.platform &#x3D;&#x3D;&#x3D; &quot;win32&quot; ? &quot;\x1B[2J\x1B[0f&quot; : &quot;\x1B[2J\x1B[3J\x1B[H&quot;
-  );
-}
-
-再调用以下，你会发现控制台上面很干净的，图下图所示：
-
-要想这一些个性化的输出,我们直接在这个回调函数中打印输出就可以了，如果你要你输出的信息和项目中的信息有关，你可以利用 stats 这个参数：
-
-大概就这样子，如果你想更好玩的话，你可以使用一些网络请求库，去获取一些网络资源：
-
-去获取这些资源都是可以的呀。
-总结
-如果你的项目是使用的 webpack，并且要想在项目的开发中自定义，你可以通过 compiler.hooks 的方式去监听不同的钩子，然后通过不同的方式来实现不同的信息输出。
-源代码地址</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -6162,74 +6148,10 @@ Scrum 开发
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-18 datetime="2023-08-18T00:14:37.000Z">2023-08-18</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-18 datetime="2023-08-18T00:14:37.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >阮一峰的网络日志</button>
-                  <a class="source-heading__link" href="http://www.ruanyifeng.com/blog/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.ruanyifeng.com/blog/2023/08/weekly-issue-267.html"
-                        open
-                      >
-                        <summary class="article-expander__title">科技爱好者周刊（第 267 期）：5G 的春天要来了</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.ruanyifeng.com/blog/2023/08/weekly-issue-267.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>这里记录每周值得分享的科技内容，周五发布。
-本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。
-封面图
-
-去年落成的浙江省衢州体育场，模仿当地丘陵地形，外层覆盖了土坡，仿佛起伏的小山丘，是世界最大的覆土建筑群。该建筑由马岩松创立的北京 MAD 建筑事务所设计。（via）
-5G 的春天要来了
-本月初，国家广电总局的官网发了一条消息，外界几乎没注意到。
-
-成都市正式启动 5G 广播电视的试验了。这就是说，广电总局要用 5G 发送电视信号了。
-你可能觉得奇怪，5G 网络看电视，不是老早就有了吗，这还需要试验吗？
-我来科普一下，现有的互联网看电视，都是采用 &quot;一对一&quot;的模式，每个客户端需要单独的服务器信号发送，100个用户就需要100次发送，非常消耗带宽。
-而本次试验是 5G 网络的&quot;广播&quot;发送，属于 &quot;一对多&quot;模式，同一个信号被无数客户端接收，所有用户都不跟服务器建立连接。
-
-在这种模式下面，客户端不需要 IP 地址，就能接收信号。它很像无线电或者 GPS，属于单向信号，再多的用户也不会消耗带宽。当然，这样的话，用户也无法上传任何数据。
-这种模式有很多优点。
-（1）4K 视频立刻普及。打开电视机，不管哪个频道，播放的都是高清的 4K 节目。
-（2）手机看电视开始流行。现在的手机看电视，需要昂贵的流量费，所以推广不起来。一旦采用广播模式，不消耗流量费，将促进手机电视的发展。
-（3）带动硬件升级，电视机需要 5G 接收器，才能收到 5G 信号。另外，为了享受高清视频，也需要使用 4K 电视机。
-（4）节省带宽。某些热点节目（比如世界杯）通过 5G 发送，会节省整个社会的带宽消耗，也会让人群聚集场合（火车站、公园等）的通信保持畅通。
-（5）推动 5G 的发展。5G 网络自从推出，一直不温不火，没有杀手级应用，体…</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6206648512">
-        <time id="build-timestamp" datetime="2023-09-16T09:53:04.233Z">2023-09-16T09:53:04.233Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6207477179">
+        <time id="build-timestamp" datetime="2023-09-16T12:54:51.984Z">2023-09-16T12:54:51.984Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
