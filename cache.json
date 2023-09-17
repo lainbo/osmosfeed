@@ -24,73 +24,6 @@
       ]
     },
     {
-      "title": "张鑫旭-鑫空间-鑫生活",
-      "feedUrl": "https://www.zhangxinxu.com/wordpress/feed/",
-      "siteUrl": "https://www.zhangxinxu.com/wordpress",
-      "articles": [
-        {
-          "id": "https://www.zhangxinxu.com/wordpress/?p=10971",
-          "author": "张 鑫旭",
-          "description": "自己体验了下，出乎意料，HTML elementtiming属性在性能监控这块，比预想的要实用的多。",
-          "link": "https://www.zhangxinxu.com/wordpress/2023/09/html-elementtiming-attribute/",
-          "publishedOn": "2023-09-15T15:58:22.000Z",
-          "wordCount": 953,
-          "title": "HTML elementtiming属性初体验记录",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.zhangxinxu.com/wordpress/?p=11003",
-          "author": "张 鑫旭",
-          "description": "坚持探索Web标准下的原生浏览器开发行为，行为驱动和数据驱动的表单开发其实各有千秋，深入HTML，你会发现这个世界比你所知的要精彩的多。",
-          "link": "https://www.zhangxinxu.com/wordpress/2023/09/form-reset-input-change/",
-          "publishedOn": "2023-09-12T15:52:48.000Z",
-          "wordCount": 1120,
-          "title": "Tips：form元素reset后input不触发change事件处理",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.zhangxinxu.com/wordpress/?p=10983",
-          "author": "张 鑫旭",
-          "description": "相比于tinypng，我这个工具还自带尺寸设置功能，同时还可以控制压缩率，指定压缩格式，纯前端实现，高性能高效率。",
-          "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-jpg-png-compress-tinyimg-mini/",
-          "publishedOn": "2023-09-05T13:05:30.000Z",
-          "wordCount": 1072,
-          "title": "做了个纯前端JPG/PNG尺寸缩放+压缩的在线工具",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.zhangxinxu.com/wordpress/?p=10969",
-          "author": "张 鑫旭",
-          "description": "一开始看到registerProtocolHandler()方法老激动了，以为又发现了个好玩具，谁知深入体验了一番之后……呵呵~",
-          "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-registerprotocolhandler/",
-          "publishedOn": "2023-08-30T15:02:58.000Z",
-          "wordCount": 993,
-          "title": "一言难尽的registerProtocolHandler()方法",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.zhangxinxu.com/wordpress/?p=10967",
-          "author": "张 鑫旭",
-          "description": "一个看似简单的HTML属性的底下，可能是一座巨大的冰山，referrer及其相关特性就是如此。",
-          "link": "https://www.zhangxinxu.com/wordpress/2023/08/web-referer-image-policy/",
-          "publishedOn": "2023-08-29T15:53:49.000Z",
-          "wordCount": 1095,
-          "title": "Web referrer策略详解与防盗链图片的显示",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.zhangxinxu.com/wordpress/?p=10950",
-          "author": "张 鑫旭",
-          "description": "Performance和PerformanceObserver，用户 Timing API，哦，学不完，根本学不完，这两周抽时间好好研究了一番，终于了解了个大概了🙊，特此记录下。",
-          "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-performanceobserver-api/",
-          "publishedOn": "2023-08-27T08:34:24.000Z",
-          "wordCount": 1301,
-          "title": "狠狠地研究了下 PerformanceObserver API",
-          "imageUrl": null
-        }
-      ]
-    },
-    {
       "title": "阮一峰的网络日志",
       "feedUrl": "https://feeds.feedburner.com/ruanyifeng",
       "siteUrl": "http://www.ruanyifeng.com/blog/",
@@ -148,9 +81,9 @@
           "description": "现在你可以通过浏览器直接起一个 PHP/Node.js 环境跑后端程序了，这是 Google I/O 2023 提到的一个 WebAssembly 实践，将 WordPress 直接运行在浏览器，包括后端和数据库：web.dev/wordpress-playground，效果如图一所示。\n这项实践颇有意义，以前大家可能见过各种 WebOS 的网页版 Demo，例如运行在 Web 上的操作系统、 Bash 环境、单机游戏，那些其实都是通过 JavaScript 来模拟实现的，现在基于 WASM 我们有机会实现一个纯浏览器的运行环境，它可以为程序提供 POSIX 接口，例如处理文件、进程、信号等等。\n这就带来了比较多的想象空间，例如大家熟悉的 Github Workspace，对于简单类型的 Node.js 应用就没必要起一个昂贵的后端容器了，前后端代码都可以在浏览器直接执行。实际上，StackBlitz 的 CodeFlow 就已经在商业化中投入使用了这样的方式。\n再例如，新手学编程就不需要配置复杂的本地环境了，基于 WASM 的浏览器环境便是一个最好的 Playground，所有的依赖通过一个远程下发的 .wasm 文件就可以搞定；再例如，对于无状态的云函数，也可以在端上直接运行一个轻量级的 WASM 环境。充分利用端的计算能力，通过软件分发和服务分发的形式提升端侧体验，同时也可以一定程度降低云的成本。\n以 WordPress 为例，图二演示了大致的实现原理：使用 Service Worker 拦截请求，然后将处理任务转发给 Worker 进程，Worker 中调用 WASM 提供的能力进行处理。整体看起来就像是在 Client 侧部署了一个 Server，又一个新形态的 BFF（Backend for Frontend） 层，😄\n借助 WASM 暴露系统能力给 JS 还是存在一定局限性的，例如对于 TCP/UDP 流量的处理，目前就做不到，倒是可以考虑通过 Websocket 包装 TCP/UDP 流量，然后再转发到代理服务器上进行处理；再例如在 high-level 的 JavaScript 中无法处理 low-level 的 C/C++ 网络请求，JS 是异步循环，而 C/C++ 执行的请求是同步的，天然就会出问题，不过社区也有人搞了一个 Asyncify 来实现兼容，算的上一个能力补偿库。类似的问题还比较多，需要靠更丰富的应用层的发展来驱动解决。\n实际上，WASM 并不单单为 Web 设计，它也可以跑在各种 IoT 设备和后端环境中，也就是说，使用 Node.js 调用一个使用 WASM 包装的 PHP 应用能力将会变成一件十分轻松的事情。按照这个思路来看，未来软件的分发就变得更加简单了，它将不再受到语言的限制。\n还是很值得投入研究的，感兴趣的朋友可以进来看看。",
           "link": "https://m.okjike.com/originalPosts/6505bb9e8425e0dd3b32e6d7",
           "publishedOn": "2023-09-16T14:28:46.000Z",
-          "wordCount": 623,
+          "wordCount": null,
           "title": "发布了: 现在你可以通过浏览器直接起一个 PHP/Node.js 环境跑后端程序了，这是 Google I/O 2023 提到的一个 WebAssembly 实践，将 WordPress 直接运行在浏览器，...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FrxOz7bsCS4VMnIUIsTtuTP83B1Mv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/65055875f21549bc73bfa6df",
@@ -168,9 +101,9 @@
           "description": "Vercel 发布了一个新的 AI 辅助设计和编程工具，v0.dev，你只需要说出你想实现的应用或者产品功能，它就会一次性给你生成多张页面或多个模块，如果你对它生成的内容不满意，你可以把鼠标放到不满意的细节部位，跟它聊天优化。\n最终产出的是一个可立即部署的应用，或者可以被用来复用的代码模块，你可以对这个代码模块进行直接的复制&粘贴。\n我都已经开始脑补一个熟悉的画面，程序员对着电脑说着话，调教着 AI 完成产品需求的开发，就好像曾经产品经理站在程序员的背后，指着屏幕，嘴里嘟囔着，“改改这个颜色，调调那个按钮”，画面历历在目😂",
           "link": "https://m.okjike.com/originalPosts/6503afa02c9bdd1af582cd12",
           "publishedOn": "2023-09-15T01:13:04.000Z",
-          "wordCount": 478,
+          "wordCount": null,
           "title": "发布了: Vercel 发布了一个新的 AI 辅助设计和编程工具，v0.dev，你只需要说出你想实现的应用或者产品功能，它就会一次性给你生成多张页面或多个模块，如果你对...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FniaBVMaAH627efDjc67B8u-y3gy?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/650330512a0c03ca13a5013e",
@@ -178,9 +111,9 @@
           "description": "说话的艺术🥲",
           "link": "https://m.okjike.com/originalPosts/650330512a0c03ca13a5013e",
           "publishedOn": "2023-09-14T16:09:53.000Z",
-          "wordCount": 436,
+          "wordCount": null,
           "title": "发布了: 说话的艺术🥲",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FgQacZGppmKxyKPCmWV_WYQlYp81v3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/6503261e1589e4a51a95e06b",
@@ -188,9 +121,9 @@
           "description": "Chrome 在 Web 体验优化方向推出了一项新的技术，View Transition，当进行页面跳转时，可以做到跟 Native 一样丝滑，在页面不刷新的情况下，继续保持着动画效果。\n实现这一效果的成本不高，只需要给元素附加一些 view transition 相关的 CSS 声明就行了，这个能力在 Chrome 111+ 版本已经开始支持。\n相关文档：https://developer.chrome.com/docs/web-platform/view-transitions/",
           "link": "https://m.okjike.com/originalPosts/6503261e1589e4a51a95e06b",
           "publishedOn": "2023-09-14T15:26:22.000Z",
-          "wordCount": 489,
+          "wordCount": null,
           "title": "发布了: Chrome 在 Web 体验优化方向推出了一项新的技术，View Transition，当进行页面跳转时，可以做到跟 Native 一样丝滑，在页面不刷新的情况下，继续保持着...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FoP9C2mTNta9S-vo2NMOQG46xBlC?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/reposts/65031c1b05145f31e5f43b9a",
@@ -198,9 +131,9 @@
           "description": "土耳其的银行卡我申请的是 oldubil 的虚拟银行卡，下载个 APP 就能申请，只不过需要你有一个可以用来接收短信的非大陆手机号码，这里不太建议使用接码平台，因为它的登录依赖一个不变的手机号码来接收短信。\n有朋友提到，薅土区的羊毛其实并不需要使用银行卡，直接充礼品卡就行了，而且礼品卡的购买的渠道很多，例如淘宝咸鱼、oyunfor 等。那为啥我一定要搞一张银行卡呢😄，主要是在 Wise 上我可以设置一个 Schedule 任务，定期给土区银行卡打款，这就避免了隔三差五地买礼品卡充值了，否则的话，我的心里会一直挂念着这件事儿——想着我的土区账号是不是快没钱了。\n给大家分享一下，这两个晚上折腾的经验和踩坑：\n1）使用 Wise 给土区账号充钱，是需要扣好几道手续费的：首先是现汇兑换，我是新加坡币转土耳其币，40SGD 扣费 0.33SGD 后转换成了 782.95TRY；然后 Wise 转给土区银行卡扣费 24.34TRY 剩 758.61TRY；最后土区银行卡收款时扣费 70.55TRY 剩 688.06TRY。一次转账有三次扣费，但整体算下来，也就 25RMB+，可以接受，下次我多转一点😅\n2）在手机上绑定土区银行卡会报错：Cannot Verify Payment Information，尝试了在手机上换地区、换时区，都没用；最后在网上找到一个解决办法，在网页上登录 Apple ID，然后在个人账户配置页进行银行卡绑定，操作成功了\n3）土区银行卡在实名认证之前，只有大概 100 美金的额度，即便你想充很多钱，也充不进去，因此它不存在太大的资损隐患；如果想实名认证，需要土区身份证+水电费账单，这很难搞定，也没必要去搞定，100 美金的额度够用了\n4）小知识点：如果你购买了礼品卡，又绑定了银行卡，默认会先扣礼品卡的钱\n土区账号确实是香，我使用一个叫「Appstore 多区价格查询」的捷径工具，查看了当前正在付费的几个 App，例如 1Password/Google One/Netflix 等，在土区都是要便宜不少的，所以长期来看，这次折腾能给我节省一笔不小的开销。\n关于如何家庭共享以及数据储存区的问题，也稍微研究了下。如果你当前已经在用国区的 2T 方案，可以这么做，\n1）先将土区升级成 2T 方案\n2）在国区账号中，将土区账号拉到家庭共享组，此时国区账号是共享组的组织者，土区账号是成员\n3）暂停国区的 iCloud+ 的共享计划，暂停后，数据不会丢，因为你上次的付费还没有到期\n4）最后再开启土区的 iCloud+ 共享计划\n国区账号的数据依然储存在云上贵州，因为共享的只是一个 iCloud+ 方案而已，不涉及数据的转移。在家庭共享组中，任何人购买了 iCloud+ 方案，都可以分享给这个家庭组，但在一个家庭组中，只允许有一个人共享此方案，所以国区的必须先暂停，再开土区的共享。\n\n转发 @Barret李靖: 看到推友们经常提到土耳其的低成本 iCloud 方案，昨晚上折腾了两个小时，成功申请到了一张土区的银行卡，通过 Wise 入金一天后到账，也顺利绑到了土区的 APP Store 账号上。成本确实低了很多，这算是合法薅羊毛么😂",
           "link": "https://m.okjike.com/reposts/65031c1b05145f31e5f43b9a",
           "publishedOn": "2023-09-14T14:43:39.000Z",
-          "wordCount": 567,
+          "wordCount": null,
           "title": "转发了: 土耳其的银行卡我申请的是 oldubil 的虚拟银行卡，下载个 APP 就能申请，只不过需要你有一个可以用来接收短信的非大陆手机号码，这里不太建议使用接码平...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/6502be641589e4a51a8aa16b",
@@ -208,9 +141,9 @@
           "description": "在 Google Colab 上下载 LLM 的速度是 200Mb+/s，10G 资源不到一分钟就落盘了，上次我下载一个 13B 的 LLaMa，硬生生等了一个小时，以后还是云炼丹吧😅",
           "link": "https://m.okjike.com/originalPosts/6502be641589e4a51a8aa16b",
           "publishedOn": "2023-09-14T08:03:48.000Z",
-          "wordCount": 463,
+          "wordCount": null,
           "title": "发布了: 在 Google Colab 上下载 LLM 的速度是 200Mb+/s，10G 资源不到一分钟就落盘了，上次我下载一个 13B 的 LLaMa，硬生生等了一个小时，以后还是云炼丹吧�...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FlHhhK1TbuMqr0uY5T5YWnLvntl8v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/6501d4da1589e4a51a77108f",
@@ -218,9 +151,9 @@
           "description": "新博文《接码平台与海外手机卡》https://mp.weixin.qq.com/s/MAmfnVBoS8N2GGqzbWXoGg\n如果你注册和使用过 ChatGPT，那你对这篇文章要解决的问题就会深有感触，注册时使用邮箱登录后，OpenAI 会要求你绑定一个手机号码，而这个手机号码不允许是中国大陆区的，很多人都会卡在这一步。\n有两条路径来解决这个问题，1）使用接码平台，临时租一个非大陆手机号码，用来接收验证码；2）你可以直接购买一张非大陆区的手机卡。本文会告诉你，这两条路径分别该怎么走。",
           "link": "https://m.okjike.com/originalPosts/6501d4da1589e4a51a77108f",
           "publishedOn": "2023-09-13T15:27:22.000Z",
-          "wordCount": 444,
+          "wordCount": null,
           "title": "发布了: 新博文《接码平台与海外手机卡》https://mp.weixin.qq.com/s/MAmfnVBoS8N2GGqzbWXoGg 如果你注册和使用过 ChatGPT，那你对这篇文章要解决的问题就会深有...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FjFCVgMO2MoPzfMykahQNrHOr4P7v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/650184f38425e0dd3bd1c18a",
@@ -228,9 +161,9 @@
           "description": "看到推友们经常提到土耳其的低成本 iCloud 方案，昨晚上折腾了两个小时，成功申请到了一张土区的银行卡，通过 Wise 入金一天后到账，也顺利绑到了土区的 APP Store 账号上。成本确实低了很多，这算是合法薅羊毛么😂",
           "link": "https://m.okjike.com/originalPosts/650184f38425e0dd3bd1c18a",
           "publishedOn": "2023-09-13T09:46:27.000Z",
-          "wordCount": 564,
+          "wordCount": null,
           "title": "发布了: 看到推友们经常提到土耳其的低成本 iCloud 方案，昨晚上折腾了两个小时，成功申请到了一张土区的银行卡，通过 Wise 入金一天后到账，也顺利绑到了土区的...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FlVF2fclNrJ-xp0Nc66G5dPApuhyv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/650139e9a925caf08a88fc99",
@@ -238,9 +171,9 @@
           "description": "看到一个分析，说话喜欢“内个…内个…那个…那个…”作为连接词的，都是脑子转太快，输出功率过高，嘴巴跟不上🤣",
           "link": "https://m.okjike.com/originalPosts/650139e9a925caf08a88fc99",
           "publishedOn": "2023-09-13T04:26:17.000Z",
-          "wordCount": 428,
+          "wordCount": null,
           "title": "发布了: 看到一个分析，说话喜欢“内个…内个…那个…那个…”作为连接词的，都是脑子转太快，输出功率过高，嘴巴跟不上🤣",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+          "imageUrl": null
         }
       ]
     },
@@ -255,9 +188,9 @@
           "description": "# Role\nCEO 助理秘书\n## Profile\n- author: 李继刚\n- version: 0.1\n- LLM: GPT-4\n- Plugin: none\n- description: 专注于整理和生成高质量的会议纪要，确保会议目标和行动计划清晰明确。\n## Attention\n请务必准确和全面地记录会议内容，使每个参会人员都能明确理解会议的决定和行动计划。\n## Background\n语音记录会议讨论信息, 现在可以方便地转成文字. 但这些碎片信息, 如何方便整理成清晰的会议纪要, 需要 GPT 帮忙\n## Constraints\n- 整理会议纪要过程中, 需严格遵守信息准确性, 不对用户提供的信息做扩写\n- 仅做信息整理, 将一些明显的病句做微调\n## Definition\n- 会议纪要：一份详细记录会议讨论、决定和行动计划的文档。\n## Goals\n- 准确记录会议的各个方面，包括议题、讨论、决定和行动计划。\n- 在规定的时间内完成会议纪要。\n## Skills\n- 文字处理：具备优秀的文字组织和编辑能力。\n## Tone\n- 专业：使用专业术语和格式。\n- 简洁：信息要点明确，不做多余的解释。\n## Value\n- 准确性：确保记录的信息无误。\n## Workflow\n- 输入: 通过开场白引导用户提供会议讨论的基本信息\n- 整理: 遵循以下框架来整理用户提供的会议信息，每个步骤后都会进行数据校验确保信息准确性\n  a. 会议主题：会议的标题和目的。\n  b. 会议日期和时间：会议的具体日期和时间。\n  c. 参会人员：列出参加会议的所有人。\n  d. 会议记录者：注明记录这些内容的人。\n  e. 会议议程：列出会议的所有主题和讨论点。\n  f. 主要讨论：详述每个议题的讨论内容，主要包括提出的问题、提议、观点等。\n  g. 决定和行动计划：列出会议的所有决定，以及计划中要采取的行动，以及负责人和计划完成日期。\n  h. 下一步打算：列出下一步的计划或在未来的会议中需要讨论的问题。\n- 输出: 输出整理后的结构清晰, 描述完整的会议纪要\n## Initialization\n简单开场白如下:\n\"你好，我是您的专业助理秘书，负责整理和生成高质量的会议纪要。请提供您的会议讨论基本信息, 我来帮您生成纪要。\"",
           "link": "https://m.okjike.com/originalPosts/65040d8b1589e4a51aa964b5",
           "publishedOn": "2023-09-15T07:53:47.000Z",
-          "wordCount": 631,
+          "wordCount": null,
           "title": "发布了: # Role CEO 助理秘书 ## Profile - author: 李继刚 - version: 0.1 - LLM: GPT-4 - Plugin: none - description: 专注于整理和生成高质量的会议纪要，确...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/6503fb42c70326f2eba60b1f",
@@ -265,9 +198,9 @@
           "description": "代码:\n- 这代码写的太\"漂亮\"了\n- 这谁写的臭代码!\n下棋:\n- 这步棋下的\"漂亮\"!\n- 这是一步臭棋\n为什么好的东西, 我们喜欢用\"视觉\"语言来描述, 而坏的东西, 喜欢用\"嗅觉\"语言来描述?",
           "link": "https://m.okjike.com/originalPosts/6503fb42c70326f2eba60b1f",
           "publishedOn": "2023-09-15T06:35:46.000Z",
-          "wordCount": 473,
+          "wordCount": null,
           "title": "发布了: 代码: - 这代码写的太\"漂亮\"了 - 这谁写的臭代码! 下棋: - 这步棋下的\"漂亮\"! - 这是一步臭棋 为什么好的东西, 我们喜欢用\"视觉\"语言来描述, 而坏的东西...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/65033d732c9bdd1af57bf75a",
@@ -275,9 +208,9 @@
           "description": "〝领导的本质，就是在不确定的世界中给人提供确定感的人。”",
           "link": "https://m.okjike.com/originalPosts/65033d732c9bdd1af57bf75a",
           "publishedOn": "2023-09-14T17:05:55.000Z",
-          "wordCount": 476,
+          "wordCount": null,
           "title": "发布了: 〝领导的本质，就是在不确定的世界中给人提供确定感的人。”",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/650337644101002b066d229e",
@@ -285,9 +218,9 @@
           "description": "人的大脑在硬件上就是强者愈强的模式，已经建立的神经元连接回路，加强它是相对容易的；重新建立一个新的神经元连接回路需要更多的努力。\n也就意味着：\n你在团队招人时，不应该去找全才，而应该去找怪才。 \n你在日常工作中，不应该盯别人的失误和缺点，而应该去发现对方的成功和亮点。\n多关注对方，多欣赏对方，多夸奖对方。\n对方的大脑会感谢你。",
           "link": "https://m.okjike.com/originalPosts/650337644101002b066d229e",
           "publishedOn": "2023-09-14T16:40:04.000Z",
-          "wordCount": 442,
+          "wordCount": null,
           "title": "发布了: 人的大脑在硬件上就是强者愈强的模式，已经建立的神经元连接回路，加强它是相对容易的；重新建立一个新的神经元连接回路需要更多的努力。 也就意味着： ...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/65028e478425e0dd3be87fd5",
@@ -295,9 +228,9 @@
           "description": "每个制度都有其适用的尺度。\n规模，环境，时机，都是生效制度的隐藏且重要因素，不可不察。",
           "link": "https://m.okjike.com/originalPosts/65028e478425e0dd3be87fd5",
           "publishedOn": "2023-09-14T04:38:31.000Z",
-          "wordCount": 441,
+          "wordCount": null,
           "title": "发布了: 每个制度都有其适用的尺度。 规模，环境，时机，都是生效制度的隐藏且重要因素，不可不察。",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/65027f804101002b06593d99",
@@ -305,9 +238,9 @@
           "description": "𝑝𝑟𝑜𝑚𝑝𝑡 𝑟𝑜𝑐𝑘𝑠",
           "link": "https://m.okjike.com/originalPosts/65027f804101002b06593d99",
           "publishedOn": "2023-09-14T03:35:28.000Z",
-          "wordCount": 454,
+          "wordCount": null,
           "title": "发布了: 𝑝𝑟𝑜𝑚𝑝𝑡 𝑟𝑜𝑐𝑘𝑠",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FkHdrjW0uLpihcwFdntcShfc1Qoov3.jpg?imageMogr2/auto-orient/crop/!x1950a0a0/thumbnail/x300"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/6501c8d78425e0dd3bd91359",
@@ -315,9 +248,9 @@
           "description": "使用比喻要非常小心\n因为它常反客为主",
           "link": "https://m.okjike.com/originalPosts/6501c8d78425e0dd3bd91359",
           "publishedOn": "2023-09-13T14:36:07.000Z",
-          "wordCount": 455,
+          "wordCount": null,
           "title": "发布了: 使用比喻要非常小心 因为它常反客为主",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/6501a40f02edc16158e58f00",
@@ -325,9 +258,9 @@
           "description": "Shopify COO Kaz 认为：\n「会议是其他一些流程没能顺利进行而导致的一个bug, 需要被 fix」",
           "link": "https://m.okjike.com/originalPosts/6501a40f02edc16158e58f00",
           "publishedOn": "2023-09-13T11:59:11.000Z",
-          "wordCount": 455,
+          "wordCount": null,
           "title": "发布了: Shopify COO Kaz 认为： 「会议是其他一些流程没能顺利进行而导致的一个bug, 需要被 fix」",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/650117eb8425e0dd3bc5ad47",
@@ -335,9 +268,9 @@
           "description": "𝐌𝐞𝐚𝐧𝐢𝐧𝐠 𝐨𝐟 𝐰𝐨𝐫𝐤\n工作 = 成长 x 开心 x 回报\n成长：通过这份工作，你学到了更多，见识更广，认知更深，能力更棒，今日之你比昨日之你变得更强。\n开心：你不只是在完成领导交待的每日任务，而是在完成一项使命，你每日的工作是在为那项使命做贡献，内心充满意义感和幸福感。𝒇𝒊𝒏𝒅 𝒔𝒐𝒎𝒆𝒕𝒉𝒊𝒏𝒈 𝒃𝒊𝒈𝒈𝒆𝒓 𝒕𝒉𝒂𝒏 𝒚𝒐𝒖𝒓𝒔𝒆𝒍𝒇.\n回报：你的成长，你对使命的贡献，同时被组织认可，换回应有的收入回报。\n三者但有所缺，工作对你而言，应是痛苦的吧。",
           "link": "https://m.okjike.com/originalPosts/650117eb8425e0dd3bc5ad47",
           "publishedOn": "2023-09-13T02:01:15.000Z",
-          "wordCount": 476,
+          "wordCount": null,
           "title": "发布了: 𝐌𝐞𝐚𝐧𝐢𝐧𝐠 𝐨𝐟 𝐰𝐨𝐫𝐤 工作 = 成长 x 开心 x 回报 成长：通过这份工作，你学到了更多，见识更广，认知更深，能力更...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/650110e53c00b8f53d443def",
@@ -345,9 +278,9 @@
           "description": "《成功公式》 笔记摘录\n成功定律一\n如果业务表现可测量，业务表现驱动成功；\n如果业务表现不可测量，则是网络驱动成功。 \n成功定律二\n业务表现是正态分布，成功的回报却是幂率分布。\n成功定律三\n未来的成功 = 欢迎度 x 适应度\n成功定律四\n团队需要多样性合作，但功劳往往归于一人。\n成功定律五\n成功 = 想法好坏 x 执行力\n想法好坏不好控制，但只要持续在场做下去，成功概率会大幅上升。",
           "link": "https://m.okjike.com/originalPosts/650110e53c00b8f53d443def",
           "publishedOn": "2023-09-13T01:31:17.000Z",
-          "wordCount": 463,
+          "wordCount": null,
           "title": "发布了: 《成功公式》 笔记摘录 成功定律一 如果业务表现可测量，业务表现驱动成功； 如果业务表现不可测量，则是网络驱动成功。 成功定律二 业务表现是正态分布...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/64f69f3e2a0c03ca1381ee8c",
@@ -355,9 +288,9 @@
           "description": "好像找到了一个目标函数：\n帮助完全不会编程的普通人写好prompt。\n(独学而无友，则孤陋而寡闻，订阅后加 jznhljg 进群切磋）",
           "link": "https://m.okjike.com/originalPosts/64f69f3e2a0c03ca1381ee8c",
           "publishedOn": "2023-09-05T03:23:42.000Z",
-          "wordCount": 485,
+          "wordCount": null,
           "title": "发布了: 好像找到了一个目标函数： 帮助完全不会编程的普通人写好prompt。 (独学而无友，则孤陋而寡闻，订阅后加 jznhljg 进群切磋）",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fslq9Vo2d4oZS7wwqnjmClW6Vq6tv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+          "imageUrl": null
         }
       ]
     },
@@ -1032,46 +965,6 @@
           "wordCount": 523,
           "title": "重庆市永川区发布暴雨橙色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230910/t20230910_526414219.html",
-          "author": "国家预警信息发布中心",
-          "description": "潼南区气象台2023年9月10日12时20分发布“高温橙色预警信号”，预计10日13时至18时，我区全部镇街日最高气温将升至37℃以上。请各地注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230910/t20230910_526414219.html",
-          "publishedOn": "2023-09-10T04:26:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市潼南区发布高温橙色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230910/t20230910_526414211.html",
-          "author": "国家预警信息发布中心",
-          "description": "垫江县气象台2023年9月10日12时发布“高温橙色预警信号”，预计9月10日12时至18时，我县桂阳街道、桂溪街道、杠家镇、高安镇、坪山镇、白家镇、包家镇、鹤游镇、砚台镇、永平镇、澄溪镇、高峰镇、五洞镇、周嘉镇、裴兴镇等乡镇（街道）日最高气温将升至37℃以上。请以上各地注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230910/t20230910_526414211.html",
-          "publishedOn": "2023-09-10T04:14:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市垫江县发布高温橙色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230910/t20230910_526414199.html",
-          "author": "国家预警信息发布中心",
-          "description": "永川区气象台2023年9月10日11时50分发布“高温橙色预警信号”，预计10日14时至19时，我区茶山竹海街道、陈食街道、临江镇、板桥镇、中山路街道、大安街道、金龙镇、南大街街道、宝峰镇、青峰镇、双石镇、胜利路街道、三教镇、红炉镇、松溉镇、朱沱镇、仙龙镇、五间镇、何埂镇、来苏镇、卫星湖街道海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230910/t20230910_526414199.html",
-          "publishedOn": "2023-09-10T03:56:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市永川区发布高温橙色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230910/t20230910_526414197.html",
-          "author": "国家预警信息发布中心",
-          "description": "万州区气象台2023年9月10日11时30分发布“高温橙色预警信号”，预计9月10日12时至18时，高笋塘街道、钟鼓楼街道、太白街道、沙河街道、天城街道、双河口街道、陈家坝街道、龙都街道、周家坝街道、长岭镇、长滩镇、新田镇、甘宁镇、郭村镇、太龙镇、龙驹镇、黄柏乡、武陵镇等地海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。注意防中暑、防溺水；注意林区、景区、城镇、古镇古街、农事活动、祭祀等火灾防范；注意节约用电、用水和安全生产；缩短户外活动和露天作业时间；相关部门和乡镇街道按照职责，做好高温防范应对工作。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230910/t20230910_526414197.html",
-          "publishedOn": "2023-09-10T03:50:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市万州区发布高温橙色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -1440,7 +1333,7 @@
           "description": "[7201047520812728355#周末怎么过#] 求一个看NBA直播的软件！！！",
           "link": "https://juejin.cn/pin/7277483626775216147",
           "publishedOn": "2023-09-11T09:23:46.000Z",
-          "wordCount": 528,
+          "wordCount": 526,
           "title": "[7201047520812728355#周末怎么过#] 求一个看NBA直播的软件！！！",
           "imageUrl": null
         },
