@@ -1,10 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-09-17T06:53:06.223Z</id>
+    <id>urn:2023-09-17T09:53:06.423Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-09-17T06:53:06.223Z</updated>
+    <updated>2023-09-17T09:53:06.423Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[发布了: 苹果将在下一个版本 iOS 17 中支持 AirDrop transfers over the internet，以前必须近距离通过蓝牙或者 WiFi 才可以传输文件，未来这一操作会变得更加便...]]></title>
+        <id>https://m.okjike.com/originalPosts/6506b96202edc16158571012</id>
+        <link href="https://m.okjike.com/originalPosts/6506b96202edc16158571012"/>
+        <updated>2023-09-17T08:31:30.000Z</updated>
+        <summary type="html"><![CDATA[苹果将在下一个版本 iOS 17 中支持 AirDrop transfers over the internet，以前必须近距离通过蓝牙或者 WiFi 才可以传输文件，未来这一操作会变得更加便捷，例如刚开始使用蓝牙传输，断开连接后可以继续保持通过网络进行传输。
+之前也看到一个开源项目 ShareDrop，https://github.com/szimek/sharedrop，它支持在局域网内实现类似 AirDrop 的文件传输能力，例如你想给你的同事发送文件，只需要双方都打开网页 sharedrop.io 就可以发现对方了。
+其原理是通过 WebRTC 建立点对点连接，FileSystem API 进行文件处理，然后使用 Firebase 进行用户管理和信号处理。iOS 17 基于网络的文件传输，想必也是相似的原理，使用点对点建立连接以确保安全性，只不过 STUN 服务由 iCloud 来提供。]]></summary>
+        <author>
+            <name>Barret李靖的即刻动态</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[又get到了，JS复制图片到剪切板]]></title>
+        <id>https://www.zhangxinxu.com/wordpress/?p=11015</id>
+        <link href="https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/"/>
+        <updated>2023-09-17T08:06:56.000Z</updated>
+        <summary type="html"><![CDATA[起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。]]></summary>
+        <author>
+            <name>张 鑫旭</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[发布了: 现在你可以通过浏览器直接起一个 PHP/Node.js 环境跑后端程序了，这是 Google I/O 2023 提到的一个 WebAssembly 实践，将 WordPress 直接运行在浏览器，...]]></title>
         <id>https://m.okjike.com/originalPosts/6505bb9e8425e0dd3b32e6d7</id>
@@ -52,6 +74,16 @@
   倪爽的阅读分享 – 2023年9月16日 查看全文 »]]></summary>
         <author>
             <name>Frank</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HTML elementtiming属性初体验记录]]></title>
+        <id>https://www.zhangxinxu.com/wordpress/?p=10971</id>
+        <link href="https://www.zhangxinxu.com/wordpress/2023/09/html-elementtiming-attribute/"/>
+        <updated>2023-09-15T15:58:22.000Z</updated>
+        <summary type="html"><![CDATA[自己体验了下，出乎意料，HTML elementtiming属性在性能监控这块，比预想的要实用的多。]]></summary>
+        <author>
+            <name>张 鑫旭</name>
         </author>
     </entry>
     <entry>
@@ -688,16 +720,6 @@ Vue3项目框架搭建封装，一次学习，终身受益【万字长文，满�
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[发布了: 看到一个分析，说话喜欢“内个…内个…那个…那个…”作为连接词的，都是脑子转太快，输出功率过高，嘴巴跟不上🤣]]></title>
-        <id>https://m.okjike.com/originalPosts/650139e9a925caf08a88fc99</id>
-        <link href="https://m.okjike.com/originalPosts/650139e9a925caf08a88fc99"/>
-        <updated>2023-09-13T04:26:17.000Z</updated>
-        <summary type="html"><![CDATA[看到一个分析，说话喜欢“内个…内个…那个…那个…”作为连接词的，都是脑子转太快，输出功率过高，嘴巴跟不上🤣]]></summary>
-        <author>
-            <name>Barret李靖的即刻动态</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[https://github.com/devlive-community/datacap 全平台数据中台系统 https://github.com/devlive-community/authx 全平台权限管理系统 https://github.com/devli...]]></title>
         <id>7277836718761820212</id>
         <link href="https://juejin.cn/pin/7277836718761820212"/>
@@ -755,6 +777,16 @@ https://github.com/devlive-community/openai-java-sdk  多平台开放 AI SDK
 想法好坏不好控制，但只要持续在场做下去，成功概率会大幅上升。]]></summary>
         <author>
             <name>李继刚的即刻动态</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Tips：form元素reset后input不触发change事件处理]]></title>
+        <id>https://www.zhangxinxu.com/wordpress/?p=11003</id>
+        <link href="https://www.zhangxinxu.com/wordpress/2023/09/form-reset-input-change/"/>
+        <updated>2023-09-12T15:52:48.000Z</updated>
+        <summary type="html"><![CDATA[坚持探索Web标准下的原生浏览器开发行为，行为驱动和数据驱动的表单开发其实各有千秋，深入HTML，你会发现这个世界比你所知的要精彩的多。]]></summary>
+        <author>
+            <name>张 鑫旭</name>
         </author>
     </entry>
     <entry>
@@ -2558,6 +2590,16 @@ Scrum 开发
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[做了个纯前端JPG/PNG尺寸缩放+压缩的在线工具]]></title>
+        <id>https://www.zhangxinxu.com/wordpress/?p=10983</id>
+        <link href="https://www.zhangxinxu.com/wordpress/2023/09/js-jpg-png-compress-tinyimg-mini/"/>
+        <updated>2023-09-05T13:05:30.000Z</updated>
+        <summary type="html"><![CDATA[相比于tinypng，我这个工具还自带尺寸设置功能，同时还可以控制压缩率，指定压缩格式，纯前端实现，高性能高效率。]]></summary>
+        <author>
+            <name>张 鑫旭</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[参考月刊 Vol.3 | 隐性知识学习指南（附EPUB资源）]]></title>
         <id>https://ouranswers.zhubai.love/posts/2310797045520371712</id>
         <link href="https://ouranswers.zhubai.love/posts/2310797045520371712"/>
@@ -3137,6 +3179,36 @@ Scrum 开发
 火药出现之后，战争进入了工业化阶段。士兵个人不那么重要了，谁的炮火更强大，谁获胜。所以，骑兵很快就被淘…]]></summary>
         <author>
             <name>阮一峰的网络日志</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[一言难尽的registerProtocolHandler()方法]]></title>
+        <id>https://www.zhangxinxu.com/wordpress/?p=10969</id>
+        <link href="https://www.zhangxinxu.com/wordpress/2023/08/js-registerprotocolhandler/"/>
+        <updated>2023-08-30T15:02:58.000Z</updated>
+        <summary type="html"><![CDATA[一开始看到registerProtocolHandler()方法老激动了，以为又发现了个好玩具，谁知深入体验了一番之后……呵呵~]]></summary>
+        <author>
+            <name>张 鑫旭</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Web referrer策略详解与防盗链图片的显示]]></title>
+        <id>https://www.zhangxinxu.com/wordpress/?p=10967</id>
+        <link href="https://www.zhangxinxu.com/wordpress/2023/08/web-referer-image-policy/"/>
+        <updated>2023-08-29T15:53:49.000Z</updated>
+        <summary type="html"><![CDATA[一个看似简单的HTML属性的底下，可能是一座巨大的冰山，referrer及其相关特性就是如此。]]></summary>
+        <author>
+            <name>张 鑫旭</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[狠狠地研究了下 PerformanceObserver API]]></title>
+        <id>https://www.zhangxinxu.com/wordpress/?p=10950</id>
+        <link href="https://www.zhangxinxu.com/wordpress/2023/08/js-performanceobserver-api/"/>
+        <updated>2023-08-27T08:34:24.000Z</updated>
+        <summary type="html"><![CDATA[Performance和PerformanceObserver，用户 Timing API，哦，学不完，根本学不完，这两周抽时间好好研究了一番，终于了解了个大概了🙊，特此记录下。]]></summary>
+        <author>
+            <name>张 鑫旭</name>
         </author>
     </entry>
     <entry>
