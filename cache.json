@@ -34,7 +34,7 @@
           "description": "起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/",
           "publishedOn": "2023-09-17T08:06:56.000Z",
-          "wordCount": 1486,
+          "wordCount": 1485,
           "title": "又get到了，JS复制图片到剪切板",
           "imageUrl": null
         },
@@ -64,7 +64,7 @@
           "description": "相比于tinypng，我这个工具还自带尺寸设置功能，同时还可以控制压缩率，指定压缩格式，纯前端实现，高性能高效率。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-jpg-png-compress-tinyimg-mini/",
           "publishedOn": "2023-09-05T13:05:30.000Z",
-          "wordCount": 1071,
+          "wordCount": 1070,
           "title": "做了个纯前端JPG/PNG尺寸缩放+压缩的在线工具",
           "imageUrl": null
         },
@@ -84,7 +84,7 @@
           "description": "一个看似简单的HTML属性的底下，可能是一座巨大的冰山，referrer及其相关特性就是如此。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/web-referer-image-policy/",
           "publishedOn": "2023-08-29T15:53:49.000Z",
-          "wordCount": 1093,
+          "wordCount": 1092,
           "title": "Web referrer策略详解与防盗链图片的显示",
           "imageUrl": null
         },
@@ -94,7 +94,7 @@
           "description": "Performance和PerformanceObserver，用户 Timing API，哦，学不完，根本学不完，这两周抽时间好好研究了一番，终于了解了个大概了🙊，特此记录下。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-performanceobserver-api/",
           "publishedOn": "2023-08-27T08:34:24.000Z",
-          "wordCount": 1300,
+          "wordCount": 1299,
           "title": "狠狠地研究了下 PerformanceObserver API",
           "imageUrl": null
         }
@@ -1203,7 +1203,7 @@
           "description": "🐛 问题复现\n之前在做 html 内容导出为 pdf、图片时，先是用 html2canvas 生成截屏，再进一步转换为 pdf 文件，感兴趣的同学可以看下这篇一文搞定前端 html 内容转图片、pdf 和 word 等文件，截图得到的图片内容、质量都没有什么问题。\n不过最近有个同事反应，他导出的图片有 bug，这我倒挺好奇的，因为这个导出功能已经用了很久，并没有人反馈过有问题（除了那个 pdf 翻页内容被截断的问题，求助 jym 🙏：前端有好的解决方法吗？），于是我要了他的文档，果不其然，出现了下面红框所示的问题。\n\n检查一下它的 DOM 结构，发现是下面这样，猜测是就是这个原因导致的。\n\n为了验证自己的猜想，浅浅调试一下 html2canvas 的源码，看下 html2canvas 是怎样一个流程，它是如何将 html内转成 canvas 的。\n调试开始\n在 html2canvas 执行的地方打个断点，开始调试代码：\n\n进入 html2canvas 内部，可以看到内部执行的是 renderElement 方法：\n\n咱们直接进入到 renderElement 方法内部，看下它的执行流程：\nrenderElement 执行流程\n判断传入节点是否有效\n\nNode.ownerDocument：只读属性，返回当前节点的顶层的 document 对象；\ndocument.defaultView：属性返回当前 document 对象所关联的 window 对象，如果没有，会返回 null。\n这里主要判断节点，快速跳过，继续执行 👇。\n合并配置项\n将用户传入的 options 与默认的 options 合并\n\n构建配置项，将传入的 opts 与默认配置合并，同时初始化一个 context 上下文对象（缓存、日志等）：\n\n缓存对象 cache\n其中 cache 为缓存对象，主要是避免…",
           "link": "https://juejin.cn/post/7277045020423798840",
           "publishedOn": "2023-09-10T14:03:06.000Z",
-          "wordCount": null,
+          "wordCount": 2735,
           "title": "悟了，html2canvas截图原理，看看它是如何截图的？",
           "imageUrl": null
         },
@@ -1243,7 +1243,7 @@
           "description": "近期接手的需求比较多，各个需求之间又不是线性关系（一个完事儿再开始另一个），往往经常出现一个还没完全结束，另一个就开始了...\n在这种场景下，我通常会采用 “空间换时间” 的方法，即对于项目A，我会拉取3 ~ 4份在本地，每一份对应一个分支，这样可以比较快速的切换项目并调试。\n当然，这只是个人的一种习惯，不是所有人都习惯这样，你若是喜欢在一个项目里频繁的切换分支，倒也何尝不是一种方法，但我不觉得这是一种好的方法。\n慢慢的，我经常不确定自己应该要打开哪个项目了，比如对于项目A，我本地有3 ~ 4份，切换时，我会使用 Control + R，调出顶部弹窗，在这里进行切换，就像下面这样：\n\n此时，我可以看到项目名称+项目路径，但是我看不到每个项目对应的分支名，这个对我来说无疑是一个巨大的痛点，我需要去到我的目标分支对应的项目中，但是很遗憾，我不能每次都可以很幸运的选到我想要的项目，经常会打开好几个我不需要的项目，这让我很头疼，每次切换前都祈祷这一次一定对！哈哈哈。\n所以，我的诉求就来了，我希望在查看这个目录的时候，能够多一项就是【分支名】，这样我可以很好的分辨出我要去哪个项目。\n所以，我大概花了2-3个小时完成了这件事，这件事已经在我脑海里1年多了，也尝试思考不同的解法，终于在这次找到了最优雅的解决方案~\n下面是增强后的效果：\n\n可以清楚的看到，在保留了原始功能的基础上，很得体的展现了项目对应的分支名！你可以一目了然的看到所有分支，当然，这些数据在你每次呼出侧边栏的时候，都是最新的！\nOK！你可以从这个链接进去安装这个插件，安装好之后，它会替代你原来的Control + R这个快捷键，你就不会再看到顶部的弹窗了，取而代之的是右侧这个还算美观的小侧边栏。\n插件商店链接：https://marketplace.visualstudio.com/items?itemName=xicunyang.show-project-with-git-branch\n下面是一些实现思路，如果你不感兴趣的话，看到这里就可以了！\n重点思路\n插件实现的其中最重要的一环是：“获取vscode弹窗里的项目列表”\n注意！这个列表不是固定死的，而是会将我们最新打开的项目放在最前面。这个列表是我非常需要的，因为不从这里获取的话，我很难统计到用户使用的是哪些工程，如果这些工程让用户手动录入，简直是太蠢了，但如果是我自己去扫描，也不是一个好方法，所以，这个列表是我最最重要的资源。\n那么如何获取这个列表的数据呢？\n简洁明了，直接去看vscode的源码吧，肯定能找着hahaha！\n但是，如何入手去看呢？那么老多代码，不好下手... 对！通过关键字去搜索！\n可以看到，弹窗内容里有这个关键字：\n\n咱们就从这里开始，直接从vscode源码里搜“选中以打开(按 Cmd 键”，会发现搜不到，这也正常，因为vscode源码里本来就没把中文内置进去，中文的表现是插件实现的，我们找到中文插件：\n\n然后顺利的得到了仓库地址，打开仓库就看到了源码，在源码里全局搜索，我们得到了一个关键的信息：openRecentPlaceholderMac\n\n这里大家都可以理解，这是做了国际化，真正在vscode源码里的应该是 openRecentPlaceholderMac ，所以我们去vscode源码里搜 openRecentPlaceholderMac 试一试\n耶，果然搜到了！\n\n按下面数字的顺序，我们可以反推出，数据来自于：workspacesService.getRecentlyOpened()\n\n现在我就担心一点，如果这个方法只是vscode内部使用的，没有对外部插件暴露的话，那就比较麻烦了，如果对外暴露了，我直接调用就可以拿到一样的数据了。\n最后经过不断的搜索和查询调用链（这是一个漫长的过程），最终找到了这里：\n\n看语义是注册了一个命令，命令的功能就是调用最近打开过的文件，并返回。\n所以，看到这里，仿佛就看到了曙光，我迫不及待的搭建了一个插件工程，调用，成功！\n\n至此，几乎就成功了一大半了，还有些细节就是获取对应目录的git分支，我问了下ChatGPT，得到了一个还不错的方法：\n\nOK！剩下的就是页面的搭建和消息传递，就不多做赘述了，大部分在谷歌上都可以搜到。\n以上，就是这次开发小插件的心得，试用了一天，感觉还是不错的，有同样痛点的同学可以使用试试哈！\nGit仓库地址：https://github.com/xicunyang/show-project-with-git-branch",
           "link": "https://juejin.cn/post/7276260308515274792",
           "publishedOn": "2023-09-08T13:06:28.000Z",
-          "wordCount": 981,
+          "wordCount": null,
           "title": "VSCode插件：简单增强 VSCode 的 Control + R",
           "imageUrl": null
         },
