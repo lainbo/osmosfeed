@@ -626,11 +626,95 @@ CEO 助理秘书
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-14 datetime="2023-09-14T17:05:55.000Z">2023-09-14</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-14 datetime="2023-09-14T17:05:55.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-14 datetime="2023-09-14T19:51:58.000Z">2023-09-14</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-14 datetime="2023-09-14T19:51:58.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7278517841884266536"
+                        open
+                      >
+                        <summary class="article-expander__title">各位微信小程序的开发者们，你们还好吗？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7278517841884266536">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言
+最近微信小程序隐私指引这波骚操作实在是太好玩了，剧情跌宕起伏，让人不由得直呼周星驰在《唐伯虎点秋香》里的那句名言“人生大起大落得太快，实在是太刺激了”。
+
+我自己因为有几个小程序需要做适配，所以全程体验了整个剧情，到今天感觉这过程实在是有点离谱，所以决定记录一下。以飨读者。
+起因
+让我们把时钟回拨到一个月前的8月14日，微信默默的发了一个足以影响所有小程序的公告 《关于小程序隐私保护指引设置的公告》。大概意思就是对于某些隐私接口，如相册，地理位置啥的，要给用户弹个窗，需要用户点同意以后才能调用。公告内容很多，总结起来有两个重点：
+这个弹窗要你们自己做哟。
+9月15号生效呦，在此之前要是没做弹窗，你的小程序就死定了呦。
+然后小伙伴们不敢怠慢，纷纷开始研究怎么个改法，社区论坛里乱成了一锅粥。
+有看文档看不懂的：
+
+有没看到公告早上上班突然发现接口都出错一脸懵的：
+
+
+还有先知先觉的：
+
+骂街的我就不贴了，以防不能过审。
+发展
+由于推出的过于仓促，阻碍了开发调试，引起开发者不满，官方很快又默默回滚了此次更新。并且鉴于大家都看不懂文档，也不知道怎么改代码。在小伙伴们的强烈呼吁下
+
+官方答应尽快推出demo。
+终于在8天之后的8月22日，距离9月15日大限还有24天的时候，大家翘首以盼的官方demo终于出现了。而且不是1个，是3个（后来又多了1个，一共4个）。这下一脸懵变成三（四）脸懵了。
+
+你让我用哪个？？？
+demo都有了，那就开干吧，还有二十几天，来得及。于是天真的小伙伴们开始高ma高ma兴lie兴lie的写bug。这次改动不仅仅涉及代码层面，还需要后台配置，前台配置，更新缓存，uni/taro框架，基础库版本，第三方开发等等各种问题，大家也是磕磕绊绊的慢慢的都摸清楚了该怎么做。
+由于此次改动涉及到所有的小程序，影响面太大，随着9月15号大限的临近，更多的问题渐渐浮出水面。
+首先就是那些维护着几十上百个小程序的小朋友，改动看似不多，但每一个都要走开发测试发版流程，而且必须在这短短的不到一个月的时间内完成，听起来就头大有木有？改不完，根本改不完，加班加点不睡觉也改不完。
+然后就是那些在线上跑了好几年没更新的小程序，有的是源代码都找不到了，有的原来的开发者早就提桶跑路了，直接欲哭无泪。
+还有后知后觉的，剩下几天就到大限的时候来社区里问这个隐私协议是个啥？这么重要的事情平台为什么没有早点通知我？？？
+最后，就是审核变的奇慢无比，原来几个小时就有结果，而现在有小程序审核了好几天了还是没有反应。这其实也是可以预见的，这种影响所有小程序的改动必然会导致版本发布量大增，微信这是人为的自己给自己制造了个审核DDOS，但后果都是开发者承担。就问你急不急吧
+
+就剩几天的时候，有小伙伴被逼的没办法了，不得不使用了一年一次平时打死都不敢用的加急审核。
+当时间来到今天，也就是9.15大限前最后一天的时候，上了车的暗自庆幸，没上车的放弃治疗，尘埃即将落定，大家各安天命的时候，意想不到的转折又来了。。。
+高潮
+9月14号晚上20点38分，也就是距离9月15号0点还有3个多小时的时候，微信官方又发布了一条公告：
+
+总结下来就两点：
+原来说大限是还剩3个小时的9月15号，新的大限推迟到10月17号。
+代码不改也没关系，平台自己会弹窗。
+啊？？？？？？？？？？？？？？？
+啥？？？？？？？？？？？？？？？
+就剩3个小时了你给我来个180度大转弯？？？？？？？？？？？
+不瞒你们说，我晚上看到这个公告的开始的表情是：
+
+然后是
+
+这下原本上了车的直接被180度逮虾户给甩出去了，合着我吭哧吭哧费劲巴拉的折腾了一个月眼看就剩3个小时了你告诉我都是白干？？？你平台为什么不一开始就把方案定成你们自己处理，非要折磨我们开发者？？？我加班都是白加了？我的用掉的加急审核次数能不能退给我？？我怎么觉得有一种被人耍了的感觉？
+离最后期限3个小时啊，不是3周，也不是3天，是3个小时啊。你们官方人员业余都是玩赛车的还是兼职开渣土车的啊，平时上下班开车是不是都是漂移过弯啊。
+未完待续
+这事就这么完了吗？ no no no，我觉得还没完，接下来这几天社区里估计又要炸锅了，大家喜欢看热闹的没事可以去围观一下。这不又延期了一个月吗？再出什么幺蛾子我是一点都不会感到意外了。
+最后，我觉得这件事印证了我之前听过的一句话，“这个世界就是个巨大的草台班子”。
+最后的最后，拿社区里最经典的一张动图镇楼</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -1345,6 +1429,8 @@ TCP三次握手，每一次失败会怎么样
 Vue3项目框架搭建封装，一次学习，终身受益【万字长文，满满干货】 - 掘金
 小程序原理，这个我实习阶段就已经在研究了，只是太久不做，忘记了，回答得不好。
 微信小程序底层框架实现原理｜万字长文…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2981,65 +3067,6 @@ tree 命令可以输出目录的树形结构
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7277065056575848448"
-                        open
-                      >
-                        <summary class="article-expander__title">如何在上班时间利用终端控制台摸鱼🧐🧐🧐</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7277065056575848448">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: cyanosis
-highlight: atom-one-dark
-作为一个资深的摸鱼小能手，班我们每天要上，终端也是我们也要每天要用到的，那么有什么办法可以在控制台终端中去摸鱼呢，那么在接下来的文章中我们就来看看它可以做到怎么样摸鱼。
-简介
-在我们开发的项目中，几乎有很多项目要都是使用 webpack 作为构建工具来进行开发的，在它进行构建的时候，会有一些信息会输出在控制台上面，如下图所示：
-
-爱瞎折腾的朋友们可能就会想了，为什么 create-react-pp 也是用的 webpack 作为构建工具，为什么我的输出和它的输出是不一样的呢？
-
-compiler
-通过查阅文档，我发现了问题所在，原来在 webpack 中它提供了一个 compiler 钩子，它用来监控文件系统的 监听(watching) 机制，并且在文件修改时重新编译。 当处于监听模式(watch mode)时， compiler 会触发诸如 watchRun, watchClose 和 invalid 等额外的事件。
-done 钩子就是当我们的代码被编译完成的时候被调用的。
-如何调用 done 钩子
-要想调用我们的 done 钩子，首先我们要引入 webpack 包，并把 webpack 配置传递给 webpack 函数，如下图所示：
-
-接下来我们看看终端输出：
-
-这些就是我们的一些 webpack 配置，在这个 compiler 对象上，它存在一个 hooks 对象，如下代码所示：
-compiler.hooks.done.tap(&quot;done&quot;, async (stats) &#x3D;&gt; {
-  console.log(11111111111111);
-});
-
-它会在代码编译完成阶段调用该回调函数:
-
-咦，你会发现了，代码编译执行完成，我的终端上的输出会这么干净，是因为在输出控制台之前， 已经被我调用了一个函数清空了。
-通过这个函数，你可以情况控制台上的一些输出信息，如下代码所示：
-function clearConsole() {
-  process.stdout.write(
-    process.platform &#x3D;&#x3D;&#x3D; &quot;win32&quot; ? &quot;\x1B[2J\x1B[0f&quot; : &quot;\x1B[2J\x1B[3J\x1B[H&quot;
-  );
-}
-
-再调用以下，你会发现控制台上面很干净的，图下图所示：
-
-要想这一些个性化的输出,我们直接在这个回调函数中打印输出就可以了，如果你要你输出的信息和项目中的信息有关，你可以利用 stats 这个参数：
-
-大概就这样子，如果你想更好玩的话，你可以使用一些网络请求库，去获取一些网络资源：
-
-去获取这些资源都是可以的呀。
-总结
-如果你的项目是使用的 webpack，并且要想在项目的开发中自定义，你可以通过 compiler.hooks 的方式去监听不同的钩子，然后通过不同的方式来实现不同的信息输出。
-源代码地址</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -3625,25 +3652,6 @@ function clearConsole() {
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>北碚区气象台2023年9月10日9时30分发布“高温橙色预警信号”，预计10日13时至19时，天府镇、朝阳街道、澄江镇、东阳街道、三圣镇、柳荫镇、金刀峡镇、静观镇、施家梁镇、龙凤桥街道、歇马街道、蔡家岗街道、童家溪镇、复兴街道、天生街道、水土街道、北温泉街道海拔400米以下地区日最高气温将升至37℃以上。请以上各地注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230910/t20230910_526414005.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市沙坪坝区发布高温橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230910/t20230910_526414005.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>沙坪坝区气象台2023年9月10日09时发布“高温橙色预警信号”，预计10日13时至19时，天星桥街道、磁器口街道、沙坪坝街道、小龙坎街道、土湾街道、联芳街道、土主街道、陈家桥街道、回龙坝镇、丰文街道、青木关镇、中梁镇、双碑街道、凤凰镇、覃家岗街道、歌乐山街道、新桥街道、山洞街道、渝碚路街道、石井坡街道、童家桥街道、井口街道海拔400米以下地区日最高气温将升至37℃以上。请以上各地做好防火、防中暑、防溺水和安全生产工作，注意节约用水用电。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -6170,8 +6178,8 @@ Scrum 开发
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6209781076">
-        <time id="build-timestamp" datetime="2023-09-16T21:53:04.760Z">2023-09-16T21:53:04.760Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6210708338">
+        <time id="build-timestamp" datetime="2023-09-17T01:15:42.695Z">2023-09-17T01:15:42.695Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
