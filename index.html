@@ -51,8 +51,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-17 datetime="2023-09-17T08:31:30.000Z">2023-09-17</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-17 datetime="2023-09-17T08:31:30.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-17 datetime="2023-09-17T12:35:00.000Z">2023-09-17</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-17 datetime="2023-09-17T12:35:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -71,15 +71,37 @@
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/6506f27415391e4bc7511b1d"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: LangChain 也开始推出了自己的 Prompt 中心化管理产品，LangSmith，https://smith.langchain.com，整个产品围绕 Prompt 的调试、测试、执行和监控提供一...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6506f27415391e4bc7511b1d">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FgBiPRLPrapPUik_hDJON7VB_kgXv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>LangChain 也开始推出了自己的 Prompt 中心化管理产品，LangSmith，https://smith.langchain.com，整个产品围绕 Prompt 的调试、测试、执行和监控提供一条龙服务，而且默认支持了 OpenAI/Meta/Google/Claude 等几家大模型，方便开发者直接对接和使用。
+之前也提到过 LangChain 的缺点，https://twitter.com/Barret_China/status/1683135367862718465，它最早的设计几乎是为 OpenAI 量身定制的，底层 LLM 一更换，就会出现严重失调，LangSmith 这个产品弥补了 LangChain 在生态支持上的缺失。
+实际上这类 Prompt 产品已经很卷了，之前有介绍过 FlowGPT/PromptPerfect/PromptKnit 等等，相比之下，LangSmith 的优势是提供了更加轻便的 SDK，通过一句简单的资源声明就可以直接获取到服务，提升了开发者体验，如图二所示。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://m.okjike.com/originalPosts/6506b96202edc16158571012"
                         open
                       >
-                        <summary class="article-expander__title">发布了: 苹果将在下一个版本 iOS 17 中支持 AirDrop transfers over the internet，以前必须近距离通过蓝牙或者 WiFi 才可以传输文件，未来这一操作会变得更加便...</summary>
+                        <summary class="article-expander__title">发布了: 苹果在 iOS 17 中已经支持了 AirDrop transfers over the internet，以前必须近距离通过蓝牙或者 WiFi 才可以传输文件，未来这一操作会变得更加便捷，例...</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6506b96202edc16158571012">
                           <div class="article-summary-box-inner media-object">
                               <img src="https://cdnv2.ruguoapp.com/Fo3602O_GkSlXgFY19IiCXFVEcQmv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
-                              <span>苹果将在下一个版本 iOS 17 中支持 AirDrop transfers over the internet，以前必须近距离通过蓝牙或者 WiFi 才可以传输文件，未来这一操作会变得更加便捷，例如刚开始使用蓝牙传输，断开连接后可以继续保持通过网络进行传输。
+                              <span>苹果在 iOS 17 中已经支持了 AirDrop transfers over the internet，以前必须近距离通过蓝牙或者 WiFi 才可以传输文件，未来这一操作会变得更加便捷，例如刚开始使用蓝牙传输，断开连接后可以继续保持通过网络进行传输。
 之前也看到一个开源项目 ShareDrop，https://github.com/szimek/sharedrop，它支持在局域网内实现类似 AirDrop 的文件传输能力，例如你想给你的同事发送文件，只需要双方都打开网页 sharedrop.io 就可以发现对方了。
 其原理是通过 WebRTC 建立点对点连接，FileSystem API 进行文件处理，然后使用 Firebase 进行用户管理和信号处理。iOS 17 基于网络的文件传输，想必也是相似的原理，使用点对点建立连接以确保安全性，只不过 STUN 服务由 iCloud 来提供。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
@@ -1215,26 +1237,6 @@ demo都有了，那就开干吧，还有二十几天，来得及。于是天真�
 如果你注册和使用过 ChatGPT，那你对这篇文章要解决的问题就会深有感触，注册时使用邮箱登录后，OpenAI 会要求你绑定一个手机号码，而这个手机号码不允许是中国大陆区的，很多人都会卡在这一步。
 有两条路径来解决这个问题，1）使用接码平台，临时租一个非大陆手机号码，用来接收验证码；2）你可以直接购买一张非大陆区的手机卡。本文会告诉你，这两条路径分别该怎么走。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/650184f38425e0dd3bd1c18a"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 看到推友们经常提到土耳其的低成本 iCloud 方案，昨晚上折腾了两个小时，成功申请到了一张土区的银行卡，通过 Wise 入金一天后到账，也顺利绑到了土区的...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/650184f38425e0dd3bd1c18a">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FlVF2fclNrJ-xp0Nc66G5dPApuhyv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>看到推友们经常提到土耳其的低成本 iCloud 方案，昨晚上折腾了两个小时，成功申请到了一张土区的银行卡，通过 Wise 入金一天后到账，也顺利绑到了土区的 APP Store 账号上。成本确实低了很多，这算是合法薅羊毛么😂</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3130,6 +3132,65 @@ tree 命令可以输出目录的树形结构
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7277065056575848448"
+                        open
+                      >
+                        <summary class="article-expander__title">如何在上班时间利用终端控制台摸鱼🧐🧐🧐</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7277065056575848448">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: cyanosis
+highlight: atom-one-dark
+作为一个资深的摸鱼小能手，班我们每天要上，终端也是我们也要每天要用到的，那么有什么办法可以在控制台终端中去摸鱼呢，那么在接下来的文章中我们就来看看它可以做到怎么样摸鱼。
+简介
+在我们开发的项目中，几乎有很多项目要都是使用 webpack 作为构建工具来进行开发的，在它进行构建的时候，会有一些信息会输出在控制台上面，如下图所示：
+
+爱瞎折腾的朋友们可能就会想了，为什么 create-react-pp 也是用的 webpack 作为构建工具，为什么我的输出和它的输出是不一样的呢？
+
+compiler
+通过查阅文档，我发现了问题所在，原来在 webpack 中它提供了一个 compiler 钩子，它用来监控文件系统的 监听(watching) 机制，并且在文件修改时重新编译。 当处于监听模式(watch mode)时， compiler 会触发诸如 watchRun, watchClose 和 invalid 等额外的事件。
+done 钩子就是当我们的代码被编译完成的时候被调用的。
+如何调用 done 钩子
+要想调用我们的 done 钩子，首先我们要引入 webpack 包，并把 webpack 配置传递给 webpack 函数，如下图所示：
+
+接下来我们看看终端输出：
+
+这些就是我们的一些 webpack 配置，在这个 compiler 对象上，它存在一个 hooks 对象，如下代码所示：
+compiler.hooks.done.tap(&quot;done&quot;, async (stats) &#x3D;&gt; {
+  console.log(11111111111111);
+});
+
+它会在代码编译完成阶段调用该回调函数:
+
+咦，你会发现了，代码编译执行完成，我的终端上的输出会这么干净，是因为在输出控制台之前， 已经被我调用了一个函数清空了。
+通过这个函数，你可以情况控制台上的一些输出信息，如下代码所示：
+function clearConsole() {
+  process.stdout.write(
+    process.platform &#x3D;&#x3D;&#x3D; &quot;win32&quot; ? &quot;\x1B[2J\x1B[0f&quot; : &quot;\x1B[2J\x1B[3J\x1B[H&quot;
+  );
+}
+
+再调用以下，你会发现控制台上面很干净的，图下图所示：
+
+要想这一些个性化的输出,我们直接在这个回调函数中打印输出就可以了，如果你要你输出的信息和项目中的信息有关，你可以利用 stats 这个参数：
+
+大概就这样子，如果你想更好玩的话，你可以使用一些网络请求库，去获取一些网络资源：
+
+去获取这些资源都是可以的呀。
+总结
+如果你的项目是使用的 webpack，并且要想在项目的开发中自定义，你可以通过 compiler.hooks 的方式去监听不同的钩子，然后通过不同的方式来实现不同的信息输出。
+源代码地址</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -3407,59 +3468,6 @@ K -- 否 --&gt; C
 接口设计
 根据上面分析出来的流程图，我们了解到
 登录二维…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7277045020423045176"
-                        open
-                      >
-                        <summary class="article-expander__title">纯前端也可以访问文件系统！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7277045020423045176">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: fancy
-highlight: atelier-dune-dark
-前言
-周末逛github的时候，发现我们只需要在github域名上加上1s他就能够打开一个vscode窗口来阅读代码，比起在github仓库中查看更加方便
-
-然后我就想网页端vscode能不能打开我本地的项目呢，带着这个疑惑我打开了网页版vscode，它居然真的可以打开我本地的项目代码!
-
-难道又出了新的API让前端的能力更进一步了？打开MDN查了一下相关文档，发现了几个新的API
-showOpenFilePicker
-用来选择文件
-
-语法
-showOpenFilePicker()
-
-参数
-options：（可选）包含以下属性
-
-multiple：布尔值，默认为false。为true表示允许用户选择多个文件
-excludeAcceptAllOption：布尔值，默认为false。默认情况下，文件选择器带有一个允许用户选择所有类型文件的过滤选项（展开于文件类型选项中）。设置此选项为 true 以使该过滤选项不可用。
-types：表示允许选择的文件类型的数组
-返回值
-返回一个promise对象，会兑现一个包含 FileSystemFileHandle 对象的 Array 数组。
-体验
-
-  
-打开文件
- {
-  const res &#x3D; await window.showOpenFilePicker();
-  console.log(res);
-};
-
-
-默认只能打开一个文件，可以传入multiple:true打开多个文件
-
-showDir…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
@@ -5825,8 +5833,8 @@ Scrum 开发
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6212877385">
-        <time id="build-timestamp" datetime="2023-09-17T09:53:06.379Z">2023-09-17T09:53:06.379Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6213699416">
+        <time id="build-timestamp" datetime="2023-09-17T12:54:50.339Z">2023-09-17T12:54:50.339Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
