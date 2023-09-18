@@ -1,10 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-09-18T01:15:05.098Z</id>
+    <id>urn:2023-09-18T03:53:05.655Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-09-18T01:15:05.098Z</updated>
+    <updated>2023-09-18T03:53:05.655Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[发布了: 不依赖后端环境，如何在浏览器直接起一个 Node.js 应用程序？StackBlitz 对外公布它们的 WebContainerAPI，https://webcontainers.io，使用 WebAssembly...]]></title>
+        <id>https://m.okjike.com/originalPosts/6507b7858425e0dd3b5bb0e4</id>
+        <link href="https://m.okjike.com/originalPosts/6507b7858425e0dd3b5bb0e4"/>
+        <updated>2023-09-18T02:35:49.000Z</updated>
+        <summary type="html"><![CDATA[不依赖后端环境，如何在浏览器直接起一个 Node.js 应用程序？StackBlitz 对外公布它们的 WebContainerAPI，https://webcontainers.io，使用 WebAssembly 将 Node.js 编译成一个 .wasm 文件，直接跑在了浏览器上。
+下图是一个在浏览器执行安装 node_modules 依赖后，启动 Node.js 程序，并监听本地端口的一个 Demo。WebContainerAPI 提供了基于内存的虚拟文件系统，并使用 ServiceWorker 劫持请求，当前它对端口的监控是模拟的，它还无法完全调度操作系统的所有资源。
+这里有一个教程，完整演示了，如何从零到一构建一个 Node.js run in web 的 Playground：https://webcontainers.io/tutorial/1-build-your-first-webcontainer-app，这个方向的研究可以帮助我们打开更多 Web 上的脑洞。]]></summary>
+        <author>
+            <name>Barret李靖的即刻动态</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[重庆市开州区发布暴雨黄色预警]]></title>
+        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20230918/t20230918_526423511.html</id>
+        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20230918/t20230918_526423511.html"/>
+        <updated>2023-09-18T02:25:00.000Z</updated>
+        <summary type="html"><![CDATA[开州区气象局2023年9月18日10时20分发布“暴雨黄色预警信号”，预计未来6小时，雪宝山镇、关面乡、河堰镇、谭家镇、满月镇、大进镇、敦好镇、麻柳乡、和谦镇、高桥镇、紫水乡累计雨量将达50-80毫米，最大小时雨量可达20-40毫米，并伴有雷电、阵性大风等强对流天气。]]></summary>
+        <author>
+            <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[重庆市巫溪县发布暴雨黄色预警]]></title>
+        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20230918/t20230918_526423470.html</id>
+        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20230918/t20230918_526423470.html"/>
+        <updated>2023-09-18T01:58:00.000Z</updated>
+        <summary type="html"><![CDATA[巫溪县气象台2023年9月18日9时30分发布“暴雨黄色预警信号”，预计未来6小时，田坝镇、尖山镇、红池坝镇、朝阳镇、文峰镇、天元乡、土城镇、乌龙乡等街道（乡镇）累计雨量将达50-80毫米，最大小时雨强可达20-30毫米，并伴有雷电、阵性大风等强对流天气；注意防范强降水可能诱发的山体滑坡、泥石流、中小河流洪水、山洪、城乡积涝等次生灾害，以及雷电、大风和冰雹可能造成的不利影响。]]></summary>
+        <author>
+            <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[重庆市城口县发布暴雨黄色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/huangsyj/20230918/t20230918_526423276.html</id>
@@ -562,18 +594,6 @@ demo都有了，那就开干吧，还有二十几天，来得及。于是天真�
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[发布了: Chrome 在 Web 体验优化方向推出了一项新的技术，View Transition，当进行页面跳转时，可以做到跟 Native 一样丝滑，在页面不刷新的情况下，继续保持着...]]></title>
-        <id>https://m.okjike.com/originalPosts/6503261e1589e4a51a95e06b</id>
-        <link href="https://m.okjike.com/originalPosts/6503261e1589e4a51a95e06b"/>
-        <updated>2023-09-14T15:26:22.000Z</updated>
-        <summary type="html"><![CDATA[Chrome 在 Web 体验优化方向推出了一项新的技术，View Transition，当进行页面跳转时，可以做到跟 Native 一样丝滑，在页面不刷新的情况下，继续保持着动画效果。
-实现这一效果的成本不高，只需要给元素附加一些 view transition 相关的 CSS 声明就行了，这个能力在 Chrome 111+ 版本已经开始支持。
-相关文档：https://developer.chrome.com/docs/web-platform/view-transitions/]]></summary>
-        <author>
-            <name>Barret李靖的即刻动态</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[[7073670907851440160#新人报道#] 新的部门里的技术大佬用.net core技术，这 对自己来说就是一个全新的领域。在某国外软件上做二次开发好多年，突然转到这个来，...]]></title>
         <id>7278509192508555298</id>
         <link href="https://juejin.cn/pin/7278509192508555298"/>
@@ -1073,6 +1093,37 @@ jcode
           <div :class="[isCorrectB?'text4':bbb? 'text…]]></summary>
         <author>
             <name>意会</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[🏮中秋节特别定制：CSS创造属于你的许愿灯之夜<结尾有彩蛋>]]></title>
+        <id>https://juejin.cn/post/7278123169259487289</id>
+        <link href="https://juejin.cn/post/7278123169259487289"/>
+        <updated>2023-09-13T07:33:33.000Z</updated>
+        <summary type="html"><![CDATA[theme: juejin
+掘友们，不卖关子，让我们先运行点击文字预览一波效果！！！🏮
+jcode
+# 中秋创意投稿大赛
+中秋节，又称为月圆节，是中国传统的重要节日之一。这一天，家人团聚，赏月吃月饼，而其中一个备受期待的活动就是放飞许愿灯。在上篇文章:# 多"财"多"亿"迎中秋<前端技术制作中秋贺卡>。初探前端，制作了一个贺卡，这次我将展示如何使用前端技术制作一个令人惊叹的许愿灯升空动画，让掘友们的中秋节更加特别。
+先别说别的掘友们：小弟祝大家年年圆满如意，月月事事顺心，日日喜悦无忧，时时高兴欢喜，刻刻充满朝气，月圆人圆花好，事顺业顺家兴！中秋节快乐！
+好，接下来让我们开始摇摆
+在开始之前，确保准备好以下资源：
+美妙的音乐：为许愿灯升空场景选择一段特别的音乐。这段音乐将为动画增色不少。在该文章中，我使用了名为 "start.ogg" 的音频文件。
+独特的SVG图形：创建一个独一无二的许愿灯SVG图形，你可以使用矢量图形编辑工具（如Adobe Illustrator）来实现。确保图形有足够的细节，使其在动画中看起来更加生动。
+HTML 结构
+首先，创建一个HTML文件，用于容纳我们的SVG图形和触发动画的按钮。以下是一个简化的HTML结构：
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中秋节许愿灯</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <svg viewBox="0 0 800 600" xmlns="http…]]></summary>
+        <author>
+            <name>扑拉鹅子</name>
         </author>
     </entry>
     <entry>
@@ -2691,56 +2742,6 @@ tree 命令可以输出目录的树形结构
   这也是我在看到 GPT 支持 function cal…]]></summary>
         <author>
             <name>也树</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[如何在上班时间利用终端控制台摸鱼🧐🧐🧐]]></title>
-        <id>https://juejin.cn/post/7277065056575848448</id>
-        <link href="https://juejin.cn/post/7277065056575848448"/>
-        <updated>2023-09-11T01:11:45.000Z</updated>
-        <summary type="html"><![CDATA[theme: cyanosis
-highlight: atom-one-dark
-作为一个资深的摸鱼小能手，班我们每天要上，终端也是我们也要每天要用到的，那么有什么办法可以在控制台终端中去摸鱼呢，那么在接下来的文章中我们就来看看它可以做到怎么样摸鱼。
-简介
-在我们开发的项目中，几乎有很多项目要都是使用 webpack 作为构建工具来进行开发的，在它进行构建的时候，会有一些信息会输出在控制台上面，如下图所示：
-
-爱瞎折腾的朋友们可能就会想了，为什么 create-react-pp 也是用的 webpack 作为构建工具，为什么我的输出和它的输出是不一样的呢？
-
-compiler
-通过查阅文档，我发现了问题所在，原来在 webpack 中它提供了一个 compiler 钩子，它用来监控文件系统的 监听(watching) 机制，并且在文件修改时重新编译。 当处于监听模式(watch mode)时， compiler 会触发诸如 watchRun, watchClose 和 invalid 等额外的事件。
-done 钩子就是当我们的代码被编译完成的时候被调用的。
-如何调用 done 钩子
-要想调用我们的 done 钩子，首先我们要引入 webpack 包，并把 webpack 配置传递给 webpack 函数，如下图所示：
-
-接下来我们看看终端输出：
-
-这些就是我们的一些 webpack 配置，在这个 compiler 对象上，它存在一个 hooks 对象，如下代码所示：
-compiler.hooks.done.tap("done", async (stats) => {
-  console.log(11111111111111);
-});
-
-它会在代码编译完成阶段调用该回调函数:
-
-咦，你会发现了，代码编译执行完成，我的终端上的输出会这么干净，是因为在输出控制台之前， 已经被我调用了一个函数清空了。
-通过这个函数，你可以情况控制台上的一些输出信息，如下代码所示：
-function clearConsole() {
-  process.stdout.write(
-    process.platform === "win32" ? "\x1B[2J\x1B[0f" : "\x1B[2J\x1B[3J\x1B[H"
-  );
-}
-
-再调用以下，你会发现控制台上面很干净的，图下图所示：
-
-要想这一些个性化的输出,我们直接在这个回调函数中打印输出就可以了，如果你要你输出的信息和项目中的信息有关，你可以利用 stats 这个参数：
-
-大概就这样子，如果你想更好玩的话，你可以使用一些网络请求库，去获取一些网络资源：
-
-去获取这些资源都是可以的呀。
-总结
-如果你的项目是使用的 webpack，并且要想在项目的开发中自定义，你可以通过 compiler.hooks 的方式去监听不同的钩子，然后通过不同的方式来实现不同的信息输出。
-源代码地址]]></summary>
-        <author>
-            <name>Moment</name>
         </author>
     </entry>
     <entry>
