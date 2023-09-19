@@ -24,83 +24,6 @@
       ]
     },
     {
-      "title": "张鑫旭-鑫空间-鑫生活",
-      "feedUrl": "https://www.zhangxinxu.com/wordpress/feed/",
-      "siteUrl": "https://www.zhangxinxu.com/wordpress",
-      "articles": [
-        {
-          "id": "https://www.zhangxinxu.com/wordpress/?p=11015",
-          "author": "张 鑫旭",
-          "description": "起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。",
-          "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/",
-          "publishedOn": "2023-09-17T08:06:56.000Z",
-          "wordCount": 1499,
-          "title": "又get到了，JS复制图片到剪切板",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.zhangxinxu.com/wordpress/?p=10971",
-          "author": "张 鑫旭",
-          "description": "自己体验了下，出乎意料，HTML elementtiming属性在性能监控这块，比预想的要实用的多。",
-          "link": "https://www.zhangxinxu.com/wordpress/2023/09/html-elementtiming-attribute/",
-          "publishedOn": "2023-09-15T15:58:22.000Z",
-          "wordCount": 956,
-          "title": "HTML elementtiming属性初体验记录",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.zhangxinxu.com/wordpress/?p=11003",
-          "author": "张 鑫旭",
-          "description": "坚持探索Web标准下的原生浏览器开发行为，行为驱动和数据驱动的表单开发其实各有千秋，深入HTML，你会发现这个世界比你所知的要精彩的多。",
-          "link": "https://www.zhangxinxu.com/wordpress/2023/09/form-reset-input-change/",
-          "publishedOn": "2023-09-12T15:52:48.000Z",
-          "wordCount": 1119,
-          "title": "Tips：form元素reset后input不触发change事件处理",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.zhangxinxu.com/wordpress/?p=10983",
-          "author": "张 鑫旭",
-          "description": "相比于tinypng，我这个工具还自带尺寸设置功能，同时还可以控制压缩率，指定压缩格式，纯前端实现，高性能高效率。",
-          "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-jpg-png-compress-tinyimg-mini/",
-          "publishedOn": "2023-09-05T13:05:30.000Z",
-          "wordCount": 1090,
-          "title": "做了个纯前端JPG/PNG尺寸缩放+压缩的在线工具",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.zhangxinxu.com/wordpress/?p=10969",
-          "author": "张 鑫旭",
-          "description": "一开始看到registerProtocolHandler()方法老激动了，以为又发现了个好玩具，谁知深入体验了一番之后……呵呵~",
-          "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-registerprotocolhandler/",
-          "publishedOn": "2023-08-30T15:02:58.000Z",
-          "wordCount": 989,
-          "title": "一言难尽的registerProtocolHandler()方法",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.zhangxinxu.com/wordpress/?p=10967",
-          "author": "张 鑫旭",
-          "description": "一个看似简单的HTML属性的底下，可能是一座巨大的冰山，referrer及其相关特性就是如此。",
-          "link": "https://www.zhangxinxu.com/wordpress/2023/08/web-referer-image-policy/",
-          "publishedOn": "2023-08-29T15:53:49.000Z",
-          "wordCount": 1096,
-          "title": "Web referrer策略详解与防盗链图片的显示",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.zhangxinxu.com/wordpress/?p=10950",
-          "author": "张 鑫旭",
-          "description": "Performance和PerformanceObserver，用户 Timing API，哦，学不完，根本学不完，这两周抽时间好好研究了一番，终于了解了个大概了🙊，特此记录下。",
-          "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-performanceobserver-api/",
-          "publishedOn": "2023-08-27T08:34:24.000Z",
-          "wordCount": 1301,
-          "title": "狠狠地研究了下 PerformanceObserver API",
-          "imageUrl": null
-        }
-      ]
-    },
-    {
       "title": "阮一峰的网络日志",
       "feedUrl": "https://feeds.feedburner.com/ruanyifeng",
       "siteUrl": "http://www.ruanyifeng.com/blog/",
@@ -158,9 +81,9 @@
           "description": "Web 网页性能的三大衡量指标 LCP/FID/CLS 已经推出来三年多了，大量网站都会根据 Chrome Devtools 的提醒对指标进行优化，不过近期 Chrome 对其进行了调整，其中 FID 未来会被替换成 INP（Interaction to Next Paint）。\nFID（First Input Delay）可以很好地衡量网页从开始加载到可交互的时长，据 Chrome 统计，目前已经有 93% 的网页达到了 200ms 以内，也就是 Good FID，但事实上从真实体感来看，只有 65% 的网站体验是流畅的，剩下来的 35% 只是做到了指标数据上好看。\n这让我想起了较早之前公司做网页优化的时候，无限追求秒开率，甚至推出红黑榜强制要求开发者进行优化，结果最后就变成了，开发者把渲染和计算的任务全部推迟，等网页骨架在 1s 内完成渲染后再执行繁重任务，以逃过黑榜。这种优化策略，往往会落到 35% 的区间，指标好看而已。\nChrome 也发文分析了，https://web.dev/inp-cwv，到底以怎样的方式来衡量网页体验才是最佳的，INP 会持续探测网页上用户行为的真实可交互时间，任何一次按钮点击超过 500ms，都会认为你的网站 INP 不达标，目的是让开发者关注网页整体交互周期的性能问题，而不仅仅是首次加载的体验。这一要求会让开发者更聚焦到如下几类优化：\n1）避免端侧密集型计算，将计算转移到 Worker 进程，或者在服务端完成计算\n2）对于长耗时的任务，需要给出过渡缓冲，例如提供一个 loading 动画增强体验\n3）让设计更聚焦用户行为，一旦用户开始互动，那么互动区域以外的部分应该减少反馈\n建立以用户为中心的指标度量，Google 在推进网页性能和体验优化方面，确实是不遗余力的👍🏻",
           "link": "https://m.okjike.com/originalPosts/65090d46c70326f2eb15bc12",
           "publishedOn": "2023-09-19T02:53:58.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "发布了: Web 网页性能的三大衡量指标 LCP/FID/CLS 已经推出来三年多了，大量网站都会根据 Chrome Devtools 的提醒对指标进行优化，不过近期 Chrome 对其进行了调...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FsiNMD4QiHw1v0q72dEuU5yj4m7Nv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/6508ff302c9bdd1af5f98d39",
@@ -168,9 +91,9 @@
           "description": "几乎所有假期到期作废的同事，要么是休假不知道干啥，要么是觉得工作实在离不开他。🤷‍♂️",
           "link": "https://m.okjike.com/originalPosts/6508ff302c9bdd1af5f98d39",
           "publishedOn": "2023-09-19T01:53:52.000Z",
-          "wordCount": 445,
+          "wordCount": null,
           "title": "发布了: 几乎所有假期到期作废的同事，要么是休假不知道干啥，要么是觉得工作实在离不开他。🤷‍♂️",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/6508ea8dc70326f2eb11df64",
@@ -178,7 +101,7 @@
           "description": "后排不系安全带，杭州交警开始罚款了，五块🥲",
           "link": "https://m.okjike.com/originalPosts/6508ea8dc70326f2eb11df64",
           "publishedOn": "2023-09-19T00:25:49.000Z",
-          "wordCount": 432,
+          "wordCount": 428,
           "title": "发布了: 后排不系安全带，杭州交警开始罚款了，五块🥲",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -188,9 +111,9 @@
           "description": "使用指纹和人脸识别等生物技术解锁手机已经被普遍接受，这项技术也可以被轻松运用到 Web 身份验证过程，目前现代浏览器已经提供了 WebAuthn 的  JavaScript API，以后登录网页就不需要密码了。这项技术有一个专有名字，叫做通行秘钥（Passkeys）。\nPasskeys 简单来说，就是有一个认证器，它站在用户和网站之间，用户将身份认证这件事情托管给认证器，唯一需要做的就是授权它去认证。认证器的载体可以是一部手机、一台电脑、一个 USB 等等，它大致的原理也很简单：\n1）身份凭证创建：网站提供一个随机串，用户把随机串和用户信息提交给认证器，认证器会生成一个公私钥对，然后把公钥、用户信息和被加签随机串提交给网站\n2）登录认证过程：网站提供一个随机串，用户把随机串提交给认证器，认证器匹配到记录后，把用户信息和加签随机串提交给网站，网站如果用公钥成功解密，并发现用户信息也匹配上了，就允许登录\n原理十分简单，更详细的交互过程可以看这篇文章：https://www.passkeys.io/technical-details，认证器的作用就是生成一组非对称密钥对作为安全通讯工具，同时管理着用户信息。目前 Apple/Google/Mircosoft 等大厂都纷纷开始支持，很多密码管理工具如 1Password 也支持接管认证器的角色，相信一两年之后会变成一个新的趋势。\n当你习惯了使用 Passkeys 以后，估计就再也不想使用密码登录了，因为它不仅方便，而且更为加安全，例如钓鱼网站就不再有效了，在进行认证的时候，认证器如果发现网站域名跟记录的信息不匹配，会直接拒绝认证。",
           "link": "https://m.okjike.com/originalPosts/650826cdf21549bc73fe31e5",
           "publishedOn": "2023-09-18T10:30:37.000Z",
-          "wordCount": 548,
+          "wordCount": null,
           "title": "发布了: 使用指纹和人脸识别等生物技术解锁手机已经被普遍接受，这项技术也可以被轻松运用到 Web 身份验证过程，目前现代浏览器已经提供了 WebAuthn 的 JavaScri...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fij1A66uv8EMb1OGfHADDUVKK-CTv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/6507b7858425e0dd3b5bb0e4",
@@ -198,9 +121,9 @@
           "description": "不依赖后端环境，如何在浏览器直接起一个 Node.js 应用程序？StackBlitz 对外公布它们的 WebContainerAPI，https://webcontainers.io，使用 WebAssembly 将 Node.js 编译成一个 .wasm 文件，直接跑在了浏览器上。\n下图是一个在浏览器执行安装 node_modules 依赖后，启动 Node.js 程序，并监听本地端口的一个 Demo。WebContainerAPI 提供了基于内存的虚拟文件系统，并使用 ServiceWorker 劫持请求，当前它对端口的监控是模拟的，它还无法完全调度操作系统的所有资源。\n这里有一个教程，完整演示了，如何从零到一构建一个 Node.js run in web 的 Playground：https://webcontainers.io/tutorial/1-build-your-first-webcontainer-app，这个方向的研究可以帮助我们打开更多 Web 上的脑洞。",
           "link": "https://m.okjike.com/originalPosts/6507b7858425e0dd3b5bb0e4",
           "publishedOn": "2023-09-18T02:35:49.000Z",
-          "wordCount": 492,
+          "wordCount": null,
           "title": "发布了: 不依赖后端环境，如何在浏览器直接起一个 Node.js 应用程序？StackBlitz 对外公布它们的 WebContainerAPI，https://webcontainers.io，使用 WebAssembly...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FlUfvZ2yE4vDeDI1eDSbJZGQd8-Rv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/650786fd4101002b06c8c34c",
@@ -208,9 +131,9 @@
           "description": "哈哈哈，马斯克传，浓缩版来了",
           "link": "https://m.okjike.com/originalPosts/650786fd4101002b06c8c34c",
           "publishedOn": "2023-09-17T23:08:45.000Z",
-          "wordCount": 452,
+          "wordCount": null,
           "title": "发布了: 哈哈哈，马斯克传，浓缩版来了",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FqZuZl2fx6Dq_iEd44ap_GZZBOYUv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/6507247302edc1615861e230",
@@ -218,9 +141,9 @@
           "description": "Documate，https://documate.site，是一款针对站内文档问答的开源 AI 工具，通过简单的配置，就可以将能力接入到你的网站之中。有了大模型的加持，用户上来几乎可以不读文档，直接与 AI 对话就可以完成自己的需求，对技术类产品文档来说，价值很高。\n文档智能问答的工具其实已经非常丰富了，但开源免费的却比较少见，仔细阅读了这个项目的源码（https://github.com/AirCodeLabs/documate），整体实现还是比较简单和清晰的，它由三部分构成：\n1）一个将文档提交到数据库的 CLI 工具，只需要在项目中配置下  documate.json 就行了，描述哪些是文档文件，如图一\n2）一个封装好的拿来即用的问答 UI 组件，直接 import 组件就可以使用，目前提供了 Vue 版本，如图二\n3）一个提供问答服务、可一键完成部署的 AI Ask Server，可以在 Aircode 直接完成部署，也可以在自己的服务器上部署，如图三\n问答服务有了，UI 组件有了，数据也有了，那就可以尝试着玩耍了，整个配置过程大概可以在 15min 内完成，效果如图四。\n另外，推荐大家学习下这个项目中的 Server 端处理逻辑，在 backend/ask.js 中，它使用简短的几十行代码演示了：如何将输入内容向量化、如何将数据库内容载入到 MemoryDB、如何进行向量化查询，以及最后如何拼接结果提交给大模型。\n你还可以再考虑使用 LLaMa 之类的开源工具私有化部署一个大模型，这样整个技术栈就全部是自己手撕的了😄",
           "link": "https://m.okjike.com/originalPosts/6507247302edc1615861e230",
           "publishedOn": "2023-09-17T16:08:19.000Z",
-          "wordCount": 494,
+          "wordCount": null,
           "title": "发布了: Documate，https://documate.site，是一款针对站内文档问答的开源 AI 工具，通过简单的配置，就可以将能力接入到你的网站之中。有了大模型的加持，用户...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fgs30_yNqwJonhtbG50baBNjfEXFv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/65071556c70326f2ebeb5809",
@@ -228,9 +151,9 @@
           "description": "微博不仅仅被封住了嘴，连骨子里都开始腐朽。\n今天看到微博粉丝突然猛涨了一波，多了好几千，研究了一下，原来是黑灰产在养号。随机抽查了十几个刚关注我的账号，他们都有如下特征：\n1）粉丝量很少，关注量颇多\n2）关注量阶段性增长，且关注对象之间无关联性\n3）大部分账号最近一次活跃是在一年前甚至更久远\n4）私信了几个刚关注我的账号，无响应\n黑灰产养号，每隔半年到一年时间，都会激活下垃圾账号，防止未来被操纵的时候需要二次认证，或者被判定为异常账号。\n实际上，这种类攻击行为，通过人肉分析，稍微看看就可以识别出来，如果让微博的工程师写个程序或者搞个算法进行自动化识别和拦截，增加下攻击门槛，不算复杂吧，可能这事儿的性价比已经低到不重要了 🤷‍♂️",
           "link": "https://m.okjike.com/originalPosts/65071556c70326f2ebeb5809",
           "publishedOn": "2023-09-17T15:03:50.000Z",
-          "wordCount": 428,
+          "wordCount": null,
           "title": "发布了: 微博不仅仅被封住了嘴，连骨子里都开始腐朽。 今天看到微博粉丝突然猛涨了一波，多了好几千，研究了一下，原来是黑灰产在养号。随机抽查了十几个刚关注...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/6506f27415391e4bc7511b1d",
@@ -238,9 +161,9 @@
           "description": "LangChain 也开始推出了自己的 Prompt 中心化管理产品，LangSmith，https://smith.langchain.com，整个产品围绕 Prompt 的调试、测试、执行和监控提供一条龙服务，而且默认支持了 OpenAI/Meta/Google/Claude 等几家大模型，方便开发者直接对接和使用。\n之前也提到过 LangChain 的缺点，https://twitter.com/Barret_China/status/1683135367862718465，它最早的设计几乎是为 OpenAI 量身定制的，底层 LLM 一更换，就会出现严重失调，LangSmith 这个产品弥补了 LangChain 在生态支持上的缺失。\n实际上这类 Prompt 产品已经很卷了，之前有介绍过 FlowGPT/PromptPerfect/PromptKnit 等等，相比之下，LangSmith 的优势是提供了更加轻便的 SDK，通过一句简单的资源声明就可以直接获取到服务，提升了开发者体验，如图二所示。",
           "link": "https://m.okjike.com/originalPosts/6506f27415391e4bc7511b1d",
           "publishedOn": "2023-09-17T12:35:00.000Z",
-          "wordCount": 483,
+          "wordCount": null,
           "title": "发布了: LangChain 也开始推出了自己的 Prompt 中心化管理产品，LangSmith，https://smith.langchain.com，整个产品围绕 Prompt 的调试、测试、执行和监控提供一...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FgBiPRLPrapPUik_hDJON7VB_kgXv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/6506b96202edc16158571012",
@@ -248,9 +171,9 @@
           "description": "苹果在 iOS 17 中已经支持了 AirDrop transfers over the internet，以前必须近距离通过蓝牙或者 WiFi 才可以传输文件，未来这一操作会变得更加便捷，例如刚开始使用蓝牙传输，断开连接后可以继续保持通过网络进行传输。\n之前也看到一个开源项目 ShareDrop，https://github.com/szimek/sharedrop，它支持在局域网内实现类似 AirDrop 的文件传输能力，例如你想给你的同事发送文件，只需要双方都打开网页 sharedrop.io 就可以发现对方了。\n其原理是通过 WebRTC 建立点对点连接，FileSystem API 进行文件处理，然后使用 Firebase 进行用户管理和信号处理。iOS 17 基于网络的文件传输，想必也是相似的原理，使用点对点建立连接以确保安全性，只不过 STUN 服务由 iCloud 来提供。",
           "link": "https://m.okjike.com/originalPosts/6506b96202edc16158571012",
           "publishedOn": "2023-09-17T08:31:30.000Z",
-          "wordCount": 495,
+          "wordCount": null,
           "title": "发布了: 苹果在 iOS 17 中已经支持了 AirDrop transfers over the internet，以前必须近距离通过蓝牙或者 WiFi 才可以传输文件，未来这一操作会变得更加便捷，例...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fo3602O_GkSlXgFY19IiCXFVEcQmv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
+          "imageUrl": null
         }
       ]
     },
@@ -260,14 +183,24 @@
       "siteUrl": "https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/65097d7c15391e4bc78b4eaa",
+          "author": null,
+          "description": "信息 = 数据 + 场景意义",
+          "link": "https://m.okjike.com/originalPosts/65097d7c15391e4bc78b4eaa",
+          "publishedOn": "2023-09-19T10:52:44.000Z",
+          "wordCount": null,
+          "title": "发布了: 信息 = 数据 + 场景意义",
+          "imageUrl": null
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/650834cc05145f31e5653c0c",
           "author": null,
           "description": "# Role\nPython 程序员\n## Profile\n- author: 李继刚\n- version: 0.1\n- LLM: GPT-4\n- Plugin: none\n- description: 基于用户提供的输入和输出信息，生成 JSON 格式的 API 调用格式。\n## Attention\n请集中精力，准确理解用户提供的输入和输出需求，以生成符合预期的 JSON 格式的 API 调用。\n## Background\n为了帮助用户快速构建或理解 API 请求，根据用户给出的基本输入和输出信息，生成模拟的 API 调用格式。\n## Constraints\n- 仅生成 JSON 格式的 API 调用\n- 所有字段值使用虚拟数据\n## Definition\n- API 调用格式：一个标准化的方式来发起一个 API 请求，通常包括 HTTP 方法、URL、请求头和请求体。\n- 虚拟数据：非实际数据，用于模拟场景或进行测试。\n## Goals\n- 准确理解用户需求\n- 生成易于理解和使用的 JSON 格式的 API 调用\n## Skills\n- 熟练掌握 Python 编程\n- 熟悉 JSON 格式和 API 架构\n## Tone\n- 专业\n- 精确\n- 清晰\n## Value\n- 准确性：严格遵循用户提供的输入和输出需求\n## Workflow\n- 输入: 通过开场白引导用户提供输入和输出信息\n- 思考: 一步步思考, 设计并生成相应的 JSON 格式的 API 调用, 用虚拟数据填充字段值\n- 输出: 输出排版规范的输入和输出 JSON 示例\n## Initialization\n开场白如下:\n\"您好，我是一个拥有 7 年 Python 编程经验的程序员。如果您能提供 API 的基本输入和输出信息，我将为您生成一个 JSON 格式的 API 调用格式。\"",
           "link": "https://m.okjike.com/originalPosts/650834cc05145f31e5653c0c",
           "publishedOn": "2023-09-18T11:30:20.000Z",
-          "wordCount": 636,
+          "wordCount": null,
           "title": "发布了: # Role Python 程序员 ## Profile - author: 李继刚 - version: 0.1 - LLM: GPT-4 - Plugin: none - description: 基于用户提供的输入和输出信息，生成 ...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fu5s6k-3gh1gKTQOzKMA2CvjQtFPv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/65040d8b1589e4a51aa964b5",
@@ -275,9 +208,9 @@
           "description": "# Role\nCEO 助理秘书\n## Profile\n- author: 李继刚\n- version: 0.1\n- LLM: GPT-4\n- Plugin: none\n- description: 专注于整理和生成高质量的会议纪要，确保会议目标和行动计划清晰明确。\n## Attention\n请务必准确和全面地记录会议内容，使每个参会人员都能明确理解会议的决定和行动计划。\n## Background\n语音记录会议讨论信息, 现在可以方便地转成文字. 但这些碎片信息, 如何方便整理成清晰的会议纪要, 需要 GPT 帮忙\n## Constraints\n- 整理会议纪要过程中, 需严格遵守信息准确性, 不对用户提供的信息做扩写\n- 仅做信息整理, 将一些明显的病句做微调\n## Definition\n- 会议纪要：一份详细记录会议讨论、决定和行动计划的文档。\n## Goals\n- 准确记录会议的各个方面，包括议题、讨论、决定和行动计划。\n- 在规定的时间内完成会议纪要。\n## Skills\n- 文字处理：具备优秀的文字组织和编辑能力。\n## Tone\n- 专业：使用专业术语和格式。\n- 简洁：信息要点明确，不做多余的解释。\n## Value\n- 准确性：确保记录的信息无误。\n## Workflow\n- 输入: 通过开场白引导用户提供会议讨论的基本信息\n- 整理: 遵循以下框架来整理用户提供的会议信息，每个步骤后都会进行数据校验确保信息准确性\n  a. 会议主题：会议的标题和目的。\n  b. 会议日期和时间：会议的具体日期和时间。\n  c. 参会人员：列出参加会议的所有人。\n  d. 会议记录者：注明记录这些内容的人。\n  e. 会议议程：列出会议的所有主题和讨论点。\n  f. 主要讨论：详述每个议题的讨论内容，主要包括提出的问题、提议、观点等。\n  g. 决定和行动计划：列出会议的所有决定，以及计划中要采取的行动，以及负责人和计划完成日期。\n  h. 下一步打算：列出下一步的计划或在未来的会议中需要讨论的问题。\n- 输出: 输出整理后的结构清晰, 描述完整的会议纪要\n## Initialization\n简单开场白如下:\n\"你好，我是您的专业助理秘书，负责整理和生成高质量的会议纪要。请提供您的会议讨论基本信息, 我来帮您生成纪要。\"",
           "link": "https://m.okjike.com/originalPosts/65040d8b1589e4a51aa964b5",
           "publishedOn": "2023-09-15T07:53:47.000Z",
-          "wordCount": 631,
+          "wordCount": null,
           "title": "发布了: # Role CEO 助理秘书 ## Profile - author: 李继刚 - version: 0.1 - LLM: GPT-4 - Plugin: none - description: 专注于整理和生成高质量的会议纪要，确...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/6503fb42c70326f2eba60b1f",
@@ -285,9 +218,9 @@
           "description": "代码:\n- 这代码写的太\"漂亮\"了\n- 这谁写的臭代码!\n下棋:\n- 这步棋下的\"漂亮\"!\n- 这是一步臭棋\n为什么好的东西, 我们喜欢用\"视觉\"语言来描述, 而坏的东西, 喜欢用\"嗅觉\"语言来描述?",
           "link": "https://m.okjike.com/originalPosts/6503fb42c70326f2eba60b1f",
           "publishedOn": "2023-09-15T06:35:46.000Z",
-          "wordCount": 473,
+          "wordCount": null,
           "title": "发布了: 代码: - 这代码写的太\"漂亮\"了 - 这谁写的臭代码! 下棋: - 这步棋下的\"漂亮\"! - 这是一步臭棋 为什么好的东西, 我们喜欢用\"视觉\"语言来描述, 而坏的东西...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/65033d732c9bdd1af57bf75a",
@@ -295,9 +228,9 @@
           "description": "〝领导的本质，就是在不确定的世界中给人提供确定感的人。”",
           "link": "https://m.okjike.com/originalPosts/65033d732c9bdd1af57bf75a",
           "publishedOn": "2023-09-14T17:05:55.000Z",
-          "wordCount": 476,
+          "wordCount": null,
           "title": "发布了: 〝领导的本质，就是在不确定的世界中给人提供确定感的人。”",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/650337644101002b066d229e",
@@ -305,9 +238,9 @@
           "description": "人的大脑在硬件上就是强者愈强的模式，已经建立的神经元连接回路，加强它是相对容易的；重新建立一个新的神经元连接回路需要更多的努力。\n也就意味着：\n你在团队招人时，不应该去找全才，而应该去找怪才。 \n你在日常工作中，不应该盯别人的失误和缺点，而应该去发现对方的成功和亮点。\n多关注对方，多欣赏对方，多夸奖对方。\n对方的大脑会感谢你。",
           "link": "https://m.okjike.com/originalPosts/650337644101002b066d229e",
           "publishedOn": "2023-09-14T16:40:04.000Z",
-          "wordCount": 442,
+          "wordCount": null,
           "title": "发布了: 人的大脑在硬件上就是强者愈强的模式，已经建立的神经元连接回路，加强它是相对容易的；重新建立一个新的神经元连接回路需要更多的努力。 也就意味着： ...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/65028e478425e0dd3be87fd5",
@@ -315,9 +248,9 @@
           "description": "每个制度都有其适用的尺度。\n规模，环境，时机，都是生效制度的隐藏且重要因素，不可不察。",
           "link": "https://m.okjike.com/originalPosts/65028e478425e0dd3be87fd5",
           "publishedOn": "2023-09-14T04:38:31.000Z",
-          "wordCount": 441,
+          "wordCount": null,
           "title": "发布了: 每个制度都有其适用的尺度。 规模，环境，时机，都是生效制度的隐藏且重要因素，不可不察。",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/65027f804101002b06593d99",
@@ -325,9 +258,9 @@
           "description": "𝑝𝑟𝑜𝑚𝑝𝑡 𝑟𝑜𝑐𝑘𝑠",
           "link": "https://m.okjike.com/originalPosts/65027f804101002b06593d99",
           "publishedOn": "2023-09-14T03:35:28.000Z",
-          "wordCount": 454,
+          "wordCount": null,
           "title": "发布了: 𝑝𝑟𝑜𝑚𝑝𝑡 𝑟𝑜𝑐𝑘𝑠",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FkHdrjW0uLpihcwFdntcShfc1Qoov3.jpg?imageMogr2/auto-orient/crop/!x1950a0a0/thumbnail/x300"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/6501c8d78425e0dd3bd91359",
@@ -335,9 +268,9 @@
           "description": "使用比喻要非常小心\n因为它常反客为主",
           "link": "https://m.okjike.com/originalPosts/6501c8d78425e0dd3bd91359",
           "publishedOn": "2023-09-13T14:36:07.000Z",
-          "wordCount": 455,
+          "wordCount": null,
           "title": "发布了: 使用比喻要非常小心 因为它常反客为主",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/6501a40f02edc16158e58f00",
@@ -345,19 +278,9 @@
           "description": "Shopify COO Kaz 认为：\n「会议是其他一些流程没能顺利进行而导致的一个bug, 需要被 fix」",
           "link": "https://m.okjike.com/originalPosts/6501a40f02edc16158e58f00",
           "publishedOn": "2023-09-13T11:59:11.000Z",
-          "wordCount": 455,
+          "wordCount": null,
           "title": "发布了: Shopify COO Kaz 认为： 「会议是其他一些流程没能顺利进行而导致的一个bug, 需要被 fix」",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/650117eb8425e0dd3bc5ad47",
-          "author": null,
-          "description": "𝐌𝐞𝐚𝐧𝐢𝐧𝐠 𝐨𝐟 𝐰𝐨𝐫𝐤\n工作 = 成长 x 开心 x 回报\n成长：通过这份工作，你学到了更多，见识更广，认知更深，能力更棒，今日之你比昨日之你变得更强。\n开心：你不只是在完成领导交待的每日任务，而是在完成一项使命，你每日的工作是在为那项使命做贡献，内心充满意义感和幸福感。𝒇𝒊𝒏𝒅 𝒔𝒐𝒎𝒆𝒕𝒉𝒊𝒏𝒈 𝒃𝒊𝒈𝒈𝒆𝒓 𝒕𝒉𝒂𝒏 𝒚𝒐𝒖𝒓𝒔𝒆𝒍𝒇.\n回报：你的成长，你对使命的贡献，同时被组织认可，换回应有的收入回报。\n三者但有所缺，工作对你而言，应是痛苦的吧。",
-          "link": "https://m.okjike.com/originalPosts/650117eb8425e0dd3bc5ad47",
-          "publishedOn": "2023-09-13T02:01:15.000Z",
-          "wordCount": 476,
-          "title": "发布了: 𝐌𝐞𝐚𝐧𝐢𝐧𝐠 𝐨𝐟 𝐰𝐨𝐫𝐤 工作 = 成长 x 开心 x 回报 成长：通过这份工作，你学到了更多，见识更广，认知更深，能力更...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/64f69f3e2a0c03ca1381ee8c",
@@ -365,9 +288,9 @@
           "description": "好像找到了一个目标函数：\n帮助完全不会编程的普通人写好prompt。\n(独学而无友，则孤陋而寡闻，订阅后加 jznhljg 进群切磋）",
           "link": "https://m.okjike.com/originalPosts/64f69f3e2a0c03ca1381ee8c",
           "publishedOn": "2023-09-05T03:23:42.000Z",
-          "wordCount": 485,
+          "wordCount": null,
           "title": "发布了: 好像找到了一个目标函数： 帮助完全不会编程的普通人写好prompt。 (独学而无友，则孤陋而寡闻，订阅后加 jznhljg 进群切磋）",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fslq9Vo2d4oZS7wwqnjmClW6Vq6tv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+          "imageUrl": null
         }
       ]
     },
@@ -377,13 +300,13 @@
       "siteUrl": "https://analy.zhubai.wiki",
       "articles": [
         {
-          "id": "https://omooo-android.zhubai.love/posts/2314287352640040960",
-          "author": "Omooo",
-          "description": "你好～  \n    \n  爱一个人是需要学习的嘛？  \n    \n  当然！  \n    \n  愿你真诚的对待身边的人。  \n    \n  本期作为 2023 年的第二十六期周刊，会谈到：  \n    \n  \n  情感人  \n    \n  疗愈式沟通  \n    \n  浪漫爱情  \n  \n    \n  01  \n    \n  在弗洛姆的经典著作《爱的艺术》中，他强调了爱作为一种动词，而不是名词的概念。爱是一种去爱人的能力，而非一种被爱的需求。然而，许多人感到自己爱的能力正在逐渐消失。我们在面对高度竞争和效率至上的社会压力时，往往感到焦虑和孤独，难以找到爱的勇气和耐心。这引发了一个复杂的问题，即在现实社会中，人们是更倾向于做一个情感人，还是做一个理性人？  \n    \n  上个月底看完了伊娃·易洛思的《冷亲密：为什么爱越来越难？》，亲密关系本身应该是温暖治愈的，为什么作者要在前面加一个 “冷” 呢？作者认为，在当今社会，人际关系似乎变得更加冷漠和脱离真挚的情感，这主要是因为社会崇尚高效和价值最大化，将感情看作一种快餐消费主义。我们一方面渴望着爱与亲密，另一方面又在进行着价值计算，在这种矛盾中徘徊思量，这段感情能给我带来什么，我付出了那么多精力、金钱、时间，到最后一无所获该怎么办？我们理性的分析着一切，却忘了亲密关系中本身就包含了感性的一面。  \n    \n  在一次讲座中，易洛思总结了亚里士多德伦理学中的友情和爱情的区别，她指出，前者是理性的，而后者是非理性的。友情只需要双方能够维持一段稳定的关系即可，你不会对你的朋友有太多的期盼和要求，这种关系通常是建立在共同的经历和相互了解的基础之上，所以我们很多人身边的朋友大多都是自己的同学、同事等，友情可以被视为一种相对理性的情感，它也更容易的维护和发展；爱情却更多是感性的，它是一种充满激情和浪漫的体验，常常不受理性思考的制约，更多地…",
-          "link": "https://omooo-android.zhubai.love/posts/2314287352640040960",
-          "publishedOn": "2023-09-15T02:01:56.000Z",
+          "id": "https://220525.zhubai.love/posts/2315096767676923904",
+          "author": "雯子",
+          "description": "Hi朋友，展信好。  \n    \n          这次的推送拖延有点久，实在抱歉☹️。这个周几乎每天都加班到很晚，回家也没有精力输出，推送也拖延了很久。下周可能还有拖延，我尽量在周内完成推送，也请读者朋友们见谅。  \n    \n          今天和大家分享4本好书，均已读完，也希望对各位读者朋友们有一些启发。  \n        \n  《中国历代政治得失》  \n    \n          这本书是由钱穆先生的5篇演讲收录而来。先生分别从政府组织架构、考试选举、赋税制度、国防与兵役制度、学校制度/教育制度5个角度分析汉、唐、宋、明、清几个朝代的制度内容以及优劣势。  \n    \n          相比较晦涩难懂的历史书，这本书无论是从框架还是逻辑结构都更清晰，读完本书可以对几个朝代的政治制度勾勒出其轮廓，再去理解历史和政治制度就会更得其法。  \n    \n          书中先生一再强调的观点也值得我们学习——批判一项制度一定要结合当时的实际需要和环境进行深入理解再进行批判，否则直接从现代的眼光和境遇去看古代的制度，都是糟粕（糟粕的标准也变化了），可借鉴学习的地方少之又少。  \n    \n  但任何一制度之创立，必然有其外在的需要，必然有其内在的用意，则是断无可疑的。纵然事过境迁，后代人都不了解了；即其在当时，也不能尽人了解得；但到底这不是一秘密。在当时，乃至在不远的后代，仍然有人知道得该项制度之外在需要与内在用意，有记载在历史上。这是我们讨论该项制度所必须注意的材料。否则时代已变，制度已不存在，单凭异代人主观的意见和悬空的推论，决不能恰切符合该项制度在当时实际的需要和真确的用意。  \n    \n  《西游记》  \n    \n          说起西游记，大家都不陌生，网上也有很多对《西游记》的解读，实际上去读原著时，会发现表面上很多情节和83版电视剧差别…",
+          "link": "https://220525.zhubai.love/posts/2315096767676923904",
+          "publishedOn": "2023-09-17T07:38:15.000Z",
           "wordCount": 63,
-          "title": "周刊 #26｜情感人｜疗愈式沟通｜浪漫爱情",
+          "title": "4本好书分享（已读完） | No.56",
           "imageUrl": "https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png"
         },
         {
@@ -394,16 +317,6 @@
           "publishedOn": "2023-09-15T01:25:43.000Z",
           "wordCount": 63,
           "title": "【0915早报】假期真是越来越近的周五",
-          "imageUrl": "https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png"
-        },
-        {
-          "id": "https://dontbeafraid.zhubai.love/posts/2314134817174327296",
-          "author": "朱弟不是弟弟",
-          "description": "大家好久不见！  \n    \n  最近在      《Hey Jude》播客      里聊了一些原生家庭的话题，当时我就知道，这事靠我一个人叭叭是不够有力的，    要叭就要去家人的面前叭叭。所以我也这么做了    ，给大家分享一下始末。  \n    \n  \n    \n  01 发现表面公平家庭中细碎的「不平等」  \n    \n  前几周，从一件很小的事情上，我看见了家庭对自己刻入骨髓里的影响。  \n    \n  起因是我发了健身视频截图给家人，同样的截图也发到了别的地方。然而妈妈完全没有关注到我的肌肉，而是来了一句：「没有人在健身房穿这种裤子啦，很搞笑。」  \n    \n  在所有其他人都给予认可和鼓励的相片里，只有家人还在不断给我挑刺。  \n    \n  而这种挑刺的方式，已经不是「指出你的不足是为了你好」的成分，就是纯粹的滤镜，一种    「女儿必须做到面面俱到，否则就很搞笑」    的负面滤镜。  \n    \n  也是同一天，妹妹发了一张弟弟安慰她的截图。弟弟和爸爸一样，喜欢长篇大论，截图里的大意是「每个人都有自己的时区，没必要和他人过度比较」。  \n    \n  看了截图，妈妈说：「我们家的孩子真是我的骄傲。」  \n    \n  嗯……什么情况下，儿子讲两句每个人都会说的鸡汤，就能成为骄傲，而女儿努力上健身房的汗水却被无视，还要从穿搭上被挑刺？  \n    \n  到底    是孩子令人骄傲，还是儿子令人骄傲？    是儿子真的值得骄傲，还是在滤镜下儿子长成啥样都值得骄傲呢？  \n    \n  诸如此类的很多小事，在我看似讲究平等的家庭里，数不胜数。  \n    \n  其中，性别最不平等的源头，就是老爸。  \n    \n  他从来只对儿子说「加油，祝你勇猛精进，更上一层楼」，对女儿就是「你健康开心就好」。  \n    \n  论赢得世俗成就的概率，他最应该鼓励的人是…",
-          "link": "https://dontbeafraid.zhubai.love/posts/2314134817174327296",
-          "publishedOn": "2023-09-14T15:55:48.000Z",
-          "wordCount": 63,
-          "title": "跟原生家庭沟通，真的是一生的课题",
           "imageUrl": "https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png"
         },
         {
@@ -547,6 +460,16 @@
           "imageUrl": "https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png"
         },
         {
+          "id": "https://dex.zhubai.love/posts/2312951974377156608",
+          "author": "dingyi @DEX周刊",
+          "description": "本期封面来自      苹果官方      ，一年一度的春晚又来了。  \n      \n  上周业内值得提的事情：  \n        \n  Fons Mans 联合一些设计师搞了一个       Off-Grid      ，和之前很多人都做的设计师专访网站不同，这个的切入点是请知名设计师对自己的项目作品做总结和揭幕背后的思考以及使用的工具，虽然每篇文章内容没有写得很深，但这种形式还是非常好的，比如      这篇采访台湾设计师的      ，把渐变玩到出神入化也是可以接到很多大牌公司项目的。当然为了赚钱这个项目也采用了订阅制。  \n        \n  位于澳洲偏远小岛的 Procreate 放出大招，一个全新的动画软件       Dreams      ，也就是把之前的绘画功能加上了动画功能，关键是已经透露了售价只要 19.99 美金，一次性买断制。你看看人家的魄力，非要搞什么订阅制的那些竞品你们学学！  \n    \n  \n    \n  提到订阅制，还有就是       37signals       宣布了一个叫       Once       的产品，下决心要改变目前订阅制泛滥成灾的趋势，不知道能不能成功，但他们的行业影响力早就不是 20 年前的样子了，虽然总想搞事情，但主流圈子早就不和他们玩了……比如上周他们 CTO 宣布在自家的所有代码中删掉 TypeScript 全部回归 JavaScript 就引起了轩然大波，在前端圈炸开锅了，很多人都在讨论。当然作为设计师的我们并不是很关心那个圈子的那些破事。",
+          "link": "https://dex.zhubai.love/posts/2312951974377156608",
+          "publishedOn": "2023-09-11T09:35:37.000Z",
+          "wordCount": 63,
+          "title": "#208",
+          "imageUrl": "https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png"
+        },
+        {
           "id": "https://huiris.zhubai.love/posts/2312878455387705344",
           "author": "不合时宜",
           "description": "朋友们，你们好呀。  \n    \n  5 月份开始，突然没有了读书的欲望，这种现象一直持续到 8 月末，最近又重新开始了读书。也说不上来为什么突然不想读书了，kindle 以前一直是随身带，在那段时间里不随身带了，每天放在电脑桌前，偶尔打开看看电池有没有电，或者给系统升个级，其余时间，甚至是晚上睡前也不再看了。  \n    \n  就像是读了这么多年书突然疲惫了，想放下书每天也刷刷视频打打游戏，感受下不读书的时候带来的变化。最大的变化是睡眠不规律了，不小心陷入了睡不醒的循环，手机屏幕中的视频、游戏带来的冲击，会让睡觉时间很容易变成 12 点以后，第二天会很疲惫。  \n    \n  偶尔也有点当电影看了 1000+ 部以后，再看新的电影，突然没了兴趣去探索电影是否有新情节走向，总能在曾经看过的电影里找到类似的故事情节。曾经在某个地方看过一句话：「在上个世纪 80 年代，电影行业的创作已经几乎停滞不前，没有新了题材可拍摄，后面拍的电影几乎都可以从以前的电影里找到类似的影子。」  \n    \n  这两天在刷 twitter 的时候看到一句话，说「《穷查理宝典》在我这儿永远不可能是宝典，充其量是一本公司内部训话。纠起原因：一个偷机的华尔街商人赚了一笔钱，把自己赚钱的过程归结于爱读书。」  \n    \n  什么原因导致我读了这么多年书，买了好几本 kindle，是我最近在想的问题。只看结果的话，貌似我看不看书对我并没有太大的帮助，顶多就是能在同事面前吹吹牛多点谈资，通过不间断的写博客写读书笔记，认识了几个朋友，顺利的入职到了几家公司上班，当生活中遇到了一些问题时多几种思路和验证的方法，其他的，貌似真的什么都不会改变。  \n    \n  现阶段读书，也只是让我能有更好的作息习惯，保证第二天精力充沛的去工作。  \n      \n  i-读《最后的熊猫》  \n        \n  很少看抖音，但最近一段时间在家里发现，我太太和孩子喜欢在手机上看熊猫，刚开始只是看成都卧龙熊猫基地的熊猫，后来开始看大连动物园的熊猫。如果她俩只是看熊猫我并不会产生好奇，好奇的是，看了一段时间后，他们都能看到熊猫就能将名字叫出来，这点我诧异。  \n    \n  2014 年去成都旅游的时候，曾经去过成都卧龙熊猫基地，整个基地很大熊猫也很多——当然是和别的动物园相比，当时的成都卧龙熊猫基地去的人还没有那么多，整体感觉上和普通的动物园没有差。据说现在的成都卧龙熊猫基地，每天都人山人海，一方面园区运营的成果，另一方面，是 3 年疫情，把很多人都憋坏了，大家都努力的将耽误的 3 年旅游一口气全都够补上，估计明年这种热度就会下降。届时再去一趟，看看这些黑白分明的动物们。  \n    \n  《最后的熊猫》，这本书就是在这样的背景下读的。作者乔治·夏勒曾经在上个世纪 80 年代末 90 年代初，作为第一个受委托在中国为世界自然基金会（WWF）进行熊猫保护工作的西方科学家，在四川山区进行了长达 5 年的熊猫研究，将这段时间研究熊猫时写的日记整理成了此书。此处不纯粹是描写观察熊猫的，还观察了不少人。其中有不少人现在依然在做动物保护的工作,并且身居高位。  \n    \n  熊猫之所以被全球人民喜爱，不仅仅是因为早早的就被列为濒临灭绝的保护动物，因为稀缺被人民喜爱，更多的是在自然界很少有动物长成熊猫那样：黑白分明、憨态可掬、性情温和（本性有可能并非如此，是人工饲养的结果），外加上人类天生的对小动物的怜悯之情。到了现在，熊猫很多时候不仅仅扮演取悦观众的角色，还有个标签是外交工具。  \n    \n  读这本书，印象比较深的是几点：  \n    \n  1、熊猫之所以数量比较少，很大一部分原因是由熊猫自己造成的。雌雄熊猫发情期不一致，导致很多熊猫一生都很难会有自己的孩子。\n2、熊猫的食量非常大的原因并不是因为熊猫胃口大，而是因为竹子作为食物热量营养成份太低，只能靠量取胜。\n3、熊猫在民间有个别称叫食铁兽。这个称呼的缘由也很有趣：相传有村民看到熊猫跑到自己的院子里，疯狂的舔铁锅之类的餐具，就被称为了食铁兽。其实熊猫是在吃上面残留的食物。\n4、动物研究的工作,貌似不如想象中有趣,枯燥且乏味应该是常态。  \n      \n  ii 几个想法  \n    \n  1、最近 twitter 上的推文质量可见的上升，其原因是马斯克给每个月累计曝光量超过 300 万的创作者发美金。这么朴素简单有效的运营措施，很多公司都忘了吧。  \n    \n  2、过于无知，就会盲目的自信。对某些新鲜事物的了解处于一知半解阶段，也会让自己盲目的自信。  \n    \n  3、95 后、00 后，真的是可怕。没责任心、不上进、不学习、不加班，还要求涨工资。  \n      \n  iii 推荐阅读  \n    \n  机械表工作原理       https://ciechanow.ski/mechanical-watch/",
@@ -583,6 +506,26 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230919/t20230919_526425956.html",
+          "author": "国家预警信息发布中心",
+          "description": "大足区气象台2023年9月19日20时35分发布“暴雨橙色预警信号”：预计未来3小时内我区铁山镇、高升镇、宝顶镇、季家镇、龙石镇、玉龙镇、珠溪镇、石马镇、龙岗街道、棠香街道、龙水镇、回龙镇、中敖镇等镇街降雨量将达50-80毫米，最大小时雨强可达20-30毫米，并伴有雷电等强对流天气。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230919/t20230919_526425956.html",
+          "publishedOn": "2023-09-19T12:53:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市大足区发布暴雨橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230919/t20230919_526425950.html",
+          "author": "国家预警信息发布中心",
+          "description": "荣昌区气象台2023年9月19日20时34分发布“雷电橙色预警信号”，我区全部镇街已受雷电活动影响，且可能持续。预计未来2小时内，我区全部镇街发生雷电活动的可能性很大。请各镇（街）及相关部门落实防雷应急措施，暂停户外活动，户外人员应进入有防雷设施的建筑物暂避，防范雷电强对流天气可能造成的危害。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230919/t20230919_526425950.html",
+          "publishedOn": "2023-09-19T12:44:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市荣昌区发布雷电橙色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/hsyj/20230918/t20230918_526423805.html",
           "author": "国家预警信息发布中心",
@@ -672,16 +615,6 @@
           "wordCount": 523,
           "title": "重庆市万盛经开区发布大雾橙色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230912/t20230912_526417365.html",
-          "author": "国家预警信息发布中心",
-          "description": "云阳县气象台2023年9月12日17时40分更新发布“大雾黄色预警信号”，预计9月12日18时至13日12时，全县各乡镇（街道）将出现能见度小于500米的大雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20230912/t20230912_526417365.html",
-          "publishedOn": "2023-09-12T09:58:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市云阳县发布大雾黄色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -728,13 +661,43 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
+          "id": "https://juejin.cn/post/7279585277831856165",
+          "author": "前端阿彬",
+          "description": "highlight: atelier-estuary-light\ntheme: devui-blue\n\n🪴 背景故事\n中秋节马上就要到了，在这里我提前祝大家生活美满万年长，阖家幸福永平安！🥳 \n最终效果见文章顶部大图\nps：最终实现的效果经过了漫长的调整过程，尤其是调各种参数，一些中秋元素是参考了搜到的中秋相关图片，颜色也是吸的图片的颜色。所以，如果觉的最终效果还不错的，动动小手点个赞，你不会损失什么，我还能得到你的鼓励💞\n涉及到的知识点\n本文默认你已经掌握了css的基础知识，这里只是罗列一下用到的知识，具体使用方法可以自行查阅学习。\n动画：animation\n渐变函数：linear-gradient()、repeating-linear-gradient()、radial-gradient()\n不规则形状： border-radius设置8个值\ncss变量：var()\n自定义属性：@property\n混合模式：background-blend-mode、mix-blend-mode\n🥷 实现过程\n1. 整体分析\n\n我要实现的目标分为六部分：\n深蓝色的祥云背景；\n黄色发光月亮，并且上面的文字要镂空漏出下面的祥云背景；\n闪光的灯笼；\n运动的祥云；\n趴在月亮上的兔子；\n在月亮上奔跑的兔子\n其中的核心难点有以下几个 >>>\n蓝色祥云背景的实现，全网目前应该是没有类似的实现，常见的css实现的纹理背景都是每个图案独立占一个区域，但是祥云不同，需要祥云直接互相“叠罗汉”；\n黄色月亮上的镂空文字。如果文字镂空漏出的是黄色月亮，那非常容易实现，但是如果要漏出更下面一层的祥云背景，就需要多层图层混合，需要考虑清图层的层级关系以及应该使用的混合模式；\n祥云的实现，目前网上也没有参考的案例，考虑了下决定用border-radius实现；\n2. 祥云背景（难点二）\n\n祥云背景参考了网上搜…",
+          "link": "https://juejin.cn/post/7279585277831856165",
+          "publishedOn": "2023-09-18T02:39:43.000Z",
+          "wordCount": 1575,
+          "title": "🥳🥳🥳 倾情奉献，纯css（无图，无JS）原创中秋贺卡！！！",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7279346413915291703",
+          "author": "萌萌哒草头将军",
+          "description": "theme: channing-cyan\nhighlight: atom-one-dark\n文章同步在公众号：萌萌哒草头将军，欢迎关注！\n最近开发了一个功能，页面首页会加载大量的图片，初次进入页面时，会导致页面性能下降，\n于是乎，我改进了这个功能，可以让所有图片自动懒加载。\n🚀 原理\n这个功能主要的底层逻辑是是使用IntersectionObserver API，IntersectionObserver用于在浏览器中观察元素的可见性和位置变化。它可以帮助开发者实现一些动态行为，如图片的懒加载、无限滚动等。\n简单的示例如下：\n// 创建IntersectionObserver实例\nconst observer = new IntersectionObserver((entries, observer) => {\n  // 遍历观察的元素\n  entries.forEach(entry => {\n    // 如果元素可见\n    if (entry.isIntersecting) {\n      // 加载图片\n      const img = entry.target;\n      const src = img.getAttribute('data-src');\n      img.setAttribute('src', src);\n      // 停止观察该元素\n      observer.unobserve(img);\n    }\n  });\n});\n\n// 获取所有需要懒加载的图片元素\nconst lazyImages = document.querySelectorAll('.lazy-image');\n\n// 观察每个图片元素\nlazyImages.forEach(image => {\n  observer.observe(image);\n});\n\n🚀…",
+          "link": "https://juejin.cn/post/7279346413915291703",
+          "publishedOn": "2023-09-17T15:20:21.000Z",
+          "wordCount": 1990,
+          "title": "Vue3如何优雅的加载大量图片🚀🚀🚀",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7279719681444528163",
           "author": "小飞棍",
           "description": "ECMAScript 2023也就是ES14已经发布3个月了，还有好多小伙伴没有关注到ES14有哪些变化，本文将为大家梳理下ES14最新规范新增功能：对数组的新增功能，对shebang的支持，对弱引用集合的符号键的扩展。这个版本的都是一些细微的改进，我们一起看看有哪些变化\n目录\nArray.prototype.toSorted\nArray.prototype.toReversed\nArray.prototype.with\nArray.prototype.findLast\nArray.prototype.findLastIndex\nArray.prototype.toSpliced\n正式的 shebang 支持\nSymbol 作为 WeakMap 的键\n总结\nArray.prototype.toSorted\ntoSorted() 与 Array.prototype.sort() 具有相同的签名，但它创建一个新的数组，而不是对原数组进行操作。\n\nlet arr = [5, 4, 2, 3, 1];\narr === arr.sort(); // true - [1, 2, 3, 4, 5]\n\narr === arr.toSorted(); // false - [1, 2, 3, 4, 5]\n\ntoSorted() 和 sort() 一样，接受一个可选参数作为比较函数。例如，我们可以使用 toSorted() 创建一个按降序排列的新数组\nconst numbers = [10, 5, 2, 7, 3, 9, 1, 6, 4];\nconst sortedNumbers = numbers.toSorted((a, b) => {\n  return b - a;\n});\nconsole.log(sortedNumbers); // [10, 9, 8, 7, 6, 5, 4, 3, …",
           "link": "https://juejin.cn/post/7279719681444528163",
           "publishedOn": "2023-09-17T10:16:04.000Z",
-          "wordCount": null,
+          "wordCount": 1752,
           "title": "ES14新特性揭秘，对前端开发有哪些影响？",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7279096030535712829",
+          "author": "linwu",
+          "description": "theme: vue-pro\n小册\n这是我整理的学习资料，非常系统和完善，欢迎一起学习\n现代JavaScript高级小册\n深入浅出Dart\n现代TypeScript高级小册\nlinwu的算法笔记📒\n背景\n最近海外应用有某些用户反馈，打开页面比较卡顿，后来针对这个问题做了层优化\n问题\n这里我们用微信好友列表为例子，因为列表功能比较常见，详细分析下常见项目存在的一些问题，以及如何优化\n\n通常我们的项目中都是有列表这种场景，然后点击列表里面的具体item，就去到具体的详情页\n\n我们可能是这么处理\n<List>\n    {\n      list.map((item)=><ListItem id={Item.useId}/>)\n    } \n</List>\n\n然后我们点击好友列表进入具体的详情页根据useId再去拿具体的信息\ngetUserInfoById(id)\n\n预加载\n但是这里就会存在一个，进入详情页的时候，打开会慢，所以这里一般会先做数据预加载,也就是在好友列表的时候我就想拿到这个详情页数据，这时候我们可能这么处理\n一次性返回数据\n<List>\n    {\n      list.map((item)=><ListItem detail={Item.detail}/>)\n    } \n</List>\n\n后端支持在好友列表的时候同时返回具体的detail信息，这样就不用去走一次getUserInfoById(id)，但是这里也会存在一个问题，好友列表这个接口太冗余，而且数据量太大，打开页面的时候也会出现加载慢的场景,所以这个策略也只能针对数据量较小的情况采取\n预加载getUserInfoById接口\n\n那么干脆一点，我们请求完好友接口后，再根据用户Id，在App下偷偷请求getUserInfoById接口\ngetUserInfoById(1)\ngetUserInfoById(2…",
+          "link": "https://juejin.cn/post/7279096030535712829",
+          "publishedOn": "2023-09-17T04:34:15.000Z",
+          "wordCount": 1619,
+          "title": "我对请求做了个性能小优化，提升了50%的页面性能",
           "imageUrl": null
         },
         {
@@ -745,6 +708,16 @@
           "publishedOn": "2023-09-16T15:36:39.000Z",
           "wordCount": 1400,
           "title": "用了策略模式之后，再也不用写那么多 if else 了，真香！",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7278684023757701183",
+          "author": "帅的名称都被抢了",
+          "description": "theme: juejin\n前言\n公司最近有这么个需求，在线预览pdf、excel、word功能，正好有点时间，稍微整理记录一下。\nPDF预览\nPDF预览用的是pdfjs-dist这个pdf.js构建库\n安装\n最好记住自己安装的版本，因为后面解析字体的时候可能会用到\npnpm i pdfjs-dist\n\n使用\n项目中引用\n因为我安装的版本是2.6.347，所以我这里用cdn引入需要的工作包版本是2.6.347,最好是引用本地的，因为有些内网没法访问cdn的话会造成异常。\nimport * as pdfjsLib from 'pdfjs-dist/build/pdf';\npdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.worker.min.js';\n\n上传组件\n这时候要简单的写一个上传组件，给组件加上id以及change事件方便测试使用效果\n  <div> \n    <!-- 上传组件 -->\n    <input type=\"file\" id=\"fileInput\" @change=\"uploadChange\">\n  </div>\n\n添加一个渲染容器\n此时需要一个渲染容器来呈现需要预览的内容，我们添加一个空的div标签，给加上一个id属性，也可以用ref。因为内容需要用到canvas画布，所以我们要v-for循环一个画布，渲染多张，如果需求只是需要渲染一张就不需要v-for循环了，但是此场景下也是兼容一张渲染的。\n  <div> \n    <!-- 上传组件 -->\n    <input type=\"file\" id=\"fileInput\" @change=\"uploadChange\">\n    <!-- 预览容器，内容呈现…",
+          "link": "https://juejin.cn/post/7278684023757701183",
+          "publishedOn": "2023-09-15T08:28:35.000Z",
+          "wordCount": 5344,
+          "title": "前端实现文件预览 - word、pdf、excel预览",
           "imageUrl": null
         },
         {
@@ -778,6 +751,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7278247100967550988",
+          "author": "王大冶",
+          "description": "首发于公众号 大迁世界，欢迎关注。📝 每周一篇实用的前端文章 🛠️ 分享值得关注的开发工具 😜 分享个人创业过程中的趣事\n快来免费体验ChatGpt plus版本的，我们出的钱 体验地址:https://chat.waixingyun.cn 可以加入网站底部技术群，一起找bug，另外新版作图神器已上线 https://cube.waixingyun.cn/home\n1.响应式\n一套适用于手机、iPad 和 PC 的代码。每次加载不同的样式时，它们都能在一个项目中兼容。这就是所谓的响应性。然后，我希望产品经理能多考虑一下。我不想做了设计工作，最后却说它不好看，因为我不会做设计。\n2.自适应\n自适应是一套代码，无论屏幕尺寸如何变化，改变的只是页面的元素尺寸，而不会出现三栏变两栏的表格变化。以前，领导和设计总让我修改页面，说是自适应窗口的变化。结果要求把三栏改成两栏。为什么要把这个按钮隐藏起来，那个按钮改成外观，怎么改呢？难道不需要设计一张图片吗？我是不是在幻想？\n使用弹性布局\n使用百分比\n避免写死宽度和高度\n添加滚动条\n使用 rem\n3.移动终端的常用宽度和高度\n\n垂直屏幕的常见宽高比：1:2, 2:3, 3:4, 3:5, 5:8, 9:16\n横向屏幕的常见宽高比：4:3, 5:3\n智能手机屏幕尺寸和分辨率列表\n\n4.常见布局\n4.1 百分比布局\n当改变窗口的高度和宽度时，通过给出 height, width, padding, border, 和 margin 等属性，它们都依赖于父组件的宽度和高度（margin 和 padding 都可以使用百分比值的形式，但这与通常的想法有点不同，不同之处在于 margin-top, margin-bottom, padding-top, and padding-bottom 的百分比值不是指容器的高度，而是指父容器的宽度）。\n如…",
+          "link": "https://juejin.cn/post/7278247100967550988",
+          "publishedOn": "2023-09-14T00:52:35.000Z",
+          "wordCount": 1165,
+          "title": "每个高级前端工程师都应该知道的前端布局",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7278238985448177704",
           "author": "程序员Winn",
           "description": "你是否遇到过写css没灵感，写不出酷炫的效果，那这篇文章你一定要看完。知道这几个开源库，它能让你写出炸天的效果并且有效地增加你的摸鱼时长。\n1.CSS Inspiration\n网址：\nhttps://chokcoco.github.io/CSS-Inspiration/#/\n\n\nCSS Inspiration 上面有各种天马行空的css教程，涵盖了css的许多常见的特效。以分类的形式展示不同的css属性或者不同的课题，例如布局方式、border、伪元素、滤镜、背景3D等。这些都是css里面十分重要的知识点，不管是用于学习还是项目中实际运用都是不错的选择。\n当然你也可以用来巩固基础知识，可以利用此项目来制作一些常用的特效，可以看到有上百个经典案例供我们参考，重点是提供源代码，复制粘贴即可使用。\n\n2.Neumorphism\n地址：\nhttps://neumorphism.io/\n\nNeumorphism属于新拟态ui风格，是目前比较新颖的一种前端css设计风格。它的格调简单，基本颜色比较浅，如米白、浅灰、浅蓝等。再利用阴影呈现出凹凸效果，看起来很简单舒适且有3D效果，因此我们可以通过拟态设计出很多优美的页面，拖动效果控制条即可秒生成css样式。\n\n3.AnimXYZ\n地址：\nhttps://animxyz.com/\n\n如果说你热衷于动画，那animxyz绝对是你的不二之选。你可以使用animxyz组合和混合不同的动画来创建自己的高度可定制的css动画，而无需编写一个单一的关键帧。\n\n相比于animate css，它的强大之处在于你可以在这里根据自己的想法来手动配置动画。实现的动画代码实例，我们可以复制迁移到项目中使用。\n4.CodePen\n\n\n最后要推荐的则是我最常用也是我最推荐的，它就是codepen。codepen是一个完全免费的前端代码托管服务，上面云集了各路大神，拥有全世界前端达人经典项目进行展示，让你从中获取到很多的创作灵感。\n它可以实现即时预览，你甚至可以在线修改并及时预览别人的作品。支持多种主流预处理器，快速添加外部资源文件，只需在输入框里输入库名，codepen就会从cdn上寻找匹配的css或js库。",
@@ -793,7 +776,7 @@
           "description": "先提前祝jym ，心有嫦娥月，祝福满满中秋！\n猜题卡片灵感来自于王者荣耀的夫子的试炼，收集了一些关于中秋节的题目做成了卡片，以选择题的形式答题。\n码上掘金的体验版已更新（上传不了图片资源），体验版为无图版本\njcode\n效果图：\n\n\n\n\n第一步先画一个div\n\n先画一个div里面放一张图片，下面显示答对题目数量，题目的数量为响应式的，记录答对的题数\n <div class=\"container\">\n    <header class=\"header\">\n      <div>\n        <img style=\"height: 143px;width: 189px;margin-top: 30px;margin-bottom: 10px;\" src=\"./img/tuzi.png\" alt=\"\">\n        <p class=\"text1\">答对{{ 0 }}题</p>\n      </div>\n  </div>\n  <div class=\"\">\n        <p class=\"text2 timu2\" style=\"margin-top: 30px;\">第{{ timusl }}/10题</p>\n        <p class=\"text2 timu2\" style=\"width: 290px;word-wrap: break-word;\">{{ \"题目内容\" }}</p>\n        <div class=\"timu\">\n          <div :class=\"[isCorrectA?'text4':aaa? 'text5' :'text1', 'timu1']\" @click=\"onclickA\">A:{{ \"木兰辞\" }}</div>\n          <div :class=\"[isCorrectB?'text4':bbb? 'text…",
           "link": "https://juejin.cn/post/7278104060237398052",
           "publishedOn": "2023-09-13T08:31:50.000Z",
-          "wordCount": 3278,
+          "wordCount": 3272,
           "title": "贺中秋，前端vue实现猜谜卡片游戏",
           "imageUrl": null
         },
@@ -818,6 +801,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7277917854430674959",
+          "author": "zxg_神说要有光",
+          "description": "大家都用过组件库，react 流行的组件库有阿里的 ant-design、字节的 semi-design、arco-design 等。\n那这些组件库都是怎么打包的呢？\n我们自己写个组件库的话，怎么写打包逻辑呢？\n这篇文章我们就来探究下。\n新建一个项目：\nmkdir component-lib-test\n\ncd component-lib-test\n\nnpm init -y\n\n\n分别安装 ant-design、arco-design、semi-design\npnpm install antd\n\npnpm install @douyinfe/semi-ui\n\npnpm install @arco-design/web-react\n\nnpm、yarn 会把所有依赖铺平，看着比较乱。而 pnpm 不会，node_modules 下很清晰：\n\n首先看下 antd，分为了 lib、es、dist 3 个目录：\n\n分别看下这三个目录的组件代码：\nlib 下的组件是 commonjs 的：\n\nes 下的组件是 es module 的：\n\ndist 下的组件是 umd 的：\n\n然后在 package.json 里分别声明了 commonjs、esm、umd 还有类型的入口：\n\n这样，当你用 require 引入的就是 lib 下的组件，用 import 引入的就是 es 下的组件。\n而直接 script 标签引入的就是 unpkg 下的组件。\n再来看看 semi-design 的：\n\n也是一样：\n\n只不过多了个 css 目录。\nantd 没有这个目录是因为它已经换成 css in js 的方案了，不需要单独引入 css 文件。\n然后是 arco-design 的：\n\n也是一样：\n\n同样是 lib、es、dist 3 个目录，同样是分别声明了 esm、commonjs、umd 的入口。\n也就是…",
+          "link": "https://juejin.cn/post/7277917854430674959",
+          "publishedOn": "2023-09-13T06:28:06.000Z",
+          "wordCount": null,
+          "title": "React 组件库都是怎么打包的？",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7277802797474021410",
           "author": "JacksonChen",
           "description": "theme: juejin\n前言\n为了更好的了解原神角色，我模仿官网做了一个角色切换效果，在做的过程当中也总结了一些技术点。\n为了让大家更好的体验，我兼容了 PC 端和移动端，建议在 PC 端查看效果更佳。接下来就为大家简单的分享一下！\n话不多说，原神启动！！\n效果\n先看一下官网的效果：\nhttps://ys.mihoyo.com/main/character/mondstadt?char=0\n我写的真实效果：https://chenyajun.fun/#/ysRoleSwitch\n我的另一篇：原神全屏滚动效果我使用 Vue 实现了原神官网的全屏滚动效果-系列上 - 掘金 (juejin.cn)\n技术点\n一、底部角色横向滚动效果\n1、原理\n\n外层容器：就是底部角色可视窗口。\n内层容器： 用来存放角色头像，点击左右键或者角色需要滚动的容器。\n滚动元素： 就是我们看到的一个个角色头像。\n首先我们使用外层容器来包裹所有的角色信息，同时使外层容器overflow：hidden。\n其次我们通过点击左右按键或者任意角色来确定当前所处的 index。\n最后通过固定角色宽度 ✖ index 来控制内层容器的left值，从而移动内层容器位置，最终显示当前激活的角色头像。（注：移动端实现效果不同，下面单独讲解）\n2、要求\n\n要求1：如果处于最左（右）侧的位置，点击左右键或者前三个角色头像不进行位移移动，只显示角色切换激活状态。\n要求2：处于最左侧并且点击左键需要角色容器第一个为倒数第六个，也就是最后一栏。相反，处于最右侧并且点击右键需要移动到第一个，也就是第一栏。\n要求3：点击中间部分永远保持在角色容器的第三个激活状态。\n3、代码实现\n大家可以根据HTML结构去理解代码\n      <div class=\"role-outer\" :style=\"{ width: isPC ? '830px' …",
@@ -833,38 +826,18 @@
           "description": "theme: nico\n引言\nBI是商业智能(Business Intelligence)的缩写，是一种将企业中现有的数据进行有效的整合的平台，它可以帮助企业、组织和个人更好地了解其业务状况、发现问题，并进行决策。BI产品普遍采用可视化的方式，可以帮助用户更直观、更高效、更智能地分析和呈现数据，从而提升数据驱动的决策能力，快速准确地提供报表并提供决策依据。\nDataWind 是一款支持千亿级别数据自助分析的一站式数据分析与协作平台。可打通从数据接入、数据整合、查询分析到全员协同共享的全流程，以数据门户、数字大屏、管理驾驶舱等可视化形态，助力业务用户实现智能洞察，让数据发挥价值。\n本文聚焦 DataWind 产品的核心可视化能力，并为您揭秘其实现原理。\n\n丰富的可视化展现形式\n图表是 BI 产品中最常用的数据可视化工具之一。通过图表，用户可以更直观地了解数据的趋势、关系和分布。常见的图表类型包括折线图、柱状图、饼图、散点图等等。不同的图表类型适用于不同的数据类型和分析目的。例如，折线图可以展示时间序列数据的趋势，柱状图可以比较不同类别的数据，饼图可以显示数据的占比等等，选择适合的图表类型对于用户理解数据非常重要。\n可视化展现形式\n1. 统计图表\n在DataWind产品中，为用户提供了丰富的图表类型供用户使用，其中包括柱状图、条形图、折线图、面积图、双轴图、饼图、环形图、玫瑰图、散点图、填充地图、散点地图、词云图、直方图、雷达图、漏斗图、指标卡、仪表图、进度图、瀑布图等，以及关系图表类型桑基图。\n\nDataWind比较具有特色的是组合图表与透视图表。\n组合图表可以将多个笛卡尔坐标系下的图表并列展示，方便用户对相同维度下的不同指标进行对比观察，组合图不但提供基础图表的组合，还提供了与双轴图得组合。\n而透视图表是用来观察一个整体的数据在多个维度下的切分的结果，反映在图表上就是具有树…",
           "link": "https://juejin.cn/post/7277786839841407034",
           "publishedOn": "2023-09-12T09:14:00.000Z",
-          "wordCount": 2380,
+          "wordCount": 2255,
           "title": "火山引擎 DataWind 产品可视化能力揭秘",
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7277799790296416290",
-          "author": "han_",
-          "description": "theme: channing-cyan\n前言\n在日常的前端开发中，总是涉及到对数据的处理，比如后端返给你一坨数据，你需要进行处理并回显到页面上，又或者提交form表单到服务端时，你需要将数据处理成后端接口定义的数据结构，而这些都离不开数据处理。\n那数据处理有什么好用的工具库吗？lodash当之无愧。\nlodash使用\n使用:\n// 浏览器环境\n<script src=\"lodash.js\"></script>\n// npm\nnpm i --save lodash\n\n接下来给大家介绍下我平时开发用lodash最最最常用的一些方法。\n一、数组类\n1、_.compact(array)\n作用：剔除掉数组中的假值（假值包括false, null,0, \"\", undefined, 和 NaN这5个）元素，并返回一个新数组。\n使用示例：\nconst _ = require('lodash')\nconsole.log(_.compact([0, 1, false, 2, '', 3, undefined, 4, null, 5]));\n// 输出 [ 1, 2, 3, 4, 5 ]\n\n项目中的应用：剔除数组中的一些脏数据。\n2、_.difference(array, [values])\n作用：过滤掉数组中的指定元素，并返回一个新数组\n使用示例：\nconst _ = require('lodash')\nconsole.log(_.difference([1, 2, 3], [2, 4]))\n// 输出 [ 1, 3 ]\nconst arr = [1, 2], obj = { a: 1 }\nconsole.log(_.difference([1, arr, [3, 4], obj, { a: 2 }], [1, arr, obj]))\n// 输出 [ 1, 3 ]\n\n类似方法：\n_.pul…",
-          "link": "https://juejin.cn/post/7277799790296416290",
-          "publishedOn": "2023-09-12T09:05:01.000Z",
-          "wordCount": 2863,
-          "title": "用lodash开发前端，真香！",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7277797749886009398",
-          "author": "掘金酱",
-          "description": "theme: Chinese-red\n\n让代码与月光交织\n让创意与技术共舞\n快来参加中秋创意投稿大赛\n让你的代码闪耀明月的光芒\n活动时间\n2023年9月12日-2023年9月24日（共13天）\n数据统计截止2023年9月25日\n如何参与\n在 # 中秋创意投稿大赛 话题下，产出中秋主题相关的技术文章，即有机会获得「掘金中秋礼盒」，可选主题参考：\n小游戏类：月饼制作、嫦娥奔月、猜灯谜、兔子寻宝、数字拼图等；\n互动贺卡：可以设计角色、场景和动画效果，并通过代码控制动画的播放和交互；\n可爱动画：使用编程语言和动画技术，创作一个中秋节传统故事的动画短片；\n中秋元素：用编程语言实现各类中秋元素制作\n（一定要放效果图哦！！可以使用码上掘金功能展现，也可以使用截图/GIF来展示）\n   ......\n文章要求\n文章体裁：必须是技术文章，且与中秋节相关。（读后感类、人生经历、面试经历、年中总结、转行产品经理、区块链、只有创意没有技术实现等与技术不是直接相关的，都不能参与活动评选）\n文章分类：中秋创意投稿文章请选择前端、后端、Android、iOS、人工智能分类，其它分类不参与活动评选。\n内容规范： 文章要求原创，内容符合掘金社区的内容标准和规范， 正文字数不得少于700字，不得有广告/洗稿/凑字数等行为。注意，所有的文章都不能只贴代码，要有自己的分析思考，否则不计数；\n其他：本次活动不与站内其他活动并行，也就是说一篇文章只能参加一个活动；若活动中发现作弊行为，立即取消活动资格！\n奖品设置\n创意TOP奖：稀土掘金中秋礼盒\n名额：综合排名 TOP 15\n评奖规则：综合阅读、点赞、评论、收藏数据评分，如果发现刷量的，直接取消活动资格！\n每个用户选择计算评分后最高的文章计算\n\n优秀文章奖：中秋原木花灯DIY包\n名额：达标即可获得，每人一份\n评奖规则：文章被推荐\n\n加群讨论\n欢迎大家进入活动群，在群内有官方运营同学进行活动答疑，有任何活动相关的问题都可以进群咨询！\n进群方式：扫描下方二维码添加「掘金酱」企业微信，向掘金酱发送关键词「创意投稿」即可进群",
-          "link": "https://juejin.cn/post/7277797749886009398",
-          "publishedOn": "2023-09-12T06:59:50.000Z",
-          "wordCount": 890,
-          "title": "🏮中秋创意投稿，共赏明月光芒 | 创意投稿大赛",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7277089907974422588",
-          "author": "八月十八",
-          "description": "theme: smartblue\n如何避免写出屎山，优雅的封装组件，在面试官面前大大加分，从这篇文章开始！\n保持单向数据流\n大家都知道vue是单项数据流的，子组件不能直接修改父组件传过来的props，但是在我们封装组件使用v-model时，不小心就会打破单行数据流的规则，例如下面这样：\n<!-- 父组件 -->\n<my-component v-model=\"msg\"></my-component>\n\n\n<!-- 子组件 -->\n<template>\n  <div>\n    <el-input  v-model=\"msg\"></el-input>\n  </div>\n</template>\n\n<script setup>\ndefineOptions({\n  name: \"my-component\",\n});\n\nconst props = defineProps({\n  msg: {\n    type: String,\n    default: \"\",\n  },\n});\n\n</script>\n\nv-model实现原理\n直接在子组件上修改props的值，就打破了单向数据流，那我们该怎么做呢，先看下v-model的实现原理：\n<!-- 父组件 -->\n<template>\n  <my-component v-model=\"msg\"></my-component>\n  <!-- 等同于 -->\n  <my-component :modelValue=\"msg\" @update:modelValue=\"msg = $event\"></my-component>\n</template>\n\nemit通知父组件修改prop值\n所以，我们可以通过emit，子组件的值变化了，不是直接修改props,而是通知父组件去修改该值!\n子组件值修改，触发父组件的update:modelValue事件，并将新…",
-          "link": "https://juejin.cn/post/7277089907974422588",
-          "publishedOn": "2023-09-11T06:27:45.000Z",
-          "wordCount": 1953,
-          "title": "妙用computed拦截v-model，面试管都夸我细",
+          "id": "https://juejin.cn/post/7277495542044573750",
+          "author": "_你当像鸟飞往你的山",
+          "description": "上一篇，深入理解了 React 中的状态，这篇就来开启 React Query 的大门！\n本章代码放在我的 github repo：ian-kevin126/react-query-best-practices\nReact Query 能干嘛？\nRQ 能干的事儿多着呢 ~\n\n而且，React Query 是用 TypeScript 写的，也可以与 React Native 结合使用，开箱即用，基本不需要任何配置，主要支持以下的一些 Features：\n缓存：每次查询后，数据将在可配置的时间内缓存，并可在整个应用程序中重复使用。\n取消查询：可以取消查询，并在取消后执行操作。\n乐观更新：在突变时，可以轻松更新状态，从而为用户提供更好的用户体验。如果突变失败，还可以轻松恢复到之前的状态。\n并行查询：如果需要同时执行一个或多个查询，可以毫无压力地执行，也不会影响缓存。\n依赖查询：有时，我们需要在另一个查询完成后再执行另一个查询。React Query 可让这一切变得简单，并避免嵌套 Promise。\n分页查询：有了 React Query，这种用户界面模式变得更加简单。你会发现，使用分页 API、更改页面和渲染获取的数据都非常简单。\n无限查询：React Query 使另一种用户界面模式变得更加简单。你可以在用户界面中实现无限滚动，相信 React Query 会让你在获取数据时更加轻松。\n滚动恢复：你是否有过这样的经历：从一个页面导航出去，当导航回来时，发现页面已经滚动到了导航之前的位置？这就是滚动恢复，只要缓存了查询结果，它就能正常工作。\n数据重新获取：需要触发数据重新获取？通过 React Query，你只需编写一行代码就能做到这一点。\n数据预取：有时，你可以提前确定用户的需求和下一步操作。在这种情况下，你可以相信 React Query 可以帮助你提前预取数据并为你缓存。这…",
+          "link": "https://juejin.cn/post/7277495542044573750",
+          "publishedOn": "2023-09-12T03:04:55.000Z",
+          "wordCount": 2884,
+          "title": "【React Query】终极教程02：初见 RQ",
           "imageUrl": null
         },
         {
@@ -873,58 +846,18 @@
           "description": "作为一个 React、Vue 双修选手，在 Vue 3 逐渐稳定下来之后，是时候摸摸 Vue 3 了。Vue3 的变化不可谓不大，所以，本系列主要通过对 Vue3 中的一些 Big Changes 做详细的介绍，然后封装一个比较通用的业务脚手架，里面会增加很多非常有用的小技巧，让你在 Vue 3 的世界里纵享丝滑 ~\n第一篇将着重介绍一些 Vue3 中重要的变化和概念 ~\n1、新建项目\n找个可以开机的电脑，在终端输入：\n\n打开链接 http://127.0.0.1:5173，你的眼睛就会看到：\n\n代表项目初始化成功，你真棒！\n你的目录会长这个样子：\n\n注意：记笔记，小技巧学起来，在 vscode 终端中使用 tree 指令打印当前项目的文件树：\ntree -I \"node_modules|.vscode|cypress\" > tree.txt\n\n这个命令会做两件事:\n使用 tree 命令输出目录树结构，同时排除 node_modules、.vscode 和 cypress 文件夹\ntree 命令可以输出目录的树形结构\n-I 参数用于排除某些文件夹不显示\n在排除参数中用 | 分隔多个要排除的文件夹名\n使用 '>' 符号将标准输出重定向到 tree.txt 文件（没有就会自动生成一个）\n这样 tree 命令的输出就会被写入到 tree.txt 文件中，而不是打印到终端屏幕上。在项目中执行，然后你就会在项目根目录中看到一个 tree.txt 文件:\n.\n├── README.md\n├── cypress.config.ts\n├── dist\n│   ├── assets\n│   │   ├── AboutView-4d995ba2.css\n│   │   ├── AboutView-675ecf4b.js\n│   │   ├── index-9f680dd7.css\n│   │ …",
           "link": "https://juejin.cn/post/7277089907973603388",
           "publishedOn": "2023-09-11T03:42:32.000Z",
-          "wordCount": 3439,
+          "wordCount": 3465,
           "title": "【Vue3】保姆级毫无废话的进阶到实战教程 - 01",
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7277045020423798840",
-          "author": "翔子丶",
-          "description": "🐛 问题复现\n之前在做 html 内容导出为 pdf、图片时，先是用 html2canvas 生成截屏，再进一步转换为 pdf 文件，感兴趣的同学可以看下这篇一文搞定前端 html 内容转图片、pdf 和 word 等文件，截图得到的图片内容、质量都没有什么问题。\n不过最近有个同事反应，他导出的图片有 bug，这我倒挺好奇的，因为这个导出功能已经用了很久，并没有人反馈过有问题（除了那个 pdf 翻页内容被截断的问题，求助 jym 🙏：前端有好的解决方法吗？），于是我要了他的文档，果不其然，出现了下面红框所示的问题。\n\n检查一下它的 DOM 结构，发现是下面这样，猜测是就是这个原因导致的。\n\n为了验证自己的猜想，浅浅调试一下 html2canvas 的源码，看下 html2canvas 是怎样一个流程，它是如何将 html内转成 canvas 的。\n调试开始\n在 html2canvas 执行的地方打个断点，开始调试代码：\n\n进入 html2canvas 内部，可以看到内部执行的是 renderElement 方法：\n\n咱们直接进入到 renderElement 方法内部，看下它的执行流程：\nrenderElement 执行流程\n判断传入节点是否有效\n\nNode.ownerDocument：只读属性，返回当前节点的顶层的 document 对象；\ndocument.defaultView：属性返回当前 document 对象所关联的 window 对象，如果没有，会返回 null。\n这里主要判断节点，快速跳过，继续执行 👇。\n合并配置项\n将用户传入的 options 与默认的 options 合并\n\n构建配置项，将传入的 opts 与默认配置合并，同时初始化一个 context 上下文对象（缓存、日志等）：\n\n缓存对象 cache\n其中 cache 为缓存对象，主要是避免…",
-          "link": "https://juejin.cn/post/7277045020423798840",
-          "publishedOn": "2023-09-10T14:03:06.000Z",
-          "wordCount": 2768,
-          "title": "悟了，html2canvas截图原理，看看它是如何截图的？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7276630249548005415",
-          "author": "前端小码哥",
-          "description": "theme: channing-cyan\n前言\n一边学习，一边记录，前前后后花了至少2个月的时间，算是把TS大部分都搞明白了。\n这篇文章的篇幅有点长，是我本人学习过程中的一些记录，参考了很多优秀博主的一些文章，以及在B站看了一些TS的视频，把几乎所有TS涵盖到的基础知识点都总结了下来，所以，对于想学习TS的小伙伴下来，一定一定要认认真真把这篇文章看完。\n8万多字的教程，不敢说是全网最好，但可以说是全网最详细。\n对于新手入门来说是一篇非常不错的宝藏文章，几乎每个 TypeScript 的知识点都有详细的讲到，并且附上一些简单的示例，通俗易懂，希望可以给想学习 TS 的小伙伴带来动力！\n一、了解TypeScript\n1. 什么是TypeScript\nTypeScript是由微软开发的一门开源的编程语言。\nTypeScript，简称TS，是JavaScript的超集（以JavaScript为基础构建的语言，JS有的TS都有）。\nTypescript = Type + JavaScript（在JS基础之上，为JS添加了类型支持）。\n可以在任何支持JavaScript的平台中执行。\n2. 为什么需要TypeScript\n我们都知道，JavaScript是弱类型的编程语言，很多的错误只有在运行的时候才会被发现，而TS在代码编译的时候（代码执行前）就可以发现错误。\n3. TypeScript的特点\n支持最新的ECMAScript语法\n在代码编译阶段就能发现错误\n在JS基础上增加了类型支持\n4. TypeScript和JavaScript的区别\nTypeScript\nJavaScript\n\n\n\n\n编译期发现错误\n运行时发现错误\n\n\n强类型语言，支持静态和动态类型\n弱类型语言，没有静态类型选项\n\n\n支持模块、泛型和接口\n不支持模块、泛型和接口\n\n\n代码运行时会被编译成JavaScript代码…",
-          "link": "https://juejin.cn/post/7276630249548005415",
-          "publishedOn": "2023-09-10T07:12:38.000Z",
-          "wordCount": 20473,
-          "title": "【全文8W字】我是怎样从0开始学会🚀TypeScript🚀的",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7276628114981388349",
-          "author": "timegogo",
-          "description": "​\n作为前端开发，工作中最常使用的编辑器就是VSCode，但是你有比较深入地去发掘过VScode的各种开发配置吗？本文介绍了一些简单但是却能明显提高前端开发效率的配置&tips\n​\n一、VSCode快捷键\nMac相比较于Window的一大优势就在于，它有着丰富的快捷键操作，仅仅依靠键盘（而不用分出手去动触控板/鼠标）就能完成很多操作，从而带来办公效率的提升。同样，对于VSCode，善用好快捷键，可以实现：减少鼠标操作 = 节省时间 = 不会消耗耐心 = 提高效率\n1.文本编辑\nshift + command + k          #删除当前行：\ncommand + backspace          #删除光标前所有字符\n​\ncommand + option + up/down   #光标同时选中多行\nshift + left/right/up/down   #选中字符\noption + 左/右键              #移动到单词最左/右侧\ncommand + up/down            #跳转到顶部、底部\n​\noption + 上/下键           #将当前代码移动到上/下一行\nshift + option +up/down   #复制当前行到上方/下方\n\ncommand + k，然后再按下 command + J # 展开所有代码行\ncommand + k，然后再按下 command + 0 # 折叠所有代码行\n​\nalt + z                   #自动换行\nshift + option + F        #格式化所有代码\ncommand + K command + F   #格式化选中代码\n\n2.视图管理\ncommand + shift + n #新建窗口\ncommand + 1/2/3     #选中不同的拆分栏…",
-          "link": "https://juejin.cn/post/7276628114981388349",
-          "publishedOn": "2023-09-09T15:36:22.000Z",
-          "wordCount": 2126,
-          "title": "VSCode开发提效指南（前端开发版）",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7276260308515274792",
-          "author": "木头就是我呀",
-          "description": "近期接手的需求比较多，各个需求之间又不是线性关系（一个完事儿再开始另一个），往往经常出现一个还没完全结束，另一个就开始了...\n在这种场景下，我通常会采用 “空间换时间” 的方法，即对于项目A，我会拉取3 ~ 4份在本地，每一份对应一个分支，这样可以比较快速的切换项目并调试。\n当然，这只是个人的一种习惯，不是所有人都习惯这样，你若是喜欢在一个项目里频繁的切换分支，倒也何尝不是一种方法，但我不觉得这是一种好的方法。\n慢慢的，我经常不确定自己应该要打开哪个项目了，比如对于项目A，我本地有3 ~ 4份，切换时，我会使用 Control + R，调出顶部弹窗，在这里进行切换，就像下面这样：\n\n此时，我可以看到项目名称+项目路径，但是我看不到每个项目对应的分支名，这个对我来说无疑是一个巨大的痛点，我需要去到我的目标分支对应的项目中，但是很遗憾，我不能每次都可以很幸运的选到我想要的项目，经常会打开好几个我不需要的项目，这让我很头疼，每次切换前都祈祷这一次一定对！哈哈哈。\n所以，我的诉求就来了，我希望在查看这个目录的时候，能够多一项就是【分支名】，这样我可以很好的分辨出我要去哪个项目。\n所以，我大概花了2-3个小时完成了这件事，这件事已经在我脑海里1年多了，也尝试思考不同的解法，终于在这次找到了最优雅的解决方案~\n下面是增强后的效果：\n\n可以清楚的看到，在保留了原始功能的基础上，很得体的展现了项目对应的分支名！你可以一目了然的看到所有分支，当然，这些数据在你每次呼出侧边栏的时候，都是最新的！\nOK！你可以从这个链接进去安装这个插件，安装好之后，它会替代你原来的Control + R这个快捷键，你就不会再看到顶部的弹窗了，取而代之的是右侧这个还算美观的小侧边栏。\n插件商店链接：https://marketplace.visualstudio.com/items?itemName=xicunyang.show-project-with-git-branch\n下面是一些实现思路，如果你不感兴趣的话，看到这里就可以了！\n重点思路\n插件实现的其中最重要的一环是：“获取vscode弹窗里的项目列表”\n注意！这个列表不是固定死的，而是会将我们最新打开的项目放在最前面。这个列表是我非常需要的，因为不从这里获取的话，我很难统计到用户使用的是哪些工程，如果这些工程让用户手动录入，简直是太蠢了，但如果是我自己去扫描，也不是一个好方法，所以，这个列表是我最最重要的资源。\n那么如何获取这个列表的数据呢？\n简洁明了，直接去看vscode的源码吧，肯定能找着hahaha！\n但是，如何入手去看呢？那么老多代码，不好下手... 对！通过关键字去搜索！\n可以看到，弹窗内容里有这个关键字：\n\n咱们就从这里开始，直接从vscode源码里搜“选中以打开(按 Cmd 键”，会发现搜不到，这也正常，因为vscode源码里本来就没把中文内置进去，中文的表现是插件实现的，我们找到中文插件：\n\n然后顺利的得到了仓库地址，打开仓库就看到了源码，在源码里全局搜索，我们得到了一个关键的信息：openRecentPlaceholderMac\n\n这里大家都可以理解，这是做了国际化，真正在vscode源码里的应该是 openRecentPlaceholderMac ，所以我们去vscode源码里搜 openRecentPlaceholderMac 试一试\n耶，果然搜到了！\n\n按下面数字的顺序，我们可以反推出，数据来自于：workspacesService.getRecentlyOpened()\n\n现在我就担心一点，如果这个方法只是vscode内部使用的，没有对外部插件暴露的话，那就比较麻烦了，如果对外暴露了，我直接调用就可以拿到一样的数据了。\n最后经过不断的搜索和查询调用链（这是一个漫长的过程），最终找到了这里：\n\n看语义是注册了一个命令，命令的功能就是调用最近打开过的文件，并返回。\n所以，看到这里，仿佛就看到了曙光，我迫不及待的搭建了一个插件工程，调用，成功！\n\n至此，几乎就成功了一大半了，还有些细节就是获取对应目录的git分支，我问了下ChatGPT，得到了一个还不错的方法：\n\nOK！剩下的就是页面的搭建和消息传递，就不多做赘述了，大部分在谷歌上都可以搜到。\n以上，就是这次开发小插件的心得，试用了一天，感觉还是不错的，有同样痛点的同学可以使用试试哈！\nGit仓库地址：https://github.com/xicunyang/show-project-with-git-branch",
-          "link": "https://juejin.cn/post/7276260308515274792",
-          "publishedOn": "2023-09-08T13:06:28.000Z",
-          "wordCount": 919,
-          "title": "VSCode插件：简单增强 VSCode 的 Control + R",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7276030484596637737",
-          "author": "_你当像鸟飞往你的山",
-          "description": "新鲜出炉的 React Query 终极教程系列来啦，结合实际业务，探索最佳实践 ~！\n\nTanStack Query (FKA React Query) is often described as the missing data-fetching library for web applications, but in more technical terms, it makes fetching, caching, synchronizing and updating server state in your web applications a breeze.\nTanStack Query（FKA React Query）通常被描述为网络应用程序中缺失的数据抓取库，但用更专业的术语来说，它能让网络应用程序中的服务器状态的抓取、缓存、同步和更新变得轻而易举。\nMotivation：Most core web frameworks do not come with an opinionated way of fetching or updating data in a holistic way. Because of this developers end up building either meta-frameworks which encapsulate strict opinions about data-fetching, or they invent their own ways of fetching data. This usually means cobbling together component-based state and side-effects, or using more general purpose state management…",
-          "link": "https://juejin.cn/post/7276030484596637737",
-          "publishedOn": "2023-09-08T02:44:25.000Z",
-          "wordCount": 2881,
-          "title": "【React Query】终极教程01：什么是状态？",
+          "id": "https://juejin.cn/post/7276990690546270247",
+          "author": "WindrunnerMax",
+          "description": "基于ReactPortals实现无限层级弹出层结构\nReact Portals提供了一种将子节点渲染到父组件以外的DOM节点的解决方案，即允许将JSX作为children渲染至DOM的不同部分，最常见用例是子组件需要从视觉上脱离父容器，例如对话框、浮动工具栏、提示信息等。\n描述\n<div>\n  <SomeComponent />\n  {createPortal(children, domNode, key?)}\n</div>\n\nReact Portals可以翻译为传送门，从字面意思上就可以理解为我们可以通过这个方法将我们的React组件传送到任意指定的位置，可以将组件的输出渲染到DOM树中的任意位置，而不仅仅是组件所在的DOM层级内。举个简单的例子，假设我们ReactDOM.render挂载组件的DOM结构是<div id=\"root\"></div>，那么对于同一个组件我们是否使用Portal在整个DOM节点上得到的效果是不同的:\nexport const App: FC = () => {\n  return (\n    <React.Fragment>\n      <div>123</div>\n      <div className=\"model\">\n        <div>456</div>\n      </div>\n    </React.Fragment>\n  );\n};\n\n// -> \n\n<body>\n  <div id=\"root\">\n    <div>123</div>\n    <div class=\"model\">\n      <div>456</div>\n    </div>\n  </div>\n</body>\n\nexport const App: FC = () => {\n  return (\n    <React.Fragment>\n      <d…",
+          "link": "https://juejin.cn/post/7276990690546270247",
+          "publishedOn": "2023-09-11T03:04:31.000Z",
+          "wordCount": 3184,
+          "title": "基于ReactPortals实现无限层级弹出层结构",
           "imageUrl": null
         }
       ]
