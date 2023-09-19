@@ -34,7 +34,7 @@
           "description": "起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/",
           "publishedOn": "2023-09-17T08:06:56.000Z",
-          "wordCount": 1499,
+          "wordCount": 1497,
           "title": "又get到了，JS复制图片到剪切板",
           "imageUrl": null
         },
@@ -44,7 +44,7 @@
           "description": "自己体验了下，出乎意料，HTML elementtiming属性在性能监控这块，比预想的要实用的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/html-elementtiming-attribute/",
           "publishedOn": "2023-09-15T15:58:22.000Z",
-          "wordCount": 956,
+          "wordCount": 954,
           "title": "HTML elementtiming属性初体验记录",
           "imageUrl": null
         },
@@ -54,7 +54,7 @@
           "description": "坚持探索Web标准下的原生浏览器开发行为，行为驱动和数据驱动的表单开发其实各有千秋，深入HTML，你会发现这个世界比你所知的要精彩的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/form-reset-input-change/",
           "publishedOn": "2023-09-12T15:52:48.000Z",
-          "wordCount": 1120,
+          "wordCount": 1119,
           "title": "Tips：form元素reset后input不触发change事件处理",
           "imageUrl": null
         },
@@ -64,7 +64,7 @@
           "description": "相比于tinypng，我这个工具还自带尺寸设置功能，同时还可以控制压缩率，指定压缩格式，纯前端实现，高性能高效率。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-jpg-png-compress-tinyimg-mini/",
           "publishedOn": "2023-09-05T13:05:30.000Z",
-          "wordCount": 1087,
+          "wordCount": 1086,
           "title": "做了个纯前端JPG/PNG尺寸缩放+压缩的在线工具",
           "imageUrl": null
         },
@@ -74,7 +74,7 @@
           "description": "一开始看到registerProtocolHandler()方法老激动了，以为又发现了个好玩具，谁知深入体验了一番之后……呵呵~",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-registerprotocolhandler/",
           "publishedOn": "2023-08-30T15:02:58.000Z",
-          "wordCount": 990,
+          "wordCount": 989,
           "title": "一言难尽的registerProtocolHandler()方法",
           "imageUrl": null
         },
@@ -94,7 +94,7 @@
           "description": "Performance和PerformanceObserver，用户 Timing API，哦，学不完，根本学不完，这两周抽时间好好研究了一番，终于了解了个大概了🙊，特此记录下。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-performanceobserver-api/",
           "publishedOn": "2023-08-27T08:34:24.000Z",
-          "wordCount": 1301,
+          "wordCount": 1300,
           "title": "狠狠地研究了下 PerformanceObserver API",
           "imageUrl": null
         }
@@ -152,6 +152,26 @@
       "feedUrl": "https://rsshub.app/jike/user/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
+        {
+          "id": "https://m.okjike.com/originalPosts/65090d46c70326f2eb15bc12",
+          "author": null,
+          "description": "Web 网页性能的三大衡量指标 LCP/FID/CLS 已经推出来三年多了，大量网站都会根据 Chrome Devtools 的提醒对指标进行优化，不过近期 Chrome 对其进行了调整，其中 FID 未来会被替换成 INP（Interaction to Next Paint）。\nFID（First Input Delay）可以很好地衡量网页从开始加载到可交互的时长，据 Chrome 统计，目前已经有 93% 的网页达到了 200ms 以内，也就是 Good FID，但事实上从真实体感来看，只有 65% 的网站体验是流畅的，剩下来的 35% 只是做到了指标数据上好看。\n这让我想起了较早之前公司做网页优化的时候，无限追求秒开率，甚至推出红黑榜强制要求开发者进行优化，结果最后就变成了，开发者把渲染和计算的任务全部推迟，等网页骨架在 1s 内完成渲染后再执行繁重任务，以逃过黑榜。这种优化策略，往往会落到 35% 的区间，指标好看而已。\nChrome 也发文分析了，https://web.dev/inp-cwv，到底以怎样的方式来衡量网页体验才是最佳的，INP 会持续探测网页上用户行为的真实可交互时间，任何一次按钮点击超过 500ms，都会认为你的网站 INP 不达标，目的是让开发者关注网页整体交互周期的性能问题，而不仅仅是首次加载的体验。这一要求会让开发者更聚焦到如下几类优化：\n1）避免端侧密集型计算，将计算转移到 Worker 进程，或者在服务端完成计算\n2）对于长耗时的任务，需要给出过渡缓冲，例如提供一个 loading 动画增强体验\n3）让设计更聚焦用户行为，一旦用户开始互动，那么互动区域以外的部分应该减少反馈\n建立以用户为中心的指标度量，Google 在推进网页性能和体验优化方面，确实是不遗余力的👍🏻",
+          "link": "https://m.okjike.com/originalPosts/65090d46c70326f2eb15bc12",
+          "publishedOn": "2023-09-19T02:53:58.000Z",
+          "wordCount": 523,
+          "title": "发布了: Web 网页性能的三大衡量指标 LCP/FID/CLS 已经推出来三年多了，大量网站都会根据 Chrome Devtools 的提醒对指标进行优化，不过近期 Chrome 对其进行了调...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FsiNMD4QiHw1v0q72dEuU5yj4m7Nv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
+        {
+          "id": "https://m.okjike.com/originalPosts/6508ff302c9bdd1af5f98d39",
+          "author": null,
+          "description": "几乎所有假期到期作废的同事，要么是休假不知道干啥，要么是觉得工作实在离不开他。🤷‍♂️",
+          "link": "https://m.okjike.com/originalPosts/6508ff302c9bdd1af5f98d39",
+          "publishedOn": "2023-09-19T01:53:52.000Z",
+          "wordCount": 431,
+          "title": "发布了: 几乎所有假期到期作废的同事，要么是休假不知道干啥，要么是觉得工作实在离不开他。🤷‍♂️",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+        },
         {
           "id": "https://m.okjike.com/originalPosts/6508ea8dc70326f2eb11df64",
           "author": null,
@@ -231,26 +251,6 @@
           "wordCount": 495,
           "title": "发布了: 苹果在 iOS 17 中已经支持了 AirDrop transfers over the internet，以前必须近距离通过蓝牙或者 WiFi 才可以传输文件，未来这一操作会变得更加便捷，例...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fo3602O_GkSlXgFY19IiCXFVEcQmv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/6505bb9e8425e0dd3b32e6d7",
-          "author": null,
-          "description": "现在你可以通过浏览器直接起一个 PHP/Node.js 环境跑后端程序了，这是 Google I/O 2023 提到的一个 WebAssembly 实践，将 WordPress 直接运行在浏览器，包括后端和数据库：web.dev/wordpress-playground，效果如图一所示。\n这项实践颇有意义，以前大家可能见过各种 WebOS 的网页版 Demo，例如运行在 Web 上的操作系统、 Bash 环境、单机游戏，那些其实都是通过 JavaScript 来模拟实现的，现在基于 WASM 我们有机会实现一个纯浏览器的运行环境，它可以为程序提供 POSIX 接口，例如处理文件、进程、信号等等。\n这就带来了比较多的想象空间，例如大家熟悉的 Github Workspace，对于简单类型的 Node.js 应用就没必要起一个昂贵的后端容器了，前后端代码都可以在浏览器直接执行。实际上，StackBlitz 的 CodeFlow 就已经在商业化中投入使用了这样的方式。\n再例如，新手学编程就不需要配置复杂的本地环境了，基于 WASM 的浏览器环境便是一个最好的 Playground，所有的依赖通过一个远程下发的 .wasm 文件就可以搞定；再例如，对于无状态的云函数，也可以在端上直接运行一个轻量级的 WASM 环境。充分利用端的计算能力，通过软件分发和服务分发的形式提升端侧体验，同时也可以一定程度降低云的成本。\n以 WordPress 为例，图二演示了大致的实现原理：使用 Service Worker 拦截请求，然后将处理任务转发给 Worker 进程，Worker 中调用 WASM 提供的能力进行处理。整体看起来就像是在 Client 侧部署了一个 Server，又一个新形态的 BFF（Backend for Frontend） 层，😄\n借助 WASM 暴露系统能力给 JS 还是存在一定局限性的，例如对于 TCP/UDP 流量的处理，目前就做不到，倒是可以考虑通过 Websocket 包装 TCP/UDP 流量，然后再转发到代理服务器上进行处理；再例如在 high-level 的 JavaScript 中无法处理 low-level 的 C/C++ 网络请求，JS 是异步循环，而 C/C++ 执行的请求是同步的，天然就会出问题，不过社区也有人搞了一个 Asyncify 来实现兼容，算的上一个能力补偿库。类似的问题还比较多，需要靠更丰富的应用层的发展来驱动解决。\n实际上，WASM 并不单单为 Web 设计，它也可以跑在各种 IoT 设备和后端环境中，也就是说，使用 Node.js 调用一个使用 WASM 包装的 PHP 应用能力将会变成一件十分轻松的事情。按照这个思路来看，未来软件的分发就变得更加简单了，它将不再受到语言的限制。\n还是很值得投入研究的，感兴趣的朋友可以进来看看。",
-          "link": "https://m.okjike.com/originalPosts/6505bb9e8425e0dd3b32e6d7",
-          "publishedOn": "2023-09-16T14:28:46.000Z",
-          "wordCount": 632,
-          "title": "发布了: 现在你可以通过浏览器直接起一个 PHP/Node.js 环境跑后端程序了，这是 Google I/O 2023 提到的一个 WebAssembly 实践，将 WordPress 直接运行在浏览器，...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FrxOz7bsCS4VMnIUIsTtuTP83B1Mv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/65055875f21549bc73bfa6df",
-          "author": null,
-          "description": "马一龙又给加鸡腿了，🎉",
-          "link": "https://m.okjike.com/originalPosts/65055875f21549bc73bfa6df",
-          "publishedOn": "2023-09-16T07:25:41.000Z",
-          "wordCount": 453,
-          "title": "发布了: 马一龙又给加鸡腿了，🎉",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FnSeo3p_-aYfGA3HHwt8kTUcAu2yv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
         }
       ]
     },
@@ -702,46 +702,6 @@
           "wordCount": 523,
           "title": "重庆市黔江区发布暴雨黄色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230912/t20230912_526416631.html",
-          "author": "国家预警信息发布中心",
-          "description": "忠县气象台2023年9月12日10时10分继续发布“暴雨黄色预警信号”，目前我县双桂、花桥、新立等12个乡镇（街道）共18个雨量站达暴雨，预计未来6小时内，忠州街道、白公街道、乌杨街道、新生街道、白石镇、永丰镇、三汇镇、磨子土家族乡、东溪镇、金鸡镇、黄金镇、洋渡镇、涂井乡、官坝镇、汝溪镇、野鹤镇、金声乡、石宝镇等乡镇（街道）累计雨量将达50-80毫米，最大小时雨强可达20-30毫米。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20230912/t20230912_526416631.html",
-          "publishedOn": "2023-09-12T02:28:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市忠县发布暴雨黄色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230912/t20230912_526416611.html",
-          "author": "国家预警信息发布中心",
-          "description": "万州区气象台2023年9月12日09时30分发布“暴雨黄色预警信号”，预计未来6小时，我区走马、高粱、九池等街道（乡镇）累计雨量将达50-70毫米，最大小时雨强可达10-30毫米，并可能伴有阵性大风等强对流天气。视情况暂停户外作业和活动。注意道路、桥涵、隧道、工地、车库、低洼地、地下空间积水，远离积水区域。注意洪水、山洪、地质灾害、城市内涝、乡村积涝等暴雨次生灾害，视情况及时撤离河道、沟谷、边坡、危岩、危房、简易工棚、挡土墙等容易发生危险区域。行驶车辆放慢车速，谨慎前行，避免强行通过积水路段和下沉式立交，避免将车辆停放在低洼易涝等危险区域。相关部门和乡镇街道按照职责，做好暴雨防范应对工作。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20230912/t20230912_526416611.html",
-          "publishedOn": "2023-09-12T02:10:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市万州区发布暴雨黄色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230912/t20230912_526416576.html",
-          "author": "国家预警信息发布中心",
-          "description": "涪陵区气象台2023年9月12日09时40分发布“暴雨黄色预警信号”，目前我区李渡街道、石沱镇已达暴雨，预计12日10时至15时，珍溪镇、百胜镇、马武镇、义和街道、南沱镇、青羊镇、龙桥街道、马鞍街道累计雨量将达50-70毫米，最大小时雨强可达10-20毫米，并伴有阵性大风等强对流天气。请注意防范！防御指南：1.视情况暂停户外作业和活动。2.注意道路、桥涵、隧道、工地、车库、低洼地、地下空间积水，远离积水区域。3.注意洪水、山洪、地质灾害、城市内涝、乡村积涝等暴雨次生灾害，视情况及时撤离河道、沟谷、边坡、危岩、危房、简易工棚、挡土墙等容易发生危险区域。4.行驶车辆放慢车速，谨慎前行，避免强行通过积水路段和下沉式立交，避免将车辆停放在低洼易涝等危险区域。5.相关部门和乡镇街道按照职责，做好暴雨防范应对工作。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20230912/t20230912_526416576.html",
-          "publishedOn": "2023-09-12T01:56:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市涪陵区发布暴雨黄色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230912/t20230912_526416539.html",
-          "author": "国家预警信息发布中心",
-          "description": "石柱县气象台2023年9月12日9时发布“暴雨黄色预警信号”，目前我县冷水镇、黄水镇、金竹乡、沙子镇、龙潭乡、六塘乡、三益乡已达暴雨，预计12日9时至15时，黄水镇、枫木镇、临溪镇、石家乡、王家乡、河嘴乡、冷水镇、金竹乡、中益乡、沙子镇、新乐乡、洗新乡、黄鹤镇、金铃乡、三益乡、桥头镇、万朝镇、龙沙镇、鱼池镇、沿溪镇、悦崃镇、王场镇、西沱镇、黎场乡、龙潭乡、下路街道、三星乡、六塘乡、马武镇、万安街道、南宾街道、三河镇、大歇镇等街道（乡镇）累计雨量将达50-90毫米，最大小时雨强可达20-40毫米，并伴有阵性大风等强对流天气。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20230912/t20230912_526416539.html",
-          "publishedOn": "2023-09-12T01:29:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市石柱土家族自治县发布暴雨黄色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -787,6 +747,26 @@
       "feedUrl": "https://rsshub.app/juejin/trending/frontend/weekly",
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
+        {
+          "id": "https://juejin.cn/post/7279041076273610764",
+          "author": "han_",
+          "description": "theme: channing-cyan\n前言\n从我个人理解来看，设计模式其实就藏在我们平时的代码中，只是有人把它们提、炼出来，赋予了一些专业的名词和定义，下面给大家介绍一个日常项目开发中非常实用的设计模式，也就是策略模式。\n策略模式的定义\n先来看下策略模式的定义：定义一系列的算法，把它们一个个封装起来，并且使它们可以相互替换。\n简单来说就是有多种选择，然后一般只会选择一种。从代码的角度来说就是，定义一系列的if和elseif，然后只会命中其中一个。\n举个例子\n话不多说，直接来看例子，比如我们需要计算员工工资，员工工资计算规则如下：\n高级工：时薪为25块/小时\n中级工：时薪为20块/小时\n初级工：时薪为15块/小时\n按每天10小时的工作时长来算。\n一、第一版实现：\nconst calculateSalary = function (workerLevel, workHours = 10) {\n    if (workerLevel === 'high') {\n        return workHours * 25\n    }\n    if (workerLevel === 'middle') {\n        return workHours * 20\n    }\n    if (workerLevel === 'low') {\n        return workHours * 15\n    }\n}\nconsole.log(calculateSalary('high')) // 250\nconsole.log(calculateSalary('middle')) // 200\n\n这段代码具有明显的缺点：\ncalculateSalary函数庞大，有许多的if else语句，这些语言需要覆盖所有的逻辑分支\ncalculateSalary函数缺乏弹性，如果新增一种员工等…",
+          "link": "https://juejin.cn/post/7279041076273610764",
+          "publishedOn": "2023-09-16T15:36:39.000Z",
+          "wordCount": 1465,
+          "title": "用了策略模式之后，再也不用写那么多 if else 了，真香！",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7278678508486377524",
+          "author": "JYeontu",
+          "description": "说在前面\n一年一度的中秋节马上又要到了，给你的浏览器也来点氛围感吧 🌕🌕🌕\n\n插件设计\n效果\n首先我们应该要先确定一下我们想要实现的效果是怎样的，如上图，我们希望在页面上鼠标点击的时候会在点击区域随机掉落一个中秋元素的物件。\n\n实现\n寻找中秋元素贴图\n1、圆月\n\n中秋的圆月有着更为独特的含义，祝大家团团圆圆过中秋。\n2、玉兔\n\n月兔是中国传统文化中的一个形象，在故事中通常被描述成一只可爱的兔子，居住在月亮上。据说玉兔会制造药丸，帮助嫦娥维持长生不老。\n3、月饼\n\n相传，古代有十个太阳，使人间炙热无法生存。后来，英雄后羿射下了九个太阳，拯救了人类。他获得了药丸的力量，并与妻子嫦娥一起住在月亮上。为了怀念后羿的英勇事迹，人们在中秋节吃月饼，将其献给后羿和嫦娥。月饼作为中秋节的代表食品，凝聚了丰富的文化内涵和传统价值观，象征着团圆、感恩和祝福。\n4、猫猫和月饼\n\n\n因为太可爱了，所以也加上了它们 😁\n插件制作\n前面我已经介绍过怎么制作一个简单的 Chrome 插件了，这里我就不再重复了，有兴趣的可以看看前面的这篇文章。\n快速制作一个 chrome 插件\n插件配置文件\n在配置文件中说明注入的js和css文件，设置好运行时机和运行匹配的 url 即可。\n{\n  \"manifest_version\": 2,\n  \"name\": \"中秋点击效果\",\n  \"version\": \"1.0\",\n  \"description\": \"祝大家中秋节快乐 ——JYeontu\",\n  \"icons\": {\n    \"128\": \"img/moon.png\",\n    \"48\": \"img/moon.png\",\n    \"16\": \"img/moon.png\"\n  },\n  \"browser_action\": {\n    \"default_icon\": \"img/moon.png\",\n    \"d…",
+          "link": "https://juejin.cn/post/7278678508486377524",
+          "publishedOn": "2023-09-15T08:05:56.000Z",
+          "wordCount": 1435,
+          "title": "中秋节马上又要到了，给你的浏览器也来点氛围感吧 🌕🌕🌕",
+          "imageUrl": null
+        },
         {
           "id": "https://juejin.cn/post/7278517841884266536",
           "author": "ad6623",
@@ -873,7 +853,7 @@
           "description": "theme: channing-cyan\n前言\n在日常的前端开发中，总是涉及到对数据的处理，比如后端返给你一坨数据，你需要进行处理并回显到页面上，又或者提交form表单到服务端时，你需要将数据处理成后端接口定义的数据结构，而这些都离不开数据处理。\n那数据处理有什么好用的工具库吗？lodash当之无愧。\nlodash使用\n使用:\n// 浏览器环境\n<script src=\"lodash.js\"></script>\n// npm\nnpm i --save lodash\n\n接下来给大家介绍下我平时开发用lodash最最最常用的一些方法。\n一、数组类\n1、_.compact(array)\n作用：剔除掉数组中的假值（假值包括false, null,0, \"\", undefined, 和 NaN这5个）元素，并返回一个新数组。\n使用示例：\nconst _ = require('lodash')\nconsole.log(_.compact([0, 1, false, 2, '', 3, undefined, 4, null, 5]));\n// 输出 [ 1, 2, 3, 4, 5 ]\n\n项目中的应用：剔除数组中的一些脏数据。\n2、_.difference(array, [values])\n作用：过滤掉数组中的指定元素，并返回一个新数组\n使用示例：\nconst _ = require('lodash')\nconsole.log(_.difference([1, 2, 3], [2, 4]))\n// 输出 [ 1, 3 ]\nconst arr = [1, 2], obj = { a: 1 }\nconsole.log(_.difference([1, arr, [3, 4], obj, { a: 2 }], [1, arr, obj]))\n// 输出 [ 1, 3 ]\n\n类似方法：\n_.pul…",
           "link": "https://juejin.cn/post/7277799790296416290",
           "publishedOn": "2023-09-12T09:05:01.000Z",
-          "wordCount": 2872,
+          "wordCount": 2916,
           "title": "用lodash开发前端，真香！",
           "imageUrl": null
         },
@@ -928,22 +908,12 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7276808079142961189",
-          "author": "糖墨夕",
-          "description": "theme: qklhk-chocolate\n简介\n还是老样子，先把产品的需求设计给理一理先。如果没有做过这一块的前端小伙伴，可能一脸懵逼。没事，我也一样，万事开头都不简单，所以需要我们花点时间精力梳理一下\n需求：\n登录二维码有效期默认2分钟，超过2分钟提示用户刷新\n扫码成功后，跳转扫码成功页面，用户在移动端点击确认登录后，登录进入应用\n理解\n登录二维码有效期默认2分钟，超过2分钟提示用户刷新： 在生成登录二维码时，后端服务器将生成一个二维码标识符，并设置一个2分钟的有效期。后端可以通过生成时间戳或其他方法来跟踪二维码的有效性。前端在展示二维码的同时也开始计时，在二维码有效期结束前，如果用户未完成扫码登录，可以提示用户刷新二维码来获取一个新的二维码和标识符。\n扫码成功后，跳转扫码成功页面，用户在移动端点击确认登录后，登录进入应用： 一旦用户在移动设备上成功扫描二维码，并点击确认登录按钮，前端应轮询向后端发送请求，确认用户的登录操作。\n梳理\n通过上面简介中的初步分析，可以大致画一下下面的流程图，这样方便我们一步步去实现\n流程图\ngraph TD\nA[生成二维码] --> B[展示二维码]\nB --> C((等待用户扫码<br>开始轮询))\nC -- 用户扫码成功 --> D[跳转扫码成功页面]\nD --> E((用户在移动端<br>点击确认登录))\nE -- 确认登录 --> F[验证登录信息]\nF -- 验证成功 --> G[用户登录成功]\nG --> H[进入应用程序]\nH --> I[应用程序主页]\nF -- 验证失败 --> J[显示登录失败提示]\nC -- 用户扫码失败或超时 --> K((二维码<br>是否过期))\nK -- 是 --> L[提示用户刷新二维码]\nL --> C\nK -- 否 --> C\n\n\n接口设计\n根据上面分析出来的流程图，我们了解到\n登录二维…",
-          "link": "https://juejin.cn/post/7276808079142961189",
-          "publishedOn": "2023-09-10T11:35:25.000Z",
-          "wordCount": 1489,
-          "title": "业务: 前后端实现二维码扫码登录-深度剖析",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7276630249548005415",
           "author": "前端小码哥",
           "description": "theme: channing-cyan\n前言\n一边学习，一边记录，前前后后花了至少2个月的时间，算是把TS大部分都搞明白了。\n这篇文章的篇幅有点长，是我本人学习过程中的一些记录，参考了很多优秀博主的一些文章，以及在B站看了一些TS的视频，把几乎所有TS涵盖到的基础知识点都总结了下来，所以，对于想学习TS的小伙伴下来，一定一定要认认真真把这篇文章看完。\n8万多字的教程，不敢说是全网最好，但可以说是全网最详细。\n对于新手入门来说是一篇非常不错的宝藏文章，几乎每个 TypeScript 的知识点都有详细的讲到，并且附上一些简单的示例，通俗易懂，希望可以给想学习 TS 的小伙伴带来动力！\n一、了解TypeScript\n1. 什么是TypeScript\nTypeScript是由微软开发的一门开源的编程语言。\nTypeScript，简称TS，是JavaScript的超集（以JavaScript为基础构建的语言，JS有的TS都有）。\nTypescript = Type + JavaScript（在JS基础之上，为JS添加了类型支持）。\n可以在任何支持JavaScript的平台中执行。\n2. 为什么需要TypeScript\n我们都知道，JavaScript是弱类型的编程语言，很多的错误只有在运行的时候才会被发现，而TS在代码编译的时候（代码执行前）就可以发现错误。\n3. TypeScript的特点\n支持最新的ECMAScript语法\n在代码编译阶段就能发现错误\n在JS基础上增加了类型支持\n4. TypeScript和JavaScript的区别\nTypeScript\nJavaScript\n\n\n\n\n编译期发现错误\n运行时发现错误\n\n\n强类型语言，支持静态和动态类型\n弱类型语言，没有静态类型选项\n\n\n支持模块、泛型和接口\n不支持模块、泛型和接口\n\n\n代码运行时会被编译成JavaScript代码…",
           "link": "https://juejin.cn/post/7276630249548005415",
           "publishedOn": "2023-09-10T07:12:38.000Z",
-          "wordCount": null,
+          "wordCount": 20465,
           "title": "【全文8W字】我是怎样从0开始学会🚀TypeScript🚀的",
           "imageUrl": null
         },
@@ -1000,7 +970,7 @@
           "description": "入手一台mac mini做前端开发怎么样？？",
           "link": "https://juejin.cn/pin/7280007832701992979",
           "publishedOn": "2023-09-18T05:30:43.000Z",
-          "wordCount": 556,
+          "wordCount": 544,
           "title": "入手一台mac mini做前端开发怎么样？？",
           "imageUrl": null
         },
@@ -1030,7 +1000,7 @@
           "description": "chatgpt3.5 谁有免费版地址，给个链接，感谢jym！\n---此消息来自一个资深白嫖患者",
           "link": "https://juejin.cn/pin/7278658174035116043",
           "publishedOn": "2023-09-15T01:44:36.000Z",
-          "wordCount": 559,
+          "wordCount": 544,
           "title": "chatgpt3.5 谁有免费版地址，给个链接，感谢jym！ ---此消息来自一个资深白嫖患者",
           "imageUrl": null
         },
@@ -1040,7 +1010,7 @@
           "description": "[7073670907851440160#新人报道#] \n新的部门里的技术大佬用.net core技术，这 对自己来说就是一个全新的领域。在某国外软件上做二次开发好多年，突然转到这个来，对于一个非技术出身的人来说真的好难，无从下手，好迷茫",
           "link": "https://juejin.cn/pin/7278509192508555298",
           "publishedOn": "2023-09-14T15:14:59.000Z",
-          "wordCount": 538,
+          "wordCount": 537,
           "title": "[7073670907851440160#新人报道#] 新的部门里的技术大佬用.net core技术，这 对自己来说就是一个全新的领域。在某国外软件上做二次开发好多年，突然转到这个来，...",
           "imageUrl": null
         },
@@ -1060,7 +1030,7 @@
           "description": "[重磅来袭] 功能强大的开源数据中台系统 DataCap 1.14.0 发布\n\n目前已经集成 Apache Seatunnel 作为默认的执行器，如果需要添加其他执行器，请参考源码：https://github.com/devlive-community/datacap/tree/dev/executor\n欢迎大家下载升级新的版本",
           "link": "https://juejin.cn/pin/7278509192507686946",
           "publishedOn": "2023-09-14T10:21:10.000Z",
-          "wordCount": 572,
+          "wordCount": 557,
           "title": "[重磅来袭] 功能强大的开源数据中台系统 DataCap 1.14.0 发布 目前已经集成 Apache Seatunnel 作为默认的执行器，如果需要添加其他执行器，请参考源码：https://...",
           "imageUrl": null
         },
@@ -1217,7 +1187,7 @@
           "description": "大家应该听过青岛下水道的故事，说德国人提前准备了油布包好的维修备件，百年之后，挖出来马上就能用。 没想到我遇到 …\n  设计 | 怎么为未来做设计 查看全文 »",
           "link": "https://nishuang.net/%e8%ae%be%e8%ae%a1-%e6%80%8e%e4%b9%88%e4%b8%ba%e6%9c%aa%e6%9d%a5%e5%81%9a%e8%ae%be%e8%ae%a1/",
           "publishedOn": "2023-09-16T06:46:52.000Z",
-          "wordCount": 496,
+          "wordCount": 305,
           "title": "设计 | 怎么为未来做设计",
           "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/future.jpeg"
         },
@@ -1227,9 +1197,9 @@
           "description": "Frank Frazetta：改變了所有插畫家命運的人 奇幻插畫Dark Kingdom最近又以六百萬美金破了 …\n  倪爽的阅读分享 – 2023年9月16日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b49%e6%9c%8816%e6%97%a5/",
           "publishedOn": "2023-09-16T05:10:54.000Z",
-          "wordCount": 439,
+          "wordCount": null,
           "title": "倪爽的阅读分享 – 2023年9月16日",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/4892398399_14e00ba213_k.jpg"
+          "imageUrl": null
         },
         {
           "id": "https://nishuang.net/?p=30355",
@@ -1262,9 +1232,9 @@
           "description": "传统学英语的效率很低，多少人从幼儿园开始，学了十几年英语还是听不懂、开不了口。所以我都建议别学课堂、书本里的“ …\n  学习 | 为什么学了那么久英语，还是不能脱离字幕看美剧? 查看全文 »",
           "link": "https://nishuang.net/%e4%b8%ba%e4%bb%80%e4%b9%88%e5%ad%a6%e4%ba%86%e9%82%a3%e4%b9%88%e4%b9%85%e8%8b%b1%e8%af%ad%e8%bf%98%e6%98%af%e4%b8%8d%e8%83%bd%e8%84%b1%e7%a6%bb%e5%ad%97%e5%b9%95%e7%9c%8b%e7%be%8e%e5%89%a7/",
           "publishedOn": "2023-09-15T07:00:44.000Z",
-          "wordCount": 398,
+          "wordCount": null,
           "title": "学习 | 为什么学了那么久英语，还是不能脱离字幕看美剧?",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/tv.jpeg"
+          "imageUrl": null
         },
         {
           "id": "https://nishuang.net/?p=30301",
@@ -1272,9 +1242,9 @@
           "description": "从个人品牌角度说，持续输出自己的想法，是创造、积累个人品牌的最简单、最有效方法。 活跃的独立开发者 Baye  …\n  设计 | 为什么要输出自己的想法 查看全文 »",
           "link": "https://nishuang.net/%e8%ae%be%e8%ae%a1-%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e8%be%93%e5%87%ba%e8%87%aa%e5%b7%b1%e7%9a%84%e6%83%b3%e6%b3%95/",
           "publishedOn": "2023-09-15T06:16:20.000Z",
-          "wordCount": 374,
+          "wordCount": null,
           "title": "设计 | 为什么要输出自己的想法",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/typing.jpeg"
+          "imageUrl": null
         },
         {
           "id": "https://nishuang.net/?p=30294",
@@ -1322,7 +1292,7 @@
           "description": "TikTok网红说服你大破悭囊的那些秘诀 TikTok 视频往往更具可信度，因为它们创造了一种特定的自我表露环 …\n  倪爽的阅读分享 – 2023年9月13日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b49%e6%9c%8813%e6%97%a5/",
           "publishedOn": "2023-09-13T04:43:26.000Z",
-          "wordCount": null,
+          "wordCount": 16,
           "title": "倪爽的阅读分享 – 2023年9月13日",
           "imageUrl": null
         },
@@ -1332,9 +1302,9 @@
           "description": "「史上最高規格的拍立得Polaroid相機」：手調功能不會輸給傳統單眼相機。 – EVERYDAY …\n  倪爽的阅读分享 – 2023年9月12日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b49%e6%9c%8812%e6%97%a5/",
           "publishedOn": "2023-09-12T05:34:45.000Z",
-          "wordCount": 401,
+          "wordCount": null,
           "title": "倪爽的阅读分享 – 2023年9月12日",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/shutterstock_708300100.jpeg"
+          "imageUrl": null
         },
         {
           "id": "https://nishuang.net/?p=29953",
@@ -1342,7 +1312,7 @@
           "description": "This wormy robot can wriggle its way around a jet engin …\n  倪爽的阅读分享 – 2023年9月11日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b49%e6%9c%8811%e6%97%a5/",
           "publishedOn": "2023-09-12T01:23:40.000Z",
-          "wordCount": null,
+          "wordCount": 16,
           "title": "倪爽的阅读分享 – 2023年9月11日",
           "imageUrl": null
         },
@@ -1352,9 +1322,9 @@
           "description": "Teenager explaining “girl math” to her dad  …\n  倪爽的阅读分享 – 2023年9月10日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b49%e6%9c%8810%e6%97%a5/",
           "publishedOn": "2023-09-10T05:22:10.000Z",
-          "wordCount": null,
+          "wordCount": 490,
           "title": "倪爽的阅读分享 – 2023年9月10日",
-          "imageUrl": null
+          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/236573_BMW_i7_xDrive60_ABassett_0011.jpeg"
         },
         {
           "id": "https://nishuang.net/?p=29944",
@@ -1362,7 +1332,7 @@
           "description": "How Tokyo Became an Anti-Car Paradise – Heatmap N …\n  倪爽的阅读分享 – 2023年9月8日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b49%e6%9c%888%e6%97%a5/",
           "publishedOn": "2023-09-08T05:26:57.000Z",
-          "wordCount": null,
+          "wordCount": 16,
           "title": "倪爽的阅读分享 – 2023年9月8日",
           "imageUrl": null
         },
@@ -1372,7 +1342,7 @@
           "description": "South Pole Electrical Infrastructure – brr 南极电力基础设 …\n  倪爽的阅读分享 – 2023年9月7日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b49%e6%9c%887%e6%97%a5/",
           "publishedOn": "2023-09-07T01:38:09.000Z",
-          "wordCount": null,
+          "wordCount": 16,
           "title": "倪爽的阅读分享 – 2023年9月7日",
           "imageUrl": null
         },
@@ -1382,7 +1352,7 @@
           "description": "8 hot logo design trends in 2023 2023年的8个热门标志设计趋势  …\n  倪爽的阅读分享 – 2023年9月6日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b49%e6%9c%886%e6%97%a5/",
           "publishedOn": "2023-09-06T19:31:16.000Z",
-          "wordCount": null,
+          "wordCount": 16,
           "title": "倪爽的阅读分享 – 2023年9月6日",
           "imageUrl": null
         },
@@ -1392,7 +1362,7 @@
           "description": "Spotify considered axing white noise podcasts to save $ …\n  倪爽的阅读分享 – 2023年9月5日 查看全文 »",
           "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b49%e6%9c%885%e6%97%a5/",
           "publishedOn": "2023-09-06T19:24:56.000Z",
-          "wordCount": null,
+          "wordCount": 16,
           "title": "倪爽的阅读分享 – 2023年9月5日",
           "imageUrl": null
         }
