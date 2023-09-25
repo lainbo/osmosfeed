@@ -51,11 +51,151 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-25 datetime="2023-09-25T07:57:00.000Z">2023-09-25</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-25 datetime="2023-09-25T07:57:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-25 datetime="2023-09-25T11:23:04.000Z">2023-09-25</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-25 datetime="2023-09-25T11:23:04.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >李继刚的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/65116d982a0c03ca13dfe978"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 一条动态</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65116d982a0c03ca13dfe978">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fg5ez5f3oR3pHz6MRfiNEs_lB7fXv3.png?imageMogr2/auto-orient/crop/!x1950a0a0/thumbnail/x300" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>即刻App，享受探索、表达和创造</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/reposts/6511210af21549bc73c2f4f7"
+                        open
+                      >
+                        <summary class="article-expander__title">转发了: ▎角色扮演 假设你是一个有着 20 年教学经验的英语老师. 现在正在教一个中国学生快速记忆英文单词. ▎ 基本信息 - 作者: 李继刚 - 版本: 0.3 - 描述: 让...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/reposts/6511210af21549bc73c2f4f7">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>▎角色扮演
+假设你是一个有着 20 年教学经验的英语老师. 现在正在教一个中国学生快速记忆英文单词.
+▎ 基本信息
+- 作者: 李继刚
+- 版本: 0.3
+- 描述: 让 GPT 来辅助快速记忆英文单词, 轻松有趣的那种~
+▎ 特殊定义
+-  : 表示该行内容需要使用 Markdown 语法的二级标题进行输出, 即 ## 二级标题
+- {{替换}} : 表示 {{  }} 的内容需要根据上下文信息, 进行文本替换
+- 强化: 对于输出中的核心关键词，你会加粗强化输出。
+- 联想: 下面的三种记忆方法, 随意选择即可
+  a. 创造图像：将需要记忆的信息转化为生动的视觉形象，例如字母、数字、事物的形状。
+  b. 故事法：把需要记忆的内容编织成一个有趣的故事，增加识记的趣味性。
+  c. 空间位置法：通过对空间位置和顺序的记忆，提高对信息的回忆。
+▎ 工作流程
+你会通过开场白引导学生提供一个英文单词, 然后将学生提供的英文单词按照词根进行拆分, 并对每个词根进行联想. 接下来, 你会接联想的内容编织成一句话的画面, 画面越夸张越让人印象深刻越好.
+▎ 限制条件
+你只会输出样式要求的内容, 不会输出任何其它解释和说明信息, 也不会再次引导用户输入.
+▎ 输出样式
+你会按如下步骤进行输出, 强化关键信息
+  - {{英文单词}} 
+  - 中文释义 
+    - 展示该单词的词性, 并提供该单词中文的释义
+    - 提供一个中英文的示例句子, 演示包含该英文单词的使用场景
+  - 词根分析 
+      以 Markdown 表格呈现如下信息: 词根(前缀, 词根, 后缀), 含义, 联想
+  - 记忆故事 
+       将联想的内容编辑成一句话的画面, 画面的场景越夸张越能让人印象深刻.
+▎ 开场对白
+&quot;你好, 你只要提供想要记忆的英文单词, 我来帮你一秒记忆它~&quot;
+
+转发 @路辉: ChatGPT 实用小技巧：多次询问得到满意结果之后，让 ChatGPT 自己总结我的需求。
+得到的总结简直太完美了，看总结就相当于练习了提问技巧。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Barret李靖的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/65115b252a0c03ca13ddea84"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 看到一款可以自动跳过软件开屏广告的工具，SKIP，https://github.com/GuoXiCheng/SKIP，它的原理比较简单，在获得系统无障碍服务权限后，程序可以读取当...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65115b252a0c03ca13ddea84">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>看到一款可以自动跳过软件开屏广告的工具，SKIP，https://github.com/GuoXiCheng/SKIP，它的原理比较简单，在获得系统无障碍服务权限后，程序可以读取当前界面上的元素信息，当识别到「跳过」或者「关闭」二字的时候，自动执行点击操作。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/6510d3d52a0c03ca13cf1f9e"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 中国预制菜，是能检测的？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6510d3d52a0c03ca13cf1f9e">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fs7OiqAiSl8HgiT6N29N8tX2RlMpv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>中国预制菜，是能检测的？</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -153,72 +293,6 @@
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >李继刚的即刻动态</button>
-                  <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/reposts/6511210af21549bc73c2f4f7"
-                        open
-                      >
-                        <summary class="article-expander__title">转发了: ▎角色扮演 假设你是一个有着 20 年教学经验的英语老师. 现在正在教一个中国学生快速记忆英文单词. ▎ 基本信息 - 作者: 李继刚 - 版本: 0.3 - 描述: 让...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/reposts/6511210af21549bc73c2f4f7">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>▎角色扮演
-假设你是一个有着 20 年教学经验的英语老师. 现在正在教一个中国学生快速记忆英文单词.
-▎ 基本信息
-- 作者: 李继刚
-- 版本: 0.3
-- 描述: 让 GPT 来辅助快速记忆英文单词, 轻松有趣的那种~
-▎ 特殊定义
--  : 表示该行内容需要使用 Markdown 语法的二级标题进行输出, 即 ## 二级标题
-- {{替换}} : 表示 {{  }} 的内容需要根据上下文信息, 进行文本替换
-- 强化: 对于输出中的核心关键词，你会加粗强化输出。
-- 联想: 下面的三种记忆方法, 随意选择即可
-  a. 创造图像：将需要记忆的信息转化为生动的视觉形象，例如字母、数字、事物的形状。
-  b. 故事法：把需要记忆的内容编织成一个有趣的故事，增加识记的趣味性。
-  c. 空间位置法：通过对空间位置和顺序的记忆，提高对信息的回忆。
-▎ 工作流程
-你会通过开场白引导学生提供一个英文单词, 然后将学生提供的英文单词按照词根进行拆分, 并对每个词根进行联想. 接下来, 你会接联想的内容编织成一句话的画面, 画面越夸张越让人印象深刻越好.
-▎ 限制条件
-你只会输出样式要求的内容, 不会输出任何其它解释和说明信息, 也不会再次引导用户输入.
-▎ 输出样式
-你会按如下步骤进行输出, 强化关键信息
-  - {{英文单词}} 
-  - 中文释义 
-    - 展示该单词的词性, 并提供该单词中文的释义
-    - 提供一个中英文的示例句子, 演示包含该英文单词的使用场景
-  - 词根分析 
-      以 Markdown 表格呈现如下信息: 词根(前缀, 词根, 后缀), 含义, 联想
-  - 记忆故事 
-       将联想的内容编辑成一句话的画面, 画面的场景越夸张越能让人印象深刻.
-▎ 开场对白
-&quot;你好, 你只要提供想要记忆的英文单词, 我来帮你一秒记忆它~&quot;
-
-转发 @路辉: ChatGPT 实用小技巧：多次询问得到满意结果之后，让 ChatGPT 自己总结我的需求。
-得到的总结简直太完美了，看总结就相当于练习了提问技巧。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >倪爽设计工作室</button>
                   <a class="source-heading__link" href="https://nishuang.net">Open</a>
                 </h3>
@@ -251,24 +325,38 @@
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Barret李靖的即刻动态</button>
-                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/6510d3d52a0c03ca13cf1f9e"
+                        data-accordion-key="https://juejin.cn/post/7281948788482637836"
                         open
                       >
-                        <summary class="article-expander__title">发布了: 中国预制菜，是能检测的？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6510d3d52a0c03ca13cf1f9e">
+                        <summary class="article-expander__title">离职用ChatGPT创业三个月，现在怎么样了？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7281948788482637836">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fs7OiqAiSl8HgiT6N29N8tX2RlMpv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
-                              <span>中国预制菜，是能检测的？</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                              <span>theme: smartblue
+先说结论：还在赔钱；
+我将从这一波创业参与者的角度来讲解：这几个月来GPT的发展历程，技术演进，和我的一些对GPT的思考；坚持读完，你一定在技术和思考上有所收获；
+一切的开始：第一次使用ChatGPT
+我永远记得2022年12月1日（ChatGPT发布第二天）第一次体验了ChatGPT；
+我当时在写研究生课题作业，所以很快就感受到了ChatGPT的可怕之处，我不善于写作业，但是用ChatGPT书写的作业，评分都是优+（之前能及格就不错了）
+我1998年出生在一个经济不发达小县城，所以我很大的时候才知道互联网；当时ChatGPT的冲击其实不亚于我当时刚认识互联网时候的震撼~
+因为我的本职工作是前端开发，所以很快就也在日常工作中使用ChatGPT来辅助我的开发；并在ChatGPT开放Api调用的第二天，开始第一次自己部署ChatGPT服务
+第一次部署独立的ChatGPT服务
+第一次部署ChatGPT服务使用的是这个GitHub开源仓库，这套代码写的非常的厉害，现在大家看到的各种套壳GPT网站大都使用的这个开源仓库
+这是GitHub源码地址：https://github.com/Chanzhaoyu/chatgpt-web
+后面我给几个朋友推荐了一下，收获到朋友的一致好评，因为当时GPT还没降速和降智，所以速度很快，回答效果也非常的好
+在一天夜里，我突然想到ChatGPT确实是一个好工具，我也一直想做一款很多人用的工具产品，所以我当天晚上10点，把被子一踢；坐到电脑旁边敲代码到早上7点，发了第一版vscode插件 - ChatMoss
+在这里非常感恩掘金平台，那是给了我第一波流量
+vscode插件 - ChatMoss
+我想先说一下为什么要起这个名字，那是因为我在过年期间看了《流浪地球2》，再叠加我对ChatGPT的震撼，和对《流浪地球2》的震撼…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1426,12 +1514,9 @@
                         <summary class="article-expander__title">学习 | 把思维碰撞变成创新利器</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e6%8a%8a%e6%80%9d%e7%bb%b4%e7%a2%b0%e6%92%9e%e5%8f%98%e6%88%90%e5%88%9b%e6%96%b0%e5%88%a9%e5%99%a8/">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/collision.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>乔布斯为什么强迫所有员工用一个厕所 智者乔布斯认为：智慧的火花常常是偶然交流碰撞产生的。 为了促进员工之间的交 …
   学习 | 把思维碰撞变成创新利器 查看全文 »</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1447,12 +1532,9 @@
                         <summary class="article-expander__title">设计 | 为什么要自己动手雕刻一只小熊？</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e8%ae%be%e8%ae%a1-%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e8%87%aa%e5%b7%b1%e5%8a%a8%e6%89%8b%e9%9b%95%e5%88%bb%e4%b8%80%e5%8f%aa%e5%b0%8f%e7%86%8a%ef%bc%9f/">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/bears.webp" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>很多独立开发者、小微技术团队，明明没有设计常识，也会为了省钱而自己做设计，一般他们会自我安慰：“这有什么难”、 …
   设计 | 为什么要自己动手雕刻一只小熊？ 查看全文 »</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1468,12 +1550,9 @@
                         <summary class="article-expander__title">设计 | 重新认识线框图</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e8%ae%be%e8%ae%a1-%e9%87%8d%e6%96%b0%e8%ae%a4%e8%af%86%e7%ba%bf%e6%a1%86%e5%9b%be/">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-1597534458220-9fb4969f2df5.jpeg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>线框图被产品经理奉为圭臬，但对设计师而言，线框图的存在则是面目模糊。在整个产品设计流程里，线框图是一种很好的产 …
   设计 | 重新认识线框图 查看全文 »</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1489,12 +1568,9 @@
                         <summary class="article-expander__title">设计 | Arc 浏览器怎么确定产品需求？</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e8%ae%be%e8%ae%a1-arc-%e6%b5%8f%e8%a7%88%e5%99%a8%e6%80%8e%e4%b9%88%e7%a1%ae%e5%ae%9a%e4%ba%a7%e5%93%81%e9%9c%80%e6%b1%82%ef%bc%9f/">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/Arc-Browser-First-Look-3.jpeg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>从客观的市场调研到主观地大胆创意，从保守的数据分析到激进地用补贴来制造需求……每个团队都有自己的方式来确定产品 …
   设计 | Arc 浏览器怎么确定产品需求？ 查看全文 »</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1510,12 +1586,9 @@
                         <summary class="article-expander__title">学习 | 为什么上司会问不重要的小细节</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e5%ad%a6%e4%b9%a0-%e4%b8%ba%e4%bb%80%e4%b9%88%e4%b8%8a%e5%8f%b8%e4%bc%9a%e9%97%ae%e4%b8%8d%e9%87%8d%e8%a6%81%e7%9a%84%e5%b0%8f%e7%bb%86%e8%8a%82/">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-1617050318658-a9a3175e34cb.jpeg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>老板、上司、老员工会吹毛求疵，说你文档里写了错别字。这不是比“直升机老板”、“微管理”还烦人么？ 我以前经常会 …
   学习 | 为什么上司会问不重要的小细节 查看全文 »</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1985,12 +2058,9 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
                         <summary class="article-expander__title">Remix | 为什么美国人看电视、看电影也要英文字幕？</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/remix-%e4%b8%ba%e4%bb%80%e4%b9%88%e7%be%8e%e5%9b%bd%e4%ba%ba%e7%9c%8b%e7%94%b5%e8%a7%86%e3%80%81%e7%9c%8b%e7%94%b5%e5%bd%b1%e4%b9%9f%e8%a6%81%e8%8b%b1%e6%96%87%e5%ad%97%e5%b9%95%ef%bc%9f/">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/inception.jpg.webp" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>Vox 拍了一部短片，说美国人看电影、看电视也听不清台词，也需要看字幕来理解台词。结果短片引起共鸣、被播放超过 …
   Remix | 为什么美国人看电视、看电影也要英文字幕？ 查看全文 »</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2006,12 +2076,9 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
                         <summary class="article-expander__title">学习 | 怎么在 X/推特 获取优质信息</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e5%ad%a6%e4%b9%a0-%e6%80%8e%e4%b9%88%e5%9c%a8-x-%e6%8e%a8%e7%89%b9-%e8%8e%b7%e5%8f%96%e4%bc%98%e8%b4%a8%e4%bf%a1%e6%81%af/">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-1525770041010-2a1233dd8152.jpeg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>推特是获取信息最快的社交网络，如果掌握一定技巧，推特也能获取最有价值的信息。 推特是个奇特的社交网站，你可以在 …
   学习 | 怎么在 X/推特 获取优质信息 查看全文 »</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2045,12 +2112,9 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
                         <summary class="article-expander__title">学习 | 为什么笔记工具不会让我们更聪明</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e5%ad%a6%e4%b9%a0-%e4%b8%ba%e4%bb%80%e4%b9%88%e7%ac%94%e8%ae%b0%e5%b7%a5%e5%85%b7%e4%b8%8d%e4%bc%9a%e8%ae%a9%e6%88%91%e4%bb%ac%e6%9b%b4%e8%81%aa%e6%98%8e/">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-1629976002376-3bccae77037d.jpeg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>因为笔记善于存储而无法激发思考，AI 人工智能也改不了这一点。 前几天读了一篇资深记者写的文章，他说出了我一直 …
   学习 | 为什么笔记工具不会让我们更聪明 查看全文 »</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2069,41 +2133,6 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
                             <span class="media-object__text">
                               <span>More than half of Americans plan to get updated COVID s …
   倪爽的阅读分享 – 2023年9月21日 查看全文 »</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >李继刚的即刻动态</button>
-                  <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/650c73462a0c03ca13749c6d"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: “人们通常可以在经过一些思考后，告诉你他们的前三个优先事项是什么，但他们很难决定只选一个。” 80/20原则，知容易，行是真难。</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/650c73462a0c03ca13749c6d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>“人们通常可以在经过一些思考后，告诉你他们的前三个优先事项是什么，但他们很难决定只选一个。”
-80/20原则，知容易，行是真难。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2192,26 +2221,6 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
 那么，当用户点击这个链接后，就会自动回复「确认登录」这个文本了，服务端在收到用户的确认文本后，再执行接下来的动作，那这种方式的交互就跟接入微信开放平台的安全水位一致了。
 快去看看自己写的代码是不是也有这个风险，赶紧去改！</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/650c00ab2a0c03ca13693374"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 当艺术评论家聚在一起时，他们谈论形式、结构和意义。当艺术家们聚在一起时，他们会讨论在哪里可以买到便宜的松节油。——毕加索</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/650c00ab2a0c03ca13693374">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>当艺术评论家聚在一起时，他们谈论形式、结构和意义。当艺术家们聚在一起时，他们会讨论在哪里可以买到便宜的松节油。——毕加索</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2918,12 +2927,9 @@ Formily 在古茗工单系统中的实践落地
                         <summary class="article-expander__title">设计 | 不要动我的电脑😡</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e8%ae%be%e8%ae%a1-%e4%b8%8d%e8%a6%81%e5%8a%a8%e6%88%91%e7%9a%84%e7%94%b5%e8%84%91%f0%9f%98%a1/">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-1519074002996-a69e7ac46a42.jpeg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>我遇到劫持浏览器鼠标左键、鼠标右键、上下文菜单…的软件和浏览器插件，都是不管软件、插件本身多好用，我都当它是病 …
   设计 | 不要动我的电脑😡 查看全文 »</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2939,12 +2945,9 @@ Formily 在古茗工单系统中的实践落地
                         <summary class="article-expander__title">设计 | AI 比你更擅长挑选字体、字体配对吗？</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e8%ae%be%e8%ae%a1-ai-%e6%af%94%e4%bd%a0%e6%9b%b4%e6%93%85%e9%95%bf%e6%8c%91%e9%80%89%e5%ad%97%e4%bd%93%e3%80%81%e5%ad%97%e4%bd%93%e9%85%8d%e5%af%b9%e5%90%97%ef%bc%9f/">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/fonts.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>设计师们不必紧张，AI 在挑选字体、字体配对方面，只相当于初级设计师。 读了一篇有趣的设计文章，作者是热衷网页 …
   设计 | AI 比你更擅长挑选字体、字体配对吗？ 查看全文 »</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2960,12 +2963,9 @@ Formily 在古茗工单系统中的实践落地
                         <summary class="article-expander__title">设计 | 怎么把普通 Glock 手枪改装成全自动武器</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e8%ae%be%e8%ae%a1-%e6%80%8e%e4%b9%88%e6%8a%8a%e6%99%ae%e9%80%9a-glock-%e6%89%8b%e6%9e%aa%e6%94%b9%e8%a3%85%e6%88%90%e5%85%a8%e8%87%aa%e5%8a%a8%e6%ad%a6%e5%99%a8/">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/glock.webp" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>只需要 20 美元，就能把 Glock 手枪改为全自动武器。 Vice 报道说美国悄悄流行一种 Glock S …
   设计 | 怎么把普通 Glock 手枪改装成全自动武器 查看全文 »</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2999,12 +2999,9 @@ Formily 在古茗工单系统中的实践落地
                         <summary class="article-expander__title">设计 | 为什么很多西方产品的功能那么单一</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e8%ae%be%e8%ae%a1-%e4%b8%ba%e4%bb%80%e4%b9%88%e5%be%88%e5%a4%9a%e8%a5%bf%e6%96%b9%e4%ba%a7%e5%93%81%e7%9a%84%e5%8a%9f%e8%83%bd%e9%82%a3%e4%b9%88%e5%8d%95%e4%b8%80/">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/tableware.jpeg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>文化差异不但影响用户购买和消费的喜好，也影响用户选择和使用产品的习惯。 希望出海的国内团队、开发者可能会注意到 …
   设计 | 为什么很多西方产品的功能那么单一 查看全文 »</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3805,76 +3802,6 @@ clip-path 元素裁剪。
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7280435532986990647"
-                        open
-                      >
-                        <summary class="article-expander__title">是什么样的vscode插件能让你提升数倍的开发效率？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7280435532986990647">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>分享下最近前端圈特别好用的vscode插件：（插件根据个人喜好选择，希望能帮助到大家😊）
-vscode icones
-
-将icones的网站页面以webview的方式直接在vscode中打开，这样你就不用脱离vscode去粘贴icones的代码和下载icon了
-
-vscode yesicon
-
-同样是一个icon网站，阮一峰老师推荐过，里面聚合了icones，并且里面的icon已经超过了18w
-
-vscode tailwind magic
-
-针对tailwindcss中自定义的样式需要用w-[10px]包裹，为了实现和unocss一样舒适的写法w10px,才产出的插件，并且他甚至超越了unocss的写法，更加灵活简单，结合官方的Tailwind CSS Intellisense效果更好哦～，另外推荐Vscode Tailwind CSS Highlight，针对一些tailwindcss提供高亮背景色，还是会更加醒目的看出一些特殊样式，针对代码修改是用处挺大的
-
-to tailwindcss
-
-提供了css转换成tailwindcss的能力，可以hover到css显示对用tailwindcss的写法，对于初次使用tailwindcss是绝佳哦
-
-Unot
-
-提供了unocss的代码提示和将css转换成unocss的能力和更加简化unocss写法的转换能力,比如默认从原型图粘贴背景色#ffff，或者rgba，你需要自己特殊处理缩紧和用[#fff]包裹，然后这个插件开启后，可以直接写bg#fff 和 bg-rgba(10, 20, 30, .1)，他在保存后会转换成unocss可识别的语法，大大提高了开发效率
-
-common intellisense
-
-他提供了大量频繁使用的组件库的代码提示，他会让你在使用这个ui组件时，享受到丝滑的体验，你的一个空格就能提示这个组件上的属性，并且处理过滤了已经写好的属性，包括vue中的事件@xxx，当你输入@，就会提示组件上暴露的事件，并且你如果用到组件实例的ref，他会在你使用xxx.value.的时候提供实力的方法和对应的描述和参数，如果你不知道这个组件该怎么使用，他在属性上敲击空格会有一个vscode内部打开的官方文档，直接在vscode上查文档粘贴代码，带给你最舒适的开发体验
-
-vscode emoji
-
-当你书写md文档时候，你可能想加入一些emoji，这个插件在你输入:,会提供emoji搜索的功能
-
-log
-
-ctrl+l，生成log日志，展示log位置和行数，并且可以选中变量，直接输出，另外他是直接go和rust中使用
-
-vscode json structure
-
-针对json格式的数据，嵌套层级比较深时，不利于查找对应父节点，他会hover到该层级时候，提供顶层如何能够获取到该层级的对象形式
-
-Vitesse Theme Colorful X
-
-基于vitesse theme调整的样式，可以尝试换换主题
-
-Material Icon Theme Simon
-
-基于Material Icon按照自己的喜好调整了个别icon图标和对比度
-
-vscode script
-
-一个仓库代码脚本执行选择器，如果终端已经执行过该条命了，再次点击会复用，可以直接跳转到对应路径，支持monorepo和learn模式
-
-function-quick-locking
-
-最近在推上看到有人在卖这个类似功能的vscode插件，我觉得对于vue2的export default使用的话确实是能带来一定的便捷，就简单实现了一个，能够列出当前的methods、computed等等的数据，当然是支持setup的，目前只支持了vue，可以体验一下，对于老项目几千行代码，去查找一个函数可能搜索能搜到一大片，使用这个快捷跳转到指定方法，能带来一定的便利</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -5248,8 +5175,8 @@ Scrum 开发
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6297709617">
-        <time id="build-timestamp" datetime="2023-09-25T09:52:51.205Z">2023-09-25T09:52:51.205Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6299678719">
+        <time id="build-timestamp" datetime="2023-09-25T12:56:51.360Z">2023-09-25T12:56:51.360Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
