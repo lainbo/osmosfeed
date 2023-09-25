@@ -51,11 +51,44 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-25 datetime="2023-09-25T00:27:01.000Z">2023-09-25</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-25 datetime="2023-09-25T00:27:01.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-25 datetime="2023-09-25T03:47:00.000Z">2023-09-25</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-25 datetime="2023-09-25T03:47:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >国家应急广播 - 重庆预警信息</button>
+                  <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20230925/t20230925_526431978.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市云阳县发布大雾黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20230925/t20230925_526431978.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>云阳县气象台2023年9月25日11时20分发布“大雾黄色预警信号”，预计未来12小时，全县各乡镇（街道）将出现能见度小于500米的大雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -1142,12 +1175,9 @@
                         <summary class="article-expander__title">学习 | 把思维碰撞变成创新利器</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e6%8a%8a%e6%80%9d%e7%bb%b4%e7%a2%b0%e6%92%9e%e5%8f%98%e6%88%90%e5%88%9b%e6%96%b0%e5%88%a9%e5%99%a8/">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/collision.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
-                              <span>乔布斯想强迫所有员工用一个厕所，MIT 混乱的临时建筑促生了伟大科研成果，程序员想用“压缩”算法解释古文。它们 …
+                              <span>乔布斯为什么强迫所有员工用一个厕所 智者乔布斯认为：智慧的火花常常是偶然交流碰撞产生的。 为了促进员工之间的交 …
   学习 | 把思维碰撞变成创新利器 查看全文 »</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1181,12 +1211,9 @@
                         <summary class="article-expander__title">设计 | 重新认识线框图</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e8%ae%be%e8%ae%a1-%e9%87%8d%e6%96%b0%e8%ae%a4%e8%af%86%e7%ba%bf%e6%a1%86%e5%9b%be/">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-1597534458220-9fb4969f2df5.jpeg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>线框图被产品经理奉为圭臬，但对设计师而言，线框图的存在则是面目模糊。在整个产品设计流程里，线框图是一种很好的产 …
   设计 | 重新认识线框图 查看全文 »</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2721,9 +2748,12 @@ TinyEngine 采用灵活的系统架构，其出色的整体架构提供了高度
                         <summary class="article-expander__title">设计 | 为什么西方人那么爱看数据？</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e8%ae%be%e8%ae%a1-%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a5%bf%e6%96%b9%e4%ba%ba%e9%82%a3%e4%b9%88%e7%88%b1%e7%9c%8b%e6%95%b0%e6%8d%ae%ef%bc%9f/">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/l-intro-1658343081-1.jpeg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>文化差异不但影响用户购买和消费的喜好，也影响用户选择和使用产品的习惯。 做出海产品的国内团队和开发者，可能会注 …
   设计 | 为什么西方人那么爱看数据？ 查看全文 »</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4046,63 +4076,6 @@ css变量：var()
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20230918/t20230918_526423622.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市开州区发布暴雨橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20230918/t20230918_526423622.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>开州区气象局2023年9月18日11时40分升级发布“暴雨橙色预警信号”，预计未来3小时，大进镇、关面乡、雪宝山镇、满月镇、谭家镇、温泉镇、和谦镇、麻柳乡、河堰镇累计雨量将达50-90毫米，最大小时雨强可达30-50毫米，并伴有雷电、阵性大风等强对流天气。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20230918/t20230918_526423511.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市开州区发布暴雨黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20230918/t20230918_526423511.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>开州区气象局2023年9月18日10时20分发布“暴雨黄色预警信号”，预计未来6小时，雪宝山镇、关面乡、河堰镇、谭家镇、满月镇、大进镇、敦好镇、麻柳乡、和谦镇、高桥镇、紫水乡累计雨量将达50-80毫米，最大小时雨量可达20-40毫米，并伴有雷电、阵性大风等强对流天气。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20230918/t20230918_526423470.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市巫溪县发布暴雨黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20230918/t20230918_526423470.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>巫溪县气象台2023年9月18日9时30分发布“暴雨黄色预警信号”，预计未来6小时，田坝镇、尖山镇、红池坝镇、朝阳镇、文峰镇、天元乡、土城镇、乌龙乡等街道（乡镇）累计雨量将达50-80毫米，最大小时雨强可达20-30毫米，并伴有雷电、阵性大风等强对流天气；注意防范强降水可能诱发的山体滑坡、泥石流、中小河流洪水、山洪、城乡积涝等次生灾害，以及雷电、大风和冰雹可能造成的不利影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -5258,8 +5231,8 @@ Scrum 开发
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6293655724">
-        <time id="build-timestamp" datetime="2023-09-25T01:15:06.526Z">2023-09-25T01:15:06.526Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6294656978">
+        <time id="build-timestamp" datetime="2023-09-25T03:52:51.245Z">2023-09-25T03:52:51.245Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
