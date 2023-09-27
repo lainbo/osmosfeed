@@ -43,7 +43,7 @@
           "description": "坚持探索Web标准下的原生浏览器开发行为，行为驱动和数据驱动的表单开发其实各有千秋，深入HTML，你会发现这个世界比你所知的要精彩的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/form-reset-input-change/",
           "publishedOn": "2023-09-12T15:52:48.000Z",
-          "wordCount": 1091,
+          "wordCount": 1092,
           "title": "Tips：form元素reset后input不触发change事件处理",
           "imageUrl": null
         },
@@ -63,7 +63,7 @@
           "description": "一开始看到registerProtocolHandler()方法老激动了，以为又发现了个好玩具，谁知深入体验了一番之后……呵呵~",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/js-registerprotocolhandler/",
           "publishedOn": "2023-08-30T15:02:58.000Z",
-          "wordCount": 961,
+          "wordCount": 965,
           "title": "一言难尽的registerProtocolHandler()方法",
           "imageUrl": null
         },
@@ -73,7 +73,7 @@
           "description": "一个看似简单的HTML属性的底下，可能是一座巨大的冰山，referrer及其相关特性就是如此。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/08/web-referer-image-policy/",
           "publishedOn": "2023-08-29T15:53:49.000Z",
-          "wordCount": 1068,
+          "wordCount": 1067,
           "title": "Web referrer策略详解与防盗链图片的显示",
           "imageUrl": null
         }
@@ -131,6 +131,16 @@
       "feedUrl": "https://rsshub.app/jike/user/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
+        {
+          "id": "https://m.okjike.com/originalPosts/6514408e2a0c03ca1321c80e",
+          "author": null,
+          "description": "推荐一款手机屏幕控制框架，AutoX，https://github.com/kkevsekk1/AutoX，准确地说，应该是一款自动化测试框架，它提供了完善的能力，可以帮你像调试 Web 网页一样，对当前界面中软件里的所有元素和层级进行定位，支持使用 JS 对元素节点做任意操作，例如下载图片文字、执行点击复制操作、请求数据后替换内容等等。\n原理跟之前提到的跳过开屏广告的 SKIP 是一样的，在开启了无障碍服务权限后，软件可以读取到界面上所有的元素布局信息，只不过 AutoX 对元素选取、代码生成、程序执行、运行调试，包括宏录制等各个环节进行了工程化的组装，而且它提供了 VSCode 插件，可以通过局域网连接后，在电脑上编码然后手机上直接执行，所见即所得，操作起来十分便捷。该框架适用于手机的自动化测试和控制场景。\n下面是一个利用 AutoX 选取目标文本的演示，拿到了元素的 ID 信息，接下来就可以到 AutoX 的编辑器开始编码了：",
+          "link": "https://m.okjike.com/originalPosts/6514408e2a0c03ca1321c80e",
+          "publishedOn": "2023-09-27T14:47:42.000Z",
+          "wordCount": 488,
+          "title": "发布了: 推荐一款手机屏幕控制框架，AutoX，https://github.com/kkevsekk1/AutoX，准确地说，应该是一款自动化测试框架，它提供了完善的能力，可以帮你像调试 We...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FkR9UdWbnKsqfGP7xne8MESN0_SD?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80"
+        },
         {
           "id": "https://m.okjike.com/originalPosts/651425edf21549bc730a794e",
           "author": null,
@@ -220,16 +230,6 @@
           "wordCount": 501,
           "title": "发布了: 多家银行正在主动下调房贷利率，如果你的首套房利率高于当地/全国下限，可以去对应银行重新签署合同，我今天就收到了银行通知，利率可以从 4.4 降到 4.2...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/650d05118425e0dd3bd401de",
-          "author": null,
-          "description": "推荐一个神奇的网站文档生成器，Docsify，https://docsify.js.org。如果你的项目 Repo 写了一个 README，或者写了一堆 Markdown 文件，正准备使用 GitBook、Hexo、Jekyll 等工具来生成一个网站，可以考虑停下来，先看看这个工具。\n你需要做的工作十分简单，在项目中增加一个 index.html 文件，写十几行代码然后稍作配置，就可以搞定你的网站文档站点了，对程序员极为友好。它的原理比较简单：\n1）搭建一个网页初始化框架，允许网站主题、字体、字号、Logo 等进行配置化传入\n2）然后直接异步加载 Markdown 文件，解析成 HTML 后呈现\n3）同时允许对 sidebar/navbar/pagecover 等框架性的东西做定制化，并以插件化的方式支持了社区化评论组件、Google 统计、代码预览等等的接入\n功能做的颇为全面，大多数情况下，默认的几个配置就可以满足需求了。",
-          "link": "https://m.okjike.com/originalPosts/650d05118425e0dd3bd401de",
-          "publishedOn": "2023-09-22T03:08:01.000Z",
-          "wordCount": 520,
-          "title": "发布了: 推荐一个神奇的网站文档生成器，Docsify，https://docsify.js.org。如果你的项目 Repo 写了一个 README，或者写了一堆 Markdown 文件，正准备使用 GitBo...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FsNwplh6M2Losp13Fyzo8sBWD-IWv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         }
       ]
     },
@@ -355,6 +355,16 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20230928/t20230928_526435419.html",
+          "author": "国家预警信息发布中心",
+          "description": "武隆区气象台2023年9月28日02时15分发布“暴雨橙色预警信号”，目前沧沟乡、火炉镇雨量已达50毫米，预计未来3小时，芙蓉街道、仙女山街道、桐梓镇、后坪乡、凤山街道等街道（乡镇）累计雨量将达50-70毫米，最大小时雨强可达30-50毫米，请加强防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20230928/t20230928_526435419.html",
+          "publishedOn": "2023-09-27T18:36:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市武隆区发布暴雨橙色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230927/t20230927_526435233.html",
           "author": "国家预警信息发布中心",
@@ -794,26 +804,6 @@
           "wordCount": 523,
           "title": "重庆市秀山土家族苗族自治县发布雷电橙色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230921/t20230921_526427509.html",
-          "author": "国家预警信息发布中心",
-          "description": "丰都县气象台2023年9月21日1时25分发布“暴雨黄色预警信号”，预计未来6小时内，双路镇、江池镇、兴义镇、高家镇、太平坝乡、暨龙镇、都督乡、武平镇、南天湖镇、三建乡、龙河镇、栗子乡、仙女湖镇、包鸾镇、三合街道、湛普镇、虎威镇、名山街道等街道（乡镇）累计雨量将达50-70毫米，最大小时雨强可达20-40毫米，并伴有雷电等强对流天气。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20230921/t20230921_526427509.html",
-          "publishedOn": "2023-09-20T17:41:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市丰都县发布暴雨黄色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230921/t20230921_526427500.html",
-          "author": "国家预警信息发布中心",
-          "description": "酉阳县气象台2023年9月21日0时30分发布“暴雨黄色预警信号”，目前我县两罾乡累计降雨量已达90.4毫米，预计未来6小时内，宜居乡、丁市镇、天馆乡、双泉乡、苍岭镇、后坪乡、清泉乡、万木镇、龚滩镇、庙溪乡、浪坪乡、铜鼓镇、花田乡、黑水镇、小河镇、板桥乡等乡镇累计雨量将达50-80毫米，最大小时雨强可达20-40毫米，并伴有雷电、阵性大风等强对流天气。防御指南：1.视情况暂停户外作业和活动。2.注意道路、桥涵、隧道、工地、车库、低洼地、地下空间积水，远离积水区域。3.注意洪水、山洪、地质灾害、城市内涝、乡村积涝等暴雨次生灾害，视情况及时撤离河道、沟谷、边坡、危岩、危房、简易工棚、挡土墙等容易发生危险区域。4.行驶车辆放慢车速，谨慎前行，避免强行通过积水路段和下沉式立交，避免将车辆停放在低洼易涝等危险区域。5.相关部门和乡镇街道按照职责，做好暴雨防范应对工作。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20230921/t20230921_526427500.html",
-          "publishedOn": "2023-09-20T16:56:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市酉阳土家族苗族自治县发布暴雨黄色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -1015,7 +1005,7 @@
           "description": "在当今数字化飞速发展的时代，企业对高效、敏捷的应用程序需求日益旺盛。为了满足这一需求，越来越多的低代码开发平台开始涌现。这些平台通过提供简单易用的开发工具和优化后的开发流程，帮助开发者快速构建高质量、可重复使用的应用程序，同时降低了开发的难度和成本，提高了开发效率和灵活性。这些低代码开发平台的出现，无疑为企业的数字化转型提供了更快速、更高效的方法，也将推动整个软件开发行业的进步。\nTinyEngine 项目介绍\n随着企业对于低代码开发平台的需求日益增长，急需一个通用的解决方案来满足各种低代码平台的开发需求。正是在这种情况下，低代码引擎应运而生。它是一种通用的开发框架，通过对低代码平台系统常用的功能进行解构，将其划分为多个功能模块，并为每个模块定义了相应的协议和开发范式，使得开发者可以根据自身的业务需求，轻松定制开发出自己的低代码开发平台。\n\nTinyEngine 提供了低代码底层能力，并集成了人工智能，从而使用户能够高效开发。TinyEngine 具有强大的拖拽功能，无论是图元还是复杂组件，都能在画布上带来流畅的体验。它适用于多场景的低代码平台开发，包括资源编排、流程编排、服务端渲染、模型驱动、移动端、大屏端以及页面编排等低代码平台。\n核心亮点\n可以定制开发低码平台。\n\nTinyEngine 采用灵活的系统架构，其出色的整体架构提供了高度的自定义自由度，使用户能够像搭建积木一样选择不同的模块来构建自己的专属设计器。此外，插件化的架构使得用户可以方便地扩展与业务相关的功能。 在 TinyEngine 中，插件根据位置大致分为三类：toolbars/plugins/settings，分别对应顶部区域、左侧区域和右侧区域。toolbars 插件主要偏向于无需 UI 或者 UI 较为简单的工具插件，plugins 是业务功能插件，显示在左侧(或下方)抽屉页面，可以通过点击进行展开收…",
           "link": "https://juejin.cn/post/7280926568854667299",
           "publishedOn": "2023-09-21T07:40:49.000Z",
-          "wordCount": 2587,
+          "wordCount": null,
           "title": "低代码引擎 TinyEngine 正式发布！！！",
           "imageUrl": null
         },
@@ -1062,7 +1052,7 @@
           "description": "macOS支持容器化了！",
           "link": "https://juejin.cn/pin/7282944006674579516",
           "publishedOn": "2023-09-26T09:13:57.000Z",
-          "wordCount": 522,
+          "wordCount": null,
           "title": "macOS支持容器化了！",
           "imageUrl": null
         },
