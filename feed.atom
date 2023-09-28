@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-09-28T06:52:40.989Z</id>
+    <id>urn:2023-09-28T09:52:22.479Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-09-28T06:52:40.989Z</updated>
+    <updated>2023-09-28T09:52:22.479Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[设计 | UI 设计里，简单不等于容易使用设计]]></title>
+        <id>https://nishuang.net/?p=30843</id>
+        <link href="https://nishuang.net/%e8%ae%be%e8%ae%a1-ui-%e8%ae%be%e8%ae%a1%e9%87%8c%ef%bc%8c%e7%ae%80%e5%8d%95%e4%b8%8d%e7%ad%89%e4%ba%8e%e5%ae%b9%e6%98%93%e4%bd%bf%e7%94%a8%e8%ae%be%e8%ae%a1/"/>
+        <updated>2023-09-28T07:52:48.000Z</updated>
+        <summary type="html"><![CDATA[Google 将关闭 Google Podcasts，随便吧，反正我厌恶它🤷‍♂️ Google Podcas …
+  设计 | UI 设计里，简单不等于容易使用设计 查看全文 »]]></summary>
+        <author>
+            <name>Frank</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[7073670907851440160#新人报道#] 欢迎使用新鲜上线的DevShots https://gpwzw.com/]]></title>
+        <id>7283532551473594425</id>
+        <link href="https://juejin.cn/pin/7283532551473594425"/>
+        <updated>2023-09-28T07:52:46.000Z</updated>
+        <summary type="html"><![CDATA[[7073670907851440160#新人报道#] 欢迎使用新鲜上线的DevShots https://gpwzw.com/]]></summary>
+        <author>
+            <name>林建彧</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[重庆市云阳县发布大雾黄色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/huangsyj/20230928/t20230928_526435486.html</id>
@@ -302,6 +323,42 @@
         <summary type="html"><![CDATA[macOS支持容器化了！]]></summary>
         <author>
             <name>飞猿创</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[vue3 + mark.js | 实现文字标注功能]]></title>
+        <id>https://juejin.cn/post/7282950051319283770</id>
+        <link href="https://juejin.cn/post/7282950051319283770"/>
+        <updated>2023-09-26T09:12:21.000Z</updated>
+        <summary type="html"><![CDATA[highlight: vs2015
+theme: smartblue
+页面效果
+
+具体实现
+新增
+1、监听鼠标抬起事件，通过window.getSelection()方法获取鼠标用户选择的文本范围或光标的当前位置。
+2、通过 选中的文字长度是否大于0或window.getSelection().isCollapsed (返回一个布尔值用于描述选区的起始点和终止点是否位于一个位置，即是否框选了)来判断是否展示标签选择的弹窗。
+3、标签选择的弹窗采用 子绝父相 的定位方式，通过鼠标抬起的位置确认弹窗的 top 与 left 值。
+    const TAG_WIDTH = 280 //自定义最大范围，以保证不超过内容的最大宽度
+    const tagInfo = ref({
+     visible: false,
+     top: 0,
+     left: 0,
+    })
+    const el = document.getElementById('text-container')
+    //鼠标抬起
+    el?.addEventListener('mouseup', (e) => {
+      const text = window?.getSelection()?.toString() || ''
+      if (text.length > 0) {
+        const left = e.offsetX < TAG_WIDTH ? 0 : e.offsetX - 300
+        tagInfo.value = {
+          visible: true,
+          top: e.offsetY + 40,
+          left: left,
+        }
+        getSelectedTex…]]></summary>
+        <author>
+            <name>蜡笔小杨</name>
         </author>
     </entry>
     <entry>
@@ -1794,24 +1851,6 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[低代码引擎 TinyEngine 正式发布！！！]]></title>
-        <id>https://juejin.cn/post/7280926568854667299</id>
-        <link href="https://juejin.cn/post/7280926568854667299"/>
-        <updated>2023-09-21T07:40:49.000Z</updated>
-        <summary type="html"><![CDATA[在当今数字化飞速发展的时代，企业对高效、敏捷的应用程序需求日益旺盛。为了满足这一需求，越来越多的低代码开发平台开始涌现。这些平台通过提供简单易用的开发工具和优化后的开发流程，帮助开发者快速构建高质量、可重复使用的应用程序，同时降低了开发的难度和成本，提高了开发效率和灵活性。这些低代码开发平台的出现，无疑为企业的数字化转型提供了更快速、更高效的方法，也将推动整个软件开发行业的进步。
-TinyEngine 项目介绍
-随着企业对于低代码开发平台的需求日益增长，急需一个通用的解决方案来满足各种低代码平台的开发需求。正是在这种情况下，低代码引擎应运而生。它是一种通用的开发框架，通过对低代码平台系统常用的功能进行解构，将其划分为多个功能模块，并为每个模块定义了相应的协议和开发范式，使得开发者可以根据自身的业务需求，轻松定制开发出自己的低代码开发平台。
-
-TinyEngine 提供了低代码底层能力，并集成了人工智能，从而使用户能够高效开发。TinyEngine 具有强大的拖拽功能，无论是图元还是复杂组件，都能在画布上带来流畅的体验。它适用于多场景的低代码平台开发，包括资源编排、流程编排、服务端渲染、模型驱动、移动端、大屏端以及页面编排等低代码平台。
-核心亮点
-可以定制开发低码平台。
-
-TinyEngine 采用灵活的系统架构，其出色的整体架构提供了高度的自定义自由度，使用户能够像搭建积木一样选择不同的模块来构建自己的专属设计器。此外，插件化的架构使得用户可以方便地扩展与业务相关的功能。 在 TinyEngine 中，插件根据位置大致分为三类：toolbars/plugins/settings，分别对应顶部区域、左侧区域和右侧区域。toolbars 插件主要偏向于无需 UI 或者 UI 较为简单的工具插件，plugins 是业务功能插件，显示在左侧(或下方)抽屉页面，可以通过点击进行展开收…]]></summary>
-        <author>
-            <name>OpenTiny社区</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[学习 | 怎么在 X/推特 获取优质信息]]></title>
         <id>https://nishuang.net/?p=30607</id>
         <link href="https://nishuang.net/%e5%ad%a6%e4%b9%a0-%e6%80%8e%e4%b9%88%e5%9c%a8-x-%e6%8e%a8%e7%89%b9-%e8%8e%b7%e5%8f%96%e4%bc%98%e8%b4%a8%e4%bf%a1%e6%81%af/"/>
@@ -1939,17 +1978,6 @@ https://github.com/devlive-community/openai-java-sdk  多平台开放 AI SDK
         <updated>2023-09-20T05:52:46.000Z</updated>
         <summary type="html"><![CDATA[只需要 20 美元，就能把 Glock 手枪改为全自动武器。 Vice 报道说美国悄悄流行一种 Glock S …
   设计 | 怎么把普通 Glock 手枪改装成全自动武器 查看全文 »]]></summary>
-        <author>
-            <name>Frank</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[设计 | 怎么为飞机驾驶舱、仪表盘设计字体]]></title>
-        <id>https://nishuang.net/?p=30488</id>
-        <link href="https://nishuang.net/%e8%ae%be%e8%ae%a1-%e6%80%8e%e4%b9%88%e4%b8%ba%e9%a3%9e%e6%9c%ba%e9%a9%be%e9%a9%b6%e8%88%b1%e3%80%81%e4%bb%aa%e8%a1%a8%e7%9b%98%e8%ae%be%e8%ae%a1%e5%ad%97%e4%bd%93/"/>
-        <updated>2023-09-20T05:19:53.000Z</updated>
-        <summary type="html"><![CDATA[在可读性要求最高的飞机驾驶舱和仪表场合里，液晶显示器的反锯齿显示字体的方式，导致了“奇怪”的字体设计的思路。  …
-  设计 | 怎么为飞机驾驶舱、仪表盘设计字体 查看全文 »]]></summary>
         <author>
             <name>Frank</name>
         </author>
@@ -2177,24 +2205,6 @@ function-quick-locking
         <summary type="html"><![CDATA[Join the latest trend in simulation games, bring out your creativity and make awesome looking models. Assemble, customize and display your creations, whether you’re a veteran or a novice. Get building, and get creative!]]></summary>
         <author>
             <name>Green Man Gaming Publishing</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[💥foya传媒科技💥 飞机：@foya991 ☀️golang工程师☀️UI设计师、脚本工程师 ☀️前端工程师☀️Nodejs工程师 ☀️PHP工程师☀️安卓工程师 ☀️Flutter工...]]></title>
-        <id>7278496537692373048</id>
-        <link href="https://juejin.cn/pin/7278496537692373048"/>
-        <updated>2023-09-14T11:11:52.000Z</updated>
-        <summary type="html"><![CDATA[💥foya传媒科技💥
-飞机：@foya991
-☀️golang工程师☀️UI设计师、脚本工程师
-☀️前端工程师☀️Nodejs工程师
-☀️PHP工程师☀️安卓工程师
-☀️Flutter工程师☀️运维工程师
-——————————————————
-简历投递：zcgs2149@gmail.com
-更多福利咨询纸飞机： @foya991]]></summary>
-        <author>
-            <name>yase</name>
         </author>
     </entry>
     <entry>
