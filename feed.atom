@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-10-01T06:53:00.316Z</id>
+    <id>urn:2023-10-01T09:53:12.682Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-10-01T06:53:00.316Z</updated>
+    <updated>2023-10-01T09:53:12.682Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -1387,6 +1387,64 @@ sudo mv /etc/a…]]></summary>
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[面试官 ： 首屏加载速度慢怎么优化？]]></title>
+        <id>https://juejin.cn/post/7281889329584521231</id>
+        <link href="https://juejin.cn/post/7281889329584521231"/>
+        <updated>2023-09-25T01:25:06.000Z</updated>
+        <summary type="html"><![CDATA[首屏加载速度慢怎么优化？
+1： 在回答这个问题之前 首屏 -- > 当进入该网页并且发送网络请求获取到资源以后 网页从没有内容到内容第一次渲染的时间 （当然是可以没有内容的）称为 首屏
+答：
+我认为 优化首屏 速度 可以从 两个方面去 优化
+1：网络
+当我们网络请求较多时 ， 浏览器会增加首屏渲染速度 ，如果 大量的数据请求慢 这样会导致 页面 渲染也随之较慢，减少网络请求
+减少网络请求
+例如 ： 使用图片懒加载形式 ， 只发送用户视口可见的数据请求 这样可以大大增加 请求速度 从而进一步提高渲染速度。
+使用缓存
+与后端配合 进行 资源缓存 ，如长期不变的 logo 或者 定量更新的资源可以采用缓存的形式 来处理，也可以优化首屏渲染时间
+使用 CDN 进行 加速
+对资源进行托管，保证服务器的响应速度
+2：加载资源方面
+路由懒加载
+使用 路由懒加载的形式，进行资源处理，当我们需要用到该资源时再进行资源加载，可以将大量的加载时间空出来留给首屏渲染。
+script 标签资源异步加载
+当一些 不影响系统环境资源的加载时 我们可以考虑使用 async 和 defer 加载
+<script defer async ><script>
+
+webpack splitChunks 代码分割
+利用webpack 代码分割 进行优化，可以将 js进行分片 ，首次加载文件体积大量减少，以及资源异步加载
+css 压缩 js压缩 html压缩 image压缩 gzip压缩
+css 可以通过 minicssExtracPlugin 进行 css压缩
+js 可以通过 TerserWebpackPlugin | uglifyJsPlugin 进行资源压缩
+html 可以通过 HtmlMinimizerWebpackPlugin 进行压缩
+图片可以通过 ImageMinimizerWebpackPlugin 进行压缩
+css 样式书写规范
+css 代码 写得好更有利于 浏览器的解析，还有说什么transform3d 能够硬件加速，我不这么认为，当你开启了一个
+transform3d 相当于是在网页上多开了一个图层 ， 当你的图层达到一定数量的时候，未免性能能好过普通的 transform translate
+服务端渲染提高首屏
+服务端渲染 ，后台将你需要绘制的页面结构以及数据全局准备好了，然后直接将 资源文件返回给前端，前端只需要渲染即可。
+体验方面
+1：增加骨架屏
+2： 增加loading动画效果
+补充说明
+通过掘友的留言发现还可以通过 前置和简化模块 来优化网页加载速度，这里我们主要关注两个方面：资源的提前加载和模块的简化。
+前置关键资源：
+关键CSS ：将关键的CSS样式直接嵌入到HTML中，以避免阻塞渲染。通过内联关键CSS，可以确保在解析和渲染HTML时，关键样式已经可用。这样，页面的渲染速度会更快，用户会更早地看到内容。
+字体预加载：如果网页使用了自定义字体，可以通过预加载字体文件来减少字体渲染的延迟。通过使用<link rel="preload">标签，将字体文件提前加载，使其在需要时立即可用。
+重要JavaScript文件的异步加载：将非关键的JavaScript文件标记为异步加载，以避免阻塞页面的渲染。只加载和执行必需的JavaScript代码，而将其他代码延迟到后续阶段加载。
+缓存关键资源：通过适当设置缓存头部响应，将关键资源缓存到用户的浏览器中。这样，用户在后续访问网站时可以直接使用缓存的资源，减少网络请求的数量和响应时间。
+简化模块：
+代码分割 ：将代码分割成较小的模块（chunks），按需加载。通过将页面的不同部分拆分为独立的模块，可以仅在需要时加载这些模块，而不是一次性加载整个应用程序的代码。这样可以减少首屏加载时需要下载的代码量，加快页面的加载速度。
+按需加载 ：延迟加载非关键的模块或组件，只在用户需要时进行加载。例如，将某些交互性较低的模块或组件延迟加载，以减少初始加载时的资源消耗。
+优化第三方库和插件：检查使用的第三方库和插件，确保只加载和使用必需的部分。有时候，第三方库可能包含大量不必要的功能和代码，可以通过按需导入或选择性地加载来减少文件大小和加载时间。
+压缩和缩减文件大小：通过压缩和缩减文件大小来减少模块和资源的加载时间。可以使用工具如Webpack或Parcel来进行代码压缩、文件合并和优化。
+通过前置关键资源和简化模块，可以减少首屏加载所需的资源量和时间，从而提高网页的加载速度。这些优化技术可根据具体的项目需求和场景进行调整和应用，以实现最佳的性能和用户体验。
+总结
+能回答到这些，想必面试应该已经够用了，主要还是大家要把每一点讲细，讲清楚，就能得到面试官的认可，一起加油吧]]></summary>
+        <author>
+            <name>优秀稳妥的Zn</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[【0925早报】节前新闻会变少的周一]]></title>
         <id>https://open.zhubai.wiki/a/l/t/z/fp/oracle/2317899227906838528</id>
         <link href="https://open.zhubai.wiki/a/l/t/z/fp/oracle/2317899227906838528"/>
@@ -1850,29 +1908,6 @@ const peopleByAge = people.reduce((acc, person) => {
 …]]></summary>
         <author>
             <name>CUGGZ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[3D世界Babylon.js的横空出世]]></title>
-        <id>https://juejin.cn/post/7281601361985306624</id>
-        <link href="https://juejin.cn/post/7281601361985306624"/>
-        <updated>2023-09-24T08:15:31.000Z</updated>
-        <summary type="html"><![CDATA[在3D Web开发领域，Babylon.js和Three.js被视为两种最流行的JavaScript库，用于创建引人入胜的3D体验。它们都提供了强大的功能和活跃的社区，但它们具有不同的优点和缺点。在这篇综合比较中，我们将深入探讨Babylon.js和Three.js之间的核心差异，以帮助您为您的3D项目做出明智的选择。
-介绍
-Babylon.js和Three.js都是JavaScript库，可以让开发者在浏览器中创建3D图形和交互式Web体验。它们在各种行业中被广泛使用，包括游戏、教育、建筑和虚拟现实。然而，它们具有不同的设计理念和功能集，适用于不同的需求。
-Babylon.js
-Babylon.js由微软开发，以其易用性和简单性而闻名。它旨在为开发者提供一个简单的路径，让他们可以轻松开始3D Web开发，这使其成为初学者的绝佳选择。Babylon.js是开源的，并且非常强调社区支持和文档。
-Three.js
-另一方面，Three.js是一个更成熟和多功能的库。它提供了广泛的功能和高度的自定义性，适用于初学者和经验丰富的开发者。Three.js已经存在很长时间，拥有庞大而活跃的社区，这导致了大量的第三方扩展和插件的产生。
-现在，让我们深入了解这两个库之间的主要差异。
-使用和学习曲线的便捷性
-Babylon.js
-Babylon.js经常因其简单性和适合初学者的方法而受到赞誉。其API被设计成直观的，该库提供了许多内置功能，可以简化开发过程。官方文档全面，并包含许多示例和教程，使新手能够轻松入门。
-Babylon.js的一个突出特点是其"Playground"，这是一个基于Web的编辑器，允许您实验代码并在3D环境中立即看到结果。这是一个学习和原型设计的宝贵工具。
-Three.js
-尽管Three.js更加灵活和强大，但对于初学者来说，它也可能更加复杂。它提供了对渲染管线更多…]]></summary>
-        <author>
-            <name>弓羽</name>
         </author>
     </entry>
     <entry>
@@ -2839,6 +2874,16 @@ https://github.com/devlive-community/openai-java-sdk  多平台开放 AI SDK
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[创作者经济2.0, 我写 newsletter 以来收到多少钱, 以及正式告别竹白 -#44]]></title>
+        <id>https://open.zhubai.wiki/a/l/t/z/fp/geekplux/2315426122986815488</id>
+        <link href="https://open.zhubai.wiki/a/l/t/z/fp/geekplux/2315426122986815488"/>
+        <updated>2023-09-18T09:03:17.000Z</updated>
+        <summary type="html"><![CDATA[创作者经济从疫情初期开始爆发，时至今日其实已经有了很明显的颓势，我相信不少人也感受到了。]]></summary>
+        <author>
+            <name>GeekPlux Lab</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[入手一台mac mini做前端开发怎么样？？]]></title>
         <id>7280007832701992979</id>
         <link href="https://juejin.cn/pin/7280007832701992979"/>
@@ -2846,16 +2891,6 @@ https://github.com/devlive-community/openai-java-sdk  多平台开放 AI SDK
         <summary type="html"><![CDATA[入手一台mac mini做前端开发怎么样？？]]></summary>
         <author>
             <name>我前端真的菜</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[创作者经济2.0, 我写 newsletter 以来收到多少钱, 以及正式告别竹白 -#44]]></title>
-        <id>https://open.zhubai.wiki/a/l/t/z/fp/geekplux/2315426122986815488</id>
-        <link href="https://open.zhubai.wiki/a/l/t/z/fp/geekplux/2315426122986815488"/>
-        <updated>2023-09-18T05:02:58.000Z</updated>
-        <summary type="html"><![CDATA[创作者经济从疫情初期开始爆发，时至今日其实已经有了很明显的颓势，我相信不少人也感受到了。]]></summary>
-        <author>
-            <name>GeekPlux Lab</name>
         </author>
     </entry>
     <entry>
