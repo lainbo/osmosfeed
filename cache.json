@@ -23,7 +23,7 @@
           "description": "起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/",
           "publishedOn": "2023-09-17T08:06:56.000Z",
-          "wordCount": 1485,
+          "wordCount": 1486,
           "title": "又get到了，JS复制图片到剪切板",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "自己体验了下，出乎意料，HTML elementtiming属性在性能监控这块，比预想的要实用的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/html-elementtiming-attribute/",
           "publishedOn": "2023-09-15T15:58:22.000Z",
-          "wordCount": 931,
+          "wordCount": 935,
           "title": "HTML elementtiming属性初体验记录",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "坚持探索Web标准下的原生浏览器开发行为，行为驱动和数据驱动的表单开发其实各有千秋，深入HTML，你会发现这个世界比你所知的要精彩的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/form-reset-input-change/",
           "publishedOn": "2023-09-12T15:52:48.000Z",
-          "wordCount": 1090,
+          "wordCount": 1092,
           "title": "Tips：form元素reset后input不触发change事件处理",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "相比于tinypng，我这个工具还自带尺寸设置功能，同时还可以控制压缩率，指定压缩格式，纯前端实现，高性能高效率。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-jpg-png-compress-tinyimg-mini/",
           "publishedOn": "2023-09-05T13:05:30.000Z",
-          "wordCount": 1058,
+          "wordCount": 1063,
           "title": "做了个纯前端JPG/PNG尺寸缩放+压缩的在线工具",
           "imageUrl": null
         }
@@ -1011,26 +1011,6 @@
           "wordCount": 523,
           "title": "重庆市开州区发布大雾黄色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230925/t20230925_526432042.html",
-          "author": "国家预警信息发布中心",
-          "description": "巴南区气象台2023年9月25日12时30分发布“大雾黄色预警信号”，预计9月25日13时至20时，我区龙洲湾街道、鱼洞街道、莲花街道、花溪街道、李家沱街道、南泉街道、姜家镇、东温泉镇、天星寺镇、惠民街道、二圣镇、木洞镇、接龙镇、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20230925/t20230925_526432042.html",
-          "publishedOn": "2023-09-25T04:59:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市巴南区发布大雾黄色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230925/t20230925_526431978.html",
-          "author": "国家预警信息发布中心",
-          "description": "云阳县气象台2023年9月25日11时20分发布“大雾黄色预警信号”，预计未来12小时，全县各乡镇（街道）将出现能见度小于500米的大雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20230925/t20230925_526431978.html",
-          "publishedOn": "2023-09-25T03:47:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市云阳县发布大雾黄色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -1237,6 +1217,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7282587833607405627",
+          "author": "荒山",
+          "description": "这篇文章继续我们的‘跨平台’之旅， 之前我们聊过:\n编写‘跨版本’ 的组件库： 如何实现支持跨 Vue 2/3 的组件库\n编写‘跨框架’的组件：来一瓶 Web Component 魔法胶水\n跨平台的运行容器： 使用 Docker 实现前端应用的标准化构建、部署和运行\n编写跨运行时的程序\n今天继续来聊一下怎么编写‘跨平台’的构建插件，前端构建工具一直都是一个比较卷的赛道，毕竟它是前端工程化的重要一环，此时此刻它正在经历着新一轮的变革 —— 使用系统编程语言(如 Rust、Go) 重构。\n从 Webpack、Parcel，到 Vite, 再到 Turbopack、Rspack、Bun… 百花齐放。\n那问题又来了，新的构建工具出来，意味着又有新的“技术债”产生。\n在这个技术快速发展的时代，新旧并存的局面没办法避免。作为库的开发者，我们希望我们的库能够服务更多的人，那“跨平台”是我们不得不考虑的问题。\n怎么开发一个跨平台的构建插件呢？\n首先我们要站在更高的角度审视这些构建工具，这些构建工具主要做什么工作？从它们暴露的插件 API 中抽象共性。这些构建工具目的都是一致的，无非就是:\n文件预处理/转换。比如 sass、typescript、image、icon 等，前端需要处理的各类资源的处理\n依赖关系处理。解析和处理模块之间的依赖关系\n代码输出。包含代码合并、代码优化、产物输出等。\n主要的差异点无非就是实现不同，进而在扩展性、构建性能上面也会有不同的表现。\n接下来我们就挑两个目前比较主流的构建工具来喵喵看，我挑选的是 Webpack 和 Rollup（ Vite 也是基于 Rollup 的，两者差异不大）。\nWebpack\n尽管这几年受到了 Vite 等方案的挑战，但不得不承认，Webpack 依旧是王，至少在生态和存量市场上。\nWebpack 是基于事件驱动(Event Drive…",
+          "link": "https://juejin.cn/post/7282587833607405627",
+          "publishedOn": "2023-09-25T07:29:33.000Z",
+          "wordCount": 4328,
+          "title": "使用 unplugin 编写跨平台的构建插件",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7282603912649998336",
           "author": "前端迷悟",
           "description": "theme: cyanosis\n1 基础部分\n1.1 环境\n在线 PlayGround: https://www.typescriptlang.org/play\n使用 ts-node / esno 直接执行 ts\nnpm install ts-node -g\nts-node fileName.ts\n\nnpm install esno -g\nesno fileName.ts\n\n使用 tsc / tsup 编译 ts\nnpm install typescript  -g\n// 查看 tsc 版本\ntsc -v\n// 编译 ts 文件\ntsc fileName.ts\n\nesno 和 tsup 都是基于 esbuild 开发的\n1.2 类型基础\nJavaScript 的原始数据类型：\nboolean / number / string / symbol / bigint\nundefined / null\nundefined 和 null 是所有类型的子类型，可赋值给其他类型；如果指定了 --strictNullChecks 标记，null 和 undefined 只能赋值给 void 和它们自己。\nlet isDone: boolean = false;\nlet age: number = 10;\nlet str: string = \"test\";\n\nlet u: undefined = undefined;\nlet n: null = null;\n\n// 非--strictNullChecks下\nlet num: number = undefined;\n\nTS 的特殊类型：\nany：回到了 JS，一般不会用\nunknown：不知道用什么类型声明变量时使用，但操作变量时需要收缩类型范围，否则会报错（any不会报错）。\nvoid：单独声明一个 void 类型的变量没有什么大用，因为你…",
@@ -1244,16 +1234,6 @@
           "publishedOn": "2023-09-25T07:01:45.000Z",
           "wordCount": 3868,
           "title": "TypeScript 快速上手指南",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7282290326068641847",
-          "author": "叶落风尘",
-          "description": "前端换肤方案 - element+less无感换肤（无需页面刷新）\n前言\n前不久在改造一个迭代了一年多的项目时，增加了一个换肤功能。通过自己的探索，总结出了一套比较合适的改造方案供大家参考，如有更好的方案欢迎评论区踊跃评论😄\n先上效果：\n\n聊聊现有方案\n在查阅现有方案时，总结了目前使用的几种方案：\n1、定义多套样式\n首先定义一套或多套样式变量，包括浅色和深色两种主题。在scss或less中使用变量，通过js改变root节点的class或属性来达到样式覆盖。\n这种方式实现的前端换肤方案，可能会导致样式不易管理，查找样式复杂，每一套皮肤需要写一个css文件，造成多个css代码冗余。\n$dark-fill-1: #222;  \n$dark-color-text: #fff;   \n$dark-color-text-1: rgba(255,255,255,0.3);   \n$dark-color-text-2: $color-brand1;\n\n[data-theme=\"dark\"] {   \n  body { background: $dark-fill-1; }   \n  .item .name { color: $dark-color-text; }   \n  .item .desc { color: $dark-color-text-1; }   \n  .header .text { color: $dark-color-text-2; }   \n}\n\n2、使用less传参\n通过less或scss的传参属性,同样的只要改变根节点class或属性即可以改变页面样式，与第一点的优点是不需要写多份css文件，缺点是通过方法传入，当样式过多时，参数过多，需要改变某一个颜色成本高，容易造成问题。\n.theme(\n    @mainPageBG: #f4f6ff,\n    @fColo…",
-          "link": "https://juejin.cn/post/7282290326068641847",
-          "publishedOn": "2023-09-25T03:11:18.000Z",
-          "wordCount": 1494,
-          "title": "前端换肤方案 - element+less无感换肤（无需页面刷新）",
           "imageUrl": null
         },
         {

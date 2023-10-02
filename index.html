@@ -3105,6 +3105,43 @@ Deno 是 JavaScript 和 …</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7282587833607405627"
+                        open
+                      >
+                        <summary class="article-expander__title">使用 unplugin 编写跨平台的构建插件</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282587833607405627">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>这篇文章继续我们的‘跨平台’之旅， 之前我们聊过:
+编写‘跨版本’ 的组件库： 如何实现支持跨 Vue 2/3 的组件库
+编写‘跨框架’的组件：来一瓶 Web Component 魔法胶水
+跨平台的运行容器： 使用 Docker 实现前端应用的标准化构建、部署和运行
+编写跨运行时的程序
+今天继续来聊一下怎么编写‘跨平台’的构建插件，前端构建工具一直都是一个比较卷的赛道，毕竟它是前端工程化的重要一环，此时此刻它正在经历着新一轮的变革 —— 使用系统编程语言(如 Rust、Go) 重构。
+从 Webpack、Parcel，到 Vite, 再到 Turbopack、Rspack、Bun… 百花齐放。
+那问题又来了，新的构建工具出来，意味着又有新的“技术债”产生。
+在这个技术快速发展的时代，新旧并存的局面没办法避免。作为库的开发者，我们希望我们的库能够服务更多的人，那“跨平台”是我们不得不考虑的问题。
+怎么开发一个跨平台的构建插件呢？
+首先我们要站在更高的角度审视这些构建工具，这些构建工具主要做什么工作？从它们暴露的插件 API 中抽象共性。这些构建工具目的都是一致的，无非就是:
+文件预处理/转换。比如 sass、typescript、image、icon 等，前端需要处理的各类资源的处理
+依赖关系处理。解析和处理模块之间的依赖关系
+代码输出。包含代码合并、代码优化、产物输出等。
+主要的差异点无非就是实现不同，进而在扩展性、构建性能上面也会有不同的表现。
+接下来我们就挑两个目前比较主流的构建工具来喵喵看，我挑选的是 Webpack 和 Rollup（ Vite 也是基于 Rollup 的，两者差异不大）。
+Webpack
+尽管这几年受到了 Vite 等方案的挑战，但不得不承认，Webpack 依旧是王，至少在生态和存量市场上。
+Webpack 是基于事件驱动(Event Drive…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7282603912649998336"
                         open
                       >
@@ -3151,51 +3188,6 @@ any：回到了 JS，一般不会用
 unknown：不知道用什么类型声明变量时使用，但操作变量时需要收缩类型范围，否则会报错（any不会报错）。
 void：单独声明一个 void 类型的变量没有什么大用，因为你…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;13
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7282290326068641847"
-                        open
-                      >
-                        <summary class="article-expander__title">前端换肤方案 - element+less无感换肤（无需页面刷新）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282290326068641847">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前端换肤方案 - element+less无感换肤（无需页面刷新）
-前言
-前不久在改造一个迭代了一年多的项目时，增加了一个换肤功能。通过自己的探索，总结出了一套比较合适的改造方案供大家参考，如有更好的方案欢迎评论区踊跃评论😄
-先上效果：
-
-聊聊现有方案
-在查阅现有方案时，总结了目前使用的几种方案：
-1、定义多套样式
-首先定义一套或多套样式变量，包括浅色和深色两种主题。在scss或less中使用变量，通过js改变root节点的class或属性来达到样式覆盖。
-这种方式实现的前端换肤方案，可能会导致样式不易管理，查找样式复杂，每一套皮肤需要写一个css文件，造成多个css代码冗余。
-$dark-fill-1: #222;  
-$dark-color-text: #fff;   
-$dark-color-text-1: rgba(255,255,255,0.3);   
-$dark-color-text-2: $color-brand1;
-
-[data-theme&#x3D;&quot;dark&quot;] {   
-  body { background: $dark-fill-1; }   
-  .item .name { color: $dark-color-text; }   
-  .item .desc { color: $dark-color-text-1; }   
-  .header .text { color: $dark-color-text-2; }   
-}
-
-2、使用less传参
-通过less或scss的传参属性,同样的只要改变根节点class或属性即可以改变页面样式，与第一点的优点是不需要写多份css文件，缺点是通过方法传入，当样式过多时，参数过多，需要改变某一个颜色成本高，容易造成问题。
-.theme(
-    @mainPageBG: #f4f6ff,
-    @fColo…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3349,44 +3341,6 @@ sudo mv /etc/a…</span>
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>开州区气象局2023年9月25日15时继续发布“大雾黄色预警信号”，预计9月25日15时至9月26日15时，我区大部分乡镇（街道）海拔400米以上将出现能见度小于500米的雾，局部地区能见度小于200米。请各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20230925/t20230925_526432042.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市巴南区发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20230925/t20230925_526432042.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>巴南区气象台2023年9月25日12时30分发布“大雾黄色预警信号”，预计9月25日13时至20时，我区龙洲湾街道、鱼洞街道、莲花街道、花溪街道、李家沱街道、南泉街道、姜家镇、东温泉镇、天星寺镇、惠民街道、二圣镇、木洞镇、接龙镇、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20230925/t20230925_526431978.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市云阳县发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20230925/t20230925_526431978.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>云阳县气象台2023年9月25日11时20分发布“大雾黄色预警信号”，预计未来12小时，全县各乡镇（街道）将出现能见度小于500米的大雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -5504,8 +5458,8 @@ Scrum 开发
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6375757642">
-        <time id="build-timestamp" datetime="2023-10-02T03:54:01.440Z">2023-10-02T03:54:01.440Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6376920400">
+        <time id="build-timestamp" datetime="2023-10-02T06:54:02.028Z">2023-10-02T06:54:02.028Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
