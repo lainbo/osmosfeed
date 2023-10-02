@@ -2679,62 +2679,52 @@ Vue3 + Fabricjs 实现定制头像2.0🌈
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7282944006674579516"
-                        open
-                      >
-                        <summary class="article-expander__title">macOS支持容器化了！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7282944006674579516">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>macOS支持容器化了！</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7282692354984214539"
-                        open
-                      >
-                        <summary class="article-expander__title">免注册 无限使用的ChatGPT https://sunmier.com/#/</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7282692354984214539">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>免注册 无限使用的ChatGPT https://sunmier.com/#/</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >掘金前端本周最热</button>
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7282972975933505571"
+                        open
+                      >
+                        <summary class="article-expander__title">Vue3常见api使用指南（TS版）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282972975933505571">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>https://juejin.cn/post/7233304089370263589?searchId&#x3D;20230728000428E89CE4C53E9375585791#heading-1
+defineProps() 和 defineEmits()
+内置函数，无需import导入，直接使用。
+传入到 defineProps 和 defineEmits 的选项会从 setup 中提升到模块的范围。因此，传入的选项不能引用在  setup 范围中声明的局部变量(比如设置默认值时)，但是，它可以引用导入（import）的变量，因为它们也在模块范围内。就是说props设置默认值的时候不能直接用setup里的变量，可以用import引入的数据
+
+//props是响应式的不能解构
+//方法1：不能设置默认值(使用withDefaults解决)
+const props &#x3D; defineProps({
+  foo?: String,
+  id: [Number, String],
+  onEvent: Function, //Function类型
+  metadata: null
+})
+
+//方法2
+const props &#x3D; defineProps({ foo: { type: String, required: true, default: &#x27;默认值&#x27; }, bar: Number })
+
+//方法3-推荐：弊端：不能设置默认值(使用withDefaults解决)
+interface Props {
+    data?: number[]
+}
+//const props &#x3D; defineProps();
+//或const props &#x3D; defineProps();
+const props &#x3D; wi…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -3071,6 +3061,58 @@ husky 是 Git Hook 工具，可以设置在 git 各个阶段触发设定的命�
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7282944006674579516"
+                        open
+                      >
+                        <summary class="article-expander__title">macOS支持容器化了！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7282944006674579516">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>macOS支持容器化了！</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7282692354984214539"
+                        open
+                      >
+                        <summary class="article-expander__title">免注册 无限使用的ChatGPT https://sunmier.com/#/</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7282692354984214539">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>免注册 无限使用的ChatGPT https://sunmier.com/#/</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >Barret李靖的即刻动态</button>
                   <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
                 </h3>
@@ -3169,35 +3211,6 @@ watch主要用于观察Vue实例上某个特定数据的变化，从而执行特
 watch不支持缓存，数据每次变化都会执行对应的函数。
 当一个值发生…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7282666723903275063"
-                        open
-                      >
-                        <summary class="article-expander__title">Bun VS Node.js：Bun1.0发布，“遥遥领先”！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282666723903275063">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: nico
-9 月 8 日，JavaScript 社区一则消息引起热议： 由 Jarred Sumner 创建的 Bun v1.0 正式发布。但在热议之余，许多人不禁要问：Bun 的本质是什么？为什么大家都把它与比较成熟的 Node.js 相提并论？Bun 只是另一种稍纵即逝的趋势，还是它将重新定义游戏规则？在本文中，让我们深入了解 Bun，看看它的功能，并了解它与成熟的 Node.js 相比有何不同。
-什么是 Bun
-Bun 是一款适用于 JavaScript 和 TypeScript 应用程序的超快速一体化工具包。Bun 的魅力在于它能简化开发流程，使其比以往更加顺畅高效。之所以能做到这一点，是因为 Bun 不仅是一个运行时，还是一个包管理器、一个 bundler 和一个测试运行器。想象一下，在开发 JavaScript 时有一把瑞士军刀，这就是 Bun。
-Bun 解决了什么问题
-2009 年 Node.js 的诞生具有划时代的意义。然而，与许多技术一样，随着它的发展，其复杂性也在增加。把它想象成一座城市。随着城市的扩张，交通拥堵可能会成为一个问题。
-Bun 的目标是成为缓解交通拥堵的新基础设施，让一切运行得更顺畅、更快速。这不是要重新发明轮子，而是要对其进行改进，确保我们在获得速度和简洁性的同时，不会失去 JavaScript 独特和强大的本质。
-Bun 被设计为 Node.js 更快、更精简、更现代的替代品，因此让我们来仔细比较一下。不过，首先让我们讨论另一个话题。
-Node.js VS Deno VS Bun
-在讨论 JavaScript 运行时的演变时，很难忽略 Deno。Node.js 的创建者 Ryan Dahl 将 Deno 作为一种新的运行时推出，旨在解决他在 Node.js 中发现的一些挑战和遗憾。
-Deno 是 JavaScript 和 …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4676,7 +4689,7 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
                             <span class="media-object__text">
                               <span>看看下面的图片，你觉得画面中间的这两个人是什么心情？ 来自加拿大 University of Alberta  …
   设计 | 察言观色也有东西方文化差异 查看全文 »</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                &ensp;<span class="article-reading-time">(&hairsp;13
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4801,7 +4814,7 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
                             <span class="media-object__text">
                               <span>ChatGPT 流行之后，越来越多的人把 ChatgPT 当做搜索引擎来使用。本文从产品设计角度，解释这个现象 …
   设计 | 为什么用户会把 ChatGPT 当搜索引擎？ 查看全文 »</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;15
+                                &ensp;<span class="article-reading-time">(&hairsp;14
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -5441,8 +5454,8 @@ Scrum 开发
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6378580219">
-        <time id="build-timestamp" datetime="2023-10-02T09:53:48.938Z">2023-10-02T09:53:48.938Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6380377907">
+        <time id="build-timestamp" datetime="2023-10-02T12:58:08.645Z">2023-10-02T12:58:08.645Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

@@ -23,7 +23,7 @@
           "description": "起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/",
           "publishedOn": "2023-09-17T08:06:56.000Z",
-          "wordCount": 1485,
+          "wordCount": 1483,
           "title": "又get到了，JS复制图片到剪切板",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "坚持探索Web标准下的原生浏览器开发行为，行为驱动和数据驱动的表单开发其实各有千秋，深入HTML，你会发现这个世界比你所知的要精彩的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/form-reset-input-change/",
           "publishedOn": "2023-09-12T15:52:48.000Z",
-          "wordCount": 1090,
+          "wordCount": 1089,
           "title": "Tips：form元素reset后input不触发change事件处理",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "相比于tinypng，我这个工具还自带尺寸设置功能，同时还可以控制压缩率，指定压缩格式，纯前端实现，高性能高效率。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-jpg-png-compress-tinyimg-mini/",
           "publishedOn": "2023-09-05T13:05:30.000Z",
-          "wordCount": 1058,
+          "wordCount": 1057,
           "title": "做了个纯前端JPG/PNG尺寸缩放+压缩的在线工具",
           "imageUrl": null
         }
@@ -1127,6 +1127,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7282972975933505571",
+          "author": "岩苍美津未",
+          "description": "https://juejin.cn/post/7233304089370263589?searchId=20230728000428E89CE4C53E9375585791#heading-1\ndefineProps() 和 defineEmits()\n内置函数，无需import导入，直接使用。\n传入到 defineProps 和 defineEmits 的选项会从 setup 中提升到模块的范围。因此，传入的选项不能引用在  setup 范围中声明的局部变量(比如设置默认值时)，但是，它可以引用导入（import）的变量，因为它们也在模块范围内。就是说props设置默认值的时候不能直接用setup里的变量，可以用import引入的数据\n<script setup>\n//props是响应式的不能解构\n//方法1：不能设置默认值(使用withDefaults解决)\nconst props = defineProps({\n  foo?: String,\n  id: [Number, String],\n  onEvent: Function, //Function类型\n  metadata: null\n})\n\n//方法2\nconst props = defineProps({ foo: { type: String, required: true, default: '默认值' }, bar: Number })\n\n//方法3-推荐：弊端：不能设置默认值(使用withDefaults解决)\ninterface Props {\n    data?: number[]\n}\n//const props = defineProps<Props>();\n//或const props = defineProps<{ data?: number[] }>();\nconst props = wi…",
+          "link": "https://juejin.cn/post/7282972975933505571",
+          "publishedOn": "2023-09-26T09:56:01.000Z",
+          "wordCount": 3106,
+          "title": "Vue3常见api使用指南（TS版）",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7282950051319283770",
           "author": "蜡笔小杨",
           "description": "highlight: vs2015\ntheme: smartblue\n页面效果\n\n具体实现\n新增\n1、监听鼠标抬起事件，通过window.getSelection()方法获取鼠标用户选择的文本范围或光标的当前位置。\n2、通过 选中的文字长度是否大于0或window.getSelection().isCollapsed (返回一个布尔值用于描述选区的起始点和终止点是否位于一个位置，即是否框选了)来判断是否展示标签选择的弹窗。\n3、标签选择的弹窗采用 子绝父相 的定位方式，通过鼠标抬起的位置确认弹窗的 top 与 left 值。\n    const TAG_WIDTH = 280 //自定义最大范围，以保证不超过内容的最大宽度\n    const tagInfo = ref({\n     visible: false,\n     top: 0,\n     left: 0,\n    })\n    const el = document.getElementById('text-container')\n    //鼠标抬起\n    el?.addEventListener('mouseup', (e) => {\n      const text = window?.getSelection()?.toString() || ''\n      if (text.length > 0) {\n        const left = e.offsetX < TAG_WIDTH ? 0 : e.offsetX - 300\n        tagInfo.value = {\n          visible: true,\n          top: e.offsetY + 40,\n          left: left,\n        }\n        getSelectedTex…",
@@ -1207,16 +1217,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7282666723903275063",
-          "author": "托儿所夜十三",
-          "description": "theme: nico\n9 月 8 日，JavaScript 社区一则消息引起热议： 由 Jarred Sumner 创建的 Bun v1.0 正式发布。但在热议之余，许多人不禁要问：Bun 的本质是什么？为什么大家都把它与比较成熟的 Node.js 相提并论？Bun 只是另一种稍纵即逝的趋势，还是它将重新定义游戏规则？在本文中，让我们深入了解 Bun，看看它的功能，并了解它与成熟的 Node.js 相比有何不同。\n什么是 Bun\nBun 是一款适用于 JavaScript 和 TypeScript 应用程序的超快速一体化工具包。Bun 的魅力在于它能简化开发流程，使其比以往更加顺畅高效。之所以能做到这一点，是因为 Bun 不仅是一个运行时，还是一个包管理器、一个 bundler 和一个测试运行器。想象一下，在开发 JavaScript 时有一把瑞士军刀，这就是 Bun。\nBun 解决了什么问题\n2009 年 Node.js 的诞生具有划时代的意义。然而，与许多技术一样，随着它的发展，其复杂性也在增加。把它想象成一座城市。随着城市的扩张，交通拥堵可能会成为一个问题。\nBun 的目标是成为缓解交通拥堵的新基础设施，让一切运行得更顺畅、更快速。这不是要重新发明轮子，而是要对其进行改进，确保我们在获得速度和简洁性的同时，不会失去 JavaScript 独特和强大的本质。\nBun 被设计为 Node.js 更快、更精简、更现代的替代品，因此让我们来仔细比较一下。不过，首先让我们讨论另一个话题。\nNode.js VS Deno VS Bun\n在讨论 JavaScript 运行时的演变时，很难忽略 Deno。Node.js 的创建者 Ryan Dahl 将 Deno 作为一种新的运行时推出，旨在解决他在 Node.js 中发现的一些挑战和遗憾。\nDeno 是 JavaScript 和 …",
-          "link": "https://juejin.cn/post/7282666723903275063",
-          "publishedOn": "2023-09-25T09:58:02.000Z",
-          "wordCount": 2941,
-          "title": "Bun VS Node.js：Bun1.0发布，“遥遥领先”！",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7282603912649998336",
           "author": "前端迷悟",
           "description": "theme: cyanosis\n1 基础部分\n1.1 环境\n在线 PlayGround: https://www.typescriptlang.org/play\n使用 ts-node / esno 直接执行 ts\nnpm install ts-node -g\nts-node fileName.ts\n\nnpm install esno -g\nesno fileName.ts\n\n使用 tsc / tsup 编译 ts\nnpm install typescript  -g\n// 查看 tsc 版本\ntsc -v\n// 编译 ts 文件\ntsc fileName.ts\n\nesno 和 tsup 都是基于 esbuild 开发的\n1.2 类型基础\nJavaScript 的原始数据类型：\nboolean / number / string / symbol / bigint\nundefined / null\nundefined 和 null 是所有类型的子类型，可赋值给其他类型；如果指定了 --strictNullChecks 标记，null 和 undefined 只能赋值给 void 和它们自己。\nlet isDone: boolean = false;\nlet age: number = 10;\nlet str: string = \"test\";\n\nlet u: undefined = undefined;\nlet n: null = null;\n\n// 非--strictNullChecks下\nlet num: number = undefined;\n\nTS 的特殊类型：\nany：回到了 JS，一般不会用\nunknown：不知道用什么类型声明变量时使用，但操作变量时需要收缩类型范围，否则会报错（any不会报错）。\nvoid：单独声明一个 void 类型的变量没有什么大用，因为你…",
@@ -1259,7 +1259,7 @@
           "description": "[7073670907851440160#新人报道#] 欢迎使用新鲜上线的DevShots https://gpwzw.com/",
           "link": "https://juejin.cn/pin/7283532551473594425",
           "publishedOn": "2023-09-28T07:52:46.000Z",
-          "wordCount": 532,
+          "wordCount": 541,
           "title": "[7073670907851440160#新人报道#] 欢迎使用新鲜上线的DevShots https://gpwzw.com/",
           "imageUrl": null
         },
@@ -1581,7 +1581,7 @@
           "description": "看看下面的图片，你觉得画面中间的这两个人是什么心情？ 来自加拿大 University of Alberta  …\n  设计 | 察言观色也有东西方文化差异 查看全文 »",
           "link": "https://nishuang.net/%e8%ae%be%e8%ae%a1-%e5%af%9f%e8%a8%80%e8%a7%82%e8%89%b2%e4%b9%9f%e6%9c%89%e4%b8%9c%e8%a5%bf%e6%96%b9%e6%96%87%e5%8c%96%e5%b7%ae%e5%bc%82/",
           "publishedOn": "2023-09-21T06:06:10.000Z",
-          "wordCount": 4138,
+          "wordCount": 3949,
           "title": "设计 | 察言观色也有东西方文化差异",
           "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-1584974292709-5c2f0619971b.jpeg"
         },
@@ -1611,7 +1611,7 @@
           "description": "ChatGPT 流行之后，越来越多的人把 ChatgPT 当做搜索引擎来使用。本文从产品设计角度，解释这个现象 …\n  设计 | 为什么用户会把 ChatGPT 当搜索引擎？ 查看全文 »",
           "link": "https://nishuang.net/%e8%ae%be%e8%ae%a1-%e4%b8%ba%e4%bb%80%e4%b9%88%e7%94%a8%e6%88%b7%e4%bc%9a%e6%8a%8a-chatgpt-%e5%bd%93%e6%90%9c%e7%b4%a2%e5%bc%95%e6%93%8e%ef%bc%9f/",
           "publishedOn": "2023-09-20T17:47:48.000Z",
-          "wordCount": 4496,
+          "wordCount": 4307,
           "title": "设计 | 为什么用户会把 ChatGPT 当搜索引擎？",
           "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-1677691820099-a6e8040aa077.jpeg"
         },
