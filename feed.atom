@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-10-02T01:16:09.079Z</id>
+    <id>urn:2023-10-02T03:54:01.469Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-10-02T01:16:09.079Z</updated>
+    <updated>2023-10-02T03:54:01.469Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[重庆市巫山县发布大雾黄色预警]]></title>
+        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439351.html</id>
+        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439351.html"/>
+        <updated>2023-10-02T03:24:00.000Z</updated>
+        <summary type="html"><![CDATA[巫山县气象台2023年10月2日11时10分发布“大雾黄色预警信号”，预计2日11时至23时，当阳乡、官阳镇、金坪乡、骡坪镇、竹贤乡、巫峡镇、龙门街道、高唐街道、曲尺乡、建平乡、铜鼓镇、红椿乡、笃坪乡、邓家乡等海拔600米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
+        <author>
+            <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[重庆市巫溪县发布大雾黄色预警]]></title>
+        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439247.html</id>
+        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439247.html"/>
+        <updated>2023-10-02T01:31:00.000Z</updated>
+        <summary type="html"><![CDATA[巫溪县气象台2023年10月2日9时继续发布“大雾黄色预警信号”，受降雨影响，预计未来12小时，我县文峰镇、上磺镇、古路镇、塘坊镇、菱角镇、尖山镇、朝阳镇、通城镇、双阳乡、胜利乡、城厢镇、宁厂镇、红池坝镇、长桂乡等海拔600米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
+        <author>
+            <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[重庆市巴南区发布大雾黄色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439190.html</id>
@@ -801,6 +821,35 @@ arr.sort(function (a, b…]]></summary>
 …]]></summary>
         <author>
             <name>荒山</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[打造前端自己的CI/CD集成环境]]></title>
+        <id>https://juejin.cn/post/7283313953382727741</id>
+        <link href="https://juejin.cn/post/7283313953382727741"/>
+        <updated>2023-09-27T08:06:28.000Z</updated>
+        <summary type="html"><![CDATA[theme: fancy
+以前总听说过CI/CD，那什么是CI/CD呢？平时开发过程中，使用到流水线，对项目进行构建，构建完成后，就能直接发布到测试环境，这个是如何实现的呢？
+持续集成
+什么是CI/CD
+CI/CD是Continuous Integration and Continuous Delivery/Deployment的缩写，意思是持续集成和持续交付/部署。CI/CD是一种软件开发流程模型，旨在通过自动化和持续性的构建、测试、部署和交付过程，来提高软件开发和发布的效率和质量。CI/CD的目标是缩短软件开发和发布的周期，降低开发和发布的成本和风险，以满足快速变化和不断迭代的业务需求。
+CI/CD主要包括三个环节：
+持续集成（Continuous Integration，CI）：开发人员将代码不断地提交到源代码管理系统中，该过程中，自动化的测试和构建工具会自动从源代码库中获取最新的代码，进行编译、测试、打包等操作，并生成相应的构建产物。
+持续交付（Continuous Delivery，CD）：将构建产物部署到测试环境，进行测试和验证，最终生成可部署的产物。
+持续部署（Continuous Deployment，CD）：将构建产物部署到生产环境，实现自动化的部署和发布，从而实现快速的交付和迭代。
+本次，我们就需要自己实现一套 CI/CD 环境，实现前端页面快速集成、快速部署。
+
+JENKINS环境配置
+JENKINS基于Docker安装
+详细步骤及介绍，还请查阅
+JENKINS官方文档
+以下摘录了，主要安装步骤：
+docker network create jenkins
+
+docker run --name jenkins-docker --rm --detach \
+  --privileged --network jenkins --network-alias …]]></summary>
+        <author>
+            <name>bonoCat</name>
         </author>
     </entry>
     <entry>
@@ -1846,6 +1895,26 @@ watch不支持缓存，数据每次变化都会执行对应的函数。
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Bun VS Node.js：Bun1.0发布，“遥遥领先”！]]></title>
+        <id>https://juejin.cn/post/7282666723903275063</id>
+        <link href="https://juejin.cn/post/7282666723903275063"/>
+        <updated>2023-09-25T09:58:02.000Z</updated>
+        <summary type="html"><![CDATA[theme: nico
+9 月 8 日，JavaScript 社区一则消息引起热议： 由 Jarred Sumner 创建的 Bun v1.0 正式发布。但在热议之余，许多人不禁要问：Bun 的本质是什么？为什么大家都把它与比较成熟的 Node.js 相提并论？Bun 只是另一种稍纵即逝的趋势，还是它将重新定义游戏规则？在本文中，让我们深入了解 Bun，看看它的功能，并了解它与成熟的 Node.js 相比有何不同。
+什么是 Bun
+Bun 是一款适用于 JavaScript 和 TypeScript 应用程序的超快速一体化工具包。Bun 的魅力在于它能简化开发流程，使其比以往更加顺畅高效。之所以能做到这一点，是因为 Bun 不仅是一个运行时，还是一个包管理器、一个 bundler 和一个测试运行器。想象一下，在开发 JavaScript 时有一把瑞士军刀，这就是 Bun。
+Bun 解决了什么问题
+2009 年 Node.js 的诞生具有划时代的意义。然而，与许多技术一样，随着它的发展，其复杂性也在增加。把它想象成一座城市。随着城市的扩张，交通拥堵可能会成为一个问题。
+Bun 的目标是成为缓解交通拥堵的新基础设施，让一切运行得更顺畅、更快速。这不是要重新发明轮子，而是要对其进行改进，确保我们在获得速度和简洁性的同时，不会失去 JavaScript 独特和强大的本质。
+Bun 被设计为 Node.js 更快、更精简、更现代的替代品，因此让我们来仔细比较一下。不过，首先让我们讨论另一个话题。
+Node.js VS Deno VS Bun
+在讨论 JavaScript 运行时的演变时，很难忽略 Deno。Node.js 的创建者 Ryan Dahl 将 Deno 作为一种新的运行时推出，旨在解决他在 Node.js 中发现的一些挑战和遗憾。
+Deno 是 JavaScript 和 …]]></summary>
+        <author>
+            <name>托儿所夜十三</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[20230925 谁在倾听]]></title>
         <id>https://open.zhubai.wiki/a/l/t/z/fp/river/2318027662662705152</id>
         <link href="https://open.zhubai.wiki/a/l/t/z/fp/river/2318027662662705152"/>
@@ -2074,6 +2143,42 @@ void：单独声明一个 void 类型的变量没有什么大用，因为你…]
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[前端换肤方案 - element+less无感换肤（无需页面刷新）]]></title>
+        <id>https://juejin.cn/post/7282290326068641847</id>
+        <link href="https://juejin.cn/post/7282290326068641847"/>
+        <updated>2023-09-25T03:11:18.000Z</updated>
+        <summary type="html"><![CDATA[前端换肤方案 - element+less无感换肤（无需页面刷新）
+前言
+前不久在改造一个迭代了一年多的项目时，增加了一个换肤功能。通过自己的探索，总结出了一套比较合适的改造方案供大家参考，如有更好的方案欢迎评论区踊跃评论😄
+先上效果：
+
+聊聊现有方案
+在查阅现有方案时，总结了目前使用的几种方案：
+1、定义多套样式
+首先定义一套或多套样式变量，包括浅色和深色两种主题。在scss或less中使用变量，通过js改变root节点的class或属性来达到样式覆盖。
+这种方式实现的前端换肤方案，可能会导致样式不易管理，查找样式复杂，每一套皮肤需要写一个css文件，造成多个css代码冗余。
+$dark-fill-1: #222;  
+$dark-color-text: #fff;   
+$dark-color-text-1: rgba(255,255,255,0.3);   
+$dark-color-text-2: $color-brand1;
+
+[data-theme="dark"] {   
+  body { background: $dark-fill-1; }   
+  .item .name { color: $dark-color-text; }   
+  .item .desc { color: $dark-color-text-1; }   
+  .header .text { color: $dark-color-text-2; }   
+}
+
+2、使用less传参
+通过less或scss的传参属性,同样的只要改变根节点class或属性即可以改变页面样式，与第一点的优点是不需要写多份css文件，缺点是通过方法传入，当样式过多时，参数过多，需要改变某一个颜色成本高，容易造成问题。
+.theme(
+    @mainPageBG: #f4f6ff,
+    @fColo…]]></summary>
+        <author>
+            <name>叶落风尘</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Flutter Love 鸿蒙]]></title>
         <id>https://juejin.cn/post/7281948788483489804</id>
         <link href="https://juejin.cn/post/7281948788483489804"/>
@@ -2161,64 +2266,6 @@ sudo mv /etc/a…]]></summary>
    每次搬家，最有意思的环节是整理各式各样的小摆件，每一件都…]]></summary>
         <author>
             <name>也树</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[面试官 ： 首屏加载速度慢怎么优化？]]></title>
-        <id>https://juejin.cn/post/7281889329584521231</id>
-        <link href="https://juejin.cn/post/7281889329584521231"/>
-        <updated>2023-09-25T01:25:06.000Z</updated>
-        <summary type="html"><![CDATA[首屏加载速度慢怎么优化？
-1： 在回答这个问题之前 首屏 -- > 当进入该网页并且发送网络请求获取到资源以后 网页从没有内容到内容第一次渲染的时间 （当然是可以没有内容的）称为 首屏
-答：
-我认为 优化首屏 速度 可以从 两个方面去 优化
-1：网络
-当我们网络请求较多时 ， 浏览器会增加首屏渲染速度 ，如果 大量的数据请求慢 这样会导致 页面 渲染也随之较慢，减少网络请求
-减少网络请求
-例如 ： 使用图片懒加载形式 ， 只发送用户视口可见的数据请求 这样可以大大增加 请求速度 从而进一步提高渲染速度。
-使用缓存
-与后端配合 进行 资源缓存 ，如长期不变的 logo 或者 定量更新的资源可以采用缓存的形式 来处理，也可以优化首屏渲染时间
-使用 CDN 进行 加速
-对资源进行托管，保证服务器的响应速度
-2：加载资源方面
-路由懒加载
-使用 路由懒加载的形式，进行资源处理，当我们需要用到该资源时再进行资源加载，可以将大量的加载时间空出来留给首屏渲染。
-script 标签资源异步加载
-当一些 不影响系统环境资源的加载时 我们可以考虑使用 async 和 defer 加载
-<script defer async ><script>
-
-webpack splitChunks 代码分割
-利用webpack 代码分割 进行优化，可以将 js进行分片 ，首次加载文件体积大量减少，以及资源异步加载
-css 压缩 js压缩 html压缩 image压缩 gzip压缩
-css 可以通过 minicssExtracPlugin 进行 css压缩
-js 可以通过 TerserWebpackPlugin | uglifyJsPlugin 进行资源压缩
-html 可以通过 HtmlMinimizerWebpackPlugin 进行压缩
-图片可以通过 ImageMinimizerWebpackPlugin 进行压缩
-css 样式书写规范
-css 代码 写得好更有利于 浏览器的解析，还有说什么transform3d 能够硬件加速，我不这么认为，当你开启了一个
-transform3d 相当于是在网页上多开了一个图层 ， 当你的图层达到一定数量的时候，未免性能能好过普通的 transform translate
-服务端渲染提高首屏
-服务端渲染 ，后台将你需要绘制的页面结构以及数据全局准备好了，然后直接将 资源文件返回给前端，前端只需要渲染即可。
-体验方面
-1：增加骨架屏
-2： 增加loading动画效果
-补充说明
-通过掘友的留言发现还可以通过 前置和简化模块 来优化网页加载速度，这里我们主要关注两个方面：资源的提前加载和模块的简化。
-前置关键资源：
-关键CSS ：将关键的CSS样式直接嵌入到HTML中，以避免阻塞渲染。通过内联关键CSS，可以确保在解析和渲染HTML时，关键样式已经可用。这样，页面的渲染速度会更快，用户会更早地看到内容。
-字体预加载：如果网页使用了自定义字体，可以通过预加载字体文件来减少字体渲染的延迟。通过使用<link rel="preload">标签，将字体文件提前加载，使其在需要时立即可用。
-重要JavaScript文件的异步加载：将非关键的JavaScript文件标记为异步加载，以避免阻塞页面的渲染。只加载和执行必需的JavaScript代码，而将其他代码延迟到后续阶段加载。
-缓存关键资源：通过适当设置缓存头部响应，将关键资源缓存到用户的浏览器中。这样，用户在后续访问网站时可以直接使用缓存的资源，减少网络请求的数量和响应时间。
-简化模块：
-代码分割 ：将代码分割成较小的模块（chunks），按需加载。通过将页面的不同部分拆分为独立的模块，可以仅在需要时加载这些模块，而不是一次性加载整个应用程序的代码。这样可以减少首屏加载时需要下载的代码量，加快页面的加载速度。
-按需加载 ：延迟加载非关键的模块或组件，只在用户需要时进行加载。例如，将某些交互性较低的模块或组件延迟加载，以减少初始加载时的资源消耗。
-优化第三方库和插件：检查使用的第三方库和插件，确保只加载和使用必需的部分。有时候，第三方库可能包含大量不必要的功能和代码，可以通过按需导入或选择性地加载来减少文件大小和加载时间。
-压缩和缩减文件大小：通过压缩和缩减文件大小来减少模块和资源的加载时间。可以使用工具如Webpack或Parcel来进行代码压缩、文件合并和优化。
-通过前置关键资源和简化模块，可以减少首屏加载所需的资源量和时间，从而提高网页的加载速度。这些优化技术可根据具体的项目需求和场景进行调整和应用，以实现最佳的性能和用户体验。
-总结
-能回答到这些，想必面试应该已经够用了，主要还是大家要把每一点讲细，讲清楚，就能得到面试官的认可，一起加油吧]]></summary>
-        <author>
-            <name>优秀稳妥的Zn</name>
         </author>
     </entry>
     <entry>
@@ -2311,56 +2358,6 @@ transform3d 相当于是在网页上多开了一个图层 ， 当你的图层达
    最后作者为了答谢付费会员群之前的测试和反馈，    将会赠送 3 个永久版和 10 个年付费版本    。具体流程将以抽奖在群里进行，敬请期待。]]></summary>
         <author>
             <name>dingyi @DEX周刊</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[腾讯一面：除了webContainer之外，还有什么办法能在浏览器上运行node代码🫣🫣🫣]]></title>
-        <id>https://juejin.cn/post/7281912738862841896</id>
-        <link href="https://juejin.cn/post/7281912738862841896"/>
-        <updated>2023-09-25T00:40:07.000Z</updated>
-        <summary type="html"><![CDATA[theme: cyanosis
-highlight: atom-one-dark
-因为我的简历上面写了一个在线代码编辑器，而且这个使用的是 webContainer，这家伙能直接在浏览器上面允许 node 代码并执行一些 node 和 npm 命令。
-于是便有了像标题里面中提到的这个问题。
-JavaScript 开发人员可能希望在浏览器中运行 Node.js 代码的原因有多种，包括：
-想要使用 Node.js API，例如 buffer, crypto, fork, events, streams 等等。
-更喜欢用 require 编写 CommonJS 风格的模块。
-在线代码编辑器允许 node 代码。
-现有选项
-现在有许多解决方案至少满足上述一些要求，例如 webpack.js.org、browserify.org 或 nodular.js。
-然而，所有这些方法都基于某种形式的源代码转换——要么提前 webpack 和 browserify，要么在运行时 nodular。
-这些解决方案似乎没有什么问题，足以满足你的目的，但实际上他们只是试图模仿或模仿某些行为。
-创建在浏览器中表现不一样的 Node.js 程序是很容易的:
-
-Browserify 通过查看 require 调用来尝试提前解析和捆绑引用的模块；上面，由于 require 的模糊用法而失败：lib.js 不会被捆绑，导致运行时错误。
-Webpack 可以说是最复杂的产品之一，它在处理 CommonJS 模块方面表现出色，并且在模仿 Node.js API 方面做得相当不错。尽管它会提前编译你的源代码，但多亏了源映射（source maps），你仍然可以调试正在运行的应用程序，这对于源代码的调试非常有帮助。然而，最终，API 中的微妙差异（例如 process.nextTick 与 setImmediate 与…]]></summary>
-        <author>
-            <name>Moment</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[离职用ChatGPT创业三个月，现在怎么样了？]]></title>
-        <id>https://juejin.cn/post/7281948788482637836</id>
-        <link href="https://juejin.cn/post/7281948788482637836"/>
-        <updated>2023-09-25T00:31:40.000Z</updated>
-        <summary type="html"><![CDATA[theme: smartblue
-先说结论：还在赔钱；
-我将从这一波创业参与者的角度来讲解：这几个月来GPT的发展历程，技术演进，和我的一些对GPT的思考；坚持读完，你一定在技术和思考上有所收获；
-一切的开始：第一次使用ChatGPT
-我永远记得2022年12月1日（ChatGPT发布第二天）第一次体验了ChatGPT；
-我当时在写研究生课题作业，所以很快就感受到了ChatGPT的可怕之处，我不善于写作业，但是用ChatGPT书写的作业，评分都是优+（之前能及格就不错了）
-我1998年出生在一个经济不发达小县城，所以我很大的时候才知道互联网；当时ChatGPT的冲击其实不亚于我当时刚认识互联网时候的震撼~
-因为我的本职工作是前端开发，所以很快就也在日常工作中使用ChatGPT来辅助我的开发；并在ChatGPT开放Api调用的第二天，开始第一次自己部署ChatGPT服务
-第一次部署独立的ChatGPT服务
-第一次部署ChatGPT服务使用的是这个GitHub开源仓库，这套代码写的非常的厉害，现在大家看到的各种套壳GPT网站大都使用的这个开源仓库
-这是GitHub源码地址：https://github.com/Chanzhaoyu/chatgpt-web
-后面我给几个朋友推荐了一下，收获到朋友的一致好评，因为当时GPT还没降速和降智，所以速度很快，回答效果也非常的好
-在一天夜里，我突然想到ChatGPT确实是一个好工具，我也一直想做一款很多人用的工具产品，所以我当天晚上10点，把被子一踢；坐到电脑旁边敲代码到早上7点，发了第一版vscode插件 - ChatMoss
-在这里非常感恩掘金平台，那是给了我第一波流量
-vscode插件 - ChatMoss
-我想先说一下为什么要起这个名字，那是因为我在过年期间看了《流浪地球2》，再叠加我对ChatGPT的震撼，和对《流浪地球2》的震撼…]]></summary>
-        <author>
-            <name>朱昆鹏</name>
         </author>
     </entry>
     <entry>
