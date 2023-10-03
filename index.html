@@ -1026,6 +1026,45 @@ Vue.js 是一个流行的 JavaScript 前端框架，用于构建用户界面。�
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7283748394601840680"
+                        open
+                      >
+                        <summary class="article-expander__title">前端代码Review，一次性掰扯明白！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7283748394601840680">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>@主要Review的指标
+
+前端代码Review主要关注以下几个方面：
+1. 代码质量：代码是否简洁、易读、易维护。是否遵循了一致的编码风格和规范，例如ESLint、Prettier等。
+功能实现：代码是否实现了预期的功能，是否有潜在的bug或逻辑错误。
+性能优化：代码是否进行了必要的性能优化，例如避免不必要的渲染、使用了合适的数据结构和算法等。
+安全性：代码是否存在可能的安全风险，例如XSS攻击、CSRF攻击等。
+5. 可测试性：代码是否易于测试，是否有单元测试和集成测试。
+可读性：代码是否易于理解，是否有足够的注释和文档。
+可复用性：代码是否有高度的模块化和复用性。
+兼容性：代码是否兼容不同的浏览器和设备。
+助记：功性读复全兼测
+@功能Review
+无需人为检测，但注释要写明白，TS类型要写清楚，让用的人如沐春风；
+该匹配单元测试的建议配套单元测试，不落人以口实~
+@性能Review
+前端代码中一些典型的、肉眼可见的需要性能优化的地方包括：
+1. 过度渲染：如果你的应用在没有必要的情况下进行了过多的渲染，这可能会导致性能问题。例如，在React中，如果你的组件在props没有改变的情况下进行了重新渲染，那么你可能需要使用shouldComponentUpdate/SCU或React.PureComponent或useEffect来避免不必要的渲染。
+大量DOM操作：频繁的DOM操作是非常耗费性能的。如果你的代码中有大量的DOM操作，你可能需要考虑使用虚拟DOM或其他优化技术（例如DocumentFragment）。
+大量的网络请求：如果你的应用发送了大量的网络请求，这可能会导致性能问题。你可能需要考虑使用缓存、预加载、懒加载等技术来减少网络请求。
+大型JavaScript文件：如果你的JavaScript文件过大，这可能会导致加载和解析时间过长。你可能需要考虑使用代码分…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7283766466083176484"
                         open
                       >
@@ -3037,51 +3076,6 @@ interface Props {
 //或const props &#x3D; defineProps();
 const props &#x3D; wi…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;10
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7282950051319283770"
-                        open
-                      >
-                        <summary class="article-expander__title">vue3 + mark.js | 实现文字标注功能</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282950051319283770">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>highlight: vs2015
-theme: smartblue
-页面效果
-
-具体实现
-新增
-1、监听鼠标抬起事件，通过window.getSelection()方法获取鼠标用户选择的文本范围或光标的当前位置。
-2、通过 选中的文字长度是否大于0或window.getSelection().isCollapsed (返回一个布尔值用于描述选区的起始点和终止点是否位于一个位置，即是否框选了)来判断是否展示标签选择的弹窗。
-3、标签选择的弹窗采用 子绝父相 的定位方式，通过鼠标抬起的位置确认弹窗的 top 与 left 值。
-    const TAG_WIDTH &#x3D; 280 //自定义最大范围，以保证不超过内容的最大宽度
-    const tagInfo &#x3D; ref({
-     visible: false,
-     top: 0,
-     left: 0,
-    })
-    const el &#x3D; document.getElementById(&#x27;text-container&#x27;)
-    //鼠标抬起
-    el?.addEventListener(&#x27;mouseup&#x27;, (e) &#x3D;&gt; {
-      const text &#x3D; window?.getSelection()?.toString() || &#x27;&#x27;
-      if (text.length &gt; 0) {
-        const left &#x3D; e.offsetX &lt; TAG_WIDTH ? 0 : e.offsetX - 300
-        tagInfo.value &#x3D; {
-          visible: true,
-          top: e.offsetY + 40,
-          left: left,
-        }
-        getSelectedTex…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;19
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -5512,8 +5506,8 @@ Scrum 开发
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6391396319">
-        <time id="build-timestamp" datetime="2023-10-03T09:53:58.527Z">2023-10-03T09:53:58.527Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6393273205">
+        <time id="build-timestamp" datetime="2023-10-03T12:57:56.694Z">2023-10-03T12:57:56.694Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

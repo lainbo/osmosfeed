@@ -23,7 +23,7 @@
           "description": "起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/",
           "publishedOn": "2023-09-17T08:06:56.000Z",
-          "wordCount": 1490,
+          "wordCount": 1489,
           "title": "又get到了，JS复制图片到剪切板",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "坚持探索Web标准下的原生浏览器开发行为，行为驱动和数据驱动的表单开发其实各有千秋，深入HTML，你会发现这个世界比你所知的要精彩的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/form-reset-input-change/",
           "publishedOn": "2023-09-12T15:52:48.000Z",
-          "wordCount": 1095,
+          "wordCount": 1096,
           "title": "Tips：form元素reset后input不触发change事件处理",
           "imageUrl": null
         },
@@ -1067,6 +1067,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7283748394601840680",
+          "author": "搬砖的乔布梭",
+          "description": "@主要Review的指标\n\n前端代码Review主要关注以下几个方面：\n1. 代码质量：代码是否简洁、易读、易维护。是否遵循了一致的编码风格和规范，例如ESLint、Prettier等。\n功能实现：代码是否实现了预期的功能，是否有潜在的bug或逻辑错误。\n性能优化：代码是否进行了必要的性能优化，例如避免不必要的渲染、使用了合适的数据结构和算法等。\n安全性：代码是否存在可能的安全风险，例如XSS攻击、CSRF攻击等。\n5. 可测试性：代码是否易于测试，是否有单元测试和集成测试。\n可读性：代码是否易于理解，是否有足够的注释和文档。\n可复用性：代码是否有高度的模块化和复用性。\n兼容性：代码是否兼容不同的浏览器和设备。\n助记：功性读复全兼测\n@功能Review\n无需人为检测，但注释要写明白，TS类型要写清楚，让用的人如沐春风；\n该匹配单元测试的建议配套单元测试，不落人以口实~\n@性能Review\n前端代码中一些典型的、肉眼可见的需要性能优化的地方包括：\n1. 过度渲染：如果你的应用在没有必要的情况下进行了过多的渲染，这可能会导致性能问题。例如，在React中，如果你的组件在props没有改变的情况下进行了重新渲染，那么你可能需要使用shouldComponentUpdate/SCU或React.PureComponent或useEffect来避免不必要的渲染。\n大量DOM操作：频繁的DOM操作是非常耗费性能的。如果你的代码中有大量的DOM操作，你可能需要考虑使用虚拟DOM或其他优化技术（例如DocumentFragment）。\n大量的网络请求：如果你的应用发送了大量的网络请求，这可能会导致性能问题。你可能需要考虑使用缓存、预加载、懒加载等技术来减少网络请求。\n大型JavaScript文件：如果你的JavaScript文件过大，这可能会导致加载和解析时间过长。你可能需要考虑使用代码分…",
+          "link": "https://juejin.cn/post/7283748394601840680",
+          "publishedOn": "2023-09-29T05:55:23.000Z",
+          "wordCount": 1407,
+          "title": "前端代码Review，一次性掰扯明白！",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7283766466083176484",
           "author": "阿泽爱干饭",
           "description": "theme: smartblue\n实现效果：\n加入帧动画前：\n\n普通的静态页面\n加入帧动画后：\n\n可以看到，加入帧动画后，页面效果还是比较丝滑的。\n技术实现\n加入animation动画类\n先用 **scss **定义三种动画类：\n.withAnimation {\n  .fade1 {\n    animation: fadeInDown1 1s;\n  }\n\n  .fade2 {\n    animation: fadeInDown2 1.25s;\n  }\n\n  .fade3 {\n    animation: fadeInDown2 1.5s;\n  }\n}\n\n@keyframes fadeInDown1 {\n  0% {\n    transform: translate3d(0, 40px, 0);\n    opacity: 0;\n  }\n\n  22% {\n    transform: translate3d(0, 40px, 0);\n    opacity: 0;\n  }\n\n  100% {\n    -webkit-transform: none;\n    transform: none;\n    opacity: 1;\n  }\n}\n@keyframes fadeInDown2 {\n  0% {\n    transform: translate3d(0, 40px, 0);\n    opacity: 0;\n  }\n\n  44% {\n    transform: translate3d(0, 40px, 0);\n    opacity: 0;\n  }\n\n  100% {\n    -webkit-transform: none;\n    transform: none;\n    opacity: 1;\n  }\n}\n@keyframes fadeInDown3 {\n  0% {\n  …",
@@ -1184,16 +1194,6 @@
           "publishedOn": "2023-09-26T09:56:01.000Z",
           "wordCount": 3106,
           "title": "Vue3常见api使用指南（TS版）",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7282950051319283770",
-          "author": "蜡笔小杨",
-          "description": "highlight: vs2015\ntheme: smartblue\n页面效果\n\n具体实现\n新增\n1、监听鼠标抬起事件，通过window.getSelection()方法获取鼠标用户选择的文本范围或光标的当前位置。\n2、通过 选中的文字长度是否大于0或window.getSelection().isCollapsed (返回一个布尔值用于描述选区的起始点和终止点是否位于一个位置，即是否框选了)来判断是否展示标签选择的弹窗。\n3、标签选择的弹窗采用 子绝父相 的定位方式，通过鼠标抬起的位置确认弹窗的 top 与 left 值。\n    const TAG_WIDTH = 280 //自定义最大范围，以保证不超过内容的最大宽度\n    const tagInfo = ref({\n     visible: false,\n     top: 0,\n     left: 0,\n    })\n    const el = document.getElementById('text-container')\n    //鼠标抬起\n    el?.addEventListener('mouseup', (e) => {\n      const text = window?.getSelection()?.toString() || ''\n      if (text.length > 0) {\n        const left = e.offsetX < TAG_WIDTH ? 0 : e.offsetX - 300\n        tagInfo.value = {\n          visible: true,\n          top: e.offsetY + 40,\n          left: left,\n        }\n        getSelectedTex…",
-          "link": "https://juejin.cn/post/7282950051319283770",
-          "publishedOn": "2023-09-26T09:12:21.000Z",
-          "wordCount": 5622,
-          "title": "vue3 + mark.js | 实现文字标注功能",
           "imageUrl": null
         },
         {
