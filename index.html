@@ -506,6 +506,51 @@ Wappalyzer是一款开源的浏览器扩展，用于识别网站所使用的技�
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7283873796977000500"
+                        open
+                      >
+                        <summary class="article-expander__title">当领导问我为什么选择typescript？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7283873796977000500">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: fancy
+“换做是你，被领导问到这类问题，你会怎么说？”，给你一首歌的时间想一想~
+
+话不多说，进入正题！被问到这类问题，领导无非是想了解你行动背后的动机，即
+为什么要引入typescript，它解决了什么问题？
+目前业务中存在哪些痛点？
+预估成本和风险收益计算？
+围绕上面问题，接下来站在业务角度一起聊聊
+背景
+在业务部门做技术，一切都是以驱动业务发展为首要前提。
+在当时，我们存在以下几类问题：
+为解决业务常见工单、研发痛点问题
+为减少运行时JavaScript常见的8种错误
+尝试提升代码质量、可维护性
+第一点
+由于业务产品面向群体为B端企业，内部有一套工单系统用于客户反馈产品使用过程中产生的问题，通过统计，前端类型工单存在一部分问题是由于代码运行时结果不及预期，而在开发环境、测试环境以及预发布环境测试都没有出现，它们诸如：
+data.x为undefined，导致页面上显示undefined字样，对用户体验极其不好
+data.a.b运行时异常，a可能存在值为null | undefined，导致页面异常
+后端改了某个接口某个字段的数据类型，没有同步前端修改、因场景较多改漏了
+前端同学由于粗心，字段名改错了，测试没有覆盖到该场景
+修改某个逻辑的时候，由于场景比较复杂，一个字段存在多种数据类型的情况，开发者不能一眼穷举出所有数据类型的情况，于是用数组的方法操作了对象，产生工单问题
+而关于研发痛点问题，它们是：
+在前端联调过程中，多次因为类型不确定导致对接过程中出现参数错误，对研发效能有一定影响
+一个函数根据场景不同接受不同的对象属性，在维护过程中，维护者无法很快知道当前某个场景需要的对象含有什么属性，并且不知道属性一定存在与否，造成逻辑层的风险不可控以及不低维护成本
+重构逻辑时误删代码、修改变量、方法、文件，改漏或者出错，导致工单问题
+第二点
+rollbar 监…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7283873796976754740"
                         open
                       >
@@ -1016,45 +1061,6 @@ Vue.js 是一个流行的 JavaScript 前端框架，用于构建用户界面。�
 响应式：Vue.js 使用数据劫持和观察者模式来实现响应式数据绑定。当数据发生变化时，相关的视图会自动更新。通过这种机制，开发者可以将精力集中在数据逻辑上，而不必手动操作 DOM。
 组件化：Vue.js 通过组件化的方式来构建用户界面。开发者可以将应用程序拆分为多个独立的、可重用的组件，每个组件都包含…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;10
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7283748394601840680"
-                        open
-                      >
-                        <summary class="article-expander__title">前端代码Review，一次性掰扯明白！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7283748394601840680">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>@主要Review的指标
-
-前端代码Review主要关注以下几个方面：
-1. 代码质量：代码是否简洁、易读、易维护。是否遵循了一致的编码风格和规范，例如ESLint、Prettier等。
-功能实现：代码是否实现了预期的功能，是否有潜在的bug或逻辑错误。
-性能优化：代码是否进行了必要的性能优化，例如避免不必要的渲染、使用了合适的数据结构和算法等。
-安全性：代码是否存在可能的安全风险，例如XSS攻击、CSRF攻击等。
-5. 可测试性：代码是否易于测试，是否有单元测试和集成测试。
-可读性：代码是否易于理解，是否有足够的注释和文档。
-可复用性：代码是否有高度的模块化和复用性。
-兼容性：代码是否兼容不同的浏览器和设备。
-助记：功性读复全兼测
-@功能Review
-无需人为检测，但注释要写明白，TS类型要写清楚，让用的人如沐春风；
-该匹配单元测试的建议配套单元测试，不落人以口实~
-@性能Review
-前端代码中一些典型的、肉眼可见的需要性能优化的地方包括：
-1. 过度渲染：如果你的应用在没有必要的情况下进行了过多的渲染，这可能会导致性能问题。例如，在React中，如果你的组件在props没有改变的情况下进行了重新渲染，那么你可能需要使用shouldComponentUpdate/SCU或React.PureComponent或useEffect来避免不必要的渲染。
-大量DOM操作：频繁的DOM操作是非常耗费性能的。如果你的代码中有大量的DOM操作，你可能需要考虑使用虚拟DOM或其他优化技术（例如DocumentFragment）。
-大量的网络请求：如果你的应用发送了大量的网络请求，这可能会导致性能问题。你可能需要考虑使用缓存、预加载、懒加载等技术来减少网络请求。
-大型JavaScript文件：如果你的JavaScript文件过大，这可能会导致加载和解析时间过长。你可能需要考虑使用代码分…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2913,25 +2919,6 @@ Vue3 + Fabricjs 实现定制头像2.0🌈
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>万州区气象台2023年9月27日00时30分继续发布“大雾黄色预警信号”，预计27日01时至09时，陈家坝街道、天城街道、高峰街道、九池街道、孙家镇、分水镇、恒合土家族乡、梨树乡、地宝土家族乡等地将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。有关部门和单位按照职责做好防雾准备工作；机场、高速公路、轮渡码头等单位加强交通管理，保障安全；驾驶人员注意雾的变化，小心驾驶；户外活动注意安全。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20230926/t20230926_526433884.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市万盛经开区发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20230926/t20230926_526433884.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>万盛经开区气象台2023年9月26日21时继续发布“大雾黄色预警信号”，我区万东镇、金桥镇、黑山镇、石林镇已出现能见度小于500米的雾并将持续，预计26日21时至27日09时，东林街道、万盛街道、丛林镇、关坝镇、青年镇、南桐镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -5506,8 +5493,8 @@ Scrum 开发
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6393273205">
-        <time id="build-timestamp" datetime="2023-10-03T12:57:56.694Z">2023-10-03T12:57:56.694Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6395382963">
+        <time id="build-timestamp" datetime="2023-10-03T15:53:54.279Z">2023-10-03T15:53:54.279Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

@@ -23,7 +23,7 @@
           "description": "起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/",
           "publishedOn": "2023-09-17T08:06:56.000Z",
-          "wordCount": 1489,
+          "wordCount": 1488,
           "title": "又get到了，JS复制图片到剪切板",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "自己体验了下，出乎意料，HTML elementtiming属性在性能监控这块，比预想的要实用的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/html-elementtiming-attribute/",
           "publishedOn": "2023-09-15T15:58:22.000Z",
-          "wordCount": 936,
+          "wordCount": 935,
           "title": "HTML elementtiming属性初体验记录",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "相比于tinypng，我这个工具还自带尺寸设置功能，同时还可以控制压缩率，指定压缩格式，纯前端实现，高性能高效率。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-jpg-png-compress-tinyimg-mini/",
           "publishedOn": "2023-09-05T13:05:30.000Z",
-          "wordCount": 1063,
+          "wordCount": 1062,
           "title": "做了个纯前端JPG/PNG尺寸缩放+压缩的在线工具",
           "imageUrl": null
         }
@@ -981,16 +981,6 @@
           "wordCount": 523,
           "title": "重庆市万州区发布大雾黄色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20230926/t20230926_526433884.html",
-          "author": "国家预警信息发布中心",
-          "description": "万盛经开区气象台2023年9月26日21时继续发布“大雾黄色预警信号”，我区万东镇、金桥镇、黑山镇、石林镇已出现能见度小于500米的雾并将持续，预计26日21时至27日09时，东林街道、万盛街道、丛林镇、关坝镇、青年镇、南桐镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20230926/t20230926_526433884.html",
-          "publishedOn": "2023-09-26T13:03:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市万盛经开区发布大雾黄色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -1037,6 +1027,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7283873796977000500",
+          "author": "寻找奶酪的mouse",
+          "description": "theme: fancy\n“换做是你，被领导问到这类问题，你会怎么说？”，给你一首歌的时间想一想~\n\n话不多说，进入正题！被问到这类问题，领导无非是想了解你行动背后的动机，即\n为什么要引入typescript，它解决了什么问题？\n目前业务中存在哪些痛点？\n预估成本和风险收益计算？\n围绕上面问题，接下来站在业务角度一起聊聊\n背景\n在业务部门做技术，一切都是以驱动业务发展为首要前提。\n在当时，我们存在以下几类问题：\n为解决业务常见工单、研发痛点问题\n为减少运行时JavaScript常见的8种错误\n尝试提升代码质量、可维护性\n第一点\n由于业务产品面向群体为B端企业，内部有一套工单系统用于客户反馈产品使用过程中产生的问题，通过统计，前端类型工单存在一部分问题是由于代码运行时结果不及预期，而在开发环境、测试环境以及预发布环境测试都没有出现，它们诸如：\ndata.x为undefined，导致页面上显示undefined字样，对用户体验极其不好\ndata.a.b运行时异常，a可能存在值为null | undefined，导致页面异常\n后端改了某个接口某个字段的数据类型，没有同步前端修改、因场景较多改漏了\n前端同学由于粗心，字段名改错了，测试没有覆盖到该场景\n修改某个逻辑的时候，由于场景比较复杂，一个字段存在多种数据类型的情况，开发者不能一眼穷举出所有数据类型的情况，于是用数组的方法操作了对象，产生工单问题\n而关于研发痛点问题，它们是：\n在前端联调过程中，多次因为类型不确定导致对接过程中出现参数错误，对研发效能有一定影响\n一个函数根据场景不同接受不同的对象属性，在维护过程中，维护者无法很快知道当前某个场景需要的对象含有什么属性，并且不知道属性一定存在与否，造成逻辑层的风险不可控以及不低维护成本\n重构逻辑时误删代码、修改变量、方法、文件，改漏或者出错，导致工单问题\n第二点\nrollbar 监…",
+          "link": "https://juejin.cn/post/7283873796977000500",
+          "publishedOn": "2023-10-01T22:33:04.000Z",
+          "wordCount": 1034,
+          "title": "当领导问我为什么选择typescript？",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7283873796976754740",
           "author": "zxg_神说要有光",
           "description": "想必大家都打过车，打车软件可以根据你的当前位置搜索附近的车辆：\n\n这两天国庆节，大家出去玩可能会借用共享充电宝。它也是基于你的位置来搜索附近充电宝：\n\n再就是大家搜索附近的酒店、餐厅等，也是基于位置的搜索。\n那么问题来了：这种附近的人、附近的酒店、附近的充电宝的功能是怎么实现的呢？\n答案是用 Redis 实现的。\n很多人对 Redis 的认识停留在它能做缓存，也就是从数据库中查询出来的数据，放到 redis 里，下次直接拿 redis 的数据返回：\n\n确实，缓存是 redis 的常见应用。\n但它并不只是可以做缓存，很多临时的数据，比如验证码、token 等，都可以放到 redis 里。\nredis 是 key-value 的数据库，value 有很多种类型：\nstring： 可以存数字、字符串，比如存验证码就是这种类型\nhash：存一个 map 的结构，比如文章的点赞数、收藏数、阅读量，就可以用 hash 存\nset：存去重后的集合数据，支持交集、并集等计算，常用来实现关注关系，比如可以用交集取出互相关注的用户\nzset：排序的集合，可以指定一个分数，按照分数排序。我们每天看的文章热榜、微博热榜等各种排行榜，都是 zset 做的\nlist：存列表数据\ngeo：存地理位置，支持地理位置之间的距离计算、按照半径搜索附近的位置\n其中，geo 的数据结构，就可以用来实现附近的人等功能。\n\n比如大众点评、美团外卖这种，就是用 redis 实现的基于地理位置的功能。\n今天我们就来实现一下：\n先在 docker 官网下载个 docker desktop，然后用它来跑 redis：\n\n在 docker desktop 搜索框搜索 redis，点击 run，把 redis 官方镜像下载并跑起来（这步需要科学上网）。\n\n它会让你填一些容器的信息：\n\n端口映射就是把主机的 6379 端口映射到容…",
@@ -1064,16 +1064,6 @@
           "publishedOn": "2023-09-29T06:10:04.000Z",
           "wordCount": 2964,
           "title": "Vue.js + Electron 炸裂组合，打造跨平台桌面应用！",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7283748394601840680",
-          "author": "搬砖的乔布梭",
-          "description": "@主要Review的指标\n\n前端代码Review主要关注以下几个方面：\n1. 代码质量：代码是否简洁、易读、易维护。是否遵循了一致的编码风格和规范，例如ESLint、Prettier等。\n功能实现：代码是否实现了预期的功能，是否有潜在的bug或逻辑错误。\n性能优化：代码是否进行了必要的性能优化，例如避免不必要的渲染、使用了合适的数据结构和算法等。\n安全性：代码是否存在可能的安全风险，例如XSS攻击、CSRF攻击等。\n5. 可测试性：代码是否易于测试，是否有单元测试和集成测试。\n可读性：代码是否易于理解，是否有足够的注释和文档。\n可复用性：代码是否有高度的模块化和复用性。\n兼容性：代码是否兼容不同的浏览器和设备。\n助记：功性读复全兼测\n@功能Review\n无需人为检测，但注释要写明白，TS类型要写清楚，让用的人如沐春风；\n该匹配单元测试的建议配套单元测试，不落人以口实~\n@性能Review\n前端代码中一些典型的、肉眼可见的需要性能优化的地方包括：\n1. 过度渲染：如果你的应用在没有必要的情况下进行了过多的渲染，这可能会导致性能问题。例如，在React中，如果你的组件在props没有改变的情况下进行了重新渲染，那么你可能需要使用shouldComponentUpdate/SCU或React.PureComponent或useEffect来避免不必要的渲染。\n大量DOM操作：频繁的DOM操作是非常耗费性能的。如果你的代码中有大量的DOM操作，你可能需要考虑使用虚拟DOM或其他优化技术（例如DocumentFragment）。\n大量的网络请求：如果你的应用发送了大量的网络请求，这可能会导致性能问题。你可能需要考虑使用缓存、预加载、懒加载等技术来减少网络请求。\n大型JavaScript文件：如果你的JavaScript文件过大，这可能会导致加载和解析时间过长。你可能需要考虑使用代码分…",
-          "link": "https://juejin.cn/post/7283748394601840680",
-          "publishedOn": "2023-09-29T05:55:23.000Z",
-          "wordCount": 1407,
-          "title": "前端代码Review，一次性掰扯明白！",
           "imageUrl": null
         },
         {
@@ -1239,7 +1229,7 @@
           "description": "vscode扩展 FnMap - 函数地图\n人性化的侧边栏函数、变量、符号列表操作和展示",
           "link": "https://juejin.cn/pin/7283768998776569915",
           "publishedOn": "2023-09-29T01:04:57.000Z",
-          "wordCount": 538,
+          "wordCount": 540,
           "title": "vscode扩展 FnMap - 函数地图 人性化的侧边栏函数、变量、符号列表操作和展示",
           "imageUrl": null
         },
@@ -1259,7 +1249,7 @@
           "description": "[7073670907851440160#新人报道#] 欢迎使用新鲜上线的DevShots https://gpwzw.com/",
           "link": "https://juejin.cn/pin/7283532551473594425",
           "publishedOn": "2023-09-28T07:52:46.000Z",
-          "wordCount": 537,
+          "wordCount": 526,
           "title": "[7073670907851440160#新人报道#] 欢迎使用新鲜上线的DevShots https://gpwzw.com/",
           "imageUrl": null
         },
@@ -1289,7 +1279,7 @@
           "description": "无所不知的jym，文章里面的gif效果展示图你们都是用什么工具生成的呀",
           "link": "https://juejin.cn/pin/7282691710072946725",
           "publishedOn": "2023-09-25T14:46:04.000Z",
-          "wordCount": 524,
+          "wordCount": 526,
           "title": "无所不知的jym，文章里面的gif效果展示图你们都是用什么工具生成的呀",
           "imageUrl": null
         },
@@ -1399,7 +1389,7 @@
           "description": "入手一台mac mini做前端开发怎么样？？",
           "link": "https://juejin.cn/pin/7280007832701992979",
           "publishedOn": "2023-09-18T05:30:43.000Z",
-          "wordCount": 525,
+          "wordCount": 527,
           "title": "入手一台mac mini做前端开发怎么样？？",
           "imageUrl": null
         },
