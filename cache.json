@@ -23,7 +23,7 @@
           "description": "起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/",
           "publishedOn": "2023-09-17T08:06:56.000Z",
-          "wordCount": 1488,
+          "wordCount": 1490,
           "title": "又get到了，JS复制图片到剪切板",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "自己体验了下，出乎意料，HTML elementtiming属性在性能监控这块，比预想的要实用的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/html-elementtiming-attribute/",
           "publishedOn": "2023-09-15T15:58:22.000Z",
-          "wordCount": 935,
+          "wordCount": 936,
           "title": "HTML elementtiming属性初体验记录",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "坚持探索Web标准下的原生浏览器开发行为，行为驱动和数据驱动的表单开发其实各有千秋，深入HTML，你会发现这个世界比你所知的要精彩的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/form-reset-input-change/",
           "publishedOn": "2023-09-12T15:52:48.000Z",
-          "wordCount": 1094,
+          "wordCount": 1095,
           "title": "Tips：form元素reset后input不触发change事件处理",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "相比于tinypng，我这个工具还自带尺寸设置功能，同时还可以控制压缩率，指定压缩格式，纯前端实现，高性能高效率。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-jpg-png-compress-tinyimg-mini/",
           "publishedOn": "2023-09-05T13:05:30.000Z",
-          "wordCount": 1062,
+          "wordCount": 1063,
           "title": "做了个纯前端JPG/PNG尺寸缩放+压缩的在线工具",
           "imageUrl": null
         }
@@ -1067,6 +1067,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7283766466083176484",
+          "author": "阿泽爱干饭",
+          "description": "theme: smartblue\n实现效果：\n加入帧动画前：\n\n普通的静态页面\n加入帧动画后：\n\n可以看到，加入帧动画后，页面效果还是比较丝滑的。\n技术实现\n加入animation动画类\n先用 **scss **定义三种动画类：\n.withAnimation {\n  .fade1 {\n    animation: fadeInDown1 1s;\n  }\n\n  .fade2 {\n    animation: fadeInDown2 1.25s;\n  }\n\n  .fade3 {\n    animation: fadeInDown2 1.5s;\n  }\n}\n\n@keyframes fadeInDown1 {\n  0% {\n    transform: translate3d(0, 40px, 0);\n    opacity: 0;\n  }\n\n  22% {\n    transform: translate3d(0, 40px, 0);\n    opacity: 0;\n  }\n\n  100% {\n    -webkit-transform: none;\n    transform: none;\n    opacity: 1;\n  }\n}\n@keyframes fadeInDown2 {\n  0% {\n    transform: translate3d(0, 40px, 0);\n    opacity: 0;\n  }\n\n  44% {\n    transform: translate3d(0, 40px, 0);\n    opacity: 0;\n  }\n\n  100% {\n    -webkit-transform: none;\n    transform: none;\n    opacity: 1;\n  }\n}\n@keyframes fadeInDown3 {\n  0% {\n  …",
+          "link": "https://juejin.cn/post/7283766466083176484",
+          "publishedOn": "2023-09-29T00:55:46.000Z",
+          "wordCount": 1567,
+          "title": "react+IntersectionObserver实现页面丝滑帧动画",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7283688117013643324",
           "author": "伊泽瑞尔",
           "description": "作为一个前端老开发了，我一直在想能否自己做一个能上线的应用，奈何种种原因，好多想法都夭折了，一直没做成。直到前段时间，我发现我的公众号已经攒了500+道面试题及答案，但它缺少一个统一管理和检索的功能，不方便查看。于是就想着做一个小程序，统一收集整理这些学习资料，方便大家检索，收藏分享等。下面是主要的几个界面截图。\n首页，主要是分类，和2个快捷入口：\n\n所有问题列表：\n\n问题详情及答案：\n\n个人信息，收藏，历史记录等：\n\n为了激励大家学习，特意做了学分管理，记录答题记录：\n\n在没有UI设计的情况下，我感觉界面能做成这样，已经相当满意了哈哈哈。只有小程序logo是特意找我前同事UI设计师设计的，这里特意感谢刘同学的帮助。\nlogo长这样：\n\n一个小男生学习前端，他需要学习html、css、JS、node、TS、Vue、React加其他，想想是不是很累呢？\n个人感受\n其实看到自己的应用从0到上线，还是很欣慰的，作为老开发，不得不否认，前端的天花板很低（相对后端），可能大多人只能做到小组长吧。但现实就是如此，我们只能不畏困难，奋勇前行吧。\n我很崇拜一个人：antfu。他是Vue和NuxtLabs核心开发成员，他也说，前端的好处是能尽早让自己看到成果，页面开发出来能马上看到效果，能给自己积极的正反馈，这样就很好，能激励你一直做下去。\n这个应用如果是后端开发来做，我感觉很难上线，因为后端接口几乎全是增伤改查，我这个前端开发用node+mysql写完所有接口也就3天不到的时间，而前端页面我花了不下10天。各种文档要找，小程序文档，uni文档要找，UI库文档要找，没有UI设计，我还要到处参考，调试。\n最后\n大家可以体验下一下小程序，看谁能成为我数据库的第一条记录呢（不会收集用户隐私），实在不感兴趣来找找bug也可以的。\n\n或者微信搜索：前端学习助手\n好了就讲这么多了，以后我会像公众号一样，每天更新三道题及答案，小程序和公众号同步更新，自己学习的同时也分享给大家。\n如果大家感兴趣的话，下期会分享从零到上线的整个流程。",
@@ -1147,6 +1157,36 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7282951856514793513",
+          "author": "JYeontu",
+          "description": "说在前面\n元素拖拽和缩放现在也是一个很常见的功能，让我们从实现div元素的拖拽缩放开始来了解元素拖拽缩放的具体原理和实现方法吧。\n效果展示\n\n\n实现步骤\n画一个div\n首先我们需要先画一个div，并给它8个方位（上、下、左、右、左上、右上、右下、左下）加上缩放锚点，我们可以通过这几个锚点来对div进行缩放，具体代码如下：\n<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Document</title>\n    <link rel=\"stylesheet\" href=\"./index.css\" />\n  </head>\n  <body>\n    <div class=\"box\" id=\"drag\">\n      <div class=\"resize-handle top-left\"></div>\n      <div class=\"resize-handle top\"></div>\n      <div class=\"resize-handle top-right\"></div>\n      <div class=\"resize-handle right\"></div>\n      <div class=\"resize-handle bottom-right\"></div>\n      <div class=\"resize-handle bottom\"></div>\n      <div cl…",
+          "link": "https://juejin.cn/post/7282951856514793513",
+          "publishedOn": "2023-09-26T16:22:36.000Z",
+          "wordCount": 3020,
+          "title": "怎么写一个可以拖拽缩放的div？",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7282975291000291340",
+          "author": "慕仲卿",
+          "description": "以下题目来自掘金等其它博客，但是问题的答案都是根据笔者自己的理解做出的。如果你最近想要换工作或者巩固一下自己的前端知识基础，不妨和我一起参与到每日刷题的过程中来，如何？\n第二天要刷的手写题如下：\n手写一个函数，实现节流。\n手写一个函数，实现防抖。\n手写一个函数，实现简单浅拷贝。\n下面是我自己写的答案：\n1. 手写一个函数，实现节流\n首先，节流的含义可以简单地理解成：在规定的时间内同一个函数不可以被触发超过一次。那么从其实现的功能出发，可以推出实现的策略为：\n建立一个闭包，在闭包中存储函数最后一次执行成功的时间戳lastExeTime；\n然后在每一次尝试性执行此函数的额时候，获取当前的时间戳currentTime，并与最后一次执行成功的时间戳做差const gap = currentTime - lastExeTime；\n如果gap的值大于规定值，则证明无需节流，执行函数，然后更新lastExeTime的值；\n如果gap的值小于规定值，则证明还在节流，这个时候什么都不需要做。\nfunction throttle (fn, wait) {\n    let lastExeTime = 0;\n    return function (...args) {\n        const currentTime = +new Date();\n        const gap = currentTime - lastExeTime;\n        if(gap > wait){\n            lastExeTime = currentTime;\n            fn.apply(this, args);\n        }\n    }\n}\n\n2.  手写一个函数，实现防抖\n首先，防抖的含义可以简单地理解成：在函数触发之前必须连续的等待规定的时间。这里需要重点理解连续的…",
+          "link": "https://juejin.cn/post/7282975291000291340",
+          "publishedOn": "2023-09-26T14:53:07.000Z",
+          "wordCount": 1288,
+          "title": "每日前端手写题--day2",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7282972975933505571",
+          "author": "岩苍美津未",
+          "description": "https://juejin.cn/post/7233304089370263589?searchId=20230728000428E89CE4C53E9375585791#heading-1\ndefineProps() 和 defineEmits()\n内置函数，无需import导入，直接使用。\n传入到 defineProps 和 defineEmits 的选项会从 setup 中提升到模块的范围。因此，传入的选项不能引用在  setup 范围中声明的局部变量(比如设置默认值时)，但是，它可以引用导入（import）的变量，因为它们也在模块范围内。就是说props设置默认值的时候不能直接用setup里的变量，可以用import引入的数据\n<script setup>\n//props是响应式的不能解构\n//方法1：不能设置默认值(使用withDefaults解决)\nconst props = defineProps({\n  foo?: String,\n  id: [Number, String],\n  onEvent: Function, //Function类型\n  metadata: null\n})\n\n//方法2\nconst props = defineProps({ foo: { type: String, required: true, default: '默认值' }, bar: Number })\n\n//方法3-推荐：弊端：不能设置默认值(使用withDefaults解决)\ninterface Props {\n    data?: number[]\n}\n//const props = defineProps<Props>();\n//或const props = defineProps<{ data?: number[] }>();\nconst props = wi…",
+          "link": "https://juejin.cn/post/7282972975933505571",
+          "publishedOn": "2023-09-26T09:56:01.000Z",
+          "wordCount": 3106,
+          "title": "Vue3常见api使用指南（TS版）",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7282950051319283770",
           "author": "蜡笔小杨",
           "description": "highlight: vs2015\ntheme: smartblue\n页面效果\n\n具体实现\n新增\n1、监听鼠标抬起事件，通过window.getSelection()方法获取鼠标用户选择的文本范围或光标的当前位置。\n2、通过 选中的文字长度是否大于0或window.getSelection().isCollapsed (返回一个布尔值用于描述选区的起始点和终止点是否位于一个位置，即是否框选了)来判断是否展示标签选择的弹窗。\n3、标签选择的弹窗采用 子绝父相 的定位方式，通过鼠标抬起的位置确认弹窗的 top 与 left 值。\n    const TAG_WIDTH = 280 //自定义最大范围，以保证不超过内容的最大宽度\n    const tagInfo = ref({\n     visible: false,\n     top: 0,\n     left: 0,\n    })\n    const el = document.getElementById('text-container')\n    //鼠标抬起\n    el?.addEventListener('mouseup', (e) => {\n      const text = window?.getSelection()?.toString() || ''\n      if (text.length > 0) {\n        const left = e.offsetX < TAG_WIDTH ? 0 : e.offsetX - 300\n        tagInfo.value = {\n          visible: true,\n          top: e.offsetY + 40,\n          left: left,\n        }\n        getSelectedTex…",
@@ -1154,36 +1194,6 @@
           "publishedOn": "2023-09-26T09:12:21.000Z",
           "wordCount": 5622,
           "title": "vue3 + mark.js | 实现文字标注功能",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7282746104025169959",
-          "author": "rainoway",
-          "description": "theme: nico\nhighlight: vs2015\n前提\n不是我的项目，我作为自发推广者而已\n背景\n怕被路过的同事、领导看到你在微信摸鱼？怕被屏幕每秒截图？\n这有一款在vscode进行微信聊天的项目，快来试试哇\n项目地址\nmoyu-chat\n环境要求\n# configure\n1. node version 18+\n2. pnpm version 7.x\n\nFeature\nESlint：Code verification\nTypeScript：JavaScript With Syntax For Types\nPNPM：Faster, disk space saving package management tool\nExpress：Fast, unopinionated, minimalist web framework for Node.js\nWechaty：RPA SDK for Chatot Makers\npnpm 安装\nnpm install -g pnpm\n\n🚀 Development\n# install dependencies\npnpm i\n\n# start the service\npnpm dev\n\n# \n\n🌟 Send Message\nwindow\n# 发送好友消息\n\n# 根据好友昵称发送消息\ncurl http://127.0.0.1:3000/0?name=好友名称'&'content=测试消息\n# 根据好友备注发送消息，需要设置好友备注名\ncurl http://127.0.0.1:3000/0?alias=好友备注'&'content=测试消息\n\n# 发送群消息\n\ncurl http://127.0.0.1:3000/1?name=群名称'&'content=测试消息\n\nmacos\n# 发送好友消息\n\n# 根据好友昵称发送消息\ncurl 'http://127.0.0.1:3000/0?name=好友名称&content=测试消息'\n# 根据好友备注发送消息，需要设置好友备注名\ncurl 'http://127.0.0.1:3000/0?alias=好友备注&content=测试消息'\n\n# 发送群消息\n\ncurl 'http://127.0.0.1:3000/1?name=群名称&content=测试消息'\n\n😇 演示\n群消息发送\n\n好友消息发送\n\n推荐vscode使用",
-          "link": "https://juejin.cn/post/7282746104025169959",
-          "publishedOn": "2023-09-26T06:38:29.000Z",
-          "wordCount": 989,
-          "title": "如何在vscode、命令行上进行微信聊天",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7282692430117748755",
-          "author": "爱吃橘子的程序猿",
-          "description": "单点登录是什么？你是怎么理解的？单点登录是如何实现的\n普通登录\n提到单点登录，首先可以想到传统登录，通过登录页面根据用户名查询用户信息，判断密码是否正确，正确则将用户信息写到session，访问的时候通过从session中获取用户信息，判断是否已登录，登录则允许访问。\n普通登录的缺点\n由于session不能共享，服务越来越多，并且还服务还搭建集群，导致每访问另外一个服务都需要重新登录。\n单点登录\n单点登录有个简称是sso，它是一个功能可以控制多个有联系的系统操作，简单地理解为通过单点登录可以让用户只需要登录一次软件或者系统，那么同系统下的平台都可以免去再次注册、验证、访问权限的麻烦程序，通俗易懂的理解为一次性登录也可以一次性下线。\n前端需要知道的单点登录概述：\n1、一个系统登录流程：用户进入系统——未登录——跳转登录界面——用户名和密码发送——服务器端验证后，设置一个cookie发送到浏览器，设置一个session存放在服务器——用户再次请求（带上cookie）——服务器验证cookie和session匹配后，就可以进行业务了。\n2、多个系统登录：如果一个大公司有很多系统，a.seafile.com, b.seafile.com,c.seafile.com。这些系统都需要登录，如果用户在不同系统间登录需要多次输入密码，用户体验很不好。所以使用 SSO (single sign on) 单点登录实现。\n3、相同域名，不同子域名下的单点登录：在浏览器端，根据同源策略，不同子域名的cookie不能共享。所以设置SSO的域名为根域名。SSO登录验证后，子域名可以访问根域名的 cookie，即可完成校验。在服务器端，可以设置多个子域名session共享（Spring-session）\n4、不同域名下的单点登录：CAS流程：用户登录子系统时未登录，跳转到 SSO 登录界面，成功登录后，…",
-          "link": "https://juejin.cn/post/7282692430117748755",
-          "publishedOn": "2023-09-26T05:01:44.000Z",
-          "wordCount": 1199,
-          "title": "前端实现单点登录（SSO）",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7282687884204671035",
-          "author": "答案answer",
-          "description": "theme: channing-cyan\n前言\n1.因为之前工作过的可视化大屏项目开发3d大屏组件模块需要用到Three.js来完成，其主功能是实现对3d模型的材质，灯光，背景，动画。等属性进行可视化的编辑操作以及模型编辑数据的存储和模型在大屏上面的拖拽显示\n2.因为是第一次使用Three.js开发实际的项目,在开发这些功能的过程中也遇到了许多Three.js的坑（好在最终都解决了）\n3.同时在开发这个项目模块的过程中也发现github能够搜索到的Three.js3d模型可视化编辑相关的开源项目非常的少,许多的three.js相关问题和功能的实现在网上也很难搜索到答案\n4.因此在参考了之前工作项目中做过的可视化大屏项目的3D模型编辑模块的功能和three.js 官方编辑器 https://threejs.org/editor/ 的部分功能的基础之上开发了一款基于Three.js+Vue3的3d模块可视化编辑器系统，其主要目的是尽可能更多的将three.js提供的API结合在实际的项目中去使用，作为自己个人学习three.js的记录，也供大家学习和参考\n项目的在线访问地址：https://zhang_6666.gitee.io/three.js3d/\n系统界面图:\n实现的主要功能模块\n背景模块：实现背景图、全景图、背景颜色的编辑功能\n材质模块：实现模型材质颜色、透明度、网格、材质显示/隐藏、材质贴图、模型材质类型切换等编辑功能\n后期处理模块：实现模型材质的辉光效果强度、半径、阈值、色调曝光度、模型的拖拽和分解等编辑功能\n灯光模块：实现环境光、点光源、半球光、聚光灯等参数的编辑功能\n动画模块：实现模型自带动画的播放、播放速度、播放类型、动作幅度和模型x,y,z轴动画等编辑功能\n辅助线/轴配置模块：实现模型的轴坐标、轴位置、网格辅助线、模型骨架、模型坐标轴辅助线等编辑功能\n几何体…",
-          "link": "https://juejin.cn/post/7282687884204671035",
-          "publishedOn": "2023-09-26T03:31:13.000Z",
-          "wordCount": 6855,
-          "title": "Three.js实现一个3D模型可视化编辑系统",
           "imageUrl": null
         },
         {
@@ -1204,16 +1214,6 @@
           "publishedOn": "2023-09-26T00:11:48.000Z",
           "wordCount": 1977,
           "title": "代码洁癖的前端工程师是如何写代码的？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7282691800858853413",
-          "author": "FrontEnd_Reese",
-          "description": "theme: orange\nhighlight: a11y-dark\n这是我目前见过给面试效率最高的公司，下午投的boss，没一会打电话问我五点钟能不能面试，后面选了七点钟。一面是个姐姐，声音很好听，人也很nice，辛苦她加班面我这个菜鸡了😂。下面是题目和笔者整理的答案，如有疏漏，烦请指正：\n八股文\n不知道宽高的块级元素如何垂直水平居中？\n1.使用 flex 布局\n.parent {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n2.使用 transform 属性\n.parent {\n    position: relative;\n}\n\n.child {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n}\n\ncomputed和watch的区别?\nVue中的computed和watch都是用于观察和响应Vue实例上的数据变化的。它们在使用场景和工作方式上有一些不同：\ncomputed（计算属性） ：\ncomputed是计算属性，主要用于当一个属性依赖于一个或多个其他属性时。当依赖的数据变化时，计算属性会重新计算。\ncomputed支持缓存。只有当其依赖的属性值发生变化时，计算属性才会重新计算。如果依赖的数据没有变化，那么多次访问计算属性会直接返回之前的计算结果，而不需要重新进行计算。\n当多个属性影响一个属性时，或者一个数据需要经过复杂的计算时，建议使用computed。\nwatch（侦听器） ：\nwatch主要用于观察Vue实例上某个特定数据的变化，从而执行特定的操作。\nwatch不支持缓存，数据每次变化都会执行对应的函数。\n当一个值发生…",
-          "link": "https://juejin.cn/post/7282691800858853413",
-          "publishedOn": "2023-09-25T23:47:08.000Z",
-          "wordCount": 2119,
-          "title": "八股只问vue，代码题考js🫣「Momenta一面」",
           "imageUrl": null
         },
         {

@@ -1022,6 +1022,86 @@ Vue.js 是一个流行的 JavaScript 前端框架，用于构建用户界面。�
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7283766466083176484"
+                        open
+                      >
+                        <summary class="article-expander__title">react+IntersectionObserver实现页面丝滑帧动画</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7283766466083176484">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: smartblue
+实现效果：
+加入帧动画前：
+
+普通的静态页面
+加入帧动画后：
+
+可以看到，加入帧动画后，页面效果还是比较丝滑的。
+技术实现
+加入animation动画类
+先用 **scss **定义三种动画类：
+.withAnimation {
+  .fade1 {
+    animation: fadeInDown1 1s;
+  }
+
+  .fade2 {
+    animation: fadeInDown2 1.25s;
+  }
+
+  .fade3 {
+    animation: fadeInDown2 1.5s;
+  }
+}
+
+@keyframes fadeInDown1 {
+  0% {
+    transform: translate3d(0, 40px, 0);
+    opacity: 0;
+  }
+
+  22% {
+    transform: translate3d(0, 40px, 0);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes fadeInDown2 {
+  0% {
+    transform: translate3d(0, 40px, 0);
+    opacity: 0;
+  }
+
+  44% {
+    transform: translate3d(0, 40px, 0);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes fadeInDown3 {
+  0% {
+  …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -2830,6 +2910,282 @@ Vue3 + Fabricjs 实现定制头像2.0🌈
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7282951856514793513"
+                        open
+                      >
+                        <summary class="article-expander__title">怎么写一个可以拖拽缩放的div？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282951856514793513">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>说在前面
+元素拖拽和缩放现在也是一个很常见的功能，让我们从实现div元素的拖拽缩放开始来了解元素拖拽缩放的具体原理和实现方法吧。
+效果展示
+
+
+实现步骤
+画一个div
+首先我们需要先画一个div，并给它8个方位（上、下、左、右、左上、右上、右下、左下）加上缩放锚点，我们可以通过这几个锚点来对div进行缩放，具体代码如下：
+
+
+  
+Document
+    
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      &lt;div cl…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7282975291000291340"
+                        open
+                      >
+                        <summary class="article-expander__title">每日前端手写题--day2</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282975291000291340">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>以下题目来自掘金等其它博客，但是问题的答案都是根据笔者自己的理解做出的。如果你最近想要换工作或者巩固一下自己的前端知识基础，不妨和我一起参与到每日刷题的过程中来，如何？
+第二天要刷的手写题如下：
+手写一个函数，实现节流。
+手写一个函数，实现防抖。
+手写一个函数，实现简单浅拷贝。
+下面是我自己写的答案：
+1. 手写一个函数，实现节流
+首先，节流的含义可以简单地理解成：在规定的时间内同一个函数不可以被触发超过一次。那么从其实现的功能出发，可以推出实现的策略为：
+建立一个闭包，在闭包中存储函数最后一次执行成功的时间戳lastExeTime；
+然后在每一次尝试性执行此函数的额时候，获取当前的时间戳currentTime，并与最后一次执行成功的时间戳做差const gap &#x3D; currentTime - lastExeTime；
+如果gap的值大于规定值，则证明无需节流，执行函数，然后更新lastExeTime的值；
+如果gap的值小于规定值，则证明还在节流，这个时候什么都不需要做。
+function throttle (fn, wait) {
+    let lastExeTime &#x3D; 0;
+    return function (...args) {
+        const currentTime &#x3D; +new Date();
+        const gap &#x3D; currentTime - lastExeTime;
+        if(gap &gt; wait){
+            lastExeTime &#x3D; currentTime;
+            fn.apply(this, args);
+        }
+    }
+}
+
+2.  手写一个函数，实现防抖
+首先，防抖的含义可以简单地理解成：在函数触发之前必须连续的等待规定的时间。这里需要重点理解连续的…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7282972975933505571"
+                        open
+                      >
+                        <summary class="article-expander__title">Vue3常见api使用指南（TS版）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282972975933505571">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>https://juejin.cn/post/7233304089370263589?searchId&#x3D;20230728000428E89CE4C53E9375585791#heading-1
+defineProps() 和 defineEmits()
+内置函数，无需import导入，直接使用。
+传入到 defineProps 和 defineEmits 的选项会从 setup 中提升到模块的范围。因此，传入的选项不能引用在  setup 范围中声明的局部变量(比如设置默认值时)，但是，它可以引用导入（import）的变量，因为它们也在模块范围内。就是说props设置默认值的时候不能直接用setup里的变量，可以用import引入的数据
+
+//props是响应式的不能解构
+//方法1：不能设置默认值(使用withDefaults解决)
+const props &#x3D; defineProps({
+  foo?: String,
+  id: [Number, String],
+  onEvent: Function, //Function类型
+  metadata: null
+})
+
+//方法2
+const props &#x3D; defineProps({ foo: { type: String, required: true, default: &#x27;默认值&#x27; }, bar: Number })
+
+//方法3-推荐：弊端：不能设置默认值(使用withDefaults解决)
+interface Props {
+    data?: number[]
+}
+//const props &#x3D; defineProps();
+//或const props &#x3D; defineProps();
+const props &#x3D; wi…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7282950051319283770"
+                        open
+                      >
+                        <summary class="article-expander__title">vue3 + mark.js | 实现文字标注功能</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282950051319283770">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>highlight: vs2015
+theme: smartblue
+页面效果
+
+具体实现
+新增
+1、监听鼠标抬起事件，通过window.getSelection()方法获取鼠标用户选择的文本范围或光标的当前位置。
+2、通过 选中的文字长度是否大于0或window.getSelection().isCollapsed (返回一个布尔值用于描述选区的起始点和终止点是否位于一个位置，即是否框选了)来判断是否展示标签选择的弹窗。
+3、标签选择的弹窗采用 子绝父相 的定位方式，通过鼠标抬起的位置确认弹窗的 top 与 left 值。
+    const TAG_WIDTH &#x3D; 280 //自定义最大范围，以保证不超过内容的最大宽度
+    const tagInfo &#x3D; ref({
+     visible: false,
+     top: 0,
+     left: 0,
+    })
+    const el &#x3D; document.getElementById(&#x27;text-container&#x27;)
+    //鼠标抬起
+    el?.addEventListener(&#x27;mouseup&#x27;, (e) &#x3D;&gt; {
+      const text &#x3D; window?.getSelection()?.toString() || &#x27;&#x27;
+      if (text.length &gt; 0) {
+        const left &#x3D; e.offsetX &lt; TAG_WIDTH ? 0 : e.offsetX - 300
+        tagInfo.value &#x3D; {
+          visible: true,
+          top: e.offsetY + 40,
+          left: left,
+        }
+        getSelectedTex…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;19
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7282691710084857913"
+                        open
+                      >
+                        <summary class="article-expander__title">50 种 ES6 模块，面试被问麻了</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282691710084857913">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>如果你问开发人员：&quot;对你来说最难的 JS 题目是什么？&quot;，你绝不会听到他说是 ES6 模块。但统计数据更能说明问题！我们统计了我们电报频道中各种主题的问答错误答案数量，发现 ES6 模块是最难的主题之一。
+免费体验 Gpt4 plus 与 AI作图神器，我们出的钱 体验地址：点这里
+测验 #1： 53%的答案正确
+// index.mjs
+import { default } from &#x27;./module.mjs&#x27;;
+
+console.log(default);
+
+// module.mjs
+export default &#x27;bar&#x27;;
+
+首先，让我们记住各种导入和导出语法：
+
+
+如果检查表中的 Import 语法，就会发现没有与我们的代码相匹配的语法：
+import { default } from ‘./module.mjs’;
+
+因为禁止使用这种语法。测验代码会出现以下错误：
+SyntaxError: Unexpected reserved word
+在 import { default } from ‘./module.mjs’; 行中， default 是 export 的名称，也是该作用域中的变量名称，这是被禁止的，因为 default 是一个保留字。解决方法很简单：
+import { default as foo } from ‘./module.mjs’;
+
+现在， default 是导出的名称， foo 是变量的名称。换句话说，如果你想在默认导出中使用命名导入语法，就必须重命名它。就是这样，非常简单！
+测验 #2：35% 的正确答案
+// index.js
+console.log(&#x27;index.js&#x27;);
+
+import { sum } from &#x27;./helper.js&#x27;;
+
+console.log(sum(1, 2));
+
+// helper.js
+
+c…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7282666723916070949"
+                        open
+                      >
+                        <summary class="article-expander__title">代码洁癖的前端工程师是如何写代码的？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282666723916070949">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言
+当我们在面对一个迭代多年且（或）多人维护的项目时，阅读他人代码最害怕遇到的就是代码书写混乱阅读困难甚至是难以读懂。糟糕的代码所带来的影响就不再多说了，所谓“💩”山不过如此，这对于一名代码洁癖患者来说是万万不能忍的。
+
+那么，什么是整洁的代码呢？这边引用一位博主的介绍，其认为可以从外在美和内在美两个方面来定义整洁的代码：
+外在美：外观看起来优雅美观的代码会使人心情愉悦，其中主要体现在代码所在的位置是否恰当，代码里是否有适当的注释、缩进和空行，以及代码里有没有重复代码等等。
+内在美：外在美只是“看起来”使人心情愉悦，如果缺乏内在美，那么当真正开始读代码的时候，刚才愉悦的心情就会在一瞬间烟消云散，内在美主要体现在代码之间的尽量少的依赖，干净利落的抽象和直截了当的控制语句，以及优秀的设计模式等等。
+那么，我们应该如何写出整洁的代码呢？要写出内在美的代码或许需要我们有非常强的技术能力或多年写代码经验，但是外在美是任何一名写代码的工程师都能做好的，也是第一步需要做好的，作为一名代码洁癖患者，至少让写的代码看起来是整洁的，这是底线。本文主要分为实用工具和个人经验两部分来分享作为一名代码洁癖患者平时在写代码时一些习惯，让“洁癖”洒满大地！！！
+第一部分：工具
+1.1 代码格式化
+1.1.1 工具配置
+
+使用 Eslint + StyleLint + Prettier + husky + lint-staged 提高前端项目质量和统一项目代码风格：
+ESLint 是一款用于查找并报告代码中问题的工具
+Stylelint 是一个强大的现代 CSS 检测器
+Prettier 是一款强大的代码格式化工具，支持多种语言
+lint-staged 是一个在 git 暂存文件上运行 linters 的工具
+husky 是 Git Hook 工具，可以设置在 git 各个阶段触发设定的命令
+各工具的…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >倪爽设计工作室</button>
                   <a class="source-heading__link" href="https://nishuang.net">Open</a>
                 </h3>
@@ -2938,298 +3294,6 @@ Vue3 + Fabricjs 实现定制头像2.0🌈
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7282950051319283770"
-                        open
-                      >
-                        <summary class="article-expander__title">vue3 + mark.js | 实现文字标注功能</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282950051319283770">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>highlight: vs2015
-theme: smartblue
-页面效果
-
-具体实现
-新增
-1、监听鼠标抬起事件，通过window.getSelection()方法获取鼠标用户选择的文本范围或光标的当前位置。
-2、通过 选中的文字长度是否大于0或window.getSelection().isCollapsed (返回一个布尔值用于描述选区的起始点和终止点是否位于一个位置，即是否框选了)来判断是否展示标签选择的弹窗。
-3、标签选择的弹窗采用 子绝父相 的定位方式，通过鼠标抬起的位置确认弹窗的 top 与 left 值。
-    const TAG_WIDTH &#x3D; 280 //自定义最大范围，以保证不超过内容的最大宽度
-    const tagInfo &#x3D; ref({
-     visible: false,
-     top: 0,
-     left: 0,
-    })
-    const el &#x3D; document.getElementById(&#x27;text-container&#x27;)
-    //鼠标抬起
-    el?.addEventListener(&#x27;mouseup&#x27;, (e) &#x3D;&gt; {
-      const text &#x3D; window?.getSelection()?.toString() || &#x27;&#x27;
-      if (text.length &gt; 0) {
-        const left &#x3D; e.offsetX &lt; TAG_WIDTH ? 0 : e.offsetX - 300
-        tagInfo.value &#x3D; {
-          visible: true,
-          top: e.offsetY + 40,
-          left: left,
-        }
-        getSelectedTex…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;19
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7282746104025169959"
-                        open
-                      >
-                        <summary class="article-expander__title">如何在vscode、命令行上进行微信聊天</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282746104025169959">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: nico
-highlight: vs2015
-前提
-不是我的项目，我作为自发推广者而已
-背景
-怕被路过的同事、领导看到你在微信摸鱼？怕被屏幕每秒截图？
-这有一款在vscode进行微信聊天的项目，快来试试哇
-项目地址
-moyu-chat
-环境要求
-# configure
-1. node version 18+
-2. pnpm version 7.x
-
-Feature
-ESlint：Code verification
-TypeScript：JavaScript With Syntax For Types
-PNPM：Faster, disk space saving package management tool
-Express：Fast, unopinionated, minimalist web framework for Node.js
-Wechaty：RPA SDK for Chatot Makers
-pnpm 安装
-npm install -g pnpm
-
-🚀 Development
-# install dependencies
-pnpm i
-
-# start the service
-pnpm dev
-
-# 
-
-🌟 Send Message
-window
-# 发送好友消息
-
-# 根据好友昵称发送消息
-curl http://127.0.0.1:3000/0?name&#x3D;好友名称&#x27;&amp;&#x27;content&#x3D;测试消息
-# 根据好友备注发送消息，需要设置好友备注名
-curl http://127.0.0.1:3000/0?alias&#x3D;好友备注&#x27;&amp;&#x27;content&#x3D;测试消息
-
-# 发送群消息
-
-curl http://127.0.0.1:3000/1?name&#x3D;群名称&#x27;&amp;&#x27;content&#x3D;测试消息
-
-macos
-# 发送好友消息
-
-# 根据好友昵称发送消息
-curl &#x27;http://127.0.0.1:3000/0?name&#x3D;好友名称&amp;content&#x3D;测试消息&#x27;
-# 根据好友备注发送消息，需要设置好友备注名
-curl &#x27;http://127.0.0.1:3000/0?alias&#x3D;好友备注&amp;content&#x3D;测试消息&#x27;
-
-# 发送群消息
-
-curl &#x27;http://127.0.0.1:3000/1?name&#x3D;群名称&amp;content&#x3D;测试消息&#x27;
-
-😇 演示
-群消息发送
-
-好友消息发送
-
-推荐vscode使用</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7282692430117748755"
-                        open
-                      >
-                        <summary class="article-expander__title">前端实现单点登录（SSO）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282692430117748755">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>单点登录是什么？你是怎么理解的？单点登录是如何实现的
-普通登录
-提到单点登录，首先可以想到传统登录，通过登录页面根据用户名查询用户信息，判断密码是否正确，正确则将用户信息写到session，访问的时候通过从session中获取用户信息，判断是否已登录，登录则允许访问。
-普通登录的缺点
-由于session不能共享，服务越来越多，并且还服务还搭建集群，导致每访问另外一个服务都需要重新登录。
-单点登录
-单点登录有个简称是sso，它是一个功能可以控制多个有联系的系统操作，简单地理解为通过单点登录可以让用户只需要登录一次软件或者系统，那么同系统下的平台都可以免去再次注册、验证、访问权限的麻烦程序，通俗易懂的理解为一次性登录也可以一次性下线。
-前端需要知道的单点登录概述：
-1、一个系统登录流程：用户进入系统——未登录——跳转登录界面——用户名和密码发送——服务器端验证后，设置一个cookie发送到浏览器，设置一个session存放在服务器——用户再次请求（带上cookie）——服务器验证cookie和session匹配后，就可以进行业务了。
-2、多个系统登录：如果一个大公司有很多系统，a.seafile.com, b.seafile.com,c.seafile.com。这些系统都需要登录，如果用户在不同系统间登录需要多次输入密码，用户体验很不好。所以使用 SSO (single sign on) 单点登录实现。
-3、相同域名，不同子域名下的单点登录：在浏览器端，根据同源策略，不同子域名的cookie不能共享。所以设置SSO的域名为根域名。SSO登录验证后，子域名可以访问根域名的 cookie，即可完成校验。在服务器端，可以设置多个子域名session共享（Spring-session）
-4、不同域名下的单点登录：CAS流程：用户登录子系统时未登录，跳转到 SSO 登录界面，成功登录后，…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7282687884204671035"
-                        open
-                      >
-                        <summary class="article-expander__title">Three.js实现一个3D模型可视化编辑系统</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282687884204671035">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: channing-cyan
-前言
-1.因为之前工作过的可视化大屏项目开发3d大屏组件模块需要用到Three.js来完成，其主功能是实现对3d模型的材质，灯光，背景，动画。等属性进行可视化的编辑操作以及模型编辑数据的存储和模型在大屏上面的拖拽显示
-2.因为是第一次使用Three.js开发实际的项目,在开发这些功能的过程中也遇到了许多Three.js的坑（好在最终都解决了）
-3.同时在开发这个项目模块的过程中也发现github能够搜索到的Three.js3d模型可视化编辑相关的开源项目非常的少,许多的three.js相关问题和功能的实现在网上也很难搜索到答案
-4.因此在参考了之前工作项目中做过的可视化大屏项目的3D模型编辑模块的功能和three.js 官方编辑器 https://threejs.org/editor/ 的部分功能的基础之上开发了一款基于Three.js+Vue3的3d模块可视化编辑器系统，其主要目的是尽可能更多的将three.js提供的API结合在实际的项目中去使用，作为自己个人学习three.js的记录，也供大家学习和参考
-项目的在线访问地址：https://zhang_6666.gitee.io/three.js3d/
-系统界面图:
-实现的主要功能模块
-背景模块：实现背景图、全景图、背景颜色的编辑功能
-材质模块：实现模型材质颜色、透明度、网格、材质显示/隐藏、材质贴图、模型材质类型切换等编辑功能
-后期处理模块：实现模型材质的辉光效果强度、半径、阈值、色调曝光度、模型的拖拽和分解等编辑功能
-灯光模块：实现环境光、点光源、半球光、聚光灯等参数的编辑功能
-动画模块：实现模型自带动画的播放、播放速度、播放类型、动作幅度和模型x,y,z轴动画等编辑功能
-辅助线/轴配置模块：实现模型的轴坐标、轴位置、网格辅助线、模型骨架、模型坐标轴辅助线等编辑功能
-几何体…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;23
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7282691710084857913"
-                        open
-                      >
-                        <summary class="article-expander__title">50 种 ES6 模块，面试被问麻了</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282691710084857913">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>如果你问开发人员：&quot;对你来说最难的 JS 题目是什么？&quot;，你绝不会听到他说是 ES6 模块。但统计数据更能说明问题！我们统计了我们电报频道中各种主题的问答错误答案数量，发现 ES6 模块是最难的主题之一。
-免费体验 Gpt4 plus 与 AI作图神器，我们出的钱 体验地址：点这里
-测验 #1： 53%的答案正确
-// index.mjs
-import { default } from &#x27;./module.mjs&#x27;;
-
-console.log(default);
-
-// module.mjs
-export default &#x27;bar&#x27;;
-
-首先，让我们记住各种导入和导出语法：
-
-
-如果检查表中的 Import 语法，就会发现没有与我们的代码相匹配的语法：
-import { default } from ‘./module.mjs’;
-
-因为禁止使用这种语法。测验代码会出现以下错误：
-SyntaxError: Unexpected reserved word
-在 import { default } from ‘./module.mjs’; 行中， default 是 export 的名称，也是该作用域中的变量名称，这是被禁止的，因为 default 是一个保留字。解决方法很简单：
-import { default as foo } from ‘./module.mjs’;
-
-现在， default 是导出的名称， foo 是变量的名称。换句话说，如果你想在默认导出中使用命名导入语法，就必须重命名它。就是这样，非常简单！
-测验 #2：35% 的正确答案
-// index.js
-console.log(&#x27;index.js&#x27;);
-
-import { sum } from &#x27;./helper.js&#x27;;
-
-console.log(sum(1, 2));
-
-// helper.js
-
-c…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;14
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7282666723916070949"
-                        open
-                      >
-                        <summary class="article-expander__title">代码洁癖的前端工程师是如何写代码的？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282666723916070949">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-当我们在面对一个迭代多年且（或）多人维护的项目时，阅读他人代码最害怕遇到的就是代码书写混乱阅读困难甚至是难以读懂。糟糕的代码所带来的影响就不再多说了，所谓“💩”山不过如此，这对于一名代码洁癖患者来说是万万不能忍的。
-
-那么，什么是整洁的代码呢？这边引用一位博主的介绍，其认为可以从外在美和内在美两个方面来定义整洁的代码：
-外在美：外观看起来优雅美观的代码会使人心情愉悦，其中主要体现在代码所在的位置是否恰当，代码里是否有适当的注释、缩进和空行，以及代码里有没有重复代码等等。
-内在美：外在美只是“看起来”使人心情愉悦，如果缺乏内在美，那么当真正开始读代码的时候，刚才愉悦的心情就会在一瞬间烟消云散，内在美主要体现在代码之间的尽量少的依赖，干净利落的抽象和直截了当的控制语句，以及优秀的设计模式等等。
-那么，我们应该如何写出整洁的代码呢？要写出内在美的代码或许需要我们有非常强的技术能力或多年写代码经验，但是外在美是任何一名写代码的工程师都能做好的，也是第一步需要做好的，作为一名代码洁癖患者，至少让写的代码看起来是整洁的，这是底线。本文主要分为实用工具和个人经验两部分来分享作为一名代码洁癖患者平时在写代码时一些习惯，让“洁癖”洒满大地！！！
-第一部分：工具
-1.1 代码格式化
-1.1.1 工具配置
-
-使用 Eslint + StyleLint + Prettier + husky + lint-staged 提高前端项目质量和统一项目代码风格：
-ESLint 是一款用于查找并报告代码中问题的工具
-Stylelint 是一个强大的现代 CSS 检测器
-Prettier 是一款强大的代码格式化工具，支持多种语言
-lint-staged 是一个在 git 暂存文件上运行 linters 的工具
-husky 是 Git Hook 工具，可以设置在 git 各个阶段触发设定的命令
-各工具的…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >Barret李靖的即刻动态</button>
                   <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
                 </h3>
@@ -3266,133 +3330,11 @@ husky 是 Git Hook 工具，可以设置在 git 各个阶段触发设定的命�
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-25 datetime="2023-09-25T23:47:08.000Z">2023-09-25</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-25 datetime="2023-09-25T23:47:08.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-25 datetime="2023-09-25T16:28:16.000Z">2023-09-25</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-25 datetime="2023-09-25T16:28:16.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7282691800858853413"
-                        open
-                      >
-                        <summary class="article-expander__title">八股只问vue，代码题考js🫣「Momenta一面」</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282691800858853413">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: orange
-highlight: a11y-dark
-这是我目前见过给面试效率最高的公司，下午投的boss，没一会打电话问我五点钟能不能面试，后面选了七点钟。一面是个姐姐，声音很好听，人也很nice，辛苦她加班面我这个菜鸡了😂。下面是题目和笔者整理的答案，如有疏漏，烦请指正：
-八股文
-不知道宽高的块级元素如何垂直水平居中？
-1.使用 flex 布局
-.parent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-2.使用 transform 属性
-.parent {
-    position: relative;
-}
-
-.child {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-computed和watch的区别?
-Vue中的computed和watch都是用于观察和响应Vue实例上的数据变化的。它们在使用场景和工作方式上有一些不同：
-computed（计算属性） ：
-computed是计算属性，主要用于当一个属性依赖于一个或多个其他属性时。当依赖的数据变化时，计算属性会重新计算。
-computed支持缓存。只有当其依赖的属性值发生变化时，计算属性才会重新计算。如果依赖的数据没有变化，那么多次访问计算属性会直接返回之前的计算结果，而不需要重新进行计算。
-当多个属性影响一个属性时，或者一个数据需要经过复杂的计算时，建议使用computed。
-watch（侦听器） ：
-watch主要用于观察Vue实例上某个特定数据的变化，从而执行特定的操作。
-watch不支持缓存，数据每次变化都会执行对应的函数。
-当一个值发生…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7282603912649998336"
-                        open
-                      >
-                        <summary class="article-expander__title">TypeScript 快速上手指南</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282603912649998336">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: cyanosis
-1 基础部分
-1.1 环境
-在线 PlayGround: https://www.typescriptlang.org/play
-使用 ts-node / esno 直接执行 ts
-npm install ts-node -g
-ts-node fileName.ts
-
-npm install esno -g
-esno fileName.ts
-
-使用 tsc / tsup 编译 ts
-npm install typescript  -g
-// 查看 tsc 版本
-tsc -v
-// 编译 ts 文件
-tsc fileName.ts
-
-esno 和 tsup 都是基于 esbuild 开发的
-1.2 类型基础
-JavaScript 的原始数据类型：
-boolean / number / string / symbol / bigint
-undefined / null
-undefined 和 null 是所有类型的子类型，可赋值给其他类型；如果指定了 --strictNullChecks 标记，null 和 undefined 只能赋值给 void 和它们自己。
-let isDone: boolean &#x3D; false;
-let age: number &#x3D; 10;
-let str: string &#x3D; &quot;test&quot;;
-
-let u: undefined &#x3D; undefined;
-let n: null &#x3D; null;
-
-// 非--strictNullChecks下
-let num: number &#x3D; undefined;
-
-TS 的特殊类型：
-any：回到了 JS，一般不会用
-unknown：不知道用什么类型声明变量时使用，但操作变量时需要收缩类型范围，否则会报错（any不会报错）。
-void：单独声明一个 void 类型的变量没有什么大用，因为你…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -3926,6 +3868,76 @@ Carl Jung
             
    最后作者为了答谢付费会员群之前的测试和反馈，    将会赠送 3 个永久版和 10 个年付费版本    。具体流程将以抽奖在群里进行，敬请期待。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7282603912649998336"
+                        open
+                      >
+                        <summary class="article-expander__title">TypeScript 快速上手指南</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282603912649998336">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: cyanosis
+1 基础部分
+1.1 环境
+在线 PlayGround: https://www.typescriptlang.org/play
+使用 ts-node / esno 直接执行 ts
+npm install ts-node -g
+ts-node fileName.ts
+
+npm install esno -g
+esno fileName.ts
+
+使用 tsc / tsup 编译 ts
+npm install typescript  -g
+// 查看 tsc 版本
+tsc -v
+// 编译 ts 文件
+tsc fileName.ts
+
+esno 和 tsup 都是基于 esbuild 开发的
+1.2 类型基础
+JavaScript 的原始数据类型：
+boolean / number / string / symbol / bigint
+undefined / null
+undefined 和 null 是所有类型的子类型，可赋值给其他类型；如果指定了 --strictNullChecks 标记，null 和 undefined 只能赋值给 void 和它们自己。
+let isDone: boolean &#x3D; false;
+let age: number &#x3D; 10;
+let str: string &#x3D; &quot;test&quot;;
+
+let u: undefined &#x3D; undefined;
+let n: null &#x3D; null;
+
+// 非--strictNullChecks下
+let num: number &#x3D; undefined;
+
+TS 的特殊类型：
+any：回到了 JS，一般不会用
+unknown：不知道用什么类型声明变量时使用，但操作变量时需要收缩类型范围，否则会报错（any不会报错）。
+void：单独声明一个 void 类型的变量没有什么大用，因为你…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;13
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -5500,8 +5512,8 @@ Scrum 开发
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6389661497">
-        <time id="build-timestamp" datetime="2023-10-03T06:53:43.968Z">2023-10-03T06:53:43.968Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6391396319">
+        <time id="build-timestamp" datetime="2023-10-03T09:53:58.527Z">2023-10-03T09:53:58.527Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
