@@ -43,7 +43,7 @@
           "description": "坚持探索Web标准下的原生浏览器开发行为，行为驱动和数据驱动的表单开发其实各有千秋，深入HTML，你会发现这个世界比你所知的要精彩的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/form-reset-input-change/",
           "publishedOn": "2023-09-12T15:52:48.000Z",
-          "wordCount": 1094,
+          "wordCount": 1093,
           "title": "Tips：form元素reset后input不触发change事件处理",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "相比于tinypng，我这个工具还自带尺寸设置功能，同时还可以控制压缩率，指定压缩格式，纯前端实现，高性能高效率。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-jpg-png-compress-tinyimg-mini/",
           "publishedOn": "2023-09-05T13:05:30.000Z",
-          "wordCount": 1064,
+          "wordCount": 1062,
           "title": "做了个纯前端JPG/PNG尺寸缩放+压缩的在线工具",
           "imageUrl": null
         }
@@ -177,7 +177,7 @@
           "description": "干就对了",
           "link": "https://m.okjike.com/originalPosts/650fae008425e0dd3b0d05f9",
           "publishedOn": "2023-09-24T03:33:20.000Z",
-          "wordCount": 472,
+          "wordCount": 463,
           "title": "发布了: 干就对了",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fo_uabazeAtdc57nLcP_yo7-dwMav3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
         },
@@ -532,6 +532,16 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231004/t20231004_526440760.html",
+          "author": "国家预警信息发布中心",
+          "description": "巴南区气象台2023年10月4日15时20分发布“大雾黄色预警信号”，预计10月4日15时20分至20时，我区姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231004/t20231004_526440760.html",
+          "publishedOn": "2023-10-04T07:31:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市巴南区发布大雾黄色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231004/t20231004_526440647.html",
           "author": "国家预警信息发布中心",
@@ -1027,6 +1037,16 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
+          "id": "https://juejin.cn/post/7284164153576538124",
+          "author": "好好吃饭好好睡觉",
+          "description": "theme: jzman\n由场景题扯到了如题所示的问题\n我： 使用scrollTop， 其他API我知道有但是具体的我忘了.....\n目前判断元素出现在可视区域的有三种方案， 我们来逐个突破：\noffsetTop, scrollTop\n getBoundingClientRect\nIntersectionObserver\n一、offsetTop + scrollTop\noffsetTop: 当前元素相对于其 offsetParent 元素的顶部内边距的距离\n\noffsetParent: 指向最近的包含该元素的定位元素或者最近的 table, td, th, body 元素\n\noffsetWidth, offsetHeight包括了content， padding， border, 不包括margin\nclientWidth, clientHeight包括了content， padding 不包括border， margin\nscrollTop: 元素的内容顶部到它的视口可见内容的顶部的距离的度量\n实现如下：\n由图可知， 考虑纵轴方向的话\n要么元素不在可视区域下方， 此时应该满足\nel.offsetTop < document.documentElement.scrollTop + document.documentElement.clientHeight\n\n要么元素不在可视区域上方, 此时应该满足 el.offsetTop > document.documentElement.scrollTop - el.offsetHeight\n\n横向方向同理(此处忽略），代码实现如下\nconst isInView = (el) => {\n    const documentScrollTop = document.documentElement.scrollTop;\n    const…",
+          "link": "https://juejin.cn/post/7284164153576538124",
+          "publishedOn": "2023-10-02T08:54:21.000Z",
+          "wordCount": 1448,
+          "title": "如何判断元素是否在可视页面内",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7284196027149746216",
           "author": "程序员Sunday",
           "description": "theme: vuepress\nhello，大家好，我是Sunday。\n很多同学经常问我： 大厂使用 Vue 多还是 React 多？\n通常情况下，我的回答都是：React 会稍微多一些。 但是具体多多少，我说不出来。\n不过今天我看到了一篇很好的文章（原文地址：https://www.toutiao.com/article/7284844340973699599）。\n所以，分享给大家。\n正文内容\n如果想成为一名优秀的开发工程师，甚至是架构师，那必须要掌握一套高效的研发流程。研发流程是否合理直接决定了研发的效率和成本，也直接关系到产品的优劣，其重要性毋庸置疑。所以，不论是大厂还是小厂都会不断优化研发流程。市面上一些常见的工具，如前端框架Vue、React，构建工具Webpack、Rollup、Vite等也都是为此而生。\n作为行业的风向标，大厂在研发流程上比小厂更加高效，工具也更加多样。例如，小厂创建项目可能会直接使用vue-cli或者create-react-app，但是在大厂，则会通过定制脚手架创建或者直接在前端研发平台实现。\n通过脚手架创建项目的好处显而易见：可以根据不同团队、不同类型项目定制专用的模板；也可以根据创建过程中输入的参数修改项目中名称、版本、描述等相关内容，缩短研发时间。因此，剖析大厂的研发流程，不仅能接触超前技术，触摸到未来的行业发展趋势，更能提升个人的技术视野，把经验应用到实际的工作中。\n全文大纲\n揭秘工具Wappalyzer介绍\n字节跳动系列\n腾讯系列\n阿里巴巴系列\n百度系列\n京东系列\n美团系列\n网易系列\n拼多多\n哔哩哔哩\n知乎\n爱奇艺\n微博\n大厂前沿技术统计结果\n揭秘工具Wappalyzer介绍\n\nWappalyzer 官网\nWappalyzer是一款开源的浏览器扩展，用于识别网站所使用的技术栈。它能够检测出使用的Web服务器、内容管理系统、编程语言…",
@@ -1064,6 +1084,16 @@
           "publishedOn": "2023-09-30T14:09:31.000Z",
           "wordCount": 1213,
           "title": "我转产品了-前端转产品是一种什么样的体验",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7283798844235890723",
+          "author": "Chil1",
+          "description": "theme: juejin\nhighlight: agate\n解决痛点\n最近在项目中碰到一个优化场景：订单列表页订单信息较多时，每次查看详情后返回时，由于重新调用接口导致页面重新渲染，滚轮不会停留在原始位置。造成用户每次返回都要重新下拉，体验感极差。\n解决方案\nkeep-alive组件缓存\n<keep-alive>包裹的动态组件会被缓存，它是一个抽象组件，自身不会渲染一个dom对象，也不会出现在父组件链中。当组件在<keep-alive>内被切换时，它的activated和deactivated这两个生命周期钩子函数将会被对应执行。\n<keep-alive :include=\"componentsList\">\n      <router-view></router-view>\n</keep-alive>\n\ninclude（包含）属性是一个被缓存组件name的数组。其中的组件都会被缓存。\nexclude（排除）属性是一个不被缓存组件name的数组。其中的组件都不会被缓存。\n如果需要缓存的页面太多，在数组中一个个添加组件的name，显然有点太繁琐了。可以利用路由中的meta来进行控制我们需要进行缓存的页面。\n{\n    path: '/first',\n    name: 'first',\n    component: () => import('../views/orderInfoList.vue'),\n    meta: { \n        keepAlive: true, //设置组件缓存\n     }\n  },\n  {\n    path: '/second',\n    name: 'second',\n    component: () => import('../views/oderInfoDetial.vue')\n  },\n\n<keep-alive> 组件可以将需要缓…",
+          "link": "https://juejin.cn/post/7283798844235890723",
+          "publishedOn": "2023-09-30T09:19:21.000Z",
+          "wordCount": 1209,
+          "title": "Vue中keep-alive 场景实现：订单列表页跳转到详情页，再从详情页跳转回列表初始停留位置",
           "imageUrl": null
         },
         {
@@ -1117,6 +1147,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7283719464905900087",
+          "author": "敏哥要成为大神",
+          "description": "1 前言\n相信做前端的同学们，应该没有人没听说过axios的鼎鼎大名吧！\n用了这么久的axios，是否也会好奇axios是如何实现的呢？\n今天就让我们走进axios的源码，学习这款神级工具是如何实现的吧！\n2 axios的实例与请求流程\n在阅读源码之前，先大概了解一下axios实例的属性和请求整体流程，带着这些概念，阅读源码可以轻松不少！\n下图是axios实例属性的简图。\n\n可以看到axios的实例上，其实主要就这三个东西：\nconfig：配置，比如url、method、params、headers等等\ninterceptors ：拦截器，分为请求拦截器和返回拦截器。\nrequest：调用xhr或者http请求的方法，参数就是config\n由于调用request方法的时候可以再次传入config，但是不能传入interceptors，所以拦截器一定是要在请求之前就在axios上添加好，不能临时加。\n下图是axios的请求流程，其实相当简单，先了解这个流程，看源码的时候就会有方向。\n\n3 源码文件结构解析\naxios的源码都在lib文件夹下，最核心的内容在core文件夹里。\nlib\n│  axios.js    // 最终导出的文件\n│  utils.js    // 工具类\n├─adapters     // 适配器相关\n│      adapters.js //适配器类\n│      http.js     // node请求\n│      xhr.js      // 浏览器请求\n├─cancel      // 取消功能相关\n│      CanceledError.js //取消异常类\n│      CancelToken.js   //取消token类\n│      isCancel.js      //判断是否取消\n├─core       // 核心功能相关 …",
+          "link": "https://juejin.cn/post/7283719464905900087",
+          "publishedOn": "2023-09-28T13:47:56.000Z",
+          "wordCount": 5216,
+          "title": "用了这么久的axios，没想到源码居然这么简单！",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7283688117013643324",
           "author": "伊泽瑞尔",
           "description": "作为一个前端老开发了，我一直在想能否自己做一个能上线的应用，奈何种种原因，好多想法都夭折了，一直没做成。直到前段时间，我发现我的公众号已经攒了500+道面试题及答案，但它缺少一个统一管理和检索的功能，不方便查看。于是就想着做一个小程序，统一收集整理这些学习资料，方便大家检索，收藏分享等。下面是主要的几个界面截图。\n首页，主要是分类，和2个快捷入口：\n\n所有问题列表：\n\n问题详情及答案：\n\n个人信息，收藏，历史记录等：\n\n为了激励大家学习，特意做了学分管理，记录答题记录：\n\n在没有UI设计的情况下，我感觉界面能做成这样，已经相当满意了哈哈哈。只有小程序logo是特意找我前同事UI设计师设计的，这里特意感谢刘同学的帮助。\nlogo长这样：\n\n一个小男生学习前端，他需要学习html、css、JS、node、TS、Vue、React加其他，想想是不是很累呢？\n个人感受\n其实看到自己的应用从0到上线，还是很欣慰的，作为老开发，不得不否认，前端的天花板很低（相对后端），可能大多人只能做到小组长吧。但现实就是如此，我们只能不畏困难，奋勇前行吧。\n我很崇拜一个人：antfu。他是Vue和NuxtLabs核心开发成员，他也说，前端的好处是能尽早让自己看到成果，页面开发出来能马上看到效果，能给自己积极的正反馈，这样就很好，能激励你一直做下去。\n这个应用如果是后端开发来做，我感觉很难上线，因为后端接口几乎全是增伤改查，我这个前端开发用node+mysql写完所有接口也就3天不到的时间，而前端页面我花了不下10天。各种文档要找，小程序文档，uni文档要找，UI库文档要找，没有UI设计，我还要到处参考，调试。\n最后\n大家可以体验下一下小程序，看谁能成为我数据库的第一条记录呢（不会收集用户隐私），实在不感兴趣来找找bug也可以的。\n\n或者微信搜索：前端学习助手\n好了就讲这么多了，以后我会像公众号一样，每天更新三道题及答案，小程序和公众号同步更新，自己学习的同时也分享给大家。\n如果大家感兴趣的话，下期会分享从零到上线的整个流程。",
@@ -1167,13 +1207,13 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7283080455852359734",
-          "author": "AliPaPa",
-          "description": "theme: condensed-night-purple\n在很久很久以前，我亲爱的同事们在对接二维码扫描业务的时候，都是使用的微信官方自带的扫一扫，比如这样\nwx.scanQRCode({\n  needResult: 0, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，\n  scanType: [\"qrCode\",\"barCode\"], // 可以指定扫二维码还是一维码，默认二者都有\n  success: function (res) {\n    var result = res.resultStr; // 当needResult 为 1 时，扫码返回的结果\n  }\n});\n\n所以我扫码就一定得依赖微信，在普通的浏览器中打开就GG，并且还要绑定公众号，烦的一批。\n然后我就在想，扫码不就是靠摄像头捕捉图像进行解码出内容嘛，那肯定会有原生的解决方案。\nGoogle Google Google Google ......\n果然是有的，Web API中也提供了一个实验性的功能，Barcode Detection API\n\n它提供了一个detect方法，可以接收图片元素、图片二进制数据或者是ImageData，最终返回一个包含码信息的Promise对象。\n但是呢，这个功能的浏览器兼容性比较差，看了caniuse，心凉了一半。\n\n但我相信大神们肯定有自己的解决方案，继续Google呗。\nGoogle Google Google Google ......\n还真有这么一个库，html5-qrcode，它在zxing-js的基础之上，又增加了对多种码制的解码支持，站在巨人的肩膀上又跟高了一层。\nhtml5-qrcode支持的码有：\nCode\nExample\n\n\n\n\nQR Code\n\n\n\nAZTEC\n\n\n\nCODE_39\n\n\n\nCODE_93\n\n\n\nCODE_128\n\n\n\nITF\n\n\n\nEAN_13\n\n\n\nEAN_8\n\n\n\nPDF_417\n\n\n\nUPC_A\n\n\n\nUPC_E\n\n\n\nDATA_MATRIX\n\n\n\nMAXICODE*\n\n\n\nRSS_14*\n\n\n\nRSS_EXPANDED*\n\n\n\n\n我个人觉得非常够用了，平时用的最多的还是二维码、条形码，其他的码也都少见。\n关键是人家还支持了各种浏览器，可以说已经是很良心了（什么UC浏览器的，其实我都瞧不上，不支持就不支持，无所吊谓）\n\n来看看官方提供的demo效果\n\n好好好，很棒。但是他们没有提供框架支持，那么我又可以站在巨人的肩膀上的巨人的肩膀上造轮子了。\n先来看看我自己封装的React组件\n\n使用方法也简单\nfunction App() {\n  const scanCodeRef = useRef();\n  const [scanResult, setScanResult] = useState('');\n\n  function startScan() {\n    scanCodeRef.current?.initScan();\n  }\n\n  return (\n    <div>\n      <button onClick={startScan}>扫一扫</button>\n      <p>扫描结果: {scanResult}</p>\n      <ScanQrCodeH5\n        ref={scanCodeRef}\n        scanTips=\"请一定要对准二维码哦～\"\n        onScanSuccess={(text) => {\n          setScanResult(text);\n        }}\n        // onScanError={(err) => {\n        //   console.log(err);\n        // }}\n      />\n    </div>\n  );\n}\n\n三二一，上链接，rc-qrcode-scan\n这次的版本没有加入从相册选择图片进行解码，下个版本将会加入，希望能帮到掘友们。\n2023-09-28更新，掘友们我把从相册选择加进去了。",
-          "link": "https://juejin.cn/post/7283080455852359734",
-          "publishedOn": "2023-09-27T06:34:24.000Z",
-          "wordCount": 1234,
-          "title": "我的发！地表最强扫一扫",
+          "id": "https://juejin.cn/post/7283060133647056932",
+          "author": "掘金一周",
+          "description": "本文字数 1996  ，阅读时间大约需要 7分钟。\n【掘金一周】本期亮点：\n CodeMod 代码重构/升级必知必会\n跨域漏洞，我把前端线上搞崩溃了\n工作5年，没用过分布式锁，正常吗？\nGo是如何精致得进行内存管理？\n聊聊强化学习：可自动玩游戏的AI技术，实战智能走迷宫案例\nAndroid 增量构建的科技与狠活\n三年磨一剑，货拉拉iOS用户端10万分位Crash率攻坚之战\n上榜规则：文章发布时间在本期「掘金一周」发布时间的前一个星期内；且符合各个栏目的内容定位和要求。\n如发现文章有抄袭、洗稿等违反社区规则的行为，将取消当期及后续上榜资格。\n一周“金”选\n\n内容评审们会在过去的一周内对社区深度技术好文进行挖掘和筛选，优质的技术文章有机会出现在下方榜单中，排名不分先后。\n前端\nCodeMod 代码重构/升级必知必会 @ 荒山\n本文介绍了 codemod 代码的应用场景以及代码的重构/升级，详尽介绍和对比了 codemod 这个领域一些主流的库\n 跨域漏洞，我把前端线上搞崩溃了  @ Sailing\n本文详细介绍了从跨域问题发现到跨域问题解决的整个过程，文章还简要提到了前端资源链路，对处理前端跨域问题具有一定的参考价值\n还原现场🔍前端录制用户行为技术方案  @ 植物系青年\n本文详细介绍了用户行为录制在不同场景中对应的技术方案，以及对不同的方案做了对比\n后端\n工作5年，没用过分布式锁，正常吗？  @哪吒编程\n本文对分布式锁基本原理和实现方式以及他的重要性和优缺点做了详细的介绍\n从 5s 到 0.5s！CompletableFuture 异步任务优化技巧，确实优雅！  @JavaGuide\n这篇文章简单介绍了 CompletableFuture 的常见操作和使用建议，以及 CompletableFuture一些常用的API\n分布式算法之MIT 6.824系列总结 @每天一杯番茄汁\n…",
+          "link": "https://juejin.cn/post/7283060133647056932",
+          "publishedOn": "2023-09-27T07:30:52.000Z",
+          "wordCount": 1202,
+          "title": "跨域漏洞，我把前端线上搞崩溃了 | 掘金一周 9.27",
           "imageUrl": null
         },
         {
@@ -1187,16 +1227,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7282972975933505571",
-          "author": "岩苍美津未",
-          "description": "https://juejin.cn/post/7233304089370263589?searchId=20230728000428E89CE4C53E9375585791#heading-1\ndefineProps() 和 defineEmits()\n内置函数，无需import导入，直接使用。\n传入到 defineProps 和 defineEmits 的选项会从 setup 中提升到模块的范围。因此，传入的选项不能引用在  setup 范围中声明的局部变量(比如设置默认值时)，但是，它可以引用导入（import）的变量，因为它们也在模块范围内。就是说props设置默认值的时候不能直接用setup里的变量，可以用import引入的数据\n<script setup>\n//props是响应式的不能解构\n//方法1：不能设置默认值(使用withDefaults解决)\nconst props = defineProps({\n  foo?: String,\n  id: [Number, String],\n  onEvent: Function, //Function类型\n  metadata: null\n})\n\n//方法2\nconst props = defineProps({ foo: { type: String, required: true, default: '默认值' }, bar: Number })\n\n//方法3-推荐：弊端：不能设置默认值(使用withDefaults解决)\ninterface Props {\n    data?: number[]\n}\n//const props = defineProps<Props>();\n//或const props = defineProps<{ data?: number[] }>();\nconst props = wi…",
-          "link": "https://juejin.cn/post/7282972975933505571",
-          "publishedOn": "2023-09-26T09:56:01.000Z",
-          "wordCount": 3106,
-          "title": "Vue3常见api使用指南（TS版）",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7282691710084857913",
           "author": "王大冶",
           "description": "如果你问开发人员：\"对你来说最难的 JS 题目是什么？\"，你绝不会听到他说是 ES6 模块。但统计数据更能说明问题！我们统计了我们电报频道中各种主题的问答错误答案数量，发现 ES6 模块是最难的主题之一。\n免费体验 Gpt4 plus 与 AI作图神器，我们出的钱 体验地址：点这里\n测验 #1： 53%的答案正确\n// index.mjs\nimport { default } from './module.mjs';\n\nconsole.log(default);\n\n// module.mjs\nexport default 'bar';\n\n首先，让我们记住各种导入和导出语法：\n\n\n如果检查表中的 Import 语法，就会发现没有与我们的代码相匹配的语法：\nimport { default } from ‘./module.mjs’;\n\n因为禁止使用这种语法。测验代码会出现以下错误：\nSyntaxError: Unexpected reserved word\n在 import { default } from ‘./module.mjs’; 行中， default 是 export 的名称，也是该作用域中的变量名称，这是被禁止的，因为 default 是一个保留字。解决方法很简单：\nimport { default as foo } from ‘./module.mjs’;\n\n现在， default 是导出的名称， foo 是变量的名称。换句话说，如果你想在默认导出中使用命名导入语法，就必须重命名它。就是这样，非常简单！\n测验 #2：35% 的正确答案\n// index.js\nconsole.log('index.js');\n\nimport { sum } from './helper.js';\n\nconsole.log(sum(1, 2));\n\n// helper.js\n\nc…",
@@ -1204,26 +1234,6 @@
           "publishedOn": "2023-09-26T00:48:09.000Z",
           "wordCount": 4067,
           "title": "50 种 ES6 模块，面试被问麻了",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7282666723916070949",
-          "author": "植物系青年",
-          "description": "前言\n当我们在面对一个迭代多年且（或）多人维护的项目时，阅读他人代码最害怕遇到的就是代码书写混乱阅读困难甚至是难以读懂。糟糕的代码所带来的影响就不再多说了，所谓“💩”山不过如此，这对于一名代码洁癖患者来说是万万不能忍的。\n\n那么，什么是整洁的代码呢？这边引用一位博主的介绍，其认为可以从外在美和内在美两个方面来定义整洁的代码：\n外在美：外观看起来优雅美观的代码会使人心情愉悦，其中主要体现在代码所在的位置是否恰当，代码里是否有适当的注释、缩进和空行，以及代码里有没有重复代码等等。\n内在美：外在美只是“看起来”使人心情愉悦，如果缺乏内在美，那么当真正开始读代码的时候，刚才愉悦的心情就会在一瞬间烟消云散，内在美主要体现在代码之间的尽量少的依赖，干净利落的抽象和直截了当的控制语句，以及优秀的设计模式等等。\n那么，我们应该如何写出整洁的代码呢？要写出内在美的代码或许需要我们有非常强的技术能力或多年写代码经验，但是外在美是任何一名写代码的工程师都能做好的，也是第一步需要做好的，作为一名代码洁癖患者，至少让写的代码看起来是整洁的，这是底线。本文主要分为实用工具和个人经验两部分来分享作为一名代码洁癖患者平时在写代码时一些习惯，让“洁癖”洒满大地！！！\n第一部分：工具\n1.1 代码格式化\n1.1.1 工具配置\n\n使用 Eslint + StyleLint + Prettier + husky + lint-staged 提高前端项目质量和统一项目代码风格：\nESLint 是一款用于查找并报告代码中问题的工具\nStylelint 是一个强大的现代 CSS 检测器\nPrettier 是一款强大的代码格式化工具，支持多种语言\nlint-staged 是一个在 git 暂存文件上运行 linters 的工具\nhusky 是 Git Hook 工具，可以设置在 git 各个阶段触发设定的命令\n各工具的…",
-          "link": "https://juejin.cn/post/7282666723916070949",
-          "publishedOn": "2023-09-26T00:11:48.000Z",
-          "wordCount": 1977,
-          "title": "代码洁癖的前端工程师是如何写代码的？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7282603912649998336",
-          "author": "前端迷悟",
-          "description": "theme: cyanosis\n1 基础部分\n1.1 环境\n在线 PlayGround: https://www.typescriptlang.org/play\n使用 ts-node / esno 直接执行 ts\nnpm install ts-node -g\nts-node fileName.ts\n\nnpm install esno -g\nesno fileName.ts\n\n使用 tsc / tsup 编译 ts\nnpm install typescript  -g\n// 查看 tsc 版本\ntsc -v\n// 编译 ts 文件\ntsc fileName.ts\n\nesno 和 tsup 都是基于 esbuild 开发的\n1.2 类型基础\nJavaScript 的原始数据类型：\nboolean / number / string / symbol / bigint\nundefined / null\nundefined 和 null 是所有类型的子类型，可赋值给其他类型；如果指定了 --strictNullChecks 标记，null 和 undefined 只能赋值给 void 和它们自己。\nlet isDone: boolean = false;\nlet age: number = 10;\nlet str: string = \"test\";\n\nlet u: undefined = undefined;\nlet n: null = null;\n\n// 非--strictNullChecks下\nlet num: number = undefined;\n\nTS 的特殊类型：\nany：回到了 JS，一般不会用\nunknown：不知道用什么类型声明变量时使用，但操作变量时需要收缩类型范围，否则会报错（any不会报错）。\nvoid：单独声明一个 void 类型的变量没有什么大用，因为你…",
-          "link": "https://juejin.cn/post/7282603912649998336",
-          "publishedOn": "2023-09-25T07:01:45.000Z",
-          "wordCount": 3868,
-          "title": "TypeScript 快速上手指南",
           "imageUrl": null
         }
       ]
@@ -1259,7 +1269,7 @@
           "description": "[7283775313786437632#我的十一假期计划清单#] 要的私我[灵光一现][灵光一现][灵光一现]",
           "link": "https://juejin.cn/pin/7283699382418849850",
           "publishedOn": "2023-09-28T12:57:24.000Z",
-          "wordCount": 544,
+          "wordCount": 540,
           "title": "[7283775313786437632#我的十一假期计划清单#] 要的私我[灵光一现][灵光一现][灵光一现]",
           "imageUrl": null
         },
@@ -1581,7 +1591,7 @@
           "description": "看看下面的图片，你觉得画面中间的这两个人是什么心情？ 来自加拿大 University of Alberta  …\n  设计 | 察言观色也有东西方文化差异 查看全文 »",
           "link": "https://nishuang.net/%e8%ae%be%e8%ae%a1-%e5%af%9f%e8%a8%80%e8%a7%82%e8%89%b2%e4%b9%9f%e6%9c%89%e4%b8%9c%e8%a5%bf%e6%96%b9%e6%96%87%e5%8c%96%e5%b7%ae%e5%bc%82/",
           "publishedOn": "2023-09-21T06:06:10.000Z",
-          "wordCount": 3949,
+          "wordCount": 4138,
           "title": "设计 | 察言观色也有东西方文化差异",
           "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-1584974292709-5c2f0619971b.jpeg"
         },
@@ -1631,7 +1641,7 @@
           "description": "设计师们不必紧张，AI 在挑选字体、字体配对方面，只相当于初级设计师。 读了一篇有趣的设计文章，作者是热衷网页 …\n  设计 | AI 比你更擅长挑选字体、字体配对吗？ 查看全文 »",
           "link": "https://nishuang.net/%e8%ae%be%e8%ae%a1-ai-%e6%af%94%e4%bd%a0%e6%9b%b4%e6%93%85%e9%95%bf%e6%8c%91%e9%80%89%e5%ad%97%e4%bd%93%e3%80%81%e5%ad%97%e4%bd%93%e9%85%8d%e5%af%b9%e5%90%97%ef%bc%9f/",
           "publishedOn": "2023-09-20T06:13:50.000Z",
-          "wordCount": 3999,
+          "wordCount": 4188,
           "title": "设计 | AI 比你更擅长挑选字体、字体配对吗？",
           "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/fonts.jpg"
         },

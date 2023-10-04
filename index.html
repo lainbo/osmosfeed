@@ -51,8 +51,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-04 datetime="2023-10-04T03:29:00.000Z">2023-10-04</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-04 datetime="2023-10-04T03:29:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-04 datetime="2023-10-04T07:31:00.000Z">2023-10-04</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-04 datetime="2023-10-04T07:31:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -67,6 +67,25 @@
                   <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231004/t20231004_526440760.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市巴南区发布大雾黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231004/t20231004_526440760.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>巴南区气象台2023年10月4日15时20分发布“大雾黄色预警信号”，预计10月4日15时20分至20时，我区姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -364,6 +383,48 @@
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7284164153576538124"
+                        open
+                      >
+                        <summary class="article-expander__title">如何判断元素是否在可视页面内</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7284164153576538124">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: jzman
+由场景题扯到了如题所示的问题
+我： 使用scrollTop， 其他API我知道有但是具体的我忘了.....
+目前判断元素出现在可视区域的有三种方案， 我们来逐个突破：
+offsetTop, scrollTop
+ getBoundingClientRect
+IntersectionObserver
+一、offsetTop + scrollTop
+offsetTop: 当前元素相对于其 offsetParent 元素的顶部内边距的距离
+
+offsetParent: 指向最近的包含该元素的定位元素或者最近的 table, td, th, body 元素
+
+offsetWidth, offsetHeight包括了content， padding， border, 不包括margin
+clientWidth, clientHeight包括了content， padding 不包括border， margin
+scrollTop: 元素的内容顶部到它的视口可见内容的顶部的距离的度量
+实现如下：
+由图可知， 考虑纵轴方向的话
+要么元素不在可视区域下方， 此时应该满足
+el.offsetTop  document.documentElement.scrollTop - el.offsetHeight
+
+横向方向同理(此处忽略），代码实现如下
+const isInView &#x3D; (el) &#x3D;&gt; {
+    const documentScrollTop &#x3D; document.documentElement.scrollTop;
+    const…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -940,6 +1001,53 @@ webapp 。然后是 node/express/koa ，开始涉及全栈。
 是否适合转产品
 根据上面所说的几点理解，我自身而言并不拒绝，这是在心理方面。
 在能力方面，我认为我是可以去学习和培养得到这份能力的。因为自己做的一个程序库 demo，得到了第一份前端工作。前端工作 2 年后，老板尝试让我做产品，并在过程中得到老板的一些建议。1、做产品就不要去考虑程序实现；2、如果自己是对的，就要去坚持，争执得面…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7283798844235890723"
+                        open
+                      >
+                        <summary class="article-expander__title">Vue中keep-alive 场景实现：订单列表页跳转到详情页，再从详情页跳转回列表初始停留位置</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7283798844235890723">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: juejin
+highlight: agate
+解决痛点
+最近在项目中碰到一个优化场景：订单列表页订单信息较多时，每次查看详情后返回时，由于重新调用接口导致页面重新渲染，滚轮不会停留在原始位置。造成用户每次返回都要重新下拉，体验感极差。
+解决方案
+keep-alive组件缓存
+包裹的动态组件会被缓存，它是一个抽象组件，自身不会渲染一个dom对象，也不会出现在父组件链中。当组件在内被切换时，它的activated和deactivated这两个生命周期钩子函数将会被对应执行。
+
+      
+
+
+include（包含）属性是一个被缓存组件name的数组。其中的组件都会被缓存。
+exclude（排除）属性是一个不被缓存组件name的数组。其中的组件都不会被缓存。
+如果需要缓存的页面太多，在数组中一个个添加组件的name，显然有点太繁琐了。可以利用路由中的meta来进行控制我们需要进行缓存的页面。
+{
+    path: &#x27;/first&#x27;,
+    name: &#x27;first&#x27;,
+    component: () &#x3D;&gt; import(&#x27;../views/orderInfoList.vue&#x27;),
+    meta: { 
+        keepAlive: true, //设置组件缓存
+     }
+  },
+  {
+    path: &#x27;/second&#x27;,
+    name: &#x27;second&#x27;,
+    component: () &#x3D;&gt; import(&#x27;../views/oderInfoDetial.vue&#x27;)
+  },
+
+ 组件可以将需要缓…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
@@ -1594,62 +1702,57 @@ Vue.js 是一个流行的 JavaScript 前端框架，用于构建用户界面。�
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7283699382418849850"
-                        open
-                      >
-                        <summary class="article-expander__title">[7283775313786437632#我的十一假期计划清单#] 要的私我[灵光一现][灵光一现][灵光一现]</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7283699382418849850">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>[7283775313786437632#我的十一假期计划清单#] 要的私我[灵光一现][灵光一现][灵光一现]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7283532551473594425"
-                        open
-                      >
-                        <summary class="article-expander__title">[7073670907851440160#新人报道#] 欢迎使用新鲜上线的DevShots https://gpwzw.com/</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7283532551473594425">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>[7073670907851440160#新人报道#] 欢迎使用新鲜上线的DevShots https://gpwzw.com/</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >掘金前端本周最热</button>
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7283719464905900087"
+                        open
+                      >
+                        <summary class="article-expander__title">用了这么久的axios，没想到源码居然这么简单！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7283719464905900087">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>1 前言
+相信做前端的同学们，应该没有人没听说过axios的鼎鼎大名吧！
+用了这么久的axios，是否也会好奇axios是如何实现的呢？
+今天就让我们走进axios的源码，学习这款神级工具是如何实现的吧！
+2 axios的实例与请求流程
+在阅读源码之前，先大概了解一下axios实例的属性和请求整体流程，带着这些概念，阅读源码可以轻松不少！
+下图是axios实例属性的简图。
+
+可以看到axios的实例上，其实主要就这三个东西：
+config：配置，比如url、method、params、headers等等
+interceptors ：拦截器，分为请求拦截器和返回拦截器。
+request：调用xhr或者http请求的方法，参数就是config
+由于调用request方法的时候可以再次传入config，但是不能传入interceptors，所以拦截器一定是要在请求之前就在axios上添加好，不能临时加。
+下图是axios的请求流程，其实相当简单，先了解这个流程，看源码的时候就会有方向。
+
+3 源码文件结构解析
+axios的源码都在lib文件夹下，最核心的内容在core文件夹里。
+lib
+│  axios.js    // 最终导出的文件
+│  utils.js    // 工具类
+├─adapters     // 适配器相关
+│      adapters.js //适配器类
+│      http.js     // node请求
+│      xhr.js      // 浏览器请求
+├─cancel      // 取消功能相关
+│      CanceledError.js //取消异常类
+│      CancelToken.js   //取消token类
+│      isCancel.js      //判断是否取消
+├─core       // 核心功能相关 …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;17
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -1764,6 +1867,58 @@ sort 排序
 const arr &#x3D; [&quot;March&quot;, &quot;Jan&quot;, &quot;Feb&quot;, &quot;Dec&quot;, 6, 2, &quot;A&quot;, &quot;a&quot;];
 arr.sort(function (a, b…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;18
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7283699382418849850"
+                        open
+                      >
+                        <summary class="article-expander__title">[7283775313786437632#我的十一假期计划清单#] 要的私我[灵光一现][灵光一现][灵光一现]</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7283699382418849850">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>[7283775313786437632#我的十一假期计划清单#] 要的私我[灵光一现][灵光一现][灵光一现]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7283532551473594425"
+                        open
+                      >
+                        <summary class="article-expander__title">[7073670907851440160#新人报道#] 欢迎使用新鲜上线的DevShots https://gpwzw.com/</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7283532551473594425">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>[7073670907851440160#新人报道#] 欢迎使用新鲜上线的DevShots https://gpwzw.com/</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2646,138 +2801,41 @@ docker run --name jenkins-docker --rm --detach \
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7283080455852359734"
+                        data-accordion-key="https://juejin.cn/post/7283060133647056932"
                         open
                       >
-                        <summary class="article-expander__title">我的发！地表最强扫一扫</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7283080455852359734">
+                        <summary class="article-expander__title">跨域漏洞，我把前端线上搞崩溃了 | 掘金一周 9.27</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7283060133647056932">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>theme: condensed-night-purple
-在很久很久以前，我亲爱的同事们在对接二维码扫描业务的时候，都是使用的微信官方自带的扫一扫，比如这样
-wx.scanQRCode({
-  needResult: 0, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
-  scanType: [&quot;qrCode&quot;,&quot;barCode&quot;], // 可以指定扫二维码还是一维码，默认二者都有
-  success: function (res) {
-    var result &#x3D; res.resultStr; // 当needResult 为 1 时，扫码返回的结果
-  }
-});
+                              <span>本文字数 1996  ，阅读时间大约需要 7分钟。
+【掘金一周】本期亮点：
+ CodeMod 代码重构/升级必知必会
+跨域漏洞，我把前端线上搞崩溃了
+工作5年，没用过分布式锁，正常吗？
+Go是如何精致得进行内存管理？
+聊聊强化学习：可自动玩游戏的AI技术，实战智能走迷宫案例
+Android 增量构建的科技与狠活
+三年磨一剑，货拉拉iOS用户端10万分位Crash率攻坚之战
+上榜规则：文章发布时间在本期「掘金一周」发布时间的前一个星期内；且符合各个栏目的内容定位和要求。
+如发现文章有抄袭、洗稿等违反社区规则的行为，将取消当期及后续上榜资格。
+一周“金”选
 
-所以我扫码就一定得依赖微信，在普通的浏览器中打开就GG，并且还要绑定公众号，烦的一批。
-然后我就在想，扫码不就是靠摄像头捕捉图像进行解码出内容嘛，那肯定会有原生的解决方案。
-Google Google Google Google ......
-果然是有的，Web API中也提供了一个实验性的功能，Barcode Detection API
-
-它提供了一个detect方法，可以接收图片元素、图片二进制数据或者是ImageData，最终返回一个包含码信息的Promise对象。
-但是呢，这个功能的浏览器兼容性比较差，看了caniuse，心凉了一半。
-
-但我相信大神们肯定有自己的解决方案，继续Google呗。
-Google Google Google Google ......
-还真有这么一个库，html5-qrcode，它在zxing-js的基础之上，又增加了对多种码制的解码支持，站在巨人的肩膀上又跟高了一层。
-html5-qrcode支持的码有：
-Code
-Example
-
-
-
-
-QR Code
-
-
-
-AZTEC
-
-
-
-CODE_39
-
-
-
-CODE_93
-
-
-
-CODE_128
-
-
-
-ITF
-
-
-
-EAN_13
-
-
-
-EAN_8
-
-
-
-PDF_417
-
-
-
-UPC_A
-
-
-
-UPC_E
-
-
-
-DATA_MATRIX
-
-
-
-MAXICODE*
-
-
-
-RSS_14*
-
-
-
-RSS_EXPANDED*
-
-
-
-
-我个人觉得非常够用了，平时用的最多的还是二维码、条形码，其他的码也都少见。
-关键是人家还支持了各种浏览器，可以说已经是很良心了（什么UC浏览器的，其实我都瞧不上，不支持就不支持，无所吊谓）
-
-来看看官方提供的demo效果
-
-好好好，很棒。但是他们没有提供框架支持，那么我又可以站在巨人的肩膀上的巨人的肩膀上造轮子了。
-先来看看我自己封装的React组件
-
-使用方法也简单
-function App() {
-  const scanCodeRef &#x3D; useRef();
-  const [scanResult, setScanResult] &#x3D; useState(&#x27;&#x27;);
-
-  function startScan() {
-    scanCodeRef.current?.initScan();
-  }
-
-  return (
-    
-扫一扫
-      
-扫描结果: {scanResult}
- {
-          setScanResult(text);
-        }}
-        // onScanError&#x3D;{(err) &#x3D;&gt; {
-        //   console.log(err);
-        // }}
-      /&gt;
-    
-  );
-}
-
-三二一，上链接，rc-qrcode-scan
-这次的版本没有加入从相册选择图片进行解码，下个版本将会加入，希望能帮到掘友们。
-2023-09-28更新，掘友们我把从相册选择加进去了。</span>
+内容评审们会在过去的一周内对社区深度技术好文进行挖掘和筛选，优质的技术文章有机会出现在下方榜单中，排名不分先后。
+前端
+CodeMod 代码重构/升级必知必会 @ 荒山
+本文介绍了 codemod 代码的应用场景以及代码的重构/升级，详尽介绍和对比了 codemod 这个领域一些主流的库
+ 跨域漏洞，我把前端线上搞崩溃了  @ Sailing
+本文详细介绍了从跨域问题发现到跨域问题解决的整个过程，文章还简要提到了前端资源链路，对处理前端跨域问题具有一定的参考价值
+还原现场🔍前端录制用户行为技术方案  @ 植物系青年
+本文详细介绍了用户行为录制在不同场景中对应的技术方案，以及对不同的方案做了对比
+后端
+工作5年，没用过分布式锁，正常吗？  @哪吒编程
+本文对分布式锁基本原理和实现方式以及他的重要性和优缺点做了详细的介绍
+从 5s 到 0.5s！CompletableFuture 异步任务优化技巧，确实优雅！  @JavaGuide
+这篇文章简单介绍了 CompletableFuture 的常见操作和使用建议，以及 CompletableFuture一些常用的API
+分布式算法之MIT 6.824系列总结 @每天一杯番茄汁
+…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
@@ -3062,48 +3120,6 @@ function throttle (fn, wait) {
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7282972975933505571"
-                        open
-                      >
-                        <summary class="article-expander__title">Vue3常见api使用指南（TS版）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282972975933505571">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>https://juejin.cn/post/7233304089370263589?searchId&#x3D;20230728000428E89CE4C53E9375585791#heading-1
-defineProps() 和 defineEmits()
-内置函数，无需import导入，直接使用。
-传入到 defineProps 和 defineEmits 的选项会从 setup 中提升到模块的范围。因此，传入的选项不能引用在  setup 范围中声明的局部变量(比如设置默认值时)，但是，它可以引用导入（import）的变量，因为它们也在模块范围内。就是说props设置默认值的时候不能直接用setup里的变量，可以用import引入的数据
-
-//props是响应式的不能解构
-//方法1：不能设置默认值(使用withDefaults解决)
-const props &#x3D; defineProps({
-  foo?: String,
-  id: [Number, String],
-  onEvent: Function, //Function类型
-  metadata: null
-})
-
-//方法2
-const props &#x3D; defineProps({ foo: { type: String, required: true, default: &#x27;默认值&#x27; }, bar: Number })
-
-//方法3-推荐：弊端：不能设置默认值(使用withDefaults解决)
-interface Props {
-    data?: number[]
-}
-//const props &#x3D; defineProps();
-//或const props &#x3D; defineProps();
-const props &#x3D; wi…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7282691710084857913"
                         open
                       >
@@ -3146,42 +3162,6 @@ console.log(sum(1, 2));
 
 c…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;14
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7282666723916070949"
-                        open
-                      >
-                        <summary class="article-expander__title">代码洁癖的前端工程师是如何写代码的？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282666723916070949">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-当我们在面对一个迭代多年且（或）多人维护的项目时，阅读他人代码最害怕遇到的就是代码书写混乱阅读困难甚至是难以读懂。糟糕的代码所带来的影响就不再多说了，所谓“💩”山不过如此，这对于一名代码洁癖患者来说是万万不能忍的。
-
-那么，什么是整洁的代码呢？这边引用一位博主的介绍，其认为可以从外在美和内在美两个方面来定义整洁的代码：
-外在美：外观看起来优雅美观的代码会使人心情愉悦，其中主要体现在代码所在的位置是否恰当，代码里是否有适当的注释、缩进和空行，以及代码里有没有重复代码等等。
-内在美：外在美只是“看起来”使人心情愉悦，如果缺乏内在美，那么当真正开始读代码的时候，刚才愉悦的心情就会在一瞬间烟消云散，内在美主要体现在代码之间的尽量少的依赖，干净利落的抽象和直截了当的控制语句，以及优秀的设计模式等等。
-那么，我们应该如何写出整洁的代码呢？要写出内在美的代码或许需要我们有非常强的技术能力或多年写代码经验，但是外在美是任何一名写代码的工程师都能做好的，也是第一步需要做好的，作为一名代码洁癖患者，至少让写的代码看起来是整洁的，这是底线。本文主要分为实用工具和个人经验两部分来分享作为一名代码洁癖患者平时在写代码时一些习惯，让“洁癖”洒满大地！！！
-第一部分：工具
-1.1 代码格式化
-1.1.1 工具配置
-
-使用 Eslint + StyleLint + Prettier + husky + lint-staged 提高前端项目质量和统一项目代码风格：
-ESLint 是一款用于查找并报告代码中问题的工具
-Stylelint 是一个强大的现代 CSS 检测器
-Prettier 是一款强大的代码格式化工具，支持多种语言
-lint-staged 是一个在 git 暂存文件上运行 linters 的工具
-husky 是 Git Hook 工具，可以设置在 git 各个阶段触发设定的命令
-各工具的…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3880,76 +3860,6 @@ Carl Jung
             
    最后作者为了答谢付费会员群之前的测试和反馈，    将会赠送 3 个永久版和 10 个年付费版本    。具体流程将以抽奖在群里进行，敬请期待。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7282603912649998336"
-                        open
-                      >
-                        <summary class="article-expander__title">TypeScript 快速上手指南</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282603912649998336">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: cyanosis
-1 基础部分
-1.1 环境
-在线 PlayGround: https://www.typescriptlang.org/play
-使用 ts-node / esno 直接执行 ts
-npm install ts-node -g
-ts-node fileName.ts
-
-npm install esno -g
-esno fileName.ts
-
-使用 tsc / tsup 编译 ts
-npm install typescript  -g
-// 查看 tsc 版本
-tsc -v
-// 编译 ts 文件
-tsc fileName.ts
-
-esno 和 tsup 都是基于 esbuild 开发的
-1.2 类型基础
-JavaScript 的原始数据类型：
-boolean / number / string / symbol / bigint
-undefined / null
-undefined 和 null 是所有类型的子类型，可赋值给其他类型；如果指定了 --strictNullChecks 标记，null 和 undefined 只能赋值给 void 和它们自己。
-let isDone: boolean &#x3D; false;
-let age: number &#x3D; 10;
-let str: string &#x3D; &quot;test&quot;;
-
-let u: undefined &#x3D; undefined;
-let n: null &#x3D; null;
-
-// 非--strictNullChecks下
-let num: number &#x3D; undefined;
-
-TS 的特殊类型：
-any：回到了 JS，一般不会用
-unknown：不知道用什么类型声明变量时使用，但操作变量时需要收缩类型范围，否则会报错（any不会报错）。
-void：单独声明一个 void 类型的变量没有什么大用，因为你…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4759,7 +4669,7 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
                             <span class="media-object__text">
                               <span>看看下面的图片，你觉得画面中间的这两个人是什么心情？ 来自加拿大 University of Alberta  …
   设计 | 察言观色也有东西方文化差异 查看全文 »</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
+                                &ensp;<span class="article-reading-time">(&hairsp;14
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4926,7 +4836,7 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
                             <span class="media-object__text">
                               <span>设计师们不必紧张，AI 在挑选字体、字体配对方面，只相当于初级设计师。 读了一篇有趣的设计文章，作者是热衷网页 …
   设计 | AI 比你更擅长挑选字体、字体配对吗？ 查看全文 »</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
+                                &ensp;<span class="article-reading-time">(&hairsp;14
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -5505,8 +5415,8 @@ Scrum 开发
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6402562102">
-        <time id="build-timestamp" datetime="2023-10-04T06:53:58.339Z">2023-10-04T06:53:58.339Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6404367063">
+        <time id="build-timestamp" datetime="2023-10-04T09:54:21.616Z">2023-10-04T09:54:21.616Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
