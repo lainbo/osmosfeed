@@ -23,7 +23,7 @@
           "description": "起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/",
           "publishedOn": "2023-09-17T08:06:56.000Z",
-          "wordCount": 1487,
+          "wordCount": 1488,
           "title": "又get到了，JS复制图片到剪切板",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "自己体验了下，出乎意料，HTML elementtiming属性在性能监控这块，比预想的要实用的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/html-elementtiming-attribute/",
           "publishedOn": "2023-09-15T15:58:22.000Z",
-          "wordCount": 935,
+          "wordCount": 934,
           "title": "HTML elementtiming属性初体验记录",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "相比于tinypng，我这个工具还自带尺寸设置功能，同时还可以控制压缩率，指定压缩格式，纯前端实现，高性能高效率。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-jpg-png-compress-tinyimg-mini/",
           "publishedOn": "2023-09-05T13:05:30.000Z",
-          "wordCount": 1062,
+          "wordCount": 1061,
           "title": "做了个纯前端JPG/PNG尺寸缩放+压缩的在线工具",
           "imageUrl": null
         }
@@ -532,6 +532,16 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231004/t20231004_526440865.html",
+          "author": "国家预警信息发布中心",
+          "description": "巫溪县气象台2023年10月4日20时10分继续发布“大雾黄色预警信号”，预计10月4日20时至5日20时，文峰镇、朝阳镇、尖山镇、红池坝镇、柏杨街道、城厢镇、宁河街道、通城镇、兰英乡、双阳乡、花台乡、田坝镇、古路镇、上磺镇等海拔600米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231004/t20231004_526440865.html",
+          "publishedOn": "2023-10-04T12:26:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市巫溪县发布大雾黄色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231004/t20231004_526440760.html",
           "author": "国家预警信息发布中心",
@@ -1077,6 +1087,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7283813865720184871",
+          "author": "蝼蚁之行",
+          "description": "最近在做视频相关的项目，自然就遇到了如何让视频顺畅播放的问题\n现在的视频网站，特别是长视频网站，一般不会直接请求一整个视频文件；这样直接导致响应时间过长，用户等待过久\n通常采用流媒体传输协议，就是将视频切成一小段一小段，比如10s为一段，这每一段是一个ts格式的文件，播放器根据播放进度请求对应或提前请求相应的ts视频文件，进而实现流畅播放，即使是点播也能保证顺畅播放\n像一些大型长视频网站，b站、腾讯视频等都是采用流媒体传输协议\n下面先来了解一下一种流媒体传输协议：HLS\nHLS\nHLS是一种基于HTTP的流媒体传输协议，可以实现流媒体的直播和点播，其工作原理就是把整个视频流分成一个个基于HTTP的文件，每次只下载一部分\nHLS协议是由苹果提出的，它包括三个部分：\nHTTP：传输协议\nm3u8：索引文件\nts文件：音视频媒体信息\n其中，m3u8是一种UTF-8编码的索引纯文本文件，它就像一个播放列表，记录了一段段的视频流ts文件\n前端首先解析m3u8文件，然后通过HTTP请求分片内容即ts文件，然后再使用MSE的appendBuffer进行buffer的封装，完成合流的工作，最后交给播放器进行播放\n实现\n\n我们上传的通常是一个mp4格式的文件，那么就需要将其进行分片，而FFmpeg能够实现将mp4转换为HLS文件\nFFmpeg是一个用于操作、转换流媒体的命令行工具\n首先需要先安装FFmpeg，控制台执行：ffmpeg 不会报错即为安装成功\n第一步：先将mp4视频转化成一个ts文件\nffmpeg -y -i './video.mp4' -vcodec copy -acodec copy -bsf:v h264_mp4toannexb \"./index.ts\"\n\n-bsf:v h264_mp4toannexb设置比特流过滤器\n第二步：将改ts文件切成一段一段的小ts文件，并将各个…",
+          "link": "https://juejin.cn/post/7283813865720184871",
+          "publishedOn": "2023-10-01T03:07:20.000Z",
+          "wordCount": 992,
+          "title": "【前端】如何流畅地播放视频",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7283766477802864675",
           "author": "程序媛李李李李李蕾",
           "description": "程序之路\n入门前端的 3 年，前端技术从 pug/handlebars/jquery 制作各种企业官网，再到 gulp/vue/react/webpack 的工程化开发后台管理、\nwebapp 。然后是 node/express/koa ，开始涉及全栈。\n代码管理工具也从 svn 到 git ，然后制定提交规范，分支管理规范，结合 gitflow/githook 以及各种 lint 保证团队开发风格及可维护\n性。\n产品发布的方式从 ftp 上传，到 npm/nodejs/shell 脚本，然后再到 jenkins/docker/git 多分支多环境部署。\n从第 3 年之后就感觉技术没什么提升了 ，后面都是在各个小作坊担任前端组长角色（其实感觉就是救火队长），哪里项目急去哪里，哪里有难题去哪里。实际比 UI、比测试、比实习产品的地位还低，基本没有话语权。\n\n为什么转产品\n严格来说，并不是专门的喜欢产品这个职位，而是希望了解产品经理所做的事。因为在软件开发的工作里，工作的内容和返工程序大大取决与产品对用户需求的理解能力，业务熟悉能力。而作为前端，经常只集中精力在处理页面还原、交互实现、数据对接、浏览器兼容等工作上面。对整个系统的业务逻辑是比较片面的。\n如果对用户需求和产品业务有所了解，那可能在开发之前就能发现需求上的不必要性，发现设计上的错误，而减少程序开发的返工率。\n总的说来，是期望：\n拒绝无效编程\n深入理解业务\n培养跨部门沟通能力\n培养产品设计能力\n是否适合转产品\n根据上面所说的几点理解，我自身而言并不拒绝，这是在心理方面。\n在能力方面，我认为我是可以去学习和培养得到这份能力的。因为自己做的一个程序库 demo，得到了第一份前端工作。前端工作 2 年后，老板尝试让我做产品，并在过程中得到老板的一些建议。1、做产品就不要去考虑程序实现；2、如果自己是对的，就要去坚持，争执得面…",
@@ -1084,6 +1104,16 @@
           "publishedOn": "2023-09-30T14:09:31.000Z",
           "wordCount": 1213,
           "title": "我转产品了-前端转产品是一种什么样的体验",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7283813865719644199",
+          "author": "好好吃饭好好睡觉",
+          "description": "theme: scrolls-light\n由场景题扯到了这个\n我： WebWorker我了解到的有两种，一种是Service Worker， 另一种是Shared Worker\n面试官： 你再想想？WebWorker和Service Worker应该是两种东西， 不太一样， 你了解PWA吗\n我： 啊？？-------\n面试官： 那你说说怎么使用Service Worker？\n我: emmm.....不会（我只了解过SharedWorker是new一个实例， 然后用postMessgae通信）\nMDN在介绍Web Worker时有以下描述，\n有许多不同类型的 worker：\n\n专用 worker\nShared worker\nService Worker\n故我理解的面试官应该指的不一样应该是专用Worker和Service Worker\n当然， 答案不是很重要， 掌握好具体是什么， 什么场景使用，如何使用才最重要， 耶\n一、什么是Web Worker\n1. 先看MDN介绍：Web Worker 使得在一个独立于 Web 应用程序主执行线程的后台线程中运行脚本操作成为可能。这样做的好处是可以在独立线程中执行费时的处理任务，使主线程（通常是 UI 线程）的运行不会被阻塞/放慢\nWeb Worker 的运行不会影响主线程，不过在和主线程进行通信的时候依旧会受到主线程单线程的瓶颈制约\n2. 限制\n不能直接在worker线程中操作 DOM 元素（不能操作DOM的原因我想也很简单， 本来JS设计为单线程就有避免出现多个线程同时操作DOM的情况）\n不能使用 window对象中的某些方法和属性（但是存在WorkerGlobalScope）\n3.worker可以依次生成新的 worker，只要这些 worker 与父页面托管在同一个origin中\n二、什么是专用Worker\n定义： 单个脚本使用…",
+          "link": "https://juejin.cn/post/7283813865719644199",
+          "publishedOn": "2023-09-30T12:08:13.000Z",
+          "wordCount": 2541,
+          "title": "由面试题引发的Worker Study",
           "imageUrl": null
         },
         {
@@ -1215,26 +1245,6 @@
           "wordCount": 1202,
           "title": "跨域漏洞，我把前端线上搞崩溃了 | 掘金一周 9.27",
           "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7282975291000291340",
-          "author": "慕仲卿",
-          "description": "以下题目来自掘金等其它博客，但是问题的答案都是根据笔者自己的理解做出的。如果你最近想要换工作或者巩固一下自己的前端知识基础，不妨和我一起参与到每日刷题的过程中来，如何？\n第二天要刷的手写题如下：\n手写一个函数，实现节流。\n手写一个函数，实现防抖。\n手写一个函数，实现简单浅拷贝。\n下面是我自己写的答案：\n1. 手写一个函数，实现节流\n首先，节流的含义可以简单地理解成：在规定的时间内同一个函数不可以被触发超过一次。那么从其实现的功能出发，可以推出实现的策略为：\n建立一个闭包，在闭包中存储函数最后一次执行成功的时间戳lastExeTime；\n然后在每一次尝试性执行此函数的额时候，获取当前的时间戳currentTime，并与最后一次执行成功的时间戳做差const gap = currentTime - lastExeTime；\n如果gap的值大于规定值，则证明无需节流，执行函数，然后更新lastExeTime的值；\n如果gap的值小于规定值，则证明还在节流，这个时候什么都不需要做。\nfunction throttle (fn, wait) {\n    let lastExeTime = 0;\n    return function (...args) {\n        const currentTime = +new Date();\n        const gap = currentTime - lastExeTime;\n        if(gap > wait){\n            lastExeTime = currentTime;\n            fn.apply(this, args);\n        }\n    }\n}\n\n2.  手写一个函数，实现防抖\n首先，防抖的含义可以简单地理解成：在函数触发之前必须连续的等待规定的时间。这里需要重点理解连续的…",
-          "link": "https://juejin.cn/post/7282975291000291340",
-          "publishedOn": "2023-09-26T14:53:07.000Z",
-          "wordCount": 1288,
-          "title": "每日前端手写题--day2",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7282691710084857913",
-          "author": "王大冶",
-          "description": "如果你问开发人员：\"对你来说最难的 JS 题目是什么？\"，你绝不会听到他说是 ES6 模块。但统计数据更能说明问题！我们统计了我们电报频道中各种主题的问答错误答案数量，发现 ES6 模块是最难的主题之一。\n免费体验 Gpt4 plus 与 AI作图神器，我们出的钱 体验地址：点这里\n测验 #1： 53%的答案正确\n// index.mjs\nimport { default } from './module.mjs';\n\nconsole.log(default);\n\n// module.mjs\nexport default 'bar';\n\n首先，让我们记住各种导入和导出语法：\n\n\n如果检查表中的 Import 语法，就会发现没有与我们的代码相匹配的语法：\nimport { default } from ‘./module.mjs’;\n\n因为禁止使用这种语法。测验代码会出现以下错误：\nSyntaxError: Unexpected reserved word\n在 import { default } from ‘./module.mjs’; 行中， default 是 export 的名称，也是该作用域中的变量名称，这是被禁止的，因为 default 是一个保留字。解决方法很简单：\nimport { default as foo } from ‘./module.mjs’;\n\n现在， default 是导出的名称， foo 是变量的名称。换句话说，如果你想在默认导出中使用命名导入语法，就必须重命名它。就是这样，非常简单！\n测验 #2：35% 的正确答案\n// index.js\nconsole.log('index.js');\n\nimport { sum } from './helper.js';\n\nconsole.log(sum(1, 2));\n\n// helper.js\n\nc…",
-          "link": "https://juejin.cn/post/7282691710084857913",
-          "publishedOn": "2023-09-26T00:48:09.000Z",
-          "wordCount": 4067,
-          "title": "50 种 ES6 模块，面试被问麻了",
-          "imageUrl": null
         }
       ]
     },
@@ -1279,7 +1289,7 @@
           "description": "[7073670907851440160#新人报道#] 欢迎使用新鲜上线的DevShots https://gpwzw.com/",
           "link": "https://juejin.cn/pin/7283532551473594425",
           "publishedOn": "2023-09-28T07:52:46.000Z",
-          "wordCount": 526,
+          "wordCount": 528,
           "title": "[7073670907851440160#新人报道#] 欢迎使用新鲜上线的DevShots https://gpwzw.com/",
           "imageUrl": null
         },
@@ -1476,7 +1486,7 @@
           "description": "克莱斯勒从 1963 年到 1964 年，制造了 55 辆使用喷气发动机/燃气轮机的双门硬顶跑车 Chrysl …\n  Remix ｜ 使用喷气发动机的复古未来主义汽车，Chrysler Turbine 查看全文 »",
           "link": "https://nishuang.net/remix-%ef%bd%9c-%e4%bd%bf%e7%94%a8%e5%96%b7%e6%b0%94%e5%8f%91%e5%8a%a8%e6%9c%ba%e7%9a%84%e5%a4%8d%e5%8f%a4%e6%9c%aa%e6%9d%a5%e4%b8%bb%e4%b9%89%e6%b1%bd%e8%bd%a6%ef%bc%8cchrysler-turbine/",
           "publishedOn": "2023-09-26T07:16:30.000Z",
-          "wordCount": 4309,
+          "wordCount": 4120,
           "title": "Remix ｜ 使用喷气发动机的复古未来主义汽车，Chrysler Turbine",
           "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/img_4923-1024x392.jpg"
         },

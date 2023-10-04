@@ -51,8 +51,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-04 datetime="2023-10-04T07:31:00.000Z">2023-10-04</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-04 datetime="2023-10-04T07:31:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-04 datetime="2023-10-04T12:26:00.000Z">2023-10-04</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-04 datetime="2023-10-04T12:26:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -67,6 +67,25 @@
                   <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231004/t20231004_526440865.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市巫溪县发布大雾黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231004/t20231004_526440865.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>巫溪县气象台2023年10月4日20时10分继续发布“大雾黄色预警信号”，预计10月4日20时至5日20时，文峰镇、朝阳镇、尖山镇、红池坝镇、柏杨街道、城厢镇、宁河街道、通城镇、兰英乡、双阳乡、花台乡、田坝镇、古路镇、上磺镇等海拔600米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -777,6 +796,47 @@ geo：存地理位置，支持地理位置之间的距离计算、按照半径�
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7283813865720184871"
+                        open
+                      >
+                        <summary class="article-expander__title">【前端】如何流畅地播放视频</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7283813865720184871">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>最近在做视频相关的项目，自然就遇到了如何让视频顺畅播放的问题
+现在的视频网站，特别是长视频网站，一般不会直接请求一整个视频文件；这样直接导致响应时间过长，用户等待过久
+通常采用流媒体传输协议，就是将视频切成一小段一小段，比如10s为一段，这每一段是一个ts格式的文件，播放器根据播放进度请求对应或提前请求相应的ts视频文件，进而实现流畅播放，即使是点播也能保证顺畅播放
+像一些大型长视频网站，b站、腾讯视频等都是采用流媒体传输协议
+下面先来了解一下一种流媒体传输协议：HLS
+HLS
+HLS是一种基于HTTP的流媒体传输协议，可以实现流媒体的直播和点播，其工作原理就是把整个视频流分成一个个基于HTTP的文件，每次只下载一部分
+HLS协议是由苹果提出的，它包括三个部分：
+HTTP：传输协议
+m3u8：索引文件
+ts文件：音视频媒体信息
+其中，m3u8是一种UTF-8编码的索引纯文本文件，它就像一个播放列表，记录了一段段的视频流ts文件
+前端首先解析m3u8文件，然后通过HTTP请求分片内容即ts文件，然后再使用MSE的appendBuffer进行buffer的封装，完成合流的工作，最后交给播放器进行播放
+实现
+
+我们上传的通常是一个mp4格式的文件，那么就需要将其进行分片，而FFmpeg能够实现将mp4转换为HLS文件
+FFmpeg是一个用于操作、转换流媒体的命令行工具
+首先需要先安装FFmpeg，控制台执行：ffmpeg 不会报错即为安装成功
+第一步：先将mp4视频转化成一个ts文件
+ffmpeg -y -i &#x27;./video.mp4&#x27; -vcodec copy -acodec copy -bsf:v h264_mp4toannexb &quot;./index.ts&quot;
+
+-bsf:v h264_mp4toannexb设置比特流过滤器
+第二步：将改ts文件切成一段一段的小ts文件，并将各个…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -1002,6 +1062,48 @@ webapp 。然后是 node/express/koa ，开始涉及全栈。
 根据上面所说的几点理解，我自身而言并不拒绝，这是在心理方面。
 在能力方面，我认为我是可以去学习和培养得到这份能力的。因为自己做的一个程序库 demo，得到了第一份前端工作。前端工作 2 年后，老板尝试让我做产品，并在过程中得到老板的一些建议。1、做产品就不要去考虑程序实现；2、如果自己是对的，就要去坚持，争执得面…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7283813865719644199"
+                        open
+                      >
+                        <summary class="article-expander__title">由面试题引发的Worker Study</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7283813865719644199">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: scrolls-light
+由场景题扯到了这个
+我： WebWorker我了解到的有两种，一种是Service Worker， 另一种是Shared Worker
+面试官： 你再想想？WebWorker和Service Worker应该是两种东西， 不太一样， 你了解PWA吗
+我： 啊？？-------
+面试官： 那你说说怎么使用Service Worker？
+我: emmm.....不会（我只了解过SharedWorker是new一个实例， 然后用postMessgae通信）
+MDN在介绍Web Worker时有以下描述，
+有许多不同类型的 worker：
+
+专用 worker
+Shared worker
+Service Worker
+故我理解的面试官应该指的不一样应该是专用Worker和Service Worker
+当然， 答案不是很重要， 掌握好具体是什么， 什么场景使用，如何使用才最重要， 耶
+一、什么是Web Worker
+1. 先看MDN介绍：Web Worker 使得在一个独立于 Web 应用程序主执行线程的后台线程中运行脚本操作成为可能。这样做的好处是可以在独立线程中执行费时的处理任务，使主线程（通常是 UI 线程）的运行不会被阻塞/放慢
+Web Worker 的运行不会影响主线程，不过在和主线程进行通信的时候依旧会受到主线程单线程的瓶颈制约
+2. 限制
+不能直接在worker线程中操作 DOM 元素（不能操作DOM的原因我想也很简单， 本来JS设计为单线程就有避免出现多个线程同时操作DOM的情况）
+不能使用 window对象中的某些方法和属性（但是存在WorkerGlobalScope）
+3.worker可以依次生成新的 worker，只要这些 worker 与父页面托管在同一个origin中
+二、什么是专用Worker
+定义： 单个脚本使用…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3052,116 +3154,6 @@ CodeMod 代码重构/升级必知必会 @ 荒山
     
    而且换句话说，青蛙和鱼仍然在我们身体里，我们只是有了更高级的东西把它们包裹了起来。 …</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7282975291000291340"
-                        open
-                      >
-                        <summary class="article-expander__title">每日前端手写题--day2</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282975291000291340">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>以下题目来自掘金等其它博客，但是问题的答案都是根据笔者自己的理解做出的。如果你最近想要换工作或者巩固一下自己的前端知识基础，不妨和我一起参与到每日刷题的过程中来，如何？
-第二天要刷的手写题如下：
-手写一个函数，实现节流。
-手写一个函数，实现防抖。
-手写一个函数，实现简单浅拷贝。
-下面是我自己写的答案：
-1. 手写一个函数，实现节流
-首先，节流的含义可以简单地理解成：在规定的时间内同一个函数不可以被触发超过一次。那么从其实现的功能出发，可以推出实现的策略为：
-建立一个闭包，在闭包中存储函数最后一次执行成功的时间戳lastExeTime；
-然后在每一次尝试性执行此函数的额时候，获取当前的时间戳currentTime，并与最后一次执行成功的时间戳做差const gap &#x3D; currentTime - lastExeTime；
-如果gap的值大于规定值，则证明无需节流，执行函数，然后更新lastExeTime的值；
-如果gap的值小于规定值，则证明还在节流，这个时候什么都不需要做。
-function throttle (fn, wait) {
-    let lastExeTime &#x3D; 0;
-    return function (...args) {
-        const currentTime &#x3D; +new Date();
-        const gap &#x3D; currentTime - lastExeTime;
-        if(gap &gt; wait){
-            lastExeTime &#x3D; currentTime;
-            fn.apply(this, args);
-        }
-    }
-}
-
-2.  手写一个函数，实现防抖
-首先，防抖的含义可以简单地理解成：在函数触发之前必须连续的等待规定的时间。这里需要重点理解连续的…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7282691710084857913"
-                        open
-                      >
-                        <summary class="article-expander__title">50 种 ES6 模块，面试被问麻了</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282691710084857913">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>如果你问开发人员：&quot;对你来说最难的 JS 题目是什么？&quot;，你绝不会听到他说是 ES6 模块。但统计数据更能说明问题！我们统计了我们电报频道中各种主题的问答错误答案数量，发现 ES6 模块是最难的主题之一。
-免费体验 Gpt4 plus 与 AI作图神器，我们出的钱 体验地址：点这里
-测验 #1： 53%的答案正确
-// index.mjs
-import { default } from &#x27;./module.mjs&#x27;;
-
-console.log(default);
-
-// module.mjs
-export default &#x27;bar&#x27;;
-
-首先，让我们记住各种导入和导出语法：
-
-
-如果检查表中的 Import 语法，就会发现没有与我们的代码相匹配的语法：
-import { default } from ‘./module.mjs’;
-
-因为禁止使用这种语法。测验代码会出现以下错误：
-SyntaxError: Unexpected reserved word
-在 import { default } from ‘./module.mjs’; 行中， default 是 export 的名称，也是该作用域中的变量名称，这是被禁止的，因为 default 是一个保留字。解决方法很简单：
-import { default as foo } from ‘./module.mjs’;
-
-现在， default 是导出的名称， foo 是变量的名称。换句话说，如果你想在默认导出中使用命名导入语法，就必须重命名它。就是这样，非常简单！
-测验 #2：35% 的正确答案
-// index.js
-console.log(&#x27;index.js&#x27;);
-
-import { sum } from &#x27;./helper.js&#x27;;
-
-console.log(sum(1, 2));
-
-// helper.js
-
-c…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;14
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -5415,8 +5407,8 @@ Scrum 开发
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6404367063">
-        <time id="build-timestamp" datetime="2023-10-04T09:54:21.616Z">2023-10-04T09:54:21.616Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6406299131">
+        <time id="build-timestamp" datetime="2023-10-04T12:58:33.849Z">2023-10-04T12:58:33.849Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
