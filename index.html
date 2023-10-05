@@ -297,6 +297,50 @@
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7285528146379390991"
+                        open
+                      >
+                        <summary class="article-expander__title">Web版Photoshop来了，用到了哪些前端技术？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7285528146379390991">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>经过 Adobe 工程师多年来的努力，并与 Chrome 等浏览器供应商密切合作，通过 WebAssembly + Emscripten、Web Components + Lit、Service Workers + Workbox 和新的 Web API 的支持，终于在近期推出了 Web 版 Photoshop（photoshop.adobe.com），这在实现高度复杂和图形密集型软件在浏览器中运行方面具有重大意义！
+
+本文就来看看 Photoshop 所使用的 Web 能力、进行的性能优化以及未来可能的发展方向。
+愿景：在浏览器中使用 Photoshop
+Adobe 的愿景就是将 Photoshop 带到浏览器中，让更多的用户能够方便地使用它进行图像编辑和平面设计。过去几十年，Photoshop一直是图像编辑和平面设计的黄金标准，但它只能在桌面上运行。现在，通过将它移植到浏览器中，就打开一个全新的世界。
+Web 版 Photoshop 承诺了无处不在、无摩擦的访问体验。用户只需打开浏览器，就能即时开始使用 Photoshop 进行编辑和协作，而不需要安装任何软件。而且，由于Web是一个跨平台的运行环境，它可以屏蔽底层操作系统的差异，使Photoshop 能够在不同的平台上与用户进行互动。
+
+另外，通过链接的功能，共享工作流变得更加方便。Photoshop文档可以通过URL直接访问。这样，创作者可以轻松地将链接发送给协作者，实现更加便捷的合作。
+但是，实现这个愿景面临着重大的技术挑战，要求重新思考像Photoshop这样强度大的应用如何在Web上运行。
+使用新的 Web 能力
+最近几年出现了一些新的 Web 平台能力，可以通过标准化和实现最终使类似于Photoshop这样的应用成为可能。Adobe工程师们创新地利用了几个关键的下一代API。
+使用 OPFS 实现高性能本地文…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >李继刚的即刻动态</button>
                   <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
                 </h3>
@@ -752,55 +796,6 @@ hello，大家好，我是Sunday。
 Wappalyzer 官网
 Wappalyzer是一款开源的浏览器扩展，用于识别网站所使用的技术栈。它能够检测出使用的Web服务器、内容管理系统、编程语言…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7284143489737818152"
-                        open
-                      >
-                        <summary class="article-expander__title">react教程</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7284143489737818152">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>React脚手架搭建
-Create-react-app基础操作
-当下前端开发的主流是组件化和模块化
-有助于团队协作开发
-便于组件的复用：提高开发效率、方便后期维护、减少冗余代码
-划分组件：
-业务组件：针对项目需求封装
-
-普通业务组件：复用性低，只是单独拆选出来的一个模块
-通用业务组件：具备复用性
-功能组件：适用于多个项目「例如：UI 组件库中的组件」
-
-通用功能组件
-组件化开发必然会带来工程化，即基于 Webpack / Vite / Rollup / Turbopack 等工具实现组件的合并、压缩、打包等。
-安装create-react-app
-我们可以基于webpack自己去搭建一套工程化打包的脚手架，但是过程会非常麻烦和繁琐，因此可以利用官方提供的脚手架create-react-app创建React项目，基于该脚手架创建项目，默认就把 Webpack 的打包规则已经处理好了，把一些项目需要的基本文件也都创建好了。我们可以在其上面做修改
-全局安装 create-react-app 脚手架：
-npm i create-react-app -g
-
-检查 create-react-app 的版本（是否安装完成·）：
-create-react-app --version
-
-创建工程化项目
-创建的命令为：
-create-react-app [项目名称]
-
-项目名称应该仅使用数字、小写字母和下划线 _ 的组合。
-创建的项目中会默认安装：
-react : React框架的核心
-react-dom : React 视图渲染的核心 [基于 React 构建 WebApp（HTML 页面）]
-react-script: 脚手架为了让项目目录看起来干净一点，把 Webpack 打包的规则及相关的插件、预处理器等都隐藏到了 node_modules 目录下，react-scripts 就是脚手…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;31
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -5293,8 +5288,8 @@ Scrum 开发
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6415632892">
-        <time id="build-timestamp" datetime="2023-10-05T06:53:45.345Z">2023-10-05T06:53:45.345Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6417442671">
+        <time id="build-timestamp" datetime="2023-10-05T09:54:10.461Z">2023-10-05T09:54:10.461Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
