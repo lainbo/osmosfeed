@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-10-05T03:53:46.022Z</id>
+    <id>urn:2023-10-05T06:53:45.378Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-10-05T03:53:46.022Z</updated>
+    <updated>2023-10-05T06:53:45.378Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[发布了: “生命中的前 30 年，你培养了习惯； 后 30 年，习惯培养了你。”]]></title>
+        <id>https://m.okjike.com/originalPosts/651e4d9705145f31e5424c4d</id>
+        <link href="https://m.okjike.com/originalPosts/651e4d9705145f31e5424c4d"/>
+        <updated>2023-10-05T05:45:59.000Z</updated>
+        <summary type="html"><![CDATA[“生命中的前 30 年，你培养了习惯；
+后 30 年，习惯培养了你。”]]></summary>
+        <author>
+            <name>李继刚的即刻动态</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[重庆市巫山县发布大风蓝色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/lanseyj/20231004/t20231004_526440911.html</id>
@@ -133,6 +144,43 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[《图解 + 实战》File、Blob、TypeArray、DataView]]></title>
+        <id>https://juejin.cn/post/7284513473316667453</id>
+        <link href="https://juejin.cn/post/7284513473316667453"/>
+        <updated>2023-10-03T03:19:41.000Z</updated>
+        <summary type="html"><![CDATA[theme: fancy
+highlight: a11y-light
+前言
+最近一段时间做过很多关于文件及音视频相关的工作，故此根据个人实践结合资料查询学习，总结了关于文件、二进制相关的内容和大家分享交流，如果文章有不对的地方，恳请指正，✅通过本文，你将了解或者加深对以下概念的认知以及其应用场景：
+File
+Blob
+ArrayBuffer
+TypeArray
+DataView
+Buffer
+FileReader
+URL.createObjectURL
+以及如何实现 ？
+如何预览图片？
+如何截取视频首帧（如果不借助第三方oss能力呢）？
+1. Blob
+Blob是对大数据块的不透明引用或者句柄。名字源于SQL数据库，表示“二进制大数据”（Binary Large Object）。在JavaScript中Blob通常表示二进制数据，但是不一定是大量数据。Blob是不透明的，我们可以对它执行的操作只有获取它的大小，MIME类型和将他切割成更小的Blob。——《JavaScript权威指南》
+1.1 主要用法
+1.1.1 构造函数使用
+第一个参数是一个包含实际数据的数组（二进制数组也行），第二个参数是数据的类型（MIME type）
+
+1.1.2 现有实例使用
+其构造器Blob原型有size和type属性分别表示blob包含数据的大小和数据类型，其原型上方法有text（返回promise）和slice, 其中slice（start, end），返回start和end为切割blob的开始和结束字节点,返回值为blob
+
+1.2 应用场景
+大文件上传（阿里云）时，会对file继承的blob的slice属性，对文件进行切割分片上传
+可以通过blob结合FileReader来把其换成其他需要的数据比如Arraybuffer
+可以暂存arrayBuffer数据，并通过URL.createO…]]></summary>
+        <author>
+            <name>Immer</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[重庆市巫溪县发布大雾黄色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/huangsyj/20231003/t20231003_526439875.html</id>
         <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20231003/t20231003_526439875.html"/>
@@ -170,6 +218,22 @@
         <summary type="html"><![CDATA[云阳县气象台2023年10月2日20时继续发布“大雾黄色预警信号”，预计未来12小时，全县各乡镇（街道）将出现能见度小于500米的大雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。]]></summary>
         <author>
             <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[点亮富文本编辑器的魔力：Selection与Range解密]]></title>
+        <id>https://juejin.cn/post/7284545971609305145</id>
+        <link href="https://juejin.cn/post/7284545971609305145"/>
+        <updated>2023-10-02T10:25:05.000Z</updated>
+        <summary type="html"><![CDATA[可能有人会说真正实现富文本时，是不会用到 Selection 与 Range 等浏览器原生 api 的，为什么还要了解他？
+讲真，我们可以不学习 document.execCommand() 命令, 但是不能不学习 Selection 与 Range，因为 document.execCommand() 所执行的命令不过是对选区的内容进行操作，直接查询 api 有那些命令即可，并且这部分内容在真正实现编辑器的实战中目前是不会再用到的，但 Selection 与 Range 不同，很多编辑器框架中进行文本选择，最终是由框架（如 Prosemirror，slate.js，quill，draft.js等）对 Selection Range 进行封装后提供给我们使用的。所以学习 Selection 与 Range 对后面学习使用 Prosemirror, slate.js 等框架时，理解他们的选区以及使用的底层技术有重要意义。
+除此之外，在使用 contenteditable 元素替换 textarea 元素时，如果要完全拦截输入，自己进行内容拼装，也需要深入理解 Selection 与 Range 才能较好地实现它。
+避免杠精专用说明：使用 contenteditable 替换 textarea 并非易事（需要考虑输入内容不包含标签，处理粘贴，换行，不同浏览器兼容问题）：以下为知名前端前辈张鑫旭写的两篇 contenteditable 替换 textarea 的文章，实现方案尚且存在较多问题，无法投入实际项目，要以较高完成度实现 textarea 的替代品，学习  Selection 与  Range 也是必须的。
+div模拟textarea文本域轻松实现高度自适应---张鑫旭
+小tip: 如何让contenteditable元素只能输入纯文本---张鑫旭
+1. 选区 Select…]]></summary>
+        <author>
+            <name>king王一帅</name>
         </author>
     </entry>
     <entry>
@@ -1223,42 +1287,6 @@ logo长这样：
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[不数不知道,JS数组已经有42个方法了]]></title>
-        <id>https://juejin.cn/post/7283377140199915583</id>
-        <link href="https://juejin.cn/post/7283377140199915583"/>
-        <updated>2023-09-28T02:28:00.000Z</updated>
-        <summary type="html"><![CDATA[theme: channing-cyan
-highlight: arduino-light
-前言
-数组在js中作为一个非常重要的类型之一，在我们对数据处理，存储数据，条件渲染的时候经常会用到，所以随着ES的不断更新，数组的方法也是越来越多，也让我们使用数组对数据操作的时候，越来越简单，但是不经意间，数组的方法已经有42个之多，接下来让我们看看有哪些数组方法从出来就你还没用过的吧！
-数组方法
-数组方法之多，大致可以分为以改变数组本身的，不改变数组本身的（返回一个新的数组），还有就是其他对数组本身功能性作用的方法
-改变数组本身 （7个）
-pop和push尾部删除添加
-这两个方法用于数组结尾的删除和添加
-const arr = [ 1, 2, 3, 4, 5 ]
-//添加到数组的尾端
-arr.push(6) //[1,2,3,4,5,6]
-//再次调用pop方法就删除了最后一位
-arr.pop()//[1,2,3,4,5]
-
-unshift和shift头部删除添加
-用于在数组的首位进行删除和添加
-const arr = [ 1, 2, 3, 4, 5 ]
-//添加到数组的前端
-arr.unshift(6) //[6,1,2,3,4,5]
-//再次调用shift方法就删除了第一位
-arr.shift()//[1,2,3,4,5]
-
-sort 排序
-进行对数组就地排序，不会复制或返回一个新数组，接收可选参数，一个回调函数，有a,b两个参数，当返回a<b时返回-1从小到大排序，当返回a>b时返回1从大到小排序，a==b时返回0，保持原来的排序（默认排序是将元素转换为字符串，然后按照它们的 UTF-16 码元值升序排序。）
-const arr = ["March", "Jan", "Feb", "Dec", 6, 2, "A", "a"];
-arr.sort(function (a, b…]]></summary>
-        <author>
-            <name>iceCode</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[发布了: 来自缅北的诱惑]]></title>
         <id>https://m.okjike.com/originalPosts/6514b17c1589e4a51a19cb43</id>
         <link href="https://m.okjike.com/originalPosts/6514b17c1589e4a51a19cb43"/>
@@ -1436,35 +1464,6 @@ arr.sort(function (a, b…]]></summary>
         <summary type="html"><![CDATA[哈哈哈，程序员的世界，你不懂]]></summary>
         <author>
             <name>Barret李靖的即刻动态</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[打造前端自己的CI/CD集成环境]]></title>
-        <id>https://juejin.cn/post/7283313953382727741</id>
-        <link href="https://juejin.cn/post/7283313953382727741"/>
-        <updated>2023-09-27T08:06:28.000Z</updated>
-        <summary type="html"><![CDATA[theme: fancy
-以前总听说过CI/CD，那什么是CI/CD呢？平时开发过程中，使用到流水线，对项目进行构建，构建完成后，就能直接发布到测试环境，这个是如何实现的呢？
-持续集成
-什么是CI/CD
-CI/CD是Continuous Integration and Continuous Delivery/Deployment的缩写，意思是持续集成和持续交付/部署。CI/CD是一种软件开发流程模型，旨在通过自动化和持续性的构建、测试、部署和交付过程，来提高软件开发和发布的效率和质量。CI/CD的目标是缩短软件开发和发布的周期，降低开发和发布的成本和风险，以满足快速变化和不断迭代的业务需求。
-CI/CD主要包括三个环节：
-持续集成（Continuous Integration，CI）：开发人员将代码不断地提交到源代码管理系统中，该过程中，自动化的测试和构建工具会自动从源代码库中获取最新的代码，进行编译、测试、打包等操作，并生成相应的构建产物。
-持续交付（Continuous Delivery，CD）：将构建产物部署到测试环境，进行测试和验证，最终生成可部署的产物。
-持续部署（Continuous Deployment，CD）：将构建产物部署到生产环境，实现自动化的部署和发布，从而实现快速的交付和迭代。
-本次，我们就需要自己实现一套 CI/CD 环境，实现前端页面快速集成、快速部署。
-
-JENKINS环境配置
-JENKINS基于Docker安装
-详细步骤及介绍，还请查阅
-JENKINS官方文档
-以下摘录了，主要安装步骤：
-docker network create jenkins
-
-docker run --name jenkins-docker --rm --detach \
-  --privileged --network jenkins --network-alias …]]></summary>
-        <author>
-            <name>bonoCat</name>
         </author>
     </entry>
     <entry>
@@ -2305,20 +2304,6 @@ Carl Jung
    但会欣赏的人，光是盯着画中的墙面，就能注意到太多的细节。仔细看这面墙，有钉子投下的阴影；墙上的黑点，是遗留的斑点和污迹；地上，有白色的脱落的粉尘…]]></summary>
         <author>
             <name>文浩</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[发布了: 主动阅读即打一架。 所谓的主动阅读，就是大脑中的已有认知 vs 书中观点， 你要以第三方视角观战，一定要让他们打起来。 如果他们没有打起来，那基本上...]]></title>
-        <id>https://m.okjike.com/originalPosts/65105fc605145f31e519e6a0</id>
-        <link href="https://m.okjike.com/originalPosts/65105fc605145f31e519e6a0"/>
-        <updated>2023-09-24T16:11:50.000Z</updated>
-        <summary type="html"><![CDATA[主动阅读即打一架。
-所谓的主动阅读，就是大脑中的已有认知 vs 书中观点， 你要以第三方视角观战，一定要让他们打起来。
-如果他们没有打起来，那基本上书读完你也就忘了，除了收获读书时的虚假输入感，啥也没剩下。
-你要站在第三方视角，把它们圈在一个角斗场中，让它们厮杀。结果不一定是你死我活，也有可能是两者合体，形成比之前更丰富的认知观点。
-你围观了这么一场架， 对于读过的各本书，还会忘吗？]]></summary>
-        <author>
-            <name>李继刚的即刻动态</name>
         </author>
     </entry>
     <entry>
