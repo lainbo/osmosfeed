@@ -51,11 +51,57 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-06 datetime="2023-10-06T02:32:00.000Z">2023-10-06</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-06 datetime="2023-10-06T02:32:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-06 datetime="2023-10-06T03:15:50.000Z">2023-10-06</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-06 datetime="2023-10-06T03:15:50.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7286112965609373731"
+                        open
+                      >
+                        <summary class="article-expander__title">尤雨溪：Vite的现状与未来展望</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7286112965609373731">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>10 月 5 日 - 6 日，ViteConf 2023 在线举行，Vue 和 Vite 的创建者尤雨溪发表了题为《The State of Vite》 的演讲，他分享了 Vite 的现状与未来展望，本文就来看一看 Vite 现在怎么样了，以及未来的路将怎么走！
+
+Vite 版本发布情况
+首先，来快速回顾一下自上一次 ViteConf 以来， Vite 的版本发布情况。每个版本都有很多更新，这里只关注最主要的功能。
+Vite 4.0
+Vite 4.0 于 2022 年 12 月发布，是上一次 ViteConf 后的主要版本更新。这个版本最大的变化是升级了 Rollup 3。Vite 和 Rollup 同步了主要版本的发布，因此也停止了对旧版 Node.js 的支持。
+
+相较于 Vite 3.0，这是一个更小的主要版本，没有太多的破坏性变化。事实上，Vite 团队的目标是发布一个稳定的版本：充分利用生态系统的 CI 工具来确保与下游项目的兼容性，以尽可能少地影响最终用户。
+除此之外，Vite 还采用了由 Arnaud Barre 最初创建的基于 SWC 的 React 插件，他现在也是 Vite 团队成员！
+Vite 4.1
+Vite 4.1 于 2023 年 2 月发布，该版本主要是将 Rollup 和 esbuild 的版本进行同步。值得注意的是 React 插件的升级：Plugin-react 插件修复了很多热更新（HMR）方面的问题，并且采用 SWC 的版本增加了对 SWC 插件的支持。
+
+Vite 4.2
+Vite 4.2 于 2023 年 3 月发布，该版本的主要改进是提升了 source map 的调试体验。Vite 团队与 Chrome Devtools 团队进行合作，修复了一些长期存在的路径显示问题。通过x_google_ignoreList  source…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -687,6 +733,82 @@ Web 版 Photoshop 承诺了无处不在、无摩擦的访问体验。用户只�
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7285037507368435712"
+                        open
+                      >
+                        <summary class="article-expander__title">Rust笔记 (一) 搭建开发环境</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7285037507368435712">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: channing-cyan
+highlight: an-old-hope
+Rust 是一门强调安全、并发、高效的系统编程语言。无 GC 实现内存安全机制、无数据竞争的并发机制、无运行时开销的抽象机制，是 Rust 独特的优越特性。 它声称解决了传统 C 语言和 C++语言几十年来饱受责难的内存安全问题，同时还保持了很高的运行效率、很深的底层控制、很广的应用范围， 在系统编程领域具有强劲的竞争力和广阔的应用前景。
+1. Rust 环境安装
+Rust 安装起来非常方便，你可以用 rustup.rs 中给出的方法，根据你的操作系统进行安装。比如在 UNIX 系统下，可以直接运行：
+curl --proto &#x27;&#x3D;https&#x27; --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+这会在你的系统上安装 Rust 工具链，之后，你就可以在本地用 cargo new 新建 Rust 项目、尝试 Rust 功能。
+cargo 是 rust 官方推荐使用的项目管理软件。功能大概类似于 java 里面的 maven 和 ant。负责管理依赖项和编译。 安装 rust 时，默认安装(可以自定义为不安装)。它也类似 Node.js 的 npm、Golang 的 go，用来做依赖管理以及开发过程中的任务管理，比如编译、运行、测试、代码格式化等等。
+rustc --version
+cargo --version
+
+如果是 windows ，假如出现 “‘rustc’不是内部或外部命令，也不是可运行的程序或批处理文件” 请在”环境变量”的 Path 中增加 rust 的 bin 目录。
+2. 开发工具
+你可以使用任何编辑器来撰写 Rust 代码，我个人比较喜欢 VS Code，功能强大且速度很快。在 VS Code 下我为 Rust 安装了一些插件，下面是我的安装顺序，你可以参考：
+rust-analyzer：它会实时编译和分析你的 Rust 代码，提示代码中的错误，并对类型进行标注。你也可以使用官方的 Rust 插件取代。
+
+rust syntax：为代码提供语法高亮。
+
+crates：帮助你分析当前项目的依赖是否是最新的版本。
+
+Crates 提供了一系列强大的功能来简化您的 Rust 开发工作流程：版本信息：Crates 提供全面的版本信息，让您随时了解项目中的 crate。其中包括包含详细版本详细信息的工具提示和内嵌视觉反馈，以供快速参考和决策。快捷命令：只需一个命令即可更新所有依赖项，以实现无缝工作流程。Crev 集成：通过与Crev集成来访问有价值的代码审查和社区协作。获取反馈并就您所依赖的板条箱做出明智的决定。Doc.rs 集成：通过Doc.rs的无缝集成，探索 Rust 的全面文档，包括包、库等。获得深入的知识和见解以增强您的编码体验。
+even better toml：Rust 使用 toml 做项目的配置管理。better toml 可以帮你语法高亮，并展示 toml 文件中的错误。
+
+rust test lens：可以帮你快速运行某个 Rust 测试。
+
+Tabnine：基于 AI 的自动补全，可以帮助你更快地撰写代码。
+
+
+3. 生成一个新的 Rust 项目
+开发工具准备好之后，我们用 cargo new my-rust 生成一个新项目。默认情况下，这条命令会生成一个可执行项目 my-rust，入口在 src/main.rs。Cargo.toml 是 Rust 项目的配置管理文件，它符合 toml 的语法。
+
+
+最后运行一下我们的 rust 项目。
+cargo run
+
+这样一来我们的 rust 开发环境就搭建好了。
+4. 写第一个 Rust 程序
+4.1 一个小爬虫
+通过 rust 抓取掘金首页。
+use std::fs;
+
+fn main() {
+    let url &#x3D; &quot;https://juejin.cn/&quot;;
+    let output &#x3D; &quot;rust.md&quot;;
+
+    println!(&quot;Fetching url: {}&quot;, url);
+    let body &#x3D; reqwest::blocking::get(url).unwrap().text().unwrap();
+
+    println!(&quot;Converting html to markdown...&quot;);
+    let md &#x3D; html2md::parse_html(&amp;body);
+
+    fs::write(output, md.as_bytes()).unwrap();
+    println!(&quot;Converted markdown hash been saved in {}&quot;, output);
+}
+
+
+Bingo！我们第一个 Rust 程序运行成功！</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7284990242813329423"
                         open
                       >
@@ -975,139 +1097,11 @@ Blob是对大数据块的不透明引用或者句柄。名字源于SQL数据库�
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-02 datetime="2023-10-02T13:32:00.000Z">2023-10-02</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-02 datetime="2023-10-02T13:32:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-02 datetime="2023-10-02T15:05:09.000Z">2023-10-02</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-02 datetime="2023-10-02T15:05:09.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >国家应急广播 - 重庆预警信息</button>
-                  <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439629.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市万盛经开区发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439629.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>万盛经开区气象台2023年10月2日21时20分继续发布“大雾黄色预警信号”，我区万东镇、金桥镇、黑山镇、石林镇已出现能见度小于500米的雾并将持续，预计2日22时至3日10时，东林街道、万盛街道、丛林镇、关坝镇、青年镇、南桐镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439614.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市巫溪县发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439614.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>巫溪县气象台2023年10月2日20时20分继续发布“大雾黄色预警信号”，受降雨影响，预计未来12小时，我县文峰镇、上磺镇、古路镇、塘坊镇、菱角镇、尖山镇、朝阳镇、通城镇、双阳乡、胜利乡、城厢镇、宁厂镇、红池坝镇、长桂乡等海拔600米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439601.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市云阳县发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439601.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>云阳县气象台2023年10月2日20时继续发布“大雾黄色预警信号”，预计未来12小时，全县各乡镇（街道）将出现能见度小于500米的大雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439351.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市巫山县发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439351.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>巫山县气象台2023年10月2日11时10分发布“大雾黄色预警信号”，预计2日11时至23时，当阳乡、官阳镇、金坪乡、骡坪镇、竹贤乡、巫峡镇、龙门街道、高唐街道、曲尺乡、建平乡、铜鼓镇、红椿乡、笃坪乡、邓家乡等海拔600米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439247.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市巫溪县发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439247.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>巫溪县气象台2023年10月2日9时继续发布“大雾黄色预警信号”，受降雨影响，预计未来12小时，我县文峰镇、上磺镇、古路镇、塘坊镇、菱角镇、尖山镇、朝阳镇、通城镇、双阳乡、胜利乡、城厢镇、宁厂镇、红池坝镇、长桂乡等海拔600米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439190.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市巴南区发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439190.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>巴南区气象台2023年10月2日08时10分发布“大雾黄色预警信号”，受降雨影响，预计2日08时10分至18时，我区姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -1119,6 +1113,39 @@ Blob是对大数据块的不透明引用或者句柄。名字源于SQL数据库�
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7284417436752904253"
+                        open
+                      >
+                        <summary class="article-expander__title">Tailwind CSS 很好，但不适合我</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7284417436752904253">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言
+在一个月前，我选择了 Tailwind CSS 用于一个企业官网的开发。一个月后，项目经过了几次小版本迭代，我对 Tailwind CSS 的使用小有心得。本文将阐述我在企业开发中使用 Tailwind CSS 后对它的看法。
+什么是 Tailwind CSS？
+Tailwind CSS 是一个高度可定制的 CSS 框架，它旨在帮助开发人员快速构建现代化、响应式的网页界面。与其他框架如Bootstrap不同，Tailwind CSS 不依赖于预定义的样式类，而是提供一组原子级的样式类，开发人员可以根据需要自由组合这些类来构建页面。
+Tailwind CSS 的核心概念是原子级类，每个类都对应一个具体的样式属性或操作，例如字体大小、颜色、边距、宽度等。通过组合这些类，可以快速地定义所需的样式，并实现样式的可复用性和可定制性。
+使用 Tailwind CSS，开发人员可以避免编写大量重复的 CSS 代码，而是直接使用预定义的类进行构建，从而提高开发效率。同时，由于每个类只负责一个具体的样式属性，因此更容易理解和维护。
+Tailwind CSS 还提供了一套强大的工具和插件，用于辅助开发过程，例如响应式布局、动画效果、自定义主题等。它还支持通过配置文件进行项目定制，开发人员可以根据项目需求选择性地启用或禁用某些特性。
+总之，Tailwind CSS 是一个灵活、高效、可扩展的 CSS 框架，旨在帮助开发人员快速构建现代化的网页界面。
+使用前我希望 Tailwind CSS 带来什么？
+不再为 CSS 命名而烦恼。
+更快更简单地实现样式。
+项目整体样式风格保持一致。
+Tailwind CSS 实际带来了什么？
+命名更简单了
+使用 Tailwind CSS 后，开发人员可以避免为 CSS 类命名而烦恼的情况，因为它采用了一种基于原子级类的设计思想。这意味着每个类只负责一个具体的…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -1276,6 +1303,134 @@ react : React框架的核心
 react-dom : React 视图渲染的核心 [基于 React 构建 WebApp（HTML 页面）]
 react-script: 脚手架为了让项目目录看起来干净一点，把 Webpack 打包的规则及相关的插件、预处理器等都隐藏到了 node_modules 目录下，react-scripts 就是脚手…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;31
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >国家应急广播 - 重庆预警信息</button>
+                  <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439629.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市万盛经开区发布大雾黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439629.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>万盛经开区气象台2023年10月2日21时20分继续发布“大雾黄色预警信号”，我区万东镇、金桥镇、黑山镇、石林镇已出现能见度小于500米的雾并将持续，预计2日22时至3日10时，东林街道、万盛街道、丛林镇、关坝镇、青年镇、南桐镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439614.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市巫溪县发布大雾黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439614.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>巫溪县气象台2023年10月2日20时20分继续发布“大雾黄色预警信号”，受降雨影响，预计未来12小时，我县文峰镇、上磺镇、古路镇、塘坊镇、菱角镇、尖山镇、朝阳镇、通城镇、双阳乡、胜利乡、城厢镇、宁厂镇、红池坝镇、长桂乡等海拔600米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439601.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市云阳县发布大雾黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439601.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>云阳县气象台2023年10月2日20时继续发布“大雾黄色预警信号”，预计未来12小时，全县各乡镇（街道）将出现能见度小于500米的大雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439351.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市巫山县发布大雾黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439351.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>巫山县气象台2023年10月2日11时10分发布“大雾黄色预警信号”，预计2日11时至23时，当阳乡、官阳镇、金坪乡、骡坪镇、竹贤乡、巫峡镇、龙门街道、高唐街道、曲尺乡、建平乡、铜鼓镇、红椿乡、笃坪乡、邓家乡等海拔600米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439247.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市巫溪县发布大雾黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439247.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>巫溪县气象台2023年10月2日9时继续发布“大雾黄色预警信号”，受降雨影响，预计未来12小时，我县文峰镇、上磺镇、古路镇、塘坊镇、菱角镇、尖山镇、朝阳镇、通城镇、双阳乡、胜利乡、城厢镇、宁厂镇、红池坝镇、长桂乡等海拔600米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439190.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市巴南区发布大雾黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231002/t20231002_526439190.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>巴南区气象台2023年10月2日08时10分发布“大雾黄色预警信号”，受降雨影响，预计2日08时10分至18时，我区姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2169,129 +2324,6 @@ lib/
                             <span class="media-object__text">
                               <span>万盛经开区气象台2023年9月29日20时40分发布“大雾黄色预警信号”，我区万东镇、金桥镇、黑山镇、石林镇已出现能见度小于500米的雾并将持续，预计29日21时至30日09时，东林街道、万盛街道、丛林镇、关坝镇、青年镇、南桐镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7283797053338517545"
-                        open
-                      >
-                        <summary class="article-expander__title">这才是真正让你入门 TypeScript 类型体操的文章！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7283797053338517545">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>欢迎关注公众号《前端界》，文章会同步更新，也可快速加入前端交流群！
-通过本文你能学到什么？
-typescript 类型体操的脑图
-
-keyof 操作符的使用
-TypeScript 中的映射类型使用，以及映射类型结合as&#x60; 关键字的使用
-extends 条件判断类型的基本使用
-infer 关键字的使用
-通过这些基础知识真实场景改造你现在的代码(用其中一篇文章 函数参数的例子来写)
-如果你觉得你 TypeScript 已经入门，且前文提到的知识点你都会，可以先尝试一下本文的 5 道题，如果都能完成，并且对每道题中用到的知识点都理解为什么？可以忽略本文。
-前置知识
-联合类型 ｜
-联合类型用 ｜ 分隔符，联合类型产生一个包含所有类型的选择集类型。联合类型表示一个值可以是几种类型之一，当一个变量希望传入某种类型时，可以考虑使用联合类型。
-type IdType &#x3D; string ｜ number ｜ boolean;
-
-let id: IdType;
-
-当变量 id 被 IdType 定义时候，id 值可以是 string 或者 number 或者 boolean 类型
-交叉类型 &amp;
-交叉类型用 &amp; 分隔符，交叉类型产生一个包含所有属性的新类型。交叉类型可以更好的帮忙我们进行代码复用。
-交叉类型在使用的时候有时候会产生一个新的类型 never,一般产生这种情况是两个 interface 使用交叉类型 &amp; 进行处理，在 interface1 中有一个 name:string ,在 interface2 中有一个name:number，对于这种情况最后产生的新 interface ,里面的 name 属性类型会变为 never 类型 。 因为没有一个类型即是 string 类型又是number 类型。
-交叉类型应用例子
-联合类型大家应该很好理解，但是交叉类型可能不那么好理解，看一下下面的…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;17
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7283766466083536932"
-                        open
-                      >
-                        <summary class="article-expander__title">Vue.js + Electron 炸裂组合，打造跨平台桌面应用！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7283766466083536932">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: channing-cyan
-highlight: androidstudio
-Vue.js + Electron 炸裂组合，打造跨平台桌面应用！
-本文介绍了 Vue.js 和 Electron 的基本特点和原理，并分析了它们在桌面应用程序开发中的优势和应用场景。在基于 Vue.js 和 Electron 的桌面应用程序开发实践中，本文详细介绍了项目的搭建和配置，包括环境的准备、项目的初始化和依赖的安装等步骤。然后，本文介绍了使用 Vue.js 进行界面设计和组件开发的方法，并提供了相关的示例代码和实现细节。接下来，本文探讨了 Electron 主进程和渲染进程的开发，包括窗口管理、文件系统访问和与底层系统交互等方面的内容。最后，本文对基于 Vue.js 和 Electron 的桌面应用程序开发做出了总结，并展望了未来的发展方向和应用前景。
-1 Vue.js 和 Electron 简介
-1.1 Vue.js 概述
-Vue.js 是一个流行的 JavaScript 前端框架，用于构建用户界面。它采用了 MVVM（Model-View-ViewModel）的架构模式，通过双向数据绑定将视图和数据进行关联。Vue.js 的设计目标是使开发者能够逐步采用和应用它，同时也能够与已有的项目和库进行无缝集成。
-以下是 Vue.js 的主要特点和优势：
-简洁：Vue.js 提供了简单而直观的 API，使开发者能够快速上手并构建复杂的应用程序。它的模板语法清晰明了，易于理解和编写。
-响应式：Vue.js 使用数据劫持和观察者模式来实现响应式数据绑定。当数据发生变化时，相关的视图会自动更新。通过这种机制，开发者可以将精力集中在数据逻辑上，而不必手动操作 DOM。
-组件化：Vue.js 通过组件化的方式来构建用户界面。开发者可以将应用程序拆分为多个独立的、可重用的组件，每个组件都包含…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7283748394601840680"
-                        open
-                      >
-                        <summary class="article-expander__title">前端代码Review，一次性掰扯明白！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7283748394601840680">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>@主要Review的指标
-
-前端代码Review主要关注以下几个方面：
-1. 代码质量：代码是否简洁、易读、易维护。是否遵循了一致的编码风格和规范，例如ESLint、Prettier等。
-功能实现：代码是否实现了预期的功能，是否有潜在的bug或逻辑错误。
-性能优化：代码是否进行了必要的性能优化，例如避免不必要的渲染、使用了合适的数据结构和算法等。
-安全性：代码是否存在可能的安全风险，例如XSS攻击、CSRF攻击等。
-5. 可测试性：代码是否易于测试，是否有单元测试和集成测试。
-可读性：代码是否易于理解，是否有足够的注释和文档。
-可复用性：代码是否有高度的模块化和复用性。
-兼容性：代码是否兼容不同的浏览器和设备。
-助记：功性读复全兼测
-@功能Review
-无需人为检测，但注释要写明白，TS类型要写清楚，让用的人如沐春风；
-该匹配单元测试的建议配套单元测试，不落人以口实~
-@性能Review
-前端代码中一些典型的、肉眼可见的需要性能优化的地方包括：
-1. 过度渲染：如果你的应用在没有必要的情况下进行了过多的渲染，这可能会导致性能问题。例如，在React中，如果你的组件在props没有改变的情况下进行了重新渲染，那么你可能需要使用shouldComponentUpdate/SCU或React.PureComponent或useEffect来避免不必要的渲染。
-大量DOM操作：频繁的DOM操作是非常耗费性能的。如果你的代码中有大量的DOM操作，你可能需要考虑使用虚拟DOM或其他优化技术（例如DocumentFragment）。
-大量的网络请求：如果你的应用发送了大量的网络请求，这可能会导致性能问题。你可能需要考虑使用缓存、预加载、懒加载等技术来减少网络请求。
-大型JavaScript文件：如果你的JavaScript文件过大，这可能会导致加载和解析时间过长。你可能需要考虑使用代码分…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -5273,8 +5305,8 @@ Scrum 开发
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6430125676">
-        <time id="build-timestamp" datetime="2023-10-06T09:53:47.196Z">2023-10-06T09:53:47.196Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6431907403">
+        <time id="build-timestamp" datetime="2023-10-06T12:57:57.698Z">2023-10-06T12:57:57.698Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
