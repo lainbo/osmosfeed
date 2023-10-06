@@ -1832,6 +1832,48 @@ webapp 。然后是 node/express/koa ，开始涉及全栈。
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7283813865719644199"
+                        open
+                      >
+                        <summary class="article-expander__title">由面试题引发的Worker Study</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7283813865719644199">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: scrolls-light
+由场景题扯到了这个
+我： WebWorker我了解到的有两种，一种是Service Worker， 另一种是Shared Worker
+面试官： 你再想想？WebWorker和Service Worker应该是两种东西， 不太一样， 你了解PWA吗
+我： 啊？？-------
+面试官： 那你说说怎么使用Service Worker？
+我: emmm.....不会（我只了解过SharedWorker是new一个实例， 然后用postMessgae通信）
+MDN在介绍Web Worker时有以下描述，
+有许多不同类型的 worker：
+
+专用 worker
+Shared worker
+Service Worker
+故我理解的面试官应该指的不一样应该是专用Worker和Service Worker
+当然， 答案不是很重要， 掌握好具体是什么， 什么场景使用，如何使用才最重要， 耶
+一、什么是Web Worker
+1. 先看MDN介绍：Web Worker 使得在一个独立于 Web 应用程序主执行线程的后台线程中运行脚本操作成为可能。这样做的好处是可以在独立线程中执行费时的处理任务，使主线程（通常是 UI 线程）的运行不会被阻塞/放慢
+Web Worker 的运行不会影响主线程，不过在和主线程进行通信的时候依旧会受到主线程单线程的瓶颈制约
+2. 限制
+不能直接在worker线程中操作 DOM 元素（不能操作DOM的原因我想也很简单， 本来JS设计为单线程就有避免出现多个线程同时操作DOM的情况）
+不能使用 window对象中的某些方法和属性（但是存在WorkerGlobalScope）
+3.worker可以依次生成新的 worker，只要这些 worker 与父页面托管在同一个origin中
+二、什么是专用Worker
+定义： 单个脚本使用…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7283798844235890723"
                         open
                       >
@@ -2388,67 +2430,6 @@ Vue.js 是一个流行的 JavaScript 前端框架，用于构建用户界面。�
                               <span>Google 将关闭 Google Podcasts，随便吧，反正我厌恶它🤷‍♂️ Google Podcasts 的 UI 设计有个特别奇怪的特征：UI 尤其是列表 UI 的设计很简洁，但缺乏好用、有用的感觉。 小结一下，Google Podcasts 界面设计最大的问题是：视觉元素缺乏层级关系（Hierarchy）。 或者更通俗一点说，界面里的标题、摘要、标签、图标、按钮等等不同视觉元素之间没 …
   设计 | UI 设计里，简单不等于容易使用设计 查看全文 »</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;14
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7283719464905900087"
-                        open
-                      >
-                        <summary class="article-expander__title">用了这么久的axios，没想到源码居然这么简单！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7283719464905900087">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>1 前言
-相信做前端的同学们，应该没有人没听说过axios的鼎鼎大名吧！
-用了这么久的axios，是否也会好奇axios是如何实现的呢？
-今天就让我们走进axios的源码，学习这款神级工具是如何实现的吧！
-2 axios的实例与请求流程
-在阅读源码之前，先大概了解一下axios实例的属性和请求整体流程，带着这些概念，阅读源码可以轻松不少！
-下图是axios实例属性的简图。
-
-可以看到axios的实例上，其实主要就这三个东西：
-config：配置，比如url、method、params、headers等等
-interceptors ：拦截器，分为请求拦截器和返回拦截器。
-request：调用xhr或者http请求的方法，参数就是config
-由于调用request方法的时候可以再次传入config，但是不能传入interceptors，所以拦截器一定是要在请求之前就在axios上添加好，不能临时加。
-下图是axios的请求流程，其实相当简单，先了解这个流程，看源码的时候就会有方向。
-
-3 源码文件结构解析
-axios的源码都在lib文件夹下，最核心的内容在core文件夹里。
-lib
-│  axios.js    // 最终导出的文件
-│  utils.js    // 工具类
-├─adapters     // 适配器相关
-│      adapters.js //适配器类
-│      http.js     // node请求
-│      xhr.js      // 浏览器请求
-├─cancel      // 取消功能相关
-│      CanceledError.js //取消异常类
-│      CancelToken.js   //取消token类
-│      isCancel.js      //判断是否取消
-├─core       // 核心功能相关 …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;17
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -5305,8 +5286,8 @@ Scrum 开发
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6427256504">
-        <time id="build-timestamp" datetime="2023-10-06T03:54:46.178Z">2023-10-06T03:54:46.178Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6428449665">
+        <time id="build-timestamp" datetime="2023-10-06T06:54:03.027Z">2023-10-06T06:54:03.027Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

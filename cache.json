@@ -23,7 +23,7 @@
           "description": "起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/",
           "publishedOn": "2023-09-17T08:06:56.000Z",
-          "wordCount": 1485,
+          "wordCount": 1484,
           "title": "又get到了，JS复制图片到剪切板",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "自己体验了下，出乎意料，HTML elementtiming属性在性能监控这块，比预想的要实用的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/html-elementtiming-attribute/",
           "publishedOn": "2023-09-15T15:58:22.000Z",
-          "wordCount": 932,
+          "wordCount": 931,
           "title": "HTML elementtiming属性初体验记录",
           "imageUrl": null
         },
@@ -1107,6 +1107,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7283813865719644199",
+          "author": "好好吃饭好好睡觉",
+          "description": "theme: scrolls-light\n由场景题扯到了这个\n我： WebWorker我了解到的有两种，一种是Service Worker， 另一种是Shared Worker\n面试官： 你再想想？WebWorker和Service Worker应该是两种东西， 不太一样， 你了解PWA吗\n我： 啊？？-------\n面试官： 那你说说怎么使用Service Worker？\n我: emmm.....不会（我只了解过SharedWorker是new一个实例， 然后用postMessgae通信）\nMDN在介绍Web Worker时有以下描述，\n有许多不同类型的 worker：\n\n专用 worker\nShared worker\nService Worker\n故我理解的面试官应该指的不一样应该是专用Worker和Service Worker\n当然， 答案不是很重要， 掌握好具体是什么， 什么场景使用，如何使用才最重要， 耶\n一、什么是Web Worker\n1. 先看MDN介绍：Web Worker 使得在一个独立于 Web 应用程序主执行线程的后台线程中运行脚本操作成为可能。这样做的好处是可以在独立线程中执行费时的处理任务，使主线程（通常是 UI 线程）的运行不会被阻塞/放慢\nWeb Worker 的运行不会影响主线程，不过在和主线程进行通信的时候依旧会受到主线程单线程的瓶颈制约\n2. 限制\n不能直接在worker线程中操作 DOM 元素（不能操作DOM的原因我想也很简单， 本来JS设计为单线程就有避免出现多个线程同时操作DOM的情况）\n不能使用 window对象中的某些方法和属性（但是存在WorkerGlobalScope）\n3.worker可以依次生成新的 worker，只要这些 worker 与父页面托管在同一个origin中\n二、什么是专用Worker\n定义： 单个脚本使用…",
+          "link": "https://juejin.cn/post/7283813865719644199",
+          "publishedOn": "2023-09-30T12:08:13.000Z",
+          "wordCount": 2541,
+          "title": "由面试题引发的Worker Study",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7283798844235890723",
           "author": "Chil1",
           "description": "theme: juejin\nhighlight: agate\n解决痛点\n最近在项目中碰到一个优化场景：订单列表页订单信息较多时，每次查看详情后返回时，由于重新调用接口导致页面重新渲染，滚轮不会停留在原始位置。造成用户每次返回都要重新下拉，体验感极差。\n解决方案\nkeep-alive组件缓存\n<keep-alive>包裹的动态组件会被缓存，它是一个抽象组件，自身不会渲染一个dom对象，也不会出现在父组件链中。当组件在<keep-alive>内被切换时，它的activated和deactivated这两个生命周期钩子函数将会被对应执行。\n<keep-alive :include=\"componentsList\">\n      <router-view></router-view>\n</keep-alive>\n\ninclude（包含）属性是一个被缓存组件name的数组。其中的组件都会被缓存。\nexclude（排除）属性是一个不被缓存组件name的数组。其中的组件都不会被缓存。\n如果需要缓存的页面太多，在数组中一个个添加组件的name，显然有点太繁琐了。可以利用路由中的meta来进行控制我们需要进行缓存的页面。\n{\n    path: '/first',\n    name: 'first',\n    component: () => import('../views/orderInfoList.vue'),\n    meta: { \n        keepAlive: true, //设置组件缓存\n     }\n  },\n  {\n    path: '/second',\n    name: 'second',\n    component: () => import('../views/oderInfoDetial.vue')\n  },\n\n<keep-alive> 组件可以将需要缓…",
@@ -1164,16 +1174,6 @@
           "publishedOn": "2023-09-29T00:55:46.000Z",
           "wordCount": 1567,
           "title": "react+IntersectionObserver实现页面丝滑帧动画",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7283719464905900087",
-          "author": "敏哥要成为大神",
-          "description": "1 前言\n相信做前端的同学们，应该没有人没听说过axios的鼎鼎大名吧！\n用了这么久的axios，是否也会好奇axios是如何实现的呢？\n今天就让我们走进axios的源码，学习这款神级工具是如何实现的吧！\n2 axios的实例与请求流程\n在阅读源码之前，先大概了解一下axios实例的属性和请求整体流程，带着这些概念，阅读源码可以轻松不少！\n下图是axios实例属性的简图。\n\n可以看到axios的实例上，其实主要就这三个东西：\nconfig：配置，比如url、method、params、headers等等\ninterceptors ：拦截器，分为请求拦截器和返回拦截器。\nrequest：调用xhr或者http请求的方法，参数就是config\n由于调用request方法的时候可以再次传入config，但是不能传入interceptors，所以拦截器一定是要在请求之前就在axios上添加好，不能临时加。\n下图是axios的请求流程，其实相当简单，先了解这个流程，看源码的时候就会有方向。\n\n3 源码文件结构解析\naxios的源码都在lib文件夹下，最核心的内容在core文件夹里。\nlib\n│  axios.js    // 最终导出的文件\n│  utils.js    // 工具类\n├─adapters     // 适配器相关\n│      adapters.js //适配器类\n│      http.js     // node请求\n│      xhr.js      // 浏览器请求\n├─cancel      // 取消功能相关\n│      CanceledError.js //取消异常类\n│      CancelToken.js   //取消token类\n│      isCancel.js      //判断是否取消\n├─core       // 核心功能相关 …",
-          "link": "https://juejin.cn/post/7283719464905900087",
-          "publishedOn": "2023-09-28T13:47:56.000Z",
-          "wordCount": 5216,
-          "title": "用了这么久的axios，没想到源码居然这么简单！",
           "imageUrl": null
         },
         {
