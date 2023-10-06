@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-10-06T06:54:03.066Z</id>
+    <id>urn:2023-10-06T09:53:47.226Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-10-06T06:54:03.066Z</updated>
+    <updated>2023-10-06T09:53:47.226Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -131,6 +131,50 @@
 对每个人而言，真正的职责只有一个：找到自我。然后在心中坚守其一生，全心全意，永不停息。所有其它的路都是不完整的，是人的逃避方式，是对大众理想的懦弱回归，是随波逐流，是对内心的恐惧。❞ | 赫尔曼·黑塞《德米安》]]></summary>
         <author>
             <name>李继刚的即刻动态</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JsDoc vs TypeScript]]></title>
+        <id>https://juejin.cn/post/7285608128039960631</id>
+        <link href="https://juejin.cn/post/7285608128039960631"/>
+        <updated>2023-10-05T06:10:31.000Z</updated>
+        <summary type="html"><![CDATA[theme: cyanosis
+本文首发微信公众号「码上花甲」。
+近期社区中不少工具放弃了 TypeScript 转而用上了 JsDoc。
+咱不评价这种做法是否值得推荐，但是，有一些项目从一开始就没有使用 TypeScript。这种情况下直接迁移到 TypeScript 成本会很高，那能否用 JsDoc 来“代替” TypeScript 呢？
+答案是可行的。
+我们不能因为 TS 而一定要用 TS，必须要结合项目实际情况来确定。
+不过 JsDoc 也有很多细节，是你可能没注意到的。除了静态类型检查之外，JsDoc 的能力还是蛮强大的。
+今天，我们就结合 TS 来看下 JsDoc 都能干哪些事情。
+1. 变量的类型
+在 TS 中，要给一个变量定义类型很简单：
+let name: string = 'Randal';
+
+使用 TS，直接在变量 name 后面定义为 string 类型即可。
+JsDoc 也能做到：
+/** @type {string} */
+let name = 'Randal';
+
+编辑器同样可以识别出 JsDoc 注释的变量类型：
+
+像其他基本类型，JsDoc 也都支持，比如 number 类型。
+/** @type {number} */
+let age = 30;
+
+除了上面这种简单的基本类型之外，JsDoc 还支持联合类型。在 TS 中的写法是这样的：
+const personName: 'Randal' | 'Olive' | 'Jack' = 'Randal';
+
+JsDoc 的写法稍微麻烦一点，但也能很好的支持：
+/**
+ * @typedef {'Randal' | 'Olive' | 'Jack'} PersonName
+ */
+
+/**
+ * @type {PersonName}
+ */
+const personName = 'Randal'…]]></summary>
+        <author>
+            <name>码上花甲</name>
         </author>
     </entry>
     <entry>
@@ -1259,77 +1303,6 @@ Vue.js 是一个流行的 JavaScript 前端框架，用于构建用户界面。�
 人性化的侧边栏函数、变量、符号列表操作和展示]]></summary>
         <author>
             <name>陈随易</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[react+IntersectionObserver实现页面丝滑帧动画]]></title>
-        <id>https://juejin.cn/post/7283766466083176484</id>
-        <link href="https://juejin.cn/post/7283766466083176484"/>
-        <updated>2023-09-29T00:55:46.000Z</updated>
-        <summary type="html"><![CDATA[theme: smartblue
-实现效果：
-加入帧动画前：
-
-普通的静态页面
-加入帧动画后：
-
-可以看到，加入帧动画后，页面效果还是比较丝滑的。
-技术实现
-加入animation动画类
-先用 **scss **定义三种动画类：
-.withAnimation {
-  .fade1 {
-    animation: fadeInDown1 1s;
-  }
-
-  .fade2 {
-    animation: fadeInDown2 1.25s;
-  }
-
-  .fade3 {
-    animation: fadeInDown2 1.5s;
-  }
-}
-
-@keyframes fadeInDown1 {
-  0% {
-    transform: translate3d(0, 40px, 0);
-    opacity: 0;
-  }
-
-  22% {
-    transform: translate3d(0, 40px, 0);
-    opacity: 0;
-  }
-
-  100% {
-    -webkit-transform: none;
-    transform: none;
-    opacity: 1;
-  }
-}
-@keyframes fadeInDown2 {
-  0% {
-    transform: translate3d(0, 40px, 0);
-    opacity: 0;
-  }
-
-  44% {
-    transform: translate3d(0, 40px, 0);
-    opacity: 0;
-  }
-
-  100% {
-    -webkit-transform: none;
-    transform: none;
-    opacity: 1;
-  }
-}
-@keyframes fadeInDown3 {
-  0% {
-  …]]></summary>
-        <author>
-            <name>阿泽爱干饭</name>
         </author>
     </entry>
     <entry>

@@ -376,6 +376,73 @@
                 </section>
               </section>
             </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7285608128039960631"
+                        open
+                      >
+                        <summary class="article-expander__title">JsDoc vs TypeScript</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7285608128039960631">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: cyanosis
+本文首发微信公众号「码上花甲」。
+近期社区中不少工具放弃了 TypeScript 转而用上了 JsDoc。
+咱不评价这种做法是否值得推荐，但是，有一些项目从一开始就没有使用 TypeScript。这种情况下直接迁移到 TypeScript 成本会很高，那能否用 JsDoc 来“代替” TypeScript 呢？
+答案是可行的。
+我们不能因为 TS 而一定要用 TS，必须要结合项目实际情况来确定。
+不过 JsDoc 也有很多细节，是你可能没注意到的。除了静态类型检查之外，JsDoc 的能力还是蛮强大的。
+今天，我们就结合 TS 来看下 JsDoc 都能干哪些事情。
+1. 变量的类型
+在 TS 中，要给一个变量定义类型很简单：
+let name: string &#x3D; &#x27;Randal&#x27;;
+
+使用 TS，直接在变量 name 后面定义为 string 类型即可。
+JsDoc 也能做到：
+/** @type {string} */
+let name &#x3D; &#x27;Randal&#x27;;
+
+编辑器同样可以识别出 JsDoc 注释的变量类型：
+
+像其他基本类型，JsDoc 也都支持，比如 number 类型。
+/** @type {number} */
+let age &#x3D; 30;
+
+除了上面这种简单的基本类型之外，JsDoc 还支持联合类型。在 TS 中的写法是这样的：
+const personName: &#x27;Randal&#x27; | &#x27;Olive&#x27; | &#x27;Jack&#x27; &#x3D; &#x27;Randal&#x27;;
+
+JsDoc 的写法稍微麻烦一点，但也能很好的支持：
+/**
+ * @typedef {&#x27;Randal&#x27; | &#x27;Olive&#x27; | &#x27;Jack&#x27;} PersonName
+ */
+
+/**
+ * @type {PersonName}
+ */
+const personName &#x3D; &#x27;Randal&#x27;…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -2224,86 +2291,6 @@ Vue.js 是一个流行的 JavaScript 前端框架，用于构建用户界面。�
 大量DOM操作：频繁的DOM操作是非常耗费性能的。如果你的代码中有大量的DOM操作，你可能需要考虑使用虚拟DOM或其他优化技术（例如DocumentFragment）。
 大量的网络请求：如果你的应用发送了大量的网络请求，这可能会导致性能问题。你可能需要考虑使用缓存、预加载、懒加载等技术来减少网络请求。
 大型JavaScript文件：如果你的JavaScript文件过大，这可能会导致加载和解析时间过长。你可能需要考虑使用代码分…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7283766466083176484"
-                        open
-                      >
-                        <summary class="article-expander__title">react+IntersectionObserver实现页面丝滑帧动画</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7283766466083176484">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: smartblue
-实现效果：
-加入帧动画前：
-
-普通的静态页面
-加入帧动画后：
-
-可以看到，加入帧动画后，页面效果还是比较丝滑的。
-技术实现
-加入animation动画类
-先用 **scss **定义三种动画类：
-.withAnimation {
-  .fade1 {
-    animation: fadeInDown1 1s;
-  }
-
-  .fade2 {
-    animation: fadeInDown2 1.25s;
-  }
-
-  .fade3 {
-    animation: fadeInDown2 1.5s;
-  }
-}
-
-@keyframes fadeInDown1 {
-  0% {
-    transform: translate3d(0, 40px, 0);
-    opacity: 0;
-  }
-
-  22% {
-    transform: translate3d(0, 40px, 0);
-    opacity: 0;
-  }
-
-  100% {
-    -webkit-transform: none;
-    transform: none;
-    opacity: 1;
-  }
-}
-@keyframes fadeInDown2 {
-  0% {
-    transform: translate3d(0, 40px, 0);
-    opacity: 0;
-  }
-
-  44% {
-    transform: translate3d(0, 40px, 0);
-    opacity: 0;
-  }
-
-  100% {
-    -webkit-transform: none;
-    transform: none;
-    opacity: 1;
-  }
-}
-@keyframes fadeInDown3 {
-  0% {
-  …</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
@@ -5286,8 +5273,8 @@ Scrum 开发
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6428449665">
-        <time id="build-timestamp" datetime="2023-10-06T06:54:03.027Z">2023-10-06T06:54:03.027Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6430125676">
+        <time id="build-timestamp" datetime="2023-10-06T09:53:47.196Z">2023-10-06T09:53:47.196Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

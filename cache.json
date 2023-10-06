@@ -23,7 +23,7 @@
           "description": "起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/",
           "publishedOn": "2023-09-17T08:06:56.000Z",
-          "wordCount": 1484,
+          "wordCount": 1491,
           "title": "又get到了，JS复制图片到剪切板",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "坚持探索Web标准下的原生浏览器开发行为，行为驱动和数据驱动的表单开发其实各有千秋，深入HTML，你会发现这个世界比你所知的要精彩的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/form-reset-input-change/",
           "publishedOn": "2023-09-12T15:52:48.000Z",
-          "wordCount": 1092,
+          "wordCount": 1090,
           "title": "Tips：form元素reset后input不触发change事件处理",
           "imageUrl": null
         }
@@ -987,6 +987,16 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
+          "id": "https://juejin.cn/post/7285608128039960631",
+          "author": "码上花甲",
+          "description": "theme: cyanosis\n本文首发微信公众号「码上花甲」。\n近期社区中不少工具放弃了 TypeScript 转而用上了 JsDoc。\n咱不评价这种做法是否值得推荐，但是，有一些项目从一开始就没有使用 TypeScript。这种情况下直接迁移到 TypeScript 成本会很高，那能否用 JsDoc 来“代替” TypeScript 呢？\n答案是可行的。\n我们不能因为 TS 而一定要用 TS，必须要结合项目实际情况来确定。\n不过 JsDoc 也有很多细节，是你可能没注意到的。除了静态类型检查之外，JsDoc 的能力还是蛮强大的。\n今天，我们就结合 TS 来看下 JsDoc 都能干哪些事情。\n1. 变量的类型\n在 TS 中，要给一个变量定义类型很简单：\nlet name: string = 'Randal';\n\n使用 TS，直接在变量 name 后面定义为 string 类型即可。\nJsDoc 也能做到：\n/** @type {string} */\nlet name = 'Randal';\n\n编辑器同样可以识别出 JsDoc 注释的变量类型：\n\n像其他基本类型，JsDoc 也都支持，比如 number 类型。\n/** @type {number} */\nlet age = 30;\n\n除了上面这种简单的基本类型之外，JsDoc 还支持联合类型。在 TS 中的写法是这样的：\nconst personName: 'Randal' | 'Olive' | 'Jack' = 'Randal';\n\nJsDoc 的写法稍微麻烦一点，但也能很好的支持：\n/**\n * @typedef {'Randal' | 'Olive' | 'Jack'} PersonName\n */\n\n/**\n * @type {PersonName}\n */\nconst personName = 'Randal'…",
+          "link": "https://juejin.cn/post/7285608128039960631",
+          "publishedOn": "2023-10-05T06:10:31.000Z",
+          "wordCount": 2104,
+          "title": "JsDoc vs TypeScript",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7285528146379390991",
           "author": "CUGGZ",
           "description": "经过 Adobe 工程师多年来的努力，并与 Chrome 等浏览器供应商密切合作，通过 WebAssembly + Emscripten、Web Components + Lit、Service Workers + Workbox 和新的 Web API 的支持，终于在近期推出了 Web 版 Photoshop（photoshop.adobe.com），这在实现高度复杂和图形密集型软件在浏览器中运行方面具有重大意义！\n\n本文就来看看 Photoshop 所使用的 Web 能力、进行的性能优化以及未来可能的发展方向。\n愿景：在浏览器中使用 Photoshop\nAdobe 的愿景就是将 Photoshop 带到浏览器中，让更多的用户能够方便地使用它进行图像编辑和平面设计。过去几十年，Photoshop一直是图像编辑和平面设计的黄金标准，但它只能在桌面上运行。现在，通过将它移植到浏览器中，就打开一个全新的世界。\nWeb 版 Photoshop 承诺了无处不在、无摩擦的访问体验。用户只需打开浏览器，就能即时开始使用 Photoshop 进行编辑和协作，而不需要安装任何软件。而且，由于Web是一个跨平台的运行环境，它可以屏蔽底层操作系统的差异，使Photoshop 能够在不同的平台上与用户进行互动。\n\n另外，通过链接的功能，共享工作流变得更加方便。Photoshop文档可以通过URL直接访问。这样，创作者可以轻松地将链接发送给协作者，实现更加便捷的合作。\n但是，实现这个愿景面临着重大的技术挑战，要求重新思考像Photoshop这样强度大的应用如何在Web上运行。\n使用新的 Web 能力\n最近几年出现了一些新的 Web 平台能力，可以通过标准化和实现最终使类似于Photoshop这样的应用成为可能。Adobe工程师们创新地利用了几个关键的下一代API。\n使用 OPFS 实现高性能本地文…",
@@ -1164,16 +1174,6 @@
           "publishedOn": "2023-09-29T05:55:23.000Z",
           "wordCount": 1407,
           "title": "前端代码Review，一次性掰扯明白！",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7283766466083176484",
-          "author": "阿泽爱干饭",
-          "description": "theme: smartblue\n实现效果：\n加入帧动画前：\n\n普通的静态页面\n加入帧动画后：\n\n可以看到，加入帧动画后，页面效果还是比较丝滑的。\n技术实现\n加入animation动画类\n先用 **scss **定义三种动画类：\n.withAnimation {\n  .fade1 {\n    animation: fadeInDown1 1s;\n  }\n\n  .fade2 {\n    animation: fadeInDown2 1.25s;\n  }\n\n  .fade3 {\n    animation: fadeInDown2 1.5s;\n  }\n}\n\n@keyframes fadeInDown1 {\n  0% {\n    transform: translate3d(0, 40px, 0);\n    opacity: 0;\n  }\n\n  22% {\n    transform: translate3d(0, 40px, 0);\n    opacity: 0;\n  }\n\n  100% {\n    -webkit-transform: none;\n    transform: none;\n    opacity: 1;\n  }\n}\n@keyframes fadeInDown2 {\n  0% {\n    transform: translate3d(0, 40px, 0);\n    opacity: 0;\n  }\n\n  44% {\n    transform: translate3d(0, 40px, 0);\n    opacity: 0;\n  }\n\n  100% {\n    -webkit-transform: none;\n    transform: none;\n    opacity: 1;\n  }\n}\n@keyframes fadeInDown3 {\n  0% {\n  …",
-          "link": "https://juejin.cn/post/7283766466083176484",
-          "publishedOn": "2023-09-29T00:55:46.000Z",
-          "wordCount": 1567,
-          "title": "react+IntersectionObserver实现页面丝滑帧动画",
           "imageUrl": null
         },
         {
@@ -1369,7 +1369,7 @@
           "description": "入手一台mac mini做前端开发怎么样？？",
           "link": "https://juejin.cn/pin/7280007832701992979",
           "publishedOn": "2023-09-18T05:30:43.000Z",
-          "wordCount": 522,
+          "wordCount": 525,
           "title": "入手一台mac mini做前端开发怎么样？？",
           "imageUrl": null
         },
