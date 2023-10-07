@@ -23,7 +23,7 @@
           "description": "起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/",
           "publishedOn": "2023-09-17T08:06:56.000Z",
-          "wordCount": 1489,
+          "wordCount": 1488,
           "title": "又get到了，JS复制图片到剪切板",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "自己体验了下，出乎意料，HTML elementtiming属性在性能监控这块，比预想的要实用的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/html-elementtiming-attribute/",
           "publishedOn": "2023-09-15T15:58:22.000Z",
-          "wordCount": 932,
+          "wordCount": 931,
           "title": "HTML elementtiming属性初体验记录",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "坚持探索Web标准下的原生浏览器开发行为，行为驱动和数据驱动的表单开发其实各有千秋，深入HTML，你会发现这个世界比你所知的要精彩的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/form-reset-input-change/",
           "publishedOn": "2023-09-12T15:52:48.000Z",
-          "wordCount": 1092,
+          "wordCount": 1091,
           "title": "Tips：form元素reset后input不触发change事件处理",
           "imageUrl": null
         }
@@ -512,6 +512,16 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231007/t20231007_526442366.html",
+          "author": "国家预警信息发布中心",
+          "description": "万盛经开区气象台2023年10月7日09时45分继续发布“大雾黄色预警信号”，我区万东镇、金桥镇、黑山镇、石林镇已出现能见度小于200米的雾并将持续，预计7日10时至8日10时，丛林镇、关坝镇、青年镇、南桐镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231007/t20231007_526442366.html",
+          "publishedOn": "2023-10-07T01:52:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市万盛经开区发布大雾黄色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231006/t20231006_526442132.html",
           "author": "国家预警信息发布中心",
@@ -1097,16 +1107,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7283813865719644199",
-          "author": "好好吃饭好好睡觉",
-          "description": "theme: scrolls-light\n由场景题扯到了这个\n我： WebWorker我了解到的有两种，一种是Service Worker， 另一种是Shared Worker\n面试官： 你再想想？WebWorker和Service Worker应该是两种东西， 不太一样， 你了解PWA吗\n我： 啊？？-------\n面试官： 那你说说怎么使用Service Worker？\n我: emmm.....不会（我只了解过SharedWorker是new一个实例， 然后用postMessgae通信）\nMDN在介绍Web Worker时有以下描述，\n有许多不同类型的 worker：\n\n专用 worker\nShared worker\nService Worker\n故我理解的面试官应该指的不一样应该是专用Worker和Service Worker\n当然， 答案不是很重要， 掌握好具体是什么， 什么场景使用，如何使用才最重要， 耶\n一、什么是Web Worker\n1. 先看MDN介绍：Web Worker 使得在一个独立于 Web 应用程序主执行线程的后台线程中运行脚本操作成为可能。这样做的好处是可以在独立线程中执行费时的处理任务，使主线程（通常是 UI 线程）的运行不会被阻塞/放慢\nWeb Worker 的运行不会影响主线程，不过在和主线程进行通信的时候依旧会受到主线程单线程的瓶颈制约\n2. 限制\n不能直接在worker线程中操作 DOM 元素（不能操作DOM的原因我想也很简单， 本来JS设计为单线程就有避免出现多个线程同时操作DOM的情况）\n不能使用 window对象中的某些方法和属性（但是存在WorkerGlobalScope）\n3.worker可以依次生成新的 worker，只要这些 worker 与父页面托管在同一个origin中\n二、什么是专用Worker\n定义： 单个脚本使用…",
-          "link": "https://juejin.cn/post/7283813865719644199",
-          "publishedOn": "2023-09-30T12:08:13.000Z",
-          "wordCount": 2541,
-          "title": "由面试题引发的Worker Study",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7283798844235890723",
           "author": "Chil1",
           "description": "theme: juejin\nhighlight: agate\n解决痛点\n最近在项目中碰到一个优化场景：订单列表页订单信息较多时，每次查看详情后返回时，由于重新调用接口导致页面重新渲染，滚轮不会停留在原始位置。造成用户每次返回都要重新下拉，体验感极差。\n解决方案\nkeep-alive组件缓存\n<keep-alive>包裹的动态组件会被缓存，它是一个抽象组件，自身不会渲染一个dom对象，也不会出现在父组件链中。当组件在<keep-alive>内被切换时，它的activated和deactivated这两个生命周期钩子函数将会被对应执行。\n<keep-alive :include=\"componentsList\">\n      <router-view></router-view>\n</keep-alive>\n\ninclude（包含）属性是一个被缓存组件name的数组。其中的组件都会被缓存。\nexclude（排除）属性是一个不被缓存组件name的数组。其中的组件都不会被缓存。\n如果需要缓存的页面太多，在数组中一个个添加组件的name，显然有点太繁琐了。可以利用路由中的meta来进行控制我们需要进行缓存的页面。\n{\n    path: '/first',\n    name: 'first',\n    component: () => import('../views/orderInfoList.vue'),\n    meta: { \n        keepAlive: true, //设置组件缓存\n     }\n  },\n  {\n    path: '/second',\n    name: 'second',\n    component: () => import('../views/oderInfoDetial.vue')\n  },\n\n<keep-alive> 组件可以将需要缓…",
@@ -1124,6 +1124,16 @@
           "publishedOn": "2023-09-30T07:34:33.000Z",
           "wordCount": 4025,
           "title": "将Flutter推向极限：你应该知道的44个性能提示",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7283748394601840680",
+          "author": "搬砖的乔布梭",
+          "description": "@主要Review的指标\n\n前端代码Review主要关注以下几个方面：\n1. 代码质量：代码是否简洁、易读、易维护。是否遵循了一致的编码风格和规范，例如ESLint、Prettier等。\n功能实现：代码是否实现了预期的功能，是否有潜在的bug或逻辑错误。\n性能优化：代码是否进行了必要的性能优化，例如避免不必要的渲染、使用了合适的数据结构和算法等。\n安全性：代码是否存在可能的安全风险，例如XSS攻击、CSRF攻击等。\n5. 可测试性：代码是否易于测试，是否有单元测试和集成测试。\n可读性：代码是否易于理解，是否有足够的注释和文档。\n可复用性：代码是否有高度的模块化和复用性。\n兼容性：代码是否兼容不同的浏览器和设备。\n助记：功性读复全兼测\n@功能Review\n无需人为检测，但注释要写明白，TS类型要写清楚，让用的人如沐春风；\n该匹配单元测试的建议配套单元测试，不落人以口实~\n@性能Review\n前端代码中一些典型的、肉眼可见的需要性能优化的地方包括：\n1. 过度渲染：如果你的应用在没有必要的情况下进行了过多的渲染，这可能会导致性能问题。例如，在React中，如果你的组件在props没有改变的情况下进行了重新渲染，那么你可能需要使用shouldComponentUpdate/SCU或React.PureComponent或useEffect来避免不必要的渲染。\n大量DOM操作：频繁的DOM操作是非常耗费性能的。如果你的代码中有大量的DOM操作，你可能需要考虑使用虚拟DOM或其他优化技术（例如DocumentFragment）。\n大量的网络请求：如果你的应用发送了大量的网络请求，这可能会导致性能问题。你可能需要考虑使用缓存、预加载、懒加载等技术来减少网络请求。\n大型JavaScript文件：如果你的JavaScript文件过大，这可能会导致加载和解析时间过长。你可能需要考虑使用代码分…",
+          "link": "https://juejin.cn/post/7283748394601840680",
+          "publishedOn": "2023-09-29T05:55:23.000Z",
+          "wordCount": 1407,
+          "title": "前端代码Review，一次性掰扯明白！",
           "imageUrl": null
         },
         {
@@ -1149,7 +1159,7 @@
           "description": "vscode扩展fnMap（函数地图）v3.1.0 发布\n1，新增功能：修改注册码备注\n2，新增功能：新增跨文件置顶，方便多文件跳转\n扩展地址：https://marketplace.visualstudio.com/items?itemName=chensuiyi.fn-map\n[7210228048107896891#每日快讯#]",
           "link": "https://juejin.cn/pin/7285185696120242213",
           "publishedOn": "2023-10-03T17:04:07.000Z",
-          "wordCount": 551,
+          "wordCount": 600,
           "title": "vscode扩展fnMap（函数地图）v3.1.0 发布 1，新增功能：修改注册码备注 2，新增功能：新增跨文件置顶，方便多文件跳转 扩展地址：https://marketplace.visualstu...",
           "imageUrl": null
         },
@@ -1159,7 +1169,7 @@
           "description": "vscode扩展 FnMap - 函数地图\n人性化的侧边栏函数、变量、符号列表操作和展示",
           "link": "https://juejin.cn/pin/7283768998776569915",
           "publishedOn": "2023-09-29T01:04:57.000Z",
-          "wordCount": 538,
+          "wordCount": 535,
           "title": "vscode扩展 FnMap - 函数地图 人性化的侧边栏函数、变量、符号列表操作和展示",
           "imageUrl": null
         },
@@ -1209,7 +1219,7 @@
           "description": "无所不知的jym，文章里面的gif效果展示图你们都是用什么工具生成的呀",
           "link": "https://juejin.cn/pin/7282691710072946725",
           "publishedOn": "2023-09-25T14:46:04.000Z",
-          "wordCount": 524,
+          "wordCount": 521,
           "title": "无所不知的jym，文章里面的gif效果展示图你们都是用什么工具生成的呀",
           "imageUrl": null
         },
@@ -1259,7 +1269,7 @@
           "description": "想开发拥有实时协作功能的可以看下：《Spaces SDK：专为实时协作功能开发设计的SDK》https://mp.weixin.qq.com/s/EK1u2tr1CRcqbevtnAETmQ\n[7210228048107896891#每日快讯#]",
           "link": "https://juejin.cn/pin/7281256255354601508",
           "publishedOn": "2023-09-22T04:14:55.000Z",
-          "wordCount": 552,
+          "wordCount": 601,
           "title": "想开发拥有实时协作功能的可以看下：《Spaces SDK：专为实时协作功能开发设计的SDK》https://mp.weixin.qq.com/s/EK1u2tr1CRcqbevtnAETmQ [7210228048107896891#...",
           "imageUrl": null
         },
@@ -1319,7 +1329,7 @@
           "description": "入手一台mac mini做前端开发怎么样？？",
           "link": "https://juejin.cn/pin/7280007832701992979",
           "publishedOn": "2023-09-18T05:30:43.000Z",
-          "wordCount": 525,
+          "wordCount": 522,
           "title": "入手一台mac mini做前端开发怎么样？？",
           "imageUrl": null
         },

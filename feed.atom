@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-10-07T01:16:17.509Z</id>
+    <id>urn:2023-10-07T03:54:05.029Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-10-07T01:16:17.509Z</updated>
+    <updated>2023-10-07T03:54:05.029Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[重庆市万盛经开区发布大雾黄色预警]]></title>
+        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20231007/t20231007_526442366.html</id>
+        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20231007/t20231007_526442366.html"/>
+        <updated>2023-10-07T01:52:00.000Z</updated>
+        <summary type="html"><![CDATA[万盛经开区气象台2023年10月7日09时45分继续发布“大雾黄色预警信号”，我区万东镇、金桥镇、黑山镇、石林镇已出现能见度小于200米的雾并将持续，预计7日10时至8日10时，丛林镇、关坝镇、青年镇、南桐镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
+        <author>
+            <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[重庆市涪陵区发布大雾黄色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/huangsyj/20231006/t20231006_526442132.html</id>
@@ -1156,39 +1166,6 @@ webapp 。然后是 node/express/koa ，开始涉及全栈。
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[由面试题引发的Worker Study]]></title>
-        <id>https://juejin.cn/post/7283813865719644199</id>
-        <link href="https://juejin.cn/post/7283813865719644199"/>
-        <updated>2023-09-30T12:08:13.000Z</updated>
-        <summary type="html"><![CDATA[theme: scrolls-light
-由场景题扯到了这个
-我： WebWorker我了解到的有两种，一种是Service Worker， 另一种是Shared Worker
-面试官： 你再想想？WebWorker和Service Worker应该是两种东西， 不太一样， 你了解PWA吗
-我： 啊？？-------
-面试官： 那你说说怎么使用Service Worker？
-我: emmm.....不会（我只了解过SharedWorker是new一个实例， 然后用postMessgae通信）
-MDN在介绍Web Worker时有以下描述，
-有许多不同类型的 worker：
-
-专用 worker
-Shared worker
-Service Worker
-故我理解的面试官应该指的不一样应该是专用Worker和Service Worker
-当然， 答案不是很重要， 掌握好具体是什么， 什么场景使用，如何使用才最重要， 耶
-一、什么是Web Worker
-1. 先看MDN介绍：Web Worker 使得在一个独立于 Web 应用程序主执行线程的后台线程中运行脚本操作成为可能。这样做的好处是可以在独立线程中执行费时的处理任务，使主线程（通常是 UI 线程）的运行不会被阻塞/放慢
-Web Worker 的运行不会影响主线程，不过在和主线程进行通信的时候依旧会受到主线程单线程的瓶颈制约
-2. 限制
-不能直接在worker线程中操作 DOM 元素（不能操作DOM的原因我想也很简单， 本来JS设计为单线程就有避免出现多个线程同时操作DOM的情况）
-不能使用 window对象中的某些方法和属性（但是存在WorkerGlobalScope）
-3.worker可以依次生成新的 worker，只要这些 worker 与父页面托管在同一个origin中
-二、什么是专用Worker
-定义： 单个脚本使用…]]></summary>
-        <author>
-            <name>好好吃饭好好睡觉</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Vue中keep-alive 场景实现：订单列表页跳转到详情页，再从详情页跳转回列表初始停留位置]]></title>
         <id>https://juejin.cn/post/7283798844235890723</id>
         <link href="https://juejin.cn/post/7283798844235890723"/>
@@ -1274,6 +1251,36 @@ lib/
         <summary type="html"><![CDATA[巫山县气象台2023年9月30日12时20分更新发布“大雾黄色预警信号”，预计9月30日12时至10月1日00时，当阳乡、骡坪镇、竹贤乡、笃坪乡、邓家乡、高唐街道、龙门街道、金坪乡、官阳镇、铜鼓镇、红椿乡、巫峡镇、曲尺乡、建平乡等海拔600米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
         <author>
             <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[前端代码Review，一次性掰扯明白！]]></title>
+        <id>https://juejin.cn/post/7283748394601840680</id>
+        <link href="https://juejin.cn/post/7283748394601840680"/>
+        <updated>2023-09-29T05:55:23.000Z</updated>
+        <summary type="html"><![CDATA[@主要Review的指标
+
+前端代码Review主要关注以下几个方面：
+1. 代码质量：代码是否简洁、易读、易维护。是否遵循了一致的编码风格和规范，例如ESLint、Prettier等。
+功能实现：代码是否实现了预期的功能，是否有潜在的bug或逻辑错误。
+性能优化：代码是否进行了必要的性能优化，例如避免不必要的渲染、使用了合适的数据结构和算法等。
+安全性：代码是否存在可能的安全风险，例如XSS攻击、CSRF攻击等。
+5. 可测试性：代码是否易于测试，是否有单元测试和集成测试。
+可读性：代码是否易于理解，是否有足够的注释和文档。
+可复用性：代码是否有高度的模块化和复用性。
+兼容性：代码是否兼容不同的浏览器和设备。
+助记：功性读复全兼测
+@功能Review
+无需人为检测，但注释要写明白，TS类型要写清楚，让用的人如沐春风；
+该匹配单元测试的建议配套单元测试，不落人以口实~
+@性能Review
+前端代码中一些典型的、肉眼可见的需要性能优化的地方包括：
+1. 过度渲染：如果你的应用在没有必要的情况下进行了过多的渲染，这可能会导致性能问题。例如，在React中，如果你的组件在props没有改变的情况下进行了重新渲染，那么你可能需要使用shouldComponentUpdate/SCU或React.PureComponent或useEffect来避免不必要的渲染。
+大量DOM操作：频繁的DOM操作是非常耗费性能的。如果你的代码中有大量的DOM操作，你可能需要考虑使用虚拟DOM或其他优化技术（例如DocumentFragment）。
+大量的网络请求：如果你的应用发送了大量的网络请求，这可能会导致性能问题。你可能需要考虑使用缓存、预加载、懒加载等技术来减少网络请求。
+大型JavaScript文件：如果你的JavaScript文件过大，这可能会导致加载和解析时间过长。你可能需要考虑使用代码分…]]></summary>
+        <author>
+            <name>搬砖的乔布梭</name>
         </author>
     </entry>
     <entry>
