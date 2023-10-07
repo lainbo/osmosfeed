@@ -51,11 +51,45 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-07 datetime="2023-10-07T07:48:50.000Z">2023-10-07</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-07 datetime="2023-10-07T07:48:50.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-07 datetime="2023-10-07T13:55:53.000Z">2023-10-07</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-07 datetime="2023-10-07T13:55:53.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7287018116970184743"
+                        open
+                      >
+                        <summary class="article-expander__title">#求助掘友 刚买了一个带鱼屏显示器，自带分屏功能，但是它的这个分屏功能是支持多个主机连接同一个显示器，我想要的效果是一个主机连接这个显示器后，展示多个显...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7287018116970184743">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>#求助掘友 
+刚买了一个带鱼屏显示器，自带分屏功能，但是它的这个分屏功能是支持多个主机连接同一个显示器，我想要的效果是一个主机连接这个显示器后，展示多个显示器的界面（相当于连接多个显示器），这个该怎么搞？</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -302,6 +336,44 @@
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7286133122209742908"
+                        open
+                      >
+                        <summary class="article-expander__title">为了实现低代码平台，我写了一个拖拽库，顺便学习如何从0发布一个开源库</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7286133122209742908">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>highlight: a11y-dark
+拖拽库github地址：https://github.com/bpuns/easy-dnd
+拖拽库说明文档：https://bpuns.github.io/easy-dnd-docs/
+前言
+一年前，我接到一个需求，需要开发一个低代码平台，调研了下市面上适用于React的拖拽库，本人都感觉使用起来过于复杂，并且体积都挺大的，我就想用原生的拖拽Api，但是原生Api在复杂场景下（无限嵌套，嵌套规则复杂），是不可用的，如果想了解具体遇到的问题，可以看 巨详细！帮你踩坑HTML5拖拽api（下） 这篇文章。因此，我就想基于 Drag and Drop api 封装的一套可以应用与复杂场景下的拖拽库
+并且这个库最好不要和任何的前端框架绑定，这样方便移植和扩展，因为是自己封装的，因此可以掌握所有实现细节，开发过程中如果遇到了性能瓶颈，也能最快的找到解决方案，而且我也没完整的发布过一个开源库，正好学习下整个过程
+拖拽库实现思路
+拖拽上下文
+页面中可能会有很多可以拖拽的区域，并且拖拽区域之间互不影响，那么就需要为每个拖拽区域创建一个上下文，那么就可以提供一个方法，用于上下文的创建，为了到时候方便扩展，可以传一个配置项作为参数。
+interface ProviderConfig { } 
+
+/**
+ * 创建拖拽作用域下的基本数据
+ * @param {*} config 配置项
+ * @returns
+ */
+function createProvider(config?: ProviderConfig): Context;
+
+拖拽类型
+在现实生活中，我们之所以知道一个物品可以放到另外一个物品中，比如食物剩余的包装袋需要放到垃圾桶中，电脑需要放到电脑包里。所以抽到代码中，需要给可以拖拽的dom元素添加一个类型，给需要放置的元素设置允许放置的类型有…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -2165,57 +2237,6 @@ ffmpeg -y -i &#x27;./video.mp4&#x27; -vcodec copy -acodec copy -bsf:v h264_mp4to
                             <span class="media-object__text">
                               <span>忠县气象台2023年10月1日4时发布“雷电黄色预警信号”，预计未来6小时内，忠州街道、白公街道、新生街道、双桂镇、新立镇、花桥镇、拔山镇、马灌镇、永丰镇、三汇镇、金鸡镇、石黄镇、官坝镇、兴峰乡、金声乡、汝溪镇、野鹤镇、涂井乡、石宝镇、黄金镇、白石镇、善广乡、任家镇、复兴镇等乡镇（街道）将出现雷雨天气，局地伴有短时强降水、阵性大风等强对流天气，请注意防范。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7283766477802864675"
-                        open
-                      >
-                        <summary class="article-expander__title">我转产品了-前端转产品是一种什么样的体验</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7283766477802864675">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>程序之路
-入门前端的 3 年，前端技术从 pug/handlebars/jquery 制作各种企业官网，再到 gulp/vue/react/webpack 的工程化开发后台管理、
-webapp 。然后是 node/express/koa ，开始涉及全栈。
-代码管理工具也从 svn 到 git ，然后制定提交规范，分支管理规范，结合 gitflow/githook 以及各种 lint 保证团队开发风格及可维护
-性。
-产品发布的方式从 ftp 上传，到 npm/nodejs/shell 脚本，然后再到 jenkins/docker/git 多分支多环境部署。
-从第 3 年之后就感觉技术没什么提升了 ，后面都是在各个小作坊担任前端组长角色（其实感觉就是救火队长），哪里项目急去哪里，哪里有难题去哪里。实际比 UI、比测试、比实习产品的地位还低，基本没有话语权。
-
-为什么转产品
-严格来说，并不是专门的喜欢产品这个职位，而是希望了解产品经理所做的事。因为在软件开发的工作里，工作的内容和返工程序大大取决与产品对用户需求的理解能力，业务熟悉能力。而作为前端，经常只集中精力在处理页面还原、交互实现、数据对接、浏览器兼容等工作上面。对整个系统的业务逻辑是比较片面的。
-如果对用户需求和产品业务有所了解，那可能在开发之前就能发现需求上的不必要性，发现设计上的错误，而减少程序开发的返工率。
-总的说来，是期望：
-拒绝无效编程
-深入理解业务
-培养跨部门沟通能力
-培养产品设计能力
-是否适合转产品
-根据上面所说的几点理解，我自身而言并不拒绝，这是在心理方面。
-在能力方面，我认为我是可以去学习和培养得到这份能力的。因为自己做的一个程序库 demo，得到了第一份前端工作。前端工作 2 年后，老板尝试让我做产品，并在过程中得到老板的一些建议。1、做产品就不要去考虑程序实现；2、如果自己是对的，就要去坚持，争执得面…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4968,25 +4989,6 @@ https://github.com/devlive-community/openai-java-sdk  多平台开放 AI SDK
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="7278646930173968442"
-                        open
-                      >
-                        <summary class="article-expander__title">真的大爱 vercel 这家公司，几个最喜欢的产品都是他家的： vercel、swr、nextjs、v0.dev[灵光一现]</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7278646930173968442">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>真的大爱 vercel 这家公司，几个最喜欢的产品都是他家的： vercel、swr、nextjs、v0.dev[灵光一现]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="7278658174035116043"
                         open
                       >
@@ -5111,8 +5113,8 @@ https://github.com/devlive-community/openai-java-sdk  多平台开放 AI SDK
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6441291206">
-        <time id="build-timestamp" datetime="2023-10-07T12:56:10.446Z">2023-10-07T12:56:10.446Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6442110714">
+        <time id="build-timestamp" datetime="2023-10-07T15:53:57.863Z">2023-10-07T15:53:57.863Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

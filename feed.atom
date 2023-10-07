@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-10-07T12:56:10.481Z</id>
+    <id>urn:2023-10-07T15:53:57.889Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-10-07T12:56:10.481Z</updated>
+    <updated>2023-10-07T15:53:57.889Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[#求助掘友 刚买了一个带鱼屏显示器，自带分屏功能，但是它的这个分屏功能是支持多个主机连接同一个显示器，我想要的效果是一个主机连接这个显示器后，展示多个显...]]></title>
+        <id>7287018116970184743</id>
+        <link href="https://juejin.cn/pin/7287018116970184743"/>
+        <updated>2023-10-07T13:55:53.000Z</updated>
+        <summary type="html"><![CDATA[#求助掘友 
+刚买了一个带鱼屏显示器，自带分屏功能，但是它的这个分屏功能是支持多个主机连接同一个显示器，我想要的效果是一个主机连接这个显示器后，展示多个显示器的界面（相当于连接多个显示器），这个该怎么搞？]]></summary>
+        <author>
+            <name>一灯架构</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[发布了: 每一个人都应该是学习家. 你的老师是 *市场* . 你的每一个动作都是在做实验： 创意阶段, 是艺术家, 天马行空; 实现阶段, 是工程师, 脚踏实地; 验证阶段,...]]></title>
         <id>https://m.okjike.com/originalPosts/65210d6215391e4bc787a6a2</id>
@@ -58,6 +69,35 @@
         <summary type="html"><![CDATA[涪陵区气象台2023年10月6日23时40分发布“大雾黄色预警信号”，预计10月6日23时至7日09时，南沱镇、马鞍街道、李渡街道、江北街道、龙桥街道、白涛街道、敦仁街道、崇义街道、江东街道、清溪镇、义和街道、石沱镇、蔺市街道、荔枝街道将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。防御指南：1.有关部门和单位按照职责做好防雾准备工作；2.机场、高速公路、轮渡码头等单位加强交通管理，保障安全；3.驾驶人员注意雾的变化，小心驾驶；4.户外活动注意安全。]]></summary>
         <author>
             <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[为了实现低代码平台，我写了一个拖拽库，顺便学习如何从0发布一个开源库]]></title>
+        <id>https://juejin.cn/post/7286133122209742908</id>
+        <link href="https://juejin.cn/post/7286133122209742908"/>
+        <updated>2023-10-06T08:41:10.000Z</updated>
+        <summary type="html"><![CDATA[highlight: a11y-dark
+拖拽库github地址：https://github.com/bpuns/easy-dnd
+拖拽库说明文档：https://bpuns.github.io/easy-dnd-docs/
+前言
+一年前，我接到一个需求，需要开发一个低代码平台，调研了下市面上适用于React的拖拽库，本人都感觉使用起来过于复杂，并且体积都挺大的，我就想用原生的拖拽Api，但是原生Api在复杂场景下（无限嵌套，嵌套规则复杂），是不可用的，如果想了解具体遇到的问题，可以看 巨详细！帮你踩坑HTML5拖拽api（下） 这篇文章。因此，我就想基于 Drag and Drop api 封装的一套可以应用与复杂场景下的拖拽库
+并且这个库最好不要和任何的前端框架绑定，这样方便移植和扩展，因为是自己封装的，因此可以掌握所有实现细节，开发过程中如果遇到了性能瓶颈，也能最快的找到解决方案，而且我也没完整的发布过一个开源库，正好学习下整个过程
+拖拽库实现思路
+拖拽上下文
+页面中可能会有很多可以拖拽的区域，并且拖拽区域之间互不影响，那么就需要为每个拖拽区域创建一个上下文，那么就可以提供一个方法，用于上下文的创建，为了到时候方便扩展，可以传一个配置项作为参数。
+interface ProviderConfig { } 
+
+/**
+ * 创建拖拽作用域下的基本数据
+ * @param {*} config 配置项
+ * @returns
+ */
+function createProvider(config?: ProviderConfig): Context;
+
+拖拽类型
+在现实生活中，我们之所以知道一个物品可以放到另外一个物品中，比如食物剩余的包装袋需要放到垃圾桶中，电脑需要放到电脑包里。所以抽到代码中，需要给可以拖拽的dom元素添加一个类型，给需要放置的元素设置允许放置的类型有…]]></summary>
+        <author>
+            <name>Bpuns</name>
         </author>
     </entry>
     <entry>
@@ -1207,34 +1247,6 @@ ffmpeg -y -i './video.mp4' -vcodec copy -acodec copy -bsf:v h264_mp4toannexb "./
         <summary type="html"><![CDATA[忠县气象台2023年10月1日4时发布“雷电黄色预警信号”，预计未来6小时内，忠州街道、白公街道、新生街道、双桂镇、新立镇、花桥镇、拔山镇、马灌镇、永丰镇、三汇镇、金鸡镇、石黄镇、官坝镇、兴峰乡、金声乡、汝溪镇、野鹤镇、涂井乡、石宝镇、黄金镇、白石镇、善广乡、任家镇、复兴镇等乡镇（街道）将出现雷雨天气，局地伴有短时强降水、阵性大风等强对流天气，请注意防范。]]></summary>
         <author>
             <name>国家预警信息发布中心</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[我转产品了-前端转产品是一种什么样的体验]]></title>
-        <id>https://juejin.cn/post/7283766477802864675</id>
-        <link href="https://juejin.cn/post/7283766477802864675"/>
-        <updated>2023-09-30T14:09:31.000Z</updated>
-        <summary type="html"><![CDATA[程序之路
-入门前端的 3 年，前端技术从 pug/handlebars/jquery 制作各种企业官网，再到 gulp/vue/react/webpack 的工程化开发后台管理、
-webapp 。然后是 node/express/koa ，开始涉及全栈。
-代码管理工具也从 svn 到 git ，然后制定提交规范，分支管理规范，结合 gitflow/githook 以及各种 lint 保证团队开发风格及可维护
-性。
-产品发布的方式从 ftp 上传，到 npm/nodejs/shell 脚本，然后再到 jenkins/docker/git 多分支多环境部署。
-从第 3 年之后就感觉技术没什么提升了 ，后面都是在各个小作坊担任前端组长角色（其实感觉就是救火队长），哪里项目急去哪里，哪里有难题去哪里。实际比 UI、比测试、比实习产品的地位还低，基本没有话语权。
-
-为什么转产品
-严格来说，并不是专门的喜欢产品这个职位，而是希望了解产品经理所做的事。因为在软件开发的工作里，工作的内容和返工程序大大取决与产品对用户需求的理解能力，业务熟悉能力。而作为前端，经常只集中精力在处理页面还原、交互实现、数据对接、浏览器兼容等工作上面。对整个系统的业务逻辑是比较片面的。
-如果对用户需求和产品业务有所了解，那可能在开发之前就能发现需求上的不必要性，发现设计上的错误，而减少程序开发的返工率。
-总的说来，是期望：
-拒绝无效编程
-深入理解业务
-培养跨部门沟通能力
-培养产品设计能力
-是否适合转产品
-根据上面所说的几点理解，我自身而言并不拒绝，这是在心理方面。
-在能力方面，我认为我是可以去学习和培养得到这份能力的。因为自己做的一个程序库 demo，得到了第一份前端工作。前端工作 2 年后，老板尝试让我做产品，并在过程中得到老板的一些建议。1、做产品就不要去考虑程序实现；2、如果自己是对的，就要去坚持，争执得面…]]></summary>
-        <author>
-            <name>程序媛李李李李李蕾</name>
         </author>
     </entry>
     <entry>
@@ -2650,16 +2662,6 @@ https://github.com/devlive-community/openai-java-sdk  多平台开放 AI SDK
         <summary type="html"><![CDATA[自己体验了下，出乎意料，HTML elementtiming属性在性能监控这块，比预想的要实用的多。]]></summary>
         <author>
             <name>张 鑫旭</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[真的大爱 vercel 这家公司，几个最喜欢的产品都是他家的： vercel、swr、nextjs、v0.dev[灵光一现]]]></title>
-        <id>7278646930173968442</id>
-        <link href="https://juejin.cn/pin/7278646930173968442"/>
-        <updated>2023-09-15T03:53:05.000Z</updated>
-        <summary type="html"><![CDATA[真的大爱 vercel 这家公司，几个最喜欢的产品都是他家的： vercel、swr、nextjs、v0.dev[灵光一现]]]></summary>
-        <author>
-            <name>一用书生</name>
         </author>
     </entry>
     <entry>
