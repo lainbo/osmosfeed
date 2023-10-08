@@ -23,7 +23,7 @@
           "description": "起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/",
           "publishedOn": "2023-09-17T08:06:56.000Z",
-          "wordCount": 1489,
+          "wordCount": 1488,
           "title": "又get到了，JS复制图片到剪切板",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "自己体验了下，出乎意料，HTML elementtiming属性在性能监控这块，比预想的要实用的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/html-elementtiming-attribute/",
           "publishedOn": "2023-09-15T15:58:22.000Z",
-          "wordCount": 941,
+          "wordCount": 940,
           "title": "HTML elementtiming属性初体验记录",
           "imageUrl": null
         },
@@ -952,7 +952,7 @@
           "description": "theme: fancy\nhighlight: a11y-light\n前言\n最近一段时间做过很多关于文件及音视频相关的工作，故此根据个人实践结合资料查询学习，总结了关于文件、二进制相关的内容和大家分享交流，如果文章有不对的地方，恳请指正，✅通过本文，你将了解或者加深对以下概念的认知以及其应用场景：\nFile\nBlob\nArrayBuffer\nTypeArray\nDataView\nBuffer\nFileReader\nURL.createObjectURL\n以及如何实现 ？\n如何预览图片？\n如何截取视频首帧（如果不借助第三方oss能力呢）？\n1. Blob\nBlob是对大数据块的不透明引用或者句柄。名字源于SQL数据库，表示“二进制大数据”（Binary Large Object）。在JavaScript中Blob通常表示二进制数据，但是不一定是大量数据。Blob是不透明的，我们可以对它执行的操作只有获取它的大小，MIME类型和将他切割成更小的Blob。——《JavaScript权威指南》\n1.1 主要用法\n1.1.1 构造函数使用\n第一个参数是一个包含实际数据的数组（二进制数组也行），第二个参数是数据的类型（MIME type）\n\n1.1.2 现有实例使用\n其构造器Blob原型有size和type属性分别表示blob包含数据的大小和数据类型，其原型上方法有text（返回promise）和slice, 其中slice（start, end），返回start和end为切割blob的开始和结束字节点,返回值为blob，下图为阿里云上传oss jsSDK实现代码片段\n\n1.2 应用场景\n大文件上传（阿里云）时，会对file继承的blob的slice属性，对文件进行切割分片上传\n可以通过blob结合FileReader来把其换成其他需要的数据比如Arraybuffer\n可以暂存arra…",
           "link": "https://juejin.cn/post/7284513473316667453",
           "publishedOn": "2023-10-03T03:19:41.000Z",
-          "wordCount": 1581,
+          "wordCount": 1632,
           "title": "《图解 + 实战》File、Blob、TypeArray、DataView",
           "imageUrl": null
         },
@@ -1099,7 +1099,7 @@
           "description": "vscode扩展fnMap（函数地图）v3.1.0 发布\n1，新增功能：修改注册码备注\n2，新增功能：新增跨文件置顶，方便多文件跳转\n扩展地址：https://marketplace.visualstudio.com/items?itemName=chensuiyi.fn-map\n[7210228048107896891#每日快讯#]",
           "link": "https://juejin.cn/pin/7285185696120242213",
           "publishedOn": "2023-10-03T17:04:07.000Z",
-          "wordCount": 583,
+          "wordCount": 621,
           "title": "vscode扩展fnMap（函数地图）v3.1.0 发布 1，新增功能：修改注册码备注 2，新增功能：新增跨文件置顶，方便多文件跳转 扩展地址：https://marketplace.visualstu...",
           "imageUrl": null
         },
@@ -1109,7 +1109,7 @@
           "description": "vscode扩展 FnMap - 函数地图\n人性化的侧边栏函数、变量、符号列表操作和展示",
           "link": "https://juejin.cn/pin/7283768998776569915",
           "publishedOn": "2023-09-29T01:04:57.000Z",
-          "wordCount": 538,
+          "wordCount": 535,
           "title": "vscode扩展 FnMap - 函数地图 人性化的侧边栏函数、变量、符号列表操作和展示",
           "imageUrl": null
         },
@@ -1159,7 +1159,7 @@
           "description": "无所不知的jym，文章里面的gif效果展示图你们都是用什么工具生成的呀",
           "link": "https://juejin.cn/pin/7282691710072946725",
           "publishedOn": "2023-09-25T14:46:04.000Z",
-          "wordCount": 524,
+          "wordCount": 521,
           "title": "无所不知的jym，文章里面的gif效果展示图你们都是用什么工具生成的呀",
           "imageUrl": null
         },
@@ -1209,7 +1209,7 @@
           "description": "想开发拥有实时协作功能的可以看下：《Spaces SDK：专为实时协作功能开发设计的SDK》https://mp.weixin.qq.com/s/EK1u2tr1CRcqbevtnAETmQ\n[7210228048107896891#每日快讯#]",
           "link": "https://juejin.cn/pin/7281256255354601508",
           "publishedOn": "2023-09-22T04:14:55.000Z",
-          "wordCount": 584,
+          "wordCount": 622,
           "title": "想开发拥有实时协作功能的可以看下：《Spaces SDK：专为实时协作功能开发设计的SDK》https://mp.weixin.qq.com/s/EK1u2tr1CRcqbevtnAETmQ [7210228048107896891#...",
           "imageUrl": null
         },
@@ -1269,7 +1269,7 @@
           "description": "入手一台mac mini做前端开发怎么样？？",
           "link": "https://juejin.cn/pin/7280007832701992979",
           "publishedOn": "2023-09-18T05:30:43.000Z",
-          "wordCount": 525,
+          "wordCount": 522,
           "title": "入手一台mac mini做前端开发怎么样？？",
           "imageUrl": null
         },
