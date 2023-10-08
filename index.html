@@ -510,7 +510,7 @@ Vite 4.1 于 2023 年 2 月发布，该版本主要是将 Rollup 和 esbuild 的
 
 Vite 4.2
 Vite 4.2 于 2023 年 3 月发布，该版本的主要改进是提升了 source map 的调试体验。Vite 团队与 Chrome Devtools 团队进行合作，修复了一些长期存在的路径显示问题。通过x_google_ignoreList  source…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -808,6 +808,44 @@ JsDoc 的写法稍微麻烦一点，但也能很好的支持：
  */
 const personName &#x3D; &#x27;Randal&#x27;…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7285184691418169363"
+                        open
+                      >
+                        <summary class="article-expander__title">国庆假期，我用Flutter写了个我自己都玩不赢的五子棋AI🤣</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7285184691418169363">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言
+在上一篇文章中，讲解了如何实现双人在本地对战的五子棋，但是只有一个人的时候就不太好玩，同时博主也没有把五子棋相关的文章写过瘾。那么这篇文章，我们来实现一个功能更加丰富的五子棋吧！在设计五子棋的算法方面，我们将引入一些经典的算法，如最大最小搜索（Max-Min）算法和Alpha-Beta剪枝算法。这些算法将帮助我们创建一个智能的对手，使游戏更具挑战性和趣味性。除了算法的介绍，本文还将深入探讨五子棋的基本玩法和规则。我们将详细解释如何落子、如何判断胜负以及如何对各种局面进行评分估值。通过学习这些基础知识，您将能够更好地理解和享受五子棋游戏。
+效果图：
+
+
+
+
+
+
+仓库地址：https://github.com/taxze6/flutter_game_collection/tree/main/gomoku_ai
+release apk下载体验：https://github.com/taxze6/flutter_game_collection/tree/main/gomoku_ai/release
+棋盘绘制
+本次采用的棋盘绘制与上篇文章的方式不同，上篇文章中采用的是GridView这样的基础组件，使用简单，无需手动编写绘制逻辑。利用GridView的布局特性，可以很方便地进行排列和调整。但是它也有缺点，就是不够灵活，当我们想实现更多的棋盘细节时，实现起来就不是很方便了，所以在本篇文章中，我们采用CustomPaint绘制的方式。
+那在绘制棋盘之前，我们需要先定义游戏所需要的一些参数和实体类：
+玩家类
+//玩家
+class Player {
+  static final Player black &#x3D; Player(Colors.black);
+  static final Player white &#x3D; Player(Colors.white);
+  late Color col…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;27
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1614,55 +1652,6 @@ Wappalyzer是一款开源的浏览器扩展，用于识别网站所使用的技�
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7284143489737818152"
-                        open
-                      >
-                        <summary class="article-expander__title">react教程</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7284143489737818152">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>React脚手架搭建
-Create-react-app基础操作
-当下前端开发的主流是组件化和模块化
-有助于团队协作开发
-便于组件的复用：提高开发效率、方便后期维护、减少冗余代码
-划分组件：
-业务组件：针对项目需求封装
-
-普通业务组件：复用性低，只是单独拆选出来的一个模块
-通用业务组件：具备复用性
-功能组件：适用于多个项目「例如：UI 组件库中的组件」
-
-通用功能组件
-组件化开发必然会带来工程化，即基于 Webpack / Vite / Rollup / Turbopack 等工具实现组件的合并、压缩、打包等。
-安装create-react-app
-我们可以基于webpack自己去搭建一套工程化打包的脚手架，但是过程会非常麻烦和繁琐，因此可以利用官方提供的脚手架create-react-app创建React项目，基于该脚手架创建项目，默认就把 Webpack 的打包规则已经处理好了，把一些项目需要的基本文件也都创建好了。我们可以在其上面做修改
-全局安装 create-react-app 脚手架：
-npm i create-react-app -g
-
-检查 create-react-app 的版本（是否安装完成·）：
-create-react-app --version
-
-创建工程化项目
-创建的命令为：
-create-react-app [项目名称]
-
-项目名称应该仅使用数字、小写字母和下划线 _ 的组合。
-创建的项目中会默认安装：
-react : React框架的核心
-react-dom : React 视图渲染的核心 [基于 React 构建 WebApp（HTML 页面）]
-react-script: 脚手架为了让项目目录看起来干净一点，把 Webpack 打包的规则及相关的插件、预处理器等都隐藏到了 node_modules 目录下，react-scripts 就是脚手…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;31
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -1964,25 +1953,6 @@ react-script: 脚手架为了让项目目录看起来干净一点，把 Webpack 
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>巫溪县气象台2023年10月1日20时20分继续发布“大雾黄色预警信号”，受降雨影响，预计未来12小时，我县文峰镇、上磺镇、古路镇、塘坊镇、菱角镇、尖山镇、朝阳镇、通城镇、双阳乡、胜利乡、城厢镇、宁厂镇、红池坝镇、长桂乡等海拔600米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231001/t20231001_526438644.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市云阳县发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231001/t20231001_526438644.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>云阳县气象台2023年10月1日10时发布“大雾黄色预警信号”，预计未来12小时，全县各乡镇（街道）将出现能见度小于500米的大雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -5043,8 +5013,8 @@ https://github.com/devlive-community/openai-java-sdk  多平台开放 AI SDK
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6444609260">
-        <time id="build-timestamp" datetime="2023-10-08T01:16:31.069Z">2023-10-08T01:16:31.069Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6445348673">
+        <time id="build-timestamp" datetime="2023-10-08T03:54:07.494Z">2023-10-08T03:54:07.494Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

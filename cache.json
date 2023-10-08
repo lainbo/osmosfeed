@@ -23,7 +23,7 @@
           "description": "起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/",
           "publishedOn": "2023-09-17T08:06:56.000Z",
-          "wordCount": 1491,
+          "wordCount": 1490,
           "title": "又get到了，JS复制图片到剪切板",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "坚持探索Web标准下的原生浏览器开发行为，行为驱动和数据驱动的表单开发其实各有千秋，深入HTML，你会发现这个世界比你所知的要精彩的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/form-reset-input-change/",
           "publishedOn": "2023-09-12T15:52:48.000Z",
-          "wordCount": 1092,
+          "wordCount": 1091,
           "title": "Tips：form元素reset后input不触发change事件处理",
           "imageUrl": null
         }
@@ -851,16 +851,6 @@
           "wordCount": 523,
           "title": "重庆市巫溪县发布大雾黄色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231001/t20231001_526438644.html",
-          "author": "国家预警信息发布中心",
-          "description": "云阳县气象台2023年10月1日10时发布“大雾黄色预警信号”，预计未来12小时，全县各乡镇（街道）将出现能见度小于500米的大雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231001/t20231001_526438644.html",
-          "publishedOn": "2023-10-01T02:17:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市云阳县发布大雾黄色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -902,7 +892,7 @@
           "description": "10 月 5 日 - 6 日，ViteConf 2023 在线举行，Vue 和 Vite 的创建者尤雨溪发表了题为《The State of Vite》 的演讲，他分享了 Vite 的现状与未来展望，本文就来看一看 Vite 现在怎么样了，以及未来的路将怎么走！\n\nVite 版本发布情况\n首先，来快速回顾一下自上一次 ViteConf 以来， Vite 的版本发布情况。每个版本都有很多更新，这里只关注最主要的功能。\nVite 4.0\nVite 4.0 于 2022 年 12 月发布，是上一次 ViteConf 后的主要版本更新。这个版本最大的变化是升级了 Rollup 3。Vite 和 Rollup 同步了主要版本的发布，因此也停止了对旧版 Node.js 的支持。\n\n相较于 Vite 3.0，这是一个更小的主要版本，没有太多的破坏性变化。事实上，Vite 团队的目标是发布一个稳定的版本：充分利用生态系统的 CI 工具来确保与下游项目的兼容性，以尽可能少地影响最终用户。\n除此之外，Vite 还采用了由 Arnaud Barre 最初创建的基于 SWC 的 React 插件，他现在也是 Vite 团队成员！\nVite 4.1\nVite 4.1 于 2023 年 2 月发布，该版本主要是将 Rollup 和 esbuild 的版本进行同步。值得注意的是 React 插件的升级：Plugin-react 插件修复了很多热更新（HMR）方面的问题，并且采用 SWC 的版本增加了对 SWC 插件的支持。\n\nVite 4.2\nVite 4.2 于 2023 年 3 月发布，该版本的主要改进是提升了 source map 的调试体验。Vite 团队与 Chrome Devtools 团队进行合作，修复了一些长期存在的路径显示问题。通过x_google_ignoreList  source…",
           "link": "https://juejin.cn/post/7286112965609373731",
           "publishedOn": "2023-10-06T03:15:50.000Z",
-          "wordCount": 1588,
+          "wordCount": 1665,
           "title": "尤雨溪：Vite的现状与未来展望",
           "imageUrl": null
         },
@@ -914,6 +904,16 @@
           "publishedOn": "2023-10-05T06:10:31.000Z",
           "wordCount": 2104,
           "title": "JsDoc vs TypeScript",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7285184691418169363",
+          "author": "编程的平行世界",
+          "description": "前言\n在上一篇文章中，讲解了如何实现双人在本地对战的五子棋，但是只有一个人的时候就不太好玩，同时博主也没有把五子棋相关的文章写过瘾。那么这篇文章，我们来实现一个功能更加丰富的五子棋吧！在设计五子棋的算法方面，我们将引入一些经典的算法，如最大最小搜索（Max-Min）算法和Alpha-Beta剪枝算法。这些算法将帮助我们创建一个智能的对手，使游戏更具挑战性和趣味性。除了算法的介绍，本文还将深入探讨五子棋的基本玩法和规则。我们将详细解释如何落子、如何判断胜负以及如何对各种局面进行评分估值。通过学习这些基础知识，您将能够更好地理解和享受五子棋游戏。\n效果图：\n\n\n\n\n\n\n仓库地址：https://github.com/taxze6/flutter_game_collection/tree/main/gomoku_ai\nrelease apk下载体验：https://github.com/taxze6/flutter_game_collection/tree/main/gomoku_ai/release\n棋盘绘制\n本次采用的棋盘绘制与上篇文章的方式不同，上篇文章中采用的是GridView这样的基础组件，使用简单，无需手动编写绘制逻辑。利用GridView的布局特性，可以很方便地进行排列和调整。但是它也有缺点，就是不够灵活，当我们想实现更多的棋盘细节时，实现起来就不是很方便了，所以在本篇文章中，我们采用CustomPaint绘制的方式。\n那在绘制棋盘之前，我们需要先定义游戏所需要的一些参数和实体类：\n玩家类\n//玩家\nclass Player {\n  static final Player black = Player(Colors.black);\n  static final Player white = Player(Colors.white);\n  late Color col…",
+          "link": "https://juejin.cn/post/7285184691418169363",
+          "publishedOn": "2023-10-05T04:56:17.000Z",
+          "wordCount": 8203,
+          "title": "国庆假期，我用Flutter写了个我自己都玩不赢的五子棋AI🤣",
           "imageUrl": null
         },
         {
@@ -1007,16 +1007,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7284143489737818152",
-          "author": "月晕52",
-          "description": "React脚手架搭建\nCreate-react-app基础操作\n当下前端开发的主流是组件化和模块化\n有助于团队协作开发\n便于组件的复用：提高开发效率、方便后期维护、减少冗余代码\n划分组件：\n业务组件：针对项目需求封装\n\n普通业务组件：复用性低，只是单独拆选出来的一个模块\n通用业务组件：具备复用性\n功能组件：适用于多个项目「例如：UI 组件库中的组件」\n\n通用功能组件\n组件化开发必然会带来工程化，即基于 Webpack / Vite / Rollup / Turbopack 等工具实现组件的合并、压缩、打包等。\n安装create-react-app\n我们可以基于webpack自己去搭建一套工程化打包的脚手架，但是过程会非常麻烦和繁琐，因此可以利用官方提供的脚手架create-react-app创建React项目，基于该脚手架创建项目，默认就把 Webpack 的打包规则已经处理好了，把一些项目需要的基本文件也都创建好了。我们可以在其上面做修改\n全局安装 create-react-app 脚手架：\nnpm i create-react-app -g\n\n检查 create-react-app 的版本（是否安装完成·）：\ncreate-react-app --version\n\n创建工程化项目\n创建的命令为：\ncreate-react-app [项目名称]\n\n项目名称应该仅使用数字、小写字母和下划线 _ 的组合。\n创建的项目中会默认安装：\nreact : React框架的核心\nreact-dom : React 视图渲染的核心 [基于 React 构建 WebApp（HTML 页面）]\nreact-script: 脚手架为了让项目目录看起来干净一点，把 Webpack 打包的规则及相关的插件、预处理器等都隐藏到了 node_modules 目录下，react-scripts 就是脚手…",
-          "link": "https://juejin.cn/post/7284143489737818152",
-          "publishedOn": "2023-10-02T01:22:05.000Z",
-          "wordCount": 9319,
-          "title": "react教程",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7283873796977000500",
           "author": "寻找奶酪的mouse",
           "description": "theme: fancy\n“换做是你，被领导问到这类问题，你会怎么说？”，给你一首歌的时间想一想~\n\n话不多说，进入正题！被问到这类问题，领导无非是想了解你行动背后的动机，即\n为什么要引入typescript，它解决了什么问题？\n目前业务中存在哪些痛点？\n预估成本和风险收益计算？\n围绕上面问题，接下来站在业务角度一起聊聊\n背景\n在业务部门做技术，一切都是以驱动业务发展为首要前提。\n在当时，我们存在以下几类问题：\n为解决业务常见工单、研发痛点问题\n为减少运行时JavaScript常见的8种错误\n尝试提升代码质量、可维护性\n第一点\n由于业务产品面向群体为B端企业，内部有一套工单系统用于客户反馈产品使用过程中产生的问题，通过统计，前端类型工单存在一部分问题是由于代码运行时结果不及预期，而在开发环境、测试环境以及预发布环境测试都没有出现，它们诸如：\ndata.x为undefined，导致页面上显示undefined字样，对用户体验极其不好\ndata.a.b运行时异常，a可能存在值为null | undefined，导致页面异常\n后端改了某个接口某个字段的数据类型，没有同步前端修改、因场景较多改漏了\n前端同学由于粗心，字段名改错了，测试没有覆盖到该场景\n修改某个逻辑的时候，由于场景比较复杂，一个字段存在多种数据类型的情况，开发者不能一眼穷举出所有数据类型的情况，于是用数组的方法操作了对象，产生工单问题\n而关于研发痛点问题，它们是：\n在前端联调过程中，多次因为类型不确定导致对接过程中出现参数错误，对研发效能有一定影响\n一个函数根据场景不同接受不同的对象属性，在维护过程中，维护者无法很快知道当前某个场景需要的对象含有什么属性，并且不知道属性一定存在与否，造成逻辑层的风险不可控以及不低维护成本\n重构逻辑时误删代码、修改变量、方法、文件，改漏或者出错，导致工单问题\n第二点\nrollbar 监…",
@@ -1099,7 +1089,7 @@
           "description": "#求助掘友 \n刚买了一个带鱼屏显示器，自带分屏功能，但是它的这个分屏功能是支持多个主机连接同一个显示器，我想要的效果是一个主机连接这个显示器后，展示多个显示器的界面（相当于连接多个显示器），这个该怎么搞？",
           "link": "https://juejin.cn/pin/7287018116970184743",
           "publishedOn": "2023-10-07T13:55:53.000Z",
-          "wordCount": 524,
+          "wordCount": 525,
           "title": "#求助掘友 刚买了一个带鱼屏显示器，自带分屏功能，但是它的这个分屏功能是支持多个主机连接同一个显示器，我想要的效果是一个主机连接这个显示器后，展示多个显...",
           "imageUrl": null
         },
@@ -1109,7 +1099,7 @@
           "description": "vscode扩展fnMap（函数地图）v3.1.0 发布\n1，新增功能：修改注册码备注\n2，新增功能：新增跨文件置顶，方便多文件跳转\n扩展地址：https://marketplace.visualstudio.com/items?itemName=chensuiyi.fn-map\n[7210228048107896891#每日快讯#]",
           "link": "https://juejin.cn/pin/7285185696120242213",
           "publishedOn": "2023-10-03T17:04:07.000Z",
-          "wordCount": 600,
+          "wordCount": 583,
           "title": "vscode扩展fnMap（函数地图）v3.1.0 发布 1，新增功能：修改注册码备注 2，新增功能：新增跨文件置顶，方便多文件跳转 扩展地址：https://marketplace.visualstu...",
           "imageUrl": null
         },
@@ -1119,7 +1109,7 @@
           "description": "vscode扩展 FnMap - 函数地图\n人性化的侧边栏函数、变量、符号列表操作和展示",
           "link": "https://juejin.cn/pin/7283768998776569915",
           "publishedOn": "2023-09-29T01:04:57.000Z",
-          "wordCount": 535,
+          "wordCount": 538,
           "title": "vscode扩展 FnMap - 函数地图 人性化的侧边栏函数、变量、符号列表操作和展示",
           "imageUrl": null
         },
@@ -1139,7 +1129,7 @@
           "description": "[7073670907851440160#新人报道#] 欢迎使用新鲜上线的DevShots https://gpwzw.com/",
           "link": "https://juejin.cn/pin/7283532551473594425",
           "publishedOn": "2023-09-28T07:52:46.000Z",
-          "wordCount": 529,
+          "wordCount": 527,
           "title": "[7073670907851440160#新人报道#] 欢迎使用新鲜上线的DevShots https://gpwzw.com/",
           "imageUrl": null
         },
@@ -1169,7 +1159,7 @@
           "description": "无所不知的jym，文章里面的gif效果展示图你们都是用什么工具生成的呀",
           "link": "https://juejin.cn/pin/7282691710072946725",
           "publishedOn": "2023-09-25T14:46:04.000Z",
-          "wordCount": 521,
+          "wordCount": 524,
           "title": "无所不知的jym，文章里面的gif效果展示图你们都是用什么工具生成的呀",
           "imageUrl": null
         },
@@ -1219,7 +1209,7 @@
           "description": "想开发拥有实时协作功能的可以看下：《Spaces SDK：专为实时协作功能开发设计的SDK》https://mp.weixin.qq.com/s/EK1u2tr1CRcqbevtnAETmQ\n[7210228048107896891#每日快讯#]",
           "link": "https://juejin.cn/pin/7281256255354601508",
           "publishedOn": "2023-09-22T04:14:55.000Z",
-          "wordCount": 601,
+          "wordCount": 584,
           "title": "想开发拥有实时协作功能的可以看下：《Spaces SDK：专为实时协作功能开发设计的SDK》https://mp.weixin.qq.com/s/EK1u2tr1CRcqbevtnAETmQ [7210228048107896891#...",
           "imageUrl": null
         },
@@ -1279,7 +1269,7 @@
           "description": "入手一台mac mini做前端开发怎么样？？",
           "link": "https://juejin.cn/pin/7280007832701992979",
           "publishedOn": "2023-09-18T05:30:43.000Z",
-          "wordCount": 522,
+          "wordCount": 525,
           "title": "入手一台mac mini做前端开发怎么样？？",
           "imageUrl": null
         },
