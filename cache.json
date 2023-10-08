@@ -23,7 +23,7 @@
           "description": "起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/",
           "publishedOn": "2023-09-17T08:06:56.000Z",
-          "wordCount": 1490,
+          "wordCount": 1489,
           "title": "又get到了，JS复制图片到剪切板",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "自己体验了下，出乎意料，HTML elementtiming属性在性能监控这块，比预想的要实用的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/html-elementtiming-attribute/",
           "publishedOn": "2023-09-15T15:58:22.000Z",
-          "wordCount": 942,
+          "wordCount": 941,
           "title": "HTML elementtiming属性初体验记录",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "坚持探索Web标准下的原生浏览器开发行为，行为驱动和数据驱动的表单开发其实各有千秋，深入HTML，你会发现这个世界比你所知的要精彩的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/form-reset-input-change/",
           "publishedOn": "2023-09-12T15:52:48.000Z",
-          "wordCount": 1091,
+          "wordCount": 1090,
           "title": "Tips：form元素reset后input不触发change事件处理",
           "imageUrl": null
         }
@@ -81,6 +81,26 @@
       "feedUrl": "https://rsshub.app/jike/user/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
+        {
+          "id": "https://m.okjike.com/originalPosts/65224e0605145f31e59abb6b",
+          "author": null,
+          "description": "关于内网穿透，你也可以选择 Cloudflare 提供的 Quick Tunnels，也是一句命令就可以实现：\ncloudflared tunnel --url http://localhost:8080\n默认生成的是一个以 .trycloudflare.com 结尾的随机域名，它是免费的。\nCloudflare 的强大之处是，你可以自定义域名、支持配置 SLB、支持 HTTPS/TCP/SSH 等服务转发、支持基于 IP 的 ACL 设置。如果免费套餐的配置不足也可以考虑升级套餐。https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/do-more-with-tunnels/trycloudflare/",
+          "link": "https://m.okjike.com/originalPosts/65224e0605145f31e59abb6b",
+          "publishedOn": "2023-10-08T06:36:54.000Z",
+          "wordCount": 473,
+          "title": "发布了: 关于内网穿透，你也可以选择 Cloudflare 提供的 Quick Tunnels，也是一句命令就可以实现： cloudflared tunnel --url http://localhost:8080 默认生成的...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FrDDO8QKfuJE1bg5IIcVOctmthtXv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
+        {
+          "id": "https://m.okjike.com/originalPosts/6522161ec9ddb2a2a3a06387",
+          "author": null,
+          "description": "VSCode 现在已经原生支持了内网穿透，你只需要在工具栏中设置本地的具体端口，它就会生成一个临时域名，帮你把服务暴露出去。\n有两种可见性配置策略：1）专用模式，需要使用与当前 VSCode 相同的登录账户才能够访问到服务，较为安全；2）公开模式，任何人都可以访问，需要注意避免敏感信息对外。\n目前一个账户允许开 5 条隧道，且存在带宽限制，不过对于一般的研发、协同和调试场景，完全够用。它的原理是与 server 端建立一条 ssh 隧道，然后开了一个反向代理。",
+          "link": "https://m.okjike.com/originalPosts/6522161ec9ddb2a2a3a06387",
+          "publishedOn": "2023-10-08T02:38:22.000Z",
+          "wordCount": 487,
+          "title": "发布了: VSCode 现在已经原生支持了内网穿透，你只需要在工具栏中设置本地的具体端口，它就会生成一个临时域名，帮你把服务暴露出去。 有两种可见性配置策略：1...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FuIBONlMVL8AYQeLTmwT3G7pciWZv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
         {
           "id": "https://m.okjike.com/originalPosts/6514b17c1589e4a51a19cb43",
           "author": null,
@@ -160,26 +180,6 @@
           "wordCount": 465,
           "title": "发布了: 干就对了",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fo_uabazeAtdc57nLcP_yo7-dwMav3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/650d450805145f31e5d6fcb4",
-          "author": null,
-          "description": "LongLLaMA，https://github.com/CStanKonrad/long_llama，主打一个 Looooong，它支持 256k 的上下文长度，一次性输入十几本圣经全文都扛得住。要知道 gpt-4 才 8k😂",
-          "link": "https://m.okjike.com/originalPosts/650d450805145f31e5d6fcb4",
-          "publishedOn": "2023-09-22T07:40:56.000Z",
-          "wordCount": 452,
-          "title": "发布了: LongLLaMA，https://github.com/CStanKonrad/long_llama，主打一个 Looooong，它支持 256k 的上下文长度，一次性输入十几本圣经全文都扛得住。要知道 gp...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fqs0BBAJ8MGTPUzZOYPAfT_jKK6Tv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/650d23cc1589e4a51a73ef61",
-          "author": null,
-          "description": "智齿只要疼过，就毫不犹豫第二天去拔。\n因为几年后的你，还是会选择去拔的🥹",
-          "link": "https://m.okjike.com/originalPosts/650d23cc1589e4a51a73ef61",
-          "publishedOn": "2023-09-22T05:19:08.000Z",
-          "wordCount": 426,
-          "title": "发布了: 智齿只要疼过，就毫不犹豫第二天去拔。 因为几年后的你，还是会选择去拔的🥹",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         }
       ]
     },
@@ -893,7 +893,7 @@
           "link": "https://juejin.cn/post/7286112965609373731",
           "publishedOn": "2023-10-06T03:15:50.000Z",
           "wordCount": 1665,
-          "title": "尤雨溪：Vite的现状与未来展望",
+          "title": "ViteConf 2023：Vite的现状与未来展望",
           "imageUrl": null
         },
         {
@@ -957,6 +957,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7284545971609714745",
+          "author": "王大冶",
+          "description": "免费体验 Gpt4 plus 与 AI作图神器，我们出的钱 体验地址：体验\nJavaScript 中的 Promises 是什么？\n如果你偶然发现了这篇文章，你可能已经对 promises 很熟悉了。但对于那些新接触 JavaScript 的人来说，我们来详细解释一下。从本质上讲，Promise 对象表示异步操作的最终完成或失败。有趣的是，当 promise 被创建时，其值可能不会立即可用。\nconst promise = new Promise((resolve, reject) => {  \n  // 一些异步操作  \n  if (/* 操作成功 */) {    \n    resolve(result);  \n  } else {    \n    reject(error);  \n  }\n});\n\n\n它们有3种状态：\nPending（待定）：这是初始状态，既没有实现也没有被拒绝。\nFulfilled（已实现）：当 promise 成功完成并产生值时的状态。\nRejected（已拒绝）：当发生错误并且 promise 中的操作不成功时的状态。\n一旦 promise 被解决，你可以使用 .then() 来处理结果，使用 .catch() 来管理其执行过程中出现的任何错误。\npromise  \n  .then(result => {    \n    console.log('成功：', result);  \n  })  \n  .catch(error => {    \n    console.error('错误：', error);  \n  });\n\n\n理解 Promise.all()\n当同时处理多个 promises 时，你可以利用内置的 Promise.all([]) 方法。此方法接受一个 promises 数组并返回一个统一的 promise。关键是，只有当所有输入的…",
+          "link": "https://juejin.cn/post/7284545971609714745",
+          "publishedOn": "2023-10-03T00:54:42.000Z",
+          "wordCount": 1321,
+          "title": "停止在 JavaScript 中使用 Promise.all()",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7284573955267510272",
           "author": "寻找奶酪的mouse",
           "description": "theme: fancy\n一直以来都没有记录或总结过自己每天工作模式和状态，以至于说回想起刚毕业参加工作的时候，作为一个初级开发，做事凭借着满腔热情，花的时间多，但成长是否成正比呢?\n今天分享一下自己当前的工作状态，其一是能够在不久后跟自己对比是否有所长进，其二也想看看JYM的工作方式，顺便偷师🐶，欢迎留言交流！\n通勤\n现在住的地方离公司比较远，前前后后需要40min，反而我比较享受这段路程，可以给我独立思考的时间，留意到路上大部分人都会刷微博、短视频，但我上午是不会刷的，一方面是早上经过这种快餐文化的侵蚀，人一天当中的注意力是有限的，它会消耗人的精力，让我们大脑会变得浮躁，从而影响工作的专注度；二是这么长的时间是能够发挥它的杠杆的，去做一些对自己有利的事情，比如最近用来刷算法，腻了就看微信读书，可能不一定用得上，但我相信有些思维的改变是潜移默化的。\n下班通勤一般会听听音乐，学学英语，有时候一天下来精神消耗太大，眼睛干涩，就不要求自己一定要做某件事情，刷刷自己感兴趣的博主，甚至有时候连视频都没精力刷，那我会冥想10-20min，这可是我恢复精力的一大法宝啊。\n做计划\n去到公司，首先是放空大脑，如何放空呢？\n把所有今天需要做的事情放入待办清单。\n周一把整周做的事情进行计划，细分到每一天需要做什么，而到了那一天就把已经做好的计划再进行确认轻重缓急。\n那应该如何做计划呢？\n我常用的方法是PDCA闭环模型，简单实用。\nPlan，定好计划或目标🎯，即我们需要完成的事情\nDo，要完成定好的目标，这一步需要对目标进行拆分，落实到每一步能够执行的行动计划\nCheck，审查每一步计划的执行结果是否达到预期，如果没有，分析导致该结果的原因；相反达到了预期结果，思考是否还有更好的方式和解决方案，这个是对上上策思维的训练。\nAction，根据第三步复盘的结果，重新对下一次PDCA进行改进，同时避免犯重复的错误\n你可以尝试一下它的威力，具体表格如下：\n\n番茄工作模式\n工作任务已经有了方向之后，我不会一股脑埋头就开撸，因为不合理时间和精力分配太容易让自己很快达到疲惫状态，接下来就很难再集中注意力。我一般会采用番茄APP来辅助分配时间，再者番茄工作法也是公认的高效率工作模式，它可以很容易让我进入心流模式，完全无视外在因素的干扰，效率嘎嘎起飞🛫。\n复盘\n每天收工之前必须经过完成PDCA闭环，这个环节是对一天的行动计划进行Check和提出Action，同时添加到第二天的PDCA中，完成收尾。\n难道一天就这样草草结束了吗，当然不是啦，学习输入应该也有输出，才能形成闭环，那就是写作。\n写作\n我从大三就开始写技术文章了，很早就注册掘金，不过当时主要在CSDN更新，后来就分散到其他渠道上，如个人公众号，公司内部wiki等等，现在转到掘金的原因是其一这个社区还是比较专一，不会参杂太多商业性的元素在里面，其二是更多想把自己的想法保留下来，给几年后的自己看到曾经的模样，同时在不久后的将来，孩子能够更加全面了解他爸爸的过去以及给予他一些启发。（似乎有点扯远了~哈哈哈）\n回到正题，一天当中我会在中午或晚上的时候进行写作，记录当天遇到的问题和想法。虽然这个时间节点都不太适合写东西，在饭食过后身体会将大部分能量用于消化食物从而减少了其他功能的能量损耗，所以吃完饭会反犯困也就是这个原因，但却是我能够自由分配的时间。\n总结\n这里没有细化到每天一天的工作内容，目前工作任务还是比较简单，大部分都能够提前完成，除此之外也承担团队前端基建的任务，如文档规范定制、业务脚手架开发和参与开源贡献。更多的是自主探索感兴趣的板块，并记录和分享出来，当然啦，掘友们有哪些板块想看的，也欢迎留言~",
@@ -1007,6 +1017,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7284143489737818152",
+          "author": "月晕52",
+          "description": "React脚手架搭建\nCreate-react-app基础操作\n当下前端开发的主流是组件化和模块化\n有助于团队协作开发\n便于组件的复用：提高开发效率、方便后期维护、减少冗余代码\n划分组件：\n业务组件：针对项目需求封装\n\n普通业务组件：复用性低，只是单独拆选出来的一个模块\n通用业务组件：具备复用性\n功能组件：适用于多个项目「例如：UI 组件库中的组件」\n\n通用功能组件\n组件化开发必然会带来工程化，即基于 Webpack / Vite / Rollup / Turbopack 等工具实现组件的合并、压缩、打包等。\n安装create-react-app\n我们可以基于webpack自己去搭建一套工程化打包的脚手架，但是过程会非常麻烦和繁琐，因此可以利用官方提供的脚手架create-react-app创建React项目，基于该脚手架创建项目，默认就把 Webpack 的打包规则已经处理好了，把一些项目需要的基本文件也都创建好了。我们可以在其上面做修改\n全局安装 create-react-app 脚手架：\nnpm i create-react-app -g\n\n检查 create-react-app 的版本（是否安装完成·）：\ncreate-react-app --version\n\n创建工程化项目\n创建的命令为：\ncreate-react-app [项目名称]\n\n项目名称应该仅使用数字、小写字母和下划线 _ 的组合。\n创建的项目中会默认安装：\nreact : React框架的核心\nreact-dom : React 视图渲染的核心 [基于 React 构建 WebApp（HTML 页面）]\nreact-script: 脚手架为了让项目目录看起来干净一点，把 Webpack 打包的规则及相关的插件、预处理器等都隐藏到了 node_modules 目录下，react-scripts 就是脚手…",
+          "link": "https://juejin.cn/post/7284143489737818152",
+          "publishedOn": "2023-10-02T01:22:05.000Z",
+          "wordCount": 9319,
+          "title": "react教程",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7283873796977000500",
           "author": "寻找奶酪的mouse",
           "description": "theme: fancy\n“换做是你，被领导问到这类问题，你会怎么说？”，给你一首歌的时间想一想~\n\n话不多说，进入正题！被问到这类问题，领导无非是想了解你行动背后的动机，即\n为什么要引入typescript，它解决了什么问题？\n目前业务中存在哪些痛点？\n预估成本和风险收益计算？\n围绕上面问题，接下来站在业务角度一起聊聊\n背景\n在业务部门做技术，一切都是以驱动业务发展为首要前提。\n在当时，我们存在以下几类问题：\n为解决业务常见工单、研发痛点问题\n为减少运行时JavaScript常见的8种错误\n尝试提升代码质量、可维护性\n第一点\n由于业务产品面向群体为B端企业，内部有一套工单系统用于客户反馈产品使用过程中产生的问题，通过统计，前端类型工单存在一部分问题是由于代码运行时结果不及预期，而在开发环境、测试环境以及预发布环境测试都没有出现，它们诸如：\ndata.x为undefined，导致页面上显示undefined字样，对用户体验极其不好\ndata.a.b运行时异常，a可能存在值为null | undefined，导致页面异常\n后端改了某个接口某个字段的数据类型，没有同步前端修改、因场景较多改漏了\n前端同学由于粗心，字段名改错了，测试没有覆盖到该场景\n修改某个逻辑的时候，由于场景比较复杂，一个字段存在多种数据类型的情况，开发者不能一眼穷举出所有数据类型的情况，于是用数组的方法操作了对象，产生工单问题\n而关于研发痛点问题，它们是：\n在前端联调过程中，多次因为类型不确定导致对接过程中出现参数错误，对研发效能有一定影响\n一个函数根据场景不同接受不同的对象属性，在维护过程中，维护者无法很快知道当前某个场景需要的对象含有什么属性，并且不知道属性一定存在与否，造成逻辑层的风险不可控以及不低维护成本\n重构逻辑时误删代码、修改变量、方法、文件，改漏或者出错，导致工单问题\n第二点\nrollbar 监…",
@@ -1037,16 +1057,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7283813865720184871",
-          "author": "蝼蚁之行",
-          "description": "最近在做视频相关的项目，自然就遇到了如何让视频顺畅播放的问题\n现在的视频网站，特别是长视频网站，一般不会直接请求一整个视频文件；这样直接导致响应时间过长，用户等待过久\n通常采用流媒体传输协议，就是将视频切成一小段一小段，比如10s为一段，这每一段是一个ts格式的文件，播放器根据播放进度请求对应或提前请求相应的ts视频文件，进而实现流畅播放，即使是点播也能保证顺畅播放\n像一些大型长视频网站，b站、腾讯视频等都是采用流媒体传输协议\n下面先来了解一下一种流媒体传输协议：HLS\nHLS\nHLS是一种基于HTTP的流媒体传输协议，可以实现流媒体的直播和点播，其工作原理就是把整个视频流分成一个个基于HTTP的文件，每次只下载一部分\nHLS协议是由苹果提出的，它包括三个部分：\nHTTP：传输协议\nm3u8：索引文件\nts文件：音视频媒体信息\n其中，m3u8是一种UTF-8编码的索引纯文本文件，它就像一个播放列表，记录了一段段的视频流ts文件\n前端首先解析m3u8文件，然后通过HTTP请求分片内容即ts文件，然后再使用MSE的appendBuffer进行buffer的封装，完成合流的工作，最后交给播放器进行播放\n实现\n\n我们上传的通常是一个mp4格式的文件，那么就需要将其进行分片，而FFmpeg能够实现将mp4转换为HLS文件\nFFmpeg是一个用于操作、转换流媒体的命令行工具\n首先需要先安装FFmpeg，控制台执行：ffmpeg 不会报错即为安装成功\n第一步：先将mp4视频转化成一个ts文件\nffmpeg -y -i './video.mp4' -vcodec copy -acodec copy -bsf:v h264_mp4toannexb \"./index.ts\"\n\n-bsf:v h264_mp4toannexb设置比特流过滤器\n第二步：将改ts文件切成一段一段的小ts文件，并将各个…",
-          "link": "https://juejin.cn/post/7283813865720184871",
-          "publishedOn": "2023-10-01T03:07:20.000Z",
-          "wordCount": 992,
-          "title": "【前端】如何流畅地播放视频",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7283748394601840680",
           "author": "搬砖的乔布梭",
           "description": "@主要Review的指标\n\n前端代码Review主要关注以下几个方面：\n1. 代码质量：代码是否简洁、易读、易维护。是否遵循了一致的编码风格和规范，例如ESLint、Prettier等。\n功能实现：代码是否实现了预期的功能，是否有潜在的bug或逻辑错误。\n性能优化：代码是否进行了必要的性能优化，例如避免不必要的渲染、使用了合适的数据结构和算法等。\n安全性：代码是否存在可能的安全风险，例如XSS攻击、CSRF攻击等。\n5. 可测试性：代码是否易于测试，是否有单元测试和集成测试。\n可读性：代码是否易于理解，是否有足够的注释和文档。\n可复用性：代码是否有高度的模块化和复用性。\n兼容性：代码是否兼容不同的浏览器和设备。\n助记：功性读复全兼测\n@功能Review\n无需人为检测，但注释要写明白，TS类型要写清楚，让用的人如沐春风；\n该匹配单元测试的建议配套单元测试，不落人以口实~\n@性能Review\n前端代码中一些典型的、肉眼可见的需要性能优化的地方包括：\n1. 过度渲染：如果你的应用在没有必要的情况下进行了过多的渲染，这可能会导致性能问题。例如，在React中，如果你的组件在props没有改变的情况下进行了重新渲染，那么你可能需要使用shouldComponentUpdate/SCU或React.PureComponent或useEffect来避免不必要的渲染。\n大量DOM操作：频繁的DOM操作是非常耗费性能的。如果你的代码中有大量的DOM操作，你可能需要考虑使用虚拟DOM或其他优化技术（例如DocumentFragment）。\n大量的网络请求：如果你的应用发送了大量的网络请求，这可能会导致性能问题。你可能需要考虑使用缓存、预加载、懒加载等技术来减少网络请求。\n大型JavaScript文件：如果你的JavaScript文件过大，这可能会导致加载和解析时间过长。你可能需要考虑使用代码分…",
@@ -1054,16 +1064,6 @@
           "publishedOn": "2023-09-29T05:55:23.000Z",
           "wordCount": 1407,
           "title": "前端代码Review，一次性掰扯明白！",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7283060133647056932",
-          "author": "掘金一周",
-          "description": "本文字数 1996  ，阅读时间大约需要 7分钟。\n【掘金一周】本期亮点：\n CodeMod 代码重构/升级必知必会\n跨域漏洞，我把前端线上搞崩溃了\n工作5年，没用过分布式锁，正常吗？\nGo是如何精致得进行内存管理？\n聊聊强化学习：可自动玩游戏的AI技术，实战智能走迷宫案例\nAndroid 增量构建的科技与狠活\n三年磨一剑，货拉拉iOS用户端10万分位Crash率攻坚之战\n上榜规则：文章发布时间在本期「掘金一周」发布时间的前一个星期内；且符合各个栏目的内容定位和要求。\n如发现文章有抄袭、洗稿等违反社区规则的行为，将取消当期及后续上榜资格。\n一周“金”选\n\n内容评审们会在过去的一周内对社区深度技术好文进行挖掘和筛选，优质的技术文章有机会出现在下方榜单中，排名不分先后。\n前端\nCodeMod 代码重构/升级必知必会 @ 荒山\n本文介绍了 codemod 代码的应用场景以及代码的重构/升级，详尽介绍和对比了 codemod 这个领域一些主流的库\n 跨域漏洞，我把前端线上搞崩溃了  @ Sailing\n本文详细介绍了从跨域问题发现到跨域问题解决的整个过程，文章还简要提到了前端资源链路，对处理前端跨域问题具有一定的参考价值\n还原现场🔍前端录制用户行为技术方案  @ 植物系青年\n本文详细介绍了用户行为录制在不同场景中对应的技术方案，以及对不同的方案做了对比\n后端\n工作5年，没用过分布式锁，正常吗？  @哪吒编程\n本文对分布式锁基本原理和实现方式以及他的重要性和优缺点做了详细的介绍\n从 5s 到 0.5s！CompletableFuture 异步任务优化技巧，确实优雅！  @JavaGuide\n这篇文章简单介绍了 CompletableFuture 的常见操作和使用建议，以及 CompletableFuture一些常用的API\n分布式算法之MIT 6.824系列总结 @每天一杯番茄汁\n…",
-          "link": "https://juejin.cn/post/7283060133647056932",
-          "publishedOn": "2023-09-27T07:30:52.000Z",
-          "wordCount": 1202,
-          "title": "跨域漏洞，我把前端线上搞崩溃了 | 掘金一周 9.27",
           "imageUrl": null
         },
         {
