@@ -23,7 +23,7 @@
           "description": "起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/",
           "publishedOn": "2023-09-17T08:06:56.000Z",
-          "wordCount": 1491,
+          "wordCount": 1490,
           "title": "又get到了，JS复制图片到剪切板",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "坚持探索Web标准下的原生浏览器开发行为，行为驱动和数据驱动的表单开发其实各有千秋，深入HTML，你会发现这个世界比你所知的要精彩的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/form-reset-input-change/",
           "publishedOn": "2023-09-12T15:52:48.000Z",
-          "wordCount": 1092,
+          "wordCount": 1091,
           "title": "Tips：form元素reset后input不触发change事件处理",
           "imageUrl": null
         }
@@ -81,6 +81,16 @@
       "feedUrl": "https://rsshub.app/jike/user/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
+        {
+          "id": "https://m.okjike.com/originalPosts/6523c56d55a9562cd3c1b734",
+          "author": null,
+          "description": "Copilot Voice，以后可以用嘴写代码了。https://githubnext.com/projects/copilot-voice\n在 VS Code 插件市场搜索 GitHub Copilot Voice，安装后，即可跟下面视频一样，用嘴编程😂，它支持打开文件、运行命令、定位到编辑器的具体位置等等，开通使用要求你付费订阅了 Github Copilot，不过它对认证的学生和开源有贡献的开发者是免费的。",
+          "link": "https://m.okjike.com/originalPosts/6523c56d55a9562cd3c1b734",
+          "publishedOn": "2023-10-09T09:18:37.000Z",
+          "wordCount": 477,
+          "title": "发布了: Copilot Voice，以后可以用嘴写代码了。https://githubnext.com/projects/copilot-voice 在 VS Code 插件市场搜索 GitHub Copilot Voice，安装后，即可...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fv-ga-l9gw8X-709E6dDe0Oc252I?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80"
+        },
         {
           "id": "https://m.okjike.com/originalPosts/65238e3499f2123c7438a61a",
           "author": null,
@@ -137,7 +147,7 @@
           "description": "lalal.ai，这个音频处理工具太牛了，它可以对复杂的合成音轨进行精准分离和无损提取。我试了一下，效果非常好。\n它主要用于两个场景，一个是音轨剥离，一个是声音移除，例如它可以提取人声、鼓、贝斯、吉他和弦乐等声音，也可以去除背景音乐、麦克风隆隆声以及其他不需要的噪音。下面的视频演示了剥离伴奏和人声的效果，还是比较直观的。\n也去搜罗了下实现原理，找到一篇介绍 MSS（Musical Source Separation）的论文：https://inria.hal.science/hal-01945345/document，它介绍了基于模型和基于信号处理的两种较为传统的处理方式，也提到，当前引入深度神经网络来解决这个问题的应用越来越多，不过最大的局限性还是可用于学习的数据太少，例如你让工具单独提取音频中鸟叫的声音，可能就比较吃力。",
           "link": "https://m.okjike.com/originalPosts/6522da181589e4a51a497121",
           "publishedOn": "2023-10-08T16:34:32.000Z",
-          "wordCount": 462,
+          "wordCount": 465,
           "title": "发布了: lalal.ai，这个音频处理工具太牛了，它可以对复杂的合成音轨进行精准分离和无损提取。我试了一下，效果非常好。 它主要用于两个场景，一个是音轨剥离，...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FiWJqUc4wfzrRMWD8sPPj4EB_4nT?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80"
         },
@@ -170,16 +180,6 @@
           "wordCount": 474,
           "title": "发布了: 关于内网穿透，你也可以选择 Cloudflare 提供的 Quick Tunnels，也是一句命令就可以实现： cloudflared tunnel --url http://localhost:8080 默认生成的...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FrDDO8QKfuJE1bg5IIcVOctmthtXv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/6522161ec9ddb2a2a3a06387",
-          "author": null,
-          "description": "VSCode 现在已经原生支持了内网穿透，你只需要在工具栏中设置本地的具体端口，它就会生成一个临时域名，帮你把服务暴露出去。\n有两种可见性配置策略：1）专用模式，需要使用与当前 VSCode 相同的登录账户才能够访问到服务，较为安全；2）公开模式，任何人都可以访问，需要注意避免敏感信息对外。\n目前一个账户允许开 5 条隧道，且存在带宽限制，不过对于一般的研发、协同和调试场景，完全够用。它的原理是与 server 端建立一条 ssh 隧道，然后开了一个反向代理。",
-          "link": "https://m.okjike.com/originalPosts/6522161ec9ddb2a2a3a06387",
-          "publishedOn": "2023-10-08T02:38:22.000Z",
-          "wordCount": 470,
-          "title": "发布了: VSCode 现在已经原生支持了内网穿透，你只需要在工具栏中设置本地的具体端口，它就会生成一个临时域名，帮你把服务暴露出去。 有两种可见性配置策略：1...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FuIBONlMVL8AYQeLTmwT3G7pciWZv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         }
       ]
     },
@@ -837,6 +837,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7285719262962352184",
+          "author": "jonssonyan",
+          "description": "大家好，我是 jonssonyan\n今天和大家分享一些免费开源的后台管理页面，帮助大家快速搭建前端页面。为什么要用模板？道理很简单，原因是方便我们快速开发。我们不应该花太多的时间在页面调整上，而应该把精力放在核心逻辑和业务上。\n以我自己为例，说一下我自己在开发过程中的切身感受。我是一名后端程序员，同时也做一些前端开发的事情，所以我的后端开发速度肯定是比前端开发要快的。每次写新项目，第一后端开发比较熟练，第二代码可以复用，所以后端一般很快就能写完。但是前端就恰恰相反，第一前端开发没有后端熟练，第二页面尽量不要复用。为什么页面尽量不要复用？主要原因是防止用户审美疲劳，让认识你的用户感觉怎么你开发的系统都是一套 UI？所以这时候我们备用一些前端后台管理模板就非常重要，能多备几个就多备几个，在自己需要的时候，几分钟就可以把前端搭建完毕，立刻进入到业务开发界面，省时省力，何乐而不为？\n另外有些人可能不太善用模板代码，有时候模板只是一个大致的框架，无论是前端模板还是后端模板，都不可能 100%符合我们的需求，需要我们按照自己的需求在上面更改。核心思路是将不需要的代码删掉，有时候系统不是越复杂越好，往往越简单，后期越容易维护。\n善用模板的技巧就是，首先，找一个符合自己技术栈的模板，比如，你擅长的技术栈是 Vue3+TS+Vite，那你找的模板就不能是 Vue2+JS 的。其次，模板最好是开源并且持续更新，别等模板过了一段时间被商业化了，那自己就成了接盘侠，后期代码只能自己维护了，导致自己的页面有了 Bug 没有及时修复，损失的还是我们自己，最好是去 GitHub 上面找模板，而且提交记录最好是最近的时间（至少最近一年要有提交记录吧）。其次，模板生态要好，要满足绝大多数场景，组件足够的丰富。 比如我们在开发过程中最常用的表格组件、上传组件、登录组件、按钮、标签等等。最后，模板的兼容性要好。…",
+          "link": "https://juejin.cn/post/7285719262962352184",
+          "publishedOn": "2023-10-06T04:07:05.000Z",
+          "wordCount": 945,
+          "title": "分享几个优秀开源免费管理后台模版，建议收藏！",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7286112965609373731",
           "author": "CUGGZ",
           "description": "10 月 5 日 - 6 日，ViteConf 2023 在线举行，Vue 和 Vite 的创建者尤雨溪发表了题为《The State of Vite》 的演讲，他分享了 Vite 的现状与未来展望，本文就来看一看 Vite 现在怎么样了，以及未来的路将怎么走！\n\nVite 版本发布情况\n首先，来快速回顾一下自上一次 ViteConf 以来， Vite 的版本发布情况。每个版本都有很多更新，这里只关注最主要的功能。\nVite 4.0\nVite 4.0 于 2022 年 12 月发布，是上一次 ViteConf 后的主要版本更新。这个版本最大的变化是升级了 Rollup 3。Vite 和 Rollup 同步了主要版本的发布，因此也停止了对旧版 Node.js 的支持。\n\n相较于 Vite 3.0，这是一个更小的主要版本，没有太多的破坏性变化。事实上，Vite 团队的目标是发布一个稳定的版本：充分利用生态系统的 CI 工具来确保与下游项目的兼容性，以尽可能少地影响最终用户。\n除此之外，Vite 还采用了由 Arnaud Barre 最初创建的基于 SWC 的 React 插件，他现在也是 Vite 团队成员！\nVite 4.1\nVite 4.1 于 2023 年 2 月发布，该版本主要是将 Rollup 和 esbuild 的版本进行同步。值得注意的是 React 插件的升级：Plugin-react 插件修复了很多热更新（HMR）方面的问题，并且采用 SWC 的版本增加了对 SWC 插件的支持。\n\nVite 4.2\nVite 4.2 于 2023 年 3 月发布，该版本的主要改进是提升了 source map 的调试体验。Vite 团队与 Chrome Devtools 团队进行合作，修复了一些长期存在的路径显示问题。通过x_google_ignoreList  source…",
@@ -927,16 +937,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7284164153576538124",
-          "author": "好好吃饭好好睡觉",
-          "description": "theme: jzman\n由场景题扯到了如题所示的问题\n我： 使用scrollTop， 其他API我知道有但是具体的我忘了.....\n目前判断元素出现在可视区域的有三种方案， 我们来逐个突破：\noffsetTop, scrollTop\n getBoundingClientRect\nIntersectionObserver\n一、offsetTop + scrollTop\noffsetTop: 当前元素相对于其 offsetParent 元素的顶部内边距的距离\n\noffsetParent: 指向最近的包含该元素的定位元素或者最近的 table, td, th, body 元素\n\noffsetWidth, offsetHeight包括了content， padding， border, 不包括margin\nclientWidth, clientHeight包括了content， padding 不包括border， margin\nscrollTop: 元素的内容顶部到它的视口可见内容的顶部的距离的度量\n实现如下：\n由图可知， 考虑纵轴方向的话\n要么元素不在可视区域下方， 此时应该满足\nel.offsetTop < document.documentElement.scrollTop + document.documentElement.clientHeight\n\n要么元素不在可视区域上方, 此时应该满足 el.offsetTop > document.documentElement.scrollTop - el.offsetHeight\n\n横向方向同理(此处忽略），代码实现如下\nconst isInView = (el) => {\n    const documentScrollTop = document.documentElement.scrollTop;\n    const…",
-          "link": "https://juejin.cn/post/7284164153576538124",
-          "publishedOn": "2023-10-02T08:54:21.000Z",
-          "wordCount": 1448,
-          "title": "如何判断元素是否在可视页面内",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7283748394601840680",
           "author": "搬砖的乔布梭",
           "description": "@主要Review的指标\n\n前端代码Review主要关注以下几个方面：\n1. 代码质量：代码是否简洁、易读、易维护。是否遵循了一致的编码风格和规范，例如ESLint、Prettier等。\n功能实现：代码是否实现了预期的功能，是否有潜在的bug或逻辑错误。\n性能优化：代码是否进行了必要的性能优化，例如避免不必要的渲染、使用了合适的数据结构和算法等。\n安全性：代码是否存在可能的安全风险，例如XSS攻击、CSRF攻击等。\n5. 可测试性：代码是否易于测试，是否有单元测试和集成测试。\n可读性：代码是否易于理解，是否有足够的注释和文档。\n可复用性：代码是否有高度的模块化和复用性。\n兼容性：代码是否兼容不同的浏览器和设备。\n助记：功性读复全兼测\n@功能Review\n无需人为检测，但注释要写明白，TS类型要写清楚，让用的人如沐春风；\n该匹配单元测试的建议配套单元测试，不落人以口实~\n@性能Review\n前端代码中一些典型的、肉眼可见的需要性能优化的地方包括：\n1. 过度渲染：如果你的应用在没有必要的情况下进行了过多的渲染，这可能会导致性能问题。例如，在React中，如果你的组件在props没有改变的情况下进行了重新渲染，那么你可能需要使用shouldComponentUpdate/SCU或React.PureComponent或useEffect来避免不必要的渲染。\n大量DOM操作：频繁的DOM操作是非常耗费性能的。如果你的代码中有大量的DOM操作，你可能需要考虑使用虚拟DOM或其他优化技术（例如DocumentFragment）。\n大量的网络请求：如果你的应用发送了大量的网络请求，这可能会导致性能问题。你可能需要考虑使用缓存、预加载、懒加载等技术来减少网络请求。\n大型JavaScript文件：如果你的JavaScript文件过大，这可能会导致加载和解析时间过长。你可能需要考虑使用代码分…",
@@ -952,7 +952,7 @@
           "description": "theme: juejin\n之前校招面试时遇到这样一个问题，git pull是哪两个指令的组合？\n当时是一脸懵的说不知道啦。\n那现在为什么又捡起来说呢？因为我搞懂了😁。\n剧透一下，本文的主旨与 合并代码 有关🤣：当时刚开始编程，全是一个人自嗨，完全没有合并代码这一场景🤣。于是并没有深究，工作后合并代码是常有的事，不得不去了解一下了。\n先说结果：git pull是两个指令的组合：git fetch和git merge。\n从git fetch开始\nFETCH_HEAD\n讲git fetch之前，还需要先了解一个东西，就是.git文件夹下的一个文件，FETCH_HEAD。\n\n可以通过 git log -p FETCH_HEAD 和 open .get/FETCH_HEAD 这两个指令去查看FETCH_HEAD（初始时没有这个文件，会报错，可以先用git fetch创建）。下面演示一下：\n下图是没有该文件：\n\n下图是有该文件：\ngit log -p FETCH_HEAD查看\n\nopen .get/FETCH_HEAD查看\n\n大致内容就是，目前有两个分支master分支和test-*分支，以及这两个分支最新的commit ID（正常项目内，这个文件内容很多，但你不需要记住这个文件的内容，看懂这个简单例子就好）\n这个文件是干啥的？\nFETCH_HEAD文件记录了远程仓库中的分支名称、最新的commit id以及提交的作者等相关信息。\n但它不是随着远程仓库实时变更的，是保存在我们本地，那就需要我们手动去更新。\n当执行git fetch命令时，它会从远程仓库获取最新的提交信息，并将这些信息存储在本地FETCH_HEAD中。\n再说git merge\n说到git merge，逃不开的必须提到git rebase，这俩是合并代码中的重要大将。\ngit merge\n作用: 将两个分支的更改合…",
           "link": "https://juejin.cn/post/7283691376649633828",
           "publishedOn": "2023-09-28T09:04:05.000Z",
-          "wordCount": 949,
+          "wordCount": 1108,
           "title": "面试官：git pull是哪两个指令的组合？😯",
           "imageUrl": null
         },
@@ -974,12 +974,22 @@
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
         {
+          "id": "7287791555623092264",
+          "author": "逆境之光",
+          "description": "逆向开发的大佬这么稀缺吗[流泪]，有没有做逆向开发到高级工程师或者技术专家程度的大佬啊[流泪][7073670077790289956#求职面试交流bbs#]",
+          "link": "https://juejin.cn/pin/7287791555623092264",
+          "publishedOn": "2023-10-09T09:53:41.000Z",
+          "wordCount": 517,
+          "title": "逆向开发的大佬这么稀缺吗[流泪]，有没有做逆向开发到高级工程师或者技术专家程度的大佬啊[流泪][7073670077790289956#求职面试交流bbs#]",
+          "imageUrl": null
+        },
+        {
           "id": "7287757113401491490",
           "author": "拜读生活",
           "description": "生成 java 实体类属性的工具 有推荐没得[发呆]",
           "link": "https://juejin.cn/pin/7287757113401491490",
           "publishedOn": "2023-10-09T09:16:18.000Z",
-          "wordCount": 538,
+          "wordCount": 537,
           "title": "生成 java 实体类属性的工具 有推荐没得[发呆]",
           "imageUrl": null
         },
@@ -989,7 +999,7 @@
           "description": "打卡，vue无敌偷懒利器",
           "link": "https://juejin.cn/pin/7287620609373831224",
           "publishedOn": "2023-10-09T05:05:12.000Z",
-          "wordCount": 532,
+          "wordCount": 531,
           "title": "打卡，vue无敌偷懒利器",
           "imageUrl": null
         },
@@ -1009,7 +1019,7 @@
           "description": "#求助掘友 \n刚买了一个带鱼屏显示器，自带分屏功能，但是它的这个分屏功能是支持多个主机连接同一个显示器，我想要的效果是一个主机连接这个显示器后，展示多个显示器的界面（相当于连接多个显示器），这个该怎么搞？",
           "link": "https://juejin.cn/pin/7287018116970184743",
           "publishedOn": "2023-10-07T13:55:53.000Z",
-          "wordCount": 523,
+          "wordCount": 525,
           "title": "#求助掘友 刚买了一个带鱼屏显示器，自带分屏功能，但是它的这个分屏功能是支持多个主机连接同一个显示器，我想要的效果是一个主机连接这个显示器后，展示多个显...",
           "imageUrl": null
         },
@@ -1029,7 +1039,7 @@
           "description": "vscode扩展 FnMap - 函数地图\n人性化的侧边栏函数、变量、符号列表操作和展示",
           "link": "https://juejin.cn/pin/7283768998776569915",
           "publishedOn": "2023-09-29T01:04:57.000Z",
-          "wordCount": 545,
+          "wordCount": 544,
           "title": "vscode扩展 FnMap - 函数地图 人性化的侧边栏函数、变量、符号列表操作和展示",
           "imageUrl": null
         },
@@ -1059,7 +1069,7 @@
           "description": "macOS支持容器化了！",
           "link": "https://juejin.cn/pin/7282944006674579516",
           "publishedOn": "2023-09-26T09:13:57.000Z",
-          "wordCount": 523,
+          "wordCount": 522,
           "title": "macOS支持容器化了！",
           "imageUrl": null
         },
@@ -1069,7 +1079,7 @@
           "description": "免注册 无限使用的ChatGPT https://sunmier.com/#/",
           "link": "https://juejin.cn/pin/7282692354984214539",
           "publishedOn": "2023-09-26T01:49:41.000Z",
-          "wordCount": 529,
+          "wordCount": 528,
           "title": "免注册 无限使用的ChatGPT https://sunmier.com/#/",
           "imageUrl": null
         },
@@ -1079,7 +1089,7 @@
           "description": "无所不知的jym，文章里面的gif效果展示图你们都是用什么工具生成的呀",
           "link": "https://juejin.cn/pin/7282691710072946725",
           "publishedOn": "2023-09-25T14:46:04.000Z",
-          "wordCount": 522,
+          "wordCount": 521,
           "title": "无所不知的jym，文章里面的gif效果展示图你们都是用什么工具生成的呀",
           "imageUrl": null
         },
@@ -1089,7 +1099,7 @@
           "description": "分享一下 DataCap 部分重构后的 UI，左侧重构前，右侧重构后",
           "link": "https://juejin.cn/pin/7282692458247995444",
           "publishedOn": "2023-09-25T12:18:53.000Z",
-          "wordCount": 546,
+          "wordCount": 545,
           "title": "分享一下 DataCap 部分重构后的 UI，左侧重构前，右侧重构后",
           "imageUrl": null
         },
@@ -1099,7 +1109,7 @@
           "description": "结合AI的自动化JVM参数解析、分析、建议工具,2秒钟完成你的java应用jvm参数分析，落实业界最佳实践，使jvm保持高性能、低资源浪费和高可观测性",
           "link": "https://juejin.cn/pin/7282228465932320826",
           "publishedOn": "2023-09-24T14:28:00.000Z",
-          "wordCount": 522,
+          "wordCount": 521,
           "title": "结合AI的自动化JVM参数解析、分析、建议工具,2秒钟完成你的java应用jvm参数分析，落实业界最佳实践，使jvm保持高性能、低资源浪费和高可观测性",
           "imageUrl": null
         },
@@ -1109,7 +1119,7 @@
           "description": "下班回家。。。",
           "link": "https://juejin.cn/pin/7281276425220014080",
           "publishedOn": "2023-09-22T09:38:36.000Z",
-          "wordCount": 524,
+          "wordCount": 523,
           "title": "下班回家。。。",
           "imageUrl": null
         },
@@ -1119,7 +1129,7 @@
           "description": "这个工具竟然可以把 python 脚本打包成可执行文件，在服务器上运行太方便了！",
           "link": "https://juejin.cn/pin/7281253419909120037",
           "publishedOn": "2023-09-22T06:06:15.000Z",
-          "wordCount": 540,
+          "wordCount": 539,
           "title": "这个工具竟然可以把 python 脚本打包成可执行文件，在服务器上运行太方便了！",
           "imageUrl": null
         },
@@ -1139,7 +1149,7 @@
           "description": "1. 折叠所有区域代码的快捷：    先按下  ctrl 和 K，再按下 ctrl 和 0 ; ( 注意这个是零，不是欧 )\n2. 展开所有折叠区域代码的快捷：先按下ctrl +k 再按 ctrl + J ;",
           "link": "https://juejin.cn/pin/7280791565924237375",
           "publishedOn": "2023-09-21T01:04:38.000Z",
-          "wordCount": 605,
+          "wordCount": 604,
           "title": "1. 折叠所有区域代码的快捷： 先按下 ctrl 和 K，再按下 ctrl 和 0 ; ( 注意这个是零，不是欧 ) 2. 展开所有折叠区域代码的快捷：先按下ctrl +k 再按 ctrl + J ;",
           "imageUrl": null
         },
@@ -1149,7 +1159,7 @@
           "description": "哈哈，最近有了个新的灵感，准备实践下。朋友们等我好消息",
           "link": "https://juejin.cn/pin/7280775972323115060",
           "publishedOn": "2023-09-20T12:35:49.000Z",
-          "wordCount": 522,
+          "wordCount": 521,
           "title": "哈哈，最近有了个新的灵感，准备实践下。朋友们等我好消息",
           "imageUrl": null
         },
@@ -1159,18 +1169,8 @@
           "description": "有人用过 bun 做包管理工具吗  很快 但是没有pnpm节省磁盘空间，pnpm的包是软连接的快捷方式，bun是从安装过的缓存中复制过来的，懂的可以讨论下",
           "link": "https://juejin.cn/pin/7280746975920930875",
           "publishedOn": "2023-09-20T09:30:18.000Z",
-          "wordCount": 546,
+          "wordCount": 545,
           "title": "有人用过 bun 做包管理工具吗 很快 但是没有pnpm节省磁盘空间，pnpm的包是软连接的快捷方式，bun是从安装过的缓存中复制过来的，懂的可以讨论下",
-          "imageUrl": null
-        },
-        {
-          "id": "7280746526825726004",
-          "author": "qianmoq",
-          "description": "https://github.com/devlive-community/datacap          全平台数据中台系统\nhttps://github.com/devlive-community/authx            全平台权限管理系统\nhttps://github.com/devlive-community/openai-java-sdk  多平台开放 AI SDK\n欢迎大家贡献代码",
-          "link": "https://juejin.cn/pin/7280746526825726004",
-          "publishedOn": "2023-09-20T09:06:24.000Z",
-          "wordCount": 543,
-          "title": "https://github.com/devlive-community/datacap 全平台数据中台系统 https://github.com/devlive-community/authx 全平台权限管理系统 https://github.com/devli...",
           "imageUrl": null
         }
       ]
