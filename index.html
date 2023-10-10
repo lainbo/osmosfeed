@@ -51,11 +51,44 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-10 datetime="2023-10-10T00:14:00.000Z">2023-10-10</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-10 datetime="2023-10-10T00:14:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-10 datetime="2023-10-10T01:19:32.000Z">2023-10-10</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-10 datetime="2023-10-10T01:19:32.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7287914116286545955"
+                        open
+                      >
+                        <summary class="article-expander__title">https://java.bejson.com/generator/ 崩掉了。。[捂脸]</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7287914116286545955">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>https://java.bejson.com/generator/  崩掉了。。[捂脸]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -128,7 +161,7 @@
                             <span class="media-object__text">
                               <span>知识不会爆炸，信息会。
 学会建立自己的信息输入体系，是roi 非常高的一件〝小事〞。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -523,7 +556,7 @@ Monorepo 的好处在于可以将项目中通用的部分单独抽离成一个�
   |-- varlet-shared 共享的通用工具
   |-- varlet-touch-emulator 桌面端适配器
   |-- varle…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1411,6 +1444,71 @@ import {ListTable, PivotTable, TYPES, themes}  from &#x27;@visactor/vtable&#x27;
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7287041017291374627"
+                        open
+                      >
+                        <summary class="article-expander__title">修改 git 的历史 commit，你能想到几种方案？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7287041017291374627">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>最近遇到一个 git 的问题：
+我在某个文件里写了一段不应该提交上去的内容，没注意，提交上去了。
+后来又提交了很多个 commit。
+之后我发现了这个，又把它去掉了，提交了一个新的 commit。
+
+这样虽然新的 commit 没有这段内容了，但老的 commit 里依然有这个内容。
+可我不想保留这段内容的记录，也就是想修改历史 commit。
+这种问题大家会怎么解决呢？
+我能想到的有三种方案，分别来试一下。
+
+我们先创建了个 git 项目。
+
+写了个 index.md，每行内容提交一个 commit。
+git log 可以看到，一共 5 个 commit：
+
+git show 看下 222 和 333 那个 commit：
+git show f5482b
+
+
+
+可以看到，这个 333 的 commit 就是我们想改掉的。
+但是现在后面提交了 444、555 这俩 commit 了，怎么改掉它呢？
+很容易想到的是 reset 到 333 那个 commit，重新提交，然后把后面的 commit 再一个个 cherry-pick 回去。
+我们试一下：
+首先把 444、555 这俩 commit 记下来，待会还要用
+
+然后 git reset 到 333 那个 commit：
+git reset --hard 65dfee
+
+
+把私密信息去掉，重新提交：
+git add .
+git commit --amend
+
+
+这样，这个 commit 就干净了。
+然后把后面的 444 和 555 再 cherry-pick 回来。
+cherry-pick 就是单独取一个 commit 过来。
+git cherry-pick 0b700f
+
+
+会有冲突，解决之后 continue 就好：
+git add .
+git cherry-pick --continue
+
+
+再 cherry-pic…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7287041057291321401"
                         open
                       >
@@ -1570,11 +1668,200 @@ DevEco 安装完成后，首次进入需要设置 nodejs 与 ohpm。可以选择
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-06 datetime="2023-10-06T15:51:00.000Z">2023-10-06</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-06 datetime="2023-10-06T15:51:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-06 datetime="2023-10-06T23:38:40.000Z">2023-10-06</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-06 datetime="2023-10-06T23:38:40.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7286307632193142843"
+                        open
+                      >
+                        <summary class="article-expander__title">✨ Pictode：十分钟轻松DIY图形编辑器💡</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7286307632193142843">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: smartblue
+利用两个多月的业余时间，使用Konva.js实现了一个名为【Pictode】的图形编辑器
+- 体验地址: https://jessyan0913.github.io/pictode-playground/#/
+🎨Pictode 欢迎体验🎨：https://pictode.com/#/
+✨GitHub 欢迎Star✨：https://github.com/JessYan0913/pictode
+
+缘起
+在掘金上看到众多技术大咖打造自己的图形编辑器项目。通过阅读大咖们的文章让我深受启发，我既敬佩这些大咖坚持创作和分享的精神，也自豪于自己也有编辑器项目的经验。这些因素汇聚，催生了我开发一个自己的图形编辑器的想法。
+虽然我以前在工作中已经实现了一些编辑器项目，如基于Three.js的3D编辑器、基于bpmn.js的流程编辑器、基于X6的拓扑编辑器，还有基于Vue的低代码编辑器等，但受公司项目限制，这些编辑器无法达到我理想中的水平。
+今年8月份，我利用业余实践开始了名为Pictode的图形编辑器项目。到目前为止，Pictode集成了众多实用功能，如工具切换、属性编辑、右键菜单、本地保存、导出图片、画布缩放、画布拖拽、历史记录、语言切换、主题切换等。经过这段时间努力，我认为Pictode已初步具备雏形，因此我决定向大家介绍它。
+Pictode主要功能演示
+图形绘制
+
+选择/变换
+
+层级移动
+
+对齐/分布
+
+组合/解除组合
+
+导出图片
+
+温馨提示🔔：看图固然好，实际体验方知妙处！吾友，诚挚邀请前往pictode一试身手，领略其中奥妙！ 🎨✨
+Pictode能为你带来什么
+也许你已经在掘金上看到许多技术大咖分享如何实现画板或图片编辑器的方法。他们或许详细解释了编辑器的原理和代码实现，有些甚至直接使用原生Canvas构建编辑器。但你是否和我有相同的感…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7286133122209742908"
+                        open
+                      >
+                        <summary class="article-expander__title">为了实现低代码平台，我写了一个拖拽库，顺便学习如何从0发布一个开源库</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7286133122209742908">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>highlight: a11y-dark
+拖拽库github地址：https://github.com/bpuns/easy-dnd
+拖拽库说明文档：https://bpuns.github.io/easy-dnd-docs/
+前言
+一年前，我接到一个需求，需要开发一个低代码平台，调研了下市面上适用于React的拖拽库，本人都感觉使用起来过于复杂，并且体积都挺大的，我就想用原生的拖拽Api，但是原生Api在复杂场景下（无限嵌套，嵌套规则复杂），是不可用的，如果想了解具体遇到的问题，可以看 巨详细！帮你踩坑HTML5拖拽api（下） 这篇文章。因此，我就想基于 Drag and Drop api 封装的一套可以应用与复杂场景下的拖拽库
+并且这个库最好不要和任何的前端框架绑定，这样方便移植和扩展，因为是自己封装的，因此可以掌握所有实现细节，开发过程中如果遇到了性能瓶颈，也能最快的找到解决方案，而且我也没完整的发布过一个开源库，正好学习下整个过程
+拖拽库实现思路
+拖拽上下文
+页面中可能会有很多可以拖拽的区域，并且拖拽区域之间互不影响，那么就需要为每个拖拽区域创建一个上下文，那么就可以提供一个方法，用于上下文的创建，为了到时候方便扩展，可以传一个配置项作为参数。
+interface ProviderConfig { } 
+
+/**
+ * 创建拖拽作用域下的基本数据
+ * @param {*} config 配置项
+ * @returns
+ */
+function createProvider(config?: ProviderConfig): Context;
+
+拖拽类型
+在现实生活中，我们之所以知道一个物品可以放到另外一个物品中，比如食物剩余的包装袋需要放到垃圾桶中，电脑需要放到电脑包里。所以抽到代码中，需要给可以拖拽的dom元素添加一个类型，给需要放置的元素设置允许放置的类型有…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7286264172097093684"
+                        open
+                      >
+                        <summary class="article-expander__title">uniapp从0 - 1实现微信小程序地图选择位置（支持卫星图）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7286264172097093684">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言
+小程序地图组件为腾讯地图，功能上使用了高德服务端API，文中经纬度格式都是gcj02，高德API返回和接收的格式也是这个，高德API中需要的AMAP_WEBAPI_KEY, 请自行前往高德开发者中心注册获取。
+真机演示视频
+https://www.aliyundrive.com/s/StwocUooKEV 手机端观看直接复制链接到浏览器，视频为手机录屏请退出全屏观看（尺寸不对）。
+实现页面地图样式
+初始化地图
+首先我们需要一个全屏的地图，设置当前页面为沉浸式页面（取消导航栏 pages.json style.navigationStyle: custom），然后进入页面创建地图组件。
+注意点：地图一定要设置固定宽度和高度
+
+  
+    
+      
+    
+  
+  
+  // 设置样式
+  .choose-loacation-box{
+      position: relative;
+      flex: 1;
+      display…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;12
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7285719262962352184"
+                        open
+                      >
+                        <summary class="article-expander__title">分享几个优秀开源免费管理后台模版，建议收藏！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7285719262962352184">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>大家好，我是 jonssonyan
+今天和大家分享一些免费开源的后台管理页面，帮助大家快速搭建前端页面。为什么要用模板？道理很简单，原因是方便我们快速开发。我们不应该花太多的时间在页面调整上，而应该把精力放在核心逻辑和业务上。
+以我自己为例，说一下我自己在开发过程中的切身感受。我是一名后端程序员，同时也做一些前端开发的事情，所以我的后端开发速度肯定是比前端开发要快的。每次写新项目，第一后端开发比较熟练，第二代码可以复用，所以后端一般很快就能写完。但是前端就恰恰相反，第一前端开发没有后端熟练，第二页面尽量不要复用。为什么页面尽量不要复用？主要原因是防止用户审美疲劳，让认识你的用户感觉怎么你开发的系统都是一套 UI？所以这时候我们备用一些前端后台管理模板就非常重要，能多备几个就多备几个，在自己需要的时候，几分钟就可以把前端搭建完毕，立刻进入到业务开发界面，省时省力，何乐而不为？
+另外有些人可能不太善用模板代码，有时候模板只是一个大致的框架，无论是前端模板还是后端模板，都不可能 100%符合我们的需求，需要我们按照自己的需求在上面更改。核心思路是将不需要的代码删掉，有时候系统不是越复杂越好，往往越简单，后期越容易维护。
+善用模板的技巧就是，首先，找一个符合自己技术栈的模板，比如，你擅长的技术栈是 Vue3+TS+Vite，那你找的模板就不能是 Vue2+JS 的。其次，模板最好是开源并且持续更新，别等模板过了一段时间被商业化了，那自己就成了接盘侠，后期代码只能自己维护了，导致自己的页面有了 Bug 没有及时修复，损失的还是我们自己，最好是去 GitHub 上面找模板，而且提交记录最好是最近的时间（至少最近一年要有提交记录吧）。其次，模板生态要好，要满足绝大多数场景，组件足够的丰富。 比如我们在开发过程中最常用的表格组件、上传组件、登录组件、按钮、标签等等。最后，模板的兼容性要好。…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7286112965609373731"
+                        open
+                      >
+                        <summary class="article-expander__title">ViteConf 2023：Vite的现状与未来展望</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7286112965609373731">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>10 月 5 日 - 6 日，ViteConf 2023 在线举行，Vue 和 Vite 的创建者尤雨溪发表了题为《The State of Vite》 的演讲，他分享了 Vite 的现状与未来展望，本文就来看一看 Vite 现在怎么样了，以及未来的路将怎么走！
+
+Vite 版本发布情况
+首先，来快速回顾一下自上一次 ViteConf 以来， Vite 的版本发布情况。每个版本都有很多更新，这里只关注最主要的功能。
+Vite 4.0
+Vite 4.0 于 2022 年 12 月发布，是上一次 ViteConf 后的主要版本更新。这个版本最大的变化是升级了 Rollup 3。Vite 和 Rollup 同步了主要版本的发布，因此也停止了对旧版 Node.js 的支持。
+
+相较于 Vite 3.0，这是一个更小的主要版本，没有太多的破坏性变化。事实上，Vite 团队的目标是发布一个稳定的版本：充分利用生态系统的 CI 工具来确保与下游项目的兼容性，以尽可能少地影响最终用户。
+除此之外，Vite 还采用了由 Arnaud Barre 最初创建的基于 SWC 的 React 插件，他现在也是 Vite 团队成员！
+Vite 4.1
+Vite 4.1 于 2023 年 2 月发布，该版本主要是将 Rollup 和 esbuild 的版本进行同步。值得注意的是 React 插件的升级：Plugin-react 插件修复了很多热更新（HMR）方面的问题，并且采用 SWC 的版本增加了对 SWC 插件的支持。
+
+Vite 4.2
+Vite 4.2 于 2023 年 3 月发布，该版本的主要改进是提升了 source map 的调试体验。Vite 团队与 Chrome Devtools 团队进行合作，修复了一些长期存在的路径显示问题。通过x_google_ignoreList  source…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -1739,151 +2026,6 @@ DevEco 安装完成后，首次进入需要设置 nodejs 与 ohpm。可以选择
    仔细看了一下表格，我发现自己    感受最「一般」的时期，不是工时最长的时期，而是找朋友玩和运动最少的时期。   
     
    说是找朋友玩，其实我更喜欢找朋友聊天，而且要少少的朋…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7286133122209742908"
-                        open
-                      >
-                        <summary class="article-expander__title">为了实现低代码平台，我写了一个拖拽库，顺便学习如何从0发布一个开源库</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7286133122209742908">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>highlight: a11y-dark
-拖拽库github地址：https://github.com/bpuns/easy-dnd
-拖拽库说明文档：https://bpuns.github.io/easy-dnd-docs/
-前言
-一年前，我接到一个需求，需要开发一个低代码平台，调研了下市面上适用于React的拖拽库，本人都感觉使用起来过于复杂，并且体积都挺大的，我就想用原生的拖拽Api，但是原生Api在复杂场景下（无限嵌套，嵌套规则复杂），是不可用的，如果想了解具体遇到的问题，可以看 巨详细！帮你踩坑HTML5拖拽api（下） 这篇文章。因此，我就想基于 Drag and Drop api 封装的一套可以应用与复杂场景下的拖拽库
-并且这个库最好不要和任何的前端框架绑定，这样方便移植和扩展，因为是自己封装的，因此可以掌握所有实现细节，开发过程中如果遇到了性能瓶颈，也能最快的找到解决方案，而且我也没完整的发布过一个开源库，正好学习下整个过程
-拖拽库实现思路
-拖拽上下文
-页面中可能会有很多可以拖拽的区域，并且拖拽区域之间互不影响，那么就需要为每个拖拽区域创建一个上下文，那么就可以提供一个方法，用于上下文的创建，为了到时候方便扩展，可以传一个配置项作为参数。
-interface ProviderConfig { } 
-
-/**
- * 创建拖拽作用域下的基本数据
- * @param {*} config 配置项
- * @returns
- */
-function createProvider(config?: ProviderConfig): Context;
-
-拖拽类型
-在现实生活中，我们之所以知道一个物品可以放到另外一个物品中，比如食物剩余的包装袋需要放到垃圾桶中，电脑需要放到电脑包里。所以抽到代码中，需要给可以拖拽的dom元素添加一个类型，给需要放置的元素设置允许放置的类型有…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7286264172097093684"
-                        open
-                      >
-                        <summary class="article-expander__title">uniapp从0 - 1实现微信小程序地图选择位置（支持卫星图）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7286264172097093684">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-小程序地图组件为腾讯地图，功能上使用了高德服务端API，文中经纬度格式都是gcj02，高德API返回和接收的格式也是这个，高德API中需要的AMAP_WEBAPI_KEY, 请自行前往高德开发者中心注册获取。
-真机演示视频
-https://www.aliyundrive.com/s/StwocUooKEV 手机端观看直接复制链接到浏览器，视频为手机录屏请退出全屏观看（尺寸不对）。
-实现页面地图样式
-初始化地图
-首先我们需要一个全屏的地图，设置当前页面为沉浸式页面（取消导航栏 pages.json style.navigationStyle: custom），然后进入页面创建地图组件。
-注意点：地图一定要设置固定宽度和高度
-
-  
-    
-      
-    
-  
-  
-  // 设置样式
-  .choose-loacation-box{
-      position: relative;
-      flex: 1;
-      display…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;12
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7285719262962352184"
-                        open
-                      >
-                        <summary class="article-expander__title">分享几个优秀开源免费管理后台模版，建议收藏！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7285719262962352184">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>大家好，我是 jonssonyan
-今天和大家分享一些免费开源的后台管理页面，帮助大家快速搭建前端页面。为什么要用模板？道理很简单，原因是方便我们快速开发。我们不应该花太多的时间在页面调整上，而应该把精力放在核心逻辑和业务上。
-以我自己为例，说一下我自己在开发过程中的切身感受。我是一名后端程序员，同时也做一些前端开发的事情，所以我的后端开发速度肯定是比前端开发要快的。每次写新项目，第一后端开发比较熟练，第二代码可以复用，所以后端一般很快就能写完。但是前端就恰恰相反，第一前端开发没有后端熟练，第二页面尽量不要复用。为什么页面尽量不要复用？主要原因是防止用户审美疲劳，让认识你的用户感觉怎么你开发的系统都是一套 UI？所以这时候我们备用一些前端后台管理模板就非常重要，能多备几个就多备几个，在自己需要的时候，几分钟就可以把前端搭建完毕，立刻进入到业务开发界面，省时省力，何乐而不为？
-另外有些人可能不太善用模板代码，有时候模板只是一个大致的框架，无论是前端模板还是后端模板，都不可能 100%符合我们的需求，需要我们按照自己的需求在上面更改。核心思路是将不需要的代码删掉，有时候系统不是越复杂越好，往往越简单，后期越容易维护。
-善用模板的技巧就是，首先，找一个符合自己技术栈的模板，比如，你擅长的技术栈是 Vue3+TS+Vite，那你找的模板就不能是 Vue2+JS 的。其次，模板最好是开源并且持续更新，别等模板过了一段时间被商业化了，那自己就成了接盘侠，后期代码只能自己维护了，导致自己的页面有了 Bug 没有及时修复，损失的还是我们自己，最好是去 GitHub 上面找模板，而且提交记录最好是最近的时间（至少最近一年要有提交记录吧）。其次，模板生态要好，要满足绝大多数场景，组件足够的丰富。 比如我们在开发过程中最常用的表格组件、上传组件、登录组件、按钮、标签等等。最后，模板的兼容性要好。…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7286112965609373731"
-                        open
-                      >
-                        <summary class="article-expander__title">ViteConf 2023：Vite的现状与未来展望</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7286112965609373731">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>10 月 5 日 - 6 日，ViteConf 2023 在线举行，Vue 和 Vite 的创建者尤雨溪发表了题为《The State of Vite》 的演讲，他分享了 Vite 的现状与未来展望，本文就来看一看 Vite 现在怎么样了，以及未来的路将怎么走！
-
-Vite 版本发布情况
-首先，来快速回顾一下自上一次 ViteConf 以来， Vite 的版本发布情况。每个版本都有很多更新，这里只关注最主要的功能。
-Vite 4.0
-Vite 4.0 于 2022 年 12 月发布，是上一次 ViteConf 后的主要版本更新。这个版本最大的变化是升级了 Rollup 3。Vite 和 Rollup 同步了主要版本的发布，因此也停止了对旧版 Node.js 的支持。
-
-相较于 Vite 3.0，这是一个更小的主要版本，没有太多的破坏性变化。事实上，Vite 团队的目标是发布一个稳定的版本：充分利用生态系统的 CI 工具来确保与下游项目的兼容性，以尽可能少地影响最终用户。
-除此之外，Vite 还采用了由 Arnaud Barre 最初创建的基于 SWC 的 React 插件，他现在也是 Vite 团队成员！
-Vite 4.1
-Vite 4.1 于 2023 年 2 月发布，该版本主要是将 Rollup 和 esbuild 的版本进行同步。值得注意的是 React 插件的升级：Plugin-react 插件修复了很多热更新（HMR）方面的问题，并且采用 SWC 的版本增加了对 SWC 插件的支持。
-
-Vite 4.2
-Vite 4.2 于 2023 年 3 月发布，该版本的主要改进是提升了 source map 的调试体验。Vite 团队与 Chrome Devtools 团队进行合作，修复了一些长期存在的路径显示问题。通过x_google_ignoreList  source…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
                             </span>
@@ -3055,86 +3197,6 @@ Blob是对大数据块的不透明引用或者句柄。名字源于SQL数据库�
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7284545971609714745"
-                        open
-                      >
-                        <summary class="article-expander__title">停止在 JavaScript 中使用 Promise.all()</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7284545971609714745">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>免费体验 Gpt4 plus 与 AI作图神器，我们出的钱 体验地址：体验
-JavaScript 中的 Promises 是什么？
-如果你偶然发现了这篇文章，你可能已经对 promises 很熟悉了。但对于那些新接触 JavaScript 的人来说，我们来详细解释一下。从本质上讲，Promise 对象表示异步操作的最终完成或失败。有趣的是，当 promise 被创建时，其值可能不会立即可用。
-const promise &#x3D; new Promise((resolve, reject) &#x3D;&gt; {  
-  // 一些异步操作  
-  if (/* 操作成功 */) {    
-    resolve(result);  
-  } else {    
-    reject(error);  
-  }
-});
-
-
-它们有3种状态：
-Pending（待定）：这是初始状态，既没有实现也没有被拒绝。
-Fulfilled（已实现）：当 promise 成功完成并产生值时的状态。
-Rejected（已拒绝）：当发生错误并且 promise 中的操作不成功时的状态。
-一旦 promise 被解决，你可以使用 .then() 来处理结果，使用 .catch() 来管理其执行过程中出现的任何错误。
-promise  
-  .then(result &#x3D;&gt; {    
-    console.log(&#x27;成功：&#x27;, result);  
-  })  
-  .catch(error &#x3D;&gt; {    
-    console.error(&#x27;错误：&#x27;, error);  
-  });
-
-
-理解 Promise.all()
-当同时处理多个 promises 时，你可以利用内置的 Promise.all([]) 方法。此方法接受一个 promises 数组并返回一个统一的 promise。关键是，只有当所有输入的…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >国家应急广播 - 重庆预警信息</button>
-                  <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231003/t20231003_526439875.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市巫溪县发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231003/t20231003_526439875.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>巫溪县气象台2023年10月3日9时30分继续发布“大雾黄色预警信号”，预计未来12小时，我县文峰镇、上磺镇、古路镇、尖山镇、朝阳镇、胜利乡、城厢镇、宁厂镇、红池坝镇等海拔600米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -3147,71 +3209,11 @@ promise
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-02 datetime="2023-10-02T15:47:16.000Z">2023-10-02</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-02 datetime="2023-10-02T15:47:16.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-02 datetime="2023-10-02T13:20:07.000Z">2023-10-02</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-02 datetime="2023-10-02T13:20:07.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7284573955267510272"
-                        open
-                      >
-                        <summary class="article-expander__title">作为中级前端工程师，每天都做些什么？（适用于所有岗位）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7284573955267510272">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: fancy
-一直以来都没有记录或总结过自己每天工作模式和状态，以至于说回想起刚毕业参加工作的时候，作为一个初级开发，做事凭借着满腔热情，花的时间多，但成长是否成正比呢?
-今天分享一下自己当前的工作状态，其一是能够在不久后跟自己对比是否有所长进，其二也想看看JYM的工作方式，顺便偷师🐶，欢迎留言交流！
-通勤
-现在住的地方离公司比较远，前前后后需要40min，反而我比较享受这段路程，可以给我独立思考的时间，留意到路上大部分人都会刷微博、短视频，但我上午是不会刷的，一方面是早上经过这种快餐文化的侵蚀，人一天当中的注意力是有限的，它会消耗人的精力，让我们大脑会变得浮躁，从而影响工作的专注度；二是这么长的时间是能够发挥它的杠杆的，去做一些对自己有利的事情，比如最近用来刷算法，腻了就看微信读书，可能不一定用得上，但我相信有些思维的改变是潜移默化的。
-下班通勤一般会听听音乐，学学英语，有时候一天下来精神消耗太大，眼睛干涩，就不要求自己一定要做某件事情，刷刷自己感兴趣的博主，甚至有时候连视频都没精力刷，那我会冥想10-20min，这可是我恢复精力的一大法宝啊。
-做计划
-去到公司，首先是放空大脑，如何放空呢？
-把所有今天需要做的事情放入待办清单。
-周一把整周做的事情进行计划，细分到每一天需要做什么，而到了那一天就把已经做好的计划再进行确认轻重缓急。
-那应该如何做计划呢？
-我常用的方法是PDCA闭环模型，简单实用。
-Plan，定好计划或目标🎯，即我们需要完成的事情
-Do，要完成定好的目标，这一步需要对目标进行拆分，落实到每一步能够执行的行动计划
-Check，审查每一步计划的执行结果是否达到预期，如果没有，分析导致该结果的原因；相反达到了预期结果，思考是否还有更好的方式和解决方案，这个是对上上策思维的训练。
-Action，根据第三步复盘的结果，重新对下一次PDCA进行改进，同时避免犯重复的错误
-你可以尝试一下它的威力，具体表格如下：
-
-番茄工作模式
-工作任务已经有了方向之后，我不会一股脑埋头就开撸，因为不合理时间和精力分配太容易让自己很快达到疲惫状态，接下来就很难再集中注意力。我一般会采用番茄APP来辅助分配时间，再者番茄工作法也是公认的高效率工作模式，它可以很容易让我进入心流模式，完全无视外在因素的干扰，效率嘎嘎起飞🛫。
-复盘
-每天收工之前必须经过完成PDCA闭环，这个环节是对一天的行动计划进行Check和提出Action，同时添加到第二天的PDCA中，完成收尾。
-难道一天就这样草草结束了吗，当然不是啦，学习输入应该也有输出，才能形成闭环，那就是写作。
-写作
-我从大三就开始写技术文章了，很早就注册掘金，不过当时主要在CSDN更新，后来就分散到其他渠道上，如个人公众号，公司内部wiki等等，现在转到掘金的原因是其一这个社区还是比较专一，不会参杂太多商业性的元素在里面，其二是更多想把自己的想法保留下来，给几年后的自己看到曾经的模样，同时在不久后的将来，孩子能够更加全面了解他爸爸的过去以及给予他一些启发。（似乎有点扯远了~哈哈哈）
-回到正题，一天当中我会在中午或晚上的时候进行写作，记录当天遇到的问题和想法。虽然这个时间节点都不太适合写东西，在饭食过后身体会将大部分能量用于消化食物从而减少了其他功能的能量损耗，所以吃完饭会反犯困也就是这个原因，但却是我能够自由分配的时间。
-总结
-这里没有细化到每天一天的工作内容，目前工作任务还是比较简单，大部分都能够提前完成，除此之外也承担团队前端基建的任务，如文档规范定制、业务脚手架开发和参与开源贡献。更多的是自主探索感兴趣的板块，并记录和分享出来，当然啦，掘友们有哪些板块想看的，也欢迎留言~</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -4761,25 +4763,6 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7280746975920930875"
-                        open
-                      >
-                        <summary class="article-expander__title">有人用过 bun 做包管理工具吗 很快 但是没有pnpm节省磁盘空间，pnpm的包是软连接的快捷方式，bun是从安装过的缓存中复制过来的，懂的可以讨论下</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7280746975920930875">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>有人用过 bun 做包管理工具吗  很快 但是没有pnpm节省磁盘空间，pnpm的包是软连接的快捷方式，bun是从安装过的缓存中复制过来的，懂的可以讨论下</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -4982,8 +4965,8 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6463475473">
-        <time id="build-timestamp" datetime="2023-10-10T01:15:06.159Z">2023-10-10T01:15:06.159Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6464501674">
+        <time id="build-timestamp" datetime="2023-10-10T03:53:10.256Z">2023-10-10T03:53:10.256Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
