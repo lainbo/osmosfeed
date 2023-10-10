@@ -23,7 +23,7 @@
           "description": "本文介绍三种改变音频播放音量的方法，其中还有一种方法直接改变音频AudioBuffer数据源的音量，说不定你哪天就会用到。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/",
           "publishedOn": "2023-10-09T14:50:57.000Z",
-          "wordCount": 1081,
+          "wordCount": 1083,
           "title": "JS改变AudioBuffer音量并下载为新audio音频",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/",
           "publishedOn": "2023-09-17T08:06:56.000Z",
-          "wordCount": 1495,
+          "wordCount": 1497,
           "title": "又get到了，JS复制图片到剪切板",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "自己体验了下，出乎意料，HTML elementtiming属性在性能监控这块，比预想的要实用的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/html-elementtiming-attribute/",
           "publishedOn": "2023-09-15T15:58:22.000Z",
-          "wordCount": 944,
+          "wordCount": 941,
           "title": "HTML elementtiming属性初体验记录",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "坚持探索Web标准下的原生浏览器开发行为，行为驱动和数据驱动的表单开发其实各有千秋，深入HTML，你会发现这个世界比你所知的要精彩的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/form-reset-input-change/",
           "publishedOn": "2023-09-12T15:52:48.000Z",
-          "wordCount": 1095,
+          "wordCount": 1093,
           "title": "Tips：form元素reset后input不触发change事件处理",
           "imageUrl": null
         }
@@ -762,7 +762,7 @@
           "description": "导读\nVTable: 不只是高性能的多维数据分析表格，更是行列间创作的方格艺术家！\nVTable是字节跳动开源可视化解决方案 VisActor 的组件之一。\n在现代应用程序中，表格组件是不可或缺的一部分，它们能够快速展示大量数据，并提供良好的可视化效果和交互体验。VTable是一款基于可视化渲染引擎VRender的高性能表格组件库，为用户提供卓越的性能和强大的多维分析能力，以及灵活强大的图形能力。\n快速上手\n获取 VTable\n你可以通过以下几种方式获取 VTable。\n使用 NPM 包\n首先，你需要在项目根目录下使用以下命令安装 VTable：\n# 使用 npm 安装\nnpm install @visactor/vtable\n\n# 使用 yarn 安装\nyarn add @visactor/vtable\n\n使用 CDN\n你还可以通过 CDN 获取构建好的 VTable 文件。\n<script src=\"https://unpkg.com/@visactor/vtable/dist/vtable.min.js\"></script>\n\n引入 VTable\n通过 NPM 包引入\n在 JavaScript 文件顶部使用 import 引入 VTable：\nimport * as VTable from '@visactor/vtable';\n\nor\n\nimport {ListTable, PivotTable, TYPES, themes}  from '@visactor/vtable';\n\n使用 script 标签引入\n通过直接在 HTML 文件中添加 <script> 标签，引入构建好的 vtable 文件：\n<script src=\"https://unpkg.com/@visactor/vtable/dist/vtable.min.js\"></script>\n<scri…",
           "link": "https://juejin.cn/post/7287214029449805836",
           "publishedOn": "2023-10-08T09:27:53.000Z",
-          "wordCount": 1497,
+          "wordCount": 1469,
           "title": "VTable——不只是高性能的多维数据分析表格",
           "imageUrl": null
         },
@@ -772,18 +772,8 @@
           "description": "《if 我是前端 Leader 系列》已经好久没更新了，我这两三年都去哪了?\n\n😂 有可能掉进了一个黑洞。不是 Byte Dance，现在国内大小公司都卷，整体行业的已经被带偏了，还有向其他行业蔓延的趋势… 真是好的不学\n那我现在怎么又开始写文章了？\n因为现在我不卷工作了，公司也开始的考勤打卡，我觉得挺好了，一切按规矩办事，到点就弹射下班。\n工作只是生活的一部分而已，工作的目的本来就是为了生活过得更好不是吗？这才应该是正常的人生形态，你说是不是？ 2023 年了，梦也该醒了\n\n💥 另外，我这边也想挪坑了，Base 珠海、远程也可以，有坑位推荐的可以私信我，感激不尽。\n回到正题，做业务前端开发要不要做设计呢？我觉得大部分情况不需要，简单的增删改查业务，没有必要浪费时间去做这些，只要在产品侧描述清楚就行了。\n如果业务比较复杂、涉及到多人分工和共识建立、而且项目预留的充裕的时间给开发者做预研和设计，那么做一下设计还是有必要的。\n那怎么做呢？本文就介绍一下我在这方面的探索，希望能给读者提供一些借鉴。\n0. 为什么需要设计？\n\n敏捷 DoD 有个设计环节，后端通常有设计和评审环节，这个阶段前端应该有什么产出？\n前端专业性体现在哪里呢？\n和 DDD 一样。 在开始开发之前，把设计工作做好，开发就是照葫芦画瓢，我们的工作更容易预测，没有惊喜。很多问题在 Code Review 阶段发现有可能已经晚了，何况我们 Code Review 还没做好？\n设计不是一个人的事情，我们要利用集体智慧，把事情做好。 以后前端也会有一个技术评审会议。这是除 Code Review 之外，难得一次技术上的沟通和知识互换。\n写完代码之后呢？文档呢？听说过文档驱动开发吗？设计阶段的产出就是我们的文档。\n1. 画好业务流程图\n设计的第一步是梳理业务。这个不是产品的责任吗？产品会提供 PRD、原型、用户故事等需…",
           "link": "https://juejin.cn/post/7287142071357784119",
           "publishedOn": "2023-10-08T07:46:19.000Z",
-          "wordCount": 2315,
+          "wordCount": 2368,
           "title": "if 我是前端 Leader, 前端业务开发做不做设计？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7287041017291374627",
-          "author": "zxg_神说要有光",
-          "description": "最近遇到一个 git 的问题：\n我在某个文件里写了一段不应该提交上去的内容，没注意，提交上去了。\n后来又提交了很多个 commit。\n之后我发现了这个，又把它去掉了，提交了一个新的 commit。\n\n这样虽然新的 commit 没有这段内容了，但老的 commit 里依然有这个内容。\n可我不想保留这段内容的记录，也就是想修改历史 commit。\n这种问题大家会怎么解决呢？\n我能想到的有三种方案，分别来试一下。\n\n我们先创建了个 git 项目。\n\n写了个 index.md，每行内容提交一个 commit。\ngit log 可以看到，一共 5 个 commit：\n\ngit show 看下 222 和 333 那个 commit：\ngit show f5482b\n\n\n\n可以看到，这个 333 的 commit 就是我们想改掉的。\n但是现在后面提交了 444、555 这俩 commit 了，怎么改掉它呢？\n很容易想到的是 reset 到 333 那个 commit，重新提交，然后把后面的 commit 再一个个 cherry-pick 回去。\n我们试一下：\n首先把 444、555 这俩 commit 记下来，待会还要用\n\n然后 git reset 到 333 那个 commit：\ngit reset --hard 65dfee\n\n\n把私密信息去掉，重新提交：\ngit add .\ngit commit --amend\n\n\n这样，这个 commit 就干净了。\n然后把后面的 444 和 555 再 cherry-pick 回来。\ncherry-pick 就是单独取一个 commit 过来。\ngit cherry-pick 0b700f\n\n\n会有冲突，解决之后 continue 就好：\ngit add .\ngit cherry-pick --continue\n\n\n再 cherry-pic…",
-          "link": "https://juejin.cn/post/7287041017291374627",
-          "publishedOn": "2023-10-07T13:42:17.000Z",
-          "wordCount": 1736,
-          "title": "修改 git 的历史 commit，你能想到几种方案？",
           "imageUrl": null
         },
         {
@@ -792,7 +782,7 @@
           "description": "前言：\n各位同学大家有段时间没有给大家更新博客了 之前鸿蒙推出了鸿ArkUi-X    框架所以就写个文章分享一下\n效果图：\n\n首先需要下载支持 ArkUI-X 套件的华为开发工具 DevEco ，版本为 4.0 以上，目前可以下载预览版进行体验。下载地址：\nDevEco Studio 4.0Beta下载链接\nWindows(64-bit)\nMac(X86)\nMac(ARM)\nide 安装过程就简单\n\nDevEco 安装完成后，首次进入需要设置 nodejs 与 ohpm。可以选择本机已经安装好的路径，若本机没有安装 nodejs 与 ohpm 也可以在这里下载安装。(这里借用了网友的图片哈尴尬)\n\n\n\n安装 OpenHarmony SDK\n\n\n安装 ArkUI-X SDK\n\n\n\n配置环境\n\n这里提示我们没有配置ANDROID_HOME 因为这里跑iOS 后面我们再讲一下跑Androi的\n创建 Harmon OS 工程\n\n\n编译 OpenHarmony 工程\n\n选择app格式\n\n查看编译后生成的android和iOS native 工程\n\n找到磁盘上的iOS 工程 导入xcode\n\n需要把这里改成iOS 13.0 最新版的mac os 系统\n\n运行\n\n如图\n\n查看包里面内容\n在 LibChecker 中也可以看到该 APP 使用了 ArkUI 的依赖：(这个是Android方便查看哈 iOS同理)\n\n最后总结\n鸿蒙的 ArkUi-X其实之前朋友就有提到过 一直没有去尝试，国庆放长假期回来我觉得有必要分享给大家，在这里我也希望鸿蒙能够崛起 这样也可以给我们开发者创造出更多的岗位 至于这个语言arkts 算是ts超集, 前端的同学比较容易上手跟flutter也比较像 学起来也没什么难度。ArkTS + ArkUI-X ，让国产自研技术达到了一个新高度，完成了从零到一的迈步，让自研不再是 PPT ，不再是“套壳”。最后呢 希望我都文章能帮助到各位同学工作和学习 如果你觉得文章还不错麻烦给我三连 关注点赞和转发 谢谢",
           "link": "https://juejin.cn/post/7287041057291321401",
           "publishedOn": "2023-10-07T13:00:29.000Z",
-          "wordCount": 1137,
+          "wordCount": 1078,
           "title": "鸿蒙跨平台框架来了ArkUi-X",
           "imageUrl": null
         },
@@ -802,18 +792,8 @@
           "description": "本文源自道招网的# 以前觉得做表盘没啥技术含量，现在才发现它其实是最快可变现的产品\n国庆假期陪亲戚家小孩一起坐车，期间发现小孩子在玩儿童手表，她准备给自己的手表换个表盘，说是原来的表盘看腻了。原来小孩子还很在乎这个，大人一般就不会感觉到腻，可能换了还会好几天不适应呢。\n\n我看了下这个儿童手表上的“表盘市场”app里面的免费表盘只有寥寥几个，估计也都是官方的免费表盘，剩下的都是付费表盘，也就是所有变盘里面付费表盘占了绝大部分。有的作者可能会做一两个免费表盘然后全部是付费表盘，有的作者可能做的全部都是付费表盘，毕竟自己花心思了，又不是做公益，谁不是为了那碎银几两而付出呢。\n一般来说付费表盘比免费的好看很多，小孩当然也更喜欢了。这些付费表盘一般是由一个可爱点的动画图片，再加上一两个类似蝴蝶飞组成的动图的。单纯从技术含量的角度来看，确实没什么技术含量，但是小孩子就是喜欢，单凭这一点，它就赢了，技术什么的靠边站，客户满意，这就是最大的价值，压倒一切。\n\n看她这么喜欢，恰逢过节，我就提出来要不我买一个送你吧，于是提出让她选一个自己最喜欢的，待她在心仪的三个表盘中间艰难取舍后，我要开始付钱了，一看价钱，也不算便宜，3.99元。第一感觉就是这么贵啊，就这么点东西就敢卖这么贵啊。我顺便翻看了一下，这里的付费表盘最低是2.99元，一般3.99元的居多，看来这是行情价了啊，我的认知一下子就被刷新了。\n但是仔细想了想，存在即合理，这些制作表盘是不是和那些制作主题的是同一波人，他们才是大佬啊，简单做点东西就能变现。技术不是最重要的，审美+创意才是。有了想法，再有点技术的实施起来就很简单了。\n表盘以及主题可以说是设计师或者程序员最快的可变现的产品了，对他们来说花点心思就可以赚钱了啊，入局早的估计都赚了不少了吧，厉害。",
           "link": "https://juejin.cn/post/7286155742850760767",
           "publishedOn": "2023-10-07T01:03:08.000Z",
-          "wordCount": 769,
+          "wordCount": 825,
           "title": "做表盘没啥技术含量？它其实是最快可变现的产品",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7286307632193142843",
-          "author": "youth君",
-          "description": "theme: smartblue\n利用两个多月的业余时间，使用Konva.js实现了一个名为【Pictode】的图形编辑器\n- 体验地址: https://jessyan0913.github.io/pictode-playground/#/\n🎨Pictode 欢迎体验🎨：https://pictode.com/#/\n✨GitHub 欢迎Star✨：https://github.com/JessYan0913/pictode\n\n缘起\n在掘金上看到众多技术大咖打造自己的图形编辑器项目。通过阅读大咖们的文章让我深受启发，我既敬佩这些大咖坚持创作和分享的精神，也自豪于自己也有编辑器项目的经验。这些因素汇聚，催生了我开发一个自己的图形编辑器的想法。\n虽然我以前在工作中已经实现了一些编辑器项目，如基于Three.js的3D编辑器、基于bpmn.js的流程编辑器、基于X6的拓扑编辑器，还有基于Vue的低代码编辑器等，但受公司项目限制，这些编辑器无法达到我理想中的水平。\n今年8月份，我利用业余实践开始了名为Pictode的图形编辑器项目。到目前为止，Pictode集成了众多实用功能，如工具切换、属性编辑、右键菜单、本地保存、导出图片、画布缩放、画布拖拽、历史记录、语言切换、主题切换等。经过这段时间努力，我认为Pictode已初步具备雏形，因此我决定向大家介绍它。\nPictode主要功能演示\n图形绘制\n\n选择/变换\n\n层级移动\n\n对齐/分布\n\n组合/解除组合\n\n导出图片\n\n温馨提示🔔：看图固然好，实际体验方知妙处！吾友，诚挚邀请前往pictode一试身手，领略其中奥妙！ 🎨✨\nPictode能为你带来什么\n也许你已经在掘金上看到许多技术大咖分享如何实现画板或图片编辑器的方法。他们或许详细解释了编辑器的原理和代码实现，有些甚至直接使用原生Canvas构建编辑器。但你是否和我有相同的感…",
-          "link": "https://juejin.cn/post/7286307632193142843",
-          "publishedOn": "2023-10-06T23:38:40.000Z",
-          "wordCount": 1919,
-          "title": "✨ Pictode：十分钟轻松DIY图形编辑器💡",
           "imageUrl": null
         },
         {
@@ -822,7 +802,7 @@
           "description": "highlight: a11y-dark\n拖拽库github地址：https://github.com/bpuns/easy-dnd\n拖拽库说明文档：https://bpuns.github.io/easy-dnd-docs/\n前言\n一年前，我接到一个需求，需要开发一个低代码平台，调研了下市面上适用于React的拖拽库，本人都感觉使用起来过于复杂，并且体积都挺大的，我就想用原生的拖拽Api，但是原生Api在复杂场景下（无限嵌套，嵌套规则复杂），是不可用的，如果想了解具体遇到的问题，可以看 巨详细！帮你踩坑HTML5拖拽api（下） 这篇文章。因此，我就想基于 Drag and Drop api 封装的一套可以应用与复杂场景下的拖拽库\n并且这个库最好不要和任何的前端框架绑定，这样方便移植和扩展，因为是自己封装的，因此可以掌握所有实现细节，开发过程中如果遇到了性能瓶颈，也能最快的找到解决方案，而且我也没完整的发布过一个开源库，正好学习下整个过程\n拖拽库实现思路\n拖拽上下文\n页面中可能会有很多可以拖拽的区域，并且拖拽区域之间互不影响，那么就需要为每个拖拽区域创建一个上下文，那么就可以提供一个方法，用于上下文的创建，为了到时候方便扩展，可以传一个配置项作为参数。\ninterface ProviderConfig { } \n\n/**\n * 创建拖拽作用域下的基本数据\n * @param {*} config 配置项\n * @returns\n */\nfunction createProvider(config?: ProviderConfig): Context;\n\n拖拽类型\n在现实生活中，我们之所以知道一个物品可以放到另外一个物品中，比如食物剩余的包装袋需要放到垃圾桶中，电脑需要放到电脑包里。所以抽到代码中，需要给可以拖拽的dom元素添加一个类型，给需要放置的元素设置允许放置的类型有…",
           "link": "https://juejin.cn/post/7286133122209742908",
           "publishedOn": "2023-10-06T08:41:10.000Z",
-          "wordCount": 2038,
+          "wordCount": 2024,
           "title": "为了实现低代码平台，我写了一个拖拽库，顺便学习如何从0发布一个开源库",
           "imageUrl": null
         },
@@ -832,7 +812,7 @@
           "description": "前言\n小程序地图组件为腾讯地图，功能上使用了高德服务端API，文中经纬度格式都是gcj02，高德API返回和接收的格式也是这个，高德API中需要的AMAP_WEBAPI_KEY, 请自行前往高德开发者中心注册获取。\n真机演示视频\nhttps://www.aliyundrive.com/s/StwocUooKEV 手机端观看直接复制链接到浏览器，视频为手机录屏请退出全屏观看（尺寸不对）。\n实现页面地图样式\n初始化地图\n首先我们需要一个全屏的地图，设置当前页面为沉浸式页面（取消导航栏 pages.json style.navigationStyle: custom），然后进入页面创建地图组件。\n注意点：地图一定要设置固定宽度和高度\n\n  <view class=\"choose-loacation-box\">\n    <view class=\"map-box\">\n      <map\n        @regionchange=\"regionChange\"\n        :latitude=\"latitude\"\n        :longitude=\"longitude\"\n        :markers=\"markers\"\n        :show-location=\"true\"\n        :enable-satellite=\"true\"\n        id=\"_baseMapDom\"\n        ref=\"_baseMapDom\"\n        style=\"width: 750rpx; height: 100%\"\n      />\n    </view>\n  </view>\n  \n  // 设置样式\n  .choose-loacation-box{\n      position: relative;\n      flex: 1;\n      display…",
           "link": "https://juejin.cn/post/7286264172097093684",
           "publishedOn": "2023-10-06T07:00:01.000Z",
-          "wordCount": 3463,
+          "wordCount": 3512,
           "title": "uniapp从0 - 1实现微信小程序地图选择位置（支持卫星图）",
           "imageUrl": null
         },
@@ -842,7 +822,7 @@
           "description": "大家好，我是 jonssonyan\n今天和大家分享一些免费开源的后台管理页面，帮助大家快速搭建前端页面。为什么要用模板？道理很简单，原因是方便我们快速开发。我们不应该花太多的时间在页面调整上，而应该把精力放在核心逻辑和业务上。\n以我自己为例，说一下我自己在开发过程中的切身感受。我是一名后端程序员，同时也做一些前端开发的事情，所以我的后端开发速度肯定是比前端开发要快的。每次写新项目，第一后端开发比较熟练，第二代码可以复用，所以后端一般很快就能写完。但是前端就恰恰相反，第一前端开发没有后端熟练，第二页面尽量不要复用。为什么页面尽量不要复用？主要原因是防止用户审美疲劳，让认识你的用户感觉怎么你开发的系统都是一套 UI？所以这时候我们备用一些前端后台管理模板就非常重要，能多备几个就多备几个，在自己需要的时候，几分钟就可以把前端搭建完毕，立刻进入到业务开发界面，省时省力，何乐而不为？\n另外有些人可能不太善用模板代码，有时候模板只是一个大致的框架，无论是前端模板还是后端模板，都不可能 100%符合我们的需求，需要我们按照自己的需求在上面更改。核心思路是将不需要的代码删掉，有时候系统不是越复杂越好，往往越简单，后期越容易维护。\n善用模板的技巧就是，首先，找一个符合自己技术栈的模板，比如，你擅长的技术栈是 Vue3+TS+Vite，那你找的模板就不能是 Vue2+JS 的。其次，模板最好是开源并且持续更新，别等模板过了一段时间被商业化了，那自己就成了接盘侠，后期代码只能自己维护了，导致自己的页面有了 Bug 没有及时修复，损失的还是我们自己，最好是去 GitHub 上面找模板，而且提交记录最好是最近的时间（至少最近一年要有提交记录吧）。其次，模板生态要好，要满足绝大多数场景，组件足够的丰富。 比如我们在开发过程中最常用的表格组件、上传组件、登录组件、按钮、标签等等。最后，模板的兼容性要好。…",
           "link": "https://juejin.cn/post/7285719262962352184",
           "publishedOn": "2023-10-06T04:07:05.000Z",
-          "wordCount": 945,
+          "wordCount": 1038,
           "title": "分享几个优秀开源免费管理后台模版，建议收藏！",
           "imageUrl": null
         },
@@ -852,7 +832,7 @@
           "description": "10 月 5 日 - 6 日，ViteConf 2023 在线举行，Vue 和 Vite 的创建者尤雨溪发表了题为《The State of Vite》 的演讲，他分享了 Vite 的现状与未来展望，本文就来看一看 Vite 现在怎么样了，以及未来的路将怎么走！\n\nVite 版本发布情况\n首先，来快速回顾一下自上一次 ViteConf 以来， Vite 的版本发布情况。每个版本都有很多更新，这里只关注最主要的功能。\nVite 4.0\nVite 4.0 于 2022 年 12 月发布，是上一次 ViteConf 后的主要版本更新。这个版本最大的变化是升级了 Rollup 3。Vite 和 Rollup 同步了主要版本的发布，因此也停止了对旧版 Node.js 的支持。\n\n相较于 Vite 3.0，这是一个更小的主要版本，没有太多的破坏性变化。事实上，Vite 团队的目标是发布一个稳定的版本：充分利用生态系统的 CI 工具来确保与下游项目的兼容性，以尽可能少地影响最终用户。\n除此之外，Vite 还采用了由 Arnaud Barre 最初创建的基于 SWC 的 React 插件，他现在也是 Vite 团队成员！\nVite 4.1\nVite 4.1 于 2023 年 2 月发布，该版本主要是将 Rollup 和 esbuild 的版本进行同步。值得注意的是 React 插件的升级：Plugin-react 插件修复了很多热更新（HMR）方面的问题，并且采用 SWC 的版本增加了对 SWC 插件的支持。\n\nVite 4.2\nVite 4.2 于 2023 年 3 月发布，该版本的主要改进是提升了 source map 的调试体验。Vite 团队与 Chrome Devtools 团队进行合作，修复了一些长期存在的路径显示问题。通过x_google_ignoreList  source…",
           "link": "https://juejin.cn/post/7286112965609373731",
           "publishedOn": "2023-10-06T03:15:50.000Z",
-          "wordCount": 1665,
+          "wordCount": 1692,
           "title": "ViteConf 2023：Vite的现状与未来展望",
           "imageUrl": null
         },
@@ -862,7 +842,7 @@
           "description": "theme: cyanosis\n本文首发微信公众号「码上花甲」。\n近期社区中不少工具放弃了 TypeScript 转而用上了 JsDoc。\n咱不评价这种做法是否值得推荐，但是，有一些项目从一开始就没有使用 TypeScript。这种情况下直接迁移到 TypeScript 成本会很高，那能否用 JsDoc 来“代替” TypeScript 呢？\n答案是可行的。\n我们不能因为 TS 而一定要用 TS，必须要结合项目实际情况来确定。\n不过 JsDoc 也有很多细节，是你可能没注意到的。除了静态类型检查之外，JsDoc 的能力还是蛮强大的。\n今天，我们就结合 TS 来看下 JsDoc 都能干哪些事情。\n1. 变量的类型\n在 TS 中，要给一个变量定义类型很简单：\nlet name: string = 'Randal';\n\n使用 TS，直接在变量 name 后面定义为 string 类型即可。\nJsDoc 也能做到：\n/** @type {string} */\nlet name = 'Randal';\n\n编辑器同样可以识别出 JsDoc 注释的变量类型：\n\n像其他基本类型，JsDoc 也都支持，比如 number 类型。\n/** @type {number} */\nlet age = 30;\n\n除了上面这种简单的基本类型之外，JsDoc 还支持联合类型。在 TS 中的写法是这样的：\nconst personName: 'Randal' | 'Olive' | 'Jack' = 'Randal';\n\nJsDoc 的写法稍微麻烦一点，但也能很好的支持：\n/**\n * @typedef {'Randal' | 'Olive' | 'Jack'} PersonName\n */\n\n/**\n * @type {PersonName}\n */\nconst personName = 'Randal'…",
           "link": "https://juejin.cn/post/7285608128039960631",
           "publishedOn": "2023-10-05T06:10:31.000Z",
-          "wordCount": 2104,
+          "wordCount": 2224,
           "title": "JsDoc vs TypeScript",
           "imageUrl": null
         },
@@ -872,7 +852,7 @@
           "description": "前言\n在上一篇文章中，讲解了如何实现双人在本地对战的五子棋，但是只有一个人的时候就不太好玩，同时博主也没有把五子棋相关的文章写过瘾。那么这篇文章，我们来实现一个功能更加丰富的五子棋吧！在设计五子棋的算法方面，我们将引入一些经典的算法，如最大最小搜索（Max-Min）算法和Alpha-Beta剪枝算法。这些算法将帮助我们创建一个智能的对手，使游戏更具挑战性和趣味性。除了算法的介绍，本文还将深入探讨五子棋的基本玩法和规则。我们将详细解释如何落子、如何判断胜负以及如何对各种局面进行评分估值。通过学习这些基础知识，您将能够更好地理解和享受五子棋游戏。\n效果图：\n\n\n\n\n\n\n仓库地址：https://github.com/taxze6/flutter_game_collection/tree/main/gomoku_ai\nrelease apk下载体验：https://github.com/taxze6/flutter_game_collection/tree/main/gomoku_ai/release\n棋盘绘制\n本次采用的棋盘绘制与上篇文章的方式不同，上篇文章中采用的是GridView这样的基础组件，使用简单，无需手动编写绘制逻辑。利用GridView的布局特性，可以很方便地进行排列和调整。但是它也有缺点，就是不够灵活，当我们想实现更多的棋盘细节时，实现起来就不是很方便了，所以在本篇文章中，我们采用CustomPaint绘制的方式。\n那在绘制棋盘之前，我们需要先定义游戏所需要的一些参数和实体类：\n玩家类\n//玩家\nclass Player {\n  static final Player black = Player(Colors.black);\n  static final Player white = Player(Colors.white);\n  late Color col…",
           "link": "https://juejin.cn/post/7285184691418169363",
           "publishedOn": "2023-10-05T04:56:17.000Z",
-          "wordCount": 8203,
+          "wordCount": 8265,
           "title": "国庆假期，我用Flutter写了个我自己都玩不赢的五子棋AI🤣",
           "imageUrl": null
         },
@@ -882,7 +862,7 @@
           "description": "经过 Adobe 工程师多年来的努力，并与 Chrome 等浏览器供应商密切合作，通过 WebAssembly + Emscripten、Web Components + Lit、Service Workers + Workbox 和新的 Web API 的支持，终于在近期推出了 Web 版 Photoshop（photoshop.adobe.com），这在实现高度复杂和图形密集型软件在浏览器中运行方面具有重大意义！\n\n本文就来看看 Photoshop 所使用的 Web 能力、进行的性能优化以及未来可能的发展方向。\n愿景：在浏览器中使用 Photoshop\nAdobe 的愿景就是将 Photoshop 带到浏览器中，让更多的用户能够方便地使用它进行图像编辑和平面设计。过去几十年，Photoshop一直是图像编辑和平面设计的黄金标准，但它只能在桌面上运行。现在，通过将它移植到浏览器中，就打开一个全新的世界。\nWeb 版 Photoshop 承诺了无处不在、无摩擦的访问体验。用户只需打开浏览器，就能即时开始使用 Photoshop 进行编辑和协作，而不需要安装任何软件。而且，由于Web是一个跨平台的运行环境，它可以屏蔽底层操作系统的差异，使Photoshop 能够在不同的平台上与用户进行互动。\n\n另外，通过链接的功能，共享工作流变得更加方便。Photoshop文档可以通过URL直接访问。这样，创作者可以轻松地将链接发送给协作者，实现更加便捷的合作。\n但是，实现这个愿景面临着重大的技术挑战，要求重新思考像Photoshop这样强度大的应用如何在Web上运行。\n使用新的 Web 能力\n最近几年出现了一些新的 Web 平台能力，可以通过标准化和实现最终使类似于Photoshop这样的应用成为可能。Adobe工程师们创新地利用了几个关键的下一代API。\n使用 OPFS 实现高性能本地文…",
           "link": "https://juejin.cn/post/7285528146379390991",
           "publishedOn": "2023-10-04T15:00:42.000Z",
-          "wordCount": 1592,
+          "wordCount": 1699,
           "title": "Web版Photoshop来了，用到了哪些前端技术？",
           "imageUrl": null
         },
@@ -892,7 +872,7 @@
           "description": "theme: channing-cyan\nhighlight: an-old-hope\nRust 是一门强调安全、并发、高效的系统编程语言。无 GC 实现内存安全机制、无数据竞争的并发机制、无运行时开销的抽象机制，是 Rust 独特的优越特性。 它声称解决了传统 C 语言和 C++语言几十年来饱受责难的内存安全问题，同时还保持了很高的运行效率、很深的底层控制、很广的应用范围， 在系统编程领域具有强劲的竞争力和广阔的应用前景。\n1. Rust 环境安装\nRust 安装起来非常方便，你可以用 rustup.rs 中给出的方法，根据你的操作系统进行安装。比如在 UNIX 系统下，可以直接运行：\ncurl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh\n\n这会在你的系统上安装 Rust 工具链，之后，你就可以在本地用 cargo new 新建 Rust 项目、尝试 Rust 功能。\ncargo 是 rust 官方推荐使用的项目管理软件。功能大概类似于 java 里面的 maven 和 ant。负责管理依赖项和编译。 安装 rust 时，默认安装(可以自定义为不安装)。它也类似 Node.js 的 npm、Golang 的 go，用来做依赖管理以及开发过程中的任务管理，比如编译、运行、测试、代码格式化等等。\nrustc --version\ncargo --version\n\n如果是 windows ，假如出现 “‘rustc’不是内部或外部命令，也不是可运行的程序或批处理文件” 请在”环境变量”的 Path 中增加 rust 的 bin 目录。\n2. 开发工具\n你可以使用任何编辑器来撰写 Rust 代码，我个人比较喜欢 VS Code，功能强大且速度很快。在 VS Code 下我为 Rust 安装了一些插件，下面是我的安装顺序，你可以参考：\nrust-analyzer：它会实时编译和分析你的 Rust 代码，提示代码中的错误，并对类型进行标注。你也可以使用官方的 Rust 插件取代。\n\nrust syntax：为代码提供语法高亮。\n\ncrates：帮助你分析当前项目的依赖是否是最新的版本。\n\nCrates 提供了一系列强大的功能来简化您的 Rust 开发工作流程：版本信息：Crates 提供全面的版本信息，让您随时了解项目中的 crate。其中包括包含详细版本详细信息的工具提示和内嵌视觉反馈，以供快速参考和决策。快捷命令：只需一个命令即可更新所有依赖项，以实现无缝工作流程。Crev 集成：通过与Crev集成来访问有价值的代码审查和社区协作。获取反馈并就您所依赖的板条箱做出明智的决定。Doc.rs 集成：通过Doc.rs的无缝集成，探索 Rust 的全面文档，包括包、库等。获得深入的知识和见解以增强您的编码体验。\neven better toml：Rust 使用 toml 做项目的配置管理。better toml 可以帮你语法高亮，并展示 toml 文件中的错误。\n\nrust test lens：可以帮你快速运行某个 Rust 测试。\n\nTabnine：基于 AI 的自动补全，可以帮助你更快地撰写代码。\n\n\n3. 生成一个新的 Rust 项目\n开发工具准备好之后，我们用 cargo new my-rust 生成一个新项目。默认情况下，这条命令会生成一个可执行项目 my-rust，入口在 src/main.rs。Cargo.toml 是 Rust 项目的配置管理文件，它符合 toml 的语法。\n\n\n最后运行一下我们的 rust 项目。\ncargo run\n\n这样一来我们的 rust 开发环境就搭建好了。\n4. 写第一个 Rust 程序\n4.1 一个小爬虫\n通过 rust 抓取掘金首页。\nuse std::fs;\n\nfn main() {\n    let url = \"https://juejin.cn/\";\n    let output = \"rust.md\";\n\n    println!(\"Fetching url: {}\", url);\n    let body = reqwest::blocking::get(url).unwrap().text().unwrap();\n\n    println!(\"Converting html to markdown...\");\n    let md = html2md::parse_html(&body);\n\n    fs::write(output, md.as_bytes()).unwrap();\n    println!(\"Converted markdown hash been saved in {}\", output);\n}\n\n\nBingo！我们第一个 Rust 程序运行成功！",
           "link": "https://juejin.cn/post/7285037507368435712",
           "publishedOn": "2023-10-04T09:39:00.000Z",
-          "wordCount": 1367,
+          "wordCount": 1470,
           "title": "Rust笔记 (一) 搭建开发环境",
           "imageUrl": null
         },
@@ -902,7 +882,7 @@
           "description": "theme: fancy\n题目来源: LeetCode 75 30 天 JavaScript 挑战\n2634. 过滤数组中的元素\n思路\n实现 Array.filter\n代码\ntype Fn = (n: number, i: number) => any\n\nfunction filter(arr: number[], fn: Fn): number[] {\n \n   let res = []\n\n   for(let i = 0; i < arr.length; i++) {\n\n     if (fn(arr[i], i)) {\n       res.push(arr[i])\n     }\n\n   }\n\n  return res\n};\n\n2626. 数组归约运算\n思路\n实现 Array.reduce\n代码\ntype Fn = (accum: number, curr: number) => number\n\nfunction reduce(nums: number[], fn: Fn, init: number): number {\n  if (!nums.length) {\n    return init\n  }\n\n  let _init = init\n\n  for(let i = 0; i < nums.length; i++) {\n    _init = fn(_init, nums[i])\n  }\n\n  return _init\n};\n\n\n1456. 定长子串中元音的最大数目\n思路\n首先计算初始窗口 [0,k] 中元音字母的个数，然后将窗口向右移动，判断窗口进入和移出的字母情况，是元音字母 count +1, 否则 -1，最后取 max 和 count 的较大值。\n代码\nconst isVowel = (c) => \"aeiou\".includes(c)\n\nfunction maxVowels(s: string, k: number): number {\n  let i = 0\n  let max = 0\n  let count = 0\n\n  for (; i < k; i++) {\n    let cur = s[i]\n\n    if (isVowel(cur)) {\n      count++\n    }\n  }\n\n  max = Math.max(count, max)\n\n  for(; i < s.length; i++) {\n    let cur = s[i]\n    let last = s[i - k]\n\n    if (isVowel(cur)) {\n      count++\n    }\n\n    if (isVowel(last)) {\n      count--\n    }\n\n    max = Math.max(count, max)\n  }\n\n return max\n};\n\n1004. 最大连续1的个数 III\n思路\n双指针，找出一个最长的子数组，如果该子数组内最多允许有 K 个 0，这个数组长度就是最大连续 1 的个数。\n代码\nfunction longestOnes(nums: number[], k: number): number {\n  let res = 0\n  let right = 0\n  let left = 0\n  let zeros = 0\n\n  while(right < nums.length) {\n    if (nums[right] === 0) {\n      zeros++\n    }\n\n    while(zeros > k) {\n      if (nums[left++] === 0) {\n        zeros--\n      }\n    }\n        \n    res = Math.max(res, right - left + 1)\n    right++\n  }\n\n  return res\n};\n\n1493. 删掉一个元素以后全为 1 的最长子数组\n思路\n双指针，判断指针内之和是否小于左右指针的差，如果小于就把左指针向右移动，最后返回右指针减去左指针再减一。\n代码\nfunction longestSubarray(nums: number[]): number {\n  let res = 0\n  let left = 0\n  let right = 0\n\n  for (; right < nums.length; right++) {\n    res += nums[right]\n\n    if (res < right - left) {\n      res -= nums[left]\n      left++\n    }\n  }\n\n  return right - left - 1\n};",
           "link": "https://juejin.cn/post/7284990242813329423",
           "publishedOn": "2023-10-04T02:43:47.000Z",
-          "wordCount": 1839,
+          "wordCount": 1746,
           "title": "30 天刷题计划（六）",
           "imageUrl": null
         },
@@ -912,8 +892,28 @@
           "description": "theme: fancy\nhighlight: a11y-light\n前言\n最近一段时间做过很多关于文件及音视频相关的工作，故此根据个人实践结合资料查询学习，总结了关于文件、二进制相关的内容和大家分享交流，如果文章有不对的地方，恳请指正，✅通过本文，你将了解或者加深对以下概念的认知以及其应用场景：\nFile\nBlob\nArrayBuffer\nTypedArray\nDataView\nBuffer\nFileReader\nURL.createObjectURL\n以及如何实现 ？\n如何预览图片？\n如何截取视频首帧（如果不借助第三方oss能力呢）？\n1. Blob\nBlob是对大数据块的不透明引用或者句柄。名字源于SQL数据库，表示“二进制大数据”（Binary Large Object）。在JavaScript中Blob通常表示二进制数据，但是不一定是大量数据。Blob是不透明的，我们可以对它执行的操作只有获取它的大小，MIME类型和将他切割成更小的Blob。——《JavaScript权威指南》\n1.1 主要用法\n1.1.1 构造函数使用\n第一个参数是一个包含实际数据的数组（二进制数组也行），第二个参数是数据的类型（MIME type）\n\n1.1.2 现有实例使用\n其构造器Blob原型有size和type属性分别表示blob包含数据的大小和数据类型，其原型上方法有text（返回promise）和slice, 其中slice（start, end），返回start和end为切割blob的开始和结束字节点,返回值为blob，下图为阿里云上传oss jsSDK实现代码片段\n\n1.2 应用场景\n大文件上传（阿里云）时，会对file继承的blob的slice属性，对文件进行切割分片上传\n可以通过blob结合FileReader来把其换成其他需要的数据比如Arraybuffer\n可以暂存arr…",
           "link": "https://juejin.cn/post/7284513473316667453",
           "publishedOn": "2023-10-03T03:19:41.000Z",
-          "wordCount": 1632,
+          "wordCount": 1603,
           "title": "《图解 + 实战》File、Blob、TypedArray、DataView",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7284545971609714745",
+          "author": "王大冶",
+          "description": "免费体验 Gpt4 plus 与 AI作图神器，我们出的钱 体验地址：体验\nJavaScript 中的 Promises 是什么？\n如果你偶然发现了这篇文章，你可能已经对 promises 很熟悉了。但对于那些新接触 JavaScript 的人来说，我们来详细解释一下。从本质上讲，Promise 对象表示异步操作的最终完成或失败。有趣的是，当 promise 被创建时，其值可能不会立即可用。\nconst promise = new Promise((resolve, reject) => {  \n  // 一些异步操作  \n  if (/* 操作成功 */) {    \n    resolve(result);  \n  } else {    \n    reject(error);  \n  }\n});\n\n\n它们有3种状态：\nPending（待定）：这是初始状态，既没有实现也没有被拒绝。\nFulfilled（已实现）：当 promise 成功完成并产生值时的状态。\nRejected（已拒绝）：当发生错误并且 promise 中的操作不成功时的状态。\n一旦 promise 被解决，你可以使用 .then() 来处理结果，使用 .catch() 来管理其执行过程中出现的任何错误。\npromise  \n  .then(result => {    \n    console.log('成功：', result);  \n  })  \n  .catch(error => {    \n    console.error('错误：', error);  \n  });\n\n\n理解 Promise.all()\n当同时处理多个 promises 时，你可以利用内置的 Promise.all([]) 方法。此方法接受一个 promises 数组并返回一个统一的 promise。关键是，只有当所有输入的…",
+          "link": "https://juejin.cn/post/7284545971609714745",
+          "publishedOn": "2023-10-03T00:54:42.000Z",
+          "wordCount": 1301,
+          "title": "停止在 JavaScript 中使用 Promise.all()",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7284573955267510272",
+          "author": "寻找奶酪的mouse",
+          "description": "theme: fancy\n一直以来都没有记录或总结过自己每天工作模式和状态，以至于说回想起刚毕业参加工作的时候，作为一个初级开发，做事凭借着满腔热情，花的时间多，但成长是否成正比呢?\n今天分享一下自己当前的工作状态，其一是能够在不久后跟自己对比是否有所长进，其二也想看看JYM的工作方式，顺便偷师🐶，欢迎留言交流！\n通勤\n现在住的地方离公司比较远，前前后后需要40min，反而我比较享受这段路程，可以给我独立思考的时间，留意到路上大部分人都会刷微博、短视频，但我上午是不会刷的，一方面是早上经过这种快餐文化的侵蚀，人一天当中的注意力是有限的，它会消耗人的精力，让我们大脑会变得浮躁，从而影响工作的专注度；二是这么长的时间是能够发挥它的杠杆的，去做一些对自己有利的事情，比如最近用来刷算法，腻了就看微信读书，可能不一定用得上，但我相信有些思维的改变是潜移默化的。\n下班通勤一般会听听音乐，学学英语，有时候一天下来精神消耗太大，眼睛干涩，就不要求自己一定要做某件事情，刷刷自己感兴趣的博主，甚至有时候连视频都没精力刷，那我会冥想10-20min，这可是我恢复精力的一大法宝啊。\n做计划\n去到公司，首先是放空大脑，如何放空呢？\n把所有今天需要做的事情放入待办清单。\n周一把整周做的事情进行计划，细分到每一天需要做什么，而到了那一天就把已经做好的计划再进行确认轻重缓急。\n那应该如何做计划呢？\n我常用的方法是PDCA闭环模型，简单实用。\nPlan，定好计划或目标🎯，即我们需要完成的事情\nDo，要完成定好的目标，这一步需要对目标进行拆分，落实到每一步能够执行的行动计划\nCheck，审查每一步计划的执行结果是否达到预期，如果没有，分析导致该结果的原因；相反达到了预期结果，思考是否还有更好的方式和解决方案，这个是对上上策思维的训练。\nAction，根据第三步复盘的结果，重新对下一次PDCA进行改进，同时避免犯重复的错误\n你可以尝试一下它的威力，具体表格如下：\n\n番茄工作模式\n工作任务已经有了方向之后，我不会一股脑埋头就开撸，因为不合理时间和精力分配太容易让自己很快达到疲惫状态，接下来就很难再集中注意力。我一般会采用番茄APP来辅助分配时间，再者番茄工作法也是公认的高效率工作模式，它可以很容易让我进入心流模式，完全无视外在因素的干扰，效率嘎嘎起飞🛫。\n复盘\n每天收工之前必须经过完成PDCA闭环，这个环节是对一天的行动计划进行Check和提出Action，同时添加到第二天的PDCA中，完成收尾。\n难道一天就这样草草结束了吗，当然不是啦，学习输入应该也有输出，才能形成闭环，那就是写作。\n写作\n我从大三就开始写技术文章了，很早就注册掘金，不过当时主要在CSDN更新，后来就分散到其他渠道上，如个人公众号，公司内部wiki等等，现在转到掘金的原因是其一这个社区还是比较专一，不会参杂太多商业性的元素在里面，其二是更多想把自己的想法保留下来，给几年后的自己看到曾经的模样，同时在不久后的将来，孩子能够更加全面了解他爸爸的过去以及给予他一些启发。（似乎有点扯远了~哈哈哈）\n回到正题，一天当中我会在中午或晚上的时候进行写作，记录当天遇到的问题和想法。虽然这个时间节点都不太适合写东西，在饭食过后身体会将大部分能量用于消化食物从而减少了其他功能的能量损耗，所以吃完饭会反犯困也就是这个原因，但却是我能够自由分配的时间。\n总结\n这里没有细化到每天一天的工作内容，目前工作任务还是比较简单，大部分都能够提前完成，除此之外也承担团队前端基建的任务，如文档规范定制、业务脚手架开发和参与开源贡献。更多的是自主探索感兴趣的板块，并记录和分享出来，当然啦，掘友们有哪些板块想看的，也欢迎留言~",
+          "link": "https://juejin.cn/post/7284573955267510272",
+          "publishedOn": "2023-10-02T15:47:16.000Z",
+          "wordCount": 848,
+          "title": "作为中级前端工程师，每天都做些什么？（适用于所有岗位）",
           "imageUrl": null
         },
         {
@@ -922,7 +922,7 @@
           "description": "@主要Review的指标\n\n前端代码Review主要关注以下几个方面：\n1. 代码质量：代码是否简洁、易读、易维护。是否遵循了一致的编码风格和规范，例如ESLint、Prettier等。\n功能实现：代码是否实现了预期的功能，是否有潜在的bug或逻辑错误。\n性能优化：代码是否进行了必要的性能优化，例如避免不必要的渲染、使用了合适的数据结构和算法等。\n安全性：代码是否存在可能的安全风险，例如XSS攻击、CSRF攻击等。\n5. 可测试性：代码是否易于测试，是否有单元测试和集成测试。\n可读性：代码是否易于理解，是否有足够的注释和文档。\n可复用性：代码是否有高度的模块化和复用性。\n兼容性：代码是否兼容不同的浏览器和设备。\n助记：功性读复全兼测\n@功能Review\n无需人为检测，但注释要写明白，TS类型要写清楚，让用的人如沐春风；\n该匹配单元测试的建议配套单元测试，不落人以口实~\n@性能Review\n前端代码中一些典型的、肉眼可见的需要性能优化的地方包括：\n1. 过度渲染：如果你的应用在没有必要的情况下进行了过多的渲染，这可能会导致性能问题。例如，在React中，如果你的组件在props没有改变的情况下进行了重新渲染，那么你可能需要使用shouldComponentUpdate/SCU或React.PureComponent或useEffect来避免不必要的渲染。\n大量DOM操作：频繁的DOM操作是非常耗费性能的。如果你的代码中有大量的DOM操作，你可能需要考虑使用虚拟DOM或其他优化技术（例如DocumentFragment）。\n大量的网络请求：如果你的应用发送了大量的网络请求，这可能会导致性能问题。你可能需要考虑使用缓存、预加载、懒加载等技术来减少网络请求。\n大型JavaScript文件：如果你的JavaScript文件过大，这可能会导致加载和解析时间过长。你可能需要考虑使用代码分…",
           "link": "https://juejin.cn/post/7283748394601840680",
           "publishedOn": "2023-09-29T05:55:23.000Z",
-          "wordCount": 1407,
+          "wordCount": 1385,
           "title": "前端代码Review，一次性掰扯明白！",
           "imageUrl": null
         },
@@ -932,7 +932,7 @@
           "description": "theme: fancy\n之前校招面试时遇到这样一个问题，git pull是哪两个指令的组合？\n当时是一脸懵的说不知道啦。\n那现在为什么又捡起来说呢？因为我搞懂了😁。\n剧透一下，本文的主旨与 合并代码 有关🤣：当时刚开始编程，全是一个人自嗨，完全没有合并代码这一场景🤣。于是并没有深究，工作后合并代码是常有的事，不得不去了解一下了。\n先说结果：git pull是两个指令的组合：git fetch和git merge。\n从git fetch开始\nFETCH_HEAD\n讲git fetch之前，还需要先了解一个东西，就是.git文件夹下的一个文件，FETCH_HEAD。\n\n可以通过 git log -p FETCH_HEAD 和 open .get/FETCH_HEAD 这两个指令去查看FETCH_HEAD（初始时没有这个文件，会报错，可以先用git fetch创建）。下面演示一下：\n下图是没有该文件：\n\n下图是有该文件：\ngit log -p FETCH_HEAD查看\n\nopen .get/FETCH_HEAD查看\n\n大致内容就是，目前有两个分支master分支和test-*分支，以及这两个分支最新的commit ID（正常项目内，这个文件内容很多，但你不需要记住这个文件的内容，看懂这个简单例子就好）\n这个文件是干啥的？\nFETCH_HEAD文件记录了远程仓库中的分支名称、最新的commit id以及提交的作者等相关信息。\n但它不是随着远程仓库实时变更的，是保存在我们本地，那就需要我们手动去更新。\n当执行git fetch命令时，它会从远程仓库获取最新的提交信息，并将这些信息存储在本地FETCH_HEAD中。\n再说git merge\n说到git merge，逃不开的必须提到git rebase，这俩是合并代码中的重要大将。\ngit merge\n作用: 将两个分支的更改合并…",
           "link": "https://juejin.cn/post/7283691376649633828",
           "publishedOn": "2023-09-28T09:04:05.000Z",
-          "wordCount": 1108,
+          "wordCount": 1107,
           "title": "面试官：git pull是哪两个指令的组合？😯",
           "imageUrl": null
         },
@@ -942,7 +942,7 @@
           "description": "最近使用在线json对比工具的时候，对于这种对比的实现方式产生了好奇，我用脚指头想也知道这功能实现起来肯定不简单，于是小小地研究了一下\n本文三种实现方式的可运行代码放这里了\njcode\n最短编辑距离\n逐字符的对比和多行文本的对比，差别无非是最小单元的不同，所以先从字符对比说起\n我首先就想到了最短编辑距离这个算法，虽然这个算法并没有直接给出一个字符串变成另一个字符串的具体过程，但既然它能得到这个过程的最短编辑距离，很显然，肯定也能拿到这个过程\n最短编辑距离的教科书解法是动态规划，关于这个解法本文就不详细说了网上到处都是，核心是用一个数组来存细分粒度的编辑距离，这个数组最好是一个一维数组，但这里为了记录下具体的编辑过程，所以需要用二维数组\n首先我们还是按照解决最短编辑距离的方法来写代码\nfunction minDistance(word1: string, word2: string) {\n  const m = word1.length\n  const n = word2.length\n  const dp = Array.from({ length: m + 1 }, () => Array.from({ length: n + 1 }, () => 0))\n  for (let i = 1; i <= m; i++) {\n    dp[i][0] = i\n  }\n  for (let i = 1; i <= n; i++) {\n    dp[0][i] = i\n  }\n  for (let i = 1; i <= m; i++) {\n    for (let j = 1; j <= n; j++) {\n      if (word1[i - 1] === word2[j - 1]) {\n        dp[i][j] = dp[i - 1][j - 1]\n      }…",
           "link": "https://juejin.cn/post/7282752001900707874",
           "publishedOn": "2023-09-26T06:13:58.000Z",
-          "wordCount": 3598,
+          "wordCount": 3694,
           "title": "git diff 知道吧？请说说实现原理",
           "imageUrl": null
         }
@@ -969,7 +969,7 @@
           "description": "逆向开发的大佬这么稀缺吗[流泪]，有没有做逆向开发到高级工程师或者技术专家程度的大佬啊[流泪][7073670077790289956#求职面试交流bbs#]",
           "link": "https://juejin.cn/pin/7287791555623092264",
           "publishedOn": "2023-10-09T09:53:41.000Z",
-          "wordCount": 517,
+          "wordCount": 518,
           "title": "逆向开发的大佬这么稀缺吗[流泪]，有没有做逆向开发到高级工程师或者技术专家程度的大佬啊[流泪][7073670077790289956#求职面试交流bbs#]",
           "imageUrl": null
         },
@@ -989,7 +989,7 @@
           "description": "打卡，vue无敌偷懒利器",
           "link": "https://juejin.cn/pin/7287620609373831224",
           "publishedOn": "2023-10-09T05:05:12.000Z",
-          "wordCount": 531,
+          "wordCount": 535,
           "title": "打卡，vue无敌偷懒利器",
           "imageUrl": null
         },
@@ -1019,7 +1019,7 @@
           "description": "vscode扩展fnMap（函数地图）v3.1.0 发布\n1，新增功能：修改注册码备注\n2，新增功能：新增跨文件置顶，方便多文件跳转\n扩展地址：https://marketplace.visualstudio.com/items?itemName=chensuiyi.fn-map\n[7210228048107896891#每日快讯#]",
           "link": "https://juejin.cn/pin/7285185696120242213",
           "publishedOn": "2023-10-03T17:04:07.000Z",
-          "wordCount": 563,
+          "wordCount": 537,
           "title": "vscode扩展fnMap（函数地图）v3.1.0 发布 1，新增功能：修改注册码备注 2，新增功能：新增跨文件置顶，方便多文件跳转 扩展地址：https://marketplace.visualstu...",
           "imageUrl": null
         },
@@ -1049,7 +1049,7 @@
           "description": "[7073670907851440160#新人报道#] 欢迎使用新鲜上线的DevShots https://gpwzw.com/",
           "link": "https://juejin.cn/pin/7283532551473594425",
           "publishedOn": "2023-09-28T07:52:46.000Z",
-          "wordCount": 529,
+          "wordCount": 538,
           "title": "[7073670907851440160#新人报道#] 欢迎使用新鲜上线的DevShots https://gpwzw.com/",
           "imageUrl": null
         },
@@ -1129,7 +1129,7 @@
           "description": "想开发拥有实时协作功能的可以看下：《Spaces SDK：专为实时协作功能开发设计的SDK》https://mp.weixin.qq.com/s/EK1u2tr1CRcqbevtnAETmQ\n[7210228048107896891#每日快讯#]",
           "link": "https://juejin.cn/pin/7281256255354601508",
           "publishedOn": "2023-09-22T04:14:55.000Z",
-          "wordCount": 564,
+          "wordCount": 538,
           "title": "想开发拥有实时协作功能的可以看下：《Spaces SDK：专为实时协作功能开发设计的SDK》https://mp.weixin.qq.com/s/EK1u2tr1CRcqbevtnAETmQ [7210228048107896891#...",
           "imageUrl": null
         },
@@ -1256,7 +1256,7 @@
           "description": "线框图被产品经理奉为圭臬，但对设计师而言，线框图的存在则是面目模糊。在整个产品设计流程里，线框图是一种很好的产品工具，而不是一个可行的 UX 设计和 UI 设计工具。 前 Google 设计师 Alex Socoloff 在推特上说：“Unpopular opinion: Low-fi wireframes are just a waste of time.”，意思是“非主流的观点：（产品设计过程 …\n  设计 | 重新认识线框图 查看全文 »",
           "link": "https://nishuang.net/%e8%ae%be%e8%ae%a1-%e9%87%8d%e6%96%b0%e8%ae%a4%e8%af%86%e7%ba%bf%e6%a1%86%e5%9b%be/",
           "publishedOn": "2023-09-22T06:55:28.000Z",
-          "wordCount": 4121,
+          "wordCount": 4182,
           "title": "设计 | 重新认识线框图",
           "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-1597534458220-9fb4969f2df5.jpeg"
         },
