@@ -51,6 +51,57 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-11 datetime="2023-10-11T03:10:31.000Z">2023-10-11</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-11 datetime="2023-10-11T03:10:31.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Barret李靖的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/652612275110e254556c8a54"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: Github 推出了 blocks，https://blocks.githubnext.com，以后仓库里面能展示什么内容，取决于你的想象力和构建 block 的能力。 Blocks 的目标是让代码仓...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/652612275110e254556c8a54">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FrbKCZM_4IE0VUp1pS5830A_JTyE?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Github 推出了 blocks，https://blocks.githubnext.com，以后仓库里面能展示什么内容，取决于你的想象力和构建 block 的能力。
+Blocks 的目标是让代码仓库变得生动起来，除了代码和 README，还可以展示 3D 文件、脑图、流程图、图标、字体预览、CSS 样式预览等等，甚至还有可交互的模块，例如所见即所得的编辑器、可以排序和统计的表格、能够运行代码的沙箱等等。
+只要按照对应的规范开发 block 并发布到市场（给仓库增加一个名为 github-blocks 的 tag 就行了），就可以被检索和使用，不过当前还是技术预览版本，需要本地起一个 devServer，然后借助在线网页才能渲染出来。
+这个尝试感觉正在重新定义 github，以后或许不能再叫它代码仓库了，应该叫内容仓库。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-10 datetime="2023-10-10T16:40:10.000Z">2023-10-10</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-10 datetime="2023-10-10T16:40:10.000Z"></time>
           </button>
@@ -632,6 +683,52 @@ prompt 也一样符合上述规律，会不断出现抽象层，还不够傻瓜�
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7287781316590583863"
+                        open
+                      >
+                        <summary class="article-expander__title">让 web 再次伟大——用 canvaskit 实现超级丝滑的原神地图（已开源）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7287781316590583863">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: cyanosis
+highlight: solarized-light
+官方网页版：
+
+canvaskit 版：
+
+因为 gif 最高只有 50hz，实际上 cavnaskit 版要远比这看起来的更丝滑，你可以通过以下链接自行体验。
+官方网页版：https://webstatic.mihoyo.com/ys/app/interactive-map/index.html?lang&#x3D;zh-cn#/
+canvaskit 版：http://106.55.55.247:8000/ （备用地址：https://7c00.top/ky-genshin-map/ ）
+如果你已经体验过，会发现这流畅程度已经和原生实现的地图几乎没有什么区别了。
+为什么官方网页版的性能如此糟糕以及为什么 canvaskit 版能有如此高的性能？
+第一个问题，官方网页版地图引擎用的是 leaflet，这是一个以 dom 为主要实现方式的地图引擎，而频繁地大量操作 dom 会导致严重的性能问题。你可以想象一下，要保证视觉上流畅，手势及动画的采样频率至少是 60hz，意味着单个 dom 节点每秒就要变换 60 次，一旦数量超过 100 个，对浏览器来说就是无法承受的压力。
+但是 leaflet 也有 canvas 实现的 layer，或者这么说，如果性能瓶颈在于 dom，那么用浏览器提供的 canvas api 就应该可以解决，为什么还需要 canvaskit 呢？
+在回答这个问题之前，先介绍一下 canvaskit，这其实就是 skia 的 js + wasm 版，c++ 实现的渲染引擎被编译成了 wasm，通过 js 提供类似 canvas api 的绘制接口。也许你已经知道 chrome 的底层就是 skia 做渲染引擎，canvas api 也可以视为 skia 绘制接口的封装，那么 skia …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;12
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >沸点 - 开发工具推荐</button>
                   <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
                 </h3>
@@ -793,11 +890,7 @@ VTable是字节跳动开源可视化解决方案 VisActor 的组件之一。
 你可以通过以下几种方式获取 VTable。
 使用 NPM 包
 首先，你需要在项目根目录下使用以下命令安装 VTable：
-# 使用 npm 安装
-npm install @visactor/vtable
-
-# 使用 yarn 安装
-yarn add @visactor/vtable
+# 使用 npm 安装npm install @visactor/vtable# 使用 yarn 安装yarn add @visactor/vtable
 
 使用 CDN
 你还可以通过 CDN 获取构建好的 VTable 文件。
@@ -805,17 +898,15 @@ yarn add @visactor/vtable
 
 引入 VTable
 通过 NPM 包引入
-在 JavaScript 文件顶部使用 import 引入 VTable：
+在 JavaScript 文件顶部使用 import 引入 VTable：
 import * as VTable from &#x27;@visactor/vtable&#x27;;
-
 or
-
 import {ListTable, PivotTable, TYPES, themes}  from &#x27;@visactor/vtable&#x27;;
 
 使用 script 标签引入
-通过直接在 HTML 文件中添加  标签，引入构建好的 vtable 文件：
+通过直接在 HTML 文件中添加  标签，引入构建好的 vtable 文件：
 
-&lt;scri…</span>
+con…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
@@ -913,27 +1004,6 @@ import {ListTable, PivotTable, TYPES, themes}  from &#x27;@visactor/vtable&#x27;
 “The idea is pretty simple, news sites want Google to index their content so it shows up in search results. So they don&#x27;t show a paywall to the Google crawler. We benefit from this because the Google crawler will cache a copy of the site every time it crawls it.”
 
 转发 @Barret李靖: 一个有趣的网站「12英尺」，12ft.io，一位外国程序员受不了互联网充满了付费高墙，他撸了一个 12 英尺的高梯来帮助读者们翻越各种付费围墙——Show me a 10ft paywall, I’ll show you a 12ft ladder.
-比较好奇他是如何实现了，每个付费内容都购买一份，然后直接代理？不过，从当前的可用性来看，墙还是要比梯子🪜更高。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/6522cbbcc70326f2eb468465"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 一个有趣的网站「12英尺」，12ft.io，一位外国程序员受不了互联网充满了付费高墙，他撸了一个 12 英尺的高梯来帮助读者们翻越各种付费围墙——Show me a...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6522cbbcc70326f2eb468465">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fgu2yr_vquXHWJwfK1xaMUBVzaznv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>一个有趣的网站「12英尺」，12ft.io，一位外国程序员受不了互联网充满了付费高墙，他撸了一个 12 英尺的高梯来帮助读者们翻越各种付费围墙——Show me a 10ft paywall, I’ll show you a 12ft ladder.
 比较好奇他是如何实现了，每个付费内容都购买一份，然后直接代理？不过，从当前的可用性来看，墙还是要比梯子🪜更高。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
@@ -2601,25 +2671,6 @@ class Player {
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231004/t20231004_526440647.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市巫山县发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231004/t20231004_526440647.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>巫山县气象台2023年10月4日10时50分发布“大雾黄色预警信号”，预计4日10时至22时，金坪乡、当阳乡、官阳镇、骡坪镇、竹贤乡、巫峡镇、高唐街道、曲尺乡、龙门街道、建平乡、笃坪乡、红椿乡、铜鼓镇、邓家乡等海拔600米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -2734,85 +2785,6 @@ fn main() {
 
 Bingo！我们第一个 Rust 程序运行成功！</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7284990242813329423"
-                        open
-                      >
-                        <summary class="article-expander__title">30 天刷题计划（六）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7284990242813329423">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: fancy
-题目来源: LeetCode 75 30 天 JavaScript 挑战
-2634. 过滤数组中的元素
-思路
-实现 Array.filter
-代码
-type Fn &#x3D; (n: number, i: number) &#x3D;&gt; any
-
-function filter(arr: number[], fn: Fn): number[] {
- 
-   let res &#x3D; []
-
-   for(let i &#x3D; 0; i  number
-
-function reduce(nums: number[], fn: Fn, init: number): number {
-  if (!nums.length) {
-    return init
-  }
-
-  let _init &#x3D; init
-
-  for(let i &#x3D; 0; i  &quot;aeiou&quot;.includes(c)
-
-function maxVowels(s: string, k: number): number {
-  let i &#x3D; 0
-  let max &#x3D; 0
-  let count &#x3D; 0
-
-  for (; i  k) {
-      if (nums[left++] &#x3D;&#x3D;&#x3D; 0) {
-        zeros--
-      }
-    }
-        
-    res &#x3D; Math.max(res, right - left + 1)
-    right++
-  }
-
-  return res
-};
-
-1493. 删掉一个元素以后全为 1 的最长子数组
-思路
-双指针，判断指针内之和是否小于左右指针的差，如果小于就把左指针向右移动，最后返回右指针减去左指针再减一。
-代码
-function longestSubarray(nums: number[]): number {
-  let res &#x3D; 0
-  let left &#x3D; 0
-  let right &#x3D; 0
-
-  for (; right &lt; nums.length; right++) {
-    res +&#x3D; nums[right]
-
-    if (res &lt; right - left) {
-      res -&#x3D; nums[left]
-      left++
-    }
-  }
-
-  return right - left - 1
-};</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4942,8 +4914,8 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6477749497">
-        <time id="build-timestamp" datetime="2023-10-11T03:53:01.559Z">2023-10-11T03:53:01.559Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6479005646">
+        <time id="build-timestamp" datetime="2023-10-11T06:53:05.565Z">2023-10-11T06:53:05.565Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

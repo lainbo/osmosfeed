@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-10-11T03:53:01.590Z</id>
+    <id>urn:2023-10-11T06:53:05.591Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-10-11T03:53:01.590Z</updated>
+    <updated>2023-10-11T06:53:05.591Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[发布了: Github 推出了 blocks，https://blocks.githubnext.com，以后仓库里面能展示什么内容，取决于你的想象力和构建 block 的能力。 Blocks 的目标是让代码仓...]]></title>
+        <id>https://m.okjike.com/originalPosts/652612275110e254556c8a54</id>
+        <link href="https://m.okjike.com/originalPosts/652612275110e254556c8a54"/>
+        <updated>2023-10-11T03:10:31.000Z</updated>
+        <summary type="html"><![CDATA[Github 推出了 blocks，https://blocks.githubnext.com，以后仓库里面能展示什么内容，取决于你的想象力和构建 block 的能力。
+Blocks 的目标是让代码仓库变得生动起来，除了代码和 README，还可以展示 3D 文件、脑图、流程图、图标、字体预览、CSS 样式预览等等，甚至还有可交互的模块，例如所见即所得的编辑器、可以排序和统计的表格、能够运行代码的沙箱等等。
+只要按照对应的规范开发 block 并发布到市场（给仓库增加一个名为 github-blocks 的 tag 就行了），就可以被检索和使用，不过当前还是技术预览版本，需要本地起一个 devServer，然后借助在线网页才能渲染出来。
+这个尝试感觉正在重新定义 github，以后或许不能再叫它代码仓库了，应该叫内容仓库。]]></summary>
+        <author>
+            <name>Barret李靖的即刻动态</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[发布了: 《大学》中所谓诚其意，毋自欺也。 抛开道德规范而言，真诚，实乃必杀技。 杀的不是敌人，杀的是双方的防备之心。]]></title>
         <id>https://m.okjike.com/originalPosts/65257e6abb3e3660e8290eea</id>
@@ -174,6 +187,29 @@ https://juejin.cn/post/7280435532986990647]]></summary>
 这个项目中演示了如何利用 wireshark 监听网卡信息以及截取数据包，代码部分倒是可以学习下。]]></summary>
         <author>
             <name>Barret李靖的即刻动态</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[让 web 再次伟大——用 canvaskit 实现超级丝滑的原神地图（已开源）]]></title>
+        <id>https://juejin.cn/post/7287781316590583863</id>
+        <link href="https://juejin.cn/post/7287781316590583863"/>
+        <updated>2023-10-09T10:57:47.000Z</updated>
+        <summary type="html"><![CDATA[theme: cyanosis
+highlight: solarized-light
+官方网页版：
+
+canvaskit 版：
+
+因为 gif 最高只有 50hz，实际上 cavnaskit 版要远比这看起来的更丝滑，你可以通过以下链接自行体验。
+官方网页版：https://webstatic.mihoyo.com/ys/app/interactive-map/index.html?lang=zh-cn#/
+canvaskit 版：http://106.55.55.247:8000/ （备用地址：https://7c00.top/ky-genshin-map/ ）
+如果你已经体验过，会发现这流畅程度已经和原生实现的地图几乎没有什么区别了。
+为什么官方网页版的性能如此糟糕以及为什么 canvaskit 版能有如此高的性能？
+第一个问题，官方网页版地图引擎用的是 leaflet，这是一个以 dom 为主要实现方式的地图引擎，而频繁地大量操作 dom 会导致严重的性能问题。你可以想象一下，要保证视觉上流畅，手势及动画的采样频率至少是 60hz，意味着单个 dom 节点每秒就要变换 60 次，一旦数量超过 100 个，对浏览器来说就是无法承受的压力。
+但是 leaflet 也有 canvas 实现的 layer，或者这么说，如果性能瓶颈在于 dom，那么用浏览器提供的 canvas api 就应该可以解决，为什么还需要 canvaskit 呢？
+在回答这个问题之前，先介绍一下 canvaskit，这其实就是 skia 的 js + wasm 版，c++ 实现的渲染引擎被编译成了 wasm，通过 js 提供类似 canvas api 的绘制接口。也许你已经知道 chrome 的底层就是 skia 做渲染引擎，canvas api 也可以视为 skia 绘制接口的封装，那么 skia …]]></summary>
+        <author>
+            <name>7c00</name>
         </author>
     </entry>
     <entry>
@@ -370,17 +406,6 @@ Monorepo 的好处在于可以将项目中通用的部分单独抽离成一个�
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[发布了: 一个有趣的网站「12英尺」，12ft.io，一位外国程序员受不了互联网充满了付费高墙，他撸了一个 12 英尺的高梯来帮助读者们翻越各种付费围墙——Show me a...]]></title>
-        <id>https://m.okjike.com/originalPosts/6522cbbcc70326f2eb468465</id>
-        <link href="https://m.okjike.com/originalPosts/6522cbbcc70326f2eb468465"/>
-        <updated>2023-10-08T15:33:16.000Z</updated>
-        <summary type="html"><![CDATA[一个有趣的网站「12英尺」，12ft.io，一位外国程序员受不了互联网充满了付费高墙，他撸了一个 12 英尺的高梯来帮助读者们翻越各种付费围墙——Show me a 10ft paywall, I’ll show you a 12ft ladder.
-比较好奇他是如何实现了，每个付费内容都购买一份，然后直接代理？不过，从当前的可用性来看，墙还是要比梯子🪜更高。]]></summary>
-        <author>
-            <name>Barret李靖的即刻动态</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[发布了: 𝐡𝐮𝐦𝐚𝐧 𝐚𝐫𝐞 𝐥𝐢𝐤𝐞 𝐦𝐚𝐜𝐡𝐢𝐧𝐞 为什么说人越来越像机器? 社会运行过程中, 首先搞出了工作标准化, ...]]></title>
         <id>https://m.okjike.com/originalPosts/65228174c70326f2eb3f093c</id>
         <link href="https://m.okjike.com/originalPosts/65228174c70326f2eb3f093c"/>
@@ -430,11 +455,7 @@ VTable是字节跳动开源可视化解决方案 VisActor 的组件之一。
 你可以通过以下几种方式获取 VTable。
 使用 NPM 包
 首先，你需要在项目根目录下使用以下命令安装 VTable：
-# 使用 npm 安装
-npm install @visactor/vtable
-
-# 使用 yarn 安装
-yarn add @visactor/vtable
+# 使用 npm 安装npm install @visactor/vtable# 使用 yarn 安装yarn add @visactor/vtable
 
 使用 CDN
 你还可以通过 CDN 获取构建好的 VTable 文件。
@@ -442,17 +463,15 @@ yarn add @visactor/vtable
 
 引入 VTable
 通过 NPM 包引入
-在 JavaScript 文件顶部使用 import 引入 VTable：
+在 JavaScript 文件顶部使用 import 引入 VTable：
 import * as VTable from '@visactor/vtable';
-
 or
-
 import {ListTable, PivotTable, TYPES, themes}  from '@visactor/vtable';
 
 使用 script 标签引入
-通过直接在 HTML 文件中添加 <script> 标签，引入构建好的 vtable 文件：
+通过直接在 HTML 文件中添加 <script> 标签，引入构建好的 vtable 文件：
 <script src="https://unpkg.com/@visactor/vtable/dist/vtable.min.js"></script>
-<scri…]]></summary>
+<script>con…]]></summary>
         <author>
             <name>玄魂</name>
         </author>
@@ -1723,156 +1742,6 @@ Bingo！我们第一个 Rust 程序运行成功！]]></summary>
         <summary type="html"><![CDATA[巴南区气象台2023年10月4日15时20分发布“大雾黄色预警信号”，预计10月4日15时20分至20时，我区姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
         <author>
             <name>国家预警信息发布中心</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[重庆市巫山县发布大雾黄色预警]]></title>
-        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20231004/t20231004_526440647.html</id>
-        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20231004/t20231004_526440647.html"/>
-        <updated>2023-10-04T03:29:00.000Z</updated>
-        <summary type="html"><![CDATA[巫山县气象台2023年10月4日10时50分发布“大雾黄色预警信号”，预计4日10时至22时，金坪乡、当阳乡、官阳镇、骡坪镇、竹贤乡、巫峡镇、高唐街道、曲尺乡、龙门街道、建平乡、笃坪乡、红椿乡、铜鼓镇、邓家乡等海拔600米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
-        <author>
-            <name>国家预警信息发布中心</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[30 天刷题计划（六）]]></title>
-        <id>https://juejin.cn/post/7284990242813329423</id>
-        <link href="https://juejin.cn/post/7284990242813329423"/>
-        <updated>2023-10-04T02:43:47.000Z</updated>
-        <summary type="html"><![CDATA[theme: fancy
-题目来源: LeetCode 75 30 天 JavaScript 挑战
-2634. 过滤数组中的元素
-思路
-实现 Array.filter
-代码
-type Fn = (n: number, i: number) => any
-
-function filter(arr: number[], fn: Fn): number[] {
- 
-   let res = []
-
-   for(let i = 0; i < arr.length; i++) {
-
-     if (fn(arr[i], i)) {
-       res.push(arr[i])
-     }
-
-   }
-
-  return res
-};
-
-2626. 数组归约运算
-思路
-实现 Array.reduce
-代码
-type Fn = (accum: number, curr: number) => number
-
-function reduce(nums: number[], fn: Fn, init: number): number {
-  if (!nums.length) {
-    return init
-  }
-
-  let _init = init
-
-  for(let i = 0; i < nums.length; i++) {
-    _init = fn(_init, nums[i])
-  }
-
-  return _init
-};
-
-
-1456. 定长子串中元音的最大数目
-思路
-首先计算初始窗口 [0,k] 中元音字母的个数，然后将窗口向右移动，判断窗口进入和移出的字母情况，是元音字母 count +1, 否则 -1，最后取 max 和 count 的较大值。
-代码
-const isVowel = (c) => "aeiou".includes(c)
-
-function maxVowels(s: string, k: number): number {
-  let i = 0
-  let max = 0
-  let count = 0
-
-  for (; i < k; i++) {
-    let cur = s[i]
-
-    if (isVowel(cur)) {
-      count++
-    }
-  }
-
-  max = Math.max(count, max)
-
-  for(; i < s.length; i++) {
-    let cur = s[i]
-    let last = s[i - k]
-
-    if (isVowel(cur)) {
-      count++
-    }
-
-    if (isVowel(last)) {
-      count--
-    }
-
-    max = Math.max(count, max)
-  }
-
- return max
-};
-
-1004. 最大连续1的个数 III
-思路
-双指针，找出一个最长的子数组，如果该子数组内最多允许有 K 个 0，这个数组长度就是最大连续 1 的个数。
-代码
-function longestOnes(nums: number[], k: number): number {
-  let res = 0
-  let right = 0
-  let left = 0
-  let zeros = 0
-
-  while(right < nums.length) {
-    if (nums[right] === 0) {
-      zeros++
-    }
-
-    while(zeros > k) {
-      if (nums[left++] === 0) {
-        zeros--
-      }
-    }
-        
-    res = Math.max(res, right - left + 1)
-    right++
-  }
-
-  return res
-};
-
-1493. 删掉一个元素以后全为 1 的最长子数组
-思路
-双指针，判断指针内之和是否小于左右指针的差，如果小于就把左指针向右移动，最后返回右指针减去左指针再减一。
-代码
-function longestSubarray(nums: number[]): number {
-  let res = 0
-  let left = 0
-  let right = 0
-
-  for (; right < nums.length; right++) {
-    res += nums[right]
-
-    if (res < right - left) {
-      res -= nums[left]
-      left++
-    }
-  }
-
-  return right - left - 1
-};]]></summary>
-        <author>
-            <name>贝蕾亚</name>
         </author>
     </entry>
     <entry>
