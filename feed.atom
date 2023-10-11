@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-10-11T06:53:05.591Z</id>
+    <id>urn:2023-10-11T09:52:54.770Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-10-11T06:53:05.591Z</updated>
+    <updated>2023-10-11T09:52:54.770Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -196,18 +196,18 @@ https://juejin.cn/post/7280435532986990647]]></summary>
         <updated>2023-10-09T10:57:47.000Z</updated>
         <summary type="html"><![CDATA[theme: cyanosis
 highlight: solarized-light
-官方网页版：
 
 canvaskit 版：
 
 因为 gif 最高只有 50hz，实际上 cavnaskit 版要远比这看起来的更丝滑，你可以通过以下链接自行体验。
 官方网页版：https://webstatic.mihoyo.com/ys/app/interactive-map/index.html?lang=zh-cn#/
 canvaskit 版：http://106.55.55.247:8000/ （备用地址：https://7c00.top/ky-genshin-map/ ）
-如果你已经体验过，会发现这流畅程度已经和原生实现的地图几乎没有什么区别了。
+或者这个 demo：
+jcode
 为什么官方网页版的性能如此糟糕以及为什么 canvaskit 版能有如此高的性能？
 第一个问题，官方网页版地图引擎用的是 leaflet，这是一个以 dom 为主要实现方式的地图引擎，而频繁地大量操作 dom 会导致严重的性能问题。你可以想象一下，要保证视觉上流畅，手势及动画的采样频率至少是 60hz，意味着单个 dom 节点每秒就要变换 60 次，一旦数量超过 100 个，对浏览器来说就是无法承受的压力。
 但是 leaflet 也有 canvas 实现的 layer，或者这么说，如果性能瓶颈在于 dom，那么用浏览器提供的 canvas api 就应该可以解决，为什么还需要 canvaskit 呢？
-在回答这个问题之前，先介绍一下 canvaskit，这其实就是 skia 的 js + wasm 版，c++ 实现的渲染引擎被编译成了 wasm，通过 js 提供类似 canvas api 的绘制接口。也许你已经知道 chrome 的底层就是 skia 做渲染引擎，canvas api 也可以视为 skia 绘制接口的封装，那么 skia …]]></summary>
+在回答这个问题之前，先介绍一下 canvaskit，这其实就是 skia 的 js + wasm 版，c++ 实现的渲染引擎被编译成了 wasm，通过 js 提供类似 canvas api 的绘制接口。也许你已经知道 chrome 的底层就是 skia 做渲染引擎，canvas api 也可以视为 skia 绘制接口的封装，那么 skia 编译成 wasm 再提供 js api 不是脱裤子放屁吗…]]></summary>
         <author>
             <name>7c00</name>
         </author>
@@ -1732,16 +1732,6 @@ fn main() {
 Bingo！我们第一个 Rust 程序运行成功！]]></summary>
         <author>
             <name>拜小白</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[重庆市巴南区发布大雾黄色预警]]></title>
-        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20231004/t20231004_526440760.html</id>
-        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20231004/t20231004_526440760.html"/>
-        <updated>2023-10-04T07:31:00.000Z</updated>
-        <summary type="html"><![CDATA[巴南区气象台2023年10月4日15时20分发布“大雾黄色预警信号”，预计10月4日15时20分至20时，我区姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
-        <author>
-            <name>国家预警信息发布中心</name>
         </author>
     </entry>
     <entry>

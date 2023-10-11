@@ -23,7 +23,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1199,
+          "wordCount": 1196,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "本文介绍三种改变音频播放音量的方法，其中还有一种方法直接改变音频AudioBuffer数据源的音量，说不定你哪天就会用到。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/",
           "publishedOn": "2023-10-09T14:50:57.000Z",
-          "wordCount": 1085,
+          "wordCount": 1083,
           "title": "JS改变AudioBuffer音量并下载为新audio音频",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/",
           "publishedOn": "2023-09-17T08:06:56.000Z",
-          "wordCount": 1498,
+          "wordCount": 1495,
           "title": "又get到了，JS复制图片到剪切板",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "自己体验了下，出乎意料，HTML elementtiming属性在性能监控这块，比预想的要实用的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/html-elementtiming-attribute/",
           "publishedOn": "2023-09-15T15:58:22.000Z",
-          "wordCount": 942,
+          "wordCount": 939,
           "title": "HTML elementtiming属性初体验记录",
           "imageUrl": null
         },
@@ -63,7 +63,7 @@
           "description": "坚持探索Web标准下的原生浏览器开发行为，行为驱动和数据驱动的表单开发其实各有千秋，深入HTML，你会发现这个世界比你所知的要精彩的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/form-reset-input-change/",
           "publishedOn": "2023-09-12T15:52:48.000Z",
-          "wordCount": 1091,
+          "wordCount": 1089,
           "title": "Tips：form元素reset后input不触发change事件处理",
           "imageUrl": null
         }
@@ -691,16 +691,6 @@
           "wordCount": 523,
           "title": "重庆市巫溪县发布大雾黄色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231004/t20231004_526440760.html",
-          "author": "国家预警信息发布中心",
-          "description": "巴南区气象台2023年10月4日15时20分发布“大雾黄色预警信号”，预计10月4日15时20分至20时，我区姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231004/t20231004_526440760.html",
-          "publishedOn": "2023-10-04T07:31:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市巴南区发布大雾黄色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -729,7 +719,7 @@
         {
           "id": "https://juejin.cn/post/7287781316590583863",
           "author": "7c00",
-          "description": "theme: cyanosis\nhighlight: solarized-light\n官方网页版：\n\ncanvaskit 版：\n\n因为 gif 最高只有 50hz，实际上 cavnaskit 版要远比这看起来的更丝滑，你可以通过以下链接自行体验。\n官方网页版：https://webstatic.mihoyo.com/ys/app/interactive-map/index.html?lang=zh-cn#/\ncanvaskit 版：http://106.55.55.247:8000/ （备用地址：https://7c00.top/ky-genshin-map/ ）\n如果你已经体验过，会发现这流畅程度已经和原生实现的地图几乎没有什么区别了。\n为什么官方网页版的性能如此糟糕以及为什么 canvaskit 版能有如此高的性能？\n第一个问题，官方网页版地图引擎用的是 leaflet，这是一个以 dom 为主要实现方式的地图引擎，而频繁地大量操作 dom 会导致严重的性能问题。你可以想象一下，要保证视觉上流畅，手势及动画的采样频率至少是 60hz，意味着单个 dom 节点每秒就要变换 60 次，一旦数量超过 100 个，对浏览器来说就是无法承受的压力。\n但是 leaflet 也有 canvas 实现的 layer，或者这么说，如果性能瓶颈在于 dom，那么用浏览器提供的 canvas api 就应该可以解决，为什么还需要 canvaskit 呢？\n在回答这个问题之前，先介绍一下 canvaskit，这其实就是 skia 的 js + wasm 版，c++ 实现的渲染引擎被编译成了 wasm，通过 js 提供类似 canvas api 的绘制接口。也许你已经知道 chrome 的底层就是 skia 做渲染引擎，canvas api 也可以视为 skia 绘制接口的封装，那么 skia …",
+          "description": "theme: cyanosis\nhighlight: solarized-light\n\ncanvaskit 版：\n\n因为 gif 最高只有 50hz，实际上 cavnaskit 版要远比这看起来的更丝滑，你可以通过以下链接自行体验。\n官方网页版：https://webstatic.mihoyo.com/ys/app/interactive-map/index.html?lang=zh-cn#/\ncanvaskit 版：http://106.55.55.247:8000/ （备用地址：https://7c00.top/ky-genshin-map/ ）\n或者这个 demo：\njcode\n为什么官方网页版的性能如此糟糕以及为什么 canvaskit 版能有如此高的性能？\n第一个问题，官方网页版地图引擎用的是 leaflet，这是一个以 dom 为主要实现方式的地图引擎，而频繁地大量操作 dom 会导致严重的性能问题。你可以想象一下，要保证视觉上流畅，手势及动画的采样频率至少是 60hz，意味着单个 dom 节点每秒就要变换 60 次，一旦数量超过 100 个，对浏览器来说就是无法承受的压力。\n但是 leaflet 也有 canvas 实现的 layer，或者这么说，如果性能瓶颈在于 dom，那么用浏览器提供的 canvas api 就应该可以解决，为什么还需要 canvaskit 呢？\n在回答这个问题之前，先介绍一下 canvaskit，这其实就是 skia 的 js + wasm 版，c++ 实现的渲染引擎被编译成了 wasm，通过 js 提供类似 canvas api 的绘制接口。也许你已经知道 chrome 的底层就是 skia 做渲染引擎，canvas api 也可以视为 skia 绘制接口的封装，那么 skia 编译成 wasm 再提供 js api 不是脱裤子放屁吗…",
           "link": "https://juejin.cn/post/7287781316590583863",
           "publishedOn": "2023-10-09T10:57:47.000Z",
           "wordCount": 3452,
@@ -939,7 +929,7 @@
           "description": "[7210002980895916043#挑战每日一条沸点#] \nvscode插件fnMap（函数地图）v3.2.0发布\n1，新增功能：可配置不同文件默认展开层级\n2，新增功能：可配置不同文件哪些符号不展示\n3，修复问题：插件关闭后符号缓存没有清空的问题\n插件地址：https://marketplace.visualstudio.com/items?itemName=chensuiyi.fn-map",
           "link": "https://juejin.cn/pin/7288229413035065402",
           "publishedOn": "2023-10-10T15:01:03.000Z",
-          "wordCount": 563,
+          "wordCount": 551,
           "title": "[7210002980895916043#挑战每日一条沸点#] vscode插件fnMap（函数地图）v3.2.0发布 1，新增功能：可配置不同文件默认展开层级 2，新增功能：可配置不同文件哪些...",
           "imageUrl": null
         },
@@ -949,7 +939,7 @@
           "description": "jym，有无好用的png图片压缩网址，哪个杀千刀的举报了熊猫，打不开了，MD，剩下的能找到的全是要登录或者花钱的[酷拽][酷拽]",
           "link": "https://juejin.cn/pin/7288151713373192253",
           "publishedOn": "2023-10-10T08:47:22.000Z",
-          "wordCount": 521,
+          "wordCount": 532,
           "title": "jym，有无好用的png图片压缩网址，哪个杀千刀的举报了熊猫，打不开了，MD，剩下的能找到的全是要登录或者花钱的[酷拽][酷拽]",
           "imageUrl": null
         },
@@ -959,7 +949,7 @@
           "description": "每日打开\nhttps://juejin.cn/post/7280435532986990647",
           "link": "https://juejin.cn/pin/7287955337524314169",
           "publishedOn": "2023-10-10T07:12:51.000Z",
-          "wordCount": 530,
+          "wordCount": 524,
           "title": "每日打开 https://juejin.cn/post/7280435532986990647",
           "imageUrl": null
         },
@@ -969,7 +959,7 @@
           "description": "https://java.bejson.com/generator/  崩掉了。。[捂脸]",
           "link": "https://juejin.cn/pin/7287914116286545955",
           "publishedOn": "2023-10-10T01:19:32.000Z",
-          "wordCount": 518,
+          "wordCount": 512,
           "title": "https://java.bejson.com/generator/ 崩掉了。。[捂脸]",
           "imageUrl": null
         },
@@ -979,7 +969,7 @@
           "description": "逆向开发的大佬这么稀缺吗[流泪]，有没有做逆向开发到高级工程师或者技术专家程度的大佬啊[流泪][7073670077790289956#求职面试交流bbs#]",
           "link": "https://juejin.cn/pin/7287791555623092264",
           "publishedOn": "2023-10-09T09:53:41.000Z",
-          "wordCount": 518,
+          "wordCount": 538,
           "title": "逆向开发的大佬这么稀缺吗[流泪]，有没有做逆向开发到高级工程师或者技术专家程度的大佬啊[流泪][7073670077790289956#求职面试交流bbs#]",
           "imageUrl": null
         },
@@ -989,7 +979,7 @@
           "description": "生成 java 实体类属性的工具 有推荐没得[发呆]",
           "link": "https://juejin.cn/pin/7287757113401491490",
           "publishedOn": "2023-10-09T09:16:18.000Z",
-          "wordCount": 533,
+          "wordCount": 527,
           "title": "生成 java 实体类属性的工具 有推荐没得[发呆]",
           "imageUrl": null
         },
@@ -999,7 +989,7 @@
           "description": "打卡，vue无敌偷懒利器",
           "link": "https://juejin.cn/pin/7287620609373831224",
           "publishedOn": "2023-10-09T05:05:12.000Z",
-          "wordCount": 531,
+          "wordCount": 525,
           "title": "打卡，vue无敌偷懒利器",
           "imageUrl": null
         },
@@ -1009,7 +999,7 @@
           "description": "[7210002980895916043#挑战每日一条沸点#] vscode扩展fnMap v3.1.1发布，修复git的diff对比模式页面一闪而过的问题\n扩展地址：https://marketplace.visualstudio.com/items?itemName=chensuiyi.fn-map",
           "link": "https://juejin.cn/pin/7287562282670161979",
           "publishedOn": "2023-10-09T03:44:15.000Z",
-          "wordCount": 567,
+          "wordCount": 555,
           "title": "[7210002980895916043#挑战每日一条沸点#] vscode扩展fnMap v3.1.1发布，修复git的diff对比模式页面一闪而过的问题 扩展地址：https://marketplace.visualstudio...",
           "imageUrl": null
         },
@@ -1019,7 +1009,7 @@
           "description": "#求助掘友 \n刚买了一个带鱼屏显示器，自带分屏功能，但是它的这个分屏功能是支持多个主机连接同一个显示器，我想要的效果是一个主机连接这个显示器后，展示多个显示器的界面（相当于连接多个显示器），这个该怎么搞？",
           "link": "https://juejin.cn/pin/7287018116970184743",
           "publishedOn": "2023-10-07T13:55:53.000Z",
-          "wordCount": 521,
+          "wordCount": 515,
           "title": "#求助掘友 刚买了一个带鱼屏显示器，自带分屏功能，但是它的这个分屏功能是支持多个主机连接同一个显示器，我想要的效果是一个主机连接这个显示器后，展示多个显...",
           "imageUrl": null
         },
@@ -1039,7 +1029,7 @@
           "description": "vscode扩展 FnMap - 函数地图\n人性化的侧边栏函数、变量、符号列表操作和展示",
           "link": "https://juejin.cn/pin/7283768998776569915",
           "publishedOn": "2023-09-29T01:04:57.000Z",
-          "wordCount": 540,
+          "wordCount": 534,
           "title": "vscode扩展 FnMap - 函数地图 人性化的侧边栏函数、变量、符号列表操作和展示",
           "imageUrl": null
         },
@@ -1059,7 +1049,7 @@
           "description": "[7073670907851440160#新人报道#] 欢迎使用新鲜上线的DevShots https://gpwzw.com/",
           "link": "https://juejin.cn/pin/7283532551473594425",
           "publishedOn": "2023-09-28T07:52:46.000Z",
-          "wordCount": 530,
+          "wordCount": 542,
           "title": "[7073670907851440160#新人报道#] 欢迎使用新鲜上线的DevShots https://gpwzw.com/",
           "imageUrl": null
         },
@@ -1069,7 +1059,7 @@
           "description": "macOS支持容器化了！",
           "link": "https://juejin.cn/pin/7282944006674579516",
           "publishedOn": "2023-09-26T09:13:57.000Z",
-          "wordCount": 518,
+          "wordCount": 512,
           "title": "macOS支持容器化了！",
           "imageUrl": null
         },
@@ -1079,7 +1069,7 @@
           "description": "免注册 无限使用的ChatGPT https://sunmier.com/#/",
           "link": "https://juejin.cn/pin/7282692354984214539",
           "publishedOn": "2023-09-26T01:49:41.000Z",
-          "wordCount": 524,
+          "wordCount": 518,
           "title": "免注册 无限使用的ChatGPT https://sunmier.com/#/",
           "imageUrl": null
         },
@@ -1089,7 +1079,7 @@
           "description": "无所不知的jym，文章里面的gif效果展示图你们都是用什么工具生成的呀",
           "link": "https://juejin.cn/pin/7282691710072946725",
           "publishedOn": "2023-09-25T14:46:04.000Z",
-          "wordCount": 517,
+          "wordCount": 511,
           "title": "无所不知的jym，文章里面的gif效果展示图你们都是用什么工具生成的呀",
           "imageUrl": null
         },
@@ -1099,7 +1089,7 @@
           "description": "分享一下 DataCap 部分重构后的 UI，左侧重构前，右侧重构后",
           "link": "https://juejin.cn/pin/7282692458247995444",
           "publishedOn": "2023-09-25T12:18:53.000Z",
-          "wordCount": 541,
+          "wordCount": 535,
           "title": "分享一下 DataCap 部分重构后的 UI，左侧重构前，右侧重构后",
           "imageUrl": null
         },
@@ -1109,7 +1099,7 @@
           "description": "结合AI的自动化JVM参数解析、分析、建议工具,2秒钟完成你的java应用jvm参数分析，落实业界最佳实践，使jvm保持高性能、低资源浪费和高可观测性",
           "link": "https://juejin.cn/pin/7282228465932320826",
           "publishedOn": "2023-09-24T14:28:00.000Z",
-          "wordCount": 517,
+          "wordCount": 511,
           "title": "结合AI的自动化JVM参数解析、分析、建议工具,2秒钟完成你的java应用jvm参数分析，落实业界最佳实践，使jvm保持高性能、低资源浪费和高可观测性",
           "imageUrl": null
         },
@@ -1119,7 +1109,7 @@
           "description": "下班回家。。。",
           "link": "https://juejin.cn/pin/7281276425220014080",
           "publishedOn": "2023-09-22T09:38:36.000Z",
-          "wordCount": 519,
+          "wordCount": 513,
           "title": "下班回家。。。",
           "imageUrl": null
         },
