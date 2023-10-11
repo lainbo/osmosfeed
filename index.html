@@ -51,11 +51,63 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-11 datetime="2023-10-11T03:10:31.000Z">2023-10-11</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-11 datetime="2023-10-11T03:10:31.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-11 datetime="2023-10-11T08:23:25.000Z">2023-10-11</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-11 datetime="2023-10-11T08:23:25.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7288507975223590949"
+                        open
+                      >
+                        <summary class="article-expander__title">jym，现在用的chatgpt3.5还是4？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7288507975223590949">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>jym，现在用的chatgpt3.5还是4？</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7288509436899934267"
+                        open
+                      >
+                        <summary class="article-expander__title">jym，[呲牙]看看你们浏览器的收藏夹有啥有趣的网站，或者很实用的工具网站</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7288509436899934267">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>jym，[呲牙]看看你们浏览器的收藏夹有啥有趣的网站，或者很实用的工具网站</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -946,6 +998,39 @@ con…</span>
 1. 画好业务流程图
 设计的第一步是梳理业务。这个不是产品的责任吗？产品会提供 PRD、原型、用户故事等需…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7287134477838876707"
+                        open
+                      >
+                        <summary class="article-expander__title">网易云音乐 Tango 低代码引擎实现揭秘</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7287134477838876707">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>本文作者：景庄
+我们在 8 月底正式开源了 Tango 低代码引擎。Tango 是一个基于源码的低代码设计器框架，支持直接基于项目源码提供低代码可视化开发能力，可以无缝的与既有的本地开发工作流进行集成，从而提供渐进式的低代码开发能力。
+
+按照计划，我们在 9 月底发布了 beta 版本，在此版本中我们遵循 “最小内核” 的原则对 Tango 的核心实现进行了大幅的重构，剥离了大量冗余的代码实现。
+为了帮助大家更近一步的了解 Tango 开源版本的核心构成与代码实现，本文将会详细揭秘 Tango 低代码引擎的设计思考与实现过程。
+Github 仓库：https://github.com/NetEase/tango
+发行历史：https://github.com/NetEase/tango/releases
+文档站点：https://netease.github.io/tango/
+低代码可视化搭建之殇
+从实现上看，低代码搭建能力的核心是 UI 可视化编程。借助 UI 可视化编程，可以大大的弱化使用者对于代码编程的感知，但在真实的业务需求场景中，我们面临着大量的复杂的应用逻辑，使用者很难借助 UI 操作表达功能逻辑。例如下图中的合同管理，资金结算等页面。如果借助于传统的低代码方案，通常会发现，很容易一条路走到黑，没有回头路。所以，经常会有开发者抱怨，稍微复杂的场景下，低代码的效率甚至不如写代码。
+
+传统低代码方案的问题
+我们不妨先简单分析一下传统的低代码方案的问题。传统的低代码搭建方案往往采用定义私有 Schema 协议来可视化表达视图逻辑，也就是将代码逻辑转换为私有的描述，大致的原理可以参考下面这张图。
+
+这类方案很容易面临不断膨胀的私有 JSON 协议。并且，私有协议扩展性和灵活性差，难以达到图灵完备状态。例如在我们的实际开发过程中，传统的低代码方案会面临各种各样的扩展性卡…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2696,82 +2781,6 @@ Web 版 Photoshop 承诺了无处不在、无摩擦的访问体验。用户只�
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7285037507368435712"
-                        open
-                      >
-                        <summary class="article-expander__title">Rust笔记 (一) 搭建开发环境</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7285037507368435712">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: channing-cyan
-highlight: an-old-hope
-Rust 是一门强调安全、并发、高效的系统编程语言。无 GC 实现内存安全机制、无数据竞争的并发机制、无运行时开销的抽象机制，是 Rust 独特的优越特性。 它声称解决了传统 C 语言和 C++语言几十年来饱受责难的内存安全问题，同时还保持了很高的运行效率、很深的底层控制、很广的应用范围， 在系统编程领域具有强劲的竞争力和广阔的应用前景。
-1. Rust 环境安装
-Rust 安装起来非常方便，你可以用 rustup.rs 中给出的方法，根据你的操作系统进行安装。比如在 UNIX 系统下，可以直接运行：
-curl --proto &#x27;&#x3D;https&#x27; --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-这会在你的系统上安装 Rust 工具链，之后，你就可以在本地用 cargo new 新建 Rust 项目、尝试 Rust 功能。
-cargo 是 rust 官方推荐使用的项目管理软件。功能大概类似于 java 里面的 maven 和 ant。负责管理依赖项和编译。 安装 rust 时，默认安装(可以自定义为不安装)。它也类似 Node.js 的 npm、Golang 的 go，用来做依赖管理以及开发过程中的任务管理，比如编译、运行、测试、代码格式化等等。
-rustc --version
-cargo --version
-
-如果是 windows ，假如出现 “‘rustc’不是内部或外部命令，也不是可运行的程序或批处理文件” 请在”环境变量”的 Path 中增加 rust 的 bin 目录。
-2. 开发工具
-你可以使用任何编辑器来撰写 Rust 代码，我个人比较喜欢 VS Code，功能强大且速度很快。在 VS Code 下我为 Rust 安装了一些插件，下面是我的安装顺序，你可以参考：
-rust-analyzer：它会实时编译和分析你的 Rust 代码，提示代码中的错误，并对类型进行标注。你也可以使用官方的 Rust 插件取代。
-
-rust syntax：为代码提供语法高亮。
-
-crates：帮助你分析当前项目的依赖是否是最新的版本。
-
-Crates 提供了一系列强大的功能来简化您的 Rust 开发工作流程：版本信息：Crates 提供全面的版本信息，让您随时了解项目中的 crate。其中包括包含详细版本详细信息的工具提示和内嵌视觉反馈，以供快速参考和决策。快捷命令：只需一个命令即可更新所有依赖项，以实现无缝工作流程。Crev 集成：通过与Crev集成来访问有价值的代码审查和社区协作。获取反馈并就您所依赖的板条箱做出明智的决定。Doc.rs 集成：通过Doc.rs的无缝集成，探索 Rust 的全面文档，包括包、库等。获得深入的知识和见解以增强您的编码体验。
-even better toml：Rust 使用 toml 做项目的配置管理。better toml 可以帮你语法高亮，并展示 toml 文件中的错误。
-
-rust test lens：可以帮你快速运行某个 Rust 测试。
-
-Tabnine：基于 AI 的自动补全，可以帮助你更快地撰写代码。
-
-
-3. 生成一个新的 Rust 项目
-开发工具准备好之后，我们用 cargo new my-rust 生成一个新项目。默认情况下，这条命令会生成一个可执行项目 my-rust，入口在 src/main.rs。Cargo.toml 是 Rust 项目的配置管理文件，它符合 toml 的语法。
-
-
-最后运行一下我们的 rust 项目。
-cargo run
-
-这样一来我们的 rust 开发环境就搭建好了。
-4. 写第一个 Rust 程序
-4.1 一个小爬虫
-通过 rust 抓取掘金首页。
-use std::fs;
-
-fn main() {
-    let url &#x3D; &quot;https://juejin.cn/&quot;;
-    let output &#x3D; &quot;rust.md&quot;;
-
-    println!(&quot;Fetching url: {}&quot;, url);
-    let body &#x3D; reqwest::blocking::get(url).unwrap().text().unwrap();
-
-    println!(&quot;Converting html to markdown...&quot;);
-    let md &#x3D; html2md::parse_html(&amp;body);
-
-    fs::write(output, md.as_bytes()).unwrap();
-    println!(&quot;Converted markdown hash been saved in {}&quot;, output);
-}
-
-
-Bingo！我们第一个 Rust 程序运行成功！</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -4398,59 +4407,6 @@ function minDistance(word1: string, word2: string) {
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7281276425220014080"
-                        open
-                      >
-                        <summary class="article-expander__title">下班回家。。。</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7281276425220014080">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>下班回家。。。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7281256255354601508"
-                        open
-                      >
-                        <summary class="article-expander__title">想开发拥有实时协作功能的可以看下：《Spaces SDK：专为实时协作功能开发设计的SDK》https://mp.weixin.qq.com/s/EK1u2tr1CRcqbevtnAETmQ [7210228048107896891#...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7281256255354601508">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>想开发拥有实时协作功能的可以看下：《Spaces SDK：专为实时协作功能开发设计的SDK》https://mp.weixin.qq.com/s/EK1u2tr1CRcqbevtnAETmQ
-[7210228048107896891#每日快讯#]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >阮一峰的网络日志</button>
                   <a class="source-heading__link" href="http://www.ruanyifeng.com/blog/">Open</a>
                 </h3>
@@ -4895,8 +4851,8 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6480870662">
-        <time id="build-timestamp" datetime="2023-10-11T09:52:54.732Z">2023-10-11T09:52:54.732Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6482807645">
+        <time id="build-timestamp" datetime="2023-10-11T12:56:53.948Z">2023-10-11T12:56:53.948Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

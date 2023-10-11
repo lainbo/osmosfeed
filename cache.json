@@ -23,7 +23,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1196,
+          "wordCount": 1197,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "本文介绍三种改变音频播放音量的方法，其中还有一种方法直接改变音频AudioBuffer数据源的音量，说不定你哪天就会用到。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/",
           "publishedOn": "2023-10-09T14:50:57.000Z",
-          "wordCount": 1083,
+          "wordCount": 1092,
           "title": "JS改变AudioBuffer音量并下载为新audio音频",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "自己体验了下，出乎意料，HTML elementtiming属性在性能监控这块，比预想的要实用的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/html-elementtiming-attribute/",
           "publishedOn": "2023-09-15T15:58:22.000Z",
-          "wordCount": 939,
+          "wordCount": 940,
           "title": "HTML elementtiming属性初体验记录",
           "imageUrl": null
         },
@@ -757,6 +757,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7287134477838876707",
+          "author": "网易云音乐技术团队",
+          "description": "本文作者：景庄\n我们在 8 月底正式开源了 Tango 低代码引擎。Tango 是一个基于源码的低代码设计器框架，支持直接基于项目源码提供低代码可视化开发能力，可以无缝的与既有的本地开发工作流进行集成，从而提供渐进式的低代码开发能力。\n\n按照计划，我们在 9 月底发布了 beta 版本，在此版本中我们遵循 “最小内核” 的原则对 Tango 的核心实现进行了大幅的重构，剥离了大量冗余的代码实现。\n为了帮助大家更近一步的了解 Tango 开源版本的核心构成与代码实现，本文将会详细揭秘 Tango 低代码引擎的设计思考与实现过程。\nGithub 仓库：https://github.com/NetEase/tango\n发行历史：https://github.com/NetEase/tango/releases\n文档站点：https://netease.github.io/tango/\n低代码可视化搭建之殇\n从实现上看，低代码搭建能力的核心是 UI 可视化编程。借助 UI 可视化编程，可以大大的弱化使用者对于代码编程的感知，但在真实的业务需求场景中，我们面临着大量的复杂的应用逻辑，使用者很难借助 UI 操作表达功能逻辑。例如下图中的合同管理，资金结算等页面。如果借助于传统的低代码方案，通常会发现，很容易一条路走到黑，没有回头路。所以，经常会有开发者抱怨，稍微复杂的场景下，低代码的效率甚至不如写代码。\n\n传统低代码方案的问题\n我们不妨先简单分析一下传统的低代码方案的问题。传统的低代码搭建方案往往采用定义私有 Schema 协议来可视化表达视图逻辑，也就是将代码逻辑转换为私有的描述，大致的原理可以参考下面这张图。\n\n这类方案很容易面临不断膨胀的私有 JSON 协议。并且，私有协议扩展性和灵活性差，难以达到图灵完备状态。例如在我们的实际开发过程中，传统的低代码方案会面临各种各样的扩展性卡…",
+          "link": "https://juejin.cn/post/7287134477838876707",
+          "publishedOn": "2023-10-08T03:44:45.000Z",
+          "wordCount": 1265,
+          "title": "网易云音乐 Tango 低代码引擎实现揭秘",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7287041017291374627",
           "author": "zxg_神说要有光",
           "description": "最近遇到一个 git 的问题：\n我在某个文件里写了一段不应该提交上去的内容，没注意，提交上去了。\n后来又提交了很多个 commit。\n之后我发现了这个，又把它去掉了，提交了一个新的 commit。\n\n这样虽然新的 commit 没有这段内容了，但老的 commit 里依然有这个内容。\n可我不想保留这段内容的记录，也就是想修改历史 commit。\n这种问题大家会怎么解决呢？\n我能想到的有三种方案，分别来试一下。\n\n我们先创建了个 git 项目。\n\n写了个 index.md，每行内容提交一个 commit。\ngit log 可以看到，一共 5 个 commit：\n\ngit show 看下 222 和 333 那个 commit：\ngit show f5482b\n\n\n\n可以看到，这个 333 的 commit 就是我们想改掉的。\n但是现在后面提交了 444、555 这俩 commit 了，怎么改掉它呢？\n很容易想到的是 reset 到 333 那个 commit，重新提交，然后把后面的 commit 再一个个 cherry-pick 回去。\n我们试一下：\n首先把 444、555 这俩 commit 记下来，待会还要用\n\n然后 git reset 到 333 那个 commit：\ngit reset --hard 65dfee\n\n\n把私密信息去掉，重新提交：\ngit add .\ngit commit --amend\n\n\n这样，这个 commit 就干净了。\n然后把后面的 444 和 555 再 cherry-pick 回来。\ncherry-pick 就是单独取一个 commit 过来。\ngit cherry-pick 0b700f\n\n\n会有冲突，解决之后 continue 就好：\ngit add .\ngit cherry-pick --continue\n\n\n再 cherry-pic…",
@@ -877,16 +887,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7285037507368435712",
-          "author": "拜小白",
-          "description": "theme: channing-cyan\nhighlight: an-old-hope\nRust 是一门强调安全、并发、高效的系统编程语言。无 GC 实现内存安全机制、无数据竞争的并发机制、无运行时开销的抽象机制，是 Rust 独特的优越特性。 它声称解决了传统 C 语言和 C++语言几十年来饱受责难的内存安全问题，同时还保持了很高的运行效率、很深的底层控制、很广的应用范围， 在系统编程领域具有强劲的竞争力和广阔的应用前景。\n1. Rust 环境安装\nRust 安装起来非常方便，你可以用 rustup.rs 中给出的方法，根据你的操作系统进行安装。比如在 UNIX 系统下，可以直接运行：\ncurl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh\n\n这会在你的系统上安装 Rust 工具链，之后，你就可以在本地用 cargo new 新建 Rust 项目、尝试 Rust 功能。\ncargo 是 rust 官方推荐使用的项目管理软件。功能大概类似于 java 里面的 maven 和 ant。负责管理依赖项和编译。 安装 rust 时，默认安装(可以自定义为不安装)。它也类似 Node.js 的 npm、Golang 的 go，用来做依赖管理以及开发过程中的任务管理，比如编译、运行、测试、代码格式化等等。\nrustc --version\ncargo --version\n\n如果是 windows ，假如出现 “‘rustc’不是内部或外部命令，也不是可运行的程序或批处理文件” 请在”环境变量”的 Path 中增加 rust 的 bin 目录。\n2. 开发工具\n你可以使用任何编辑器来撰写 Rust 代码，我个人比较喜欢 VS Code，功能强大且速度很快。在 VS Code 下我为 Rust 安装了一些插件，下面是我的安装顺序，你可以参考：\nrust-analyzer：它会实时编译和分析你的 Rust 代码，提示代码中的错误，并对类型进行标注。你也可以使用官方的 Rust 插件取代。\n\nrust syntax：为代码提供语法高亮。\n\ncrates：帮助你分析当前项目的依赖是否是最新的版本。\n\nCrates 提供了一系列强大的功能来简化您的 Rust 开发工作流程：版本信息：Crates 提供全面的版本信息，让您随时了解项目中的 crate。其中包括包含详细版本详细信息的工具提示和内嵌视觉反馈，以供快速参考和决策。快捷命令：只需一个命令即可更新所有依赖项，以实现无缝工作流程。Crev 集成：通过与Crev集成来访问有价值的代码审查和社区协作。获取反馈并就您所依赖的板条箱做出明智的决定。Doc.rs 集成：通过Doc.rs的无缝集成，探索 Rust 的全面文档，包括包、库等。获得深入的知识和见解以增强您的编码体验。\neven better toml：Rust 使用 toml 做项目的配置管理。better toml 可以帮你语法高亮，并展示 toml 文件中的错误。\n\nrust test lens：可以帮你快速运行某个 Rust 测试。\n\nTabnine：基于 AI 的自动补全，可以帮助你更快地撰写代码。\n\n\n3. 生成一个新的 Rust 项目\n开发工具准备好之后，我们用 cargo new my-rust 生成一个新项目。默认情况下，这条命令会生成一个可执行项目 my-rust，入口在 src/main.rs。Cargo.toml 是 Rust 项目的配置管理文件，它符合 toml 的语法。\n\n\n最后运行一下我们的 rust 项目。\ncargo run\n\n这样一来我们的 rust 开发环境就搭建好了。\n4. 写第一个 Rust 程序\n4.1 一个小爬虫\n通过 rust 抓取掘金首页。\nuse std::fs;\n\nfn main() {\n    let url = \"https://juejin.cn/\";\n    let output = \"rust.md\";\n\n    println!(\"Fetching url: {}\", url);\n    let body = reqwest::blocking::get(url).unwrap().text().unwrap();\n\n    println!(\"Converting html to markdown...\");\n    let md = html2md::parse_html(&body);\n\n    fs::write(output, md.as_bytes()).unwrap();\n    println!(\"Converted markdown hash been saved in {}\", output);\n}\n\n\nBingo！我们第一个 Rust 程序运行成功！",
-          "link": "https://juejin.cn/post/7285037507368435712",
-          "publishedOn": "2023-10-04T09:39:00.000Z",
-          "wordCount": 1469,
-          "title": "Rust笔记 (一) 搭建开发环境",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7283748394601840680",
           "author": "搬砖的乔布梭",
           "description": "@主要Review的指标\n\n前端代码Review主要关注以下几个方面：\n1. 代码质量：代码是否简洁、易读、易维护。是否遵循了一致的编码风格和规范，例如ESLint、Prettier等。\n功能实现：代码是否实现了预期的功能，是否有潜在的bug或逻辑错误。\n性能优化：代码是否进行了必要的性能优化，例如避免不必要的渲染、使用了合适的数据结构和算法等。\n安全性：代码是否存在可能的安全风险，例如XSS攻击、CSRF攻击等。\n5. 可测试性：代码是否易于测试，是否有单元测试和集成测试。\n可读性：代码是否易于理解，是否有足够的注释和文档。\n可复用性：代码是否有高度的模块化和复用性。\n兼容性：代码是否兼容不同的浏览器和设备。\n助记：功性读复全兼测\n@功能Review\n无需人为检测，但注释要写明白，TS类型要写清楚，让用的人如沐春风；\n该匹配单元测试的建议配套单元测试，不落人以口实~\n@性能Review\n前端代码中一些典型的、肉眼可见的需要性能优化的地方包括：\n1. 过度渲染：如果你的应用在没有必要的情况下进行了过多的渲染，这可能会导致性能问题。例如，在React中，如果你的组件在props没有改变的情况下进行了重新渲染，那么你可能需要使用shouldComponentUpdate/SCU或React.PureComponent或useEffect来避免不必要的渲染。\n大量DOM操作：频繁的DOM操作是非常耗费性能的。如果你的代码中有大量的DOM操作，你可能需要考虑使用虚拟DOM或其他优化技术（例如DocumentFragment）。\n大量的网络请求：如果你的应用发送了大量的网络请求，这可能会导致性能问题。你可能需要考虑使用缓存、预加载、懒加载等技术来减少网络请求。\n大型JavaScript文件：如果你的JavaScript文件过大，这可能会导致加载和解析时间过长。你可能需要考虑使用代码分…",
@@ -923,6 +923,26 @@
       "feedUrl": "https://rsshub.app/juejin/pins/6824710202000932877",
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
+        {
+          "id": "7288507975223590949",
+          "author": "Nuyoah_Go",
+          "description": "jym，现在用的chatgpt3.5还是4？",
+          "link": "https://juejin.cn/pin/7288507975223590949",
+          "publishedOn": "2023-10-11T08:23:25.000Z",
+          "wordCount": 509,
+          "title": "jym，现在用的chatgpt3.5还是4？",
+          "imageUrl": null
+        },
+        {
+          "id": "7288509436899934267",
+          "author": "荒唐的尼玛",
+          "description": "jym，[呲牙]看看你们浏览器的收藏夹有啥有趣的网站，或者很实用的工具网站",
+          "link": "https://juejin.cn/pin/7288509436899934267",
+          "publishedOn": "2023-10-11T07:44:37.000Z",
+          "wordCount": 530,
+          "title": "jym，[呲牙]看看你们浏览器的收藏夹有啥有趣的网站，或者很实用的工具网站",
+          "imageUrl": null
+        },
         {
           "id": "7288229413035065402",
           "author": "陈随易",
@@ -1102,26 +1122,6 @@
           "wordCount": 511,
           "title": "结合AI的自动化JVM参数解析、分析、建议工具,2秒钟完成你的java应用jvm参数分析，落实业界最佳实践，使jvm保持高性能、低资源浪费和高可观测性",
           "imageUrl": null
-        },
-        {
-          "id": "7281276425220014080",
-          "author": "qianmoq",
-          "description": "下班回家。。。",
-          "link": "https://juejin.cn/pin/7281276425220014080",
-          "publishedOn": "2023-09-22T09:38:36.000Z",
-          "wordCount": 513,
-          "title": "下班回家。。。",
-          "imageUrl": null
-        },
-        {
-          "id": "7281256255354601508",
-          "author": "独立开发者张张",
-          "description": "想开发拥有实时协作功能的可以看下：《Spaces SDK：专为实时协作功能开发设计的SDK》https://mp.weixin.qq.com/s/EK1u2tr1CRcqbevtnAETmQ\n[7210228048107896891#每日快讯#]",
-          "link": "https://juejin.cn/pin/7281256255354601508",
-          "publishedOn": "2023-09-22T04:14:55.000Z",
-          "wordCount": 562,
-          "title": "想开发拥有实时协作功能的可以看下：《Spaces SDK：专为实时协作功能开发设计的SDK》https://mp.weixin.qq.com/s/EK1u2tr1CRcqbevtnAETmQ [7210228048107896891#...",
-          "imageUrl": null
         }
       ]
     },
@@ -1226,7 +1226,7 @@
           "description": "线框图被产品经理奉为圭臬，但对设计师而言，线框图的存在则是面目模糊。在整个产品设计流程里，线框图是一种很好的产品工具，而不是一个可行的 UX 设计和 UI 设计工具。 前 Google 设计师 Alex Socoloff 在推特上说：“Unpopular opinion: Low-fi wireframes are just a waste of time.”，意思是“非主流的观点：（产品设计过程 …\n  设计 | 重新认识线框图 查看全文 »",
           "link": "https://nishuang.net/%e8%ae%be%e8%ae%a1-%e9%87%8d%e6%96%b0%e8%ae%a4%e8%af%86%e7%ba%bf%e6%a1%86%e5%9b%be/",
           "publishedOn": "2023-09-22T06:55:28.000Z",
-          "wordCount": 4121,
+          "wordCount": 4182,
           "title": "设计 | 重新认识线框图",
           "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-1597534458220-9fb4969f2df5.jpeg"
         },
