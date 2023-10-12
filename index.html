@@ -51,6 +51,54 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-12 datetime="2023-10-12T03:14:06.000Z">2023-10-12</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-12 datetime="2023-10-12T03:14:06.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >李继刚的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/6527647eea72dfbaff63bc46"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 人是自己学到的所有技能的总和。</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6527647eea72dfbaff63bc46">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>人是自己学到的所有技能的总和。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-11 datetime="2023-10-11T16:24:34.000Z">2023-10-11</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-11 datetime="2023-10-11T16:24:34.000Z"></time>
           </button>
@@ -100,7 +148,7 @@
                               <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>“不学历史的人注定会重蹈覆辙。”</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -849,7 +897,7 @@ jcode
 第一个问题，官方网页版地图引擎用的是 leaflet，这是一个以 dom 为主要实现方式的地图引擎，而频繁地大量操作 dom 会导致严重的性能问题。你可以想象一下，要保证视觉上流畅，手势及动画的采样频率至少是 60hz，意味着单个 dom 节点每秒就要变换 60 次，一旦数量超过 100 个，对浏览器来说就是无法承受的压力。
 但是 leaflet 也有 canvas 实现的 layer，或者这么说，如果性能瓶颈在于 dom，那么用浏览器提供的 canvas api 就应该可以解决，为什么还需要 canvaskit 呢？
 在回答这个问题之前，先介绍一下 canvaskit，这其实就是 skia 的 js + wasm 版，c++ 实现的渲染引擎被编译成了 wasm，通过 js 提供类似 canvas api 的绘制接口。也许你已经知道 chrome 的底层就是 skia 做渲染引擎，canvas api 也可以视为 skia 绘制接口的封装，那么 skia 编译成 wasm 再提供 js api 不是脱裤子放屁吗…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;12
+                                &ensp;<span class="article-reading-time">(&hairsp;11
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1060,7 +1108,7 @@ Monorepo 的好处在于可以将项目中通用的部分单独抽离成一个�
 撤销已发布的包npm unpublish mj-calculation使用的命令。
 14、步骤十四强制删除包
 强制撤销已发布的包npm unpublish mj-calculation --force使用的命令。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1269,30 +1317,6 @@ Github 仓库：https://github.com/NetEase/tango
                               <img src="https://cdnv2.ruguoapp.com/Fg4GmA0WdtAJe4F4_J2Ou142DuPSv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>这段文字有那股子癫狂沉浸的味了</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/65228174c70326f2eb3f093c"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 𝐡𝐮𝐦𝐚𝐧 𝐚𝐫𝐞 𝐥𝐢𝐤𝐞 𝐦𝐚𝐜𝐡𝐢𝐧𝐞 为什么说人越来越像机器? 社会运行过程中, 首先搞出了工作标准化, ...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65228174c70326f2eb3f093c">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>𝐡𝐮𝐦𝐚𝐧 𝐚𝐫𝐞 𝐥𝐢𝐤𝐞 𝐦𝐚𝐜𝐡𝐢𝐧𝐞
-为什么说人越来越像机器?
-社会运行过程中, 首先搞出了工作标准化, 把人当零件用.
-然后开始教育标准化, 把学校当成工厂, 批量生成工作需要的零件.
-接下来就是职业路径标准化, 在画好的阶梯上, 每人都在遵循八字箴言: 同样做事, 做的更好. 从而换回更高的位置和福利回报.</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -2016,6 +2040,47 @@ DevEco 安装完成后，首次进入需要设置 nodejs 与 ohpm。可以选择
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7286787235361800204"
+                        open
+                      >
+                        <summary class="article-expander__title">浅聊如何仅半天搭建代码自动审核平台demo</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7286787235361800204">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>背景
+媳妇国庆节在家加班，发现在优化react代码。我凑近一看，原来是代码复杂度高、相似代码多、使用的npm包有版本风险。这不就激起我的好奇心了嘛，如果是人工检测审核，那工作量得多大啊。原来是利用了 SonarQube 这个代码自动审核平台。
+SonarQube 是什么
+官方文档，下面是文档截图。
+
+实际上可以通过该平台可视化方式展现代码中的漏洞、bug、代码质量、测试覆盖率等等。根据时间等多种维度展示代码质量波动情况。
+下面是搭建的SnoarQube的平台的demo截图，可以看见内容还是很丰富的。
+
+动手试一下
+安装SonarQube
+文档提供了两种方式，一种是本地安装，一种是docker。我选择后者，安装过程也非常简单。首先下载一个docker，然后搜索安装并运行镜像即可。而镜像运行的命令在文档也可以看见.
+
+题外话：可以看见sonarqube下载量非常高，达500M+，我之前却从来没听说过。
+镜像运行之后，打开http://127.0.0.1:9000就可以看见SonarQube已经安装完成了。
+创建代码项目
+SonarQube,支持从多种平台导入项目。我在gitlab创建了一个demo项目，根据文档指引，需要在代码里面编写sonar-project.properties和.gitlab-ci.yml两个文件，文件内容根据提示复制内容即可。你会发现，.yml配置里面包含了SONAR_HOST_URL和SONAR_TOKEN两个环境变量。根据文档提示，需要在git项目里：Settings &gt; CI/CD &gt; Variables，创建这两个环境变量，并勾选或关闭Protect Variable、Mask Variable复选框。
+
+发布代码
+代码发布，根据 .yml 可以知道，会执行两个 sonarqube-check  sonarqube-vulnerability-report 两个stage。但是不出意外的话就是会出意外，pipeline会报错。仔细查看报错内容可以得知，127.0.0.1:9000根本无法访问啊。SonarQube是本地镜像服务，gitlab不可能直接通过ip访问啊。思考片刻，我将自己的127.0.0.1:9000，发布到外网不就解决了吗。经过搜索，发现了ngrok：(https://ngrok.com/)神器。可以代理本机ip到.ngrok-free.app上。经过一番（安装、环境变量配置、脚本启动）操作，成功将本机ip代理到外网上。 接着修改SONAR_HOST_URL为代理的新地址，并重新发布代码触发pipeline。
+
+展望
+SonarQube 是真的好，可以从多个维度查看代码质量。并可以结合 devops拒绝辣鸡的代码上线。明天就将它推荐给领导。
+此刻传来了媳妇的吐槽：辣鸡SonarQube，代码复杂度计算一点都不合理，为了复杂度指标强行把代码拆散。升级个npm版本，代码又跑不起来了。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7286155742850760767"
                         open
                       >
@@ -2579,44 +2644,6 @@ JsDoc 的写法稍微麻烦一点，但也能很好的支持：
  */
 const personName &#x3D; &#x27;Randal&#x27;…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7285184691418169363"
-                        open
-                      >
-                        <summary class="article-expander__title">国庆假期，我用Flutter写了个我自己都玩不赢的五子棋AI🤣</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7285184691418169363">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-在上一篇文章中，讲解了如何实现双人在本地对战的五子棋，但是只有一个人的时候就不太好玩，同时博主也没有把五子棋相关的文章写过瘾。那么这篇文章，我们来实现一个功能更加丰富的五子棋吧！在设计五子棋的算法方面，我们将引入一些经典的算法，如最大最小搜索（Max-Min）算法和Alpha-Beta剪枝算法。这些算法将帮助我们创建一个智能的对手，使游戏更具挑战性和趣味性。除了算法的介绍，本文还将深入探讨五子棋的基本玩法和规则。我们将详细解释如何落子、如何判断胜负以及如何对各种局面进行评分估值。通过学习这些基础知识，您将能够更好地理解和享受五子棋游戏。
-效果图：
-
-
-
-
-
-
-仓库地址：https://github.com/taxze6/flutter_game_collection/tree/main/gomoku_ai
-release apk下载体验：https://github.com/taxze6/flutter_game_collection/tree/main/gomoku_ai/release
-棋盘绘制
-本次采用的棋盘绘制与上篇文章的方式不同，上篇文章中采用的是GridView这样的基础组件，使用简单，无需手动编写绘制逻辑。利用GridView的布局特性，可以很方便地进行排列和调整。但是它也有缺点，就是不够灵活，当我们想实现更多的棋盘细节时，实现起来就不是很方便了，所以在本篇文章中，我们采用CustomPaint绘制的方式。
-那在绘制棋盘之前，我们需要先定义游戏所需要的一些参数和实体类：
-玩家类
-//玩家
-class Player {
-  static final Player black &#x3D; Player(Colors.black);
-  static final Player white &#x3D; Player(Colors.white);
-  late Color col…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;28
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3676,9 +3703,12 @@ class Player {
                         <summary class="article-expander__title">倪爽的阅读分享 – 2023年9月27日</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b49%e6%9c%8827%e6%97%a5/">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/bennu_navcam.webp" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>To Understand the Burgess Shale’s 500-Million-Year-Old Fossils, We Imagined How They’d Taste 为了理解伯吉斯页岩中5亿年前的化石，我们想象了它们的味道。 加拿大的伯吉斯页岩遗址保存了 5 亿年前寒武纪时期的生物化石，为了探索古代生物与现代烹饪之间的联系，大厨分享了烹饪五种伯吉斯页岩古生物的想法。  …
   倪爽的阅读分享 – 2023年9月27日 查看全文 »</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3694,9 +3724,12 @@ class Player {
                         <summary class="article-expander__title">设计 | UI 设计里，简单不等于容易使用设计</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e8%ae%be%e8%ae%a1-ui-%e8%ae%be%e8%ae%a1%e9%87%8c%ef%bc%8c%e7%ae%80%e5%8d%95%e4%b8%8d%e7%ad%89%e4%ba%8e%e5%ae%b9%e6%98%93%e4%bd%bf%e7%94%a8%e8%ae%be%e8%ae%a1/">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-1511649475669-e288648b2339.jpeg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>Google 将关闭 Google Podcasts，随便吧，反正我厌恶它🤷‍♂️ Google Podcasts 的 UI 设计有个特别奇怪的特征：UI 尤其是列表 UI 的设计很简洁，但缺乏好用、有用的感觉。 小结一下，Google Podcasts 界面设计最大的问题是：视觉元素缺乏层级关系（Hierarchy）。 或者更通俗一点说，界面里的标题、摘要、标签、图标、按钮等等不同视觉元素之间没 …
   设计 | UI 设计里，简单不等于容易使用设计 查看全文 »</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3851,9 +3884,12 @@ git…</span>
                         <summary class="article-expander__title">设计 | 脱离商业的设计，只是（无足轻重的）装饰</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e8%ae%be%e8%ae%a1-%e8%84%b1%e7%a6%bb%e5%95%86%e4%b8%9a%e7%9a%84%e8%ae%be%e8%ae%a1%ef%bc%8c%e5%8f%aa%e6%98%af%ef%bc%88%e6%97%a0%e8%b6%b3%e8%bd%bb%e9%87%8d%e7%9a%84%ef%bc%89%e8%a3%85%e9%a5%b0/">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-1540242908484-50aa09aea5a7.jpeg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>全世界设计师都追看了 Figma Config 2023 大会的演讲视频，其中最被忽视的，大概是这个名为“脱离商业的设计，只是装饰”的演讲，演讲者是 Netflix 网飞的设计 VP。 他用简单的故事介绍了商业在设计中的意义，并介绍了几个小策略，帮助设计师在做设计时更接近商业： 多数设计师可能不理解上面这些到底在说什么，我换个说法，大家就理解了： 几乎每个设计师，不管是小公司的新设计师、还是成熟公 …
   设计 | 脱离商业的设计，只是（无足轻重的）装饰 查看全文 »</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3869,9 +3905,12 @@ git…</span>
                         <summary class="article-expander__title">Remix ｜ 使用喷气发动机的复古未来主义汽车，Chrysler Turbine</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/remix-%ef%bd%9c-%e4%bd%bf%e7%94%a8%e5%96%b7%e6%b0%94%e5%8f%91%e5%8a%a8%e6%9c%ba%e7%9a%84%e5%a4%8d%e5%8f%a4%e6%9c%aa%e6%9d%a5%e4%b8%bb%e4%b9%89%e6%b1%bd%e8%bd%a6%ef%bc%8cchrysler-turbine/">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/img_4923-1024x392.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>克莱斯勒从 1963 年到 1964 年，制造了 55 辆使用喷气发动机/燃气轮机的双门硬顶跑车 Chrysler Turbine，并把它们免费借给普通美国人试驾。这些时髦、酷炫、高科技、超现实的小车改变了试驾者的生活，但燃气轮机汽车永远离开了我们。 Hagerty Drivers Foundation 拍了一部 70 分钟的纪录片，介绍这段奇妙的历史。 克莱斯勒组织了庞大的用户试驾活动，来自美国 …
   Remix ｜ 使用喷气发动机的复古未来主义汽车，Chrysler Turbine 查看全文 »</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4074,9 +4113,12 @@ function minDistance(word1: string, word2: string) {
                         <summary class="article-expander__title">倪爽的阅读分享 – 2023年9月24日</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b49%e6%9c%8824%e6%97%a5/">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/091923-musk-neuralink-primates-death-2.webp" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>Color for brand designers working with product teams 品牌设计师与产品团队合作的色彩管理 品牌设计师在数字空间中面临挑战，因为他们的品牌颜色可能无法在产品设计中效果不佳，产品团队不得不进行调整。 主要原因是品牌指南没有考虑到可访问性和规模。文章介绍了解决这种问题的几个方法。 Get it shipped — building better rel …
   倪爽的阅读分享 – 2023年9月24日 查看全文 »</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4167,9 +4209,12 @@ function minDistance(word1: string, word2: string) {
                         <summary class="article-expander__title">倪爽的阅读分享 – 2023年9月23日</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b49%e6%9c%8823%e6%97%a5/">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-gallery-full-8_Easy-Resize.com_-746x1024-1.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>「你要的都有了！」致敬FM2的經典造型，方便攜帶的全片幅相機 – Nikon 全新 Zf 單眼相機 – EVERYDAY OBJECT Nikon Zf相机还配备了一块3.2英寸的可翻转触摸屏，方便用户进行取景和操作。同时，相机还支持Wi-Fi和蓝牙连接，可以方便地与智能设备进行无线传输和分享照片。此外，相机还具备防尘防滴功能，保证在恶劣环境下的可靠性和耐用性。 总体来说， …
   倪爽的阅读分享 – 2023年9月23日 查看全文 »</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4213,9 +4258,12 @@ function minDistance(word1: string, word2: string) {
                         <summary class="article-expander__title">学习 | 把思维碰撞变成创新利器</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e6%8a%8a%e6%80%9d%e7%bb%b4%e7%a2%b0%e6%92%9e%e5%8f%98%e6%88%90%e5%88%9b%e6%96%b0%e5%88%a9%e5%99%a8/">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/collision.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>乔布斯为什么强迫所有员工用一个厕所 智者乔布斯认为：智慧的火花常常是偶然交流碰撞产生的。 为了促进员工之间的交流，当初乔布斯为动画制作公司皮克斯设计总部大楼时，设想了一项创新性的设计：取消分布于各个楼层和区域的洗手间，只设置一个大型共用洗手间，而且把它放在大楼大厅的中央！ – 每个人都得上厕所吧？这个集中式洗手间，将能提高员工相互碰面和交流的机会。 还好最后这个疯狂的设想没有实施。 乔 …
   学习 | 把思维碰撞变成创新利器 查看全文 »</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4231,9 +4279,12 @@ function minDistance(word1: string, word2: string) {
                         <summary class="article-expander__title">设计 | 为什么要自己动手雕刻一只小熊？</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e8%ae%be%e8%ae%a1-%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e8%87%aa%e5%b7%b1%e5%8a%a8%e6%89%8b%e9%9b%95%e5%88%bb%e4%b8%80%e5%8f%aa%e5%b0%8f%e7%86%8a%ef%bc%9f/">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/bears.webp" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>很多独立开发者、小微技术团队，明明没有设计常识，也会为了省钱而自己做设计，一般他们会自我安慰：“这有什么难”、“反正有免费工具”、“有 Tailwind、还有现成的模板”… 说个我的真实例子，让大家体会一下这个常识：不懂设计的外行“自己做设计”，这种想法很愚昧。 话说我们家院子里装饰用的木刻小熊，日晒雨淋变成了幽灵小熊，需要再买一个。 某天开车看到卖木雕的小店，在路边排了十几只木雕小熊，大叔正在拿 …
   设计 | 为什么要自己动手雕刻一只小熊？ 查看全文 »</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4249,9 +4300,12 @@ function minDistance(word1: string, word2: string) {
                         <summary class="article-expander__title">设计 | 重新认识线框图</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e8%ae%be%e8%ae%a1-%e9%87%8d%e6%96%b0%e8%ae%a4%e8%af%86%e7%ba%bf%e6%a1%86%e5%9b%be/">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-1597534458220-9fb4969f2df5.jpeg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>线框图被产品经理奉为圭臬，但对设计师而言，线框图的存在则是面目模糊。在整个产品设计流程里，线框图是一种很好的产品工具，而不是一个可行的 UX 设计和 UI 设计工具。 前 Google 设计师 Alex Socoloff 在推特上说：“Unpopular opinion: Low-fi wireframes are just a waste of time.”，意思是“非主流的观点：（产品设计过程 …
   设计 | 重新认识线框图 查看全文 »</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4267,9 +4321,12 @@ function minDistance(word1: string, word2: string) {
                         <summary class="article-expander__title">设计 | Arc 浏览器怎么确定产品需求？</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e8%ae%be%e8%ae%a1-arc-%e6%b5%8f%e8%a7%88%e5%99%a8%e6%80%8e%e4%b9%88%e7%a1%ae%e5%ae%9a%e4%ba%a7%e5%93%81%e9%9c%80%e6%b1%82%ef%bc%9f/">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/Arc-Browser-First-Look-3.jpeg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>从客观的市场调研到主观地大胆创意，从保守的数据分析到激进地用补贴来制造需求……每个团队都有自己的方式来确定产品需求。 Arc 浏览器有很多奇妙、奇特、奇怪的功能，很难想象他们的产品需求是从哪儿来的。 他们拍了视频介绍他们的做法。 这其实是很多技术背景的创业公司、独立开发者的常规做法 – 试试再说！ 只要设计原型和开发原型的成本足够低，尝试出来的功能、往往是最好的功能。 而大公司、一般团 …
   设计 | Arc 浏览器怎么确定产品需求？ 查看全文 »</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4285,9 +4342,12 @@ function minDistance(word1: string, word2: string) {
                         <summary class="article-expander__title">学习 | 为什么上司会问不重要的小细节</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e5%ad%a6%e4%b9%a0-%e4%b8%ba%e4%bb%80%e4%b9%88%e4%b8%8a%e5%8f%b8%e4%bc%9a%e9%97%ae%e4%b8%8d%e9%87%8d%e8%a6%81%e7%9a%84%e5%b0%8f%e7%bb%86%e8%8a%82/">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-1617050318658-a9a3175e34cb.jpeg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>老板、上司、老员工会吹毛求疵，说你文档里写了错别字。这不是比“直升机老板”、“微管理”还烦人么？ 我以前经常会直接纠正同事的小细节错误。 比如我经常要解释“登录”是 Log in 的翻译、所以不是“登陆”，用户的“账户”是 Account 的翻译、所以不是“帐户”…跟纠正“的地得”差不多。还好我在工作场合属于比较 nice 的人，即使口无遮拦，同事也知道我没什么恶意、不会多计较。 随着工作中管理职 …
   学习 | 为什么上司会问不重要的小细节 查看全文 »</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;13
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4303,9 +4363,12 @@ function minDistance(word1: string, word2: string) {
                         <summary class="article-expander__title">倪爽的阅读分享 – 2023年9月22日</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b49%e6%9c%8822%e6%97%a5/">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/F6W3CPdasAAivUQ-1.jpeg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>So AI can make optical illusions now 现在人工智能可以制造视觉错觉了 Stable Diffusion 用户分享了看起来像普通人物照片的图像。然而，仔细观察后，就会发现这些图像实际上是由字词和信息组成的。例如这个蹲在湿地上的女人，仔细观察后，她展示了一个比特币的标志。 This beer-powered puffer jacket is the coolest  …
   倪爽的阅读分享 – 2023年9月22日 查看全文 »</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4398,9 +4461,12 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
                         <summary class="article-expander__title">Remix | 为什么美国人看电视、看电影也要英文字幕？</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/remix-%e4%b8%ba%e4%bb%80%e4%b9%88%e7%be%8e%e5%9b%bd%e4%ba%ba%e7%9c%8b%e7%94%b5%e8%a7%86%e3%80%81%e7%9c%8b%e7%94%b5%e5%bd%b1%e4%b9%9f%e8%a6%81%e8%8b%b1%e6%96%87%e5%ad%97%e5%b9%95%ef%bc%9f/">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/inception.jpg.webp" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>Vox 拍了一部短片，说美国人看电影、看电视也听不清台词，也需要看字幕来理解台词。结果短片引起共鸣、被播放超过 1000 万次。 各种听不清的台词里，最被人诟病的来自大导演诺兰的电影，他说这是刻意的，他希望你去电影院听 128 声道专业级音效，手机上听不清台词算你活该。 观众听不清台词的另一个原因，反而是因为技术的进化。具体来说，现在的麦克风太灵敏了，演员学会了很低声地说话。30 Rock 男主角 …
   Remix | 为什么美国人看电视、看电影也要英文字幕？ 查看全文 »</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4416,9 +4482,12 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
                         <summary class="article-expander__title">学习 | 怎么在 X/推特 获取优质信息</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e5%ad%a6%e4%b9%a0-%e6%80%8e%e4%b9%88%e5%9c%a8-x-%e6%8e%a8%e7%89%b9-%e8%8e%b7%e5%8f%96%e4%bc%98%e8%b4%a8%e4%bf%a1%e6%81%af/">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-1525770041010-2a1233dd8152.jpeg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>推特是获取信息最快的社交网络，如果掌握一定技巧，推特也能获取最有价值的信息。 推特是个奇特的社交网站，你可以在这里获取一手信息，和各个领域的高人直接沟通，同时你也会在这里看到各种垃圾信息，各种居心不良的人在这里别有目的。 如果你想在推特获得优质的、有价值的信息，或者学习 AI 之类的新知识，那就需要技巧来过滤垃圾信息、放大优质信息。 没耐心的人直接跳到 Part 3。 Part 1：过滤垃圾信息  …
   学习 | 怎么在 X/推特 获取优质信息 查看全文 »</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4476,9 +4545,12 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
                         <summary class="article-expander__title">倪爽的阅读分享 – 2023年9月21日</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b49%e6%9c%8821%e6%97%a5/">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/b-52-stratofortress_013.jpeg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>More than half of Americans plan to get updated COVID shot 超过一半的美国人计划接种更新的COVID疫苗 根据最近的一项调查，超过半数的美国成年人计划接种最新的 COVID-19 疫苗。该疫苗针对omicron亚变种XBB.1.5。 What’s in the US military’s historic lost and fou …
   倪爽的阅读分享 – 2023年9月21日 查看全文 »</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4707,57 +4779,10 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-12 datetime="2023-09-12T15:52:48.000Z">2023-09-12</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-12 datetime="2023-09-12T15:52:48.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >张鑫旭-鑫空间-鑫生活</button>
-                  <a class="source-heading__link" href="https://www.zhangxinxu.com/wordpress">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.zhangxinxu.com/wordpress/?p&#x3D;11003"
-                        open
-                      >
-                        <summary class="article-expander__title">Tips：form元素reset后input不触发change事件处理</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.zhangxinxu.com/wordpress/2023/09/form-reset-input-change/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>坚持探索Web标准下的原生浏览器开发行为，行为驱动和数据驱动的表单开发其实各有千秋，深入HTML，你会发现这个世界比你所知的要精彩的多。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6491024478">
-        <time id="build-timestamp" datetime="2023-10-12T03:52:51.015Z">2023-10-12T03:52:51.015Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6492281498">
+        <time id="build-timestamp" datetime="2023-10-12T06:53:13.900Z">2023-10-12T06:53:13.900Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
