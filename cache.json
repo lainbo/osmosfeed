@@ -43,7 +43,7 @@
           "description": "起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/",
           "publishedOn": "2023-09-17T08:06:56.000Z",
-          "wordCount": 1494,
+          "wordCount": 1495,
           "title": "又get到了，JS复制图片到剪切板",
           "imageUrl": null
         },
@@ -97,7 +97,7 @@
           "description": "跑在手表上的游戏😵‍💫",
           "link": "https://m.okjike.com/originalPosts/6527d811bb3e3660e85ce9b3",
           "publishedOn": "2023-10-12T11:27:13.000Z",
-          "wordCount": 456,
+          "wordCount": 460,
           "title": "发布了: 跑在手表上的游戏😵‍💫",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fr8SlncnP3lg1AaCRjk9Yu3hJGze?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80"
         },
@@ -127,7 +127,7 @@
           "description": "微软研发的 AutoGen 框架太强大了，它是一个多代理框架，利用它可以轻松定制一系列工作任务。https://github.com/microsoft/autogen\n举一个常见的例子：我们要实现一个爬虫程序，抓取并保存网页图片。如果把这个任务丢给 ChatGPT，它会直接返回一串可执行代码，但是代码通常会存在问题，例如执行报错、缺少依赖等，你需要反复跟 ChatGPT 对话来完善程序。当然，我们也可以设定一个复杂 Prompt，要求它调用 ChatGPT 的代码执行插件，如果存在报错，则继续修正程序。\n这个任务如果交给 AutoGen 来实现，将会变得无比简单，几行代码就可以搞定：\n1）定义一个 Assistant Agent，它的任务是解决问题\n2）定义一个 UserProxy Agent，它的任务是替代人询问问题，同时在本地执行程序\n这两个 Agent 都不需要给他们设置 Prompt。当我们把爬虫任务交给 UserProxy 后，它会理解任务，然后询问 Assistant 应该如何做，Assistant 会把操作过程告诉 UserProxy，接着 UserProxy 会根据指示在本地安装依赖，然后创建文件执行代码，如果执行出现错误，它会把详细报错提交给 Assistant，依次循环，直到可以获取到最终的结果。任务结束的时候，你会看到目标图片已经保存到本地磁盘了。\n利用这个框架可以做的事情非常多，它提供的能力也十分完善，可以在项目的 notebook 中找到很多最佳实践：https://github.com/microsoft/autogen/tree/main/notebook\nP.S. 为了确保安全，还是建议你在 Docker 环境中执行程序，UserProxy 有一个 code_execution_config 配置，将 use_docker 配置为 True 即可；另外，它还有一个 human_input_mode 参数，设置为 NEVER，表示整个过程都不需要人参与，也可以设置为其他值，它会等待人的输入后再进行下一步操作，这个设计可以让人参与到任务执行过程，避免跑偏。",
           "link": "https://m.okjike.com/originalPosts/6527c452fb5ea50a73e2b33b",
           "publishedOn": "2023-10-12T10:02:58.000Z",
-          "wordCount": 540,
+          "wordCount": 546,
           "title": "发布了: 微软研发的 AutoGen 框架太强大了，它是一个多代理框架，利用它可以轻松定制一系列工作任务。https://github.com/microsoft/autogen 举一个常见的例子：...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fo7BSBkUrotRg7zsqNXRB2IeaQ1e?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80"
         },
@@ -665,7 +665,7 @@
           "description": "CSS工作组在其官方WIKI总结了这些年CSS在设计上犯的46条失误。这些错误大体可以概括为5类：\n属性key、value设计失误\n布局、对齐上的设计失误\n颜色相关的失误\n选择器设计失误\n本文会选一些我觉得有意思的失误来讲讲。完整的失误列表见上述官方WIKI。\n欢迎围观朋友圈、加入人类高质量前端交流群，带飞\n!important语法\n!important语法用来增加样式的权重，毕竟，感叹号通常表达强调的意思。但在编程语言中，!通常是取反的意思，比如：\nconst isValid = true;\n!isValid // false\n\n初次接触CSS的工程师很可能会觉得!important是不important的意思，这与该语法实际想表达的意思完全相反。\n所以，工作组认为!important是个糟糕的语法。\nz-index语法\nz-index属性用于设置定位元素及其后代元素或flex元素的Z轴层叠顺序，z-index较大的元素会叠在较小元素的上面。\n在编程语言中，index是索引的意思，并没有表达出层叠的意思。所以，工作组认为叫z-order或干脆叫depth（深度）会更好。\n同时，他们也认为，这个属性应该对所有元素有效（而不是只对定位元素及其后代，以及flex元素有效）。\n单个元素margin的塌陷\nmargin坍塌是CSS中的基础特性，假设有2个上下重叠的块级元素：\n上面的元素margin-bottom为20px\n下面元素margin-top为30px\n按照直觉来看，他们之间的margin应该是50px（20px + 30px），但是由于margin坍塌，他们之间的margin为其中较大的值（30px）。\n\n上面是2个块级元素之间的margin坍塌。\n对于单个块级元素，也存在margin坍塌 —— 如果一个元素内部没有内容，或者它的内容被清除（clear）了，那么这个元素的上下margin会发生塌陷。\n这意味着，即使你为元素的顶部和底部都设置了margin，但实际上他们会合并成一个（值等于两者中的最大者，而不是它们的总和）。\n这种塌陷行为可能会导致一些让人懵逼的布局问题。比如，你试图通过增加一个元素的margin-bottom来增加它下面的空间，但不起作用，可能就是因为增加的 margin塌陷掉了。\n所以，CSS工作组认为这不是个好设计。\nrgb与rgba\nrgba与hsla都是设置颜色的属性，相比于rgb与hsl，他们还可以设置alpha值（透明度）。\n所以，为啥不直接让rgb与hsl能够接收第四个参数（alpha值）呢？工作组很费解 自己当初咋想的。\nborder-radius\nborder-radius直译为边界半径，当初应该取名叫corner-radius（拐角半径）。\n毕竟，这就是设置元素拐角处圆角的半径的啊～～\n绝对定位的替换元素\n所谓替换元素，是指外观和尺寸由外部资源决定的元素，比如：\nimg\nobject（嵌入的对象，如Flash动画）\nvideo\niframe\n工作组认为，当替换元素被绝对定位时，偏移属性不应该改变元素的位置，而应该改变尺寸。\n比如，当对绝对定位的img设置left: 20px; right: 20px;，那么他应该被拉伸到从左侧20px到右侧20px的长度，而不是移动到距离左侧20px的位置。\n这个规则对于响应式布局是非常有用的，因为它允许元素自动调整其大小以适应不同的视口宽度。\n总结\n上面只是挑了几个我觉得有意思的失误来聊。除此之外，还有很多是使用习惯上的设计失误，个人认为比较主观。比如：\n子孙选择器应该使用»符号，即：\n// 当前的子孙选择器\ndiv p {\n  color: green;\n}\n// 期望的子孙选择器\ndiv » p {\n  color: green;\n}\n\n兄弟选择器应该用++符号，即：\n// 当前的兄弟选择器\ndiv ~ p {\n  color: green;\n}\n// 期望的兄弟选择器\ndiv ++ p {\n  color: green;\n}\n\n不知道上述改动，你能接受么？",
           "link": "https://juejin.cn/post/7288243037088006198",
           "publishedOn": "2023-10-11T03:25:55.000Z",
-          "wordCount": 856,
+          "wordCount": 872,
           "title": "让CSS官方后悔的一些决定",
           "imageUrl": null
         },
@@ -705,7 +705,7 @@
           "description": "导读\nVTable: 不只是高性能的多维数据分析表格，更是行列间创作的方格艺术家！\nVTable是字节跳动开源可视化解决方案 VisActor 的组件之一。\n在现代应用程序中，表格组件是不可或缺的一部分，它们能够快速展示大量数据，并提供良好的可视化效果和交互体验。VTable是一款基于可视化渲染引擎VRender的高性能表格组件库，为用户提供卓越的性能和强大的多维分析能力，以及灵活强大的图形能力。\n快速上手\n获取 VTable\n你可以通过以下几种方式获取 VTable。\n使用 NPM 包\n首先，你需要在项目根目录下使用以下命令安装 VTable：\n# 使用 npm 安装npm install @visactor/vtable# 使用 yarn 安装yarn add @visactor/vtable\n\n使用 CDN\n你还可以通过 CDN 获取构建好的 VTable 文件。\n<script src=\"https://unpkg.com/@visactor/vtable/dist/vtable.min.js\"></script>\n\n引入 VTable\n通过 NPM 包引入\n在 JavaScript 文件顶部使用 import 引入 VTable：\nimport * as VTable from '@visactor/vtable';\nor\nimport {ListTable, PivotTable, TYPES, themes}  from '@visactor/vtable';\n\n使用 script 标签引入\n通过直接在 HTML 文件中添加 <script> 标签，引入构建好的 vtable 文件：\n<script src=\"https://unpkg.com/@visactor/vtable/dist/vtable.min.js\"></script>\n<script>con…",
           "link": "https://juejin.cn/post/7287214029449805836",
           "publishedOn": "2023-10-08T09:27:53.000Z",
-          "wordCount": 1607,
+          "wordCount": 1597,
           "title": "VTable——不只是高性能的多维数据分析表格",
           "imageUrl": null
         },
@@ -745,7 +745,7 @@
           "description": "前言：\n各位同学大家有段时间没有给大家更新博客了 之前鸿蒙推出了鸿ArkUi-X    框架所以就写个文章分享一下\n效果图：\n\n首先需要下载支持 ArkUI-X 套件的华为开发工具 DevEco ，版本为 4.0 以上，目前可以下载预览版进行体验。下载地址：\nDevEco Studio 4.0Beta下载链接\nWindows(64-bit)\nMac(X86)\nMac(ARM)\nide 安装过程就简单\n\nDevEco 安装完成后，首次进入需要设置 nodejs 与 ohpm。可以选择本机已经安装好的路径，若本机没有安装 nodejs 与 ohpm 也可以在这里下载安装。(这里借用了网友的图片哈尴尬)\n\n\n\n安装 OpenHarmony SDK\n\n\n安装 ArkUI-X SDK\n\n\n\n配置环境\n\n这里提示我们没有配置ANDROID_HOME 因为这里跑iOS 后面我们再讲一下跑Androi的\n创建 Harmon OS 工程\n\n\n编译 OpenHarmony 工程\n\n选择app格式\n\n查看编译后生成的android和iOS native 工程\n\n找到磁盘上的iOS 工程 导入xcode\n\n需要把这里改成iOS 13.0 最新版的mac os 系统\n\n运行\n\n如图\n\n查看包里面内容\n在 LibChecker 中也可以看到该 APP 使用了 ArkUI 的依赖：(这个是Android方便查看哈 iOS同理)\n\n最后总结\n鸿蒙的 ArkUi-X其实之前朋友就有提到过 一直没有去尝试，国庆放长假期回来我觉得有必要分享给大家，在这里我也希望鸿蒙能够崛起 这样也可以给我们开发者创造出更多的岗位 至于这个语言arkts 算是ts超集, 前端的同学比较容易上手跟flutter也比较像 学起来也没什么难度。ArkTS + ArkUI-X ，让国产自研技术达到了一个新高度，完成了从零到一的迈步，让自研不再是 PPT ，不再是“套壳”。最后呢 希望我都文章能帮助到各位同学工作和学习 如果你觉得文章还不错麻烦给我三连 关注点赞和转发 谢谢",
           "link": "https://juejin.cn/post/7287041057291321401",
           "publishedOn": "2023-10-07T13:00:29.000Z",
-          "wordCount": 1119,
+          "wordCount": 1115,
           "title": "鸿蒙跨平台框架来了ArkUi-X",
           "imageUrl": null
         },
@@ -765,7 +765,7 @@
           "description": "theme: smartblue\n利用两个多月的业余时间，使用Konva.js实现了一个名为【Pictode】的图形编辑器\n- 体验地址: https://jessyan0913.github.io/pictode-playground/#/\n🎨Pictode 欢迎体验🎨：https://pictode.com/#/\n✨GitHub 欢迎Star✨：https://github.com/JessYan0913/pictode\n\n缘起\n在掘金上看到众多技术大咖打造自己的图形编辑器项目。通过阅读大咖们的文章让我深受启发，我既敬佩这些大咖坚持创作和分享的精神，也自豪于自己也有编辑器项目的经验。这些因素汇聚，催生了我开发一个自己的图形编辑器的想法。\n虽然我以前在工作中已经实现了一些编辑器项目，如基于Three.js的3D编辑器、基于bpmn.js的流程编辑器、基于X6的拓扑编辑器，还有基于Vue的低代码编辑器等，但受公司项目限制，这些编辑器无法达到我理想中的水平。\n今年8月份，我利用业余实践开始了名为Pictode的图形编辑器项目。到目前为止，Pictode集成了众多实用功能，如工具切换、属性编辑、右键菜单、本地保存、导出图片、画布缩放、画布拖拽、历史记录、语言切换、主题切换等。经过这段时间努力，我认为Pictode已初步具备雏形，因此我决定向大家介绍它。\nPictode主要功能演示\n图形绘制\n\n选择/变换\n\n层级移动\n\n对齐/分布\n\n组合/解除组合\n\n导出图片\n\n温馨提示🔔：看图固然好，实际体验方知妙处！吾友，诚挚邀请前往pictode一试身手，领略其中奥妙！ 🎨✨\nPictode能为你带来什么\n也许你已经在掘金上看到许多技术大咖分享如何实现画板或图片编辑器的方法。他们或许详细解释了编辑器的原理和代码实现，有些甚至直接使用原生Canvas构建编辑器。但你是否和我有相同的感…",
           "link": "https://juejin.cn/post/7286307632193142843",
           "publishedOn": "2023-10-06T23:38:40.000Z",
-          "wordCount": 1812,
+          "wordCount": 1909,
           "title": "✨ Pictode：十分钟轻松DIY图形编辑器💡",
           "imageUrl": null
         },
@@ -775,7 +775,7 @@
           "description": "highlight: a11y-dark\n拖拽库github地址：https://github.com/bpuns/easy-dnd\n拖拽库说明文档：https://bpuns.github.io/easy-dnd-docs/\n前言\n一年前，我接到一个需求，需要开发一个低代码平台，调研了下市面上适用于React的拖拽库，本人都感觉使用起来过于复杂，并且体积都挺大的，我就想用原生的拖拽Api，但是原生Api在复杂场景下（无限嵌套，嵌套规则复杂），是不可用的，如果想了解具体遇到的问题，可以看 巨详细！帮你踩坑HTML5拖拽api（下） 这篇文章。因此，我就想基于 Drag and Drop api 封装的一套可以应用与复杂场景下的拖拽库\n并且这个库最好不要和任何的前端框架绑定，这样方便移植和扩展，因为是自己封装的，因此可以掌握所有实现细节，开发过程中如果遇到了性能瓶颈，也能最快的找到解决方案，而且我也没完整的发布过一个开源库，正好学习下整个过程\n拖拽库实现思路\n拖拽上下文\n页面中可能会有很多可以拖拽的区域，并且拖拽区域之间互不影响，那么就需要为每个拖拽区域创建一个上下文，那么就可以提供一个方法，用于上下文的创建，为了到时候方便扩展，可以传一个配置项作为参数。\ninterface ProviderConfig { } \n\n/**\n * 创建拖拽作用域下的基本数据\n * @param {*} config 配置项\n * @returns\n */\nfunction createProvider(config?: ProviderConfig): Context;\n\n拖拽类型\n在现实生活中，我们之所以知道一个物品可以放到另外一个物品中，比如食物剩余的包装袋需要放到垃圾桶中，电脑需要放到电脑包里。所以抽到代码中，需要给可以拖拽的dom元素添加一个类型，给需要放置的元素设置允许放置的类型有…",
           "link": "https://juejin.cn/post/7286133122209742908",
           "publishedOn": "2023-10-06T08:41:10.000Z",
-          "wordCount": 2058,
+          "wordCount": 2027,
           "title": "为了实现低代码平台，我写了一个拖拽库，顺便学习如何从0发布一个开源库",
           "imageUrl": null
         },
@@ -795,7 +795,7 @@
           "description": "大家好，我是 jonssonyan\n今天和大家分享一些免费开源的后台管理页面，帮助大家快速搭建前端页面。为什么要用模板？道理很简单，原因是方便我们快速开发。我们不应该花太多的时间在页面调整上，而应该把精力放在核心逻辑和业务上。\n以我自己为例，说一下我自己在开发过程中的切身感受。我是一名后端程序员，同时也做一些前端开发的事情，所以我的后端开发速度肯定是比前端开发要快的。每次写新项目，第一后端开发比较熟练，第二代码可以复用，所以后端一般很快就能写完。但是前端就恰恰相反，第一前端开发没有后端熟练，第二页面尽量不要复用。为什么页面尽量不要复用？主要原因是防止用户审美疲劳，让认识你的用户感觉怎么你开发的系统都是一套 UI？所以这时候我们备用一些前端后台管理模板就非常重要，能多备几个就多备几个，在自己需要的时候，几分钟就可以把前端搭建完毕，立刻进入到业务开发界面，省时省力，何乐而不为？\n另外有些人可能不太善用模板代码，有时候模板只是一个大致的框架，无论是前端模板还是后端模板，都不可能 100%符合我们的需求，需要我们按照自己的需求在上面更改。核心思路是将不需要的代码删掉，有时候系统不是越复杂越好，往往越简单，后期越容易维护。\n善用模板的技巧就是，首先，找一个符合自己技术栈的模板，比如，你擅长的技术栈是 Vue3+TS+Vite，那你找的模板就不能是 Vue2+JS 的。其次，模板最好是开源并且持续更新，别等模板过了一段时间被商业化了，那自己就成了接盘侠，后期代码只能自己维护了，导致自己的页面有了 Bug 没有及时修复，损失的还是我们自己，最好是去 GitHub 上面找模板，而且提交记录最好是最近的时间（至少最近一年要有提交记录吧）。其次，模板生态要好，要满足绝大多数场景，组件足够的丰富。 比如我们在开发过程中最常用的表格组件、上传组件、登录组件、按钮、标签等等。最后，模板的兼容性要好。…",
           "link": "https://juejin.cn/post/7285719262962352184",
           "publishedOn": "2023-10-06T04:07:05.000Z",
-          "wordCount": 1027,
+          "wordCount": 1003,
           "title": "分享几个优秀开源免费管理后台模版，建议收藏！",
           "imageUrl": null
         },
@@ -805,7 +805,7 @@
           "description": "10 月 5 日 - 6 日，ViteConf 2023 在线举行，Vue 和 Vite 的创建者尤雨溪发表了题为《The State of Vite》 的演讲，他分享了 Vite 的现状与未来展望，本文就来看一看 Vite 现在怎么样了，以及未来的路将怎么走！\n\nVite 版本发布情况\n首先，来快速回顾一下自上一次 ViteConf 以来， Vite 的版本发布情况。每个版本都有很多更新，这里只关注最主要的功能。\nVite 4.0\nVite 4.0 于 2022 年 12 月发布，是上一次 ViteConf 后的主要版本更新。这个版本最大的变化是升级了 Rollup 3。Vite 和 Rollup 同步了主要版本的发布，因此也停止了对旧版 Node.js 的支持。\n\n相较于 Vite 3.0，这是一个更小的主要版本，没有太多的破坏性变化。事实上，Vite 团队的目标是发布一个稳定的版本：充分利用生态系统的 CI 工具来确保与下游项目的兼容性，以尽可能少地影响最终用户。\n除此之外，Vite 还采用了由 Arnaud Barre 最初创建的基于 SWC 的 React 插件，他现在也是 Vite 团队成员！\nVite 4.1\nVite 4.1 于 2023 年 2 月发布，该版本主要是将 Rollup 和 esbuild 的版本进行同步。值得注意的是 React 插件的升级：Plugin-react 插件修复了很多热更新（HMR）方面的问题，并且采用 SWC 的版本增加了对 SWC 插件的支持。\n\nVite 4.2\nVite 4.2 于 2023 年 3 月发布，该版本的主要改进是提升了 source map 的调试体验。Vite 团队与 Chrome Devtools 团队进行合作，修复了一些长期存在的路径显示问题。通过x_google_ignoreList  source…",
           "link": "https://juejin.cn/post/7286112965609373731",
           "publishedOn": "2023-10-06T03:15:50.000Z",
-          "wordCount": 1656,
+          "wordCount": 1646,
           "title": "ViteConf 2023：Vite的现状与未来展望",
           "imageUrl": null
         },
@@ -835,7 +835,7 @@
           "description": "theme: fancy\n2023.10.10有补充说明！点击查看\n之前校招面试时遇到这样一个问题，git pull是哪两个指令的组合？\n当时是一脸懵的说不知道啦。\n那现在为什么又捡起来说呢？因为我搞懂了😁。\n剧透一下，本文的主旨与 合并代码 有关🤣：当时刚开始编程，全是一个人自嗨，完全没有合并代码这一场景🤣。于是并没有深究，工作后合并代码是常有的事，不得不去了解一下了。\n先说结果：git pull是两个指令的组合：git fetch和git merge。\n从git fetch开始\nFETCH_HEAD\n讲git fetch之前，还需要先了解一个东西，就是.git文件夹下的一个文件，FETCH_HEAD。\n\n可以通过 git log -p FETCH_HEAD 和 open .get/FETCH_HEAD 这两个指令去查看FETCH_HEAD（初始时没有这个文件，会报错，可以先用git fetch创建）。下面演示一下：\n下图是没有该文件：\n\n下图是有该文件：\ngit log -p FETCH_HEAD查看\n\nopen .get/FETCH_HEAD查看\n\n大致内容就是，目前有两个分支master分支和test-*分支，以及这两个分支最新的commit ID（正常项目内，这个文件内容很多，但你不需要记住这个文件的内容，看懂这个简单例子就好）\n这个文件是干啥的？\nFETCH_HEAD文件记录了远程仓库中的分支名称、最新的commit id以及提交的作者等相关信息。\n但它不是随着远程仓库实时变更的，是保存在我们本地，那就需要我们手动去更新。\n当执行git fetch命令时，它会从远程仓库获取最新的提交信息，并将这些信息存储在本地FETCH_HEAD中。\n再说git merge\n说到git merge，逃不开的必须提到git rebase，这俩是合并代码中的重要大将。\ngit…",
           "link": "https://juejin.cn/post/7283691376649633828",
           "publishedOn": "2023-09-28T09:04:05.000Z",
-          "wordCount": 1245,
+          "wordCount": 1194,
           "title": "面试官：git pull是哪两个指令的组合？😯",
           "imageUrl": null
         },
