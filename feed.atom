@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-10-13T09:53:07.919Z</id>
+    <id>urn:2023-10-13T12:57:03.027Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-10-13T09:53:07.919Z</updated>
+    <updated>2023-10-13T12:57:03.027Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -432,16 +432,6 @@ vscode插件fnMap（函数地图）v3.2.0发布
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[纯JS实现多个音频的拼接或者合并]]></title>
-        <id>https://www.zhangxinxu.com/wordpress/?p=11022</id>
-        <link href="https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/"/>
-        <updated>2023-10-10T14:53:25.000Z</updated>
-        <summary type="html"><![CDATA[3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。]]></summary>
-        <author>
-            <name>张 鑫旭</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[哇，好像真的理解vue3的diff了]]></title>
         <id>https://juejin.cn/post/7287961549142655015</id>
         <link href="https://juejin.cn/post/7287961549142655015"/>
@@ -525,16 +515,6 @@ https://juejin.cn/post/7280435532986990647]]></summary>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[JS改变AudioBuffer音量并下载为新audio音频]]></title>
-        <id>https://www.zhangxinxu.com/wordpress/?p=11026</id>
-        <link href="https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/"/>
-        <updated>2023-10-09T14:50:57.000Z</updated>
-        <summary type="html"><![CDATA[本文介绍三种改变音频播放音量的方法，其中还有一种方法直接改变音频AudioBuffer数据源的音量，说不定你哪天就会用到。]]></summary>
-        <author>
-            <name>张 鑫旭</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[发布了: 这个项目（https://github.com/n0a/telegram-get-remote-ip）演示了如何在 Telegram 通话过程中获取对方的 IP 信息，接电话也是有风险的😅 事实上，基...]]></title>
         <id>https://m.okjike.com/originalPosts/652400deaa7d4f2b30c8580e</id>
         <link href="https://m.okjike.com/originalPosts/652400deaa7d4f2b30c8580e"/>
@@ -560,13 +540,13 @@ canvaskit 版：
 
 因为 gif 最高只有 50hz，实际上 cavnaskit 版要远比这看起来的更丝滑，你可以通过以下链接自行体验。
 官方网页版：https://webstatic.mihoyo.com/ys/app/interactive-map/index.html?lang=zh-cn#/
-canvaskit 版：http://106.55.55.247:8000/ （备用地址：http://7c00.top/ky-genshin-map/ ）
+canvaskit 版：http://106.55.55.247/ky-genshin-map/ （备用地址：http://7c00.top/ky-genshin-map/ ）
 或者这个 demo：
 jcode
 为什么官方网页版的性能如此糟糕以及为什么 canvaskit 版能有如此高的性能？
 第一个问题，官方网页版地图引擎用的是 leaflet，这是一个以 dom 为主要实现方式的地图引擎，而频繁地大量操作 dom 会导致严重的性能问题。你可以想象一下，要保证视觉上流畅，手势及动画的采样频率至少是 60hz，意味着单个 dom 节点每秒就要变换 60 次，一旦数量超过 100 个，对浏览器来说就是无法承受的压力。
 但是 leaflet 也有 canvas 实现的 layer，或者这么说，如果性能瓶颈在于 dom，那么用浏览器提供的 canvas api 就应该可以解决，为什么还需要 canvaskit 呢？
-在回答这个问题之前，先介绍一下 canvaskit，这其实就是 skia 的 js + wasm 版，c++ 实现的渲染引擎被编译成了 wasm，通过 js 提供类似 canvas api 的绘制接口。也许你已经知道 chrome 的底层就是 skia 做渲染引擎，canvas api 也可以视为 skia 绘制接口的封装，那么 skia 编译成 wasm 再提供 js api 不是脱裤子放屁吗。…]]></summary>
+在回答这个问题之前，先介绍一下 canvaskit，这其实就是 skia 的 js + wasm 版，c++ 实现的渲染引擎被编译成了 wasm，通过 js 提供类似 canvas api 的绘制接口。也许你已经知道 chrome 的底层就是 skia 做渲染引擎，canvas api 也可以视为 skia 绘制接口的封装，那么 skia 编译成 wasm 再提供 js api…]]></summary>
         <author>
             <name>7c00</name>
         </author>
@@ -2575,26 +2555,6 @@ JavaScript的XMLHttpRequest或Fetch API请求其他源的资源。
 通过<img>、<link>、<scri…]]></summary>
         <author>
             <name>Sailing</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[又get到了，JS复制图片到剪切板]]></title>
-        <id>https://www.zhangxinxu.com/wordpress/?p=11015</id>
-        <link href="https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/"/>
-        <updated>2023-09-17T08:06:56.000Z</updated>
-        <summary type="html"><![CDATA[起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。]]></summary>
-        <author>
-            <name>张 鑫旭</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[HTML elementtiming属性初体验记录]]></title>
-        <id>https://www.zhangxinxu.com/wordpress/?p=10971</id>
-        <link href="https://www.zhangxinxu.com/wordpress/2023/09/html-elementtiming-attribute/"/>
-        <updated>2023-09-15T15:58:22.000Z</updated>
-        <summary type="html"><![CDATA[自己体验了下，出乎意料，HTML elementtiming属性在性能监控这块，比预想的要实用的多。]]></summary>
-        <author>
-            <name>张 鑫旭</name>
         </author>
     </entry>
     <entry>
