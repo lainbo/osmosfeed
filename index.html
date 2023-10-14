@@ -680,6 +680,37 @@ P.S. 为了确保安全，还是建议你在 Docker 环境中执行程序，User
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Epic Games Store - Free Games</button>
+                  <a class="source-heading__link" href="https://store.epicgames.com/zh-CN/free-games?lang&#x3D;zh-CN">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://store.epicgames.com/zh-CN/p/destiny-2"
+                        open
+                      >
+                        <summary class="article-expander__title">《命运2》：Bungie 30 周年纪念组合包</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://store.epicgames.com/zh-CN/p/destiny-2">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>《命运2》是发生在一个独立进化的世界中的一款免费的大型多人线上动作游戏。你可以在任何时间与任何地点和你的朋友们进行游戏。</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >掘金前端本周最热</button>
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
@@ -742,6 +773,105 @@ P.S. 为了确保安全，还是建议你在 Docker 环境中执行程序，User
 
 
 I can use it(ChatGPT) all day.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7288517000580694070"
+                        open
+                      >
+                        <summary class="article-expander__title">探索前端可视化大屏：创造令人惊叹的数据可视化体验</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7288517000580694070">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>介绍
+🔥🔥Vue3 + TS + Echarts + Pinia 优秀可视化数据大屏解决方案，包括移动端与 PC 端的响应式适配处理，实现移动端和PC端不同布局和兼容。欢迎大家提出Issues
+项目地址
+http://124.221.177.11/#/login
+gitee开源地址：https://gitee.com/yuanjinwei/DM_screen_web（开源出来就是纯用爱发电 有劳大家点个star支持鼓励一下😭）
+github开源地址：https://github.com/williamyuanjw/DM_screen_web
+项目展示
+登录页
+
+PC 端首页
+
+小于 576px 设备效果
+
+操作文档
+登录项目之后，在首页以关注度图表为例
+图表可支持左右滑动，图表内长按鼠标左滑或者右滑进行不同月份的展示
+右上角从左到右图标的功能分别为：切换至折线图、切换至柱状图、详情弹窗
+打开详情弹窗后可以通过下拉搜索框进行输入搜索选择要添加至图表的项目，也可进行删除
+
+
+项目中间部分的雷达图和虚拟列表可以进行交互，点击列表的项目可以添加至雷达图，点击雷达图某个项目可以展示详情，点击 remove 可以移除
+
+
+项目亮点
+实现对不同大小的屏幕/设备的良好适配以及针对小屏幕设备有不同的布局以及兼容
+不定高无限滚动加载虚拟列表的实现，控制列表渲染数据量的同时实现列表无限滚动
+参数/事件
+说明
+类型
+默认值
+
+
+
+
+dataSource
+传入的数组
+Array
+必传
+
+
+loading
+分页加载loading状态
+Boolean
+必传
+
+
+estimatedHeight
+每一项的初始高度，用于传入渲染后再通过计算得到不定高列表的真实高度
+Number
+必传
+
+
+@scrollEnd
+列表滚动到底部触发的方法
+Function
+-
+
+
+
+
+
+
+
+项目名：{{ item.name }}
+
+
+{{ item.name }}
+{{ item.influence }}
+{{ item.trend }}
+{{ item.response }}
+{{ item.activity }}
+{{ item.github }}
+
+
+
+
+
+Echarts 图表相关 hooks 的封装，提高如折柱混合图、图表详情弹窗的代码复用性
+实现下拉搜索选择框、列表与图表之间的增删交互，根据文档解决雷达图等图表增删时的异常问题
+使用 transition 标签以及图片预加载来优化图片未加载完全等导致的用户视觉体验问题
+实现 Echarts 等组件的按需加载。在打包过程中对项目大体积模块进行分块打包以及优化项目字体文件大小</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
@@ -1940,25 +2070,6 @@ Github 仓库：https://github.com/NetEase/tango
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231007/t20231007_526442366.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市万盛经开区发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231007/t20231007_526442366.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>万盛经开区气象台2023年10月7日09时45分继续发布“大雾黄色预警信号”，我区万东镇、金桥镇、黑山镇、石林镇已出现能见度小于200米的雾并将持续，预计7日10时至8日10时，丛林镇、关坝镇、青年镇、南桐镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -2452,33 +2563,6 @@ DevEco 安装完成后，首次进入需要设置 nodejs 与 ohpm。可以选择
 最后总结
 鸿蒙的 ArkUi-X其实之前朋友就有提到过 一直没有去尝试，国庆放长假期回来我觉得有必要分享给大家，在这里我也希望鸿蒙能够崛起 这样也可以给我们开发者创造出更多的岗位 至于这个语言arkts 算是ts超集, 前端的同学比较容易上手跟flutter也比较像 学起来也没什么难度。ArkTS + ArkUI-X ，让国产自研技术达到了一个新高度，完成了从零到一的迈步，让自研不再是 PPT ，不再是“套壳”。最后呢 希望我都文章能帮助到各位同学工作和学习 如果你觉得文章还不错麻烦给我三连 关注点赞和转发 谢谢</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7286155742850760767"
-                        open
-                      >
-                        <summary class="article-expander__title">做表盘没啥技术含量？它其实是最快可变现的产品</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7286155742850760767">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>本文源自道招网的# 以前觉得做表盘没啥技术含量，现在才发现它其实是最快可变现的产品
-国庆假期陪亲戚家小孩一起坐车，期间发现小孩子在玩儿童手表，她准备给自己的手表换个表盘，说是原来的表盘看腻了。原来小孩子还很在乎这个，大人一般就不会感觉到腻，可能换了还会好几天不适应呢。
-
-我看了下这个儿童手表上的“表盘市场”app里面的免费表盘只有寥寥几个，估计也都是官方的免费表盘，剩下的都是付费表盘，也就是所有变盘里面付费表盘占了绝大部分。有的作者可能会做一两个免费表盘然后全部是付费表盘，有的作者可能做的全部都是付费表盘，毕竟自己花心思了，又不是做公益，谁不是为了那碎银几两而付出呢。
-一般来说付费表盘比免费的好看很多，小孩当然也更喜欢了。这些付费表盘一般是由一个可爱点的动画图片，再加上一两个类似蝴蝶飞组成的动图的。单纯从技术含量的角度来看，确实没什么技术含量，但是小孩子就是喜欢，单凭这一点，它就赢了，技术什么的靠边站，客户满意，这就是最大的价值，压倒一切。
-
-看她这么喜欢，恰逢过节，我就提出来要不我买一个送你吧，于是提出让她选一个自己最喜欢的，待她在心仪的三个表盘中间艰难取舍后，我要开始付钱了，一看价钱，也不算便宜，3.99元。第一感觉就是这么贵啊，就这么点东西就敢卖这么贵啊。我顺便翻看了一下，这里的付费表盘最低是2.99元，一般3.99元的居多，看来这是行情价了啊，我的认知一下子就被刷新了。
-但是仔细想了想，存在即合理，这些制作表盘是不是和那些制作主题的是同一波人，他们才是大佬啊，简单做点东西就能变现。技术不是最重要的，审美+创意才是。有了想法，再有点技术的实施起来就很简单了。
-表盘以及主题可以说是设计师或者程序员最快的可变现的产品了，对他们来说花点心思就可以赚钱了啊，入局早的估计都赚了不少了吧，厉害。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4834,8 +4918,8 @@ JavaScript的XMLHttpRequest或Fetch API请求其他源的资源。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6514646926">
-        <time id="build-timestamp" datetime="2023-10-14T01:14:59.031Z">2023-10-14T01:14:59.031Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6515402995">
+        <time id="build-timestamp" datetime="2023-10-14T03:52:51.865Z">2023-10-14T03:52:51.865Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
