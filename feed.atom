@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-10-14T15:52:48.633Z</id>
+    <id>urn:2023-10-14T18:52:47.219Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-10-14T15:52:48.633Z</updated>
+    <updated>2023-10-14T18:52:47.219Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -238,6 +238,33 @@ P.S. 为了确保安全，还是建议你在 Docker 环境中执行程序，User
         <summary type="html"><![CDATA[巴南区气象台2023年10月12日17时发布“大雾黄色预警信号”，预计12日17时至22时，我区李家沱街道、花溪街道、莲花街道、鱼洞街道、龙洲湾街道、界石镇、南泉街道、一品街道、安澜镇、圣灯山镇、南彭街道、惠民街道将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
         <author>
             <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Rspress 1.0 正式发布，基于 Rspack 的高性能静态站点生成器！]]></title>
+        <id>https://juejin.cn/post/7288963205980864575</id>
+        <link href="https://juejin.cn/post/7288963205980864575"/>
+        <updated>2023-10-12T08:56:14.000Z</updated>
+        <summary type="html"><![CDATA[GitHub 仓库地址：https://github.com/web-infra-dev/rspress
+官网地址：https://rspress.dev
+今天，我们很高兴地跟大家宣布 Rspress 1.0 正式发布了！
+框架定位
+Rspress 是由 ByteDance Web Infra 团队孵化的一款静态站点生成器，使用 Rspack 进行构建，基于 React 框架进行渲染，支持 MDX 内容开发，主打高性能、简单易用和定制性强。
+Rspress 中内置了一套默认的文档主题，你可以通过 Rspress 来快速搭建一个文档站点，同时也可以自定义主题，来满足你的个性化静态站需求，比如博客站、产品主页等。
+当然，你也可以接入官方提供的相应插件来方便地搭建组件库文档。
+项目背景
+Rspress 最初的形态是给 Web Infra 团队内部提供文档工具，在过去在维护一些稍复杂的文档项目的过程中，我们围绕着以下的几个方向来建设 Rspress 本身的能力：
+构建性能。保证足够快的启动速度，带来良好的开发体验。
+MDX 支持。通过 MDX，我们可以方便地复用文档片段，以及在文档中渲染自定义的 React 组件。
+文档站基础能力。包括国际化、多版本支持、全文搜索、组件库文档等。
+可扩展性。内置插件系统，支持通过插件 API 来扩展框架功能。
+同时我们意识到这些也代表了 SSG 站点开发的一些核心需求。接下来将会根据这几个方面分别进行介绍。
+构建性能
+当项目越来越庞大，团队成员时常苦恼于冗长的项目启动时间，开发体验因此受到了一些负面影响，并且项目开发的时间越长，这种体验的劣化就越为明显。
+我们不禁开始思考，是否能跳出目前社区工具链的限制，突破现有 SSG 框架的性能瓶颈，实现绝大多数场景的项目秒启效果？
+接着，我们在这个方向上持续地探索，最终在 Rspress 上实现了这样的效果。…]]></summary>
+        <author>
+            <name>神三元</name>
         </author>
     </entry>
     <entry>
@@ -769,6 +796,27 @@ jcode
         <summary type="html"><![CDATA[生成 java 实体类属性的工具 有推荐没得[发呆]]]></summary>
         <author>
             <name>拜读生活</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[web3基础]]></title>
+        <id>https://juejin.cn/post/7287786675517325371</id>
+        <link href="https://juejin.cn/post/7287786675517325371"/>
+        <updated>2023-10-09T09:13:46.000Z</updated>
+        <summary type="html"><![CDATA[需求背景
+就有个朋友说她想搞个前端Web3社区，我觉得这事大不可为，毕竟Web3跟前端确实没太大关系，然后她说先试试嘛，然后就帮忙写篇文章呗。
+1、区块链是什么？
+区块链的本质就是一个分布式、去中心化（搞笑的说就是一群人觉得在一个系统中，权利资源控制权应该分散在多个独立参与者中也就是民主透明基于共识算法，而非单一实体，但现在的web3看起来也并不是这样，比如持有大量币的决定权xxx之类的）全球记账本，而看起来对于这个记账本和传统web2世界的区别就是交易成本低、基于算法自动验证、透明、freedom。
+在Web3中有许多的概念和名词，为了大家去帮助理解这篇文章，我会以点-线-链的结构去帮助大家先构建大局观，那么我们需要大致看一下接下来要讲的概念节点（Node）、交易结构（Transaction Structure）、区块（Block）、链（Chain）之间的关系。
+节点之间协同运作以完成交易验证、区块生成等任务，维护整个网络的稳定运行。
+节点生成并验证交易，根据交易结构组织和存储交易数据。
+生成的交易被打包到新的区块中，并通过挖矿或权益证明等共识机制将区块添加到链上。
+链是由一系列按顺序连接的区块组成的数据结构。每个区块都包含前一个区块的哈希，通过这种方式将它们连接在一起，形成一个链式结构。这个链式结构能够快速地检测篡改和恶意行为，维护整个网络的安全。
+Node：
+那么首先是Node，节点是构成去中心化网络基础的关键组件。在Web3（去中心化网络）概念中，节点是独立的服务器或计算设备，共同组成并维护整个网络。这些节点通过互联网相互连接，执行并验证网络中的操作和交易。每个节点维护网络的一个副本，这使整个系统具有高度的安全性和抗攻击能力。
+总的来说，在Web3环境中，各种类型的节点共同维护去中心化网络的安全和稳定运行，这些节点之间互相协作，实现了数据的传输、验证和共享。节点的多…]]></summary>
+        <author>
+            <name>溪饱鱼</name>
         </author>
     </entry>
     <entry>
@@ -1367,118 +1415,6 @@ Github 仓库：https://github.com/NetEase/tango
 刚买了一个带鱼屏显示器，自带分屏功能，但是它的这个分屏功能是支持多个主机连接同一个显示器，我想要的效果是一个主机连接这个显示器后，展示多个显示器的界面（相当于连接多个显示器），这个该怎么搞？]]></summary>
         <author>
             <name>一灯架构</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[修改 git 的历史 commit，你能想到几种方案？]]></title>
-        <id>https://juejin.cn/post/7287041017291374627</id>
-        <link href="https://juejin.cn/post/7287041017291374627"/>
-        <updated>2023-10-07T13:42:17.000Z</updated>
-        <summary type="html"><![CDATA[最近遇到一个 git 的问题：
-我在某个文件里写了一段不应该提交上去的内容，没注意，提交上去了。
-后来又提交了很多个 commit。
-之后我发现了这个，又把它去掉了，提交了一个新的 commit。
-
-这样虽然新的 commit 没有这段内容了，但老的 commit 里依然有这个内容。
-可我不想保留这段内容的记录，也就是想修改历史 commit。
-这种问题大家会怎么解决呢？
-我能想到的有三种方案，分别来试一下。
-
-我们先创建了个 git 项目。
-
-写了个 index.md，每行内容提交一个 commit。
-git log 可以看到，一共 5 个 commit：
-
-git show 看下 222 和 333 那个 commit：
-git show f5482b
-
-
-
-可以看到，这个 333 的 commit 就是我们想改掉的。
-但是现在后面提交了 444、555 这俩 commit 了，怎么改掉它呢？
-很容易想到的是 reset 到 333 那个 commit，重新提交，然后把后面的 commit 再一个个 cherry-pick 回去。
-我们试一下：
-首先把 444、555 这俩 commit 记下来，待会还要用
-
-然后 git reset 到 333 那个 commit：
-git reset --hard 65dfee
-
-
-把私密信息去掉，重新提交：
-git add .
-git commit --amend
-
-
-这样，这个 commit 就干净了。
-然后把后面的 444 和 555 再 cherry-pick 回来。
-cherry-pick 就是单独取一个 commit 过来。
-git cherry-pick 0b700f
-
-
-会有冲突，解决之后 continue 就好：
-git add .
-git cherry-pick --continue
-
-
-再 cherry-pic…]]></summary>
-        <author>
-            <name>zxg_神说要有光</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[鸿蒙跨平台框架来了ArkUi-X]]></title>
-        <id>https://juejin.cn/post/7287041057291321401</id>
-        <link href="https://juejin.cn/post/7287041057291321401"/>
-        <updated>2023-10-07T13:00:29.000Z</updated>
-        <summary type="html"><![CDATA[前言：
-各位同学大家有段时间没有给大家更新博客了 之前鸿蒙推出了鸿ArkUi-X    框架所以就写个文章分享一下
-效果图：
-
-首先需要下载支持 ArkUI-X 套件的华为开发工具 DevEco ，版本为 4.0 以上，目前可以下载预览版进行体验。下载地址：
-DevEco Studio 4.0Beta下载链接
-Windows(64-bit)
-Mac(X86)
-Mac(ARM)
-ide 安装过程就简单
-
-DevEco 安装完成后，首次进入需要设置 nodejs 与 ohpm。可以选择本机已经安装好的路径，若本机没有安装 nodejs 与 ohpm 也可以在这里下载安装。(这里借用了网友的图片哈尴尬)
-
-
-
-安装 OpenHarmony SDK
-
-
-安装 ArkUI-X SDK
-
-
-
-配置环境
-
-这里提示我们没有配置ANDROID_HOME 因为这里跑iOS 后面我们再讲一下跑Androi的
-创建 Harmon OS 工程
-
-
-编译 OpenHarmony 工程
-
-选择app格式
-
-查看编译后生成的android和iOS native 工程
-
-找到磁盘上的iOS 工程 导入xcode
-
-需要把这里改成iOS 13.0 最新版的mac os 系统
-
-运行
-
-如图
-
-查看包里面内容
-在 LibChecker 中也可以看到该 APP 使用了 ArkUI 的依赖：(这个是Android方便查看哈 iOS同理)
-
-最后总结
-鸿蒙的 ArkUi-X其实之前朋友就有提到过 一直没有去尝试，国庆放长假期回来我觉得有必要分享给大家，在这里我也希望鸿蒙能够崛起 这样也可以给我们开发者创造出更多的岗位 至于这个语言arkts 算是ts超集, 前端的同学比较容易上手跟flutter也比较像 学起来也没什么难度。ArkTS + ArkUI-X ，让国产自研技术达到了一个新高度，完成了从零到一的迈步，让自研不再是 PPT ，不再是“套壳”。最后呢 希望我都文章能帮助到各位同学工作和学习 如果你觉得文章还不错麻烦给我三连 关注点赞和转发 谢谢]]></summary>
-        <author>
-            <name>xq9527</name>
         </author>
     </entry>
     <entry>

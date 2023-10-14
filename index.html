@@ -711,6 +711,56 @@ P.S. 为了确保安全，还是建议你在 Docker 环境中执行程序，User
                 </section>
               </section>
             </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7288963205980864575"
+                        open
+                      >
+                        <summary class="article-expander__title">Rspress 1.0 正式发布，基于 Rspack 的高性能静态站点生成器！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7288963205980864575">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>GitHub 仓库地址：https://github.com/web-infra-dev/rspress
+官网地址：https://rspress.dev
+今天，我们很高兴地跟大家宣布 Rspress 1.0 正式发布了！
+框架定位
+Rspress 是由 ByteDance Web Infra 团队孵化的一款静态站点生成器，使用 Rspack 进行构建，基于 React 框架进行渲染，支持 MDX 内容开发，主打高性能、简单易用和定制性强。
+Rspress 中内置了一套默认的文档主题，你可以通过 Rspress 来快速搭建一个文档站点，同时也可以自定义主题，来满足你的个性化静态站需求，比如博客站、产品主页等。
+当然，你也可以接入官方提供的相应插件来方便地搭建组件库文档。
+项目背景
+Rspress 最初的形态是给 Web Infra 团队内部提供文档工具，在过去在维护一些稍复杂的文档项目的过程中，我们围绕着以下的几个方向来建设 Rspress 本身的能力：
+构建性能。保证足够快的启动速度，带来良好的开发体验。
+MDX 支持。通过 MDX，我们可以方便地复用文档片段，以及在文档中渲染自定义的 React 组件。
+文档站基础能力。包括国际化、多版本支持、全文搜索、组件库文档等。
+可扩展性。内置插件系统，支持通过插件 API 来扩展框架功能。
+同时我们意识到这些也代表了 SSG 站点开发的一些核心需求。接下来将会根据这几个方面分别进行介绍。
+构建性能
+当项目越来越庞大，团队成员时常苦恼于冗长的项目启动时间，开发体验因此受到了一些负面影响，并且项目开发的时间越长，这种体验的劣化就越为明显。
+我们不禁开始思考，是否能跳出目前社区工具链的限制，突破现有 SSG 框架的性能瓶颈，实现绝大多数场景的项目秒启效果？
+接着，我们在这个方向上持续地探索，最终在 Rspress 上实现了这样的效果。…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -1555,8 +1605,34 @@ jcode
 第一个问题，官方网页版地图引擎用的是 leaflet，这是一个以 dom 为主要实现方式的地图引擎，而频繁地大量操作 dom 会导致严重的性能问题。你可以想象一下，要保证视觉上流畅，手势及动画的采样频率至少是 60hz，意味着单个 dom 节点每秒就要变换 60 次，一旦数量超过 100 个，对浏览器来说就是无法承受的压力。
 但是 leaflet 也有 canvas 实现的 layer，或者这么说，如果性能瓶颈在于 dom，那么用浏览器提供的 canvas api 就应该可以解决，为什么还需要 canvaskit 呢？
 在回答这个问题之前，先介绍一下 canvaskit，这其实就是 skia 的 js + wasm 版，c++ 实现的渲染引擎被编译成了 wasm，通过 js 提供类似 canvas api 的绘制接口。也许你已经知道 chrome 的底层就是 skia 做渲染引擎，canvas api 也可以视为 skia 绘制接口的封装，那么 skia 编译成 wasm 再提供 js api …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
-                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7287786675517325371"
+                        open
+                      >
+                        <summary class="article-expander__title">web3基础</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7287786675517325371">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>需求背景
+就有个朋友说她想搞个前端Web3社区，我觉得这事大不可为，毕竟Web3跟前端确实没太大关系，然后她说先试试嘛，然后就帮忙写篇文章呗。
+1、区块链是什么？
+区块链的本质就是一个分布式、去中心化（搞笑的说就是一群人觉得在一个系统中，权利资源控制权应该分散在多个独立参与者中也就是民主透明基于共识算法，而非单一实体，但现在的web3看起来也并不是这样，比如持有大量币的决定权xxx之类的）全球记账本，而看起来对于这个记账本和传统web2世界的区别就是交易成本低、基于算法自动验证、透明、freedom。
+在Web3中有许多的概念和名词，为了大家去帮助理解这篇文章，我会以点-线-链的结构去帮助大家先构建大局观，那么我们需要大致看一下接下来要讲的概念节点（Node）、交易结构（Transaction Structure）、区块（Block）、链（Chain）之间的关系。
+节点之间协同运作以完成交易验证、区块生成等任务，维护整个网络的稳定运行。
+节点生成并验证交易，根据交易结构组织和存储交易数据。
+生成的交易被打包到新的区块中，并通过挖矿或权益证明等共识机制将区块添加到链上。
+链是由一系列按顺序连接的区块组成的数据结构。每个区块都包含前一个区块的哈希，通过这种方式将它们连接在一起，形成一个链式结构。这个链式结构能够快速地检测篡改和恶意行为，维护整个网络的安全。
+Node：
+那么首先是Node，节点是构成去中心化网络基础的关键组件。在Web3（去中心化网络）概念中，节点是独立的服务器或计算设备，共同组成并维护整个网络。这些节点通过互联网相互连接，执行并验证网络中的操作和交易。每个节点维护网络的一个副本，这使整个系统具有高度的安全性和抗攻击能力。
+总的来说，在Web3环境中，各种类型的节点共同维护去中心化网络的安全和稳定运行，这些节点之间互相协作，实现了数据的传输、验证和共享。节点的多…</span>
                             </span>
                           </div>
                         </a>
@@ -1615,8 +1691,6 @@ gf1 和 gf2 是通过 new GirlFriend 创建出来的两个 实例对象
 在 实例对象 上会默认存在一个属性叫做 __proto__，这里记作 隐式原型
 在 构造函数 上会默认存在一个属性叫做 prototype，这里记作 **显示原型 **
 通常我…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1671,8 +1745,6 @@ sensors.init({
 
 sensors.registerPage({
     cu…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1822,8 +1894,6 @@ Monorepo 的好处在于可以将项目中通用的部分单独抽离成一个�
   |-- varlet-shared 共享的通用工具
   |-- varlet-touch-emulator 桌面端适配器
   |-- varle…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1882,8 +1952,6 @@ Monorepo 的好处在于可以将项目中通用的部分单独抽离成一个�
 撤销已发布的包npm unpublish mj-calculation使用的命令。
 14、步骤十四强制删除包
 强制撤销已发布的包npm unpublish mj-calculation --force使用的命令。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1926,8 +1994,6 @@ import {ListTable, PivotTable, TYPES, themes}  from &#x27;@visactor/vtable&#x27;
 通过直接在 HTML 文件中添加  标签，引入构建好的 vtable 文件：
 
 con…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1968,8 +2034,6 @@ js爬虫思路实践
 2. 用代码模拟获取接口数据
 代码模拟获取接口数据？那不就是调接口吗，这我熟，于是axios/fetch一顿撸，如下：
 fetch(&quot;https://movie.douban…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2006,8 +2070,6 @@ fetch(&quot;https://movie.douban…</span>
 写完代码之后呢？文档呢？听说过文档驱动开发吗？设计阶段的产出就是我们的文档。
 1. 画好业务流程图
 设计的第一步是梳理业务。这个不是产品的责任吗？产品会提供 PRD、原型、用户故事等需…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2052,8 +2114,6 @@ fetch(&quot;https://movie.douban…</span>
       .content {
         background: #181818;
         height:…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2085,8 +2145,6 @@ Github 仓库：https://github.com/NetEase/tango
 我们不妨先简单分析一下传统的低代码方案的问题。传统的低代码搭建方案往往采用定义私有 Schema 协议来可视化表达视图逻辑，也就是将代码逻辑转换为私有的描述，大致的原理可以参考下面这张图。
 
 这类方案很容易面临不断膨胀的私有 JSON 协议。并且，私有协议扩展性和灵活性差，难以达到图灵完备状态。例如在我们的实际开发过程中，传统的低代码方案会面临各种各样的扩展性卡…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2644,150 +2702,6 @@ Github 仓库：https://github.com/NetEase/tango
                 </section>
               </section>
             </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7287041017291374627"
-                        open
-                      >
-                        <summary class="article-expander__title">修改 git 的历史 commit，你能想到几种方案？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7287041017291374627">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>最近遇到一个 git 的问题：
-我在某个文件里写了一段不应该提交上去的内容，没注意，提交上去了。
-后来又提交了很多个 commit。
-之后我发现了这个，又把它去掉了，提交了一个新的 commit。
-
-这样虽然新的 commit 没有这段内容了，但老的 commit 里依然有这个内容。
-可我不想保留这段内容的记录，也就是想修改历史 commit。
-这种问题大家会怎么解决呢？
-我能想到的有三种方案，分别来试一下。
-
-我们先创建了个 git 项目。
-
-写了个 index.md，每行内容提交一个 commit。
-git log 可以看到，一共 5 个 commit：
-
-git show 看下 222 和 333 那个 commit：
-git show f5482b
-
-
-
-可以看到，这个 333 的 commit 就是我们想改掉的。
-但是现在后面提交了 444、555 这俩 commit 了，怎么改掉它呢？
-很容易想到的是 reset 到 333 那个 commit，重新提交，然后把后面的 commit 再一个个 cherry-pick 回去。
-我们试一下：
-首先把 444、555 这俩 commit 记下来，待会还要用
-
-然后 git reset 到 333 那个 commit：
-git reset --hard 65dfee
-
-
-把私密信息去掉，重新提交：
-git add .
-git commit --amend
-
-
-这样，这个 commit 就干净了。
-然后把后面的 444 和 555 再 cherry-pick 回来。
-cherry-pick 就是单独取一个 commit 过来。
-git cherry-pick 0b700f
-
-
-会有冲突，解决之后 continue 就好：
-git add .
-git cherry-pick --continue
-
-
-再 cherry-pic…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7287041057291321401"
-                        open
-                      >
-                        <summary class="article-expander__title">鸿蒙跨平台框架来了ArkUi-X</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7287041057291321401">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言：
-各位同学大家有段时间没有给大家更新博客了 之前鸿蒙推出了鸿ArkUi-X    框架所以就写个文章分享一下
-效果图：
-
-首先需要下载支持 ArkUI-X 套件的华为开发工具 DevEco ，版本为 4.0 以上，目前可以下载预览版进行体验。下载地址：
-DevEco Studio 4.0Beta下载链接
-Windows(64-bit)
-Mac(X86)
-Mac(ARM)
-ide 安装过程就简单
-
-DevEco 安装完成后，首次进入需要设置 nodejs 与 ohpm。可以选择本机已经安装好的路径，若本机没有安装 nodejs 与 ohpm 也可以在这里下载安装。(这里借用了网友的图片哈尴尬)
-
-
-
-安装 OpenHarmony SDK
-
-
-安装 ArkUI-X SDK
-
-
-
-配置环境
-
-这里提示我们没有配置ANDROID_HOME 因为这里跑iOS 后面我们再讲一下跑Androi的
-创建 Harmon OS 工程
-
-
-编译 OpenHarmony 工程
-
-选择app格式
-
-查看编译后生成的android和iOS native 工程
-
-找到磁盘上的iOS 工程 导入xcode
-
-需要把这里改成iOS 13.0 最新版的mac os 系统
-
-运行
-
-如图
-
-查看包里面内容
-在 LibChecker 中也可以看到该 APP 使用了 ArkUI 的依赖：(这个是Android方便查看哈 iOS同理)
-
-最后总结
-鸿蒙的 ArkUi-X其实之前朋友就有提到过 一直没有去尝试，国庆放长假期回来我觉得有必要分享给大家，在这里我也希望鸿蒙能够崛起 这样也可以给我们开发者创造出更多的岗位 至于这个语言arkts 算是ts超集, 前端的同学比较容易上手跟flutter也比较像 学起来也没什么难度。ArkTS + ArkUI-X ，让国产自研技术达到了一个新高度，完成了从零到一的迈步，让自研不再是 PPT ，不再是“套壳”。最后呢 希望我都文章能帮助到各位同学工作和学习 如果你觉得文章还不错麻烦给我三连 关注点赞和转发 谢谢</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -2921,8 +2835,6 @@ DevEco 安装完成后，首次进入需要设置 nodejs 与 ohpm。可以选择
 我一开始是不会写简历的，因为中间没有跳过槽，也没定时更新，所以就随便拿了以前的模板改了改时间和项目就开始投了，简历回复少不说，即使有机会面试了也没有把简历提到的讲清楚，结果可想而知。
 后面想想不行，虽然没写过，但是我会看简历啊，之前带团队有时候一天要看上百份简历，大概知道面试官青睐哪些人才，优化之后断断续续才有面试。
 其次是我在面试过程…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4033,8 +3945,6 @@ FETCH_HEAD文件记录了远程仓库中的分支名称、最新的commit id以�
 当执行git fetch命令时，它会从远程仓库获取最新的提交信息，并将这些信息存储在本地FETCH_HEAD中。
 再说git merge
 说到git merge，逃不开的必须提到git rebase，这俩是合并代码中的重要…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4755,8 +4665,6 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
 JavaScript的XMLHttpRequest或Fetch API请求其他源的资源。
 通过、
 、&lt;scri…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4863,8 +4771,8 @@ JavaScript的XMLHttpRequest或Fetch API请求其他源的资源。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6518598208">
-        <time id="build-timestamp" datetime="2023-10-14T15:52:48.605Z">2023-10-14T15:52:48.605Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6519404105">
+        <time id="build-timestamp" datetime="2023-10-14T18:52:47.193Z">2023-10-14T18:52:47.193Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
