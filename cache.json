@@ -23,7 +23,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1199,
+          "wordCount": 1202,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "本文介绍三种改变音频播放音量的方法，其中还有一种方法直接改变音频AudioBuffer数据源的音量，说不定你哪天就会用到。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/",
           "publishedOn": "2023-10-09T14:50:57.000Z",
-          "wordCount": 1095,
+          "wordCount": 1097,
           "title": "JS改变AudioBuffer音量并下载为新audio音频",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/",
           "publishedOn": "2023-09-17T08:06:56.000Z",
-          "wordCount": 1498,
+          "wordCount": 1500,
           "title": "又get到了，JS复制图片到剪切板",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "自己体验了下，出乎意料，HTML elementtiming属性在性能监控这块，比预想的要实用的多。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/html-elementtiming-attribute/",
           "publishedOn": "2023-09-15T15:58:22.000Z",
-          "wordCount": 942,
+          "wordCount": 945,
           "title": "HTML elementtiming属性初体验记录",
           "imageUrl": null
         }
@@ -107,7 +107,7 @@
           "description": "跑在手表上的游戏😵‍💫",
           "link": "https://m.okjike.com/originalPosts/6527d811bb3e3660e85ce9b3",
           "publishedOn": "2023-10-12T11:27:13.000Z",
-          "wordCount": 462,
+          "wordCount": 456,
           "title": "发布了: 跑在手表上的游戏😵‍💫",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fr8SlncnP3lg1AaCRjk9Yu3hJGze?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80"
         },
@@ -117,7 +117,7 @@
           "description": "Giffgaff 卡现在已经支持免费转为 eSIM 了，直接在软件上（Account -> SIM -> Replace my SIM -> Switch to a new eSIM）操作即可，立省一个卡槽，看到有推友操作成功了。\n可惜我的手机不支持🙁，是因为国行么？",
           "link": "https://m.okjike.com/originalPosts/6527ced5af95215b83c14b5d",
           "publishedOn": "2023-10-12T10:47:49.000Z",
-          "wordCount": 491,
+          "wordCount": 492,
           "title": "发布了: Giffgaff 卡现在已经支持免费转为 eSIM 了，直接在软件上（Account -> SIM -> Replace my SIM -> Switch to a new eSIM）操作即可，立省一个卡槽，看到...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fj-MYkeKqYwqd3Xz6NBdTsdTiF2mv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
         },
@@ -137,7 +137,7 @@
           "description": "微软研发的 AutoGen 框架太强大了，它是一个多代理框架，利用它可以轻松定制一系列工作任务。https://github.com/microsoft/autogen\n举一个常见的例子：我们要实现一个爬虫程序，抓取并保存网页图片。如果把这个任务丢给 ChatGPT，它会直接返回一串可执行代码，但是代码通常会存在问题，例如执行报错、缺少依赖等，你需要反复跟 ChatGPT 对话来完善程序。当然，我们也可以设定一个复杂 Prompt，要求它调用 ChatGPT 的代码执行插件，如果存在报错，则继续修正程序。\n这个任务如果交给 AutoGen 来实现，将会变得无比简单，几行代码就可以搞定：\n1）定义一个 Assistant Agent，它的任务是解决问题\n2）定义一个 UserProxy Agent，它的任务是替代人询问问题，同时在本地执行程序\n这两个 Agent 都不需要给他们设置 Prompt。当我们把爬虫任务交给 UserProxy 后，它会理解任务，然后询问 Assistant 应该如何做，Assistant 会把操作过程告诉 UserProxy，接着 UserProxy 会根据指示在本地安装依赖，然后创建文件执行代码，如果执行出现错误，它会把详细报错提交给 Assistant，依次循环，直到可以获取到最终的结果。任务结束的时候，你会看到目标图片已经保存到本地磁盘了。\n利用这个框架可以做的事情非常多，它提供的能力也十分完善，可以在项目的 notebook 中找到很多最佳实践：https://github.com/microsoft/autogen/tree/main/notebook\nP.S. 为了确保安全，还是建议你在 Docker 环境中执行程序，UserProxy 有一个 code_execution_config 配置，将 use_docker 配置为 True 即可；另外，它还有一个 human_input_mode 参数，设置为 NEVER，表示整个过程都不需要人参与，也可以设置为其他值，它会等待人的输入后再进行下一步操作，这个设计可以让人参与到任务执行过程，避免跑偏。",
           "link": "https://m.okjike.com/originalPosts/6527c452fb5ea50a73e2b33b",
           "publishedOn": "2023-10-12T10:02:58.000Z",
-          "wordCount": 546,
+          "wordCount": 550,
           "title": "发布了: 微软研发的 AutoGen 框架太强大了，它是一个多代理框架，利用它可以轻松定制一系列工作任务。https://github.com/microsoft/autogen 举一个常见的例子：...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fo7BSBkUrotRg7zsqNXRB2IeaQ1e?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80"
         },
@@ -244,7 +244,7 @@
           "description": "马斯克要给人类找后路，带领人类飞往火星。\n回头看看，中国古代的那个〝杞人忧天〞，他是不是其实是领先世人的哲人，而不是神经病？",
           "link": "https://m.okjike.com/originalPosts/6528b4459a83b06c46a84f6c",
           "publishedOn": "2023-10-13T03:06:45.000Z",
-          "wordCount": 460,
+          "wordCount": 462,
           "title": "发布了: 马斯克要给人类找后路，带领人类飞往火星。 回头看看，中国古代的那个〝杞人忧天〞，他是不是其实是领先世人的哲人，而不是神经病？",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -605,23 +605,6 @@
       ]
     },
     {
-      "title": "Epic Games Store - Free Games",
-      "feedUrl": "https://rsshub.app/epicgames/freegames/zh-CN",
-      "siteUrl": "https://store.epicgames.com/zh-CN/free-games?lang=zh-CN",
-      "articles": [
-        {
-          "id": "https://store.epicgames.com/zh-CN/p/destiny-2",
-          "author": "Bungie",
-          "description": "《命运2》是发生在一个独立进化的世界中的一款免费的大型多人线上动作游戏。你可以在任何时间与任何地点和你的朋友们进行游戏。",
-          "link": "https://store.epicgames.com/zh-CN/p/destiny-2",
-          "publishedOn": "2023-10-11T16:00:00.000Z",
-          "wordCount": null,
-          "title": "《命运2》：Bungie 30 周年纪念组合包",
-          "imageUrl": null
-        }
-      ]
-    },
-    {
       "title": "掘金前端本周最热",
       "feedUrl": "https://rsshub.app/juejin/trending/frontend/weekly",
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
@@ -682,8 +665,18 @@
           "description": "theme: cyanosis\nhighlight: solarized-light\n\ncanvaskit 版：\n\n因为 gif 最高只有 50hz，实际上 cavnaskit 版要远比这看起来的更丝滑，你可以通过以下链接自行体验。\n官方网页版：https://webstatic.mihoyo.com/ys/app/interactive-map/index.html?lang=zh-cn#/\ncanvaskit 版：http://106.55.55.247/ky-genshin-map/ （备用地址：http://7c00.top/ky-genshin-map/ ）\n或者这个 demo：\njcode\n为什么官方网页版的性能如此糟糕以及为什么 canvaskit 版能有如此高的性能？\n第一个问题，官方网页版地图引擎用的是 leaflet，这是一个以 dom 为主要实现方式的地图引擎，而频繁地大量操作 dom 会导致严重的性能问题。你可以想象一下，要保证视觉上流畅，手势及动画的采样频率至少是 60hz，意味着单个 dom 节点每秒就要变换 60 次，一旦数量超过 100 个，对浏览器来说就是无法承受的压力。\n但是 leaflet 也有 canvas 实现的 layer，或者这么说，如果性能瓶颈在于 dom，那么用浏览器提供的 canvas api 就应该可以解决，为什么还需要 canvaskit 呢？\n在回答这个问题之前，先介绍一下 canvaskit，这其实就是 skia 的 js + wasm 版，c++ 实现的渲染引擎被编译成了 wasm，通过 js 提供类似 canvas api 的绘制接口。也许你已经知道 chrome 的底层就是 skia 做渲染引擎，canvas api 也可以视为 skia 绘制接口的封装，那么 skia 编译成 wasm 再提供 js api…",
           "link": "https://juejin.cn/post/7287781316590583863",
           "publishedOn": "2023-10-09T10:57:47.000Z",
-          "wordCount": 3445,
+          "wordCount": 3435,
           "title": "让 web 再次伟大——用 canvaskit 实现超级丝滑的原神地图（已开源）",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7287562282670227515",
+          "author": "攀登的牵牛花",
+          "description": "theme: fancy\n\n日常项目开发中，涉及到一些例如支付数据，点击捕获错误等信息，埋点日志的上报是必不可少的，项目中埋点的简单封装，作以参考。\n埋点安装\n标题也有说，我们用的是 神策埋点平台 提供的JS SDK\npnpm install sa-sdk-javascript\n\n参数配置\n一般情况我们都在项目外层 utils文件中创建一个 sensor.js 文件，创建一个埋点实例：\nimport sensors from 'sa-sdk-javascript'\n\n// 一些动态的参数需要我们和服务端商议自行填写\n\nsensors.init({\n\n    name: 'sensors',\n    \n    server_url: '', // 服务端接受数据地址\n    \n    show_log: false, // 不输出log到控制台\n\n    cross_subdomain: false, // 不在根域下设置cookie\n    \n    is_track_single_page: true, // 表示是否开启单页面自动采集 $pageview 功能，SDK 会在 url 改变之后自动采集web页面浏览事件 $pageview。\n    \n    heatmap: {\n    \n  // 是否开启点击图，default 表示开启，自动采集 $WebClick 事件，可以设置 'not_collect' 表示关闭。\n  clickmap: 'not_collect',\n  \n  // 是否开启触达注意力图，not_collect 表示关闭，不会自动采集 $WebStay 事件，可以设置 'default' 表示开启。\n  scroll_notice_map: 'not_collect'\n  \n}\n})\n\nsensors.registerPage({\n    cu…",
+          "link": "https://juejin.cn/post/7287562282670227515",
+          "publishedOn": "2023-10-09T04:02:19.000Z",
+          "wordCount": 1559,
+          "title": "vue前端埋点 - 神策埋点",
           "imageUrl": null
         },
         {
@@ -724,6 +717,16 @@
           "publishedOn": "2023-10-08T07:46:19.000Z",
           "wordCount": 2352,
           "title": "if 我是前端 Leader, 前端业务开发做不做设计？",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7287144390601244672",
+          "author": "VioletJack",
+          "description": "背景\n最近家里突然计划买房，打破了我攒钱到财务自由的规划。所以开始重新计算自己背了房贷之后的生活到底如何。\n一开始通过笔记软件来进行未来收入支出推算。后来发现太过麻烦，任何一项收入支出的改动，都会影响到后续结余累计值的计算。\n所以干脆发挥传统艺能，写网页！\n逻辑\n假设当前年收入稳定不变，在 50 岁之后收入降低。\n通过 上一年结余 + 收入-房贷-生活支出-特殊情况支出 的公式得到累加计算每年的结余资金。\n通过修改特使事件来模拟一些如装修、买车的需求。\n最后预测下 30 年后的生活结余，从而可知未来的生活质量。\n实现\n首先，创建一个 HTML 文件 feature.html，然后咔咔一顿写。\n<!DOCTYPE html>\n<html lang=\"zh-CN\" dir=\"ltr\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n    <link rel=\"icon\" href=\"https://cn.vuejs.org/logo.svg\" />\n    <title>生涯模拟</title>\n    <meta name=\"description\" content=\"人生经费模拟器\" />\n\n    <script src=\"https://unpkg.com/vue@3/dist/vue.global.js\"></script>\n\n    <style>\n      body {\n        margin: 0;\n        padding: 0;\n      }\n\n      .content {\n        background: #181818;\n        height:…",
+          "link": "https://juejin.cn/post/7287144390601244672",
+          "publishedOn": "2023-10-08T03:56:37.000Z",
+          "wordCount": 2116,
+          "title": "用代码预测未来买房后的生活",
           "imageUrl": null
         },
         {
@@ -787,16 +790,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7283748394601840680",
-          "author": "搬砖的乔布梭",
-          "description": "@主要Review的指标\n\n前端代码Review主要关注以下几个方面：\n1. 代码质量：代码是否简洁、易读、易维护。是否遵循了一致的编码风格和规范，例如ESLint、Prettier等。\n功能实现：代码是否实现了预期的功能，是否有潜在的bug或逻辑错误。\n性能优化：代码是否进行了必要的性能优化，例如避免不必要的渲染、使用了合适的数据结构和算法等。\n安全性：代码是否存在可能的安全风险，例如XSS攻击、CSRF攻击等。\n5. 可测试性：代码是否易于测试，是否有单元测试和集成测试。\n可读性：代码是否易于理解，是否有足够的注释和文档。\n可复用性：代码是否有高度的模块化和复用性。\n兼容性：代码是否兼容不同的浏览器和设备。\n助记：功性读复全兼测\n@功能Review\n无需人为检测，但注释要写明白，TS类型要写清楚，让用的人如沐春风；\n该匹配单元测试的建议配套单元测试，不落人以口实~\n@性能Review\n前端代码中一些典型的、肉眼可见的需要性能优化的地方包括：\n1. 过度渲染：如果你的应用在没有必要的情况下进行了过多的渲染，这可能会导致性能问题。例如，在React中，如果你的组件在props没有改变的情况下进行了重新渲染，那么你可能需要使用shouldComponentUpdate/SCU或React.PureComponent或useEffect来避免不必要的渲染。\n大量DOM操作：频繁的DOM操作是非常耗费性能的。如果你的代码中有大量的DOM操作，你可能需要考虑使用虚拟DOM或其他优化技术（例如DocumentFragment）。\n大量的网络请求：如果你的应用发送了大量的网络请求，这可能会导致性能问题。你可能需要考虑使用缓存、预加载、懒加载等技术来减少网络请求。\n大型JavaScript文件：如果你的JavaScript文件过大，这可能会导致加载和解析时间过长。你可能需要考虑使用代码分…",
-          "link": "https://juejin.cn/post/7283748394601840680",
-          "publishedOn": "2023-09-29T05:55:23.000Z",
-          "wordCount": 1350,
-          "title": "前端代码Review，一次性掰扯明白！",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7283691376649633828",
           "author": "aomyh",
           "description": "theme: fancy\n2023.10.13补充！\n2023.10.10补充！\n之前校招面试时遇到这样一个问题，git pull是哪两个指令的组合？\n当时是一脸懵的说不知道啦。\n那现在为什么又捡起来说呢？因为我搞懂了😁。\n剧透一下，本文的主旨与 合并代码 有关🤣：当时刚开始编程，全是一个人自嗨，完全没有合并代码这一场景🤣。于是并没有深究，工作后合并代码是常有的事，不得不去了解一下了。\n先说结果：git pull是两个指令的组合：git fetch和git merge。\n从git fetch开始\nFETCH_HEAD\n讲git fetch之前，还需要先了解一个东西，就是.git文件夹下的一个文件，FETCH_HEAD。\n\n可以通过 git log -p FETCH_HEAD 和 open .git/FETCH_HEAD 这两个指令去查看FETCH_HEAD（初始时没有这个文件，会报错，可以先用git fetch创建）。下面演示一下：\n下图是没有该文件：\n\n下图是有该文件：\ngit log -p FETCH_HEAD查看\n\nopen .get/FETCH_HEAD查看\n\n大致内容就是，目前有两个分支master分支和test-*分支，以及这两个分支最新的commit ID（正常项目内，这个文件内容很多，但你不需要记住这个文件的内容，看懂这个简单例子就好）\n这个文件是干啥的？\nFETCH_HEAD文件记录了远程仓库中的分支名称、最新的commit id以及提交的作者等相关信息。\n但它不是随着远程仓库实时变更的，是保存在我们本地，那就需要我们手动去更新。\n当执行git fetch命令时，它会从远程仓库获取最新的提交信息，并将这些信息存储在本地FETCH_HEAD中。\n再说git merge\n说到git merge，逃不开的必须提到git rebase，这俩是合并代码中的重要…",
@@ -804,16 +797,6 @@
           "publishedOn": "2023-09-28T09:04:05.000Z",
           "wordCount": 1249,
           "title": "面试官：git pull是哪两个指令的组合？😯",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7282752001900707874",
-          "author": "清夜",
-          "description": "最近使用在线json对比工具的时候，对于这种对比的实现方式产生了好奇，我用脚指头想也知道这功能实现起来肯定不简单，于是小小地研究了一下\n本文三种实现方式的可运行代码放这里了\njcode\n最短编辑距离\n逐字符的对比和多行文本的对比，差别无非是最小单元的不同，所以先从字符对比说起\n我首先就想到了最短编辑距离这个算法，虽然这个算法并没有直接给出一个字符串变成另一个字符串的具体过程，但既然它能得到这个过程的最短编辑距离，很显然，肯定也能拿到这个过程\n最短编辑距离的教科书解法是动态规划，关于这个解法本文就不详细说了网上到处都是，核心是用一个数组来存细分粒度的编辑距离，这个数组最好是一个一维数组，但这里为了记录下具体的编辑过程，所以需要用二维数组\n首先我们还是按照解决最短编辑距离的方法来写代码\nfunction minDistance(word1: string, word2: string) {\n  const m = word1.length\n  const n = word2.length\n  const dp = Array.from({ length: m + 1 }, () => Array.from({ length: n + 1 }, () => 0))\n  for (let i = 1; i <= m; i++) {\n    dp[i][0] = i\n  }\n  for (let i = 1; i <= n; i++) {\n    dp[0][i] = i\n  }\n  for (let i = 1; i <= m; i++) {\n    for (let j = 1; j <= n; j++) {\n      if (word1[i - 1] === word2[j - 1]) {\n        dp[i][j] = dp[i - 1][j - 1]\n      }…",
-          "link": "https://juejin.cn/post/7282752001900707874",
-          "publishedOn": "2023-09-26T06:13:58.000Z",
-          "wordCount": 3677,
-          "title": "git diff 知道吧？请说说实现原理",
           "imageUrl": null
         },
         {
@@ -834,12 +817,22 @@
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
         {
+          "id": "7289397650387025977",
+          "author": "Simon_He",
+          "description": "大的来了，一波更新完效率提升X倍",
+          "link": "https://juejin.cn/pin/7289397650387025977",
+          "publishedOn": "2023-10-14T03:06:29.000Z",
+          "wordCount": 534,
+          "title": "大的来了，一波更新完效率提升X倍",
+          "imageUrl": null
+        },
+        {
           "id": "7288992783582281728",
           "author": "Alone88",
           "description": "基于微信测试号的AI机器人，支持谷歌搜索引擎插件：https://github.com/anhao/AIChatBot/",
           "link": "https://juejin.cn/pin/7288992783582281728",
           "publishedOn": "2023-10-13T03:33:12.000Z",
-          "wordCount": 516,
+          "wordCount": 517,
           "title": "基于微信测试号的AI机器人，支持谷歌搜索引擎插件：https://github.com/anhao/AIChatBot/",
           "imageUrl": null
         },
@@ -849,7 +842,7 @@
           "description": "DevOps相对关注运维自动化,较少涉及复杂算法。\nDevOps更专注基础架构和工程流程。\nDevOps的工作重心在于搭建工程化系统,而不是产品功能或业务创新。\nDevOps工程师相对更专注技术展开,对商业策略和产品决策参与较少。\nDevOps也主要在运维团队内部协作。和产品、设计等部门协作的机会较少。",
           "link": "https://juejin.cn/pin/7288964017351458857",
           "publishedOn": "2023-10-13T01:16:05.000Z",
-          "wordCount": 523,
+          "wordCount": 527,
           "title": "DevOps相对关注运维自动化,较少涉及复杂算法。 DevOps更专注基础架构和工程流程。 DevOps的工作重心在于搭建工程化系统,而不是产品功能或业务创新。 DevOps工程...",
           "imageUrl": null
         },
@@ -859,7 +852,7 @@
           "description": "jym，[呲牙]看看你们浏览器的收藏夹有啥有趣的网站，或者很实用的工具网站",
           "link": "https://juejin.cn/pin/7288509436899934267",
           "publishedOn": "2023-10-11T07:44:37.000Z",
-          "wordCount": 513,
+          "wordCount": 517,
           "title": "jym，[呲牙]看看你们浏览器的收藏夹有啥有趣的网站，或者很实用的工具网站",
           "imageUrl": null
         },
@@ -879,7 +872,7 @@
           "description": "jym，有无好用的png图片压缩网址，哪个杀千刀的举报了熊猫，打不开了，MD，剩下的能找到的全是要登录或者花钱的[酷拽][酷拽]",
           "link": "https://juejin.cn/pin/7288151713373192253",
           "publishedOn": "2023-10-10T08:47:22.000Z",
-          "wordCount": 513,
+          "wordCount": 517,
           "title": "jym，有无好用的png图片压缩网址，哪个杀千刀的举报了熊猫，打不开了，MD，剩下的能找到的全是要登录或者花钱的[酷拽][酷拽]",
           "imageUrl": null
         },
@@ -889,7 +882,7 @@
           "description": "每日打开\nhttps://juejin.cn/post/7280435532986990647",
           "link": "https://juejin.cn/pin/7287955337524314169",
           "publishedOn": "2023-10-10T07:12:51.000Z",
-          "wordCount": 526,
+          "wordCount": 530,
           "title": "每日打开 https://juejin.cn/post/7280435532986990647",
           "imageUrl": null
         },
@@ -899,7 +892,7 @@
           "description": "https://java.bejson.com/generator/  崩掉了。。[捂脸]",
           "link": "https://juejin.cn/pin/7287914116286545955",
           "publishedOn": "2023-10-10T01:19:32.000Z",
-          "wordCount": 514,
+          "wordCount": 518,
           "title": "https://java.bejson.com/generator/ 崩掉了。。[捂脸]",
           "imageUrl": null
         },
@@ -919,7 +912,7 @@
           "description": "生成 java 实体类属性的工具 有推荐没得[发呆]",
           "link": "https://juejin.cn/pin/7287757113401491490",
           "publishedOn": "2023-10-09T09:16:18.000Z",
-          "wordCount": 529,
+          "wordCount": 533,
           "title": "生成 java 实体类属性的工具 有推荐没得[发呆]",
           "imageUrl": null
         },
@@ -929,7 +922,7 @@
           "description": "打卡，vue无敌偷懒利器",
           "link": "https://juejin.cn/pin/7287620609373831224",
           "publishedOn": "2023-10-09T05:05:12.000Z",
-          "wordCount": 527,
+          "wordCount": 531,
           "title": "打卡，vue无敌偷懒利器",
           "imageUrl": null
         },
@@ -949,7 +942,7 @@
           "description": "#求助掘友 \n刚买了一个带鱼屏显示器，自带分屏功能，但是它的这个分屏功能是支持多个主机连接同一个显示器，我想要的效果是一个主机连接这个显示器后，展示多个显示器的界面（相当于连接多个显示器），这个该怎么搞？",
           "link": "https://juejin.cn/pin/7287018116970184743",
           "publishedOn": "2023-10-07T13:55:53.000Z",
-          "wordCount": 517,
+          "wordCount": 521,
           "title": "#求助掘友 刚买了一个带鱼屏显示器，自带分屏功能，但是它的这个分屏功能是支持多个主机连接同一个显示器，我想要的效果是一个主机连接这个显示器后，展示多个显...",
           "imageUrl": null
         },
@@ -969,7 +962,7 @@
           "description": "vscode扩展 FnMap - 函数地图\n人性化的侧边栏函数、变量、符号列表操作和展示",
           "link": "https://juejin.cn/pin/7283768998776569915",
           "publishedOn": "2023-09-29T01:04:57.000Z",
-          "wordCount": 536,
+          "wordCount": 540,
           "title": "vscode扩展 FnMap - 函数地图 人性化的侧边栏函数、变量、符号列表操作和展示",
           "imageUrl": null
         },
@@ -999,7 +992,7 @@
           "description": "macOS支持容器化了！",
           "link": "https://juejin.cn/pin/7282944006674579516",
           "publishedOn": "2023-09-26T09:13:57.000Z",
-          "wordCount": 514,
+          "wordCount": 518,
           "title": "macOS支持容器化了！",
           "imageUrl": null
         },
@@ -1009,18 +1002,8 @@
           "description": "免注册 无限使用的ChatGPT https://sunmier.com/#/",
           "link": "https://juejin.cn/pin/7282692354984214539",
           "publishedOn": "2023-09-26T01:49:41.000Z",
-          "wordCount": 520,
+          "wordCount": 524,
           "title": "免注册 无限使用的ChatGPT https://sunmier.com/#/",
-          "imageUrl": null
-        },
-        {
-          "id": "7282691710072946725",
-          "author": "爆浆麻花",
-          "description": "无所不知的jym，文章里面的gif效果展示图你们都是用什么工具生成的呀",
-          "link": "https://juejin.cn/pin/7282691710072946725",
-          "publishedOn": "2023-09-25T14:46:04.000Z",
-          "wordCount": 513,
-          "title": "无所不知的jym，文章里面的gif效果展示图你们都是用什么工具生成的呀",
           "imageUrl": null
         },
         {
@@ -1029,7 +1012,7 @@
           "description": "分享一下 DataCap 部分重构后的 UI，左侧重构前，右侧重构后",
           "link": "https://juejin.cn/pin/7282692458247995444",
           "publishedOn": "2023-09-25T12:18:53.000Z",
-          "wordCount": 537,
+          "wordCount": 541,
           "title": "分享一下 DataCap 部分重构后的 UI，左侧重构前，右侧重构后",
           "imageUrl": null
         }

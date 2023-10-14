@@ -51,6 +51,53 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-14 datetime="2023-10-14T03:06:29.000Z">2023-10-14</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-14 datetime="2023-10-14T03:06:29.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7289397650387025977"
+                        open
+                      >
+                        <summary class="article-expander__title">大的来了，一波更新完效率提升X倍</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7289397650387025977">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>大的来了，一波更新完效率提升X倍</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-13 datetime="2023-10-13T15:28:00.000Z">2023-10-13</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-13 datetime="2023-10-13T15:28:00.000Z"></time>
           </button>
@@ -665,37 +712,6 @@ P.S. 为了确保安全，还是建议你在 Docker 环境中执行程序，User
                               <span>现在走到哪一步了</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Epic Games Store - Free Games</button>
-                  <a class="source-heading__link" href="https://store.epicgames.com/zh-CN/free-games?lang&#x3D;zh-CN">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://store.epicgames.com/zh-CN/p/destiny-2"
-                        open
-                      >
-                        <summary class="article-expander__title">《命运2》：Bungie 30 周年纪念组合包</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://store.epicgames.com/zh-CN/p/destiny-2">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>《命运2》是发生在一个独立进化的世界中的一款免费的大型多人线上动作游戏。你可以在任何时间与任何地点和你的朋友们进行游戏。</span>
                             </span>
                           </div>
                         </a>
@@ -1550,6 +1566,62 @@ jcode
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7287562282670227515"
+                        open
+                      >
+                        <summary class="article-expander__title">vue前端埋点 - 神策埋点</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7287562282670227515">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: fancy
+
+日常项目开发中，涉及到一些例如支付数据，点击捕获错误等信息，埋点日志的上报是必不可少的，项目中埋点的简单封装，作以参考。
+埋点安装
+标题也有说，我们用的是 神策埋点平台 提供的JS SDK
+pnpm install sa-sdk-javascript
+
+参数配置
+一般情况我们都在项目外层 utils文件中创建一个 sensor.js 文件，创建一个埋点实例：
+import sensors from &#x27;sa-sdk-javascript&#x27;
+
+// 一些动态的参数需要我们和服务端商议自行填写
+
+sensors.init({
+
+    name: &#x27;sensors&#x27;,
+    
+    server_url: &#x27;&#x27;, // 服务端接受数据地址
+    
+    show_log: false, // 不输出log到控制台
+
+    cross_subdomain: false, // 不在根域下设置cookie
+    
+    is_track_single_page: true, // 表示是否开启单页面自动采集 $pageview 功能，SDK 会在 url 改变之后自动采集web页面浏览事件 $pageview。
+    
+    heatmap: {
+    
+  // 是否开启点击图，default 表示开启，自动采集 $WebClick 事件，可以设置 &#x27;not_collect&#x27; 表示关闭。
+  clickmap: &#x27;not_collect&#x27;,
+  
+  // 是否开启触达注意力图，not_collect 表示关闭，不会自动采集 $WebStay 事件，可以设置 &#x27;default&#x27; 表示开启。
+  scroll_notice_map: &#x27;not_collect&#x27;
+  
+}
+})
+
+sensors.registerPage({
+    cu…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -1837,6 +1909,52 @@ con…</span>
 1. 画好业务流程图
 设计的第一步是梳理业务。这个不是产品的责任吗？产品会提供 PRD、原型、用户故事等需…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7287144390601244672"
+                        open
+                      >
+                        <summary class="article-expander__title">用代码预测未来买房后的生活</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7287144390601244672">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>背景
+最近家里突然计划买房，打破了我攒钱到财务自由的规划。所以开始重新计算自己背了房贷之后的生活到底如何。
+一开始通过笔记软件来进行未来收入支出推算。后来发现太过麻烦，任何一项收入支出的改动，都会影响到后续结余累计值的计算。
+所以干脆发挥传统艺能，写网页！
+逻辑
+假设当前年收入稳定不变，在 50 岁之后收入降低。
+通过 上一年结余 + 收入-房贷-生活支出-特殊情况支出 的公式得到累加计算每年的结余资金。
+通过修改特使事件来模拟一些如装修、买车的需求。
+最后预测下 30 年后的生活结余，从而可知未来的生活质量。
+实现
+首先，创建一个 HTML 文件 feature.html，然后咔咔一顿写。
+
+
+  
+生涯模拟
+    
+
+    
+
+    
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .content {
+        background: #181818;
+        height:…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3676,64 +3794,11 @@ https://www.aliyundrive.com/s/StwocUooKEV 手机端观看直接复制链接到�
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-29 datetime="2023-09-29T05:55:23.000Z">2023-09-29</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-29 datetime="2023-09-29T05:55:23.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-29 datetime="2023-09-29T01:04:57.000Z">2023-09-29</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-29 datetime="2023-09-29T01:04:57.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7283748394601840680"
-                        open
-                      >
-                        <summary class="article-expander__title">前端代码Review，一次性掰扯明白！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7283748394601840680">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>@主要Review的指标
-
-前端代码Review主要关注以下几个方面：
-1. 代码质量：代码是否简洁、易读、易维护。是否遵循了一致的编码风格和规范，例如ESLint、Prettier等。
-功能实现：代码是否实现了预期的功能，是否有潜在的bug或逻辑错误。
-性能优化：代码是否进行了必要的性能优化，例如避免不必要的渲染、使用了合适的数据结构和算法等。
-安全性：代码是否存在可能的安全风险，例如XSS攻击、CSRF攻击等。
-5. 可测试性：代码是否易于测试，是否有单元测试和集成测试。
-可读性：代码是否易于理解，是否有足够的注释和文档。
-可复用性：代码是否有高度的模块化和复用性。
-兼容性：代码是否兼容不同的浏览器和设备。
-助记：功性读复全兼测
-@功能Review
-无需人为检测，但注释要写明白，TS类型要写清楚，让用的人如沐春风；
-该匹配单元测试的建议配套单元测试，不落人以口实~
-@性能Review
-前端代码中一些典型的、肉眼可见的需要性能优化的地方包括：
-1. 过度渲染：如果你的应用在没有必要的情况下进行了过多的渲染，这可能会导致性能问题。例如，在React中，如果你的组件在props没有改变的情况下进行了重新渲染，那么你可能需要使用shouldComponentUpdate/SCU或React.PureComponent或useEffect来避免不必要的渲染。
-大量DOM操作：频繁的DOM操作是非常耗费性能的。如果你的代码中有大量的DOM操作，你可能需要考虑使用虚拟DOM或其他优化技术（例如DocumentFragment）。
-大量的网络请求：如果你的应用发送了大量的网络请求，这可能会导致性能问题。你可能需要考虑使用缓存、预加载、懒加载等技术来减少网络请求。
-大型JavaScript文件：如果你的JavaScript文件过大，这可能会导致加载和解析时间过长。你可能需要考虑使用代码分…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -4092,61 +4157,6 @@ FETCH_HEAD文件记录了远程仓库中的分支名称、最新的commit id以�
                 </section>
               </section>
             </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7282752001900707874"
-                        open
-                      >
-                        <summary class="article-expander__title">git diff 知道吧？请说说实现原理</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7282752001900707874">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>最近使用在线json对比工具的时候，对于这种对比的实现方式产生了好奇，我用脚指头想也知道这功能实现起来肯定不简单，于是小小地研究了一下
-本文三种实现方式的可运行代码放这里了
-jcode
-最短编辑距离
-逐字符的对比和多行文本的对比，差别无非是最小单元的不同，所以先从字符对比说起
-我首先就想到了最短编辑距离这个算法，虽然这个算法并没有直接给出一个字符串变成另一个字符串的具体过程，但既然它能得到这个过程的最短编辑距离，很显然，肯定也能拿到这个过程
-最短编辑距离的教科书解法是动态规划，关于这个解法本文就不详细说了网上到处都是，核心是用一个数组来存细分粒度的编辑距离，这个数组最好是一个一维数组，但这里为了记录下具体的编辑过程，所以需要用二维数组
-首先我们还是按照解决最短编辑距离的方法来写代码
-function minDistance(word1: string, word2: string) {
-  const m &#x3D; word1.length
-  const n &#x3D; word2.length
-  const dp &#x3D; Array.from({ length: m + 1 }, () &#x3D;&gt; Array.from({ length: n + 1 }, () &#x3D;&gt; 0))
-  for (let i &#x3D; 1; i &lt;&#x3D; m; i++) {
-    dp[i][0] &#x3D; i
-  }
-  for (let i &#x3D; 1; i &lt;&#x3D; n; i++) {
-    dp[0][i] &#x3D; i
-  }
-  for (let i &#x3D; 1; i &lt;&#x3D; m; i++) {
-    for (let j &#x3D; 1; j &lt;&#x3D; n; j++) {
-      if (word1[i - 1] &#x3D;&#x3D;&#x3D; word2[j - 1]) {
-        dp[i][j] &#x3D; dp[i - 1][j - 1]
-      }…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;12
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -4156,8 +4166,8 @@ function minDistance(word1: string, word2: string) {
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-25 datetime="2023-09-25T14:46:04.000Z">2023-09-25</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-25 datetime="2023-09-25T14:46:04.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-25 datetime="2023-09-25T12:18:53.000Z">2023-09-25</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-25 datetime="2023-09-25T12:18:53.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -4172,25 +4182,6 @@ function minDistance(word1: string, word2: string) {
                   <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
                 </h3>
                 <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7282691710072946725"
-                        open
-                      >
-                        <summary class="article-expander__title">无所不知的jym，文章里面的gif效果展示图你们都是用什么工具生成的呀</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7282691710072946725">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>无所不知的jym，文章里面的gif效果展示图你们都是用什么工具生成的呀</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -4918,8 +4909,8 @@ JavaScript的XMLHttpRequest或Fetch API请求其他源的资源。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6515402995">
-        <time id="build-timestamp" datetime="2023-10-14T03:52:51.865Z">2023-10-14T03:52:51.865Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6516178070">
+        <time id="build-timestamp" datetime="2023-10-14T06:52:59.920Z">2023-10-14T06:52:59.920Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
