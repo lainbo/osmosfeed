@@ -1605,6 +1605,8 @@ jcode
 第一个问题，官方网页版地图引擎用的是 leaflet，这是一个以 dom 为主要实现方式的地图引擎，而频繁地大量操作 dom 会导致严重的性能问题。你可以想象一下，要保证视觉上流畅，手势及动画的采样频率至少是 60hz，意味着单个 dom 节点每秒就要变换 60 次，一旦数量超过 100 个，对浏览器来说就是无法承受的压力。
 但是 leaflet 也有 canvas 实现的 layer，或者这么说，如果性能瓶颈在于 dom，那么用浏览器提供的 canvas api 就应该可以解决，为什么还需要 canvaskit 呢？
 在回答这个问题之前，先介绍一下 canvaskit，这其实就是 skia 的 js + wasm 版，c++ 实现的渲染引擎被编译成了 wasm，通过 js 提供类似 canvas api 的绘制接口。也许你已经知道 chrome 的底层就是 skia 做渲染引擎，canvas api 也可以视为 skia 绘制接口的封装，那么 skia 编译成 wasm 再提供 js api …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1633,6 +1635,8 @@ jcode
 Node：
 那么首先是Node，节点是构成去中心化网络基础的关键组件。在Web3（去中心化网络）概念中，节点是独立的服务器或计算设备，共同组成并维护整个网络。这些节点通过互联网相互连接，执行并验证网络中的操作和交易。每个节点维护网络的一个副本，这使整个系统具有高度的安全性和抗攻击能力。
 总的来说，在Web3环境中，各种类型的节点共同维护去中心化网络的安全和稳定运行，这些节点之间互相协作，实现了数据的传输、验证和共享。节点的多…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1691,6 +1695,8 @@ gf1 和 gf2 是通过 new GirlFriend 创建出来的两个 实例对象
 在 实例对象 上会默认存在一个属性叫做 __proto__，这里记作 隐式原型
 在 构造函数 上会默认存在一个属性叫做 prototype，这里记作 **显示原型 **
 通常我…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1745,6 +1751,8 @@ sensors.init({
 
 sensors.registerPage({
     cu…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1894,6 +1902,8 @@ Monorepo 的好处在于可以将项目中通用的部分单独抽离成一个�
   |-- varlet-shared 共享的通用工具
   |-- varlet-touch-emulator 桌面端适配器
   |-- varle…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1952,6 +1962,8 @@ Monorepo 的好处在于可以将项目中通用的部分单独抽离成一个�
 撤销已发布的包npm unpublish mj-calculation使用的命令。
 14、步骤十四强制删除包
 强制撤销已发布的包npm unpublish mj-calculation --force使用的命令。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1994,6 +2006,8 @@ import {ListTable, PivotTable, TYPES, themes}  from &#x27;@visactor/vtable&#x27;
 通过直接在 HTML 文件中添加  标签，引入构建好的 vtable 文件：
 
 con…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2034,6 +2048,8 @@ js爬虫思路实践
 2. 用代码模拟获取接口数据
 代码模拟获取接口数据？那不就是调接口吗，这我熟，于是axios/fetch一顿撸，如下：
 fetch(&quot;https://movie.douban…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2070,6 +2086,8 @@ fetch(&quot;https://movie.douban…</span>
 写完代码之后呢？文档呢？听说过文档驱动开发吗？设计阶段的产出就是我们的文档。
 1. 画好业务流程图
 设计的第一步是梳理业务。这个不是产品的责任吗？产品会提供 PRD、原型、用户故事等需…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2114,6 +2132,8 @@ fetch(&quot;https://movie.douban…</span>
       .content {
         background: #181818;
         height:…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2145,6 +2165,8 @@ Github 仓库：https://github.com/NetEase/tango
 我们不妨先简单分析一下传统的低代码方案的问题。传统的低代码搭建方案往往采用定义私有 Schema 协议来可视化表达视图逻辑，也就是将代码逻辑转换为私有的描述，大致的原理可以参考下面这张图。
 
 这类方案很容易面临不断膨胀的私有 JSON 协议。并且，私有协议扩展性和灵活性差，难以达到图灵完备状态。例如在我们的实际开发过程中，传统的低代码方案会面临各种各样的扩展性卡…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2835,6 +2857,8 @@ Github 仓库：https://github.com/NetEase/tango
 我一开始是不会写简历的，因为中间没有跳过槽，也没定时更新，所以就随便拿了以前的模板改了改时间和项目就开始投了，简历回复少不说，即使有机会面试了也没有把简历提到的讲清楚，结果可想而知。
 后面想想不行，虽然没写过，但是我会看简历啊，之前带团队有时候一天要看上百份简历，大概知道面试官青睐哪些人才，优化之后断断续续才有面试。
 其次是我在面试过程…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3945,6 +3969,8 @@ FETCH_HEAD文件记录了远程仓库中的分支名称、最新的commit id以�
 当执行git fetch命令时，它会从远程仓库获取最新的提交信息，并将这些信息存储在本地FETCH_HEAD中。
 再说git merge
 说到git merge，逃不开的必须提到git rebase，这俩是合并代码中的重要…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4665,6 +4691,8 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
 JavaScript的XMLHttpRequest或Fetch API请求其他源的资源。
 通过、
 、&lt;scri…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4771,8 +4799,8 @@ JavaScript的XMLHttpRequest或Fetch API请求其他源的资源。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6519404105">
-        <time id="build-timestamp" datetime="2023-10-14T18:52:47.193Z">2023-10-14T18:52:47.193Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6520144016">
+        <time id="build-timestamp" datetime="2023-10-14T21:53:02.353Z">2023-10-14T21:53:02.353Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
