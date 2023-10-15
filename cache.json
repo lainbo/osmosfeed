@@ -730,16 +730,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7287419040666337335",
-          "author": "耗子君QAQ",
-          "description": "theme: vue-pro\n写在前面\n掘金的同学们大家好呀，我是 Vue3 移动端组件库 Varlet UI 的作者，时间过的真的很快，转眼已经来到了 2023 年的 10 月，上一次梳理和分享组件库的架构还是在两年以前 Varlet 刚刚开源的时候，承蒙社区同学们的帮助，两年过去之后 Varlet 已经有了 4000+ 的 star 数量。\n在两年前作者曾写过一篇 如何从0到1开发一个开源组件库 希望能够分享和记录组件库从 0 到 1 的心得和思考，同时也希望社区对组件库有兴趣的同学们可以少走一些弯路。然而时至今日前端的生态已经有了翻天覆地的变化，Varlet 也不断的学习并且紧紧追赶，同时也有了长足的进步。本篇文章作者将以一个组件库作者的视角来分享一下目前 Varlet 组件库的架构变化和思路。\nPnpm Monorepo 拆包架构\nMonorepo 的好处在于可以将项目中通用的部分单独抽离成一个包进行单独的发布和管理，并且免去了很多依赖关系的维护压力。这有利于组件库的生态建设，我们在项目初期就采用了这种架构，当时采用的是 yarn workspace + lerna 的方式。之后 pnpm 大行其道，我们快速的切换到了 pnpm，pnpm 性能更好并且更加节省磁盘空间，并且对于依赖关系有着更优秀的处理，并且有效的解决了幽灵依赖对于项目整体产生的影响。\n目前的拆包结构如下...\n|-- packages\n  |-- varlet-cli 组件库命令行工具，管理整个组件库的生命周期\n  |-- varlet-eslint-config 组件库的 eslint 规则\n  |-- varlet-icons 组件库图标库打包工具\n  |-- varlet-shared 共享的通用工具\n  |-- varlet-touch-emulator 桌面端适配器\n  |-- varle…",
-          "link": "https://juejin.cn/post/7287419040666337335",
-          "publishedOn": "2023-10-08T17:09:27.000Z",
-          "wordCount": 1634,
-          "title": "Vue3 组件库设计 | 分享 Varlet UI 开源组件库的架构思路",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7287425222365364259",
           "author": "泽南Zn",
           "description": "theme: nico\n背景🌟\n我们公司平时在开发的时候，总是会需要开发一些组件库，去提供给组内其他人通用，这样大大提高了复用性，当然大厂会有自己的组件库，不过学无止境嘛，大家可以根据本文学会如何发布npm包！现在一起来吧~\n01、步骤一注册\n打开npm官网，如果没有账号就注册账号，如果有就登陆。\n02、步骤二创建文件夹\n按需求创建一个文件夹，本文以test为例。\n03、步骤三初始化package.json文件\n进入test文件夹里面，使用cmd打开命令行窗口，在命令行窗口里面输入npm init初始化package.json文件。也可以在Visual Studio Coode的终端里面使用npm init命令初始化。\n04、步骤四初始化package.json文件的过程\n创建package.json的步骤\n01、package name: 设置包名，也就是下载时所使用的的命令，设置需谨慎。\n02、version: 设置版本号，如果不设置那就默认版本号。\n03、description: 包描述，就是对这个包的概括。\n04、entry point: 设置入口文件，如果不设置会默认为index.js文件。\n05、test command: 设置测试指令，默认值就是一句不能执行的话，可不设置。\n06、git repository: 设置或创建git管理库。\n07、keywords: 设置关键字，也可以不设置。\n08、author: 设置作者名称，可不设置。\n09、license: 备案号，可以不设置。\n10、回车即可生成package.json文件，然后还有一行需要输入yes命令就推出窗口。\n11、测试package.json文件是否创建成功的命令npm install -g。\n05、步骤五创建index.js文件\n在test文件夹根目录下创建index.js文件，接着就是编写index.js文件了，此处不作详细叙述。\n06、步骤六初始化package-lock.json文件\n在test根目录下使用npm link命令创建package-lock.json文件。\n07、步骤七登录npm账号\n使用npm login链接npm官网账号，此过程需要输入Username、Password和Email，需要提前准备好。连接成功会输出Logged in as [Username] on http://registry.npmjs.org/ 这句话，账号不同，输出会有不同。\n08、步骤八发布包到npm服务器\n执行npm publish命令发布包即可。\n09、步骤九下载安装\n下载安装使用包，此例的下载命令是npm install mj-calculation --save。\n10、步骤十更新包\n更新包的命npm version patch，更新成功会输出版本号，版本号会自动加一，此更新只针对本地而言。\n11、步骤十一发布包到npm服务器\n更新包至npm服务器的命令npm publish，成功会输出版本，npm服务器的版本也会更新。\n12、步骤十二删除指定版本\n删除指定版本npm unpublish mj-calculation@1.0.2，成功会输出删除的版本号，对应服务器也会删除。\n13、步骤十三删除包\n撤销已发布的包npm unpublish mj-calculation使用的命令。\n14、步骤十四强制删除包\n强制撤销已发布的包npm unpublish mj-calculation --force使用的命令。",
@@ -787,6 +777,16 @@
           "publishedOn": "2023-10-08T03:44:45.000Z",
           "wordCount": 1296,
           "title": "网易云音乐 Tango 低代码引擎实现揭秘",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7284144079716728873",
+          "author": "alex12306",
+          "description": "theme: cyanosis\nbabel是什么？\n浏览器的发展跟不上语言的发展，es6+虽然很普及了，但也不是所有浏览器都可以支持es6+语法。babel的诞生就源于此。\nbabel只是提供了一个“平台”，让更多有能力的plugins入驻平台，是这些plugins提供了将 ES6+版本的代码转换为向后兼容的 JavaScript 语法的能力。\nbabel的编译流程\n主要分为三步，流程主要为：\nparsing（解析）、transforming（转化）、generating（生成）\nparsing: babylon（babel 内部使用的解析类库叫做 babylon，现在改名叫@babel/parser） 负责将es6代码进行语法分析和词法分析后转换成抽象语法树AST\ntransforming: plugin插件使用 @babel/traverse 来遍历 AST 并进行节点的操作，用它提供的 API 来编写对 AST 的遍历和修改逻辑，由此来将一种AST转换为另一种AST\ngenerating：@babel/generator负责通过AST树生成ES5代码\n其中第二步的转化是重中之重，babel的插件机制也是在这一步发挥作用的，plugins在这里进行操作，转化成新的AST，再交给第三步的@babel/generator。 所以如果没有这些plugins进驻平台，那么babel这个“平台”是不具备任何能力的。\n而这整个过程，由@babel/core 负责编译过程的控制和管理。它会调用其他模块来解析、转换和生成代码。\n名词介绍\nPlugins 和 Presets 的运行顺序\nPlugins 在 Presets 前运行\nPlugins 顺序从前往后排列\nPresets 顺序是颠倒的（从后往前）\n    {\n      \"plugins\": [\"Tom\", \"Jack\"],\n  …",
+          "link": "https://juejin.cn/post/7284144079716728873",
+          "publishedOn": "2023-10-01T09:24:08.000Z",
+          "wordCount": 3786,
+          "title": "一文掌握Babel来龙去脉、三大脚手架中使用Babel",
           "imageUrl": null
         },
         {

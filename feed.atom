@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-10-15T18:52:51.473Z</id>
+    <id>urn:2023-10-15T21:52:53.385Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-10-15T18:52:51.473Z</updated>
+    <updated>2023-10-15T21:52:53.385Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -2265,29 +2265,6 @@ sensors.registerPage({
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Vue3 组件库设计 | 分享 Varlet UI 开源组件库的架构思路]]></title>
-        <id>https://juejin.cn/post/7287419040666337335</id>
-        <link href="https://juejin.cn/post/7287419040666337335"/>
-        <updated>2023-10-08T17:09:27.000Z</updated>
-        <summary type="html"><![CDATA[theme: vue-pro
-写在前面
-掘金的同学们大家好呀，我是 Vue3 移动端组件库 Varlet UI 的作者，时间过的真的很快，转眼已经来到了 2023 年的 10 月，上一次梳理和分享组件库的架构还是在两年以前 Varlet 刚刚开源的时候，承蒙社区同学们的帮助，两年过去之后 Varlet 已经有了 4000+ 的 star 数量。
-在两年前作者曾写过一篇 如何从0到1开发一个开源组件库 希望能够分享和记录组件库从 0 到 1 的心得和思考，同时也希望社区对组件库有兴趣的同学们可以少走一些弯路。然而时至今日前端的生态已经有了翻天覆地的变化，Varlet 也不断的学习并且紧紧追赶，同时也有了长足的进步。本篇文章作者将以一个组件库作者的视角来分享一下目前 Varlet 组件库的架构变化和思路。
-Pnpm Monorepo 拆包架构
-Monorepo 的好处在于可以将项目中通用的部分单独抽离成一个包进行单独的发布和管理，并且免去了很多依赖关系的维护压力。这有利于组件库的生态建设，我们在项目初期就采用了这种架构，当时采用的是 yarn workspace + lerna 的方式。之后 pnpm 大行其道，我们快速的切换到了 pnpm，pnpm 性能更好并且更加节省磁盘空间，并且对于依赖关系有着更优秀的处理，并且有效的解决了幽灵依赖对于项目整体产生的影响。
-目前的拆包结构如下...
-|-- packages
-  |-- varlet-cli 组件库命令行工具，管理整个组件库的生命周期
-  |-- varlet-eslint-config 组件库的 eslint 规则
-  |-- varlet-icons 组件库图标库打包工具
-  |-- varlet-shared 共享的通用工具
-  |-- varlet-touch-emulator 桌面端适配器
-  |-- varle…]]></summary>
-        <author>
-            <name>耗子君QAQ</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[面试官：你之前的工作发布过npm包吗？]]></title>
         <id>https://juejin.cn/post/7287425222365364259</id>
         <link href="https://juejin.cn/post/7287425222365364259"/>
@@ -2493,6 +2470,35 @@ Github 仓库：https://github.com/NetEase/tango
 [7210228048107896891#每日快讯#]]]></summary>
         <author>
             <name>陈随易</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[一文掌握Babel来龙去脉、三大脚手架中使用Babel]]></title>
+        <id>https://juejin.cn/post/7284144079716728873</id>
+        <link href="https://juejin.cn/post/7284144079716728873"/>
+        <updated>2023-10-01T09:24:08.000Z</updated>
+        <summary type="html"><![CDATA[theme: cyanosis
+babel是什么？
+浏览器的发展跟不上语言的发展，es6+虽然很普及了，但也不是所有浏览器都可以支持es6+语法。babel的诞生就源于此。
+babel只是提供了一个“平台”，让更多有能力的plugins入驻平台，是这些plugins提供了将 ES6+版本的代码转换为向后兼容的 JavaScript 语法的能力。
+babel的编译流程
+主要分为三步，流程主要为：
+parsing（解析）、transforming（转化）、generating（生成）
+parsing: babylon（babel 内部使用的解析类库叫做 babylon，现在改名叫@babel/parser） 负责将es6代码进行语法分析和词法分析后转换成抽象语法树AST
+transforming: plugin插件使用 @babel/traverse 来遍历 AST 并进行节点的操作，用它提供的 API 来编写对 AST 的遍历和修改逻辑，由此来将一种AST转换为另一种AST
+generating：@babel/generator负责通过AST树生成ES5代码
+其中第二步的转化是重中之重，babel的插件机制也是在这一步发挥作用的，plugins在这里进行操作，转化成新的AST，再交给第三步的@babel/generator。 所以如果没有这些plugins进驻平台，那么babel这个“平台”是不具备任何能力的。
+而这整个过程，由@babel/core 负责编译过程的控制和管理。它会调用其他模块来解析、转换和生成代码。
+名词介绍
+Plugins 和 Presets 的运行顺序
+Plugins 在 Presets 前运行
+Plugins 顺序从前往后排列
+Presets 顺序是颠倒的（从后往前）
+    {
+      "plugins": ["Tom", "Jack"],
+  …]]></summary>
+        <author>
+            <name>alex12306</name>
         </author>
     </entry>
     <entry>
