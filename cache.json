@@ -23,7 +23,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1198,
+          "wordCount": 1199,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "本文介绍三种改变音频播放音量的方法，其中还有一种方法直接改变音频AudioBuffer数据源的音量，说不定你哪天就会用到。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/",
           "publishedOn": "2023-10-09T14:50:57.000Z",
-          "wordCount": 1094,
+          "wordCount": 1092,
           "title": "JS改变AudioBuffer音量并下载为新audio音频",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/",
           "publishedOn": "2023-09-17T08:06:56.000Z",
-          "wordCount": 1497,
+          "wordCount": 1498,
           "title": "又get到了，JS复制图片到剪切板",
           "imageUrl": null
         }
@@ -785,7 +785,7 @@
           "description": "theme: cyanosis\nbabel是什么？\n浏览器的发展跟不上语言的发展，es6+虽然很普及了，但也不是所有浏览器都可以支持es6+语法。babel的诞生就源于此。\nbabel只是提供了一个“平台”，让更多有能力的plugins入驻平台，是这些plugins提供了将 ES6+版本的代码转换为向后兼容的 JavaScript 语法的能力。\nbabel的编译流程\n主要分为三步，流程主要为：\nparsing（解析）、transforming（转化）、generating（生成）\nparsing: babylon（babel 内部使用的解析类库叫做 babylon，现在改名叫@babel/parser） 负责将es6代码进行语法分析和词法分析后转换成抽象语法树AST\ntransforming: plugin插件使用 @babel/traverse 来遍历 AST 并进行节点的操作，用它提供的 API 来编写对 AST 的遍历和修改逻辑，由此来将一种AST转换为另一种AST\ngenerating：@babel/generator负责通过AST树生成ES5代码\n其中第二步的转化是重中之重，babel的插件机制也是在这一步发挥作用的，plugins在这里进行操作，转化成新的AST，再交给第三步的@babel/generator。 所以如果没有这些plugins进驻平台，那么babel这个“平台”是不具备任何能力的。\n而这整个过程，由@babel/core 负责编译过程的控制和管理。它会调用其他模块来解析、转换和生成代码。\n名词介绍\nPlugins 和 Presets 的运行顺序\nPlugins 在 Presets 前运行\nPlugins 顺序从前往后排列\nPresets 顺序是颠倒的（从后往前）\n    {\n      \"plugins\": [\"Tom\", \"Jack\"],\n  …",
           "link": "https://juejin.cn/post/7284144079716728873",
           "publishedOn": "2023-10-01T09:24:08.000Z",
-          "wordCount": 3786,
+          "wordCount": 3719,
           "title": "一文掌握Babel来龙去脉、三大脚手架中使用Babel",
           "imageUrl": null
         },
@@ -832,7 +832,7 @@
           "description": "大的来了，一波更新完效率提升X倍",
           "link": "https://juejin.cn/pin/7289397650387025977",
           "publishedOn": "2023-10-14T03:06:29.000Z",
-          "wordCount": 539,
+          "wordCount": 535,
           "title": "大的来了，一波更新完效率提升X倍",
           "imageUrl": null
         },
@@ -872,7 +872,7 @@
           "description": "[7210002980895916043#挑战每日一条沸点#] \nvscode插件fnMap（函数地图）v3.2.0发布\n1，新增功能：可配置不同文件默认展开层级\n2，新增功能：可配置不同文件哪些符号不展示\n3，修复问题：插件关闭后符号缓存没有清空的问题\n插件地址：https://marketplace.visualstudio.com/items?itemName=chensuiyi.fn-map",
           "link": "https://juejin.cn/pin/7288229413035065402",
           "publishedOn": "2023-10-10T15:01:03.000Z",
-          "wordCount": 542,
+          "wordCount": 559,
           "title": "[7210002980895916043#挑战每日一条沸点#] vscode插件fnMap（函数地图）v3.2.0发布 1，新增功能：可配置不同文件默认展开层级 2，新增功能：可配置不同文件哪些...",
           "imageUrl": null
         },
@@ -942,7 +942,7 @@
           "description": "[7210002980895916043#挑战每日一条沸点#] vscode扩展fnMap v3.1.1发布，修复git的diff对比模式页面一闪而过的问题\n扩展地址：https://marketplace.visualstudio.com/items?itemName=chensuiyi.fn-map",
           "link": "https://juejin.cn/pin/7287562282670161979",
           "publishedOn": "2023-10-09T03:44:15.000Z",
-          "wordCount": 546,
+          "wordCount": 563,
           "title": "[7210002980895916043#挑战每日一条沸点#] vscode扩展fnMap v3.1.1发布，修复git的diff对比模式页面一闪而过的问题 扩展地址：https://marketplace.visualstudio...",
           "imageUrl": null
         },
@@ -992,7 +992,7 @@
           "description": "[7073670907851440160#新人报道#] 欢迎使用新鲜上线的DevShots https://gpwzw.com/",
           "link": "https://juejin.cn/pin/7283532551473594425",
           "publishedOn": "2023-09-28T07:52:46.000Z",
-          "wordCount": 545,
+          "wordCount": 541,
           "title": "[7073670907851440160#新人报道#] 欢迎使用新鲜上线的DevShots https://gpwzw.com/",
           "imageUrl": null
         },
