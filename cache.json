@@ -23,7 +23,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1199,
+          "wordCount": 1196,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/",
           "publishedOn": "2023-09-17T08:06:56.000Z",
-          "wordCount": 1498,
+          "wordCount": 1495,
           "title": "又get到了，JS复制图片到剪切板",
           "imageUrl": null
         }
@@ -620,6 +620,36 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7288632764915204115",
+          "author": "飞书深诺技术团队",
+          "description": "一、背景介绍\n飞书深诺集团是专注海外数字营销解决方案的专业服务提供商，为有全球化营销需求的企业提供标准&定制相结合的全链路服务产品，满足游戏、APP、电商、品牌等典型出海场景需求。到 2022 年，集团各产线前端单页面应用（下文直接用 SPA 代替）的数量，已经占前端项目总数量的三分之二以上，个别巨石应用会面临以下问题：\n应用单次构建-发布时间，已经超过了10min，从开发到生产上线部署，会经历 4 个环境 dev / test / pre / prod，总部署时间大于 40min 以上。\n应用接入了 6+ 其他产线提供的 MF(Module Federation) 微前端组件，任何微前端组件进行版本升级时，都需要重走 dev -> prod 4 个环境的构建发布流程。\n考虑到 test 环境可能同时有多个测试在多环境进行发布测试，这个量级又以倍数上升。\nLife is short，将如此多的时间浪费在构建发布上是不值得的，解决此问题势在必行。\n二、基本思路\n解决思路拆解\n根据上面信息可知，当前总构建发布时间\n= 单次构建发布时间 * 环境个数\n= 单次构建时间 * 环境个数 + 单次发布时间 * 环境个数\n因为单次发布时间，一般只涉及到镜像的推送与发布，已基本没有可提升的空间，所以解决思路目前有两个：\n解决思路一：减少单次构建时间\n解决思路二：构建产物实现多环境复用，使公式由（* 环境个数）变为（* 1）\n解决思路一：减少单次构建时间\n目前业界针对减少单次构建时间，主要有以下常规主流方案：\n使用 swc 或 esbuild 等新一代构建工具，带来极致的构建效率\n应用构建缓存，本质上都是实现增量构建，主要有两种方案：\n利用 docker 构建缓存，将不变的步骤缓存起来\n利用 webpack 或 esbuild 本身构建缓存，提升打包速度\n多进程优化，利用 webpack，实…",
+          "link": "https://juejin.cn/post/7288632764915204115",
+          "publishedOn": "2023-10-12T02:37:22.000Z",
+          "wordCount": 1818,
+          "title": "飞书深诺前端 SPA 敏捷部署方案演进",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7288561905405313080",
+          "author": "FrontEnd_Reese",
+          "description": "theme: v-green\nhighlight: a11y-dark\n八股文\n讲讲异步组件和路由懒加载？异步加载的过程是怎么样的？为什么在router中使用回调的方式引入组件就可以实现异步加载？假如一个页面有特别多的异步组件会带来什么问题？\n其实异步组件和异步路由是一样的东西，异步路由引入的也还是对应的组件。\n异步加载的过程涉及到JavaScript运行时、事件循环机制以及打包工具的配合工作。过程：\n代码分割：当我们在代码中使用import()函数异步加载组件时，打包工具（如Webpack或Rollup）会将这些组件作为单独的JavaScript文件（通常被称为\"chunks\"）进行打包。\n初始加载：在页面初始加载时，只有主bundle会被下载。主bundle中包含了应用的主要代码，但不包括异步组件的代码。\n异步请求：当用户触发了需要异步组件的操作（如访问一个使用了路由懒加载的路由），JavaScript运行时会发送一个网络请求，请求异步组件对应的JavaScript文件。\n下载和执行：浏览器下载异步组件对应的JavaScript文件，并执行其中的代码。这个过程可能会涉及到一些延迟，因为需要等待网络请求完成，并且JavaScript是单线程的，不能同时执行多段代码。\n渲染组件：异步组件的代码被执行后，组件会被注册到Vue.js应用中，并触发视图的更新。Vue.js会创建一个新的组件实例，并将其渲染到页面上。\n在这个过程中，打包工具起到了关键作用。它负责将代码分割成多个小文件，并在构建时生成一份映射表，这样JavaScript运行时就知道每个异步组件对应哪个文件。\n同时，JavaScript的事件循环机制也在这个过程中发挥了作用。由于JavaScript是单线程的，它需要使用事件循环来处理异步操作。当我们使用import()函数加载一个组件时，这个操作会被放入微任务队列中。…",
+          "link": "https://juejin.cn/post/7288561905405313080",
+          "publishedOn": "2023-10-11T17:35:24.000Z",
+          "wordCount": 1663,
+          "title": "24秋招美团一面🦘「八股文+代码输出+算法题」",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7288504491506024487",
+          "author": "杨老头儿",
+          "description": "早在2023/4/12，chrome已经支持使用本地覆盖web内容和HTTP相应标头，通过本地覆盖可以模拟远程资源。话不说直接开始\n如何设置本地覆盖\n1、打开 DevTools，导航到“网络”面板，右键单击要覆盖的请求，从下拉菜单中选择“覆盖标头”或“覆盖内容” 。\n\n2、如果您尚未设置本地覆盖，则在顶部的操作栏中，DevTools 会提示您：选择一个文件夹来存储覆盖文件。\n\n3、单击 “允许” 以授予 DevTools 对其的访问权限。\n\n4、如果您设置了本地覆盖但已禁用，DevTools 会自动启用它们。\n5、如何清除mock的数据\n\n演示：\n覆盖HTTP请求返回值\njvideo\n覆盖HTTP header请求\njvideo\n参考：\n本地覆盖 Web 内容和 HTTP 响应标头\n在本地覆盖 HTTP 响应标头",
+          "link": "https://juejin.cn/post/7288504491506024487",
+          "publishedOn": "2023-10-11T08:52:30.000Z",
+          "wordCount": 896,
+          "title": "chrome 也支持模拟请求喽",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7288517000580694070",
           "author": "前端_Williamyyy",
           "description": "介绍\n🔥🔥Vue3 + TS + Echarts + Pinia 优秀可视化数据大屏解决方案，包括移动端与 PC 端的响应式适配处理，实现移动端和PC端不同布局和兼容。欢迎大家提出Issues\n项目地址\nhttp://124.221.177.11/#/login\ngitee开源地址：https://gitee.com/yuanjinwei/DM_screen_web（开源出来就是纯用爱发电 有劳大家点个star支持鼓励一下😭）\ngithub开源地址：https://github.com/williamyuanjw/DM_screen_web\n项目展示\n登录页\n\nPC 端首页\n\n小于 576px 设备效果\n\n操作文档\n登录项目之后，在首页以关注度图表为例\n图表可支持左右滑动，图表内长按鼠标左滑或者右滑进行不同月份的展示\n右上角从左到右图标的功能分别为：切换至折线图、切换至柱状图、详情弹窗\n打开详情弹窗后可以通过下拉搜索框进行输入搜索选择要添加至图表的项目，也可进行删除\n\n\n项目中间部分的雷达图和虚拟列表可以进行交互，点击列表的项目可以添加至雷达图，点击雷达图某个项目可以展示详情，点击 remove 可以移除\n\n\n项目亮点\n实现对不同大小的屏幕/设备的良好适配以及针对小屏幕设备有不同的布局以及兼容\n不定高无限滚动加载虚拟列表的实现，控制列表渲染数据量的同时实现列表无限滚动\n参数/事件\n说明\n类型\n默认值\n\n\n\n\ndataSource\n传入的数组\nArray\n必传\n\n\nloading\n分页加载loading状态\nBoolean\n必传\n\n\nestimatedHeight\n每一项的初始高度，用于传入渲染后再通过计算得到不定高列表的真实高度\nNumber\n必传\n\n\n@scrollEnd\n列表滚动到底部触发的方法\nFunction\n-\n\n\n\n<virtual-list\n:data-source=\"github.dataSource\"\n:loading=\"github.loading\"\n:estimated-height=\"30\"\n@scroll-end=\"github.addData\"\nclass=\"virtual-list\"\n>\n<template #item=\"{ item }\">\n<a-tooltip placement=\"top\" color=\"rgba(73, 146, 255, 0.8)\">\n<template #title>\n<span>项目名：{{ item.name }}</span>\n</template>\n<div class=\"virtual-list-item\" @click=\"radarFirst.chart.addRadarData(item.name)\">\n<span class=\"virtual-list-item-col\">{{ item.name }}</span>\n<span class=\"virtual-list-item-col\">{{ item.influence }}</span>\n<span class=\"virtual-list-item-col\">{{ item.trend }}</span>\n<span class=\"virtual-list-item-col\">{{ item.response }}</span>\n<span class=\"virtual-list-item-col\">{{ item.activity }}</span>\n<span class=\"virtual-list-item-col\">{{ item.github }}</span>\n</div>\n</a-tooltip>\n</template>\n</virtual-list>\n\nEcharts 图表相关 hooks 的封装，提高如折柱混合图、图表详情弹窗的代码复用性\n实现下拉搜索选择框、列表与图表之间的增删交互，根据文档解决雷达图等图表增删时的异常问题\n使用 transition 标签以及图片预加载来优化图片未加载完全等导致的用户视觉体验问题\n实现 Echarts 等组件的按需加载。在打包过程中对项目大体积模块进行分块打包以及优化项目字体文件大小",
@@ -695,7 +725,7 @@
           "description": "theme: cyanosis\nhighlight: solarized-light\n\ncanvaskit 版：\n\n因为 gif 最高只有 50hz，实际上 cavnaskit 版要远比这看起来的更丝滑，你可以通过以下链接自行体验。\n官方网页版：https://webstatic.mihoyo.com/ys/app/interactive-map/index.html?lang=zh-cn#/\ncanvaskit 版：http://106.55.55.247/ky-genshin-map/ （备用地址：http://7c00.cc/ky-genshin-map/ ）\n或者这个 demo：\njcode\n为什么官方网页版的性能如此糟糕以及为什么 canvaskit 版能有如此高的性能？\n第一个问题，官方网页版地图引擎用的是 leaflet，这是一个以 dom 为主要实现方式的地图引擎，而频繁地大量操作 dom 会导致严重的性能问题。你可以想象一下，要保证视觉上流畅，手势及动画的采样频率至少是 60hz，意味着单个 dom 节点每秒就要变换 60 次，一旦数量超过 100 个，对浏览器来说就是无法承受的压力。\n但是 leaflet 也有 canvas 实现的 layer，或者这么说，如果性能瓶颈在于 dom，那么用浏览器提供的 canvas api 就应该可以解决，为什么还需要 canvaskit 呢？\n在回答这个问题之前，先介绍一下 canvaskit，这其实就是 skia 的 js + wasm 版，c++ 实现的渲染引擎被编译成了 wasm，通过 js 提供类似 canvas api 的绘制接口。也许你已经知道 chrome 的底层就是 skia 做渲染引擎，canvas api 也可以视为 skia 绘制接口的封装，那么 skia 编译成 wasm 再提供 js api …",
           "link": "https://juejin.cn/post/7287781316590583863",
           "publishedOn": "2023-10-09T10:57:47.000Z",
-          "wordCount": 3435,
+          "wordCount": 3422,
           "title": "让 web 再次伟大——用 canvaskit 实现超级丝滑的原神地图（已开源）",
           "imageUrl": null
         },
@@ -740,16 +770,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7287214029449805836",
-          "author": "玄魂",
-          "description": "导读\nVTable: 不只是高性能的多维数据分析表格，更是行列间创作的方格艺术家！\nVTable是字节跳动开源可视化解决方案 VisActor 的组件之一。\n在现代应用程序中，表格组件是不可或缺的一部分，它们能够快速展示大量数据，并提供良好的可视化效果和交互体验。VTable是一款基于可视化渲染引擎VRender的高性能表格组件库，为用户提供卓越的性能和强大的多维分析能力，以及灵活强大的图形能力。\n快速上手\n获取 VTable\n你可以通过以下几种方式获取 VTable。\n使用 NPM 包\n首先，你需要在项目根目录下使用以下命令安装 VTable：\n# 使用 npm 安装npm install @visactor/vtable# 使用 yarn 安装yarn add @visactor/vtable\n\n使用 CDN\n你还可以通过 CDN 获取构建好的 VTable 文件。\n<script src=\"https://unpkg.com/@visactor/vtable/dist/vtable.min.js\"></script>\n\n引入 VTable\n通过 NPM 包引入\n在 JavaScript 文件顶部使用 import 引入 VTable：\nimport * as VTable from '@visactor/vtable';\nor\nimport {ListTable, PivotTable, TYPES, themes}  from '@visactor/vtable';\n\n使用 script 标签引入\n通过直接在 HTML 文件中添加 <script> 标签，引入构建好的 vtable 文件：\n<script src=\"https://unpkg.com/@visactor/vtable/dist/vtable.min.js\"></script>\n<script>con…",
-          "link": "https://juejin.cn/post/7287214029449805836",
-          "publishedOn": "2023-10-08T09:27:53.000Z",
-          "wordCount": 1452,
-          "title": "VTable——不只是高性能的多维数据分析表格，开源，免费，百万数据秒级渲染",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7287389831192625210",
           "author": "buddywang",
           "description": "前言\n说起网络爬虫，很多人第一时间想到python，但爬虫并非只能用python实现，虽然网上大部分爬虫文章都在说python爬虫，但对于前端程序员来说，我觉得js才是最屌的（对于简单爬取任务来说，复杂的我暂时没碰到～），下面说说我的经验（是的，仅限本人经验），希望能给各位前端程序员带来一点新视角。\n前置条件\n熟悉常用的js bom dom api\n会用chrome devtool\n什么是爬虫\n简单点，字面意思，爬虫就是用来爬取数据（文本、图片、视频等等）的代码脚本；\n在第一次听爬虫的时候，感觉这个词碉堡了，学会了一定很酷！这也是我以前入坑python的主要原因。但搜索下科普文章/百科等等，还是有点云里雾里的感觉。其实我觉得了解一个概念从实际的需求出发更加容易理解，毕竟概念是人造的，没有概念前呢？下面根据真实事件改编：\n需求一：获取豆瓣评分电影Top250的详细信息\n需要获取以下表头信息，并存到本地/数据库/..\n\n先不说怎么做到，但只要你用代码实现了这个需求，那你就是写了一个爬虫。\njs爬虫思路实践\n从哪里开始呢？首先，你要爬数据，就得先有目标，一般目标是一个网页，网页上有你想要的数据，一般网页数据多的时候都会分页请求数据，那必然就有规律！\n1. 分析页面请求，找到数据来源，分析接口规律\n简单分析下第一页/第二页接口请求，发现数据是以下接口返回的：\n\n\n第一页接口路径：https://movie.douban.com/top250?start=1\n第二页接口路径：https://movie.douban.com/top250?start=25&filter=\n依此类推，第几页只是start参数不一样\n2. 用代码模拟获取接口数据\n代码模拟获取接口数据？那不就是调接口吗，这我熟，于是axios/fetch一顿撸，如下：\nfetch(\"https://movie.douban…",
@@ -770,16 +790,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7287134477838876707",
-          "author": "网易云音乐技术团队",
-          "description": "本文作者：景庄\n我们在 8 月底正式开源了 Tango 低代码引擎。Tango 是一个基于源码的低代码设计器框架，支持直接基于项目源码提供低代码可视化开发能力，可以无缝的与既有的本地开发工作流进行集成，从而提供渐进式的低代码开发能力。\n\n按照计划，我们在 9 月底发布了 beta 版本，在此版本中我们遵循 “最小内核” 的原则对 Tango 的核心实现进行了大幅的重构，剥离了大量冗余的代码实现。\n为了帮助大家更近一步的了解 Tango 开源版本的核心构成与代码实现，本文将会详细揭秘 Tango 低代码引擎的设计思考与实现过程。\nGithub 仓库：https://github.com/NetEase/tango\n发行历史：https://github.com/NetEase/tango/releases\n文档站点：https://netease.github.io/tango/\n低代码可视化搭建之殇\n从实现上看，低代码搭建能力的核心是 UI 可视化编程。借助 UI 可视化编程，可以大大的弱化使用者对于代码编程的感知，但在真实的业务需求场景中，我们面临着大量的复杂的应用逻辑，使用者很难借助 UI 操作表达功能逻辑。例如下图中的合同管理，资金结算等页面。如果借助于传统的低代码方案，通常会发现，很容易一条路走到黑，没有回头路。所以，经常会有开发者抱怨，稍微复杂的场景下，低代码的效率甚至不如写代码。\n\n传统低代码方案的问题\n我们不妨先简单分析一下传统的低代码方案的问题。传统的低代码搭建方案往往采用定义私有 Schema 协议来可视化表达视图逻辑，也就是将代码逻辑转换为私有的描述，大致的原理可以参考下面这张图。\n\n这类方案很容易面临不断膨胀的私有 JSON 协议。并且，私有协议扩展性和灵活性差，难以达到图灵完备状态。例如在我们的实际开发过程中，传统的低代码方案会面临各种各样的扩展性卡…",
-          "link": "https://juejin.cn/post/7287134477838876707",
-          "publishedOn": "2023-10-08T03:44:45.000Z",
-          "wordCount": 1296,
-          "title": "网易云音乐 Tango 低代码引擎实现揭秘",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7284144079716728873",
           "author": "alex12306",
           "description": "theme: cyanosis\nbabel是什么？\n浏览器的发展跟不上语言的发展，es6+虽然很普及了，但也不是所有浏览器都可以支持es6+语法。babel的诞生就源于此。\nbabel只是提供了一个“平台”，让更多有能力的plugins入驻平台，是这些plugins提供了将 ES6+版本的代码转换为向后兼容的 JavaScript 语法的能力。\nbabel的编译流程\n主要分为三步，流程主要为：\nparsing（解析）、transforming（转化）、generating（生成）\nparsing: babylon（babel 内部使用的解析类库叫做 babylon，现在改名叫@babel/parser） 负责将es6代码进行语法分析和词法分析后转换成抽象语法树AST\ntransforming: plugin插件使用 @babel/traverse 来遍历 AST 并进行节点的操作，用它提供的 API 来编写对 AST 的遍历和修改逻辑，由此来将一种AST转换为另一种AST\ngenerating：@babel/generator负责通过AST树生成ES5代码\n其中第二步的转化是重中之重，babel的插件机制也是在这一步发挥作用的，plugins在这里进行操作，转化成新的AST，再交给第三步的@babel/generator。 所以如果没有这些plugins进驻平台，那么babel这个“平台”是不具备任何能力的。\n而这整个过程，由@babel/core 负责编译过程的控制和管理。它会调用其他模块来解析、转换和生成代码。\n名词介绍\nPlugins 和 Presets 的运行顺序\nPlugins 在 Presets 前运行\nPlugins 顺序从前往后排列\nPresets 顺序是颠倒的（从后往前）\n    {\n      \"plugins\": [\"Tom\", \"Jack\"],\n  …",
@@ -787,16 +797,6 @@
           "publishedOn": "2023-10-01T09:24:08.000Z",
           "wordCount": 3719,
           "title": "一文掌握Babel来龙去脉、三大脚手架中使用Babel",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7283766466083471396",
-          "author": "聪聪正在递归下降",
-          "description": "序言\n这是深入理解 swc 的第三部分，来探究 swc 的语法分析阶段。\n语法分析是将源代码转换成抽象语法树（Abstract Syntax Tree，AST）的过程。这是一个重要的步骤，因为抽象语法树能以更结构化的方式表达代码的语义，为后续的代码转换和生成阶段提供基础。\n上下文无关语法\n在开始深入理解 JavaScript 源代码语法分析之前，我们首先需要理解 JavaScript 的语法结构。JavaScript 的语法是由一个名为 \"Technical Committee 39\"（TC39）的组织定义的，它在 ECMA-262 标准中得到了明确的规定。ECMA-262 是 JavaScript 的官方标准，它采用了一种称为 \"上下文无关语法\"（Context-Free Grammar，CFG）的形式化语法来明确规定了 JavaScript 的语法规则。\n上下文无关语法是一种广泛应用于编程语言的形式化语法，它的基本规则实际上非常直观，而且易于理解。尽管对于所有的细节进行深入的理解可能需要一定的时间，但我们可以通过一个简单的例子来初步感受其工作原理。\n我们来看一下 JavaScript 中 if 语句的语法定义：\nIfStatement :\n    if ( Expression ) Statement else Statement\n    if ( Expression ) Statement [lookahead ≠ else]\n\n在这个例子中，IfStatement，Expression 和 Statement 都是非终结符，它们代表的是可以进一步展开或替换的语法结构。 if，(，) 和 else 这些则是终结符，它们是语法结构中具体的字面符号。\n这个规则的含义是，一个 IfStatement 可以由 if ( Expression ) Statement else…",
-          "link": "https://juejin.cn/post/7283766466083471396",
-          "publishedOn": "2023-09-29T04:55:27.000Z",
-          "wordCount": 2925,
-          "title": "深入理解 swc - 第三部分，语法分析",
           "imageUrl": null
         },
         {
@@ -817,12 +817,22 @@
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
         {
+          "id": "7290017749715615784",
+          "author": "长期价值第一位",
+          "description": "[7018942344208580646#1024一起掘金#]  [呲牙]发现一个很方便的局域网传文件工具，一个wifi下的所有手机和电脑，不用下APP，网页就可以，yanhuo7.com . P2P，免流量，蛮方便的",
+          "link": "https://juejin.cn/pin/7290017749715615784",
+          "publishedOn": "2023-10-16T04:43:58.000Z",
+          "wordCount": 560,
+          "title": "[7018942344208580646#1024一起掘金#] [呲牙]发现一个很方便的局域网传文件工具，一个wifi下的所有手机和电脑，不用下APP，网页就可以，yanhuo7.com . P2P，免流...",
+          "imageUrl": null
+        },
+        {
           "id": "7289664651364794402",
           "author": "Simon_He",
           "description": "https://github.com/Simon-He95/fast-create-variable\n这个插件一定会火起来的🥺",
           "link": "https://juejin.cn/pin/7289664651364794402",
           "publishedOn": "2023-10-15T08:20:51.000Z",
-          "wordCount": 532,
+          "wordCount": 544,
           "title": "https://github.com/Simon-He95/fast-create-variable 这个插件一定会火起来的🥺",
           "imageUrl": null
         },
@@ -832,7 +842,7 @@
           "description": "大的来了，一波更新完效率提升X倍",
           "link": "https://juejin.cn/pin/7289397650387025977",
           "publishedOn": "2023-10-14T03:06:29.000Z",
-          "wordCount": 535,
+          "wordCount": 548,
           "title": "大的来了，一波更新完效率提升X倍",
           "imageUrl": null
         },
@@ -842,7 +852,7 @@
           "description": "基于微信测试号的AI机器人，支持谷歌搜索引擎插件：https://github.com/anhao/AIChatBot/",
           "link": "https://juejin.cn/pin/7288992783582281728",
           "publishedOn": "2023-10-13T03:33:12.000Z",
-          "wordCount": 518,
+          "wordCount": 534,
           "title": "基于微信测试号的AI机器人，支持谷歌搜索引擎插件：https://github.com/anhao/AIChatBot/",
           "imageUrl": null
         },
@@ -852,7 +862,7 @@
           "description": "DevOps相对关注运维自动化,较少涉及复杂算法。\nDevOps更专注基础架构和工程流程。\nDevOps的工作重心在于搭建工程化系统,而不是产品功能或业务创新。\nDevOps工程师相对更专注技术展开,对商业策略和产品决策参与较少。\nDevOps也主要在运维团队内部协作。和产品、设计等部门协作的机会较少。",
           "link": "https://juejin.cn/pin/7288964017351458857",
           "publishedOn": "2023-10-13T01:16:05.000Z",
-          "wordCount": 526,
+          "wordCount": 542,
           "title": "DevOps相对关注运维自动化,较少涉及复杂算法。 DevOps更专注基础架构和工程流程。 DevOps的工作重心在于搭建工程化系统,而不是产品功能或业务创新。 DevOps工程...",
           "imageUrl": null
         },
@@ -862,7 +872,7 @@
           "description": "jym，[呲牙]看看你们浏览器的收藏夹有啥有趣的网站，或者很实用的工具网站",
           "link": "https://juejin.cn/pin/7288509436899934267",
           "publishedOn": "2023-10-11T07:44:37.000Z",
-          "wordCount": 518,
+          "wordCount": 534,
           "title": "jym，[呲牙]看看你们浏览器的收藏夹有啥有趣的网站，或者很实用的工具网站",
           "imageUrl": null
         },
@@ -882,7 +892,7 @@
           "description": "jym，有无好用的png图片压缩网址，哪个杀千刀的举报了熊猫，打不开了，MD，剩下的能找到的全是要登录或者花钱的[酷拽][酷拽]",
           "link": "https://juejin.cn/pin/7288151713373192253",
           "publishedOn": "2023-10-10T08:47:22.000Z",
-          "wordCount": 518,
+          "wordCount": 534,
           "title": "jym，有无好用的png图片压缩网址，哪个杀千刀的举报了熊猫，打不开了，MD，剩下的能找到的全是要登录或者花钱的[酷拽][酷拽]",
           "imageUrl": null
         },
@@ -892,7 +902,7 @@
           "description": "每日打开\nhttps://juejin.cn/post/7280435532986990647",
           "link": "https://juejin.cn/pin/7287955337524314169",
           "publishedOn": "2023-10-10T07:12:51.000Z",
-          "wordCount": 519,
+          "wordCount": 547,
           "title": "每日打开 https://juejin.cn/post/7280435532986990647",
           "imageUrl": null
         },
@@ -902,7 +912,7 @@
           "description": "https://java.bejson.com/generator/  崩掉了。。[捂脸]",
           "link": "https://juejin.cn/pin/7287914116286545955",
           "publishedOn": "2023-10-10T01:19:32.000Z",
-          "wordCount": 519,
+          "wordCount": 535,
           "title": "https://java.bejson.com/generator/ 崩掉了。。[捂脸]",
           "imageUrl": null
         },
@@ -922,7 +932,7 @@
           "description": "生成 java 实体类属性的工具 有推荐没得[发呆]",
           "link": "https://juejin.cn/pin/7287757113401491490",
           "publishedOn": "2023-10-09T09:16:18.000Z",
-          "wordCount": 534,
+          "wordCount": 550,
           "title": "生成 java 实体类属性的工具 有推荐没得[发呆]",
           "imageUrl": null
         },
@@ -932,7 +942,7 @@
           "description": "打卡，vue无敌偷懒利器",
           "link": "https://juejin.cn/pin/7287620609373831224",
           "publishedOn": "2023-10-09T05:05:12.000Z",
-          "wordCount": 520,
+          "wordCount": 548,
           "title": "打卡，vue无敌偷懒利器",
           "imageUrl": null
         },
@@ -952,7 +962,7 @@
           "description": "#求助掘友 \n刚买了一个带鱼屏显示器，自带分屏功能，但是它的这个分屏功能是支持多个主机连接同一个显示器，我想要的效果是一个主机连接这个显示器后，展示多个显示器的界面（相当于连接多个显示器），这个该怎么搞？",
           "link": "https://juejin.cn/pin/7287018116970184743",
           "publishedOn": "2023-10-07T13:55:53.000Z",
-          "wordCount": 522,
+          "wordCount": 538,
           "title": "#求助掘友 刚买了一个带鱼屏显示器，自带分屏功能，但是它的这个分屏功能是支持多个主机连接同一个显示器，我想要的效果是一个主机连接这个显示器后，展示多个显...",
           "imageUrl": null
         },
@@ -972,7 +982,7 @@
           "description": "vscode扩展 FnMap - 函数地图\n人性化的侧边栏函数、变量、符号列表操作和展示",
           "link": "https://juejin.cn/pin/7283768998776569915",
           "publishedOn": "2023-09-29T01:04:57.000Z",
-          "wordCount": 541,
+          "wordCount": 557,
           "title": "vscode扩展 FnMap - 函数地图 人性化的侧边栏函数、变量、符号列表操作和展示",
           "imageUrl": null
         },
@@ -1002,18 +1012,8 @@
           "description": "macOS支持容器化了！",
           "link": "https://juejin.cn/pin/7282944006674579516",
           "publishedOn": "2023-09-26T09:13:57.000Z",
-          "wordCount": 519,
+          "wordCount": 535,
           "title": "macOS支持容器化了！",
-          "imageUrl": null
-        },
-        {
-          "id": "7282692458247995444",
-          "author": "qianmoq",
-          "description": "分享一下 DataCap 部分重构后的 UI，左侧重构前，右侧重构后",
-          "link": "https://juejin.cn/pin/7282692458247995444",
-          "publishedOn": "2023-09-25T12:18:53.000Z",
-          "wordCount": 542,
-          "title": "分享一下 DataCap 部分重构后的 UI，左侧重构前，右侧重构后",
           "imageUrl": null
         }
       ]
