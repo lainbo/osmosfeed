@@ -23,7 +23,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1198,
+          "wordCount": 1195,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "本文介绍三种改变音频播放音量的方法，其中还有一种方法直接改变音频AudioBuffer数据源的音量，说不定你哪天就会用到。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/",
           "publishedOn": "2023-10-09T14:50:57.000Z",
-          "wordCount": 1090,
+          "wordCount": 1091,
           "title": "JS改变AudioBuffer音量并下载为新audio音频",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/",
           "publishedOn": "2023-09-17T08:06:56.000Z",
-          "wordCount": 1494,
+          "wordCount": 1496,
           "title": "又get到了，JS复制图片到剪切板",
           "imageUrl": null
         }
@@ -97,7 +97,7 @@
           "description": "Giffgaff 卡现在已经支持免费转为 eSIM 了，直接在软件上（Account -> SIM -> Replace my SIM -> Switch to a new eSIM）操作即可，立省一个卡槽，看到有推友操作成功了。\n可惜我的手机不支持🙁，是因为国行么？",
           "link": "https://m.okjike.com/originalPosts/6527ced5af95215b83c14b5d",
           "publishedOn": "2023-10-12T10:47:49.000Z",
-          "wordCount": 495,
+          "wordCount": 493,
           "title": "发布了: Giffgaff 卡现在已经支持免费转为 eSIM 了，直接在软件上（Account -> SIM -> Replace my SIM -> Switch to a new eSIM）操作即可，立省一个卡槽，看到...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fj-MYkeKqYwqd3Xz6NBdTsdTiF2mv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
         },
@@ -610,6 +610,46 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
+          "id": "https://juejin.cn/post/7290169619511377976",
+          "author": "手撕红黑树",
+          "description": "theme: channing-cyan\n前言\n最近在测试 Tailwind CSS 和 Uno CSS 这两种原子化 CSS 工具是否能够有效减少打包后的文件体积时，先开始分析这些工具的优缺点，然后再直接上数据，最后做了一款经典的 TodoList 来进行测试，文章都写好了就差最后的数据了：\n\n但测试得出来的结果相差很小，几乎没有什么太大的参考价值。想想也是，一个 TodoList 刚能有几行样式？只有在样式足够庞大的前提下这个测试才有意义，毕竟样式多了重复的部分自然也会变多，然后积少成多最终才能达到量变引起质变的效果。当然量变引起质变这个说法可能稍微夸张了点，但样式越庞大得出来的结果才越有参考价值这个肯定是没错的，于是我把原本比较简陋简洁的 TodoList 来了个大升级：\n\n但就在给列表拖拽排序的时候我发现了一个令人难以接受的事实，说到 Vue3 拖拽库大家首先想到的是哪个？是 VueDraggable 对吧？那其次呢？假如 VueDraggable 停止维护了，并且随着 Vue 的升级也慢慢无法兼容了，大家首先想到的替代品是什么？替代品就是 Vue3 这么庞大的生态居然没有任何一款成熟的替代品！\n测试原子化 CSS 时的发现\n本来想着测试如下几种情况：\nVue 3 只用 Tailwind 写一个 TodoList\nVue 3 只用 UnoCSS 的属性模式写一个 TodoList\nVue 3 复杂样式用普通写法、简单样式用 Tailwind 写一个 TodoList\nVue 3 复杂样式用普通写法、简单样式用  UnoCSS 的属性模式写一个 TodoList\nVue 3 不用任何原子化 CSS 写一个 TodoList\nVue 3 不用任何原子化 CSS（但用内置的 scoped）写一个 TodoList\nVue 3 只用 CSS Module 写一个 TodoL…",
+          "link": "https://juejin.cn/post/7290169619511377976",
+          "publishedOn": "2023-10-16T03:31:49.000Z",
+          "wordCount": 2308,
+          "title": "别再卷组件库了，Vue 拖拽库都断代了！",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7289718324857880633",
+          "author": "荒山",
+          "description": "theme: github\n\n昨天，一个在掘金认识的小伙伴，进入了美团专门做 IDE 的基建组，心底真是替他高兴，这本来就是他应得的。\n刚认识的时候还是一个工作一年的小毛孩，整天逮着我问各种问题，模板引擎、Babel、Electron、Jest、Rollup…\n虽然没见过面，不知道他长什么样，在我脑海里，他就是两样放着光，对技术充满好奇心、自我驱动力很强小伙子。\n我就知道他能成，因为我多少也是这样子的，尽管我现在有些倦怠。\n后来，随着工作越来越忙，博客也停更了，我们便很少联系了。\n不过，后面我招人，尤其是校招生或者初级开发，我都是按照他这个范本来的。我也时常跟别人提起，我认识北京这样一个小伙子。\n也有可能我们这边庙太小了，这样的小伙伴屈指可数。\n平台和好奇心一样重要。\n大部分人智商条件不会有太多的差距，尤其是程序员这个群体，而好奇心可以让你比别人多迈出一步，经过长时间的积累就会拉开很大的差距。\n而平台可以让你保持专注，与优秀的人共事，获得更多专业的经验和知识、财富，建立自己的竞争壁垒。\n回到正题。\n我觉得是时候阶段性地总结和回望回顾我过去这三年，却发现大部分都是泡沫。跨端、业务、质量管理、低代码、领域驱动设计... 本文话题可能会比较杂\n2020 年七月，口罩第二年。我选择了跳槽，加入了一家创业公司\n跨端开发的泡沫\n2020 年，微信小程序已经成为国内重要的流量入口，事实也证明，我们过去几年交付的 C 端项目几乎上都是小程序。更严谨的说，应该是微信小程序，尽管很多巨头都推出了自己的小程序平台，基本上都是陪跑的。\nTaro 2.x\n进来后接手的第一个项目是原生小程序迁移到 Taro。\n那时候，我们的愿景是“一码多端”，期望一套程序能够跑在微信小程序、支付宝小程序等小程序平台、H5、甚至是原生 App。\n那时候 Taro 还是 2.x 版本，即通过语法静态编译成各端小程序的源码…",
+          "link": "https://juejin.cn/post/7289718324857880633",
+          "publishedOn": "2023-10-15T14:13:46.000Z",
+          "wordCount": 2612,
+          "title": "回顾我这三年，都是泡沫",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7289282433661173760",
+          "author": "谦宇",
+          "description": "theme: smartblue\nhighlight: a11y-dark\n前言\n通过本文你将理解rspack，并快速实现Vue2、Vue3项目配置，提升5倍多的项目构建性能，快速提高工作效率。\nWebpack 构建问题\n原有大型后台系统项目 DEV 构建需要 3分钟以上；\n自动化部署构建阶段需要10分钟以上；\n生产打包构建需要2分钟；\nRspack 优化后\n使用 Rspack 替代 Webpack 后：\nDEV构建 3min -> 20s\n自动化部署 6min -> 3min\n打包速度 2min -> 20s\n比 Webpack 更快 的 Rspack\nRspack 是基于 Rust 重写 Webpack，允许依赖 Webpack 的打包构建工具。\n核心优势在于：\n快速的 Dev 启动性能。是开发者每天需要运行很多次的命令，但大型项目每次都需要等待 10 分钟，这对于工程师来说非常痛苦，因此优化开发模式下启动的时间至关重要。npm run dev\n高效的 Build 性能。经常在 CI/CD 环境中运行，它决定了应用生产交付的效率。有些应用在生产环境中需要 20 到 30 分钟的构建时间，如果能缩短这段时间，对开发流程也将非常有帮助。npm run build\n灵活的配置。用户工程的配置非常灵活，不够统一。在之前的尝试中，将 Webpack 配置迁移到其他构建工具时，我们遇到了许多问题，因为其他构建工具的配置不如 Webpack 灵活。\n生产环境的优化能力。在启用 Rspack 之前，我们尝试了社区内的各种方案，但它们都面临着一定程度的生产环境负优化，例如拆分包不够精细等。因此，优化生产环境的产物是我们不可放弃的功能。\n————摘自Rspack官网\n起步\n安装依赖：\npnpm add @rspack/cli@0.3.4\n\n配置npm脚本：\n// package.json\n…",
+          "link": "https://juejin.cn/post/7289282433661173760",
+          "publishedOn": "2023-10-13T12:33:29.000Z",
+          "wordCount": 2238,
+          "title": "用 Rspack 替代 Webpack，提升五倍构建速度",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7289038122918150156",
+          "author": "掘金酱",
+          "description": "theme: channing-cyan\n技术无止境 创作不间断\n👏 创作者训练营第三期来咯，快来和我们一起探索技术写作进阶之旅吧～！\n经过第二期和全站创作者们一起写作，相信很多新手作者都收获了很多心得，文章质量也大有进步；为了培养新手作者们的创作习惯以及鼓励大家继续创作出更多优质的内容，我们将第三期训练营与更文活动合并，并为大家准备了丰厚的奖品池，快去围观 👀 👇\n✏️ 官方创作指南（持续更新）\n标题\n简介\n作者\n\n\n\n\n🔗 如何从 0 到 1 写好技术文章\n有想法想沉淀，动笔前却犯了难？本篇文章将通过五个步骤教你写一篇技术文章。\nPDI技术写作团队\n\n\n🔗 如何写作系列教程\n《如何写作通用教程》将写作拆解成五个部分，总结了在写作前、写作中和写作后三个阶段需要注意的写作要点和技巧，通读整个系列文档，可以帮助你初步搭建系统的基础写作知识。\nPDI技术写作团队\n\n\n\n👍 优秀案例赏析\n标题\n简介\n作者\n\n\n\n\n🚀3.40秒到231.84毫秒，我用Performance面板分析性能瓶颈全流程（多图流量预警⚠️）\n如何优化不是本文的关键，本文主要和大家一起学习如何使用performance面板来进行性能瓶颈的定位，学习面板的使用，找到性能瓶颈源码并解决问题。\n一只大加号\n\n\nMongoDB保姆级指南(上)：七万字从零到进阶，助你掌握又一款强大的NoSQL！\n关于MongoDB相关的文章，总共会分为上中下三篇，同时为了屏蔽语言之间的差异，前面两篇都会使用MongoDB原生的语法进行阐述，为此，无论你是Java，还是PHP、Node、Go、Python、C#……任何语言的开发者，都可以畅通无阻般阅读！\n竹子爱熊猫\n\n\n【特征选择】Filter - 过滤法中的数学原理\n本文主要对特征工程中特征选择部分的部分常见方法的数学原理进行讲解，将不涉及或很少涉及代码实现或应用，阅读…",
+          "link": "https://juejin.cn/post/7289038122918150156",
+          "publishedOn": "2023-10-13T06:36:58.000Z",
+          "wordCount": 1184,
+          "title": "创作者训练营第三期 · 探索技术写作进阶之旅",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7288963205980864575",
           "author": "神三元",
           "description": "GitHub 仓库地址：https://github.com/web-infra-dev/rspress\n官网地址：https://rspress.dev\n今天，我们很高兴地跟大家宣布 Rspress 1.0 正式发布了！\n框架定位\nRspress 是由 ByteDance Web Infra 团队孵化的一款静态站点生成器，使用 Rspack 进行构建，基于 React 框架进行渲染，支持 MDX 内容开发，主打高性能、简单易用和定制性强。\nRspress 中内置了一套默认的文档主题，你可以通过 Rspress 来快速搭建一个文档站点，同时也可以自定义主题，来满足你的个性化静态站需求，比如博客站、产品主页等。\n当然，你也可以接入官方提供的相应插件来方便地搭建组件库文档。\n项目背景\nRspress 最初的形态是给 Web Infra 团队内部提供文档工具，在过去在维护一些稍复杂的文档项目的过程中，我们围绕着以下的几个方向来建设 Rspress 本身的能力：\n构建性能。保证足够快的启动速度，带来良好的开发体验。\nMDX 支持。通过 MDX，我们可以方便地复用文档片段，以及在文档中渲染自定义的 React 组件。\n文档站基础能力。包括国际化、多版本支持、全文搜索、组件库文档等。\n可扩展性。内置插件系统，支持通过插件 API 来扩展框架功能。\n同时我们意识到这些也代表了 SSG 站点开发的一些核心需求。接下来将会根据这几个方面分别进行介绍。\n构建性能\n当项目越来越庞大，团队成员时常苦恼于冗长的项目启动时间，开发体验因此受到了一些负面影响，并且项目开发的时间越长，这种体验的劣化就越为明显。\n我们不禁开始思考，是否能跳出目前社区工具链的限制，突破现有 SSG 框架的性能瓶颈，实现绝大多数场景的项目秒启效果？\n接着，我们在这个方向上持续地探索，最终在 Rspress 上实现了这样的效果。…",
@@ -695,7 +735,7 @@
           "description": "我的博客原文\n@author: 郭瑞峰\n@createTime: 2023/10/09\n@updateTime: 2023/10/10\n恭喜大家顺利过完2023年所有假期，现在就准备好上班上到明年吧\n/(ㄒoㄒ)/~~\n对了，国庆回来后要过三个周一，兴奋不？？(反正我特难受)\nX﹏X\n好了，不多说了，开始总结一下我板砖两年的经验教训吧\ngit 相关的\ngit 相关的什么拉分支、提交记录、更新分支、提交分支之类的原理或者操作都可以掘金掘到，我说多了没意义。\n更何况很多操作可以通过可视化软件完成，比如说Fork、Sourcetree软件，或者 GitLens 插件。所以说这里介绍一些我开发时候遇到的其他情况所需要的其他指令。\nrebase 合并多个提交记录\n这里提到 合并多个提交记录 用于以下情况：\n1、项目commit有严格记录，必须使用特定编号\n2、当前开发任务被迫暂停，需要切换至其他分支开发\n3、当前功能/模块开发需要经过多个节点回溯\n这里以第二个情况为例，介绍一下这个怎么操作(我最讨厌突然救火的行为了(╬▔皿▔)╯)。\n第零步，被抓去救火\n第一步，记录commit这个功能/模块/bug修复，不推远程\n\n第二步，在代码暂停处注释一行 开发进度、开发思路或者~~你的不满~~，再提交一个新的记录commit，建议以临时提交：开头：\n\n第三步，回来继续开发，开发完成后提交记录commit，建议开头以临时提交：开发完成，注意这里必须把所有的文件提交了，如果有其他的代码不能提交在这里面，请以忽略文件或者其他文件提交\n\n第四步，记录合并\n先获取你第一次提交记录前一个的ID\n\n再在控制台输入git rebase -i <前一个记录的ID>，进入选择列表\n\n\n按i进入编辑，将临时提交前面的pick改为s，按esc退出编辑，再输入:x或者:wq保存\n\n这里有确认修改内容，确认无误后输入:x…",
           "link": "https://juejin.cn/post/7287998330017595407",
           "publishedOn": "2023-10-10T09:18:31.000Z",
-          "wordCount": 1505,
+          "wordCount": 1480,
           "title": "前端组内开发技巧（xiaoxiaoxuan个人总结版）",
           "imageUrl": null
         },
@@ -730,6 +770,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7287914955989450788",
+          "author": "程序员Sunday",
+          "description": "Hello，大家好，我是 Sunday。\n前端又上线了一个全新的框架，叫做 nue.js ，号称可以取代 Vue、React、Next、Vite，并且可以改变目前前端的开发方式：\n\n这个框架是在 2023-09-13 日进行的第一次提交。我在 21 号看到它的时候，已经有了 2300 的 star。\n\n最近又听到朋友提起了它，所以专门到 github 上看了一眼，发现已经有了 3700 的 star 了，这个速度可以说非常恐怖了。\n\n再加上它这么高调的宣传文案， 所以咱们今天就来看看这个 nue.js 它到底为前端带来了什么样的全新体验。\n什么是 nue.js？\nNueJS 是一个非常小的（压缩后 2.3kb）JavaScript 库，用于构建 Web 界面。 它是即将推出的 Nue 生态系统的核心。\n它就像 Vue.js、React.js 或 Svelte，但没有hooks, effects, props, portals, watchers, provides, injects, suspension 这些抽象概念。\n了解 HTML、CSS 和 JavaScript 的基础知识，就可以开始了。\n它带来了哪些改变？\nnue.js 期望通过更少的代码来完成相同的功能。官方给出了对应的代码量对比。\n在相同的功能下：\nreact 需要 2537 行代码：\n\nVue 需要 1913 行代码：\n\nSvelte 需要 1286 行代码：\n\n而 nue 只需要 208 行代码，比 react 少了 10 倍：\n\n那么下面，咱们就通过一个 demo 来看看 nue.js 究竟是怎么使用的。\n创建项目\n我们可以通过一种简单的方式，来快速获取 nue.js 的基础项目：\n# clone the repository\ngit clone https://github.com/nuejs/cre…",
+          "link": "https://juejin.cn/post/7287914955989450788",
+          "publishedOn": "2023-10-10T01:43:11.000Z",
+          "wordCount": 1311,
+          "title": "制造麻烦 or 解决问题？前端又出新框架啦！你还学得动吗？",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7287781316590583863",
           "author": "7c00",
           "description": "theme: cyanosis\nhighlight: solarized-light\n\ncanvaskit 版：\n\n因为 gif 最高只有 50hz，实际上 cavnaskit 版要远比这看起来的更丝滑，你可以通过以下链接自行体验。\n官方网页版：https://webstatic.mihoyo.com/ys/app/interactive-map/index.html?lang=zh-cn#/\ncanvaskit 版：http://106.55.55.247/ky-genshin-map/ （备用地址：http://ky-genshin-map.7c00.cc/ ）\n或者这个 demo：\njcode\n为什么官方网页版的性能如此糟糕以及为什么 canvaskit 版能有如此高的性能？\n第一个问题，官方网页版地图引擎用的是 leaflet，这是一个以 dom 为主要实现方式的地图引擎，而频繁地大量操作 dom 会导致严重的性能问题。你可以想象一下，要保证视觉上流畅，手势及动画的采样频率至少是 60hz，意味着单个 dom 节点每秒就要变换 60 次，一旦数量超过 100 个，对浏览器来说就是无法承受的压力。\n但是 leaflet 也有 canvas 实现的 layer，或者这么说，如果性能瓶颈在于 dom，那么用浏览器提供的 canvas api 就应该可以解决，为什么还需要 canvaskit 呢？\n在回答这个问题之前，先介绍一下 canvaskit，这其实就是 skia 的 js + wasm 版，c++ 实现的渲染引擎被编译成了 wasm，通过 js 提供类似 canvas api 的绘制接口。也许你已经知道 chrome 的底层就是 skia 做渲染引擎，canvas api 也可以视为 skia 绘制接口的封装，那么 skia 编译成 wasm 再提供 js api …",
@@ -737,56 +787,6 @@
           "publishedOn": "2023-10-09T10:57:47.000Z",
           "wordCount": 3422,
           "title": "让 web 再次伟大——用 canvaskit 实现超级丝滑的原神地图（已开源）",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7287786675517325371",
-          "author": "溪饱鱼",
-          "description": "需求背景\n就有个朋友说她想搞个前端Web3社区，我觉得这事大不可为，毕竟Web3跟前端确实没太大关系，然后她说先试试嘛，然后就帮忙写篇文章呗。\n1、区块链是什么？\n区块链的本质就是一个分布式、去中心化（搞笑的说就是一群人觉得在一个系统中，权利资源控制权应该分散在多个独立参与者中也就是民主透明基于共识算法，而非单一实体，但现在的web3看起来也并不是这样，比如持有大量币的决定权xxx之类的）全球记账本，而看起来对于这个记账本和传统web2世界的区别就是交易成本低、基于算法自动验证、透明、freedom。\n在Web3中有许多的概念和名词，为了大家去帮助理解这篇文章，我会以点-线-链的结构去帮助大家先构建大局观，那么我们需要大致看一下接下来要讲的概念节点（Node）、交易结构（Transaction Structure）、区块（Block）、链（Chain）之间的关系。\n节点之间协同运作以完成交易验证、区块生成等任务，维护整个网络的稳定运行。\n节点生成并验证交易，根据交易结构组织和存储交易数据。\n生成的交易被打包到新的区块中，并通过挖矿或权益证明等共识机制将区块添加到链上。\n链是由一系列按顺序连接的区块组成的数据结构。每个区块都包含前一个区块的哈希，通过这种方式将它们连接在一起，形成一个链式结构。这个链式结构能够快速地检测篡改和恶意行为，维护整个网络的安全。\nNode：\n那么首先是Node，节点是构成去中心化网络基础的关键组件。在Web3（去中心化网络）概念中，节点是独立的服务器或计算设备，共同组成并维护整个网络。这些节点通过互联网相互连接，执行并验证网络中的操作和交易。每个节点维护网络的一个副本，这使整个系统具有高度的安全性和抗攻击能力。\n总的来说，在Web3环境中，各种类型的节点共同维护去中心化网络的安全和稳定运行，这些节点之间互相协作，实现了数据的传输、验证和共享。节点的多…",
-          "link": "https://juejin.cn/post/7287786675517325371",
-          "publishedOn": "2023-10-09T09:13:46.000Z",
-          "wordCount": 1510,
-          "title": "web3基础",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7287524648808366091",
-          "author": "coderMonkey",
-          "description": "theme: channing-cyan\n原型很简单，10 分钟就能搞懂！！！\n函数\n先来看一下上古时期的工作中我们是如何定义函数的，直接使用 function 关键字来声明\nfunction fun() {}\n\n但是有的时候我们会发现函数也会用下面的这种格式来定义\nfunction Fun() {}\n\n除了第二个 函数名的首字母大写之外，本质上两者毫无区别 \n函数名首字母大写的意义\n当我们需要将一个函数作为 构造函数 使用时，通常会将函数名首字母大写，为了看起来规范一些，仅此而已 \n实例化\n对 构造函数 使用 new 关键字可以创建出不同的 实例（实例的本质就是一个对象），就好比说：你没有女朋友，但是你可以准备一个构造函数 new 很多女朋友出来，就是这个意思！\n开造\n构造函数（女朋友构造器）：\nfunction GirlFriend() {}\n\n创建第一个 gf1 （实例对象）\nconst gf1 = new GirlFriend()\n\ngf1.name = '小美'\ngf1.age = 18\n\nconsole.log(gf1)  // {name: '小美', age: 18}\n\n创建第二个 gf2 （实例对象）\nconst gf2 = new GirlFriend()\n\ngf2.name = '小丽'\ngf2.age = 19\n\nconsole.log(gf2) // {name: '小丽', age: 19}\n\n\n关联\nGirlFriend 是一个 构造函数\ngf1 和 gf2 是通过 new GirlFriend 创建出来的两个 实例对象\n那如何将 实例对象 和 构造函数 联系在一起呢？\n在 实例对象 上会默认存在一个属性叫做 __proto__，这里记作 隐式原型\n在 构造函数 上会默认存在一个属性叫做 prototype，这里记作 **显示原型 **\n通常我…",
-          "link": "https://juejin.cn/post/7287524648808366091",
-          "publishedOn": "2023-10-09T06:06:19.000Z",
-          "wordCount": 1867,
-          "title": "10分钟搞懂 js 原型",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7287425222365364259",
-          "author": "泽南Zn",
-          "description": "theme: nico\n背景🌟\n我们公司平时在开发的时候，总是会需要开发一些组件库，去提供给组内其他人通用，这样大大提高了复用性，当然大厂会有自己的组件库，不过学无止境嘛，大家可以根据本文学会如何发布npm包！现在一起来吧~\n01、步骤一注册\n打开npm官网，如果没有账号就注册账号，如果有就登陆。\n02、步骤二创建文件夹\n按需求创建一个文件夹，本文以test为例。\n03、步骤三初始化package.json文件\n进入test文件夹里面，使用cmd打开命令行窗口，在命令行窗口里面输入npm init初始化package.json文件。也可以在Visual Studio Coode的终端里面使用npm init命令初始化。\n04、步骤四初始化package.json文件的过程\n创建package.json的步骤\n01、package name: 设置包名，也就是下载时所使用的的命令，设置需谨慎。\n02、version: 设置版本号，如果不设置那就默认版本号。\n03、description: 包描述，就是对这个包的概括。\n04、entry point: 设置入口文件，如果不设置会默认为index.js文件。\n05、test command: 设置测试指令，默认值就是一句不能执行的话，可不设置。\n06、git repository: 设置或创建git管理库。\n07、keywords: 设置关键字，也可以不设置。\n08、author: 设置作者名称，可不设置。\n09、license: 备案号，可以不设置。\n10、回车即可生成package.json文件，然后还有一行需要输入yes命令就推出窗口。\n11、测试package.json文件是否创建成功的命令npm install -g。\n05、步骤五创建index.js文件\n在test文件夹根目录下创建index.js文件，接着就是编写index.js文件了，此处不作详细叙述。\n06、步骤六初始化package-lock.json文件\n在test根目录下使用npm link命令创建package-lock.json文件。\n07、步骤七登录npm账号\n使用npm login链接npm官网账号，此过程需要输入Username、Password和Email，需要提前准备好。连接成功会输出Logged in as [Username] on http://registry.npmjs.org/ 这句话，账号不同，输出会有不同。\n08、步骤八发布包到npm服务器\n执行npm publish命令发布包即可。\n09、步骤九下载安装\n下载安装使用包，此例的下载命令是npm install mj-calculation --save。\n10、步骤十更新包\n更新包的命npm version patch，更新成功会输出版本号，版本号会自动加一，此更新只针对本地而言。\n11、步骤十一发布包到npm服务器\n更新包至npm服务器的命令npm publish，成功会输出版本，npm服务器的版本也会更新。\n12、步骤十二删除指定版本\n删除指定版本npm unpublish mj-calculation@1.0.2，成功会输出删除的版本号，对应服务器也会删除。\n13、步骤十三删除包\n撤销已发布的包npm unpublish mj-calculation使用的命令。\n14、步骤十四强制删除包\n强制撤销已发布的包npm unpublish mj-calculation --force使用的命令。",
-          "link": "https://juejin.cn/post/7287425222365364259",
-          "publishedOn": "2023-10-08T12:51:51.000Z",
-          "wordCount": 991,
-          "title": "面试官：你之前的工作发布过npm包吗？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7287389831192625210",
-          "author": "buddywang",
-          "description": "前言\n说起网络爬虫，很多人第一时间想到python，但爬虫并非只能用python实现，虽然网上大部分爬虫文章都在说python爬虫，但对于前端程序员来说，我觉得js才是最屌的（对于简单爬取任务来说，复杂的我暂时没碰到～），下面说说我的经验（是的，仅限本人经验），希望能给各位前端程序员带来一点新视角。\n前置条件\n熟悉常用的js bom dom api\n会用chrome devtool\n什么是爬虫\n简单点，字面意思，爬虫就是用来爬取数据（文本、图片、视频等等）的代码脚本；\n在第一次听爬虫的时候，感觉这个词碉堡了，学会了一定很酷！这也是我以前入坑python的主要原因。但搜索下科普文章/百科等等，还是有点云里雾里的感觉。其实我觉得了解一个概念从实际的需求出发更加容易理解，毕竟概念是人造的，没有概念前呢？下面根据真实事件改编：\n需求一：获取豆瓣评分电影Top250的详细信息\n需要获取以下表头信息，并存到本地/数据库/..\n\n先不说怎么做到，但只要你用代码实现了这个需求，那你就是写了一个爬虫。\njs爬虫思路实践\n从哪里开始呢？首先，你要爬数据，就得先有目标，一般目标是一个网页，网页上有你想要的数据，一般网页数据多的时候都会分页请求数据，那必然就有规律！\n1. 分析页面请求，找到数据来源，分析接口规律\n简单分析下第一页/第二页接口请求，发现数据是以下接口返回的：\n\n\n第一页接口路径：https://movie.douban.com/top250?start=1\n第二页接口路径：https://movie.douban.com/top250?start=25&filter=\n依此类推，第几页只是start参数不一样\n2. 用代码模拟获取接口数据\n代码模拟获取接口数据？那不就是调接口吗，这我熟，于是axios/fetch一顿撸，如下：\nfetch(\"https://movie.douban…",
-          "link": "https://juejin.cn/post/7287389831192625210",
-          "publishedOn": "2023-10-08T08:16:32.000Z",
-          "wordCount": 1651,
-          "title": "写爬虫？前端er何必用python",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7287144390601244672",
-          "author": "VioletJack",
-          "description": "背景\n最近家里突然计划买房，打破了我攒钱到财务自由的规划。所以开始重新计算自己背了房贷之后的生活到底如何。\n一开始通过笔记软件来进行未来收入支出推算。后来发现太过麻烦，任何一项收入支出的改动，都会影响到后续结余累计值的计算。\n所以干脆发挥传统艺能，写网页！\n逻辑\n假设当前年收入稳定不变，在 50 岁之后收入降低。\n通过 上一年结余 + 收入-房贷-生活支出-特殊情况支出 的公式得到累加计算每年的结余资金。\n通过修改特使事件来模拟一些如装修、买车的需求。\n最后预测下 30 年后的生活结余，从而可知未来的生活质量。\n实现\n首先，创建一个 HTML 文件 feature.html，然后咔咔一顿写。\n<!DOCTYPE html>\n<html lang=\"zh-CN\" dir=\"ltr\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n    <link rel=\"icon\" href=\"https://cn.vuejs.org/logo.svg\" />\n    <title>生涯模拟</title>\n    <meta name=\"description\" content=\"人生经费模拟器\" />\n\n    <script src=\"https://unpkg.com/vue@3/dist/vue.global.js\"></script>\n\n    <style>\n      body {\n        margin: 0;\n        padding: 0;\n      }\n\n      .content {\n        background: #181818;\n        height:…",
-          "link": "https://juejin.cn/post/7287144390601244672",
-          "publishedOn": "2023-10-08T03:56:37.000Z",
-          "wordCount": 2116,
-          "title": "用代码预测未来买房后的生活",
           "imageUrl": null
         },
         {
