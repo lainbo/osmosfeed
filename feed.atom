@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-10-16T18:53:00.964Z</id>
+    <id>urn:2023-10-16T21:52:46.955Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-10-16T18:53:00.964Z</updated>
+    <updated>2023-10-16T21:52:46.955Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -39,17 +39,6 @@
         <summary type="html"><![CDATA[不要沉溺于信息消费，要追求知识生产。]]></summary>
         <author>
             <name>李继刚的即刻动态</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[发布了: 养育的起点，是了解和理解。 孩子的每一个行为，背后都隐藏着对这个世界运行逻辑的理解，他们的理解可能并不准确，作为大人，需要识别他们的逻辑，并予...]]></title>
-        <id>https://m.okjike.com/originalPosts/652d49a2d5f9a5727f17f366</id>
-        <link href="https://m.okjike.com/originalPosts/652d49a2d5f9a5727f17f366"/>
-        <updated>2023-10-16T14:33:06.000Z</updated>
-        <summary type="html"><![CDATA[养育的起点，是了解和理解。
-孩子的每一个行为，背后都隐藏着对这个世界运行逻辑的理解，他们的理解可能并不准确，作为大人，需要识别他们的逻辑，并予以提醒和纠正，帮助他们建立基本的人生信条。]]></summary>
-        <author>
-            <name>Barret李靖的即刻动态</name>
         </author>
     </entry>
     <entry>
@@ -2302,6 +2291,21 @@ jcode
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[发布了: 利用 AutoGPT/LangChain/SuperAGI 等，可以让 LLM 帮助解决复杂的问题，但也有一个致命的通病：由于接受的指令相对简单，随着任务的自主规划和执行，过...]]></title>
+        <id>https://m.okjike.com/originalPosts/65237106c70326f2eb524c37</id>
+        <link href="https://m.okjike.com/originalPosts/65237106c70326f2eb524c37"/>
+        <updated>2023-10-09T03:18:30.000Z</updated>
+        <summary type="html"><![CDATA[利用 AutoGPT/LangChain/SuperAGI 等，可以让 LLM 帮助解决复杂的问题，但也有一个致命的通病：由于接受的指令相对简单，随着任务的自主规划和执行，过程中一旦出现微小偏差，最后的结果就会滚雪球似的，离预期越来越远。
+一个解法是，在指令下发之初，对要执行的任务做十分详尽的描述，告诉 LLM 第一步到第十步分别要做啥，因此我们经常会看到各种复杂且严苛的 Prompt，还会利用 One-Shot/Few-Shot 帮助大模型做输出结果的矫正，虽然可以一定程度解决问题，但这个做法也限制了 LLM 的创造力，同时，由于任务的复杂性，仍然存在偏离任务目标的可能。
+看到这个论文提供了一个思路，https://arxiv.org/pdf/2309.07870.pdf，“Agents 框架探索了通过结合基于推理图的符号主义 (symbolism) 推理和基于 LLM 的连接主义 (connectionism) 推理，来结合高层次的世界模型知识和低层次的简单推理泛化能力，从而实现更智能更可控的通用人工智能 (AGI) 方案”。详情可以参阅这篇文章：https://www.jiqizhixin.com/articles/2023-09-21-2
+简单来说，就是在进行下一步任务的时候，回顾目标和初始计划，结合环境信息，利用大模型的推理能力来动态决定状态的转移和下一个行动的 Agent 是哪个。
+这个解决思路有点像动态规划算法，在问题求解过程中考虑不同状态和决策，只不过 Agents 框架更侧重于处理复杂的智能决策和动态环境，而不仅仅是静态优化问题，也算得上一次创新了。
+这篇论文对应的工程实践也在 github 上开源了：https://github.com/aiwaves-cn/agents，如果你要利用 LLM 解决复杂且庞大的问题，这个思路值得一试。]]></summary>
+        <author>
+            <name>Barret李靖的即刻动态</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[租房和生活选择权]]></title>
         <id>https://open.zhubai.wiki/a/l/t/z/pq/xiaoshu/2322984747813146624</id>
         <link href="https://open.zhubai.wiki/a/l/t/z/pq/xiaoshu/2322984747813146624"/>
@@ -2817,16 +2821,6 @@ JavaScript的XMLHttpRequest或Fetch API请求其他源的资源。
 通过<img>、<link>、<scri…]]></summary>
         <author>
             <name>Sailing</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[又get到了，JS复制图片到剪切板]]></title>
-        <id>https://www.zhangxinxu.com/wordpress/?p=11015</id>
-        <link href="https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/"/>
-        <updated>2023-09-17T08:06:56.000Z</updated>
-        <summary type="html"><![CDATA[起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。]]></summary>
-        <author>
-            <name>张 鑫旭</name>
         </author>
     </entry>
 </feed>

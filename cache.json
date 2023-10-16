@@ -23,7 +23,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1197,
+          "wordCount": 1198,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -35,16 +35,6 @@
           "publishedOn": "2023-10-09T14:50:57.000Z",
           "wordCount": 1092,
           "title": "JS改变AudioBuffer音量并下载为新audio音频",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.zhangxinxu.com/wordpress/?p=11015",
-          "author": "张 鑫旭",
-          "description": "起初以为只是个小需求，实现JS复制图片到剪切板，直到深入了解，才发现，原来涉及到那么多知识，真是不虚此学。",
-          "link": "https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/",
-          "publishedOn": "2023-09-17T08:06:56.000Z",
-          "wordCount": 1497,
-          "title": "又get到了，JS复制图片到剪切板",
           "imageUrl": null
         }
       ]
@@ -81,16 +71,6 @@
       "feedUrl": "https://rsshub.app/jike/user/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
-        {
-          "id": "https://m.okjike.com/originalPosts/652d49a2d5f9a5727f17f366",
-          "author": null,
-          "description": "养育的起点，是了解和理解。\n孩子的每一个行为，背后都隐藏着对这个世界运行逻辑的理解，他们的理解可能并不准确，作为大人，需要识别他们的逻辑，并予以提醒和纠正，帮助他们建立基本的人生信条。",
-          "link": "https://m.okjike.com/originalPosts/652d49a2d5f9a5727f17f366",
-          "publishedOn": "2023-10-16T14:33:06.000Z",
-          "wordCount": 463,
-          "title": "发布了: 养育的起点，是了解和理解。 孩子的每一个行为，背后都隐藏着对这个世界运行逻辑的理解，他们的理解可能并不准确，作为大人，需要识别他们的逻辑，并予...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FjbpkmQQk5B9LEYa03VCFqcK1LYgv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
         {
           "id": "https://m.okjike.com/originalPosts/6527d811bb3e3660e85ce9b3",
           "author": null,
@@ -180,6 +160,16 @@
           "wordCount": 438,
           "title": "发布了: 工作中跟“不靠谱”同事的交流，愤怒是解决不了问题的，它只会拉大人与人之间的距离，如果目的是为了宣泄，最好的方式是怒跑五公里。 去挖掘对方背后的...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+        },
+        {
+          "id": "https://m.okjike.com/originalPosts/65237106c70326f2eb524c37",
+          "author": null,
+          "description": "利用 AutoGPT/LangChain/SuperAGI 等，可以让 LLM 帮助解决复杂的问题，但也有一个致命的通病：由于接受的指令相对简单，随着任务的自主规划和执行，过程中一旦出现微小偏差，最后的结果就会滚雪球似的，离预期越来越远。\n一个解法是，在指令下发之初，对要执行的任务做十分详尽的描述，告诉 LLM 第一步到第十步分别要做啥，因此我们经常会看到各种复杂且严苛的 Prompt，还会利用 One-Shot/Few-Shot 帮助大模型做输出结果的矫正，虽然可以一定程度解决问题，但这个做法也限制了 LLM 的创造力，同时，由于任务的复杂性，仍然存在偏离任务目标的可能。\n看到这个论文提供了一个思路，https://arxiv.org/pdf/2309.07870.pdf，“Agents 框架探索了通过结合基于推理图的符号主义 (symbolism) 推理和基于 LLM 的连接主义 (connectionism) 推理，来结合高层次的世界模型知识和低层次的简单推理泛化能力，从而实现更智能更可控的通用人工智能 (AGI) 方案”。详情可以参阅这篇文章：https://www.jiqizhixin.com/articles/2023-09-21-2\n简单来说，就是在进行下一步任务的时候，回顾目标和初始计划，结合环境信息，利用大模型的推理能力来动态决定状态的转移和下一个行动的 Agent 是哪个。\n这个解决思路有点像动态规划算法，在问题求解过程中考虑不同状态和决策，只不过 Agents 框架更侧重于处理复杂的智能决策和动态环境，而不仅仅是静态优化问题，也算得上一次创新了。\n这篇论文对应的工程实践也在 github 上开源了：https://github.com/aiwaves-cn/agents，如果你要利用 LLM 解决复杂且庞大的问题，这个思路值得一试。",
+          "link": "https://m.okjike.com/originalPosts/65237106c70326f2eb524c37",
+          "publishedOn": "2023-10-09T03:18:30.000Z",
+          "wordCount": 494,
+          "title": "发布了: 利用 AutoGPT/LangChain/SuperAGI 等，可以让 LLM 帮助解决复杂的问题，但也有一个致命的通病：由于接受的指令相对简单，随着任务的自主规划和执行，过...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FjPSEzpAM_K1JUrl4mISJzqX6GFXv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         }
       ]
     },
@@ -204,7 +194,7 @@
           "description": "学一门新东西，最好的入门方法：读官方文档(手册)。\n只要把心慢下来，慢慢地读，一节一节地读，半天不到时间，读完官方手册，你就能不花一分钱的学到你最想学的那些知识。\n这道理如此简单，但行者甚夷，怪哉。",
           "link": "https://m.okjike.com/originalPosts/652d5aca38c9be71869ebc10",
           "publishedOn": "2023-10-16T15:46:18.000Z",
-          "wordCount": 486,
+          "wordCount": 480,
           "title": "发布了: 学一门新东西，最好的入门方法：读官方文档(手册)。 只要把心慢下来，慢慢地读，一节一节地读，半天不到时间，读完官方手册，你就能不花一分钱的学到你...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
