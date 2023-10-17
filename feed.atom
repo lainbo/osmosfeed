@@ -1,10 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-10-17T03:53:02.319Z</id>
+    <id>urn:2023-10-17T06:53:14.030Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-10-17T03:53:02.319Z</updated>
+    <updated>2023-10-17T06:53:14.030Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[发布了: 焦虑和痛苦的根源，从空间维度看，是与比自己更强的人对比，慕强是一个无限陷阱，永远都有比自己更强的人；从时间维度看，是与未来的不确定性比，今天的...]]></title>
+        <id>https://m.okjike.com/originalPosts/652e1cbfaa7d4f2b30a24f52</id>
+        <link href="https://m.okjike.com/originalPosts/652e1cbfaa7d4f2b30a24f52"/>
+        <updated>2023-10-17T05:33:51.000Z</updated>
+        <summary type="html"><![CDATA[焦虑和痛苦的根源，从空间维度看，是与比自己更强的人对比，慕强是一个无限陷阱，永远都有比自己更强的人；从时间维度看，是与未来的不确定性比，今天的优势到了明天就不一定了，例如前段时间一个搞 C 的程序员悲观叹息自己被时代踢出了局。
+看似消极却有效的观点：接受自己的有限性，接受命运的安排。]]></summary>
+        <author>
+            <name>Barret李靖的即刻动态</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[发布了: 在跟 ChatGPT 交互的时候，为什么让它打印思考过程，或者给它几个样本示例，结果会变得更好呢？https://arxiv.org/abs/2305.15408，这篇论文从理论层面...]]></title>
+        <id>https://m.okjike.com/originalPosts/652e0acbd5f9a5727f2664c9</id>
+        <link href="https://m.okjike.com/originalPosts/652e0acbd5f9a5727f2664c9"/>
+        <updated>2023-10-17T04:17:15.000Z</updated>
+        <summary type="html"><![CDATA[在跟 ChatGPT 交互的时候，为什么让它打印思考过程，或者给它几个样本示例，结果会变得更好呢？https://arxiv.org/abs/2305.15408，这篇论文从理论层面论证了 CoT 为大模型提效的原理。
+CoT（Chain of Thought prompting）有两种比较常见的实践方式，一个是在提示词中增加 Let’s think step by step，让大模型打印思考过程；另外一种是给出一些样本示例，让大模型依葫芦画瓢给出结果。
+如果让大模型直接输出结果，那么随着输入内容长度的增加，准确推理所需要的神经元数量会以超越多项式（非线性增长）的速度增长，原因很简单，对于不存在并行算法解的推理性问题，例如 (16 - 3 - 4) * 2，Transformer 模型不擅长应对，论文使用了理论计算机科学中的电路复杂性理论进行了论证。
+简单来说，输入文本越长，正确推理所需要消耗的资源就越多。例如让大模型回答 (16 - 3 - 4) * 2 它会给出正确的结果，但是让它回答“Janet 的鸭子每天下 16 个蛋，她每天早餐吃 3 个，给朋友每天 4 个。其余的卖钱，每个鸡蛋 2 美元。她每天赚多少钱?”，出错的概率就比较大了，因为信息量变大了，它给出的结果可能会是：“这意味着她每天会用掉 3 + 4 = 7 个鸡蛋。剩余的鸡蛋卖出去每个 2 美元，因此她每天总共卖出 7 * 2 = 14 美元的鸡蛋。答案是 14 美元。”，大模型在接受大量的信息利用贪婪解码策略推理时，受限于计算能力，它会丢失了部分信息。
+而如果让大模型打印思考过程，就不一样了，在输出的时候，内容会不断被反馈到输入层，这可以增加模型的有效深度（正比于 CoT 的输出长度），也就是说，每次输入都将比上一次输入更具体和详细。因此，在不增加计算资源的情况下，大模型的有效深度将会随着输出长度的增加而增加，这样大模型就能更好地理解问题，并逐步推理出正确的答案了。]]></summary>
+        <author>
+            <name>Barret李靖的即刻动态</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[打卡打卡，今天周二]]></title>
+        <id>7290733884136030242</id>
+        <link href="https://juejin.cn/pin/7290733884136030242"/>
+        <updated>2023-10-17T03:54:52.000Z</updated>
+        <summary type="html"><![CDATA[打卡打卡，今天周二]]></summary>
+        <author>
+            <name>Simon_He</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[转发了: 如果官方英文文档读不进去，这里有人用心整理好的翻译对比稿，read the fuck manual。]]></title>
         <id>https://m.okjike.com/reposts/652df313d5f9a5727f23cfe9</id>
@@ -83,6 +118,48 @@
 https://www.wolai.com/signup?invitation=C2ZS3U2Z]]></summary>
         <author>
             <name>Passerby_Z</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[我最近3个月的前端专业学习记录]]></title>
+        <id>https://juejin.cn/post/7290226270641618979</id>
+        <link href="https://juejin.cn/post/7290226270641618979"/>
+        <updated>2023-10-16T07:57:46.000Z</updated>
+        <summary type="html"><![CDATA[以下内容是2023年7月17~10月16日自己每周学习的记录
+第29周 7.17-7.23
+这周在项目中使用了一种新的布局。
+就是下图所示的布局效果。
+
+在过去，这种图片固定比例的，宽度自适应的布局都至少只要2层以上的标签，这一次，使用了容器元素和全新的cqw单位，可以一层标签即实现最终的效果。
+相关实现已经整理成文，有兴趣可以访问这里：“CSS高宽不等图片固定比例布局的三重进化”。
+第30周 7.24-7.30
+本周研究了了一个新的CSS属性text-wrap，目前仅Chrome浏览器支持，兼容性如下图所示：
+
+其中名为balance的属性值很有趣，可以让div元素中的内联元素尽可能宽度一致排列，布局差异如下所示：
+
+这个属性其实很有用，例如类似朋友圈点赞的那种布局效果，目前的实现都是优先第一行显示的。
+
+有了text-wrap:balance属性后，就可以是下图所示的布局效果，体验会更好。
+
+更多内容可以访问这里了解。
+第31周 7.31-8.6
+在做项目的时候，偶然看到有同事的CSS代码中对samp标签样式进行了定义，然后研究了下这个已经没用过的HTML标签，发现还是一个系列，可以用来帮助代码文本的语义化呈现，具体如下：
+kbd: 键盘输入的文字内容
+samp: 范例输出
+code: 计算机代码输出
+var: 变量与自变量实例
+平时只用过 code 标签 ，结果没想到还有其他类似HTML属性，现代浏览器全部都支持。
+更详细的内容我已经这里成文章了，有兴趣的可以访问这里了解。
+第32周 8.7-8.13
+本周学习了两个HTML全局属性，nonce和popover属性。
+nonce与安全相关，配合meta元素的CSP设置，可以决定哪个内联JS执行，哪个内联<script›元素不执行。
+假设页面有如下所示的代码：
+<meta http-equiv="Content-Security-Policy" content="script-src 'nonce-NDhkODkxMzYtNGUxZS00N2NjLTk1YTItNWMyOTM4YzdhZGJj'">
+<script nonce="NDhkODkxMzYtNGUxZS00N2NjLTk1YTItNWMyOTM4YzdhZGJj">// …</script>
+
+则此时，只有nonce值有设置，且值匹配的]]></summary>
+        <author>
+            <name>张鑫旭</name>
         </author>
     </entry>
     <entry>
@@ -1868,43 +1945,6 @@ async getMedia() {
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[制造麻烦 or 解决问题？前端又出新框架啦！你还学得动吗？]]></title>
-        <id>https://juejin.cn/post/7287914955989450788</id>
-        <link href="https://juejin.cn/post/7287914955989450788"/>
-        <updated>2023-10-10T01:43:11.000Z</updated>
-        <summary type="html"><![CDATA[Hello，大家好，我是 Sunday。
-前端又上线了一个全新的框架，叫做 nue.js ，号称可以取代 Vue、React、Next、Vite，并且可以改变目前前端的开发方式：
-
-这个框架是在 2023-09-13 日进行的第一次提交。我在 21 号看到它的时候，已经有了 2300 的 star。
-
-最近又听到朋友提起了它，所以专门到 github 上看了一眼，发现已经有了 3700 的 star 了，这个速度可以说非常恐怖了。
-
-再加上它这么高调的宣传文案， 所以咱们今天就来看看这个 nue.js 它到底为前端带来了什么样的全新体验。
-什么是 nue.js？
-NueJS 是一个非常小的（压缩后 2.3kb）JavaScript 库，用于构建 Web 界面。 它是即将推出的 Nue 生态系统的核心。
-它就像 Vue.js、React.js 或 Svelte，但没有hooks, effects, props, portals, watchers, provides, injects, suspension 这些抽象概念。
-了解 HTML、CSS 和 JavaScript 的基础知识，就可以开始了。
-它带来了哪些改变？
-nue.js 期望通过更少的代码来完成相同的功能。官方给出了对应的代码量对比。
-在相同的功能下：
-react 需要 2537 行代码：
-
-Vue 需要 1913 行代码：
-
-Svelte 需要 1286 行代码：
-
-而 nue 只需要 208 行代码，比 react 少了 10 倍：
-
-那么下面，咱们就通过一个 demo 来看看 nue.js 究竟是怎么使用的。
-创建项目
-我们可以通过一种简单的方式，来快速获取 nue.js 的基础项目：
-# clone the repository
-git clone https://github.com/nuejs/cre…]]></summary>
-        <author>
-            <name>程序员Sunday</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[https://java.bejson.com/generator/ 崩掉了。。[捂脸]]]></title>
         <id>7287914116286545955</id>
         <link href="https://juejin.cn/pin/7287914116286545955"/>
@@ -2223,16 +2263,6 @@ git clone https://github.com/nuejs/cre…]]></summary>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[发布了: 人都是喜欢听好话的，但越喜欢得到赞扬，就会越讨厌被批评，而这两个东西往往都是同时到来。]]></title>
-        <id>https://m.okjike.com/originalPosts/65238e3499f2123c7438a61a</id>
-        <link href="https://m.okjike.com/originalPosts/65238e3499f2123c7438a61a"/>
-        <updated>2023-10-09T05:23:00.000Z</updated>
-        <summary type="html"><![CDATA[人都是喜欢听好话的，但越喜欢得到赞扬，就会越讨厌被批评，而这两个东西往往都是同时到来。]]></summary>
-        <author>
-            <name>Barret李靖的即刻动态</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[#212]]></title>
         <id>https://open.zhubai.wiki/a/l/t/z/fp/dex/2323033390305865728</id>
         <link href="https://open.zhubai.wiki/a/l/t/z/fp/dex/2323033390305865728"/>
@@ -2278,18 +2308,6 @@ git clone https://github.com/nuejs/cre…]]></summary>
         <summary type="html"><![CDATA[打卡，vue无敌偷懒利器]]></summary>
         <author>
             <name>Simon_He</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[发布了: 工作中跟“不靠谱”同事的交流，愤怒是解决不了问题的，它只会拉大人与人之间的距离，如果目的是为了宣泄，最好的方式是怒跑五公里。 去挖掘对方背后的...]]></title>
-        <id>https://m.okjike.com/originalPosts/65238651330d12fc06643f65</id>
-        <link href="https://m.okjike.com/originalPosts/65238651330d12fc06643f65"/>
-        <updated>2023-10-09T04:49:21.000Z</updated>
-        <summary type="html"><![CDATA[工作中跟“不靠谱”同事的交流，愤怒是解决不了问题的，它只会拉大人与人之间的距离，如果目的是为了宣泄，最好的方式是怒跑五公里。
-去挖掘对方背后的困难，然后想办法帮他解决掉；心平气和地电话或私聊，而不是拉到大群里责骂和鞭尸。
-想起之前一位同事说过的一句话，“大家都是打工的，没必要去针对谁”。]]></summary>
-        <author>
-            <name>Barret李靖的即刻动态</name>
         </author>
     </entry>
     <entry>
@@ -2584,16 +2602,6 @@ Presets 顺序是颠倒的（从后往前）
   倪爽的阅读分享 – 2023年9月27日 查看全文 »]]></summary>
         <author>
             <name>Frank</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[7283775313786437632#我的十一假期计划清单#] 要的私我[灵光一现][灵光一现][灵光一现]]]></title>
-        <id>7283699382418849850</id>
-        <link href="https://juejin.cn/pin/7283699382418849850"/>
-        <updated>2023-09-28T12:57:24.000Z</updated>
-        <summary type="html"><![CDATA[[7283775313786437632#我的十一假期计划清单#] 要的私我[灵光一现][灵光一现][灵光一现]]]></summary>
-        <author>
-            <name>海盐先生</name>
         </author>
     </entry>
     <entry>
