@@ -51,11 +51,70 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-17 datetime="2023-10-17T03:54:52.000Z">2023-10-17</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-17 datetime="2023-10-17T03:54:52.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-17 datetime="2023-10-17T05:33:51.000Z">2023-10-17</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-17 datetime="2023-10-17T05:33:51.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Barret李靖的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/652e1cbfaa7d4f2b30a24f52"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 焦虑和痛苦的根源，从空间维度看，是与比自己更强的人对比，慕强是一个无限陷阱，永远都有比自己更强的人；从时间维度看，是与未来的不确定性比，今天的...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/652e1cbfaa7d4f2b30a24f52">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>焦虑和痛苦的根源，从空间维度看，是与比自己更强的人对比，慕强是一个无限陷阱，永远都有比自己更强的人；从时间维度看，是与未来的不确定性比，今天的优势到了明天就不一定了，例如前段时间一个搞 C 的程序员悲观叹息自己被时代踢出了局。
+看似消极却有效的观点：接受自己的有限性，接受命运的安排。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/652e0acbd5f9a5727f2664c9"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 在跟 ChatGPT 交互的时候，为什么让它打印思考过程，或者给它几个样本示例，结果会变得更好呢？https://arxiv.org/abs/2305.15408，这篇论文从理论层面...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/652e0acbd5f9a5727f2664c9">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fst6OEd18pFY_1YkBCnuI5pMG5-Fv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>在跟 ChatGPT 交互的时候，为什么让它打印思考过程，或者给它几个样本示例，结果会变得更好呢？https://arxiv.org/abs/2305.15408，这篇论文从理论层面论证了 CoT 为大模型提效的原理。
+CoT（Chain of Thought prompting）有两种比较常见的实践方式，一个是在提示词中增加 Let’s think step by step，让大模型打印思考过程；另外一种是给出一些样本示例，让大模型依葫芦画瓢给出结果。
+如果让大模型直接输出结果，那么随着输入内容长度的增加，准确推理所需要的神经元数量会以超越多项式（非线性增长）的速度增长，原因很简单，对于不存在并行算法解的推理性问题，例如 (16 - 3 - 4) * 2，Transformer 模型不擅长应对，论文使用了理论计算机科学中的电路复杂性理论进行了论证。
+简单来说，输入文本越长，正确推理所需要消耗的资源就越多。例如让大模型回答 (16 - 3 - 4) * 2 它会给出正确的结果，但是让它回答“Janet 的鸭子每天下 16 个蛋，她每天早餐吃 3 个，给朋友每天 4 个。其余的卖钱，每个鸡蛋 2 美元。她每天赚多少钱?”，出错的概率就比较大了，因为信息量变大了，它给出的结果可能会是：“这意味着她每天会用掉 3 + 4 &#x3D; 7 个鸡蛋。剩余的鸡蛋卖出去每个 2 美元，因此她每天总共卖出 7 * 2 &#x3D; 14 美元的鸡蛋。答案是 14 美元。”，大模型在接受大量的信息利用贪婪解码策略推理时，受限于计算能力，它会丢失了部分信息。
+而如果让大模型打印思考过程，就不一样了，在输出的时候，内容会不断被反馈到输入层，这可以增加模型的有效深度（正比于 CoT 的输出长度），也就是说，每次输入都将比上一次输入更具体和详细。因此，在不增加计算资源的情况下，大模型的有效深度将会随着输出长度的增加而增加，这样大模型就能更好地理解问题，并逐步推理出正确的答案了。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -311,6 +370,41 @@ https://www.wolai.com/signup?invitation&#x3D;C2ZS3U2Z</span>
 至少，你要对得起自己的时间吧。
 －－刘润。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Barret李靖的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/652d49a2d5f9a5727f17f366"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 养育的起点，是了解和理解。 孩子的每一个行为，背后都隐藏着对这个世界运行逻辑的理解，他们的理解可能并不准确，作为大人，需要识别他们的逻辑，并予...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/652d49a2d5f9a5727f17f366">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FjbpkmQQk5B9LEYa03VCFqcK1LYgv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>养育的起点，是了解和理解。
+孩子的每一个行为，背后都隐藏着对这个世界运行逻辑的理解，他们的理解可能并不准确，作为大人，需要识别他们的逻辑，并予以提醒和纠正，帮助他们建立基本的人生信条。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2397,6 +2491,74 @@ Life is short，将如此多的时间浪费在构建发布上是不值得的，�
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7288561905405313080"
+                        open
+                      >
+                        <summary class="article-expander__title">24秋招美团一面🦘「八股文+代码输出+算法题」</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7288561905405313080">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: v-green
+highlight: a11y-dark
+八股文
+讲讲异步组件和路由懒加载？异步加载的过程是怎么样的？为什么在router中使用回调的方式引入组件就可以实现异步加载？假如一个页面有特别多的异步组件会带来什么问题？
+其实异步组件和异步路由是一样的东西，异步路由引入的也还是对应的组件。
+异步加载的过程涉及到JavaScript运行时、事件循环机制以及打包工具的配合工作。过程：
+代码分割：当我们在代码中使用import()函数异步加载组件时，打包工具（如Webpack或Rollup）会将这些组件作为单独的JavaScript文件（通常被称为&quot;chunks&quot;）进行打包。
+初始加载：在页面初始加载时，只有主bundle会被下载。主bundle中包含了应用的主要代码，但不包括异步组件的代码。
+异步请求：当用户触发了需要异步组件的操作（如访问一个使用了路由懒加载的路由），JavaScript运行时会发送一个网络请求，请求异步组件对应的JavaScript文件。
+下载和执行：浏览器下载异步组件对应的JavaScript文件，并执行其中的代码。这个过程可能会涉及到一些延迟，因为需要等待网络请求完成，并且JavaScript是单线程的，不能同时执行多段代码。
+渲染组件：异步组件的代码被执行后，组件会被注册到Vue.js应用中，并触发视图的更新。Vue.js会创建一个新的组件实例，并将其渲染到页面上。
+在这个过程中，打包工具起到了关键作用。它负责将代码分割成多个小文件，并在构建时生成一份映射表，这样JavaScript运行时就知道每个异步组件对应哪个文件。
+同时，JavaScript的事件循环机制也在这个过程中发挥了作用。由于JavaScript是单线程的，它需要使用事件循环来处理异步操作。当我们使用import()函数加载一个组件时，这个操作会被放入微任务队列中。…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7288504491506024487"
+                        open
+                      >
+                        <summary class="article-expander__title">chrome 也支持模拟请求喽</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7288504491506024487">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>早在2023/4/12，chrome已经支持使用本地覆盖web内容和HTTP相应标头，通过本地覆盖可以模拟远程资源。话不说直接开始
+如何设置本地覆盖
+1、打开 DevTools，导航到“网络”面板，右键单击要覆盖的请求，从下拉菜单中选择“覆盖标头”或“覆盖内容” 。
+
+2、如果您尚未设置本地覆盖，则在顶部的操作栏中，DevTools 会提示您：选择一个文件夹来存储覆盖文件。
+
+3、单击 “允许” 以授予 DevTools 对其的访问权限。
+
+4、如果您设置了本地覆盖但已禁用，DevTools 会自动启用它们。
+5、如何清除mock的数据
+
+演示：
+覆盖HTTP请求返回值
+jvideo
+覆盖HTTP header请求
+jvideo
+参考：
+本地覆盖 Web 内容和 HTTP 响应标头
+在本地覆盖 HTTP 响应标头</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7288517000580694070"
                         open
                       >
@@ -2900,112 +3062,6 @@ rebase 合并多个提交记录
 按i进入编辑，将临时提交前面的pick改为s，按esc退出编辑，再输入:x或者:wq保存
 
 这里有确认修改内容，确认无误后输入:x…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7287913225168617487"
-                        open
-                      >
-                        <summary class="article-expander__title">🚀 10 个 GitHub 存储库，助你成为前端巨匠✨</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7287913225168617487">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: jzman
-本文包含 10 个 Github 存储库的列表，这些存储库对所有经验水平的 Javascript 开发人员都很有用。在本文中，我们将介绍 10 个公开可用的 Github 存储库，它们将把你的 Javascript 技能提升到一个新的水平！无论您是该语言的完全初学者还是已经使用Javascript开发一段时间，这里都有适合每个人的东西。事不宜迟，让我们开始吧。
-每个 JavaScript 开发人员都应该知道的 33 个概念
-顾名思义，这个存储库包含每个优秀Javascript开发人员都应该知道的33个Javascript概念的列表。每个概念也有一堆学习资源来了解更多信息，并且通过共享的各种文章和视频，很难不学好它。
-
-JavaScript 进阶问题列表
-此存储库允许您：
-测试你对 JavaScript 的了解程度；
-稍微刷新一下你的知识；
-或者准备你的编程面试！
-它包含从基础到高级的问题，并定期更新新问题。每个问题的答案都存在于每个问题下方的折叠部分中，您可以单击以展开（但不要作弊！！！）。如果您是那种遵循“每天解决一个问题，远离失业”的人，那么这对您来说是完美的回购协议。
-
-你不知道的 JavaScript
-如果你想从头到尾地学习这门语言，那么这就是你应该去的地方。这是一系列书籍，旨在将你从新手变成经验丰富的开发人员，让他们对 Javascript 幕后工作原理有深入的了解。它深入探讨了 Javascript 语言的核心机制，并且完全免费在线提供。如果你想牢牢掌握这门语言，你就不能错过这一篇！
-
-Airbnb Javascript风格指南
-这是当今互联网上最著名的 Javascript 资源之一，这是理所当然的。
-它包含一套 Javascript 编码指南和最佳实践，最初由 Airbnb 的工程团队编写。它涵盖了 Javascript 的各个方面，并针对大量主题提供了详细的建议。完全值得一看！
-
-技术面试手册
-如果您正在阅读本文，那么您很可能在某个时候会参加技术面试。因此，这对您来说可能是非常有用的资源。这本手册已使超过 1,000,000 人受益，它使您免去了有时推荐的死记硬背练习竞争性编程问题的麻烦。该存储库具有实用的内容，涵盖了技术面试的所有阶段，从申请工作到通过面试再到报价谈判。
-
-算法 - Javascript
-这是互联网上另一个非常值得一试的广受欢迎的资源。它专注于在Javascript 中实现各种数据结构和算法，从基本的排序和搜索到复杂的结构和算法，如动态编程。您将找到每个内容的详细解释代码片段！
-
-很棒的JavaScript库
-这个存储库包含一系列很棒的浏览器端库、资源和其他闪亮的东西，全部用 Javascript 编写。它涵盖了从包管理器、加载器、捆绑器和转译器到 UI 工具、实用程序、手势、地图、动画等的所有内容。如果任何浏览器端的魔术可以用Javascript完成，很有可能，你会发现它列在这里。一定要开始这个并保留它以备将来参考。
-
-WTFJS
-如果您一直在使用 Javascript 进行开发，那么您很可能每隔一段时间就会遇到一些奇怪的事情。作为一种语言，Javascript 充满了这些棘手的小事情，有时这些事情很烦人。如果以上两句话中的任何一句话引起了您的共鸣，那么就不要再犹豫了。该存储库包含许多此类概念的列表，这些概念对于新开发人员来说很难理解。
-
-有效的工程师
-他们是把事情做好的人。高效的工程师会产生结果。如果你想成为一名高效的工程师，你就必须在职业生涯中学习、忘却、重新学习很多东西。因此，这个要点将帮助您采取正确的心态并知道该做什么以及不该做什么。如果您正确利用它，这可能是最有用的资源之一！
-
-免费编程书籍
-无论我观看多少课程、观看多少视频，书籍仍然是学习新东西的黄金标准。如果您像我一样，那么这个存储库适合您。它是任何人都可以免费获取的编程书籍合集。它是最著名的存储库之一，在 Github 上拥有超过 300,000 颗星。非常值得一看！
-
-这些 GitHub 存储库提供了丰富的资源，涵盖了 JavaScript 开发的各个方面，从基础知识到高级主题，从编码规范到面试准备，对于提高前端开发技能和知识非常有帮助。无论您是初学者还是有经验的开发人员，都可以从中受益。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7287965561035210771"
-                        open
-                      >
-                        <summary class="article-expander__title">h5调用手机摄像头踩坑</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7287965561035210771">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: condensed-night-purple
-highlight: vs2015
-1. 背景
-一般业务也很少接触摄像头，有也是现成的工具库扫个二维码。难得用一次，记录下踩坑。
-2.调用摄像头的方法
-2.1. input
-
-
-
-
-
-
-
-这个就不用多说了，缺点就是没办法自定义界面，它是调用的系统原生相机界面。
-2.2. mediaDevices
-由于我需要自定义界面，就像下面这样：
-
-所以我选择了这个方案，这个api使用起来其实很简单：
-
-
-开启摄像头
-
-async getMedia() {
-    // 获取设备媒体的设置，通常就video和audio
-    const constraints &#x3D; {  
-    // video配置，具体配置可以看看mdn
-        video: {  
-            height: 200,  
-            wdith: 200,  
-        },  
-    // 关闭音频
-     …</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
@@ -3802,73 +3858,6 @@ async getMedia() {
                             <span class="media-object__text">
                               <span>Copilot Voice，以后可以用嘴写代码了。https://githubnext.com/projects/copilot-voice
 在 VS Code 插件市场搜索 GitHub Copilot Voice，安装后，即可跟下面视频一样，用嘴编程😂，它支持打开文件、运行命令、定位到编辑器的具体位置等等，开通使用要求你付费订阅了 Github Copilot，不过它对认证的学生和开源有贡献的开发者是免费的。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/65238e3499f2123c7438a61a"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 人都是喜欢听好话的，但越喜欢得到赞扬，就会越讨厌被批评，而这两个东西往往都是同时到来。</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65238e3499f2123c7438a61a">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>人都是喜欢听好话的，但越喜欢得到赞扬，就会越讨厌被批评，而这两个东西往往都是同时到来。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/65238651330d12fc06643f65"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 工作中跟“不靠谱”同事的交流，愤怒是解决不了问题的，它只会拉大人与人之间的距离，如果目的是为了宣泄，最好的方式是怒跑五公里。 去挖掘对方背后的...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65238651330d12fc06643f65">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>工作中跟“不靠谱”同事的交流，愤怒是解决不了问题的，它只会拉大人与人之间的距离，如果目的是为了宣泄，最好的方式是怒跑五公里。
-去挖掘对方背后的困难，然后想办法帮他解决掉；心平气和地电话或私聊，而不是拉到大群里责骂和鞭尸。
-想起之前一位同事说过的一句话，“大家都是打工的，没必要去针对谁”。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/65237106c70326f2eb524c37"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 利用 AutoGPT/LangChain/SuperAGI 等，可以让 LLM 帮助解决复杂的问题，但也有一个致命的通病：由于接受的指令相对简单，随着任务的自主规划和执行，过...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65237106c70326f2eb524c37">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FjPSEzpAM_K1JUrl4mISJzqX6GFXv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>利用 AutoGPT/LangChain/SuperAGI 等，可以让 LLM 帮助解决复杂的问题，但也有一个致命的通病：由于接受的指令相对简单，随着任务的自主规划和执行，过程中一旦出现微小偏差，最后的结果就会滚雪球似的，离预期越来越远。
-一个解法是，在指令下发之初，对要执行的任务做十分详尽的描述，告诉 LLM 第一步到第十步分别要做啥，因此我们经常会看到各种复杂且严苛的 Prompt，还会利用 One-Shot/Few-Shot 帮助大模型做输出结果的矫正，虽然可以一定程度解决问题，但这个做法也限制了 LLM 的创造力，同时，由于任务的复杂性，仍然存在偏离任务目标的可能。
-看到这个论文提供了一个思路，https://arxiv.org/pdf/2309.07870.pdf，“Agents 框架探索了通过结合基于推理图的符号主义 (symbolism) 推理和基于 LLM 的连接主义 (connectionism) 推理，来结合高层次的世界模型知识和低层次的简单推理泛化能力，从而实现更智能更可控的通用人工智能 (AGI) 方案”。详情可以参阅这篇文章：https://www.jiqizhixin.com/articles/2023-09-21-2
-简单来说，就是在进行下一步任务的时候，回顾目标和初始计划，结合环境信息，利用大模型的推理能力来动态决定状态的转移和下一个行动的 Agent 是哪个。
-这个解决思路有点像动态规划算法，在问题求解过程中考虑不同状态和决策，只不过 Agents 框架更侧重于处理复杂的智能决策和动态环境，而不仅仅是静态优化问题，也算得上一次创新了。
-这篇论文对应的工程实践也在 github 上开源了：https://github.com/aiwaves-cn/agents，如果你要利用 LLM 解决复杂且庞大的问题，这个思路值得一试。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -4915,8 +4904,8 @@ JavaScript的XMLHttpRequest或Fetch API请求其他源的资源。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6545494490">
-        <time id="build-timestamp" datetime="2023-10-17T09:53:04.144Z">2023-10-17T09:53:04.144Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6547496142">
+        <time id="build-timestamp" datetime="2023-10-17T12:56:57.845Z">2023-10-17T12:56:57.845Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
