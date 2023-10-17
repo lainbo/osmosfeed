@@ -51,11 +51,66 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-17 datetime="2023-10-17T05:33:51.000Z">2023-10-17</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-17 datetime="2023-10-17T05:33:51.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-17 datetime="2023-10-17T16:40:48.000Z">2023-10-17</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-17 datetime="2023-10-17T16:40:48.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7290848097159102505"
+                        open
+                      >
+                        <summary class="article-expander__title">[7073670907851440160#新人报道#] 大神们 用homebrew 是不兼容arm吗？ 下载jkd8时显示这样 openjdk@8: The x86_64 architecture is required for this software....</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7290848097159102505">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>[7073670907851440160#新人报道#] 大神们 用homebrew 是不兼容arm吗？  下载jkd8时显示这样
+openjdk@8: The x86_64 architecture is required for this software.
+Error: openjdk@8: An unsatisfied requirement failed this build.
+求解答</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7290733884136030242"
+                        open
+                      >
+                        <summary class="article-expander__title">打卡打卡，今天周二</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7290733884136030242">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>打卡打卡，今天周二</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -105,39 +160,6 @@ CoT（Chain of Thought prompting）有两种比较常见的实践方式，一个
 如果让大模型直接输出结果，那么随着输入内容长度的增加，准确推理所需要的神经元数量会以超越多项式（非线性增长）的速度增长，原因很简单，对于不存在并行算法解的推理性问题，例如 (16 - 3 - 4) * 2，Transformer 模型不擅长应对，论文使用了理论计算机科学中的电路复杂性理论进行了论证。
 简单来说，输入文本越长，正确推理所需要消耗的资源就越多。例如让大模型回答 (16 - 3 - 4) * 2 它会给出正确的结果，但是让它回答“Janet 的鸭子每天下 16 个蛋，她每天早餐吃 3 个，给朋友每天 4 个。其余的卖钱，每个鸡蛋 2 美元。她每天赚多少钱?”，出错的概率就比较大了，因为信息量变大了，它给出的结果可能会是：“这意味着她每天会用掉 3 + 4 &#x3D; 7 个鸡蛋。剩余的鸡蛋卖出去每个 2 美元，因此她每天总共卖出 7 * 2 &#x3D; 14 美元的鸡蛋。答案是 14 美元。”，大模型在接受大量的信息利用贪婪解码策略推理时，受限于计算能力，它会丢失了部分信息。
 而如果让大模型打印思考过程，就不一样了，在输出的时候，内容会不断被反馈到输入层，这可以增加模型的有效深度（正比于 CoT 的输出长度），也就是说，每次输入都将比上一次输入更具体和详细。因此，在不增加计算资源的情况下，大模型的有效深度将会随着输出长度的增加而增加，这样大模型就能更好地理解问题，并逐步推理出正确的答案了。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7290733884136030242"
-                        open
-                      >
-                        <summary class="article-expander__title">打卡打卡，今天周二</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7290733884136030242">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>打卡打卡，今天周二</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -4133,54 +4155,6 @@ Presets 顺序是颠倒的（从后往前）
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-29 datetime="2023-09-29T01:04:57.000Z">2023-09-29</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-29 datetime="2023-09-29T01:04:57.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7283768998776569915"
-                        open
-                      >
-                        <summary class="article-expander__title">vscode扩展 FnMap - 函数地图 人性化的侧边栏函数、变量、符号列表操作和展示</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7283768998776569915">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>vscode扩展 FnMap - 函数地图
-人性化的侧边栏函数、变量、符号列表操作和展示</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-28 datetime="2023-09-28T14:42:38.000Z">2023-09-28</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-28 datetime="2023-09-28T14:42:38.000Z"></time>
           </button>
@@ -4841,8 +4815,8 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6549705946">
-        <time id="build-timestamp" datetime="2023-10-17T15:53:00.035Z">2023-10-17T15:53:00.035Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6551563236">
+        <time id="build-timestamp" datetime="2023-10-17T18:52:54.649Z">2023-10-17T18:52:54.649Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
