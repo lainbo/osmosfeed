@@ -51,6 +51,56 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-17 datetime="2023-10-17T02:36:03.000Z">2023-10-17</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-17 datetime="2023-10-17T02:36:03.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >李继刚的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/reposts/652df313d5f9a5727f23cfe9"
+                        open
+                      >
+                        <summary class="article-expander__title">转发了: 如果官方英文文档读不进去，这里有人用心整理好的翻译对比稿，read the fuck manual。</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/reposts/652df313d5f9a5727f23cfe9">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>如果官方英文文档读不进去，这里有人用心整理好的翻译对比稿，read the fuck manual。
+
+转发 @大咕咕咕咕驴: 送大家一本大黄书。OpenAI 六月份发了一个 GPT best practices，比市面上任何几千九百九的提示词工程课可能都实用。我只是做了编译和补充用例和排版🙏</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-16 datetime="2023-10-16T17:14:17.000Z">2023-10-16</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-16 datetime="2023-10-16T17:14:17.000Z"></time>
           </button>
@@ -702,6 +752,146 @@ Dall ・ E 作图大师
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7289661061984501819"
+                        open
+                      >
+                        <summary class="article-expander__title">前端页面秒开的关键 - 小白也能看懂的同构渲染原理和实现（含nodejs服务端测试与优化，附PPT）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7289661061984501819">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: juejin
+大概在昨年下半年，我利用同构渲染技术，把公司中一个需要7、8秒才能打开的vue3项目成功优化至秒开（当然除了同构之外也配合了一些其他手段），由于那段时间vue3推出不久，很多框架这部分功能还没有跟上，我便试着用vue和vite本身提供的api来完成同构，最终也了令人满意的效果，自己在这个过程中也获益匪浅。
+如今各大框架的功能已经完善，如果你现在想做同构渲染，我推荐直接使用next.js（react）或nuxt.js(vue)来进行开发，而不是像我一样手动进行实现。本文主要是对于同构原理的描述，不涉及框架的使用。
+为了让小白也能看懂，文章会包含很多特别基础的理论描述，如果觉得没必要了解，你可以通过标题跳转到自己感兴趣的部分。文章中的代码主要以vue为例，但是原理不局限于任何框架。
+点击这里查看完整代码和PPT
+1. 什么是同构渲染？为什么使用它？
+1.1 什么是渲染?
+以现在前端流行的react和vue框架为例。react中的jsx和vue里面的模板，都是是无法直接在浏览器运行的。将它们转换成可在浏览器中运行的html，这个过程被称为渲染。
+1.2 什么是客户端渲染（client-side-render, 以下简称csr）
+CSR是现在前端开发者最熟悉的渲染方式。利用vue-cli或create-react-app创建一个应用，不作任何额外配置直接打包的出来代码就是CSR。
+你可以用如下的方法辨别一个web页面是否是CSR：打开chrome控制台 - 网络面板，查看第一条请求，就能看到当前页面向服务器请求的html资源；如果是CSR（如下图所示），这个html的body中是没有实际内容的。
+
+那么页面内容是如何渲染出来的呢？仔细看上面的html，会发现存在一个script标签，打包器正是把整个应用都打包进了这个js文件里面。
+当浏览器请求页面的时候…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7289339080838627382"
+                        open
+                      >
+                        <summary class="article-expander__title">🍀别找了！前端那些好用的网站都在这里了！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7289339080838627382">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>🍀一、渐变神器Gradient
+网站地址：
+Gradient by ShapeFactory | Chromatic Gradient Generator
+网站介绍：
+Gradient是一款网页渐变设计工具，可以帮助用户轻松创建漂亮的渐变颜色样式，并将其应用到网页、APP等设计项目中。
+网站示例：
+
+🍀二、两款阴影工具在线网站
+网站地址：
+1、lingdaima在线阴影创建：在线创建可视化CSS阴影效果神器 
+2、box-shadow阴影网站：CSS box shadow inspiration - Box Shadow
+网站介绍：
+1、lingdaima是一款在线阴影创建工具，可以帮助用户快速地生成各种类型的阴影效果，并且提供多种自定义选项和实时预览功能。以下是该工具的主要特点和使用方法：
+特点：
+界面简洁易用，支持拖拽、滑动等操作；
+提供多种阴影类型，包括内部阴影、外部阴影、立体阴影等；
+可以自定义阴影属性，如颜色、大小、模糊度、位置等；
+支持将生成的阴影效果导出为CSS代码或PNG图片格式。
+
+2、box-shadow阴影网站，在这个网站中会按照人们对各种阴影效果的喜爱程度进行排名，相信大多数人喜欢的阴影效果，如果用在你的网站上也一定会非常的好看的。
+
+🍀三、网站UI配色宝藏网站UI Design Daily
+网站地址：
+UI Design Daily | Weekly FREE UI resources straight to your inbox
+网站介绍：
+UI Design Daily是一个专注于UI设计的在线社区，提供了大量优秀的设计素材和模板，以及许多实用的设计工具和资源。
+特点：
+提供丰富的UI设计素材和模板
+可以按照类别、颜色、风格等属性进行筛选和浏览；
+支持在线预览和下载设计素材和模板，以及查看其他设计师的作品；
+网站配色难？不知道颜色如何搭配？那这个网站将为你提供源源不断的思路
+网站示例：
+
+🍀四、 Small Dev tools实用工具合集
+网站地址：
+Home - SmallDev.tools --- 首页 - 小型开发工具
+网站介绍：
+如果说前面几款网站的功能太单一的话，那么Small Dev tools这个网站可谓是一款集成了多种实用工具的在线开发者工具箱，可以帮助开发者们轻松地完成常见的开发任务和问题解决
+这个网站包含了很多实用的功能，比如JSON解码器、JSON格式化程序、UTF8编码、Base64编码、Base64解码、CSS格式化程序、CSS压缩器等等，但是唯一不足的地方是这个网站的打开速度有点慢。
+网站示例：
+
+🍀五、 Glass Morphism 在线制作 CSS 玻璃风格神器
+网站地址：
+Glass Morphism (glassgenerator.netlify.app)
+网站介绍：
+Glass Morphism是一个有趣的在线CSS玻璃风格工具，可以帮助开发者们在UI设计中快速应用Glass Morphism风格，并且提供了多种自定义选项和实时预览功能
+特点：
+可以自定义UI元素的属性，如颜色、阴影、高光等；
+支持实时预览效果，调整后立刻看到变化；
+支持将生成的CSS代码导出为文件或直接复制。
+网站示例：
+
+🍀六、Keyframes 在线动画、阴影和颜色
+网站地址：
+Keyframes.app
+网站介绍：
+Keyframes是一个在线动画生成器，可以帮助用户快速创建各种类型的CSS3动画、阴影和使用颜色效果，并且提供多种自定义选项和实时预览功能。以下是该工具的主要特点和使用方法
+特点:
+界面简洁易用，支持拖拽、滑动等操作；
+提供多种动画类型，包括旋转、平移、缩放、淡入淡出等；
+可以自定义动画属性，如持续时间、延迟时间、曲线函数等；
+支持实时预览效果，调整后立刻看到变化；
+支持将生成的CSS代码导出为文件或直接复制。
+网站示例：
+
+🍀七、BGJar 在线SVG 背景
+网站地址：
+BGJar | Free svg background image generator for your websites
+网站介绍：
+BGJar是一个免费的在线背景生成器，提供了各种类型和风格的背景图像，并且支持实时预览和自定义选项。以下是该网站的主要特点和使用方法：
+特点:
+提供各种类型和风格的背景图像，包括渐变色、图案、纹理等；
+可以自定义背景属性，如颜色、透明度、大小等；
+支持实时预览效果，调整后立刻看到变化；
+支持将生成的背景下载为PNG或SVG格式。
+网站示例：</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >李继刚的即刻动态</button>
                   <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
                 </h3>
@@ -1182,28 +1372,6 @@ MongoDB保姆级指南(上)：七万字从零到进阶，助你掌握又一款�
                               <span>读书要快还是要慢?
   根据你的知识水平和所读书的内容, 你熟知的内容就快读, 不懂的内容就慢读. 换言之，你懂的越多，就会读的越快。读书这事，有复利效应。
   读书关键不是读完多少本, 而是吸收了多少到你的思想中.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/6528dc409a83b06c46acbf08"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 拥有一本书有两种方式: 一种是花钱买到手上, 物质上拥有它; 另一种是将它融入到你思想中, 精神上拥有它.</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6528dc409a83b06c46acbf08">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>拥有一本书有两种方式:
-  一种是花钱买到手上, 物质上拥有它;
-  另一种是将它融入到你思想中, 精神上拥有它.</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -2794,62 +2962,6 @@ async getMedia() {
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7287914955989762084"
-                        open
-                      >
-                        <summary class="article-expander__title">【动画进阶】神奇的背景，生化危机4日食 Loading 动画还原</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7287914955989762084">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>最近，在 Steam 玩一款老游戏（生化危机 4 重置版），其中，每当游戏转场的过程中，都有这么一个有趣的 Loading 动画：
-
-整个效果有点类似于日食效果，中间一圈黑色，向外散发着太阳般的光芒。
-本文，我们将尝试使用 CSS，还原这个效果。
-整个效果做出来，类似于如下两个动画效果这样：
-
-
-实现主体效果
-其实，整个效果，去掉中间黑色的遮罩，是这个样子的：
-
-所以，我们的目标就变成了，如何使用 CSS，实现上述这个图形效果。
-角向渐变
-到这里，思考一圈 CSS 中的各种属性，和这个图形能挂上钩的，几乎就只有角向渐变 conic-gradient 了。
-我们可以利用多重角向渐变，试着画一个类似的图形 -- 从单个颜色到透明，再多次循环铺满 360° 的整个图形：
-
-
-body {
-    background: #000;
-}
-div {
-    width: 200vw;
-    height: 200vh;
-    background: 
-        repeating-conic-gradient(
-            rgba(0, 136, 204, 0.77), 
-            rgba(150, 157, 100, 0.72) 2%, 
-            rgba(230, 247, 200, 0.82) 3%, 
-            transparent 4%,
-            transparent 5%
-    );
-}
-
-我们随机设置了 conic-gradient() 中的颜色 A 到颜色 B 到颜色 C到透明的变化，可以得到这么一张图形：
-
-注意，对于上面的颜色没有任何要求，随机设置都可以。
-我们可以让这个图形旋转起来，简单加上一个旋转动画：
-div {
-    animation: …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7287914955989450788"
                         open
                       >
@@ -3724,52 +3836,6 @@ git clone https://github.com/nuejs/cre…</span>
 去挖掘对方背后的困难，然后想办法帮他解决掉；心平气和地电话或私聊，而不是拉到大群里责骂和鞭尸。
 想起之前一位同事说过的一句话，“大家都是打工的，没必要去针对谁”。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7287781316590583863"
-                        open
-                      >
-                        <summary class="article-expander__title">让 web 再次伟大——用 canvaskit 实现超级丝滑的原神地图（已开源）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7287781316590583863">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: cyanosis
-highlight: solarized-light
-
-canvaskit 版：
-
-因为 gif 最高只有 50hz，实际上 cavnaskit 版要远比这看起来的更丝滑，你可以通过以下链接自行体验。
-官方网页版：https://webstatic.mihoyo.com/ys/app/interactive-map/index.html?lang&#x3D;zh-cn#/
-canvaskit 版：http://106.55.55.247/ky-genshin-map/ （备用地址：http://ky-genshin-map.7c00.cc/ ）
-或者这个 demo：
-jcode
-为什么官方网页版的性能如此糟糕以及为什么 canvaskit 版能有如此高的性能？
-第一个问题，官方网页版地图引擎用的是 leaflet，这是一个以 dom 为主要实现方式的地图引擎，而频繁地大量操作 dom 会导致严重的性能问题。你可以想象一下，要保证视觉上流畅，手势及动画的采样频率至少是 60hz，意味着单个 dom 节点每秒就要变换 60 次，一旦数量超过 100 个，对浏览器来说就是无法承受的压力。
-但是 leaflet 也有 canvas 实现的 layer，或者这么说，如果性能瓶颈在于 dom，那么用浏览器提供的 canvas api 就应该可以解决，为什么还需要 canvaskit 呢？
-在回答这个问题之前，先介绍一下 canvaskit，这其实就是 skia 的 js + wasm 版，c++ 实现的渲染引擎被编译成了 wasm，通过 js 提供类似 canvas api 的绘制接口。也许你已经知道 chrome 的底层就是 skia 做渲染引擎，canvas api 也可以视为 skia 绘制接口的封装，那么 skia 编译成 wasm 再提供 js api …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4848,8 +4914,8 @@ JavaScript的XMLHttpRequest或Fetch API请求其他源的资源。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6541230383">
-        <time id="build-timestamp" datetime="2023-10-17T01:15:09.976Z">2023-10-17T01:15:09.976Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6542298267">
+        <time id="build-timestamp" datetime="2023-10-17T03:53:02.292Z">2023-10-17T03:53:02.292Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
