@@ -118,6 +118,80 @@ Error: openjdk@8: An unsatisfied requirement failed this build.
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7290786959441117243"
+                        open
+                      >
+                        <summary class="article-expander__title">面试官：如何判断两个数组的内容是否相等</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7290786959441117243">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>title: JS
+titleTemplate: 两数组内容比较
+theme: channing-cyan
+题目
+给定两个数组，判断两数组内容是否相等。
+不使用排序
+不考虑元素位置
+例：
+[1, 2, 3] 和 [1, 3, 2] // true
+[1, 2, 3] 和 [1, 2, 4] // false
+
+
+思考几秒：有了😀😀
+1. 直接遍历✍
+直接遍历第一个数组，并判断是否存在于在第二个数组中
+求差集, 如果差集数组有长度，也说明两数组不等（个人感觉比上面的麻烦就不举例了）
+const arr1 &#x3D;  [&quot;apple&quot;, &quot;banana&quot;, 1]
+const arr2 &#x3D;  [&quot;apple&quot;, 1, &quot;banana&quot;]
+
+function fn(arr1, arr2) {
+  // Arrary.some: 有一项不满足 返回false
+  // Arrary.indexOf: 查到返回下标，查不到返回 -1
+  if (arr1.length !&#x3D;&#x3D; arr2.length) {
+    return false;
+  }
+  return !arr1.some(item &#x3D;&gt; arr2.indexOf(item)&#x3D;&#x3D;&#x3D;-1)
+}
+
+fn(arr1,arr2) // true
+
+细心的小伙伴就会发现：NaN 会有问题
+const arr1 &#x3D;  [&quot;apple&quot;, &quot;banana&quot;, NaN]
+const arr2 &#x3D;  [&quot;apple&quot;, NaN, &quot;banana&quot;]
+
+function fn(arr1, arr2) {
+  if (arr1.length !&#x3D;&#x3D; arr2.length) {
+    return false;
+  }
+  return !arr1.some(item &#x3D;&gt; arr2.indexOf(item)&#x3D;&#x3D;&#x3D;-1)
+}
+
+fn(arr…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >Barret李靖的即刻动态</button>
                   <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
                 </h3>
@@ -572,7 +646,46 @@ Vue 3 复杂样式用普通写法、简单样式用  UnoCSS 的属性模式写�
 Vue 3 不用任何原子化 CSS 写一个 TodoList
 Vue 3 不用任何原子化 CSS（但用内置的 scoped）写一个 TodoList
 Vue 3 只用 CSS Module 写一个 TodoL…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7290005438153867283"
+                        open
+                      >
+                        <summary class="article-expander__title">面试官：你知道websocket的心跳机制吗？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7290005438153867283">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: smartblue
+前言
+哈喽，大家好，我是泽南Zn👨‍🎓。在之前的一篇文章写到， 前端如何使用websocket发送消息，websocket是怎么建立连接的呢？如果断开了会怎样？如何一直保持长连接呢？接下来，本篇文章将会带你了解--- WebSocket心跳机制
+一、WebSocket心跳机制
+前端实现WebSocket心跳机制的方式主要有两种：
+使用setInterval定时发送心跳包。
+在前端监听到WebSocket的onclose()事件时，重新创建WebSocket连接。
+第一种方式会对服务器造成很大的压力，因为即使WebSocket连接正常，也要定时发送心跳包，从而消耗服务器资源。第二种方式虽然减轻了服务器的负担，但是在重连时可能会丢失一些数据。
+二、WebSocket心跳包机制
+WebSocket心跳包是WebSocket协议的保活机制，用于维持长连接。有效的心跳包可以防止长时间不通讯时，WebSocket自动断开连接。
+心跳包是指在一定时间间隔内，WebSocket发送的空数据包。常见的WebSocket心跳包机制如下：
+客户端定时向服务器发送心跳数据包，以保持长连接。
+服务器定时向客户端发送心跳数据包，以检测客户端连接是否正常。
+双向发送心跳数据包。
+三、WebSocket心跳机制原理
+WebSocket心跳机制的原理是利用心跳包及时发送和接收数据，保证WebSocket长连接不被断开。WebSocket心跳机制的原理可以用下面的流程来说明：
+客户端建立WebSocket连接。
+客户端向服务器发送心跳数据包，服务器接收并返回一个表示接收到心跳数据包的响应。
+当服务器没有及时接收到客户端发送的心跳数据包时，服务器会发送一个关闭连接的请求。
+服务器定时向客户端发送心跳数据包，客户端接收并返回一个表示接收到心跳数据包的响应。
+当客户端没有及时接…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -968,6 +1081,60 @@ Dall ・ E 作图大师
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7289664472868732982"
+                        open
+                      >
+                        <summary class="article-expander__title">字节一面——当我从闭包谈到高阶函数，面试官：来道curry函数尝尝😊</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7289664472868732982">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: smartblue
+highlight: a11y-dark
+一、前言
+前段时间参与字节面试，一面中问到我 闭包 ，我照着自己的理解从闭包的特性到高阶函数，再提到了闭包的应用，如 curry函数。
+curry函数:
+// 实现一个add函数
+// return 1 + 2 + 3 + 2 传参为undefined时返回sum
+add(1,2,3)(2)()
+// 8
+
+😶😶😶……本人只懂概念没有实操过啊😭👊
+闭包的概念、延伸概念、应用以及优劣，顺带解决这个题目。
+二、闭包
+2.1 闭包的概念
+闭包是由一个函数以及与其相关的引用环境组合而成的实体。闭包可以在函数内部访问外部函数的变量，并且这些变量可以在外部函数执行结束后仍然保持其状态。
+function outerFunction(x) {
+  return function innerFunction(y) {
+    return x + y;
+  };
+}
+
+// 创建闭包函数
+var closure &#x3D; outerFunction(5);
+
+// 调用闭包函数
+var result &#x3D; closure(3);
+
+console.log(result); // 输出：8
+
+可以看到 innerFunction 可以获取到传入 outerFunction 的参数,可见原本在外部函数执行结束后本该销毁的地址得到了保留。
+闭包可以访问和修改其创建时捕获的外部环境中的变量值，从而实现状态的保存和共享。
+闭包可以私有化变量，从而避免命名冲突和污染全局作用域。
+闭包可以延长变量的生命周期，从而实现回调、事件处理等高级操作。
+有的同学可能会联想到高阶函数，或许对高阶函数、闭包存在不清晰的认知，那么我们就再来讲一下高阶函数。
+2.2 高阶函数
+高阶函数指的是能够接受函数作为参数或返回函数作为结果的函数,如 Ar…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -2513,74 +2680,6 @@ Life is short，将如此多的时间浪费在构建发布上是不值得的，�
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7288561905405313080"
-                        open
-                      >
-                        <summary class="article-expander__title">24秋招美团一面🦘「八股文+代码输出+算法题」</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7288561905405313080">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: v-green
-highlight: a11y-dark
-八股文
-讲讲异步组件和路由懒加载？异步加载的过程是怎么样的？为什么在router中使用回调的方式引入组件就可以实现异步加载？假如一个页面有特别多的异步组件会带来什么问题？
-其实异步组件和异步路由是一样的东西，异步路由引入的也还是对应的组件。
-异步加载的过程涉及到JavaScript运行时、事件循环机制以及打包工具的配合工作。过程：
-代码分割：当我们在代码中使用import()函数异步加载组件时，打包工具（如Webpack或Rollup）会将这些组件作为单独的JavaScript文件（通常被称为&quot;chunks&quot;）进行打包。
-初始加载：在页面初始加载时，只有主bundle会被下载。主bundle中包含了应用的主要代码，但不包括异步组件的代码。
-异步请求：当用户触发了需要异步组件的操作（如访问一个使用了路由懒加载的路由），JavaScript运行时会发送一个网络请求，请求异步组件对应的JavaScript文件。
-下载和执行：浏览器下载异步组件对应的JavaScript文件，并执行其中的代码。这个过程可能会涉及到一些延迟，因为需要等待网络请求完成，并且JavaScript是单线程的，不能同时执行多段代码。
-渲染组件：异步组件的代码被执行后，组件会被注册到Vue.js应用中，并触发视图的更新。Vue.js会创建一个新的组件实例，并将其渲染到页面上。
-在这个过程中，打包工具起到了关键作用。它负责将代码分割成多个小文件，并在构建时生成一份映射表，这样JavaScript运行时就知道每个异步组件对应哪个文件。
-同时，JavaScript的事件循环机制也在这个过程中发挥了作用。由于JavaScript是单线程的，它需要使用事件循环来处理异步操作。当我们使用import()函数加载一个组件时，这个操作会被放入微任务队列中。…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7288504491506024487"
-                        open
-                      >
-                        <summary class="article-expander__title">chrome 也支持模拟请求喽</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7288504491506024487">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>早在2023/4/12，chrome已经支持使用本地覆盖web内容和HTTP相应标头，通过本地覆盖可以模拟远程资源。话不说直接开始
-如何设置本地覆盖
-1、打开 DevTools，导航到“网络”面板，右键单击要覆盖的请求，从下拉菜单中选择“覆盖标头”或“覆盖内容” 。
-
-2、如果您尚未设置本地覆盖，则在顶部的操作栏中，DevTools 会提示您：选择一个文件夹来存储覆盖文件。
-
-3、单击 “允许” 以授予 DevTools 对其的访问权限。
-
-4、如果您设置了本地覆盖但已禁用，DevTools 会自动启用它们。
-5、如何清除mock的数据
-
-演示：
-覆盖HTTP请求返回值
-jvideo
-覆盖HTTP header请求
-jvideo
-参考：
-本地覆盖 Web 内容和 HTTP 响应标头
-在本地覆盖 HTTP 响应标头</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7288517000580694070"
                         open
                       >
@@ -2669,91 +2768,6 @@ Echarts 图表相关 hooks 的封装，提高如折柱混合图、图表详情�
 实现下拉搜索选择框、列表与图表之间的增删交互，根据文档解决雷达图等图表增删时的异常问题
 使用 transition 标签以及图片预加载来优化图片未加载完全等导致的用户视觉体验问题
 实现 Echarts 等组件的按需加载。在打包过程中对项目大体积模块进行分块打包以及优化项目字体文件大小</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7288243037088006198"
-                        open
-                      >
-                        <summary class="article-expander__title">让CSS官方后悔的一些决定</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7288243037088006198">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>CSS工作组在其官方WIKI总结了这些年CSS在设计上犯的46条失误。这些错误大体可以概括为5类：
-属性key、value设计失误
-布局、对齐上的设计失误
-颜色相关的失误
-选择器设计失误
-本文会选一些我觉得有意思的失误来讲讲。完整的失误列表见上述官方WIKI。
-欢迎围观朋友圈、加入人类高质量前端交流群，带飞
-!important语法
-!important语法用来增加样式的权重，毕竟，感叹号通常表达强调的意思。但在编程语言中，!通常是取反的意思，比如：
-const isValid &#x3D; true;
-!isValid // false
-
-初次接触CSS的工程师很可能会觉得!important是不important的意思，这与该语法实际想表达的意思完全相反。
-所以，工作组认为!important是个糟糕的语法。
-z-index语法
-z-index属性用于设置定位元素及其后代元素或flex元素的Z轴层叠顺序，z-index较大的元素会叠在较小元素的上面。
-在编程语言中，index是索引的意思，并没有表达出层叠的意思。所以，工作组认为叫z-order或干脆叫depth（深度）会更好。
-同时，他们也认为，这个属性应该对所有元素有效（而不是只对定位元素及其后代，以及flex元素有效）。
-单个元素margin的塌陷
-margin坍塌是CSS中的基础特性，假设有2个上下重叠的块级元素：
-上面的元素margin-bottom为20px
-下面元素margin-top为30px
-按照直觉来看，他们之间的margin应该是50px（20px + 30px），但是由于margin坍塌，他们之间的margin为其中较大的值（30px）。
-
-上面是2个块级元素之间的margin坍塌。
-对于单个块级元素，也存在margin坍塌 —— 如果一个元素内部没有内容，或者它的内容被清除（clear）了，那么这个元素的上下margin会发生塌陷。
-这意味着，即使你为元素的顶部和底部都设置了margin，但实际上他们会合并成一个（值等于两者中的最大者，而不是它们的总和）。
-这种塌陷行为可能会导致一些让人懵逼的布局问题。比如，你试图通过增加一个元素的margin-bottom来增加它下面的空间，但不起作用，可能就是因为增加的 margin塌陷掉了。
-所以，CSS工作组认为这不是个好设计。
-rgb与rgba
-rgba与hsla都是设置颜色的属性，相比于rgb与hsl，他们还可以设置alpha值（透明度）。
-所以，为啥不直接让rgb与hsl能够接收第四个参数（alpha值）呢？工作组很费解 自己当初咋想的。
-border-radius
-border-radius直译为边界半径，当初应该取名叫corner-radius（拐角半径）。
-毕竟，这就是设置元素拐角处圆角的半径的啊～～
-绝对定位的替换元素
-所谓替换元素，是指外观和尺寸由外部资源决定的元素，比如：
-img
-object（嵌入的对象，如Flash动画）
-video
-iframe
-工作组认为，当替换元素被绝对定位时，偏移属性不应该改变元素的位置，而应该改变尺寸。
-比如，当对绝对定位的img设置left: 20px; right: 20px;，那么他应该被拉伸到从左侧20px到右侧20px的长度，而不是移动到距离左侧20px的位置。
-这个规则对于响应式布局是非常有用的，因为它允许元素自动调整其大小以适应不同的视口宽度。
-总结
-上面只是挑了几个我觉得有意思的失误来聊。除此之外，还有很多是使用习惯上的设计失误，个人认为比较主观。比如：
-子孙选择器应该使用»符号，即：
-// 当前的子孙选择器
-div p {
-  color: green;
-}
-// 期望的子孙选择器
-div » p {
-  color: green;
-}
-
-兄弟选择器应该用++符号，即：
-// 当前的兄弟选择器
-div ~ p {
-  color: green;
-}
-// 期望的兄弟选择器
-div ++ p {
-  color: green;
-}
-
-不知道上述改动，你能接受么？</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
@@ -4815,8 +4829,8 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6555981468">
-        <time id="build-timestamp" datetime="2023-10-18T03:53:09.616Z">2023-10-18T03:53:09.616Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6557272243">
+        <time id="build-timestamp" datetime="2023-10-18T06:52:49.941Z">2023-10-18T06:52:49.941Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
