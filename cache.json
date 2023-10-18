@@ -23,7 +23,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1205,
+          "wordCount": 1204,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -72,6 +72,16 @@
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/652faa1cbb3e3660e8041b7b",
+          "author": null,
+          "description": "如何让 ChatGPT 更好地思考，以获得更佳的输出效果，有几个比较成熟的实践和技巧，背后都有对应的论文。\n1）CoT，思维链提示，https://arxiv.org/abs/2205.10625，将思考过程打印出来或者提供 one-shot/few-shot，输出的准确性会更高；例如你可以在提示词后追加：“Let's think step by step”，效果就要好一些。\n对于决策推理性的问题，CoT 的效果都比较不错，事实上这个涌现效果是被发现而不是被设计出来的，后来它的有效性在这篇论文（https://arxiv.org/abs/2205.10625）中得到了证明。\n2）Self-Consistency，自洽性，https://arxiv.org/abs/2203.11171，在多次输出中找到投票最高的那条，例如你可以这么跟 ChatGPT 说：\n“对于每一个问题，你会思考 5 种不同的思路，然后将它们结合起来，输出最佳的措辞、最全面和最准确的答案。”（图一）\n3）Least to Most prompting，本质是规划+逐步执行，https://arxiv.org/abs/2205.10625，对于复杂的任务，单纯使用 CoT + SC 效果依然不会太好，可以让 ChatGPT 先自己去拆解问题再回答：\n\"对于每一个问题，你首先需要回答是否将问题分解为子问题，若否，直接给出答案；若是，则将问题拆解为子问题，然后将它们结合起来，输出最佳的措辞、最全面和最准确的答案。\"\n“To solve {problem}, we need to……”，让大模型开启这种思维模式，不断细化问题，结果会更好。（图二）\n4）Multi-Persona Self-Collaboration，多角色扮演，https://arxiv.org/abs/2307.05300，这个有点类似之前提到的 AutoGen，让多个代理相互对话来解决问题，只不过 AutoGen 是从工程层面真正做到了多 Agents 交互，而这里提到的，是让 ChatGPT 扮演多重人格/角色，例如：\n“你可以扮演任何角色，针对我给出的问题，请提供三个最相关的角色，对问题进行两轮讨论，然后你综合讨论结果总结最佳方案。请打印三个角色的讨论过程以及最后的方案。”（图三）\n以上，这些技巧的运用并不复杂，但是思想比较重要，掌握了之后，稍微修改下 Prompt，便可以得到更加符合预期的结果。#AI学习#",
+          "link": "https://m.okjike.com/originalPosts/652faa1cbb3e3660e8041b7b",
+          "publishedOn": "2023-10-18T09:49:16.000Z",
+          "wordCount": 508,
+          "title": "发布了: 如何让 ChatGPT 更好地思考，以获得更佳的输出效果，有几个比较成熟的实践和技巧，背后都有对应的论文。 1）CoT，思维链提示，https://arxiv.org/abs/22...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fre5jgJ7vXoX5nLdvGRUgPWTyo2bv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/652e1cbfaa7d4f2b30a24f52",
           "author": null,
           "description": "焦虑和痛苦的根源，从空间维度看，是与比自己更强的人对比，慕强是一个无限陷阱，永远都有比自己更强的人；从时间维度看，是与未来的不确定性比，今天的优势到了明天就不一定了，例如前段时间一个搞 C 的程序员悲观叹息自己被时代踢出了局。\n看似消极却有效的观点：接受自己的有限性，接受命运的安排。",
@@ -107,7 +117,7 @@
           "description": "跑在手表上的游戏😵‍💫",
           "link": "https://m.okjike.com/originalPosts/6527d811bb3e3660e85ce9b3",
           "publishedOn": "2023-10-12T11:27:13.000Z",
-          "wordCount": 478,
+          "wordCount": 471,
           "title": "发布了: 跑在手表上的游戏😵‍💫",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fr8SlncnP3lg1AaCRjk9Yu3hJGze?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80"
         },
@@ -160,16 +170,6 @@
           "wordCount": 488,
           "title": "发布了: 这个项目（https://github.com/n0a/telegram-get-remote-ip）演示了如何在 Telegram 通话过程中获取对方的 IP 信息，接电话也是有风险的😅 事实上，基...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FnJePUXuAnmZtqatxE20uoYYymYX?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/6523c56d55a9562cd3c1b734",
-          "author": null,
-          "description": "Copilot Voice，以后可以用嘴写代码了。https://githubnext.com/projects/copilot-voice\n在 VS Code 插件市场搜索 GitHub Copilot Voice，安装后，即可跟下面视频一样，用嘴编程😂，它支持打开文件、运行命令、定位到编辑器的具体位置等等，开通使用要求你付费订阅了 Github Copilot，不过它对认证的学生和开源有贡献的开发者是免费的。",
-          "link": "https://m.okjike.com/originalPosts/6523c56d55a9562cd3c1b734",
-          "publishedOn": "2023-10-09T09:18:37.000Z",
-          "wordCount": 477,
-          "title": "发布了: Copilot Voice，以后可以用嘴写代码了。https://githubnext.com/projects/copilot-voice 在 VS Code 插件市场搜索 GitHub Copilot Voice，安装后，即可...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fv-ga-l9gw8X-709E6dDe0Oc252I?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80"
         }
       ]
     },
@@ -224,7 +224,7 @@
           "description": "时间，比金子还要宝贵。\n你关注什么，你就会变成什么样的人。\n所以，不要去关注战争冲突，不要去关注年收入超过1个亿的人数，不要去关注隔壁邻居又买了什么。\n这些你了解得再透彻，你的水平也不会发生任何改变。\n找到最重要的目标，计算自己的时间成本，在具体的工作中创造心流的体验，珍惜每天的第三个8小时，才是你可以做的。\n我看到过一句话，在最后和你分享：\n如果你买个摄像头放在家里，用上帝视角观察自己每天都在做什么，你会发现——你富不起来真是太正常了。\n时间是不可再生的资源。\n至少，你要对得起自己的时间吧。\n－－刘润。",
           "link": "https://m.okjike.com/originalPosts/652ce1bd99f2123c74039542",
           "publishedOn": "2023-10-16T07:09:49.000Z",
-          "wordCount": 443,
+          "wordCount": 441,
           "title": "发布了: 时间，比金子还要宝贵。 你关注什么，你就会变成什么样的人。 所以，不要去关注战争冲突，不要去关注年收入超过1个亿的人数，不要去关注隔壁邻居又买了...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -590,13 +590,33 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
+          "id": "https://juejin.cn/post/7291096702021304354",
+          "author": "一只大加号",
+          "description": "theme: smartblue\n前段时间看了实习生的新项目，发现他启动不了项目，因为node版本太低，我让他去用nvm来管理node的版本，然后看到他切换版本的时候是这样的，先用nvm下载安装目标的node版本，然后在把安装好的node版本替换掉原先的node路径下的node_modules，而不是用命令行进行版本切换，才发现原来他使用nvm来切换node版本虽然显示切换成功，但全局的node版本一直是不变的，所以才用文件覆盖的方式强制进行解决，对于这个问题进行解决并且梳理\n可以直接跳到第四步查看解决方案\n1️⃣ 安装nvm\nwhere nvm\n\n找不到nvm路径的朋友可以用这个命令来找到nvm的安装路径，默认的安装路径都是差不多的\n\n2️⃣ 查看目前node版本\n可以看到目前的版本是node V16.14.2\n\n3️⃣ nvm安装目标node版本\nnvm的主要作用就是用来切换node的版本，为什么要切换node的版本，就是因为你的当前node版本和你要启动的项目不兼容，有两种可能，要么是你的项目太旧，你的node版本相对来说比较高，需要用到向下兼容；另外一种可能就是你项目用到的node比较新，你需要进行升级\n先安装需要安装的目标版本，用isntall来安装你需要的对应node版本\n\n回到你的nvm安装路径，就可以看到你已经安装的各种版本的node文件夹\n\n当然也可以用命令行\nnvm list\n\n\n4️⃣ nvm切换到目标node版本\n切换到目标node版本使用nvm use\nnvm use\n\n查看目前nvm安装了哪些版本 然后use来进行切换\n\n到切换的时候发现了问题，这里无论怎么切换，node的版本依然不会变\n\n可以看到我用的use来切换到15的版本，但是再次查看nvm的node历史版本，可以看到还是位于16.14.2的node版本，明明就是这么顺利的问题，出了一个让人摸不到头脑的事情\n5️⃣寻找问题\n既然nvm切换版本已经成功，那么为什么node版本不会变，有没有可能根本改的不是同一个node，或者是存在两个node，直到我打开环境变量一看，为啥会存在两个node的路径，可能的原因就是之前的node版本没有删除，node -v一直输出的是安装前的node\n\n原来已经安装了一个node的，全局的node指向的node路径和nvm切换node的路径是不一样的\nnvm切换的node是基于他文件夹中的nodejs\n\n\n点进去看你会发现他也是有一个node.exe的程序的，所以问题是已经找到的了，目前系统上出现了两个node，并且nvm切换的node版本并不是全局的node，因为环境变量已经指向了旧的node，他的版本不会改变，那么nvm去怎么切换都是没有用的\n6️⃣解决方案\n\n看了网上的一些解决方案都是要在nvm中新建两个文件夹的方式来解决，但是其实直接把nodejs删除也是一个很直接的办法，先通过where node找到当前的node的安装目录，直接进行删除\n\n最后是通过把另外一个目录的node进行删除，重新看一下node的安装路径，也就是重新执行一下 where node\n\n可以看到在nvm配置正确的情况下是能直接指向nvm下的node的\n最后重新切换一下node的版本，也就是上文的操作\n\nPS\n我指的手动切换是nvm下载node版本之后手动去替换node_modules，原来大家觉得用nvm use也是手动替换（确实是我的问题），经过评论区广大jym指正，可以尝试一下volta这个工具来进行切换版本，真正做到不用手动替换，后续我会亲自去体验一下并且发文，感谢评论区小伙伴\n🙏 感谢您花时间阅读这篇文章！如果觉得有趣或有收获，请关注我的更新，给个喜欢和分享。您的支持是我写作的最大动力！\n往期好文推荐\n📚想搞私活？你可能需要配置多个SSH\n🚀3.40秒到231.84毫秒，我用Performance面板分析性能瓶颈全流程（多图流量预警⚠️）！\n五个有用的iframe踩坑问题，快收藏！\n面试必备-Vue3+Ts手写实现无限滚动列表\n面试必备-Vue 3 + ts 掌握 defineExpose：项目实践！\n面试必备，学会使用 Vue3 + ts 手写实现拖拽hook！",
+          "link": "https://juejin.cn/post/7291096702021304354",
+          "publishedOn": "2023-10-18T02:44:39.000Z",
+          "wordCount": 812,
+          "title": "🤔公司实习生居然还在手动切换node版本？",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7290786959441117243",
           "author": "程序员小易",
           "description": "title: JS\ntitleTemplate: 两数组内容比较\ntheme: channing-cyan\n题目\n给定两个数组，判断两数组内容是否相等。\n不使用排序\n不考虑元素位置\n例：\n[1, 2, 3] 和 [1, 3, 2] // true\n[1, 2, 3] 和 [1, 2, 4] // false\n\n\n思考几秒：有了😀😀\n1. 直接遍历✍\n直接遍历第一个数组，并判断是否存在于在第二个数组中\n求差集, 如果差集数组有长度，也说明两数组不等（个人感觉比上面的麻烦就不举例了）\nconst arr1 =  [\"apple\", \"banana\", 1]\nconst arr2 =  [\"apple\", 1, \"banana\"]\n\nfunction fn(arr1, arr2) {\n  // Arrary.some: 有一项不满足 返回false\n  // Arrary.indexOf: 查到返回下标，查不到返回 -1\n  if (arr1.length !== arr2.length) {\n    return false;\n  }\n  return !arr1.some(item => arr2.indexOf(item)===-1)\n}\n\nfn(arr1,arr2) // true\n\n细心的小伙伴就会发现：NaN 会有问题\nconst arr1 =  [\"apple\", \"banana\", NaN]\nconst arr2 =  [\"apple\", NaN, \"banana\"]\n\nfunction fn(arr1, arr2) {\n  if (arr1.length !== arr2.length) {\n    return false;\n  }\n  return !arr1.some(item => arr2.indexOf(item)===-1)\n}\n\nfn(arr…",
           "link": "https://juejin.cn/post/7290786959441117243",
           "publishedOn": "2023-10-17T07:26:43.000Z",
-          "wordCount": 1981,
+          "wordCount": 2366,
           "title": "面试官：如何判断两个数组的内容是否相等",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7290474926943010851",
+          "author": "夕水",
+          "description": "难以置信，一个小小的需求让我捣鼓出一个提效的网站来\n需求介绍\n事情是这样的，有个群友在业务当中碰到一个小小的需求，需求是这样的: 页面当中存在多个输入框，输入框的 value 值是一个数值组成的字符串（盲猜应该是身份证号码），这个字符串的位数是 15 位或者是 18 位，例如:'621848063680370'(15 位)和'621848063688370808'(18 位)，然后默认的值是这样的，现在问题来了，需求希望在这些数值中插入空白符号，比如 15 位的数字就按照 6 + 6 + 3 的格式分隔，分隔的时候需要使用空白符号。比如'621848063680370'分隔后应该变成'621848 063680 370',也就是数字位数到了第 6 位就加个空白符号分隔，...依次类推，而 18 位数字的分割规则则是:6 + 4 + 4 + 4。比如'621848063688370808'应该分隔成'621848 0636 8837 0808'。\n这个需求就是对字符串的处理，提到分隔替换，那么我们就可以想到强大的字符串替换方法 replace，这个方法可以接受 2 个参数，一个参数通常是一个正则表达式，第二个参数则是一个回调函数，用于定义替换后返回字符串。因此，我的第一个想法就是使用正则表达式去处理，如何处理呢？\n原理分析\n首先我们需要去理解这个规则，从需求我们可以发现，不同的位数，规则就会有所不同，因此我们可以提前用一个数据来表示这种规则，为了保持良好的扩展性，我设计了如下字段:\ntype spaceRule = {\n  digit: number; // 位数\n  rule: RegExp; //规则\n  symbolNumber: number; // 插入符号数量\n  symbolName: string; // 插入符号\n};\n\n可以看到，我设计了四个参数，正如注释…",
+          "link": "https://juejin.cn/post/7290474926943010851",
+          "publishedOn": "2023-10-16T13:33:45.000Z",
+          "wordCount": 4613,
+          "title": "难以置信，一个小小的需求让我捣鼓出一个提效的网站来",
           "imageUrl": null
         },
         {
@@ -605,7 +625,7 @@
           "description": "以下内容是2023年7月17~10月16日自己每周学习的记录\n第29周 7.17-7.23\n这周在项目中使用了一种新的布局。\n就是下图所示的布局效果。\n\n在过去，这种图片固定比例的，宽度自适应的布局都至少只要2层以上的标签，这一次，使用了容器元素和全新的cqw单位，可以一层标签即实现最终的效果。\n相关实现已经整理成文，有兴趣可以访问这里：“CSS高宽不等图片固定比例布局的三重进化”。\n第30周 7.24-7.30\n本周研究了了一个新的CSS属性text-wrap，目前仅Chrome浏览器支持，兼容性如下图所示：\n\n其中名为balance的属性值很有趣，可以让div元素中的内联元素尽可能宽度一致排列，布局差异如下所示：\n\n这个属性其实很有用，例如类似朋友圈点赞的那种布局效果，目前的实现都是优先第一行显示的。\n\n有了text-wrap:balance属性后，就可以是下图所示的布局效果，体验会更好。\n\n更多内容可以访问这里了解。\n第31周 7.31-8.6\n在做项目的时候，偶然看到有同事的CSS代码中对samp标签样式进行了定义，然后研究了下这个已经没用过的HTML标签，发现还是一个系列，可以用来帮助代码文本的语义化呈现，具体如下：\nkbd: 键盘输入的文字内容\nsamp: 范例输出\ncode: 计算机代码输出\nvar: 变量与自变量实例\n平时只用过 code 标签 ，结果没想到还有其他类似HTML属性，现代浏览器全部都支持。\n更详细的内容我已经这里成文章了，有兴趣的可以访问这里了解。\n第32周 8.7-8.13\n本周学习了两个HTML全局属性，nonce和popover属性。\nnonce与安全相关，配合meta元素的CSP设置，可以决定哪个内联JS执行，哪个内联<script›元素不执行。\n假设页面有如下所示的代码：\n<meta http-equiv=\"Content-Security-Policy\" content=\"script-src 'nonce-NDhkODkxMzYtNGUxZS00N2NjLTk1YTItNWMyOTM4YzdhZGJj'\">\n<script nonce=\"NDhkODkxMzYtNGUxZS00N2NjLTk1YTItNWMyOTM4YzdhZGJj\">// …</script>\n\n则此时，只有nonce值有设置，且值匹配的",
           "link": "https://juejin.cn/post/7290226270641618979",
           "publishedOn": "2023-10-16T07:57:46.000Z",
-          "wordCount": 1557,
+          "wordCount": 1467,
           "title": "我最近3个月的前端专业学习记录",
           "imageUrl": null
         },
@@ -615,7 +635,7 @@
           "description": "之前看到有人在浏览器端复刻了原神的登录界面，效果非常还原。\n本文就让我们一起来看看这种效果是如何实现的，主要分析Shader相关的部分。\n怀着学习的目的，我自己也写了一版，观看地址：https://genshin-replica.miaohezi.com/\n\n背景\n背景是一个渐变色，由 3 种颜色组成，可以用Shader的smoothstep函数配合UV坐标的y分量画出来。\nfloat y=1.-uv.y;\nfloat mask1=1.-smoothstep(0.,stop1,y);\nfloat mask2=smoothstep(0.,stop1,y)*(1.-smoothstep(stop1,stop2,y));\nfloat mask3=smoothstep(stop1,stop2,y);\ncol+=col1*mask1;\ncol+=col2*mask2;\ncol+=col3*mask3;\n\n\n整个Shader代码我放到Shadertoy上了，预览地址：https://www.shadertoy.com/view/dstBzj\n背景云\n背景云由两种平面网格组成，它们有属于自己的遮罩纹理。\n\n在Shader中，采样遮罩纹理，获取里面的透明度数据，将其作为alpha通道的值，再定义一个主颜色即可。\nvec2 uv=vUv;\nvec4 tex=texture(uTexture,uv);\nfloat alpha=tex.r*.4;\nvec3 col=vec3(1.8);\ngl_FragColor=vec4(col,alpha);\n\n\n这是其中一种平面的写法，它只有一种颜色。\n另一个平面有两种颜色，是因为用了mix函数将 2 种颜色混合到了一起。\nvec3 col=vec3(.090,.569,.980);\ncol=mix(col,vec3(.93),vec3(pow(tex.r,…",
           "link": "https://juejin.cn/post/7290157103674032182",
           "publishedOn": "2023-10-16T03:33:08.000Z",
-          "wordCount": 1106,
+          "wordCount": 1049,
           "title": "原神，启动！three.js 复刻原神登录界面技术浅析",
           "imageUrl": null
         },
@@ -625,7 +645,7 @@
           "description": "theme: channing-cyan\n前言\n最近在测试 Tailwind CSS 和 Uno CSS 这两种原子化 CSS 工具是否能够有效减少打包后的文件体积时，先开始分析这些工具的优缺点，然后再直接上数据，最后做了一款经典的 TodoList 来进行测试，文章都写好了就差最后的数据了：\n\n但测试得出来的结果相差很小，几乎没有什么太大的参考价值。想想也是，一个 TodoList 刚能有几行样式？只有在样式足够庞大的前提下这个测试才有意义，毕竟样式多了重复的部分自然也会变多，然后积少成多最终才能达到量变引起质变的效果。当然量变引起质变这个说法可能稍微夸张了点，但样式越庞大得出来的结果才越有参考价值这个肯定是没错的，于是我把原本比较简陋简洁的 TodoList 来了个大升级：\n\n但就在给列表拖拽排序的时候我发现了一个令人难以接受的事实，说到 Vue3 拖拽库大家首先想到的是哪个？是 VueDraggable 对吧？那其次呢？假如 VueDraggable 停止维护了，并且随着 Vue 的升级也慢慢无法兼容了，大家首先想到的替代品是什么？替代品就是 Vue3 这么庞大的生态居然没有任何一款成熟的替代品！\n测试原子化 CSS 时的发现\n本来想着测试如下几种情况：\nVue 3 只用 Tailwind 写一个 TodoList\nVue 3 只用 UnoCSS 的属性模式写一个 TodoList\nVue 3 复杂样式用普通写法、简单样式用 Tailwind 写一个 TodoList\nVue 3 复杂样式用普通写法、简单样式用  UnoCSS 的属性模式写一个 TodoList\nVue 3 不用任何原子化 CSS 写一个 TodoList\nVue 3 不用任何原子化 CSS（但用内置的 scoped）写一个 TodoList\nVue 3 只用 CSS Module 写一个 TodoL…",
           "link": "https://juejin.cn/post/7290169619511377976",
           "publishedOn": "2023-10-16T03:31:49.000Z",
-          "wordCount": 2180,
+          "wordCount": 2280,
           "title": "别再卷组件库了，Vue 拖拽库都断代了！",
           "imageUrl": null
         },
@@ -635,7 +655,7 @@
           "description": "theme: smartblue\n前言\n哈喽，大家好，我是泽南Zn👨‍🎓。在之前的一篇文章写到， 前端如何使用websocket发送消息，websocket是怎么建立连接的呢？如果断开了会怎样？如何一直保持长连接呢？接下来，本篇文章将会带你了解--- WebSocket心跳机制\n一、WebSocket心跳机制\n前端实现WebSocket心跳机制的方式主要有两种：\n使用setInterval定时发送心跳包。\n在前端监听到WebSocket的onclose()事件时，重新创建WebSocket连接。\n第一种方式会对服务器造成很大的压力，因为即使WebSocket连接正常，也要定时发送心跳包，从而消耗服务器资源。第二种方式虽然减轻了服务器的负担，但是在重连时可能会丢失一些数据。\n二、WebSocket心跳包机制\nWebSocket心跳包是WebSocket协议的保活机制，用于维持长连接。有效的心跳包可以防止长时间不通讯时，WebSocket自动断开连接。\n心跳包是指在一定时间间隔内，WebSocket发送的空数据包。常见的WebSocket心跳包机制如下：\n客户端定时向服务器发送心跳数据包，以保持长连接。\n服务器定时向客户端发送心跳数据包，以检测客户端连接是否正常。\n双向发送心跳数据包。\n三、WebSocket心跳机制原理\nWebSocket心跳机制的原理是利用心跳包及时发送和接收数据，保证WebSocket长连接不被断开。WebSocket心跳机制的原理可以用下面的流程来说明：\n客户端建立WebSocket连接。\n客户端向服务器发送心跳数据包，服务器接收并返回一个表示接收到心跳数据包的响应。\n当服务器没有及时接收到客户端发送的心跳数据包时，服务器会发送一个关闭连接的请求。\n服务器定时向客户端发送心跳数据包，客户端接收并返回一个表示接收到心跳数据包的响应。\n当客户端没有及时接…",
           "link": "https://juejin.cn/post/7290005438153867283",
           "publishedOn": "2023-10-16T01:51:30.000Z",
-          "wordCount": 1019,
+          "wordCount": 990,
           "title": "面试官：你知道websocket的心跳机制吗？",
           "imageUrl": null
         },
@@ -645,7 +665,7 @@
           "description": "theme: github\n\n昨天，一个在掘金认识的小伙伴，进入了美团专门做 IDE 的基建组，心底真是替他高兴，这本来就是他应得的。\n刚认识的时候还是一个工作一年的小毛孩，整天逮着我问各种问题，模板引擎、Babel、Electron、Jest、Rollup…\n虽然没见过面，不知道他长什么样，在我脑海里，他就是两样放着光，对技术充满好奇心、自我驱动力很强小伙子。\n我就知道他能成，因为我多少也是这样子的，尽管我现在有些倦怠。\n后来，随着工作越来越忙，博客也停更了，我们便很少联系了。\n不过，后面我招人，尤其是校招生或者初级开发，我都是按照他这个范本来的。我也时常跟别人提起，我认识北京这样一个小伙子。\n也有可能我们这边庙太小了，这样的小伙伴屈指可数。\n平台和好奇心一样重要。\n大部分人智商条件不会有太多的差距，尤其是程序员这个群体，而好奇心可以让你比别人多迈出一步，经过长时间的积累就会拉开很大的差距。\n而平台可以让你保持专注，与优秀的人共事，获得更多专业的经验和知识、财富，建立自己的竞争壁垒。\n回到正题。\n我觉得是时候阶段性地总结和回望回顾我过去这三年，却发现大部分都是泡沫。跨端、业务、质量管理、低代码、领域驱动设计... 本文话题可能会比较杂\n2020 年七月，口罩第二年。我选择了跳槽，加入了一家创业公司\n跨端开发的泡沫\n2020 年，微信小程序已经成为国内重要的流量入口，事实也证明，我们过去几年交付的 C 端项目几乎上都是小程序。更严谨的说，应该是微信小程序，尽管很多巨头都推出了自己的小程序平台，基本上都是陪跑的。\nTaro 2.x\n进来后接手的第一个项目是原生小程序迁移到 Taro。\n那时候，我们的愿景是“一码多端”，期望一套程序能够跑在微信小程序、支付宝小程序等小程序平台、H5、甚至是原生 App。\n那时候 Taro 还是 2.x 版本，即通过语法静态编译成各端小程序的源码…",
           "link": "https://juejin.cn/post/7289718324857880633",
           "publishedOn": "2023-10-15T14:13:46.000Z",
-          "wordCount": 2591,
+          "wordCount": 2559,
           "title": "回顾我这三年，都是泡沫",
           "imageUrl": null
         },
@@ -655,7 +675,7 @@
           "description": "theme: smartblue\nhighlight: a11y-dark\n一、前言\n前段时间参与字节面试，一面中问到我 闭包 ，我照着自己的理解从闭包的特性到高阶函数，再提到了闭包的应用，如 curry函数。\ncurry函数:\n// 实现一个add函数\n// return 1 + 2 + 3 + 2 传参为undefined时返回sum\nadd(1,2,3)(2)()\n// 8\n\n😶😶😶……本人只懂概念没有实操过啊😭👊\n闭包的概念、延伸概念、应用以及优劣，顺带解决这个题目。\n二、闭包\n2.1 闭包的概念\n闭包是由一个函数以及与其相关的引用环境组合而成的实体。闭包可以在函数内部访问外部函数的变量，并且这些变量可以在外部函数执行结束后仍然保持其状态。\nfunction outerFunction(x) {\n  return function innerFunction(y) {\n    return x + y;\n  };\n}\n\n// 创建闭包函数\nvar closure = outerFunction(5);\n\n// 调用闭包函数\nvar result = closure(3);\n\nconsole.log(result); // 输出：8\n\n可以看到 innerFunction 可以获取到传入 outerFunction 的参数,可见原本在外部函数执行结束后本该销毁的地址得到了保留。\n闭包可以访问和修改其创建时捕获的外部环境中的变量值，从而实现状态的保存和共享。\n闭包可以私有化变量，从而避免命名冲突和污染全局作用域。\n闭包可以延长变量的生命周期，从而实现回调、事件处理等高级操作。\n有的同学可能会联想到高阶函数，或许对高阶函数、闭包存在不清晰的认知，那么我们就再来讲一下高阶函数。\n2.2 高阶函数\n高阶函数指的是能够接受函数作为参数或返回函数作为结果的函数,如 Ar…",
           "link": "https://juejin.cn/post/7289664472868732982",
           "publishedOn": "2023-10-14T16:40:08.000Z",
-          "wordCount": 3112,
+          "wordCount": 3028,
           "title": "字节一面——当我从闭包谈到高阶函数，面试官：来道curry函数尝尝😊",
           "imageUrl": null
         },
@@ -665,7 +685,7 @@
           "description": "theme: juejin\n大概在昨年下半年，我利用同构渲染技术，把公司中一个需要7、8秒才能打开的vue3项目成功优化至秒开（当然除了同构之外也配合了一些其他手段），由于那段时间vue3推出不久，很多框架这部分功能还没有跟上，我便试着用vue和vite本身提供的api来完成同构，最终也了令人满意的效果，自己在这个过程中也获益匪浅。\n如今各大框架的功能已经完善，如果你现在想做同构渲染，我推荐直接使用next.js（react）或nuxt.js(vue)来进行开发，而不是像我一样手动进行实现。本文主要是对于同构原理的描述，不涉及框架的使用。\n为了让小白也能看懂，文章会包含很多特别基础的理论描述，如果觉得没必要了解，你可以通过标题跳转到自己感兴趣的部分。文章中的代码主要以vue为例，但是原理不局限于任何框架。\n点击这里查看完整代码和PPT\n1. 什么是同构渲染？为什么使用它？\n1.1 什么是渲染?\n以现在前端流行的react和vue框架为例。react中的jsx和vue里面的模板，都是是无法直接在浏览器运行的。将它们转换成可在浏览器中运行的html，这个过程被称为渲染。\n1.2 什么是客户端渲染（client-side-render, 以下简称csr）\nCSR是现在前端开发者最熟悉的渲染方式。利用vue-cli或create-react-app创建一个应用，不作任何额外配置直接打包的出来代码就是CSR。\n你可以用如下的方法辨别一个web页面是否是CSR：打开chrome控制台 - 网络面板，查看第一条请求，就能看到当前页面向服务器请求的html资源；如果是CSR（如下图所示），这个html的body中是没有实际内容的。\n\n那么页面内容是如何渲染出来的呢？仔细看上面的html，会发现存在一个script标签，打包器正是把整个应用都打包进了这个js文件里面。\n当浏览器请求页面的时候…",
           "link": "https://juejin.cn/post/7289661061984501819",
           "publishedOn": "2023-10-14T09:46:48.000Z",
-          "wordCount": 2441,
+          "wordCount": 2421,
           "title": "前端页面秒开的关键 - 小白也能看懂的同构渲染原理和实现（含nodejs服务端测试与优化，附PPT）",
           "imageUrl": null
         },
@@ -675,7 +695,7 @@
           "description": "theme: smartblue\nhighlight: atelier-sulphurpool-light\n前言\n  大家好，我是沐浴在曙光下的贰货道士。在日常开发中，我们经常会面对各种挑战和繁琐的任务。不管是处理复杂的数据结构，还是解决棘手的编程问题，都可能让我们感到沮丧和无从下手。但是，幸运的是，有一些神奇的方法可以让我们的开发变得更加轻松、高效，甚至让我们在编码的过程中快乐地摸🐟。\n  我们将介绍一些在日常开发中非常实用的方法，它们能够极大地提升我们的开发效率和幸福感。这些方法不仅仅是技术层面的技巧，更是关于如何优雅地解决问题、简化复杂性的智慧。通过掌握这些方法，我们能够更加从容地面对开发中的困难，并以更高的效率和质量完成我们的工作。有喜欢本文的朋友，欢迎一键三连哦。让我们一起快乐地摸🐟吧~\n1. ⭐ toFixed方法的二次封装，解决toFixed精度问题\n  在金钱计算中，精度问题是一个非常重要且常见的挑战。例如，当我们进行货币计算时，需要确保结果的精度准确，并且不出现舍入错误或精度损失。使用IEEE 754标准的JavaScript语言内置的toFixed方法，是处理小数精度的一种常见方式，它用于将数字保留指定的小数位数。然而，toFixed方法在某些情况下可能会导致精度问题，特别是在处理金钱计算时。例如，当进行复杂的浮点数运算时，toFixed可能会产生不准确的结果或舍入错误，这可能会对最终的计算结果产生意想不到的影响。\n  具体会有哪些影响呢？js中存在一个最大安全整数，可以使用Number.MAX_SAFE_INTEGER获取。值为9007199254740991，即2的53次方减1。当js的数值超过这个最大安全整数，就会出现精度丢失问题(对于采用IEEE 754标准的数值，最好使用字符串去表示，才不会丢失精度)：\nconsole.log(Number…",
           "link": "https://juejin.cn/post/7289662476730597436",
           "publishedOn": "2023-10-14T06:07:09.000Z",
-          "wordCount": 3408,
+          "wordCount": 3384,
           "title": "🔥🔥🔥自从学会这些奇技淫巧，日常开发可以快乐地摸🐟了",
           "imageUrl": null
         },
@@ -685,7 +705,7 @@
           "description": "🍀一、渐变神器Gradient\n网站地址：\nGradient by ShapeFactory | Chromatic Gradient Generator\n网站介绍：\nGradient是一款网页渐变设计工具，可以帮助用户轻松创建漂亮的渐变颜色样式，并将其应用到网页、APP等设计项目中。\n网站示例：\n\n🍀二、两款阴影工具在线网站\n网站地址：\n1、lingdaima在线阴影创建：在线创建可视化CSS阴影效果神器 \n2、box-shadow阴影网站：CSS box shadow inspiration - Box Shadow\n网站介绍：\n1、lingdaima是一款在线阴影创建工具，可以帮助用户快速地生成各种类型的阴影效果，并且提供多种自定义选项和实时预览功能。以下是该工具的主要特点和使用方法：\n特点：\n界面简洁易用，支持拖拽、滑动等操作；\n提供多种阴影类型，包括内部阴影、外部阴影、立体阴影等；\n可以自定义阴影属性，如颜色、大小、模糊度、位置等；\n支持将生成的阴影效果导出为CSS代码或PNG图片格式。\n\n2、box-shadow阴影网站，在这个网站中会按照人们对各种阴影效果的喜爱程度进行排名，相信大多数人喜欢的阴影效果，如果用在你的网站上也一定会非常的好看的。\n\n🍀三、网站UI配色宝藏网站UI Design Daily\n网站地址：\nUI Design Daily | Weekly FREE UI resources straight to your inbox\n网站介绍：\nUI Design Daily是一个专注于UI设计的在线社区，提供了大量优秀的设计素材和模板，以及许多实用的设计工具和资源。\n特点：\n提供丰富的UI设计素材和模板\n可以按照类别、颜色、风格等属性进行筛选和浏览；\n支持在线预览和下载设计素材和模板，以及查看其他设计师的作品；\n网站配色难？不知道颜色如何搭配？那这个网站将为你提供源源不断的思路\n网站示例：\n\n🍀四、 Small Dev tools实用工具合集\n网站地址：\nHome - SmallDev.tools --- 首页 - 小型开发工具\n网站介绍：\n如果说前面几款网站的功能太单一的话，那么Small Dev tools这个网站可谓是一款集成了多种实用工具的在线开发者工具箱，可以帮助开发者们轻松地完成常见的开发任务和问题解决\n这个网站包含了很多实用的功能，比如JSON解码器、JSON格式化程序、UTF8编码、Base64编码、Base64解码、CSS格式化程序、CSS压缩器等等，但是唯一不足的地方是这个网站的打开速度有点慢。\n网站示例：\n\n🍀五、 Glass Morphism 在线制作 CSS 玻璃风格神器\n网站地址：\nGlass Morphism (glassgenerator.netlify.app)\n网站介绍：\nGlass Morphism是一个有趣的在线CSS玻璃风格工具，可以帮助开发者们在UI设计中快速应用Glass Morphism风格，并且提供了多种自定义选项和实时预览功能\n特点：\n可以自定义UI元素的属性，如颜色、阴影、高光等；\n支持实时预览效果，调整后立刻看到变化；\n支持将生成的CSS代码导出为文件或直接复制。\n网站示例：\n\n🍀六、Keyframes 在线动画、阴影和颜色\n网站地址：\nKeyframes.app\n网站介绍：\nKeyframes是一个在线动画生成器，可以帮助用户快速创建各种类型的CSS3动画、阴影和使用颜色效果，并且提供多种自定义选项和实时预览功能。以下是该工具的主要特点和使用方法\n特点:\n界面简洁易用，支持拖拽、滑动等操作；\n提供多种动画类型，包括旋转、平移、缩放、淡入淡出等；\n可以自定义动画属性，如持续时间、延迟时间、曲线函数等；\n支持实时预览效果，调整后立刻看到变化；\n支持将生成的CSS代码导出为文件或直接复制。\n网站示例：\n\n🍀七、BGJar 在线SVG 背景\n网站地址：\nBGJar | Free svg background image generator for your websites\n网站介绍：\nBGJar是一个免费的在线背景生成器，提供了各种类型和风格的背景图像，并且支持实时预览和自定义选项。以下是该网站的主要特点和使用方法：\n特点:\n提供各种类型和风格的背景图像，包括渐变色、图案、纹理等；\n可以自定义背景属性，如颜色、透明度、大小等；\n支持实时预览效果，调整后立刻看到变化；\n支持将生成的背景下载为PNG或SVG格式。\n网站示例：",
           "link": "https://juejin.cn/post/7289339080838627382",
           "publishedOn": "2023-10-14T01:45:17.000Z",
-          "wordCount": 1067,
+          "wordCount": 1028,
           "title": "🍀别找了！前端那些好用的网站都在这里了！",
           "imageUrl": null
         },
@@ -695,7 +715,7 @@
           "description": "theme: smartblue\nhighlight: a11y-dark\n前言\n通过本文你将理解rspack，并快速实现Vue2、Vue3项目配置，提升5倍多的项目构建性能，快速提高工作效率。\nWebpack 构建问题\n原有大型后台系统项目 DEV 构建需要 3分钟以上；\n自动化部署构建阶段需要10分钟以上；\n生产打包构建需要2分钟；\nRspack 优化后\n使用 Rspack 替代 Webpack 后：\nDEV构建 3min -> 20s\n自动化部署 6min -> 3min\n打包速度 2min -> 20s\n比 Webpack 更快 的 Rspack\nRspack 是基于 Rust 重写 Webpack，允许依赖 Webpack 的打包构建工具。\n核心优势在于：\n快速的 Dev 启动性能。是开发者每天需要运行很多次的命令，但大型项目每次都需要等待 10 分钟，这对于工程师来说非常痛苦，因此优化开发模式下启动的时间至关重要。npm run dev\n高效的 Build 性能。经常在 CI/CD 环境中运行，它决定了应用生产交付的效率。有些应用在生产环境中需要 20 到 30 分钟的构建时间，如果能缩短这段时间，对开发流程也将非常有帮助。npm run build\n灵活的配置。用户工程的配置非常灵活，不够统一。在之前的尝试中，将 Webpack 配置迁移到其他构建工具时，我们遇到了许多问题，因为其他构建工具的配置不如 Webpack 灵活。\n生产环境的优化能力。在启用 Rspack 之前，我们尝试了社区内的各种方案，但它们都面临着一定程度的生产环境负优化，例如拆分包不够精细等。因此，优化生产环境的产物是我们不可放弃的功能。\n————摘自Rspack官网\n起步\n安装依赖：\npnpm add @rspack/cli@0.3.4\n\n配置npm脚本：\n// package.json\n…",
           "link": "https://juejin.cn/post/7289282433661173760",
           "publishedOn": "2023-10-13T12:33:29.000Z",
-          "wordCount": 2243,
+          "wordCount": 2298,
           "title": "用 Rspack 替代 Webpack，提升五倍构建速度",
           "imageUrl": null
         },
@@ -705,7 +725,7 @@
           "description": "theme: channing-cyan\n技术无止境 创作不间断\n👏 创作者训练营第三期来咯，快来和我们一起探索技术写作进阶之旅吧～！\n经过第二期和全站创作者们一起写作，相信很多新手作者都收获了很多心得，文章质量也大有进步；为了培养新手作者们的创作习惯以及鼓励大家继续创作出更多优质的内容，我们将第三期训练营与更文活动合并，并为大家准备了丰厚的奖品池，快去围观 👀 👇\n✏️ 官方创作指南（持续更新）\n标题\n简介\n作者\n\n\n\n\n🔗 如何从 0 到 1 写好技术文章\n有想法想沉淀，动笔前却犯了难？本篇文章将通过五个步骤教你写一篇技术文章。\nPDI技术写作团队\n\n\n🔗 如何写作系列教程\n《如何写作通用教程》将写作拆解成五个部分，总结了在写作前、写作中和写作后三个阶段需要注意的写作要点和技巧，通读整个系列文档，可以帮助你初步搭建系统的基础写作知识。\nPDI技术写作团队\n\n\n\n👍 优秀案例赏析\n标题\n简介\n作者\n\n\n\n\n🚀3.40秒到231.84毫秒，我用Performance面板分析性能瓶颈全流程（多图流量预警⚠️）\n如何优化不是本文的关键，本文主要和大家一起学习如何使用performance面板来进行性能瓶颈的定位，学习面板的使用，找到性能瓶颈源码并解决问题。\n一只大加号\n\n\nMongoDB保姆级指南(上)：七万字从零到进阶，助你掌握又一款强大的NoSQL！\n关于MongoDB相关的文章，总共会分为上中下三篇，同时为了屏蔽语言之间的差异，前面两篇都会使用MongoDB原生的语法进行阐述，为此，无论你是Java，还是PHP、Node、Go、Python、C#……任何语言的开发者，都可以畅通无阻般阅读！\n竹子爱熊猫\n\n\n【特征选择】Filter - 过滤法中的数学原理\n本文主要对特征工程中特征选择部分的部分常见方法的数学原理进行讲解，将不涉及或很少涉及代码实现或应用，阅读…",
           "link": "https://juejin.cn/post/7289038122918150156",
           "publishedOn": "2023-10-13T06:36:58.000Z",
-          "wordCount": 1225,
+          "wordCount": 1226,
           "title": "创作者训练营第三期 · 探索技术写作进阶之旅",
           "imageUrl": null
         },
@@ -715,7 +735,7 @@
           "description": "GitHub 仓库地址：https://github.com/web-infra-dev/rspress\n官网地址：https://rspress.dev\n今天，我们很高兴地跟大家宣布 Rspress 1.0 正式发布了！\n框架定位\nRspress 是由 ByteDance Web Infra 团队孵化的一款静态站点生成器，使用 Rspack 进行构建，基于 React 框架进行渲染，支持 MDX 内容开发，主打高性能、简单易用和定制性强。\nRspress 中内置了一套默认的文档主题，你可以通过 Rspress 来快速搭建一个文档站点，同时也可以自定义主题，来满足你的个性化静态站需求，比如博客站、产品主页等。\n当然，你也可以接入官方提供的相应插件来方便地搭建组件库文档。\n项目背景\nRspress 最初的形态是给 Web Infra 团队内部提供文档工具，在过去在维护一些稍复杂的文档项目的过程中，我们围绕着以下的几个方向来建设 Rspress 本身的能力：\n构建性能。保证足够快的启动速度，带来良好的开发体验。\nMDX 支持。通过 MDX，我们可以方便地复用文档片段，以及在文档中渲染自定义的 React 组件。\n文档站基础能力。包括国际化、多版本支持、全文搜索、组件库文档等。\n可扩展性。内置插件系统，支持通过插件 API 来扩展框架功能。\n同时我们意识到这些也代表了 SSG 站点开发的一些核心需求。接下来将会根据这几个方面分别进行介绍。\n构建性能\n当项目越来越庞大，团队成员时常苦恼于冗长的项目启动时间，开发体验因此受到了一些负面影响，并且项目开发的时间越长，这种体验的劣化就越为明显。\n我们不禁开始思考，是否能跳出目前社区工具链的限制，突破现有 SSG 框架的性能瓶颈，实现绝大多数场景的项目秒启效果？\n接着，我们在这个方向上持续地探索，最终在 Rspress 上实现了这样的效果。…",
           "link": "https://juejin.cn/post/7288963205980864575",
           "publishedOn": "2023-10-12T08:56:14.000Z",
-          "wordCount": 2685,
+          "wordCount": 2526,
           "title": "Rspress 1.0 正式发布，基于 Rspack 的高性能静态站点生成器！",
           "imageUrl": null
         },
@@ -725,7 +745,7 @@
           "description": "theme: scrolls-light\nhighlight: atom-one-dark-reasonable\n在前端开发中，代码的重复度是一个常见的问题。重复的代码不仅增加了代码的维护成本，还可能导致程序的低效运行。为了解决这个问题，有许多工具和技术被用来检测和消除代码重复。其中一个被广泛使用的工具就是jscpd。\njscpd简介\njscpd是一款开源的JavaScript的工具库，用于检测代码重复的情况，针对复制粘贴的代码检测很有效果。它可以通过扫描源代码文件，分析其中的代码片段，并比较它们之间的相似性来检测代码的重复度。jscpd支持各种前端框架和语言，包括HTML、CSS和JavaScript等150种的源码文件格式。无论是原生的JavaScript、CSS、HTML代码，还是使用typescript、scss、vue、react等代码，都能很好的检测出项目中的重复代码。\n开源仓库地址：github.com/kucherenko/jscpd/tree/master\n如何使用\n使用jscpd进行代码重复度检测非常简单。我们需要安装jscpd。可以通过npm或yarn来安装jscpd。\nnpm install -g jscpd\n\nyarn global add jscpd\n\n安装完成后，我们可以在终端运行jscpd命令，指定要检测的代码目录或文件。例如，我们可以输入以下命令来检测当前目录下的所有JavaScript文件：\njscpd .\n\n指定目录检测：\njscpd /path/to/code\n\n在命令行执行成功后的效果如下图所示：\n\n简要说明一下对应图中的字段内容：\nClone found (javascript)：\n显示找到的重复代码块，这里是javascript文件。并且会显示重复代码在文件中具体的行数，便于查找。\nFormat：文件格式，这里是 javascr…",
           "link": "https://juejin.cn/post/7288699185981095988",
           "publishedOn": "2023-10-12T06:55:12.000Z",
-          "wordCount": 1426,
+          "wordCount": 1430,
           "title": "前端代码重复度检测",
           "imageUrl": null
         },
@@ -735,28 +755,8 @@
           "description": "一、背景介绍\n飞书深诺集团是专注海外数字营销解决方案的专业服务提供商，为有全球化营销需求的企业提供标准&定制相结合的全链路服务产品，满足游戏、APP、电商、品牌等典型出海场景需求。到 2022 年，集团各产线前端单页面应用（下文直接用 SPA 代替）的数量，已经占前端项目总数量的三分之二以上，个别巨石应用会面临以下问题：\n应用单次构建-发布时间，已经超过了10min，从开发到生产上线部署，会经历 4 个环境 dev / test / pre / prod，总部署时间大于 40min 以上。\n应用接入了 6+ 其他产线提供的 MF(Module Federation) 微前端组件，任何微前端组件进行版本升级时，都需要重走 dev -> prod 4 个环境的构建发布流程。\n考虑到 test 环境可能同时有多个测试在多环境进行发布测试，这个量级又以倍数上升。\nLife is short，将如此多的时间浪费在构建发布上是不值得的，解决此问题势在必行。\n二、基本思路\n解决思路拆解\n根据上面信息可知，当前总构建发布时间\n= 单次构建发布时间 * 环境个数\n= 单次构建时间 * 环境个数 + 单次发布时间 * 环境个数\n因为单次发布时间，一般只涉及到镜像的推送与发布，已基本没有可提升的空间，所以解决思路目前有两个：\n解决思路一：减少单次构建时间\n解决思路二：构建产物实现多环境复用，使公式由（* 环境个数）变为（* 1）\n解决思路一：减少单次构建时间\n目前业界针对减少单次构建时间，主要有以下常规主流方案：\n使用 swc 或 esbuild 等新一代构建工具，带来极致的构建效率\n应用构建缓存，本质上都是实现增量构建，主要有两种方案：\n利用 docker 构建缓存，将不变的步骤缓存起来\n利用 webpack 或 esbuild 本身构建缓存，提升打包速度\n多进程优化，利用 webpack，实…",
           "link": "https://juejin.cn/post/7288632764915204115",
           "publishedOn": "2023-10-12T02:37:22.000Z",
-          "wordCount": 1775,
+          "wordCount": 1740,
           "title": "飞书深诺前端 SPA 敏捷部署方案演进",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7288561905405313080",
-          "author": "FrontEnd_Reese",
-          "description": "theme: v-green\nhighlight: a11y-dark\n八股文\n讲讲异步组件和路由懒加载？异步加载的过程是怎么样的？为什么在router中使用回调的方式引入组件就可以实现异步加载？假如一个页面有特别多的异步组件会带来什么问题？\n其实异步组件和异步路由是一样的东西，异步路由引入的也还是对应的组件。\n异步加载的过程涉及到JavaScript运行时、事件循环机制以及打包工具的配合工作。过程：\n代码分割：当我们在代码中使用import()函数异步加载组件时，打包工具（如Webpack或Rollup）会将这些组件作为单独的JavaScript文件（通常被称为\"chunks\"）进行打包。\n初始加载：在页面初始加载时，只有主bundle会被下载。主bundle中包含了应用的主要代码，但不包括异步组件的代码。\n异步请求：当用户触发了需要异步组件的操作（如访问一个使用了路由懒加载的路由），JavaScript运行时会发送一个网络请求，请求异步组件对应的JavaScript文件。\n下载和执行：浏览器下载异步组件对应的JavaScript文件，并执行其中的代码。这个过程可能会涉及到一些延迟，因为需要等待网络请求完成，并且JavaScript是单线程的，不能同时执行多段代码。\n渲染组件：异步组件的代码被执行后，组件会被注册到Vue.js应用中，并触发视图的更新。Vue.js会创建一个新的组件实例，并将其渲染到页面上。\n在这个过程中，打包工具起到了关键作用。它负责将代码分割成多个小文件，并在构建时生成一份映射表，这样JavaScript运行时就知道每个异步组件对应哪个文件。\n同时，JavaScript的事件循环机制也在这个过程中发挥了作用。由于JavaScript是单线程的，它需要使用事件循环来处理异步操作。当我们使用import()函数加载一个组件时，这个操作会被放入微任务队列中。…",
-          "link": "https://juejin.cn/post/7288561905405313080",
-          "publishedOn": "2023-10-11T17:35:24.000Z",
-          "wordCount": 1640,
-          "title": "24秋招美团一面🦘「八股文+代码输出+算法题」",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7288504491506024487",
-          "author": "杨老头儿",
-          "description": "早在2023/4/12，chrome已经支持使用本地覆盖web内容和HTTP相应标头，通过本地覆盖可以模拟远程资源。话不说直接开始\n如何设置本地覆盖\n1、打开 DevTools，导航到“网络”面板，右键单击要覆盖的请求，从下拉菜单中选择“覆盖标头”或“覆盖内容” 。\n\n2、如果您尚未设置本地覆盖，则在顶部的操作栏中，DevTools 会提示您：选择一个文件夹来存储覆盖文件。\n\n3、单击 “允许” 以授予 DevTools 对其的访问权限。\n\n4、如果您设置了本地覆盖但已禁用，DevTools 会自动启用它们。\n5、如何清除mock的数据\n\n演示：\n覆盖HTTP请求返回值\njvideo\n覆盖HTTP header请求\njvideo\n参考：\n本地覆盖 Web 内容和 HTTP 响应标头\n在本地覆盖 HTTP 响应标头",
-          "link": "https://juejin.cn/post/7288504491506024487",
-          "publishedOn": "2023-10-11T08:52:30.000Z",
-          "wordCount": 877,
-          "title": "chrome 也支持模拟请求喽",
           "imageUrl": null
         },
         {
@@ -765,7 +765,7 @@
           "description": "介绍\n🔥🔥Vue3 + TS + Echarts + Pinia 优秀可视化数据大屏解决方案，包括移动端与 PC 端的响应式适配处理，实现移动端和PC端不同布局和兼容。欢迎大家提出Issues\n项目地址\nhttp://124.221.177.11/#/login\ngitee开源地址：https://gitee.com/yuanjinwei/DM_screen_web（开源出来就是纯用爱发电 有劳大家点个star支持鼓励一下😭）\ngithub开源地址：https://github.com/williamyuanjw/DM_screen_web\n项目展示\n登录页\n\nPC 端首页\n\n小于 576px 设备效果\n\n操作文档\n登录项目之后，在首页以关注度图表为例\n图表可支持左右滑动，图表内长按鼠标左滑或者右滑进行不同月份的展示\n右上角从左到右图标的功能分别为：切换至折线图、切换至柱状图、详情弹窗\n打开详情弹窗后可以通过下拉搜索框进行输入搜索选择要添加至图表的项目，也可进行删除\n\n\n项目中间部分的雷达图和虚拟列表可以进行交互，点击列表的项目可以添加至雷达图，点击雷达图某个项目可以展示详情，点击 remove 可以移除\n\n\n项目亮点\n实现对不同大小的屏幕/设备的良好适配以及针对小屏幕设备有不同的布局以及兼容\n不定高无限滚动加载虚拟列表的实现，控制列表渲染数据量的同时实现列表无限滚动\n参数/事件\n说明\n类型\n默认值\n\n\n\n\ndataSource\n传入的数组\nArray\n必传\n\n\nloading\n分页加载loading状态\nBoolean\n必传\n\n\nestimatedHeight\n每一项的初始高度，用于传入渲染后再通过计算得到不定高列表的真实高度\nNumber\n必传\n\n\n@scrollEnd\n列表滚动到底部触发的方法\nFunction\n-\n\n\n\n<virtual-list\n:data-source=\"github.dataSource\"\n:loading=\"github.loading\"\n:estimated-height=\"30\"\n@scroll-end=\"github.addData\"\nclass=\"virtual-list\"\n>\n<template #item=\"{ item }\">\n<a-tooltip placement=\"top\" color=\"rgba(73, 146, 255, 0.8)\">\n<template #title>\n<span>项目名：{{ item.name }}</span>\n</template>\n<div class=\"virtual-list-item\" @click=\"radarFirst.chart.addRadarData(item.name)\">\n<span class=\"virtual-list-item-col\">{{ item.name }}</span>\n<span class=\"virtual-list-item-col\">{{ item.influence }}</span>\n<span class=\"virtual-list-item-col\">{{ item.trend }}</span>\n<span class=\"virtual-list-item-col\">{{ item.response }}</span>\n<span class=\"virtual-list-item-col\">{{ item.activity }}</span>\n<span class=\"virtual-list-item-col\">{{ item.github }}</span>\n</div>\n</a-tooltip>\n</template>\n</virtual-list>\n\nEcharts 图表相关 hooks 的封装，提高如折柱混合图、图表详情弹窗的代码复用性\n实现下拉搜索选择框、列表与图表之间的增删交互，根据文档解决雷达图等图表增删时的异常问题\n使用 transition 标签以及图片预加载来优化图片未加载完全等导致的用户视觉体验问题\n实现 Echarts 等组件的按需加载。在打包过程中对项目大体积模块进行分块打包以及优化项目字体文件大小",
           "link": "https://juejin.cn/post/7288517000580694070",
           "publishedOn": "2023-10-11T08:13:07.000Z",
-          "wordCount": 1000,
+          "wordCount": 976,
           "title": "探索前端可视化大屏：创造令人惊叹的数据可视化体验",
           "imageUrl": null
         },
@@ -775,7 +775,7 @@
           "description": "theme: cyanosis\nbabel是什么？\n浏览器的发展跟不上语言的发展，es6+虽然很普及了，但也不是所有浏览器都可以支持es6+语法。babel的诞生就源于此。\nbabel只是提供了一个“平台”，让更多有能力的plugins入驻平台，是这些plugins提供了将 ES6+版本的代码转换为向后兼容的 JavaScript 语法的能力。\nbabel的编译流程\n主要分为三步，流程主要为：\nparsing（解析）、transforming（转化）、generating（生成）\nparsing: babylon（babel 内部使用的解析类库叫做 babylon，现在改名叫@babel/parser） 负责将es6代码进行语法分析和词法分析后转换成抽象语法树AST\ntransforming: plugin插件使用 @babel/traverse 来遍历 AST 并进行节点的操作，用它提供的 API 来编写对 AST 的遍历和修改逻辑，由此来将一种AST转换为另一种AST\ngenerating：@babel/generator负责通过AST树生成ES5代码\n其中第二步的转化是重中之重，babel的插件机制也是在这一步发挥作用的，plugins在这里进行操作，转化成新的AST，再交给第三步的@babel/generator。 所以如果没有这些plugins进驻平台，那么babel这个“平台”是不具备任何能力的。\n而这整个过程，由@babel/core 负责编译过程的控制和管理。它会调用其他模块来解析、转换和生成代码。\n名词介绍\nPlugins 和 Presets 的运行顺序\nPlugins 在 Presets 前运行\nPlugins 顺序从前往后排列\nPresets 顺序是颠倒的（从后往前）\n    {\n      \"plugins\": [\"Tom\", \"Jack\"],\n  …",
           "link": "https://juejin.cn/post/7284144079716728873",
           "publishedOn": "2023-10-01T09:24:08.000Z",
-          "wordCount": 3780,
+          "wordCount": 3771,
           "title": "一文掌握Babel来龙去脉、三大脚手架中使用Babel",
           "imageUrl": null
         }
@@ -802,7 +802,7 @@
           "description": "你们都用什么开发工具",
           "link": "https://juejin.cn/pin/7291135064842158114",
           "publishedOn": "2023-10-18T08:00:51.000Z",
-          "wordCount": 523,
+          "wordCount": 514,
           "title": "你们都用什么开发工具",
           "imageUrl": null
         },
@@ -822,7 +822,7 @@
           "description": "打卡打卡，今天周二",
           "link": "https://juejin.cn/pin/7290733884136030242",
           "publishedOn": "2023-10-17T03:54:52.000Z",
-          "wordCount": 539,
+          "wordCount": 523,
           "title": "打卡打卡，今天周二",
           "imageUrl": null
         },
@@ -832,7 +832,7 @@
           "description": "#1024一起掘金#   新增一个函数节点代码编辑模式",
           "link": "https://juejin.cn/pin/7290494120206909492",
           "publishedOn": "2023-10-16T17:14:17.000Z",
-          "wordCount": 531,
+          "wordCount": 515,
           "title": "#1024一起掘金# 新增一个函数节点代码编辑模式",
           "imageUrl": null
         },
@@ -842,7 +842,7 @@
           "description": "发现一款非常好用的云文档，不论记笔记、写文档、画脑图、做计划、管项目、构建知识库还是高效团队协作，都比以前事半功倍，不论个人用还是团队用都很不错，推荐给你！\nhttps://www.wolai.com/signup?invitation=C2ZS3U2Z",
           "link": "https://juejin.cn/pin/7290382189992427559",
           "publishedOn": "2023-10-16T09:28:48.000Z",
-          "wordCount": 531,
+          "wordCount": 515,
           "title": "发现一款非常好用的云文档，不论记笔记、写文档、画脑图、做计划、管项目、构建知识库还是高效团队协作，都比以前事半功倍，不论个人用还是团队用都很不错，推荐...",
           "imageUrl": null
         },
@@ -862,7 +862,7 @@
           "description": "https://github.com/Simon-He95/fast-create-variable\n这个插件一定会火起来的🥺",
           "link": "https://juejin.cn/pin/7289664651364794402",
           "publishedOn": "2023-10-15T08:20:51.000Z",
-          "wordCount": 536,
+          "wordCount": 520,
           "title": "https://github.com/Simon-He95/fast-create-variable 这个插件一定会火起来的🥺",
           "imageUrl": null
         },
@@ -872,7 +872,7 @@
           "description": "大的来了，一波更新完效率提升X倍",
           "link": "https://juejin.cn/pin/7289397650387025977",
           "publishedOn": "2023-10-14T03:06:29.000Z",
-          "wordCount": 539,
+          "wordCount": 523,
           "title": "大的来了，一波更新完效率提升X倍",
           "imageUrl": null
         },
@@ -882,7 +882,7 @@
           "description": "基于微信测试号的AI机器人，支持谷歌搜索引擎插件：https://github.com/anhao/AIChatBot/",
           "link": "https://juejin.cn/pin/7288992783582281728",
           "publishedOn": "2023-10-13T03:33:12.000Z",
-          "wordCount": 524,
+          "wordCount": 508,
           "title": "基于微信测试号的AI机器人，支持谷歌搜索引擎插件：https://github.com/anhao/AIChatBot/",
           "imageUrl": null
         },
@@ -892,7 +892,7 @@
           "description": "DevOps相对关注运维自动化,较少涉及复杂算法。\nDevOps更专注基础架构和工程流程。\nDevOps的工作重心在于搭建工程化系统,而不是产品功能或业务创新。\nDevOps工程师相对更专注技术展开,对商业策略和产品决策参与较少。\nDevOps也主要在运维团队内部协作。和产品、设计等部门协作的机会较少。",
           "link": "https://juejin.cn/pin/7288964017351458857",
           "publishedOn": "2023-10-13T01:16:05.000Z",
-          "wordCount": 532,
+          "wordCount": 516,
           "title": "DevOps相对关注运维自动化,较少涉及复杂算法。 DevOps更专注基础架构和工程流程。 DevOps的工作重心在于搭建工程化系统,而不是产品功能或业务创新。 DevOps工程...",
           "imageUrl": null
         },
@@ -902,7 +902,7 @@
           "description": "jym，[呲牙]看看你们浏览器的收藏夹有啥有趣的网站，或者很实用的工具网站",
           "link": "https://juejin.cn/pin/7288509436899934267",
           "publishedOn": "2023-10-11T07:44:37.000Z",
-          "wordCount": 525,
+          "wordCount": 509,
           "title": "jym，[呲牙]看看你们浏览器的收藏夹有啥有趣的网站，或者很实用的工具网站",
           "imageUrl": null
         },
@@ -922,7 +922,7 @@
           "description": "jym，有无好用的png图片压缩网址，哪个杀千刀的举报了熊猫，打不开了，MD，剩下的能找到的全是要登录或者花钱的[酷拽][酷拽]",
           "link": "https://juejin.cn/pin/7288151713373192253",
           "publishedOn": "2023-10-10T08:47:22.000Z",
-          "wordCount": 524,
+          "wordCount": 508,
           "title": "jym，有无好用的png图片压缩网址，哪个杀千刀的举报了熊猫，打不开了，MD，剩下的能找到的全是要登录或者花钱的[酷拽][酷拽]",
           "imageUrl": null
         },
@@ -932,7 +932,7 @@
           "description": "每日打开\nhttps://juejin.cn/post/7280435532986990647",
           "link": "https://juejin.cn/pin/7287955337524314169",
           "publishedOn": "2023-10-10T07:12:51.000Z",
-          "wordCount": 538,
+          "wordCount": 522,
           "title": "每日打开 https://juejin.cn/post/7280435532986990647",
           "imageUrl": null
         },
@@ -942,7 +942,7 @@
           "description": "https://java.bejson.com/generator/  崩掉了。。[捂脸]",
           "link": "https://juejin.cn/pin/7287914116286545955",
           "publishedOn": "2023-10-10T01:19:32.000Z",
-          "wordCount": 526,
+          "wordCount": 510,
           "title": "https://java.bejson.com/generator/ 崩掉了。。[捂脸]",
           "imageUrl": null
         },
@@ -962,7 +962,7 @@
           "description": "生成 java 实体类属性的工具 有推荐没得[发呆]",
           "link": "https://juejin.cn/pin/7287757113401491490",
           "publishedOn": "2023-10-09T09:16:18.000Z",
-          "wordCount": 541,
+          "wordCount": 525,
           "title": "生成 java 实体类属性的工具 有推荐没得[发呆]",
           "imageUrl": null
         },
@@ -972,7 +972,7 @@
           "description": "打卡，vue无敌偷懒利器",
           "link": "https://juejin.cn/pin/7287620609373831224",
           "publishedOn": "2023-10-09T05:05:12.000Z",
-          "wordCount": 539,
+          "wordCount": 523,
           "title": "打卡，vue无敌偷懒利器",
           "imageUrl": null
         },

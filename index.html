@@ -51,11 +51,55 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-18 datetime="2023-10-18T08:51:01.000Z">2023-10-18</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-18 datetime="2023-10-18T08:51:01.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-18 datetime="2023-10-18T09:49:16.000Z">2023-10-18</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-18 datetime="2023-10-18T09:49:16.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Barret李靖的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/652faa1cbb3e3660e8041b7b"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 如何让 ChatGPT 更好地思考，以获得更佳的输出效果，有几个比较成熟的实践和技巧，背后都有对应的论文。 1）CoT，思维链提示，https://arxiv.org/abs/22...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/652faa1cbb3e3660e8041b7b">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fre5jgJ7vXoX5nLdvGRUgPWTyo2bv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>如何让 ChatGPT 更好地思考，以获得更佳的输出效果，有几个比较成熟的实践和技巧，背后都有对应的论文。
+1）CoT，思维链提示，https://arxiv.org/abs/2205.10625，将思考过程打印出来或者提供 one-shot/few-shot，输出的准确性会更高；例如你可以在提示词后追加：“Let&#x27;s think step by step”，效果就要好一些。
+对于决策推理性的问题，CoT 的效果都比较不错，事实上这个涌现效果是被发现而不是被设计出来的，后来它的有效性在这篇论文（https://arxiv.org/abs/2205.10625）中得到了证明。
+2）Self-Consistency，自洽性，https://arxiv.org/abs/2203.11171，在多次输出中找到投票最高的那条，例如你可以这么跟 ChatGPT 说：
+“对于每一个问题，你会思考 5 种不同的思路，然后将它们结合起来，输出最佳的措辞、最全面和最准确的答案。”（图一）
+3）Least to Most prompting，本质是规划+逐步执行，https://arxiv.org/abs/2205.10625，对于复杂的任务，单纯使用 CoT + SC 效果依然不会太好，可以让 ChatGPT 先自己去拆解问题再回答：
+&quot;对于每一个问题，你首先需要回答是否将问题分解为子问题，若否，直接给出答案；若是，则将问题拆解为子问题，然后将它们结合起来，输出最佳的措辞、最全面和最准确的答案。&quot;
+“To solve {problem}, we need to……”，让大模型开启这种思维模式，不断细化问题，结果会更好。（图二）
+4）Multi-Persona Self-Collaboration，多角色扮演，https://arxiv.org/abs/2307.05300，这个有点类似之前提到的 AutoGen，让多个代理相互对话来解决问题，只不过 AutoGen 是从工程层面真正做到了多 Agents 交互，而这里提到的，是让 ChatGPT 扮演多重人格/角色，例如：
+“你可以扮演任何角色，针对我给出的问题，请提供三个最相关的角色，对问题进行两轮讨论，然后你综合讨论结果总结最佳方案。请打印三个角色的讨论过程以及最后的方案。”（图三）
+以上，这些技巧的运用并不复杂，但是思想比较重要，掌握了之后，稍微修改下 Prompt，便可以得到更加符合预期的结果。#AI学习#</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -100,6 +144,95 @@
                             <span class="media-object__text">
                               <span>你们都用什么开发工具</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7291096702021304354"
+                        open
+                      >
+                        <summary class="article-expander__title">🤔公司实习生居然还在手动切换node版本？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7291096702021304354">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: smartblue
+前段时间看了实习生的新项目，发现他启动不了项目，因为node版本太低，我让他去用nvm来管理node的版本，然后看到他切换版本的时候是这样的，先用nvm下载安装目标的node版本，然后在把安装好的node版本替换掉原先的node路径下的node_modules，而不是用命令行进行版本切换，才发现原来他使用nvm来切换node版本虽然显示切换成功，但全局的node版本一直是不变的，所以才用文件覆盖的方式强制进行解决，对于这个问题进行解决并且梳理
+可以直接跳到第四步查看解决方案
+1️⃣ 安装nvm
+where nvm
+
+找不到nvm路径的朋友可以用这个命令来找到nvm的安装路径，默认的安装路径都是差不多的
+
+2️⃣ 查看目前node版本
+可以看到目前的版本是node V16.14.2
+
+3️⃣ nvm安装目标node版本
+nvm的主要作用就是用来切换node的版本，为什么要切换node的版本，就是因为你的当前node版本和你要启动的项目不兼容，有两种可能，要么是你的项目太旧，你的node版本相对来说比较高，需要用到向下兼容；另外一种可能就是你项目用到的node比较新，你需要进行升级
+先安装需要安装的目标版本，用isntall来安装你需要的对应node版本
+
+回到你的nvm安装路径，就可以看到你已经安装的各种版本的node文件夹
+
+当然也可以用命令行
+nvm list
+
+
+4️⃣ nvm切换到目标node版本
+切换到目标node版本使用nvm use
+nvm use
+
+查看目前nvm安装了哪些版本 然后use来进行切换
+
+到切换的时候发现了问题，这里无论怎么切换，node的版本依然不会变
+
+可以看到我用的use来切换到15的版本，但是再次查看nvm的node历史版本，可以看到还是位于16.14.2的node版本，明明就是这么顺利的问题，出了一个让人摸不到头脑的事情
+5️⃣寻找问题
+既然nvm切换版本已经成功，那么为什么node版本不会变，有没有可能根本改的不是同一个node，或者是存在两个node，直到我打开环境变量一看，为啥会存在两个node的路径，可能的原因就是之前的node版本没有删除，node -v一直输出的是安装前的node
+
+原来已经安装了一个node的，全局的node指向的node路径和nvm切换node的路径是不一样的
+nvm切换的node是基于他文件夹中的nodejs
+
+
+点进去看你会发现他也是有一个node.exe的程序的，所以问题是已经找到的了，目前系统上出现了两个node，并且nvm切换的node版本并不是全局的node，因为环境变量已经指向了旧的node，他的版本不会改变，那么nvm去怎么切换都是没有用的
+6️⃣解决方案
+
+看了网上的一些解决方案都是要在nvm中新建两个文件夹的方式来解决，但是其实直接把nodejs删除也是一个很直接的办法，先通过where node找到当前的node的安装目录，直接进行删除
+
+最后是通过把另外一个目录的node进行删除，重新看一下node的安装路径，也就是重新执行一下 where node
+
+可以看到在nvm配置正确的情况下是能直接指向nvm下的node的
+最后重新切换一下node的版本，也就是上文的操作
+
+PS
+我指的手动切换是nvm下载node版本之后手动去替换node_modules，原来大家觉得用nvm use也是手动替换（确实是我的问题），经过评论区广大jym指正，可以尝试一下volta这个工具来进行切换版本，真正做到不用手动替换，后续我会亲自去体验一下并且发文，感谢评论区小伙伴
+🙏 感谢您花时间阅读这篇文章！如果觉得有趣或有收获，请关注我的更新，给个喜欢和分享。您的支持是我写作的最大动力！
+往期好文推荐
+📚想搞私活？你可能需要配置多个SSH
+🚀3.40秒到231.84毫秒，我用Performance面板分析性能瓶颈全流程（多图流量预警⚠️）！
+五个有用的iframe踩坑问题，快收藏！
+面试必备-Vue3+Ts手写实现无限滚动列表
+面试必备-Vue 3 + ts 掌握 defineExpose：项目实践！
+面试必备，学会使用 Vue3 + ts 手写实现拖拽hook！</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -242,7 +375,7 @@ function fn(arr1, arr2) {
 }
 
 fn(arr…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                &ensp;<span class="article-reading-time">(&hairsp;8
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -592,6 +725,38 @@ https://www.wolai.com/signup?invitation&#x3D;C2ZS3U2Z</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7290474926943010851"
+                        open
+                      >
+                        <summary class="article-expander__title">难以置信，一个小小的需求让我捣鼓出一个提效的网站来</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7290474926943010851">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>难以置信，一个小小的需求让我捣鼓出一个提效的网站来
+需求介绍
+事情是这样的，有个群友在业务当中碰到一个小小的需求，需求是这样的: 页面当中存在多个输入框，输入框的 value 值是一个数值组成的字符串（盲猜应该是身份证号码），这个字符串的位数是 15 位或者是 18 位，例如:&#x27;621848063680370&#x27;(15 位)和&#x27;621848063688370808&#x27;(18 位)，然后默认的值是这样的，现在问题来了，需求希望在这些数值中插入空白符号，比如 15 位的数字就按照 6 + 6 + 3 的格式分隔，分隔的时候需要使用空白符号。比如&#x27;621848063680370&#x27;分隔后应该变成&#x27;621848 063680 370&#x27;,也就是数字位数到了第 6 位就加个空白符号分隔，...依次类推，而 18 位数字的分割规则则是:6 + 4 + 4 + 4。比如&#x27;621848063688370808&#x27;应该分隔成&#x27;621848 0636 8837 0808&#x27;。
+这个需求就是对字符串的处理，提到分隔替换，那么我们就可以想到强大的字符串替换方法 replace，这个方法可以接受 2 个参数，一个参数通常是一个正则表达式，第二个参数则是一个回调函数，用于定义替换后返回字符串。因此，我的第一个想法就是使用正则表达式去处理，如何处理呢？
+原理分析
+首先我们需要去理解这个规则，从需求我们可以发现，不同的位数，规则就会有所不同，因此我们可以提前用一个数据来表示这种规则，为了保持良好的扩展性，我设计了如下字段:
+type spaceRule &#x3D; {
+  digit: number; // 位数
+  rule: RegExp; //规则
+  symbolNumber: number; // 插入符号数量
+  symbolName: string; // 插入符号
+};
+
+可以看到，我设计了四个参数，正如注释…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;15
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7290226270641618979"
                         open
                       >
@@ -679,7 +844,7 @@ gl_FragColor&#x3D;vec4(col,alpha);
 另一个平面有两种颜色，是因为用了mix函数将 2 种颜色混合到了一起。
 vec3 col&#x3D;vec3(.090,.569,.980);
 col&#x3D;mix(col,vec3(.93),vec3(pow(tex.r,…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -713,7 +878,7 @@ Vue 3 复杂样式用普通写法、简单样式用  UnoCSS 的属性模式写�
 Vue 3 不用任何原子化 CSS 写一个 TodoList
 Vue 3 不用任何原子化 CSS（但用内置的 scoped）写一个 TodoList
 Vue 3 只用 CSS Module 写一个 TodoL…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                &ensp;<span class="article-reading-time">(&hairsp;8
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1348,7 +1513,7 @@ BGJar是一个免费的在线背景生成器，提供了各种类型和风格的
 支持实时预览效果，调整后立刻看到变化；
 支持将生成的背景下载为PNG或SVG格式。
 网站示例：</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1546,7 +1711,7 @@ pnpm add @rspack/cli@0.3.4
 配置npm脚本：
 // package.json
 …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                &ensp;<span class="article-reading-time">(&hairsp;8
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2174,7 +2339,7 @@ MDX 支持。通过 MDX，我们可以方便地复用文档片段，以及在文
 当项目越来越庞大，团队成员时常苦恼于冗长的项目启动时间，开发体验因此受到了一些负面影响，并且项目开发的时间越长，这种体验的劣化就越为明显。
 我们不禁开始思考，是否能跳出目前社区工具链的限制，突破现有 SSG 框架的性能瓶颈，实现绝大多数场景的项目秒启效果？
 接着，我们在这个方向上持续地探索，最终在 Rspress 上实现了这样的效果。…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                &ensp;<span class="article-reading-time">(&hairsp;8
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2743,74 +2908,6 @@ Life is short，将如此多的时间浪费在构建发布上是不值得的，�
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7288561905405313080"
-                        open
-                      >
-                        <summary class="article-expander__title">24秋招美团一面🦘「八股文+代码输出+算法题」</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7288561905405313080">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: v-green
-highlight: a11y-dark
-八股文
-讲讲异步组件和路由懒加载？异步加载的过程是怎么样的？为什么在router中使用回调的方式引入组件就可以实现异步加载？假如一个页面有特别多的异步组件会带来什么问题？
-其实异步组件和异步路由是一样的东西，异步路由引入的也还是对应的组件。
-异步加载的过程涉及到JavaScript运行时、事件循环机制以及打包工具的配合工作。过程：
-代码分割：当我们在代码中使用import()函数异步加载组件时，打包工具（如Webpack或Rollup）会将这些组件作为单独的JavaScript文件（通常被称为&quot;chunks&quot;）进行打包。
-初始加载：在页面初始加载时，只有主bundle会被下载。主bundle中包含了应用的主要代码，但不包括异步组件的代码。
-异步请求：当用户触发了需要异步组件的操作（如访问一个使用了路由懒加载的路由），JavaScript运行时会发送一个网络请求，请求异步组件对应的JavaScript文件。
-下载和执行：浏览器下载异步组件对应的JavaScript文件，并执行其中的代码。这个过程可能会涉及到一些延迟，因为需要等待网络请求完成，并且JavaScript是单线程的，不能同时执行多段代码。
-渲染组件：异步组件的代码被执行后，组件会被注册到Vue.js应用中，并触发视图的更新。Vue.js会创建一个新的组件实例，并将其渲染到页面上。
-在这个过程中，打包工具起到了关键作用。它负责将代码分割成多个小文件，并在构建时生成一份映射表，这样JavaScript运行时就知道每个异步组件对应哪个文件。
-同时，JavaScript的事件循环机制也在这个过程中发挥了作用。由于JavaScript是单线程的，它需要使用事件循环来处理异步操作。当我们使用import()函数加载一个组件时，这个操作会被放入微任务队列中。…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7288504491506024487"
-                        open
-                      >
-                        <summary class="article-expander__title">chrome 也支持模拟请求喽</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7288504491506024487">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>早在2023/4/12，chrome已经支持使用本地覆盖web内容和HTTP相应标头，通过本地覆盖可以模拟远程资源。话不说直接开始
-如何设置本地覆盖
-1、打开 DevTools，导航到“网络”面板，右键单击要覆盖的请求，从下拉菜单中选择“覆盖标头”或“覆盖内容” 。
-
-2、如果您尚未设置本地覆盖，则在顶部的操作栏中，DevTools 会提示您：选择一个文件夹来存储覆盖文件。
-
-3、单击 “允许” 以授予 DevTools 对其的访问权限。
-
-4、如果您设置了本地覆盖但已禁用，DevTools 会自动启用它们。
-5、如何清除mock的数据
-
-演示：
-覆盖HTTP请求返回值
-jvideo
-覆盖HTTP header请求
-jvideo
-参考：
-本地覆盖 Web 内容和 HTTP 响应标头
-在本地覆盖 HTTP 响应标头</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -3898,27 +3995,6 @@ https://juejin.cn/post/7280435532986990647</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/6523c56d55a9562cd3c1b734"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: Copilot Voice，以后可以用嘴写代码了。https://githubnext.com/projects/copilot-voice 在 VS Code 插件市场搜索 GitHub Copilot Voice，安装后，即可...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6523c56d55a9562cd3c1b734">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fv-ga-l9gw8X-709E6dDe0Oc252I?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Copilot Voice，以后可以用嘴写代码了。https://githubnext.com/projects/copilot-voice
-在 VS Code 插件市场搜索 GitHub Copilot Voice，安装后，即可跟下面视频一样，用嘴编程😂，它支持打开文件、运行命令、定位到编辑器的具体位置等等，开通使用要求你付费订阅了 Github Copilot，不过它对认证的学生和开源有贡献的开发者是免费的。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -4748,8 +4824,8 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6559182976">
-        <time id="build-timestamp" datetime="2023-10-18T09:52:49.138Z">2023-10-18T09:52:49.138Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6561182626">
+        <time id="build-timestamp" datetime="2023-10-18T12:56:46.645Z">2023-10-18T12:56:46.645Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
