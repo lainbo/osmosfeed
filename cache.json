@@ -23,7 +23,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1198,
+          "wordCount": 1199,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "本文介绍三种改变音频播放音量的方法，其中还有一种方法直接改变音频AudioBuffer数据源的音量，说不定你哪天就会用到。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/",
           "publishedOn": "2023-10-09T14:50:57.000Z",
-          "wordCount": 1093,
+          "wordCount": 1095,
           "title": "JS改变AudioBuffer音量并下载为新audio音频",
           "imageUrl": null
         }
@@ -137,7 +137,7 @@
           "description": "微软研发的 AutoGen 框架太强大了，它是一个多代理框架，利用它可以轻松定制一系列工作任务。https://github.com/microsoft/autogen\n举一个常见的例子：我们要实现一个爬虫程序，抓取并保存网页图片。如果把这个任务丢给 ChatGPT，它会直接返回一串可执行代码，但是代码通常会存在问题，例如执行报错、缺少依赖等，你需要反复跟 ChatGPT 对话来完善程序。当然，我们也可以设定一个复杂 Prompt，要求它调用 ChatGPT 的代码执行插件，如果存在报错，则继续修正程序。\n这个任务如果交给 AutoGen 来实现，将会变得无比简单，几行代码就可以搞定：\n1）定义一个 Assistant Agent，它的任务是解决问题\n2）定义一个 UserProxy Agent，它的任务是替代人询问问题，同时在本地执行程序\n这两个 Agent 都不需要给他们设置 Prompt。当我们把爬虫任务交给 UserProxy 后，它会理解任务，然后询问 Assistant 应该如何做，Assistant 会把操作过程告诉 UserProxy，接着 UserProxy 会根据指示在本地安装依赖，然后创建文件执行代码，如果执行出现错误，它会把详细报错提交给 Assistant，依次循环，直到可以获取到最终的结果。任务结束的时候，你会看到目标图片已经保存到本地磁盘了。\n利用这个框架可以做的事情非常多，它提供的能力也十分完善，可以在项目的 notebook 中找到很多最佳实践：https://github.com/microsoft/autogen/tree/main/notebook\nP.S. 为了确保安全，还是建议你在 Docker 环境中执行程序，UserProxy 有一个 code_execution_config 配置，将 use_docker 配置为 True 即可；另外，它还有一个 human_input_mode 参数，设置为 NEVER，表示整个过程都不需要人参与，也可以设置为其他值，它会等待人的输入后再进行下一步操作，这个设计可以让人参与到任务执行过程，避免跑偏。",
           "link": "https://m.okjike.com/originalPosts/6527c452fb5ea50a73e2b33b",
           "publishedOn": "2023-10-12T10:02:58.000Z",
-          "wordCount": 550,
+          "wordCount": 548,
           "title": "发布了: 微软研发的 AutoGen 框架太强大了，它是一个多代理框架，利用它可以轻松定制一系列工作任务。https://github.com/microsoft/autogen 举一个常见的例子：...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fo7BSBkUrotRg7zsqNXRB2IeaQ1e?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80"
         },
@@ -735,7 +735,7 @@
           "description": "介绍\n🔥🔥Vue3 + TS + Echarts + Pinia 优秀可视化数据大屏解决方案，包括移动端与 PC 端的响应式适配处理，实现移动端和PC端不同布局和兼容。欢迎大家提出Issues\n项目地址\nhttp://124.221.177.11/#/login\ngitee开源地址：https://gitee.com/yuanjinwei/DM_screen_web（开源出来就是纯用爱发电 有劳大家点个star支持鼓励一下😭）\ngithub开源地址：https://github.com/williamyuanjw/DM_screen_web\n项目展示\n登录页\n\nPC 端首页\n\n小于 576px 设备效果\n\n操作文档\n登录项目之后，在首页以关注度图表为例\n图表可支持左右滑动，图表内长按鼠标左滑或者右滑进行不同月份的展示\n右上角从左到右图标的功能分别为：切换至折线图、切换至柱状图、详情弹窗\n打开详情弹窗后可以通过下拉搜索框进行输入搜索选择要添加至图表的项目，也可进行删除\n\n\n项目中间部分的雷达图和虚拟列表可以进行交互，点击列表的项目可以添加至雷达图，点击雷达图某个项目可以展示详情，点击 remove 可以移除\n\n\n项目亮点\n实现对不同大小的屏幕/设备的良好适配以及针对小屏幕设备有不同的布局以及兼容\n不定高无限滚动加载虚拟列表的实现，控制列表渲染数据量的同时实现列表无限滚动\n参数/事件\n说明\n类型\n默认值\n\n\n\n\ndataSource\n传入的数组\nArray\n必传\n\n\nloading\n分页加载loading状态\nBoolean\n必传\n\n\nestimatedHeight\n每一项的初始高度，用于传入渲染后再通过计算得到不定高列表的真实高度\nNumber\n必传\n\n\n@scrollEnd\n列表滚动到底部触发的方法\nFunction\n-\n\n\n\n<virtual-list\n:data-source=\"github.dataSource\"\n:loading=\"github.loading\"\n:estimated-height=\"30\"\n@scroll-end=\"github.addData\"\nclass=\"virtual-list\"\n>\n<template #item=\"{ item }\">\n<a-tooltip placement=\"top\" color=\"rgba(73, 146, 255, 0.8)\">\n<template #title>\n<span>项目名：{{ item.name }}</span>\n</template>\n<div class=\"virtual-list-item\" @click=\"radarFirst.chart.addRadarData(item.name)\">\n<span class=\"virtual-list-item-col\">{{ item.name }}</span>\n<span class=\"virtual-list-item-col\">{{ item.influence }}</span>\n<span class=\"virtual-list-item-col\">{{ item.trend }}</span>\n<span class=\"virtual-list-item-col\">{{ item.response }}</span>\n<span class=\"virtual-list-item-col\">{{ item.activity }}</span>\n<span class=\"virtual-list-item-col\">{{ item.github }}</span>\n</div>\n</a-tooltip>\n</template>\n</virtual-list>\n\nEcharts 图表相关 hooks 的封装，提高如折柱混合图、图表详情弹窗的代码复用性\n实现下拉搜索选择框、列表与图表之间的增删交互，根据文档解决雷达图等图表增删时的异常问题\n使用 transition 标签以及图片预加载来优化图片未加载完全等导致的用户视觉体验问题\n实现 Echarts 等组件的按需加载。在打包过程中对项目大体积模块进行分块打包以及优化项目字体文件大小",
           "link": "https://juejin.cn/post/7288517000580694070",
           "publishedOn": "2023-10-11T08:13:07.000Z",
-          "wordCount": 1000,
+          "wordCount": 985,
           "title": "探索前端可视化大屏：创造令人惊叹的数据可视化体验",
           "imageUrl": null
         },
@@ -892,7 +892,7 @@
           "description": "[7210002980895916043#挑战每日一条沸点#] \nvscode插件fnMap（函数地图）v3.2.0发布\n1，新增功能：可配置不同文件默认展开层级\n2，新增功能：可配置不同文件哪些符号不展示\n3，修复问题：插件关闭后符号缓存没有清空的问题\n插件地址：https://marketplace.visualstudio.com/items?itemName=chensuiyi.fn-map",
           "link": "https://juejin.cn/pin/7288229413035065402",
           "publishedOn": "2023-10-10T15:01:03.000Z",
-          "wordCount": 551,
+          "wordCount": 554,
           "title": "[7210002980895916043#挑战每日一条沸点#] vscode插件fnMap（函数地图）v3.2.0发布 1，新增功能：可配置不同文件默认展开层级 2，新增功能：可配置不同文件哪些...",
           "imageUrl": null
         },
@@ -962,7 +962,7 @@
           "description": "[7210002980895916043#挑战每日一条沸点#] vscode扩展fnMap v3.1.1发布，修复git的diff对比模式页面一闪而过的问题\n扩展地址：https://marketplace.visualstudio.com/items?itemName=chensuiyi.fn-map",
           "link": "https://juejin.cn/pin/7287562282670161979",
           "publishedOn": "2023-10-09T03:44:15.000Z",
-          "wordCount": 555,
+          "wordCount": 558,
           "title": "[7210002980895916043#挑战每日一条沸点#] vscode扩展fnMap v3.1.1发布，修复git的diff对比模式页面一闪而过的问题 扩展地址：https://marketplace.visualstudio...",
           "imageUrl": null
         },
@@ -982,7 +982,7 @@
           "description": "vscode扩展fnMap（函数地图）v3.1.0 发布\n1，新增功能：修改注册码备注\n2，新增功能：新增跨文件置顶，方便多文件跳转\n扩展地址：https://marketplace.visualstudio.com/items?itemName=chensuiyi.fn-map\n[7210228048107896891#每日快讯#]",
           "link": "https://juejin.cn/pin/7285185696120242213",
           "publishedOn": "2023-10-03T17:04:07.000Z",
-          "wordCount": 587,
+          "wordCount": 563,
           "title": "vscode扩展fnMap（函数地图）v3.1.0 发布 1，新增功能：修改注册码备注 2，新增功能：新增跨文件置顶，方便多文件跳转 扩展地址：https://marketplace.visualstu...",
           "imageUrl": null
         }
