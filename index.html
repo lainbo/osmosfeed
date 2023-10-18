@@ -51,6 +51,73 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-18 datetime="2023-10-18T08:51:01.000Z">2023-10-18</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-18 datetime="2023-10-18T08:51:01.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7291186128361766968"
+                        open
+                      >
+                        <summary class="article-expander__title">[7018942344208580646#1024一起掘金#] 大的来了，今天给fast-create-variable支持了react中使用，虽然我不用react[灵光一现]</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7291186128361766968">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>[7018942344208580646#1024一起掘金#] 
+大的来了，今天给fast-create-variable支持了react中使用，虽然我不用react[灵光一现]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7291135064842158114"
+                        open
+                      >
+                        <summary class="article-expander__title">你们都用什么开发工具</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7291135064842158114">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>你们都用什么开发工具</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-17 datetime="2023-10-17T16:40:48.000Z">2023-10-17</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-17 datetime="2023-10-17T16:40:48.000Z"></time>
           </button>
@@ -2680,6 +2747,74 @@ Life is short，将如此多的时间浪费在构建发布上是不值得的，�
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7288561905405313080"
+                        open
+                      >
+                        <summary class="article-expander__title">24秋招美团一面🦘「八股文+代码输出+算法题」</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7288561905405313080">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: v-green
+highlight: a11y-dark
+八股文
+讲讲异步组件和路由懒加载？异步加载的过程是怎么样的？为什么在router中使用回调的方式引入组件就可以实现异步加载？假如一个页面有特别多的异步组件会带来什么问题？
+其实异步组件和异步路由是一样的东西，异步路由引入的也还是对应的组件。
+异步加载的过程涉及到JavaScript运行时、事件循环机制以及打包工具的配合工作。过程：
+代码分割：当我们在代码中使用import()函数异步加载组件时，打包工具（如Webpack或Rollup）会将这些组件作为单独的JavaScript文件（通常被称为&quot;chunks&quot;）进行打包。
+初始加载：在页面初始加载时，只有主bundle会被下载。主bundle中包含了应用的主要代码，但不包括异步组件的代码。
+异步请求：当用户触发了需要异步组件的操作（如访问一个使用了路由懒加载的路由），JavaScript运行时会发送一个网络请求，请求异步组件对应的JavaScript文件。
+下载和执行：浏览器下载异步组件对应的JavaScript文件，并执行其中的代码。这个过程可能会涉及到一些延迟，因为需要等待网络请求完成，并且JavaScript是单线程的，不能同时执行多段代码。
+渲染组件：异步组件的代码被执行后，组件会被注册到Vue.js应用中，并触发视图的更新。Vue.js会创建一个新的组件实例，并将其渲染到页面上。
+在这个过程中，打包工具起到了关键作用。它负责将代码分割成多个小文件，并在构建时生成一份映射表，这样JavaScript运行时就知道每个异步组件对应哪个文件。
+同时，JavaScript的事件循环机制也在这个过程中发挥了作用。由于JavaScript是单线程的，它需要使用事件循环来处理异步操作。当我们使用import()函数加载一个组件时，这个操作会被放入微任务队列中。…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7288504491506024487"
+                        open
+                      >
+                        <summary class="article-expander__title">chrome 也支持模拟请求喽</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7288504491506024487">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>早在2023/4/12，chrome已经支持使用本地覆盖web内容和HTTP相应标头，通过本地覆盖可以模拟远程资源。话不说直接开始
+如何设置本地覆盖
+1、打开 DevTools，导航到“网络”面板，右键单击要覆盖的请求，从下拉菜单中选择“覆盖标头”或“覆盖内容” 。
+
+2、如果您尚未设置本地覆盖，则在顶部的操作栏中，DevTools 会提示您：选择一个文件夹来存储覆盖文件。
+
+3、单击 “允许” 以授予 DevTools 对其的访问权限。
+
+4、如果您设置了本地覆盖但已禁用，DevTools 会自动启用它们。
+5、如何清除mock的数据
+
+演示：
+覆盖HTTP请求返回值
+jvideo
+覆盖HTTP header请求
+jvideo
+参考：
+本地覆盖 Web 内容和 HTTP 响应标头
+在本地覆盖 HTTP 响应标头</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7288517000580694070"
                         open
                       >
@@ -2982,123 +3117,6 @@ https://juejin.cn/post/7280435532986990647</span>
                             <span class="media-object__text">
                               <span>3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7287961549142655015"
-                        open
-                      >
-                        <summary class="article-expander__title">哇，好像真的理解vue3的diff了</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7287961549142655015">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: v-green
-highlight: xcode
-她不变的微笑仿佛在嘲弄那些信以为真的主顾，他们真的把只在想象中的一切当作了实在，因为这里可触可感的物品也同属虚假：家具坐上去便散架，唱机的空膛里藏了一只抱窝的母鸡，花园里全是纸花，日历上还是香蕉公司到来之前的年份，画框里的版画剪自从未出版过的杂志。 ——《百年孤独》
-diff 这个东西想必看这篇文章的各位都不会陌生，不管是技术闲聊，还是面试都说过或者是听说过，然后被说的多难多难，导致很多人还没开始就已经结束了，所以我用应届生的视角告诉大家，其实确实很复杂，用毕生所学结合用代码+案例+图文的形式来加深自己的理解印象，如果这个过程能帮你，那更好了，秉承开源精神，哈哈哈，我特喜欢，这是我 GitHub 欢迎👏相互 follower 下。
-前置知识
-了解 vue3 中采取了 vnode
-知道vnode不过就是一个js对象
-知道vnode中有个children属性，它要么是字符串类型，要么是数组类型
-知道了这些后，那么可以开始了，记住，在vue中的diff其实就是对比两个数组之间的差异并对差异进行相对正确高效的处理
-要做什么
-现在开始不要想什么diff啥的，就想着，你有两个数组，需要判断里面元素的差异，换做自己应该怎么做
-想象一下，两数组对比，我们会发现以下几件事：
-当两数组的左端有几个相同元素，但是后面不同
-
-当数组的右端有几个相同元素，但是前面不同
-
-当新的数组比老的长的时候
-右端长
-
-左端长
-
-当旧的数组比新的长的时候
-右端短
-
-左端短
-
-当新老长度相等，但是有一串差异区域时
-
-分析完情况后，我们来一一实现
-左端对比
-首先实现左端对比查找到第一个不同的节点
-声明一个变量 i &#x3D; 0
-每次自增1，直到找到一个不同节点，跳出循环，循环条件应该同时满足&lt;&#x3D;新(c2)，旧(c1)的的最后一个元素的下标分别就是i &lt;&#x3D; c…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7287998330017595407"
-                        open
-                      >
-                        <summary class="article-expander__title">前端组内开发技巧（xiaoxiaoxuan个人总结版）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7287998330017595407">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>我的博客原文
-@author: 郭瑞峰
-@createTime: 2023/10/09
-@updateTime: 2023/10/10
-恭喜大家顺利过完2023年所有假期，现在就准备好上班上到明年吧
-/(ㄒoㄒ)/~~
-对了，国庆回来后要过三个周一，兴奋不？？(反正我特难受)
-X﹏X
-好了，不多说了，开始总结一下我板砖两年的经验教训吧
-git 相关的
-git 相关的什么拉分支、提交记录、更新分支、提交分支之类的原理或者操作都可以掘金掘到，我说多了没意义。
-更何况很多操作可以通过可视化软件完成，比如说Fork、Sourcetree软件，或者 GitLens 插件。所以说这里介绍一些我开发时候遇到的其他情况所需要的其他指令。
-rebase 合并多个提交记录
-这里提到 合并多个提交记录 用于以下情况：
-1、项目commit有严格记录，必须使用特定编号
-2、当前开发任务被迫暂停，需要切换至其他分支开发
-3、当前功能/模块开发需要经过多个节点回溯
-这里以第二个情况为例，介绍一下这个怎么操作(我最讨厌突然救火的行为了(╬▔皿▔)╯)。
-第零步，被抓去救火
-第一步，记录commit这个功能/模块/bug修复，不推远程
-
-第二步，在代码暂停处注释一行 开发进度、开发思路或者~~你的不满~~，再提交一个新的记录commit，建议以临时提交：开头：
-
-第三步，回来继续开发，开发完成后提交记录commit，建议开头以临时提交：开发完成，注意这里必须把所有的文件提交了，如果有其他的代码不能提交在这里面，请以忽略文件或者其他文件提交
-
-第四步，记录合并
-先获取你第一次提交记录前一个的ID
-
-再在控制台输入git rebase -i ，进入选择列表
-
-
-按i进入编辑，将临时提交前面的pick改为s，按esc退出编辑，再输入:x或者:wq保存
-
-这里有确认修改内容，确认无误后输入:x…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4004,105 +4022,6 @@ rebase 合并多个提交记录
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-07 datetime="2023-10-07T13:55:53.000Z">2023-10-07</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-07 datetime="2023-10-07T13:55:53.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7287018116970184743"
-                        open
-                      >
-                        <summary class="article-expander__title">#求助掘友 刚买了一个带鱼屏显示器，自带分屏功能，但是它的这个分屏功能是支持多个主机连接同一个显示器，我想要的效果是一个主机连接这个显示器后，展示多个显...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7287018116970184743">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>#求助掘友 
-刚买了一个带鱼屏显示器，自带分屏功能，但是它的这个分屏功能是支持多个主机连接同一个显示器，我想要的效果是一个主机连接这个显示器后，展示多个显示器的界面（相当于连接多个显示器），这个该怎么搞？</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-03 datetime="2023-10-03T17:04:07.000Z">2023-10-03</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-03 datetime="2023-10-03T17:04:07.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7285185696120242213"
-                        open
-                      >
-                        <summary class="article-expander__title">vscode扩展fnMap（函数地图）v3.1.0 发布 1，新增功能：修改注册码备注 2，新增功能：新增跨文件置顶，方便多文件跳转 扩展地址：https://marketplace.visualstu...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7285185696120242213">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>vscode扩展fnMap（函数地图）v3.1.0 发布
-1，新增功能：修改注册码备注
-2，新增功能：新增跨文件置顶，方便多文件跳转
-扩展地址：https://marketplace.visualstudio.com/items?itemName&#x3D;chensuiyi.fn-map
-[7210228048107896891#每日快讯#]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-01 datetime="2023-10-01T09:24:08.000Z">2023-10-01</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-01 datetime="2023-10-01T09:24:08.000Z"></time>
           </button>
@@ -4829,8 +4748,8 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6557272243">
-        <time id="build-timestamp" datetime="2023-10-18T06:52:49.941Z">2023-10-18T06:52:49.941Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6559182976">
+        <time id="build-timestamp" datetime="2023-10-18T09:52:49.138Z">2023-10-18T09:52:49.138Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
