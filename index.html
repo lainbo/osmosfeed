@@ -568,7 +568,7 @@ D
 
 
 4 个面…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                &ensp;<span class="article-reading-time">(&hairsp;11
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -833,6 +833,62 @@ function fn(arr1, arr2) {
 
 fn(arr…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7290558277666930744"
+                        open
+                      >
+                        <summary class="article-expander__title">这个前端Api管理方案会更好？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7290558277666930744">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>简介
+大家好，前端小白一枚，目前接触后台管理系统比较多，经常遇到不同对象的增删改查的接口，如何对Api进行一个有比较好的管理是个问题。在学习偏函数的时候有了灵感，想到一个不错的API管理方案，并应用在项目一个模块当中，并且开发效率和维护性可读性都很不错，和大家分享一下~
+当前项目的前端API管理方案
+// 封装的接口
+export function obj1Func1(){}
+export function obj1Func2(){}
+export function obj2Func3(){}
+export function obj2Func4(){}
+
+// 引入方式
+import { obj1Func1, obj1Func2, obj2Func3, obj2Func4 } from &#x27;xxx&#x27;
+
+// 使用方式
+const params &#x3D; {...}
+await obj1Func1(params)
+
+当接口多了之后，我们管理接口(查找)是一件很麻烦且废眼睛的事，需要一直翻，注释看不过来，维护性和可读性差。
+统一export方式
+// 封装的接口
+function obj1Func1(){}
+function obj1Func2(){}
+function obj2Func3(){}
+function obj2Func4(){}
+// 导出接口
+export {
+    obj1Func1,//注释
+    obj1Func2,//注释
+    obj2Func3,//注释
+    obj2Func4,//注释
+    ...
+}
+
+// 引入方式
+import { obj1Func1, obj1Func2, obj2Func3, obj2Func4 } from &#x27;xxx&#x27;
+
+// 使用方式
+const params &#x3D; {...}
+await obj1Func1(pa…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2673,42 +2729,6 @@ P.S. 为了确保安全，还是建议你在 Docker 环境中执行程序，User
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7288963205980864575"
-                        open
-                      >
-                        <summary class="article-expander__title">Rspress 1.0 正式发布，基于 Rspack 的高性能静态站点生成器！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7288963205980864575">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>GitHub 仓库地址：https://github.com/web-infra-dev/rspress
-官网地址：https://rspress.dev
-今天，我们很高兴地跟大家宣布 Rspress 1.0 正式发布了！
-框架定位
-Rspress 是由 ByteDance Web Infra 团队孵化的一款静态站点生成器，使用 Rspack 进行构建，基于 React 框架进行渲染，支持 MDX 内容开发，主打高性能、简单易用和定制性强。
-Rspress 中内置了一套默认的文档主题，你可以通过 Rspress 来快速搭建一个文档站点，同时也可以自定义主题，来满足你的个性化静态站需求，比如博客站、产品主页等。
-当然，你也可以接入官方提供的相应插件来方便地搭建组件库文档。
-项目背景
-Rspress 最初的形态是给 Web Infra 团队内部提供文档工具，在过去在维护一些稍复杂的文档项目的过程中，我们围绕着以下的几个方向来建设 Rspress 本身的能力：
-构建性能。保证足够快的启动速度，带来良好的开发体验。
-MDX 支持。通过 MDX，我们可以方便地复用文档片段，以及在文档中渲染自定义的 React 组件。
-文档站基础能力。包括国际化、多版本支持、全文搜索、组件库文档等。
-可扩展性。内置插件系统，支持通过插件 API 来扩展框架功能。
-同时我们意识到这些也代表了 SSG 站点开发的一些核心需求。接下来将会根据这几个方面分别进行介绍。
-构建性能
-当项目越来越庞大，团队成员时常苦恼于冗长的项目启动时间，开发体验因此受到了一些负面影响，并且项目开发的时间越长，这种体验的劣化就越为明显。
-我们不禁开始思考，是否能跳出目前社区工具链的限制，突破现有 SSG 框架的性能瓶颈，实现绝大多数场景的项目秒启效果？
-接着，我们在这个方向上持续地探索，最终在 Rspress 上实现了这样的效果。…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -4957,8 +4977,8 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6572860514">
-        <time id="build-timestamp" datetime="2023-10-19T09:53:41.827Z">2023-10-19T09:53:41.827Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6574907942">
+        <time id="build-timestamp" datetime="2023-10-19T12:56:46.092Z">2023-10-19T12:56:46.092Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
