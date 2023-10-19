@@ -23,7 +23,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1204,
+          "wordCount": 1206,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "本文介绍三种改变音频播放音量的方法，其中还有一种方法直接改变音频AudioBuffer数据源的音量，说不定你哪天就会用到。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/",
           "publishedOn": "2023-10-09T14:50:57.000Z",
-          "wordCount": 1093,
+          "wordCount": 1092,
           "title": "JS改变AudioBuffer音量并下载为新audio音频",
           "imageUrl": null
         }
@@ -71,6 +71,16 @@
       "feedUrl": "https://rsshub.app/jike/user/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
+        {
+          "id": "https://m.okjike.com/originalPosts/65308bd4aa7d4f2b30d6b94a",
+          "author": null,
+          "description": "这是一条十分强大且很有参考价值的 Prompt：https://github.com/ProfSynapse/Synapse_CoR/tree/main，跟它进行第一轮对话后，它会帮助你召唤出适合该任务的专家，在与专家进行第二轮对话后，ChatGPT 会完全明白你的目标，然后给出详细的分解和实施过程。\n为什么这条 Prompt 表现效果会非常好呢？它的整个过程分成了两个阶段，第一阶段是明确要做的事情，把任务的轮廓给描绘清楚，第二阶段则是深入到细节，收集任务全貌所需要的信息。\n之前也提到过（https://twitter.com/Barret_China/status/1668922606828007424），GPT 跟人类的思考方式是完全不一样的，它的每一个字符（Token）生成都是通过概率推导的方式获得的，而且生成每个字符所消耗的计算资源一样。推导的过程中会出现高质量和低质量的结果，它自己是知道质量高低的，但是默认的情况下，它就是要推导出所有的可能性。\n第一阶段的操作，很大程度减少了大模型在推理过程中的分支数量，对于不符合目标的推理权重会大大降低。\n而第二阶段其实是在做拆解任务的工作，首先召唤出来的专家会根据目标生成一份执行计划，然后让你参与到对话过程，不断完善这份计划。这有点像之前（https://twitter.com/Barret_China/status/1714578115580833858）提到的 CoT + Least to Most prompting + Multi-Persona Self-Collaboration 的结合。\n两个阶段的对话内容将会成为 ChatGPT 生成最终内容的重要参考语料，后续的推理权重会更大程度偏向于任务目标和执行计划。因此这个 Prompt 可以说，写的非常非常好，充分利用了大模型底层的运作机制。",
+          "link": "https://m.okjike.com/originalPosts/65308bd4aa7d4f2b30d6b94a",
+          "publishedOn": "2023-10-19T01:52:20.000Z",
+          "wordCount": 480,
+          "title": "发布了: 这是一条十分强大且很有参考价值的 Prompt：https://github.com/ProfSynapse/Synapse_CoR/tree/main，跟它进行第一轮对话后，它会帮助你召唤出适合该任...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FkJ-qC2yitDkvoABcTL2h2Vdcb5dv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
         {
           "id": "https://m.okjike.com/originalPosts/652faa1cbb3e3660e8041b7b",
           "author": null,
@@ -160,16 +170,6 @@
           "wordCount": 492,
           "title": "发布了: Github 推出了 blocks，https://blocks.githubnext.com，以后仓库里面能展示什么内容，取决于你的想象力和构建 block 的能力。 Blocks 的目标是让代码仓...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FrbKCZM_4IE0VUp1pS5830A_JTyE?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/652400deaa7d4f2b30c8580e",
-          "author": null,
-          "description": "这个项目（https://github.com/n0a/telegram-get-remote-ip）演示了如何在 Telegram 通话过程中获取对方的 IP 信息，接电话也是有风险的😅\n事实上，基于 WebRTC 的点对点连接都会存在这类问题，在信令过程、ICE 候选者收集、建连和通讯环节，都会暴露当前真实 IP。\n不过国内反而没这个问题，因为上 tg 必须走代理，也就是说暴露给对方的都是代理节点的信息。\n其实，都能够让对方接电话了，真的想获取 IP 也没那么麻烦，直接扔一个伪装好的链接让对方点击下，网页上随便一个请求就可以把端侧各类信息收集齐全了😅\n这个项目中演示了如何利用 wireshark 监听网卡信息以及截取数据包，代码部分倒是可以学习下。",
-          "link": "https://m.okjike.com/originalPosts/652400deaa7d4f2b30c8580e",
-          "publishedOn": "2023-10-09T13:32:14.000Z",
-          "wordCount": 488,
-          "title": "发布了: 这个项目（https://github.com/n0a/telegram-get-remote-ip）演示了如何在 Telegram 通话过程中获取对方的 IP 信息，接电话也是有风险的😅 事实上，基...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FnJePUXuAnmZtqatxE20uoYYymYX?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80"
         }
       ]
     },
@@ -184,7 +184,7 @@
           "description": "思考的深度即逻辑链的长度。\n大多数人习惯于因为a所以b的简单短小逻辑链，这样大脑理解接收起来毫无压力。\n如果想要提升思考深度，也就是提升逻辑链的长度，有两个方向可以使劲：因和果。\n往因上使劲的方法，就是著名的5 why。 针对你看到的问题，连续追问为什么，直接问出的那个答案显而易见。\n往果上使劲的方法，是一个类似的方法 5 so。针对你看到的一个现象，连续追问so what？ \n通过一左一右两个方向的不断延伸，你的逻辑思考链条也就脱离了简单的因为所以式思考框架。\n方法很简单，甚至可能你都早已知晓，坚持使用，直到习惯成自然， 很难。",
           "link": "https://m.okjike.com/originalPosts/65300c9899f2123c744ac7f1",
           "publishedOn": "2023-10-18T16:49:28.000Z",
-          "wordCount": 455,
+          "wordCount": 465,
           "title": "发布了: 思考的深度即逻辑链的长度。 大多数人习惯于因为a所以b的简单短小逻辑链，这样大脑理解接收起来毫无压力。 如果想要提升思考深度，也就是提升逻辑链的长...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -493,6 +493,56 @@
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
         {
+          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231019/t20231019_526456234.html",
+          "author": "国家预警信息发布中心",
+          "description": "武隆区气象台2023年10月19日11时发布“大风蓝色预警信号”，目前我区凤山街道和芙蓉街道已出现7级以上大风，预计未来12小时大风将持续，白马镇、羊角街道、仙女山街道等乡镇街道风力可达7级，局地阵风可达8级以上，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231019/t20231019_526456234.html",
+          "publishedOn": "2023-10-19T03:38:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市武隆区发布大风蓝色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231019/t20231019_526456196.html",
+          "author": "国家预警信息发布中心",
+          "description": "万州区气象台2023年10月19日10时50分发布“大雾黄色预警信号”，预计19日11时至20时，高笋塘街道、太龙镇、钟鼓楼街道、大周镇、熊家镇、黄柏乡、小周镇、长岭镇、龙都街道、百安坝街道、五桥街道、白羊镇、牌楼街道、陈家坝街道、茨竹乡、铁峰乡、太白街道、沙河街道、天城街道、周家坝街道、高峰街道、双河口街道、九池街道、新田镇等镇乡街将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。有关部门和单位按照职责做好防雾准备工作；机场、高速公路、轮渡码头等单位加强交通管理，保障安全；驾驶人员注意雾的变化，小心驾驶；户外活动注意安全。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231019/t20231019_526456196.html",
+          "publishedOn": "2023-10-19T03:16:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市万州区发布大雾黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231019/t20231019_526456106.html",
+          "author": "国家预警信息发布中心",
+          "description": "城口县气象台2023年10月19日10时10分发布“暴雨黄色预警信号”，目前我县鸡鸣乡累计雨量已达50毫米以上，预计未来6小时，咸宜镇、明通镇、高燕镇、庙坝镇、坪坝镇、沿河乡、双河乡、治平乡、北屏乡、龙田乡、巴山镇、周溪乡等乡镇（街道）累计雨量将达50-70毫米，最大小时雨强可达20-30毫米，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231019/t20231019_526456106.html",
+          "publishedOn": "2023-10-19T02:26:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市城口县发布暴雨黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231019/t20231019_526456059.html",
+          "author": "国家预警信息发布中心",
+          "description": "巫山县气象台2023年10月19日9时40分发布“大雾黄色预警信号”，预计19日9时至21时，当阳乡、竹贤乡、骡坪镇、金坪乡、巫峡镇、龙门街道、高唐街道、建平乡、曲尺乡、红椿乡、铜鼓镇、邓家乡、笃坪乡、官阳镇等海拔600米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231019/t20231019_526456059.html",
+          "publishedOn": "2023-10-19T02:01:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市巫山县发布大雾黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231019/t20231019_526455880.html",
+          "author": "国家预警信息发布中心",
+          "description": "云阳县气象台2023年10月19日8时50分发布“大雾黄色预警信号”，预计未来12小时，全县各乡镇（街道）将出现能见度小于500米的大雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231019/t20231019_526455880.html",
+          "publishedOn": "2023-10-19T01:13:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市云阳县发布大雾黄色预警",
+          "imageUrl": null
+        },
+        {
           "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231019/t20231019_526455873.html",
           "author": "国家预警信息发布中心",
           "description": "巫溪县气象台2023年10月19日9时发布“大雾黄色预警信号”，预计未来12小时，我县文峰镇、上磺镇、古路镇、塘坊镇、菱角镇、尖山镇、朝阳镇、通城镇、双阳乡、胜利乡、城厢镇、宁厂镇、红池坝镇、长桂乡等海拔600米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
@@ -660,6 +710,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7290474926943010851",
+          "author": "夕水",
+          "description": "难以置信，一个小小的需求让我捣鼓出一个提效的网站来\n需求介绍\n事情是这样的，有个群友在业务当中碰到一个小小的需求，需求是这样的: 页面当中存在多个输入框，输入框的 value 值是一个数值组成的字符串（盲猜应该是身份证号码），这个字符串的位数是 15 位或者是 18 位，例如:'621848063680370'(15 位)和'621848063688370808'(18 位)，然后默认的值是这样的，现在问题来了，需求希望在这些数值中插入空白符号，比如 15 位的数字就按照 6 + 6 + 3 的格式分隔，分隔的时候需要使用空白符号。比如'621848063680370'分隔后应该变成'621848 063680 370',也就是数字位数到了第 6 位就加个空白符号分隔，...依次类推，而 18 位数字的分割规则则是:6 + 4 + 4 + 4。比如'621848063688370808'应该分隔成'621848 0636 8837 0808'。\n这个需求就是对字符串的处理，提到分隔替换，那么我们就可以想到强大的字符串替换方法 replace，这个方法可以接受 2 个参数，一个参数通常是一个正则表达式，第二个参数则是一个回调函数，用于定义替换后返回字符串。因此，我的第一个想法就是使用正则表达式去处理，如何处理呢？\n原理分析\n首先我们需要去理解这个规则，从需求我们可以发现，不同的位数，规则就会有所不同，因此我们可以提前用一个数据来表示这种规则，为了保持良好的扩展性，我设计了如下字段:\ntype spaceRule = {\n  digit: number; // 位数\n  rule: RegExp; //规则\n  symbolNumber: number; // 插入符号数量\n  symbolName: string; // 插入符号\n};\n\n可以看到，我设计了四个参数，正如注释…",
+          "link": "https://juejin.cn/post/7290474926943010851",
+          "publishedOn": "2023-10-16T13:33:45.000Z",
+          "wordCount": 4613,
+          "title": "难以置信，一个小小的需求让我捣鼓出一个提效的网站来",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7290226270641618979",
           "author": "张鑫旭",
           "description": "以下内容是2023年7月17~10月16日自己每周学习的记录\n第29周 7.17-7.23\n这周在项目中使用了一种新的布局。\n就是下图所示的布局效果。\n\n在过去，这种图片固定比例的，宽度自适应的布局都至少只要2层以上的标签，这一次，使用了容器元素和全新的cqw单位，可以一层标签即实现最终的效果。\n相关实现已经整理成文，有兴趣可以访问这里：“CSS高宽不等图片固定比例布局的三重进化”。\n第30周 7.24-7.30\n本周研究了了一个新的CSS属性text-wrap，目前仅Chrome浏览器支持，兼容性如下图所示：\n\n其中名为balance的属性值很有趣，可以让div元素中的内联元素尽可能宽度一致排列，布局差异如下所示：\n\n这个属性其实很有用，例如类似朋友圈点赞的那种布局效果，目前的实现都是优先第一行显示的。\n\n有了text-wrap:balance属性后，就可以是下图所示的布局效果，体验会更好。\n\n更多内容可以访问这里了解。\n第31周 7.31-8.6\n在做项目的时候，偶然看到有同事的CSS代码中对samp标签样式进行了定义，然后研究了下这个已经没用过的HTML标签，发现还是一个系列，可以用来帮助代码文本的语义化呈现，具体如下：\nkbd: 键盘输入的文字内容\nsamp: 范例输出\ncode: 计算机代码输出\nvar: 变量与自变量实例\n平时只用过 code 标签 ，结果没想到还有其他类似HTML属性，现代浏览器全部都支持。\n更详细的内容我已经这里成文章了，有兴趣的可以访问这里了解。\n第32周 8.7-8.13\n本周学习了两个HTML全局属性，nonce和popover属性。\nnonce与安全相关，配合meta元素的CSP设置，可以决定哪个内联JS执行，哪个内联<script›元素不执行。\n假设页面有如下所示的代码：\n<meta http-equiv=\"Content-Security-Policy\" content=\"script-src 'nonce-NDhkODkxMzYtNGUxZS00N2NjLTk1YTItNWMyOTM4YzdhZGJj'\">\n<script nonce=\"NDhkODkxMzYtNGUxZS00N2NjLTk1YTItNWMyOTM4YzdhZGJj\">// …</script>\n\n则此时，只有nonce值有设置，且值匹配的",
@@ -715,7 +775,7 @@
           "description": "theme: smartblue\nhighlight: a11y-dark\n一、前言\n前段时间参与字节面试，一面中问到我 闭包 ，我照着自己的理解从闭包的特性到高阶函数，再提到了闭包的应用，如 curry函数。\ncurry函数:\n// 实现一个add函数\n// return 1 + 2 + 3 + 2 传参为undefined时返回sum\nadd(1,2,3)(2)()\n// 8\n\n😶😶😶……本人只懂概念没有实操过啊😭👊\n闭包的概念、延伸概念、应用以及优劣，顺带解决这个题目。\n二、闭包\n2.1 闭包的概念\n闭包是由一个函数以及与其相关的引用环境组合而成的实体。闭包可以在函数内部访问外部函数的变量，并且这些变量可以在外部函数执行结束后仍然保持其状态。\nfunction outerFunction(x) {\n  return function innerFunction(y) {\n    return x + y;\n  };\n}\n\n// 创建闭包函数\nvar closure = outerFunction(5);\n\n// 调用闭包函数\nvar result = closure(3);\n\nconsole.log(result); // 输出：8\n\n可以看到 innerFunction 可以获取到传入 outerFunction 的参数,可见原本在外部函数执行结束后本该销毁的地址得到了保留。\n闭包可以访问和修改其创建时捕获的外部环境中的变量值，从而实现状态的保存和共享。\n闭包可以私有化变量，从而避免命名冲突和污染全局作用域。\n闭包可以延长变量的生命周期，从而实现回调、事件处理等高级操作。\n有的同学可能会联想到高阶函数，或许对高阶函数、闭包存在不清晰的认知，那么我们就再来讲一下高阶函数。\n2.2 高阶函数\n高阶函数指的是能够接受函数作为参数或返回函数作为结果的函数,如 Ar…",
           "link": "https://juejin.cn/post/7289664472868732982",
           "publishedOn": "2023-10-14T16:40:08.000Z",
-          "wordCount": 3028,
+          "wordCount": 3027,
           "title": "字节一面——当我从闭包谈到高阶函数，面试官：来道curry函数尝尝😊",
           "imageUrl": null
         },
@@ -780,16 +840,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7288699185981095988",
-          "author": "南城FE",
-          "description": "theme: scrolls-light\nhighlight: atom-one-dark-reasonable\n在前端开发中，代码的重复度是一个常见的问题。重复的代码不仅增加了代码的维护成本，还可能导致程序的低效运行。为了解决这个问题，有许多工具和技术被用来检测和消除代码重复。其中一个被广泛使用的工具就是jscpd。\njscpd简介\njscpd是一款开源的JavaScript的工具库，用于检测代码重复的情况，针对复制粘贴的代码检测很有效果。它可以通过扫描源代码文件，分析其中的代码片段，并比较它们之间的相似性来检测代码的重复度。jscpd支持各种前端框架和语言，包括HTML、CSS和JavaScript等150种的源码文件格式。无论是原生的JavaScript、CSS、HTML代码，还是使用typescript、scss、vue、react等代码，都能很好的检测出项目中的重复代码。\n开源仓库地址：github.com/kucherenko/jscpd/tree/master\n如何使用\n使用jscpd进行代码重复度检测非常简单。我们需要安装jscpd。可以通过npm或yarn来安装jscpd。\nnpm install -g jscpd\n\nyarn global add jscpd\n\n安装完成后，我们可以在终端运行jscpd命令，指定要检测的代码目录或文件。例如，我们可以输入以下命令来检测当前目录下的所有JavaScript文件：\njscpd .\n\n指定目录检测：\njscpd /path/to/code\n\n在命令行执行成功后的效果如下图所示：\n\n简要说明一下对应图中的字段内容：\nClone found (javascript)：\n显示找到的重复代码块，这里是javascript文件。并且会显示重复代码在文件中具体的行数，便于查找。\nFormat：文件格式，这里是 javascr…",
-          "link": "https://juejin.cn/post/7288699185981095988",
-          "publishedOn": "2023-10-12T06:55:12.000Z",
-          "wordCount": 1430,
-          "title": "前端代码重复度检测",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7288632764915204115",
           "author": "飞书深诺技术团队",
           "description": "一、背景介绍\n飞书深诺集团是专注海外数字营销解决方案的专业服务提供商，为有全球化营销需求的企业提供标准&定制相结合的全链路服务产品，满足游戏、APP、电商、品牌等典型出海场景需求。到 2022 年，集团各产线前端单页面应用（下文直接用 SPA 代替）的数量，已经占前端项目总数量的三分之二以上，个别巨石应用会面临以下问题：\n应用单次构建-发布时间，已经超过了10min，从开发到生产上线部署，会经历 4 个环境 dev / test / pre / prod，总部署时间大于 40min 以上。\n应用接入了 6+ 其他产线提供的 MF(Module Federation) 微前端组件，任何微前端组件进行版本升级时，都需要重走 dev -> prod 4 个环境的构建发布流程。\n考虑到 test 环境可能同时有多个测试在多环境进行发布测试，这个量级又以倍数上升。\nLife is short，将如此多的时间浪费在构建发布上是不值得的，解决此问题势在必行。\n二、基本思路\n解决思路拆解\n根据上面信息可知，当前总构建发布时间\n= 单次构建发布时间 * 环境个数\n= 单次构建时间 * 环境个数 + 单次发布时间 * 环境个数\n因为单次发布时间，一般只涉及到镜像的推送与发布，已基本没有可提升的空间，所以解决思路目前有两个：\n解决思路一：减少单次构建时间\n解决思路二：构建产物实现多环境复用，使公式由（* 环境个数）变为（* 1）\n解决思路一：减少单次构建时间\n目前业界针对减少单次构建时间，主要有以下常规主流方案：\n使用 swc 或 esbuild 等新一代构建工具，带来极致的构建效率\n应用构建缓存，本质上都是实现增量构建，主要有两种方案：\n利用 docker 构建缓存，将不变的步骤缓存起来\n利用 webpack 或 esbuild 本身构建缓存，提升打包速度\n多进程优化，利用 webpack，实…",
@@ -832,7 +882,7 @@
           "description": "[7018942344208580646#1024一起掘金#] \n大的来了，今天给fast-create-variable支持了react中使用，虽然我不用react[灵光一现]",
           "link": "https://juejin.cn/pin/7291186128361766968",
           "publishedOn": "2023-10-18T08:51:01.000Z",
-          "wordCount": 538,
+          "wordCount": 547,
           "title": "[7018942344208580646#1024一起掘金#] 大的来了，今天给fast-create-variable支持了react中使用，虽然我不用react[灵光一现]",
           "imageUrl": null
         },
@@ -842,7 +892,7 @@
           "description": "你们都用什么开发工具",
           "link": "https://juejin.cn/pin/7291135064842158114",
           "publishedOn": "2023-10-18T08:00:51.000Z",
-          "wordCount": 514,
+          "wordCount": 523,
           "title": "你们都用什么开发工具",
           "imageUrl": null
         },
@@ -862,7 +912,7 @@
           "description": "打卡打卡，今天周二",
           "link": "https://juejin.cn/pin/7290733884136030242",
           "publishedOn": "2023-10-17T03:54:52.000Z",
-          "wordCount": 523,
+          "wordCount": 530,
           "title": "打卡打卡，今天周二",
           "imageUrl": null
         },
@@ -872,7 +922,7 @@
           "description": "#1024一起掘金#   新增一个函数节点代码编辑模式",
           "link": "https://juejin.cn/pin/7290494120206909492",
           "publishedOn": "2023-10-16T17:14:17.000Z",
-          "wordCount": 515,
+          "wordCount": 524,
           "title": "#1024一起掘金# 新增一个函数节点代码编辑模式",
           "imageUrl": null
         },
@@ -882,7 +932,7 @@
           "description": "发现一款非常好用的云文档，不论记笔记、写文档、画脑图、做计划、管项目、构建知识库还是高效团队协作，都比以前事半功倍，不论个人用还是团队用都很不错，推荐给你！\nhttps://www.wolai.com/signup?invitation=C2ZS3U2Z",
           "link": "https://juejin.cn/pin/7290382189992427559",
           "publishedOn": "2023-10-16T09:28:48.000Z",
-          "wordCount": 515,
+          "wordCount": 524,
           "title": "发现一款非常好用的云文档，不论记笔记、写文档、画脑图、做计划、管项目、构建知识库还是高效团队协作，都比以前事半功倍，不论个人用还是团队用都很不错，推荐...",
           "imageUrl": null
         },
@@ -892,7 +942,7 @@
           "description": "[7018942344208580646#1024一起掘金#]  [呲牙]发现一个很方便的局域网传文件工具，一个wifi下的所有手机和电脑，不用下APP，网页就可以，yanhuo7.com . P2P，免流量，蛮方便的",
           "link": "https://juejin.cn/pin/7290017749715615784",
           "publishedOn": "2023-10-16T04:43:58.000Z",
-          "wordCount": 541,
+          "wordCount": 549,
           "title": "[7018942344208580646#1024一起掘金#] [呲牙]发现一个很方便的局域网传文件工具，一个wifi下的所有手机和电脑，不用下APP，网页就可以，yanhuo7.com . P2P，免流...",
           "imageUrl": null
         },
@@ -902,7 +952,7 @@
           "description": "https://github.com/Simon-He95/fast-create-variable\n这个插件一定会火起来的🥺",
           "link": "https://juejin.cn/pin/7289664651364794402",
           "publishedOn": "2023-10-15T08:20:51.000Z",
-          "wordCount": 520,
+          "wordCount": 529,
           "title": "https://github.com/Simon-He95/fast-create-variable 这个插件一定会火起来的🥺",
           "imageUrl": null
         },
@@ -912,7 +962,7 @@
           "description": "大的来了，一波更新完效率提升X倍",
           "link": "https://juejin.cn/pin/7289397650387025977",
           "publishedOn": "2023-10-14T03:06:29.000Z",
-          "wordCount": 523,
+          "wordCount": 532,
           "title": "大的来了，一波更新完效率提升X倍",
           "imageUrl": null
         },
@@ -922,7 +972,7 @@
           "description": "基于微信测试号的AI机器人，支持谷歌搜索引擎插件：https://github.com/anhao/AIChatBot/",
           "link": "https://juejin.cn/pin/7288992783582281728",
           "publishedOn": "2023-10-13T03:33:12.000Z",
-          "wordCount": 508,
+          "wordCount": 517,
           "title": "基于微信测试号的AI机器人，支持谷歌搜索引擎插件：https://github.com/anhao/AIChatBot/",
           "imageUrl": null
         },
@@ -932,7 +982,7 @@
           "description": "DevOps相对关注运维自动化,较少涉及复杂算法。\nDevOps更专注基础架构和工程流程。\nDevOps的工作重心在于搭建工程化系统,而不是产品功能或业务创新。\nDevOps工程师相对更专注技术展开,对商业策略和产品决策参与较少。\nDevOps也主要在运维团队内部协作。和产品、设计等部门协作的机会较少。",
           "link": "https://juejin.cn/pin/7288964017351458857",
           "publishedOn": "2023-10-13T01:16:05.000Z",
-          "wordCount": 516,
+          "wordCount": 525,
           "title": "DevOps相对关注运维自动化,较少涉及复杂算法。 DevOps更专注基础架构和工程流程。 DevOps的工作重心在于搭建工程化系统,而不是产品功能或业务创新。 DevOps工程...",
           "imageUrl": null
         },
@@ -942,7 +992,7 @@
           "description": "jym，[呲牙]看看你们浏览器的收藏夹有啥有趣的网站，或者很实用的工具网站",
           "link": "https://juejin.cn/pin/7288509436899934267",
           "publishedOn": "2023-10-11T07:44:37.000Z",
-          "wordCount": 509,
+          "wordCount": 518,
           "title": "jym，[呲牙]看看你们浏览器的收藏夹有啥有趣的网站，或者很实用的工具网站",
           "imageUrl": null
         },
@@ -962,7 +1012,7 @@
           "description": "jym，有无好用的png图片压缩网址，哪个杀千刀的举报了熊猫，打不开了，MD，剩下的能找到的全是要登录或者花钱的[酷拽][酷拽]",
           "link": "https://juejin.cn/pin/7288151713373192253",
           "publishedOn": "2023-10-10T08:47:22.000Z",
-          "wordCount": 508,
+          "wordCount": 517,
           "title": "jym，有无好用的png图片压缩网址，哪个杀千刀的举报了熊猫，打不开了，MD，剩下的能找到的全是要登录或者花钱的[酷拽][酷拽]",
           "imageUrl": null
         },
@@ -972,7 +1022,7 @@
           "description": "每日打开\nhttps://juejin.cn/post/7280435532986990647",
           "link": "https://juejin.cn/pin/7287955337524314169",
           "publishedOn": "2023-10-10T07:12:51.000Z",
-          "wordCount": 522,
+          "wordCount": 531,
           "title": "每日打开 https://juejin.cn/post/7280435532986990647",
           "imageUrl": null
         },
@@ -982,7 +1032,7 @@
           "description": "https://java.bejson.com/generator/  崩掉了。。[捂脸]",
           "link": "https://juejin.cn/pin/7287914116286545955",
           "publishedOn": "2023-10-10T01:19:32.000Z",
-          "wordCount": 510,
+          "wordCount": 519,
           "title": "https://java.bejson.com/generator/ 崩掉了。。[捂脸]",
           "imageUrl": null
         },
@@ -1002,7 +1052,7 @@
           "description": "生成 java 实体类属性的工具 有推荐没得[发呆]",
           "link": "https://juejin.cn/pin/7287757113401491490",
           "publishedOn": "2023-10-09T09:16:18.000Z",
-          "wordCount": 525,
+          "wordCount": 534,
           "title": "生成 java 实体类属性的工具 有推荐没得[发呆]",
           "imageUrl": null
         },
@@ -1012,7 +1062,7 @@
           "description": "打卡，vue无敌偷懒利器",
           "link": "https://juejin.cn/pin/7287620609373831224",
           "publishedOn": "2023-10-09T05:05:12.000Z",
-          "wordCount": 523,
+          "wordCount": 532,
           "title": "打卡，vue无敌偷懒利器",
           "imageUrl": null
         },
