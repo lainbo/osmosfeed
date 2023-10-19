@@ -51,8 +51,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-19 datetime="2023-10-19T03:38:00.000Z">2023-10-19</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-19 datetime="2023-10-19T03:38:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-19 datetime="2023-10-19T05:52:00.000Z">2023-10-19</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-19 datetime="2023-10-19T05:52:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -67,6 +67,25 @@
                   <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/lanseyj/20231019/t20231019_526456341.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市巫山县发布大风蓝色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/lanseyj/20231019/t20231019_526456341.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>巫山县气象台2023年10月19日13时20分发布“大风蓝色预警信号”，预计19日13时至19时，当阳乡、平河乡、金坪乡、大昌镇、双龙镇、巫峡镇、龙门街道、高唐街道、建平乡、培石乡、抱龙镇、大溪乡、曲尺乡等乡镇沿江河谷及高海拔地区风速较大，风力可达6级，局地阵风可达7级以上，请注意防范。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -548,6 +567,80 @@ PS
 面试必备-Vue3+Ts手写实现无限滚动列表
 面试必备-Vue 3 + ts 掌握 defineExpose：项目实践！
 面试必备，学会使用 Vue3 + ts 手写实现拖拽hook！</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7290848097159807017"
+                        open
+                      >
+                        <summary class="article-expander__title">萝卜刀真的太危险了,于是我用Cocos做了一个</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7290848097159807017">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>点击上方亿元程序员+关注和★星标
+
+引言
+大家好，我是亿元程序员，一位有着8年游戏行业经验的主程。
+昨天，我女儿和我说想买一把萝卜刀，众所周知，萝卜刀在潜意识当中是存在一定的危险的，所以我果断拒绝了，但是我还是想体验一下，怎么办？于是我就用Cocos做了一个。
+1.准备素材
+1.首先我们从网络上找到一张关于萝卜刀的图片。
+
+2.导入PS，把我们需要的其中一把裁剪出来。
+
+3.然后我们通过精湛的PS技术(不是)，把萝卜刀拆解。
+
+4.把资源放进去Cocos。
+
+下面我们一起让萝卜刀动起来
+2.做动画
+要想萝卜刀尽可能和实物一样，我们得做动画，我们利用Cocos的动画编辑器简单做一下。
+1.首先我们先创建个Knife节点，把3部分的图片放进去并且按照结构拼接好。
+
+2.调整我们的转动轴位置，即锚点。
+
+3.编辑动画。
+白色部分我们添加一个旋转动画，添加一个angle属性，在0.1秒的地方加一个关键帧，并把它调整至打开状态。
+
+然后给刀尖部分添加一个position属性，在0.15秒处将添加一个关键帧，并把它调整成展开状态。
+
+刀尖展开后，我们需要把白色部分复原，在0.25秒处添加一个关键帧，并且把它复原
+
+到这里，萝卜刀的简单动画已经编辑完成，我们把动画调整回最初状态，然后保存。
+下面我们来编写控制萝卜刀运动的代码。
+3.写代码
+为了让萝卜刀有实物一样的甩刀效果，我们利用一下重力感应控制。
+
+关键Api是cc.SystemEvent.EventType.DEVICEMOTION事件，我们监听一下。
+
+还需要是否启用加速度计事件把打开。
+
+动画的播放比较简单。每次播放之前把方向改变一下，实现打开和关闭效果。
+
+4.效果演示
+构建小游戏。
+
+效果演示。
+
+结语
+本文仅供娱乐参考学习，萝卜刀有风险，大家谨慎对待。
+在哪里可以看到如此清晰的思路，快跟上我的节奏！关注我，和我一起了解游戏行业最新动态，学习游戏开发技巧。
+我是&quot;亿元程序员&quot;，一位有着8年游戏行业经验的主程。在游戏开发中，希望能给到您帮助, 也希望通过您能帮助到大家。
+AD:笔者线上的小游戏《贪吃蛇掌机经典》《填色之旅》《重力迷宫球》大家可以自行点击搜索体验。
+实不相瞒，想要个赞和在看！请把该文章分享给你觉得有需要的其他小伙伴。谢谢！
+推荐专栏：
+和8年游戏主程一起学习设计模式
+8年主程手把手打造Cocos独立游戏开发框架
+从零开始开发贪吃蛇小游戏到上线系列
+游戏开发的技巧、心得、资讯
+点击下方绿色按钮+关注</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
@@ -1084,38 +1177,6 @@ https://www.wolai.com/signup?invitation&#x3D;C2ZS3U2Z</span>
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7290474926943010851"
-                        open
-                      >
-                        <summary class="article-expander__title">难以置信，一个小小的需求让我捣鼓出一个提效的网站来</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7290474926943010851">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>难以置信，一个小小的需求让我捣鼓出一个提效的网站来
-需求介绍
-事情是这样的，有个群友在业务当中碰到一个小小的需求，需求是这样的: 页面当中存在多个输入框，输入框的 value 值是一个数值组成的字符串（盲猜应该是身份证号码），这个字符串的位数是 15 位或者是 18 位，例如:&#x27;621848063680370&#x27;(15 位)和&#x27;621848063688370808&#x27;(18 位)，然后默认的值是这样的，现在问题来了，需求希望在这些数值中插入空白符号，比如 15 位的数字就按照 6 + 6 + 3 的格式分隔，分隔的时候需要使用空白符号。比如&#x27;621848063680370&#x27;分隔后应该变成&#x27;621848 063680 370&#x27;,也就是数字位数到了第 6 位就加个空白符号分隔，...依次类推，而 18 位数字的分割规则则是:6 + 4 + 4 + 4。比如&#x27;621848063688370808&#x27;应该分隔成&#x27;621848 0636 8837 0808&#x27;。
-这个需求就是对字符串的处理，提到分隔替换，那么我们就可以想到强大的字符串替换方法 replace，这个方法可以接受 2 个参数，一个参数通常是一个正则表达式，第二个参数则是一个回调函数，用于定义替换后返回字符串。因此，我的第一个想法就是使用正则表达式去处理，如何处理呢？
-原理分析
-首先我们需要去理解这个规则，从需求我们可以发现，不同的位数，规则就会有所不同，因此我们可以提前用一个数据来表示这种规则，为了保持良好的扩展性，我设计了如下字段:
-type spaceRule &#x3D; {
-  digit: number; // 位数
-  rule: RegExp; //规则
-  symbolNumber: number; // 插入符号数量
-  symbolName: string; // 插入符号
-};
-
-可以看到，我设计了四个参数，正如注释…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;15
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -5032,8 +5093,8 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6569628829">
-        <time id="build-timestamp" datetime="2023-10-19T03:52:49.300Z">2023-10-19T03:52:49.300Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6570935884">
+        <time id="build-timestamp" datetime="2023-10-19T06:52:55.873Z">2023-10-19T06:52:55.873Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
