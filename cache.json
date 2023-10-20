@@ -117,7 +117,7 @@
           "description": "如何让 ChatGPT 更好地思考，以获得更佳的输出效果，有几个比较成熟的实践和技巧，背后都有对应的论文。\n1）CoT，思维链提示，https://arxiv.org/abs/2205.10625，将思考过程打印出来或者提供 one-shot/few-shot，输出的准确性会更高；例如你可以在提示词后追加：“Let's think step by step”，效果就要好一些。\n对于决策推理性的问题，CoT 的效果都比较不错，事实上这个涌现效果是被发现而不是被设计出来的，后来它的有效性在这篇论文（https://arxiv.org/abs/2205.10625）中得到了证明。\n2）Self-Consistency，自洽性，https://arxiv.org/abs/2203.11171，在多次输出中找到投票最高的那条，例如你可以这么跟 ChatGPT 说：\n“对于每一个问题，你会思考 5 种不同的思路，然后将它们结合起来，输出最佳的措辞、最全面和最准确的答案。”（图一）\n3）Least to Most prompting，本质是规划+逐步执行，https://arxiv.org/abs/2205.10625，对于复杂的任务，单纯使用 CoT + SC 效果依然不会太好，可以让 ChatGPT 先自己去拆解问题再回答：\n\"对于每一个问题，你首先需要回答是否将问题分解为子问题，若否，直接给出答案；若是，则将问题拆解为子问题，然后将它们结合起来，输出最佳的措辞、最全面和最准确的答案。\"\n“To solve {problem}, we need to……”，让大模型开启这种思维模式，不断细化问题，结果会更好。（图二）\n4）Multi-Persona Self-Collaboration，多角色扮演，https://arxiv.org/abs/2307.05300，这个有点类似之前提到的 AutoGen，让多个代理相互对话来解决问题，只不过 AutoGen 是从工程层面真正做到了多 Agents 交互，而这里提到的，是让 ChatGPT 扮演多重人格/角色，例如：\n“你可以扮演任何角色，针对我给出的问题，请提供三个最相关的角色，对问题进行两轮讨论，然后你综合讨论结果总结最佳方案。请打印三个角色的讨论过程以及最后的方案。”（图三）\n以上，这些技巧的运用并不复杂，但是思想比较重要，掌握了之后，稍微修改下 Prompt，便可以得到更加符合预期的结果。#AI学习#",
           "link": "https://m.okjike.com/originalPosts/652faa1cbb3e3660e8041b7b",
           "publishedOn": "2023-10-18T09:49:16.000Z",
-          "wordCount": 510,
+          "wordCount": 512,
           "title": "发布了: 如何让 ChatGPT 更好地思考，以获得更佳的输出效果，有几个比较成熟的实践和技巧，背后都有对应的论文。 1）CoT，思维链提示，https://arxiv.org/abs/22...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fre5jgJ7vXoX5nLdvGRUgPWTyo2bv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -939,7 +939,7 @@
           "description": "[7018942344208580646#1024一起掘金#]作为一名程序员，请说出你的首选开发工具？（VScode  yyds）",
           "link": "https://juejin.cn/pin/7291549843545440296",
           "publishedOn": "2023-10-19T14:05:14.000Z",
-          "wordCount": 549,
+          "wordCount": 529,
           "title": "[7018942344208580646#1024一起掘金#]作为一名程序员，请说出你的首选开发工具？（VScode yyds）",
           "imageUrl": null
         },
@@ -949,7 +949,7 @@
           "description": "[7018942344208580646#1024一起掘金#] \n大的来了，今天给fast-create-variable支持了react中使用，虽然我不用react[灵光一现]",
           "link": "https://juejin.cn/pin/7291186128361766968",
           "publishedOn": "2023-10-18T08:51:01.000Z",
-          "wordCount": 559,
+          "wordCount": 539,
           "title": "[7018942344208580646#1024一起掘金#] 大的来了，今天给fast-create-variable支持了react中使用，虽然我不用react[灵光一现]",
           "imageUrl": null
         },
@@ -1009,7 +1009,7 @@
           "description": "[7018942344208580646#1024一起掘金#]  [呲牙]发现一个很方便的局域网传文件工具，一个wifi下的所有手机和电脑，不用下APP，网页就可以，yanhuo7.com . P2P，免流量，蛮方便的",
           "link": "https://juejin.cn/pin/7290017749715615784",
           "publishedOn": "2023-10-16T04:43:58.000Z",
-          "wordCount": 561,
+          "wordCount": 541,
           "title": "[7018942344208580646#1024一起掘金#] [呲牙]发现一个很方便的局域网传文件工具，一个wifi下的所有手机和电脑，不用下APP，网页就可以，yanhuo7.com . P2P，免流...",
           "imageUrl": null
         },
@@ -1284,36 +1284,6 @@
           "wordCount": 4212,
           "title": "学习 | 怎么在 X/推特 获取优质信息",
           "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-1525770041010-2a1233dd8152.jpeg"
-        },
-        {
-          "id": "https://nishuang.net/?p=30600",
-          "author": "Frank",
-          "description": "看看下面的图片，你觉得画面中间的这两个人是什么心情？ 来自加拿大 University of Alberta 的研究人员，找了加拿大学生和日本学生做对比测试，研究结果表明： 研究结果说东方人察言观色时更具备集体意识。 中国文化和日本文化都属于典型的东亚文化，你可以拿这个结论对比一下自己的观察结果，看看你是只看中间人物表情、还是无意识地观察了所有人的表情。 心理学研究说这种差异来自东西方文化的差异， …\n  设计 | 察言观色也有东西方文化差异 查看全文 »",
-          "link": "https://nishuang.net/%e8%ae%be%e8%ae%a1-%e5%af%9f%e8%a8%80%e8%a7%82%e8%89%b2%e4%b9%9f%e6%9c%89%e4%b8%9c%e8%a5%bf%e6%96%b9%e6%96%87%e5%8c%96%e5%b7%ae%e5%bc%82/",
-          "publishedOn": "2023-09-21T06:06:10.000Z",
-          "wordCount": 4034,
-          "title": "设计 | 察言观色也有东西方文化差异",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-1584974292709-5c2f0619971b.jpeg"
-        },
-        {
-          "id": "https://nishuang.net/?p=30591",
-          "author": "Frank",
-          "description": "因为笔记善于存储而无法激发思考，AI 人工智能也改不了这一点。 前几天读了一篇资深记者写的文章，他说出了我一直的观点：笔记工具只是帮你记录更多信息，并不能自动帮你学习。 作者因为工作原因要处理大量信息，他尝试了 Roam Research、Obsidian、Mem 等不同的笔记工具，但标签、双向链接这些知识管理功能，并不能阻止我们工作时分心，工作效率不会有什么提升。 同时，Notion AI、Ch …\n  学习 | 为什么笔记工具不会让我们更聪明 查看全文 »",
-          "link": "https://nishuang.net/%e5%ad%a6%e4%b9%a0-%e4%b8%ba%e4%bb%80%e4%b9%88%e7%ac%94%e8%ae%b0%e5%b7%a5%e5%85%b7%e4%b8%8d%e4%bc%9a%e8%ae%a9%e6%88%91%e4%bb%ac%e6%9b%b4%e8%81%aa%e6%98%8e/",
-          "publishedOn": "2023-09-21T05:50:59.000Z",
-          "wordCount": 4065,
-          "title": "学习 | 为什么笔记工具不会让我们更聪明",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-1629976002376-3bccae77037d.jpeg"
-        },
-        {
-          "id": "https://nishuang.net/?p=30587",
-          "author": "Frank",
-          "description": "More than half of Americans plan to get updated COVID shot 超过一半的美国人计划接种更新的COVID疫苗 根据最近的一项调查，超过半数的美国成年人计划接种最新的 COVID-19 疫苗。该疫苗针对omicron亚变种XBB.1.5。 What’s in the US military’s historic lost and fou …\n  倪爽的阅读分享 – 2023年9月21日 查看全文 »",
-          "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b49%e6%9c%8821%e6%97%a5/",
-          "publishedOn": "2023-09-21T04:43:42.000Z",
-          "wordCount": 4066,
-          "title": "倪爽的阅读分享 – 2023年9月21日",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/b-52-stratofortress_013.jpeg"
         }
       ]
     }
