@@ -51,11 +51,52 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-20 datetime="2023-10-20T02:49:58.000Z">2023-10-20</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-20 datetime="2023-10-20T02:49:58.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-20 datetime="2023-10-20T04:06:44.000Z">2023-10-20</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-20 datetime="2023-10-20T04:06:44.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Barret李靖的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/6531fcd4bb3e3660e835fab0"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 前文（https://twitter.com/Barret_China/status/1714578115580833858）介绍过 CoT 可以提升 ChatGPT 的输出质量，而 CoT Self-Consistency 又可以提升 ...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6531fcd4bb3e3660e835fab0">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fo6Acn4EymEHC0riDlmY1zM_XdGWv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>前文（https://twitter.com/Barret_China/status/1714578115580833858）介绍过 CoT 可以提升 ChatGPT 的输出质量，而 CoT Self-Consistency 又可以提升 CoT 的可靠性，它本质就是让具备随机性的 LLM 多推理几次，然后对结果进行投票，取票数最高的一个。但是这里有一个问题，有可能票数较低的结果中，存在局部最优解，例如：
+CoT-1：stepA -&gt; stepB -&gt; stepC ❌
+CoT-2：stepM -&gt; stepN -&gt; stepL ❌
+CoT-3：stepX -&gt; stepY -&gt; stepZ ✅
+CoT-1 和 CoT-2 被淘汰，最后结果选了 CoT-3，但是最佳的路径有可能是 stepA -&gt; stepY -&gt; stepZ，局部最优解 stepA 在 CoT-1 中被干掉了。那如何让 ChatGPT 在推理过程中保留最佳输出结果呢？
+看到一篇关于 ToT 的论文《Tree of Thoughts: Deliberate Problem Solving with Large Language Models》，https://arxiv.org/abs/2305.10601，它的解决思路也比较简单，引入一个树结构，保存每一步推理产生的多个结果作为叶子节点，在进行一次状态评估剔除掉无效结果后，再基于叶子节点继续推理，由此展开一棵树，最后通过深度优先（DFS）或广度优先（BFS）算法组装节点生成多条 CoTs，然后交给大模型评估哪个结果最好。
+这个过程可以做到，每个环节都是局部最优。从论文实验的数据来看，它输出的结果，正确率比 CoT 要高将近 70%。不过这个方案带来的代价也是比较高的，过程中需要多次与 ChatGPT 交互，因此在执行这类任务的时候，需要考虑剪枝数量和推理深度。
+看到 LangChain 对 ToT 做了一个 Python 版本的实现，https://github.com/langchain-ai/langchain/pull/5167/files，感兴趣的可以参考下。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -1134,6 +1175,108 @@ fn(arr…</span>
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7290751877734776893"
+                        open
+                      >
+                        <summary class="article-expander__title">ES6的一些高级技巧</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7290751877734776893">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>highlight: a11y-dark
+theme: cyanosis
+引言
+ES6（ECMAScript 2015）引入了许多新的功能和语法，其中一些功能可能相对较冷门，但非常实用。本文将介绍一些这样的高级技巧，包括
+Object.entries()
+Object.fromEntries()
+Symbol类型和Symbol属性
+WeakMap和WeakSet
+Promise.allSettled()
+BigInt
+Array.of
+Array.from
+.at和flat
+1.  Object.entries()和Object.fromEntries()
+Object.entries()方法返回一个给定对象自身可枚举属性的键值对数组。
+Object.fromEntries()方法将键值对列表转换为一个对象。
+当使用Object.entries()时，可以传入一个对象作为参数。这个对象可以是任何具有可枚举属性的对象。例如：
+const obj &#x3D; { a: 1, b: 2, c: 3 };
+
+const entries &#x3D; Object.entries(obj);
+console.log(entries); // [[&quot;a&quot;, 1], [&quot;b&quot;, 2], [&quot;c&quot;, 3]]
+
+在这个例子中，我们将一个包含三个属性的对象传递给Object.entries()方法，并将返回的结果存储在entries变量中。entries变量现在是一个包含键值对数组的数组。
+同样地，当使用Object.fromEntries()时，可以传入一个键值对数组作为参数。这个数组中的每个元素都是一个包含键和值的数组。例如：
+const entries &#x3D; [[&quot;a&quot;, 1], [&quot;b&quot;, 2], [&quot;c&quot;, 3]];
+
+const obj &#x3D; Object.fromEntries(entries);
+c…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7290558277666930744"
+                        open
+                      >
+                        <summary class="article-expander__title">这个前端Api管理方案会更好？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7290558277666930744">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>简介
+大家好，前端小白一枚，目前接触后台管理系统比较多，经常遇到不同对象的增删改查的接口，如何对Api进行一个有比较好的管理是个问题。在学习偏函数的时候有了灵感，想到一个不错的API管理方案，并应用在项目一个模块当中，并且开发效率和维护性可读性都很不错，和大家分享一下~
+当前项目的前端API管理方案
+// 封装的接口
+export function obj1Func1(){}
+export function obj1Func2(){}
+export function obj2Func3(){}
+export function obj2Func4(){}
+
+// 引入方式
+import { obj1Func1, obj1Func2, obj2Func3, obj2Func4 } from &#x27;xxx&#x27;
+
+// 使用方式
+const params &#x3D; {...}
+await obj1Func1(params)
+
+当接口多了之后，我们管理接口(查找)是一件很麻烦且废眼睛的事，需要一直翻，注释看不过来，维护性和可读性差。
+统一export方式
+// 封装的接口
+function obj1Func1(){}
+function obj1Func2(){}
+function obj2Func3(){}
+function obj2Func4(){}
+// 导出接口
+export {
+    obj1Func1,//注释
+    obj1Func2,//注释
+    obj2Func3,//注释
+    obj2Func4,//注释
+    ...
+}
+
+// 引入方式
+import { obj1Func1, obj1Func2, obj2Func3, obj2Func4 } from &#x27;xxx&#x27;
+
+// 使用方式
+const params &#x3D; {...}
+await obj1Func1(pa…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -1630,7 +1773,7 @@ Vue 3 复杂样式用普通写法、简单样式用  UnoCSS 的属性模式写�
 Vue 3 不用任何原子化 CSS 写一个 TodoList
 Vue 3 不用任何原子化 CSS（但用内置的 scoped）写一个 TodoList
 Vue 3 只用 CSS Module 写一个 TodoL…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2798,33 +2941,6 @@ DevOps也主要在运维团队内部协作。和产品、设计等部门协作�
                               <span>在 Google Colab 上执行了一个爬虫任务，可以看出 AutoGen 框架的强大（https://web.okjike.com/originalPost/6527c452fb5ea50a73e2b33b），我做的事情就是配置了 ChatGPT 的 api_key 以及定义了要做啥事情，剩下的都是程序干的了。
 这是最简单的模式，也可以定义很多个 Assistant 和 UserProxy，例如搞三个角色，产品经理、程序员和设计师，让他们之间讨论如何实现一个产品原型，并给出 Demo 代码。
 相比让一个 AI Agent 承担多重角色来执行复杂任务，多 Agents 的优势十分突出，最后的效果也要好很多很多。过程中人类可以随时介入，进行调优，也可以避免跑题。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/6527c452fb5ea50a73e2b33b"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 微软研发的 AutoGen 框架太强大了，它是一个多代理框架，利用它可以轻松定制一系列工作任务。https://github.com/microsoft/autogen 举一个常见的例子：...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6527c452fb5ea50a73e2b33b">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fo7BSBkUrotRg7zsqNXRB2IeaQ1e?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>微软研发的 AutoGen 框架太强大了，它是一个多代理框架，利用它可以轻松定制一系列工作任务。https://github.com/microsoft/autogen
-举一个常见的例子：我们要实现一个爬虫程序，抓取并保存网页图片。如果把这个任务丢给 ChatGPT，它会直接返回一串可执行代码，但是代码通常会存在问题，例如执行报错、缺少依赖等，你需要反复跟 ChatGPT 对话来完善程序。当然，我们也可以设定一个复杂 Prompt，要求它调用 ChatGPT 的代码执行插件，如果存在报错，则继续修正程序。
-这个任务如果交给 AutoGen 来实现，将会变得无比简单，几行代码就可以搞定：
-1）定义一个 Assistant Agent，它的任务是解决问题
-2）定义一个 UserProxy Agent，它的任务是替代人询问问题，同时在本地执行程序
-这两个 Agent 都不需要给他们设置 Prompt。当我们把爬虫任务交给 UserProxy 后，它会理解任务，然后询问 Assistant 应该如何做，Assistant 会把操作过程告诉 UserProxy，接着 UserProxy 会根据指示在本地安装依赖，然后创建文件执行代码，如果执行出现错误，它会把详细报错提交给 Assistant，依次循环，直到可以获取到最终的结果。任务结束的时候，你会看到目标图片已经保存到本地磁盘了。
-利用这个框架可以做的事情非常多，它提供的能力也十分完善，可以在项目的 notebook 中找到很多最佳实践：https://github.com/microsoft/autogen/tree/main/notebook
-P.S. 为了确保安全，还是建议你在 Docker 环境中执行程序，UserProxy 有一个 code_execution_config 配置，将 use_docker 配置为 True 即可；另外，它还有一个 human_input_mode 参数，设置为 NEVER，表示整个过程都不需要人参与，也可以设置为其他值，它会等待人的输入后再进行下一步操作，这个设计可以让人参与到任务执行过程，避免跑偏。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -4360,72 +4476,6 @@ https://juejin.cn/post/7280435532986990647</span>
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-01 datetime="2023-10-01T09:24:08.000Z">2023-10-01</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-01 datetime="2023-10-01T09:24:08.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7284144079716728873"
-                        open
-                      >
-                        <summary class="article-expander__title">一文掌握Babel来龙去脉、三大脚手架中使用Babel</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7284144079716728873">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: cyanosis
-babel是什么？
-浏览器的发展跟不上语言的发展，es6+虽然很普及了，但也不是所有浏览器都可以支持es6+语法。babel的诞生就源于此。
-babel只是提供了一个“平台”，让更多有能力的plugins入驻平台，是这些plugins提供了将 ES6+版本的代码转换为向后兼容的 JavaScript 语法的能力。
-babel的编译流程
-主要分为三步，流程主要为：
-parsing（解析）、transforming（转化）、generating（生成）
-parsing: babylon（babel 内部使用的解析类库叫做 babylon，现在改名叫@babel/parser） 负责将es6代码进行语法分析和词法分析后转换成抽象语法树AST
-transforming: plugin插件使用 @babel/traverse 来遍历 AST 并进行节点的操作，用它提供的 API 来编写对 AST 的遍历和修改逻辑，由此来将一种AST转换为另一种AST
-generating：@babel/generator负责通过AST树生成ES5代码
-其中第二步的转化是重中之重，babel的插件机制也是在这一步发挥作用的，plugins在这里进行操作，转化成新的AST，再交给第三步的@babel/generator。 所以如果没有这些plugins进驻平台，那么babel这个“平台”是不具备任何能力的。
-而这整个过程，由@babel/core 负责编译过程的控制和管理。它会调用其他模块来解析、转换和生成代码。
-名词介绍
-Plugins 和 Presets 的运行顺序
-Plugins 在 Presets 前运行
-Plugins 顺序从前往后排列
-Presets 顺序是颠倒的（从后往前）
-    {
-      &quot;plugins&quot;: [&quot;Tom&quot;, &quot;Jack&quot;],
-  …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-28 datetime="2023-09-28T14:42:38.000Z">2023-09-28</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-28 datetime="2023-09-28T14:42:38.000Z"></time>
           </button>
@@ -5014,80 +5064,10 @@ Unity 是一个顶级的游戏引擎，很多著名的手机游戏和网页游�
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-20 datetime="2023-09-20T17:47:48.000Z">2023-09-20</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-20 datetime="2023-09-20T17:47:48.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >倪爽设计工作室</button>
-                  <a class="source-heading__link" href="https://nishuang.net">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://nishuang.net/?p&#x3D;30538"
-                        open
-                      >
-                        <summary class="article-expander__title">设计 | 为什么用户会把 ChatGPT 当搜索引擎？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e8%ae%be%e8%ae%a1-%e4%b8%ba%e4%bb%80%e4%b9%88%e7%94%a8%e6%88%b7%e4%bc%9a%e6%8a%8a-chatgpt-%e5%bd%93%e6%90%9c%e7%b4%a2%e5%bc%95%e6%93%8e%ef%bc%9f/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-1677691820099-a6e8040aa077.jpeg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>ChatGPT 流行之后，越来越多的人把 ChatgPT 当做搜索引擎来使用。本文从产品设计角度，解释这个现象背后的原因，以及它对产品设计的影响。 我以前有外号叫“人头Google脑”，手机能上网之前我就有“立刻Google一下”的名声，而且我还“代客 Google”帮人搜索💪 某次在南锣鼓巷，某路人盯着电线杆喃喃自语：你说电线杆顶上那个橙色小风车是干嘛用的？我琢磨好久也没想明白。 那位长了一张自 …
-  设计 | 为什么用户会把 ChatGPT 当搜索引擎？ 查看全文 »</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;15
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://nishuang.net/?p&#x3D;30554"
-                        open
-                      >
-                        <summary class="article-expander__title">设计 | 不要动我的电脑😡</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e8%ae%be%e8%ae%a1-%e4%b8%8d%e8%a6%81%e5%8a%a8%e6%88%91%e7%9a%84%e7%94%b5%e8%84%91%f0%9f%98%a1/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-1519074002996-a69e7ac46a42.jpeg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>我遇到劫持浏览器鼠标左键、鼠标右键、上下文菜单…的软件和浏览器插件，都是不管软件、插件本身多好用，我都当它是病毒、木马、恶意软件，立刻卸载。 我今天卸载的，是最近 2、3 年里最好用的“阅读模式”/免打扰阅读/沉浸式阅读插件，不知道为什么它劫持了浏览器鼠标左键，显示 CLIP 功能。 现在有各种设计软件、编辑软件直接运行在浏览器里，劫持鼠标和上下文菜单，会打乱这些重度依赖人机交互软件的正常操作。  …
-  设计 | 不要动我的电脑😡 查看全文 »</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6583159292">
-        <time id="build-timestamp" datetime="2023-10-20T03:52:55.728Z">2023-10-20T03:52:55.728Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6584393566">
+        <time id="build-timestamp" datetime="2023-10-20T06:53:14.207Z">2023-10-20T06:53:14.207Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

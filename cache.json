@@ -23,7 +23,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1208,
+          "wordCount": 1206,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "本文介绍三种改变音频播放音量的方法，其中还有一种方法直接改变音频AudioBuffer数据源的音量，说不定你哪天就会用到。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/",
           "publishedOn": "2023-10-09T14:50:57.000Z",
-          "wordCount": 1093,
+          "wordCount": 1094,
           "title": "JS改变AudioBuffer音量并下载为新audio音频",
           "imageUrl": null
         }
@@ -71,6 +71,16 @@
       "feedUrl": "https://rsshub.app/jike/user/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
+        {
+          "id": "https://m.okjike.com/originalPosts/6531fcd4bb3e3660e835fab0",
+          "author": null,
+          "description": "前文（https://twitter.com/Barret_China/status/1714578115580833858）介绍过 CoT 可以提升 ChatGPT 的输出质量，而 CoT Self-Consistency 又可以提升 CoT 的可靠性，它本质就是让具备随机性的 LLM 多推理几次，然后对结果进行投票，取票数最高的一个。但是这里有一个问题，有可能票数较低的结果中，存在局部最优解，例如：\nCoT-1：stepA -> stepB -> stepC ❌\nCoT-2：stepM -> stepN -> stepL ❌\nCoT-3：stepX -> stepY -> stepZ ✅\nCoT-1 和 CoT-2 被淘汰，最后结果选了 CoT-3，但是最佳的路径有可能是 stepA -> stepY -> stepZ，局部最优解 stepA 在 CoT-1 中被干掉了。那如何让 ChatGPT 在推理过程中保留最佳输出结果呢？\n看到一篇关于 ToT 的论文《Tree of Thoughts: Deliberate Problem Solving with Large Language Models》，https://arxiv.org/abs/2305.10601，它的解决思路也比较简单，引入一个树结构，保存每一步推理产生的多个结果作为叶子节点，在进行一次状态评估剔除掉无效结果后，再基于叶子节点继续推理，由此展开一棵树，最后通过深度优先（DFS）或广度优先（BFS）算法组装节点生成多条 CoTs，然后交给大模型评估哪个结果最好。\n这个过程可以做到，每个环节都是局部最优。从论文实验的数据来看，它输出的结果，正确率比 CoT 要高将近 70%。不过这个方案带来的代价也是比较高的，过程中需要多次与 ChatGPT 交互，因此在执行这类任务的时候，需要考虑剪枝数量和推理深度。\n看到 LangChain 对 ToT 做了一个 Python 版本的实现，https://github.com/langchain-ai/langchain/pull/5167/files，感兴趣的可以参考下。",
+          "link": "https://m.okjike.com/originalPosts/6531fcd4bb3e3660e835fab0",
+          "publishedOn": "2023-10-20T04:06:44.000Z",
+          "wordCount": 564,
+          "title": "发布了: 前文（https://twitter.com/Barret_China/status/1714578115580833858）介绍过 CoT 可以提升 ChatGPT 的输出质量，而 CoT Self-Consistency 又可以提升 ...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fo6Acn4EymEHC0riDlmY1zM_XdGWv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
         {
           "id": "https://m.okjike.com/originalPosts/6530c721d1917302aa8fa90b",
           "author": null,
@@ -160,16 +170,6 @@
           "wordCount": 477,
           "title": "发布了: 在 Google Colab 上执行了一个爬虫任务，可以看出 AutoGen 框架的强大（https://web.okjike.com/originalPost/6527c452fb5ea50a73e2b33b），我做的事情...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FvNOkUYkAEC1zAjaXTAOi3Zybb6Xv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/6527c452fb5ea50a73e2b33b",
-          "author": null,
-          "description": "微软研发的 AutoGen 框架太强大了，它是一个多代理框架，利用它可以轻松定制一系列工作任务。https://github.com/microsoft/autogen\n举一个常见的例子：我们要实现一个爬虫程序，抓取并保存网页图片。如果把这个任务丢给 ChatGPT，它会直接返回一串可执行代码，但是代码通常会存在问题，例如执行报错、缺少依赖等，你需要反复跟 ChatGPT 对话来完善程序。当然，我们也可以设定一个复杂 Prompt，要求它调用 ChatGPT 的代码执行插件，如果存在报错，则继续修正程序。\n这个任务如果交给 AutoGen 来实现，将会变得无比简单，几行代码就可以搞定：\n1）定义一个 Assistant Agent，它的任务是解决问题\n2）定义一个 UserProxy Agent，它的任务是替代人询问问题，同时在本地执行程序\n这两个 Agent 都不需要给他们设置 Prompt。当我们把爬虫任务交给 UserProxy 后，它会理解任务，然后询问 Assistant 应该如何做，Assistant 会把操作过程告诉 UserProxy，接着 UserProxy 会根据指示在本地安装依赖，然后创建文件执行代码，如果执行出现错误，它会把详细报错提交给 Assistant，依次循环，直到可以获取到最终的结果。任务结束的时候，你会看到目标图片已经保存到本地磁盘了。\n利用这个框架可以做的事情非常多，它提供的能力也十分完善，可以在项目的 notebook 中找到很多最佳实践：https://github.com/microsoft/autogen/tree/main/notebook\nP.S. 为了确保安全，还是建议你在 Docker 环境中执行程序，UserProxy 有一个 code_execution_config 配置，将 use_docker 配置为 True 即可；另外，它还有一个 human_input_mode 参数，设置为 NEVER，表示整个过程都不需要人参与，也可以设置为其他值，它会等待人的输入后再进行下一步操作，这个设计可以让人参与到任务执行过程，避免跑偏。",
-          "link": "https://m.okjike.com/originalPosts/6527c452fb5ea50a73e2b33b",
-          "publishedOn": "2023-10-12T10:02:58.000Z",
-          "wordCount": 548,
-          "title": "发布了: 微软研发的 AutoGen 框架太强大了，它是一个多代理框架，利用它可以轻松定制一系列工作任务。https://github.com/microsoft/autogen 举一个常见的例子：...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fo7BSBkUrotRg7zsqNXRB2IeaQ1e?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80"
         }
       ]
     },
@@ -264,7 +264,7 @@
           "description": "时间，比金子还要宝贵。\n你关注什么，你就会变成什么样的人。\n所以，不要去关注战争冲突，不要去关注年收入超过1个亿的人数，不要去关注隔壁邻居又买了什么。\n这些你了解得再透彻，你的水平也不会发生任何改变。\n找到最重要的目标，计算自己的时间成本，在具体的工作中创造心流的体验，珍惜每天的第三个8小时，才是你可以做的。\n我看到过一句话，在最后和你分享：\n如果你买个摄像头放在家里，用上帝视角观察自己每天都在做什么，你会发现——你富不起来真是太正常了。\n时间是不可再生的资源。\n至少，你要对得起自己的时间吧。\n－－刘润。",
           "link": "https://m.okjike.com/originalPosts/652ce1bd99f2123c74039542",
           "publishedOn": "2023-10-16T07:09:49.000Z",
-          "wordCount": 445,
+          "wordCount": 443,
           "title": "发布了: 时间，比金子还要宝贵。 你关注什么，你就会变成什么样的人。 所以，不要去关注战争冲突，不要去关注年收入超过1个亿的人数，不要去关注隔壁邻居又买了...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -732,7 +732,7 @@
           "description": "我的小册 《CSS 技术揭秘与实战通关》上线了，想了解更多有趣、进阶、系统化的 CSS 内容，可以猛击 - LINK。\n最近大家刷抖音，是否有刷到拉斯维加斯的新地标 「Sphere」：\n\n场馆内部的视觉效果非常惊人，其中一个效果让我虎躯一震：\n\n我的第一想法就是，这个看起来用 CSS 也可以实现嘛？还有 CSS 不能实现的？\n本文，就将尝试使用 CSS，大致还原这个效果。\n拆解动画效果\n其实，上述的动画效果，本质就是一个 3D 立方体。\n同时，3D 立方体上每个面存在颜色不一样的文字，文字和颜色都在随机变化。\n也就是说，我们需要实现一个 3D 立方体：\n\n同时，我们还需要实现这样一个动画效果 -- 文字和颜色都在随机变化的平面效果：\n\n两者组合一下，再挪动 3D 元素的景深距离，就能实现我们想要的效果！\n好，下面我们一个一个实现。\n实现一个 3D 立方体\n实现一个 3D 立方体，相对另外一个文字和颜色都在随机变化的平面效果而言，属于非常非常简单的一步了。\n我们在非常多篇文章中也讲过具体的实现方式：\n最常见的 3D 图形，莫过于一个 3D 立方体。\n如果没有上下两个面，只是一个 4 个面的图形，大概是这样：\n\n这样一个图形，利用 CSS 3D，如何快速实现呢？\n首先，构造这么一个结构：\n<div class=\"perspective\">\n        <div class=\"container\">\n                <div class=\"img\">3</div>\n                <div class=\"img\">D</div>\n                <div class=\"img\">视</div>\n                <div class=\"img\">图</div>\n        </div>\n</div>\n\n4 个面…",
           "link": "https://juejin.cn/post/7290968251911356473",
           "publishedOn": "2023-10-18T02:37:42.000Z",
-          "wordCount": 3181,
+          "wordCount": 3196,
           "title": "CSS 还原拉斯维加斯球数字动画",
           "imageUrl": null
         },
@@ -742,7 +742,7 @@
           "description": "24岁的我选择了裸辞\n前言\n说实话选择裸辞后很迷茫，但是又不想在原本的公司上班，目前处于昏昏沉沉的状态，工作也是混一天是一天，没有了什么明确的目标，不知道屏幕前的你们有没有这种感觉,目前想着休息一段时间，可是又不敢休息，钱包不允许。\n今年的金九银十根本没有，环境确实很差。\n\n公司A\n公司A:第一家面试的公司，没过，一家初创公司，没过也是情理之中，毕竟我面试的状态太差了，很多问题都没回答上来，这时候没什么准备，刚开始刷面试题，不过说实话有点打击，作为毕业以后第一次换工作的经历，刚毕业的时候面一个拿一个offer，甚至都怀疑这两年工作是不是白做了，技术一直下坡路。\n笔试题目\n第一题.  [1,3,5,2,19,30,10] 请将数组排序从小到大\n[1,3,5,2,19,30,10] .sort((a,b) => a - b)\n加分项： 题目之外还可以自己写一些排序例如算法，但是笔者只答了 sort方法排序\n什么是防抖和节流？ 它们有什么区别 怎么实现\n防抖： 延迟一定时间执行某一方法，如果重新触发时间重置\n节流： 是规定时间内多次触发方法只执行一次\n区别: 一个是立即执行规定时间内不重复执行，一个是规定时间内只执行一次，其实区别可以不用回答，介绍防抖和节流就包含了区别\n实现： 因为现场是笔试所以我这里的答案是简易版的防抖和节流\n防抖实现：\nfunction debounce(func, time) {\n        let timer = null;\n        return function (...args) {\n            clearInterval(timer);\n            timer = setTimeout(() => {\n                func.apply(this, args)\n            }, ti…",
           "link": "https://juejin.cn/post/7290931758788051005",
           "publishedOn": "2023-10-18T02:05:19.000Z",
-          "wordCount": 2646,
+          "wordCount": 2620,
           "title": "2023年金九银十面经，假的今年没有金九银十",
           "imageUrl": null
         },
@@ -752,7 +752,7 @@
           "description": "点击上方亿元程序员+关注和★星标\n\n引言\n大家好，我是亿元程序员，一位有着8年游戏行业经验的主程。\n昨天，我女儿和我说想买一把萝卜刀，众所周知，萝卜刀在潜意识当中是存在一定的危险的，所以我果断拒绝了，但是我还是想体验一下，怎么办？于是我就用Cocos做了一个。\n1.准备素材\n1.首先我们从网络上找到一张关于萝卜刀的图片。\n\n2.导入PS，把我们需要的其中一把裁剪出来。\n\n3.然后我们通过精湛的PS技术(不是)，把萝卜刀拆解。\n\n4.把资源放进去Cocos。\n\n下面我们一起让萝卜刀动起来\n2.做动画\n要想萝卜刀尽可能和实物一样，我们得做动画，我们利用Cocos的动画编辑器简单做一下。\n1.首先我们先创建个Knife节点，把3部分的图片放进去并且按照结构拼接好。\n\n2.调整我们的转动轴位置，即锚点。\n\n3.编辑动画。\n白色部分我们添加一个旋转动画，添加一个angle属性，在0.1秒的地方加一个关键帧，并把它调整至打开状态。\n\n然后给刀尖部分添加一个position属性，在0.15秒处将添加一个关键帧，并把它调整成展开状态。\n\n刀尖展开后，我们需要把白色部分复原，在0.25秒处添加一个关键帧，并且把它复原\n\n到这里，萝卜刀的简单动画已经编辑完成，我们把动画调整回最初状态，然后保存。\n下面我们来编写控制萝卜刀运动的代码。\n3.写代码\n为了让萝卜刀有实物一样的甩刀效果，我们利用一下重力感应控制。\n\n关键Api是cc.SystemEvent.EventType.DEVICEMOTION事件，我们监听一下。\n\n还需要是否启用加速度计事件把打开。\n\n动画的播放比较简单。每次播放之前把方向改变一下，实现打开和关闭效果。\n\n4.效果演示\n构建小游戏。\n\n效果演示。\n\n结语\n本文仅供娱乐参考学习，萝卜刀有风险，大家谨慎对待。\n在哪里可以看到如此清晰的思路，快跟上我的节奏！关注我，和我一起了解游戏行业最新动态，学习游戏开发技巧。\n我是\"亿元程序员\"，一位有着8年游戏行业经验的主程。在游戏开发中，希望能给到您帮助, 也希望通过您能帮助到大家。\nAD:笔者线上的小游戏《贪吃蛇掌机经典》《填色之旅》《重力迷宫球》大家可以自行点击搜索体验。\n实不相瞒，想要个赞和在看！请把该文章分享给你觉得有需要的其他小伙伴。谢谢！\n推荐专栏：\n和8年游戏主程一起学习设计模式\n8年主程手把手打造Cocos独立游戏开发框架\n从零开始开发贪吃蛇小游戏到上线系列\n游戏开发的技巧、心得、资讯\n点击下方绿色按钮+关注",
           "link": "https://juejin.cn/post/7290848097159807017",
           "publishedOn": "2023-10-18T00:30:30.000Z",
-          "wordCount": 844,
+          "wordCount": 899,
           "title": "萝卜刀真的太危险了,于是我用Cocos做了一个",
           "imageUrl": null
         },
@@ -762,7 +762,7 @@
           "description": "代码背景\n本次分享基于一次线上环境的卡顿事故，客户数据体量过大导致的页面卡顿甚至页面直接崩溃的问题。现在我们将会把此次事故抽象成为大家更好理解的案例，从而来进行分析和解决。\n同时希望大家在阅读完之后可以了解到页面卡顿背后的底层原因，还有任务切片的解决原理！\n<body>\n    <input type=\"text\">\n    <button id=\"my-button\">执行任务</button>\n    <!-- box容器 -->\n    <div id=\"box\" style=\"height:500px;width:400px;overflow: auto;margin-top:24px;\">\n</body>\n\n// box容器溢出滚动\nconst box = document.getElementById('box')\nfor(let i=0;i<1000;i++){\n    const myText = document.createElement('h2')\n    myText.innerText = i\n    box.appendChild(myText)\n}\n\n// 执行任务\nconst myButton = document.getElementById('my-button')\nmyButton.addEventListener('click',load)\nfunction load() {\n  const total = 300000;\n  for (let i = 0; i < total; i++) {\n      console.log(i)\n  }\n}\n\n点击执行任务按钮会发现，我们不仅不能和输入框进行交互，连box容器区域的滚动也不再有响应，整个页面卡顿住了，直到load任务执行完成，页面才恢复响应，输入框才能正常使用，box容器区域也能…",
           "link": "https://juejin.cn/post/7290753121702215691",
           "publishedOn": "2023-10-17T07:43:15.000Z",
-          "wordCount": 1175,
+          "wordCount": 1167,
           "title": "面试官：做过性能优化？我：任务切片！",
           "imageUrl": null
         },
@@ -772,8 +772,28 @@
           "description": "title: JS\ntitleTemplate: 两数组内容比较\ntheme: channing-cyan\n题目\n给定两个数组，判断两数组内容是否相等。\n不使用排序\n不考虑元素位置\n例：\n[1, 2, 3] 和 [1, 3, 2] // true\n[1, 2, 3] 和 [1, 2, 4] // false\n\n\n思考几秒：有了😀😀\n1. 直接遍历✍\n直接遍历第一个数组，并判断是否存在于在第二个数组中\n求差集, 如果差集数组有长度，也说明两数组不等（个人感觉比上面的麻烦就不举例了）\nconst arr1 =  [\"apple\", \"banana\", 1]\nconst arr2 =  [\"apple\", 1, \"banana\"]\n\nfunction fn(arr1, arr2) {\n  // Arrary.some: 有一项不满足 返回false\n  // Arrary.indexOf: 查到返回下标，查不到返回 -1\n  if (arr1.length !== arr2.length) {\n    return false;\n  }\n  return !arr1.some(item => arr2.indexOf(item)===-1)\n}\n\nfn(arr1,arr2) // true\n\n细心的小伙伴就会发现：NaN 会有问题\nconst arr1 =  [\"apple\", \"banana\", NaN]\nconst arr2 =  [\"apple\", NaN, \"banana\"]\n\nfunction fn(arr1, arr2) {\n  if (arr1.length !== arr2.length) {\n    return false;\n  }\n  return !arr1.some(item => arr2.indexOf(item)===-1)\n}\n\nfn(arr…",
           "link": "https://juejin.cn/post/7290786959441117243",
           "publishedOn": "2023-10-17T07:26:43.000Z",
-          "wordCount": 2357,
+          "wordCount": 2350,
           "title": "面试官：如何判断两个数组的内容是否相等",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7290751877734776893",
+          "author": "前端俊刚",
+          "description": "highlight: a11y-dark\ntheme: cyanosis\n引言\nES6（ECMAScript 2015）引入了许多新的功能和语法，其中一些功能可能相对较冷门，但非常实用。本文将介绍一些这样的高级技巧，包括\nObject.entries()\nObject.fromEntries()\nSymbol类型和Symbol属性\nWeakMap和WeakSet\nPromise.allSettled()\nBigInt\nArray.of\nArray.from\n.at和flat\n1.  Object.entries()和Object.fromEntries()\nObject.entries()方法返回一个给定对象自身可枚举属性的键值对数组。\nObject.fromEntries()方法将键值对列表转换为一个对象。\n当使用Object.entries()时，可以传入一个对象作为参数。这个对象可以是任何具有可枚举属性的对象。例如：\nconst obj = { a: 1, b: 2, c: 3 };\n\nconst entries = Object.entries(obj);\nconsole.log(entries); // [[\"a\", 1], [\"b\", 2], [\"c\", 3]]\n\n在这个例子中，我们将一个包含三个属性的对象传递给Object.entries()方法，并将返回的结果存储在entries变量中。entries变量现在是一个包含键值对数组的数组。\n同样地，当使用Object.fromEntries()时，可以传入一个键值对数组作为参数。这个数组中的每个元素都是一个包含键和值的数组。例如：\nconst entries = [[\"a\", 1], [\"b\", 2], [\"c\", 3]];\n\nconst obj = Object.fromEntries(entries);\nc…",
+          "link": "https://juejin.cn/post/7290751877734776893",
+          "publishedOn": "2023-10-17T07:21:31.000Z",
+          "wordCount": 1612,
+          "title": "ES6的一些高级技巧",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7290558277666930744",
+          "author": "爱吃好果汁丶",
+          "description": "简介\n大家好，前端小白一枚，目前接触后台管理系统比较多，经常遇到不同对象的增删改查的接口，如何对Api进行一个有比较好的管理是个问题。在学习偏函数的时候有了灵感，想到一个不错的API管理方案，并应用在项目一个模块当中，并且开发效率和维护性可读性都很不错，和大家分享一下~\n当前项目的前端API管理方案\n// 封装的接口\nexport function obj1Func1(){}\nexport function obj1Func2(){}\nexport function obj2Func3(){}\nexport function obj2Func4(){}\n\n// 引入方式\nimport { obj1Func1, obj1Func2, obj2Func3, obj2Func4 } from 'xxx'\n\n// 使用方式\nconst params = {...}\nawait obj1Func1(params)\n\n当接口多了之后，我们管理接口(查找)是一件很麻烦且废眼睛的事，需要一直翻，注释看不过来，维护性和可读性差。\n统一export方式\n// 封装的接口\nfunction obj1Func1(){}\nfunction obj1Func2(){}\nfunction obj2Func3(){}\nfunction obj2Func4(){}\n// 导出接口\nexport {\n    obj1Func1,//注释\n    obj1Func2,//注释\n    obj2Func3,//注释\n    obj2Func4,//注释\n    ...\n}\n\n// 引入方式\nimport { obj1Func1, obj1Func2, obj2Func3, obj2Func4 } from 'xxx'\n\n// 使用方式\nconst params = {...}\nawait obj1Func1(pa…",
+          "link": "https://juejin.cn/post/7290558277666930744",
+          "publishedOn": "2023-10-17T02:21:37.000Z",
+          "wordCount": 1972,
+          "title": "这个前端Api管理方案会更好？",
           "imageUrl": null
         },
         {
@@ -782,7 +802,7 @@
           "description": "难以置信，一个小小的需求让我捣鼓出一个提效的网站来\n需求介绍\n事情是这样的，有个群友在业务当中碰到一个小小的需求，需求是这样的: 页面当中存在多个输入框，输入框的 value 值是一个数值组成的字符串（盲猜应该是身份证号码），这个字符串的位数是 15 位或者是 18 位，例如:'621848063680370'(15 位)和'621848063688370808'(18 位)，然后默认的值是这样的，现在问题来了，需求希望在这些数值中插入空白符号，比如 15 位的数字就按照 6 + 6 + 3 的格式分隔，分隔的时候需要使用空白符号。比如'621848063680370'分隔后应该变成'621848 063680 370',也就是数字位数到了第 6 位就加个空白符号分隔，...依次类推，而 18 位数字的分割规则则是:6 + 4 + 4 + 4。比如'621848063688370808'应该分隔成'621848 0636 8837 0808'。\n这个需求就是对字符串的处理，提到分隔替换，那么我们就可以想到强大的字符串替换方法 replace，这个方法可以接受 2 个参数，一个参数通常是一个正则表达式，第二个参数则是一个回调函数，用于定义替换后返回字符串。因此，我的第一个想法就是使用正则表达式去处理，如何处理呢？\n原理分析\n首先我们需要去理解这个规则，从需求我们可以发现，不同的位数，规则就会有所不同，因此我们可以提前用一个数据来表示这种规则，为了保持良好的扩展性，我设计了如下字段:\ntype spaceRule = {\n  digit: number; // 位数\n  rule: RegExp; //规则\n  symbolNumber: number; // 插入符号数量\n  symbolName: string; // 插入符号\n};\n\n可以看到，我设计了四个参数，正如注释…",
           "link": "https://juejin.cn/post/7290474926943010851",
           "publishedOn": "2023-10-16T13:33:45.000Z",
-          "wordCount": 4608,
+          "wordCount": 4595,
           "title": "难以置信，一个小小的需求让我捣鼓出一个提效的网站来",
           "imageUrl": null
         },
@@ -792,7 +812,7 @@
           "description": "以下内容是2023年7月17~10月16日自己每周学习的记录\n第29周 7.17-7.23\n这周在项目中使用了一种新的布局。\n就是下图所示的布局效果。\n\n在过去，这种图片固定比例的，宽度自适应的布局都至少只要2层以上的标签，这一次，使用了容器元素和全新的cqw单位，可以一层标签即实现最终的效果。\n相关实现已经整理成文，有兴趣可以访问这里：“CSS高宽不等图片固定比例布局的三重进化”。\n第30周 7.24-7.30\n本周研究了了一个新的CSS属性text-wrap，目前仅Chrome浏览器支持，兼容性如下图所示：\n\n其中名为balance的属性值很有趣，可以让div元素中的内联元素尽可能宽度一致排列，布局差异如下所示：\n\n这个属性其实很有用，例如类似朋友圈点赞的那种布局效果，目前的实现都是优先第一行显示的。\n\n有了text-wrap:balance属性后，就可以是下图所示的布局效果，体验会更好。\n\n更多内容可以访问这里了解。\n第31周 7.31-8.6\n在做项目的时候，偶然看到有同事的CSS代码中对samp标签样式进行了定义，然后研究了下这个已经没用过的HTML标签，发现还是一个系列，可以用来帮助代码文本的语义化呈现，具体如下：\nkbd: 键盘输入的文字内容\nsamp: 范例输出\ncode: 计算机代码输出\nvar: 变量与自变量实例\n平时只用过 code 标签 ，结果没想到还有其他类似HTML属性，现代浏览器全部都支持。\n更详细的内容我已经这里成文章了，有兴趣的可以访问这里了解。\n第32周 8.7-8.13\n本周学习了两个HTML全局属性，nonce和popover属性。\nnonce与安全相关，配合meta元素的CSP设置，可以决定哪个内联JS执行，哪个内联<script›元素不执行。\n假设页面有如下所示的代码：\n<meta http-equiv=\"Content-Security-Policy\" content=\"script-src 'nonce-NDhkODkxMzYtNGUxZS00N2NjLTk1YTItNWMyOTM4YzdhZGJj'\">\n<script nonce=\"NDhkODkxMzYtNGUxZS00N2NjLTk1YTItNWMyOTM4YzdhZGJj\">// …</script>\n\n则此时，只有nonce值有设置，且值匹配的",
           "link": "https://juejin.cn/post/7290226270641618979",
           "publishedOn": "2023-10-16T07:57:46.000Z",
-          "wordCount": 1529,
+          "wordCount": 1541,
           "title": "我最近3个月的前端专业学习记录",
           "imageUrl": null
         },
@@ -802,7 +822,7 @@
           "description": "之前看到有人在浏览器端复刻了原神的登录界面，效果非常还原。\n本文就让我们一起来看看这种效果是如何实现的，主要分析Shader相关的部分。\n怀着学习的目的，我自己也写了一版，观看地址：https://genshin-replica.miaohezi.com/\n\n背景\n背景是一个渐变色，由 3 种颜色组成，可以用Shader的smoothstep函数配合UV坐标的y分量画出来。\nfloat y=1.-uv.y;\nfloat mask1=1.-smoothstep(0.,stop1,y);\nfloat mask2=smoothstep(0.,stop1,y)*(1.-smoothstep(stop1,stop2,y));\nfloat mask3=smoothstep(stop1,stop2,y);\ncol+=col1*mask1;\ncol+=col2*mask2;\ncol+=col3*mask3;\n\n\n整个Shader代码我放到Shadertoy上了，预览地址：https://www.shadertoy.com/view/dstBzj\n背景云\n背景云由两种平面网格组成，它们有属于自己的遮罩纹理。\n\n在Shader中，采样遮罩纹理，获取里面的透明度数据，将其作为alpha通道的值，再定义一个主颜色即可。\nvec2 uv=vUv;\nvec4 tex=texture(uTexture,uv);\nfloat alpha=tex.r*.4;\nvec3 col=vec3(1.8);\ngl_FragColor=vec4(col,alpha);\n\n\n这是其中一种平面的写法，它只有一种颜色。\n另一个平面有两种颜色，是因为用了mix函数将 2 种颜色混合到了一起。\nvec3 col=vec3(.090,.569,.980);\ncol=mix(col,vec3(.93),vec3(pow(tex.r,…",
           "link": "https://juejin.cn/post/7290157103674032182",
           "publishedOn": "2023-10-16T03:33:08.000Z",
-          "wordCount": 1048,
+          "wordCount": 1036,
           "title": "原神，启动！three.js 复刻原神登录界面技术浅析",
           "imageUrl": null
         },
@@ -812,7 +832,7 @@
           "description": "theme: channing-cyan\n前言\n最近在测试 Tailwind CSS 和 Uno CSS 这两种原子化 CSS 工具是否能够有效减少打包后的文件体积时，先开始分析这些工具的优缺点，然后再直接上数据，最后做了一款经典的 TodoList 来进行测试，文章都写好了就差最后的数据了：\n\n但测试得出来的结果相差很小，几乎没有什么太大的参考价值。想想也是，一个 TodoList 刚能有几行样式？只有在样式足够庞大的前提下这个测试才有意义，毕竟样式多了重复的部分自然也会变多，然后积少成多最终才能达到量变引起质变的效果。当然量变引起质变这个说法可能稍微夸张了点，但样式越庞大得出来的结果才越有参考价值这个肯定是没错的，于是我把原本比较简陋简洁的 TodoList 来了个大升级：\n\n但就在给列表拖拽排序的时候我发现了一个令人难以接受的事实，说到 Vue3 拖拽库大家首先想到的是哪个？是 VueDraggable 对吧？那其次呢？假如 VueDraggable 停止维护了，并且随着 Vue 的升级也慢慢无法兼容了，大家首先想到的替代品是什么？替代品就是 Vue3 这么庞大的生态居然没有任何一款成熟的替代品！\n测试原子化 CSS 时的发现\n本来想着测试如下几种情况：\nVue 3 只用 Tailwind 写一个 TodoList\nVue 3 只用 UnoCSS 的属性模式写一个 TodoList\nVue 3 复杂样式用普通写法、简单样式用 Tailwind 写一个 TodoList\nVue 3 复杂样式用普通写法、简单样式用  UnoCSS 的属性模式写一个 TodoList\nVue 3 不用任何原子化 CSS 写一个 TodoList\nVue 3 不用任何原子化 CSS（但用内置的 scoped）写一个 TodoList\nVue 3 只用 CSS Module 写一个 TodoL…",
           "link": "https://juejin.cn/post/7290169619511377976",
           "publishedOn": "2023-10-16T03:31:49.000Z",
-          "wordCount": 2266,
+          "wordCount": 2237,
           "title": "别再卷组件库了，Vue 拖拽库都断代了！",
           "imageUrl": null
         },
@@ -822,7 +842,7 @@
           "description": "theme: smartblue\n前言\n哈喽，大家好，我是泽南Zn👨‍🎓。在之前的一篇文章写到， 前端如何使用websocket发送消息，websocket是怎么建立连接的呢？如果断开了会怎样？如何一直保持长连接呢？接下来，本篇文章将会带你了解--- WebSocket心跳机制\n一、WebSocket心跳机制\n前端实现WebSocket心跳机制的方式主要有两种：\n使用setInterval定时发送心跳包。\n在前端监听到WebSocket的onclose()事件时，重新创建WebSocket连接。\n第一种方式会对服务器造成很大的压力，因为即使WebSocket连接正常，也要定时发送心跳包，从而消耗服务器资源。第二种方式虽然减轻了服务器的负担，但是在重连时可能会丢失一些数据。\n二、WebSocket心跳包机制\nWebSocket心跳包是WebSocket协议的保活机制，用于维持长连接。有效的心跳包可以防止长时间不通讯时，WebSocket自动断开连接。\n心跳包是指在一定时间间隔内，WebSocket发送的空数据包。常见的WebSocket心跳包机制如下：\n客户端定时向服务器发送心跳数据包，以保持长连接。\n服务器定时向客户端发送心跳数据包，以检测客户端连接是否正常。\n双向发送心跳数据包。\n三、WebSocket心跳机制原理\nWebSocket心跳机制的原理是利用心跳包及时发送和接收数据，保证WebSocket长连接不被断开。WebSocket心跳机制的原理可以用下面的流程来说明：\n客户端建立WebSocket连接。\n客户端向服务器发送心跳数据包，服务器接收并返回一个表示接收到心跳数据包的响应。\n当服务器没有及时接收到客户端发送的心跳数据包时，服务器会发送一个关闭连接的请求。\n服务器定时向客户端发送心跳数据包，客户端接收并返回一个表示接收到心跳数据包的响应。\n当客户端没有及时接…",
           "link": "https://juejin.cn/post/7290005438153867283",
           "publishedOn": "2023-10-16T01:51:30.000Z",
-          "wordCount": 995,
+          "wordCount": 984,
           "title": "面试官：你知道websocket的心跳机制吗？",
           "imageUrl": null
         },
@@ -842,7 +862,7 @@
           "description": "theme: smartblue\nhighlight: a11y-dark\n一、前言\n前段时间参与字节面试，一面中问到我 闭包 ，我照着自己的理解从闭包的特性到高阶函数，再提到了闭包的应用，如 curry函数。\ncurry函数:\n// 实现一个add函数\n// return 1 + 2 + 3 + 2 传参为undefined时返回sum\nadd(1,2,3)(2)()\n// 8\n\n😶😶😶……本人只懂概念没有实操过啊😭👊\n闭包的概念、延伸概念、应用以及优劣，顺带解决这个题目。\n二、闭包\n2.1 闭包的概念\n闭包是由一个函数以及与其相关的引用环境组合而成的实体。闭包可以在函数内部访问外部函数的变量，并且这些变量可以在外部函数执行结束后仍然保持其状态。\nfunction outerFunction(x) {\n  return function innerFunction(y) {\n    return x + y;\n  };\n}\n\n// 创建闭包函数\nvar closure = outerFunction(5);\n\n// 调用闭包函数\nvar result = closure(3);\n\nconsole.log(result); // 输出：8\n\n可以看到 innerFunction 可以获取到传入 outerFunction 的参数,可见原本在外部函数执行结束后本该销毁的地址得到了保留。\n闭包可以访问和修改其创建时捕获的外部环境中的变量值，从而实现状态的保存和共享。\n闭包可以私有化变量，从而避免命名冲突和污染全局作用域。\n闭包可以延长变量的生命周期，从而实现回调、事件处理等高级操作。\n有的同学可能会联想到高阶函数，或许对高阶函数、闭包存在不清晰的认知，那么我们就再来讲一下高阶函数。\n2.2 高阶函数\n高阶函数指的是能够接受函数作为参数或返回函数作为结果的函数,如 Ar…",
           "link": "https://juejin.cn/post/7289664472868732982",
           "publishedOn": "2023-10-14T16:40:08.000Z",
-          "wordCount": 3045,
+          "wordCount": 3039,
           "title": "字节一面——当我从闭包谈到高阶函数，面试官：来道curry函数尝尝😊",
           "imageUrl": null
         },
@@ -852,7 +872,7 @@
           "description": "theme: juejin\n大概在昨年下半年，我利用同构渲染技术，把公司中一个需要7、8秒才能打开的vue3项目成功优化至秒开（当然除了同构之外也配合了一些其他手段），由于那段时间vue3推出不久，很多框架这部分功能还没有跟上，我便试着用vue和vite本身提供的api来完成同构，最终也了令人满意的效果，自己在这个过程中也获益匪浅。\n如今各大框架的功能已经完善，如果你现在想做同构渲染，我推荐直接使用next.js（react）或nuxt.js(vue)来进行开发，而不是像我一样手动进行实现。本文主要是对于同构原理的描述，不涉及框架的使用。\n为了让小白也能看懂，文章会包含很多特别基础的理论描述，如果觉得没必要了解，你可以通过标题跳转到自己感兴趣的部分。文章中的代码主要以vue为例，但是原理不局限于任何框架。\n点击这里查看完整代码和PPT\n1. 什么是同构渲染？为什么使用它？\n1.1 什么是渲染?\n以现在前端流行的react和vue框架为例。react中的jsx和vue里面的模板，都是是无法直接在浏览器运行的。将它们转换成可在浏览器中运行的html，这个过程被称为渲染。\n1.2 什么是客户端渲染（client-side-render, 以下简称csr）\nCSR是现在前端开发者最熟悉的渲染方式。利用vue-cli或create-react-app创建一个应用，不作任何额外配置直接打包的出来代码就是CSR。\n你可以用如下的方法辨别一个web页面是否是CSR：打开chrome控制台 - 网络面板，查看第一条请求，就能看到当前页面向服务器请求的html资源；如果是CSR（如下图所示），这个html的body中是没有实际内容的。\n\n那么页面内容是如何渲染出来的呢？仔细看上面的html，会发现存在一个script标签，打包器正是把整个应用都打包进了这个js文件里面。\n当浏览器请求页面的时候…",
           "link": "https://juejin.cn/post/7289661061984501819",
           "publishedOn": "2023-10-14T09:46:48.000Z",
-          "wordCount": 2413,
+          "wordCount": 2403,
           "title": "前端页面秒开的关键 - 小白也能看懂的同构渲染原理和实现（含nodejs服务端测试与优化，附PPT）",
           "imageUrl": null
         },
@@ -862,7 +882,7 @@
           "description": "theme: smartblue\nhighlight: atelier-sulphurpool-light\n前言\n  大家好，我是沐浴在曙光下的贰货道士。在日常开发中，我们经常会面对各种挑战和繁琐的任务。不管是处理复杂的数据结构，还是解决棘手的编程问题，都可能让我们感到沮丧和无从下手。但是，幸运的是，有一些神奇的方法可以让我们的开发变得更加轻松、高效，甚至让我们在编码的过程中快乐地摸🐟。\n  我们将介绍一些在日常开发中非常实用的方法，它们能够极大地提升我们的开发效率和幸福感。这些方法不仅仅是技术层面的技巧，更是关于如何优雅地解决问题、简化复杂性的智慧。通过掌握这些方法，我们能够更加从容地面对开发中的困难，并以更高的效率和质量完成我们的工作。有喜欢本文的朋友，欢迎一键三连哦。让我们一起快乐地摸🐟吧~\n1. ⭐ toFixed方法的二次封装，解决toFixed精度问题\n  在金钱计算中，精度问题是一个非常重要且常见的挑战。例如，当我们进行货币计算时，需要确保结果的精度准确，并且不出现舍入错误或精度损失。使用IEEE 754标准的JavaScript语言内置的toFixed方法，是处理小数精度的一种常见方式，它用于将数字保留指定的小数位数。然而，toFixed方法在某些情况下可能会导致精度问题，特别是在处理金钱计算时。例如，当进行复杂的浮点数运算时，toFixed可能会产生不准确的结果或舍入错误，这可能会对最终的计算结果产生意想不到的影响。\n  具体会有哪些影响呢？js中存在一个最大安全整数，可以使用Number.MAX_SAFE_INTEGER获取。值为9007199254740991，即2的53次方减1。当js的数值超过这个最大安全整数，就会出现精度丢失问题(对于采用IEEE 754标准的数值，最好使用字符串去表示，才不会丢失精度)：\nconsole.log(Number…",
           "link": "https://juejin.cn/post/7289662476730597436",
           "publishedOn": "2023-10-14T06:07:09.000Z",
-          "wordCount": 3387,
+          "wordCount": 3392,
           "title": "🔥🔥🔥自从学会这些奇技淫巧，日常开发可以快乐地摸🐟了",
           "imageUrl": null
         },
@@ -872,7 +892,7 @@
           "description": "🍀一、渐变神器Gradient\n网站地址：\nGradient by ShapeFactory | Chromatic Gradient Generator\n网站介绍：\nGradient是一款网页渐变设计工具，可以帮助用户轻松创建漂亮的渐变颜色样式，并将其应用到网页、APP等设计项目中。\n网站示例：\n\n🍀二、两款阴影工具在线网站\n网站地址：\n1、lingdaima在线阴影创建：在线创建可视化CSS阴影效果神器 \n2、box-shadow阴影网站：CSS box shadow inspiration - Box Shadow\n网站介绍：\n1、lingdaima是一款在线阴影创建工具，可以帮助用户快速地生成各种类型的阴影效果，并且提供多种自定义选项和实时预览功能。以下是该工具的主要特点和使用方法：\n特点：\n界面简洁易用，支持拖拽、滑动等操作；\n提供多种阴影类型，包括内部阴影、外部阴影、立体阴影等；\n可以自定义阴影属性，如颜色、大小、模糊度、位置等；\n支持将生成的阴影效果导出为CSS代码或PNG图片格式。\n\n2、box-shadow阴影网站，在这个网站中会按照人们对各种阴影效果的喜爱程度进行排名，相信大多数人喜欢的阴影效果，如果用在你的网站上也一定会非常的好看的。\n\n🍀三、网站UI配色宝藏网站UI Design Daily\n网站地址：\nUI Design Daily | Weekly FREE UI resources straight to your inbox\n网站介绍：\nUI Design Daily是一个专注于UI设计的在线社区，提供了大量优秀的设计素材和模板，以及许多实用的设计工具和资源。\n特点：\n提供丰富的UI设计素材和模板\n可以按照类别、颜色、风格等属性进行筛选和浏览；\n支持在线预览和下载设计素材和模板，以及查看其他设计师的作品；\n网站配色难？不知道颜色如何搭配？那这个网站将为你提供源源不断的思路\n网站示例：\n\n🍀四、 Small Dev tools实用工具合集\n网站地址：\nHome - SmallDev.tools --- 首页 - 小型开发工具\n网站介绍：\n如果说前面几款网站的功能太单一的话，那么Small Dev tools这个网站可谓是一款集成了多种实用工具的在线开发者工具箱，可以帮助开发者们轻松地完成常见的开发任务和问题解决\n这个网站包含了很多实用的功能，比如JSON解码器、JSON格式化程序、UTF8编码、Base64编码、Base64解码、CSS格式化程序、CSS压缩器等等，但是唯一不足的地方是这个网站的打开速度有点慢。\n网站示例：\n\n🍀五、 Glass Morphism 在线制作 CSS 玻璃风格神器\n网站地址：\nGlass Morphism (glassgenerator.netlify.app)\n网站介绍：\nGlass Morphism是一个有趣的在线CSS玻璃风格工具，可以帮助开发者们在UI设计中快速应用Glass Morphism风格，并且提供了多种自定义选项和实时预览功能\n特点：\n可以自定义UI元素的属性，如颜色、阴影、高光等；\n支持实时预览效果，调整后立刻看到变化；\n支持将生成的CSS代码导出为文件或直接复制。\n网站示例：\n\n🍀六、Keyframes 在线动画、阴影和颜色\n网站地址：\nKeyframes.app\n网站介绍：\nKeyframes是一个在线动画生成器，可以帮助用户快速创建各种类型的CSS3动画、阴影和使用颜色效果，并且提供多种自定义选项和实时预览功能。以下是该工具的主要特点和使用方法\n特点:\n界面简洁易用，支持拖拽、滑动等操作；\n提供多种动画类型，包括旋转、平移、缩放、淡入淡出等；\n可以自定义动画属性，如持续时间、延迟时间、曲线函数等；\n支持实时预览效果，调整后立刻看到变化；\n支持将生成的CSS代码导出为文件或直接复制。\n网站示例：\n\n🍀七、BGJar 在线SVG 背景\n网站地址：\nBGJar | Free svg background image generator for your websites\n网站介绍：\nBGJar是一个免费的在线背景生成器，提供了各种类型和风格的背景图像，并且支持实时预览和自定义选项。以下是该网站的主要特点和使用方法：\n特点:\n提供各种类型和风格的背景图像，包括渐变色、图案、纹理等；\n可以自定义背景属性，如颜色、透明度、大小等；\n支持实时预览效果，调整后立刻看到变化；\n支持将生成的背景下载为PNG或SVG格式。\n网站示例：",
           "link": "https://juejin.cn/post/7289339080838627382",
           "publishedOn": "2023-10-14T01:45:17.000Z",
-          "wordCount": 1022,
+          "wordCount": 1031,
           "title": "🍀别找了！前端那些好用的网站都在这里了！",
           "imageUrl": null
         },
@@ -882,7 +902,7 @@
           "description": "theme: smartblue\nhighlight: a11y-dark\n前言\n通过本文你将理解rspack，并快速实现Vue2、Vue3项目配置，提升5倍多的项目构建性能，快速提高工作效率。\nWebpack 构建问题\n原有大型后台系统项目 DEV 构建需要 3分钟以上；\n自动化部署构建阶段需要10分钟以上；\n生产打包构建需要2分钟；\nRspack 优化后\n使用 Rspack 替代 Webpack 后：\nDEV构建 3min -> 20s\n自动化部署 6min -> 3min\n打包速度 2min -> 20s\n比 Webpack 更快 的 Rspack\nRspack 是基于 Rust 重写 Webpack，允许依赖 Webpack 的打包构建工具。\n核心优势在于：\n快速的 Dev 启动性能。是开发者每天需要运行很多次的命令，但大型项目每次都需要等待 10 分钟，这对于工程师来说非常痛苦，因此优化开发模式下启动的时间至关重要。npm run dev\n高效的 Build 性能。经常在 CI/CD 环境中运行，它决定了应用生产交付的效率。有些应用在生产环境中需要 20 到 30 分钟的构建时间，如果能缩短这段时间，对开发流程也将非常有帮助。npm run build\n灵活的配置。用户工程的配置非常灵活，不够统一。在之前的尝试中，将 Webpack 配置迁移到其他构建工具时，我们遇到了许多问题，因为其他构建工具的配置不如 Webpack 灵活。\n生产环境的优化能力。在启用 Rspack 之前，我们尝试了社区内的各种方案，但它们都面临着一定程度的生产环境负优化，例如拆分包不够精细等。因此，优化生产环境的产物是我们不可放弃的功能。\n————摘自Rspack官网\n起步\n安装依赖：\npnpm add @rspack/cli@0.3.4\n\n配置npm脚本：\n// package.json\n…",
           "link": "https://juejin.cn/post/7289282433661173760",
           "publishedOn": "2023-10-13T12:33:29.000Z",
-          "wordCount": 2268,
+          "wordCount": 2280,
           "title": "用 Rspack 替代 Webpack，提升五倍构建速度",
           "imageUrl": null
         },
@@ -892,7 +912,7 @@
           "description": "theme: channing-cyan\n技术无止境 创作不间断\n👏 创作者训练营第三期来咯，快来和我们一起探索技术写作进阶之旅吧～！\n经过第二期和全站创作者们一起写作，相信很多新手作者都收获了很多心得，文章质量也大有进步；为了培养新手作者们的创作习惯以及鼓励大家继续创作出更多优质的内容，我们将第三期训练营与更文活动合并，并为大家准备了丰厚的奖品池，快去围观 👀 👇\n✏️ 官方创作指南（持续更新）\n标题\n简介\n作者\n\n\n\n\n🔗 如何从 0 到 1 写好技术文章\n有想法想沉淀，动笔前却犯了难？本篇文章将通过五个步骤教你写一篇技术文章。\nPDI技术写作团队\n\n\n🔗 如何写作系列教程\n《如何写作通用教程》将写作拆解成五个部分，总结了在写作前、写作中和写作后三个阶段需要注意的写作要点和技巧，通读整个系列文档，可以帮助你初步搭建系统的基础写作知识。\nPDI技术写作团队\n\n\n\n👍 优秀案例赏析\n标题\n简介\n作者\n\n\n\n\n🚀3.40秒到231.84毫秒，我用Performance面板分析性能瓶颈全流程（多图流量预警⚠️）\n如何优化不是本文的关键，本文主要和大家一起学习如何使用performance面板来进行性能瓶颈的定位，学习面板的使用，找到性能瓶颈源码并解决问题。\n一只大加号\n\n\nMongoDB保姆级指南(上)：七万字从零到进阶，助你掌握又一款强大的NoSQL！\n关于MongoDB相关的文章，总共会分为上中下三篇，同时为了屏蔽语言之间的差异，前面两篇都会使用MongoDB原生的语法进行阐述，为此，无论你是Java，还是PHP、Node、Go、Python、C#……任何语言的开发者，都可以畅通无阻般阅读！\n竹子爱熊猫\n\n\n【特征选择】Filter - 过滤法中的数学原理\n本文主要对特征工程中特征选择部分的部分常见方法的数学原理进行讲解，将不涉及或很少涉及代码实现或应用，阅读…",
           "link": "https://juejin.cn/post/7289038122918150156",
           "publishedOn": "2023-10-13T06:36:58.000Z",
-          "wordCount": 1234,
+          "wordCount": 1243,
           "title": "创作者训练营第三期 · 探索技术写作进阶之旅",
           "imageUrl": null
         },
@@ -902,18 +922,8 @@
           "description": "一、背景介绍\n飞书深诺集团是专注海外数字营销解决方案的专业服务提供商，为有全球化营销需求的企业提供标准&定制相结合的全链路服务产品，满足游戏、APP、电商、品牌等典型出海场景需求。到 2022 年，集团各产线前端单页面应用（下文直接用 SPA 代替）的数量，已经占前端项目总数量的三分之二以上，个别巨石应用会面临以下问题：\n应用单次构建-发布时间，已经超过了10min，从开发到生产上线部署，会经历 4 个环境 dev / test / pre / prod，总部署时间大于 40min 以上。\n应用接入了 6+ 其他产线提供的 MF(Module Federation) 微前端组件，任何微前端组件进行版本升级时，都需要重走 dev -> prod 4 个环境的构建发布流程。\n考虑到 test 环境可能同时有多个测试在多环境进行发布测试，这个量级又以倍数上升。\nLife is short，将如此多的时间浪费在构建发布上是不值得的，解决此问题势在必行。\n二、基本思路\n解决思路拆解\n根据上面信息可知，当前总构建发布时间\n= 单次构建发布时间 * 环境个数\n= 单次构建时间 * 环境个数 + 单次发布时间 * 环境个数\n因为单次发布时间，一般只涉及到镜像的推送与发布，已基本没有可提升的空间，所以解决思路目前有两个：\n解决思路一：减少单次构建时间\n解决思路二：构建产物实现多环境复用，使公式由（* 环境个数）变为（* 1）\n解决思路一：减少单次构建时间\n目前业界针对减少单次构建时间，主要有以下常规主流方案：\n使用 swc 或 esbuild 等新一代构建工具，带来极致的构建效率\n应用构建缓存，本质上都是实现增量构建，主要有两种方案：\n利用 docker 构建缓存，将不变的步骤缓存起来\n利用 webpack 或 esbuild 本身构建缓存，提升打包速度\n多进程优化，利用 webpack，实…",
           "link": "https://juejin.cn/post/7288632764915204115",
           "publishedOn": "2023-10-12T02:37:22.000Z",
-          "wordCount": 1733,
+          "wordCount": 1774,
           "title": "飞书深诺前端 SPA 敏捷部署方案演进",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7284144079716728873",
-          "author": "alex12306",
-          "description": "theme: cyanosis\nbabel是什么？\n浏览器的发展跟不上语言的发展，es6+虽然很普及了，但也不是所有浏览器都可以支持es6+语法。babel的诞生就源于此。\nbabel只是提供了一个“平台”，让更多有能力的plugins入驻平台，是这些plugins提供了将 ES6+版本的代码转换为向后兼容的 JavaScript 语法的能力。\nbabel的编译流程\n主要分为三步，流程主要为：\nparsing（解析）、transforming（转化）、generating（生成）\nparsing: babylon（babel 内部使用的解析类库叫做 babylon，现在改名叫@babel/parser） 负责将es6代码进行语法分析和词法分析后转换成抽象语法树AST\ntransforming: plugin插件使用 @babel/traverse 来遍历 AST 并进行节点的操作，用它提供的 API 来编写对 AST 的遍历和修改逻辑，由此来将一种AST转换为另一种AST\ngenerating：@babel/generator负责通过AST树生成ES5代码\n其中第二步的转化是重中之重，babel的插件机制也是在这一步发挥作用的，plugins在这里进行操作，转化成新的AST，再交给第三步的@babel/generator。 所以如果没有这些plugins进驻平台，那么babel这个“平台”是不具备任何能力的。\n而这整个过程，由@babel/core 负责编译过程的控制和管理。它会调用其他模块来解析、转换和生成代码。\n名词介绍\nPlugins 和 Presets 的运行顺序\nPlugins 在 Presets 前运行\nPlugins 顺序从前往后排列\nPresets 顺序是颠倒的（从后往前）\n    {\n      \"plugins\": [\"Tom\", \"Jack\"],\n  …",
-          "link": "https://juejin.cn/post/7284144079716728873",
-          "publishedOn": "2023-10-01T09:24:08.000Z",
-          "wordCount": 3750,
-          "title": "一文掌握Babel来龙去脉、三大脚手架中使用Babel",
           "imageUrl": null
         }
       ]
@@ -929,7 +939,7 @@
           "description": "有没有大佬了解 power Apps 开发平台的。我想在 vcode 编辑开发，安装了Power Platform Tools 插件，也配置了公司的环境，但是用这个 pac paportal list 获取列表，没有数据。我想新创建一个项目，该怎么去做啊",
           "link": "https://juejin.cn/pin/7291830798160052278",
           "publishedOn": "2023-10-20T02:49:58.000Z",
-          "wordCount": 571,
+          "wordCount": 572,
           "title": "有没有大佬了解 power Apps 开发平台的。我想在 vcode 编辑开发，安装了Power Platform Tools 插件，也配置了公司的环境，但是用这个 pac paportal list 获取列...",
           "imageUrl": null
         },
@@ -1314,26 +1324,6 @@
           "wordCount": 4066,
           "title": "倪爽的阅读分享 – 2023年9月21日",
           "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/b-52-stratofortress_013.jpeg"
-        },
-        {
-          "id": "https://nishuang.net/?p=30538",
-          "author": "Frank",
-          "description": "ChatGPT 流行之后，越来越多的人把 ChatgPT 当做搜索引擎来使用。本文从产品设计角度，解释这个现象背后的原因，以及它对产品设计的影响。 我以前有外号叫“人头Google脑”，手机能上网之前我就有“立刻Google一下”的名声，而且我还“代客 Google”帮人搜索💪 某次在南锣鼓巷，某路人盯着电线杆喃喃自语：你说电线杆顶上那个橙色小风车是干嘛用的？我琢磨好久也没想明白。 那位长了一张自 …\n  设计 | 为什么用户会把 ChatGPT 当搜索引擎？ 查看全文 »",
-          "link": "https://nishuang.net/%e8%ae%be%e8%ae%a1-%e4%b8%ba%e4%bb%80%e4%b9%88%e7%94%a8%e6%88%b7%e4%bc%9a%e6%8a%8a-chatgpt-%e5%bd%93%e6%90%9c%e7%b4%a2%e5%bc%95%e6%93%8e%ef%bc%9f/",
-          "publishedOn": "2023-09-20T17:47:48.000Z",
-          "wordCount": 4439,
-          "title": "设计 | 为什么用户会把 ChatGPT 当搜索引擎？",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-1677691820099-a6e8040aa077.jpeg"
-        },
-        {
-          "id": "https://nishuang.net/?p=30554",
-          "author": "Frank",
-          "description": "我遇到劫持浏览器鼠标左键、鼠标右键、上下文菜单…的软件和浏览器插件，都是不管软件、插件本身多好用，我都当它是病毒、木马、恶意软件，立刻卸载。 我今天卸载的，是最近 2、3 年里最好用的“阅读模式”/免打扰阅读/沉浸式阅读插件，不知道为什么它劫持了浏览器鼠标左键，显示 CLIP 功能。 现在有各种设计软件、编辑软件直接运行在浏览器里，劫持鼠标和上下文菜单，会打乱这些重度依赖人机交互软件的正常操作。  …\n  设计 | 不要动我的电脑😡 查看全文 »",
-          "link": "https://nishuang.net/%e8%ae%be%e8%ae%a1-%e4%b8%8d%e8%a6%81%e5%8a%a8%e6%88%91%e7%9a%84%e7%94%b5%e8%84%91%f0%9f%98%a1/",
-          "publishedOn": "2023-09-20T15:58:38.000Z",
-          "wordCount": 4020,
-          "title": "设计 | 不要动我的电脑😡",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-1519074002996-a69e7ac46a42.jpeg"
         }
       ]
     }
