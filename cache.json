@@ -23,7 +23,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1206,
+          "wordCount": 1208,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "本文介绍三种改变音频播放音量的方法，其中还有一种方法直接改变音频AudioBuffer数据源的音量，说不定你哪天就会用到。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/",
           "publishedOn": "2023-10-09T14:50:57.000Z",
-          "wordCount": 1094,
+          "wordCount": 1093,
           "title": "JS改变AudioBuffer音量并下载为新audio音频",
           "imageUrl": null
         }
@@ -87,7 +87,7 @@
           "description": "这是一条十分强大且很有参考价值的 Prompt：https://github.com/ProfSynapse/Synapse_CoR/tree/main，跟它进行第一轮对话后，它会帮助你召唤出适合该任务的专家，在与专家进行第二轮对话后，ChatGPT 会完全明白你的目标，然后给出详细的分解和实施过程。\n为什么这条 Prompt 表现效果会非常好呢？它的整个过程分成了两个阶段，第一阶段是明确要做的事情，把任务的轮廓给描绘清楚，第二阶段则是深入到细节，收集任务全貌所需要的信息。\n之前也提到过（https://twitter.com/Barret_China/status/1668922606828007424），GPT 跟人类的思考方式是完全不一样的，它的每一个字符（Token）生成都是通过概率推导的方式获得的，而且生成每个字符所消耗的计算资源一样。推导的过程中会出现高质量和低质量的结果，它自己是知道质量高低的，但是默认的情况下，它就是要推导出所有的可能性。\n第一阶段的操作，很大程度减少了大模型在推理过程中的分支数量，对于不符合目标的推理权重会大大降低。\n而第二阶段其实是在做拆解任务的工作，首先召唤出来的专家会根据目标生成一份执行计划，然后让你参与到对话过程，不断完善这份计划。这有点像之前（https://twitter.com/Barret_China/status/1714578115580833858）提到的 CoT + Least to Most prompting + Multi-Persona Self-Collaboration 的结合。\n两个阶段的对话内容将会成为 ChatGPT 生成最终内容的重要参考语料，后续的推理权重会更大程度偏向于任务目标和执行计划。因此这个 Prompt 可以说，写的非常非常好，充分利用了大模型底层的运作机制。",
           "link": "https://m.okjike.com/originalPosts/65308bd4aa7d4f2b30d6b94a",
           "publishedOn": "2023-10-19T01:52:20.000Z",
-          "wordCount": 480,
+          "wordCount": 491,
           "title": "发布了: 这是一条十分强大且很有参考价值的 Prompt：https://github.com/ProfSynapse/Synapse_CoR/tree/main，跟它进行第一轮对话后，它会帮助你召唤出适合该任...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FkJ-qC2yitDkvoABcTL2h2Vdcb5dv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -97,7 +97,7 @@
           "description": "如何让 ChatGPT 更好地思考，以获得更佳的输出效果，有几个比较成熟的实践和技巧，背后都有对应的论文。\n1）CoT，思维链提示，https://arxiv.org/abs/2205.10625，将思考过程打印出来或者提供 one-shot/few-shot，输出的准确性会更高；例如你可以在提示词后追加：“Let's think step by step”，效果就要好一些。\n对于决策推理性的问题，CoT 的效果都比较不错，事实上这个涌现效果是被发现而不是被设计出来的，后来它的有效性在这篇论文（https://arxiv.org/abs/2205.10625）中得到了证明。\n2）Self-Consistency，自洽性，https://arxiv.org/abs/2203.11171，在多次输出中找到投票最高的那条，例如你可以这么跟 ChatGPT 说：\n“对于每一个问题，你会思考 5 种不同的思路，然后将它们结合起来，输出最佳的措辞、最全面和最准确的答案。”（图一）\n3）Least to Most prompting，本质是规划+逐步执行，https://arxiv.org/abs/2205.10625，对于复杂的任务，单纯使用 CoT + SC 效果依然不会太好，可以让 ChatGPT 先自己去拆解问题再回答：\n\"对于每一个问题，你首先需要回答是否将问题分解为子问题，若否，直接给出答案；若是，则将问题拆解为子问题，然后将它们结合起来，输出最佳的措辞、最全面和最准确的答案。\"\n“To solve {problem}, we need to……”，让大模型开启这种思维模式，不断细化问题，结果会更好。（图二）\n4）Multi-Persona Self-Collaboration，多角色扮演，https://arxiv.org/abs/2307.05300，这个有点类似之前提到的 AutoGen，让多个代理相互对话来解决问题，只不过 AutoGen 是从工程层面真正做到了多 Agents 交互，而这里提到的，是让 ChatGPT 扮演多重人格/角色，例如：\n“你可以扮演任何角色，针对我给出的问题，请提供三个最相关的角色，对问题进行两轮讨论，然后你综合讨论结果总结最佳方案。请打印三个角色的讨论过程以及最后的方案。”（图三）\n以上，这些技巧的运用并不复杂，但是思想比较重要，掌握了之后，稍微修改下 Prompt，便可以得到更加符合预期的结果。#AI学习#",
           "link": "https://m.okjike.com/originalPosts/652faa1cbb3e3660e8041b7b",
           "publishedOn": "2023-10-18T09:49:16.000Z",
-          "wordCount": 508,
+          "wordCount": 510,
           "title": "发布了: 如何让 ChatGPT 更好地思考，以获得更佳的输出效果，有几个比较成熟的实践和技巧，背后都有对应的论文。 1）CoT，思维链提示，https://arxiv.org/abs/22...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fre5jgJ7vXoX5nLdvGRUgPWTyo2bv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -179,6 +179,16 @@
       "siteUrl": "https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36",
       "articles": [
         {
+          "id": "https://m.okjike.com/reposts/6531c2a4bb3e3660e82f7c57",
+          "author": null,
+          "description": "宝藏账号+1\n\n转发 @梁将军: 真正的搅局者，目测有两大杀手锏：\n一个叫“大众产品高质化”。一个叫“小众产品大众化”。\n啥叫“大众产品高质化”？你去地摊一条街，两家都卖炸土豆。一家老板是面相好似杀猪的，喜欢不拘小节地用手给你配菜。另一家老板是个白净大学生，带着一次性手套给你配菜，除了葱花辣椒还会额外加点花生脆、鸡枞菌油。\n后面这家地摊，就是把大众产品高质化。在大众市场里，用户最大的痛点是：便宜的不好用，好用的不便宜。\n价格一样、档次提高，你的机会就来了。比如，你想进入无糖饮料市场，元气是0糖0脂0卡，你再加个0防腐剂，四个0的你就有机会切走它的市场。\n再说“小众产品大众化”。节目制作公司做说唱类综艺，不是因为说唱小众，而是说唱音乐可以引发大众的兴趣。电器公司做扫地机器人，不是因为这个市场竞争压力小，而未来的家庭，扫地机器人会替代拖布和扫把。\n记住！做小众产品的目的，不是追求小而美，而是推动小众市场的普及，把小众市场大众化。\n赶在小众市场爆发前，迅速垄断市场，起初看似是偏安一隅，其实是池塘养鱼，肥了再杀。",
+          "link": "https://m.okjike.com/reposts/6531c2a4bb3e3660e82f7c57",
+          "publishedOn": "2023-10-19T23:58:28.000Z",
+          "wordCount": 400,
+          "title": "转发了: 宝藏账号+1",
+          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+        },
+        {
           "id": "https://m.okjike.com/reposts/6531bedb966044831467a10e",
           "author": null,
           "description": "这个好玩\n\n转发 @Luke的AI整活日记: 【build in public】我的第一个产品来辣！\n基于AI做了一款小产品，叫【KnowU】：可以通过一个人的即刻主页内容来生成个性化的报告\n现已支持如下功能：（以@李自然 为例）\n1. 娱乐化的即刻主页分析（如图1）\n2. 即刻主页的Dashboard（如图2）\n目前【KnowU】处于内测阶段，大家如果对于报告内容&idea有什么想法请提出，这两天我会陆续公布后续的开发计划以及需求，到时候可能搞个投票，由大家决定优先开发哪个功能\n欢迎➕微信探讨做产品的思路：Daniel_Wen666（请备注即刻）\n如果你想要获取自己的报告，请【转发】本条动态，我会在你的动态底下回复！\n#独立开发的日常 #AI的神奇用法",
@@ -234,7 +244,7 @@
           "description": "学一门新东西，最好的入门方法：读官方文档(手册)。\n只要把心慢下来，慢慢地读，一节一节地读，半天不到时间，读完官方手册，你就能不花一分钱的学到你最想学的那些知识。\n这道理如此简单，但行者甚夷，怪哉。",
           "link": "https://m.okjike.com/originalPosts/652d5aca38c9be71869ebc10",
           "publishedOn": "2023-10-16T15:46:18.000Z",
-          "wordCount": 519,
+          "wordCount": 515,
           "title": "发布了: 学一门新东西，最好的入门方法：读官方文档(手册)。 只要把心慢下来，慢慢地读，一节一节地读，半天不到时间，读完官方手册，你就能不花一分钱的学到你...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -254,7 +264,7 @@
           "description": "时间，比金子还要宝贵。\n你关注什么，你就会变成什么样的人。\n所以，不要去关注战争冲突，不要去关注年收入超过1个亿的人数，不要去关注隔壁邻居又买了什么。\n这些你了解得再透彻，你的水平也不会发生任何改变。\n找到最重要的目标，计算自己的时间成本，在具体的工作中创造心流的体验，珍惜每天的第三个8小时，才是你可以做的。\n我看到过一句话，在最后和你分享：\n如果你买个摄像头放在家里，用上帝视角观察自己每天都在做什么，你会发现——你富不起来真是太正常了。\n时间是不可再生的资源。\n至少，你要对得起自己的时间吧。\n－－刘润。",
           "link": "https://m.okjike.com/originalPosts/652ce1bd99f2123c74039542",
           "publishedOn": "2023-10-16T07:09:49.000Z",
-          "wordCount": 443,
+          "wordCount": 445,
           "title": "发布了: 时间，比金子还要宝贵。 你关注什么，你就会变成什么样的人。 所以，不要去关注战争冲突，不要去关注年收入超过1个亿的人数，不要去关注隔壁邻居又买了...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -267,16 +277,6 @@
           "wordCount": 452,
           "title": "发布了: 背景： 照片的背景是温暖的暗杏色调，与人物的皮肤色调形成了和谐统一的效果，为画面创造了一个柔和、宁静的氛围。 主体： 照片的主体是一位日本年轻女...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FvTG0i_5SMaYKMPQj34Jpxr8uuX7v3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/652b9c989a83b06c46e607e7",
-          "author": null,
-          "description": "# Role\nDall ・ E 作图大师\n## Profile\n- author: 李继刚\n- version: 0.1\n- LLM: GPT-4\n- Plugin: None\n- description: 熟知 Dall ・ E 的底层工作机制原理，具备高超的图像审美素养，能够深度解构图片并提供详细描述。\n## Attention\n努力思考，根据图片内容提供尽可能详细的描述。\n## Background\n为了让用户更好地使用 Dall ・ E 生成类似风格的图片，需要对图片的各个元素进行详细的解析。\n## Constraints\n- 必须根据实际图片内容进行描述，不能编造。\n- 描述要细致入微，捕捉图片中的每一个细节。\n## Examples\n- 背景: 宁静的海滩，夕阳西下。\n- 主角: 一位年轻女子，站在海边。\n- 脸部: 椭圆形脸，明亮的眼睛，微微上扬的嘴角。\n- 发型: 长发飘飘，受到海风的吹拂。\n- 服装: 穿着夏日的短裙和背心。\n- 姿势: 双手抱膝，坐在沙滩上。\n- 风格: 温暖、浪漫。\n## Goals\n- 为用户提供详细、准确的图片描述。\n- 帮助用户理解图片的各个元素和风格。\n## Skills\n- 图像解析能力\n- 审美判断\n- 描述技巧\n## Workflow\n- 第一步: 观察图片，分析其构成元素。\n- 第二步: 根据下述框架开始描述图片的各个部分。\n  + 背景: 描述图片的背景内容。\n  + 主角: 描述图片中的主体角色及其特点。\n  + 脸部: 描述图中人物的脸部特点，如脸形、眼神、表情等。\n  + 发型: 描述图中人物的发型。\n  + 服装: 描述图中人物的服装。\n  + 姿势: 描述图中人物的姿势和动作。\n  + 风格: 描述图片的整体风格和调性。\n- 第三步: 校对描述，确保其准确性, 输出你的分析结果。\n## Initialization\n开场白如 下：\n\"你好，我是 Dall ・ E 作图大师。请提交您的图片，我会为您提供详细的图片描述，帮助您使用 Dall ・ E 生成类似风格的图片。\"",
-          "link": "https://m.okjike.com/originalPosts/652b9c989a83b06c46e607e7",
-          "publishedOn": "2023-10-15T08:02:32.000Z",
-          "wordCount": 636,
-          "title": "发布了: # Role Dall ・ E 作图大师 ## Profile - author: 李继刚 - version: 0.1 - LLM: GPT-4 - Plugin: None - description: 熟知 Dall ・ E 的底层工作机制...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FvWhhvMTD1Q95Aptudq3f7mCjDITv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         }
       ]
     },
@@ -842,7 +842,7 @@
           "description": "theme: smartblue\nhighlight: a11y-dark\n一、前言\n前段时间参与字节面试，一面中问到我 闭包 ，我照着自己的理解从闭包的特性到高阶函数，再提到了闭包的应用，如 curry函数。\ncurry函数:\n// 实现一个add函数\n// return 1 + 2 + 3 + 2 传参为undefined时返回sum\nadd(1,2,3)(2)()\n// 8\n\n😶😶😶……本人只懂概念没有实操过啊😭👊\n闭包的概念、延伸概念、应用以及优劣，顺带解决这个题目。\n二、闭包\n2.1 闭包的概念\n闭包是由一个函数以及与其相关的引用环境组合而成的实体。闭包可以在函数内部访问外部函数的变量，并且这些变量可以在外部函数执行结束后仍然保持其状态。\nfunction outerFunction(x) {\n  return function innerFunction(y) {\n    return x + y;\n  };\n}\n\n// 创建闭包函数\nvar closure = outerFunction(5);\n\n// 调用闭包函数\nvar result = closure(3);\n\nconsole.log(result); // 输出：8\n\n可以看到 innerFunction 可以获取到传入 outerFunction 的参数,可见原本在外部函数执行结束后本该销毁的地址得到了保留。\n闭包可以访问和修改其创建时捕获的外部环境中的变量值，从而实现状态的保存和共享。\n闭包可以私有化变量，从而避免命名冲突和污染全局作用域。\n闭包可以延长变量的生命周期，从而实现回调、事件处理等高级操作。\n有的同学可能会联想到高阶函数，或许对高阶函数、闭包存在不清晰的认知，那么我们就再来讲一下高阶函数。\n2.2 高阶函数\n高阶函数指的是能够接受函数作为参数或返回函数作为结果的函数,如 Ar…",
           "link": "https://juejin.cn/post/7289664472868732982",
           "publishedOn": "2023-10-14T16:40:08.000Z",
-          "wordCount": 3049,
+          "wordCount": 3045,
           "title": "字节一面——当我从闭包谈到高阶函数，面试官：来道curry函数尝尝😊",
           "imageUrl": null
         },
@@ -924,12 +924,22 @@
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
         {
+          "id": "7291830798160052278",
+          "author": "中国人不骗中国人",
+          "description": "有没有大佬了解 power Apps 开发平台的。我想在 vcode 编辑开发，安装了Power Platform Tools 插件，也配置了公司的环境，但是用这个 pac paportal list 获取列表，没有数据。我想新创建一个项目，该怎么去做啊",
+          "link": "https://juejin.cn/pin/7291830798160052278",
+          "publishedOn": "2023-10-20T02:49:58.000Z",
+          "wordCount": 571,
+          "title": "有没有大佬了解 power Apps 开发平台的。我想在 vcode 编辑开发，安装了Power Platform Tools 插件，也配置了公司的环境，但是用这个 pac paportal list 获取列...",
+          "imageUrl": null
+        },
+        {
           "id": "7291549843545440296",
           "author": "HakineLee",
           "description": "[7018942344208580646#1024一起掘金#]作为一名程序员，请说出你的首选开发工具？（VScode  yyds）",
           "link": "https://juejin.cn/pin/7291549843545440296",
           "publishedOn": "2023-10-19T14:05:14.000Z",
-          "wordCount": 525,
+          "wordCount": 549,
           "title": "[7018942344208580646#1024一起掘金#]作为一名程序员，请说出你的首选开发工具？（VScode yyds）",
           "imageUrl": null
         },
@@ -939,7 +949,7 @@
           "description": "[7018942344208580646#1024一起掘金#] \n大的来了，今天给fast-create-variable支持了react中使用，虽然我不用react[灵光一现]",
           "link": "https://juejin.cn/pin/7291186128361766968",
           "publishedOn": "2023-10-18T08:51:01.000Z",
-          "wordCount": 536,
+          "wordCount": 559,
           "title": "[7018942344208580646#1024一起掘金#] 大的来了，今天给fast-create-variable支持了react中使用，虽然我不用react[灵光一现]",
           "imageUrl": null
         },
@@ -949,7 +959,7 @@
           "description": "你们都用什么开发工具",
           "link": "https://juejin.cn/pin/7291135064842158114",
           "publishedOn": "2023-10-18T08:00:51.000Z",
-          "wordCount": 522,
+          "wordCount": 525,
           "title": "你们都用什么开发工具",
           "imageUrl": null
         },
@@ -989,7 +999,7 @@
           "description": "发现一款非常好用的云文档，不论记笔记、写文档、画脑图、做计划、管项目、构建知识库还是高效团队协作，都比以前事半功倍，不论个人用还是团队用都很不错，推荐给你！\nhttps://www.wolai.com/signup?invitation=C2ZS3U2Z",
           "link": "https://juejin.cn/pin/7290382189992427559",
           "publishedOn": "2023-10-16T09:28:48.000Z",
-          "wordCount": 521,
+          "wordCount": 524,
           "title": "发现一款非常好用的云文档，不论记笔记、写文档、画脑图、做计划、管项目、构建知识库还是高效团队协作，都比以前事半功倍，不论个人用还是团队用都很不错，推荐...",
           "imageUrl": null
         },
@@ -999,7 +1009,7 @@
           "description": "[7018942344208580646#1024一起掘金#]  [呲牙]发现一个很方便的局域网传文件工具，一个wifi下的所有手机和电脑，不用下APP，网页就可以，yanhuo7.com . P2P，免流量，蛮方便的",
           "link": "https://juejin.cn/pin/7290017749715615784",
           "publishedOn": "2023-10-16T04:43:58.000Z",
-          "wordCount": 538,
+          "wordCount": 561,
           "title": "[7018942344208580646#1024一起掘金#] [呲牙]发现一个很方便的局域网传文件工具，一个wifi下的所有手机和电脑，不用下APP，网页就可以，yanhuo7.com . P2P，免流...",
           "imageUrl": null
         },
@@ -1099,7 +1109,7 @@
           "description": "逆向开发的大佬这么稀缺吗[流泪]，有没有做逆向开发到高级工程师或者技术专家程度的大佬啊[流泪][7073670077790289956#求职面试交流bbs#]",
           "link": "https://juejin.cn/pin/7287791555623092264",
           "publishedOn": "2023-10-09T09:53:41.000Z",
-          "wordCount": 519,
+          "wordCount": 522,
           "title": "逆向开发的大佬这么稀缺吗[流泪]，有没有做逆向开发到高级工程师或者技术专家程度的大佬啊[流泪][7073670077790289956#求职面试交流bbs#]",
           "imageUrl": null
         },
@@ -1111,16 +1121,6 @@
           "publishedOn": "2023-10-09T09:16:18.000Z",
           "wordCount": 534,
           "title": "生成 java 实体类属性的工具 有推荐没得[发呆]",
-          "imageUrl": null
-        },
-        {
-          "id": "7287620609373831224",
-          "author": "Simon_He",
-          "description": "打卡，vue无敌偷懒利器",
-          "link": "https://juejin.cn/pin/7287620609373831224",
-          "publishedOn": "2023-10-09T05:05:12.000Z",
-          "wordCount": 532,
-          "title": "打卡，vue无敌偷懒利器",
           "imageUrl": null
         }
       ]
