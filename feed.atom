@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-10-22T01:15:41.983Z</id>
+    <id>urn:2023-10-22T03:52:50.670Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-10-22T01:15:41.983Z</updated>
+    <updated>2023-10-22T03:52:50.670Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -499,6 +499,31 @@ As Detective Sebastian Castellanos, fight for survival with limited resources in
         <summary type="html"><![CDATA[艾玛和泰迪熊：影子历险记 以独特的俯视视角与侧向卷轴玩法和非凡的美学，重新定义了益智平台游戏这一大游戏类型。快来帮助艾玛和泰迪熊芬顿，解开著名魔术师托马斯·凯恩失踪一案的谜团吧。]]></summary>
         <author>
             <name>Hatinh Interactive</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[学习前端工程化1️⃣——前端工程化与模块化]]></title>
+        <id>https://juejin.cn/post/7291186181157535800</id>
+        <link href="https://juejin.cn/post/7291186181157535800"/>
+        <updated>2023-10-18T09:55:16.000Z</updated>
+        <summary type="html"><![CDATA[theme: v-green
+highlight: monokai
+前端工程化是什么？一提到工程化我们的第一反应往往就是 webpack。webpack 确实是前端工程化中重要的工具，但二者并不能划等号。
+其实顾名思义，前端，工程化，就是把前端做成一项工程。这其中的区别类似于，写一个简单的展示页面 = 小孩子搭积木，一个大型的项目 = 开发商盖房子。搭积木只需要简单的手工操作，而盖房子则需要的工程规划、设计、资源管理等一系列流程。
+前端工程化贯穿从编码、发布到运维的整个前端研发生命周期，一切以提高效率、降低成本、质量保证为目的的手段都属于工程化。它借鉴了软件工程相关的方法和思想，通过使用工具、流程、最佳实践和规范来提高前端开发效率、质量和可维护性；旨在解决前端开发中出现的各种挑战，包括项目复杂性、跨浏览器兼容性、性能优化、代码可维护性以及团队协作等问题。
+前端开发模式进化史
+首先让我们回顾一下前端开发模式的演化历史，前端工程化正是为了应对这些演化中出现的挑战和需求而发展起来的：
+前后端混合：服务端渲染，javascript仅实现交互
+前后端分离：借助 ajax 实现前后端分离、单页应用(SPA)等新模式
+模块化开发：npm 管理模块、Webpack 编译打包资源
+模块化 + MVVM：基于 React 或 Vue 等框架进行组件化开发，不再手动操作 html 元素
+前端工程化解决了什么问题
+那么前端工程化究竟解决了什么问题呢:
+全局作用域问题：前端工程化可以帮助解决全局作用域污染问题。模块化开发工具如Webpack和ES6模块化帮助开发者将代码分解为模块，避免全局变量冲突，并提高代码的可维护性。
+编码规范：通过代码规范工具（如ESLint、TSLint）和自动化代码格式化工具（如Prettier），前端工程化可以确保代码风格一致，减少错误和提高可读性。
+资源合并和压缩：前端…]]></summary>
+        <author>
+            <name>FrontEnd_Reese</name>
         </author>
     </entry>
     <entry>
@@ -1360,29 +1385,6 @@ console.log(result); // 输出：8
 高阶函数指的是能够接受函数作为参数或返回函数作为结果的函数,如 Ar…]]></summary>
         <author>
             <name>只有一斤了呐</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[前端页面秒开的关键 - 小白也能看懂的同构渲染原理和实现（含nodejs服务端测试与优化，附PPT）]]></title>
-        <id>https://juejin.cn/post/7289661061984501819</id>
-        <link href="https://juejin.cn/post/7289661061984501819"/>
-        <updated>2023-10-14T09:46:48.000Z</updated>
-        <summary type="html"><![CDATA[theme: juejin
-大概在昨年下半年，我利用同构渲染技术，把公司中一个需要7、8秒才能打开的vue3项目成功优化至秒开（当然除了同构之外也配合了一些其他手段），由于那段时间vue3推出不久，很多框架这部分功能还没有跟上，我便试着用vue和vite本身提供的api来完成同构，最终也了令人满意的效果，自己在这个过程中也获益匪浅。
-如今各大框架的功能已经完善，如果你现在想做同构渲染，我推荐直接使用next.js（react）或nuxt.js(vue)来进行开发，而不是像我一样手动进行实现。本文主要是对于同构原理的描述，不涉及框架的使用。
-为了让小白也能看懂，文章会包含很多特别基础的理论描述，如果觉得没必要了解，你可以通过标题跳转到自己感兴趣的部分。文章中的代码主要以vue为例，但是原理不局限于任何框架。
-点击这里查看完整代码和PPT
-1. 什么是同构渲染？为什么使用它？
-1.1 什么是渲染?
-以现在前端流行的react和vue框架为例。react中的jsx和vue里面的模板，都是是无法直接在浏览器运行的。将它们转换成可在浏览器中运行的html，这个过程被称为渲染。
-1.2 什么是客户端渲染（client-side-render, 以下简称csr）
-CSR是现在前端开发者最熟悉的渲染方式。利用vue-cli或create-react-app创建一个应用，不作任何额外配置直接打包的出来代码就是CSR。
-你可以用如下的方法辨别一个web页面是否是CSR：打开chrome控制台 - 网络面板，查看第一条请求，就能看到当前页面向服务器请求的html资源；如果是CSR（如下图所示），这个html的body中是没有实际内容的。
-
-那么页面内容是如何渲染出来的呢？仔细看上面的html，会发现存在一个script标签，打包器正是把整个应用都打包进了这个js文件里面。
-当浏览器请求页面的时候…]]></summary>
-        <author>
-            <name>monet</name>
         </author>
     </entry>
     <entry>

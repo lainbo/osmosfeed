@@ -23,7 +23,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1206,
+          "wordCount": 1211,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "本文介绍三种改变音频播放音量的方法，其中还有一种方法直接改变音频AudioBuffer数据源的音量，说不定你哪天就会用到。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/",
           "publishedOn": "2023-10-09T14:50:57.000Z",
-          "wordCount": 1095,
+          "wordCount": 1099,
           "title": "JS改变AudioBuffer音量并下载为新audio音频",
           "imageUrl": null
         }
@@ -117,7 +117,7 @@
           "description": "如何让 ChatGPT 更好地思考，以获得更佳的输出效果，有几个比较成熟的实践和技巧，背后都有对应的论文。\n1）CoT，思维链提示，https://arxiv.org/abs/2205.10625，将思考过程打印出来或者提供 one-shot/few-shot，输出的准确性会更高；例如你可以在提示词后追加：“Let's think step by step”，效果就要好一些。\n对于决策推理性的问题，CoT 的效果都比较不错，事实上这个涌现效果是被发现而不是被设计出来的，后来它的有效性在这篇论文（https://arxiv.org/abs/2205.10625）中得到了证明。\n2）Self-Consistency，自洽性，https://arxiv.org/abs/2203.11171，在多次输出中找到投票最高的那条，例如你可以这么跟 ChatGPT 说：\n“对于每一个问题，你会思考 5 种不同的思路，然后将它们结合起来，输出最佳的措辞、最全面和最准确的答案。”（图一）\n3）Least to Most prompting，本质是规划+逐步执行，https://arxiv.org/abs/2205.10625，对于复杂的任务，单纯使用 CoT + SC 效果依然不会太好，可以让 ChatGPT 先自己去拆解问题再回答：\n\"对于每一个问题，你首先需要回答是否将问题分解为子问题，若否，直接给出答案；若是，则将问题拆解为子问题，然后将它们结合起来，输出最佳的措辞、最全面和最准确的答案。\"\n“To solve {problem}, we need to……”，让大模型开启这种思维模式，不断细化问题，结果会更好。（图二）\n4）Multi-Persona Self-Collaboration，多角色扮演，https://arxiv.org/abs/2307.05300，这个有点类似之前提到的 AutoGen，让多个代理相互对话来解决问题，只不过 AutoGen 是从工程层面真正做到了多 Agents 交互，而这里提到的，是让 ChatGPT 扮演多重人格/角色，例如：\n“你可以扮演任何角色，针对我给出的问题，请提供三个最相关的角色，对问题进行两轮讨论，然后你综合讨论结果总结最佳方案。请打印三个角色的讨论过程以及最后的方案。”（图三）\n以上，这些技巧的运用并不复杂，但是思想比较重要，掌握了之后，稍微修改下 Prompt，便可以得到更加符合预期的结果。#AI学习#",
           "link": "https://m.okjike.com/originalPosts/652faa1cbb3e3660e8041b7b",
           "publishedOn": "2023-10-18T09:49:16.000Z",
-          "wordCount": 512,
+          "wordCount": 510,
           "title": "发布了: 如何让 ChatGPT 更好地思考，以获得更佳的输出效果，有几个比较成熟的实践和技巧，背后都有对应的论文。 1）CoT，思维链提示，https://arxiv.org/abs/22...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fre5jgJ7vXoX5nLdvGRUgPWTyo2bv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -254,7 +254,7 @@
           "description": "学一门新东西，最好的入门方法：读官方文档(手册)。\n只要把心慢下来，慢慢地读，一节一节地读，半天不到时间，读完官方手册，你就能不花一分钱的学到你最想学的那些知识。\n这道理如此简单，但行者甚夷，怪哉。",
           "link": "https://m.okjike.com/originalPosts/652d5aca38c9be71869ebc10",
           "publishedOn": "2023-10-16T15:46:18.000Z",
-          "wordCount": 515,
+          "wordCount": 527,
           "title": "发布了: 学一门新东西，最好的入门方法：读官方文档(手册)。 只要把心慢下来，慢慢地读，一节一节地读，半天不到时间，读完官方手册，你就能不花一分钱的学到你...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -677,6 +677,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7291186181157535800",
+          "author": "FrontEnd_Reese",
+          "description": "theme: v-green\nhighlight: monokai\n前端工程化是什么？一提到工程化我们的第一反应往往就是 webpack。webpack 确实是前端工程化中重要的工具，但二者并不能划等号。\n其实顾名思义，前端，工程化，就是把前端做成一项工程。这其中的区别类似于，写一个简单的展示页面 = 小孩子搭积木，一个大型的项目 = 开发商盖房子。搭积木只需要简单的手工操作，而盖房子则需要的工程规划、设计、资源管理等一系列流程。\n前端工程化贯穿从编码、发布到运维的整个前端研发生命周期，一切以提高效率、降低成本、质量保证为目的的手段都属于工程化。它借鉴了软件工程相关的方法和思想，通过使用工具、流程、最佳实践和规范来提高前端开发效率、质量和可维护性；旨在解决前端开发中出现的各种挑战，包括项目复杂性、跨浏览器兼容性、性能优化、代码可维护性以及团队协作等问题。\n前端开发模式进化史\n首先让我们回顾一下前端开发模式的演化历史，前端工程化正是为了应对这些演化中出现的挑战和需求而发展起来的：\n前后端混合：服务端渲染，javascript仅实现交互\n前后端分离：借助 ajax 实现前后端分离、单页应用(SPA)等新模式\n模块化开发：npm 管理模块、Webpack 编译打包资源\n模块化 + MVVM：基于 React 或 Vue 等框架进行组件化开发，不再手动操作 html 元素\n前端工程化解决了什么问题\n那么前端工程化究竟解决了什么问题呢:\n全局作用域问题：前端工程化可以帮助解决全局作用域污染问题。模块化开发工具如Webpack和ES6模块化帮助开发者将代码分解为模块，避免全局变量冲突，并提高代码的可维护性。\n编码规范：通过代码规范工具（如ESLint、TSLint）和自动化代码格式化工具（如Prettier），前端工程化可以确保代码风格一致，减少错误和提高可读性。\n资源合并和压缩：前端…",
+          "link": "https://juejin.cn/post/7291186181157535800",
+          "publishedOn": "2023-10-18T09:55:16.000Z",
+          "wordCount": 1721,
+          "title": "学习前端工程化1️⃣——前端工程化与模块化",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7290968251911356473",
           "author": "Chokcoco",
           "description": "我的小册 《CSS 技术揭秘与实战通关》上线了，想了解更多有趣、进阶、系统化的 CSS 内容，可以猛击 - LINK。\n最近大家刷抖音，是否有刷到拉斯维加斯的新地标 「Sphere」：\n\n场馆内部的视觉效果非常惊人，其中一个效果让我虎躯一震：\n\n我的第一想法就是，这个看起来用 CSS 也可以实现嘛？还有 CSS 不能实现的？\n本文，就将尝试使用 CSS，大致还原这个效果。\n拆解动画效果\n其实，上述的动画效果，本质就是一个 3D 立方体。\n同时，3D 立方体上每个面存在颜色不一样的文字，文字和颜色都在随机变化。\n也就是说，我们需要实现一个 3D 立方体：\n\n同时，我们还需要实现这样一个动画效果 -- 文字和颜色都在随机变化的平面效果：\n\n两者组合一下，再挪动 3D 元素的景深距离，就能实现我们想要的效果！\n好，下面我们一个一个实现。\n实现一个 3D 立方体\n实现一个 3D 立方体，相对另外一个文字和颜色都在随机变化的平面效果而言，属于非常非常简单的一步了。\n我们在非常多篇文章中也讲过具体的实现方式：\n最常见的 3D 图形，莫过于一个 3D 立方体。\n如果没有上下两个面，只是一个 4 个面的图形，大概是这样：\n\n这样一个图形，利用 CSS 3D，如何快速实现呢？\n首先，构造这么一个结构：\n<div class=\"perspective\">\n        <div class=\"container\">\n                <div class=\"img\">3</div>\n                <div class=\"img\">D</div>\n                <div class=\"img\">视</div>\n                <div class=\"img\">图</div>\n        </div>\n</div>\n\n4 个面…",
@@ -845,16 +855,6 @@
           "wordCount": 3039,
           "title": "字节一面——当我从闭包谈到高阶函数，面试官：来道curry函数尝尝😊",
           "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7289661061984501819",
-          "author": "monet",
-          "description": "theme: juejin\n大概在昨年下半年，我利用同构渲染技术，把公司中一个需要7、8秒才能打开的vue3项目成功优化至秒开（当然除了同构之外也配合了一些其他手段），由于那段时间vue3推出不久，很多框架这部分功能还没有跟上，我便试着用vue和vite本身提供的api来完成同构，最终也了令人满意的效果，自己在这个过程中也获益匪浅。\n如今各大框架的功能已经完善，如果你现在想做同构渲染，我推荐直接使用next.js（react）或nuxt.js(vue)来进行开发，而不是像我一样手动进行实现。本文主要是对于同构原理的描述，不涉及框架的使用。\n为了让小白也能看懂，文章会包含很多特别基础的理论描述，如果觉得没必要了解，你可以通过标题跳转到自己感兴趣的部分。文章中的代码主要以vue为例，但是原理不局限于任何框架。\n点击这里查看完整代码和PPT\n1. 什么是同构渲染？为什么使用它？\n1.1 什么是渲染?\n以现在前端流行的react和vue框架为例。react中的jsx和vue里面的模板，都是是无法直接在浏览器运行的。将它们转换成可在浏览器中运行的html，这个过程被称为渲染。\n1.2 什么是客户端渲染（client-side-render, 以下简称csr）\nCSR是现在前端开发者最熟悉的渲染方式。利用vue-cli或create-react-app创建一个应用，不作任何额外配置直接打包的出来代码就是CSR。\n你可以用如下的方法辨别一个web页面是否是CSR：打开chrome控制台 - 网络面板，查看第一条请求，就能看到当前页面向服务器请求的html资源；如果是CSR（如下图所示），这个html的body中是没有实际内容的。\n\n那么页面内容是如何渲染出来的呢？仔细看上面的html，会发现存在一个script标签，打包器正是把整个应用都打包进了这个js文件里面。\n当浏览器请求页面的时候…",
-          "link": "https://juejin.cn/post/7289661061984501819",
-          "publishedOn": "2023-10-14T09:46:48.000Z",
-          "wordCount": 2417,
-          "title": "前端页面秒开的关键 - 小白也能看懂的同构渲染原理和实现（含nodejs服务端测试与优化，附PPT）",
-          "imageUrl": null
         }
       ]
     },
@@ -909,7 +909,7 @@
           "description": "你们都用什么开发工具",
           "link": "https://juejin.cn/pin/7291135064842158114",
           "publishedOn": "2023-10-18T08:00:51.000Z",
-          "wordCount": 536,
+          "wordCount": 525,
           "title": "你们都用什么开发工具",
           "imageUrl": null
         },
@@ -949,7 +949,7 @@
           "description": "发现一款非常好用的云文档，不论记笔记、写文档、画脑图、做计划、管项目、构建知识库还是高效团队协作，都比以前事半功倍，不论个人用还是团队用都很不错，推荐给你！\nhttps://www.wolai.com/signup?invitation=C2ZS3U2Z",
           "link": "https://juejin.cn/pin/7290382189992427559",
           "publishedOn": "2023-10-16T09:28:48.000Z",
-          "wordCount": 535,
+          "wordCount": 524,
           "title": "发现一款非常好用的云文档，不论记笔记、写文档、画脑图、做计划、管项目、构建知识库还是高效团队协作，都比以前事半功倍，不论个人用还是团队用都很不错，推荐...",
           "imageUrl": null
         },
@@ -1019,7 +1019,7 @@
           "description": "[7210002980895916043#挑战每日一条沸点#] \nvscode插件fnMap（函数地图）v3.2.0发布\n1，新增功能：可配置不同文件默认展开层级\n2，新增功能：可配置不同文件哪些符号不展示\n3，修复问题：插件关闭后符号缓存没有清空的问题\n插件地址：https://marketplace.visualstudio.com/items?itemName=chensuiyi.fn-map",
           "link": "https://juejin.cn/pin/7288229413035065402",
           "publishedOn": "2023-10-10T15:01:03.000Z",
-          "wordCount": 537,
+          "wordCount": 540,
           "title": "[7210002980895916043#挑战每日一条沸点#] vscode插件fnMap（函数地图）v3.2.0发布 1，新增功能：可配置不同文件默认展开层级 2，新增功能：可配置不同文件哪些...",
           "imageUrl": null
         },
@@ -1059,7 +1059,7 @@
           "description": "逆向开发的大佬这么稀缺吗[流泪]，有没有做逆向开发到高级工程师或者技术专家程度的大佬啊[流泪][7073670077790289956#求职面试交流bbs#]",
           "link": "https://juejin.cn/pin/7287791555623092264",
           "publishedOn": "2023-10-09T09:53:41.000Z",
-          "wordCount": 527,
+          "wordCount": 522,
           "title": "逆向开发的大佬这么稀缺吗[流泪]，有没有做逆向开发到高级工程师或者技术专家程度的大佬啊[流泪][7073670077790289956#求职面试交流bbs#]",
           "imageUrl": null
         }
