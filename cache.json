@@ -23,7 +23,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1207,
+          "wordCount": 1208,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "本文介绍三种改变音频播放音量的方法，其中还有一种方法直接改变音频AudioBuffer数据源的音量，说不定你哪天就会用到。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/",
           "publishedOn": "2023-10-09T14:50:57.000Z",
-          "wordCount": 1095,
+          "wordCount": 1093,
           "title": "JS改变AudioBuffer音量并下载为新audio音频",
           "imageUrl": null
         }
@@ -127,7 +127,7 @@
           "description": "焦虑和痛苦的根源，从空间维度看，是与比自己更强的人对比，慕强是一个无限陷阱，永远都有比自己更强的人；从时间维度看，是与未来的不确定性比，今天的优势到了明天就不一定了，例如前段时间一个搞 C 的程序员悲观叹息自己被时代踢出了局。\n看似消极却有效的观点：接受自己的有限性，接受命运的安排。",
           "link": "https://m.okjike.com/originalPosts/652e1cbfaa7d4f2b30a24f52",
           "publishedOn": "2023-10-17T05:33:51.000Z",
-          "wordCount": 484,
+          "wordCount": 482,
           "title": "发布了: 焦虑和痛苦的根源，从空间维度看，是与比自己更强的人对比，慕强是一个无限陷阱，永远都有比自己更强的人；从时间维度看，是与未来的不确定性比，今天的...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -194,7 +194,7 @@
           "description": "“放过”与“放下”是有分别的。\n其分别何在呢？大概“放过”只是暂时躲闪，暂时潜隐，根底还在；“放下”则中心没事，更无系缚了。\n遇到难关， 莫放过， 冲上去搞清楚，才能放下。",
           "link": "https://m.okjike.com/originalPosts/653345be97aae411ebd6efa4",
           "publishedOn": "2023-10-21T03:30:06.000Z",
-          "wordCount": 449,
+          "wordCount": 447,
           "title": "发布了: “放过”与“放下”是有分别的。 其分别何在呢？大概“放过”只是暂时躲闪，暂时潜隐，根底还在；“放下”则中心没事，更无系缚了。 遇到难关， 莫放过...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -657,6 +657,16 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
+          "id": "https://juejin.cn/post/7292437487011856394",
+          "author": "zxg_神说要有光",
+          "description": "这几个月，想必大家都听到过一个新闻：\nSvelte 弃用 TypeScript，改用 JSDoc 了。\n\nTypeScript 我们知道，是用来给 JS 加上类型的，可以实现类型提示和编译时的类型检查。\n那 JSDoc 能够完成一样的功能么？Svelte 是出于什么原因弃用 TS 的呢？\n先不着急回答这个问题。\n我们总得先了解下 JSDoc：\n可能大家认为的 JSDoc 是这个东西：\n\n在代码的注释上加上类型的标识，然后通过 jsdoc 命令行工具，就可以直接生成文档。\n比如这样的文档：\n\n确实，这个是 JSDoc 最初的含义。\n但我们说的 JSDoc 并不是这个，而是 TS 基于 JSDoc 语法实现的，在注释里给代码添加类型的语法。\n文档在这里：\n\nts 支持在 js 文件的注释里，通过 JSDoc 的语法给它加上类型。\n至于有什么意义，那可就太多了。\n比如一个 JS 的配置文件，你想在写配置的时候能有提示，就可以用 JSDoc：\n\n这里注释里的 @type 就是 JSDoc 声明类型的语法。\n在 vite 文档里，你可以看到对 JSDoc 的支持：\n\n我们自己试一下：\nmkdir jsdoc-test\ncd jsdoc-test\nnpm init -y\n\n\n创建项目和 package.json。\n然后安装 typescript：\nnpm install --save-dev typescript\n\n创建 tsconfig.json 文件：\nnpx tsc --init\n\n\n生成的 tscconfig.json 太多注释了，我们删一下：\n\n然后创建 src/index.ts\nfunction add(a: number, b: number) {\n    return a + b;\n}\n\n这样在用到这个 add 的时候，就会做类型检查：\n\n在 tsconfig.json…",
+          "link": "https://juejin.cn/post/7292437487011856394",
+          "publishedOn": "2023-10-22T10:58:00.000Z",
+          "wordCount": 1618,
+          "title": "JSDoc 真能取代 TypeScript？",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7291496777688334336",
           "author": "很饿的秃头",
           "description": "工作篇\n我在8月底结束了第一份工作后，在9月初迎来了我的二份工作，投简历投了大概一周约了12家面试，虽然那时候是疫情相对来说找工作还是比较容易点的，至少约的到面试，面了差不多6家，拿到了2家，当时情绪低落囊中羞涩想尽快入职工作选择第2家，后面的面试都推了，但是问题来了，通勤距离过长，每天公交从首站坐20个站左右去上班，下班在科技园的东门而公司在北门，走大概10分钟，从家里去公交站走路20分钟，于是我就开启了长达单程快2小时的路程上班，房子还有两个月到期我决定到期再搬过来。\n\n这份工作给的工资是6500，试用期80%，也就是拿到手5200，试用期不交社保[刚毕业不太懂社保这个]，毕竟刚毕业，然后我就想努力的转正，这次我面试的职位的 .net开发工程师，离谱的事情我刚入职第一天让我接手一个五年经验大佬的项目[压缩成本也不是这样压缩的]，那我只是一只小喽喽啊，害，我痛苦极了， 很显然很多东西我接不住\n\n但是交接大佬人挺好的这里暂称他为大哥，大嫂还在公司，后面有问题我直接让大嫂帮我问大哥，就暂时还过的去，勉勉强强的干着但是我特别吃力，我的顶头管我的是一个50左右的经理，开发出生头发花白，在公司待了12年，公司是做支付平台的又特别的严格，我之前没有接触过这块，有什么问题我还会问我之前的师傅，就勉强干着，经理每天晚上带我加班，于是我每天早上6点20起床，晚上12点到家，我的长头发嫌洗头发麻烦头发也剪了，不出意外一个月多以后我生病了，大概就是发烧，睡眠不足，经期也有问题，大概休了三天假加周末后来就好了，我当时就想离职了，觉得自己顶不住真的顶不住，第一家公司6天70个小时，第二家6天达到快90个小时，我就差睡在公司了\n\n那段时间我每天都会被骂，就在工位其他同事都听见，我真想找个地缝钻下去，在高强度的工作下，公司每天都在招人，明明已经不缺人，公司试用期三天没工资[如果换我现在肯定告他了]，招人又开人，很离谱这样的公司现在还存在，后大概快两个月后我搬家离公司20分钟的车程附近我的日子稍微好过了一点，但是我却出了点问题，我每天焦虑的睡不觉，周末休息也不爱出门就在家里学习看代码，可能是怕被骂，我的精神状态一直不太好，睡觉喜欢抽，蹬腿特别严重时常蹬腿瞪醒，后来我就想着转正了好了，两个多月过去了快转正了，当时11月多了也想着快过年了，在这家公司我每个月还能存2000块钱，5200的工资，因为我几乎不出门就是吃饭睡觉，每天开销60左右，科技园里面吃饭挺贵的我算很省了，在这个公司除了老板跟经理，其他同事相处挺好的，我是里面最小的也挺照顾我的，他们都是25+，于是我就在这样过着，当时也没有意识去医院看看，就想着转正能加1300的工资，对于我来说是一笔不小的诱惑。。。。。\n\n转眼三个月过去了公司没有给我转正，也没有开我就闭口不谈，我就急了在等我三个月后的10天左右，我就找人事询问，人事姐姐给我的意见是让我去问经理，经理说我被延迟转正了，说我表现不好，于是我又开始emo了，也不知都怎么办想离职又快过年了就这样混着，想着会找我谈，我还是太年轻了，直到12月20号左右，我找经理谈了大概意思就是要我转岗，说我基础太差了什么的，转做实施去客户现场调试工资4000，我拒绝了我知道这就是想赶我走，于是我离职了，离职后没有压力反而是一种解脱，我记得离职当天去看了场电影，那是我第一次在深圳看电影就在坂田，看完电影后回家哭了一场，然后就休息了两天总是失眠加蹬腿（我不知道大家是否也有过这样现象），医院给我建议是精神太紧张长期睡眠不足经期也不正常，让我好好休息，大概休息了几天月底我就和我同学去了张家界旅游去了，就这样我的第二份工作结束了。。。。。。。。。。。。。。。。",
@@ -807,16 +817,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7290005438153867283",
-          "author": "泽南Zn",
-          "description": "theme: smartblue\n前言\n哈喽，大家好，我是泽南Zn👨‍🎓。在之前的一篇文章写到， 前端如何使用websocket发送消息，websocket是怎么建立连接的呢？如果断开了会怎样？如何一直保持长连接呢？接下来，本篇文章将会带你了解--- WebSocket心跳机制\n一、WebSocket心跳机制\n前端实现WebSocket心跳机制的方式主要有两种：\n使用setInterval定时发送心跳包。\n在前端监听到WebSocket的onclose()事件时，重新创建WebSocket连接。\n第一种方式会对服务器造成很大的压力，因为即使WebSocket连接正常，也要定时发送心跳包，从而消耗服务器资源。第二种方式虽然减轻了服务器的负担，但是在重连时可能会丢失一些数据。\n二、WebSocket心跳包机制\nWebSocket心跳包是WebSocket协议的保活机制，用于维持长连接。有效的心跳包可以防止长时间不通讯时，WebSocket自动断开连接。\n心跳包是指在一定时间间隔内，WebSocket发送的空数据包。常见的WebSocket心跳包机制如下：\n客户端定时向服务器发送心跳数据包，以保持长连接。\n服务器定时向客户端发送心跳数据包，以检测客户端连接是否正常。\n双向发送心跳数据包。\n三、WebSocket心跳机制原理\nWebSocket心跳机制的原理是利用心跳包及时发送和接收数据，保证WebSocket长连接不被断开。WebSocket心跳机制的原理可以用下面的流程来说明：\n客户端建立WebSocket连接。\n客户端向服务器发送心跳数据包，服务器接收并返回一个表示接收到心跳数据包的响应。\n当服务器没有及时接收到客户端发送的心跳数据包时，服务器会发送一个关闭连接的请求。\n服务器定时向客户端发送心跳数据包，客户端接收并返回一个表示接收到心跳数据包的响应。\n当客户端没有及时接…",
-          "link": "https://juejin.cn/post/7290005438153867283",
-          "publishedOn": "2023-10-16T01:51:30.000Z",
-          "wordCount": 984,
-          "title": "面试官：你知道websocket的心跳机制吗？",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7289718324857880633",
           "author": "荒山",
           "description": "theme: github\n\n昨天，一个在掘金认识的小伙伴，进入了美团专门做 IDE 的基建组，心底真是替他高兴，这本来就是他应得的。\n刚认识的时候还是一个工作一年的小毛孩，整天逮着我问各种问题，模板引擎、Babel、Electron、Jest、Rollup…\n虽然没见过面，不知道他长什么样，在我脑海里，他就是两样放着光，对技术充满好奇心、自我驱动力很强小伙子。\n我就知道他能成，因为我多少也是这样子的，尽管我现在有些倦怠。\n后来，随着工作越来越忙，博客也停更了，我们便很少联系了。\n不过，后面我招人，尤其是校招生或者初级开发，我都是按照他这个范本来的。我也时常跟别人提起，我认识北京这样一个小伙子。\n也有可能我们这边庙太小了，这样的小伙伴屈指可数。\n平台和好奇心一样重要。\n大部分人智商条件不会有太多的差距，尤其是程序员这个群体，而好奇心可以让你比别人多迈出一步，经过长时间的积累就会拉开很大的差距。\n而平台可以让你保持专注，与优秀的人共事，获得更多专业的经验和知识、财富，建立自己的竞争壁垒。\n回到正题。\n我觉得是时候阶段性地总结和回望回顾我过去这三年，却发现大部分都是泡沫。跨端、业务、质量管理、低代码、领域驱动设计... 本文话题可能会比较杂\n2020 年七月，口罩第二年。我选择了跳槽，加入了一家创业公司\n跨端开发的泡沫\n2020 年，微信小程序已经成为国内重要的流量入口，事实也证明，我们过去几年交付的 C 端项目几乎上都是小程序。更严谨的说，应该是微信小程序，尽管很多巨头都推出了自己的小程序平台，基本上都是陪跑的。\nTaro 2.x\n进来后接手的第一个项目是原生小程序迁移到 Taro。\n那时候，我们的愿景是“一码多端”，期望一套程序能够跑在微信小程序、支付宝小程序等小程序平台、H5、甚至是原生 App。\n那时候 Taro 还是 2.x 版本，即通过语法静态编译成各端小程序的源码…",
@@ -864,6 +864,16 @@
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
         {
+          "id": "7292916079385640986",
+          "author": "忘记时间206",
+          "description": "[7018942344208580646#1024一起掘金#]  tabby设置ssh的配色不生效，怎么搞？",
+          "link": "https://juejin.cn/pin/7292916079385640986",
+          "publishedOn": "2023-10-23T02:26:52.000Z",
+          "wordCount": 523,
+          "title": "[7018942344208580646#1024一起掘金#] tabby设置ssh的配色不生效，怎么搞？",
+          "imageUrl": null
+        },
+        {
           "id": "7292552003015999488",
           "author": "bug哥",
           "description": "[7018942344208580646#1024一起掘金#] 今年手搓的一个记录代码 CRUD 操作的 IDEA 插件，它能协助识别有潜在问题的 SQL，和获取 GPT 优化建议。地址：https://plugins.jetbrains.com/plugin/22655-mysql-proxy",
@@ -899,7 +909,7 @@
           "description": "打卡，昨天在tailwind-magic实现了，unocss的attributify的支持，写起来贼爽😬",
           "link": "https://juejin.cn/pin/7291957867040931875",
           "publishedOn": "2023-10-21T03:12:36.000Z",
-          "wordCount": 528,
+          "wordCount": 531,
           "title": "打卡，昨天在tailwind-magic实现了，unocss的attributify的支持，写起来贼爽😬",
           "imageUrl": null
         },
@@ -909,7 +919,7 @@
           "description": "有没有大佬了解 power Apps 开发平台的。我想在 vcode 编辑开发，安装了Power Platform Tools 插件，也配置了公司的环境，但是用这个 pac paportal list 获取列表，没有数据。我想新创建一个项目，该怎么去做啊",
           "link": "https://juejin.cn/pin/7291830798160052278",
           "publishedOn": "2023-10-20T02:49:58.000Z",
-          "wordCount": 572,
+          "wordCount": 575,
           "title": "有没有大佬了解 power Apps 开发平台的。我想在 vcode 编辑开发，安装了Power Platform Tools 插件，也配置了公司的环境，但是用这个 pac paportal list 获取列...",
           "imageUrl": null
         },
@@ -939,7 +949,7 @@
           "description": "你们都用什么开发工具",
           "link": "https://juejin.cn/pin/7291135064842158114",
           "publishedOn": "2023-10-18T08:00:51.000Z",
-          "wordCount": 519,
+          "wordCount": 526,
           "title": "你们都用什么开发工具",
           "imageUrl": null
         },
@@ -959,7 +969,7 @@
           "description": "打卡打卡，今天周二",
           "link": "https://juejin.cn/pin/7290733884136030242",
           "publishedOn": "2023-10-17T03:54:52.000Z",
-          "wordCount": 530,
+          "wordCount": 533,
           "title": "打卡打卡，今天周二",
           "imageUrl": null
         },
@@ -969,7 +979,7 @@
           "description": "#1024一起掘金#   新增一个函数节点代码编辑模式",
           "link": "https://juejin.cn/pin/7290494120206909492",
           "publishedOn": "2023-10-16T17:14:17.000Z",
-          "wordCount": 524,
+          "wordCount": 527,
           "title": "#1024一起掘金# 新增一个函数节点代码编辑模式",
           "imageUrl": null
         },
@@ -979,7 +989,7 @@
           "description": "发现一款非常好用的云文档，不论记笔记、写文档、画脑图、做计划、管项目、构建知识库还是高效团队协作，都比以前事半功倍，不论个人用还是团队用都很不错，推荐给你！\nhttps://www.wolai.com/signup?invitation=C2ZS3U2Z",
           "link": "https://juejin.cn/pin/7290382189992427559",
           "publishedOn": "2023-10-16T09:28:48.000Z",
-          "wordCount": 518,
+          "wordCount": 521,
           "title": "发现一款非常好用的云文档，不论记笔记、写文档、画脑图、做计划、管项目、构建知识库还是高效团队协作，都比以前事半功倍，不论个人用还是团队用都很不错，推荐...",
           "imageUrl": null
         },
@@ -999,7 +1009,7 @@
           "description": "https://github.com/Simon-He95/fast-create-variable\n这个插件一定会火起来的🥺",
           "link": "https://juejin.cn/pin/7289664651364794402",
           "publishedOn": "2023-10-15T08:20:51.000Z",
-          "wordCount": 529,
+          "wordCount": 532,
           "title": "https://github.com/Simon-He95/fast-create-variable 这个插件一定会火起来的🥺",
           "imageUrl": null
         },
@@ -1009,7 +1019,7 @@
           "description": "大的来了，一波更新完效率提升X倍",
           "link": "https://juejin.cn/pin/7289397650387025977",
           "publishedOn": "2023-10-14T03:06:29.000Z",
-          "wordCount": 532,
+          "wordCount": 535,
           "title": "大的来了，一波更新完效率提升X倍",
           "imageUrl": null
         },
@@ -1019,7 +1029,7 @@
           "description": "基于微信测试号的AI机器人，支持谷歌搜索引擎插件：https://github.com/anhao/AIChatBot/",
           "link": "https://juejin.cn/pin/7288992783582281728",
           "publishedOn": "2023-10-13T03:33:12.000Z",
-          "wordCount": 517,
+          "wordCount": 520,
           "title": "基于微信测试号的AI机器人，支持谷歌搜索引擎插件：https://github.com/anhao/AIChatBot/",
           "imageUrl": null
         },
@@ -1029,7 +1039,7 @@
           "description": "DevOps相对关注运维自动化,较少涉及复杂算法。\nDevOps更专注基础架构和工程流程。\nDevOps的工作重心在于搭建工程化系统,而不是产品功能或业务创新。\nDevOps工程师相对更专注技术展开,对商业策略和产品决策参与较少。\nDevOps也主要在运维团队内部协作。和产品、设计等部门协作的机会较少。",
           "link": "https://juejin.cn/pin/7288964017351458857",
           "publishedOn": "2023-10-13T01:16:05.000Z",
-          "wordCount": 525,
+          "wordCount": 528,
           "title": "DevOps相对关注运维自动化,较少涉及复杂算法。 DevOps更专注基础架构和工程流程。 DevOps的工作重心在于搭建工程化系统,而不是产品功能或业务创新。 DevOps工程...",
           "imageUrl": null
         },
@@ -1039,7 +1049,7 @@
           "description": "jym，[呲牙]看看你们浏览器的收藏夹有啥有趣的网站，或者很实用的工具网站",
           "link": "https://juejin.cn/pin/7288509436899934267",
           "publishedOn": "2023-10-11T07:44:37.000Z",
-          "wordCount": 516,
+          "wordCount": 519,
           "title": "jym，[呲牙]看看你们浏览器的收藏夹有啥有趣的网站，或者很实用的工具网站",
           "imageUrl": null
         },
@@ -1051,16 +1061,6 @@
           "publishedOn": "2023-10-10T15:01:03.000Z",
           "wordCount": 540,
           "title": "[7210002980895916043#挑战每日一条沸点#] vscode插件fnMap（函数地图）v3.2.0发布 1，新增功能：可配置不同文件默认展开层级 2，新增功能：可配置不同文件哪些...",
-          "imageUrl": null
-        },
-        {
-          "id": "7288151713373192253",
-          "author": "送酒白衣人丶",
-          "description": "jym，有无好用的png图片压缩网址，哪个杀千刀的举报了熊猫，打不开了，MD，剩下的能找到的全是要登录或者花钱的[酷拽][酷拽]",
-          "link": "https://juejin.cn/pin/7288151713373192253",
-          "publishedOn": "2023-10-10T08:47:22.000Z",
-          "wordCount": 517,
-          "title": "jym，有无好用的png图片压缩网址，哪个杀千刀的举报了熊猫，打不开了，MD，剩下的能找到的全是要登录或者花钱的[酷拽][酷拽]",
           "imageUrl": null
         }
       ]
@@ -1129,16 +1129,6 @@
           "wordCount": 4078,
           "title": "倪爽的阅读分享 – 2023年9月24日",
           "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/091923-musk-neuralink-primates-death-2.webp"
-        },
-        {
-          "id": "https://nishuang.net/?p=30767",
-          "author": "Frank",
-          "description": "「你要的都有了！」致敬FM2的經典造型，方便攜帶的全片幅相機 – Nikon 全新 Zf 單眼相機 – EVERYDAY OBJECT Nikon Zf相机还配备了一块3.2英寸的可翻转触摸屏，方便用户进行取景和操作。同时，相机还支持Wi-Fi和蓝牙连接，可以方便地与智能设备进行无线传输和分享照片。此外，相机还具备防尘防滴功能，保证在恶劣环境下的可靠性和耐用性。 总体来说， …\n  倪爽的阅读分享 – 2023年9月23日 查看全文 »",
-          "link": "https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b49%e6%9c%8823%e6%97%a5/",
-          "publishedOn": "2023-09-23T15:44:12.000Z",
-          "wordCount": 4055,
-          "title": "倪爽的阅读分享 – 2023年9月23日",
-          "imageUrl": "https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-gallery-full-8_Easy-Resize.com_-746x1024-1.jpg"
         }
       ]
     }

@@ -51,6 +51,53 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-23 datetime="2023-10-23T02:26:52.000Z">2023-10-23</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-23 datetime="2023-10-23T02:26:52.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7292916079385640986"
+                        open
+                      >
+                        <summary class="article-expander__title">[7018942344208580646#1024一起掘金#] tabby设置ssh的配色不生效，怎么搞？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7292916079385640986">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>[7018942344208580646#1024一起掘金#]  tabby设置ssh的配色不生效，怎么搞？</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-22 datetime="2023-10-22T16:26:58.000Z">2023-10-22</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-22 datetime="2023-10-22T16:26:58.000Z"></time>
           </button>
@@ -170,6 +217,85 @@ Prompt 如下:
 https://github.com/devlive-community/datacap/pull/453
 新支持的功能，欢迎大家一起参与源码贡献，目前已经有 9 位贡献者，100+ 使用用户，系统后续越来越强大，欢迎大家来共建</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7292437487011856394"
+                        open
+                      >
+                        <summary class="article-expander__title">JSDoc 真能取代 TypeScript？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7292437487011856394">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>这几个月，想必大家都听到过一个新闻：
+Svelte 弃用 TypeScript，改用 JSDoc 了。
+
+TypeScript 我们知道，是用来给 JS 加上类型的，可以实现类型提示和编译时的类型检查。
+那 JSDoc 能够完成一样的功能么？Svelte 是出于什么原因弃用 TS 的呢？
+先不着急回答这个问题。
+我们总得先了解下 JSDoc：
+可能大家认为的 JSDoc 是这个东西：
+
+在代码的注释上加上类型的标识，然后通过 jsdoc 命令行工具，就可以直接生成文档。
+比如这样的文档：
+
+确实，这个是 JSDoc 最初的含义。
+但我们说的 JSDoc 并不是这个，而是 TS 基于 JSDoc 语法实现的，在注释里给代码添加类型的语法。
+文档在这里：
+
+ts 支持在 js 文件的注释里，通过 JSDoc 的语法给它加上类型。
+至于有什么意义，那可就太多了。
+比如一个 JS 的配置文件，你想在写配置的时候能有提示，就可以用 JSDoc：
+
+这里注释里的 @type 就是 JSDoc 声明类型的语法。
+在 vite 文档里，你可以看到对 JSDoc 的支持：
+
+我们自己试一下：
+mkdir jsdoc-test
+cd jsdoc-test
+npm init -y
+
+
+创建项目和 package.json。
+然后安装 typescript：
+npm install --save-dev typescript
+
+创建 tsconfig.json 文件：
+npx tsc --init
+
+
+生成的 tscconfig.json 太多注释了，我们删一下：
+
+然后创建 src/index.ts
+function add(a: number, b: number) {
+    return a + b;
+}
+
+这样在用到这个 add 的时候，就会做类型检查：
+
+在 tsconfig.json…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3652,45 +3778,6 @@ Vue 3 只用 CSS Module 写一个 TodoL…</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7290005438153867283"
-                        open
-                      >
-                        <summary class="article-expander__title">面试官：你知道websocket的心跳机制吗？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7290005438153867283">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: smartblue
-前言
-哈喽，大家好，我是泽南Zn👨‍🎓。在之前的一篇文章写到， 前端如何使用websocket发送消息，websocket是怎么建立连接的呢？如果断开了会怎样？如何一直保持长连接呢？接下来，本篇文章将会带你了解--- WebSocket心跳机制
-一、WebSocket心跳机制
-前端实现WebSocket心跳机制的方式主要有两种：
-使用setInterval定时发送心跳包。
-在前端监听到WebSocket的onclose()事件时，重新创建WebSocket连接。
-第一种方式会对服务器造成很大的压力，因为即使WebSocket连接正常，也要定时发送心跳包，从而消耗服务器资源。第二种方式虽然减轻了服务器的负担，但是在重连时可能会丢失一些数据。
-二、WebSocket心跳包机制
-WebSocket心跳包是WebSocket协议的保活机制，用于维持长连接。有效的心跳包可以防止长时间不通讯时，WebSocket自动断开连接。
-心跳包是指在一定时间间隔内，WebSocket发送的空数据包。常见的WebSocket心跳包机制如下：
-客户端定时向服务器发送心跳数据包，以保持长连接。
-服务器定时向客户端发送心跳数据包，以检测客户端连接是否正常。
-双向发送心跳数据包。
-三、WebSocket心跳机制原理
-WebSocket心跳机制的原理是利用心跳包及时发送和接收数据，保证WebSocket长连接不被断开。WebSocket心跳机制的原理可以用下面的流程来说明：
-客户端建立WebSocket连接。
-客户端向服务器发送心跳数据包，服务器接收并返回一个表示接收到心跳数据包的响应。
-当服务器没有及时接收到客户端发送的心跳数据包时，服务器会发送一个关闭连接的请求。
-服务器定时向客户端发送心跳数据包，客户端接收并返回一个表示接收到心跳数据包的响应。
-当客户端没有及时接…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -4311,25 +4398,6 @@ vscode插件fnMap（函数地图）v3.2.0发布
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7288151713373192253"
-                        open
-                      >
-                        <summary class="article-expander__title">jym，有无好用的png图片压缩网址，哪个杀千刀的举报了熊猫，打不开了，MD，剩下的能找到的全是要登录或者花钱的[酷拽][酷拽]</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7288151713373192253">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>jym，有无好用的png图片压缩网址，哪个杀千刀的举报了熊猫，打不开了，MD，剩下的能找到的全是要登录或者花钱的[酷拽][酷拽]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -4625,59 +4693,10 @@ vscode插件fnMap（函数地图）v3.2.0发布
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-23 datetime="2023-09-23T15:44:12.000Z">2023-09-23</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-23 datetime="2023-09-23T15:44:12.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >倪爽设计工作室</button>
-                  <a class="source-heading__link" href="https://nishuang.net">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://nishuang.net/?p&#x3D;30767"
-                        open
-                      >
-                        <summary class="article-expander__title">倪爽的阅读分享 – 2023年9月23日</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://nishuang.net/%e5%80%aa%e7%88%bd%e7%9a%84%e9%98%85%e8%af%bb%e5%88%86%e4%ba%ab-2023%e5%b9%b49%e6%9c%8823%e6%97%a5/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://nishuang.net/wp-content/uploads/sites/10/2023/09/photo-gallery-full-8_Easy-Resize.com_-746x1024-1.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>「你要的都有了！」致敬FM2的經典造型，方便攜帶的全片幅相機 – Nikon 全新 Zf 單眼相機 – EVERYDAY OBJECT Nikon Zf相机还配备了一块3.2英寸的可翻转触摸屏，方便用户进行取景和操作。同时，相机还支持Wi-Fi和蓝牙连接，可以方便地与智能设备进行无线传输和分享照片。此外，相机还具备防尘防滴功能，保证在恶劣环境下的可靠性和耐用性。 总体来说， …
-  倪爽的阅读分享 – 2023年9月23日 查看全文 »</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;14
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6607481290">
-        <time id="build-timestamp" datetime="2023-10-23T01:14:54.334Z">2023-10-23T01:14:54.334Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6608493914">
+        <time id="build-timestamp" datetime="2023-10-23T03:52:30.620Z">2023-10-23T03:52:30.620Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
