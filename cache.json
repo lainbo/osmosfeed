@@ -23,7 +23,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1206,
+          "wordCount": 1205,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -657,12 +657,22 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
+          "id": "https://juejin.cn/post/7292428123849293887",
+          "author": "写前端的刻猫猫",
+          "description": "theme: cyanosis\n许多工程师都喜欢使用 Mac 进行开发工作，笔者也是如此，所以整理了一下个人觉得好用的软件和工具，以及相关的设置并分享出来，也欢迎在评论区交流想法👏。\nMacOS上有许多优秀的生产力软件和工具，加上更贴近 Linux 的使用习惯，赢得许多开发者的青睐，Windows PC 虽然无所不能，出于将工作和娱乐分开的目的，本人的 PC 已经完全变成了Steam启动器和原神启动器了（ 原神，启动!🤓）\nTL；DR（Too Long，Don‘t read - 太长不读）\n文章篇幅较长，直接列一个省流概括，， 如果有精力还是建议阅读下全文，每个软件我都给出推荐理由和介绍，都是个人体验过并最终留下来长期使用的。\nArc - 浏览器， Warp - 终端， Raycast - 启动器，Orbstack - 容器，Setapp - 软件订阅，CleanShotX - 截屏，OBS - 录屏推流，Gifox - Gif图制作， 1Password - 密码管理器，Bartender - 菜单栏管理，Downie - 视频下载，IINA / Infuse - 视频播放器，iRightMouse - 鼠标右键增强，PopClip / Bob - 鼠标工具\n浏览器\n因为浏览器在日常使用的频率非常高，且内容较多( 包括浏览器拓展和油猴脚本),故单独列举出来。\nArc\n目前已使用半年多，不少人说不久还是会换回 chrome 或者其他，但并没有，我相信他们都只是习惯了使用Chrome而不想折腾，但其实如果你稍微留意，会发现很多知名开发者都一直在使用 Arc 且评价相当不错，如 Anthony fu ，t3dotgg 等，油管教学博主有相当高的比例都在使用 Arc, 它绝不是一个好看的玩具，它值得你去尝试，合适不合适需要体验后才有发言权。\n实际上我都认真尝试过几乎市面上所有…",
+          "link": "https://juejin.cn/post/7292428123849293887",
+          "publishedOn": "2023-10-22T16:21:11.000Z",
+          "wordCount": 2377,
+          "title": "2023年🧑‍💻工程师的 Mac 工具箱",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7292437487011856394",
           "author": "zxg_神说要有光",
           "description": "这几个月，想必大家都听到过一个新闻：\nSvelte 弃用 TypeScript，改用 JSDoc 了。\n\nTypeScript 我们知道，是用来给 JS 加上类型的，可以实现类型提示和编译时的类型检查。\n那 JSDoc 能够完成一样的功能么？Svelte 是出于什么原因弃用 TS 的呢？\n先不着急回答这个问题。\n我们总得先了解下 JSDoc：\n可能大家认为的 JSDoc 是这个东西：\n\n在代码的注释上加上类型的标识，然后通过 jsdoc 命令行工具，就可以直接生成文档。\n比如这样的文档：\n\n确实，这个是 JSDoc 最初的含义。\n但我们说的 JSDoc 并不是这个，而是 TS 基于 JSDoc 语法实现的，在注释里给代码添加类型的语法。\n文档在这里：\n\nts 支持在 js 文件的注释里，通过 JSDoc 的语法给它加上类型。\n至于有什么意义，那可就太多了。\n比如一个 JS 的配置文件，你想在写配置的时候能有提示，就可以用 JSDoc：\n\n这里注释里的 @type 就是 JSDoc 声明类型的语法。\n在 vite 文档里，你可以看到对 JSDoc 的支持：\n\n我们自己试一下：\nmkdir jsdoc-test\ncd jsdoc-test\nnpm init -y\n\n\n创建项目和 package.json。\n然后安装 typescript：\nnpm install --save-dev typescript\n\n创建 tsconfig.json 文件：\nnpx tsc --init\n\n\n生成的 tscconfig.json 太多注释了，我们删一下：\n\n然后创建 src/index.ts\nfunction add(a: number, b: number) {\n    return a + b;\n}\n\n这样在用到这个 add 的时候，就会做类型检查：\n\n在 tsconfig.json…",
           "link": "https://juejin.cn/post/7292437487011856394",
           "publishedOn": "2023-10-22T10:58:00.000Z",
-          "wordCount": 1618,
+          "wordCount": 1699,
           "title": "JSDoc 真能取代 TypeScript？",
           "imageUrl": null
         },
@@ -672,18 +682,8 @@
           "description": "theme: Chinese-red\n来啦来啦，它来啦~\n掘金小册 2023 年度最大优惠力度来啦！\n150+ 本好课等你挑，抽奖、满赠、闯关、互动玩不停！\n话不多说，快来看看册姐为大家准备的四重惊喜吧！\n⏰ 活动时间\n2023 年 10 月 23 日～2023 年 10 月 31 日\n🔔 惊喜一：1024 狂欢，全场 5 折起！\n上新小册 6 折，其他小册 5 折特惠\n购买小册➡️：点击浏览小册列表\n想买但是不知道怎么选？看这里：掘金之「什么值得买」\n活动期内，实付满 68 元即可参与抽奖👇🏻\n「奖品数量」\n「奖品名称」\n「实物图」\n\n\n\n\n10 个\n稀土掘金-码赛克系列运动毛巾\n\n\n\n\n\n会员兑换券不计入实付总金额，活动结束后由运营统一抽取。\n👑 惊喜二：满 168 元 /268 元 /368 元赠好礼！\n参与规则：活动期间累计实付金额满 168 元 /268 元 /368 元的用户，可从对应礼品中三选一！各金额段满赠奖品不可叠加，但可与抽奖礼品叠加~ 同时，会员兑换券支付不计入实付总金额。\n假如：小明购买小册实付满 268 元，即可从大鼠标垫、摩卡壶和云朵小背包中挑选一个礼品。\n实付金额\n「奖品详情」\n「实物图」\n\n\n\n\n满 168 元\n动漫硅胶腕托鼠标垫 或 陶瓷马克杯 或 稀土掘金 JUEJIN FRIENDS 「码赛克」棒球帽（三选一）\n\n\n\n满 268 元\n小助手系列桌垫大鼠标垫 或 Touch 系列「围炉喝咖」摩卡壶 或 Max 云朵小背包（三选一）\n\n\n\n满 368 元\nTV 造型梦幻星空加热恒温杯垫 或 便携简约休闲胸包尼龙防泼水运动斜挎包 或 「无限新生」系列环保竹纤维材质饭盒套装（三选一）\n\n\n\n\n🤩福利加码！！！\n活动期间累计实付金额 TOP3 ，可分别获得：\n\n\n\n\n\n\n\nTop1：小米 7pro 智能手环（数量1)\nTop2：小米 AI 音箱第二代（数量1）\nTop3:小米蓝牙项圈耳机青春版（数量1）\n\n\n\n\n✨ 此奖品和满赠不叠加，可与抽奖礼品叠加\n👏 惊喜三：闯关有礼，掘金热门周边带回家~\n参与规则：活动期间每完成一关，即可获得一次抽奖机会，每人最多可参与 3 轮抽奖。「如果 3 关全部完成，必得 yoyo 抱枕 1 个！」\n活动流程：完成闯关-->填写👉🏻问卷👈🏻-->符合活动要求，自动进入抽奖池-->活动结束后，运营统一抽取。\n「闯关详情」\n「闯关规则」\n「奖品详情」\n「实物图」\n\n\n\n\n第一关：关注有礼\n关注掘金小册微信公众号，同时添加小册四姐@北比，或小册五姐@北比\n可参与Who Cares系列咖啡杯抽奖（3个）\n\n\n\n第二关：转发有礼\n转发 1024 活动链接（掘金文章/掘金公众号文章）到朋友圈，文案可自由发挥。朋友圈需公开可见，至少保留至活动结束后 5 个工作日\n可参与掘金加湿器抽奖（3个）\n\n\n\n第三关：推广有礼\n活动期间，参与掘金小册分销，成功分销 >=3 本（小册定价 >=29.9）。注意：分销人与实际购买人的 uid 不同才会计入总数\n可参与掘金翻转小夜灯抽奖（3个）\n\n\n\n\n另外：小册作者持续招募中，如果你也想成为其中一员，拿长效收益，千万别错过哦👉🏻问卷👈🏻~\n🥰 惊喜四：有奖互动，赢掘金 code&life 系列雨伞~\n2023 年转眼已过大半，今年你都关注了哪些前沿技术，有什么有趣/深入的发现和研究吗？\n👉🏻欢迎在文章评论区留下你的分享和见解，和大家一起畅聊~\n🎁 我们将从评论中抽取 5 人送出 code&life系列雨伞，每人 1 个。获奖名单将于活动结束后 5 个工作日（11月7日）内公布，届时请留意站内信/私信通知哦~\n「奖品数量」\n「奖品名称」\n「实物图」\n\n\n\n\n3 个\n掘金 code&life 系列雨伞\n\n\n\n\n另外，除现有小册，你还想看哪些小册主题，也欢迎反馈给我们哦👉🏻问卷👈🏻\n📢 活动须知&奖品领取方式（必看）\n各活动计算的实付金额以活动期间的「累计」实付金额为准，计算时间段为 10 月 23 日～10 月 31 日，会员兑换券不计入。\n其中，满赠活动各阶段礼品不叠加，但可与其他活动的抽奖礼品叠加~\n各活动获奖名单：活动结束后的 5 个工作日内（预计 11 月 7 日）公布\n实物礼品领取：\n活动结束后的 5 个工作日（11 月 7 日）内开始采集发货信息，届时请留意站内信/私信通知。\n信息发出后，请掘友们在 5 个工作日内完成填写，11 月 14 日 24 点截止。过期未填写视为放弃所有奖品，不予发放。\n多次提交问卷的，官方将以最新提交为准。\n信息采集完，将于 11 月 24 日前完成实物礼品发放。\n有任何疑问，可以通过 1️⃣站内私信掘金小册，2️⃣微信联系小册四姐@北比或小册五姐@北比\n🏃🏻现在就去选购👉🏻https://sourl.co/nQUPPM",
           "link": "https://juejin.cn/post/7291836033721090082",
           "publishedOn": "2023-10-20T06:20:27.000Z",
-          "wordCount": 1336,
+          "wordCount": 1362,
           "title": "💥1024最强省钱攻略 | 全场小册5折起，更有小米手环 7Pro、小爱音箱等十几种礼物等你来拿~",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7291853227246190642",
-          "author": "FinClip",
-          "description": "Telegram 宣布为其开发者提供了一项“能够在其中运行迷你应用”的新功能（ 迷你应用即 Mini App，下文中以“小程序”代替）。\n\n在 Telegram 的博客中，开发人员介绍可以使用 JavaScript 构建自己的迷你应用\n在一篇博客文章中，Telegram 的开发者写到“小程序提供了可替代互联网网站的灵活界面（create infinitely flexible interfaces that can be launched right inside Telegram）”。\n这项功能与在 Telegram 中已经运行了一段时间的机器人（Bot）有些类似，用户可以在其中获得相比机器人更进一步的使用体验，不仅能够在其中完成餐饮点单，电子支付，还可以向用户发送推送通知，或者继续调用目前正在通过机器人执行的任务。\n增加小程序这项功能对于 Telegram 来说是一个有意思的变化，在某种角度上也标志着 Telegram 正向着成为另一款“超级应用”的道路前进。超级应用由小程序的开放平台所构成，外部开发者可以在平台上运行各种小程序， “通过小程序打造自己的超级应用”这件事很可能是过去半年中与 iPhone 15/Twitter 更名齐名的技术讯息之一。\n截止目前，Telegram 大约拥有 8 亿日活跃用户。出于某些政治原因，它在许多主流移动社交工具所不能进入的国家地区（不论是发达国家还是发展中国家）有着相当大的优势，而且哪怕是像黑莓这种几乎早已被遗弃的手机上也能安装它。\n\nTelegram 的创始人 Pavel Durov\n当然，把自己打造成超级应用的雄心壮志并不仅仅局限于 Telegram。在某种角度，它的最大竞争对手可能是 Elon Musk 的 X（也就是更名后的 Twitter），他在很久以前就宣布了想把 X 改造成微信这种超级应用的雄韬伟略，但以目前引入小程序…",
-          "link": "https://juejin.cn/post/7291853227246190642",
-          "publishedOn": "2023-10-20T05:52:28.000Z",
-          "wordCount": 1138,
-          "title": "颠覆者：Telegram 凭借源自中国的云基础设施成为超级应用",
           "imageUrl": null
         },
         {
@@ -692,7 +692,7 @@
           "description": "工作篇\n我在8月底结束了第一份工作后，在9月初迎来了我的二份工作，投简历投了大概一周约了12家面试，虽然那时候是疫情相对来说找工作还是比较容易点的，至少约的到面试，面了差不多6家，拿到了2家，当时情绪低落囊中羞涩想尽快入职工作选择第2家，后面的面试都推了，但是问题来了，通勤距离过长，每天公交从首站坐20个站左右去上班，下班在科技园的东门而公司在北门，走大概10分钟，从家里去公交站走路20分钟，于是我就开启了长达单程快2小时的路程上班，房子还有两个月到期我决定到期再搬过来。\n\n这份工作给的工资是6500，试用期80%，也就是拿到手5200，试用期不交社保[刚毕业不太懂社保这个]，毕竟刚毕业，然后我就想努力的转正，这次我面试的职位的 .net开发工程师，离谱的事情我刚入职第一天让我接手一个五年经验大佬的项目[压缩成本也不是这样压缩的]，那我只是一只小喽喽啊，害，我痛苦极了， 很显然很多东西我接不住\n\n但是交接大佬人挺好的这里暂称他为大哥，大嫂还在公司，后面有问题我直接让大嫂帮我问大哥，就暂时还过的去，勉勉强强的干着但是我特别吃力，我的顶头管我的是一个50左右的经理，开发出生头发花白，在公司待了12年，公司是做支付平台的又特别的严格，我之前没有接触过这块，有什么问题我还会问我之前的师傅，就勉强干着，经理每天晚上带我加班，于是我每天早上6点20起床，晚上12点到家，我的长头发嫌洗头发麻烦头发也剪了，不出意外一个月多以后我生病了，大概就是发烧，睡眠不足，经期也有问题，大概休了三天假加周末后来就好了，我当时就想离职了，觉得自己顶不住真的顶不住，第一家公司6天70个小时，第二家6天达到快90个小时，我就差睡在公司了\n\n那段时间我每天都会被骂，就在工位其他同事都听见，我真想找个地缝钻下去，在高强度的工作下，公司每天都在招人，明明已经不缺人，公司试用期三天没工资[如果换我现在肯定告他了]，招人又开人，很离谱这样的公司现在还存在，后大概快两个月后我搬家离公司20分钟的车程附近我的日子稍微好过了一点，但是我却出了点问题，我每天焦虑的睡不觉，周末休息也不爱出门就在家里学习看代码，可能是怕被骂，我的精神状态一直不太好，睡觉喜欢抽，蹬腿特别严重时常蹬腿瞪醒，后来我就想着转正了好了，两个多月过去了快转正了，当时11月多了也想着快过年了，在这家公司我每个月还能存2000块钱，5200的工资，因为我几乎不出门就是吃饭睡觉，每天开销60左右，科技园里面吃饭挺贵的我算很省了，在这个公司除了老板跟经理，其他同事相处挺好的，我是里面最小的也挺照顾我的，他们都是25+，于是我就在这样过着，当时也没有意识去医院看看，就想着转正能加1300的工资，对于我来说是一笔不小的诱惑。。。。。\n\n转眼三个月过去了公司没有给我转正，也没有开我就闭口不谈，我就急了在等我三个月后的10天左右，我就找人事询问，人事姐姐给我的意见是让我去问经理，经理说我被延迟转正了，说我表现不好，于是我又开始emo了，也不知都怎么办想离职又快过年了就这样混着，想着会找我谈，我还是太年轻了，直到12月20号左右，我找经理谈了大概意思就是要我转岗，说我基础太差了什么的，转做实施去客户现场调试工资4000，我拒绝了我知道这就是想赶我走，于是我离职了，离职后没有压力反而是一种解脱，我记得离职当天去看了场电影，那是我第一次在深圳看电影就在坂田，看完电影后回家哭了一场，然后就休息了两天总是失眠加蹬腿（我不知道大家是否也有过这样现象），医院给我建议是精神太紧张长期睡眠不足经期也不正常，让我好好休息，大概休息了几天月底我就和我同学去了张家界旅游去了，就这样我的第二份工作结束了。。。。。。。。。。。。。。。。",
           "link": "https://juejin.cn/post/7291496777688334336",
           "publishedOn": "2023-10-19T08:07:17.000Z",
-          "wordCount": 748,
+          "wordCount": 779,
           "title": "工作不给转正又不辞退怎么办",
           "imageUrl": null
         },
@@ -702,8 +702,18 @@
           "description": "highlight: androidstudio\ntheme: channing-cyan\n设计目的\n为了解决前端项目部署之后，如何通知用户系统有新版本，并引导用户刷新页面以加载最新资源的问题。\n适用场景\n用户在浏览器中打开某 web 应用（通常是后台管理系统）很长时间且未刷新页面时，如果应用有新功能添加或问题修复，用户可能无法及时知道有新版发布。这样会导致用户继续使用旧版，影响用户体验和数据准确性，甚至出现程序报错。\n实现原理\n使用 Web Worker API 在浏览器后台轮询请求页面，不会影响主线程运行。\n命中协商缓存，对比本地和服务器请求响应头etag字段值。\n如果etag值不一致，说明有更新，则弹出更新提示，并引导用户手动刷新页面（例如弹窗提示），完成应用更新。\n当页面不可见时（例如切换标签页或最小化窗口），停止实时检测任务；再次可见时（例如切换回标签页或还原窗口），恢复实时检测任务。\n在本地 localStorage存入 _APP_ETAG_, 当etag值不一致时表示有新的版本，弹出更新提示框，同时更新本地存储的etag值\n安装使用\nnpm install version-polling --save\n\n使用\n这里只提供npm 依赖构建用法，也可以通过 script 引入，直接插入到 HTML\n\n// 在应用入口文件中使用: 如 main.js, app.jsx\nimport { createVersionPolling } from \"version-polling\";\n\ncreateVersionPolling({\n  appETagKey: \"__APP_ETAG__\",\n  pollingInterval: 5 * 60 * 1000, // 单位为毫秒-默认5分钟轮询一次\n  silent: process.env.NODE_ENV === \"development\", // 开发环境下不检测\n  onUpdate: (self) => {\n    // 当检测到有新版本时，执行的回调函数，可以在这里提示用户刷新页面\n    const result = confirm(\"页面有更新，点击确定刷新页面！\");\n    if (result) {\n      self.onRefresh();\n    } else {\n      self.onCancel();\n    }\n    // 强制更新可以用alert\n    // alert('有新版本，请刷新页面');\n  },\n})\n\n详细参数\n参数\n说明\n类型\n默认值\n\n\n\n\nappETagKey\nweb 应用更新唯一标识字段名\nstring\n_APP_ETAG_\n\n\npollingInterval\n轮询间隔，单位为毫秒，默认为 5 分钟\nnumber\n5 * 60 * 1000\n\n\nimmediate\n初始化后, 立即触发实时监测\nboolean\ntrue\n\n\nhtmlFileUrl\nweb 应用网站运行目录\nstring\n${location.origin}${location.pathname}\n\n\nsilent\n初始化后, 立即触发实时监测\nboolean\ntrue\n\n\nonUpdate\n更新检测的回调函数，可以自定义更新的逻辑\n(self) => void\n-\n\n\n\nversion-polling npm官方文档",
           "link": "https://juejin.cn/post/7291496777688023040",
           "publishedOn": "2023-10-19T07:38:13.000Z",
-          "wordCount": 1161,
+          "wordCount": 1120,
           "title": "解决前端部署之后，通知用户系统有新版本【version-polling】",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7291496138195370042",
+          "author": "前端连连看",
+          "description": "Why\n总能看见很多推荐开源项目的文章，但是发现其中推荐的项目质量参差不齐，甚至有些作者早就不维护了。所以打算写下这篇推荐文，文中将列出在时间点为2023年10月份时依旧很能打的开源 Vue3 模板项目！\n推荐依据\n我从 2020 年 Vue3 发布后就开始在 GitHub 开源社区跟踪大量 Vue3 项目，将根据 维护频率、Issues、PR、代码质量、UI 质量、文档 等方面来做推荐，文章提到的模板均满足以下要求：\n维护频率：持续进行\nIssues：处理的及时\nPR：有一定社区参与度\n代码质量：中上\nUI 质量：中上\n文档：有\n二开：适合即可\n参考示例：适合即可\n避免出现较大的争议，文章做以下几点规定：\n我没有关注到的项目/不熟悉的项目，文章中不会体现出来，但欢迎评论区自己自荐！\n每个阵营推荐的项目顺序不代表其综合质量高低，只是按当前 GitHub Star 数量来排\n收费或者有一些奇奇怪怪要求的项目，我几乎都不会关注，所以也不会推荐\n每个项目的打分均是根据我本人观察得到的数据而来，尽量客观，但肯定有误差，请见谅\n❤️ 推荐列表\nElement Plus\n推荐三款：\nVue Pure Admin 截止当前 10.9K Star\nV3 Admin Vite 截止当前 2.6K Star\nVue Element Plus Admin 截止当前 1.7K Star\nNaive UI\n推荐一款\nSoybean Admin 截止当前 5.6K Star\nAnt Design Vue\n推荐一款\nVue Vben Admin 截止当前 19.9K Star\n❤️ 详细介绍\nElement Plus\nVue Pure Admin\n\n简介：Vue Pure Admin 是一款开源免费且开箱即用的中后台管理系统模版。使用了最新的 Vue3、Vite、Element Plus、TypeScr…",
+          "link": "https://juejin.cn/post/7291496138195370042",
+          "publishedOn": "2023-10-19T07:36:48.000Z",
+          "wordCount": 1342,
+          "title": "🔥优秀的 Vue3 开源后台模板推荐",
           "imageUrl": null
         },
         {
@@ -712,7 +722,7 @@
           "description": "背景\n目前公司用的是基于 vue-cli4 开发的脚手架，在vue-cli的基础增加了业务开发的 多语言、多皮肤，以及接口请求，权限等解决方案，能快速搭建项目的基本结构。\n但随着技术的迭代，vue2.7/vue3的推出（composition-api），vite的发展，以及vue-cli的不维护，webpack5（缓存+模块联邦）的推出，目前这套脚手架确实有些老旧，需要升级。\n使用过 vue3+ts+vite 的开发体验还是很丝滑，但目前的公司的情况上这套解决方案，还面临一些问题。下面讨论一些方案的选择：\nvite\nvite带来的开发体验的提升，目前的生态发展也是不错的；\n使用 vite 搭建工程，但集成公司所有的组件库会有一些问题，而且很多插件还需重新开发，目前不适合迁移到vite。\nwebpack5\nwebpack5 带来的 cache 特性，是一个折中的方案，webpack 的兼容性不用多说，同时缓存也可以提高开发启动的速度，提升开发体验。同时可搭配 esbuild-loader 代替 babel-loader ，提升构建速度。\nvue3\nvue3的升级带来的生态割裂，导致组件库的如果直接想要迁移很麻烦。公司的组件库短期应该不会有 vue3 版本。\nvue2.7\nvue官方推出 vue2.7，虽然今年就不维护了，但可使用 composition-api，目前来说体验还是不错的，但有一些小问题不维护了，整体上还是值得升级的。\nts\nvue2.6 如果要使用 ts，要使用装饰器写法，这种风格也不再推荐；使用 composition-api 搭配 ts 体验还是不错的。ts 虽然一开始写起来有些痛苦，解决各种报错，但是长期来讲可大大提高项目的可维护性。\n基于以上情况的分析和讨论，我基于webpack5+vue2.7+typescript 搭建了项目脚手架，同时使用了 esb…",
           "link": "https://juejin.cn/post/7291477529779109928",
           "publishedOn": "2023-10-19T07:02:53.000Z",
-          "wordCount": 3203,
+          "wordCount": 3119,
           "title": "从0到1搭建webpack5+vue2.7+ts脚手架",
           "imageUrl": null
         },
@@ -722,7 +732,7 @@
           "description": "前言\n说起Pinia，熟悉vue3开发的程序员肯定不会陌生，甚至被vue官方推荐取代vuex，成为vue全家桶之一。\n疑惑\n还记得之前用 vuex 时，更改state还分同步和异步（这里有尤雨溪的回答https://www.zhihu.com/question/48759748） ，面试还被问过为什么...，当时也是不太理解，觉得肯定有他的道理，谁知看了pinia后，更改state同步异步都可以......\n回到正题：但我们真的需要Pinia/Vuex吗？Pinia/Vuex解决了什么问题？没有Pinia/Vuex前我们是怎么做的呢，会有什么问题？\n刨根\n对于以上问题，以下是本人的一些思考（有不足之处，还望赐教🙏）\n为什么需要Pinia，它解决了什么问题？先查下官网/别人怎么说；\n网上很多是说，Pinia 是 Vue.js 的轻量级状态管理库；\n官方文档如下描述：\n\n对于以上支撑观点，下面一个个来看，看下Pinia是否是必须的：\n1. Pinia 是 Vue.js 的轻量级状态管理库\n详阅vue官网关于状态管理 的文章，里面提到一个场景：多个组件共享一个共同的状态时，用vue原生的能力实现有点麻烦，文章推荐以下方法，将公用的数据提取到全局，这样需要的组件可以直接引用：\n// store.js\nimport { reactive } from \"vue\";\n\nexport const store = reactive({\n  count: 0,\n  // ...\n});\n\n<!-- ComponentA.vue -->\n<script setup>\nimport { store } from './store.js'\n</script>\n\n<template>From A: {{ store.count }}</template>\n\n<!-- ComponentB.vue …",
           "link": "https://juejin.cn/post/7291464815659106359",
           "publishedOn": "2023-10-19T03:54:43.000Z",
-          "wordCount": 1865,
+          "wordCount": 1780,
           "title": "前端文艺复兴：真的需要Pinia吗？",
           "imageUrl": null
         },
@@ -732,7 +742,7 @@
           "description": "theme: qklhk-chocolate\n当然除了 ‘+’ 拼接你也可以用模版字符串的方式，相对来说可能要好一些，但是如果字段太多的话，还是不太方便，所以这里介绍一种其他的方式，比如qs。\nqs是npm仓库所管理的包，可以通过npm install qs安装，因此我们可以直接通过require('qs')引用得到,qs.stringify()作用是将对象或者数组序列化成URL的格式。那么这句话是什么意思呢？\n我们先来看一下官方的用法\nUsage\nvar qs = require('qs');\nvar assert = require('assert');\n\nvar obj = qs.parse('a=c');\nassert.deepEqual(obj, { a: 'c' });\n\nvar str = qs.stringify(obj);\nassert.equal(str, 'a=c');\n\n非常简单，直接引入然后通过qs.stringify(),qs.parse() 就可以了。\n下面我们举两个例子：\n对象序列化\nlet obj = {\nmethods: 'query_num'\nid: 1,\nname: 'Lisa'\n}\nqs.stringify(obj)\n//   methods=query_stu&id=1&name=chenchen    这就是我们的传到服务器的url\n\n数组序列化\nlet arr = [1,3]\nqs.stringify({a:arr})\n// 'arr[0]=1&arr[1]=3'\n\n这种格式可以进行转为序列化，但是url中会带有数组的下标a[0]、a[1]，这并不是我们一般的处理办法。常用方法如下：\n// 常用并推荐使用\nlet arr = [1,3]\nqs.stringify({a:arr},{indices:false});\n// 'arr=1&arr=3' 这个格式，是比较常用的格式\n\n其中：indices:false，去除默认处理的方式。如果不写这个的话，则默认是第一种处理的方式(带下标)。\nqs.parse()则就是反过来的，将我们通过qs.stringify()序列化的对象或者数组转回去。\nlet url = 'id=1&name=chenchen'\nqs.parse(url)\n// {id:1，name:chenchen}  \n\n接下来看一个实例：\n// 根据业务id查询业务费用列表\nexport function commonBuzCostPage(params) {\n  return request({\n    url: `/departmentCost/commonBuzCostPage`,\n    method: 'get',\n    params,\n    paramsSerializer: params => {\n      return qs.stringify(params, {\n        indices: false\n      })\n    }\n  })\n}\n\nfetch(`${apiurl}/projiects?${qs.stringify(param)}`) \n.then(async response =>{\n    if (response.ok){\n        setList(await response.json())\n        }\n    })",
           "link": "https://juejin.cn/post/7291468863395954749",
           "publishedOn": "2023-10-19T02:57:13.000Z",
-          "wordCount": 1232,
+          "wordCount": 1189,
           "title": "前端传参如果参数过多你还会拼接在URL上嘛？",
           "imageUrl": null
         },
@@ -742,7 +752,7 @@
           "description": "theme: v-green\nhighlight: monokai\n前端工程化是什么？一提到工程化我们的第一反应往往就是 webpack。webpack 确实是前端工程化中重要的工具，但二者并不能划等号。\n其实顾名思义，前端，工程化，就是把前端做成一项工程。这其中的区别类似于，写一个简单的展示页面 = 小孩子搭积木，一个大型的项目 = 开发商盖房子。搭积木只需要简单的手工操作，而盖房子则需要的工程规划、设计、资源管理等一系列流程。\n前端工程化贯穿从编码、发布到运维的整个前端研发生命周期，一切以提高效率、降低成本、质量保证为目的的手段都属于工程化。它借鉴了软件工程相关的方法和思想，通过使用工具、流程、最佳实践和规范来提高前端开发效率、质量和可维护性；旨在解决前端开发中出现的各种挑战，包括项目复杂性、跨浏览器兼容性、性能优化、代码可维护性以及团队协作等问题。\n前端开发模式进化史\n首先让我们回顾一下前端开发模式的演化历史，前端工程化正是为了应对这些演化中出现的挑战和需求而发展起来的：\n前后端混合：服务端渲染，javascript仅实现交互\n前后端分离：借助 ajax 实现前后端分离、单页应用(SPA)等新模式\n模块化开发：npm 管理模块、Webpack 编译打包资源\n模块化 + MVVM：基于 React 或 Vue 等框架进行组件化开发，不再手动操作 html 元素\n前端工程化解决了什么问题\n那么前端工程化究竟解决了什么问题呢:\n全局作用域问题：前端工程化可以帮助解决全局作用域污染问题。模块化开发工具如Webpack和ES6模块化帮助开发者将代码分解为模块，避免全局变量冲突，并提高代码的可维护性。\n编码规范：通过代码规范工具（如ESLint、TSLint）和自动化代码格式化工具（如Prettier），前端工程化可以确保代码风格一致，减少错误和提高可读性。\n资源合并和压缩：前端…",
           "link": "https://juejin.cn/post/7291186181157535800",
           "publishedOn": "2023-10-18T09:55:16.000Z",
-          "wordCount": 1721,
+          "wordCount": 1761,
           "title": "学习前端工程化1️⃣——前端工程化与模块化",
           "imageUrl": null
         },
@@ -752,7 +762,7 @@
           "description": "我的小册 《CSS 技术揭秘与实战通关》上线了，想了解更多有趣、进阶、系统化的 CSS 内容，可以猛击 - LINK。\n最近大家刷抖音，是否有刷到拉斯维加斯的新地标 「Sphere」：\n\n场馆内部的视觉效果非常惊人，其中一个效果让我虎躯一震：\n\n我的第一想法就是，这个看起来用 CSS 也可以实现嘛？还有 CSS 不能实现的？\n本文，就将尝试使用 CSS，大致还原这个效果。\n拆解动画效果\n其实，上述的动画效果，本质就是一个 3D 立方体。\n同时，3D 立方体上每个面存在颜色不一样的文字，文字和颜色都在随机变化。\n也就是说，我们需要实现一个 3D 立方体：\n\n同时，我们还需要实现这样一个动画效果 -- 文字和颜色都在随机变化的平面效果：\n\n两者组合一下，再挪动 3D 元素的景深距离，就能实现我们想要的效果！\n好，下面我们一个一个实现。\n实现一个 3D 立方体\n实现一个 3D 立方体，相对另外一个文字和颜色都在随机变化的平面效果而言，属于非常非常简单的一步了。\n我们在非常多篇文章中也讲过具体的实现方式：\n最常见的 3D 图形，莫过于一个 3D 立方体。\n如果没有上下两个面，只是一个 4 个面的图形，大概是这样：\n\n这样一个图形，利用 CSS 3D，如何快速实现呢？\n首先，构造这么一个结构：\n<div class=\"perspective\">\n        <div class=\"container\">\n                <div class=\"img\">3</div>\n                <div class=\"img\">D</div>\n                <div class=\"img\">视</div>\n                <div class=\"img\">图</div>\n        </div>\n</div>\n\n4 个面…",
           "link": "https://juejin.cn/post/7290968251911356473",
           "publishedOn": "2023-10-18T02:37:42.000Z",
-          "wordCount": 3126,
+          "wordCount": 3172,
           "title": "CSS 还原拉斯维加斯球数字动画",
           "imageUrl": null
         },
@@ -762,7 +772,7 @@
           "description": "24岁的我选择了裸辞\n前言\n说实话选择裸辞后很迷茫，但是又不想在原本的公司上班，目前处于昏昏沉沉的状态，工作也是混一天是一天，没有了什么明确的目标，不知道屏幕前的你们有没有这种感觉,目前想着休息一段时间，可是又不敢休息，钱包不允许。\n今年的金九银十根本没有，环境确实很差。\n\n公司A\n公司A:第一家面试的公司，没过，一家初创公司，没过也是情理之中，毕竟我面试的状态太差了，很多问题都没回答上来，这时候没什么准备，刚开始刷面试题，不过说实话有点打击，作为毕业以后第一次换工作的经历，刚毕业的时候面一个拿一个offer，甚至都怀疑这两年工作是不是白做了，技术一直下坡路。\n笔试题目\n第一题.  [1,3,5,2,19,30,10] 请将数组排序从小到大\n[1,3,5,2,19,30,10] .sort((a,b) => a - b)\n加分项： 题目之外还可以自己写一些排序例如算法，但是笔者只答了 sort方法排序\n什么是防抖和节流？ 它们有什么区别 怎么实现\n防抖： 延迟一定时间执行某一方法，如果重新触发时间重置\n节流： 是规定时间内多次触发方法只执行一次\n区别: 一个是立即执行规定时间内不重复执行，一个是规定时间内只执行一次，其实区别可以不用回答，介绍防抖和节流就包含了区别\n实现： 因为现场是笔试所以我这里的答案是简易版的防抖和节流\n防抖实现：\nfunction debounce(func, time) {\n        let timer = null;\n        return function (...args) {\n            clearInterval(timer);\n            timer = setTimeout(() => {\n                func.apply(this, args)\n            }, ti…",
           "link": "https://juejin.cn/post/7290931758788051005",
           "publishedOn": "2023-10-18T02:05:19.000Z",
-          "wordCount": 2623,
+          "wordCount": 2597,
           "title": "2023年金九银十面经，假的今年没有金九银十",
           "imageUrl": null
         },
@@ -772,7 +782,7 @@
           "description": "点击上方亿元程序员+关注和★星标\n\n引言\n大家好，我是亿元程序员，一位有着8年游戏行业经验的主程。\n昨天，我女儿和我说想买一把萝卜刀，众所周知，萝卜刀在潜意识当中是存在一定的危险的，所以我果断拒绝了，但是我还是想体验一下，怎么办？于是我就用Cocos做了一个。\n1.准备素材\n1.首先我们从网络上找到一张关于萝卜刀的图片。\n\n2.导入PS，把我们需要的其中一把裁剪出来。\n\n3.然后我们通过精湛的PS技术(不是)，把萝卜刀拆解。\n\n4.把资源放进去Cocos。\n\n下面我们一起让萝卜刀动起来\n2.做动画\n要想萝卜刀尽可能和实物一样，我们得做动画，我们利用Cocos的动画编辑器简单做一下。\n1.首先我们先创建个Knife节点，把3部分的图片放进去并且按照结构拼接好。\n\n2.调整我们的转动轴位置，即锚点。\n\n3.编辑动画。\n白色部分我们添加一个旋转动画，添加一个angle属性，在0.1秒的地方加一个关键帧，并把它调整至打开状态。\n\n然后给刀尖部分添加一个position属性，在0.15秒处将添加一个关键帧，并把它调整成展开状态。\n\n刀尖展开后，我们需要把白色部分复原，在0.25秒处添加一个关键帧，并且把它复原\n\n到这里，萝卜刀的简单动画已经编辑完成，我们把动画调整回最初状态，然后保存。\n下面我们来编写控制萝卜刀运动的代码。\n3.写代码\n为了让萝卜刀有实物一样的甩刀效果，我们利用一下重力感应控制。\n\n关键Api是cc.SystemEvent.EventType.DEVICEMOTION事件，我们监听一下。\n\n还需要是否启用加速度计事件把打开。\n\n动画的播放比较简单。每次播放之前把方向改变一下，实现打开和关闭效果。\n\n4.效果演示\n构建小游戏。\n\n效果演示。\n\n结语\n本文仅供娱乐参考学习，萝卜刀有风险，大家谨慎对待。\n在哪里可以看到如此清晰的思路，快跟上我的节奏！关注我，和我一起了解游戏行业最新动态，学习游戏开发技巧。\n我是\"亿元程序员\"，一位有着8年游戏行业经验的主程。在游戏开发中，希望能给到您帮助, 也希望通过您能帮助到大家。\nAD:笔者线上的小游戏《贪吃蛇掌机经典》《填色之旅》《重力迷宫球》大家可以自行点击搜索体验。\n实不相瞒，想要个赞和在看！请把该文章分享给你觉得有需要的其他小伙伴。谢谢！\n推荐专栏：\n和8年游戏主程一起学习设计模式\n8年主程手把手打造Cocos独立游戏开发框架\n从零开始开发贪吃蛇小游戏到上线系列\n游戏开发的技巧、心得、资讯\n点击下方绿色按钮+关注",
           "link": "https://juejin.cn/post/7290848097159807017",
           "publishedOn": "2023-10-18T00:30:30.000Z",
-          "wordCount": 899,
+          "wordCount": 870,
           "title": "萝卜刀真的太危险了,于是我用Cocos做了一个",
           "imageUrl": null
         },
@@ -782,7 +792,7 @@
           "description": "theme: serene-rose\nhighlight: ascetic\n面试\n面试前端时，我们经常会被问到：你能讲一下vue的生命周期吗？\n你可能会这么说：vue的生命周期有beforeCreate、created、beforeMount、mounted......\n面试官可能会告诉你：可以了，回去等面试结果通知吧！！！\n如果这时你还能讲一讲vue生命周期的执行原理，这岂不是能在面试中有所加分，不然，你拿什么与别人与众不同\n要想深入了解vue的生命周期，首先让我们看到vue源码\nVue生命周期源码解析\ncallHook函数\n在vue源码lifecycle.ts文件下有这么一个方法：\n//lifecycle.ts\nexport function callHook(\n  vm: Component,\n  hook: string,\n  args?: any[],\n  setContext = true\n) {\n  // #7573 disable dep collection when invoking lifecycle hooks\n  pushTarget()\n  const prev = currentInstance\n  setContext && setCurrentInstance(vm)\n  const handlers = vm.$options[hook]\n  const info = `${hook} hook`\n  if (handlers) {\n    for (let i = 0, j = handlers.length; i < j; i++) {\n      invokeWithErrorHandling(handlers[i], vm, args || null, vm, info)\n    }\n  }\n  if (vm._hasHookEv…",
           "link": "https://juejin.cn/post/7290837333926019091",
           "publishedOn": "2023-10-17T14:38:45.000Z",
-          "wordCount": 1699,
+          "wordCount": 1721,
           "title": "面试时这样回答Vue生命周期，面试官说：你明天直接来上班！！！",
           "imageUrl": null
         },
@@ -792,7 +802,7 @@
           "description": "前言： 在有了获取手机摄像头权限并且记录当前画面的前置知识以后，我们现在已经可以进行下一步实现一个仿微信扫一扫的功能了。\ntips: 如果你是直接看的本文，对如何打开摄像头拍照这个功能还不太熟悉，请移步 🎁前端如何打开摄像头拍照。这是你阅读本篇的必需前置知识。\n一. 效果预览\n这里先简单放一下整体界面效果，接下来带大家一步一步分析其中的功能如何实现。\n\n\n本篇将重点讲解多张二维码识别的处理场景。\n二. 简单了解二维码\n现在流行使用的二维码是 qrcode，其中 qr 两个字母其实就是 quick response 的缩写，简单来说就是快速响应的意思。三个角用来定位，黑点表示二进制的1，白色点代表0。（这里感兴趣可以自行了解) 它的本质其实就是将一个地址链接利用某种约定好的规则隐藏到一个图片当中，\n\n\n\n我们可以利用 chrome 自带的创建当前网站二维码的功能快速体验一下。\n\n你可以用手机自带的二维码扫码软件扫一下这个二维码，它将会将你引导到我掘金的个人主页。\n\n\n\n细心的你可能会发现二维码下面已经给你提示了你准备保存的链接地址，现在你观察一下浏览器地址栏是否正对应下面这个地址呢？\n\n三. 实现扫码本地图片功能\n我们不需要深入了解这个二维码的转换规则，我们可以直接选用现有的插件即可完成识别功能。 这里我们选用 antfu 大佬的轮子。这里我们不过多介绍，你只需要它可以识别出图片中的二维码即可。如果感兴趣，这是具体仓库地址 qr-sanner-wechat。\n首先安装 npm i qr-scanner-wechat。\n它的使用方法也十分简单，这个依赖导出了一个方法，我们直接引入这个方法即 import { scan } from 'qr-scanner-wechat。\n这个函数可以接收一个 image 元素或者 canvas 元素作为参数，并且返回一个 promise 类型…",
           "link": "https://juejin.cn/post/7290813210276724771",
           "publishedOn": "2023-10-17T11:49:51.000Z",
-          "wordCount": 2378,
+          "wordCount": 2400,
           "title": "前端实现微信扫一扫的思路",
           "imageUrl": null
         },
@@ -802,7 +812,7 @@
           "description": "代码背景\n本次分享基于一次线上环境的卡顿事故，客户数据体量过大导致的页面卡顿甚至页面直接崩溃的问题。现在我们将会把此次事故抽象成为大家更好理解的案例，从而来进行分析和解决。\n同时希望大家在阅读完之后可以了解到页面卡顿背后的底层原因，还有任务切片的解决原理！\n<body>\n    <input type=\"text\">\n    <button id=\"my-button\">执行任务</button>\n    <!-- box容器 -->\n    <div id=\"box\" style=\"height:500px;width:400px;overflow: auto;margin-top:24px;\">\n</body>\n\n// box容器溢出滚动\nconst box = document.getElementById('box')\nfor(let i=0;i<1000;i++){\n    const myText = document.createElement('h2')\n    myText.innerText = i\n    box.appendChild(myText)\n}\n\n// 执行任务\nconst myButton = document.getElementById('my-button')\nmyButton.addEventListener('click',load)\nfunction load() {\n  const total = 300000;\n  for (let i = 0; i < total; i++) {\n      console.log(i)\n  }\n}\n\n点击执行任务按钮会发现，我们不仅不能和输入框进行交互，连box容器区域的滚动也不再有响应，整个页面卡顿住了，直到load任务执行完成，页面才恢复响应，输入框才能正常使用，box容器区域也能…",
           "link": "https://juejin.cn/post/7290753121702215691",
           "publishedOn": "2023-10-17T07:43:15.000Z",
-          "wordCount": 1166,
+          "wordCount": 1173,
           "title": "面试官：做过性能优化？我：任务切片！",
           "imageUrl": null
         },
@@ -812,7 +822,7 @@
           "description": "title: JS\ntitleTemplate: 两数组内容比较\ntheme: channing-cyan\n题目\n给定两个数组，判断两数组内容是否相等。\n不使用排序\n不考虑元素位置\n例：\n[1, 2, 3] 和 [1, 3, 2] // true\n[1, 2, 3] 和 [1, 2, 4] // false\n\n\n思考几秒：有了😀😀\n1. 直接遍历✍\n直接遍历第一个数组，并判断是否存在于在第二个数组中\n求差集, 如果差集数组有长度，也说明两数组不等（个人感觉比上面的麻烦就不举例了）\nconst arr1 =  [\"apple\", \"banana\", 1]\nconst arr2 =  [\"apple\", 1, \"banana\"]\n\nfunction fn(arr1, arr2) {\n  // Arrary.some: 有一项不满足 返回false\n  // Arrary.indexOf: 查到返回下标，查不到返回 -1\n  if (arr1.length !== arr2.length) {\n    return false;\n  }\n  return !arr1.some(item => arr2.indexOf(item)===-1)\n}\n\nfn(arr1,arr2) // true\n\n细心的小伙伴就会发现：NaN 会有问题\nconst arr1 =  [\"apple\", \"banana\", NaN]\nconst arr2 =  [\"apple\", NaN, \"banana\"]\n\nfunction fn(arr1, arr2) {\n  if (arr1.length !== arr2.length) {\n    return false;\n  }\n  return !arr1.some(item => arr2.indexOf(item)===-1)\n}\n\nfn(arr…",
           "link": "https://juejin.cn/post/7290786959441117243",
           "publishedOn": "2023-10-17T07:26:43.000Z",
-          "wordCount": 2608,
+          "wordCount": 2625,
           "title": "面试官：如何判断两个数组的内容是否相等",
           "imageUrl": null
         },
@@ -822,7 +832,7 @@
           "description": "highlight: a11y-dark\ntheme: cyanosis\n引言\nES6（ECMAScript 2015）引入了许多新的功能和语法，其中一些功能可能相对较冷门，但非常实用。本文将介绍一些这样的高级技巧，包括\nObject.entries()\nObject.fromEntries()\nSymbol类型和Symbol属性\nWeakMap和WeakSet\nPromise.allSettled()\nBigInt\nArray.of\nArray.from\n.at和flat\n1.  Object.entries()和Object.fromEntries()\nObject.entries()方法返回一个给定对象自身可枚举属性的键值对数组。\nObject.fromEntries()方法将键值对列表转换为一个对象。\n当使用Object.entries()时，可以传入一个对象作为参数。这个对象可以是任何具有可枚举属性的对象。例如：\nconst obj = { a: 1, b: 2, c: 3 };\n\nconst entries = Object.entries(obj);\nconsole.log(entries); // [[\"a\", 1], [\"b\", 2], [\"c\", 3]]\n\n在这个例子中，我们将一个包含三个属性的对象传递给Object.entries()方法，并将返回的结果存储在entries变量中。entries变量现在是一个包含键值对数组的数组。\n同样地，当使用Object.fromEntries()时，可以传入一个键值对数组作为参数。这个数组中的每个元素都是一个包含键和值的数组。例如：\nconst entries = [[\"a\", 1], [\"b\", 2], [\"c\", 3]];\n\nconst obj = Object.fromEntries(entries);\nc…",
           "link": "https://juejin.cn/post/7290751877734776893",
           "publishedOn": "2023-10-17T07:21:31.000Z",
-          "wordCount": 1613,
+          "wordCount": 1606,
           "title": "ES6的一些高级技巧",
           "imageUrl": null
         },
@@ -832,7 +842,7 @@
           "description": "简介\n大家好，前端小白一枚，目前接触后台管理系统比较多，经常遇到不同对象的增删改查的接口，如何对Api进行一个有比较好的管理是个问题。在学习偏函数的时候有了灵感，想到一个不错的API管理方案，并应用在项目一个模块当中，并且开发效率和维护性可读性都很不错，和大家分享一下~\n当前项目的前端API管理方案\n// 封装的接口\nexport function obj1Func1(){}\nexport function obj1Func2(){}\nexport function obj2Func3(){}\nexport function obj2Func4(){}\n\n// 引入方式\nimport { obj1Func1, obj1Func2, obj2Func3, obj2Func4 } from 'xxx'\n\n// 使用方式\nconst params = {...}\nawait obj1Func1(params)\n\n当接口多了之后，我们管理接口(查找)是一件很麻烦且废眼睛的事，需要一直翻，注释看不过来，维护性和可读性差。\n统一export方式\n// 封装的接口\nfunction obj1Func1(){}\nfunction obj1Func2(){}\nfunction obj2Func3(){}\nfunction obj2Func4(){}\n// 导出接口\nexport {\n    obj1Func1,//注释\n    obj1Func2,//注释\n    obj2Func3,//注释\n    obj2Func4,//注释\n    ...\n}\n\n// 引入方式\nimport { obj1Func1, obj1Func2, obj2Func3, obj2Func4 } from 'xxx'\n\n// 使用方式\nconst params = {...}\nawait obj1Func1(pa…",
           "link": "https://juejin.cn/post/7290558277666930744",
           "publishedOn": "2023-10-17T02:21:37.000Z",
-          "wordCount": 2022,
+          "wordCount": 2048,
           "title": "这个前端Api管理方案会更好？",
           "imageUrl": null
         },
@@ -842,18 +852,8 @@
           "description": "难以置信，一个小小的需求让我捣鼓出一个提效的网站来\n需求介绍\n事情是这样的，有个群友在业务当中碰到一个小小的需求，需求是这样的: 页面当中存在多个输入框，输入框的 value 值是一个数值组成的字符串（盲猜应该是身份证号码），这个字符串的位数是 15 位或者是 18 位，例如:'621848063680370'(15 位)和'621848063688370808'(18 位)，然后默认的值是这样的，现在问题来了，需求希望在这些数值中插入空白符号，比如 15 位的数字就按照 6 + 6 + 3 的格式分隔，分隔的时候需要使用空白符号。比如'621848063680370'分隔后应该变成'621848 063680 370',也就是数字位数到了第 6 位就加个空白符号分隔，...依次类推，而 18 位数字的分割规则则是:6 + 4 + 4 + 4。比如'621848063688370808'应该分隔成'621848 0636 8837 0808'。\n这个需求就是对字符串的处理，提到分隔替换，那么我们就可以想到强大的字符串替换方法 replace，这个方法可以接受 2 个参数，一个参数通常是一个正则表达式，第二个参数则是一个回调函数，用于定义替换后返回字符串。因此，我的第一个想法就是使用正则表达式去处理，如何处理呢？\n原理分析\n首先我们需要去理解这个规则，从需求我们可以发现，不同的位数，规则就会有所不同，因此我们可以提前用一个数据来表示这种规则，为了保持良好的扩展性，我设计了如下字段:\ntype spaceRule = {\n  digit: number; // 位数\n  rule: RegExp; //规则\n  symbolNumber: number; // 插入符号数量\n  symbolName: string; // 插入符号\n};\n\n可以看到，我设计了四个参数，正如注释…",
           "link": "https://juejin.cn/post/7290474926943010851",
           "publishedOn": "2023-10-16T13:33:45.000Z",
-          "wordCount": 4604,
+          "wordCount": 4620,
           "title": "难以置信，一个小小的需求让我捣鼓出一个提效的网站来",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7290226270641618979",
-          "author": "张鑫旭",
-          "description": "以下内容是2023年7月17~10月16日自己每周学习的记录\n第29周 7.17-7.23\n这周在项目中使用了一种新的布局。\n就是下图所示的布局效果。\n\n在过去，这种图片固定比例的，宽度自适应的布局都至少只要2层以上的标签，这一次，使用了容器元素和全新的cqw单位，可以一层标签即实现最终的效果。\n相关实现已经整理成文，有兴趣可以访问这里：“CSS高宽不等图片固定比例布局的三重进化”。\n第30周 7.24-7.30\n本周研究了了一个新的CSS属性text-wrap，目前仅Chrome浏览器支持，兼容性如下图所示：\n\n其中名为balance的属性值很有趣，可以让div元素中的内联元素尽可能宽度一致排列，布局差异如下所示：\n\n这个属性其实很有用，例如类似朋友圈点赞的那种布局效果，目前的实现都是优先第一行显示的。\n\n有了text-wrap:balance属性后，就可以是下图所示的布局效果，体验会更好。\n\n更多内容可以访问这里了解。\n第31周 7.31-8.6\n在做项目的时候，偶然看到有同事的CSS代码中对samp标签样式进行了定义，然后研究了下这个已经没用过的HTML标签，发现还是一个系列，可以用来帮助代码文本的语义化呈现，具体如下：\nkbd: 键盘输入的文字内容\nsamp: 范例输出\ncode: 计算机代码输出\nvar: 变量与自变量实例\n平时只用过 code 标签 ，结果没想到还有其他类似HTML属性，现代浏览器全部都支持。\n更详细的内容我已经这里成文章了，有兴趣的可以访问这里了解。\n第32周 8.7-8.13\n本周学习了两个HTML全局属性，nonce和popover属性。\nnonce与安全相关，配合meta元素的CSP设置，可以决定哪个内联JS执行，哪个内联<script›元素不执行。\n假设页面有如下所示的代码：\n<meta http-equiv=\"Content-Security-Policy\" content=\"script-src 'nonce-NDhkODkxMzYtNGUxZS00N2NjLTk1YTItNWMyOTM4YzdhZGJj'\">\n<script nonce=\"NDhkODkxMzYtNGUxZS00N2NjLTk1YTItNWMyOTM4YzdhZGJj\">// …</script>\n\n则此时，只有nonce值有设置，且值匹配的",
-          "link": "https://juejin.cn/post/7290226270641618979",
-          "publishedOn": "2023-10-16T07:57:46.000Z",
-          "wordCount": 1539,
-          "title": "我最近3个月的前端专业学习记录",
           "imageUrl": null
         }
       ]
@@ -864,12 +864,22 @@
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
         {
+          "id": "7293029930089283594",
+          "author": "星曈",
+          "description": "[7018942344208580646#1024一起掘金#] \nUU们，为什么安装的eclipse的默认编码方式是GBK啊？我想了一周了没想明白？国外公司这么好？适配国内编码？改个UTF-8编码格式给我一顿找找",
+          "link": "https://juejin.cn/pin/7293029930089283594",
+          "publishedOn": "2023-10-23T09:27:20.000Z",
+          "wordCount": 525,
+          "title": "[7018942344208580646#1024一起掘金#] UU们，为什么安装的eclipse的默认编码方式是GBK啊？我想了一周了没想明白？国外公司这么好？适配国内编码？改个UTF-8编码...",
+          "imageUrl": null
+        },
+        {
           "id": "7292990906109313033",
           "author": "用户4200698514654",
           "description": "语雀挂了这么久，你们受影响了么？ [7018942344208580646#1024一起掘金#] #语雀挂了#",
           "link": "https://juejin.cn/pin/7292990906109313033",
           "publishedOn": "2023-10-23T09:11:57.000Z",
-          "wordCount": 527,
+          "wordCount": 528,
           "title": "语雀挂了这么久，你们受影响了么？ [7018942344208580646#1024一起掘金#] #语雀挂了#",
           "imageUrl": null
         },
@@ -919,7 +929,7 @@
           "description": "打卡，昨天在tailwind-magic实现了，unocss的attributify的支持，写起来贼爽😬",
           "link": "https://juejin.cn/pin/7291957867040931875",
           "publishedOn": "2023-10-21T03:12:36.000Z",
-          "wordCount": 531,
+          "wordCount": 534,
           "title": "打卡，昨天在tailwind-magic实现了，unocss的attributify的支持，写起来贼爽😬",
           "imageUrl": null
         },
@@ -929,7 +939,7 @@
           "description": "有没有大佬了解 power Apps 开发平台的。我想在 vcode 编辑开发，安装了Power Platform Tools 插件，也配置了公司的环境，但是用这个 pac paportal list 获取列表，没有数据。我想新创建一个项目，该怎么去做啊",
           "link": "https://juejin.cn/pin/7291830798160052278",
           "publishedOn": "2023-10-20T02:49:58.000Z",
-          "wordCount": 575,
+          "wordCount": 578,
           "title": "有没有大佬了解 power Apps 开发平台的。我想在 vcode 编辑开发，安装了Power Platform Tools 插件，也配置了公司的环境，但是用这个 pac paportal list 获取列...",
           "imageUrl": null
         },
@@ -959,7 +969,7 @@
           "description": "你们都用什么开发工具",
           "link": "https://juejin.cn/pin/7291135064842158114",
           "publishedOn": "2023-10-18T08:00:51.000Z",
-          "wordCount": 526,
+          "wordCount": 525,
           "title": "你们都用什么开发工具",
           "imageUrl": null
         },
@@ -969,7 +979,7 @@
           "description": "[7073670907851440160#新人报道#] 大神们 用homebrew 是不兼容arm吗？  下载jkd8时显示这样\nopenjdk@8: The x86_64 architecture is required for this software.\nError: openjdk@8: An unsatisfied requirement failed this build.\n求解答",
           "link": "https://juejin.cn/pin/7290848097159102505",
           "publishedOn": "2023-10-17T16:40:48.000Z",
-          "wordCount": 584,
+          "wordCount": 582,
           "title": "[7073670907851440160#新人报道#] 大神们 用homebrew 是不兼容arm吗？ 下载jkd8时显示这样 openjdk@8: The x86_64 architecture is required for this software....",
           "imageUrl": null
         },
@@ -979,7 +989,7 @@
           "description": "打卡打卡，今天周二",
           "link": "https://juejin.cn/pin/7290733884136030242",
           "publishedOn": "2023-10-17T03:54:52.000Z",
-          "wordCount": 533,
+          "wordCount": 536,
           "title": "打卡打卡，今天周二",
           "imageUrl": null
         },
@@ -989,7 +999,7 @@
           "description": "#1024一起掘金#   新增一个函数节点代码编辑模式",
           "link": "https://juejin.cn/pin/7290494120206909492",
           "publishedOn": "2023-10-16T17:14:17.000Z",
-          "wordCount": 527,
+          "wordCount": 530,
           "title": "#1024一起掘金# 新增一个函数节点代码编辑模式",
           "imageUrl": null
         },
@@ -999,7 +1009,7 @@
           "description": "发现一款非常好用的云文档，不论记笔记、写文档、画脑图、做计划、管项目、构建知识库还是高效团队协作，都比以前事半功倍，不论个人用还是团队用都很不错，推荐给你！\nhttps://www.wolai.com/signup?invitation=C2ZS3U2Z",
           "link": "https://juejin.cn/pin/7290382189992427559",
           "publishedOn": "2023-10-16T09:28:48.000Z",
-          "wordCount": 521,
+          "wordCount": 524,
           "title": "发现一款非常好用的云文档，不论记笔记、写文档、画脑图、做计划、管项目、构建知识库还是高效团队协作，都比以前事半功倍，不论个人用还是团队用都很不错，推荐...",
           "imageUrl": null
         },
@@ -1019,7 +1029,7 @@
           "description": "https://github.com/Simon-He95/fast-create-variable\n这个插件一定会火起来的🥺",
           "link": "https://juejin.cn/pin/7289664651364794402",
           "publishedOn": "2023-10-15T08:20:51.000Z",
-          "wordCount": 532,
+          "wordCount": 535,
           "title": "https://github.com/Simon-He95/fast-create-variable 这个插件一定会火起来的🥺",
           "imageUrl": null
         },
@@ -1029,7 +1039,7 @@
           "description": "大的来了，一波更新完效率提升X倍",
           "link": "https://juejin.cn/pin/7289397650387025977",
           "publishedOn": "2023-10-14T03:06:29.000Z",
-          "wordCount": 535,
+          "wordCount": 538,
           "title": "大的来了，一波更新完效率提升X倍",
           "imageUrl": null
         },
@@ -1039,7 +1049,7 @@
           "description": "基于微信测试号的AI机器人，支持谷歌搜索引擎插件：https://github.com/anhao/AIChatBot/",
           "link": "https://juejin.cn/pin/7288992783582281728",
           "publishedOn": "2023-10-13T03:33:12.000Z",
-          "wordCount": 520,
+          "wordCount": 523,
           "title": "基于微信测试号的AI机器人，支持谷歌搜索引擎插件：https://github.com/anhao/AIChatBot/",
           "imageUrl": null
         },
@@ -1049,18 +1059,8 @@
           "description": "DevOps相对关注运维自动化,较少涉及复杂算法。\nDevOps更专注基础架构和工程流程。\nDevOps的工作重心在于搭建工程化系统,而不是产品功能或业务创新。\nDevOps工程师相对更专注技术展开,对商业策略和产品决策参与较少。\nDevOps也主要在运维团队内部协作。和产品、设计等部门协作的机会较少。",
           "link": "https://juejin.cn/pin/7288964017351458857",
           "publishedOn": "2023-10-13T01:16:05.000Z",
-          "wordCount": 528,
+          "wordCount": 531,
           "title": "DevOps相对关注运维自动化,较少涉及复杂算法。 DevOps更专注基础架构和工程流程。 DevOps的工作重心在于搭建工程化系统,而不是产品功能或业务创新。 DevOps工程...",
-          "imageUrl": null
-        },
-        {
-          "id": "7288509436899934267",
-          "author": "荒唐的尼玛",
-          "description": "jym，[呲牙]看看你们浏览器的收藏夹有啥有趣的网站，或者很实用的工具网站",
-          "link": "https://juejin.cn/pin/7288509436899934267",
-          "publishedOn": "2023-10-11T07:44:37.000Z",
-          "wordCount": 519,
-          "title": "jym，[呲牙]看看你们浏览器的收藏夹有啥有趣的网站，或者很实用的工具网站",
           "imageUrl": null
         }
       ]
