@@ -23,7 +23,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1205,
+          "wordCount": 1207,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "本文介绍三种改变音频播放音量的方法，其中还有一种方法直接改变音频AudioBuffer数据源的音量，说不定你哪天就会用到。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/",
           "publishedOn": "2023-10-09T14:50:57.000Z",
-          "wordCount": 1094,
+          "wordCount": 1095,
           "title": "JS改变AudioBuffer音量并下载为新audio音频",
           "imageUrl": null
         }
@@ -179,12 +179,22 @@
       "siteUrl": "https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/65354d52aa7d4f2b303c8f43",
+          "author": null,
+          "description": "解决 Dall-E 生成图一致性问题\n1/ 问题\n通过和Dall-E 对话来生成完美目标图的过程, 经常遇到一个问题, 想要指定中间某个轮次的某张图做细节调整时, 常常会得到一个人物和环境都变样的新图, 而不是自己想要的\"细微调整\"\n2/ 解法\nhttps://x.com/xiaohuggg/status/1715920774010372133?s=20\n介绍了一个思路, 给Dall-E 生成的图片赋予一个唯一的编号, 这样后面再基于某张图片做调整时, 就可以通过这个编号来唯一指定, 从而提升一致性输出效果\n3/ 实践\nPrompt 如下:\n━━━━━━━━━━━━━━━━━━\n你会和用户的交互过程中，检测用户Prompt末尾是否有数字序号，如有，则在每一轮次生成的图片描述后面，做序号的增长。\n一个日本年轻女生穿着和服，夜晚站在海边吹着海风，正视镜头，头发微微吹动，背景有一个烟火在天空绽放 -001\n━━━━━━━━━━━━━━━━━━\n这样生成的图片,每张都会带有一个唯一编号(002, 003, ...), 后续如果要针对某张图做细微调整，只需说:\n━━━━━━━━━━━━━━━━━━\n基于图片004, 让人物微笑, 正视镜头\n━━━━━━━━━━━━━━━━━━",
+          "link": "https://m.okjike.com/originalPosts/65354d52aa7d4f2b303c8f43",
+          "publishedOn": "2023-10-22T16:26:58.000Z",
+          "wordCount": 500,
+          "title": "发布了: 解决 Dall-E 生成图一致性问题 1/ 问题 通过和Dall-E 对话来生成完美目标图的过程, 经常遇到一个问题, 想要指定中间某个轮次的某张图做细节调整时, 常常...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FpUKSOzu9snxj0bd1bmVGyZOqY6Gv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/653345be97aae411ebd6efa4",
           "author": null,
           "description": "“放过”与“放下”是有分别的。\n其分别何在呢？大概“放过”只是暂时躲闪，暂时潜隐，根底还在；“放下”则中心没事，更无系缚了。\n遇到难关， 莫放过， 冲上去搞清楚，才能放下。",
           "link": "https://m.okjike.com/originalPosts/653345be97aae411ebd6efa4",
           "publishedOn": "2023-10-21T03:30:06.000Z",
-          "wordCount": 447,
+          "wordCount": 449,
           "title": "发布了: “放过”与“放下”是有分别的。 其分别何在呢？大概“放过”只是暂时躲闪，暂时潜隐，根底还在；“放下”则中心没事，更无系缚了。 遇到难关， 莫放过...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -266,16 +276,6 @@
           "publishedOn": "2023-10-16T15:40:03.000Z",
           "wordCount": 440,
           "title": "发布了: 不要沉溺于信息消费，要追求知识生产。",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/652ce1bd99f2123c74039542",
-          "author": null,
-          "description": "时间，比金子还要宝贵。\n你关注什么，你就会变成什么样的人。\n所以，不要去关注战争冲突，不要去关注年收入超过1个亿的人数，不要去关注隔壁邻居又买了什么。\n这些你了解得再透彻，你的水平也不会发生任何改变。\n找到最重要的目标，计算自己的时间成本，在具体的工作中创造心流的体验，珍惜每天的第三个8小时，才是你可以做的。\n我看到过一句话，在最后和你分享：\n如果你买个摄像头放在家里，用上帝视角观察自己每天都在做什么，你会发现——你富不起来真是太正常了。\n时间是不可再生的资源。\n至少，你要对得起自己的时间吧。\n－－刘润。",
-          "link": "https://m.okjike.com/originalPosts/652ce1bd99f2123c74039542",
-          "publishedOn": "2023-10-16T07:09:49.000Z",
-          "wordCount": 442,
-          "title": "发布了: 时间，比金子还要宝贵。 你关注什么，你就会变成什么样的人。 所以，不要去关注战争冲突，不要去关注年收入超过1个亿的人数，不要去关注隔壁邻居又买了...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         }
       ]
@@ -879,7 +879,7 @@
           "description": "[7018942344208580646#1024一起掘金#] \n今天搞定的排序功能",
           "link": "https://juejin.cn/pin/7292439225064620082",
           "publishedOn": "2023-10-22T13:01:59.000Z",
-          "wordCount": 529,
+          "wordCount": 530,
           "title": "[7018942344208580646#1024一起掘金#] 今天搞定的排序功能",
           "imageUrl": null
         },
@@ -939,7 +939,7 @@
           "description": "你们都用什么开发工具",
           "link": "https://juejin.cn/pin/7291135064842158114",
           "publishedOn": "2023-10-18T08:00:51.000Z",
-          "wordCount": 523,
+          "wordCount": 519,
           "title": "你们都用什么开发工具",
           "imageUrl": null
         },
@@ -979,7 +979,7 @@
           "description": "发现一款非常好用的云文档，不论记笔记、写文档、画脑图、做计划、管项目、构建知识库还是高效团队协作，都比以前事半功倍，不论个人用还是团队用都很不错，推荐给你！\nhttps://www.wolai.com/signup?invitation=C2ZS3U2Z",
           "link": "https://juejin.cn/pin/7290382189992427559",
           "publishedOn": "2023-10-16T09:28:48.000Z",
-          "wordCount": 522,
+          "wordCount": 518,
           "title": "发现一款非常好用的云文档，不论记笔记、写文档、画脑图、做计划、管项目、构建知识库还是高效团队协作，都比以前事半功倍，不论个人用还是团队用都很不错，推荐...",
           "imageUrl": null
         },

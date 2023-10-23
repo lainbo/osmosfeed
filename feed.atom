@@ -1,10 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-10-22T21:52:42.716Z</id>
+    <id>urn:2023-10-23T01:14:54.360Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-10-22T21:52:42.716Z</updated>
+    <updated>2023-10-23T01:14:54.360Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[发布了: 解决 Dall-E 生成图一致性问题 1/ 问题 通过和Dall-E 对话来生成完美目标图的过程, 经常遇到一个问题, 想要指定中间某个轮次的某张图做细节调整时, 常常...]]></title>
+        <id>https://m.okjike.com/originalPosts/65354d52aa7d4f2b303c8f43</id>
+        <link href="https://m.okjike.com/originalPosts/65354d52aa7d4f2b303c8f43"/>
+        <updated>2023-10-22T16:26:58.000Z</updated>
+        <summary type="html"><![CDATA[解决 Dall-E 生成图一致性问题
+1/ 问题
+通过和Dall-E 对话来生成完美目标图的过程, 经常遇到一个问题, 想要指定中间某个轮次的某张图做细节调整时, 常常会得到一个人物和环境都变样的新图, 而不是自己想要的"细微调整"
+2/ 解法
+https://x.com/xiaohuggg/status/1715920774010372133?s=20
+介绍了一个思路, 给Dall-E 生成的图片赋予一个唯一的编号, 这样后面再基于某张图片做调整时, 就可以通过这个编号来唯一指定, 从而提升一致性输出效果
+3/ 实践
+Prompt 如下:
+━━━━━━━━━━━━━━━━━━
+你会和用户的交互过程中，检测用户Prompt末尾是否有数字序号，如有，则在每一轮次生成的图片描述后面，做序号的增长。
+一个日本年轻女生穿着和服，夜晚站在海边吹着海风，正视镜头，头发微微吹动，背景有一个烟火在天空绽放 -001
+━━━━━━━━━━━━━━━━━━
+这样生成的图片,每张都会带有一个唯一编号(002, 003, ...), 后续如果要针对某张图做细微调整，只需说:
+━━━━━━━━━━━━━━━━━━
+基于图片004, 让人物微笑, 正视镜头
+━━━━━━━━━━━━━━━━━━]]></summary>
+        <author>
+            <name>李继刚的即刻动态</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[7018942344208580646#1024一起掘金#] 今年手搓的一个记录代码 CRUD 操作的 IDEA 插件，它能协助识别有潜在问题的 SQL，和获取 GPT 优化建议。地址：https://plu...]]></title>
         <id>7292552003015999488</id>
@@ -1921,25 +1946,6 @@ nonce与安全相关，配合meta元素的CSP设置，可以决定哪个内联JS
 则此时，只有nonce值有设置，且值匹配的]]></summary>
         <author>
             <name>张鑫旭</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[发布了: 时间，比金子还要宝贵。 你关注什么，你就会变成什么样的人。 所以，不要去关注战争冲突，不要去关注年收入超过1个亿的人数，不要去关注隔壁邻居又买了...]]></title>
-        <id>https://m.okjike.com/originalPosts/652ce1bd99f2123c74039542</id>
-        <link href="https://m.okjike.com/originalPosts/652ce1bd99f2123c74039542"/>
-        <updated>2023-10-16T07:09:49.000Z</updated>
-        <summary type="html"><![CDATA[时间，比金子还要宝贵。
-你关注什么，你就会变成什么样的人。
-所以，不要去关注战争冲突，不要去关注年收入超过1个亿的人数，不要去关注隔壁邻居又买了什么。
-这些你了解得再透彻，你的水平也不会发生任何改变。
-找到最重要的目标，计算自己的时间成本，在具体的工作中创造心流的体验，珍惜每天的第三个8小时，才是你可以做的。
-我看到过一句话，在最后和你分享：
-如果你买个摄像头放在家里，用上帝视角观察自己每天都在做什么，你会发现——你富不起来真是太正常了。
-时间是不可再生的资源。
-至少，你要对得起自己的时间吧。
-－－刘润。]]></summary>
-        <author>
-            <name>李继刚的即刻动态</name>
         </author>
     </entry>
     <entry>
