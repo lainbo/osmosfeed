@@ -23,7 +23,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1207,
+          "wordCount": 1205,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -667,6 +667,16 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
+          "id": "https://juejin.cn/post/7293176193322237990",
+          "author": "ikoala",
+          "description": "大家好，我是考拉！\n这是我历时 1 个多月翻译的 Nest.js V10.x 版本中文文档。就在 1024 这天上线吧！网站访问速度还是蛮快的哦！\n网站地址：http://nestjs.inode.club\n\n\n之前写过 Nest.js系列文章：\nNest.js 手把手带你实战-项目创建&数据库操作\nNest.js 手把手带你实战-实现注册、扫码登陆、jwt认证等\n基于Nest.js+TypeORM实战系列3（项目已开源）\nNest.js 手把手带你实战： Node.js中使用Redis原来这么简单\n感兴趣可以看看，当年用的 Nest.js 版本比较老，后面小伙伴们都催新版本的一些用法， Nest.js V8.x -  V10.x变更的内容也比较多，大家可以先看翻译的中文文档，后面有时间我会专门出一期文章说明更新的内容。后面不忙也会持续更新 Nest.js 系列文章。\n中文文档刚上线，如果发现文档中有什么问题，欢迎指出，一定及时更新， 希望可以方便更多小伙伴。\n1024 程序员节日快乐，无BUG，祝大家都能早早下班！\n我这边也有一些Node Nest.js 技术交流交流群，感兴趣的可以加我的私人微信 ikoala520  进群，一起学习，共同进步。",
+          "link": "https://juejin.cn/post/7293176193322237990",
+          "publishedOn": "2023-10-24T03:56:54.000Z",
+          "wordCount": 770,
+          "title": "1024程序员节，Nest.js中文文档上线啦！（最新版本）",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7292428123849293887",
           "author": "写前端的刻猫猫",
           "description": "theme: cyanosis\n许多工程师都喜欢使用 Mac 进行开发工作，笔者也是如此，所以整理了一下个人觉得好用的软件和工具，以及相关的设置并分享出来，也欢迎在评论区交流想法👏。\nMacOS上有许多优秀的生产力软件和工具，加上更贴近 Linux 的使用习惯，赢得许多开发者的青睐，Windows PC 虽然无所不能，出于将工作和娱乐分开的目的，本人的 PC 已经完全变成了Steam启动器和原神启动器了（ 原神，启动!🤓）\nTL；DR（Too Long，Don‘t read - 太长不读）\n文章篇幅较长，直接列一个省流概括，， 如果有精力还是建议阅读下全文，每个软件我都给出推荐理由和介绍，都是个人体验过并最终留下来长期使用的。\nArc - 浏览器， Warp - 终端， Raycast - 启动器，Orbstack - 容器，Setapp - 软件订阅，CleanShotX - 截屏，OBS - 录屏推流，Gifox - Gif图制作， 1Password - 密码管理器，Bartender - 菜单栏管理，Downie - 视频下载，IINA / Infuse - 视频播放器，iRightMouse - 鼠标右键增强，PopClip / Bob - 鼠标工具\n浏览器\n因为浏览器在日常使用的频率非常高，且内容较多( 包括浏览器拓展和油猴脚本),故单独列举出来。\nArc\n目前已使用半年多，不少人说不久还是会换回 chrome 或者其他，但并没有，我相信他们都只是习惯了使用Chrome而不想折腾，但其实如果你稍微留意，会发现很多知名开发者都一直在使用 Arc 且评价相当不错，如 Anthony fu ，t3dotgg 等，油管教学博主有相当高的比例都在使用 Arc, 它绝不是一个好看的玩具，它值得你去尝试，合适不合适需要体验后才有发言权。\n实际上我都认真尝试过几乎市面上所有…",
@@ -682,7 +692,7 @@
           "description": "这几个月，想必大家都听到过一个新闻：\nSvelte 弃用 TypeScript，改用 JSDoc 了。\n\nTypeScript 我们知道，是用来给 JS 加上类型的，可以实现类型提示和编译时的类型检查。\n那 JSDoc 能够完成一样的功能么？Svelte 是出于什么原因弃用 TS 的呢？\n先不着急回答这个问题。\n我们总得先了解下 JSDoc：\n可能大家认为的 JSDoc 是这个东西：\n\n在代码的注释上加上类型的标识，然后通过 jsdoc 命令行工具，就可以直接生成文档。\n比如这样的文档：\n\n确实，这个是 JSDoc 最初的含义。\n但我们说的 JSDoc 并不是这个，而是 TS 基于 JSDoc 语法实现的，在注释里给代码添加类型的语法。\n文档在这里：\n\nts 支持在 js 文件的注释里，通过 JSDoc 的语法给它加上类型。\n至于有什么意义，那可就太多了。\n比如一个 JS 的配置文件，你想在写配置的时候能有提示，就可以用 JSDoc：\n\n这里注释里的 @type 就是 JSDoc 声明类型的语法。\n在 vite 文档里，你可以看到对 JSDoc 的支持：\n\n我们自己试一下：\nmkdir jsdoc-test\ncd jsdoc-test\nnpm init -y\n\n\n创建项目和 package.json。\n然后安装 typescript：\nnpm install --save-dev typescript\n\n创建 tsconfig.json 文件：\nnpx tsc --init\n\n\n生成的 tscconfig.json 太多注释了，我们删一下：\n\n然后创建 src/index.ts\nfunction add(a: number, b: number) {\n    return a + b;\n}\n\n这样在用到这个 add 的时候，就会做类型检查：\n\n在 tsconfig.json…",
           "link": "https://juejin.cn/post/7292437487011856394",
           "publishedOn": "2023-10-22T10:58:00.000Z",
-          "wordCount": 1699,
+          "wordCount": 1706,
           "title": "JSDoc 真能取代 TypeScript？",
           "imageUrl": null
         },
@@ -692,7 +702,7 @@
           "description": "theme: fancy\n💡Tips:不知道小伙伴在前端开发的时候有没有这样的困惑\n前端项目打包后，我打包过的静态资源是如何访问后端服务的？\n访问后端服务的时候难道不存在跨域的问题吗？如何解决的？\n假如我想自己简单修改下部署后的目录该如何去做？\n🥲其实不仅仅是你会有这样的疑惑，包括我在内刚接触前端的时候，由于没有后端的开发经验也会被这些问题所困扰，但是今天我们将一次性弄清楚这个问题，让我们前端的知识体系由点成线，由线成面~\n一.明确问题\n我们知道，我们平时在开发的时候一般都是使用proxy进行代理的，它的原理是：浏览器会先去访问本地的node服务器，然后node服务器再去代理到你要访问的后端api接口，但是我们可能平时没有node服务器的概念，因为node服务器在webpack中，我们一般是通过下面这种方式来设置\n\n但是我们的项目上线后这种方式就不能用了，（因为Node是我们本地开发的环境，并没有办法在线上使用。）其实，我们一般会通过后端的Nginx代理来解决跨域的问题，但是你知道前端的生产地址配置是什么吗？如何通过Nginx访问后端接口呢？是直接配置的类似于http://www.xxxx.com/api/aaa这样的路径呢？还是直接是一个相对路径/prod？要想搞清楚这些，首先就要了解什么是Nginx。\n二.什么是Nginx\n🐻是一个开源的高性能、轻量级的Web服务器和反向代理服务器，它具有事件驱动，异步非阻塞的架构，被广泛应用于构建高性能的网站，应用程序和服务。\n🤡在平时开发中我们经常听到正向代理和反向代理这两个名词，那么什么是反向代理，什么是正向代理哪？\n反向代理：服务器的IP是被屏蔽的，也就是说客户端不知道服务器真实的地址是哪个，客户端访问的地址或者域名是访问的Nginx服务器的地址。\n\n正向代理：和反向代理刚好相反，这个时候服务器不知道真正的客户端是哪个，…",
           "link": "https://juejin.cn/post/7291952951048060940",
           "publishedOn": "2023-10-21T05:05:08.000Z",
-          "wordCount": 1105,
+          "wordCount": 1112,
           "title": "一次性弄清前端上线和生产环境地址",
           "imageUrl": null
         },
@@ -712,7 +722,7 @@
           "description": "Telegram 宣布为其开发者提供了一项“能够在其中运行迷你应用”的新功能（ 迷你应用即 Mini App，下文中以“小程序”代替）。\n\n在 Telegram 的博客中，开发人员介绍可以使用 JavaScript 构建自己的迷你应用\n在一篇博客文章中，Telegram 的开发者写到“小程序提供了可替代互联网网站的灵活界面（create infinitely flexible interfaces that can be launched right inside Telegram）”。\n这项功能与在 Telegram 中已经运行了一段时间的机器人（Bot）有些类似，用户可以在其中获得相比机器人更进一步的使用体验，不仅能够在其中完成餐饮点单，电子支付，还可以向用户发送推送通知，或者继续调用目前正在通过机器人执行的任务。\n增加小程序这项功能对于 Telegram 来说是一个有意思的变化，在某种角度上也标志着 Telegram 正向着成为另一款“超级应用”的道路前进。超级应用由小程序的开放平台所构成，外部开发者可以在平台上运行各种小程序， “通过小程序打造自己的超级应用”这件事很可能是过去半年中与 iPhone 15/Twitter 更名齐名的技术讯息之一。\n截止目前，Telegram 大约拥有 8 亿日活跃用户。出于某些政治原因，它在许多主流移动社交工具所不能进入的国家地区（不论是发达国家还是发展中国家）有着相当大的优势，而且哪怕是像黑莓这种几乎早已被遗弃的手机上也能安装它。\n\nTelegram 的创始人 Pavel Durov\n当然，把自己打造成超级应用的雄心壮志并不仅仅局限于 Telegram。在某种角度，它的最大竞争对手可能是 Elon Musk 的 X（也就是更名后的 Twitter），他在很久以前就宣布了想把 X 改造成微信这种超级应用的雄韬伟略，但以目前引入小程序…",
           "link": "https://juejin.cn/post/7291853227246190642",
           "publishedOn": "2023-10-20T05:52:28.000Z",
-          "wordCount": 1118,
+          "wordCount": 1112,
           "title": "颠覆者：Telegram 凭借源自中国的云基础设施成为超级应用",
           "imageUrl": null
         },
@@ -732,7 +742,7 @@
           "description": "highlight: androidstudio\ntheme: channing-cyan\n设计目的\n为了解决前端项目部署之后，如何通知用户系统有新版本，并引导用户刷新页面以加载最新资源的问题。\n适用场景\n用户在浏览器中打开某 web 应用（通常是后台管理系统）很长时间且未刷新页面时，如果应用有新功能添加或问题修复，用户可能无法及时知道有新版发布。这样会导致用户继续使用旧版，影响用户体验和数据准确性，甚至出现程序报错。\n实现原理\n使用 Web Worker API 在浏览器后台轮询请求页面，不会影响主线程运行。\n命中协商缓存，对比本地和服务器请求响应头etag字段值。\n如果etag值不一致，说明有更新，则弹出更新提示，并引导用户手动刷新页面（例如弹窗提示），完成应用更新。\n当页面不可见时（例如切换标签页或最小化窗口），停止实时检测任务；再次可见时（例如切换回标签页或还原窗口），恢复实时检测任务。\n在本地 localStorage存入 _APP_ETAG_, 当etag值不一致时表示有新的版本，弹出更新提示框，同时更新本地存储的etag值\n安装使用\nnpm install version-polling --save\n\n使用\n这里只提供npm 依赖构建用法，也可以通过 script 引入，直接插入到 HTML\n\n// 在应用入口文件中使用: 如 main.js, app.jsx\nimport { createVersionPolling } from \"version-polling\";\n\ncreateVersionPolling({\n  appETagKey: \"__APP_ETAG__\",\n  pollingInterval: 5 * 60 * 1000, // 单位为毫秒-默认5分钟轮询一次\n  silent: process.env.NODE_ENV === \"development\", // 开发环境下不检测\n  onUpdate: (self) => {\n    // 当检测到有新版本时，执行的回调函数，可以在这里提示用户刷新页面\n    const result = confirm(\"页面有更新，点击确定刷新页面！\");\n    if (result) {\n      self.onRefresh();\n    } else {\n      self.onCancel();\n    }\n    // 强制更新可以用alert\n    // alert('有新版本，请刷新页面');\n  },\n})\n\n详细参数\n参数\n说明\n类型\n默认值\n\n\n\n\nappETagKey\nweb 应用更新唯一标识字段名\nstring\n_APP_ETAG_\n\n\npollingInterval\n轮询间隔，单位为毫秒，默认为 5 分钟\nnumber\n5 * 60 * 1000\n\n\nimmediate\n初始化后, 立即触发实时监测\nboolean\ntrue\n\n\nhtmlFileUrl\nweb 应用网站运行目录\nstring\n${location.origin}${location.pathname}\n\n\nsilent\n初始化后, 立即触发实时监测\nboolean\ntrue\n\n\nonUpdate\n更新检测的回调函数，可以自定义更新的逻辑\n(self) => void\n-\n\n\n\nversion-polling npm官方文档",
           "link": "https://juejin.cn/post/7291496777688023040",
           "publishedOn": "2023-10-19T07:38:13.000Z",
-          "wordCount": 1120,
+          "wordCount": 1042,
           "title": "解决前端部署之后，通知用户系统有新版本【version-polling】",
           "imageUrl": null
         },
@@ -752,7 +762,7 @@
           "description": "背景\n目前公司用的是基于 vue-cli4 开发的脚手架，在vue-cli的基础增加了业务开发的 多语言、多皮肤，以及接口请求，权限等解决方案，能快速搭建项目的基本结构。\n但随着技术的迭代，vue2.7/vue3的推出（composition-api），vite的发展，以及vue-cli的不维护，webpack5（缓存+模块联邦）的推出，目前这套脚手架确实有些老旧，需要升级。\n使用过 vue3+ts+vite 的开发体验还是很丝滑，但目前的公司的情况上这套解决方案，还面临一些问题。下面讨论一些方案的选择：\nvite\nvite带来的开发体验的提升，目前的生态发展也是不错的；\n使用 vite 搭建工程，但集成公司所有的组件库会有一些问题，而且很多插件还需重新开发，目前不适合迁移到vite。\nwebpack5\nwebpack5 带来的 cache 特性，是一个折中的方案，webpack 的兼容性不用多说，同时缓存也可以提高开发启动的速度，提升开发体验。同时可搭配 esbuild-loader 代替 babel-loader ，提升构建速度。\nvue3\nvue3的升级带来的生态割裂，导致组件库的如果直接想要迁移很麻烦。公司的组件库短期应该不会有 vue3 版本。\nvue2.7\nvue官方推出 vue2.7，虽然今年就不维护了，但可使用 composition-api，目前来说体验还是不错的，但有一些小问题不维护了，整体上还是值得升级的。\nts\nvue2.6 如果要使用 ts，要使用装饰器写法，这种风格也不再推荐；使用 composition-api 搭配 ts 体验还是不错的。ts 虽然一开始写起来有些痛苦，解决各种报错，但是长期来讲可大大提高项目的可维护性。\n基于以上情况的分析和讨论，我基于webpack5+vue2.7+typescript 搭建了项目脚手架，同时使用了 esb…",
           "link": "https://juejin.cn/post/7291477529779109928",
           "publishedOn": "2023-10-19T07:02:53.000Z",
-          "wordCount": 3119,
+          "wordCount": 3220,
           "title": "从0到1搭建webpack5+vue2.7+ts脚手架",
           "imageUrl": null
         },
@@ -762,7 +772,7 @@
           "description": "前言\n说起Pinia，熟悉vue3开发的程序员肯定不会陌生，甚至被vue官方推荐取代vuex，成为vue全家桶之一。\n疑惑\n还记得之前用 vuex 时，更改state还分同步和异步（这里有尤雨溪的回答https://www.zhihu.com/question/48759748） ，面试还被问过为什么...，当时也是不太理解，觉得肯定有他的道理，谁知看了pinia后，更改state同步异步都可以......\n回到正题：但我们真的需要Pinia/Vuex吗？Pinia/Vuex解决了什么问题？没有Pinia/Vuex前我们是怎么做的呢，会有什么问题？\n刨根\n对于以上问题，以下是本人的一些思考（有不足之处，还望赐教🙏）\n为什么需要Pinia，它解决了什么问题？先查下官网/别人怎么说；\n网上很多是说，Pinia 是 Vue.js 的轻量级状态管理库；\n官方文档如下描述：\n\n对于以上支撑观点，下面一个个来看，看下Pinia是否是必须的：\n1. Pinia 是 Vue.js 的轻量级状态管理库\n详阅vue官网关于状态管理 的文章，里面提到一个场景：多个组件共享一个共同的状态时，用vue原生的能力实现有点麻烦，文章推荐以下方法，将公用的数据提取到全局，这样需要的组件可以直接引用：\n// store.js\nimport { reactive } from \"vue\";\n\nexport const store = reactive({\n  count: 0,\n  // ...\n});\n\n<!-- ComponentA.vue -->\n<script setup>\nimport { store } from './store.js'\n</script>\n\n<template>From A: {{ store.count }}</template>\n\n<!-- ComponentB.vue …",
           "link": "https://juejin.cn/post/7291464815659106359",
           "publishedOn": "2023-10-19T03:54:43.000Z",
-          "wordCount": 1780,
+          "wordCount": 1909,
           "title": "前端文艺复兴：真的需要Pinia吗？",
           "imageUrl": null
         },
@@ -772,7 +782,7 @@
           "description": "theme: qklhk-chocolate\n当然除了 ‘+’ 拼接你也可以用模版字符串的方式，相对来说可能要好一些，但是如果字段太多的话，还是不太方便，所以这里介绍一种其他的方式，比如qs。\nqs是npm仓库所管理的包，可以通过npm install qs安装，因此我们可以直接通过require('qs')引用得到,qs.stringify()作用是将对象或者数组序列化成URL的格式。那么这句话是什么意思呢？\n我们先来看一下官方的用法\nUsage\nvar qs = require('qs');\nvar assert = require('assert');\n\nvar obj = qs.parse('a=c');\nassert.deepEqual(obj, { a: 'c' });\n\nvar str = qs.stringify(obj);\nassert.equal(str, 'a=c');\n\n非常简单，直接引入然后通过qs.stringify(),qs.parse() 就可以了。\n下面我们举两个例子：\n对象序列化\nlet obj = {\nmethods: 'query_num'\nid: 1,\nname: 'Lisa'\n}\nqs.stringify(obj)\n//   methods=query_stu&id=1&name=chenchen    这就是我们的传到服务器的url\n\n数组序列化\nlet arr = [1,3]\nqs.stringify({a:arr})\n// 'arr[0]=1&arr[1]=3'\n\n这种格式可以进行转为序列化，但是url中会带有数组的下标a[0]、a[1]，这并不是我们一般的处理办法。常用方法如下：\n// 常用并推荐使用\nlet arr = [1,3]\nqs.stringify({a:arr},{indices:false});\n// 'arr=1&arr=3' 这个格式，是比较常用的格式\n\n其中：indices:false，去除默认处理的方式。如果不写这个的话，则默认是第一种处理的方式(带下标)。\nqs.parse()则就是反过来的，将我们通过qs.stringify()序列化的对象或者数组转回去。\nlet url = 'id=1&name=chenchen'\nqs.parse(url)\n// {id:1，name:chenchen}  \n\n接下来看一个实例：\n// 根据业务id查询业务费用列表\nexport function commonBuzCostPage(params) {\n  return request({\n    url: `/departmentCost/commonBuzCostPage`,\n    method: 'get',\n    params,\n    paramsSerializer: params => {\n      return qs.stringify(params, {\n        indices: false\n      })\n    }\n  })\n}\n\nfetch(`${apiurl}/projiects?${qs.stringify(param)}`) \n.then(async response =>{\n    if (response.ok){\n        setList(await response.json())\n        }\n    })",
           "link": "https://juejin.cn/post/7291468863395954749",
           "publishedOn": "2023-10-19T02:57:13.000Z",
-          "wordCount": 1189,
+          "wordCount": 1114,
           "title": "前端传参如果参数过多你还会拼接在URL上嘛？",
           "imageUrl": null
         },
@@ -787,22 +797,12 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7291291652139499535",
-          "author": "嚣张农民",
-          "description": "theme: fancy\n1、从输入url到页面显示出来发生了什么\n1.DNS解析\n2.TCP连接\n3.发送HTTP请求\n4.服务器处理请求并返回需要的数据\n5.浏览器解析渲染页面\n解析HTML，生成DOM树，解析CSS，生成CSSOM树\n将DOM树和CSSOM树结合，生成渲染树(Render Tree)\nLayout(回流):根据生成的渲染树，进行回流(Layout)，得到节点的几何信息（位置，大小）\nPainting(重绘):根据渲染树以及回流得到的几何信息，得到节点的绝对像素\nDisplay:将像素发送给GPU，展示在页面上\n6.连接结束\n2、http状态码的了解\n1xx（临时响应）\n表示临时响应并需要请求者继续执行操作的状态代码\n2xx （成功）\n表示成功处理了请求的状态码。\n例：200 – 服务器成功返回网页\n3xx （重定向）\n表示要完成请求，需要进一步操作。 通常，这些状态代码用来重定向\n例：\n301 （永久移动） 请求的网页已永久移动到新位置。 服务器返回此响应时，会自动将请求者转到新位置。\n302 （临时移动） 服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来进行以后的请求。\n304 （未修改） 自从上次请求后，请求的网页未修改过。 服务器返回此响应时，不会返回网页内容。\n4xx（请求错误） 这些状态代码表示请求可能出错，妨碍了服务器的处理。\n例：404 – 请求的网页不存在\n5xx（服务器错误）\n这些状态代码表示服务器在尝试处理请求时发生内部错误。 这些错误可能是服务器本身的错误，而不是请求出错。\n例：\n500 （服务器内部错误） 服务器遇到错误，无法完成请求。\n503 （服务不可用） 服务器目前无法使用（由于超载或停机维护）。 通常，这只是暂时状态。\n3、http2.0的优点\n解析速度快\n服务器解析 HTTP1.1 的请求时，必须不断地…",
-          "link": "https://juejin.cn/post/7291291652139499535",
-          "publishedOn": "2023-10-19T01:48:41.000Z",
-          "wordCount": 2364,
-          "title": "中级前端必备知识点",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7291186181157535800",
           "author": "FrontEnd_Reese",
           "description": "theme: v-green\nhighlight: monokai\n前端工程化是什么？一提到工程化我们的第一反应往往就是 webpack。webpack 确实是前端工程化中重要的工具，但二者并不能划等号。\n其实顾名思义，前端，工程化，就是把前端做成一项工程。这其中的区别类似于，写一个简单的展示页面 = 小孩子搭积木，一个大型的项目 = 开发商盖房子。搭积木只需要简单的手工操作，而盖房子则需要的工程规划、设计、资源管理等一系列流程。\n前端工程化贯穿从编码、发布到运维的整个前端研发生命周期，一切以提高效率、降低成本、质量保证为目的的手段都属于工程化。它借鉴了软件工程相关的方法和思想，通过使用工具、流程、最佳实践和规范来提高前端开发效率、质量和可维护性；旨在解决前端开发中出现的各种挑战，包括项目复杂性、跨浏览器兼容性、性能优化、代码可维护性以及团队协作等问题。\n前端开发模式进化史\n首先让我们回顾一下前端开发模式的演化历史，前端工程化正是为了应对这些演化中出现的挑战和需求而发展起来的：\n前后端混合：服务端渲染，javascript仅实现交互\n前后端分离：借助 ajax 实现前后端分离、单页应用(SPA)等新模式\n模块化开发：npm 管理模块、Webpack 编译打包资源\n模块化 + MVVM：基于 React 或 Vue 等框架进行组件化开发，不再手动操作 html 元素\n前端工程化解决了什么问题\n那么前端工程化究竟解决了什么问题呢:\n全局作用域问题：前端工程化可以帮助解决全局作用域污染问题。模块化开发工具如Webpack和ES6模块化帮助开发者将代码分解为模块，避免全局变量冲突，并提高代码的可维护性。\n编码规范：通过代码规范工具（如ESLint、TSLint）和自动化代码格式化工具（如Prettier），前端工程化可以确保代码风格一致，减少错误和提高可读性。\n资源合并和压缩：前端…",
           "link": "https://juejin.cn/post/7291186181157535800",
           "publishedOn": "2023-10-18T09:55:16.000Z",
-          "wordCount": 1761,
+          "wordCount": 1772,
           "title": "学习前端工程化1️⃣——前端工程化与模块化",
           "imageUrl": null
         },
@@ -842,7 +842,7 @@
           "description": "theme: serene-rose\nhighlight: ascetic\n面试\n面试前端时，我们经常会被问到：你能讲一下vue的生命周期吗？\n你可能会这么说：vue的生命周期有beforeCreate、created、beforeMount、mounted......\n面试官可能会告诉你：可以了，回去等面试结果通知吧！！！\n如果这时你还能讲一讲vue生命周期的执行原理，这岂不是能在面试中有所加分，不然，你拿什么与别人与众不同\n要想深入了解vue的生命周期，首先让我们看到vue源码\nVue生命周期源码解析\ncallHook函数\n在vue源码lifecycle.ts文件下有这么一个方法：\n//lifecycle.ts\nexport function callHook(\n  vm: Component,\n  hook: string,\n  args?: any[],\n  setContext = true\n) {\n  // #7573 disable dep collection when invoking lifecycle hooks\n  pushTarget()\n  const prev = currentInstance\n  setContext && setCurrentInstance(vm)\n  const handlers = vm.$options[hook]\n  const info = `${hook} hook`\n  if (handlers) {\n    for (let i = 0, j = handlers.length; i < j; i++) {\n      invokeWithErrorHandling(handlers[i], vm, args || null, vm, info)\n    }\n  }\n  if (vm._hasHookEv…",
           "link": "https://juejin.cn/post/7290837333926019091",
           "publishedOn": "2023-10-17T14:38:45.000Z",
-          "wordCount": 1721,
+          "wordCount": 1722,
           "title": "面试时这样回答Vue生命周期，面试官说：你明天直接来上班！！！",
           "imageUrl": null
         },
@@ -852,7 +852,7 @@
           "description": "前言： 在有了获取手机摄像头权限并且记录当前画面的前置知识以后，我们现在已经可以进行下一步实现一个仿微信扫一扫的功能了。\ntips: 如果你是直接看的本文，对如何打开摄像头拍照这个功能还不太熟悉，请移步 🎁前端如何打开摄像头拍照。这是你阅读本篇的必需前置知识。\n一. 效果预览\n这里先简单放一下整体界面效果，接下来带大家一步一步分析其中的功能如何实现。\n\n\n本篇将重点讲解多张二维码识别的处理场景。\n二. 简单了解二维码\n现在流行使用的二维码是 qrcode，其中 qr 两个字母其实就是 quick response 的缩写，简单来说就是快速响应的意思。三个角用来定位，黑点表示二进制的1，白色点代表0。（这里感兴趣可以自行了解) 它的本质其实就是将一个地址链接利用某种约定好的规则隐藏到一个图片当中，\n\n\n\n我们可以利用 chrome 自带的创建当前网站二维码的功能快速体验一下。\n\n你可以用手机自带的二维码扫码软件扫一下这个二维码，它将会将你引导到我掘金的个人主页。\n\n\n\n细心的你可能会发现二维码下面已经给你提示了你准备保存的链接地址，现在你观察一下浏览器地址栏是否正对应下面这个地址呢？\n\n三. 实现扫码本地图片功能\n我们不需要深入了解这个二维码的转换规则，我们可以直接选用现有的插件即可完成识别功能。 这里我们选用 antfu 大佬的轮子。这里我们不过多介绍，你只需要它可以识别出图片中的二维码即可。如果感兴趣，这是具体仓库地址 qr-sanner-wechat。\n首先安装 npm i qr-scanner-wechat。\n它的使用方法也十分简单，这个依赖导出了一个方法，我们直接引入这个方法即 import { scan } from 'qr-scanner-wechat。\n这个函数可以接收一个 image 元素或者 canvas 元素作为参数，并且返回一个 promise 类型…",
           "link": "https://juejin.cn/post/7290813210276724771",
           "publishedOn": "2023-10-17T11:49:51.000Z",
-          "wordCount": 2400,
+          "wordCount": 2332,
           "title": "前端实现微信扫一扫的思路",
           "imageUrl": null
         }
@@ -1029,7 +1029,7 @@
           "description": "[7073670907851440160#新人报道#] 大神们 用homebrew 是不兼容arm吗？  下载jkd8时显示这样\nopenjdk@8: The x86_64 architecture is required for this software.\nError: openjdk@8: An unsatisfied requirement failed this build.\n求解答",
           "link": "https://juejin.cn/pin/7290848097159102505",
           "publishedOn": "2023-10-17T16:40:48.000Z",
-          "wordCount": 582,
+          "wordCount": 583,
           "title": "[7073670907851440160#新人报道#] 大神们 用homebrew 是不兼容arm吗？ 下载jkd8时显示这样 openjdk@8: The x86_64 architecture is required for this software....",
           "imageUrl": null
         },

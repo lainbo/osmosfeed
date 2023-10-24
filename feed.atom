@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-10-24T09:52:36.030Z</id>
+    <id>urn:2023-10-24T12:56:12.391Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-10-24T09:52:36.030Z</updated>
+    <updated>2023-10-24T12:56:12.391Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -29,6 +29,29 @@ https://kill-the-newsletter.com]]></summary>
 vsual stdio为啥没有好多插件可以下载]]></summary>
         <author>
             <name>confusecell</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[1024程序员节，Nest.js中文文档上线啦！（最新版本）]]></title>
+        <id>https://juejin.cn/post/7293176193322237990</id>
+        <link href="https://juejin.cn/post/7293176193322237990"/>
+        <updated>2023-10-24T03:56:54.000Z</updated>
+        <summary type="html"><![CDATA[大家好，我是考拉！
+这是我历时 1 个多月翻译的 Nest.js V10.x 版本中文文档。就在 1024 这天上线吧！网站访问速度还是蛮快的哦！
+网站地址：http://nestjs.inode.club
+
+
+之前写过 Nest.js系列文章：
+Nest.js 手把手带你实战-项目创建&数据库操作
+Nest.js 手把手带你实战-实现注册、扫码登陆、jwt认证等
+基于Nest.js+TypeORM实战系列3（项目已开源）
+Nest.js 手把手带你实战： Node.js中使用Redis原来这么简单
+感兴趣可以看看，当年用的 Nest.js 版本比较老，后面小伙伴们都催新版本的一些用法， Nest.js V8.x -  V10.x变更的内容也比较多，大家可以先看翻译的中文文档，后面有时间我会专门出一期文章说明更新的内容。后面不忙也会持续更新 Nest.js 系列文章。
+中文文档刚上线，如果发现文档中有什么问题，欢迎指出，一定及时更新， 希望可以方便更多小伙伴。
+1024 程序员节日快乐，无BUG，祝大家都能早早下班！
+我这边也有一些Node Nest.js 技术交流交流群，感兴趣的可以加我的私人微信 ikoala520  进群，一起学习，共同进步。]]></summary>
+        <author>
+            <name>ikoala</name>
         </author>
     </entry>
     <entry>
@@ -1139,50 +1162,6 @@ fetch(`${apiurl}/projiects?${qs.stringify(param)}`)
 两个阶段的对话内容将会成为 ChatGPT 生成最终内容的重要参考语料，后续的推理权重会更大程度偏向于任务目标和执行计划。因此这个 Prompt 可以说，写的非常非常好，充分利用了大模型底层的运作机制。]]></summary>
         <author>
             <name>Barret李靖的即刻动态</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[中级前端必备知识点]]></title>
-        <id>https://juejin.cn/post/7291291652139499535</id>
-        <link href="https://juejin.cn/post/7291291652139499535"/>
-        <updated>2023-10-19T01:48:41.000Z</updated>
-        <summary type="html"><![CDATA[theme: fancy
-1、从输入url到页面显示出来发生了什么
-1.DNS解析
-2.TCP连接
-3.发送HTTP请求
-4.服务器处理请求并返回需要的数据
-5.浏览器解析渲染页面
-解析HTML，生成DOM树，解析CSS，生成CSSOM树
-将DOM树和CSSOM树结合，生成渲染树(Render Tree)
-Layout(回流):根据生成的渲染树，进行回流(Layout)，得到节点的几何信息（位置，大小）
-Painting(重绘):根据渲染树以及回流得到的几何信息，得到节点的绝对像素
-Display:将像素发送给GPU，展示在页面上
-6.连接结束
-2、http状态码的了解
-1xx（临时响应）
-表示临时响应并需要请求者继续执行操作的状态代码
-2xx （成功）
-表示成功处理了请求的状态码。
-例：200 – 服务器成功返回网页
-3xx （重定向）
-表示要完成请求，需要进一步操作。 通常，这些状态代码用来重定向
-例：
-301 （永久移动） 请求的网页已永久移动到新位置。 服务器返回此响应时，会自动将请求者转到新位置。
-302 （临时移动） 服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来进行以后的请求。
-304 （未修改） 自从上次请求后，请求的网页未修改过。 服务器返回此响应时，不会返回网页内容。
-4xx（请求错误） 这些状态代码表示请求可能出错，妨碍了服务器的处理。
-例：404 – 请求的网页不存在
-5xx（服务器错误）
-这些状态代码表示服务器在尝试处理请求时发生内部错误。 这些错误可能是服务器本身的错误，而不是请求出错。
-例：
-500 （服务器内部错误） 服务器遇到错误，无法完成请求。
-503 （服务不可用） 服务器目前无法使用（由于超载或停机维护）。 通常，这只是暂时状态。
-3、http2.0的优点
-解析速度快
-服务器解析 HTTP1.1 的请求时，必须不断地…]]></summary>
-        <author>
-            <name>嚣张农民</name>
         </author>
     </entry>
     <entry>
