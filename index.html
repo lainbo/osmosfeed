@@ -565,6 +565,54 @@ https://github.com/devlive-community/datacap/pull/453
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7291952951048060940"
+                        open
+                      >
+                        <summary class="article-expander__title">一次性弄清前端上线和生产环境地址</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7291952951048060940">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: fancy
+💡Tips:不知道小伙伴在前端开发的时候有没有这样的困惑
+前端项目打包后，我打包过的静态资源是如何访问后端服务的？
+访问后端服务的时候难道不存在跨域的问题吗？如何解决的？
+假如我想自己简单修改下部署后的目录该如何去做？
+🥲其实不仅仅是你会有这样的疑惑，包括我在内刚接触前端的时候，由于没有后端的开发经验也会被这些问题所困扰，但是今天我们将一次性弄清楚这个问题，让我们前端的知识体系由点成线，由线成面~
+一.明确问题
+我们知道，我们平时在开发的时候一般都是使用proxy进行代理的，它的原理是：浏览器会先去访问本地的node服务器，然后node服务器再去代理到你要访问的后端api接口，但是我们可能平时没有node服务器的概念，因为node服务器在webpack中，我们一般是通过下面这种方式来设置
+
+但是我们的项目上线后这种方式就不能用了，（因为Node是我们本地开发的环境，并没有办法在线上使用。）其实，我们一般会通过后端的Nginx代理来解决跨域的问题，但是你知道前端的生产地址配置是什么吗？如何通过Nginx访问后端接口呢？是直接配置的类似于http://www.xxxx.com/api/aaa这样的路径呢？还是直接是一个相对路径/prod？要想搞清楚这些，首先就要了解什么是Nginx。
+二.什么是Nginx
+🐻是一个开源的高性能、轻量级的Web服务器和反向代理服务器，它具有事件驱动，异步非阻塞的架构，被广泛应用于构建高性能的网站，应用程序和服务。
+🤡在平时开发中我们经常听到正向代理和反向代理这两个名词，那么什么是反向代理，什么是正向代理哪？
+反向代理：服务器的IP是被屏蔽的，也就是说客户端不知道服务器真实的地址是哪个，客户端访问的地址或者域名是访问的Nginx服务器的地址。
+
+正向代理：和反向代理刚好相反，这个时候服务器不知道真正的客户端是哪个，…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >李继刚的即刻动态</button>
                   <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
                 </h3>
@@ -3390,62 +3438,6 @@ c…</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7290558277666930744"
-                        open
-                      >
-                        <summary class="article-expander__title">这个前端Api管理方案会更好？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7290558277666930744">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>简介
-大家好，前端小白一枚，目前接触后台管理系统比较多，经常遇到不同对象的增删改查的接口，如何对Api进行一个有比较好的管理是个问题。在学习偏函数的时候有了灵感，想到一个不错的API管理方案，并应用在项目一个模块当中，并且开发效率和维护性可读性都很不错，和大家分享一下~
-当前项目的前端API管理方案
-// 封装的接口
-export function obj1Func1(){}
-export function obj1Func2(){}
-export function obj2Func3(){}
-export function obj2Func4(){}
-
-// 引入方式
-import { obj1Func1, obj1Func2, obj2Func3, obj2Func4 } from &#x27;xxx&#x27;
-
-// 使用方式
-const params &#x3D; {...}
-await obj1Func1(params)
-
-当接口多了之后，我们管理接口(查找)是一件很麻烦且废眼睛的事，需要一直翻，注释看不过来，维护性和可读性差。
-统一export方式
-// 封装的接口
-function obj1Func1(){}
-function obj1Func2(){}
-function obj2Func3(){}
-function obj2Func4(){}
-// 导出接口
-export {
-    obj1Func1,//注释
-    obj1Func2,//注释
-    obj2Func3,//注释
-    obj2Func4,//注释
-    ...
-}
-
-// 引入方式
-import { obj1Func1, obj1Func2, obj2Func3, obj2Func4 } from &#x27;xxx&#x27;
-
-// 使用方式
-const params &#x3D; {...}
-await obj1Func1(pa…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -4799,8 +4791,8 @@ https://www.wolai.com/signup?invitation&#x3D;C2ZS3U2Z</span>
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6622117670">
-        <time id="build-timestamp" datetime="2023-10-24T03:53:03.624Z">2023-10-24T03:53:03.624Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6623359279">
+        <time id="build-timestamp" datetime="2023-10-24T06:52:32.680Z">2023-10-24T06:52:32.680Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
