@@ -51,8 +51,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-25 datetime="2023-10-25T02:47:00.000Z">2023-10-25</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-25 datetime="2023-10-25T02:47:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-25 datetime="2023-10-25T04:15:00.000Z">2023-10-25</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-25 datetime="2023-10-25T04:15:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -67,6 +67,25 @@
                   <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231025/t20231025_526462824.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市万州区发布大雾黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231025/t20231025_526462824.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>万州区气象台2023年10月25日11时50分发布“大雾黄色预警信号”，预计25日12时至20时，高笋塘街道、太龙镇、钟鼓楼街道、长滩镇、长岭镇、龙都街道、百安坝街道、五桥街道、牌楼街道、陈家坝街道、罗田镇、走马镇、恒合土家族乡、龙驹镇、普子乡、茨竹乡、太白街道、甘宁镇、高峰街道、双河口街道、九池街道、瀼渡镇、新田镇、溪口乡等镇乡街将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。有关部门和单位按照职责做好防雾准备工作；机场、高速公路、轮渡码头等单位加强交通管理，保障安全；驾驶人员注意雾的变化，小心驾驶；户外活动注意安全。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -544,6 +563,48 @@ UU们，为什么安装的eclipse的默认编码方式是GBK啊？我想了一�
                 </section>
               </section>
             </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7293021170256658444"
+                        open
+                      >
+                        <summary class="article-expander__title">卷不动，真滴卷不动，前端再出新轮子 nue.js</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7293021170256658444">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>一、唠唠嗑
+
+NueJS 前几个月刚出来的开源项目，目前在GitHub上已经有 4k 多的star了，可谓是吸星之迅速呀。
+NueJS 是一个非常小巧 (2.3kb minzipped) 的 JavaScript 库，用于构建 Web 界面。它具有代码量少、易于上手的特点。而且它是即将推出的 Nue 生态系统的核心。与 Vue.js、React.js 或 Svelte 不同，它没有 hooks、effects、props、portals 等特殊抽象概念。只需掌握 HTML、CSS 和 JavaScript 基础知识你就可以试着去使用它了。
+1、那为什么说它非常小巧呢
+因为 NueJS 类似Vue、React或Svelte，但又与他们有所区分，它更简单,没有复杂的Hooks、Props等概念,开发者只需要掌握HTML、CSS和JavaScript基础知识就可以使用。
+与 React 相比，NueJS 实现相同功能的代码量仅为后者的十分之一,大大缩小了项目体积，简化了Web前端开发。NueJS 通过HTML模板语法来编写界面,减少了大量冗余代码。
+
+若 React 和 Vue 宣称是“纯JavaScript”，那 NueJs 可以被认为是 “纯HTML”。NueJs 更适合专注于交互设计、无障碍和用户体验的 UI 开发者。
+小插曲： Riot.js不知道大家有没有听说过，它也是出自 NueJs 作者之手，是一个 JavaScript 的 MVP 框架，这东西的知名成度因该不用我多说了吧。如果感兴趣的话可以看看这篇文章：Riot.js相关介绍，俺认为对于想了解的话那是够用了，作者还称它对目前的 Web 生态不是很满意，他想从头开始编写一个全新的生态。（吹没吹牛俺不知道，但俺是真服他，要想想这可是他仅仅花一年时间搞出来的呀，还把它开源了，要是俺，别说一年，一辈子俺都搞不出来）好了，…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -641,6 +702,49 @@ Arc
 目前已使用半年多，不少人说不久还是会换回 chrome 或者其他，但并没有，我相信他们都只是习惯了使用Chrome而不想折腾，但其实如果你稍微留意，会发现很多知名开发者都一直在使用 Arc 且评价相当不错，如 Anthony fu ，t3dotgg 等，油管教学博主有相当高的比例都在使用 Arc, 它绝不是一个好看的玩具，它值得你去尝试，合适不合适需要体验后才有发言权。
 实际上我都认真尝试过几乎市面上所有…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7292416512333332534"
+                        open
+                      >
+                        <summary class="article-expander__title">如何防止网站信息泄露（复制/水印/控制台）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7292416512333332534">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>一、前言
+中午休息的时候，闲逛公司内网，看到一个url，就想复制一下url，看看url对应的内容是啥，习惯性使用ctrl+c，然后ctrl+v，最后得到是 禁止复制，哦，原来是禁用了复制。这能难倒一个前端开发吗？当然不能。于是打开了控制台，这时，发现页面自动执行了一段立即执行函数，函数体里面是debugger代码，然后手动跳过debugger后，页面已经变成一个空白页面了。
+本文将简单讲解禁止复制、水印和禁止打开控制台三个功能点的实现。
+前面几节是分功能讲解，最后一节将会写出完整的代码，如何防止网站信息泄露。
+二、禁止复制
+现在有的复制网页（常规网页用户，不开控制台的情况）的内容方式有：
+选择 -&gt; ctrl+c（command + c）
+选择 -&gt; 鼠标右键 -&gt; 复制
+js拦截
+相比user-select无法做到某一些内容可以被选中
+document.addEventListener(&#x27;contextmenu&#x27;, function(e) {  
+    e.preventDefault();  
+}, false);  
+
+document.addEventListener(&#x27;selectstart&#x27;, function(e) {  
+    e.preventDefault();  
+}, false);
+
+
+user-select
+不难发现，当我们复制内容的时候，首选是选择目标内容，那我们可以禁用用户的选择目标内容。
+css属性user-select用于控制用户是否能够选择（即复制）文本和其他页面元素。它的作用是指定用户在浏览网页时是否能够选择和复制页面上的文本和其他元素。
+user-select: none;
+我是捌玖，欢迎关注我哟，这儿是利用css样式，测试能否禁用复制
+…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2189,6 +2293,59 @@ fetch(&#x60;${apiurl}/projiects?${qs.stringify(param)}&#x60;)
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7291291652139499535"
+                        open
+                      >
+                        <summary class="article-expander__title">中级前端必备知识点</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7291291652139499535">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: fancy
+1、从输入url到页面显示出来发生了什么
+1.DNS解析
+2.TCP连接
+3.发送HTTP请求
+4.服务器处理请求并返回需要的数据
+5.浏览器解析渲染页面
+解析HTML，生成DOM树，解析CSS，生成CSSOM树
+将DOM树和CSSOM树结合，生成渲染树(Render Tree)
+Layout(回流):根据生成的渲染树，进行回流(Layout)，得到节点的几何信息（位置，大小）
+Painting(重绘):根据渲染树以及回流得到的几何信息，得到节点的绝对像素
+Display:将像素发送给GPU，展示在页面上
+6.连接结束
+2、http状态码的了解
+1xx（临时响应）
+表示临时响应并需要请求者继续执行操作的状态代码
+2xx （成功）
+表示成功处理了请求的状态码。
+例：200 – 服务器成功返回网页
+3xx （重定向）
+表示要完成请求，需要进一步操作。 通常，这些状态代码用来重定向
+例：
+301 （永久移动） 请求的网页已永久移动到新位置。 服务器返回此响应时，会自动将请求者转到新位置。
+302 （临时移动） 服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来进行以后的请求。
+304 （未修改） 自从上次请求后，请求的网页未修改过。 服务器返回此响应时，不会返回网页内容。
+4xx（请求错误） 这些状态代码表示请求可能出错，妨碍了服务器的处理。
+例：404 – 请求的网页不存在
+5xx（服务器错误）
+这些状态代码表示服务器在尝试处理请求时发生内部错误。 这些错误可能是服务器本身的错误，而不是请求出错。
+例：
+500 （服务器内部错误） 服务器遇到错误，无法完成请求。
+503 （服务不可用） 服务器目前无法使用（由于超载或停机维护）。 通常，这只是暂时状态。
+3、http2.0的优点
+解析速度快
+服务器解析 HTTP1.1 的请求时，必须不断地…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -2295,6 +2452,8 @@ fetch(&#x60;${apiurl}/projiects?${qs.stringify(param)}&#x60;)
    
     
    短期的目标是，在当下的环境中，…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2907,61 +3066,6 @@ highlight: monokai
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7290968251911356473"
-                        open
-                      >
-                        <summary class="article-expander__title">CSS 还原拉斯维加斯球数字动画</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7290968251911356473">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>我的小册 《CSS 技术揭秘与实战通关》上线了，想了解更多有趣、进阶、系统化的 CSS 内容，可以猛击 - LINK。
-最近大家刷抖音，是否有刷到拉斯维加斯的新地标 「Sphere」：
-
-场馆内部的视觉效果非常惊人，其中一个效果让我虎躯一震：
-
-我的第一想法就是，这个看起来用 CSS 也可以实现嘛？还有 CSS 不能实现的？
-本文，就将尝试使用 CSS，大致还原这个效果。
-拆解动画效果
-其实，上述的动画效果，本质就是一个 3D 立方体。
-同时，3D 立方体上每个面存在颜色不一样的文字，文字和颜色都在随机变化。
-也就是说，我们需要实现一个 3D 立方体：
-
-同时，我们还需要实现这样一个动画效果 -- 文字和颜色都在随机变化的平面效果：
-
-两者组合一下，再挪动 3D 元素的景深距离，就能实现我们想要的效果！
-好，下面我们一个一个实现。
-实现一个 3D 立方体
-实现一个 3D 立方体，相对另外一个文字和颜色都在随机变化的平面效果而言，属于非常非常简单的一步了。
-我们在非常多篇文章中也讲过具体的实现方式：
-最常见的 3D 图形，莫过于一个 3D 立方体。
-如果没有上下两个面，只是一个 4 个面的图形，大概是这样：
-
-这样一个图形，利用 CSS 3D，如何快速实现呢？
-首先，构造这么一个结构：
-
-        
-3
-                
-D
-                
-视
-                
-图
-        
-
-
-4 个面…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7290931758788051005"
                         open
                       >
@@ -3504,111 +3608,6 @@ Error: openjdk@8: An unsatisfied requirement failed this build.
                             <span class="media-object__text">
                               <span>打卡打卡，今天周二</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7290837333926019091"
-                        open
-                      >
-                        <summary class="article-expander__title">面试时这样回答Vue生命周期，面试官说：你明天直接来上班！！！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7290837333926019091">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: serene-rose
-highlight: ascetic
-面试
-面试前端时，我们经常会被问到：你能讲一下vue的生命周期吗？
-你可能会这么说：vue的生命周期有beforeCreate、created、beforeMount、mounted......
-面试官可能会告诉你：可以了，回去等面试结果通知吧！！！
-如果这时你还能讲一讲vue生命周期的执行原理，这岂不是能在面试中有所加分，不然，你拿什么与别人与众不同
-要想深入了解vue的生命周期，首先让我们看到vue源码
-Vue生命周期源码解析
-callHook函数
-在vue源码lifecycle.ts文件下有这么一个方法：
-//lifecycle.ts
-export function callHook(
-  vm: Component,
-  hook: string,
-  args?: any[],
-  setContext &#x3D; true
-) {
-  // #7573 disable dep collection when invoking lifecycle hooks
-  pushTarget()
-  const prev &#x3D; currentInstance
-  setContext &amp;&amp; setCurrentInstance(vm)
-  const handlers &#x3D; vm.$options[hook]
-  const info &#x3D; &#x60;${hook} hook&#x60;
-  if (handlers) {
-    for (let i &#x3D; 0, j &#x3D; handlers.length; i &lt; j; i++) {
-      invokeWithErrorHandling(handlers[i], vm, args || null, vm, info)
-    }
-  }
-  if (vm._hasHookEv…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7290813210276724771"
-                        open
-                      >
-                        <summary class="article-expander__title">前端实现微信扫一扫的思路</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7290813210276724771">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言： 在有了获取手机摄像头权限并且记录当前画面的前置知识以后，我们现在已经可以进行下一步实现一个仿微信扫一扫的功能了。
-tips: 如果你是直接看的本文，对如何打开摄像头拍照这个功能还不太熟悉，请移步 🎁前端如何打开摄像头拍照。这是你阅读本篇的必需前置知识。
-一. 效果预览
-这里先简单放一下整体界面效果，接下来带大家一步一步分析其中的功能如何实现。
-
-
-本篇将重点讲解多张二维码识别的处理场景。
-二. 简单了解二维码
-现在流行使用的二维码是 qrcode，其中 qr 两个字母其实就是 quick response 的缩写，简单来说就是快速响应的意思。三个角用来定位，黑点表示二进制的1，白色点代表0。（这里感兴趣可以自行了解) 它的本质其实就是将一个地址链接利用某种约定好的规则隐藏到一个图片当中，
-
-
-
-我们可以利用 chrome 自带的创建当前网站二维码的功能快速体验一下。
-
-你可以用手机自带的二维码扫码软件扫一下这个二维码，它将会将你引导到我掘金的个人主页。
-
-
-
-细心的你可能会发现二维码下面已经给你提示了你准备保存的链接地址，现在你观察一下浏览器地址栏是否正对应下面这个地址呢？
-
-三. 实现扫码本地图片功能
-我们不需要深入了解这个二维码的转换规则，我们可以直接选用现有的插件即可完成识别功能。 这里我们选用 antfu 大佬的轮子。这里我们不过多介绍，你只需要它可以识别出图片中的二维码即可。如果感兴趣，这是具体仓库地址 qr-sanner-wechat。
-首先安装 npm i qr-scanner-wechat。
-它的使用方法也十分简单，这个依赖导出了一个方法，我们直接引入这个方法即 import { scan } from &#x27;qr-scanner-wechat。
-这个函数可以接收一个 image 元素或者 canvas 元素作为参数，并且返回一个 promise 类型…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4878,8 +4877,8 @@ https://www.wolai.com/signup?invitation&#x3D;C2ZS3U2Z</span>
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6635524600">
-        <time id="build-timestamp" datetime="2023-10-25T03:52:59.432Z">2023-10-25T03:52:59.432Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6636794458">
+        <time id="build-timestamp" datetime="2023-10-25T06:52:44.595Z">2023-10-25T06:52:44.595Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
