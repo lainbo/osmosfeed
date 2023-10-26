@@ -23,7 +23,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1205,
+          "wordCount": 1206,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -493,6 +493,26 @@
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
         {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231026/t20231026_526464744.html",
+          "author": "国家预警信息发布中心",
+          "description": "云阳县气象台2023年10月26日19时继续发布“大雾黄色预警信号”，预计未来12小时，全县各乡镇（街道）将出现能见度小于500米的大雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231026/t20231026_526464744.html",
+          "publishedOn": "2023-10-26T11:14:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市云阳县发布大雾黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231026/t20231026_526464714.html",
+          "author": "国家预警信息发布中心",
+          "description": "潼南区气象台2023年10月26日18时40分发布“大雾黄色预警信号”，预计未来12小时，我区全部镇街将出现能见度小于500米的雾，局部地区能见度小于200米。请各地注意防范大雾天气可能造成的影响。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231026/t20231026_526464714.html",
+          "publishedOn": "2023-10-26T10:47:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市潼南区发布大雾黄色预警",
+          "imageUrl": null
+        },
+        {
           "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231026/t20231026_526464352.html",
           "author": "国家预警信息发布中心",
           "description": "巴南区气象台2023年10月26日15时30分发布“大雾黄色预警信号”，预计10月26日15时30分至27日8时，我区姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
@@ -687,6 +707,16 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
+          "id": "https://juejin.cn/post/7293463921729372201",
+          "author": "范天缘",
+          "description": "前言\n在网上找了很久都没有找到使用Three.js开发智慧城市的免费文章或者免费视频,自己花了一点时间做了一个纯前端的智慧城市项目。\n技术栈都是最新的:vue3+vite+typeScript+Three+antv G2\n源码分享 源码\n模型,天空图盒子链接分享(不想下载源码可以只用下这个)提取码1234 ————————————————\n有地面版本\n\n无地面版本\n\n开发各种框架的版本 开发工具为vscode\n\"vue\": \"^3.2.47\"\n\"@antv/g2plot\": \"^2.4.29\",\n\"typescript\": \"^5.0.2\",\n\"vite\": \"^4.3.0\",\n\"@types/three\": \"^0.150.2\",\n一.搭建three场景\n引入three,先初始化场景,相机,渲染器,光线,轨道控制器\n<template>\n  <div class=\"container\" id=\"container\"></div>\n</tempalte>\n<script lang=\"ts\" setup>\nlet scene = null as any,//场景\ncamera = null as any,//相机\nrenderer = null as any,//渲染器\ncontrols = null as any//轨道控制器\nimport {onMounted, reactive } from 'vue';\nimport * as THREE from 'three';\nimport {OrbitControls} from 'three/examples/jsm/controls/OrbitControls'\n//设置three的方法\nconst render = async () =>{\n  //1.创建场景\n  scene = new THREE.Scene();\n…",
+          "link": "https://juejin.cn/post/7293463921729372201",
+          "publishedOn": "2023-10-25T03:33:58.000Z",
+          "wordCount": 3419,
+          "title": "用Three.js做一个智慧城市-纯前端（Vue3+Three.js+antvG2）",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7293176193322237990",
           "author": "ikoala",
           "description": "大家好，我是考拉！\n这是我历时 1 个多月翻译的 Nest.js V10.x 版本中文文档。就在 1024 这天上线吧！网站访问速度还是蛮快的哦！\n网站地址：http://nestjs.inode.club\n\n\n之前写过 Nest.js系列文章：\nNest.js 手把手带你实战-项目创建&数据库操作\nNest.js 手把手带你实战-实现注册、扫码登陆、jwt认证等\n基于Nest.js+TypeORM实战系列3（项目已开源）\nNest.js 手把手带你实战： Node.js中使用Redis原来这么简单\n感兴趣可以看看，当年用的 Nest.js 版本比较老，后面小伙伴们都催新版本的一些用法， Nest.js V8.x -  V10.x变更的内容也比较多，大家可以先看翻译的中文文档，后面有时间我会专门出一期文章说明更新的内容。后面不忙也会持续更新 Nest.js 系列文章。\n中文文档刚上线，如果发现文档中有什么问题，欢迎指出，一定及时更新， 希望可以方便更多小伙伴。\n1024 程序员节日快乐，无BUG，祝大家都能早早下班！\n我这边也有一些Node Nest.js 技术交流交流群，感兴趣的可以加我的私人微信 ikoala520  进群，一起学习，共同进步。",
@@ -724,6 +754,16 @@
           "publishedOn": "2023-10-23T09:39:33.000Z",
           "wordCount": 872,
           "title": "想找一份国外远程或者外企工作，如何学习外语",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7292450647303208999",
+          "author": "法的空间",
+          "description": "theme: fancy\n前言\n坐在面试官面前，我感到有些紧张，而面试官似乎察觉到了。他面带微笑，递了一杯水给我，问道：“你平时有玩什么游戏吗？”\n我很惊讶，但很快冷静了下来，回答道：“平时偶尔玩一下 Dota。”\n面试官接着问: “是什么吸引你玩 Dota 的？”\n我想了想说：\n运营，需要耐心地运营，任何一点细节都会影响最终的结果。\n学习和适应性，需要不断的去学习，适应新的东西。\n团队协作，个人的实力再强，也需要团队的配合，才能走的更远。\n坚持，不到最后一秒，你无法知道到底结果如何。\n面试官又问道: “那你在学习工作生活中，你觉得有什么东西跟 Dota 相似的吗？”\n我回答道: “我觉得不论是在学习、工作还是生活中，都需要耐心运营，并不断适应新的环境和知识。单打独斗通常不是高效的方式，只有坚持不懈，才能取得显著的成果。举个例子，就像在 技术社区 中，大家都对相同的兴趣保持着高度的热情。技术社区的成员分享编程技巧、开发经验和问题解决方法；他们积极合作，共同建设资源、工具和资料，以推动领域的发展；他们不仅学习新的技能，还不断提高自己的表现，以达到更高的水平。”\n面试官： “你这里说到技术社区，那你有听说过 FlutterCandies 吗？”\n这个问题让我稍作思考，然后微笑着回答：“当然，FlutterCandies 是一个非常杰出的 Flutter 社区。他们致力于分享各种 Flutter 插件、工具和示例代码，为 Flutter 开发者提供了强大的支持，让他们更轻松地构建高质量的应用程序。FlutterCandies 社区的成员积极参与开源项目，为 Flutter 生态系统的繁荣作出了出色的贡献。\n\n然而，面试官似乎对我的回答还想深入了解，他接着追问：“除此以外，还有其他方面的了解吗？”\n我稍作思考后继续说：“实际上，我也是 FlutterCandies 社区的一名成员，…",
+          "link": "https://juejin.cn/post/7292450647303208999",
+          "publishedOn": "2023-10-22T23:13:18.000Z",
+          "wordCount": 8274,
+          "title": "面试被问到 FlutterCandies，阁下又当如何应对 ？",
           "imageUrl": null
         },
         {
@@ -827,16 +867,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7291496777688334336",
-          "author": "很饿的秃头",
-          "description": "工作篇\n我在8月底结束了第一份工作后，在9月初迎来了我的二份工作，投简历投了大概一周约了12家面试，虽然那时候是疫情相对来说找工作还是比较容易点的，至少约的到面试，面了差不多6家，拿到了2家，当时情绪低落囊中羞涩想尽快入职工作选择第2家，后面的面试都推了，但是问题来了，通勤距离过长，每天公交从首站坐20个站左右去上班，下班在科技园的东门而公司在北门，走大概10分钟，从家里去公交站走路20分钟，于是我就开启了长达单程快2小时的路程上班，房子还有两个月到期我决定到期再搬过来。\n\n这份工作给的工资是6500，试用期80%，也就是拿到手5200，试用期不交社保[刚毕业不太懂社保这个]，毕竟刚毕业，然后我就想努力的转正，这次我面试的职位的 .net开发工程师，离谱的事情我刚入职第一天让我接手一个五年经验大佬的项目[压缩成本也不是这样压缩的]，那我只是一只小喽喽啊，害，我痛苦极了， 很显然很多东西我接不住\n\n但是交接大佬人挺好的这里暂称他为大哥，大嫂还在公司，后面有问题我直接让大嫂帮我问大哥，就暂时还过的去，勉勉强强的干着但是我特别吃力，我的顶头管我的是一个50左右的经理，开发出生头发花白，在公司待了12年，公司是做支付平台的又特别的严格，我之前没有接触过这块，有什么问题我还会问我之前的师傅，就勉强干着，经理每天晚上带我加班，于是我每天早上6点20起床，晚上12点到家，我的长头发嫌洗头发麻烦头发也剪了，不出意外一个月多以后我生病了，大概就是发烧，睡眠不足，经期也有问题，大概休了三天假加周末后来就好了，我当时就想离职了，觉得自己顶不住真的顶不住，第一家公司6天70个小时，第二家6天达到快90个小时，我就差睡在公司了\n\n那段时间我每天都会被骂，就在工位其他同事都听见，我真想找个地缝钻下去，在高强度的工作下，公司每天都在招人，明明已经不缺人，公司试用期三天没工资[如果换我现在肯定告他了]，招人又开人，很离谱这样的公司现在还存在，后大概快两个月后我搬家离公司20分钟的车程附近我的日子稍微好过了一点，但是我却出了点问题，我每天焦虑的睡不觉，周末休息也不爱出门就在家里学习看代码，可能是怕被骂，我的精神状态一直不太好，睡觉喜欢抽，蹬腿特别严重时常蹬腿瞪醒，后来我就想着转正了好了，两个多月过去了快转正了，当时11月多了也想着快过年了，在这家公司我每个月还能存2000块钱，5200的工资，因为我几乎不出门就是吃饭睡觉，每天开销60左右，科技园里面吃饭挺贵的我算很省了，在这个公司除了老板跟经理，其他同事相处挺好的，我是里面最小的也挺照顾我的，他们都是25+，于是我就在这样过着，当时也没有意识去医院看看，就想着转正能加1300的工资，对于我来说是一笔不小的诱惑。。。。。\n\n转眼三个月过去了公司没有给我转正，也没有开我就闭口不谈，我就急了在等我三个月后的10天左右，我就找人事询问，人事姐姐给我的意见是让我去问经理，经理说我被延迟转正了，说我表现不好，于是我又开始emo了，也不知都怎么办想离职又快过年了就这样混着，想着会找我谈，我还是太年轻了，直到12月20号左右，我找经理谈了大概意思就是要我转岗，说我基础太差了什么的，转做实施去客户现场调试工资4000，我拒绝了我知道这就是想赶我走，于是我离职了，离职后没有压力反而是一种解脱，我记得离职当天去看了场电影，那是我第一次在深圳看电影就在坂田，看完电影后回家哭了一场，然后就休息了两天总是失眠加蹬腿（我不知道大家是否也有过这样现象），医院给我建议是精神太紧张长期睡眠不足经期也不正常，让我好好休息，大概休息了几天月底我就和我同学去了张家界旅游去了，就这样我的第二份工作结束了。。。。。。。。。。。。。。。。",
-          "link": "https://juejin.cn/post/7291496777688334336",
-          "publishedOn": "2023-10-19T08:07:17.000Z",
-          "wordCount": 768,
-          "title": "工作不给转正又不辞退怎么办",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7291496777688023040",
           "author": "百分三十七",
           "description": "highlight: androidstudio\ntheme: channing-cyan\n设计目的\n为了解决前端项目部署之后，如何通知用户系统有新版本，并引导用户刷新页面以加载最新资源的问题。\n适用场景\n用户在浏览器中打开某 web 应用（通常是后台管理系统）很长时间且未刷新页面时，如果应用有新功能添加或问题修复，用户可能无法及时知道有新版发布。这样会导致用户继续使用旧版，影响用户体验和数据准确性，甚至出现程序报错。\n实现原理\n使用 Web Worker API 在浏览器后台轮询请求页面，不会影响主线程运行。\n命中协商缓存，对比本地和服务器请求响应头etag字段值。\n如果etag值不一致，说明有更新，则弹出更新提示，并引导用户手动刷新页面（例如弹窗提示），完成应用更新。\n当页面不可见时（例如切换标签页或最小化窗口），停止实时检测任务；再次可见时（例如切换回标签页或还原窗口），恢复实时检测任务。\n在本地 localStorage存入 _APP_ETAG_, 当etag值不一致时表示有新的版本，弹出更新提示框，同时更新本地存储的etag值\n安装使用\nnpm install version-polling --save\n\n使用\n这里只提供npm 依赖构建用法，也可以通过 script 引入，直接插入到 HTML\n\n// 在应用入口文件中使用: 如 main.js, app.jsx\nimport { createVersionPolling } from \"version-polling\";\n\ncreateVersionPolling({\n  appETagKey: \"__APP_ETAG__\",\n  pollingInterval: 5 * 60 * 1000, // 单位为毫秒-默认5分钟轮询一次\n  silent: process.env.NODE_ENV === \"development\", // 开发环境下不检测\n  onUpdate: (self) => {\n    // 当检测到有新版本时，执行的回调函数，可以在这里提示用户刷新页面\n    const result = confirm(\"页面有更新，点击确定刷新页面！\");\n    if (result) {\n      self.onRefresh();\n    } else {\n      self.onCancel();\n    }\n    // 强制更新可以用alert\n    // alert('有新版本，请刷新页面');\n  },\n})\n\n详细参数\n参数\n说明\n类型\n默认值\n\n\n\n\nappETagKey\nweb 应用更新唯一标识字段名\nstring\n_APP_ETAG_\n\n\npollingInterval\n轮询间隔，单位为毫秒，默认为 5 分钟\nnumber\n5 * 60 * 1000\n\n\nimmediate\n初始化后, 立即触发实时监测\nboolean\ntrue\n\n\nhtmlFileUrl\nweb 应用网站运行目录\nstring\n${location.origin}${location.pathname}\n\n\nsilent\n初始化后, 立即触发实时监测\nboolean\ntrue\n\n\nonUpdate\n更新检测的回调函数，可以自定义更新的逻辑\n(self) => void\n-\n\n\n\nversion-polling npm官方文档",
@@ -854,16 +884,6 @@
           "publishedOn": "2023-10-19T07:36:48.000Z",
           "wordCount": 1315,
           "title": "🔥优秀的 Vue3 开源后台模板推荐",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7291477529779109928",
-          "author": "前端迷悟",
-          "description": "背景\n目前公司用的是基于 vue-cli4 开发的脚手架，在vue-cli的基础增加了业务开发的 多语言、多皮肤，以及接口请求，权限等解决方案，能快速搭建项目的基本结构。\n但随着技术的迭代，vue2.7/vue3的推出（composition-api），vite的发展，以及vue-cli的不维护，webpack5（缓存+模块联邦）的推出，目前这套脚手架确实有些老旧，需要升级。\n使用过 vue3+ts+vite 的开发体验还是很丝滑，但目前的公司的情况上这套解决方案，还面临一些问题。下面讨论一些方案的选择：\nvite\nvite带来的开发体验的提升，目前的生态发展也是不错的；\n使用 vite 搭建工程，但集成公司所有的组件库会有一些问题，而且很多插件还需重新开发，目前不适合迁移到vite。\nwebpack5\nwebpack5 带来的 cache 特性，是一个折中的方案，webpack 的兼容性不用多说，同时缓存也可以提高开发启动的速度，提升开发体验。同时可搭配 esbuild-loader 代替 babel-loader ，提升构建速度。\nvue3\nvue3的升级带来的生态割裂，导致组件库的如果直接想要迁移很麻烦。公司的组件库短期应该不会有 vue3 版本。\nvue2.7\nvue官方推出 vue2.7，虽然今年就不维护了，但可使用 composition-api，目前来说体验还是不错的，但有一些小问题不维护了，整体上还是值得升级的。\nts\nvue2.6 如果要使用 ts，要使用装饰器写法，这种风格也不再推荐；使用 composition-api 搭配 ts 体验还是不错的。ts 虽然一开始写起来有些痛苦，解决各种报错，但是长期来讲可大大提高项目的可维护性。\n基于以上情况的分析和讨论，我基于webpack5+vue2.7+typescript 搭建了项目脚手架，同时使用了 esb…",
-          "link": "https://juejin.cn/post/7291477529779109928",
-          "publishedOn": "2023-10-19T07:02:53.000Z",
-          "wordCount": 3273,
-          "title": "从0到1搭建webpack5+vue2.7+ts脚手架",
           "imageUrl": null
         },
         {
@@ -909,7 +929,7 @@
           "description": "[7018942344208580646#1024一起掘金#] \nvsual stdio为啥没有好多插件可以下载",
           "link": "https://juejin.cn/pin/7293342646176645158",
           "publishedOn": "2023-10-24T08:32:04.000Z",
-          "wordCount": 539,
+          "wordCount": 540,
           "title": "[7018942344208580646#1024一起掘金#] vsual stdio为啥没有好多插件可以下载",
           "imageUrl": null
         },
@@ -919,7 +939,7 @@
           "description": "[7018942344208580646#1024一起掘金#] Agile Query 全特性演示，https://www.agiquery.com",
           "link": "https://juejin.cn/pin/7293122700659212339",
           "publishedOn": "2023-10-24T01:30:34.000Z",
-          "wordCount": 546,
+          "wordCount": 547,
           "title": "[7018942344208580646#1024一起掘金#] Agile Query 全特性演示，https://www.agiquery.com",
           "imageUrl": null
         },
@@ -949,7 +969,7 @@
           "description": "[7018942344208580646#1024一起掘金#] \nDataCap 元数据支持更新数据了，元数据管理模块又离替换 Navicat 接近一步了",
           "link": "https://juejin.cn/pin/7293121832152367155",
           "publishedOn": "2023-10-23T12:55:30.000Z",
-          "wordCount": 552,
+          "wordCount": 553,
           "title": "[7018942344208580646#1024一起掘金#] DataCap 元数据支持更新数据了，元数据管理模块又离替换 Navicat 接近一步了",
           "imageUrl": null
         },
@@ -959,7 +979,7 @@
           "description": "[7018942344208580646#1024一起掘金#] \nUU们，为什么安装的eclipse的默认编码方式是GBK啊？我想了一周了没想明白？国外公司这么好？适配国内编码？改个UTF-8编码格式给我一顿找找",
           "link": "https://juejin.cn/pin/7293029930089283594",
           "publishedOn": "2023-10-23T09:27:20.000Z",
-          "wordCount": 533,
+          "wordCount": 534,
           "title": "[7018942344208580646#1024一起掘金#] UU们，为什么安装的eclipse的默认编码方式是GBK啊？我想了一周了没想明白？国外公司这么好？适配国内编码？改个UTF-8编码...",
           "imageUrl": null
         },
@@ -969,7 +989,7 @@
           "description": "语雀挂了这么久，你们受影响了么？ [7018942344208580646#1024一起掘金#] #语雀挂了#",
           "link": "https://juejin.cn/pin/7292990906109313033",
           "publishedOn": "2023-10-23T09:11:57.000Z",
-          "wordCount": 536,
+          "wordCount": 537,
           "title": "语雀挂了这么久，你们受影响了么？ [7018942344208580646#1024一起掘金#] #语雀挂了#",
           "imageUrl": null
         },
@@ -979,7 +999,7 @@
           "description": "[7018942344208580646#1024一起掘金#]  tabby设置ssh的配色不生效，怎么搞？",
           "link": "https://juejin.cn/pin/7292916079385640986",
           "publishedOn": "2023-10-23T02:26:52.000Z",
-          "wordCount": 534,
+          "wordCount": 533,
           "title": "[7018942344208580646#1024一起掘金#] tabby设置ssh的配色不生效，怎么搞？",
           "imageUrl": null
         },
@@ -989,7 +1009,7 @@
           "description": "[7018942344208580646#1024一起掘金#] 今年手搓的一个记录代码 CRUD 操作的 IDEA 插件，它能协助识别有潜在问题的 SQL，和获取 GPT 优化建议。地址：https://plugins.jetbrains.com/plugin/22655-mysql-proxy",
           "link": "https://juejin.cn/pin/7292552003015999488",
           "publishedOn": "2023-10-22T15:09:01.000Z",
-          "wordCount": 574,
+          "wordCount": 573,
           "title": "[7018942344208580646#1024一起掘金#] 今年手搓的一个记录代码 CRUD 操作的 IDEA 插件，它能协助识别有潜在问题的 SQL，和获取 GPT 优化建议。地址：https://plu...",
           "imageUrl": null
         },
@@ -999,7 +1019,7 @@
           "description": "[7018942344208580646#1024一起掘金#] \n今天搞定的排序功能",
           "link": "https://juejin.cn/pin/7292439225064620082",
           "publishedOn": "2023-10-22T13:01:59.000Z",
-          "wordCount": 541,
+          "wordCount": 540,
           "title": "[7018942344208580646#1024一起掘金#] 今天搞定的排序功能",
           "imageUrl": null
         },
@@ -1009,7 +1029,7 @@
           "description": "[7018942344208580646#1024一起掘金#] \nhttps://github.com/devlive-community/datacap/pull/453\n新支持的功能，欢迎大家一起参与源码贡献，目前已经有 9 位贡献者，100+ 使用用户，系统后续越来越强大，欢迎大家来共建",
           "link": "https://juejin.cn/pin/7292395962777141274",
           "publishedOn": "2023-10-22T10:29:12.000Z",
-          "wordCount": 546,
+          "wordCount": 547,
           "title": "[7018942344208580646#1024一起掘金#] https://github.com/devlive-community/datacap/pull/453 新支持的功能，欢迎大家一起参与源码贡献，目前已经有 9 位贡献...",
           "imageUrl": null
         },
@@ -1039,7 +1059,7 @@
           "description": "[7018942344208580646#1024一起掘金#]作为一名程序员，请说出你的首选开发工具？（VScode  yyds）",
           "link": "https://juejin.cn/pin/7291549843545440296",
           "publishedOn": "2023-10-19T14:05:14.000Z",
-          "wordCount": 536,
+          "wordCount": 537,
           "title": "[7018942344208580646#1024一起掘金#]作为一名程序员，请说出你的首选开发工具？（VScode yyds）",
           "imageUrl": null
         },
@@ -1049,7 +1069,7 @@
           "description": "[7018942344208580646#1024一起掘金#] \n大的来了，今天给fast-create-variable支持了react中使用，虽然我不用react[灵光一现]",
           "link": "https://juejin.cn/pin/7291186128361766968",
           "publishedOn": "2023-10-18T08:51:01.000Z",
-          "wordCount": 552,
+          "wordCount": 555,
           "title": "[7018942344208580646#1024一起掘金#] 大的来了，今天给fast-create-variable支持了react中使用，虽然我不用react[灵光一现]",
           "imageUrl": null
         },
