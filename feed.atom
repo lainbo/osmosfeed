@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-10-26T03:52:51.184Z</id>
+    <id>urn:2023-10-26T06:52:47.808Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-10-26T03:52:51.184Z</updated>
+    <updated>2023-10-26T06:52:47.808Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[发布了: 这阵子观察下来，写好 DallE Prompt 的一个关键点是： 多用形容词。 ━━━━━━━━━━━━━━━━━━ Animated film-style illustration of a tal...]]></title>
+        <id>https://m.okjike.com/originalPosts/6539ef6038c9be7186ac599e</id>
+        <link href="https://m.okjike.com/originalPosts/6539ef6038c9be7186ac599e"/>
+        <updated>2023-10-26T04:47:28.000Z</updated>
+        <summary type="html"><![CDATA[这阵子观察下来，写好 DallE Prompt 的一个关键点是： 多用形容词。
+━━━━━━━━━━━━━━━━━━
+Animated film-style illustration of a tall, lean man with dark hair, wearing a stylish coat and scarf, walking on a cobblestone street with a majestic greyhound. The surroundings are bathed in the soft glow of street lamps, with vintage buildings and ivy-covered walls. Fallen leaves swirl around, and there's a hint of mist. The mood is introspective, with the man lost in thought and the dog looking ahead with keen eyes.]]></summary>
+        <author>
+            <name>李继刚的即刻动态</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[发布了: 与其抱怨工作和生活中的各种小插曲，还不如把它视为一个游戏，通关过程中开启了或难或易的支线任务。这么去想的话，也是其乐无穷的。 我们的一生并不总...]]></title>
         <id>https://m.okjike.com/originalPosts/6539af2c38c9be7186a52d9a</id>
@@ -1134,6 +1146,52 @@ Free Now to 2023-10-26T15:00:00.000Z]]></summary>
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[可视化巴以冲突10天伤亡情况]]></title>
+        <id>https://juejin.cn/post/7291509875582058508</id>
+        <link href="https://juejin.cn/post/7291509875582058508"/>
+        <updated>2023-10-19T11:10:21.000Z</updated>
+        <summary type="html"><![CDATA[最近巴以冲突是人们关注的热点，这里我们就使用 G2 可视化一下其时间线，最后的效果如下图所示：
+
+那接下来就来看看如何用 G2 来绘制这张图，看完你将有如下的收获：
+G2 如何设置图表的 title
+G2 如何设置图表的背景颜色
+G2 中 fold 数据处理的使用方法
+G2 如何自定义映射颜色
+G2 如何绘制数据驱动的 label
+G2 如何绘制 html label
+G2 如何自定义图例的文本
+可交互的版本可以通过如下渠道看：
+AntV Storytelling
+Observable Notebook
+接下来我们就开始可视化。注意，这里更多是从技术视角介绍这张图的可视化思路，更多相关介绍请看新闻稿。
+准备
+首先我们了解一下数据，该数据是一份表格数据，每一个数据行包含时间、事件以及当前两方的伤亡情况。
+
+我们简单封装一个工具函数来简化可视化声明，这里用到了 G2 5.0 新的 Spec API：
+function g2(options) {
+  const chart = new G2.Chart();
+  chart.options(options);
+  chart.render();
+  return chart.getContainer();
+}
+
+思路
+在开始写代码前，我们简单来梳理一下可视化的思路。上面这张图看起来复杂，其实主体本质上就是一个柱形图 + 面积图 + 数据标签，而我们可以通过类似“叠图层”的方式，将它们组合成一个图表，最后再优化一下样式即可。
+
+下面就到了写代码时间。
+视图
+我们所有的内容都是放在如下的一个视图里的，然后通过 children 配置去添加不同的标记。
+g2({
+  type: "view",
+  width: 800, // 一些布局信息
+  height: 1200,
+  insetTop: 15,
+  insetRight: 1…]]></summary>
+        <author>
+            <name>蚂蚁集团数据体验技术</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[工作不给转正又不辞退怎么办]]></title>
         <id>https://juejin.cn/post/7291496777688334336</id>
         <link href="https://juejin.cn/post/7291496777688334336"/>
@@ -1326,16 +1384,6 @@ vue2.6 如果要使用 ts，要使用装饰器写法，这种风格也不再推�
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[重庆市巫山县发布大风蓝色预警]]></title>
-        <id>http://www.cneb.gov.cn/yjxx/lanseyj/20231019/t20231019_526456341.html</id>
-        <link href="http://www.cneb.gov.cn/yjxx/lanseyj/20231019/t20231019_526456341.html"/>
-        <updated>2023-10-19T05:52:00.000Z</updated>
-        <summary type="html"><![CDATA[巫山县气象台2023年10月19日13时20分发布“大风蓝色预警信号”，预计19日13时至19时，当阳乡、平河乡、金坪乡、大昌镇、双龙镇、巫峡镇、龙门街道、高唐街道、建平乡、培石乡、抱龙镇、大溪乡、曲尺乡等乡镇沿江河谷及高海拔地区风速较大，风力可达6级，局地阵风可达7级以上，请注意防范。]]></summary>
-        <author>
-            <name>国家预警信息发布中心</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[前端文艺复兴：真的需要Pinia吗？]]></title>
         <id>https://juejin.cn/post/7291464815659106359</id>
         <link href="https://juejin.cn/post/7291464815659106359"/>
@@ -1372,16 +1420,6 @@ import { store } from './store.js'
 <!-- ComponentB.vue …]]></summary>
         <author>
             <name>思路为王</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[重庆市武隆区发布大风蓝色预警]]></title>
-        <id>http://www.cneb.gov.cn/yjxx/lanseyj/20231019/t20231019_526456234.html</id>
-        <link href="http://www.cneb.gov.cn/yjxx/lanseyj/20231019/t20231019_526456234.html"/>
-        <updated>2023-10-19T03:38:00.000Z</updated>
-        <summary type="html"><![CDATA[武隆区气象台2023年10月19日11时发布“大风蓝色预警信号”，目前我区凤山街道和芙蓉街道已出现7级以上大风，预计未来12小时大风将持续，白马镇、羊角街道、仙女山街道等乡镇街道风力可达7级，局地阵风可达8级以上，请注意防范。]]></summary>
-        <author>
-            <name>国家预警信息发布中心</name>
         </author>
     </entry>
     <entry>
@@ -1576,41 +1614,6 @@ import { store } from './store.js'
    …]]></summary>
         <author>
             <name>雯子</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[什么？掘金文章里居然能跑 flutter app？！]]></title>
-        <id>https://juejin.cn/post/7291195694466826281</id>
-        <link href="https://juejin.cn/post/7291195694466826281"/>
-        <updated>2023-10-18T14:50:29.000Z</updated>
-        <summary type="html"><![CDATA[先上效果：
-jcode
-（这是我用 flutter 写的一个 k 线图组件 demo，利用 flutter 动画系统实现丝滑过渡。）
-jcode
-（flutter 动画 demo）
-jcode
-（flame 2d 游戏，需要键盘控制）
-点进来的你已经知道了，这是用码上掘金跑的 flutter web app，但为了能在码上掘金跑 flutter 还有一些坑要踩。
-首先，如何在码上掘金里跑 flutter web app？
-一个简单的想法是把编译好的 js 代码复制到码上掘金里运行，但我们要复制哪些代码呢？这就不得不先研究下 flutter web 是怎么跑起来的。
-Flutter Web 是怎么跑起来的
-打开编译后的 index.html，你会发现里面只有几行 js 代码，没有任何实体标签：
-<script>
-// The value below is injected by flutter build, do not touch.
-const serviceWorkerVersion = "1381134275";
-</script>
-<!-- This script adds the flutter initialization JS code -->
-<script src="flutter.js" defer></script>
-<script>
-window.addEventListener('load', function(ev) {
-  // Download main.dart.js
-  _flutter.loader.loadEntrypoint({
-    serviceWorker: {
-      serviceWorkerVersion: serviceWorkerVersion,
-    },
-    onEntrypointLoaded: fu…]]></summary>
-        <author>
-            <name>7c00</name>
         </author>
     </entry>
     <entry>
@@ -2089,18 +2092,6 @@ CoT（Chain of Thought prompting）有两种比较常见的实践方式，一个
    如果…]]></summary>
         <author>
             <name>HouSirui</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[转发了: 如果官方英文文档读不进去，这里有人用心整理好的翻译对比稿，read the fuck manual。]]></title>
-        <id>https://m.okjike.com/reposts/652df313d5f9a5727f23cfe9</id>
-        <link href="https://m.okjike.com/reposts/652df313d5f9a5727f23cfe9"/>
-        <updated>2023-10-17T02:36:03.000Z</updated>
-        <summary type="html"><![CDATA[如果官方英文文档读不进去，这里有人用心整理好的翻译对比稿，read the fuck manual。
-
-转发 @大咕咕咕咕驴: 送大家一本大黄书。OpenAI 六月份发了一个 GPT best practices，比市面上任何几千九百九的提示词工程课可能都实用。我只是做了编译和补充用例和排版🙏]]></summary>
-        <author>
-            <name>李继刚的即刻动态</name>
         </author>
     </entry>
     <entry>
