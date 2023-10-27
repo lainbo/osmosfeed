@@ -23,7 +23,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1206,
+          "wordCount": 1205,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -284,7 +284,7 @@
           "description": "思考的深度即逻辑链的长度。\n大多数人习惯于因为a所以b的简单短小逻辑链，这样大脑理解接收起来毫无压力。\n如果想要提升思考深度，也就是提升逻辑链的长度，有两个方向可以使劲：因和果。\n往因上使劲的方法，就是著名的5 why。 针对你看到的问题，连续追问为什么，直接问出的那个答案显而易见。\n往果上使劲的方法，是一个类似的方法 5 so。针对你看到的一个现象，连续追问so what？ \n通过一左一右两个方向的不断延伸，你的逻辑思考链条也就脱离了简单的因为所以式思考框架。\n方法很简单，甚至可能你都早已知晓，坚持使用，直到习惯成自然， 很难。",
           "link": "https://m.okjike.com/originalPosts/65300c9899f2123c744ac7f1",
           "publishedOn": "2023-10-18T16:49:28.000Z",
-          "wordCount": 463,
+          "wordCount": 465,
           "title": "发布了: 思考的深度即逻辑链的长度。 大多数人习惯于因为a所以b的简单短小逻辑链，这样大脑理解接收起来毫无压力。 如果想要提升思考深度，也就是提升逻辑链的长...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         }
@@ -702,7 +702,7 @@
           "description": "性能改进和DOM节点的附加属性的类型检查使新的Vue值得更新。Vue团队确实做了很多工作。实际上，他们在同一天发布了两个子版本。Vue 3.3.5 和 3.3.6 都在2023年10月20日发布。\n免费体验 Gpt4 plus 与 AI作图神器，我们出的钱 体验地址：体验\nWeakMaps\n其中一个得到改进的是在可能的情况下从 Maps 和 Sets 转移到WeakMaps 和WeakSets。\n那是什么，为什么这么重要？\n如果你在 Maps或 Sets 中存储东西，你会对这些东西做一个引用。这意味着，只要Map或Set被使用，这个东西就不会被垃圾收集器从内存中释放。\n这通常这是有意义的。但有时候不是。例如，通过在系统中流动的数据中添加诊断数据。\n这就是 WeakMaps 和 WeakSets 开始发挥作用的地方，Vue现在在内部更多地使用这些来防止内存泄漏并提高整体性能。\n对 contenteditable=\"plaintext-only\" 的支持\n我认为 contenteditable可以是true或false。但显然，有第三个值 \"plaintext-only\"。\n通常，当你将参数设置为true时，可以编辑格式，粘贴富文本。使用plaintext-only值则不行。\n现在的变化是，Vue不会为HTML规范中定义的合法值抛出 Typescript 错误。\n延迟加载图像\n这只是对HTML特性的类型支持。它在3.3.5中被添加，并使你能够将 img 的加载参数设置为lazy。\n这样，图像不会立即加载。这是一个标准的HTML特性，已经存在了一段时间，但这个修复是一个很好的提醒，用它来提高应用程序的性能。\n此版本中还有其他的错误修复和性能改进。\nVue 3.2.40的新功能\n错误地禁用按钮\n\n上面的代码说明了按钮不应该被禁用，因为“false”在属性中实际上是一个字符串，而不是…",
           "link": "https://juejin.cn/post/7293804880706240550",
           "publishedOn": "2023-10-26T00:57:33.000Z",
-          "wordCount": 1089,
+          "wordCount": 1088,
           "title": "Vue 3.3.6 发布了，得益于WeakMap，它更快了",
           "imageUrl": null
         },
@@ -712,18 +712,18 @@
           "description": "前言\n要在 JavaScript 中实现屏幕录制，可以使用 navigator.mediaDevices.getDisplayMedia() 方法来获取屏幕的媒体流。然后，可使用 MediaRecorder 对象将媒体流录制为视频文件。\n但该方法会在浏览器弹出一个授权窗口，让用户选择要分享的内容，这不可实现“无感知”。\n\n如果真正做到无感知，那我们就不能借助浏览器或者系统系统的能力了。我们能做的就只能是通过js去操作了。\n要在页面内直接录制视频似乎并不容易，没有现成的开源库可以使用，也没有很好的想法。\n那我们换一个思路，视频是由帧组成的，我们是否可以不断的截图，然后组合成一段视频？好像是可以的。\n\n效果\n\njcode\n页面\n先写一个简单的页面：\n<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Canvas视频录制</title>\n    <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n\n<body>\n    <main>\n        <div class=\"buttons\">\n            <button class=\"start-btn\">开始录制</button>\n            <button class=\"pause-btn\">暂停录制</button>\n            <button class=\"resume-btn\">继续录制</button>\n            <button class=\"stop-btn\">结束录制</button>\n        </div>\n        <div id=\"box\">\n            <section class…",
           "link": "https://juejin.cn/post/7293462197386592283",
           "publishedOn": "2023-10-25T03:36:38.000Z",
-          "wordCount": 1583,
+          "wordCount": 1586,
           "title": "📷纯前端也可以实现「用户无感知录屏」？",
           "imageUrl": null
         },
         {
           "id": "https://juejin.cn/post/7293463921729372201",
           "author": "范天缘",
-          "description": "前言\n在网上找了很久都没有找到使用Three.js开发智慧城市的免费文章或者免费视频,自己花了一点时间做了一个纯前端的智慧城市项目。\n技术栈都是最新的:vue3+vite+typeScript+Three+antv G2\n源码分享 源码\n模型,天空图盒子链接分享(不想下载源码可以只用下这个)提取码1234 ————————————————\n有地面版本\n\n无地面版本\n\n开发各种框架的版本 开发工具为vscode\n\"vue\": \"^3.2.47\"\n\"@antv/g2plot\": \"^2.4.29\",\n\"typescript\": \"^5.0.2\",\n\"vite\": \"^4.3.0\",\n\"@types/three\": \"^0.150.2\",\n一.搭建three场景\n引入three,先初始化场景,相机,渲染器,光线,轨道控制器\n<template>\n  <div class=\"container\" id=\"container\"></div>\n</tempalte>\n<script lang=\"ts\" setup>\nlet scene = null as any,//场景\ncamera = null as any,//相机\nrenderer = null as any,//渲染器\ncontrols = null as any//轨道控制器\nimport {onMounted, reactive } from 'vue';\nimport * as THREE from 'three';\nimport {OrbitControls} from 'three/examples/jsm/controls/OrbitControls'\n//设置three的方法\nconst render = async () =>{\n  //1.创建场景\n  scene = new THREE.Scene();\n…",
+          "description": "前言\n在网上找了很久都没有找到使用Three.js开发3d的免费文章或者免费视频,自己花了一点时间做了一个纯前端的项目demo。\n模型都是在网上免费下载的，没有那么精细 美观 请见谅。\n此文章只用于想学习three.js的小伙伴做学习用途\n技术栈都是最新的:vue3+vite+typeScript+Three+antv G2\n源码分享 源码\n模型,天空图盒子链接分享(不想下载源码可以只用下这个)提取码1234 ————————————————\n有地面版本\n\n无地面版本\n\n\n开发各种框架的版本 开发工具为vscode\n\"vue\": \"^3.2.47\"\n\"@antv/g2plot\": \"^2.4.29\",\n\"typescript\": \"^5.0.2\",\n\"vite\": \"^4.3.0\",\n\"@types/three\": \"^0.150.2\",\n一.搭建three场景\n引入three,先初始化场景,相机,渲染器,光线,轨道控制器\n<template>\n  <div class=\"container\" id=\"container\"></div>\n</tempalte>\n<script lang=\"ts\" setup>\nlet scene = null as any,//场景\ncamera = null as any,//相机\nrenderer = null as any,//渲染器\ncontrols = null as any//轨道控制器\nimport {onMounted, reactive } from 'vue';\nimport * as THREE from 'three';\nimport {OrbitControls} from 'three/examples/jsm/controls/OrbitControls'\n//设置three的方法\nconst render =…",
           "link": "https://juejin.cn/post/7293463921729372201",
           "publishedOn": "2023-10-25T03:33:58.000Z",
-          "wordCount": 3419,
-          "title": "用Three.js做一个智慧城市-纯前端（Vue3+Three.js+antvG2）",
+          "wordCount": 3425,
+          "title": "用Three.js做一个3d版的demo-纯前端（Vue3+Three.js+antvG2）",
           "imageUrl": null
         },
         {
@@ -732,7 +732,7 @@
           "description": "大家好，我是考拉！\n这是我历时 1 个多月翻译的 Nest.js V10.x 版本中文文档。就在 1024 这天上线吧！网站访问速度还是蛮快的哦！\n网站地址：http://nestjs.inode.club\n\n\n之前写过 Nest.js系列文章：\nNest.js 手把手带你实战-项目创建&数据库操作\nNest.js 手把手带你实战-实现注册、扫码登陆、jwt认证等\n基于Nest.js+TypeORM实战系列3（项目已开源）\nNest.js 手把手带你实战： Node.js中使用Redis原来这么简单\n感兴趣可以看看，当年用的 Nest.js 版本比较老，后面小伙伴们都催新版本的一些用法， Nest.js V8.x -  V10.x变更的内容也比较多，大家可以先看翻译的中文文档，后面有时间我会专门出一期文章说明更新的内容。后面不忙也会持续更新 Nest.js 系列文章。\n中文文档刚上线，如果发现文档中有什么问题，欢迎指出，一定及时更新， 希望可以方便更多小伙伴。\n1024 程序员节日快乐，无BUG，祝大家都能早早下班！\n我这边也有一些Node Nest.js 技术交流交流群，感兴趣的可以加我的私人微信 ikoala520  进群，一起学习，共同进步。",
           "link": "https://juejin.cn/post/7293176193322237990",
           "publishedOn": "2023-10-24T03:56:54.000Z",
-          "wordCount": 849,
+          "wordCount": 850,
           "title": "1024程序员节，Nest.js中文文档上线啦！（最新版本）",
           "imageUrl": null
         },
@@ -742,7 +742,7 @@
           "description": "🎉 官网视觉升级\n1、更加符合DevUI设计理念的全新首页🆕\n\n2、优化内页布局结构，更好的交互体验get✔️\n\n🎉 组件库1.6.0版本更新，MD、代码编辑、代码检视等重量组件发布！\n✨ 新特性\n新增ActionTimeline操作时间轴组件\n新增CodeEditor代码编辑器组件\n新增CodeReview代码检视组件\n新增Markdown MD编辑器组件\n新增Dragdrop拖拽组件\n新增DCharts图标组件\n新增GitGraph提交网络图组件\n新增Carousel走马灯组件\nSelect: editable-select和select组件增加input-change事件\nModal: 添加close监听事件\nForm: 新增hideRequiredMark参数\nSplitter: 增加updateCollapsed方法\nGrid: 新增noOuter参数，抵消外层边距\n...\n一起来看一下新增的组件们在业务中的落地效果吧👏\n mardown编辑器：\n\nCodeEditor 代码编辑\n\nCodeReview 代码检视\n\n更多新增组件请访问 Vue-DevUI 网站查看体验。\n🐛 Bug修复\nCollapse: 修复折叠面板禁用时图标颜色\nTag: 修复Tag标签primary类型选中状态下，关闭按钮颜色与背景色一致\nImagePreview: 修复图片拖动并重置，再次拖动时的位置问题\nSelect: 修复select组件清空时不清空filterQuery的问题\nTree: 修复tree组件新增节点时折叠父节点，父节点会变成懒加载状态\nTooltip: tooltip组件xss问题修复\n...\n🔖 接下来做什么\n在未来的2.0版本（github规划地址），组件库将重点关注以下方面：\n📚 组件完善\n添加更多更实用的组件，如NavSprite、CategorySearch、Gantt、Dashboard等\n对现有的Table、Select、DatePickerPro等组件进行功能优化与完善\n封装通用的响应式组件、动画组件以及无障碍能力\n🔧 工程和文档优化\n完善组件单元测试，使用统一的错误处理和提示机制\n搜索引擎优化，提高页面体验\n完善组件英文文档，提供更好的国际化支持\n提供更好的主题定制能力\n👇 了解更多\nDevUI Design 官网: devui.design/home\nGitHub仓库: github.com/DevCloudFE/vue-devui\n如果你今天刚刚加入我们，可以先看看官网上的示例组件，你可以在左侧导航栏中切换想要查看的组件，然后通过右侧的快速前往在不同Demo之间切换。\n如果你准备添加 Vue DevUI，请前往快速开始文档，只需要几行代码。\n如果你对我们的开源项目感兴趣，并希望参与共建，欢迎加入我们的开源社区，关注DevUI微信公众号：DevUI 。",
           "link": "https://juejin.cn/post/7293115036535570484",
           "publishedOn": "2023-10-23T12:24:04.000Z",
-          "wordCount": 1027,
+          "wordCount": 1028,
           "title": "🌟 Vue DevUI 1.6.0，视觉升级、重量组件发布！",
           "imageUrl": null
         },
@@ -762,7 +762,7 @@
           "description": "theme: condensed-night-purple\n前言\n好久不更文章了，因为自己这段时间以及未来的一段时间在忙着一些事情，所以之后的文章频率也会很低了，在结束之后，有机会跟大家分享，我觉得是大家感兴趣的东西\n书归正传，现阶段行业不景气，很多人担心自己的工作不稳定，于是很多人想着去做国外的远程工作，既自由，挣得也多，也有人一直都想去外企，因为听说外企待遇好，而且适合养老\n这里我不去说远程和外企的缺点，因为远程工作我并不了解，而且我也不想说太多被杠\n那么，既然你有想去国外远程或者外企的想法，你的外语是必须要ok的，说到外语的话比较就有意思了，因为我自身是某外国语大学的学生，一外是日语，二外是英语，然后考过很多外语考试，4.6级，JLPT，雅思，专四专八\n\n\n有些考试的截图找不到了，我觉得这两个代表性的就够了，然后日语英语的话还有一些市、省、国家级别的比赛，以及日语还有在刊的论文\n\n我是在上大学时候接触日语的，英语其实大部分也是在大学学的，尤其是口语和听力，在这里大致分享给大家我用过的学习的方法，我的方法不一定适合大家，但是我是一个很笨的人，也能学的还算可以，我相信大家也可以\n日语\n日语我推荐的比较多，因为这是我主要的专业，日语的能力考（JLPT）含金量是比较高的，JTest反而认可度并不高，所以这里不介绍，基本上你有个N2的证书，大部分的日企都Ok，而且重点是，JLPT考试无限制，不管你是不是学生都能考，这里主要教大家怎么备考JLPT\n备考JLPT\n红蓝宝书（红是词汇、蓝是文法），新完全掌握（重点推荐语法的，别的一般），我其实就重点推荐这两种，像别的还有很多，例如无敌绿宝书等，我觉得没必要，然后练习题的书书我觉得随便买就行，练习题不是主要的，重点的是真题！真题！真题！往年的真题是一定要买的，然后在最后一定要刷真题\n然后我推荐一个B站的老师\n\nhttps://space…",
           "link": "https://juejin.cn/post/7292980341001371663",
           "publishedOn": "2023-10-23T09:39:33.000Z",
-          "wordCount": 872,
+          "wordCount": 871,
           "title": "想找一份国外远程或者外企工作，如何学习外语",
           "imageUrl": null
         },
@@ -772,7 +772,7 @@
           "description": "说在前面\n不知道大家平时工作的时候会不会需要经常新建git分支来开发新需求呢？在我这边工作的时候，需求都是以issue的形式来进行开发，每个issue新建一个关联的分支来进行开发，这样可以通过issue看到一个需求完整的开发记录，便于后续需求回顾和需求回退。而我平时本地分支都不怎么清理，这就导致了我这两年来本地分支的数量达到了惊人的361个，所以便开始写了这个可以批量删除分支的命令行工具。\n\n功能设计\n我们希望可以通过命令行命令的方式来进行交互，快速获取本地分支列表及各分支的最后提交时间和合并状态，在控制台选择我们想要删除的分支。\n功能实现\n1、命令行交互获取相关参数\n这里我们使用@jyeontu/j-inquirer模块来完成命令行交互功能，@jyeontu/j-inquirer模块除了支持inquirer模块的所有交互类型，还扩展了文件选择器、文件夹选择器及多级选择器交互类型，具体介绍可以查看文档：https://www.npmjs.com/package/@jyeontu/j-inquirer\n（1）获取操作分支类型\n我们的分支分为本地分支和远程分支，这里我们可以选择我们需要操作的分支类型，选择列表为：\"本地分支\"、\"远程分支\"、\"本地+远程\"。\n（2）获取远程仓库名（remote）\n我们可以输入自己git的远程仓库名，默认为origin。\n（3）获取生产分支名\n我们需要判断各分支是否已经合并到生产分支，所以需要输入自己项目的生产分支名，默认为develop。\n相关代码\nconst branchListOptions = [\n  {\n    type: \"list\",\n    message: \"请选择要操作的分支来源：\",\n    name: \"branchType\",\n    choices: [\"本地分支\", \"远程分支\", \"本地+远程\"],\n  },\n  {…",
           "link": "https://juejin.cn/post/7292635075304964123",
           "publishedOn": "2023-10-22T17:29:11.000Z",
-          "wordCount": 1761,
+          "wordCount": 1762,
           "title": "工作两年，本地git分支达到了惊人的361个，该怎么快速清理呢？",
           "imageUrl": null
         },
@@ -802,7 +802,7 @@
           "description": "这几个月，想必大家都听到过一个新闻：\nSvelte 弃用 TypeScript，改用 JSDoc 了。\n\nTypeScript 我们知道，是用来给 JS 加上类型的，可以实现类型提示和编译时的类型检查。\n那 JSDoc 能够完成一样的功能么？Svelte 是出于什么原因弃用 TS 的呢？\n先不着急回答这个问题。\n我们总得先了解下 JSDoc：\n可能大家认为的 JSDoc 是这个东西：\n\n在代码的注释上加上类型的标识，然后通过 jsdoc 命令行工具，就可以直接生成文档。\n比如这样的文档：\n\n确实，这个是 JSDoc 最初的含义。\n但我们说的 JSDoc 并不是这个，而是 TS 基于 JSDoc 语法实现的，在注释里给代码添加类型的语法。\n文档在这里：\n\nts 支持在 js 文件的注释里，通过 JSDoc 的语法给它加上类型。\n至于有什么意义，那可就太多了。\n比如一个 JS 的配置文件，你想在写配置的时候能有提示，就可以用 JSDoc：\n\n这里注释里的 @type 就是 JSDoc 声明类型的语法。\n在 vite 文档里，你可以看到对 JSDoc 的支持：\n\n我们自己试一下：\nmkdir jsdoc-test\ncd jsdoc-test\nnpm init -y\n\n\n创建项目和 package.json。\n然后安装 typescript：\nnpm install --save-dev typescript\n\n创建 tsconfig.json 文件：\nnpx tsc --init\n\n\n生成的 tscconfig.json 太多注释了，我们删一下：\n\n然后创建 src/index.ts\nfunction add(a: number, b: number) {\n    return a + b;\n}\n\n这样在用到这个 add 的时候，就会做类型检查：\n\n在 tsconfig.json…",
           "link": "https://juejin.cn/post/7292437487011856394",
           "publishedOn": "2023-10-22T10:58:00.000Z",
-          "wordCount": 1655,
+          "wordCount": 1656,
           "title": "JSDoc 真能取代 TypeScript？",
           "imageUrl": null
         },
@@ -822,7 +822,7 @@
           "description": "theme: smartblue\n前言\n这次给大家带来的是一个类似蚊香加载一样的效果，这个效果还是非常具有视觉欣赏性的，相比前几篇文章的CSS特效，这一次的会比较震撼一点。\n效果预览\njcode\n从效果上看感觉像是一层层蚊香摞在一起，通过动画来使得它们达到3D金钟罩的效果。\nHTML布局\n首先我们通过15个span子元素来实现金钟罩的每一层，用于创建基本结构。从专业术语上讲，每个span元素都代表加载动画中的一个旋转的小点。通过添加多个span元素，可以创建出一串连续旋转的小点，形成一个加载动画的效果。\n<div class=\"loader\">\n        <span></span>\n        // 以下省略15个span元素\n </div>\n\nCSS设计\n完成了基本的结构布局，接下来就是为它设计CSS样式了。我们一步一步来分析：\n首先是类名为loader的CSS类，相关代码如下。\n.loader{\n    position: relative;\n    width: 300px;\n    height: 300px;\n    transform-style: preserve-3d;\n    transform: perspective(500px) rotateX(60deg);\n}\n\n我们将元素的定位方式设置为相对定位，使其相对于其正常位置进行定位。然后定义好宽度和高度之后，设置元素的变换样式为preserve-3d，这样可以元素的子元素也会受到3D变换的影响。除此之外，还需要transform属性来设置元素的变换效果。这里的perspective(500px)表示以500像素的视角来观察元素，rotateX(60deg)则表示绕X轴顺时针旋转60度。\n这样就将一个宽高都定义好的元素进行了透视效果的3D旋转，使其以60度角度绕X轴旋转。\nloader类可以理…",
           "link": "https://juejin.cn/post/7291951762948259851",
           "publishedOn": "2023-10-21T01:02:22.000Z",
-          "wordCount": 962,
+          "wordCount": 963,
           "title": "手把手教你打造一个“蚊香”式加载",
           "imageUrl": null
         },
@@ -832,7 +832,7 @@
           "description": "theme: Chinese-red\n来啦来啦，它来啦~\n掘金小册 2023 年度最大优惠力度来啦！\n150+ 本好课等你挑，抽奖、满赠、闯关、互动玩不停！\n话不多说，快来看看册姐为大家准备的四重惊喜吧！\n⏰ 活动时间\n2023 年 10 月 23 日～2023 年 10 月 31 日\n🔔 惊喜一：1024 狂欢，全场 5 折起！\n上新小册 6 折，其他小册 5 折特惠\n购买小册➡️：点击浏览小册列表\n想买但是不知道怎么选？看这里：掘金之「什么值得买」\n活动期内，实付满 68 元即可参与抽奖👇🏻。会员兑换券不计入实付总金额，活动结束后由运营统一抽取。\n「奖品数量」\n「奖品名称」\n「实物图」\n\n\n\n\n10 个\n稀土掘金-码赛克系列运动毛巾\n\n\n\n\n👑 惊喜二：满 168 元 /268 元 /368 元赠好礼！\n参与规则：活动期间累计实付金额满 168 元 /268 元 /368 元的用户，可从对应礼品中三选一！各金额段满赠奖品不可叠加，但可与抽奖礼品叠加~ 同时，会员兑换券支付不计入实付总金额。\n假如：小明购买小册实付满 268 元，即可从大鼠标垫、摩卡壶和云朵小背包中挑选一个礼品。\n实付金额\n「奖品详情」\n「实物图」\n\n\n\n\n满 168 元\n动漫硅胶腕托鼠标垫 或 陶瓷马克杯 或 稀土掘金 JUEJIN FRIENDS 「码赛克」棒球帽（三选一）\n\n\n\n满 268 元\n小助手系列桌垫大鼠标垫 或 Touch 系列「围炉喝咖」摩卡壶 或 Max 云朵小背包（三选一）\n\n\n\n满 368 元\nTV 造型梦幻星空加热恒温杯垫 或 便携简约休闲胸包尼龙防泼水运动斜挎包 或 「无限新生」系列环保竹纤维材质饭盒套装（三选一）\n\n\n\n\n🤩福利加码！！！\n活动期间累计实付金额 TOP3 ，可分别获得：\n\n\n\n\n\n\n\nTop1：小米 7pro 智能手环（数量1)\nTop2：小米 AI 音箱第二代（数量1）\nTop3:小米蓝牙项圈耳机青春版（数量1）\n\n\n\n\n✨ 此奖品和满赠不叠加，可与抽奖礼品叠加\n👏 惊喜三：闯关有礼，掘金热门周边带回家~\n参与规则：活动期间每完成一关，即可获得一次抽奖机会，每人最多可参与 3 轮抽奖。「如果 3 关全部完成，必得 yoyo 抱枕 1 个！」\n活动流程：完成闯关-->填写👉🏻问卷👈🏻-->符合活动要求，自动进入抽奖池-->活动结束后，运营统一抽取。\n「闯关详情」\n「闯关规则」\n「奖品详情」\n「实物图」\n\n\n\n\n第一关：关注有礼\n关注掘金小册微信公众号，同时添加小册四姐@北比，或小册五姐@北比\n可参与Who Cares系列咖啡杯抽奖（3个）\n\n\n\n第二关：转发有礼\n转发 1024 活动链接（掘金文章或掘金公众号文章）到朋友圈，文案可自由发挥。朋友圈需公开可见，至少保留至活动结束后 5 个工作日\n可参与掘金加湿器抽奖（3个）\n\n\n\n第三关：推广有礼\n活动期间，参与掘金小册分销，成功分销 >=3 本（小册定价 >=29.9）。注意：分销人与实际购买人的 uid 不同才会计入总数\n可参与掘金翻转小夜灯抽奖（3个）\n\n\n\n\n另外：小册作者持续招募中，如果你也想成为其中一员，拿长效收益，千万别错过哦👉🏻问卷👈🏻~\n🥰 惊喜四：有奖互动，赢掘金 code&life 系列雨伞~\n2023 年转眼已过大半，今年你都关注了哪些前沿技术，有什么有趣/深入的发现和研究吗？\n👉🏻欢迎在文章评论区留下你的分享和见解，和大家一起畅聊~\n🎁 我们将从评论中抽取 5 人送出 code&life系列雨伞，每人 1 个。获奖名单将于活动结束后 5 个工作日（11月7日）内公布，届时请留意站内信/私信通知哦~\n「奖品数量」\n「奖品名称」\n「实物图」\n\n\n\n\n5 个\n掘金 code&life 系列雨伞\n\n\n\n\n另外，除现有小册，你还想看哪些小册主题，也欢迎反馈给我们哦👉🏻问卷👈🏻\n📢 活动须知&奖品领取方式（必看）\n各活动计算的实付金额以活动期间的「累计」实付金额为准，计算时间段为 10 月 23 日～10 月 31 日，会员兑换券不计入。\n其中，满赠活动各阶段礼品不叠加，但可与其他活动的抽奖礼品叠加~\n各活动获奖名单：活动结束后的 5 个工作日内（预计 11 月 7 日）公布\n实物礼品领取：\n活动结束后的 5 个工作日（11 月 7 日）内开始采集发货信息，届时请留意站内信/私信通知。\n信息发出后，请掘友们在 5 个工作日内完成填写，11 月 14 日 24 点截止。过期未填写视为放弃所有奖品，不予发放。\n多次提交问卷的，官方将以最新提交为准。\n信息采集完，将于 11 月 24 日前完成实物礼品发放。\n有任何疑问，可以通过 1️⃣站内私信掘金小册，2️⃣微信联系小册四姐@北比或小册五姐@北比\n🏃🏻现在就去选购👉🏻https://sourl.co/nQUPPM",
           "link": "https://juejin.cn/post/7291836033721090082",
           "publishedOn": "2023-10-20T06:20:27.000Z",
-          "wordCount": 1308,
+          "wordCount": 1303,
           "title": "💥1024最强省钱攻略 | 全场小册5折起，更有小米手环 7Pro、小爱音箱等十几种礼物等你来拿~",
           "imageUrl": null
         },
@@ -852,7 +852,7 @@
           "description": "最近巴以冲突是人们关注的热点，这里我们就使用 G2 可视化一下其时间线，最后的效果如下图所示：\n\n那接下来就来看看如何用 G2 来绘制这张图，看完你将有如下的收获：\nG2 如何设置图表的 title\nG2 如何设置图表的背景颜色\nG2 中 fold 数据处理的使用方法\nG2 如何自定义映射颜色\nG2 如何绘制数据驱动的 label\nG2 如何绘制 html label\nG2 如何自定义图例的文本\n可交互的版本可以通过如下渠道看：\nAntV Storytelling\nObservable Notebook\n接下来我们就开始可视化。注意，这里更多是从技术视角介绍这张图的可视化思路，更多相关介绍请看新闻稿。\n准备\n首先我们了解一下数据，该数据是一份表格数据，每一个数据行包含时间、事件以及当前两方的伤亡情况。\n\n我们简单封装一个工具函数来简化可视化声明，这里用到了 G2 5.0 新的 Spec API：\nfunction g2(options) {\n  const chart = new G2.Chart();\n  chart.options(options);\n  chart.render();\n  return chart.getContainer();\n}\n\n思路\n在开始写代码前，我们简单来梳理一下可视化的思路。上面这张图看起来复杂，其实主体本质上就是一个柱形图 + 面积图 + 数据标签，而我们可以通过类似“叠图层”的方式，将它们组合成一个图表，最后再优化一下样式即可。\n\n下面就到了写代码时间。\n视图\n我们所有的内容都是放在如下的一个视图里的，然后通过 children 配置去添加不同的标记。\ng2({\n  type: \"view\",\n  width: 800, // 一些布局信息\n  height: 1200,\n  insetTop: 15,\n  insetRight: 1…",
           "link": "https://juejin.cn/post/7291509875582058508",
           "publishedOn": "2023-10-19T11:10:21.000Z",
-          "wordCount": 3497,
+          "wordCount": 3498,
           "title": "可视化巴以冲突10天伤亡情况",
           "imageUrl": null
         },
@@ -882,7 +882,7 @@
           "description": "前言\n说起Pinia，熟悉vue3开发的程序员肯定不会陌生，甚至被vue官方推荐取代vuex，成为vue全家桶之一。\n疑惑\n还记得之前用 vuex 时，更改state还分同步和异步（这里有尤雨溪的回答https://www.zhihu.com/question/48759748） ，面试还被问过为什么...，当时也是不太理解，觉得肯定有他的道理，谁知看了pinia后，更改state同步异步都可以......\n回到正题：但我们真的需要Pinia/Vuex吗？Pinia/Vuex解决了什么问题？没有Pinia/Vuex前我们是怎么做的呢，会有什么问题？\n刨根\n对于以上问题，以下是本人的一些思考（有不足之处，还望赐教🙏）\n为什么需要Pinia，它解决了什么问题？先查下官网/别人怎么说；\n网上很多是说，Pinia 是 Vue.js 的轻量级状态管理库；\n官方文档如下描述：\n\n对于以上支撑观点，下面一个个来看，看下Pinia是否是必须的：\n1. Pinia 是 Vue.js 的轻量级状态管理库\n详阅vue官网关于状态管理 的文章，里面提到一个场景：多个组件共享一个共同的状态时，用vue原生的能力实现有点麻烦，文章推荐以下方法，将公用的数据提取到全局，这样需要的组件可以直接引用：\n// store.js\nimport { reactive } from \"vue\";\n\nexport const store = reactive({\n  count: 0,\n  // ...\n});\n\n<!-- ComponentA.vue -->\n<script setup>\nimport { store } from './store.js'\n</script>\n\n<template>From A: {{ store.count }}</template>\n\n<!-- ComponentB.vue …",
           "link": "https://juejin.cn/post/7291464815659106359",
           "publishedOn": "2023-10-19T03:54:43.000Z",
-          "wordCount": 1895,
+          "wordCount": 1893,
           "title": "前端文艺复兴：真的需要Pinia吗？",
           "imageUrl": null
         }
@@ -893,6 +893,16 @@
       "feedUrl": "https://rsshub.app/juejin/pins/6824710202000932877",
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
+        {
+          "id": "7294230559248662539",
+          "author": "xncHung",
+          "description": "[7073670907851440160#新人报道#] 最近开发了一个名叫RetrofitAssistant的IDEA插件,android Studio也可以用，主要功能是提供接口管理/代码补全/代码检查，同时如果你所用的api文档工具支持open api 3的话（如swagger/apifox），它还是个文档工具，代码补全会更加强大，强烈推荐android老铁们使用。",
+          "link": "https://juejin.cn/pin/7294230559248662539",
+          "publishedOn": "2023-10-27T02:59:38.000Z",
+          "wordCount": 553,
+          "title": "[7073670907851440160#新人报道#] 最近开发了一个名叫RetrofitAssistant的IDEA插件,android Studio也可以用，主要功能是提供接口管理/代码补全/代码检查，同时如...",
+          "imageUrl": null
+        },
         {
           "id": "7294199692623855653",
           "author": "哲思_swift",
@@ -1081,16 +1091,6 @@
           "publishedOn": "2023-10-18T08:51:01.000Z",
           "wordCount": 556,
           "title": "[7018942344208580646#1024一起掘金#] 大的来了，今天给fast-create-variable支持了react中使用，虽然我不用react[灵光一现]",
-          "imageUrl": null
-        },
-        {
-          "id": "7291135064842158114",
-          "author": "无畏先锋",
-          "description": "你们都用什么开发工具",
-          "link": "https://juejin.cn/pin/7291135064842158114",
-          "publishedOn": "2023-10-18T08:00:51.000Z",
-          "wordCount": 563,
-          "title": "你们都用什么开发工具",
           "imageUrl": null
         }
       ]
