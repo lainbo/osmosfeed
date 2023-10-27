@@ -23,7 +23,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1212,
+          "wordCount": 1206,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "本文介绍三种改变音频播放音量的方法，其中还有一种方法直接改变音频AudioBuffer数据源的音量，说不定你哪天就会用到。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/",
           "publishedOn": "2023-10-09T14:50:57.000Z",
-          "wordCount": 1097,
+          "wordCount": 1094,
           "title": "JS改变AudioBuffer音量并下载为新audio音频",
           "imageUrl": null
         }
@@ -147,7 +147,7 @@
           "description": "如何让 ChatGPT 更好地思考，以获得更佳的输出效果，有几个比较成熟的实践和技巧，背后都有对应的论文。\n1）CoT，思维链提示，https://arxiv.org/abs/2205.10625，将思考过程打印出来或者提供 one-shot/few-shot，输出的准确性会更高；例如你可以在提示词后追加：“Let's think step by step”，效果就要好一些。\n对于决策推理性的问题，CoT 的效果都比较不错，事实上这个涌现效果是被发现而不是被设计出来的，后来它的有效性在这篇论文（https://arxiv.org/abs/2205.10625）中得到了证明。\n2）Self-Consistency，自洽性，https://arxiv.org/abs/2203.11171，在多次输出中找到投票最高的那条，例如你可以这么跟 ChatGPT 说：\n“对于每一个问题，你会思考 5 种不同的思路，然后将它们结合起来，输出最佳的措辞、最全面和最准确的答案。”（图一）\n3）Least to Most prompting，本质是规划+逐步执行，https://arxiv.org/abs/2205.10625，对于复杂的任务，单纯使用 CoT + SC 效果依然不会太好，可以让 ChatGPT 先自己去拆解问题再回答：\n\"对于每一个问题，你首先需要回答是否将问题分解为子问题，若否，直接给出答案；若是，则将问题拆解为子问题，然后将它们结合起来，输出最佳的措辞、最全面和最准确的答案。\"\n“To solve {problem}, we need to……”，让大模型开启这种思维模式，不断细化问题，结果会更好。（图二）\n4）Multi-Persona Self-Collaboration，多角色扮演，https://arxiv.org/abs/2307.05300，这个有点类似之前提到的 AutoGen，让多个代理相互对话来解决问题，只不过 AutoGen 是从工程层面真正做到了多 Agents 交互，而这里提到的，是让 ChatGPT 扮演多重人格/角色，例如：\n“你可以扮演任何角色，针对我给出的问题，请提供三个最相关的角色，对问题进行两轮讨论，然后你综合讨论结果总结最佳方案。请打印三个角色的讨论过程以及最后的方案。”（图三）\n以上，这些技巧的运用并不复杂，但是思想比较重要，掌握了之后，稍微修改下 Prompt，便可以得到更加符合预期的结果。#AI学习#",
           "link": "https://m.okjike.com/originalPosts/652faa1cbb3e3660e8041b7b",
           "publishedOn": "2023-10-18T09:49:16.000Z",
-          "wordCount": 510,
+          "wordCount": 508,
           "title": "发布了: 如何让 ChatGPT 更好地思考，以获得更佳的输出效果，有几个比较成熟的实践和技巧，背后都有对应的论文。 1）CoT，思维链提示，https://arxiv.org/abs/22...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fre5jgJ7vXoX5nLdvGRUgPWTyo2bv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -284,7 +284,7 @@
           "description": "思考的深度即逻辑链的长度。\n大多数人习惯于因为a所以b的简单短小逻辑链，这样大脑理解接收起来毫无压力。\n如果想要提升思考深度，也就是提升逻辑链的长度，有两个方向可以使劲：因和果。\n往因上使劲的方法，就是著名的5 why。 针对你看到的问题，连续追问为什么，直接问出的那个答案显而易见。\n往果上使劲的方法，是一个类似的方法 5 so。针对你看到的一个现象，连续追问so what？ \n通过一左一右两个方向的不断延伸，你的逻辑思考链条也就脱离了简单的因为所以式思考框架。\n方法很简单，甚至可能你都早已知晓，坚持使用，直到习惯成自然， 很难。",
           "link": "https://m.okjike.com/originalPosts/65300c9899f2123c744ac7f1",
           "publishedOn": "2023-10-18T16:49:28.000Z",
-          "wordCount": 465,
+          "wordCount": 463,
           "title": "发布了: 思考的深度即逻辑链的长度。 大多数人习惯于因为a所以b的简单短小逻辑链，这样大脑理解接收起来毫无压力。 如果想要提升思考深度，也就是提升逻辑链的长...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         }
@@ -670,33 +670,23 @@
       "siteUrl": "https://store.epicgames.com/zh-CN/free-games?lang=zh-CN",
       "articles": [
         {
+          "id": "https://store.epicgames.com/zh-CN/p/tandem-a-tale-of-shadows-c3f55e",
+          "author": "Hatinh Interactive",
+          "description": "艾玛和泰迪熊：影子历险记 以独特的俯视视角与侧向卷轴玩法和非凡的美学，重新定义了益智平台游戏这一大游戏类型。快来帮助艾玛和泰迪熊芬顿，解开著名魔术师托马斯·凯恩失踪一案的谜团吧。\n\nFree Now to 2023-11-02T15:00:00.000Z",
+          "link": "https://store.epicgames.com/zh-CN/p/tandem-a-tale-of-shadows-c3f55e",
+          "publishedOn": "2023-10-26T15:00:00.000Z",
+          "wordCount": null,
+          "title": "Tandem: A Tale of Shadows",
+          "imageUrl": null
+        },
+        {
           "id": "https://store.epicgames.com/zh-CN/p/the-evil-within-2",
           "author": "Bethesda Softworks LLC",
-          "description": "To save his daughter, Detective Sebastian Castellanos returns to a world of nightmares in The Evil Within 2. \n \nFight for your life inside a terrifying reality using weapons, traps and stealth in this survival horror follow-up from Tango Gameworks.",
+          "description": "To save his daughter, Detective Sebastian Castellanos returns to a world of nightmares in The Evil Within 2. \n \nFight for your life inside a terrifying reality using weapons, traps and stealth in this survival horror follow-up from Tango Gameworks.\n\nFree Now to 2023-11-02T15:00:00.000Z",
           "link": "https://store.epicgames.com/zh-CN/p/the-evil-within-2",
           "publishedOn": "2023-10-26T15:00:00.000Z",
           "wordCount": null,
           "title": "The Evil Within 2",
-          "imageUrl": null
-        },
-        {
-          "id": "https://store.epicgames.com/zh-CN/p/911-operator-585edd",
-          "author": "Games Operators S.A.",
-          "description": "911 OPERATOR 是一款模拟911接线员工作的游戏。你需要通过给予求助者现场应急指导和分配救援力量来处理各种险情。游戏中，你可以体验在任意城市中的接警员工作！",
-          "link": "https://store.epicgames.com/zh-CN/p/911-operator-585edd",
-          "publishedOn": "2023-10-23T14:00:00.000Z",
-          "wordCount": null,
-          "title": "911 Operator",
-          "imageUrl": null
-        },
-        {
-          "id": "https://store.epicgames.com/zh-CN/p/tandem-a-tale-of-shadows-c3f55e",
-          "author": "Hatinh Interactive",
-          "description": "艾玛和泰迪熊：影子历险记 以独特的俯视视角与侧向卷轴玩法和非凡的美学，重新定义了益智平台游戏这一大游戏类型。快来帮助艾玛和泰迪熊芬顿，解开著名魔术师托马斯·凯恩失踪一案的谜团吧。",
-          "link": "https://store.epicgames.com/zh-CN/p/tandem-a-tale-of-shadows-c3f55e",
-          "publishedOn": "2023-10-18T15:00:00.000Z",
-          "wordCount": null,
-          "title": "Tandem: A Tale of Shadows",
           "imageUrl": null
         }
       ]
@@ -706,6 +696,26 @@
       "feedUrl": "https://rsshub.app/juejin/trending/frontend/weekly",
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
+        {
+          "id": "https://juejin.cn/post/7293804880706240550",
+          "author": "王大冶",
+          "description": "性能改进和DOM节点的附加属性的类型检查使新的Vue值得更新。Vue团队确实做了很多工作。实际上，他们在同一天发布了两个子版本。Vue 3.3.5 和 3.3.6 都在2023年10月20日发布。\n免费体验 Gpt4 plus 与 AI作图神器，我们出的钱 体验地址：体验\nWeakMaps\n其中一个得到改进的是在可能的情况下从 Maps 和 Sets 转移到WeakMaps 和WeakSets。\n那是什么，为什么这么重要？\n如果你在 Maps或 Sets 中存储东西，你会对这些东西做一个引用。这意味着，只要Map或Set被使用，这个东西就不会被垃圾收集器从内存中释放。\n这通常这是有意义的。但有时候不是。例如，通过在系统中流动的数据中添加诊断数据。\n这就是 WeakMaps 和 WeakSets 开始发挥作用的地方，Vue现在在内部更多地使用这些来防止内存泄漏并提高整体性能。\n对 contenteditable=\"plaintext-only\" 的支持\n我认为 contenteditable可以是true或false。但显然，有第三个值 \"plaintext-only\"。\n通常，当你将参数设置为true时，可以编辑格式，粘贴富文本。使用plaintext-only值则不行。\n现在的变化是，Vue不会为HTML规范中定义的合法值抛出 Typescript 错误。\n延迟加载图像\n这只是对HTML特性的类型支持。它在3.3.5中被添加，并使你能够将 img 的加载参数设置为lazy。\n这样，图像不会立即加载。这是一个标准的HTML特性，已经存在了一段时间，但这个修复是一个很好的提醒，用它来提高应用程序的性能。\n此版本中还有其他的错误修复和性能改进。\nVue 3.2.40的新功能\n错误地禁用按钮\n\n上面的代码说明了按钮不应该被禁用，因为“false”在属性中实际上是一个字符串，而不是…",
+          "link": "https://juejin.cn/post/7293804880706240550",
+          "publishedOn": "2023-10-26T00:57:33.000Z",
+          "wordCount": 1089,
+          "title": "Vue 3.3.6 发布了，得益于WeakMap，它更快了",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7293462197386592283",
+          "author": "Mengke",
+          "description": "前言\n要在 JavaScript 中实现屏幕录制，可以使用 navigator.mediaDevices.getDisplayMedia() 方法来获取屏幕的媒体流。然后，可使用 MediaRecorder 对象将媒体流录制为视频文件。\n但该方法会在浏览器弹出一个授权窗口，让用户选择要分享的内容，这不可实现“无感知”。\n\n如果真正做到无感知，那我们就不能借助浏览器或者系统系统的能力了。我们能做的就只能是通过js去操作了。\n要在页面内直接录制视频似乎并不容易，没有现成的开源库可以使用，也没有很好的想法。\n那我们换一个思路，视频是由帧组成的，我们是否可以不断的截图，然后组合成一段视频？好像是可以的。\n\n效果\n\njcode\n页面\n先写一个简单的页面：\n<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Canvas视频录制</title>\n    <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n\n<body>\n    <main>\n        <div class=\"buttons\">\n            <button class=\"start-btn\">开始录制</button>\n            <button class=\"pause-btn\">暂停录制</button>\n            <button class=\"resume-btn\">继续录制</button>\n            <button class=\"stop-btn\">结束录制</button>\n        </div>\n        <div id=\"box\">\n            <section class…",
+          "link": "https://juejin.cn/post/7293462197386592283",
+          "publishedOn": "2023-10-25T03:36:38.000Z",
+          "wordCount": 1583,
+          "title": "📷纯前端也可以实现「用户无感知录屏」？",
+          "imageUrl": null
+        },
         {
           "id": "https://juejin.cn/post/7293463921729372201",
           "author": "范天缘",
@@ -754,16 +764,6 @@
           "publishedOn": "2023-10-23T09:39:33.000Z",
           "wordCount": 872,
           "title": "想找一份国外远程或者外企工作，如何学习外语",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7292450647303208999",
-          "author": "法的空间",
-          "description": "theme: fancy\n前言\n坐在面试官面前，我感到有些紧张，而面试官似乎察觉到了。他面带微笑，递了一杯水给我，问道：“你平时有玩什么游戏吗？”\n我很惊讶，但很快冷静了下来，回答道：“平时偶尔玩一下 Dota。”\n面试官接着问: “是什么吸引你玩 Dota 的？”\n我想了想说：\n运营，需要耐心地运营，任何一点细节都会影响最终的结果。\n学习和适应性，需要不断的去学习，适应新的东西。\n团队协作，个人的实力再强，也需要团队的配合，才能走的更远。\n坚持，不到最后一秒，你无法知道到底结果如何。\n面试官又问道: “那你在学习工作生活中，你觉得有什么东西跟 Dota 相似的吗？”\n我回答道: “我觉得不论是在学习、工作还是生活中，都需要耐心运营，并不断适应新的环境和知识。单打独斗通常不是高效的方式，只有坚持不懈，才能取得显著的成果。举个例子，就像在 技术社区 中，大家都对相同的兴趣保持着高度的热情。技术社区的成员分享编程技巧、开发经验和问题解决方法；他们积极合作，共同建设资源、工具和资料，以推动领域的发展；他们不仅学习新的技能，还不断提高自己的表现，以达到更高的水平。”\n面试官： “你这里说到技术社区，那你有听说过 FlutterCandies 吗？”\n这个问题让我稍作思考，然后微笑着回答：“当然，FlutterCandies 是一个非常杰出的 Flutter 社区。他们致力于分享各种 Flutter 插件、工具和示例代码，为 Flutter 开发者提供了强大的支持，让他们更轻松地构建高质量的应用程序。FlutterCandies 社区的成员积极参与开源项目，为 Flutter 生态系统的繁荣作出了出色的贡献。\n\n然而，面试官似乎对我的回答还想深入了解，他接着追问：“除此以外，还有其他方面的了解吗？”\n我稍作思考后继续说：“实际上，我也是 FlutterCandies 社区的一名成员，…",
-          "link": "https://juejin.cn/post/7292450647303208999",
-          "publishedOn": "2023-10-22T23:13:18.000Z",
-          "wordCount": 8274,
-          "title": "面试被问到 FlutterCandies，阁下又当如何应对 ？",
           "imageUrl": null
         },
         {
@@ -847,16 +847,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7291598231954948152",
-          "author": "墨渊君",
-          "description": "引言\n图片压缩在项目中是一个常见的需求, 通过减小图片文件的大小, 降低存储和传输成本, 提高网页加载速度, 以及减少带宽占用!\n个人站点 《仿 Mac 个人网站开发 ｜项目复盘》目前是使用 TinyPNG 提供的 API 来压缩图片的, 实际上目前系统就我一个人在使用, 所以 TinyPNG 一个月 500次 的免费额度还完全够用!!! 唯一的遗憾就是 TinyPNG 不支持 GIF 图片压缩, 但是考虑到大部分 GIF 录制软件导出的图片都是可以通过设置参数, 达到压缩的效果, 所以也就这样先用着咯....\n直到有幸看到 神光大大 的文章 《Nest + Sharp 实现了一个 gif 压缩工具, 帮我省不少钱》, 原来 Node 完全可以使用 Sharp 来完成图片的压缩、包括 GIF, 所以就生出了改造项目的想法, 而本文就是整个改造过程的一个简单记录....\n一、现有方案「TinyPNG」介绍\n正如引言所述, 目前个人站点压缩图片用的是 TinyPNG 所以在开始前, 容我简单介绍下它!!!\n1.1 是什么?\n\n正如官网所说, TinyPNG 是一个强大的图片压缩工具, 它使用智能有损压缩技术可以将我们的的 WebP、PNG、JPEG 等图片的文件大小进行一个压缩, 它可以通过选择性的减少图片中的颜色, 使得只需要很少的字节数就能保存数据, 在视觉上压缩的图片前后影响几乎不可见, 但是在文件大小上却有着显著效果!!!\n\n同时 TinyPNG 官方客户端代码库支持各种语言, 通过官方提供的 SDK 我们可以轻松调用它们的 API, 实现图片压缩功能!!!\n当然天下没有免费的午餐, TinyPNG API 每月是会有 500次 的免费额度, 超过部分则需要收费咯!!! 当然个人使用的话 500次 基本就够用了!!\n\n1.2 怎么用?\nWEB 版: 直接进入 TinyP…",
-          "link": "https://juejin.cn/post/7291598231954948152",
-          "publishedOn": "2023-10-20T00:17:30.000Z",
-          "wordCount": 2180,
-          "title": "Sharp: 压缩图片用啥 TinyPNG, 我也可以, 而且还免费呢?",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7291509875582058508",
           "author": "蚂蚁集团数据体验技术",
           "description": "最近巴以冲突是人们关注的热点，这里我们就使用 G2 可视化一下其时间线，最后的效果如下图所示：\n\n那接下来就来看看如何用 G2 来绘制这张图，看完你将有如下的收获：\nG2 如何设置图表的 title\nG2 如何设置图表的背景颜色\nG2 中 fold 数据处理的使用方法\nG2 如何自定义映射颜色\nG2 如何绘制数据驱动的 label\nG2 如何绘制 html label\nG2 如何自定义图例的文本\n可交互的版本可以通过如下渠道看：\nAntV Storytelling\nObservable Notebook\n接下来我们就开始可视化。注意，这里更多是从技术视角介绍这张图的可视化思路，更多相关介绍请看新闻稿。\n准备\n首先我们了解一下数据，该数据是一份表格数据，每一个数据行包含时间、事件以及当前两方的伤亡情况。\n\n我们简单封装一个工具函数来简化可视化声明，这里用到了 G2 5.0 新的 Spec API：\nfunction g2(options) {\n  const chart = new G2.Chart();\n  chart.options(options);\n  chart.render();\n  return chart.getContainer();\n}\n\n思路\n在开始写代码前，我们简单来梳理一下可视化的思路。上面这张图看起来复杂，其实主体本质上就是一个柱形图 + 面积图 + 数据标签，而我们可以通过类似“叠图层”的方式，将它们组合成一个图表，最后再优化一下样式即可。\n\n下面就到了写代码时间。\n视图\n我们所有的内容都是放在如下的一个视图里的，然后通过 children 配置去添加不同的标记。\ng2({\n  type: \"view\",\n  width: 800, // 一些布局信息\n  height: 1200,\n  insetTop: 15,\n  insetRight: 1…",
@@ -904,12 +894,32 @@
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
         {
+          "id": "7294199692623855653",
+          "author": "哲思_swift",
+          "description": "[7210228048107896891#每日快讯#]  上班摸鱼",
+          "link": "https://juejin.cn/pin/7294199692623855653",
+          "publishedOn": "2023-10-27T01:48:35.000Z",
+          "wordCount": 570,
+          "title": "[7210228048107896891#每日快讯#] 上班摸鱼",
+          "imageUrl": null
+        },
+        {
+          "id": "7294150742113796122",
+          "author": "慧慧来咯",
+          "description": "[7215101111321395200#人工智能创作者签约季#]  每天摸鱼",
+          "link": "https://juejin.cn/pin/7294150742113796122",
+          "publishedOn": "2023-10-27T01:46:35.000Z",
+          "wordCount": 526,
+          "title": "[7215101111321395200#人工智能创作者签约季#] 每天摸鱼",
+          "imageUrl": null
+        },
+        {
           "id": "7293786247654768681",
           "author": "bug哥",
           "description": "刚把这款叫 MySQL Proxy 的 IDEA 的插件从付费模式改成了 Freemium 模式，现有的功能都改成免费，希望能在日常工作上帮到大家。插件功能是从代码发送给 Mysql 服务器的协议包里解析出 SQL，并以此为基础开发了检索、使用 GPT 查询优化的功能，强烈你建议试用。",
           "link": "https://juejin.cn/pin/7293786247654768681",
           "publishedOn": "2023-10-25T09:55:54.000Z",
-          "wordCount": 600,
+          "wordCount": 618,
           "title": "刚把这款叫 MySQL Proxy 的 IDEA 的插件从付费模式改成了 Freemium 模式，现有的功能都改成免费，希望能在日常工作上帮到大家。插件功能是从代码发送给 Mysql 服...",
           "imageUrl": null
         },
@@ -1081,26 +1091,6 @@
           "publishedOn": "2023-10-18T08:00:51.000Z",
           "wordCount": 563,
           "title": "你们都用什么开发工具",
-          "imageUrl": null
-        },
-        {
-          "id": "7290848097159102505",
-          "author": "用户1478004274607",
-          "description": "[7073670907851440160#新人报道#] 大神们 用homebrew 是不兼容arm吗？  下载jkd8时显示这样\nopenjdk@8: The x86_64 architecture is required for this software.\nError: openjdk@8: An unsatisfied requirement failed this build.\n求解答",
-          "link": "https://juejin.cn/pin/7290848097159102505",
-          "publishedOn": "2023-10-17T16:40:48.000Z",
-          "wordCount": 594,
-          "title": "[7073670907851440160#新人报道#] 大神们 用homebrew 是不兼容arm吗？ 下载jkd8时显示这样 openjdk@8: The x86_64 architecture is required for this software....",
-          "imageUrl": null
-        },
-        {
-          "id": "7290733884136030242",
-          "author": "Simon_He",
-          "description": "打卡打卡，今天周二",
-          "link": "https://juejin.cn/pin/7290733884136030242",
-          "publishedOn": "2023-10-17T03:54:52.000Z",
-          "wordCount": 574,
-          "title": "打卡打卡，今天周二",
           "imageUrl": null
         }
       ]
