@@ -23,7 +23,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1206,
+          "wordCount": 1212,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "本文介绍三种改变音频播放音量的方法，其中还有一种方法直接改变音频AudioBuffer数据源的音量，说不定你哪天就会用到。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/",
           "publishedOn": "2023-10-09T14:50:57.000Z",
-          "wordCount": 1093,
+          "wordCount": 1097,
           "title": "JS改变AudioBuffer音量并下载为新audio音频",
           "imageUrl": null
         }
@@ -44,6 +44,16 @@
       "feedUrl": "https://feeds.feedburner.com/ruanyifeng",
       "siteUrl": "http://www.ruanyifeng.com/blog/",
       "articles": [
+        {
+          "id": "http://www.ruanyifeng.com/blog/2023/10/weekly-issue-275.html",
+          "author": null,
+          "description": "这里记录每周值得分享的科技内容，周五发布。\n本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。\n封面图\n\n令人意想不到，上图这栋看上去很时尚的建筑，竟然是印度的第三个南极考察站---- Bharathi 站，建于2012年。（via）\n彼得·蒂尔的实验\n彼得·蒂尔（Peter Thiel，1967-）是美国著名的风险投资家。\n\n他有两件事，非常有名。第一件，1998年参与创办 PayPal，四年后以15亿美元被收购，他获利5500万美元。\n第二件，他是 Facebook 的第一个投资人。2004年，Facebook 还没成立，他就给了扎克伯格50万美元。八年后，这笔投资价值20亿美元。\n他还出过一本畅销书，书名叫《从0到1》。这是2012年他的斯坦福大学创业课的讲义。\n\n今天不谈这些事情，我只想谈谈，他的一个离经叛道的实验，让我有极大的共鸣。\n这个实验就是验证，创业者到底要不要读（完）大学。\n彼得·蒂尔一直认为，很多有才华的年轻人，都被大学耽误了。 虽然他本人是斯坦福大学的文学学士和法学博士，但是他公开说，自己读完学位，只是因为不知道还能干什么。\n\"我看到那些与我一样的年轻人，而感到内疚。\n你不知道自己的人生该做什么，所以你拿到了本科学位。你不知道本科学位可以做什么，所以你又拿到了研究生学位。\n我就是这样选择了法学院，那是一个人不知道还能做什么时的安全选择。我对自己的大学生活没有什么大遗憾，但如果重来一次，我会思考更多的选择。\"\n他的言下之意就是，如果当年有人指点，告诉他怎么创业，他可能也会退学。\n\n2010年，他做了一个空前大胆的决定，成立\"蒂尔奖学金\"（Thiel Fellowship），每年资助20名左右的大学生，一人10万美元，条件是你必须退学创业。\n舆论一片哗然，指责他极其不负责任，进行错…",
+          "link": "http://www.ruanyifeng.com/blog/2023/10/weekly-issue-275.html",
+          "publishedOn": "2023-10-27T00:05:35.000Z",
+          "wordCount": null,
+          "title": "科技爱好者周刊（第 275 期）：彼得·蒂尔的实验",
+          "imageUrl": null
+        },
         {
           "id": "http://www.ruanyifeng.com/blog/2023/10/weekly-issue-274.html",
           "author": null,
@@ -137,7 +147,7 @@
           "description": "如何让 ChatGPT 更好地思考，以获得更佳的输出效果，有几个比较成熟的实践和技巧，背后都有对应的论文。\n1）CoT，思维链提示，https://arxiv.org/abs/2205.10625，将思考过程打印出来或者提供 one-shot/few-shot，输出的准确性会更高；例如你可以在提示词后追加：“Let's think step by step”，效果就要好一些。\n对于决策推理性的问题，CoT 的效果都比较不错，事实上这个涌现效果是被发现而不是被设计出来的，后来它的有效性在这篇论文（https://arxiv.org/abs/2205.10625）中得到了证明。\n2）Self-Consistency，自洽性，https://arxiv.org/abs/2203.11171，在多次输出中找到投票最高的那条，例如你可以这么跟 ChatGPT 说：\n“对于每一个问题，你会思考 5 种不同的思路，然后将它们结合起来，输出最佳的措辞、最全面和最准确的答案。”（图一）\n3）Least to Most prompting，本质是规划+逐步执行，https://arxiv.org/abs/2205.10625，对于复杂的任务，单纯使用 CoT + SC 效果依然不会太好，可以让 ChatGPT 先自己去拆解问题再回答：\n\"对于每一个问题，你首先需要回答是否将问题分解为子问题，若否，直接给出答案；若是，则将问题拆解为子问题，然后将它们结合起来，输出最佳的措辞、最全面和最准确的答案。\"\n“To solve {problem}, we need to……”，让大模型开启这种思维模式，不断细化问题，结果会更好。（图二）\n4）Multi-Persona Self-Collaboration，多角色扮演，https://arxiv.org/abs/2307.05300，这个有点类似之前提到的 AutoGen，让多个代理相互对话来解决问题，只不过 AutoGen 是从工程层面真正做到了多 Agents 交互，而这里提到的，是让 ChatGPT 扮演多重人格/角色，例如：\n“你可以扮演任何角色，针对我给出的问题，请提供三个最相关的角色，对问题进行两轮讨论，然后你综合讨论结果总结最佳方案。请打印三个角色的讨论过程以及最后的方案。”（图三）\n以上，这些技巧的运用并不复杂，但是思想比较重要，掌握了之后，稍微修改下 Prompt，便可以得到更加符合预期的结果。#AI学习#",
           "link": "https://m.okjike.com/originalPosts/652faa1cbb3e3660e8041b7b",
           "publishedOn": "2023-10-18T09:49:16.000Z",
-          "wordCount": 508,
+          "wordCount": 510,
           "title": "发布了: 如何让 ChatGPT 更好地思考，以获得更佳的输出效果，有几个比较成熟的实践和技巧，背后都有对应的论文。 1）CoT，思维链提示，https://arxiv.org/abs/22...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fre5jgJ7vXoX5nLdvGRUgPWTyo2bv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -493,6 +503,16 @@
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
         {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231027/t20231027_526465012.html",
+          "author": "国家预警信息发布中心",
+          "description": "云阳县气象台2023年10月27日7时30分继续发布“大雾黄色预警信号”，预计未来12小时，全县各乡镇（街道）将出现能见度小于500米的大雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231027/t20231027_526465012.html",
+          "publishedOn": "2023-10-26T23:43:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市云阳县发布大雾黄色预警",
+          "imageUrl": null
+        },
+        {
           "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231026/t20231026_526464744.html",
           "author": "国家预警信息发布中心",
           "description": "云阳县气象台2023年10月26日19时继续发布“大雾黄色预警信号”，预计未来12小时，全县各乡镇（街道）将出现能见度小于500米的大雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。",
@@ -652,11 +672,31 @@
         {
           "id": "https://store.epicgames.com/zh-CN/p/the-evil-within-2",
           "author": "Bethesda Softworks LLC",
-          "description": "To save his daughter, Detective Sebastian Castellanos returns to a world of nightmares in The Evil Within 2. \n \nFight for your life inside a terrifying reality using weapons, traps and stealth in this survival horror follow-up from Tango Gameworks.\n\nFree Now to 2023-11-02T15:00:00.000Z",
+          "description": "To save his daughter, Detective Sebastian Castellanos returns to a world of nightmares in The Evil Within 2. \n \nFight for your life inside a terrifying reality using weapons, traps and stealth in this survival horror follow-up from Tango Gameworks.",
           "link": "https://store.epicgames.com/zh-CN/p/the-evil-within-2",
           "publishedOn": "2023-10-26T15:00:00.000Z",
           "wordCount": null,
           "title": "The Evil Within 2",
+          "imageUrl": null
+        },
+        {
+          "id": "https://store.epicgames.com/zh-CN/p/911-operator-585edd",
+          "author": "Games Operators S.A.",
+          "description": "911 OPERATOR 是一款模拟911接线员工作的游戏。你需要通过给予求助者现场应急指导和分配救援力量来处理各种险情。游戏中，你可以体验在任意城市中的接警员工作！",
+          "link": "https://store.epicgames.com/zh-CN/p/911-operator-585edd",
+          "publishedOn": "2023-10-23T14:00:00.000Z",
+          "wordCount": null,
+          "title": "911 Operator",
+          "imageUrl": null
+        },
+        {
+          "id": "https://store.epicgames.com/zh-CN/p/tandem-a-tale-of-shadows-c3f55e",
+          "author": "Hatinh Interactive",
+          "description": "艾玛和泰迪熊：影子历险记 以独特的俯视视角与侧向卷轴玩法和非凡的美学，重新定义了益智平台游戏这一大游戏类型。快来帮助艾玛和泰迪熊芬顿，解开著名魔术师托马斯·凯恩失踪一案的谜团吧。",
+          "link": "https://store.epicgames.com/zh-CN/p/tandem-a-tale-of-shadows-c3f55e",
+          "publishedOn": "2023-10-18T15:00:00.000Z",
+          "wordCount": null,
+          "title": "Tandem: A Tale of Shadows",
           "imageUrl": null
         }
       ]
