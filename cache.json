@@ -23,7 +23,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1205,
+          "wordCount": 1204,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "本文介绍三种改变音频播放音量的方法，其中还有一种方法直接改变音频AudioBuffer数据源的音量，说不定你哪天就会用到。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/",
           "publishedOn": "2023-10-09T14:50:57.000Z",
-          "wordCount": 1094,
+          "wordCount": 1093,
           "title": "JS改变AudioBuffer音量并下载为新audio音频",
           "imageUrl": null
         }
@@ -214,7 +214,7 @@
           "description": "如何保持独立思考? 一阴一阳法。\n一阴: 对每个进入脑海的观点进行概率打分。\n每个观点，不是简单的信或不信这种非黑即白式的判断，而是概率性的，对某个观点，你相信百分之多少。\n这样做, 可以给大脑留出空间。\n一阳: 保持好奇心。\n针对没有到达自己满意标准（90％以上？）的观点，通过好奇心地驱动，去寻找新信息和观点，来填充那个空间。",
           "link": "https://m.okjike.com/originalPosts/653a09b75110e254551c7301",
           "publishedOn": "2023-10-26T06:39:51.000Z",
-          "wordCount": 449,
+          "wordCount": 451,
           "title": "发布了: 如何保持独立思考? 一阴一阳法。 一阴: 对每个进入脑海的观点进行概率打分。 每个观点，不是简单的信或不信这种非黑即白式的判断，而是概率性的，对某个...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -687,6 +687,16 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
+          "id": "https://juejin.cn/post/7294056563631079424",
+          "author": "鹿林秋月",
+          "description": "前言\n个人项目开发创业半年有余，两个项目全部扑街，一无所获。\n仔细想来其实也不是什么都没有得到，因为现状就是，我创业开始前能预想到的最坏情况，哪怕一毛钱都挣不到，但是也可以从中积累一些经验，比如全栈开发经验。\n我过去7年的工作都是在从事前端开发，从最开始的IPTV 开发，用原生JS、JQuery 开发运行在机顶盒上JSP 页面；到18年，创建了项目组的第一个Vue 项目，那时候我才算是开始“现代”前端的工作；再到21年来上海，在新公司开始全面使用React + TS。也就是说，时至创业开始，我所有的工作经验只有前端开发，后端相关的只有自己瞎折腾的项目，没有真正应用到实际项目中的，这次也算是逼着自己进步了一把。\n技术选型\n前端 - 后台管理系统：React + TS，用了Antd 的组件库提供的模板直接创建项目\n前端 - 微信小程序：原生微信小程序开发 + Vant Weapp\n服务端：微信云开发\n为什么要选用以上技术栈，只有有一个原因，就是成本极低！非常低！前后端全部用JS 搞定；后台管理系统部署在腾讯云的Web 应用托管上，直接免去运维工作。说个题外话，前几年搞个人网站的，服务器是薅的阿里云的羊毛，结果就是啥活都得自己干，用Express 框架开发的后端服务，用Nginx 做代理，结果并发超过100个 服务器直接挂掉。。\n现在这一套技术栈，几乎没有学习成本，腾讯云的Web 应用托管集成了CI 工具，提交代码到线上分支后直接自动部署，用了半年多，网站、小程序都没有挂掉过。（我真不是腾讯的托。。）\n后台管理系统\nReact、TS、Antd 业务开发技术不多赘述，讲讲怎么在Web 端请求微信云开发的接口吧。\n微信云开发提供了可访问云服务的Web Sdk，引入sdk 后，只需要进行简单的初始化，即可访问接口。\n云开发登录授权配置，打开匿名登录\n\n示例代码\n处理请求\nimport …",
+          "link": "https://juejin.cn/post/7294056563631079424",
+          "publishedOn": "2023-10-26T10:07:48.000Z",
+          "wordCount": 2476,
+          "title": "个人创业中的全栈开发经验",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7293804880706240550",
           "author": "王大冶",
           "description": "性能改进和DOM节点的附加属性的类型检查使新的Vue值得更新。Vue团队确实做了很多工作。实际上，他们在同一天发布了两个子版本。Vue 3.3.5 和 3.3.6 都在2023年10月20日发布。\n免费体验 Gpt4 plus 与 AI作图神器，我们出的钱 体验地址：体验\nWeakMaps\n其中一个得到改进的是在可能的情况下从 Maps 和 Sets 转移到WeakMaps 和WeakSets。\n那是什么，为什么这么重要？\n如果你在 Maps或 Sets 中存储东西，你会对这些东西做一个引用。这意味着，只要Map或Set被使用，这个东西就不会被垃圾收集器从内存中释放。\n这通常这是有意义的。但有时候不是。例如，通过在系统中流动的数据中添加诊断数据。\n这就是 WeakMaps 和 WeakSets 开始发挥作用的地方，Vue现在在内部更多地使用这些来防止内存泄漏并提高整体性能。\n对 contenteditable=\"plaintext-only\" 的支持\n我认为 contenteditable可以是true或false。但显然，有第三个值 \"plaintext-only\"。\n通常，当你将参数设置为true时，可以编辑格式，粘贴富文本。使用plaintext-only值则不行。\n现在的变化是，Vue不会为HTML规范中定义的合法值抛出 Typescript 错误。\n延迟加载图像\n这只是对HTML特性的类型支持。它在3.3.5中被添加，并使你能够将 img 的加载参数设置为lazy。\n这样，图像不会立即加载。这是一个标准的HTML特性，已经存在了一段时间，但这个修复是一个很好的提醒，用它来提高应用程序的性能。\n此版本中还有其他的错误修复和性能改进。\nVue 3.2.40的新功能\n错误地禁用按钮\n\n上面的代码说明了按钮不应该被禁用，因为“false”在属性中实际上是一个字符串，而不是…",
@@ -847,16 +857,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7291952951048060940",
-          "author": "一溪风月",
-          "description": "theme: fancy\n💡Tips:不知道小伙伴在前端开发的时候有没有这样的困惑\n前端项目打包后，我打包过的静态资源是如何访问后端服务的？\n访问后端服务的时候难道不存在跨域的问题吗？如何解决的？\n假如我想自己简单修改下部署后的目录该如何去做？\n🥲其实不仅仅是你会有这样的疑惑，包括我在内刚接触前端的时候，由于没有后端的开发经验也会被这些问题所困扰，但是今天我们将一次性弄清楚这个问题，让我们前端的知识体系由点成线，由线成面~\n一.明确问题\n我们知道，我们平时在开发的时候一般都是使用proxy进行代理的，它的原理是：浏览器会先去访问本地的node服务器，然后node服务器再去代理到你要访问的后端api接口，但是我们可能平时没有node服务器的概念，因为node服务器在webpack中，我们一般是通过下面这种方式来设置\n\n但是我们的项目上线后这种方式就不能用了，（因为Node是我们本地开发的环境，并没有办法在线上使用。）其实，我们一般会通过后端的Nginx代理来解决跨域的问题，但是你知道前端的生产地址配置是什么吗？如何通过Nginx访问后端接口呢？是直接配置的类似于http://www.xxxx.com/api/aaa这样的路径呢？还是直接是一个相对路径/prod？要想搞清楚这些，首先就要了解什么是Nginx。\n二.什么是Nginx\n🐻是一个开源的高性能、轻量级的Web服务器和反向代理服务器，它具有事件驱动，异步非阻塞的架构，被广泛应用于构建高性能的网站，应用程序和服务。\n🤡在平时开发中我们经常听到正向代理和反向代理这两个名词，那么什么是反向代理，什么是正向代理哪？\n反向代理：服务器的IP是被屏蔽的，也就是说客户端不知道服务器真实的地址是哪个，客户端访问的地址或者域名是访问的Nginx服务器的地址。\n\n正向代理：和反向代理刚好相反，这个时候服务器不知道真正的客户端是哪个，…",
-          "link": "https://juejin.cn/post/7291952951048060940",
-          "publishedOn": "2023-10-21T05:05:08.000Z",
-          "wordCount": 1079,
-          "title": "一次性弄清前端上线和生产环境地址",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7291951762948259851",
           "author": "一条会coding的Shark",
           "description": "theme: smartblue\n前言\n这次给大家带来的是一个类似蚊香加载一样的效果，这个效果还是非常具有视觉欣赏性的，相比前几篇文章的CSS特效，这一次的会比较震撼一点。\n效果预览\njcode\n从效果上看感觉像是一层层蚊香摞在一起，通过动画来使得它们达到3D金钟罩的效果。\nHTML布局\n首先我们通过15个span子元素来实现金钟罩的每一层，用于创建基本结构。从专业术语上讲，每个span元素都代表加载动画中的一个旋转的小点。通过添加多个span元素，可以创建出一串连续旋转的小点，形成一个加载动画的效果。\n<div class=\"loader\">\n        <span></span>\n        // 以下省略15个span元素\n </div>\n\nCSS设计\n完成了基本的结构布局，接下来就是为它设计CSS样式了。我们一步一步来分析：\n首先是类名为loader的CSS类，相关代码如下。\n.loader{\n    position: relative;\n    width: 300px;\n    height: 300px;\n    transform-style: preserve-3d;\n    transform: perspective(500px) rotateX(60deg);\n}\n\n我们将元素的定位方式设置为相对定位，使其相对于其正常位置进行定位。然后定义好宽度和高度之后，设置元素的变换样式为preserve-3d，这样可以元素的子元素也会受到3D变换的影响。除此之外，还需要transform属性来设置元素的变换效果。这里的perspective(500px)表示以500像素的视角来观察元素，rotateX(60deg)则表示绕X轴顺时针旋转60度。\n这样就将一个宽高都定义好的元素进行了透视效果的3D旋转，使其以60度角度绕X轴旋转。\nloader类可以理…",
@@ -883,6 +883,16 @@
       "feedUrl": "https://rsshub.app/juejin/pins/6824710202000932877",
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
+        {
+          "id": "7294525616447684620",
+          "author": "Simon_He",
+          "description": "今天把这个插件link的vant主页了，看看还能不能让更多的框架可以link一下，让更多的开发者能够体验到这个插件[灵光一现]https://github.com/Simon-He95/vscode-common-intellisense",
+          "link": "https://juejin.cn/pin/7294525616447684620",
+          "publishedOn": "2023-10-28T03:42:45.000Z",
+          "wordCount": 576,
+          "title": "今天把这个插件link的vant主页了，看看还能不能让更多的框架可以link一下，让更多的开发者能够体验到这个插件[灵光一现]https://github.com/Simon-He95/vscode-c...",
+          "imageUrl": null
+        },
         {
           "id": "7294230559248662539",
           "author": "xncHung",
@@ -919,7 +929,7 @@
           "description": "刚把这款叫 MySQL Proxy 的 IDEA 的插件从付费模式改成了 Freemium 模式，现有的功能都改成免费，希望能在日常工作上帮到大家。插件功能是从代码发送给 Mysql 服务器的协议包里解析出 SQL，并以此为基础开发了检索、使用 GPT 查询优化的功能，强烈你建议试用。",
           "link": "https://juejin.cn/pin/7293786247654768681",
           "publishedOn": "2023-10-25T09:55:54.000Z",
-          "wordCount": 622,
+          "wordCount": 601,
           "title": "刚把这款叫 MySQL Proxy 的 IDEA 的插件从付费模式改成了 Freemium 模式，现有的功能都改成免费，希望能在日常工作上帮到大家。插件功能是从代码发送给 Mysql 服...",
           "imageUrl": null
         },
@@ -1071,16 +1081,6 @@
           "publishedOn": "2023-10-19T14:05:14.000Z",
           "wordCount": 542,
           "title": "[7018942344208580646#1024一起掘金#]作为一名程序员，请说出你的首选开发工具？（VScode yyds）",
-          "imageUrl": null
-        },
-        {
-          "id": "7291186128361766968",
-          "author": "Simon_He",
-          "description": "[7018942344208580646#1024一起掘金#] \n大的来了，今天给fast-create-variable支持了react中使用，虽然我不用react[灵光一现]",
-          "link": "https://juejin.cn/pin/7291186128361766968",
-          "publishedOn": "2023-10-18T08:51:01.000Z",
-          "wordCount": 560,
-          "title": "[7018942344208580646#1024一起掘金#] 大的来了，今天给fast-create-variable支持了react中使用，虽然我不用react[灵光一现]",
           "imageUrl": null
         }
       ]
