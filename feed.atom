@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-10-28T15:52:46.610Z</id>
+    <id>urn:2023-10-28T18:52:36.029Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-10-28T15:52:46.610Z</updated>
+    <updated>2023-10-28T18:52:36.029Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -148,18 +148,6 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Tandem: A Tale of Shadows]]></title>
-        <id>https://store.epicgames.com/zh-CN/p/tandem-a-tale-of-shadows-c3f55e</id>
-        <link href="https://store.epicgames.com/zh-CN/p/tandem-a-tale-of-shadows-c3f55e"/>
-        <updated>2023-10-26T15:00:00.000Z</updated>
-        <summary type="html"><![CDATA[艾玛和泰迪熊：影子历险记 以独特的俯视视角与侧向卷轴玩法和非凡的美学，重新定义了益智平台游戏这一大游戏类型。快来帮助艾玛和泰迪熊芬顿，解开著名魔术师托马斯·凯恩失踪一案的谜团吧。
-
-Free Now to 2023-11-02T15:00:00.000Z]]></summary>
-        <author>
-            <name>Hatinh Interactive</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[The Evil Within 2]]></title>
         <id>https://store.epicgames.com/zh-CN/p/the-evil-within-2</id>
         <link href="https://store.epicgames.com/zh-CN/p/the-evil-within-2"/>
@@ -171,6 +159,27 @@ Fight for your life inside a terrifying reality using weapons, traps and stealth
 Free Now to 2023-11-02T15:00:00.000Z]]></summary>
         <author>
             <name>Bethesda Softworks LLC</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[前端周报：React RSC 新范式！TS 5.2 正式发布，但 Turbo 8 和 TS 和平分手！Node 20.6 支持 .env。（2023 年第 37]]></title>
+        <id>https://juejin.cn/post/7294147620913610802</id>
+        <link href="https://juejin.cn/post/7294147620913610802"/>
+        <updated>2023-10-26T14:33:47.000Z</updated>
+        <summary type="html"><![CDATA[大家好，这里是大家的林语冰，您现在收看的是 2023 年第 37 周前端生态的技术周报（视频解说请临幸 人猫神话@bilibili）。
+每周必看
+你不知道的 React 服务器组件
+多年以来，React 生态孵化了若干种 SSR（服务端渲染）的元框架，包括但不限于 Next.js、Gatsby、Remix 等，但 React 生态一直没有一种官方方法。
+
+数月前，React 团队发布了 RSC（React Server Components） —— 一种最新的范式转变。有史以来第一次，React 组件可以专门在服务器上运行。
+RSC 范式引入了一种新型组件类型，即服务器组件。这些新组件的代码不会包含在 JS 打包中，所以祂们永远不会水合或重新渲染。RSC 不是 SSR 的替代品。事实上，您甚至可以在没有 SSR 的情况下使用 RSC。
+RSC 的优势在于性能，祂优化需要下载的 JS 代码数量，以及需要 hydration（水合）的组件数量，祂可以优化页面 TTI（可交互时间）性能指标。
+前端全家桶
+Biome 是一个一体化的全能前端工具链，其前身是 Rome（罗马）。Rome 是 Facebook 投资的一个项目，其作者编写过 Babel 和 Yarn，但 Rome 目前已停止维护。
+Biome 衍生自 Rome，直男翻译为“生物群落”。顾名思义，Biome 是一个前端工具链的全家桶，其终极目标旨在取代 Babel、ESLint、webpack、Prettier、Jest 等不同工具，实现前端工具链的大一统。
+目前，Biome 支持地表最强 IDE VS Code，且已有对应的 VS Code 扩展，同时支持多种主流语言，包括但不限于 —— JS、TS、JSX 等，但尚不支持 Vue、Svelte 等框架的语法。如果您像 UP 一样是 Vue 爱好者，大概会对 Biome …]]></summary>
+        <author>
+            <name>人猫神话</name>
         </author>
     </entry>
     <entry>
@@ -1153,51 +1162,6 @@ https://github.com/devlive-community/datacap/pull/453
 新支持的功能，欢迎大家一起参与源码贡献，目前已经有 9 位贡献者，100+ 使用用户，系统后续越来越强大，欢迎大家来共建]]></summary>
         <author>
             <name>qianmoq</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[前端如何直接上传文件夹]]></title>
-        <id>https://juejin.cn/post/7292323606875553843</id>
-        <link href="https://juejin.cn/post/7292323606875553843"/>
-        <updated>2023-10-21T17:28:26.000Z</updated>
-        <summary type="html"><![CDATA[theme: v-green
-前面写了一篇仿写el-upload组件，彻底搞懂文件上传，实现了选择/拖拽文件上传，我们经常看到一些网站支持直接选择整个文件夹上传，例如：宝塔面板、cloudflare托管、对象存储网站等等需要模拟文件路径存储文件的场景。那是怎么实现的呢？
-依然从两方面来说：
-input选择文件夹
-拖拽文件夹
-input选择文件夹
-在props.js中加一个属性，upload-folder是否支持上传文件夹
-export default {
-  // 前面的省略了...
-  // 是否支持选择文件夹
-  'upload-folder': {
-    type: Boolean,
-    default: false
-  }
-}
-
-改一下input标签，依然是根据props的值动态判断是否支持上传文件夹。主要是webkitdirectory这个属性，由于不是一个标准属性，需要加浏览器前缀。
-<input 
-  type="file" 
-  id="file" 
-  :multiple="multiple"
-  :accept="accept"
-  :webkitdirectory="uploadFolder"
-  :mozdirectory="uploadFolder"
-  :odirectory="uploadFolder"
-  @change="handleChange"
->
-
-注意：支持选择文件夹时就只能选择文件夹，无法选择文件。
-
-
-那么如何获取选择的文件夹呢？其实我们最终要上传的依然是文件，也就是file对象，文件夹也是一个特殊的文件。
-依然是通过input的onchange事件回调拿到上传的event。
-或者直接获取input这个dom对象，然后拿到files属性，结果是一样的。
-// input选择文件回调
-const handleChange =…]]></summary>
-        <author>
-            <name>xintianyou</name>
         </author>
     </entry>
     <entry>

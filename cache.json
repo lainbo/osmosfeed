@@ -33,7 +33,7 @@
           "description": "本文介绍三种改变音频播放音量的方法，其中还有一种方法直接改变音频AudioBuffer数据源的音量，说不定你哪天就会用到。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/",
           "publishedOn": "2023-10-09T14:50:57.000Z",
-          "wordCount": 1093,
+          "wordCount": 1092,
           "title": "JS改变AudioBuffer音量并下载为新audio音频",
           "imageUrl": null
         }
@@ -670,16 +670,6 @@
       "siteUrl": "https://store.epicgames.com/zh-CN/free-games?lang=zh-CN",
       "articles": [
         {
-          "id": "https://store.epicgames.com/zh-CN/p/tandem-a-tale-of-shadows-c3f55e",
-          "author": "Hatinh Interactive",
-          "description": "艾玛和泰迪熊：影子历险记 以独特的俯视视角与侧向卷轴玩法和非凡的美学，重新定义了益智平台游戏这一大游戏类型。快来帮助艾玛和泰迪熊芬顿，解开著名魔术师托马斯·凯恩失踪一案的谜团吧。\n\nFree Now to 2023-11-02T15:00:00.000Z",
-          "link": "https://store.epicgames.com/zh-CN/p/tandem-a-tale-of-shadows-c3f55e",
-          "publishedOn": "2023-10-26T15:00:00.000Z",
-          "wordCount": null,
-          "title": "Tandem: A Tale of Shadows",
-          "imageUrl": null
-        },
-        {
           "id": "https://store.epicgames.com/zh-CN/p/the-evil-within-2",
           "author": "Bethesda Softworks LLC",
           "description": "To save his daughter, Detective Sebastian Castellanos returns to a world of nightmares in The Evil Within 2. \n \nFight for your life inside a terrifying reality using weapons, traps and stealth in this survival horror follow-up from Tango Gameworks.\n\nFree Now to 2023-11-02T15:00:00.000Z",
@@ -696,6 +686,16 @@
       "feedUrl": "https://rsshub.app/juejin/trending/frontend/weekly",
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
+        {
+          "id": "https://juejin.cn/post/7294147620913610802",
+          "author": "人猫神话",
+          "description": "大家好，这里是大家的林语冰，您现在收看的是 2023 年第 37 周前端生态的技术周报（视频解说请临幸 人猫神话@bilibili）。\n每周必看\n你不知道的 React 服务器组件\n多年以来，React 生态孵化了若干种 SSR（服务端渲染）的元框架，包括但不限于 Next.js、Gatsby、Remix 等，但 React 生态一直没有一种官方方法。\n\n数月前，React 团队发布了 RSC（React Server Components） —— 一种最新的范式转变。有史以来第一次，React 组件可以专门在服务器上运行。\nRSC 范式引入了一种新型组件类型，即服务器组件。这些新组件的代码不会包含在 JS 打包中，所以祂们永远不会水合或重新渲染。RSC 不是 SSR 的替代品。事实上，您甚至可以在没有 SSR 的情况下使用 RSC。\nRSC 的优势在于性能，祂优化需要下载的 JS 代码数量，以及需要 hydration（水合）的组件数量，祂可以优化页面 TTI（可交互时间）性能指标。\n前端全家桶\nBiome 是一个一体化的全能前端工具链，其前身是 Rome（罗马）。Rome 是 Facebook 投资的一个项目，其作者编写过 Babel 和 Yarn，但 Rome 目前已停止维护。\nBiome 衍生自 Rome，直男翻译为“生物群落”。顾名思义，Biome 是一个前端工具链的全家桶，其终极目标旨在取代 Babel、ESLint、webpack、Prettier、Jest 等不同工具，实现前端工具链的大一统。\n目前，Biome 支持地表最强 IDE VS Code，且已有对应的 VS Code 扩展，同时支持多种主流语言，包括但不限于 —— JS、TS、JSX 等，但尚不支持 Vue、Svelte 等框架的语法。如果您像 UP 一样是 Vue 爱好者，大概会对 Biome …",
+          "link": "https://juejin.cn/post/7294147620913610802",
+          "publishedOn": "2023-10-26T14:33:47.000Z",
+          "wordCount": 1506,
+          "title": "前端周报：React RSC 新范式！TS 5.2 正式发布，但 Turbo 8 和 TS 和平分手！Node 20.6 支持 .env。（2023 年第 37",
+          "imageUrl": null
+        },
         {
           "id": "https://juejin.cn/post/7294056563631079424",
           "author": "鹿林秋月",
@@ -854,16 +854,6 @@
           "publishedOn": "2023-10-22T10:58:00.000Z",
           "wordCount": 1656,
           "title": "JSDoc 真能取代 TypeScript？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7292323606875553843",
-          "author": "xintianyou",
-          "description": "theme: v-green\n前面写了一篇仿写el-upload组件，彻底搞懂文件上传，实现了选择/拖拽文件上传，我们经常看到一些网站支持直接选择整个文件夹上传，例如：宝塔面板、cloudflare托管、对象存储网站等等需要模拟文件路径存储文件的场景。那是怎么实现的呢？\n依然从两方面来说：\ninput选择文件夹\n拖拽文件夹\ninput选择文件夹\n在props.js中加一个属性，upload-folder是否支持上传文件夹\nexport default {\n  // 前面的省略了...\n  // 是否支持选择文件夹\n  'upload-folder': {\n    type: Boolean,\n    default: false\n  }\n}\n\n改一下input标签，依然是根据props的值动态判断是否支持上传文件夹。主要是webkitdirectory这个属性，由于不是一个标准属性，需要加浏览器前缀。\n<input \n  type=\"file\" \n  id=\"file\" \n  :multiple=\"multiple\"\n  :accept=\"accept\"\n  :webkitdirectory=\"uploadFolder\"\n  :mozdirectory=\"uploadFolder\"\n  :odirectory=\"uploadFolder\"\n  @change=\"handleChange\"\n>\n\n注意：支持选择文件夹时就只能选择文件夹，无法选择文件。\n\n\n那么如何获取选择的文件夹呢？其实我们最终要上传的依然是文件，也就是file对象，文件夹也是一个特殊的文件。\n依然是通过input的onchange事件回调拿到上传的event。\n或者直接获取input这个dom对象，然后拿到files属性，结果是一样的。\n// input选择文件回调\nconst handleChange =…",
-          "link": "https://juejin.cn/post/7292323606875553843",
-          "publishedOn": "2023-10-21T17:28:26.000Z",
-          "wordCount": 1703,
-          "title": "前端如何直接上传文件夹",
           "imageUrl": null
         },
         {
