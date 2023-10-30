@@ -781,6 +781,39 @@ https://www.agiquery.com</span>
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >张鑫旭-鑫空间-鑫生活</button>
+                  <a class="source-heading__link" href="https://www.zhangxinxu.com/wordpress">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.zhangxinxu.com/wordpress/?p&#x3D;11038"
+                        open
+                      >
+                        <summary class="article-expander__title">聊聊Web网页中资源加载的优先级</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.zhangxinxu.com/wordpress/2023/10/img-js-preload-fetch-priority/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>想要提高网页的加载体验，其实有个非常简单且实用的技巧，那就是改变请求资源的加载优先级，这也可以改变？没错！</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >掘金前端本周最热</button>
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
@@ -815,6 +848,50 @@ https://www.agiquery.com</span>
 
 上述配置完之后，就是右键虚拟机-&gt;设置-&gt;选择第2步中设置了Nat模式的网卡
 然后就可以打开虚拟机的命令行，然后查看一下ip（输入命…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7294852698460471308"
+                        open
+                      >
+                        <summary class="article-expander__title">破涕为笑，一个node中间层bug我让同事的名字出现在全球用户的页面上</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7294852698460471308">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言
+近期遇到了一个线上故障，排查花了很多时间精力，在bug复现过程中，我还不小心让同事的名字出现在了全球用户的页面上，从“一把辛酸泪”到“破涕为笑”，感觉特别有意思。本文中的代码、描述都过滤了敏感信息，以简单demo的形式复现该故障。
+如下图，不管用户搜索啥词，每个用户页面回显的都是sivan
+
+业务功能描述
+站点的搜索功能，搜索功能会根据业务场景继续细分为a搜索，b搜索...，每种搜索在node中间层走的可能是不同的链路。
+如下图展示，a搜索回显了default
+
+b搜索回显了sang和for
+
+
+故障描述
+偶现，但是触发频率很高
+现象为在x国家站点上，不管用户搜索什么内容，页面回显的大概率是一串固定的字符串
+只有在x国家站点会出现该故障，其他国家站点没有出现
+测试环境无法复现，只有线上环境会出现该故障
+
+
+排查
+炒面代码分析
+从线上的故障现象来看，像是搜索词被替换掉了，分析看客户端页面下发的参数是没有任何问题的，找搜索服务的后端协助，后端说他们接收到的搜索词就已经是有问题的搜索词了。
+初步猜测是被类似xssFilter之类的转换函数替换掉了原来的搜索词，或者node中间层有某一条链路的代码把搜索词改掉了。于是把node中间层的搜索链路的相关代码都研究了好几遍，通过关键字搜项目全局，把每个可疑的地方都看了，感觉代码逻辑写的都没毛病（node中间层的代码链路写得跟炒面一样，看得头都大了）。
+没办法，代码分析不出来问题所在，测试环境又无法复现，只能在代码分析的基础上，把每个有可能改到搜索词的可疑地方打上日志，在搜索链路的一些比较关键的执行地方也打上日志，重新发版，来辅助排查。
+// 线上打日志的时候需要注意加条件限制，不然每个用户请求都打日志，一下子就打爆了
+if (req.query.sdebug &#x3D;&#x3D;&#x3D; &#x27;s&#x27;) {
+  logger.warn({ /** data *…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
@@ -1036,9 +1113,12 @@ https://www.agiquery.com</span>
                         <summary class="article-expander__title">发布了: 领先者的最优策略是模仿 挑战者的最优策略是颠覆</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/653cb5cb9660448314540ec3">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>领先者的最优策略是模仿
 挑战者的最优策略是颠覆</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1096,6 +1176,8 @@ https://www.agiquery.com</span>
    理解时间是一种幻觉，需要对普遍接受的对现实的理解进行根本性的改变。   
     
    所有事件同时存在。只有从分隔视角进行观察，它们才会随着时间的推移而发生，这导致事件看起来是一个线性的、展开的因果关系链。时间是事件的标记点，对于作为潜在体验存…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1139,8 +1221,11 @@ https://www.agiquery.com</span>
                         <summary class="article-expander__title">发布了: 一条动态</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/653bac6f9a83b06c4642f251">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Ftr8hGCFrx_aI4RtPADX4C4ILFC6v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
-                              <span>No content preview</span>
+                              <span>即刻App，享受探索、表达和创造</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1156,8 +1241,11 @@ https://www.agiquery.com</span>
                         <summary class="article-expander__title">发布了: 一张漫画画面，画面中由六格竖条空间分隔，每个竖条空间中展示一个少女。 这六位少女气质皆有不同，各有特色。有长发，有短发。有调皮，有高冷。 她们的...</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/653b9d88bb3e3660e8068f99">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fq_Pxy9wg_mpfLoBdeDRyFFgIvHsv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>一张漫画画面，画面中由六格竖条空间分隔，每个竖条空间中展示一个少女。 这六位少女气质皆有不同，各有特色。有长发，有短发。有调皮，有高冷。 她们的表情和姿势各不相同。请使用 monochrome storyboard style， 将这张同时展示六位不同特色的美丽少女的漫画给画出来。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1187,8 +1275,11 @@ https://www.agiquery.com</span>
                         <summary class="article-expander__title">发布了: Database as a Service 🐶</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/653b60169a83b06c463b30ed">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FgG-HBWp4O94h6PQN3lpwuqIQ7MWv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>Database as a Service 🐶</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1204,8 +1295,11 @@ https://www.agiquery.com</span>
                         <summary class="article-expander__title">发布了: 吾辈当自强</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/653b5e03d5f9a5727f47d711">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fi19uIKjEJc830QC7Jdyq52pc6t5?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>吾辈当自强</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1396,6 +1490,8 @@ https://www.agiquery.com</span>
    24.碳基储能材料解决方案提供商“国科炭美”获数千万元天使轮融资   
     
    25.lncRNA 创新药物研发商“凌泰氪”获亿元Pre-A轮融资</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1575,25 +1671,6 @@ https://www.agiquery.com</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://store.epicgames.com/zh-CN/p/tandem-a-tale-of-shadows-c3f55e"
-                        open
-                      >
-                        <summary class="article-expander__title">Tandem: A Tale of Shadows</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://store.epicgames.com/zh-CN/p/tandem-a-tale-of-shadows-c3f55e">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>艾玛和泰迪熊：影子历险记 以独特的俯视视角与侧向卷轴玩法和非凡的美学，重新定义了益智平台游戏这一大游戏类型。快来帮助艾玛和泰迪熊芬顿，解开著名魔术师托马斯·凯恩失踪一案的谜团吧。
-
-Free Now to 2023-11-02T15:00:00.000Z</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://store.epicgames.com/zh-CN/p/the-evil-within-2"
                         open
                       >
@@ -1648,7 +1725,7 @@ RSC 的优势在于性能，祂优化需要下载的 JS 代码数量，以及需
 Biome 是一个一体化的全能前端工具链，其前身是 Rome（罗马）。Rome 是 Facebook 投资的一个项目，其作者编写过 Babel 和 Yarn，但 Rome 目前已停止维护。
 Biome 衍生自 Rome，直男翻译为“生物群落”。顾名思义，Biome 是一个前端工具链的全家桶，其终极目标旨在取代 Babel、ESLint、webpack、Prettier、Jest 等不同工具，实现前端工具链的大一统。
 目前，Biome 支持地表最强 IDE VS Code，且已有对应的 VS Code 扩展，同时支持多种主流语言，包括但不限于 —— JS、TS、JSX 等，但尚不支持 Vue、Svelte 等框架的语法。如果您像 UP 一样是 Vue 爱好者，大概会对 Biome …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1803,7 +1880,7 @@ set方法：默认值为undefined。当修改该属性时会调用此方法。
 第一种，通过角膜手术改变角膜的形态和屈光力，使物象成像到视网膜上。
 第二种，更换晶体或向眼内植入补偿晶体，从而达到类似的效果，这种类似于带隐形眼镜。
 其中有一个特点就是晶体是有可逆性，激光手术的话，是不可逆的。以上两种并没有说哪种是最优解，需要通过医院检查才能决定。一般来说，角膜屈光手术建议近视度数小于 1000 度，散光小于 600 度。如果因为度数…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1872,9 +1949,12 @@ Vue 3.2.40的新功能
                         <summary class="article-expander__title">发布了: 猎头给我打电话，被我反问了几个问题，她一脸懵逼，说太专业，话术太官方，问我是不是同行🐶 后来我告诉她，之前在 Linkedin 比较活跃，加了很多猎头...</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/653a6cc438c9be7186b949c9">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>猎头给我打电话，被我反问了几个问题，她一脸懵逼，说太专业，话术太官方，问我是不是同行🐶
 后来我告诉她，之前在 Linkedin 比较活跃，加了很多猎头朋友，然后……话题就变成了跟她交流如何做好自媒体、增加粉丝，彻底聊偏……</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1890,9 +1970,12 @@ Vue 3.2.40的新功能
                         <summary class="article-expander__title">发布了: 与其抱怨工作和生活中的各种小插曲，还不如把它视为一个游戏，通关过程中开启了或难或易的支线任务。这么去想的话，也是其乐无穷的。 我们的一生并不总...</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6539af2c38c9be7186a52d9a">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>与其抱怨工作和生活中的各种小插曲，还不如把它视为一个游戏，通关过程中开启了或难或易的支线任务。这么去想的话，也是其乐无穷的。
 我们的一生并不总是向着终点一路狂奔，弯弯绕绕、曲曲折折反倒是常态。有的时候，走在正确的路线上，但大多数时候，并不是。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1922,6 +2005,7 @@ Vue 3.2.40的新功能
                         <summary class="article-expander__title">Reading #165 靠出租自己的时间是无法致富的</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://open.zhubai.wiki/a/l/t/z/pq/workreview/2329271043405496320">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>要利用杠杆。现阶段新出现的也是最有效的杠杆，是“复制边际成本为零的产品”。包括书籍、媒体、电影、代码。如果不会写代码，那就出书、写博客、做视频、录播客。原来的劳动力杠杆和资本杠杆，都必须有人追随你或者给你钱。但新的杠杆，是不需要任何人的许可，你就可以做的。   
     
@@ -1946,6 +2030,8 @@ Vue 3.2.40的新功能
                             <span class="media-object__text">
                               <span>这个页面讲述了百度简单搜索app的重构。新版更像聊天软件，支持自然语言提问。虽有浏览器功能，但部分不佳。其拍照提问结果不理想。简单搜索与Bing有相似之处，但结合了百度产品，具更强优势。尚需完善。
        查看全文</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2049,6 +2135,8 @@ Vue 3.2.40的新功能
    21.SK海力士营收降幅减缓，显示芯片行业回暖迹象   
     
    22.生成式AI驱动的多Agent营销SaaS平台“WorkMagic”获数百万美元天使轮融资</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2078,6 +2166,7 @@ Vue 3.2.40的新功能
                         <summary class="article-expander__title">发布了: 如何保持独立思考? 一阴一阳法。 一阴: 对每个进入脑海的观点进行概率打分。 每个观点，不是简单的信或不信这种非黑即白式的判断，而是概率性的，对某个...</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/653a09b75110e254551c7301">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>如何保持独立思考? 一阴一阳法。
 一阴: 对每个进入脑海的观点进行概率打分。
@@ -2085,6 +2174,8 @@ Vue 3.2.40的新功能
 这样做, 可以给大脑留出空间。
 一阳: 保持好奇心。
 针对没有到达自己满意标准（90％以上？）的观点，通过好奇心地驱动，去寻找新信息和观点，来填充那个空间。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2100,10 +2191,13 @@ Vue 3.2.40的新功能
                         <summary class="article-expander__title">发布了: 这阵子观察下来，写好 DallE Prompt 的一个关键点是： 多用形容词。 ━━━━━━━━━━━━━━━━━━ Animated film-style illustration of a tal...</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6539ef6038c9be7186ac599e">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fl13HOVoxx2TpJSHbqwxlDvouBVrv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>这阵子观察下来，写好 DallE Prompt 的一个关键点是： 多用形容词。
 ━━━━━━━━━━━━━━━━━━
 Animated film-style illustration of a tall, lean man with dark hair, wearing a stylish coat and scarf, walking on a cobblestone street with a majestic greyhound. The surroundings are bathed in the soft glow of street lamps, with vintage buildings and ivy-covered walls. Fallen leaves swirl around, and there&#x27;s a hint of mist. The mood is introspective, with the man lost in thought and the dog looking ahead with keen eyes.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2391,6 +2485,8 @@ Animated film-style illustration of a tall, lean man with dark hair, wearing a s
    回复得晚，也是一种沟通，意思是我需要多一些个人时间，或者说我需要多点时间想想。   
     
    声音大、声音小也是在沟通，声音大可能是在表达我很重视所表达的内容，希望对方也能重视；声音小…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;24
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2411,6 +2507,8 @@ Animated film-style illustration of a tall, lean man with dark hair, wearing a s
     
    
        查看全文</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;16
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2510,6 +2608,8 @@ Animated film-style illustration of a tall, lean man with dark hair, wearing a s
    19.碳纤维电机转子厂商“墨森科技”获数千万元天使轮融资   
     
    20.冷链云工厂平台“粤十机器人”获新一轮战略融资</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2586,6 +2686,8 @@ Animated film-style illustration of a tall, lean man with dark hair, wearing a s
    我国累计建成 5G 基站 318.9 万个   
     
    航天科技集团发布六款固体火箭发动机，最大推力 1…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;28
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2637,7 +2739,7 @@ Strve.js
       function add() {
         setData(() &#x3D;&gt; {
       …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                &ensp;<span class="article-reading-time">(&hairsp;10
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2674,7 +2776,7 @@ onLayerInit(){
 const { scene, camera, renderer } &#x3D; this
 
     const renderScene &#x3D; new RenderPass(scene, camera)…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2771,7 +2873,7 @@ import * as THREE from &#x27;three&#x27;;
 import {OrbitControls} from &#x27;three/examples/jsm/controls/OrbitControls&#x27;
 //设置three的方法
 const render &#x3D;…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                &ensp;<span class="article-reading-time">(&hairsp;12
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2863,8 +2965,11 @@ JS交互
                         <summary class="article-expander__title">发布了: 一条动态</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6538e7e45110e254550422a3">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FvVjoX_ACrg8LToNVzVn5x5A2SlTv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
-                              <span>No content preview</span>
+                              <span>即刻App，享受探索、表达和创造</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2880,10 +2985,13 @@ JS交互
                         <summary class="article-expander__title">发布了: 约束理论： 任何时候，系统的众多输入中的一个输入正在限制其他输入实现更大的总输出。 因此，要想不断增加系统的产出，就得反复识别并解决当前的约束。</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6538e57d97aae411eb505864">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>约束理论：
 任何时候，系统的众多输入中的一个输入正在限制其他输入实现更大的总输出。
 因此，要想不断增加系统的产出，就得反复识别并解决当前的约束。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3114,6 +3222,8 @@ JS交互
         播客相对论｜2023年8月份不能错过的播客单集       
        播客相对论｜2022年 九月份不能错过的播客单集       
        我的播客年度大讲2022 Podcast盘点</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3143,6 +3253,8 @@ JS交互
    保持联系！   
         
    最后，还要谢谢竹白在我生命里很重要的这几年内提供的支持和陪伴💖</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;42
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3232,6 +3344,7 @@ JS交互
                         <summary class="article-expander__title">Reading #163 不要跟愤世嫉俗和消极悲观的人合作。他们的预言会自我实现</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://open.zhubai.wiki/a/l/t/z/pq/workreview/2328397432159326208">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>&gt;&gt; 培养迭代思维。生活中所有的回报，无论是财富、人际关系，还是知识，都来自复利。   
     
@@ -3518,6 +3631,8 @@ DataCap 元数据支持更新数据了，元数据管理模块又离替换 Navic
    在       21期周报       中介绍过构成生活方式的三个要素：品牌、亚文化和供应链。其中，品牌帮助亚文化扩散，并争夺叙事的权利。David Marx的《原宿牛仔》回顾了1960年到2010年日本男装的发展史，大致的结构是从常春藤风格开始，工装、阿美咔叽、vintage以及里原宿等等街头时尚是如何被制造和传播、甚至反过来「教育」美国街头时尚的。   
     
    David Marx讲故事的方式特别抓人，更多是从某一时期或某个风格掌舵者的视角来展开。前几…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3611,6 +3726,8 @@ DataCap 元数据支持更新数据了，元数据管理模块又离替换 Navic
    以上就是本期的食堂周刊，观众老爷们如果觉得还不错，一键三连是对食堂老板最大的支持。   
     
    你的前端食堂，吃好每一顿饭，我们下期见。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3669,6 +3786,7 @@ DataCap 元数据支持更新数据了，元数据管理模块又离替换 Navic
                         <summary class="article-expander__title">如何更好地休息</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://open.zhubai.wiki/a/l/t/z/pq/xiaoshu/2328057622093422592">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>你好，我是小树。由于竹白平台的原因，计划在明年停止内容在竹白的发布。现有的邮件订阅用户我会想办法尽量无缝迁移，微信订阅的用户需要麻烦各位关注下公众号       一颗小树       。   
     
@@ -3788,6 +3906,8 @@ DataCap 元数据支持更新数据了，元数据管理模块又离替换 Navic
    12.英国老牌零售商威尔科倒闭   
     
    13.三星SDI将从2026年开始向现代汽车供应电动汽车电池</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3821,6 +3941,8 @@ DataCap 元数据支持更新数据了，元数据管理模块又离替换 Navic
    3.        sitinshade        
     
    这个网站是用来寻找旅行时候避开阳光的最佳座位，只需要…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;21
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3963,7 +4085,7 @@ GitHub仓库: github.com/DevCloudFE/vue-devui
 如果你今天刚刚加入我们，可以先看看官网上的示例组件，你可以在左侧导航栏中切换想要查看的组件，然后通过右侧的快速前往在不同Demo之间切换。
 如果你准备添加 Vue DevUI，请前往快速开始文档，只需要几行代码。
 如果你对我们的开源项目感兴趣，并希望参与共建，欢迎加入我们的开源社区，关注DevUI微信公众号：DevUI 。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4046,66 +4168,11 @@ https://space…</span>
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-22 datetime="2023-10-22T17:29:11.000Z">2023-10-22</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-22 datetime="2023-10-22T17:29:11.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-22 datetime="2023-10-22T16:26:58.000Z">2023-10-22</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-22 datetime="2023-10-22T16:26:58.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7292635075304964123"
-                        open
-                      >
-                        <summary class="article-expander__title">工作两年，本地git分支达到了惊人的361个，该怎么快速清理呢？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7292635075304964123">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>说在前面
-不知道大家平时工作的时候会不会需要经常新建git分支来开发新需求呢？在我这边工作的时候，需求都是以issue的形式来进行开发，每个issue新建一个关联的分支来进行开发，这样可以通过issue看到一个需求完整的开发记录，便于后续需求回顾和需求回退。而我平时本地分支都不怎么清理，这就导致了我这两年来本地分支的数量达到了惊人的361个，所以便开始写了这个可以批量删除分支的命令行工具。
-
-功能设计
-我们希望可以通过命令行命令的方式来进行交互，快速获取本地分支列表及各分支的最后提交时间和合并状态，在控制台选择我们想要删除的分支。
-功能实现
-1、命令行交互获取相关参数
-这里我们使用@jyeontu/j-inquirer模块来完成命令行交互功能，@jyeontu/j-inquirer模块除了支持inquirer模块的所有交互类型，还扩展了文件选择器、文件夹选择器及多级选择器交互类型，具体介绍可以查看文档：https://www.npmjs.com/package/@jyeontu/j-inquirer
-（1）获取操作分支类型
-我们的分支分为本地分支和远程分支，这里我们可以选择我们需要操作的分支类型，选择列表为：&quot;本地分支&quot;、&quot;远程分支&quot;、&quot;本地+远程&quot;。
-（2）获取远程仓库名（remote）
-我们可以输入自己git的远程仓库名，默认为origin。
-（3）获取生产分支名
-我们需要判断各分支是否已经合并到生产分支，所以需要输入自己项目的生产分支名，默认为develop。
-相关代码
-const branchListOptions &#x3D; [
-  {
-    type: &quot;list&quot;,
-    message: &quot;请选择要操作的分支来源：&quot;,
-    name: &quot;branchType&quot;,
-    choices: [&quot;本地分支&quot;, &quot;远程分支&quot;, &quot;本地+远程&quot;],
-  },
-  {…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -4127,6 +4194,7 @@ const branchListOptions &#x3D; [
                         <summary class="article-expander__title">发布了: 解决 Dall-E 生成图一致性问题 1/ 问题 通过和Dall-E 对话来生成完美目标图的过程, 经常遇到一个问题, 想要指定中间某个轮次的某张图做细节调整时, 常常...</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65354d52aa7d4f2b303c8f43">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FpUKSOzu9snxj0bd1bmVGyZOqY6Gv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>解决 Dall-E 生成图一致性问题
 1/ 问题
@@ -4144,6 +4212,8 @@ Prompt 如下:
 ━━━━━━━━━━━━━━━━━━
 基于图片004, 让人物微笑, 正视镜头
 ━━━━━━━━━━━━━━━━━━</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4187,9 +4257,12 @@ Prompt 如下:
                         <summary class="article-expander__title">发布了: 达成一个小目标😄 本来已经放弃微博，最近被微博的运营抓住了，经常给我推流，那就继续玩一下吧～</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6533efdd9a83b06c469b2db1">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FqdgPIsh25JppNDT8wFXCl5W0aEqv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>达成一个小目标😄
 本来已经放弃微博，最近被微博的运营抓住了，经常给我推流，那就继续玩一下吧～</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4393,6 +4466,7 @@ Top3:小米蓝牙项圈耳机青春版（数量1）
                         <summary class="article-expander__title">发布了: 前文（https://twitter.com/Barret_China/status/1714578115580833858）介绍过 CoT 可以提升 ChatGPT 的输出质量，而 CoT Self-Consistency 又可以提升 ...</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6531fcd4bb3e3660e835fab0">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fo6Acn4EymEHC0riDlmY1zM_XdGWv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>前文（https://twitter.com/Barret_China/status/1714578115580833858）介绍过 CoT 可以提升 ChatGPT 的输出质量，而 CoT Self-Consistency 又可以提升 CoT 的可靠性，它本质就是让具备随机性的 LLM 多推理几次，然后对结果进行投票，取票数最高的一个。但是这里有一个问题，有可能票数较低的结果中，存在局部最优解，例如：
 CoT-1：stepA -&gt; stepB -&gt; stepC ❌
@@ -4402,6 +4476,8 @@ CoT-1 和 CoT-2 被淘汰，最后结果选了 CoT-3，但是最佳的路径有�
 看到一篇关于 ToT 的论文《Tree of Thoughts: Deliberate Problem Solving with Large Language Models》，https://arxiv.org/abs/2305.10601，它的解决思路也比较简单，引入一个树结构，保存每一步推理产生的多个结果作为叶子节点，在进行一次状态评估剔除掉无效结果后，再基于叶子节点继续推理，由此展开一棵树，最后通过深度优先（DFS）或广度优先（BFS）算法组装节点生成多条 CoTs，然后交给大模型评估哪个结果最好。
 这个过程可以做到，每个环节都是局部最优。从论文实验的数据来看，它输出的结果，正确率比 CoT 要高将近 70%。不过这个方案带来的代价也是比较高的，过程中需要多次与 ChatGPT 交互，因此在执行这类任务的时候，需要考虑剪枝数量和推理深度。
 看到 LangChain 对 ToT 做了一个 Python 版本的实现，https://github.com/langchain-ai/langchain/pull/5167/files，感兴趣的可以参考下。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4531,9 +4607,12 @@ ECH 非常巧妙地解决了域名加密。它采用双层格式，也就是说�
                         <summary class="article-expander__title">发布了: 未来对 AI 的学习将会是一门必修课，Gartner 给出了 2024 年的技术趋势预测，https://www.gartner.com/en/articles/gartner-top-10-strategic-technolog...</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6530c721d1917302aa8fa90b">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FsTkPIeTJlb3l-Uquve79SRZ0VRhv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>未来对 AI 的学习将会是一门必修课，Gartner 给出了 2024 年的技术趋势预测，https://www.gartner.com/en/articles/gartner-top-10-strategic-technology-trends-for-2024，其中四项都直接提到了 AI，包括人工智能信任、风险和安全管理，人工智能增强开发和智能应用等。
 并提到，2026 年，生成式 AI 将显着改变新 Web 应用程序和移动应用程序 70% 的设计和开发工作。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4549,6 +4628,7 @@ ECH 非常巧妙地解决了域名加密。它采用双层格式，也就是说�
                         <summary class="article-expander__title">发布了: 这是一条十分强大且很有参考价值的 Prompt：https://github.com/ProfSynapse/Synapse_CoR/tree/main，跟它进行第一轮对话后，它会帮助你召唤出适合该任...</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65308bd4aa7d4f2b30d6b94a">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FkJ-qC2yitDkvoABcTL2h2Vdcb5dv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>这是一条十分强大且很有参考价值的 Prompt：https://github.com/ProfSynapse/Synapse_CoR/tree/main，跟它进行第一轮对话后，它会帮助你召唤出适合该任务的专家，在与专家进行第二轮对话后，ChatGPT 会完全明白你的目标，然后给出详细的分解和实施过程。
 为什么这条 Prompt 表现效果会非常好呢？它的整个过程分成了两个阶段，第一阶段是明确要做的事情，把任务的轮廓给描绘清楚，第二阶段则是深入到细节，收集任务全貌所需要的信息。
@@ -4556,6 +4636,8 @@ ECH 非常巧妙地解决了域名加密。它采用双层格式，也就是说�
 第一阶段的操作，很大程度减少了大模型在推理过程中的分支数量，对于不符合目标的推理权重会大大降低。
 而第二阶段其实是在做拆解任务的工作，首先召唤出来的专家会根据目标生成一份执行计划，然后让你参与到对话过程，不断完善这份计划。这有点像之前（https://twitter.com/Barret_China/status/1714578115580833858）提到的 CoT + Least to Most prompting + Multi-Persona Self-Collaboration 的结合。
 两个阶段的对话内容将会成为 ChatGPT 生成最终内容的重要参考语料，后续的推理权重会更大程度偏向于任务目标和执行计划。因此这个 Prompt 可以说，写的非常非常好，充分利用了大模型底层的运作机制。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4599,6 +4681,7 @@ ECH 非常巧妙地解决了域名加密。它采用双层格式，也就是说�
                         <summary class="article-expander__title">发布了: 如何让 ChatGPT 更好地思考，以获得更佳的输出效果，有几个比较成熟的实践和技巧，背后都有对应的论文。 1）CoT，思维链提示，https://arxiv.org/abs/22...</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/652faa1cbb3e3660e8041b7b">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fre5jgJ7vXoX5nLdvGRUgPWTyo2bv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>如何让 ChatGPT 更好地思考，以获得更佳的输出效果，有几个比较成熟的实践和技巧，背后都有对应的论文。
 1）CoT，思维链提示，https://arxiv.org/abs/2205.10625，将思考过程打印出来或者提供 one-shot/few-shot，输出的准确性会更高；例如你可以在提示词后追加：“Let&#x27;s think step by step”，效果就要好一些。
@@ -4611,6 +4694,8 @@ ECH 非常巧妙地解决了域名加密。它采用双层格式，也就是说�
 4）Multi-Persona Self-Collaboration，多角色扮演，https://arxiv.org/abs/2307.05300，这个有点类似之前提到的 AutoGen，让多个代理相互对话来解决问题，只不过 AutoGen 是从工程层面真正做到了多 Agents 交互，而这里提到的，是让 ChatGPT 扮演多重人格/角色，例如：
 “你可以扮演任何角色，针对我给出的问题，请提供三个最相关的角色，对问题进行两轮讨论，然后你综合讨论结果总结最佳方案。请打印三个角色的讨论过程以及最后的方案。”（图三）
 以上，这些技巧的运用并不复杂，但是思想比较重要，掌握了之后，稍微修改下 Prompt，便可以得到更加符合预期的结果。#AI学习#</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4654,9 +4739,12 @@ ECH 非常巧妙地解决了域名加密。它采用双层格式，也就是说�
                         <summary class="article-expander__title">发布了: 焦虑和痛苦的根源，从空间维度看，是与比自己更强的人对比，慕强是一个无限陷阱，永远都有比自己更强的人；从时间维度看，是与未来的不确定性比，今天的...</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/652e1cbfaa7d4f2b30a24f52">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>焦虑和痛苦的根源，从空间维度看，是与比自己更强的人对比，慕强是一个无限陷阱，永远都有比自己更强的人；从时间维度看，是与未来的不确定性比，今天的优势到了明天就不一定了，例如前段时间一个搞 C 的程序员悲观叹息自己被时代踢出了局。
 看似消极却有效的观点：接受自己的有限性，接受命运的安排。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4734,10 +4822,104 @@ ECH 非常巧妙地解决了域名加密。它采用双层格式，也就是说�
             </li>
         </ul>
       </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-10 datetime="2023-10-10T14:53:25.000Z">2023-10-10</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-10 datetime="2023-10-10T14:53:25.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >张鑫旭-鑫空间-鑫生活</button>
+                  <a class="source-heading__link" href="https://www.zhangxinxu.com/wordpress">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.zhangxinxu.com/wordpress/?p&#x3D;11022"
+                        open
+                      >
+                        <summary class="article-expander__title">纯JS实现多个音频的拼接或者合并</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-09 datetime="2023-10-09T14:50:57.000Z">2023-10-09</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-09 datetime="2023-10-09T14:50:57.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >张鑫旭-鑫空间-鑫生活</button>
+                  <a class="source-heading__link" href="https://www.zhangxinxu.com/wordpress">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.zhangxinxu.com/wordpress/?p&#x3D;11026"
+                        open
+                      >
+                        <summary class="article-expander__title">JS改变AudioBuffer音量并下载为新audio音频</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>本文介绍三种改变音频播放音量的方法，其中还有一种方法直接改变音频AudioBuffer数据源的音量，说不定你哪天就会用到。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6689313517">
-        <time id="build-timestamp" datetime="2023-10-30T06:54:44.046Z">2023-10-30T06:54:44.046Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6691052755">
+        <time id="build-timestamp" datetime="2023-10-30T09:53:35.667Z">2023-10-30T09:53:35.667Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
