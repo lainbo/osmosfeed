@@ -34,7 +34,7 @@
           "description": "想要提高网页的加载体验，其实有个非常简单且实用的技巧，那就是改变请求资源的加载优先级，这也可以改变？没错！",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/img-js-preload-fetch-priority/",
           "publishedOn": "2023-10-29T15:55:41.000Z",
-          "wordCount": 941,
+          "wordCount": 940,
           "title": "聊聊Web网页中资源加载的优先级",
           "imageUrl": null
         },
@@ -44,7 +44,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1212,
+          "wordCount": 1211,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -102,6 +102,16 @@
       "feedUrl": "https://rsshub.app/jike/user/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
+        {
+          "id": "https://m.okjike.com/originalPosts/65410fcfaa7d4f2b30389ca5",
+          "author": null,
+          "description": "技术老板和产品老板的区别：在一个新技术命题的投入上，技术老板只需要一个眼神，感觉对了就可以投入；而在产品老板面前，这个问题需要被深入调研、反复论证，甚至快要拿到最后的结果了，才能通过评审认可其价值，但仍可能被视为「投入是非必要的」，业务优先级更高。\n当然，也没有绝对的好坏，两者的思维方式和侧重点不同，倒也可以借此在决策时形成互补，以达到更好的结果。",
+          "link": "https://m.okjike.com/originalPosts/65410fcfaa7d4f2b30389ca5",
+          "publishedOn": "2023-10-31T14:31:43.000Z",
+          "wordCount": 425,
+          "title": "发布了: 技术老板和产品老板的区别：在一个新技术命题的投入上，技术老板只需要一个眼神，感觉对了就可以投入；而在产品老板面前，这个问题需要被深入调研、反复...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+        },
         {
           "id": "https://m.okjike.com/originalPosts/65407a7e99f2123c74a4cd43",
           "author": null,
@@ -191,16 +201,6 @@
           "wordCount": 465,
           "title": "发布了: 未来对 AI 的学习将会是一门必修课，Gartner 给出了 2024 年的技术趋势预测，https://www.gartner.com/en/articles/gartner-top-10-strategic-technolog...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FsTkPIeTJlb3l-Uquve79SRZ0VRhv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/65308bd4aa7d4f2b30d6b94a",
-          "author": null,
-          "description": "这是一条十分强大且很有参考价值的 Prompt：https://github.com/ProfSynapse/Synapse_CoR/tree/main，跟它进行第一轮对话后，它会帮助你召唤出适合该任务的专家，在与专家进行第二轮对话后，ChatGPT 会完全明白你的目标，然后给出详细的分解和实施过程。\n为什么这条 Prompt 表现效果会非常好呢？它的整个过程分成了两个阶段，第一阶段是明确要做的事情，把任务的轮廓给描绘清楚，第二阶段则是深入到细节，收集任务全貌所需要的信息。\n之前也提到过（https://twitter.com/Barret_China/status/1668922606828007424），GPT 跟人类的思考方式是完全不一样的，它的每一个字符（Token）生成都是通过概率推导的方式获得的，而且生成每个字符所消耗的计算资源一样。推导的过程中会出现高质量和低质量的结果，它自己是知道质量高低的，但是默认的情况下，它就是要推导出所有的可能性。\n第一阶段的操作，很大程度减少了大模型在推理过程中的分支数量，对于不符合目标的推理权重会大大降低。\n而第二阶段其实是在做拆解任务的工作，首先召唤出来的专家会根据目标生成一份执行计划，然后让你参与到对话过程，不断完善这份计划。这有点像之前（https://twitter.com/Barret_China/status/1714578115580833858）提到的 CoT + Least to Most prompting + Multi-Persona Self-Collaboration 的结合。\n两个阶段的对话内容将会成为 ChatGPT 生成最终内容的重要参考语料，后续的推理权重会更大程度偏向于任务目标和执行计划。因此这个 Prompt 可以说，写的非常非常好，充分利用了大模型底层的运作机制。",
-          "link": "https://m.okjike.com/originalPosts/65308bd4aa7d4f2b30d6b94a",
-          "publishedOn": "2023-10-19T01:52:20.000Z",
-          "wordCount": 496,
-          "title": "发布了: 这是一条十分强大且很有参考价值的 Prompt：https://github.com/ProfSynapse/Synapse_CoR/tree/main，跟它进行第一轮对话后，它会帮助你召唤出适合该任...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FkJ-qC2yitDkvoABcTL2h2Vdcb5dv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         }
       ]
     },
@@ -1081,16 +1081,6 @@
       "siteUrl": "https://store.epicgames.com/zh-CN/free-games?lang=zh-CN",
       "articles": [
         {
-          "id": "https://store.epicgames.com/zh-CN/p/tandem-a-tale-of-shadows-c3f55e",
-          "author": "Hatinh Interactive",
-          "description": "艾玛和泰迪熊：影子历险记 以独特的俯视视角与侧向卷轴玩法和非凡的美学，重新定义了益智平台游戏这一大游戏类型。快来帮助艾玛和泰迪熊芬顿，解开著名魔术师托马斯·凯恩失踪一案的谜团吧。\n\nFree Now to 2023-11-02T15:00:00.000Z",
-          "link": "https://store.epicgames.com/zh-CN/p/tandem-a-tale-of-shadows-c3f55e",
-          "publishedOn": "2023-10-26T15:00:00.000Z",
-          "wordCount": null,
-          "title": "Tandem: A Tale of Shadows",
-          "imageUrl": null
-        },
-        {
           "id": "https://store.epicgames.com/zh-CN/p/the-evil-within-2",
           "author": "Bethesda Softworks LLC",
           "description": "To save his daughter, Detective Sebastian Castellanos returns to a world of nightmares in The Evil Within 2. \n \nFight for your life inside a terrifying reality using weapons, traps and stealth in this survival horror follow-up from Tango Gameworks.\n\nFree Now to 2023-11-02T15:00:00.000Z",
@@ -1320,7 +1310,7 @@
           "description": "下载量不理想[流泪]，xdm帮忙推广推广，免费好用哦～，别让作者桑心了",
           "link": "https://juejin.cn/pin/7295962144749813797",
           "publishedOn": "2023-10-31T10:40:57.000Z",
-          "wordCount": 519,
+          "wordCount": 529,
           "title": "下载量不理想[流泪]，xdm帮忙推广推广，免费好用哦～，别让作者桑心了",
           "imageUrl": null
         },
@@ -1330,7 +1320,7 @@
           "description": "移动端，深度链接deeplink几乎可以将用户从任何地方引导到特定App内的指定页面。\n其优势不言而喻，一方面能为用户移动端带来绝佳的体验，相比于传统链接，能够直接跳过许多无关紧要的点击和页面，直奔主题，直达目标页面；另一方面，能显著提高各场景带来的用户转化率和留存率。\n1、跨渠道、跨平台场景还原\n可用于实现场景：网页/H5跳转App、微信、微博、抖音、B站、爱奇艺、小红书等社交平台跳转App、二维码跳转App、短信跳转App、邮件跳转App、渠道跳转H5跳转App等场景。\n2、结合参数传递实现安装来源追踪\n（1）Web到App全链路数据追踪\n（2）自动绑定用户关系链\n推送门：https://www.openinstall.io/pullUp.html",
           "link": "https://juejin.cn/pin/7295948894327521289",
           "publishedOn": "2023-10-31T08:56:11.000Z",
-          "wordCount": 507,
+          "wordCount": 513,
           "title": "移动端，深度链接deeplink几乎可以将用户从任何地方引导到特定App内的指定页面。 其优势不言而喻，一方面能为用户移动端带来绝佳的体验，相比于传统链接，能够直...",
           "imageUrl": null
         },
@@ -1360,7 +1350,7 @@
           "description": "让大数据的个性化分析，像Excel 一样简单\nhttps://www.agiquery.com",
           "link": "https://juejin.cn/pin/7295237661618470964",
           "publishedOn": "2023-10-30T02:45:02.000Z",
-          "wordCount": 513,
+          "wordCount": 522,
           "title": "让大数据的个性化分析，像Excel 一样简单 https://www.agiquery.com",
           "imageUrl": null
         },
@@ -1400,7 +1390,7 @@
           "description": "这个vscode插件，大家体验下来觉得不错的可以帮忙推广一下，如果有什么体验上的增强或者改进的意见可以新建issue来反馈[灵光一现]",
           "link": "https://juejin.cn/pin/7294663087945318451",
           "publishedOn": "2023-10-29T04:21:01.000Z",
-          "wordCount": 521,
+          "wordCount": 527,
           "title": "这个vscode插件，大家体验下来觉得不错的可以帮忙推广一下，如果有什么体验上的增强或者改进的意见可以新建issue来反馈[灵光一现]",
           "imageUrl": null
         },
@@ -1410,7 +1400,7 @@
           "description": "周末啥也没干[流泪]，收到个issue: https://github.com/Simon-He95/fast-create-variable/issues/6,\n很高兴有人使用，现在设置为默认配置在对象的底部去新创建变量了",
           "link": "https://juejin.cn/pin/7294663300923310089",
           "publishedOn": "2023-10-29T04:18:36.000Z",
-          "wordCount": 549,
+          "wordCount": 555,
           "title": "周末啥也没干[流泪]，收到个issue: https://github.com/Simon-He95/fast-create-variable/issues/6, 很高兴有人使用，现在设置为默认配置在对象的底部去新创建变...",
           "imageUrl": null
         },
@@ -1450,7 +1440,7 @@
           "description": "今天把这个插件link的vant主页了，看看还能不能让更多的框架可以link一下，让更多的开发者能够体验到这个插件[灵光一现]https://github.com/Simon-He95/vscode-common-intellisense",
           "link": "https://juejin.cn/pin/7294525616447684620",
           "publishedOn": "2023-10-28T03:42:45.000Z",
-          "wordCount": 519,
+          "wordCount": 525,
           "title": "今天把这个插件link的vant主页了，看看还能不能让更多的框架可以link一下，让更多的开发者能够体验到这个插件[灵光一现]https://github.com/Simon-He95/vscode-c...",
           "imageUrl": null
         },
@@ -1470,7 +1460,7 @@
           "description": "[7210228048107896891#每日快讯#]  上班摸鱼",
           "link": "https://juejin.cn/pin/7294199692623855653",
           "publishedOn": "2023-10-27T01:48:35.000Z",
-          "wordCount": 574,
+          "wordCount": 564,
           "title": "[7210228048107896891#每日快讯#] 上班摸鱼",
           "imageUrl": null
         },
@@ -1490,7 +1480,7 @@
           "description": "刚把这款叫 MySQL Proxy 的 IDEA 的插件从付费模式改成了 Freemium 模式，现有的功能都改成免费，希望能在日常工作上帮到大家。插件功能是从代码发送给 Mysql 服务器的协议包里解析出 SQL，并以此为基础开发了检索、使用 GPT 查询优化的功能，强烈你建议试用。",
           "link": "https://juejin.cn/pin/7293786247654768681",
           "publishedOn": "2023-10-25T09:55:54.000Z",
-          "wordCount": 587,
+          "wordCount": 593,
           "title": "刚把这款叫 MySQL Proxy 的 IDEA 的插件从付费模式改成了 Freemium 模式，现有的功能都改成免费，希望能在日常工作上帮到大家。插件功能是从代码发送给 Mysql 服...",
           "imageUrl": null
         },
@@ -1500,7 +1490,7 @@
           "description": "宁德时代，蓝月亮，得物，蓝禾，真我手机，三七互娱，顺丰，奇安信24秋招\n①蓝月亮\n【招聘岗位】技术，研发，lT，供应链，市场，职能等\n【网申链接】https://sourl.cn/NsVxG6\n【内推码】 在网申页面“信息获取渠道”中“其他渠道”输入内推码：CS01\n②蓝禾\n【岗位】运营、设计、研发，技术，采购，职能等\n【一键内推】：https://lanhevip.jobs.feishu.cn/index/m/?external_referral_code=T1KYX4B\n③宁德时代\n【岗位】计算机类、研发类、工程类，供应链与运营类，市场职能类等400余岗位\n【一键内推】：https://app.mokahr.com/m/campus_apply/catlhr/115953?recommendCode=DSfHYtXs#/jobs\n【内推码】：DSfHYtXs\n④得物\n【岗位】技术，设计，供应链，风控，产品，运营，商品研究等\n【一键内推】https://app.mokahr.com/m/campus_apply/thedu/37483?recommendCode=DSDF7rFF#/jobs\n【内推码】DSDF7rFF\n⑤三七互娱\n【岗位】市场推广，游戏研发/策划/运营类，美术设计\n【一键内推】https://sourl.cn/bV9bkT\n【内推码】DSQNKtCs\n⑥顺丰集团\n【招聘岗位】研发类、管培生类，航空类，经营管理、职能\n【内推码】4FOLXH\n【一键内推】https://sourl.cn/SV2eSv\n⑦realme真我手机\n【岗位】研发，产品，销售，设计\n【一键内推】https://sourl.cn/NLePXv\n【内推码】fnqscs\n⑧奇安信\n【岗位】安全类，研发类，测试类，技术类，营销类，产品类\n【内推链接】https://sourl.cn/MJkhG3\n【内推码】DSPBBk1g\n⑨金证科技\n【岗位】C++/Java/web/区块链开发，测试/运维/售前/维护/实施工程师，产品经理，运营等\n【内推码】EVVG83\n【投递链接】https://sourl.cn/NHPzx6",
           "link": "https://juejin.cn/pin/7293567405154140212",
           "publishedOn": "2023-10-25T07:54:16.000Z",
-          "wordCount": 513,
+          "wordCount": 519,
           "title": "宁德时代，蓝月亮，得物，蓝禾，真我手机，三七互娱，顺丰，奇安信24秋招 ①蓝月亮 【招聘岗位】技术，研发，lT，供应链，市场，职能等 【网申链接】https://sou...",
           "imageUrl": null
         },
