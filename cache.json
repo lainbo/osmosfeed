@@ -44,7 +44,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1215,
+          "wordCount": 1212,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -54,7 +54,7 @@
           "description": "本文介绍三种改变音频播放音量的方法，其中还有一种方法直接改变音频AudioBuffer数据源的音量，说不定你哪天就会用到。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/",
           "publishedOn": "2023-10-09T14:50:57.000Z",
-          "wordCount": 1097,
+          "wordCount": 1096,
           "title": "JS改变AudioBuffer音量并下载为新audio音频",
           "imageUrl": null
         }
@@ -1088,6 +1088,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7295571705690079267",
+          "author": "毅航",
+          "description": "theme: fancy\nhighlight: atelier-heath-light\n思考，输出，沉淀。用通俗的语言陈述技术，让自己和他人都有所收获。\nSystem Design顾名思义就是去尝试设计一个系统。一般来说，设计完美的系统几乎是不可能的。任何的系统都是需要不断迭代。除此之外，还需要有具体的需求，并根据需求选取合适的架构风格。\n可能你会想平时我的工作就是crud有必要学习系统设计吗？这个问题其实不好回答。但学习系统设计的人大多会出于如下两种原因：\n正在准备面试，你的目标公司会考到系统设计相关知识；\n目前正处于架构师或者想成为架构师 工作中会用到系统架构相关的知识。\n可能你也很想系统了解System Design但苦于没有体系的资料，如果你有这样的焦虑。那最近GitHub上一个火起来的system-design-101或许能帮助到你。\nGitHub地址： System Design-101\n\nSystem Design-101是什么\nSystem-design-101 见名只意，其是GitHub上一个关于系统设计的开源项目。它的目的是用图像和通俗的话语来解释复杂的系统。以帮助读者更好地理解系统设计的要点。总的来说System Design有如下亮点：\n涵盖了多个系统设计的主题，如通信协议、数据库、缓存、微服务架构等。\n提供了多个系统设计的案例分析，如Netflix、Google等。\n通过丰富的流程图、架构图、代码块、表格等来展示系统的结构和逻辑。\n接下来，我们将选择几个比较熟悉的模块进行介绍。\nGit多版本管理控制\nGit 作为日常开发中一个不可缺少的工具。其主要用于管理和跟踪文件和代码的变化。而日常我们在开发中，我们的代码通常会存放于两个位置\n一个是在像 Github 这样的远程服务器上；\n另一个是在我们的本地计算机上。\n然而，这并不完全准确。Git 在我们的本…",
+          "link": "https://juejin.cn/post/7295571705690079267",
+          "publishedOn": "2023-10-30T12:42:34.000Z",
+          "wordCount": 1049,
+          "title": "推荐一本系统设计相关的开源宝典，Github上40.6k star！",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7294880695398072335",
           "author": "前端少年汪",
           "description": "三者区别\nNuxt.js和Next.js都是服务端渲染框架(SSR)，属于前端框架,Nest.js则是node框架,属于后端框架。\n虽然名字看起来都很像但是确实不一样的框架。\n其中Nuxt.js是vue的ssr框架，Next.js是react的ssr框架\n都是比vue和react更上层的前端框架\n\n \n       \n\n\nSSR框架\n先搞清楚什么是服务端渲染\n服务端渲染（Server-Side Rendering，简称 SSR）是一种将网页内容在服务器端动态生成并发送给客户端的技术。传统的客户端渲染（Client-Side Rendering，简称 CSR）是在客户端浏览器中使用 JavaScript 动态生成页面内容。\n在传统的客户端渲染中，浏览器首先下载一个空的 HTML 页面，然后通过 JavaScript 请求数据并生成页面内容。这种方式的优点是可以提供更丰富的交互和动态效果，但也存在一些缺点。例如，搜索引擎爬虫可能无法正确解析和索引页面内容，导致 SEO（搜索引擎优化）问题。同时，初始加载时用户可能会看到空白的页面或者出现闪烁的内容。\n相比之下，服务端渲染通过在服务器上预先生成完整的 HTML 页面，将其发送给客户端浏览器。这样，浏览器在接收到页面时就能够立即显示完整的内容，而不需要等待 JavaScript 的下载和执行。这样可以提高页面的加载速度和首次渲染速度，并且对于搜索引擎爬虫来说更容易解析和索引页面内容，有利于 SEO。\n服务端渲染的实现方式通常涉及使用服务器端框架（如Node.js、Java、Python等）来处理请求，并在服务器上生成完整的 HTML 页面。服务器端框架可以使用模板引擎或者直接在后端代码中生成 HTML。一旦生成完整的 HTML 页面，服务器将其发送给客户端浏览器，浏览器接收到后即可直接显示页面内容。\n需要注意的是，服务端渲染不是完全…",
@@ -1225,16 +1235,6 @@
           "publishedOn": "2023-10-26T00:57:33.000Z",
           "wordCount": 1144,
           "title": "Vue 3.3.6 发布了，得益于WeakMap，它更快了",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7293786784127025179",
-          "author": "Vam的金豆之路",
-          "description": "前言\n终于实现了一个重要目标！我独立研发的 JavaScript 框架 Strve，最近发布了重大版本 6.0.2。距离上次大版本发布已经接近两个月，期间进行了大量的优化，使得框架性能和稳定性都得到了大幅度的提升。在上次的大版本更新中，成功实现了对 JSX 语法的全面支持，使得 Strve 在代码智能提示和代码格式化方面更加友好，进一步提高了开发效率。\n介绍\n相信有些小伙伴没有听说过 Strve 到底是什么，那我这里就大体介绍一下。\nStrve 是一个可以将字符串转换为视图（用户界面）的 JavaScript 库。Strve 不仅易于使用，而且可以灵活地拆解不同的代码块。使用模板字符串开发用户界面，主要是利用 JavaScript 的能力，只关注 JavaScript 文件。Strve 又是一个易用性的 JavaScript 框架，它提供了很多实用的功能与生态工具。\n我们可以通过一些简单的示例来了解 Strve 的使用方法。\n<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <title>Strve.js</title>\n  </head>\n\n  <body>\n    <script src=\"https://cdn.jsdelivr.net/npm/strve-js@6.0.2/dist/strve.full.prod.js\"></script>\n    <script>\n      const { html, setData, createApp } = Strve;\n      const state = {\n        count: 0,\n      };\n\n      function add() {\n        setData(() => {\n      …",
-          "link": "https://juejin.cn/post/7293786784127025179",
-          "publishedOn": "2023-10-25T16:19:19.000Z",
-          "wordCount": 3078,
-          "title": "自研框架跻身全球 JS 框架榜单，排名紧随 React、Angular 之后！",
           "imageUrl": null
         },
         {
