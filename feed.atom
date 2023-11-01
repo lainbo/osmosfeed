@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-11-01T06:53:31.018Z</id>
+    <id>urn:2023-11-01T09:53:55.734Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-11-01T06:53:31.018Z</updated>
+    <updated>2023-11-01T09:53:55.734Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -1379,18 +1379,6 @@ ngork http 8080
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Tandem: A Tale of Shadows]]></title>
-        <id>https://store.epicgames.com/zh-CN/p/tandem-a-tale-of-shadows-c3f55e</id>
-        <link href="https://store.epicgames.com/zh-CN/p/tandem-a-tale-of-shadows-c3f55e"/>
-        <updated>2023-10-26T15:00:00.000Z</updated>
-        <summary type="html"><![CDATA[艾玛和泰迪熊：影子历险记 以独特的俯视视角与侧向卷轴玩法和非凡的美学，重新定义了益智平台游戏这一大游戏类型。快来帮助艾玛和泰迪熊芬顿，解开著名魔术师托马斯·凯恩失踪一案的谜团吧。
-
-Free Now to 2023-11-02T15:00:00.000Z]]></summary>
-        <author>
-            <name>Hatinh Interactive</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[The Evil Within 2]]></title>
         <id>https://store.epicgames.com/zh-CN/p/the-evil-within-2</id>
         <link href="https://store.epicgames.com/zh-CN/p/the-evil-within-2"/>
@@ -1498,6 +1486,54 @@ import …]]></summary>
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[React 弹窗组件用的 createPortal 是怎么实现的？]]></title>
+        <id>https://juejin.cn/post/7294090534699188261</id>
+        <link href="https://juejin.cn/post/7294090534699188261"/>
+        <updated>2023-10-26T09:24:08.000Z</updated>
+        <summary type="html"><![CDATA[想必大家都用过弹窗组件，比如 antd 的 Modal 组件：
+
+打开 devtools 可以看到，它是直接挂在 body 下的：
+
+实现这种效果是用的 createPortal：
+
+渲染结果如下：
+
+弹窗组件都是基于这个 api 来实现的。
+那 React 源码里是如何实现这种功能的呢？
+首先，我们过一遍 React 的渲染流程：
+我们组件里写的这些是 jsx 代码：
+
+它们编译后会变成类似 React.createElement 这种代码，叫做 render function。
+render function 执行的结果是 React Element。
+类似这样：
+
+React 组件 render 的结果就是产生 React Element。
+我们也经常把 React Element 叫做 vdom。
+React 会把 vdom 转成 fiber 的结构，这个过程叫做 reconcile：
+
+reconcile 完成后，就产生了完整的 fiber 树。
+之后会经历 commit 阶段，遍历这个 fiber 树，进行 dom 的增删改，effect 执行等。
+这就是 React 的渲染流程，也就是 render（reconcile） + commit 2 大阶段。
+接下来我们一起调试下 React 源码：
+npx create-react-app --template typescript portal-test
+
+先用 cra 创建个 react 项目。
+
+进入项目，把 App.tsx 改成这样：
+import { createPortal } from 'react-dom';
+
+function App() {
+  return (
+    <div className="App">
+        <p>
+          bbbb
+        </p>
+ …]]></summary>
+        <author>
+            <name>zxg_神说要有光</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[JS对象已经存在29个方法了，来看看你知道多少]]></title>
         <id>https://juejin.cn/post/7294072846129004585</id>
         <link href="https://juejin.cn/post/7294072846129004585"/>
@@ -1578,6 +1614,36 @@ set方法：默认值为undefined。当修改该属性时会调用此方法。
        查看全文]]></summary>
         <author>
             <name>张洪Heo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[京东微前端框架MicroApp 1.0正式发布]]></title>
+        <id>https://juejin.cn/post/7293797226932977702</id>
+        <link href="https://juejin.cn/post/7293797226932977702"/>
+        <updated>2023-10-26T02:22:30.000Z</updated>
+        <summary type="html"><![CDATA[MicroApp是由京东前端团队推出的一款微前端框架，它从组件化的思维，基于类WebComponent进行微前端的渲染，旨在降低上手难度、提升工作效率。MicroApp无关技术栈，也不和业务绑定，可以用于任何前端框架。
+•源码地址： https://github.com/micro-zoe/micro-app
+•官网地址： https://micro-zoe.github.io/micro-app
+微前端是一种页面整合方案，它的核心在于将一个庞大的前端应用拆分成多个独立灵活的小型应用，每个应用都可以独立开发、独立运行、独立部署，再将这些小型应用融合为一个完整的应用，或者将原本运行已久、没有关联的几个应用融合为一个应用。微前端既可以将多个项目融合为一，又可以减少项目之间的耦合，提升项目扩展性，相比一整块的前端仓库，微前端架构下的前端仓库倾向于更小更灵活。
+
+升级亮点
+距离MicroApp开源已经有一年多时间，在这段时间里我们收到了很多问题反馈，包括沙箱的性能、vite的兼容、路由冲突等等，为了解决这些问题我们将很多核心功能进行升级和重构，经过不断的打磨和验证，最终推出MicroApp1.0正式版。
+正式版的升级主要在以下几个方面：
+1.更简洁的接入方式
+2.沙箱的性能
+3.虚拟路由系统
+4.样式隔离
+5.兼容vite
+6.开发工具
+
+一行代码嵌入
+MicroApp借鉴了WebComponent的思想，通过CustomElement结合自定义的ShadowDom，将微前端封装成一个类WebComponent组件，实现微前端的组件化渲染。在此基础上，通过实现JS隔离、样式隔离、路由隔离，降低子应用的接入成本，子应用只需设置允许跨域请求，不需要改动任何代码即可接入微前端，使用方式和iframe几乎一致，但却没有iframe存在的问题。
+接入方式如下：
+
+JS沙箱的困境
+在Micro…]]></summary>
+        <author>
+            <name>京东前端</name>
         </author>
     </entry>
     <entry>
@@ -1916,89 +1982,6 @@ const { scene, camera, renderer } = this
        查看全文]]></summary>
         <author>
             <name>张洪Heo</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[📷纯前端也可以实现「用户无感知录屏」？]]></title>
-        <id>https://juejin.cn/post/7293462197386592283</id>
-        <link href="https://juejin.cn/post/7293462197386592283"/>
-        <updated>2023-10-25T03:36:38.000Z</updated>
-        <summary type="html"><![CDATA[前言
-要在 JavaScript 中实现屏幕录制，可以使用 navigator.mediaDevices.getDisplayMedia() 方法来获取屏幕的媒体流。然后，可使用 MediaRecorder 对象将媒体流录制为视频文件。
-但该方法会在浏览器弹出一个授权窗口，让用户选择要分享的内容，这不可实现“无感知”。
-
-如果真正做到无感知，那我们就不能借助浏览器或者系统系统的能力了。我们能做的就只能是通过js去操作了。
-要在页面内直接录制视频似乎并不容易，没有现成的开源库可以使用，也没有很好的想法。
-那我们换一个思路，视频是由帧组成的，我们是否可以不断的截图，然后组合成一段视频？好像是可以的。
-
-效果
-
-jcode
-页面
-先写一个简单的页面：
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Canvas视频录制</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <main>
-        <div class="buttons">
-            <button class="start-btn">开始录制</button>
-            <button class="pause-btn">暂停录制</button>
-            <button class="resume-btn">继续录制</button>
-            <button class="stop-btn">结束录制</button>
-        </div>
-        <div id="box">
-            <section class…]]></summary>
-        <author>
-            <name>Mengke</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[用Three.js做一个3d版的demo-纯前端（Vue3+Three.js+antvG2）]]></title>
-        <id>https://juejin.cn/post/7293463921729372201</id>
-        <link href="https://juejin.cn/post/7293463921729372201"/>
-        <updated>2023-10-25T03:33:58.000Z</updated>
-        <summary type="html"><![CDATA[前言
-在网上找了很久都没有找到使用Three.js开发3d的免费文章或者免费视频,自己花了一点时间做了一个纯前端的项目demo。
-模型都是在网上免费下载的，没有那么精细 美观 请见谅。
-此文章只用于想学习three.js的小伙伴做学习用途
-技术栈都是最新的:vue3+vite+typeScript+Three+antv G2
-源码分享 源码
-模型,天空图盒子链接分享(不想下载源码可以只用下这个)提取码1234 ————————————————
-有地面版本
-
-无地面版本
-
-
-开发各种框架的版本 开发工具为vscode
-"vue": "^3.2.47"
-"@antv/g2plot": "^2.4.29",
-"typescript": "^5.0.2",
-"vite": "^4.3.0",
-"@types/three": "^0.150.2",
-一.搭建three场景
-引入three,先初始化场景,相机,渲染器,光线,轨道控制器
-<template>
-  <div class="container" id="container"></div>
-</tempalte>
-<script lang="ts" setup>
-let scene = null as any,//场景
-camera = null as any,//相机
-renderer = null as any,//渲染器
-controls = null as any//轨道控制器
-import {onMounted, reactive } from 'vue';
-import * as THREE from 'three';
-import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls'
-//设置three的方法
-const render =…]]></summary>
-        <author>
-            <name>范天缘</name>
         </author>
     </entry>
     <entry>
