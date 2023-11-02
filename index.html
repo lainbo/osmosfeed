@@ -51,8 +51,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-02 datetime="2023-11-02T02:43:25.000Z">2023-11-02</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-02 datetime="2023-11-02T02:43:25.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-02 datetime="2023-11-02T05:49:53.000Z">2023-11-02</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-02 datetime="2023-11-02T05:49:53.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -67,6 +67,25 @@
                   <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7296442264447828020"
+                        open
+                      >
+                        <summary class="article-expander__title">jym，idea怎么设置项目右键出现的菜单栏不需要鼠标滚动也能看到所有选项，现在找个选项需要鼠标一直往后滑，我记得以前可以让所有选项都缩略到菜单栏上，不需要...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7296442264447828020">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>jym，idea怎么设置项目右键出现的菜单栏不需要鼠标滚动也能看到所有选项，现在找个选项需要鼠标一直往后滑，我记得以前可以让所有选项都缩略到菜单栏上，不需要鼠标往后滑，但是我忘记怎么设置了</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -813,6 +832,49 @@ https://github.com/Simon-He95/sponsor</span>
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7295943233740554278"
+                        open
+                      >
+                        <summary class="article-expander__title">Wasm 真的比 Js 快吗？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7295943233740554278">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>网上各种介绍wasm的文章都在说wasm的性能是js的数倍之多，实际情况真的是这样吗？
+本文用rust编译到wasm与js进行性能对比，尝试解答这个问题
+普通计算
+直接上代码，如果是计算斐波那契数列
+rust 代码如下
+#[wasm_bindgen]
+pub fn fib_wasm(value: u32) -&gt; u32 {
+    if value  number) &#x3D;&gt; {
+  const result &#x3D; []
+  for (let i &#x3D; 10; i &lt; 10 + maxIterTime; i++) {
+    result.push(fib(i))
+  }
+}
+
+console.time(&quot;js&quot;)
+testFib(fibJs)
+console.timeEnd(&quot;js&quot;)
+
+console.time(&quot;wasm&quot;)
+testFib(fibWasm)
+console.timeEnd(&quot;wasm&quot;)
+
+对比结果如下
+
+可以看到js的耗时确实是wasm的数倍…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -2172,6 +2234,50 @@ if (req.query.sdebug &#x3D;&#x3D;&#x3D; &#x27;s&#x27;) {
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7294852698460438540"
+                        open
+                      >
+                        <summary class="article-expander__title">大厂也在用的：HTMl+CSS+JS实现瀑布流式页面布局</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7294852698460438540">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: channing-cyan
+什么是瀑布流式页面布局
+下面看几个现实的案例：
+小红书中的瀑布流式页面布局
+
+手机淘宝中的瀑布流式页面布局：
+
+介绍
+瀑布流式布局页面是什么？
+页面上给人一种参差不齐的多栏布局，其中元素大部分为图片，图片的宽度是统一固定的，但是由于高度不一样，第一行图片排满之后，新的图片会插入到第一排中高度最低的图片下面，并更新高度，如此循环，最终达到瀑布流式的效果。
+优点：
+吸引眼球： 瀑布流布局的不规则排列方式能够引起用户的兴趣，使界面更吸引人。用户会感到好奇，想要浏览所有的项目，因为每个项目都以不同的方式呈现。
+有效利用空间： 瀑布流布局可以充分利用页面空间，无论是横向还是纵向滚动，都可以容纳很多项目。这对于展示大量内容或产品非常有用。
+适应性： 瀑布流布局可以适应不同屏幕大小和设备类型，因为它是响应式设计的一部分。这意味着它可以在桌面电脑、平板电脑和移动设备上都有良好的表现。
+提高用户参与度： 用户通常更愿意探索页面上的不同项目，因为每次滚动都可能带来新的发现，从而增加了用户的参与度和浏览时间。
+缺点：
+信息层次不明确： 由于项目的不规则排列，瀑布流布局可能会使用户难以识别内容的层次和重要性。重要内容可能会被埋没在次要内容中。
+不适用于所有类型的内容： 瀑布流布局更适合视觉导向的内容，如图片、照片、商品展示等。对于需要详细信息或结构化内容的页面，这种布局可能不够合适。
+加载时间问题： 当页面包含大量项目时，瀑布流布局可能导致页面加载时间变长，特别是在网络连接较慢的情况下。这可能会影响用户体验。
+有限的导航性： 用户可能会发现导航和查找特定项目变得更加困难，因为项目的位置是不固定的。这可能会使用户在页面上迷失方向。
+代码实现
+HTML：
+
+
+
+  &lt;meta chars…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -2752,25 +2858,6 @@ ngork http 8080
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7294199692623855653"
-                        open
-                      >
-                        <summary class="article-expander__title">[7210228048107896891#每日快讯#] 上班摸鱼</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7294199692623855653">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>[7210228048107896891#每日快讯#]  上班摸鱼</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -3022,25 +3109,6 @@ ngork http 8080
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>潼南区气象台2023年10月26日18时40分发布“大雾黄色预警信号”，预计未来12小时，我区全部镇街将出现能见度小于500米的雾，局部地区能见度小于200米。请各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231026/t20231026_526464352.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市巴南区发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231026/t20231026_526464352.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>巴南区气象台2023年10月26日15时30分发布“大雾黄色预警信号”，预计10月26日15时30分至27日8时，我区姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -3313,44 +3381,6 @@ set方法：默认值为undefined。当修改该属性时会调用此方法。
                       name: &quot;员工状态&quot;,
                       id: 12…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7293804880706240550"
-                        open
-                      >
-                        <summary class="article-expander__title">Vue 3.3.6 发布了，得益于WeakMap，它更快了</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7293804880706240550">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>性能改进和DOM节点的附加属性的类型检查使新的Vue值得更新。Vue团队确实做了很多工作。实际上，他们在同一天发布了两个子版本。Vue 3.3.5 和 3.3.6 都在2023年10月20日发布。
-免费体验 Gpt4 plus 与 AI作图神器，我们出的钱 体验地址：体验
-WeakMaps
-其中一个得到改进的是在可能的情况下从 Maps 和 Sets 转移到WeakMaps 和WeakSets。
-那是什么，为什么这么重要？
-如果你在 Maps或 Sets 中存储东西，你会对这些东西做一个引用。这意味着，只要Map或Set被使用，这个东西就不会被垃圾收集器从内存中释放。
-这通常这是有意义的。但有时候不是。例如，通过在系统中流动的数据中添加诊断数据。
-这就是 WeakMaps 和 WeakSets 开始发挥作用的地方，Vue现在在内部更多地使用这些来防止内存泄漏并提高整体性能。
-对 contenteditable&#x3D;&quot;plaintext-only&quot; 的支持
-我认为 contenteditable可以是true或false。但显然，有第三个值 &quot;plaintext-only&quot;。
-通常，当你将参数设置为true时，可以编辑格式，粘贴富文本。使用plaintext-only值则不行。
-现在的变化是，Vue不会为HTML规范中定义的合法值抛出 Typescript 错误。
-延迟加载图像
-这只是对HTML特性的类型支持。它在3.3.5中被添加，并使你能够将 img 的加载参数设置为lazy。
-这样，图像不会立即加载。这是一个标准的HTML特性，已经存在了一段时间，但这个修复是一个很好的提醒，用它来提高应用程序的性能。
-此版本中还有其他的错误修复和性能改进。
-Vue 3.2.40的新功能
-错误地禁用按钮
-
-上面的代码说明了按钮不应该被禁用，因为“false”在属性中实际上是一个字符串，而不是…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3854,57 +3884,6 @@ Vue 3.2.40的新功能
     
    航天科技集团发布六款固体火箭发动机，最大推力 1…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;28
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7293788726235365426"
-                        open
-                      >
-                        <summary class="article-expander__title">在高德地图实现后期效果</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7293788726235365426">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>介绍
-最近在做可视化图层开发的时候，发现我们自己开发的图层一些优秀的案例比起来，总是有一定的差距。差了后期效果合成环节，就比如个人晒图前忘了用美图秀秀修图。于是花了些时间研究了高德地图JSAPI2.0和GLCustomLayer，探索如何将后期特效接入到3D图层中。
-
-后期特效其实有点类似照片的后期滤镜处理，是对渲染结果的二次处理，可以实现发光、模糊、色调调整、镜头暗角、模拟环境光遮蔽等各种效果，为了方便理解，下面的讲解我将以辉光效果为例，学会了一种其他效果思路类似。
-方案调研
-Three官方提供了非常简单的方法实现后期特效，貌似仅需要完成以下两个步骤就可以完成我们想要的需求，代码也非常清晰简单：
-import * as THREE from &#x27;three&#x27;
-import { EffectComposer } from &#x27;three/examples/jsm/postprocessing/EffectComposer.js&#x27;
-import { RenderPass } from &#x27;three/examples/jsm/postprocessing/RenderPass.js&#x27;
-import { UnrealBloomPass } from &#x27;three/examples/jsm/postprocessing//UnrealBloomPass.js&#x27;
-import { OutputPass } from &#x27;three/examples/jsm/postprocessing/OutputPass.js&#x27;
-
-...
-
-// 1.在图层初始化完成后，创建效果合成器
-onLayerInit(){
-const { scene, camera, renderer } &#x3D; this
-
-    const renderScene &#x3D; new RenderPass(scene, camera)…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4990,8 +4969,8 @@ ECH 非常巧妙地解决了域名加密。它采用双层格式，也就是说�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6729261177">
-        <time id="build-timestamp" datetime="2023-11-02T06:53:36.527Z">2023-11-02T06:53:36.527Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6730898483">
+        <time id="build-timestamp" datetime="2023-11-02T09:53:28.401Z">2023-11-02T09:53:28.401Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

@@ -138,7 +138,7 @@
           "description": "在进行软件架构设计的时候，“C4 模型”可以很好地辅助表达一系列的分层图表，https://c4model.com，它按照上下文（Context）、容器（Container）、组件（Component）和代码（Code）四个维度对软件架构的层级做了定义。\n之前一直是徒手画框，看到 PlantUML 已经内置了 C4 元素，使用简单的 DSL 就可以完成架构图的绘制，实在是太方便了！C4 还内置了一些主题，也可以通过 PlantUML 提供的语法对界面样式进行自定义，不过，一般也不用特别追求好看，内置的主题基本就够用了。\n另外，VSCode 上的插件名就是 PlantUML，它提供了一个包含大量示例的参考仓库：https://github.com/plantuml-stdlib/C4-PlantUML",
           "link": "https://m.okjike.com/originalPosts/65407a7e99f2123c74a4cd43",
           "publishedOn": "2023-10-31T03:54:38.000Z",
-          "wordCount": 482,
+          "wordCount": 537,
           "title": "发布了: 在进行软件架构设计的时候，“C4 模型”可以很好地辅助表达一系列的分层图表，https://c4model.com，它按照上下文（Context）、容器（Container）、组件...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FmGyX5Out1PRvPuUIX-CRcpUUyh4v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -1012,16 +1012,6 @@
           "wordCount": 523,
           "title": "重庆市潼南区发布大雾黄色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231026/t20231026_526464352.html",
-          "author": "国家预警信息发布中心",
-          "description": "巴南区气象台2023年10月26日15时30分发布“大雾黄色预警信号”，预计10月26日15时30分至27日8时，我区姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231026/t20231026_526464352.html",
-          "publishedOn": "2023-10-26T07:51:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市巴南区发布大雾黄色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -1057,6 +1047,16 @@
       "feedUrl": "https://rsshub.app/juejin/trending/frontend/weekly",
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
+        {
+          "id": "https://juejin.cn/post/7295943233740554278",
+          "author": "asyncrustacean",
+          "description": "网上各种介绍wasm的文章都在说wasm的性能是js的数倍之多，实际情况真的是这样吗？\n本文用rust编译到wasm与js进行性能对比，尝试解答这个问题\n普通计算\n直接上代码，如果是计算斐波那契数列\nrust 代码如下\n#[wasm_bindgen]\npub fn fib_wasm(value: u32) -> u32 {\n    if value <= 1 {\n        return value;\n    }\n\n    fib_wasm(value - 1) + fib_wasm(value - 2)\n}\n\n运行 wasm-pack build --verbose --release --target web 编译成 js库\n相同代码用 js 编写，代码如下所示\nfunction fibJs(value: number): number {\n  if (value <= 1) {\n    return value\n  }\n  return fibJs(value - 1) + fibJs(value - 2)\n}\n\n测试代码如下\nconst maxIterTime = 10\n\nconst testFib = (fib: (value: number) => number) => {\n  const result = []\n  for (let i = 10; i < 10 + maxIterTime; i++) {\n    result.push(fib(i))\n  }\n}\n\nconsole.time(\"js\")\ntestFib(fibJs)\nconsole.timeEnd(\"js\")\n\nconsole.time(\"wasm\")\ntestFib(fibWasm)\nconsole.timeEnd(\"wasm\")\n\n对比结果如下\n\n可以看到js的耗时确实是wasm的数倍…",
+          "link": "https://juejin.cn/post/7295943233740554278",
+          "publishedOn": "2023-10-31T08:54:57.000Z",
+          "wordCount": 2642,
+          "title": "Wasm 真的比 Js 快吗？",
+          "imageUrl": null
+        },
         {
           "id": "https://juejin.cn/post/7295805817055166502",
           "author": "魔术师卡颂",
@@ -1158,6 +1158,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7294852698460438540",
+          "author": "全糖奶茶不加糖",
+          "description": "theme: channing-cyan\n什么是瀑布流式页面布局\n下面看几个现实的案例：\n小红书中的瀑布流式页面布局\n\n手机淘宝中的瀑布流式页面布局：\n\n介绍\n瀑布流式布局页面是什么？\n页面上给人一种参差不齐的多栏布局，其中元素大部分为图片，图片的宽度是统一固定的，但是由于高度不一样，第一行图片排满之后，新的图片会插入到第一排中高度最低的图片下面，并更新高度，如此循环，最终达到瀑布流式的效果。\n优点：\n吸引眼球： 瀑布流布局的不规则排列方式能够引起用户的兴趣，使界面更吸引人。用户会感到好奇，想要浏览所有的项目，因为每个项目都以不同的方式呈现。\n有效利用空间： 瀑布流布局可以充分利用页面空间，无论是横向还是纵向滚动，都可以容纳很多项目。这对于展示大量内容或产品非常有用。\n适应性： 瀑布流布局可以适应不同屏幕大小和设备类型，因为它是响应式设计的一部分。这意味着它可以在桌面电脑、平板电脑和移动设备上都有良好的表现。\n提高用户参与度： 用户通常更愿意探索页面上的不同项目，因为每次滚动都可能带来新的发现，从而增加了用户的参与度和浏览时间。\n缺点：\n信息层次不明确： 由于项目的不规则排列，瀑布流布局可能会使用户难以识别内容的层次和重要性。重要内容可能会被埋没在次要内容中。\n不适用于所有类型的内容： 瀑布流布局更适合视觉导向的内容，如图片、照片、商品展示等。对于需要详细信息或结构化内容的页面，这种布局可能不够合适。\n加载时间问题： 当页面包含大量项目时，瀑布流布局可能导致页面加载时间变长，特别是在网络连接较慢的情况下。这可能会影响用户体验。\n有限的导航性： 用户可能会发现导航和查找特定项目变得更加困难，因为项目的位置是不固定的。这可能会使用户在页面上迷失方向。\n代码实现\nHTML：\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta chars…",
+          "link": "https://juejin.cn/post/7294852698460438540",
+          "publishedOn": "2023-10-29T06:41:21.000Z",
+          "wordCount": 2466,
+          "title": "大厂也在用的：HTMl+CSS+JS实现瀑布流式页面布局",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7294638699417190410",
           "author": "zxg_神说要有光",
           "description": "Node 里怎么打印日志呢？\n有同学说，不也是用 console.log 么。\n不，服务端打印日志一般不会用 console.log。\n因为 console.log 打印完就没了，而服务端的日志经常要用来排查问题，需要搜索、分析日志内容，所以需要写入文件或者数据库里。\n而且打印的日志需要分级别，比如有的是错误的日志，有的只是普通日志，需要能够过滤不同级别的日志。\n此外，打印的日志需要带上时间戳，所在的代码位置等信息。\n这些都是 console.log 没有的功能。\n所以我们一般都会用专门的日志框架来做，比如 winston。\n它是 Node 最流行的日志框架，npm 官网上可以看到每周千万级的下载量：\n\n那 winston 都有什么功能？怎么用呢？\n我们试试看：\nmkdir winston-test\ncd winston-test\nnpm init -y\n\n\n先创建个项目。\n安装 winston：\nnpm install --save winston\n\n然后写下 index.js\nimport winston from 'winston';\n\nconst logger = winston.createLogger({\n    level: 'debug',\n    format: winston.format.simple(),\n    transports: [\n        new winston.transports.Console(),\n        new winston.transports.File({ \n            dirname: 'log', filename: 'test.log' \n        }),\n    ]\n});\n\nlogger.info('光光光光光光光光光');\nlogger.error('东东东东东东东东');\nlo…",
@@ -1228,26 +1238,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7293804880706240550",
-          "author": "王大冶",
-          "description": "性能改进和DOM节点的附加属性的类型检查使新的Vue值得更新。Vue团队确实做了很多工作。实际上，他们在同一天发布了两个子版本。Vue 3.3.5 和 3.3.6 都在2023年10月20日发布。\n免费体验 Gpt4 plus 与 AI作图神器，我们出的钱 体验地址：体验\nWeakMaps\n其中一个得到改进的是在可能的情况下从 Maps 和 Sets 转移到WeakMaps 和WeakSets。\n那是什么，为什么这么重要？\n如果你在 Maps或 Sets 中存储东西，你会对这些东西做一个引用。这意味着，只要Map或Set被使用，这个东西就不会被垃圾收集器从内存中释放。\n这通常这是有意义的。但有时候不是。例如，通过在系统中流动的数据中添加诊断数据。\n这就是 WeakMaps 和 WeakSets 开始发挥作用的地方，Vue现在在内部更多地使用这些来防止内存泄漏并提高整体性能。\n对 contenteditable=\"plaintext-only\" 的支持\n我认为 contenteditable可以是true或false。但显然，有第三个值 \"plaintext-only\"。\n通常，当你将参数设置为true时，可以编辑格式，粘贴富文本。使用plaintext-only值则不行。\n现在的变化是，Vue不会为HTML规范中定义的合法值抛出 Typescript 错误。\n延迟加载图像\n这只是对HTML特性的类型支持。它在3.3.5中被添加，并使你能够将 img 的加载参数设置为lazy。\n这样，图像不会立即加载。这是一个标准的HTML特性，已经存在了一段时间，但这个修复是一个很好的提醒，用它来提高应用程序的性能。\n此版本中还有其他的错误修复和性能改进。\nVue 3.2.40的新功能\n错误地禁用按钮\n\n上面的代码说明了按钮不应该被禁用，因为“false”在属性中实际上是一个字符串，而不是…",
-          "link": "https://juejin.cn/post/7293804880706240550",
-          "publishedOn": "2023-10-26T00:57:33.000Z",
-          "wordCount": 1144,
-          "title": "Vue 3.3.6 发布了，得益于WeakMap，它更快了",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7293788726235365426",
-          "author": "gyratesky",
-          "description": "介绍\n最近在做可视化图层开发的时候，发现我们自己开发的图层一些优秀的案例比起来，总是有一定的差距。差了后期效果合成环节，就比如个人晒图前忘了用美图秀秀修图。于是花了些时间研究了高德地图JSAPI2.0和GLCustomLayer，探索如何将后期特效接入到3D图层中。\n\n后期特效其实有点类似照片的后期滤镜处理，是对渲染结果的二次处理，可以实现发光、模糊、色调调整、镜头暗角、模拟环境光遮蔽等各种效果，为了方便理解，下面的讲解我将以辉光效果为例，学会了一种其他效果思路类似。\n方案调研\nThree官方提供了非常简单的方法实现后期特效，貌似仅需要完成以下两个步骤就可以完成我们想要的需求，代码也非常清晰简单：\nimport * as THREE from 'three'\nimport { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js'\nimport { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js'\nimport { UnrealBloomPass } from 'three/examples/jsm/postprocessing//UnrealBloomPass.js'\nimport { OutputPass } from 'three/examples/jsm/postprocessing/OutputPass.js'\n\n...\n\n// 1.在图层初始化完成后，创建效果合成器\nonLayerInit(){\nconst { scene, camera, renderer } = this\n\n    const renderScene = new RenderPass(scene, camera)…",
-          "link": "https://juejin.cn/post/7293788726235365426",
-          "publishedOn": "2023-10-25T12:18:16.000Z",
-          "wordCount": 2244,
-          "title": "在高德地图实现后期效果",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7291836033721090082",
           "author": "掘金小册",
           "description": "theme: Chinese-red\n来啦来啦，它来啦~\n掘金小册 2023 年度最大优惠力度来啦！\n150+ 本好课等你挑，抽奖、满赠、闯关、互动玩不停！\n话不多说，快来看看册姐为大家准备的四重惊喜吧！\n⏰ 活动时间\n2023 年 10 月 23 日～2023 年 10 月 31 日\n🔔 惊喜一：1024 狂欢，全场 5 折起！\n上新小册 6 折，其他小册 5 折特惠\n购买小册➡️：点击浏览小册列表\n想买但是不知道怎么选？看这里：掘金之「什么值得买」\n活动期内，实付满 68 元即可参与抽奖👇🏻。会员兑换券不计入实付总金额，活动结束后由运营统一抽取。\n「奖品数量」\n「奖品名称」\n「实物图」\n\n\n\n\n10 个\n稀土掘金-码赛克系列运动毛巾\n\n\n\n\n👑 惊喜二：满 168 元 /268 元 /368 元赠好礼！\n参与规则：活动期间累计实付金额满 168 元 /268 元 /368 元的用户，可从对应礼品中三选一！各金额段满赠奖品不可叠加，但可与抽奖礼品叠加~ 同时，会员兑换券支付不计入实付总金额。\n假如：小明购买小册实付满 268 元，即可从大鼠标垫、摩卡壶和云朵小背包中挑选一个礼品。\n实付金额\n「奖品详情」\n「实物图」\n\n\n\n\n满 168 元\n动漫硅胶腕托鼠标垫 或 陶瓷马克杯 或 稀土掘金 JUEJIN FRIENDS 「码赛克」棒球帽（三选一）\n\n\n\n满 268 元\n小助手系列桌垫大鼠标垫 或 Touch 系列「围炉喝咖」摩卡壶 或 Max 云朵小背包（三选一）\n\n\n\n满 368 元\nTV 造型梦幻星空加热恒温杯垫 或 便携简约休闲胸包尼龙防泼水运动斜挎包 或 「无限新生」系列环保竹纤维材质饭盒套装（三选一）\n\n\n\n\n🤩福利加码！！！\n活动期间累计实付金额 TOP3 ，可分别获得：\n\n\n\n\n\n\n\nTop1：小米 7pro 智能手环（数量1)\nTop2：小米 AI 音箱第二代（数量1）\nTop3:小米蓝牙项圈耳机青春版（数量1）\n\n\n\n\n✨ 此奖品和满赠不叠加，可与抽奖礼品叠加\n👏 惊喜三：闯关有礼，掘金热门周边带回家~\n参与规则：活动期间每完成一关，即可获得一次抽奖机会，每人最多可参与 3 轮抽奖。「如果 3 关全部完成，必得 yoyo 抱枕 1 个！」\n活动流程：完成闯关-->填写👉🏻问卷👈🏻-->符合活动要求，自动进入抽奖池-->活动结束后，运营统一抽取。\n「闯关详情」\n「闯关规则」\n「奖品详情」\n「实物图」\n\n\n\n\n第一关：关注有礼\n关注掘金小册微信公众号，同时添加小册四姐@北比，或小册五姐@北比\n可参与Who Cares系列咖啡杯抽奖（3个）\n\n\n\n第二关：转发有礼\n转发 1024 活动链接（掘金文章或掘金公众号文章）到朋友圈，文案可自由发挥。朋友圈需公开可见，至少保留至活动结束后 5 个工作日\n可参与掘金加湿器抽奖（3个）\n\n\n\n第三关：推广有礼\n活动期间，参与掘金小册分销，成功分销 >=3 本（小册定价 >=29.9）。注意：分销人与实际购买人的 uid 不同才会计入总数\n可参与掘金翻转小夜灯抽奖（3个）\n\n\n\n\n另外：小册作者持续招募中，如果你也想成为其中一员，拿长效收益，千万别错过哦👉🏻问卷👈🏻~\n🥰 惊喜四：有奖互动，赢掘金 code&life 系列雨伞~\n2023 年转眼已过大半，今年你都关注了哪些前沿技术，有什么有趣/深入的发现和研究吗？\n👉🏻欢迎在文章评论区留下你的分享和见解，和大家一起畅聊~\n🎁 我们将从评论中抽取 3 人送出 code&life系列雨伞，每人 1 个。获奖名单将于活动结束后 5 个工作日（11月7日）内公布，届时请留意站内信/私信通知哦~\n「奖品数量」\n「奖品名称」\n「实物图」\n\n\n\n\n3 个\n掘金 code&life 系列雨伞\n\n\n\n\n另外，除现有小册，你还想看哪些小册主题，也欢迎反馈给我们哦👉🏻问卷👈🏻\n📢 活动须知&奖品领取方式（必看）\n各活动计算的实付金额以活动期间的「累计」实付金额为准，计算时间段为 10 月 23 日～10 月 31 日，会员兑换券不计入。\n其中，满赠活动各阶段礼品不叠加，但可与其他活动的抽奖礼品叠加~\n各活动获奖名单：活动结束后的 5 个工作日内（预计 11 月 7 日）公布\n实物礼品领取：\n活动结束后的 5 个工作日（11 月 7 日）内开始采集发货信息，届时请留意站内信/私信通知。\n信息发出后，请掘友们在 5 个工作日内完成填写，11 月 14 日 24 点截止。过期未填写视为放弃所有奖品，不予发放。\n多次提交问卷的，官方将以最新提交为准。\n信息采集完，将于 11 月 24 日前完成实物礼品发放。\n有任何疑问，可以通过 1️⃣站内私信掘金小册，2️⃣微信联系小册四姐@北比或小册五姐@北比\n🏃🏻现在就去选购👉🏻https://sourl.co/nQUPPM",
@@ -1264,6 +1254,16 @@
       "feedUrl": "https://rsshub.app/juejin/pins/6824710202000932877",
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
+        {
+          "id": "7296442264447828020",
+          "author": "箜絔",
+          "description": "jym，idea怎么设置项目右键出现的菜单栏不需要鼠标滚动也能看到所有选项，现在找个选项需要鼠标一直往后滑，我记得以前可以让所有选项都缩略到菜单栏上，不需要鼠标往后滑，但是我忘记怎么设置了",
+          "link": "https://juejin.cn/pin/7296442264447828020",
+          "publishedOn": "2023-11-02T05:49:53.000Z",
+          "wordCount": 504,
+          "title": "jym，idea怎么设置项目右键出现的菜单栏不需要鼠标滚动也能看到所有选项，现在找个选项需要鼠标一直往后滑，我记得以前可以让所有选项都缩略到菜单栏上，不需要...",
+          "imageUrl": null
+        },
         {
           "id": "7296440993214103578",
           "author": "鱼头人",
@@ -1430,7 +1430,7 @@
           "description": "[7160505361521180712#我又站起来了#]  上班还是摸鱼",
           "link": "https://juejin.cn/pin/7294555030727557147",
           "publishedOn": "2023-10-28T09:11:50.000Z",
-          "wordCount": 542,
+          "wordCount": 539,
           "title": "[7160505361521180712#我又站起来了#] 上班还是摸鱼",
           "imageUrl": null
         },
@@ -1452,16 +1452,6 @@
           "publishedOn": "2023-10-27T02:59:38.000Z",
           "wordCount": 546,
           "title": "[7073670907851440160#新人报道#] 最近开发了一个名叫RetrofitAssistant的IDEA插件,android Studio也可以用，主要功能是提供接口管理/代码补全/代码检查，同时如...",
-          "imageUrl": null
-        },
-        {
-          "id": "7294199692623855653",
-          "author": "哲思_swift",
-          "description": "[7210228048107896891#每日快讯#]  上班摸鱼",
-          "link": "https://juejin.cn/pin/7294199692623855653",
-          "publishedOn": "2023-10-27T01:48:35.000Z",
-          "wordCount": 589,
-          "title": "[7210228048107896891#每日快讯#] 上班摸鱼",
           "imageUrl": null
         }
       ]
