@@ -44,7 +44,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1215,
+          "wordCount": 1216,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -54,7 +54,7 @@
           "description": "本文介绍三种改变音频播放音量的方法，其中还有一种方法直接改变音频AudioBuffer数据源的音量，说不定你哪天就会用到。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/",
           "publishedOn": "2023-10-09T14:50:57.000Z",
-          "wordCount": 1099,
+          "wordCount": 1100,
           "title": "JS改变AudioBuffer音量并下载为新audio音频",
           "imageUrl": null
         }
@@ -215,7 +215,7 @@
           "description": "「当学生准备好了，老师就会出现」\n -- 《笔记的方法》",
           "link": "https://m.okjike.com/originalPosts/6544945799f2123c74fd6d30",
           "publishedOn": "2023-11-03T06:33:59.000Z",
-          "wordCount": 453,
+          "wordCount": 455,
           "title": "发布了: 「当学生准备好了，老师就会出现」 -- 《笔记的方法》",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -523,6 +523,16 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231103/t20231103_526473977.html",
+          "author": "国家预警信息发布中心",
+          "description": "渝北区气象台2023年11月3日18时20分发布“大雾黄色预警信号”，预计3日19时至4日09时，石船镇、大盛镇、洛碛镇、龙兴镇、统景镇、大湾镇、双龙湖街道、茨竹镇、木耳镇、古路镇、仙桃街道、双凤桥街道、王家街道、兴隆镇、龙塔街道、龙溪街道、龙山街道、玉峰山镇、宝圣湖街道、两路街道、悦来街道、回兴街道将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231103/t20231103_526473977.html",
+          "publishedOn": "2023-11-03T10:15:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市渝北区发布大雾黄色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231103/t20231103_526473847.html",
           "author": "国家预警信息发布中心",
@@ -1201,6 +1211,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7295010992122118185",
+          "author": "公号是前端必修课",
+          "description": "highlight: a11y-dark\n一、序言\n这个问题估计会难倒一部分同学。甚至会有人反问，forEach循环在JavaScript中能终止吗？\n比如 ，我举个例子\nconst array = [ -3, -2, -1, 0, 1, 2, 3 ]\n\narray.forEach((it) => {\n  if (it >= 0) {\n    console.log(it)\n    // 0 1 2 3\n    return // or break\n  }\n})\n\n从这个例子来看，好像不管是通过return还是break都无法终止forEach循环。\nforEach相当于就是函数的执行，比如下面这段代码，即使func1执行了return语句，仍然会打印出2。\nconst func1 = () => {\n  console.log(1)\n  return\n}\n\nconst func2 = () => {\n  func1()\n  console.log(2)\n}\n\nfunc2()\n\n二、方法\n然而，我能想到三种方式可以终止forEach循环。\n01. 抛出错误\n当找到一个大于等于0的数字之后，return循环将终止执行，所以控制台只会输出数字0，代码如下：\nconst array = [ -3, -2, -1, 0, 1, 2, 3 ]\n\ntry {\n  array.forEach((it) => {\n    if (it >= 0) {\n      console.log(it) // 输出：0\n      throw Error(`We've found the target element.`)\n    }\n  })\n} catch (err) {\n  \n}\n\n02. 将数组长度设置成0\n我们也能通过将数组长度设置成0来终止forEach循环。代码如下\nconst array = [ -3, -2, -1, 0, 1, 2, 3 ]\n\narray.forEach((it) => {\n  if (it >= 0) {\n    console.log(it) // 输出：0\n    array.length = 0\n  }\n})\n\n03. 将数组元素移除\n当满足条件时，使用splice方法将数组内元素移除，也能终止forEach循环。代码如下：\nconst array = [ -3, -2, -1, 0, 1, 2, 3 ]\n\narray.forEach((it, i) => {\n  if (it >= 0) {\n    console.log(it) // 输出：0\n    array.splice(i + 1, array.length - i)\n  }\n})\n\n三、建议\n建议使用for和some\n在日常工作中，一般是不会出现一种情况是让你终止forEach循环的，如果有终止的情况，可以使用for和some方法。\nfor\nconst array = [ -3, -2, -1, 0, 1, 2, 3 ]\n\nfor (let i = 0, len = array.length; i < len; i++) {\n  if (array[ i ] >= 0) {\n    console.log(array[ i ])\n    break\n  }\n}\n\nsome\nconst array = [ -3, -2, -1, 0, 1, 2, 3 ]\n\narray.some((it, i) => {\n  if (it >= 0) {\n    console.log(it)\n    return true\n  }\n})",
+          "link": "https://juejin.cn/post/7295010992122118185",
+          "publishedOn": "2023-10-29T23:14:55.000Z",
+          "wordCount": 1352,
+          "title": "如何终止forEach循环？",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7294954501575753743",
           "author": "imber",
           "description": "前言\nvercel 于 2023/10/16 发布 next14 版本，从官网的博客更新记录可以看到，最新的两个版本主要更新性能方面，具体 Next14 更新点可以看官网\n\n一、Nextjs 更新是要解决什么问题？\n众所周知 nextjs 在本地开发的时候速度不太好，HMR 和首次打开页面的时候速度都没有 vite 体验好，现在next13.5、next14 重点更新了 nextjs 性能方面的问题，提高我们的开发体验。注意 turbopack 从 13 开始已经是 nextjs 内置的，不过打包不太稳定，比如打包 3D 模型的时候可能会报错，只能在 dev 环境使用，也就是 next dev --turbo 直接开箱即用。\n二、为什么 vite 模块少的时候那么快，模块多则会变慢？\nvite 是基于 esbuild 的 no bundle 模式，只需要依赖预构建成 esm，浏览器直接使用，不需要打包；但是项目大起来的时候可能也会首次渲染较慢，因为全量编译导致一次性执行的任务比较多，且发起的请求比较多浏览器对请求数是有限制了，请求排队也会导致变慢。\n三、Turbopack 为什么比 vite 快？\nturbopack 自己说比 vite 快，条件是 1000 个模块的情况下，但是想一下我们的项目其实很少会写到这么多模块，那 1000 个模块之前都会让开发者体验不是很好.\n3.1 turbopack在性能方面做的事情\n1、基于turbo引擎支持增量计算，由 rust 编写，比 js 速度更快；\n2、函数级缓存，turbopack 能做到函数级别的缓存，也就是说更细化；\n3、按需编译，也就是说不会像webpack一样全量编译；\n4、请求级编译，相比于页面级编译更智能；如果浏览器想要一些 CSS，turbopack只会编译它 - 不编译引用的图像。背后 next/dynamic …",
@@ -1281,16 +1301,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7294260754916409353",
-          "author": "风度前端",
-          "description": "箭头函数给我们的工作带来了极大的方便，但是它们有什么缺点呢？我们应该一直使用箭头函数吗？我们应该在哪些场景中停止使用箭头函数？今天这篇文章，我就跟大家汇总了4种场景下，不建议使用箭头函数的情况，希望对你有用。\n箭头函数的特点\n1、不支持参数对象arguments\n在箭头函数中，我们不能像在普通函数中那样使用 arguments 对象。\nconst fn1 = () => {\n  console.log('arguments', arguments)\n}\n\nfn1('fatfish', 'medium')\n\nfunction fn2(){\n  console.log('arguments', arguments)\n}\n\nfn2('fatfish', 'medium')\n\n可以看到，fn1箭头函数报错，但是fn2可以正常读取arguments对象。\n\n我们如何才能在箭头函数中获取所有传递给函数的参数？\n可以使用Spread Operator来解决它。\n\nconst fn3 = (...values) => {\n  console.log('values', values)\n}\n\nfn3('fatfish', 'medium')\n\n2、无法通过apply、call、bind来改变this指针\nconst fn1 = () => {\n  console.log('this-fn1', this)\n}\n\nfn1()\n\nfunction fn2(){\n  console.log('this-fn2', this)\n}\n\nfn2()\n\n\n如果我们希望 fn1 和 fn2 都打印对象，我们应该怎么做？\nconst thisObj = {\n  name: 'fatfish'\n}\n\nconst fn1 = () => {\n  console.log('this-fn1', this)\n}\n\nf…",
-          "link": "https://juejin.cn/post/7294260754916409353",
-          "publishedOn": "2023-10-27T08:05:45.000Z",
-          "wordCount": 1442,
-          "title": "不应该使用箭头函数的四种场景",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7291836033721090082",
           "author": "掘金小册",
           "description": "theme: Chinese-red\n来啦来啦，它来啦~\n掘金小册 2023 年度最大优惠力度来啦！\n150+ 本好课等你挑，抽奖、满赠、闯关、互动玩不停！\n话不多说，快来看看册姐为大家准备的四重惊喜吧！\n⏰ 活动时间\n2023 年 10 月 23 日～2023 年 10 月 31 日\n🔔 惊喜一：1024 狂欢，全场 5 折起！\n上新小册 6 折，其他小册 5 折特惠\n购买小册➡️：点击浏览小册列表\n想买但是不知道怎么选？看这里：掘金之「什么值得买」\n活动期内，实付满 68 元即可参与抽奖👇🏻。会员兑换券不计入实付总金额，活动结束后由运营统一抽取。\n「奖品数量」\n「奖品名称」\n「实物图」\n\n\n\n\n10 个\n稀土掘金-码赛克系列运动毛巾\n\n\n\n\n👑 惊喜二：满 168 元 /268 元 /368 元赠好礼！\n参与规则：活动期间累计实付金额满 168 元 /268 元 /368 元的用户，可从对应礼品中三选一！各金额段满赠奖品不可叠加，但可与抽奖礼品叠加~ 同时，会员兑换券支付不计入实付总金额。\n假如：小明购买小册实付满 268 元，即可从大鼠标垫、摩卡壶和云朵小背包中挑选一个礼品。\n实付金额\n「奖品详情」\n「实物图」\n\n\n\n\n满 168 元\n动漫硅胶腕托鼠标垫 或 陶瓷马克杯 或 稀土掘金 JUEJIN FRIENDS 「码赛克」棒球帽（三选一）\n\n\n\n满 268 元\n小助手系列桌垫大鼠标垫 或 Touch 系列「围炉喝咖」摩卡壶 或 Max 云朵小背包（三选一）\n\n\n\n满 368 元\nTV 造型梦幻星空加热恒温杯垫 或 便携简约休闲胸包尼龙防泼水运动斜挎包 或 「无限新生」系列环保竹纤维材质饭盒套装（三选一）\n\n\n\n\n🤩福利加码！！！\n活动期间累计实付金额 TOP3 ，可分别获得：\n\n\n\n\n\n\n\nTop1：小米 7pro 智能手环（数量1)\nTop2：小米 AI 音箱第二代（数量1）\nTop3:小米蓝牙项圈耳机青春版（数量1）\n\n\n\n\n✨ 此奖品和满赠不叠加，可与抽奖礼品叠加\n👏 惊喜三：闯关有礼，掘金热门周边带回家~\n参与规则：活动期间每完成一关，即可获得一次抽奖机会，每人最多可参与 3 轮抽奖。「如果 3 关全部完成，必得 yoyo 抱枕 1 个！」\n活动流程：完成闯关-->填写👉🏻问卷👈🏻-->符合活动要求，自动进入抽奖池-->活动结束后，运营统一抽取。\n「闯关详情」\n「闯关规则」\n「奖品详情」\n「实物图」\n\n\n\n\n第一关：关注有礼\n关注掘金小册微信公众号，同时添加小册四姐@北比，或小册五姐@北比\n可参与Who Cares系列咖啡杯抽奖（3个）\n\n\n\n第二关：转发有礼\n转发 1024 活动链接（掘金文章或掘金公众号文章）到朋友圈，文案可自由发挥。朋友圈需公开可见，至少保留至活动结束后 5 个工作日\n可参与掘金加湿器抽奖（3个）\n\n\n\n第三关：推广有礼\n活动期间，参与掘金小册分销，成功分销 >=3 本（小册定价 >=29.9）。注意：分销人与实际购买人的 uid 不同才会计入总数\n可参与掘金翻转小夜灯抽奖（3个）\n\n\n\n\n另外：小册作者持续招募中，如果你也想成为其中一员，拿长效收益，千万别错过哦👉🏻问卷👈🏻~\n🥰 惊喜四：有奖互动，赢掘金 code&life 系列雨伞~\n2023 年转眼已过大半，今年你都关注了哪些前沿技术，有什么有趣/深入的发现和研究吗？\n👉🏻欢迎在文章评论区留下你的分享和见解，和大家一起畅聊~\n🎁 我们将从评论中抽取 3 人送出 code&life系列雨伞，每人 1 个。获奖名单将于活动结束后 5 个工作日（11月7日）内公布，届时请留意站内信/私信通知哦~\n「奖品数量」\n「奖品名称」\n「实物图」\n\n\n\n\n3 个\n掘金 code&life 系列雨伞\n\n\n\n\n另外，除现有小册，你还想看哪些小册主题，也欢迎反馈给我们哦👉🏻问卷👈🏻\n📢 活动须知&奖品领取方式（必看）\n各活动计算的实付金额以活动期间的「累计」实付金额为准，计算时间段为 10 月 23 日～10 月 31 日，会员兑换券不计入。\n其中，满赠活动各阶段礼品不叠加，但可与其他活动的抽奖礼品叠加~\n各活动获奖名单：活动结束后的 5 个工作日内（预计 11 月 7 日）公布\n实物礼品领取：\n活动结束后的 5 个工作日（11 月 7 日）内开始采集发货信息，届时请留意站内信/私信通知。\n信息发出后，请掘友们在 5 个工作日内完成填写，11 月 14 日 24 点截止。过期未填写视为放弃所有奖品，不予发放。\n多次提交问卷的，官方将以最新提交为准。\n信息采集完，将于 11 月 24 日前完成实物礼品发放。\n有任何疑问，可以通过 1️⃣站内私信掘金小册，2️⃣微信联系小册四姐@北比或小册五姐@北比\n🏃🏻现在就去选购👉🏻https://sourl.co/nQUPPM",
@@ -1333,7 +1343,7 @@
           "description": "有没有一种手机软件.  能自动收集 短信中的快递信息 ,这样能提醒拿快递. 进行归类显示 \n每次拿快递 得翻一遍短信,很麻烦",
           "link": "https://juejin.cn/pin/7296771769066307611",
           "publishedOn": "2023-11-03T01:34:19.000Z",
-          "wordCount": 536,
+          "wordCount": 543,
           "title": "有没有一种手机软件. 能自动收集 短信中的快递信息 ,这样能提醒拿快递. 进行归类显示 每次拿快递 得翻一遍短信,很麻烦",
           "imageUrl": null
         },
@@ -1373,7 +1383,7 @@
           "description": "xdm，你们mac用的什么软件连的远程服务器啊，现在用的这个finalShell，好难看啊",
           "link": "https://juejin.cn/pin/7296440993214103578",
           "publishedOn": "2023-11-02T02:43:25.000Z",
-          "wordCount": 524,
+          "wordCount": 531,
           "title": "xdm，你们mac用的什么软件连的远程服务器啊，现在用的这个finalShell，好难看啊",
           "imageUrl": null
         },
@@ -1413,7 +1423,7 @@
           "description": "下载量不理想[流泪]，xdm帮忙推广推广，免费好用哦～，别让作者桑心了",
           "link": "https://juejin.cn/pin/7295962144749813797",
           "publishedOn": "2023-10-31T10:40:57.000Z",
-          "wordCount": 532,
+          "wordCount": 539,
           "title": "下载量不理想[流泪]，xdm帮忙推广推广，免费好用哦～，别让作者桑心了",
           "imageUrl": null
         },

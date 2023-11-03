@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-11-03T09:53:34.610Z</id>
+    <id>urn:2023-11-03T12:57:09.729Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-11-03T09:53:34.610Z</updated>
+    <updated>2023-11-03T12:57:09.729Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[重庆市渝北区发布大雾黄色预警]]></title>
+        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20231103/t20231103_526473977.html</id>
+        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20231103/t20231103_526473977.html"/>
+        <updated>2023-11-03T10:15:00.000Z</updated>
+        <summary type="html"><![CDATA[渝北区气象台2023年11月3日18时20分发布“大雾黄色预警信号”，预计3日19时至4日09时，石船镇、大盛镇、洛碛镇、龙兴镇、统景镇、大湾镇、双龙湖街道、茨竹镇、木耳镇、古路镇、仙桃街道、双凤桥街道、王家街道、兴隆镇、龙塔街道、龙溪街道、龙山街道、玉峰山镇、宝圣湖街道、两路街道、悦来街道、回兴街道将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
+        <author>
+            <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[重庆市梁平区发布暴雨黄色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/huangsyj/20231103/t20231103_526473847.html</id>
@@ -986,6 +996,104 @@ https://www.agiquery.com]]></summary>
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[如何终止forEach循环？]]></title>
+        <id>https://juejin.cn/post/7295010992122118185</id>
+        <link href="https://juejin.cn/post/7295010992122118185"/>
+        <updated>2023-10-29T23:14:55.000Z</updated>
+        <summary type="html"><![CDATA[highlight: a11y-dark
+一、序言
+这个问题估计会难倒一部分同学。甚至会有人反问，forEach循环在JavaScript中能终止吗？
+比如 ，我举个例子
+const array = [ -3, -2, -1, 0, 1, 2, 3 ]
+
+array.forEach((it) => {
+  if (it >= 0) {
+    console.log(it)
+    // 0 1 2 3
+    return // or break
+  }
+})
+
+从这个例子来看，好像不管是通过return还是break都无法终止forEach循环。
+forEach相当于就是函数的执行，比如下面这段代码，即使func1执行了return语句，仍然会打印出2。
+const func1 = () => {
+  console.log(1)
+  return
+}
+
+const func2 = () => {
+  func1()
+  console.log(2)
+}
+
+func2()
+
+二、方法
+然而，我能想到三种方式可以终止forEach循环。
+01. 抛出错误
+当找到一个大于等于0的数字之后，return循环将终止执行，所以控制台只会输出数字0，代码如下：
+const array = [ -3, -2, -1, 0, 1, 2, 3 ]
+
+try {
+  array.forEach((it) => {
+    if (it >= 0) {
+      console.log(it) // 输出：0
+      throw Error(`We've found the target element.`)
+    }
+  })
+} catch (err) {
+  
+}
+
+02. 将数组长度设置成0
+我们也能通过将数组长度设置成0来终止forEach循环。代码如下
+const array = [ -3, -2, -1, 0, 1, 2, 3 ]
+
+array.forEach((it) => {
+  if (it >= 0) {
+    console.log(it) // 输出：0
+    array.length = 0
+  }
+})
+
+03. 将数组元素移除
+当满足条件时，使用splice方法将数组内元素移除，也能终止forEach循环。代码如下：
+const array = [ -3, -2, -1, 0, 1, 2, 3 ]
+
+array.forEach((it, i) => {
+  if (it >= 0) {
+    console.log(it) // 输出：0
+    array.splice(i + 1, array.length - i)
+  }
+})
+
+三、建议
+建议使用for和some
+在日常工作中，一般是不会出现一种情况是让你终止forEach循环的，如果有终止的情况，可以使用for和some方法。
+for
+const array = [ -3, -2, -1, 0, 1, 2, 3 ]
+
+for (let i = 0, len = array.length; i < len; i++) {
+  if (array[ i ] >= 0) {
+    console.log(array[ i ])
+    break
+  }
+}
+
+some
+const array = [ -3, -2, -1, 0, 1, 2, 3 ]
+
+array.some((it, i) => {
+  if (it >= 0) {
+    console.log(it)
+    return true
+  }
+})]]></summary>
+        <author>
+            <name>公号是前端必修课</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[重庆市万州区发布大雾黄色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/huangsyj/20231030/t20231030_526467617.html</id>
         <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20231030/t20231030_526467617.html"/>
@@ -1637,66 +1745,6 @@ ngork http 8080
 然后，访问控制台出现的https链接即可。]]></summary>
         <author>
             <name>石小石Orz</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[不应该使用箭头函数的四种场景]]></title>
-        <id>https://juejin.cn/post/7294260754916409353</id>
-        <link href="https://juejin.cn/post/7294260754916409353"/>
-        <updated>2023-10-27T08:05:45.000Z</updated>
-        <summary type="html"><![CDATA[箭头函数给我们的工作带来了极大的方便，但是它们有什么缺点呢？我们应该一直使用箭头函数吗？我们应该在哪些场景中停止使用箭头函数？今天这篇文章，我就跟大家汇总了4种场景下，不建议使用箭头函数的情况，希望对你有用。
-箭头函数的特点
-1、不支持参数对象arguments
-在箭头函数中，我们不能像在普通函数中那样使用 arguments 对象。
-const fn1 = () => {
-  console.log('arguments', arguments)
-}
-
-fn1('fatfish', 'medium')
-
-function fn2(){
-  console.log('arguments', arguments)
-}
-
-fn2('fatfish', 'medium')
-
-可以看到，fn1箭头函数报错，但是fn2可以正常读取arguments对象。
-
-我们如何才能在箭头函数中获取所有传递给函数的参数？
-可以使用Spread Operator来解决它。
-
-const fn3 = (...values) => {
-  console.log('values', values)
-}
-
-fn3('fatfish', 'medium')
-
-2、无法通过apply、call、bind来改变this指针
-const fn1 = () => {
-  console.log('this-fn1', this)
-}
-
-fn1()
-
-function fn2(){
-  console.log('this-fn2', this)
-}
-
-fn2()
-
-
-如果我们希望 fn1 和 fn2 都打印对象，我们应该怎么做？
-const thisObj = {
-  name: 'fatfish'
-}
-
-const fn1 = () => {
-  console.log('this-fn1', this)
-}
-
-f…]]></summary>
-        <author>
-            <name>风度前端</name>
         </author>
     </entry>
     <entry>

@@ -51,8 +51,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-03 datetime="2023-11-03T09:15:00.000Z">2023-11-03</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-03 datetime="2023-11-03T09:15:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-03 datetime="2023-11-03T10:15:00.000Z">2023-11-03</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-03 datetime="2023-11-03T10:15:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -67,6 +67,25 @@
                   <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231103/t20231103_526473977.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市渝北区发布大雾黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231103/t20231103_526473977.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>渝北区气象台2023年11月3日18时20分发布“大雾黄色预警信号”，预计3日19时至4日09时，石船镇、大盛镇、洛碛镇、龙兴镇、统景镇、大湾镇、双龙湖街道、茨竹镇、木耳镇、古路镇、仙桃街道、双凤桥街道、王家街道、兴隆镇、龙塔街道、龙溪街道、龙山街道、玉峰山镇、宝圣湖街道、两路街道、悦来街道、回兴街道将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -2565,43 +2584,116 @@ https://www.agiquery.com</span>
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >张鑫旭-鑫空间-鑫生活</button>
-                  <a class="source-heading__link" href="https://www.zhangxinxu.com/wordpress">Open</a>
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.zhangxinxu.com/wordpress/?p&#x3D;11038"
+                        data-accordion-key="https://juejin.cn/post/7295010992122118185"
                         open
                       >
-                        <summary class="article-expander__title">聊聊Web网页中资源加载的优先级</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.zhangxinxu.com/wordpress/2023/10/img-js-preload-fetch-priority/">
+                        <summary class="article-expander__title">如何终止forEach循环？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7295010992122118185">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>想要提高网页的加载体验，其实有个非常简单且实用的技巧，那就是改变请求资源的加载优先级，这也可以改变？没错！</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
+                              <span>highlight: a11y-dark
+一、序言
+这个问题估计会难倒一部分同学。甚至会有人反问，forEach循环在JavaScript中能终止吗？
+比如 ，我举个例子
+const array &#x3D; [ -3, -2, -1, 0, 1, 2, 3 ]
+
+array.forEach((it) &#x3D;&gt; {
+  if (it &gt;&#x3D; 0) {
+    console.log(it)
+    // 0 1 2 3
+    return // or break
+  }
+})
+
+从这个例子来看，好像不管是通过return还是break都无法终止forEach循环。
+forEach相当于就是函数的执行，比如下面这段代码，即使func1执行了return语句，仍然会打印出2。
+const func1 &#x3D; () &#x3D;&gt; {
+  console.log(1)
+  return
+}
+
+const func2 &#x3D; () &#x3D;&gt; {
+  func1()
+  console.log(2)
+}
+
+func2()
+
+二、方法
+然而，我能想到三种方式可以终止forEach循环。
+01. 抛出错误
+当找到一个大于等于0的数字之后，return循环将终止执行，所以控制台只会输出数字0，代码如下：
+const array &#x3D; [ -3, -2, -1, 0, 1, 2, 3 ]
+
+try {
+  array.forEach((it) &#x3D;&gt; {
+    if (it &gt;&#x3D; 0) {
+      console.log(it) // 输出：0
+      throw Error(&#x60;We&#x27;ve found the target element.&#x60;)
+    }
+  })
+} catch (err) {
+  
+}
+
+02. 将数组长度设置成0
+我们也能通过将数组长度设置成0来终止forEach循环。代码如下
+const array &#x3D; [ -3, -2, -1, 0, 1, 2, 3 ]
+
+array.forEach((it) &#x3D;&gt; {
+  if (it &gt;&#x3D; 0) {
+    console.log(it) // 输出：0
+    array.length &#x3D; 0
+  }
+})
+
+03. 将数组元素移除
+当满足条件时，使用splice方法将数组内元素移除，也能终止forEach循环。代码如下：
+const array &#x3D; [ -3, -2, -1, 0, 1, 2, 3 ]
+
+array.forEach((it, i) &#x3D;&gt; {
+  if (it &gt;&#x3D; 0) {
+    console.log(it) // 输出：0
+    array.splice(i + 1, array.length - i)
+  }
+})
+
+三、建议
+建议使用for和some
+在日常工作中，一般是不会出现一种情况是让你终止forEach循环的，如果有终止的情况，可以使用for和some方法。
+for
+const array &#x3D; [ -3, -2, -1, 0, 1, 2, 3 ]
+
+for (let i &#x3D; 0, len &#x3D; array.length; i &#x3D; 0) {
+    console.log(array[ i ])
+    break
+  }
+}
+
+some
+const array &#x3D; [ -3, -2, -1, 0, 1, 2, 3 ]
+
+array.some((it, i) &#x3D;&gt; {
+  if (it &gt;&#x3D; 0) {
+    console.log(it)
+    return true
+  }
+})</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
                       </details>
                     </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
@@ -2835,6 +2927,39 @@ HTML：
 
   &lt;meta chars…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >张鑫旭-鑫空间-鑫生活</button>
+                  <a class="source-heading__link" href="https://www.zhangxinxu.com/wordpress">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.zhangxinxu.com/wordpress/?p&#x3D;11038"
+                        open
+                      >
+                        <summary class="article-expander__title">聊聊Web网页中资源加载的优先级</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.zhangxinxu.com/wordpress/2023/10/img-js-preload-fetch-priority/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>想要提高网页的加载体验，其实有个非常简单且实用的技巧，那就是改变请求资源的加载优先级，这也可以改变？没错！</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3177,94 +3302,11 @@ ngork http 8080
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-27 datetime="2023-10-27T08:05:45.000Z">2023-10-27</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-27 datetime="2023-10-27T08:05:45.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-27 datetime="2023-10-27T07:00:38.000Z">2023-10-27</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-27 datetime="2023-10-27T07:00:38.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7294260754916409353"
-                        open
-                      >
-                        <summary class="article-expander__title">不应该使用箭头函数的四种场景</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7294260754916409353">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>箭头函数给我们的工作带来了极大的方便，但是它们有什么缺点呢？我们应该一直使用箭头函数吗？我们应该在哪些场景中停止使用箭头函数？今天这篇文章，我就跟大家汇总了4种场景下，不建议使用箭头函数的情况，希望对你有用。
-箭头函数的特点
-1、不支持参数对象arguments
-在箭头函数中，我们不能像在普通函数中那样使用 arguments 对象。
-const fn1 &#x3D; () &#x3D;&gt; {
-  console.log(&#x27;arguments&#x27;, arguments)
-}
-
-fn1(&#x27;fatfish&#x27;, &#x27;medium&#x27;)
-
-function fn2(){
-  console.log(&#x27;arguments&#x27;, arguments)
-}
-
-fn2(&#x27;fatfish&#x27;, &#x27;medium&#x27;)
-
-可以看到，fn1箭头函数报错，但是fn2可以正常读取arguments对象。
-
-我们如何才能在箭头函数中获取所有传递给函数的参数？
-可以使用Spread Operator来解决它。
-
-const fn3 &#x3D; (...values) &#x3D;&gt; {
-  console.log(&#x27;values&#x27;, values)
-}
-
-fn3(&#x27;fatfish&#x27;, &#x27;medium&#x27;)
-
-2、无法通过apply、call、bind来改变this指针
-const fn1 &#x3D; () &#x3D;&gt; {
-  console.log(&#x27;this-fn1&#x27;, this)
-}
-
-fn1()
-
-function fn2(){
-  console.log(&#x27;this-fn2&#x27;, this)
-}
-
-fn2()
-
-
-如果我们希望 fn1 和 fn2 都打印对象，我们应该怎么做？
-const thisObj &#x3D; {
-  name: &#x27;fatfish&#x27;
-}
-
-const fn1 &#x3D; () &#x3D;&gt; {
-  console.log(&#x27;this-fn1&#x27;, this)
-}
-
-f…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -5088,8 +5130,8 @@ ECH 非常巧妙地解决了域名加密。它采用双层格式，也就是说�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6743660720">
-        <time id="build-timestamp" datetime="2023-11-03T09:53:34.589Z">2023-11-03T09:53:34.589Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6745444800">
+        <time id="build-timestamp" datetime="2023-11-03T12:57:09.702Z">2023-11-03T12:57:09.702Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
