@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-11-03T01:15:40.036Z</id>
+    <id>urn:2023-11-03T03:53:19.152Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-11-03T01:15:40.036Z</updated>
+    <updated>2023-11-03T03:53:19.152Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[有没有一种手机软件. 能自动收集 短信中的快递信息 ,这样能提醒拿快递. 进行归类显示 每次拿快递 得翻一遍短信,很麻烦]]></title>
+        <id>7296771769066307611</id>
+        <link href="https://juejin.cn/pin/7296771769066307611"/>
+        <updated>2023-11-03T01:34:19.000Z</updated>
+        <summary type="html"><![CDATA[有没有一种手机软件.  能自动收集 短信中的快递信息 ,这样能提醒拿快递. 进行归类显示 
+每次拿快递 得翻一遍短信,很麻烦]]></summary>
+        <author>
+            <name>后端入土</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[重庆市万州区发布大雾黄色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/huangsyj/20231103/t20231103_526473117.html</id>
@@ -140,6 +151,47 @@ https://datacap.edurt.io/release/latest.html]]></summary>
         <summary type="html"><![CDATA[xdm，你们mac用的什么软件连的远程服务器啊，现在用的这个finalShell，好难看啊]]></summary>
         <author>
             <name>鱼头人</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[我被美女包围了Cocos源码？]]></title>
+        <id>https://juejin.cn/post/7296345202238717992</id>
+        <link href="https://juejin.cn/post/7296345202238717992"/>
+        <updated>2023-11-02T00:41:01.000Z</updated>
+        <summary type="html"><![CDATA[点击上方亿元程序员+关注和★星标
+
+引言
+大家好，我是亿元程序员，一位有着8年游戏行业经验的主程。
+近期，国产真人恋爱影视游戏**《完蛋！我被美女包围了》连续多日荣登Steam国区畅销榜首**。这款游戏力压了一众热门免费游戏，如《PUBG》、《CS2》和《Apex》，稳居国区畅销榜首。
+想体验一下游戏，但是花钱是不可能花钱的，于是我用Cocos做了一个Demo实现真人互动影像游戏。
+本文源码和源工程在文末获取，小伙伴们自行前往。仅供学习与交流，请勿用作其他用途。
+1.准备素材
+1.首先我们录制一下游戏中分蛋糕的名场面。
+
+2.然后把游戏录屏拆分成几个小片段。
+其中包括:
+1.将蛋糕拿起来片段。
+2.选择人物片段。
+3.分别递给3个人物蛋糕的片段。
+
+下面我们先看看实现原理
+2.实现原理
+1.组件
+要想用Cocos实现真人互动影像游戏，我们可以利用Cocos的cc.VideoPlayer组件。然后通过在上面添加点击事件去做一些逻辑响应。
+
+2.遇到问题
+无论我们怎么调整节点位置，发现cc.VideoPlayer组件都是在界面的最上层，包括修改节点的zIndex。这样没办法在视频上方添加UI或者一些局部点击事件。
+
+3.解决办法
+首先要勾选cc.VideoPlayer组件中的StayOnBottom，这个设置是保证cc.VideoPlayer组件置于最底部。
+
+然后Cocos2.X版本需要在Cocos安装目录中搜索boot.js，找到resources\static\preview-templates目录下的boot.js文件。
+
+打开boot.js文件并且在cc.game.run之前添加cc.macro.ENABLE_TRANSPARENT_CANVAS = true;开启支持全透明。
+
+Cocos3.X版本可以直接在项目设置-MarcoConfigurations中勾选EN…]]></summary>
+        <author>
+            <name>亿元程序员</name>
         </author>
     </entry>
     <entry>
@@ -1159,41 +1211,6 @@ if (req.query.sdebug === 's') {
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[大厂也在用的：HTMl+CSS+JS实现瀑布流式页面布局]]></title>
-        <id>https://juejin.cn/post/7294852698460438540</id>
-        <link href="https://juejin.cn/post/7294852698460438540"/>
-        <updated>2023-10-29T06:41:21.000Z</updated>
-        <summary type="html"><![CDATA[theme: channing-cyan
-什么是瀑布流式页面布局
-下面看几个现实的案例：
-小红书中的瀑布流式页面布局
-
-手机淘宝中的瀑布流式页面布局：
-
-介绍
-瀑布流式布局页面是什么？
-页面上给人一种参差不齐的多栏布局，其中元素大部分为图片，图片的宽度是统一固定的，但是由于高度不一样，第一行图片排满之后，新的图片会插入到第一排中高度最低的图片下面，并更新高度，如此循环，最终达到瀑布流式的效果。
-优点：
-吸引眼球： 瀑布流布局的不规则排列方式能够引起用户的兴趣，使界面更吸引人。用户会感到好奇，想要浏览所有的项目，因为每个项目都以不同的方式呈现。
-有效利用空间： 瀑布流布局可以充分利用页面空间，无论是横向还是纵向滚动，都可以容纳很多项目。这对于展示大量内容或产品非常有用。
-适应性： 瀑布流布局可以适应不同屏幕大小和设备类型，因为它是响应式设计的一部分。这意味着它可以在桌面电脑、平板电脑和移动设备上都有良好的表现。
-提高用户参与度： 用户通常更愿意探索页面上的不同项目，因为每次滚动都可能带来新的发现，从而增加了用户的参与度和浏览时间。
-缺点：
-信息层次不明确： 由于项目的不规则排列，瀑布流布局可能会使用户难以识别内容的层次和重要性。重要内容可能会被埋没在次要内容中。
-不适用于所有类型的内容： 瀑布流布局更适合视觉导向的内容，如图片、照片、商品展示等。对于需要详细信息或结构化内容的页面，这种布局可能不够合适。
-加载时间问题： 当页面包含大量项目时，瀑布流布局可能导致页面加载时间变长，特别是在网络连接较慢的情况下。这可能会影响用户体验。
-有限的导航性： 用户可能会发现导航和查找特定项目变得更加困难，因为项目的位置是不固定的。这可能会使用户在页面上迷失方向。
-代码实现
-HTML：
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta chars…]]></summary>
-        <author>
-            <name>全糖奶茶不加糖</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[这个vscode插件，大家体验下来觉得不错的可以帮忙推广一下，如果有什么体验上的增强或者改进的意见可以新建issue来反馈[灵光一现]]]></title>
         <id>7294663087945318451</id>
         <link href="https://juejin.cn/pin/7294663087945318451"/>
@@ -1359,16 +1376,6 @@ logger.error('东东东东东东东东');
 lo…]]></summary>
         <author>
             <name>zxg_神说要有光</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[7160505361521180712#我又站起来了#] 上班还是摸鱼]]></title>
-        <id>7294555030727557147</id>
-        <link href="https://juejin.cn/pin/7294555030727557147"/>
-        <updated>2023-10-28T09:11:50.000Z</updated>
-        <summary type="html"><![CDATA[[7160505361521180712#我又站起来了#]  上班还是摸鱼]]></summary>
-        <author>
-            <name>专业美甲护理师</name>
         </author>
     </entry>
     <entry>
