@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-11-04T15:53:25.570Z</id>
+    <id>urn:2023-11-04T18:53:27.100Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-11-04T15:53:25.570Z</updated>
+    <updated>2023-11-04T18:53:27.100Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -279,6 +279,39 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[科技爱好者周刊（第 276 期）：内容行业的衰落]]></title>
+        <id>http://www.ruanyifeng.com/blog/2023/11/weekly-issue-276.html</id>
+        <link href="http://www.ruanyifeng.com/blog/2023/11/weekly-issue-276.html"/>
+        <updated>2023-11-03T00:02:33.000Z</updated>
+        <summary type="html"><![CDATA[这里记录每周值得分享的科技内容，周五发布。
+本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。
+封面图
+
+山西平陆县有一条大裂缝，非常笔直，长约10公里，当地称为"划沟"。它的形成原因未知，可能与地震有关。（via）
+内容行业的衰落
+现在的 AI 技术，每天都在进化。我有一种感觉，普通人大概没意识到，它马上就要改变人类社会了。
+历史上，这种事一再发生。在你不知不觉中，某些大事件悄悄酝酿，突然就冲击到了你的生活，将你的人生全部打乱，你却毫无准备。
+首当其冲，受到 AI 冲击的将是内容行业。我们以后消费的内容，绝大部分将都是 AI 参与生成的。
+文字、图像、声音这三个内容领域，我就不举例了，相关报道太多了。我们来看看，难度最高的视频生成，AI 现在到了什么程度。
+上个月，日本有一条饮料广告（B 站，Youtube）。
+
+
+看上去，这条广告很普通，模特拿着饮料又唱又跳。但是，这个模特不是真人，而是 AI 生成的。
+她的动作、表情、嘴型如此自然，毫无破绽。以后我们还需要真人模特吗？
+不仅模特没有了用武之地，而且明星偶像也可以被 AI 取代。今年上半年，韩国就成立了 AI 女团 MAVE。
+
+
+四个成员都是 AI 生成的，还有自己的单曲和 MV，大家可以去看一下（ B 站，Youtube）。你看了以后，大概会觉得，真人偶像以后不好当了。
+事实上，迪斯尼已经在公映的电影里面，加入了 AI 演员。
+
+
+上面是今年的新片《舞会契约》（Prom Pact）的截图，里面有一个镜头一晃而过。网友注意到，第二排的观众明显是 AI 生成的。制片公司为了省钱，不用群众演员，就用 AI 把人加上去了。
+好莱坞的演员工会最近正在罢工，他们的主要诉求就是，制片公司不能使用 AI 演员，不能剥夺真人演员的演出机会。可见这些专业人士，已…]]></summary>
+        <author>
+            <name>阮一峰的网络日志</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[重庆市忠县发布大雾橙色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/csyj/20231103/t20231103_526472996.html</id>
         <link href="http://www.cneb.gov.cn/yjxx/csyj/20231103/t20231103_526472996.html"/>
@@ -321,15 +354,34 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Turnip Boy Commits Tax Evasion]]></title>
-        <id>https://store.epicgames.com/zh-CN/p/turnip-boy-commits-tax-evasion-fb2084</id>
-        <link href="https://store.epicgames.com/zh-CN/p/turnip-boy-commits-tax-evasion-fb2084"/>
-        <updated>2023-11-02T15:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Play as an adorable yet trouble-making turnip. Avoid paying taxes, solve plantastic puzzles, harvest crops and battle massive beasts all in a journey to tear down a corrupt vegetable government!
+        <title type="html"><![CDATA[我敢打赌你不知道的十个JavaScript技巧]]></title>
+        <id>https://juejin.cn/post/7296755101622878248</id>
+        <link href="https://juejin.cn/post/7296755101622878248"/>
+        <updated>2023-11-02T14:08:45.000Z</updated>
+        <summary type="html"><![CDATA[theme: v-green
+highlight: github-gist
+JavaScript 作为最流行的语言之一，其语法灵活且每年都在不断吸纳新特性，即使是一个从业多年的老手， 偶尔也会有一些被低估的 JavaScript 功能和技巧，本文将分享这些技巧，一同讨论探究，不用过于较真标题，只是一种写作手法！（逃）
+1. 使用 flatMap
+有些 JavaScript 方法尽管鲜为人知，但它们解决独特挑战的潜力能够增强编码效率， 比如 flatMap()
+数组方法 flatMap() 本质上是 filter()和 map() 的组合，但是区别在于 flatMap 不会产生中间数组，性能更佳。
+使用 filter + map
+console.time("filterAndMap")  
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];  
+  
+const squaredOddNumbers = numbers  
+                        .filter(num => num % 2 !== 0)  
+                        .map(num => num * num)  
+  
+console.log(squaredOddNumbers); // [1, 9, 25, 49, 81]  
+console.timeEnd("filterAndMap") // filterAndMap: 0.324951171875 ms
 
-Free Now to 2023-11-09T16:00:00.000Z]]></summary>
+使用 flatmap
+console.time("flatmap")  
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];  
+  
+const squaredOddNumbers = numbers.flat…]]></summary>
         <author>
-            <name>Graffiti Games</name>
+            <name>写前端的刻猫猫</name>
         </author>
     </entry>
     <entry>
@@ -1388,29 +1440,6 @@ array.some((it, i) => {
         <summary type="html"><![CDATA[巴南区气象台2023年10月29日21时50分发布“大雾黄色预警信号”，预计10月30日4时至11时，姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
         <author>
             <name>国家预警信息发布中心</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[聊聊 Next14]]></title>
-        <id>https://juejin.cn/post/7294954501575753743</id>
-        <link href="https://juejin.cn/post/7294954501575753743"/>
-        <updated>2023-10-29T12:42:44.000Z</updated>
-        <summary type="html"><![CDATA[前言
-vercel 于 2023/10/16 发布 next14 版本，从官网的博客更新记录可以看到，最新的两个版本主要更新性能方面，具体 Next14 更新点可以看官网
-
-一、Nextjs 更新是要解决什么问题？
-众所周知 nextjs 在本地开发的时候速度不太好，HMR 和首次打开页面的时候速度都没有 vite 体验好，现在next13.5、next14 重点更新了 nextjs 性能方面的问题，提高我们的开发体验。注意 turbopack 从 13 开始已经是 nextjs 内置的，不过打包不太稳定，比如打包 3D 模型的时候可能会报错，只能在 dev 环境使用，也就是 next dev --turbo 直接开箱即用。
-二、为什么 vite 模块少的时候那么快，模块多则会变慢？
-vite 是基于 esbuild 的 no bundle 模式，只需要依赖预构建成 esm，浏览器直接使用，不需要打包；但是项目大起来的时候可能也会首次渲染较慢，因为全量编译导致一次性执行的任务比较多，且发起的请求比较多浏览器对请求数是有限制了，请求排队也会导致变慢。
-三、Turbopack 为什么比 vite 快？
-turbopack 自己说比 vite 快，条件是 1000 个模块的情况下，但是想一下我们的项目其实很少会写到这么多模块，那 1000 个模块之前都会让开发者体验不是很好.
-3.1 turbopack在性能方面做的事情
-1、基于turbo引擎支持增量计算，由 rust 编写，比 js 速度更快；
-2、函数级缓存，turbopack 能做到函数级别的缓存，也就是说更细化；
-3、按需编译，也就是说不会像webpack一样全量编译；
-4、请求级编译，相比于页面级编译更智能；如果浏览器想要一些 CSS，turbopack只会编译它 - 不编译引用的图像。背后 next/dynamic …]]></summary>
-        <author>
-            <name>imber</name>
         </author>
     </entry>
     <entry>
