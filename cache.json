@@ -34,7 +34,7 @@
           "description": "想要提高网页的加载体验，其实有个非常简单且实用的技巧，那就是改变请求资源的加载优先级，这也可以改变？没错！",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/img-js-preload-fetch-priority/",
           "publishedOn": "2023-10-29T15:55:41.000Z",
-          "wordCount": 941,
+          "wordCount": 940,
           "title": "聊聊Web网页中资源加载的优先级",
           "imageUrl": null
         },
@@ -44,7 +44,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1213,
+          "wordCount": 1211,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -54,7 +54,7 @@
           "description": "本文介绍三种改变音频播放音量的方法，其中还有一种方法直接改变音频AudioBuffer数据源的音量，说不定你哪天就会用到。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/",
           "publishedOn": "2023-10-09T14:50:57.000Z",
-          "wordCount": 1096,
+          "wordCount": 1095,
           "title": "JS改变AudioBuffer音量并下载为新audio音频",
           "imageUrl": null
         }
@@ -235,7 +235,7 @@
           "description": "西方画作作者的签名像是封印，裱装起来， 严禁篡改。\n中国画作作者的盖章像是邀请，作者留白腾空，收藏家们轮流上阵， 章印成了画作的一部分，和作者共同丰富了作品。",
           "link": "https://m.okjike.com/originalPosts/6547a7776f9c4ea80d28593a",
           "publishedOn": "2023-11-05T14:32:23.000Z",
-          "wordCount": 446,
+          "wordCount": 450,
           "title": "发布了: 西方画作作者的签名像是封印，裱装起来， 严禁篡改。 中国画作作者的盖章像是邀请，作者留白腾空，收藏家们轮流上阵， 章印成了画作的一部分，和作者共...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -956,7 +956,7 @@
           "description": "theme: v-green\nhighlight: github-gist\nJavaScript 作为最流行的语言之一，其语法灵活且每年都在不断吸纳新特性，即使是一个从业多年的老手， 偶尔也会有一些被低估的 JavaScript 功能和技巧，本文将分享这些技巧，一同讨论探究，不用过于较真标题，只是一种写作手法！（逃）\n1. 使用 flatMap\n有些 JavaScript 方法尽管鲜为人知，但它们解决独特挑战的潜力能够增强编码效率， 比如 flatMap()\n数组方法 flatMap() 本质上是 map()和 flat() 的组合，区别在于 flatMap 只能扁平1级，flat 可以指定需要扁平的级数，flatmap 比分别调用这两个方法稍微高效一些。\n使用 flat + map\nconst arr = [1, 2, [4, 5], 6, 7, [8]];\n\n// 使用 map 对每个元素进行操作并用 flat 展平结果\nconst result = arr.map(element => Array.isArray(element) ? element : [element]).flat();\n\nconsole.log(result); // output: [1, 2, 4, 5, 6, 7, 8]\n\n使用 flatmap\nconst arr = [1, 2, [4, 5], 6, 7, [8]] ;\n\nconsole.log(arr.flatMap((element) => element)); \n// output :[1, 2, 4, 5, 6, 7, 8]\n\nflatmap 尽管是一个方法，但也会有 中间数组 (指中间创建了必须进行垃圾收集的临时数组)的产生，flatMap 非常适合在需要灵活性和可读性的情况下使用。\n2. 数组方法的顺序\njavascript…",
           "link": "https://juejin.cn/post/7296755101622878248",
           "publishedOn": "2023-11-02T14:08:45.000Z",
-          "wordCount": 3418,
+          "wordCount": 3399,
           "title": "我敢打赌你不知道的十个JavaScript技巧",
           "imageUrl": null
         },
@@ -996,7 +996,7 @@
           "description": "theme: smartblue\nhighlight: a11y-light\n但行好事 莫问前程\n前言🎀\n在过去为了实现 懒加载、滚动动画 等需求并不容易，我们需要获取 元素与视窗的交叉状态，这通常使用 滚动事件 + 计算偏移量 + 判断逻辑 实现，再辅以防抖节流等优化。\n现如今随着技术的发展，浏览器推出了多种 观察器，让我们有更好的方式，去便捷、高效的收集页面与元素的信息。\n本文，我们一起学习适用于 监听元素与视窗交叉状态 的观察器：IntersectionObserver（交叉观察器），了解它的相关知识与应用。\n简介\nIntersectionObserver API 提供了一种创建IntersectionObserver 对象的方法，对象用于监测目标元素与视窗(viewport)的交叉状态，并在交叉状态变化时执行回调函数，回调函数可以接收到元素与视窗交叉的具体数据。\n\n一个 IntersectionObserver 对象可以监听多个目标元素，并通过队列维护回调的执行顺序。\nIntersectionObserver 特别适用于：滚动动画、懒加载、虚拟列表等场景。\n回调异步执行，不阻塞主线程。且监听不随着目标元素的滚动而触发，性能消耗极低。\nAPI\n构造函数\nIntersectionObserver 构造函数 接收两个参数：\ncallback： 当元素可见比例达到指定阈值后触发的回调函数\noptions： 配置对象（可选，不传时会使用默认配置）\nIntersectionObserver 构造函数 返回观察器实例，实例携带四个方法：\nobserve：开始监听目标元素\nunobserve：停止监听目标元素\ndisconnect：关闭观察器\ntakeRecords：返回所有观察目标的 IntersectionObserverEntry 对象数组\n// 调用构造函数 生成Inte…",
           "link": "https://juejin.cn/post/7296058491289501696",
           "publishedOn": "2023-11-01T03:25:31.000Z",
-          "wordCount": 1631,
+          "wordCount": 1611,
           "title": "IntersectionObserver：实现滚动动画、懒加载、虚拟列表...",
           "imageUrl": null
         },
@@ -1096,7 +1096,7 @@
           "description": "前言\nvercel 于 2023/10/16 发布 next14 版本，从官网的博客更新记录可以看到，最新的两个版本主要更新性能方面，具体 Next14 更新点可以看官网\n\n一、Nextjs 更新是要解决什么问题？\n众所周知 nextjs 在本地开发的时候速度不太好，HMR 和首次打开页面的时候速度都没有 vite 体验好，现在next13.5、next14 重点更新了 nextjs 性能方面的问题，提高我们的开发体验。注意 turbopack 从 13 开始已经是 nextjs 内置的，不过打包不太稳定，比如打包 3D 模型的时候可能会报错，只能在 dev 环境使用，也就是 next dev --turbo 直接开箱即用。\n二、为什么 vite 模块少的时候那么快，模块多则会变慢？\nvite 是基于 esbuild 的 no bundle 模式，只需要依赖预构建成 esm，浏览器直接使用，不需要打包；但是项目大起来的时候可能也会首次渲染较慢，因为全量编译导致一次性执行的任务比较多，且发起的请求比较多浏览器对请求数是有限制了，请求排队也会导致变慢。\n三、Turbopack 为什么比 vite 快？\nturbopack 自己说比 vite 快，条件是 1000 个模块的情况下，但是想一下我们的项目其实很少会写到这么多模块，那 1000 个模块之前都会让开发者体验不是很好.\n3.1 turbopack在性能方面做的事情\n1、基于turbo引擎支持增量计算，由 rust 编写，比 js 速度更快；\n2、函数级缓存，turbopack 能做到函数级别的缓存，也就是说更细化；\n3、按需编译，也就是说不会像webpack一样全量编译；\n4、请求级编译，相比于页面级编译更智能；如果浏览器想要一些 CSS，turbopack只会编译它 - 不编译引用的图像。背后 next/dynamic …",
           "link": "https://juejin.cn/post/7294954501575753743",
           "publishedOn": "2023-10-29T12:42:44.000Z",
-          "wordCount": 1560,
+          "wordCount": 1622,
           "title": "聊聊 Next14",
           "imageUrl": null
         },
@@ -1143,7 +1143,7 @@
           "description": "简单易用的多功能编辑器 1.0.0 版本已经发布，欢迎下载使用\nhttps://github.com/devlive-community/incubator-notepad/releases/tag/1.0.0",
           "link": "https://juejin.cn/pin/7297423930225623081",
           "publishedOn": "2023-11-05T07:53:20.000Z",
-          "wordCount": 524,
+          "wordCount": 534,
           "title": "简单易用的多功能编辑器 1.0.0 版本已经发布，欢迎下载使用 https://github.com/devlive-community/incubator-notepad/releases/tag/1.0.0",
           "imageUrl": null
         },
@@ -1153,7 +1153,7 @@
           "description": "FeatureProbe: 一款让你不再胆战心惊地发布新功能！可以随心切换功能、即时修复问题的开源项目。",
           "link": "https://juejin.cn/pin/7297044626099634185",
           "publishedOn": "2023-11-03T08:27:12.000Z",
-          "wordCount": 514,
+          "wordCount": 532,
           "title": "FeatureProbe: 一款让你不再胆战心惊地发布新功能！可以随心切换功能、即时修复问题的开源项目。",
           "imageUrl": null
         },
@@ -1173,7 +1173,7 @@
           "description": "有没有人日常开发已经用copilot了 ，感觉提效多吗？",
           "link": "https://juejin.cn/pin/7296738166379626522",
           "publishedOn": "2023-11-02T12:06:45.000Z",
-          "wordCount": 517,
+          "wordCount": 535,
           "title": "有没有人日常开发已经用copilot了 ，感觉提效多吗？",
           "imageUrl": null
         },
@@ -1183,7 +1183,7 @@
           "description": "功能强大的开源数据中台系统 DataCap 1.16.0 发布，优化元数据管理，编辑器功能更强大。\n欢迎下载使用\nhttps://datacap.edurt.io/release/latest.html",
           "link": "https://juejin.cn/pin/7296692742876741643",
           "publishedOn": "2023-11-02T09:58:43.000Z",
-          "wordCount": 529,
+          "wordCount": 547,
           "title": "功能强大的开源数据中台系统 DataCap 1.16.0 发布，优化元数据管理，编辑器功能更强大。 欢迎下载使用 https://datacap.edurt.io/release/latest.html",
           "imageUrl": null
         },
@@ -1193,7 +1193,7 @@
           "description": "jym，idea怎么设置项目右键出现的菜单栏不需要鼠标滚动也能看到所有选项，现在找个选项需要鼠标一直往后滑，我记得以前可以让所有选项都缩略到菜单栏上，不需要鼠标往后滑，但是我忘记怎么设置了",
           "link": "https://juejin.cn/pin/7296442264447828020",
           "publishedOn": "2023-11-02T05:49:53.000Z",
-          "wordCount": 510,
+          "wordCount": 528,
           "title": "jym，idea怎么设置项目右键出现的菜单栏不需要鼠标滚动也能看到所有选项，现在找个选项需要鼠标一直往后滑，我记得以前可以让所有选项都缩略到菜单栏上，不需要...",
           "imageUrl": null
         },
@@ -1203,7 +1203,7 @@
           "description": "xdm，你们mac用的什么软件连的远程服务器啊，现在用的这个finalShell，好难看啊",
           "link": "https://juejin.cn/pin/7296440993214103578",
           "publishedOn": "2023-11-02T02:43:25.000Z",
-          "wordCount": 517,
+          "wordCount": 527,
           "title": "xdm，你们mac用的什么软件连的远程服务器啊，现在用的这个finalShell，好难看啊",
           "imageUrl": null
         },
@@ -1213,7 +1213,7 @@
           "description": "今天又收到了一笔来自社区的回馈，我正在对微信或支付宝上的赞助者搭建一个感谢页，如果你赞助我，请备注或者联系我，留下你的github用户名，同时很高兴我的插件能帮助到更多的人去解决开发中的一些痛点，带来更好的开发体验🥰\nhttps://github.com/Simon-He95/sponsor",
           "link": "https://juejin.cn/pin/7296296611554033715",
           "publishedOn": "2023-11-01T10:13:24.000Z",
-          "wordCount": 518,
+          "wordCount": 536,
           "title": "今天又收到了一笔来自社区的回馈，我正在对微信或支付宝上的赞助者搭建一个感谢页，如果你赞助我，请备注或者联系我，留下你的github用户名，同时很高兴我的插件...",
           "imageUrl": null
         },
@@ -1243,7 +1243,7 @@
           "description": "下载量不理想[流泪]，xdm帮忙推广推广，免费好用哦～，别让作者桑心了",
           "link": "https://juejin.cn/pin/7295962144749813797",
           "publishedOn": "2023-10-31T10:40:57.000Z",
-          "wordCount": 525,
+          "wordCount": 535,
           "title": "下载量不理想[流泪]，xdm帮忙推广推广，免费好用哦～，别让作者桑心了",
           "imageUrl": null
         },
@@ -1253,7 +1253,7 @@
           "description": "移动端，深度链接deeplink几乎可以将用户从任何地方引导到特定App内的指定页面。\n其优势不言而喻，一方面能为用户移动端带来绝佳的体验，相比于传统链接，能够直接跳过许多无关紧要的点击和页面，直奔主题，直达目标页面；另一方面，能显著提高各场景带来的用户转化率和留存率。\n1、跨渠道、跨平台场景还原\n可用于实现场景：网页/H5跳转App、微信、微博、抖音、B站、爱奇艺、小红书等社交平台跳转App、二维码跳转App、短信跳转App、邮件跳转App、渠道跳转H5跳转App等场景。\n2、结合参数传递实现安装来源追踪\n（1）Web到App全链路数据追踪\n（2）自动绑定用户关系链\n推送门：https://www.openinstall.io/pullUp.html",
           "link": "https://juejin.cn/pin/7295948894327521289",
           "publishedOn": "2023-10-31T08:56:11.000Z",
-          "wordCount": 508,
+          "wordCount": 526,
           "title": "移动端，深度链接deeplink几乎可以将用户从任何地方引导到特定App内的指定页面。 其优势不言而喻，一方面能为用户移动端带来绝佳的体验，相比于传统链接，能够直...",
           "imageUrl": null
         },
@@ -1283,7 +1283,7 @@
           "description": "让大数据的个性化分析，像Excel 一样简单\nhttps://www.agiquery.com",
           "link": "https://juejin.cn/pin/7295237661618470964",
           "publishedOn": "2023-10-30T02:45:02.000Z",
-          "wordCount": 517,
+          "wordCount": 535,
           "title": "让大数据的个性化分析，像Excel 一样简单 https://www.agiquery.com",
           "imageUrl": null
         },
@@ -1323,7 +1323,7 @@
           "description": "[7030616379422146571#晒晒你的摸鱼流量#]  摸鱼，jym",
           "link": "https://juejin.cn/pin/7294884963630809126",
           "publishedOn": "2023-10-29T03:42:00.000Z",
-          "wordCount": 510,
+          "wordCount": 507,
           "title": "[7030616379422146571#晒晒你的摸鱼流量#] 摸鱼，jym",
           "imageUrl": null
         },
@@ -1333,7 +1333,7 @@
           "description": "[7073670907851440160#新人报道#]  开始摸鱼",
           "link": "https://juejin.cn/pin/7294884963630628902",
           "publishedOn": "2023-10-29T03:09:18.000Z",
-          "wordCount": 512,
+          "wordCount": 515,
           "title": "[7073670907851440160#新人报道#] 开始摸鱼",
           "imageUrl": null
         }
