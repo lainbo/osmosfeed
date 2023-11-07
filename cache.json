@@ -34,7 +34,7 @@
           "description": "想要提高网页的加载体验，其实有个非常简单且实用的技巧，那就是改变请求资源的加载优先级，这也可以改变？没错！",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/img-js-preload-fetch-priority/",
           "publishedOn": "2023-10-29T15:55:41.000Z",
-          "wordCount": 943,
+          "wordCount": 944,
           "title": "聊聊Web网页中资源加载的优先级",
           "imageUrl": null
         },
@@ -44,7 +44,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1217,
+          "wordCount": 1215,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -948,6 +948,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7297124052174848036",
+          "author": "Shaka",
+          "description": "theme: condensed-night-purple\n前言\n之前总有小伙伴问我，现在没有工作，或者想在空闲时间做一些程序员兼职，怎么做，做什么，能赚点外快\n因为我之前发别的文章的时候有捎带着说过一嘴我做一些副业，这里就说一下我是怎么做的，都做了什么\n希望能对你有些帮助~\n正文\n学生单\n学生单是我接过最多的，已经写了100多份毕设，上百份大作业了，这里给大家介绍一下\n像python这种的数据处理的大作业也很多，但是我个人不太会，所以没结过，我只说我做过的\n我大致做过几种单子，最多的是学生的单子，分为大作业单子和毕设单子\n大作业单一般指一个小作业，比如：\n几个web界面（大多是html、css、js）\n一个全栈的小demo，大多是jsp+SSM或者vue+springboot，之所以不算是毕设是因为，页面的数目不多，数据库表少，而且后端也很简单\n我不知道掘金这里能不能说价格，以防万一我就不说大致价格了，大家想参考价格可以去tb或者咸鱼之类的打听就行\n然后最多的就是毕设单子，一般就是一个全栈的项目\n最多的是vue+springboot的项目，需求量特别大，这里说一下，之前基本都是vue2的项目，现在很多学校要求vue3了，但是大部分商家vue3的模板很少，所以tb上接vue3的项目要么少，要么很贵，所以我觉得能接vue3和springboot项目的可以打一定的价格战，vue2的市面上价格差不多，模板差不多，不好竞争的\n少数vue+node的全栈项目，一般是express或者koa，价格和springboot差不多，但是需求量特别少\nuni+vue+springboot的项目，其实和vue+springboot项目差不多，因为单纯的vue+springboot项目太多了，所以现在很多人要求做个uni手机端，需求量适中\n.net项目，信管专业的学生用.net的很多，需求量不少，…",
+          "link": "https://juejin.cn/post/7297124052174848036",
+          "publishedOn": "2023-11-04T05:27:20.000Z",
+          "wordCount": 873,
+          "title": "程序员的副业发展",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7297049953229766690",
           "author": "狂奔滴小马",
           "description": "上周 Next.js 14 发布了，该版本相较于 13，没有任何 API 变更，主要更新点是 Turbopack 带来了大幅的性能提升以及 Server Actions 功能进入稳定版本。\n\nNext.js 14 带来了三个主要新功能\nTurbopack：在 app router 和 page router 中通过了 5,000 个测试\n本地启动服务器时间快了约 50%\n热模块替换速度快了约 94%\n然而并不是所有的测试都通过了，当前只通过了 90% 的测试，所以 Turbopack 还不稳定。\n第二点 Server Actions 被标记为稳定。\n\n集成了缓存和重新验证\n简单的函数调用，与表单原生配合使用\n第三点 部分预渲染（预览）：快速的初始静态响应 + 流式动态内容\n其中第二点在 Twitter 中引起了巨大讨论，也就是下面这张图，\n\n大家都在拿这张图开玩笑，甚至出现了 \"use electronics\"。\n\n这种写法好像仿佛回到了 PHP 时代，前端后代码写在一个文件里，它非常容易理解，但是很多人在质疑代码的安全问题，Sql 没有使用占位符，它是否会受到SQL 注入攻击。\n那么我们来分析下，上面幻灯片中的代码是否存在安全问题，\n最主要是下面这句。\nawait sql`INSERT INTO Bookmarks (slug) VALUES (${slug})`\n\nSQL 注入攻击\n首先来看下 Sql 是如何注入攻击的。\n比如，我们需要通过 Url 获得当前用户的 id，查询该用户的信息，使用以下代码来实现。\n\n一旦用户知道了程序的漏洞，使用以下 url 来访问，那么我们的程序将瞬间被摧毁。\n\n这是一个有效的 SQL 命令，查询的同时将删除所有用户。\n\n数据库在这种情况下执行，它会变成两个 sql 查询：\n第一个 sql select 语句，它实际上不做任何事情；\n第二个 sql 会删除你的整个 Users 数据库；\n这就是 sql 注入，因此，直接拼接的 sql，不经过处理，是不安全的。\n安全的查询方法是需要使用参数化查询, 如下：\n\nuserId 会替换 sql 中的$1，这样 sql 执行就安全了。\n标签模板\n我们再看上面幻灯片中的 sql 语句，与上面两种操作数据不同的是他使用的是 ES6 中的 标签模板\nawait sql`INSERT INTO Bookmarks (slug) VALUES (${slug})`\n\n标签模板其实不是模板字符串，而是函数调用的一种特殊形式。“标签”指的就是函数，紧跟在后面的模板字符串就是它的参数。\ntag`hello`\n// 等同于\ntag(['hello'])\n\n因此在标签模版之前需要先定义函数\nfunction tag(stringArr, ...values){\n  // ...\n}\n\ntag 函数的第一个参数是模版字符串，它是一个数组，后面的参数为模版中传入的值，也就是上面的sql 是一个函数，执行代码等同于\nawait sql(['INSERT INTO Bookmarks (slug) VALUES (',')'], slug)\n\n因此幻灯片中的查询语句并不会直接在数据库上执行，而是经过了 sql 这个函数的封装，调用数据库的查询语言都在 sql 内部实现，它没有 sql 注入的风险。\n小结\nNext.js 14.0 加快了启动服务器时间和模块热替换，分别提速 50%和 94%，引入了部分预渲染，允许定义一个静态 HTML 壳，然后可以用<Suspense />流式传输动态内容； Server Actions 虽然引起了争议，那也只是大家工作之余的调侃，相比原先必须先写一个接口，再调接口，但对开发者来说是极大地简化了开发成本，可以直接请求数据库拿数据，对前端来说，真的太方便了。\n那么，你认为呢？\n以上就是本文全部内容，希望这篇文章对大家有所帮助，也可以参考我往期的文章或者在评论区交流你的想法和心得，欢迎一起探索前端。",
@@ -1048,16 +1058,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7295624857432850468",
-          "author": "Hooray",
-          "description": "theme: vuepress\n前言\n去年年底，我写了一篇《如何做好一款管理后台框架》的文章，这是我对开发 Fantastic-admin 这款基于 Vue 的中后台管理系统框架两年多时间的一个思考与总结。\n很意外这么一篇标题平平无奇的文章能收获 30k 的浏览以及 600 多个收藏，似乎大家对这种非干货的文章也挺感兴趣。于是在这个三年的时间点上（没错，也就是1100天），我打算继续出来和大家唠唠，这一年我又做了些什么事，或者说，如何把一款好的后台框架变得通用？\n题外话：如果你对我以前的文章感兴趣，可以点我头像进入主页查看；如果你期待我以后的文章，也可以点个关注。\n痛点\n因为 Fantastic-admin 是基于 Element Plus 这款 UI 组件库进行开发的，于是今年我陆陆续续被问到一些问题：\n以后会有 Ant Design Vue 版本么？会有 Naive UI 版本么？会有 …… 版本么？\n我们公司/团队有一套内部的 UI 组件库，可以在 Fantastic-admin 里使用么？会和 Element Plus 有冲突么？\n我们有一些老项目希望迁移到 Fantastic-admin 上来，但 UI 组件库用的不是 Element Plus ，有什么办法么？\n…\n\n类似的问题一多，我也在思考一个问题：我的这款框架是不是被 Element Plus 绑架了？如果开发者在做技术选型的时候，因为 UI 组件库不符合预期，而将我的框架筛掉，这是我不希望看到的结果。\n基于这个潜在隐患，我开始计划对框架进行转型。\n方案\n方案一\n既然开发者对 UI 组件库有各自的偏好，我又想拉拢这部分开发者，那是不是多出几套不同 UI 组件库版本的就可以了呢？没错，这是我最开始冒出来的念头。\n我参考了一些同类产品的做法，尽管它们把不同 UI 组件库版本做得很像，但在使用体验过程中，还是会带…",
-          "link": "https://juejin.cn/post/7295624857432850468",
-          "publishedOn": "2023-10-31T00:16:25.000Z",
-          "wordCount": 1779,
-          "title": "用1100天做一款通用的管理后台框架",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7295576148364460071",
           "author": "皮卡怪兽",
           "description": "最近，前端开发领域又迎来了一个新框架——ofa.js。它的独特之处在于，不依赖于现有的 nodes/npm/webpack 前端开发工作流程。与jQuery类似，只需引用一个脚本，您就能像使用React/Vue/Angular一样轻松地开发大型应用。\n\n极易上手\n如果您要开发简单的项目，想要用一个漂亮的按钮组件，例如 Ant Design 中的 Button组件，你需要学习Node.js、NPM和React等知识，才能开始使用该按钮组件。对于非前端开发者或初学者来说，这将是一个漫长的过程。\n如果使用基于ofa.js 开发的组件，就不需要这么复杂了；你只需要了解HTML的基础知识（即使不看ofa.js的文档），也可以轻松使用基于ofa.js开发的组件。以下是使用官方的 punch-logo 代码示例：\n<!-- 引入ofa.js到您的项目 -->\n<script src=\"https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js\"></script>\n\n<!-- 加载预先开发的punch-logo组件 -->\n<l-m src=\"https://kirakiray.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html\"></l-m>\n\n<!-- 使用punch-logo组件 -->\n<punch-logo style=\"margin:50px 0 0 100px;\">\n    <img src=\"https://kirakiray.github.io/ofa-v4-docs/docs/publics/logo.svg\" logo height=\"90\" />\n    <h2>不加班了</h2>\n    <p slot=\"fly\">下班给我</p>\n   …",
@@ -1110,7 +1110,7 @@
           "description": "简单易用的多功能编辑器 1.0.0 版本已经发布，欢迎下载使用\nhttps://github.com/devlive-community/incubator-notepad/releases/tag/1.0.0",
           "link": "https://juejin.cn/pin/7297423930225623081",
           "publishedOn": "2023-11-05T07:53:20.000Z",
-          "wordCount": 516,
+          "wordCount": 532,
           "title": "简单易用的多功能编辑器 1.0.0 版本已经发布，欢迎下载使用 https://github.com/devlive-community/incubator-notepad/releases/tag/1.0.0",
           "imageUrl": null
         },
@@ -1120,7 +1120,7 @@
           "description": "FeatureProbe: 一款让你不再胆战心惊地发布新功能！可以随心切换功能、即时修复问题的开源项目。",
           "link": "https://juejin.cn/pin/7297044626099634185",
           "publishedOn": "2023-11-03T08:27:12.000Z",
-          "wordCount": 514,
+          "wordCount": 530,
           "title": "FeatureProbe: 一款让你不再胆战心惊地发布新功能！可以随心切换功能、即时修复问题的开源项目。",
           "imageUrl": null
         },
@@ -1130,7 +1130,7 @@
           "description": "有没有一种手机软件.  能自动收集 短信中的快递信息 ,这样能提醒拿快递. 进行归类显示 \n每次拿快递 得翻一遍短信,很麻烦",
           "link": "https://juejin.cn/pin/7296771769066307611",
           "publishedOn": "2023-11-03T01:34:19.000Z",
-          "wordCount": 539,
+          "wordCount": 555,
           "title": "有没有一种手机软件. 能自动收集 短信中的快递信息 ,这样能提醒拿快递. 进行归类显示 每次拿快递 得翻一遍短信,很麻烦",
           "imageUrl": null
         },
@@ -1140,7 +1140,7 @@
           "description": "有没有人日常开发已经用copilot了 ，感觉提效多吗？",
           "link": "https://juejin.cn/pin/7296738166379626522",
           "publishedOn": "2023-11-02T12:06:45.000Z",
-          "wordCount": 517,
+          "wordCount": 533,
           "title": "有没有人日常开发已经用copilot了 ，感觉提效多吗？",
           "imageUrl": null
         },
@@ -1150,7 +1150,7 @@
           "description": "功能强大的开源数据中台系统 DataCap 1.16.0 发布，优化元数据管理，编辑器功能更强大。\n欢迎下载使用\nhttps://datacap.edurt.io/release/latest.html",
           "link": "https://juejin.cn/pin/7296692742876741643",
           "publishedOn": "2023-11-02T09:58:43.000Z",
-          "wordCount": 529,
+          "wordCount": 545,
           "title": "功能强大的开源数据中台系统 DataCap 1.16.0 发布，优化元数据管理，编辑器功能更强大。 欢迎下载使用 https://datacap.edurt.io/release/latest.html",
           "imageUrl": null
         },
@@ -1160,7 +1160,7 @@
           "description": "jym，idea怎么设置项目右键出现的菜单栏不需要鼠标滚动也能看到所有选项，现在找个选项需要鼠标一直往后滑，我记得以前可以让所有选项都缩略到菜单栏上，不需要鼠标往后滑，但是我忘记怎么设置了",
           "link": "https://juejin.cn/pin/7296442264447828020",
           "publishedOn": "2023-11-02T05:49:53.000Z",
-          "wordCount": 510,
+          "wordCount": 526,
           "title": "jym，idea怎么设置项目右键出现的菜单栏不需要鼠标滚动也能看到所有选项，现在找个选项需要鼠标一直往后滑，我记得以前可以让所有选项都缩略到菜单栏上，不需要...",
           "imageUrl": null
         },
@@ -1170,7 +1170,7 @@
           "description": "xdm，你们mac用的什么软件连的远程服务器啊，现在用的这个finalShell，好难看啊",
           "link": "https://juejin.cn/pin/7296440993214103578",
           "publishedOn": "2023-11-02T02:43:25.000Z",
-          "wordCount": 509,
+          "wordCount": 525,
           "title": "xdm，你们mac用的什么软件连的远程服务器啊，现在用的这个finalShell，好难看啊",
           "imageUrl": null
         },
@@ -1180,7 +1180,7 @@
           "description": "今天又收到了一笔来自社区的回馈，我正在对微信或支付宝上的赞助者搭建一个感谢页，如果你赞助我，请备注或者联系我，留下你的github用户名，同时很高兴我的插件能帮助到更多的人去解决开发中的一些痛点，带来更好的开发体验🥰\nhttps://github.com/Simon-He95/sponsor",
           "link": "https://juejin.cn/pin/7296296611554033715",
           "publishedOn": "2023-11-01T10:13:24.000Z",
-          "wordCount": 518,
+          "wordCount": 534,
           "title": "今天又收到了一笔来自社区的回馈，我正在对微信或支付宝上的赞助者搭建一个感谢页，如果你赞助我，请备注或者联系我，留下你的github用户名，同时很高兴我的插件...",
           "imageUrl": null
         },
@@ -1190,7 +1190,7 @@
           "description": "[7018942344208580646#1024一起掘金#] 害怕electron的体积？恐惧tauri的上手难度？这里有个折中方案，neutralinojs，体积跟tauri一样小，开发难度比electron还低，小工具，小产品，值得一试，上车！",
           "link": "https://juejin.cn/pin/7296165821595533348",
           "publishedOn": "2023-11-01T02:00:45.000Z",
-          "wordCount": 523,
+          "wordCount": 526,
           "title": "[7018942344208580646#1024一起掘金#] 害怕electron的体积？恐惧tauri的上手难度？这里有个折中方案，neutralinojs，体积跟tauri一样小，开发难度比electron还低...",
           "imageUrl": null
         },
@@ -1200,7 +1200,7 @@
           "description": "[7018942344208580646#1024一起掘金#] 现代化的浏览器扩展开发模板，支持热更新，支持vue、react等流行框架！开发浏览器扩展，打造小而美的产品利器！还说什么？上车！",
           "link": "https://juejin.cn/pin/7296017207099883583",
           "publishedOn": "2023-11-01T01:16:11.000Z",
-          "wordCount": 523,
+          "wordCount": 526,
           "title": "[7018942344208580646#1024一起掘金#] 现代化的浏览器扩展开发模板，支持热更新，支持vue、react等流行框架！开发浏览器扩展，打造小而美的产品利器！还说什么？...",
           "imageUrl": null
         },
@@ -1210,7 +1210,7 @@
           "description": "下载量不理想[流泪]，xdm帮忙推广推广，免费好用哦～，别让作者桑心了",
           "link": "https://juejin.cn/pin/7295962144749813797",
           "publishedOn": "2023-10-31T10:40:57.000Z",
-          "wordCount": 517,
+          "wordCount": 535,
           "title": "下载量不理想[流泪]，xdm帮忙推广推广，免费好用哦～，别让作者桑心了",
           "imageUrl": null
         },
@@ -1220,7 +1220,7 @@
           "description": "移动端，深度链接deeplink几乎可以将用户从任何地方引导到特定App内的指定页面。\n其优势不言而喻，一方面能为用户移动端带来绝佳的体验，相比于传统链接，能够直接跳过许多无关紧要的点击和页面，直奔主题，直达目标页面；另一方面，能显著提高各场景带来的用户转化率和留存率。\n1、跨渠道、跨平台场景还原\n可用于实现场景：网页/H5跳转App、微信、微博、抖音、B站、爱奇艺、小红书等社交平台跳转App、二维码跳转App、短信跳转App、邮件跳转App、渠道跳转H5跳转App等场景。\n2、结合参数传递实现安装来源追踪\n（1）Web到App全链路数据追踪\n（2）自动绑定用户关系链\n推送门：https://www.openinstall.io/pullUp.html",
           "link": "https://juejin.cn/pin/7295948894327521289",
           "publishedOn": "2023-10-31T08:56:11.000Z",
-          "wordCount": 508,
+          "wordCount": 524,
           "title": "移动端，深度链接deeplink几乎可以将用户从任何地方引导到特定App内的指定页面。 其优势不言而喻，一方面能为用户移动端带来绝佳的体验，相比于传统链接，能够直...",
           "imageUrl": null
         },
@@ -1240,7 +1240,7 @@
           "description": "[7018942344208580646#1024一起掘金#] Elasticsearch引擎的轻量级替代品Meilisearch，适合中小项目，独立开发，小团队，小型服务器使用。",
           "link": "https://juejin.cn/pin/7295620562424086567",
           "publishedOn": "2023-10-31T01:02:58.000Z",
-          "wordCount": 534,
+          "wordCount": 537,
           "title": "[7018942344208580646#1024一起掘金#] Elasticsearch引擎的轻量级替代品Meilisearch，适合中小项目，独立开发，小团队，小型服务器使用。",
           "imageUrl": null
         },
@@ -1250,7 +1250,7 @@
           "description": "让大数据的个性化分析，像Excel 一样简单\nhttps://www.agiquery.com",
           "link": "https://juejin.cn/pin/7295237661618470964",
           "publishedOn": "2023-10-30T02:45:02.000Z",
-          "wordCount": 517,
+          "wordCount": 533,
           "title": "让大数据的个性化分析，像Excel 一样简单 https://www.agiquery.com",
           "imageUrl": null
         },
@@ -1300,7 +1300,7 @@
           "description": "[7073670907851440160#新人报道#]  开始摸鱼",
           "link": "https://juejin.cn/pin/7294884963630628902",
           "publishedOn": "2023-10-29T03:09:18.000Z",
-          "wordCount": 525,
+          "wordCount": 520,
           "title": "[7073670907851440160#新人报道#] 开始摸鱼",
           "imageUrl": null
         }
