@@ -34,7 +34,7 @@
           "description": "想要提高网页的加载体验，其实有个非常简单且实用的技巧，那就是改变请求资源的加载优先级，这也可以改变？没错！",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/img-js-preload-fetch-priority/",
           "publishedOn": "2023-10-29T15:55:41.000Z",
-          "wordCount": 943,
+          "wordCount": 944,
           "title": "聊聊Web网页中资源加载的优先级",
           "imageUrl": null
         },
@@ -44,7 +44,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1219,
+          "wordCount": 1220,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         },
@@ -54,7 +54,7 @@
           "description": "本文介绍三种改变音频播放音量的方法，其中还有一种方法直接改变音频AudioBuffer数据源的音量，说不定你哪天就会用到。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/",
           "publishedOn": "2023-10-09T14:50:57.000Z",
-          "wordCount": 1098,
+          "wordCount": 1099,
           "title": "JS改变AudioBuffer音量并下载为新audio音频",
           "imageUrl": null
         }
@@ -225,7 +225,7 @@
           "description": "今天又学到一招, 可以让DallE 同时输出多张图。\n1. 先在Custom Instrctions 的 Respond 部分配置如下内容，目的是让DallE画图时，同步输出每张图片的唯一ID:  gen_id\n2. 然后在画图时, 通过在Prompt 中使用另一个ID: referenced_image_ids, 指定多个之前轮次生成图的gen_id, 这样可以实现,你指定几个引用的,生成几张图\n例如: 如下的Prompt 引用之前轮次生成的四张图的ID, 就直接生成了四张:\ndraw a 4-frame watercolor storyboard, a japanese lady is kicking football on the playground. referenced_image_ids: dau9FgsR3yoPV3Bx, elw2wpqszyMjFO7y, Kg5bnExkhmGQY5ty, uItPouWMg79hLIgd\nCI 配置的内容如下:\n\n假设你是 DallE 绘图的研发人员， 精通 DallE 底层实现原理，知晓如何描述才能生成高质量的效果。\n你的注意事项如下:\n- 在使用 Dall-E 画图时, 如果涉及到名人, 你将不会直接使用他们的名字, 尽量避免涉及到版权问题. 你会转向通过描述该人物的脸部特征和气质, 去概括总结其人物形象, 从而实现不提名字但能模仿出人物特征的效果.\n- 在 Dall-E 绘图时，生成的画面默认比例为 16:9，除非用户明确指示其它比例。\n你的工作流程如下：\n- 基于用户输入的基础 Prompt， 在名词前添加适当的形容词，完善场景氛围和细节描述\n- 接下来思考该场景氛围，需要补充哪些额外的细节描述，例如背景，光线，镜头角度, 清晰度, 对比度, 曝光度等等\n- 基于上述两步思考，输出优化后的 Prompt ， 并调用 DallE 模块， 绘制该 Prompt 的画面。\n- 在画图之后, 清晰明确地输出每张图片的 gen_id, 格式为:\n   图片 的 gen_id :",
           "link": "https://m.okjike.com/originalPosts/654a3edb859fc596dfdf8693",
           "publishedOn": "2023-11-07T13:42:51.000Z",
-          "wordCount": 612,
+          "wordCount": 616,
           "title": "发布了: 今天又学到一招, 可以让DallE 同时输出多张图。 1. 先在Custom Instrctions 的 Respond 部分配置如下内容，目的是让DallE画图时，同步输出每张图片的唯...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FqDlC8ow8lVp3MlBeyiKWRg08hMqv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -235,7 +235,7 @@
           "description": "所谓生态，即上下游伙伴在你这里能赚到钱。",
           "link": "https://m.okjike.com/originalPosts/654a23bb190f2acb893eaaa8",
           "publishedOn": "2023-11-07T11:47:08.000Z",
-          "wordCount": 444,
+          "wordCount": 440,
           "title": "发布了: 所谓生态，即上下游伙伴在你这里能赚到钱。",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -831,46 +831,6 @@
           "publishedOn": "2023-11-01T06:39:00.000Z",
           "wordCount": 523,
           "title": "重庆市忠县发布大雾黄色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20231101/t20231101_526470451.html",
-          "author": "国家预警信息发布中心",
-          "description": "黔江区气象台2023年11月1日7时30分发布“大雾橙色预警信号”，预计1日8时至11时，我区全部乡镇街道将出现能见度小于200米的雾，局部地区能见度小于50米。请以上各地注意防范大雾天气可能造成的影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20231101/t20231101_526470451.html",
-          "publishedOn": "2023-10-31T23:50:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市黔江区发布大雾橙色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20231101/t20231101_526470444.html",
-          "author": "国家预警信息发布中心",
-          "description": "潼南区气象台2023年11月1日7时20分发布“大雾橙色预警信号”，目前我区桂林、梓潼、大佛等镇街已出现能见度小于200米的雾，局部地区能见度小于50米，预计大雾将持续至上午10时左右。请各地注意防范大雾天气可能造成的影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20231101/t20231101_526470444.html",
-          "publishedOn": "2023-10-31T23:41:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市潼南区发布大雾橙色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231101/t20231101_526470443.html",
-          "author": "国家预警信息发布中心",
-          "description": "万州区气象台2023年11月1日07时20分发布“大雾黄色预警信号”，预计1日08时至11时，陈家坝街道、高笋塘街道、长滩镇、长岭镇、龙都街道、百安坝街道、五桥街道、牌楼街道、走马镇、龙驹镇、太白街道、高峰街道、双河口街道、九池街道、分水镇、孙家镇、柱山乡等镇乡街将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。有关部门和单位按照职责做好防雾准备工作；机场、高速公路、轮渡码头等单位加强交通管理，保障安全；驾驶人员注意雾的变化，小心驾驶；户外活动注意安全。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231101/t20231101_526470443.html",
-          "publishedOn": "2023-10-31T23:41:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市万州区发布大雾黄色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20231101/t20231101_526470442.html",
-          "author": "国家预警信息发布中心",
-          "description": "涪陵区气象台2023年11月1日07时发布“大雾橙色预警信号”，预计11月1日07时至11时，南沱镇、马鞍街道、李渡街道、江北街道、龙桥街道、白涛街道、敦仁街道、崇义街道、江东街道、清溪镇、义和街道、石沱镇、蔺市街道、荔枝街道将出现能见度小于200米的雾，局部地区能见度小于50米。请以上各地注意防范大雾天气可能造成的影响。防御指南：1.有关部门和单位按照职责做好防雾工作；2.机场、高速公路、轮渡码头等单位加强调度指挥；3.驾驶人员必须严格控制车、船的行进速度；4.减少户外活动。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20231101/t20231101_526470442.html",
-          "publishedOn": "2023-10-31T23:40:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市涪陵区发布大雾橙色预警",
           "imageUrl": null
         }
       ]
