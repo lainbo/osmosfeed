@@ -210,6 +210,16 @@
       "siteUrl": "https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/654affabdc63db69597210b2",
+          "author": null,
+          "description": "一张照片, 一个日本动漫脸的真人女孩, 正在以战斗姿势起势。画面中结合了水墨美学和武术美学， 通过单色调色板和渐变的水墨笔触， 展示了水墨画的柔和质感和动态表现力。她的姿态既强大又优雅，极简的装饰物展示了她内心的纯净。她的服装古朴又高雅， 与水墨画和谐完美整合。微妙的照明效果增强了她姿势的动态质量。",
+          "link": "https://m.okjike.com/originalPosts/654affabdc63db69597210b2",
+          "publishedOn": "2023-11-08T03:25:31.000Z",
+          "wordCount": 463,
+          "title": "发布了: 一张照片, 一个日本动漫脸的真人女孩, 正在以战斗姿势起势。画面中结合了水墨美学和武术美学， 通过单色调色板和渐变的水墨笔触， 展示了水墨画的柔和质...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FhmyX5bceTkhSrbf8yddll8fJ8anv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/654a3edb859fc596dfdf8693",
           "author": null,
           "description": "今天又学到一招, 可以让DallE 同时输出多张图。\n1. 先在Custom Instrctions 的 Respond 部分配置如下内容，目的是让DallE画图时，同步输出每张图片的唯一ID:  gen_id\n2. 然后在画图时, 通过在Prompt 中使用另一个ID: referenced_image_ids, 指定多个之前轮次生成图的gen_id, 这样可以实现,你指定几个引用的,生成几张图\n例如: 如下的Prompt 引用之前轮次生成的四张图的ID, 就直接生成了四张:\ndraw a 4-frame watercolor storyboard, a japanese lady is kicking football on the playground. referenced_image_ids: dau9FgsR3yoPV3Bx, elw2wpqszyMjFO7y, Kg5bnExkhmGQY5ty, uItPouWMg79hLIgd\nCI 配置的内容如下:\n\n假设你是 DallE 绘图的研发人员， 精通 DallE 底层实现原理，知晓如何描述才能生成高质量的效果。\n你的注意事项如下:\n- 在使用 Dall-E 画图时, 如果涉及到名人, 你将不会直接使用他们的名字, 尽量避免涉及到版权问题. 你会转向通过描述该人物的脸部特征和气质, 去概括总结其人物形象, 从而实现不提名字但能模仿出人物特征的效果.\n- 在 Dall-E 绘图时，生成的画面默认比例为 16:9，除非用户明确指示其它比例。\n你的工作流程如下：\n- 基于用户输入的基础 Prompt， 在名词前添加适当的形容词，完善场景氛围和细节描述\n- 接下来思考该场景氛围，需要补充哪些额外的细节描述，例如背景，光线，镜头角度, 清晰度, 对比度, 曝光度等等\n- 基于上述两步思考，输出优化后的 Prompt ， 并调用 DallE 模块， 绘制该 Prompt 的画面。\n- 在画图之后, 清晰明确地输出每张图片的 gen_id, 格式为:\n   图片 的 gen_id :",
@@ -297,16 +307,6 @@
           "publishedOn": "2023-11-05T16:32:45.000Z",
           "wordCount": 447,
           "title": "发布了: 「承诺在没兑现之前都是谎言」",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/6547a7776f9c4ea80d28593a",
-          "author": null,
-          "description": "西方画作作者的签名像是封印，裱装起来， 严禁篡改。\n中国画作作者的盖章像是邀请，作者留白腾空，收藏家们轮流上阵， 章印成了画作的一部分，和作者共同丰富了作品。",
-          "link": "https://m.okjike.com/originalPosts/6547a7776f9c4ea80d28593a",
-          "publishedOn": "2023-11-05T14:32:23.000Z",
-          "wordCount": 450,
-          "title": "发布了: 西方画作作者的签名像是封印，裱装起来， 严禁篡改。 中国画作作者的盖章像是邀请，作者留白腾空，收藏家们轮流上阵， 章印成了画作的一部分，和作者共...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         }
       ]
@@ -812,16 +812,6 @@
           "wordCount": 523,
           "title": "重庆市涪陵区发布大雾橙色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231101/t20231101_526471042.html",
-          "author": "国家预警信息发布中心",
-          "description": "忠县气象台2023年11月1日14时30分继续发布“大雾黄色预警信号”，预计2日0时至10时，涂井乡、石宝镇、汝溪镇、金声乡、野鹤镇、磨子土家族乡、乌杨街道、石子乡、白公街道、复兴镇、东溪镇、忠州街道、黄金镇、永丰镇、花桥镇、三汇镇、马灌镇、官坝镇、金鸡镇、石黄镇、兴峰乡、新生街道、白石镇、任家镇、双桂镇、拔山镇、洋渡镇、善广乡、新立镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231101/t20231101_526471042.html",
-          "publishedOn": "2023-11-01T06:39:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市忠县发布大雾黄色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -847,6 +837,26 @@
       "feedUrl": "https://rsshub.app/juejin/trending/frontend/weekly",
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
+        {
+          "id": "https://juejin.cn/post/7298285602042527754",
+          "author": "手撕红黑树",
+          "description": "theme: channing-cyan\n前言\n之前写了篇文章《无虚拟 DOM 版 Vue 进行到哪一步了？》\n这篇文章的评论区有很多人都觉得这是在倒退：\n\n在这个人的眼里，无虚拟 DOM 版 Vue + SSR 就等于 jsp + jq，这两者怎么可能一样呢？写 Vue 和写 jQuery 一样？Nuxt 和 JSP 一样？在他的眼中已经不关心写法了，反正都是 JS 写业务画页面。如果按照他这种说法那后端也别用 Spring 了，都是用 Java 写业务和接口，反正都不关心写法了已经。而且持这种观点的人不在少数：\n\n\n甚至还在沸点里看到了这样的观点：\n\n首先我们可以总结一下，评论区大概可以分为如下几类：\n前端倒退派：无虚拟 DOM + SSR 不就是 jQuery + JSP 么\n无意义派：前端性能已经很快了，再快几十毫秒也没什么太大意义\n抄袭派：这不就是在抄 Svelte 么（实际官方承认的是 Solid）\n灌水派：6、学不动了、尤雨溪不懂 Vue、前端墙头草…等一系列没什么太大意义的评论\n认真思考派：\n\n\n认真思考派其实也分为两种：一种是不理解虚拟 DOM 原本不是为了提升性能的吗？为何现在反而成为了性能瓶颈？大家都在想方设法的绕开虚拟 DOM？\n另一种则是思考如果没了虚拟 DOM 还怎么跨平台？本文主要解答的是跨平台的这样一个问题：\n\n性能的问题会放到下篇文章去讲，不然的话文章太长会让人看不下去。相信我，这两个问题绝对会成为日后的面试题。有的面试官是自己也有这个疑问，想听听大家都是怎么回答的，如果你能够在众多候选人中解答了他的疑惑，那么相信你一定会给面试官留下一个更加深刻的印象。\n还有的面试官是通过自己思考得出了答案，然后拿来作为筛选候选人的一道面试题。甚至更有可能出现的一种情况是面试官自己也觉得想要跨平台就必须依赖虚拟 DOM，如果你能反驳他，那势必会引起他的兴趣…",
+          "link": "https://juejin.cn/post/7298285602042527754",
+          "publishedOn": "2023-11-07T06:42:41.000Z",
+          "wordCount": 4438,
+          "title": "没了虚拟 DOM 也能跨平台？",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7298150295376642082",
+          "author": "前端开发爱好者",
+          "description": "哈喽,大家好 我是 xy👨🏻‍💻。今天给大家推荐一款不用充钱也能让你变强的 vscode 插件 通义灵码（TONGYI Lingma），可以称之为 copilot 的替代甜品 💪\n前言\n之前一直使用的 GitHub Copilot，虽然功能强大，但是收费相对来说有点贵，每个月收费在10美刀这样，一直想找一个免费的替代方案，之前也尝试使用 Kite 和 TabNine 等类似智能代码补全插件，但是效果都不尽人意。\n一直到上个月，也就是 10 月 31 号，在杭州云栖大会上，阿里云对外展示了一款可自动编写代码的 AI 助手：通义灵码（TONGYI Lingma），可以称之为 copilot 的替代甜品\n什么是 通义灵码（TONGYI Lingma）\n通义灵码（TONGYI Lingma），是阿里云出品的一款基于通义大模型的智能编码辅助工具，提供行级/函数级实时续写、自然语言生成代码、单元测试生成、代码注释生成、代码解释、研发智能问答、异常报错排查等能力，并针对阿里云 SDK/OpenAPI 的使用场景调优，助力开发者高效、流畅的编码。\n\n兼容 Visual Studio Code、JetBrainsIDEs 等主流 IDE\n支持 Java、Python、Go、C/C++、JavaScript、TypeScript、PHP、Ruby、Rust、Scala 等主流编程语言\n\n产品官网: https://tongyi.aliyun.com/lingma\n通义灵码主要功能\n代码智能生成:\n通过训练海量优秀开源代码数据，根据当前代码文件的上下文，为开发者生成行级和函数级代码，包括代码块、方法等，帮助开发者快速完成编码工作。\n行/函数级实时续写:\n在编码过程中，根据上下文和当前语法，通义灵码会自动预测和生成建议代码，开发者只需点击 Tab 键即可采纳\n自然语言生成代码:\n在编辑器中，开发者可以通过自然语言描述所需功能，通义灵码会根据描述和上下文，在编辑器区直接生成代码及相关注释，提供连续的编码体验。\n单元测试生成:\n通义灵码支持根据不同的测试架(如JUnit、MockitoSpring Test、unit test、pytest等)生成单元测试代码，并提供相关的代码解释。\n代码注释生成:\n通义灵码可以一键生成方法注释及行间注释，节省编写代码注释的时间，提升代码的可读性和注释覆盖率\n研发智能问答:\n基于海量研发文档、产品文档、通用研发知识以及阿里云的云服务文档和SDK/OpenAPI文档等进行问答训练，为开发者提供研发问题的答疑解惑。\n在 VSCode 中安装通义灵码\n打开 VSCode，在插件市场搜索 通义灵码（TONGYI Lingma），点击 安装\n\n安装成功之后左侧菜单中会增加通义灵码插件按钮，点击按钮，接着点击登录去授权\n\nVSCode 会提示等待阿里云授权中: 已复制链接，如遇浏览器未打开的情况，可直接粘贴至浏览器进行登录\n\n浏览器会自动打开到阿里云的登录授权页面，登录自己的账号直接授权即可\n\n\n授权成功后，VSCode 会提示登录成功，并且在插件窗口会显示自己的账号名称\n\n\n重启 Visual Studio Code，有的不需要重启好像也可以直接用，就可以体验 通义灵码 智能编码了。\n简单试用一下效果\n随便找了个文件，输入要求：帮我写一个防抖函数, 使用typescript写\n\n直接就自动生成出来了，只需点击 Tab 键即可采纳，是不是感觉很强大，总的来说，相比较于Github Copilot，通义灵码 还是有很多优势的，比如：免费！！！\n写在最后\n公众号：前端开发爱好者 专注分享 web 前端相关技术文章、视频教程资源、热点资讯等，如果喜欢我的分享，给 🐟🐟 点一个赞 👍 或者 ➕关注 都是对我最大的支持。\n欢迎加我好友，我会第一时间和你分享前端行业趋势，面试资源，学习途径等等。\nWX: xuxuxu_yyy\n添加好友备注【进阶学习】拉你进技术交流群\n关注公众号后，在首页：\n回复面试题，获取最新大厂面试资料。\n回复简历，获取 3200 套 简历模板。\n回复React实战，获取 React 最新实战教程。\n回复Vue实战，获取 Vue 最新实战教程。\n回复ts，获取 TypeScript 精讲课程。\n回复vite，获取 Vite 精讲课程。\n回复uniapp，获取 uniapp 精讲课程。\n回复js书籍，获取 js 进阶 必看书籍。\n回复Node，获取 Nodejs+koa2 实战教程。\n回复数据结构算法，获取数据结构算法教程。\n回复架构师，获取 架构师学习资源教程。\n更多教程资源应有尽有，欢迎关注获取",
+          "link": "https://juejin.cn/post/7298150295376642082",
+          "publishedOn": "2023-11-06T07:20:34.000Z",
+          "wordCount": 1046,
+          "title": "一个 不用充钱 也能让你变强的 VSCode 插件！！！",
+          "imageUrl": null
+        },
         {
           "id": "https://juejin.cn/post/7297917491795132428",
           "author": "程序员Sunday",
@@ -998,26 +1008,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7296058491289501696",
-          "author": "西维",
-          "description": "theme: smartblue\nhighlight: a11y-light\n但行好事 莫问前程\n前言🎀\n在过去为了实现 懒加载、滚动动画 等需求并不容易，我们需要获取 元素与视窗的交叉状态，这通常使用 滚动事件 + 计算偏移量 + 判断逻辑 实现，再辅以防抖节流等优化。\n现如今随着技术的发展，浏览器推出了多种 观察器，让我们有更好的方式，去便捷、高效的收集页面与元素的信息。\n本文，我们一起学习适用于 监听元素与视窗交叉状态 的观察器：IntersectionObserver（交叉观察器），了解它的相关知识与应用。\n简介\nIntersectionObserver API 提供了一种创建IntersectionObserver 对象的方法，对象用于监测目标元素与视窗(viewport)的交叉状态，并在交叉状态变化时执行回调函数，回调函数可以接收到元素与视窗交叉的具体数据。\n\n一个 IntersectionObserver 对象可以监听多个目标元素，并通过队列维护回调的执行顺序。\nIntersectionObserver 特别适用于：滚动动画、懒加载、虚拟列表等场景。\n回调异步执行，不阻塞主线程。且监听不随着目标元素的滚动而触发，性能消耗极低。\nAPI\n构造函数\nIntersectionObserver 构造函数 接收两个参数：\ncallback： 当元素可见比例达到指定阈值后触发的回调函数\noptions： 配置对象（可选，不传时会使用默认配置）\nIntersectionObserver 构造函数 返回观察器实例，实例携带四个方法：\nobserve：开始监听目标元素\nunobserve：停止监听目标元素\ndisconnect：关闭观察器\ntakeRecords：返回所有观察目标的 IntersectionObserverEntry 对象数组\n// 调用构造函数 生成Inte…",
-          "link": "https://juejin.cn/post/7296058491289501696",
-          "publishedOn": "2023-11-01T03:25:31.000Z",
-          "wordCount": 1633,
-          "title": "IntersectionObserver：实现滚动动画、懒加载、虚拟列表...",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7296104547167305764",
-          "author": "至臻",
-          "description": "引言\n在JavaScript编程中，循环是不可或缺的工具，它们允许我们有效地处理和操作数组中的元素。然而，JavaScript提供了多种不同类型的循环方法，其中包括forEach和map。这两者可能看起来很相似，但它们在使用和用途上存在显著差异。\n你是否曾经在编程中感到困惑，不确定何时应该使用forEach，何时应该使用map？本文将解开这个迷题，帮助你更好地理解这两种循环的区别，并提供实际的示例，以便你在日常编程中能够明智地选择合适的循环方法。让我们深入研究forEach和map，探讨它们的语法、用法，以及最佳实践。\n问题的答案\n为了理解两者的区别，我们看看它们分别是做什么的。\nforEach\n遍历数组中的元素。\n为每个元素执行回调。\n无返回值。\nconst a = [1, 2, 3];\nconst doubled = a.forEach((num, index) => {\n  // 执行与 num、index 相关的代码\n});\n\n// doubled = undefined\n\nmap\n遍历数组中的元素\n通过对每个元素调用函数，将每个元素“映射（map）”到一个新元素，从而创建一个新数组。\nconst a = [1, 2, 3];\nconst doubled = a.map((num) => {\n  return num * 2;\n});\n\n// doubled = [2, 4, 6]\n\n.forEach和.map()的主要区别在于.map()返回一个新的数组。如果你想得到一个结果，但不想改变原始数组，用.map()。如果你只需要在数组上做迭代修改，用forEach。\n参考​\nhttps://codeburst.io/javascript-map-vs-foreach-f38111822c0f\n1.forEach 循环的解析\n1.1 语法和用法\n解释 forEach 循…",
-          "link": "https://juejin.cn/post/7296104547167305764",
-          "publishedOn": "2023-11-01T01:20:51.000Z",
-          "wordCount": 1341,
-          "title": "突破前端开发面试（五）：你知道何时应该使用forEach而不是map吗？",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7295673054231052324",
           "author": "iceCode",
           "description": "highlight: arduino-light\ntheme: channing-cyan\n前言\n随着前端的发展，对前端页面的要求越来越高，而css的功能也越来越强大，但对于写css样式来说却是非常头疼的的事。因为前端页面的动画要求以及页面布局的精细管控，需要写大量的css。为了解决写css难得问题，目前已经出来了许多css得解决方案，如Tailwind CSS，CSS in JS,sass,less等。\n随着Tailwind CSS的热度越来越高，使用Tailwind CSS的项目也是越来越多，但是真没必要为了使用而使用。当前流行的流行的前端框架里，React框架对CSS的处理，官方也没有给出特别好的解决，每个人写样式用到的解决方案也不同，Vue框架本身有着很好的CSS处理，在每一个Vue文件里写的样式,都可以是唯一的。\n正文\n这里只针对Vue里使用Tailwind CSS来说明，因为React里写CSS确实没有太统一又简便的解决方案，想用什么都可以。\n首先说Tailwind CSS确实是个好东西，没有必要质疑大佬写出来的东西（我是菜鸡），每一个类名代表一个样式，这样就不会产生样式覆盖以及权重不够的问题，并且当项目足够大时，所构建的css包也是非常小的，同时在生产环境中还会自动删除没有使用到的CSS代码。\n就是这样的Tailwind CSS我为什么不推荐在Vue里面使用呢。主要因为Vue中写样式很容易，上面写好模板语法，定义好class，紧接着就可以在下面写样式，每一个组件内，Vue的样式都是独立的，也就是说大多情况下在Vue里基本不会产生样式覆盖的问题。\n写框架一定会有组件化思想，为了更好的模板复用。既然Tailwind CSS是为了复用样式的，组件也同时是复用样式和模板的，那为什么不在Vue中将组件拆分的更细一些呢？\n个人写项目的时候，会把项目中的button也进行二…",
@@ -1070,7 +1060,7 @@
           "description": "这几天逼着自己密集写代码发现，真正最高效的开发工具是 GitHub Copilot Chat。如果你自己是一个半吊子程序人，应该很快能理解我在说什么。大家都有成为半吊子的机会，比如你去写一个你不熟悉的语言。很容易就变成了半吊子。但是，有了 Copilot，信心大增，我觉得我已经是全栈了。",
           "link": "https://juejin.cn/pin/7298329135963848738",
           "publishedOn": "2023-11-07T03:05:46.000Z",
-          "wordCount": 540,
+          "wordCount": 537,
           "title": "这几天逼着自己密集写代码发现，真正最高效的开发工具是 GitHub Copilot Chat。如果你自己是一个半吊子程序人，应该很快能理解我在说什么。大家都有成为半吊子的...",
           "imageUrl": null
         },
@@ -1080,7 +1070,7 @@
           "description": "想开发一Chrome浏览器插件，求一些中肯的建议！楼主Java后端程序员，以前兼职写过前端，cv键用的贼溜，懂一些vue和element，写过原生js插件，写过jQuery插件。最近不写Web前端已久，闲来无事想写Chrome插件玩玩，想为开源软件做一丢丢贡献，因此调研了些Chrome Extension的写法，发现其实Chrome Extension技术不难，全是Web端的技术栈，无外乎就是html和JavaScript，JavaScript主要是了解Chrome开放的api，所以写一Chrome插件变成了些一个浏览器应用。我的想法是写一个后端助手，在后端平时开发中做一些辅助之类的，功能点比如JSON校验，yaml和propertites配置文件转换，时间戳转换等，不知道社区有没有一些比较中肯的建议之类的。",
           "link": "https://juejin.cn/pin/7298325881731743784",
           "publishedOn": "2023-11-07T01:52:49.000Z",
-          "wordCount": 536,
+          "wordCount": 533,
           "title": "想开发一Chrome浏览器插件，求一些中肯的建议！楼主Java后端程序员，以前兼职写过前端，cv键用的贼溜，懂一些vue和element，写过原生js插件，写过jQuery插件。最...",
           "imageUrl": null
         },
