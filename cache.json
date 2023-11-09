@@ -200,6 +200,36 @@
       "siteUrl": "https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/654cf208b754c3dc3c0b205f",
+          "author": null,
+          "description": "穷小子突然获得了绝世武功，刚体验了一会轻功水上漂的爽感，突然武功尽失。\n怅然若失，比当初穷小子时期尤有过之。",
+          "link": "https://m.okjike.com/originalPosts/654cf208b754c3dc3c0b205f",
+          "publishedOn": "2023-11-09T14:51:52.000Z",
+          "wordCount": 441,
+          "title": "发布了: 穷小子突然获得了绝世武功，刚体验了一会轻功水上漂的爽感，突然武功尽失。 怅然若失，比当初穷小子时期尤有过之。",
+          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+        },
+        {
+          "id": "https://m.okjike.com/originalPosts/654cd4483c6228d75359de1a",
+          "author": null,
+          "description": "KK站在2014年时间点，写的「一切为时未晚」，鼓励互联网创业者们向前看，加上AI能力 ，一切大有可为。\n站在现在这时间点，回头看这文章，字字为真。\n那站在2044年，再看今天，又会是什么感受？",
+          "link": "https://m.okjike.com/originalPosts/654cd4483c6228d75359de1a",
+          "publishedOn": "2023-11-09T12:44:56.000Z",
+          "wordCount": 453,
+          "title": "发布了: KK站在2014年时间点，写的「一切为时未晚」，鼓励互联网创业者们向前看，加上AI能力 ，一切大有可为。 站在现在这时间点，回头看这文章，字字为真。 那...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FjBJjDsaueIWD-ku6_41BvLLyAFev3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
+        {
+          "id": "https://m.okjike.com/originalPosts/654cd005859fc596df16425e",
+          "author": null,
+          "description": "一位身披鲜艳红色斗篷的人物凌空悬浮在大型金字塔的内部宫殿入口台阶上，背对一群穿着统一白色服装，坐在地上有序排列的人群。场景中强烈的自然光从左上角照进，形成戏剧性的光与影的对比，整个画面色彩对比鲜明，渲染出一种神秘和仪式感的氛围。",
+          "link": "https://m.okjike.com/originalPosts/654cd005859fc596df16425e",
+          "publishedOn": "2023-11-09T12:26:45.000Z",
+          "wordCount": 477,
+          "title": "发布了: 一位身披鲜艳红色斗篷的人物凌空悬浮在大型金字塔的内部宫殿入口台阶上，背对一群穿着统一白色服装，坐在地上有序排列的人群。场景中强烈的自然光从左上...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FvWkvOst4jb28s0j_v8r52qSjszUv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/654ca1dff59114ac234c3a9c",
           "author": null,
           "description": "一幅印象派风格的海洋画作，展示深蓝色的海水和波涛，画面中央有一个波峰正在翻滚，周围散发着带有黄色和白色的水花，类似于活力四射的海泡。背景的天空是渐变的，从蓝色到带有温暖色调的云朵。画风特征是厚重和有力的笔触，以及鲜明的色彩对比和动态的波涛。比例为宽屏16:9，重点在于捕捉光线在水面上的反射和波涛的动态美。",
@@ -265,39 +295,9 @@
           "description": "今天又学到一招, 可以让DallE 同时输出多张图。\n1. 先在Custom Instrctions 的 Respond 部分配置如下内容，目的是让DallE画图时，同步输出每张图片的唯一ID:  gen_id\n2. 然后在画图时, 通过在Prompt 中使用另一个ID: referenced_image_ids, 指定多个之前轮次生成图的gen_id, 这样可以实现,你指定几个引用的,生成几张图\n例如: 如下的Prompt 引用之前轮次生成的四张图的ID, 就直接生成了四张:\ndraw a 4-frame watercolor storyboard, a japanese lady is kicking football on the playground. referenced_image_ids: dau9FgsR3yoPV3Bx, elw2wpqszyMjFO7y, Kg5bnExkhmGQY5ty, uItPouWMg79hLIgd\nCI 配置的内容如下:\n\n假设你是 DallE 绘图的研发人员， 精通 DallE 底层实现原理，知晓如何描述才能生成高质量的效果。\n你的注意事项如下:\n- 在使用 Dall-E 画图时, 如果涉及到名人, 你将不会直接使用他们的名字, 尽量避免涉及到版权问题. 你会转向通过描述该人物的脸部特征和气质, 去概括总结其人物形象, 从而实现不提名字但能模仿出人物特征的效果.\n- 在 Dall-E 绘图时，生成的画面默认比例为 16:9，除非用户明确指示其它比例。\n你的工作流程如下：\n- 基于用户输入的基础 Prompt， 在名词前添加适当的形容词，完善场景氛围和细节描述\n- 接下来思考该场景氛围，需要补充哪些额外的细节描述，例如背景，光线，镜头角度, 清晰度, 对比度, 曝光度等等\n- 基于上述两步思考，输出优化后的 Prompt ， 并调用 DallE 模块， 绘制该 Prompt 的画面。\n- 在画图之后, 清晰明确地输出每张图片的 gen_id, 格式为:\n   图片 的 gen_id :",
           "link": "https://m.okjike.com/originalPosts/654a3edb859fc596dfdf8693",
           "publishedOn": "2023-11-07T13:42:51.000Z",
-          "wordCount": 616,
+          "wordCount": 614,
           "title": "发布了: 今天又学到一招, 可以让DallE 同时输出多张图。 1. 先在Custom Instrctions 的 Respond 部分配置如下内容，目的是让DallE画图时，同步输出每张图片的唯...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FqDlC8ow8lVp3MlBeyiKWRg08hMqv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/654a23bb190f2acb893eaaa8",
-          "author": null,
-          "description": "所谓生态，即上下游伙伴在你这里能赚到钱。",
-          "link": "https://m.okjike.com/originalPosts/654a23bb190f2acb893eaaa8",
-          "publishedOn": "2023-11-07T11:47:08.000Z",
-          "wordCount": 444,
-          "title": "发布了: 所谓生态，即上下游伙伴在你这里能赚到钱。",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/6549ddf49660448314634a47",
-          "author": null,
-          "description": "人生只有4000周。\n如果觉得每天都是重复的，无趣的，多想想这句。 找点新鲜事做吧，来一趟不容易。",
-          "link": "https://m.okjike.com/originalPosts/6549ddf49660448314634a47",
-          "publishedOn": "2023-11-07T06:49:24.000Z",
-          "wordCount": 443,
-          "title": "发布了: 人生只有4000周。 如果觉得每天都是重复的，无趣的，多想想这句。 找点新鲜事做吧，来一趟不容易。",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/6549c16699f2123c7464dbaa",
-          "author": null,
-          "description": "▎角色扮演\nCool Teacher\n▎基本信息\n- 作者: 李继刚\n- 版本: 3.6\n- LLM: GPT-4\n- 描述: 你是世界上最 Cool 的老师. 擅长使用最简单的词汇和通俗的语言来教会 0 基础的学生.\n▎激灵起来\n有很多求知若渴的年轻人, 对于概念的学习难以快速深入掌握. 你作为伟大的物理学家费曼的亲传弟子, 有义务和能力站出来改变这个枯燥的学习世界, 让年轻人知道学习也可以这么快乐!\n▎限制条件\n- 任何条件下不要违反角色\n- 不要编造你不知道的信息, 如果你的数据库中没有该概念的知识, 请直接表明\n- 不要在最后添加总结部分. \"总之\", \"所以\" 这种总结的段落不要输出\n▎定义概念\n- : 使用 Markdown 的二级标题展示, 即 ## 标题内容\n- 内涵: 一个概念的内涵指的是该概念所包含的所有属性或准则, 简单来说就是\"概念是什么\"\n- 外延: 一个概念的外延描述了“这个概念包含了哪些实例”, 它描述了一个概念可适用的所有特定实例.\n▎实现目标\n你会以一种非常创新和善解人意的方式, 让一个对该概念一无所知的学生掌握一个新概念\n▎运行规则\n1. 在你眼里, 没有笨蛋, 只有还不够通俗的解释. 所有的知识都可以通过直白简单的语言解释清楚\n2. 你在解释概念的字里行间, 处处体现着: 真实, 亲切, 坦诚, 以及对用户的关爱.\n3. 你的讲解非常有逻辑性和体系性, 同时还充满了幽默风趣,\n4. 你的讲解非常自然, 能够让学生沉浸其中\n5. 对于输出中的核心关键词，你会加粗强化输出。\n▎擅长技能\n1. 擅长使用简单的文字, 充满哲理, 给人开放性的想象\n2. 在适当地方添加少量的 Emoji 表情, 提升阅读体验\n3. 模仿费曼的教学风格, 使用简单语言：告别行话，欢迎日常语言以简化复杂概念。\n4. 类比和隐喻：通过相关的心理形象将抽象和具体联系起来…",
-          "link": "https://m.okjike.com/originalPosts/6549c16699f2123c7464dbaa",
-          "publishedOn": "2023-11-07T04:47:34.000Z",
-          "wordCount": 805,
-          "title": "发布了: ▎角色扮演 Cool Teacher ▎基本信息 - 作者: 李继刚 - 版本: 3.6 - LLM: GPT-4 - 描述: 你是世界上最 Cool 的老师. 擅长使用最简单的词汇和通俗的语言...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fv0NAC7mZD8gNbgnDMgurnS5jzLGv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
         }
       ]
     },
@@ -1080,7 +1080,7 @@
           "description": "顺丰，蓝禾，宁德时代，蓝月亮，康龙化成，真我手机，三七互娱，奇安信24秋招\n①顺丰集团\n【招聘岗位】研发类、管培生类，航空类，经营管理、职能\n【内推码】4FOLXH\n【一键内推】https://sourl.cn/SV2eSv\n②蓝月亮\n【招聘岗位】技术，研发，lT，供应链，市场，职能等\n【网申链接】https://sourl.cn/NsVxG6\n【内推码】 在网申页面“信息获取渠道”中“其他渠道”输入内推码：CS01\n③蓝禾\n【岗位】运营、设计、研发，技术，采购，职能等\n【一键内推】：https://lanhevip.jobs.feishu.cn/index/m/?external_referral_code=T1KYX4B\n④宁德时代\n【岗位】计算机类、研发类、工程类，供应链与运营类，市场职能类等400余岗位\n【一键内推】：https://sourl.cn/XdijGS\n【内推码】：DSfHYtXs\n⑤康龙化成\n【岗位】 生物科学，临床，大分子，CMC，分析，合成，职能运营\n【一键内推】 https://app.mokahr.com/m/campus-recruitment/pharmaron/45318?recommendCode=DSgCEz6s#/jobs\n【内推码】DSgCEz6s\n⑥得物\n【岗位】设计类，商品研究类\n【一键内推】https://sourl.cn/EjWGdb\n【内推码】DSDF7rFF\n⑦三七互娱\n【岗位】美术设计类\n【一键内推】https://sourl.cn/bV9bkT\n【内推码】DSQNKtCs\n⑧奇安信\n【岗位】安全类，研发类，测试类，技术类，营销类，产品类\n【内推链接】https://sourl.cn/MJkhG3\n【内推码】DSPBBk1g\n⑨realme真我手机\n【岗位】研发，产品，销售，设计\n【一键内推】https://sourl.cn/NLePXv\n【内推码】fnqscs",
           "link": "https://juejin.cn/pin/7299354838929686568",
           "publishedOn": "2023-11-09T11:43:27.000Z",
-          "wordCount": 540,
+          "wordCount": 576,
           "title": "顺丰，蓝禾，宁德时代，蓝月亮，康龙化成，真我手机，三七互娱，奇安信24秋招 ①顺丰集团 【招聘岗位】研发类、管培生类，航空类，经营管理、职能 【内推码】4FO...",
           "imageUrl": null
         },
@@ -1090,7 +1090,7 @@
           "description": "2023.2.4 的IDEA根本安装不了 JRebel，我试了好几个版本了，激活一直报 LS client not configured，而且在 marketplace 上面 JRebel 的版本只能下载 2023.2.0 的版本，网上说要下载 2022.4.1 的版本现在都下载不了了。",
           "link": "https://juejin.cn/pin/7299346813257760802",
           "publishedOn": "2023-11-09T10:00:49.000Z",
-          "wordCount": 583,
+          "wordCount": 587,
           "title": "2023.2.4 的IDEA根本安装不了 JRebel，我试了好几个版本了，激活一直报 LS client not configured，而且在 marketplace 上面 JRebel 的版本只能下载 2023.2.0 的...",
           "imageUrl": null
         },
@@ -1100,7 +1100,7 @@
           "description": "功能强大的开源数据中台系统 DataCap 又一新功能开发完成，6️⃣ 6️⃣ 6️⃣\nhttps://github.com/devlive-community/datacap/pull/472",
           "link": "https://juejin.cn/pin/7299049580346458153",
           "publishedOn": "2023-11-09T04:36:40.000Z",
-          "wordCount": 549,
+          "wordCount": 579,
           "title": "功能强大的开源数据中台系统 DataCap 又一新功能开发完成，6️⃣ 6️⃣ 6️⃣ https://github.com/devlive-community/datacap/pull/472",
           "imageUrl": null
         },
@@ -1120,7 +1120,7 @@
           "description": "Mac Mini 2 8G的配置，学习和做一些简单的IOS开发，偶尔用PS修个图画插图。配置够吗？有一个主力机Windows，日常大工作量都在win上。",
           "link": "https://juejin.cn/pin/7298629051207106594",
           "publishedOn": "2023-11-07T08:37:41.000Z",
-          "wordCount": 556,
+          "wordCount": 586,
           "title": "Mac Mini 2 8G的配置，学习和做一些简单的IOS开发，偶尔用PS修个图画插图。配置够吗？有一个主力机Windows，日常大工作量都在win上。",
           "imageUrl": null
         },
@@ -1130,7 +1130,7 @@
           "description": "这几天逼着自己密集写代码发现，真正最高效的开发工具是 GitHub Copilot Chat。如果你自己是一个半吊子程序人，应该很快能理解我在说什么。大家都有成为半吊子的机会，比如你去写一个你不熟悉的语言。很容易就变成了半吊子。但是，有了 Copilot，信心大增，我觉得我已经是全栈了。",
           "link": "https://juejin.cn/pin/7298329135963848738",
           "publishedOn": "2023-11-07T03:05:46.000Z",
-          "wordCount": 550,
+          "wordCount": 586,
           "title": "这几天逼着自己密集写代码发现，真正最高效的开发工具是 GitHub Copilot Chat。如果你自己是一个半吊子程序人，应该很快能理解我在说什么。大家都有成为半吊子的...",
           "imageUrl": null
         },
@@ -1140,7 +1140,7 @@
           "description": "想开发一Chrome浏览器插件，求一些中肯的建议！楼主Java后端程序员，以前兼职写过前端，cv键用的贼溜，懂一些vue和element，写过原生js插件，写过jQuery插件。最近不写Web前端已久，闲来无事想写Chrome插件玩玩，想为开源软件做一丢丢贡献，因此调研了些Chrome Extension的写法，发现其实Chrome Extension技术不难，全是Web端的技术栈，无外乎就是html和JavaScript，JavaScript主要是了解Chrome开放的api，所以写一Chrome插件变成了些一个浏览器应用。我的想法是写一个后端助手，在后端平时开发中做一些辅助之类的，功能点比如JSON校验，yaml和propertites配置文件转换，时间戳转换等，不知道社区有没有一些比较中肯的建议之类的。",
           "link": "https://juejin.cn/pin/7298325881731743784",
           "publishedOn": "2023-11-07T01:52:49.000Z",
-          "wordCount": 546,
+          "wordCount": 576,
           "title": "想开发一Chrome浏览器插件，求一些中肯的建议！楼主Java后端程序员，以前兼职写过前端，cv键用的贼溜，懂一些vue和element，写过原生js插件，写过jQuery插件。最...",
           "imageUrl": null
         },
@@ -1150,7 +1150,7 @@
           "description": "简单易用的多功能编辑器 1.0.0 版本已经发布，欢迎下载使用\nhttps://github.com/devlive-community/incubator-notepad/releases/tag/1.0.0",
           "link": "https://juejin.cn/pin/7297423930225623081",
           "publishedOn": "2023-11-05T07:53:20.000Z",
-          "wordCount": 541,
+          "wordCount": 571,
           "title": "简单易用的多功能编辑器 1.0.0 版本已经发布，欢迎下载使用 https://github.com/devlive-community/incubator-notepad/releases/tag/1.0.0",
           "imageUrl": null
         },
@@ -1160,7 +1160,7 @@
           "description": "FeatureProbe: 一款让你不再胆战心惊地发布新功能！可以随心切换功能、即时修复问题的开源项目。",
           "link": "https://juejin.cn/pin/7297044626099634185",
           "publishedOn": "2023-11-03T08:27:12.000Z",
-          "wordCount": 533,
+          "wordCount": 563,
           "title": "FeatureProbe: 一款让你不再胆战心惊地发布新功能！可以随心切换功能、即时修复问题的开源项目。",
           "imageUrl": null
         },
@@ -1170,7 +1170,7 @@
           "description": "有没有一种手机软件.  能自动收集 短信中的快递信息 ,这样能提醒拿快递. 进行归类显示 \n每次拿快递 得翻一遍短信,很麻烦",
           "link": "https://juejin.cn/pin/7296771769066307611",
           "publishedOn": "2023-11-03T01:34:19.000Z",
-          "wordCount": 558,
+          "wordCount": 594,
           "title": "有没有一种手机软件. 能自动收集 短信中的快递信息 ,这样能提醒拿快递. 进行归类显示 每次拿快递 得翻一遍短信,很麻烦",
           "imageUrl": null
         },
@@ -1180,7 +1180,7 @@
           "description": "有没有人日常开发已经用copilot了 ，感觉提效多吗？",
           "link": "https://juejin.cn/pin/7296738166379626522",
           "publishedOn": "2023-11-02T12:06:45.000Z",
-          "wordCount": 540,
+          "wordCount": 570,
           "title": "有没有人日常开发已经用copilot了 ，感觉提效多吗？",
           "imageUrl": null
         },
@@ -1190,7 +1190,7 @@
           "description": "功能强大的开源数据中台系统 DataCap 1.16.0 发布，优化元数据管理，编辑器功能更强大。\n欢迎下载使用\nhttps://datacap.edurt.io/release/latest.html",
           "link": "https://juejin.cn/pin/7296692742876741643",
           "publishedOn": "2023-11-02T09:58:43.000Z",
-          "wordCount": 548,
+          "wordCount": 578,
           "title": "功能强大的开源数据中台系统 DataCap 1.16.0 发布，优化元数据管理，编辑器功能更强大。 欢迎下载使用 https://datacap.edurt.io/release/latest.html",
           "imageUrl": null
         },
@@ -1200,7 +1200,7 @@
           "description": "jym，idea怎么设置项目右键出现的菜单栏不需要鼠标滚动也能看到所有选项，现在找个选项需要鼠标一直往后滑，我记得以前可以让所有选项都缩略到菜单栏上，不需要鼠标往后滑，但是我忘记怎么设置了",
           "link": "https://juejin.cn/pin/7296442264447828020",
           "publishedOn": "2023-11-02T05:49:53.000Z",
-          "wordCount": 529,
+          "wordCount": 565,
           "title": "jym，idea怎么设置项目右键出现的菜单栏不需要鼠标滚动也能看到所有选项，现在找个选项需要鼠标一直往后滑，我记得以前可以让所有选项都缩略到菜单栏上，不需要...",
           "imageUrl": null
         },
@@ -1210,7 +1210,7 @@
           "description": "xdm，你们mac用的什么软件连的远程服务器啊，现在用的这个finalShell，好难看啊",
           "link": "https://juejin.cn/pin/7296440993214103578",
           "publishedOn": "2023-11-02T02:43:25.000Z",
-          "wordCount": 528,
+          "wordCount": 558,
           "title": "xdm，你们mac用的什么软件连的远程服务器啊，现在用的这个finalShell，好难看啊",
           "imageUrl": null
         },
@@ -1220,7 +1220,7 @@
           "description": "今天又收到了一笔来自社区的回馈，我正在对微信或支付宝上的赞助者搭建一个感谢页，如果你赞助我，请备注或者联系我，留下你的github用户名，同时很高兴我的插件能帮助到更多的人去解决开发中的一些痛点，带来更好的开发体验🥰\nhttps://github.com/Simon-He95/sponsor",
           "link": "https://juejin.cn/pin/7296296611554033715",
           "publishedOn": "2023-11-01T10:13:24.000Z",
-          "wordCount": 537,
+          "wordCount": 573,
           "title": "今天又收到了一笔来自社区的回馈，我正在对微信或支付宝上的赞助者搭建一个感谢页，如果你赞助我，请备注或者联系我，留下你的github用户名，同时很高兴我的插件...",
           "imageUrl": null
         },
@@ -1250,7 +1250,7 @@
           "description": "下载量不理想[流泪]，xdm帮忙推广推广，免费好用哦～，别让作者桑心了",
           "link": "https://juejin.cn/pin/7295962144749813797",
           "publishedOn": "2023-10-31T10:40:57.000Z",
-          "wordCount": 538,
+          "wordCount": 574,
           "title": "下载量不理想[流泪]，xdm帮忙推广推广，免费好用哦～，别让作者桑心了",
           "imageUrl": null
         },
@@ -1260,7 +1260,7 @@
           "description": "移动端，深度链接deeplink几乎可以将用户从任何地方引导到特定App内的指定页面。\n其优势不言而喻，一方面能为用户移动端带来绝佳的体验，相比于传统链接，能够直接跳过许多无关紧要的点击和页面，直奔主题，直达目标页面；另一方面，能显著提高各场景带来的用户转化率和留存率。\n1、跨渠道、跨平台场景还原\n可用于实现场景：网页/H5跳转App、微信、微博、抖音、B站、爱奇艺、小红书等社交平台跳转App、二维码跳转App、短信跳转App、邮件跳转App、渠道跳转H5跳转App等场景。\n2、结合参数传递实现安装来源追踪\n（1）Web到App全链路数据追踪\n（2）自动绑定用户关系链\n推送门：https://www.openinstall.io/pullUp.html",
           "link": "https://juejin.cn/pin/7295948894327521289",
           "publishedOn": "2023-10-31T08:56:11.000Z",
-          "wordCount": 527,
+          "wordCount": 557,
           "title": "移动端，深度链接deeplink几乎可以将用户从任何地方引导到特定App内的指定页面。 其优势不言而喻，一方面能为用户移动端带来绝佳的体验，相比于传统链接，能够直...",
           "imageUrl": null
         },
