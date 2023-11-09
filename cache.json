@@ -34,7 +34,7 @@
           "description": "想要提高网页的加载体验，其实有个非常简单且实用的技巧，那就是改变请求资源的加载优先级，这也可以改变？没错！",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/img-js-preload-fetch-priority/",
           "publishedOn": "2023-10-29T15:55:41.000Z",
-          "wordCount": 940,
+          "wordCount": 944,
           "title": "聊聊Web网页中资源加载的优先级",
           "imageUrl": null
         },
@@ -44,7 +44,7 @@
           "description": "3年前有更新过JS剪裁audio音频，今天我们再讲讲如何使用原生的JS实现多个音频的拼接或合并，此文可是其他地方见不到的哟。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/",
           "publishedOn": "2023-10-10T14:53:25.000Z",
-          "wordCount": 1216,
+          "wordCount": 1221,
           "title": "纯JS实现多个音频的拼接或者合并",
           "imageUrl": null
         }
@@ -812,26 +812,6 @@
           "wordCount": 523,
           "title": "重庆市涪陵区发布大雾黄色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20231102/t20231102_526471844.html",
-          "author": "国家预警信息发布中心",
-          "description": "黔江区气象台2023年11月2日8时发布“大雾橙色预警信号”，预计2日8时至12时，我区全部乡镇将出现能见度小于200米的雾，局部地区能见度小于50米。请各地注意防范大雾天气可能造成的影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20231102/t20231102_526471844.html",
-          "publishedOn": "2023-11-02T00:11:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市黔江区发布大雾橙色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20231102/t20231102_526471819.html",
-          "author": "国家预警信息发布中心",
-          "description": "涪陵区气象台2023年11月2日07时20分发布“大雾橙色预警信号”，预计11月2日07时至12时，南沱镇、马鞍街道、李渡街道、江北街道、龙桥街道、白涛街道、敦仁街道、崇义街道、江东街道、清溪镇、义和街道、石沱镇、蔺市街道、荔枝街道将出现能见度小于200米的雾，局部地区能见度小于50米。请以上各地注意防范大雾天气可能造成的影响。防御指南：有关部门和单位按照职责做好防雾工作；机场、高速公路、轮渡码头等单位加强调度指挥；驾驶人员必须严格控制车、船的行进速度；减少户外活动。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20231102/t20231102_526471819.html",
-          "publishedOn": "2023-11-01T23:47:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市涪陵区发布大雾橙色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -873,7 +853,7 @@
           "description": "theme: awesome-green\nhighlight: an-old-hope\n本文为转载翻译文章。\n原文地址：https://dev.to/saviomartin/20-killer-javascript-one-liners-94f\n原文作者：Savio Martin\n今天，我想分享 20 个 令人惊叹的 JavaScript 一行代码，让你的工作更轻松。一起来看看吧！🚀\n1. 获取浏览器 Cookie 的值\n使用 document.cookie 来获取 Cookie 的值。\nconst cookie = name => `; ${document.cookie}`.split(`; ${name}=`).pop().split(';').shift();\n\ncookie('_ga');\n// Result: \"GA1.2.1929736587.1601974046\"\n\n2. 将 RGB 转换为十六进制\nconst rgbToHex = (r, g, b) => \"#\" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);\n\nrgbToHex(0, 51, 255);\n// Result: #0033ff`\n\n3. 复制到剪贴板\n使用 navigator.clipboard.writeText 轻松将任何文本复制到剪贴板上。\nconst copyToClipboard = (text) => navigator.clipboard.writeText(text);\ncopyToClipboard(\"Hello World\");\n\n4.检查日期是否有效\n使用以下代码段检查日期是否有效。\nconst isDateValid = (...val) => !Number.isNaN(new Da…",
           "link": "https://juejin.cn/post/7298342976576323595",
           "publishedOn": "2023-11-07T05:56:12.000Z",
-          "wordCount": 2229,
+          "wordCount": 2324,
           "title": "20 个令人惊叹的一行 JavaScript 代码",
           "imageUrl": null
         },
@@ -925,6 +905,16 @@
           "publishedOn": "2023-11-05T13:16:49.000Z",
           "wordCount": 2017,
           "title": "qiankun？这次我选了wujie！",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7297221276157280290",
+          "author": "小白Coding日志",
+          "description": "在技术的世界里，要用魔法来打败魔法\n说来惭愧我做前端已近三年了竟然还没有学会如何调试代码，也就是给自己的代码打上断点一步步看它的运行状态以达到理清代码运行逻辑、排查问题提升开发效率的目的。直到最近我才学会了这一技能，在这之前我用的还是在代码中用console.log的方式去调试，使用这种方法也不是不好，在大多数情况下它绝对适用，如果遇到稍微复杂点的代码执行逻辑console.log就显得力不从心了。根据我的经验来看使用console.log的优点是：简单便捷，比如你想查看某个变量的最新状态或者是查看从服务端返回的最新数据，你只需要在自己的代码中通过console.log将其打印出来即可，然后你在浏览器控制台中就能看见打印的效果。缺点是：让代码看上去混乱，比如我为了调试某段代码而写了很多个console.log而调试完之后我又忘了将它们删除，往往我就是这样的一个人，放眼望去代码中到处是console.log看上去很乱；再一个就是如果是复杂逻辑并不适用console.log例如复杂的条件语句、一个方法的执行依赖其他方法，这些显然无法胜任，因为无法看到代码每一步的执行状态。我觉得作为一名合格的前端一定要掌握前端调试的技能，会了调试你的开发效率就会提高，而且如果想进阶看一看框架源码的话调试技能也是必备的。\n我是如何学会前端调试的？\n我经常看到别人调试代码的时候就好羡慕咔咔咔一顿操作感觉好厉害啊，可自己就是学不会不善于使用断点的方式调试代码，觉得这玩意儿操作起来好复杂，还不如我的console.log用的顺手呢，就这样我一直呆在自己的舒适区，直到有一天我接触到了源码相关的知识方才意识到学会调试的重要性，后来我在掘金上买了前端调试的小册开始了我的前端调试之路。也是在最近一周我学会了调试的技能，学完之后就立刻派上了用场，断点调试其实也没有想象的那么复杂，你在需要断点的位置打上一个断点就行然后代码执行到哪里就会自动的进入断点的，在断点上你可以查看变量的值，参数的最新状态等等。遇到问题后一个断点就能快速的定位到问题所在。\n如何进行前端代码调试？\n我开发使用的是vue3所以就以vue3项目为例来开启一个调试，首先用VSCode打开一个vue3项目，在左侧侧边栏找到点击调试按钮，点击创建一个launch.json调试配置文件。如果找不到那个调试的按钮可以在侧边栏上鼠标右击在弹出的框中把运行和调试勾上就行了。\n          \n然后在弹出的下拉框中选择Chrome会创建一个文件，然后将url改为你自己启动的前端服务即可，比我的前端服务是http://localhost:3000 改为对应的就行了。\n\n\n点击这里会打开一个新的浏览器窗口，就能够开启调试\n            \n    \n上面的几个按钮分别对应的是 ：继续执行、单步执行、进入函数调用、跳出函数调用、重启、关闭调试。它是悬浮在vscod中的，如果觉得它挡住了打开的某个文件可以把鼠标放到最左侧六个小方块上面把它移动到别的位置上去，刚开始我还以为它不能动是固定在哪里的呢。\n如何打断点？\n在你想打断点的代码前面的位置点击一下就能看到一个红色的小点，证明这里已经打上断点了，比如我在main.js文件中这个位置上打了一个断点想看一下orderStatus中都有些什么，然后再点击上面的重启按钮。\n此时代码已经在断点处断住了，你就可以在这里查看orderStatus中都有些什么，这样直接在vscode中就可以查看，而不需要频繁切换浏览器与vscode的窗口\n\n\n在vscode的左侧面板还可以查看当前变量、调用堆栈、断点情况这些信息一目了然，极大地提升了我们的开发效率。这样就能愉快的编写代码边调试了，遇到什么问题一调试便知问题所在。\n这东西光看一遍可不行，还是得上手操作才行，在日常工作中将它用起来，所谓熟能生巧嘛！多多练习就能掌握这一技能。",
+          "link": "https://juejin.cn/post/7297221276157280290",
+          "publishedOn": "2023-11-05T01:51:10.000Z",
+          "wordCount": 767,
+          "title": "我终于学会的前端技能——代码调试、打断点",
           "imageUrl": null
         },
         {
@@ -1008,16 +998,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7296345202238717992",
-          "author": "亿元程序员",
-          "description": "点击上方亿元程序员+关注和★星标\n\n引言\n大家好，我是亿元程序员，一位有着8年游戏行业经验的主程。\n近期，国产真人恋爱影视游戏**《完蛋！我被美女包围了》连续多日荣登Steam国区畅销榜首**。这款游戏力压了一众热门免费游戏，如《PUBG》、《CS2》和《Apex》，稳居国区畅销榜首。\n想体验一下游戏，但是花钱是不可能花钱的，于是我用Cocos做了一个Demo实现真人互动影像游戏。\n本文源码和源工程在文末获取，小伙伴们自行前往。仅供学习与交流，请勿用作其他用途。\n1.准备素材\n1.首先我们录制一下游戏中分蛋糕的名场面。\n\n2.然后把游戏录屏拆分成几个小片段。\n其中包括:\n1.将蛋糕拿起来片段。\n2.选择人物片段。\n3.分别递给3个人物蛋糕的片段。\n\n下面我们先看看实现原理\n2.实现原理\n1.组件\n要想用Cocos实现真人互动影像游戏，我们可以利用Cocos的cc.VideoPlayer组件。然后通过在上面添加点击事件去做一些逻辑响应。\n\n2.遇到问题\n无论我们怎么调整节点位置，发现cc.VideoPlayer组件都是在界面的最上层，包括修改节点的zIndex。这样没办法在视频上方添加UI或者一些局部点击事件。\n\n3.解决办法\n首先要勾选cc.VideoPlayer组件中的StayOnBottom，这个设置是保证cc.VideoPlayer组件置于最底部。\n\n然后Cocos2.X版本需要在Cocos安装目录中搜索boot.js，找到resources\\static\\preview-templates目录下的boot.js文件。\n\n打开boot.js文件并且在cc.game.run之前添加cc.macro.ENABLE_TRANSPARENT_CANVAS = true;开启支持全透明。\n\nCocos3.X版本可以直接在项目设置-MarcoConfigurations中勾选EN…",
-          "link": "https://juejin.cn/post/7296345202238717992",
-          "publishedOn": "2023-11-02T00:41:01.000Z",
-          "wordCount": 992,
-          "title": "我被美女包围了Cocos源码？",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7296330137284788275",
           "author": "zxg_神说要有光",
           "description": "Next.js 是 React 的全栈框架，主打服务端渲染，也就是 SSR（Server Side Rendering）。\n它有一套非常强大但也很奇怪的路由机制。\n这套路由机制是什么样的？为什么又说很奇怪呢？\n我们试一下就知道了。\n先创建个 Next.js 项目：\nnpx create-next-app@latest\n\n\n执行 create-next-app，输入一些信息，Next.js 项目就创建好了。\n进入项目，执行 npm run dev，把它跑起来：\n\n浏览器访问可以看到这个页面，就代表跑成功了：\n\n在项目下可以看到 src 下有个 app 目录，下面有 page.tsx：\n\n我们添加几个目录：\n\nguang/liu/page.tsx\nexport default function Liu() {\n  return <div>666</div>\n}\n\nguang/shuai/page.tsx\nexport default function Shuai() {\n    return <div>帅</div>\n}\n\n然后浏览器访问下：\n\n\n可以看到，添加了几个目录，就自动多了几个对应的路由。\n这就是 Next.js 的基于文件系统的路由。\n刚学了 page.tsx 是定义页面的，那如果多个页面有公共部分呢？\n比如这种菜单和导航：\n\n肯定不是每个页面一份。\n这种定义在 layout.tsx 里。\napp/layout.tsx 是定义最外层的布局：\n也就是 html 结构，还有 title、description 等信息：\n\n在网页的 html 源码里可以看到这些：\n\n\n我们改一下试试：\n\n\n不止是根路由可以定义 layout，每一级都可以：\n\nexport default function Layout({\n  children,\n}: {\n  children: Rea…",
@@ -1060,7 +1040,7 @@
           "description": "jym, 最近摸鱼做了一个gpt4 小程序 还有很多功能没做 有兴趣的小伙伴可以一起搞搞事情~ 已经出了第一版了 微信搜 GF聊天  可以先看下哈决定是否加入[呲牙]",
           "link": "https://juejin.cn/pin/7298918307746283558",
           "publishedOn": "2023-11-08T07:43:32.000Z",
-          "wordCount": 565,
+          "wordCount": null,
           "title": "jym, 最近摸鱼做了一个gpt4 小程序 还有很多功能没做 有兴趣的小伙伴可以一起搞搞事情~ 已经出了第一版了 微信搜 GF聊天 可以先看下哈决定是否加入[呲牙]",
           "imageUrl": null
         },
@@ -1070,7 +1050,7 @@
           "description": "[7073670907851440160#新人报道#]",
           "link": "https://juejin.cn/pin/7298669054638424115",
           "publishedOn": "2023-11-08T01:21:03.000Z",
-          "wordCount": 512,
+          "wordCount": 506,
           "title": "[7073670907851440160#新人报道#]",
           "imageUrl": null
         },

@@ -187,8 +187,6 @@
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>jym, 最近摸鱼做了一个gpt4 小程序 还有很多功能没做 有兴趣的小伙伴可以一起搞搞事情~ 已经出了第一版了 微信搜 GF聊天  可以先看下哈决定是否加入[呲牙]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -591,7 +589,7 @@ copyToClipboard(&quot;Hello World&quot;);
 4.检查日期是否有效
 使用以下代码段检查日期是否有效。
 const isDateValid &#x3D; (...val) &#x3D;&gt; !Number.isNaN(new Da…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                &ensp;<span class="article-reading-time">(&hairsp;8
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1131,6 +1129,45 @@ C： Vue3 + Vite2 + ant-design-vue@3.2.20：为了响应领导“统一前端UI�
 我：我看过他的代码，没有什么大问题，都是一些细节方面的小bug，而且还有别的微前端方案可以选择。
 领导：行，你安排一下…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7297221276157280290"
+                        open
+                      >
+                        <summary class="article-expander__title">我终于学会的前端技能——代码调试、打断点</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7297221276157280290">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>在技术的世界里，要用魔法来打败魔法
+说来惭愧我做前端已近三年了竟然还没有学会如何调试代码，也就是给自己的代码打上断点一步步看它的运行状态以达到理清代码运行逻辑、排查问题提升开发效率的目的。直到最近我才学会了这一技能，在这之前我用的还是在代码中用console.log的方式去调试，使用这种方法也不是不好，在大多数情况下它绝对适用，如果遇到稍微复杂点的代码执行逻辑console.log就显得力不从心了。根据我的经验来看使用console.log的优点是：简单便捷，比如你想查看某个变量的最新状态或者是查看从服务端返回的最新数据，你只需要在自己的代码中通过console.log将其打印出来即可，然后你在浏览器控制台中就能看见打印的效果。缺点是：让代码看上去混乱，比如我为了调试某段代码而写了很多个console.log而调试完之后我又忘了将它们删除，往往我就是这样的一个人，放眼望去代码中到处是console.log看上去很乱；再一个就是如果是复杂逻辑并不适用console.log例如复杂的条件语句、一个方法的执行依赖其他方法，这些显然无法胜任，因为无法看到代码每一步的执行状态。我觉得作为一名合格的前端一定要掌握前端调试的技能，会了调试你的开发效率就会提高，而且如果想进阶看一看框架源码的话调试技能也是必备的。
+我是如何学会前端调试的？
+我经常看到别人调试代码的时候就好羡慕咔咔咔一顿操作感觉好厉害啊，可自己就是学不会不善于使用断点的方式调试代码，觉得这玩意儿操作起来好复杂，还不如我的console.log用的顺手呢，就这样我一直呆在自己的舒适区，直到有一天我接触到了源码相关的知识方才意识到学会调试的重要性，后来我在掘金上买了前端调试的小册开始了我的前端调试之路。也是在最近一周我学会了调试的技能，学完之后就立刻派上了用场，断点调试其实也没有想象的那么复杂，你在需要断点的位置打上一个断点就行然后代码执行到哪里就会自动的进入断点的，在断点上你可以查看变量的值，参数的最新状态等等。遇到问题后一个断点就能快速的定位到问题所在。
+如何进行前端代码调试？
+我开发使用的是vue3所以就以vue3项目为例来开启一个调试，首先用VSCode打开一个vue3项目，在左侧侧边栏找到点击调试按钮，点击创建一个launch.json调试配置文件。如果找不到那个调试的按钮可以在侧边栏上鼠标右击在弹出的框中把运行和调试勾上就行了。
+          
+然后在弹出的下拉框中选择Chrome会创建一个文件，然后将url改为你自己启动的前端服务即可，比我的前端服务是http://localhost:3000 改为对应的就行了。
+
+
+点击这里会打开一个新的浏览器窗口，就能够开启调试
+            
+    
+上面的几个按钮分别对应的是 ：继续执行、单步执行、进入函数调用、跳出函数调用、重启、关闭调试。它是悬浮在vscod中的，如果觉得它挡住了打开的某个文件可以把鼠标放到最左侧六个小方块上面把它移动到别的位置上去，刚开始我还以为它不能动是固定在哪里的呢。
+如何打断点？
+在你想打断点的代码前面的位置点击一下就能看到一个红色的小点，证明这里已经打上断点了，比如我在main.js文件中这个位置上打了一个断点想看一下orderStatus中都有些什么，然后再点击上面的重启按钮。
+此时代码已经在断点处断住了，你就可以在这里查看orderStatus中都有些什么，这样直接在vscode中就可以查看，而不需要频繁切换浏览器与vscode的窗口
+
+
+在vscode的左侧面板还可以查看当前变量、调用堆栈、断点情况这些信息一目了然，极大地提升了我们的开发效率。这样就能愉快的编写代码边调试了，遇到什么问题一调试便知问题所在。
+这东西光看一遍可不行，还是得上手操作才行，在日常工作中将它用起来，所谓熟能生巧嘛！多多练习就能掌握这一技能。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2107,25 +2144,6 @@ https://youtu.be/2Ggf45daK7k?si&#x3D;ZxrjR5o2PIMOpM7W</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20231102/t20231102_526471844.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市黔江区发布大雾橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20231102/t20231102_526471844.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>黔江区气象台2023年11月2日8时发布“大雾橙色预警信号”，预计2日8时至12时，我区全部乡镇将出现能见度小于200米的雾，局部地区能见度小于50米。请各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -2406,56 +2424,6 @@ javascript…</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7296345202238717992"
-                        open
-                      >
-                        <summary class="article-expander__title">我被美女包围了Cocos源码？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7296345202238717992">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>点击上方亿元程序员+关注和★星标
-
-引言
-大家好，我是亿元程序员，一位有着8年游戏行业经验的主程。
-近期，国产真人恋爱影视游戏**《完蛋！我被美女包围了》连续多日荣登Steam国区畅销榜首**。这款游戏力压了一众热门免费游戏，如《PUBG》、《CS2》和《Apex》，稳居国区畅销榜首。
-想体验一下游戏，但是花钱是不可能花钱的，于是我用Cocos做了一个Demo实现真人互动影像游戏。
-本文源码和源工程在文末获取，小伙伴们自行前往。仅供学习与交流，请勿用作其他用途。
-1.准备素材
-1.首先我们录制一下游戏中分蛋糕的名场面。
-
-2.然后把游戏录屏拆分成几个小片段。
-其中包括:
-1.将蛋糕拿起来片段。
-2.选择人物片段。
-3.分别递给3个人物蛋糕的片段。
-
-下面我们先看看实现原理
-2.实现原理
-1.组件
-要想用Cocos实现真人互动影像游戏，我们可以利用Cocos的cc.VideoPlayer组件。然后通过在上面添加点击事件去做一些逻辑响应。
-
-2.遇到问题
-无论我们怎么调整节点位置，发现cc.VideoPlayer组件都是在界面的最上层，包括修改节点的zIndex。这样没办法在视频上方添加UI或者一些局部点击事件。
-
-3.解决办法
-首先要勾选cc.VideoPlayer组件中的StayOnBottom，这个设置是保证cc.VideoPlayer组件置于最底部。
-
-然后Cocos2.X版本需要在Cocos安装目录中搜索boot.js，找到resources\static\preview-templates目录下的boot.js文件。
-
-打开boot.js文件并且在cc.game.run之前添加cc.macro.ENABLE_TRANSPARENT_CANVAS &#x3D; true;开启支持全透明。
-
-Cocos3.X版本可以直接在项目设置-MarcoConfigurations中勾选EN…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -2560,44 +2528,11 @@ https://datacap.edurt.io/release/latest.html</span>
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-01 datetime="2023-11-01T23:47:00.000Z">2023-11-01</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-01 datetime="2023-11-01T23:47:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-01 datetime="2023-11-01T23:36:23.000Z">2023-11-01</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-01 datetime="2023-11-01T23:36:23.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >国家应急广播 - 重庆预警信息</button>
-                  <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20231102/t20231102_526471819.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市涪陵区发布大雾橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20231102/t20231102_526471819.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>涪陵区气象台2023年11月2日07时20分发布“大雾橙色预警信号”，预计11月2日07时至12时，南沱镇、马鞍街道、李渡街道、江北街道、龙桥街道、白涛街道、敦仁街道、崇义街道、江东街道、清溪镇、义和街道、石沱镇、蔺市街道、荔枝街道将出现能见度小于200米的雾，局部地区能见度小于50米。请以上各地注意防范大雾天气可能造成的影响。防御指南：有关部门和单位按照职责做好防雾工作；机场、高速公路、轮渡码头等单位加强调度指挥；驾驶人员必须严格控制车、船的行进速度；减少户外活动。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -4578,8 +4513,8 @@ ECH 非常巧妙地解决了域名加密。它采用双层格式，也就是说�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6804420639">
-        <time id="build-timestamp" datetime="2023-11-08T21:53:31.705Z">2023-11-08T21:53:31.705Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6806080757">
+        <time id="build-timestamp" datetime="2023-11-09T01:16:02.052Z">2023-11-09T01:16:02.052Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
