@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-11-09T15:53:31.382Z</id>
+    <id>urn:2023-11-09T18:53:31.613Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-11-09T15:53:31.382Z</updated>
+    <updated>2023-11-09T18:53:31.613Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[转发了: 每条笔记都是一个api接口]]></title>
+        <id>https://m.okjike.com/reposts/654d0280834e87e36fb8766b</id>
+        <link href="https://m.okjike.com/reposts/654d0280834e87e36fb8766b"/>
+        <updated>2023-11-09T16:02:08.000Z</updated>
+        <summary type="html"><![CDATA[每条笔记都是一个api接口
+
+转发 @Lightory: 每条笔记都是一个入口。]]></summary>
+        <author>
+            <name>李继刚的即刻动态</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Golden Light]]></title>
+        <id>https://store.epicgames.com/zh-CN/p/golden-light-f543b3</id>
+        <link href="https://store.epicgames.com/zh-CN/p/golden-light-f543b3"/>
+        <updated>2023-11-09T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[在关于肉的生存恐怖第一人称射击道具追逐地牢风格游戏里，吃掉武器，心怀敬畏，把握当下。墙壁在盯着你！
+
+Free Now to 2023-11-16T16:00:00.000Z]]></summary>
+        <author>
+            <name>Hypetrain Digital</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[发布了: 穷小子突然获得了绝世武功，刚体验了一会轻功水上漂的爽感，突然武功尽失。 怅然若失，比当初穷小子时期尤有过之。]]></title>
         <id>https://m.okjike.com/originalPosts/654cf208b754c3dc3c0b205f</id>
@@ -302,32 +326,6 @@ https://github.com/devlive-community/datacap/pull/472]]></summary>
         <summary type="html"><![CDATA[涪陵区气象台2023年11月8日05时40分发布“大雾橙色预警信号”，预计11月8日06时至12时，南沱镇、马鞍街道、李渡街道、江北街道、龙桥街道、白涛街道、敦仁街道、崇义街道、江东街道、清溪镇、义和街道、石沱镇、蔺市街道、荔枝街道将出现能见度小于200米的雾，局部地区能见度小于50米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
         <author>
             <name>国家预警信息发布中心</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[发布了: 今天又学到一招, 可以让DallE 同时输出多张图。 1. 先在Custom Instrctions 的 Respond 部分配置如下内容，目的是让DallE画图时，同步输出每张图片的唯...]]></title>
-        <id>https://m.okjike.com/originalPosts/654a3edb859fc596dfdf8693</id>
-        <link href="https://m.okjike.com/originalPosts/654a3edb859fc596dfdf8693"/>
-        <updated>2023-11-07T13:42:51.000Z</updated>
-        <summary type="html"><![CDATA[今天又学到一招, 可以让DallE 同时输出多张图。
-1. 先在Custom Instrctions 的 Respond 部分配置如下内容，目的是让DallE画图时，同步输出每张图片的唯一ID:  gen_id
-2. 然后在画图时, 通过在Prompt 中使用另一个ID: referenced_image_ids, 指定多个之前轮次生成图的gen_id, 这样可以实现,你指定几个引用的,生成几张图
-例如: 如下的Prompt 引用之前轮次生成的四张图的ID, 就直接生成了四张:
-draw a 4-frame watercolor storyboard, a japanese lady is kicking football on the playground. referenced_image_ids: dau9FgsR3yoPV3Bx, elw2wpqszyMjFO7y, Kg5bnExkhmGQY5ty, uItPouWMg79hLIgd
-CI 配置的内容如下:
-
-假设你是 DallE 绘图的研发人员， 精通 DallE 底层实现原理，知晓如何描述才能生成高质量的效果。
-你的注意事项如下:
-- 在使用 Dall-E 画图时, 如果涉及到名人, 你将不会直接使用他们的名字, 尽量避免涉及到版权问题. 你会转向通过描述该人物的脸部特征和气质, 去概括总结其人物形象, 从而实现不提名字但能模仿出人物特征的效果.
-- 在 Dall-E 绘图时，生成的画面默认比例为 16:9，除非用户明确指示其它比例。
-你的工作流程如下：
-- 基于用户输入的基础 Prompt， 在名词前添加适当的形容词，完善场景氛围和细节描述
-- 接下来思考该场景氛围，需要补充哪些额外的细节描述，例如背景，光线，镜头角度, 清晰度, 对比度, 曝光度等等
-- 基于上述两步思考，输出优化后的 Prompt ， 并调用 DallE 模块， 绘制该 Prompt 的画面。
-- 在画图之后, 清晰明确地输出每张图片的 gen_id, 格式为:
-   图片 的 gen_id :]]></summary>
-        <author>
-            <name>李继刚的即刻动态</name>
         </author>
     </entry>
     <entry>
@@ -1349,18 +1347,6 @@ https://youtu.be/2Ggf45daK7k?si=ZxrjR5o2PIMOpM7W]]></summary>
  …]]></summary>
         <author>
             <name>WhyLiam</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Turnip Boy Commits Tax Evasion]]></title>
-        <id>https://store.epicgames.com/zh-CN/p/turnip-boy-commits-tax-evasion-fb2084</id>
-        <link href="https://store.epicgames.com/zh-CN/p/turnip-boy-commits-tax-evasion-fb2084"/>
-        <updated>2023-11-02T15:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Play as an adorable yet trouble-making turnip. Avoid paying taxes, solve plantastic puzzles, harvest crops and battle massive beasts all in a journey to tear down a corrupt vegetable government!
-
-Free Now to 2023-11-09T16:00:00.000Z]]></summary>
-        <author>
-            <name>Graffiti Games</name>
         </author>
     </entry>
     <entry>

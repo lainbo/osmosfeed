@@ -200,6 +200,16 @@
       "siteUrl": "https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36",
       "articles": [
         {
+          "id": "https://m.okjike.com/reposts/654d0280834e87e36fb8766b",
+          "author": null,
+          "description": "每条笔记都是一个api接口\n\n转发 @Lightory: 每条笔记都是一个入口。",
+          "link": "https://m.okjike.com/reposts/654d0280834e87e36fb8766b",
+          "publishedOn": "2023-11-09T16:02:08.000Z",
+          "wordCount": 408,
+          "title": "转发了: 每条笔记都是一个api接口",
+          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/654cf208b754c3dc3c0b205f",
           "author": null,
           "description": "穷小子突然获得了绝世武功，刚体验了一会轻功水上漂的爽感，突然武功尽失。\n怅然若失，比当初穷小子时期尤有过之。",
@@ -225,7 +235,7 @@
           "description": "一位身披鲜艳红色斗篷的人物凌空悬浮在大型金字塔的内部宫殿入口台阶上，背对一群穿着统一白色服装，坐在地上有序排列的人群。场景中强烈的自然光从左上角照进，形成戏剧性的光与影的对比，整个画面色彩对比鲜明，渲染出一种神秘和仪式感的氛围。",
           "link": "https://m.okjike.com/originalPosts/654cd005859fc596df16425e",
           "publishedOn": "2023-11-09T12:26:45.000Z",
-          "wordCount": 477,
+          "wordCount": 478,
           "title": "发布了: 一位身披鲜艳红色斗篷的人物凌空悬浮在大型金字塔的内部宫殿入口台阶上，背对一群穿着统一白色服装，坐在地上有序排列的人群。场景中强烈的自然光从左上...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FvWkvOst4jb28s0j_v8r52qSjszUv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
         },
@@ -255,7 +265,7 @@
           "description": "以前是「人人都是产品经理」\n现在是「人人都是程序员」",
           "link": "https://m.okjike.com/originalPosts/654c79b484bcbc4a46e2a324",
           "publishedOn": "2023-11-09T06:18:28.000Z",
-          "wordCount": 446,
+          "wordCount": 449,
           "title": "发布了: 以前是「人人都是产品经理」 现在是「人人都是程序员」",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -288,16 +298,6 @@
           "wordCount": 478,
           "title": "发布了: 一张照片, 一个日本动漫脸的真人女孩, 正在以战斗姿势起势。画面中结合了水墨美学和武术美学， 通过单色调色板和渐变的水墨笔触， 展示了水墨画的柔和质...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FhmyX5bceTkhSrbf8yddll8fJ8anv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/654a3edb859fc596dfdf8693",
-          "author": null,
-          "description": "今天又学到一招, 可以让DallE 同时输出多张图。\n1. 先在Custom Instrctions 的 Respond 部分配置如下内容，目的是让DallE画图时，同步输出每张图片的唯一ID:  gen_id\n2. 然后在画图时, 通过在Prompt 中使用另一个ID: referenced_image_ids, 指定多个之前轮次生成图的gen_id, 这样可以实现,你指定几个引用的,生成几张图\n例如: 如下的Prompt 引用之前轮次生成的四张图的ID, 就直接生成了四张:\ndraw a 4-frame watercolor storyboard, a japanese lady is kicking football on the playground. referenced_image_ids: dau9FgsR3yoPV3Bx, elw2wpqszyMjFO7y, Kg5bnExkhmGQY5ty, uItPouWMg79hLIgd\nCI 配置的内容如下:\n\n假设你是 DallE 绘图的研发人员， 精通 DallE 底层实现原理，知晓如何描述才能生成高质量的效果。\n你的注意事项如下:\n- 在使用 Dall-E 画图时, 如果涉及到名人, 你将不会直接使用他们的名字, 尽量避免涉及到版权问题. 你会转向通过描述该人物的脸部特征和气质, 去概括总结其人物形象, 从而实现不提名字但能模仿出人物特征的效果.\n- 在 Dall-E 绘图时，生成的画面默认比例为 16:9，除非用户明确指示其它比例。\n你的工作流程如下：\n- 基于用户输入的基础 Prompt， 在名词前添加适当的形容词，完善场景氛围和细节描述\n- 接下来思考该场景氛围，需要补充哪些额外的细节描述，例如背景，光线，镜头角度, 清晰度, 对比度, 曝光度等等\n- 基于上述两步思考，输出优化后的 Prompt ， 并调用 DallE 模块， 绘制该 Prompt 的画面。\n- 在画图之后, 清晰明确地输出每张图片的 gen_id, 格式为:\n   图片 的 gen_id :",
-          "link": "https://m.okjike.com/originalPosts/654a3edb859fc596dfdf8693",
-          "publishedOn": "2023-11-07T13:42:51.000Z",
-          "wordCount": 614,
-          "title": "发布了: 今天又学到一招, 可以让DallE 同时输出多张图。 1. 先在Custom Instrctions 的 Respond 部分配置如下内容，目的是让DallE画图时，同步输出每张图片的唯...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FqDlC8ow8lVp3MlBeyiKWRg08hMqv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         }
       ]
     },
@@ -861,13 +861,13 @@
       "siteUrl": "https://store.epicgames.com/zh-CN/free-games?lang=zh-CN",
       "articles": [
         {
-          "id": "https://store.epicgames.com/zh-CN/p/turnip-boy-commits-tax-evasion-fb2084",
-          "author": "Graffiti Games",
-          "description": "Play as an adorable yet trouble-making turnip. Avoid paying taxes, solve plantastic puzzles, harvest crops and battle massive beasts all in a journey to tear down a corrupt vegetable government!\n\nFree Now to 2023-11-09T16:00:00.000Z",
-          "link": "https://store.epicgames.com/zh-CN/p/turnip-boy-commits-tax-evasion-fb2084",
-          "publishedOn": "2023-11-02T15:00:00.000Z",
+          "id": "https://store.epicgames.com/zh-CN/p/golden-light-f543b3",
+          "author": "Hypetrain Digital",
+          "description": "在关于肉的生存恐怖第一人称射击道具追逐地牢风格游戏里，吃掉武器，心怀敬畏，把握当下。墙壁在盯着你！\n\nFree Now to 2023-11-16T16:00:00.000Z",
+          "link": "https://store.epicgames.com/zh-CN/p/golden-light-f543b3",
+          "publishedOn": "2023-11-09T16:00:00.000Z",
           "wordCount": null,
-          "title": "Turnip Boy Commits Tax Evasion",
+          "title": "Golden Light",
           "imageUrl": null
         }
       ]
@@ -1090,7 +1090,7 @@
           "description": "2023.2.4 的IDEA根本安装不了 JRebel，我试了好几个版本了，激活一直报 LS client not configured，而且在 marketplace 上面 JRebel 的版本只能下载 2023.2.0 的版本，网上说要下载 2022.4.1 的版本现在都下载不了了。",
           "link": "https://juejin.cn/pin/7299346813257760802",
           "publishedOn": "2023-11-09T10:00:49.000Z",
-          "wordCount": 587,
+          "wordCount": 593,
           "title": "2023.2.4 的IDEA根本安装不了 JRebel，我试了好几个版本了，激活一直报 LS client not configured，而且在 marketplace 上面 JRebel 的版本只能下载 2023.2.0 的...",
           "imageUrl": null
         },
@@ -1100,7 +1100,7 @@
           "description": "功能强大的开源数据中台系统 DataCap 又一新功能开发完成，6️⃣ 6️⃣ 6️⃣\nhttps://github.com/devlive-community/datacap/pull/472",
           "link": "https://juejin.cn/pin/7299049580346458153",
           "publishedOn": "2023-11-09T04:36:40.000Z",
-          "wordCount": 579,
+          "wordCount": 585,
           "title": "功能强大的开源数据中台系统 DataCap 又一新功能开发完成，6️⃣ 6️⃣ 6️⃣ https://github.com/devlive-community/datacap/pull/472",
           "imageUrl": null
         },
@@ -1110,7 +1110,7 @@
           "description": "[7073670907851440160#新人报道#]",
           "link": "https://juejin.cn/pin/7298669054638424115",
           "publishedOn": "2023-11-08T01:21:03.000Z",
-          "wordCount": 509,
+          "wordCount": 510,
           "title": "[7073670907851440160#新人报道#]",
           "imageUrl": null
         },
@@ -1120,7 +1120,7 @@
           "description": "Mac Mini 2 8G的配置，学习和做一些简单的IOS开发，偶尔用PS修个图画插图。配置够吗？有一个主力机Windows，日常大工作量都在win上。",
           "link": "https://juejin.cn/pin/7298629051207106594",
           "publishedOn": "2023-11-07T08:37:41.000Z",
-          "wordCount": 586,
+          "wordCount": 592,
           "title": "Mac Mini 2 8G的配置，学习和做一些简单的IOS开发，偶尔用PS修个图画插图。配置够吗？有一个主力机Windows，日常大工作量都在win上。",
           "imageUrl": null
         },
@@ -1140,7 +1140,7 @@
           "description": "想开发一Chrome浏览器插件，求一些中肯的建议！楼主Java后端程序员，以前兼职写过前端，cv键用的贼溜，懂一些vue和element，写过原生js插件，写过jQuery插件。最近不写Web前端已久，闲来无事想写Chrome插件玩玩，想为开源软件做一丢丢贡献，因此调研了些Chrome Extension的写法，发现其实Chrome Extension技术不难，全是Web端的技术栈，无外乎就是html和JavaScript，JavaScript主要是了解Chrome开放的api，所以写一Chrome插件变成了些一个浏览器应用。我的想法是写一个后端助手，在后端平时开发中做一些辅助之类的，功能点比如JSON校验，yaml和propertites配置文件转换，时间戳转换等，不知道社区有没有一些比较中肯的建议之类的。",
           "link": "https://juejin.cn/pin/7298325881731743784",
           "publishedOn": "2023-11-07T01:52:49.000Z",
-          "wordCount": 576,
+          "wordCount": 572,
           "title": "想开发一Chrome浏览器插件，求一些中肯的建议！楼主Java后端程序员，以前兼职写过前端，cv键用的贼溜，懂一些vue和element，写过原生js插件，写过jQuery插件。最...",
           "imageUrl": null
         },
@@ -1150,7 +1150,7 @@
           "description": "简单易用的多功能编辑器 1.0.0 版本已经发布，欢迎下载使用\nhttps://github.com/devlive-community/incubator-notepad/releases/tag/1.0.0",
           "link": "https://juejin.cn/pin/7297423930225623081",
           "publishedOn": "2023-11-05T07:53:20.000Z",
-          "wordCount": 571,
+          "wordCount": 577,
           "title": "简单易用的多功能编辑器 1.0.0 版本已经发布，欢迎下载使用 https://github.com/devlive-community/incubator-notepad/releases/tag/1.0.0",
           "imageUrl": null
         },
@@ -1160,7 +1160,7 @@
           "description": "FeatureProbe: 一款让你不再胆战心惊地发布新功能！可以随心切换功能、即时修复问题的开源项目。",
           "link": "https://juejin.cn/pin/7297044626099634185",
           "publishedOn": "2023-11-03T08:27:12.000Z",
-          "wordCount": 563,
+          "wordCount": 569,
           "title": "FeatureProbe: 一款让你不再胆战心惊地发布新功能！可以随心切换功能、即时修复问题的开源项目。",
           "imageUrl": null
         },
@@ -1180,7 +1180,7 @@
           "description": "有没有人日常开发已经用copilot了 ，感觉提效多吗？",
           "link": "https://juejin.cn/pin/7296738166379626522",
           "publishedOn": "2023-11-02T12:06:45.000Z",
-          "wordCount": 570,
+          "wordCount": 576,
           "title": "有没有人日常开发已经用copilot了 ，感觉提效多吗？",
           "imageUrl": null
         },
@@ -1190,7 +1190,7 @@
           "description": "功能强大的开源数据中台系统 DataCap 1.16.0 发布，优化元数据管理，编辑器功能更强大。\n欢迎下载使用\nhttps://datacap.edurt.io/release/latest.html",
           "link": "https://juejin.cn/pin/7296692742876741643",
           "publishedOn": "2023-11-02T09:58:43.000Z",
-          "wordCount": 578,
+          "wordCount": 584,
           "title": "功能强大的开源数据中台系统 DataCap 1.16.0 发布，优化元数据管理，编辑器功能更强大。 欢迎下载使用 https://datacap.edurt.io/release/latest.html",
           "imageUrl": null
         },
@@ -1210,7 +1210,7 @@
           "description": "xdm，你们mac用的什么软件连的远程服务器啊，现在用的这个finalShell，好难看啊",
           "link": "https://juejin.cn/pin/7296440993214103578",
           "publishedOn": "2023-11-02T02:43:25.000Z",
-          "wordCount": 558,
+          "wordCount": 564,
           "title": "xdm，你们mac用的什么软件连的远程服务器啊，现在用的这个finalShell，好难看啊",
           "imageUrl": null
         },
@@ -1230,7 +1230,7 @@
           "description": "[7018942344208580646#1024一起掘金#] 害怕electron的体积？恐惧tauri的上手难度？这里有个折中方案，neutralinojs，体积跟tauri一样小，开发难度比electron还低，小工具，小产品，值得一试，上车！",
           "link": "https://juejin.cn/pin/7296165821595533348",
           "publishedOn": "2023-11-01T02:00:45.000Z",
-          "wordCount": 526,
+          "wordCount": 529,
           "title": "[7018942344208580646#1024一起掘金#] 害怕electron的体积？恐惧tauri的上手难度？这里有个折中方案，neutralinojs，体积跟tauri一样小，开发难度比electron还低...",
           "imageUrl": null
         },
@@ -1240,7 +1240,7 @@
           "description": "[7018942344208580646#1024一起掘金#] 现代化的浏览器扩展开发模板，支持热更新，支持vue、react等流行框架！开发浏览器扩展，打造小而美的产品利器！还说什么？上车！",
           "link": "https://juejin.cn/pin/7296017207099883583",
           "publishedOn": "2023-11-01T01:16:11.000Z",
-          "wordCount": 525,
+          "wordCount": 528,
           "title": "[7018942344208580646#1024一起掘金#] 现代化的浏览器扩展开发模板，支持热更新，支持vue、react等流行框架！开发浏览器扩展，打造小而美的产品利器！还说什么？...",
           "imageUrl": null
         },
@@ -1260,7 +1260,7 @@
           "description": "移动端，深度链接deeplink几乎可以将用户从任何地方引导到特定App内的指定页面。\n其优势不言而喻，一方面能为用户移动端带来绝佳的体验，相比于传统链接，能够直接跳过许多无关紧要的点击和页面，直奔主题，直达目标页面；另一方面，能显著提高各场景带来的用户转化率和留存率。\n1、跨渠道、跨平台场景还原\n可用于实现场景：网页/H5跳转App、微信、微博、抖音、B站、爱奇艺、小红书等社交平台跳转App、二维码跳转App、短信跳转App、邮件跳转App、渠道跳转H5跳转App等场景。\n2、结合参数传递实现安装来源追踪\n（1）Web到App全链路数据追踪\n（2）自动绑定用户关系链\n推送门：https://www.openinstall.io/pullUp.html",
           "link": "https://juejin.cn/pin/7295948894327521289",
           "publishedOn": "2023-10-31T08:56:11.000Z",
-          "wordCount": 557,
+          "wordCount": 563,
           "title": "移动端，深度链接deeplink几乎可以将用户从任何地方引导到特定App内的指定页面。 其优势不言而喻，一方面能为用户移动端带来绝佳的体验，相比于传统链接，能够直...",
           "imageUrl": null
         },
