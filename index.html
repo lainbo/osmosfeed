@@ -51,11 +51,46 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-10 datetime="2023-11-10T00:53:46.000Z">2023-11-10</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-10 datetime="2023-11-10T00:53:46.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-10 datetime="2023-11-10T03:51:29.000Z">2023-11-10</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-10 datetime="2023-11-10T03:51:29.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >李继刚的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/654da8c1f59114ac23608054"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: https://chat.openai.com/g/g-SUOFbmGvx-cool-teacher cool teacher 放到gpts上了</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/654da8c1f59114ac23608054">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FjxCotdLWus6t0Rpv0Z_Dv64FB7Sv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>https://chat.openai.com/g/g-SUOFbmGvx-cool-teacher
+cool teacher 放到gpts上了</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -536,6 +571,60 @@ https://github.com/devlive-community/datacap/pull/472</span>
                 </section>
               </section>
             </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7299037876636663847"
+                        open
+                      >
+                        <summary class="article-expander__title">以为 flv.js 直播超简单，结果被延迟和卡顿整疯了</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7299037876636663847">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>大家好，我是杨成功。
+之前写过一篇浏览器直播的文章，叫《用一个 flv.js 播放监控的例子，带你深撅直播流技术》。这片文章的热度还不错，主要内容就是科普直播是什么，以及如何在浏览器中播放直播。
+实现方法很简单，使用一个流行的第三方包 flv.js，即可快速播放直播。
+在我们的项目中也使用这种方式，比如播放海康监控器的直播、教学直播等都可以正常播放。然而在产品成熟后，我们发现直播中有两个致命问题：
+直播延迟，播越久延迟越高。
+直播卡顿，无法判断什么时候卡顿。
+解决上述两个问题是直播稳定性和可用性的关键，下面就来详解一下。
+抗延迟关键 —— “追帧”
+使用 flv.js 直播，需要一个  标签承载直播画面。默认情况下 video 标签用于播放点播（录制好的）视频，因此它会一边播放一边下载。
+点播不要求实时性，暂停之后再继续播放，视频会接着暂停的画面继续播放；而如果是直播，暂停后继续播放时必须切换到最新的画面帧，这就是 “追帧” 的概念。
+一图胜千言，不追帧的效果是这样的：
+
+追帧的效果是这样的：
+
+可以看到，设置追帧后的暂停重播，会立即切换到最新的画面。
+在实际场景中，直播没有暂停按钮，但是常常会因为网络问题卡顿。如果卡顿恢复后视频没有追帧，就会导致直播延迟越来越高。
+使用 mpegts.js 替代 flv.js
+据传说，flv.js 的作者是一个高中毕业在 B 站上班的小伙子，月薪仅仅不到 5k。后来小伙离职去了日本，无法更新 flv.js，于是有了 mpegts.js。
+目前 flv.js 已停止维护，mpegts.js 是其升级版，开发者是同一个人。涉及到追帧的高级功能，mpegts.js 支持的更好。在 flv.js 主页也可以看到推荐：
+
+mpegts.js 的用法与 flv.js 基本一致，如下：
+import mpegts from &#x27;mpegts…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -688,26 +777,6 @@ https://github.com/devlive-community/datacap/pull/472</span>
                               <span>今年的苹果发布会感觉像滑水一样的过去了，主家也知道没什么改变世界的东西，滑水应付； 用户也心知肚明早知如此的心态，滑水一扫，钱包不买。
 前几天的openai 发布感觉像当年的苹果发布会，主家知道自己正在推出的东西会影响世界发展，眼中带光； 用户也期待万分心跳加速，快拿我钱，权限求给。
 世界的范式就在这么不经意间完成了切换。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/654affabdc63db69597210b2"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 一张照片, 一个日本动漫脸的真人女孩, 正在以战斗姿势起势。画面中结合了水墨美学和武术美学， 通过单色调色板和渐变的水墨笔触， 展示了水墨画的柔和质...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/654affabdc63db69597210b2">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FhmyX5bceTkhSrbf8yddll8fJ8anv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>一张照片, 一个日本动漫脸的真人女孩, 正在以战斗姿势起势。画面中结合了水墨美学和武术美学， 通过单色调色板和渐变的水墨笔触， 展示了水墨画的柔和质感和动态表现力。她的姿态既强大又优雅，极简的装饰物展示了她内心的纯净。她的服装古朴又高雅， 与水墨画和谐完美整合。微妙的照明效果增强了她姿势的动态质量。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -946,44 +1015,6 @@ copyToClipboard(&quot;Hello World&quot;);
 使用以下代码段检查日期是否有效。
 const isDateValid &#x3D; (...val) &#x3D;&gt; !Number.isNaN(new Da…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7298218459795734582"
-                        open
-                      >
-                        <summary class="article-expander__title">【前端面经】2023面试复盘之字节跳动</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7298218459795734582">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: awesome-green
-相关链接：
-一图搞定前端面试之基础篇
-【前端面经】2023面试复盘之美团
-【前端面经】2023面试复盘之小红书
-【前端面经】2023面试复盘之阿里云
-【前端面经】2023面试复盘之蚂蚁金服
-【前端面经】2023面试复盘之快手 (待发布)
-结论
-✅通过
-字节的面试还挺曲折，一开始是某部门的HR直接联系我的，在面了三轮之后感觉面试官的状态瞅着蔫蔫的🫠，又咨询了一下在字节的朋友，便决定更换部门（但是该部门的HR小姐姐很好，跟了我一个多月，还提前给我做面试建议和辅导，希望她能找到更好的候选人🙏🏻）。
-不得不说字节真是宇宙厂，在这样的行情下依然有很多部门在招人。因为之前拒过字节的offer加上不少朋友在，所以也是跟好几个部门的ld微信聊了聊，之后便选择了一个新的部门。而前面流程的三面通过也促使了换部门后可以直通终面，这点是真的不错~
-整体看下来，字节的面试给我的感觉就是比较正常的从技术到管理循序渐进，代码题的话不再是执着于leetcode，而是替换为了一些前端或业务可能遇到的问题，对于我这种从来不刷题的算法渣来说确实挺不错的👍。最后由于我目前的工作经历的原因导致有面试官的定级不一致，便又加了一轮定级面。
-一面
-总时长：65min
-这次换工作的第一个面试，在2023的行情下还是挺珍惜的，所以准备了挺久，结果发现准备的一点也没有用上，好在问的一些问题靠着平时的积累还是能够应付一下。
-感觉面试官可能不算太资深，面试和代码都没有很难，不过自己答得也不是太好，完全没有达到自己的预期和标准，所以对于结果也不是特别有把握。
-聊项目
-不知道是不是面的岗位的原因，本来准备了很久了基础完全没有问，上来就开始聊项目。这部分主要是我自己在讲，面试官穿插着问了一些问题，不过感觉技术性没有那么强，都是比较开放性的问题。
-本身聊项目是我最擅长的事情，不过因为很多项…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2071,63 +2102,6 @@ uni+vue+springboot的项目，其实和vue+springboot项目差不多，因为单
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>巫溪县气象台2023年11月3日15时发布“暴雨黄色预警信号”，预计未来6小时，我县柏杨街道、天星乡、峰灵镇、蒲莲镇、胜利乡、长桂乡、红池坝镇、古路镇、塘坊镇、上磺镇、田坝镇、文峰镇、朝阳镇、尖山镇、通城镇、中梁乡、天元乡等街道（乡镇）累计雨量将达50-80毫米，最大小时雨强可达20-30毫米；注意防范强降水可能诱发的山体滑坡、泥石流、中小河流洪水、山洪、城乡积涝等次生灾害。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231103/t20231103_526473556.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市云阳县发布暴雨黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231103/t20231103_526473556.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>云阳县气象台2023年11月3日14时35分发布“暴雨黄色预警信号”，过去6小时，我县外郎乡、蔈草镇、龙角镇、泥溪镇、普安乡、凤鸣镇、堰坪镇累计雨量已达50毫米。预计未来6小时，我县宝坪镇、南溪镇、鱼泉镇、故陵镇、清水土家族乡、桑坪镇、大阳镇、双土镇、上坝乡、沙市镇、黄石镇、路阳镇等街道（乡镇）累计雨量将达50-70毫米，最大小时雨强可达10-20毫米，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231103/t20231103_526473410.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市巫山县发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231103/t20231103_526473410.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>巫山县气象台2023年11月3日12时40分发布“大雾黄色预警信号”，预计11月3日13时至4日1时，官阳镇、当阳乡、骡坪镇、高唐街道、龙门街道、曲尺乡、铜鼓镇、红椿乡、邓家乡、笃坪乡、竹贤乡、建平乡、金坪乡、巫峡镇等海拔600米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231103/t20231103_526473398.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市万州区发布暴雨黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231103/t20231103_526473398.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>万州区气象台2023年11月3日12时20分发布“暴雨黄色预警信号”，预计未来6小时，我区甘宁镇、高梁镇、孙家镇、长岭镇、白羊镇、长滩镇、太安镇、柱山乡、五桥街道、陈家坝街道、九池街道等镇乡街道累计雨量将达30-50毫米，最大小时雨强可达10-20毫米，请注意防范。视情况暂停户外作业和活动。注意道路、桥涵、隧道、工地、车库、低洼地、地下空间积水，远离积水区域。注意洪水、山洪、地质灾害、城市内涝、乡村积涝等暴雨次生灾害，视情况及时撤离河道、沟谷、边坡、危岩、危房、简易工棚、挡土墙等容易发生危险区域。行驶车辆放慢车速，谨慎前行，避免强行通过积水路段和下沉式立交，避免将车辆停放在低洼易涝等危险区域。相关部门和乡镇街道按照职责，做好暴雨防范应对工作。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -4480,8 +4454,8 @@ ECH 非常巧妙地解决了域名加密。它采用双层格式，也就是说�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6820526407">
-        <time id="build-timestamp" datetime="2023-11-10T03:53:26.282Z">2023-11-10T03:53:26.282Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6821695647">
+        <time id="build-timestamp" datetime="2023-11-10T06:53:30.934Z">2023-11-10T06:53:30.934Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
