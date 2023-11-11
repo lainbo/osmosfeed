@@ -34,7 +34,7 @@
           "description": "想要提高网页的加载体验，其实有个非常简单且实用的技巧，那就是改变请求资源的加载优先级，这也可以改变？没错！",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/img-js-preload-fetch-priority/",
           "publishedOn": "2023-10-29T15:55:41.000Z",
-          "wordCount": 943,
+          "wordCount": 942,
           "title": "聊聊Web网页中资源加载的优先级",
           "imageUrl": null
         }
@@ -838,6 +838,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7297522590683168783",
+          "author": "Sunshine_Lin",
+          "description": "前言\n大家好，我是林三心，用最通俗易懂的话讲最难的知识点是我的座右铭，基础是进阶的前提是我的初心~\n协同文档\n在平时的开发中，协同文档真的帮助到了我们很多，他可以应用到很多场景，比如：\n需求文档同步\n信息收集\n公司内部文档编写\n所以现阶段协同文档也是市面上很火的一种趋势，比较火的产品有：\n企微文档\n飞书文档\n语雀\n等等。。。。\n协同\n想要实现协同文档，其实有一个最大的痛点，那就是 协同。\n通俗点说就是：两个人同时编辑同一个文档，就会有冲突，那么这个冲突应该怎么解决？\n为了解决这个问题，市面上出现了两种算法（不是本文重点）\nOT （Operational transformation）\nCRDT（Conflict-free Replicated Data Type）\n这不是本文重点，如果不想看可以直接跳到下面的代码实战~\nOT\n\n实现协同文档\n接下来开始实现一个简单的协同文档！！！\n装库\n我们需要先安装几个库\nnpm i yjs y-quill \n      quill quill-cursors \n      y-websocket\n\nyjs： 一个集成 CRDT 算法的同步库，是此次协同文档的核心\nquill： 一个富文本编辑器\nquill-cursors： 一个quill的插件，用于显示多个光标，因为多个用户共同编辑就会有多个光标\ny-quill： 可以理解为他能将yjs和quill融合起来，实现协同\ny-websocket： 一个yjs的库，作用是将数据同步到多个客户端\n客户端\n<div id=\"app\"></div>\n\nimport * as Y from 'yjs';\nimport { QuillBinding } from 'y-quill';\nimport Quill from 'quill';\nimport QuillCursors from 'quill-cursors';\nimport { WebsocketProvider } from 'y-websocket';\nimport 'quill/dist/quill.snow.css'; // 使用了 snow 主题色\n\n// 使用 cursors 插件\nQuill.register('modules/cursors', QuillCursors);\nconst quill = new Quill(document.querySelector('#app'), {\n  modules: {\n    cursors: true,\n    toolbar: [\n      [{ header: [1, 2, false] }],\n      ['bold', 'italic', 'underline'],\n      ['image', 'code-block'],\n    ],\n    history: {\n      userOnly: true,\n    },\n  },\n  placeholder: '林三心不学挖掘机...',\n  theme: 'snow',\n});\nconst ydoc = new Y.Doc(); // y 文档对象，保存需要共享的数据\nconst ytext = ydoc.getText('quill'); // 创建名为 quill 的 Text 对象\n// 连接到 websocket 服务端\nconst provider = new WebsocketProvider('ws://localhost:1234', 'quill-demo-room', ydoc);\n// 数据模型绑定，再绑上光标对象\nconst binding = new QuillBinding(ytext, quill, provider.awareness);\n\n服务端\n只需要在终端里运行\nHOST=localhost PORT=1234 npx y-websocket\n\n\n效果\n现在就可以实现协同文档的效果啦！！！\n\n结语 & 加学习群 & 摸鱼群\n我是林三心\n一个待过小型toG型外包公司、大型外包公司、小公司、潜力型创业公司、大公司的作死型前端选手；\n一个偏前端的全干工程师；\n一个不正经的掘金作者；\n一个逗比的B站up主；\n一个不帅的小红书博主；\n一个喜欢打铁的篮球菜鸟；\n一个喜欢历史的乏味少年；\n一个喜欢rap的五音不全弱鸡\n如果你想一起学习前端，一起摸鱼，一起研究简历优化，一起研究面试进步，一起交流历史音乐篮球rap，可以来俺的摸鱼学习群哈哈，点这个，有7000多名前端小伙伴在等着一起学习哦 --> 摸鱼沸点",
+          "link": "https://juejin.cn/post/7297522590683168783",
+          "publishedOn": "2023-11-05T15:20:40.000Z",
+          "wordCount": 1193,
+          "title": "仅仅28行代码，就能实现一个【协同文档】",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7297592806569164810",
           "author": "Elecat",
           "description": "theme: smartblue\nhighlight: agate\n写在最前：\n本文面向对无界和微前端有一定了解的人群，不再对微前端的概念和无界的基础使用方式做解释说明\n前言\n掘金上搜wujie，那么大眼一看，好像全都是介绍的，并没有几个落地方案的分享。正好我上个月把部门内三个业务系统用wujie整合了一下，记录成文章和大家分享一下。（为什么不用qiankun？qiankun之前做了好多次了，这次想尝个鲜~）\n背景说明\n笔者部门内有三个管理系统，技术栈分别是：\nA： Vue2 + Webpack4 + ant-design-vue@1.7.8：该项目是部门内“司龄”最长的，从部门成立之初起，所有的业务都堆在里边。\nB： Vue3 + Webpack5 + ant-desgin-vue@3.2.20：由于业务目标不清晰以及前端开发各自为战，部分需求被拆出来了一个单独的项目进行开发，但实际上然并卵。\nC： Vue3 + Vite2 + ant-design-vue@3.2.20：为了响应领导“统一前端UI规范”和“低代码降本增效”的号召，这个项目应运而生，使用JSON Scheme渲染列表页 + 手写Form表单的形式开发需求。\n没错，就是3个纯业务向的管理系统。对接我们部门的大部分业务人员，日常都至少需要操作3个系统，甚至有些人还会用到别的部门的系统，甚至有的人习惯打开多个浏览器tab页来回切换对比同个页面的数据。。。poor guy。。。浏览器密密麻麻的全是tab页。。。\n契机\n某天，发生了如下对话：\n领导：业务部门老大说，系统间来回切换太麻烦了，有没有办法解决这个问题？\n我：有，微前端。\n领导：之前XXX不是用qiankun做过吗，问题很多，不了了之了。\n我：我看过他的代码，没有什么大问题，都是一些细节方面的小bug，而且还有别的微前端方案可以选择。\n领导：行，你安排一下…",
@@ -885,16 +895,6 @@
           "publishedOn": "2023-11-04T09:30:47.000Z",
           "wordCount": 1697,
           "title": "国货之光？用Rust编写的Vivo Blue OS",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7297049953229766690",
-          "author": "狂奔滴小马",
-          "description": "上周 Next.js 14 发布了，该版本相较于 13，没有任何 API 变更，主要更新点是 Turbopack 带来了大幅的性能提升以及 Server Actions 功能进入稳定版本。\n\nNext.js 14 带来了三个主要新功能\nTurbopack：在 app router 和 page router 中通过了 5,000 个测试\n本地启动服务器时间快了约 50%\n热模块替换速度快了约 94%\n然而并不是所有的测试都通过了，当前只通过了 90% 的测试，所以 Turbopack 还不稳定。\n第二点 Server Actions 被标记为稳定。\n\n集成了缓存和重新验证\n简单的函数调用，与表单原生配合使用\n第三点 部分预渲染（预览）：快速的初始静态响应 + 流式动态内容\n其中第二点在 Twitter 中引起了巨大讨论，也就是下面这张图，\n\n大家都在拿这张图开玩笑，甚至出现了 \"use electronics\"。\n\n这种写法好像仿佛回到了 PHP 时代，前端后代码写在一个文件里，它非常容易理解，但是很多人在质疑代码的安全问题，Sql 没有使用占位符，它是否会受到SQL 注入攻击。\n那么我们来分析下，上面幻灯片中的代码是否存在安全问题，\n最主要是下面这句。\nawait sql`INSERT INTO Bookmarks (slug) VALUES (${slug})`\n\nSQL 注入攻击\n首先来看下 Sql 是如何注入攻击的。\n比如，我们需要通过 Url 获得当前用户的 id，查询该用户的信息，使用以下代码来实现。\n\n一旦用户知道了程序的漏洞，使用以下 url 来访问，那么我们的程序将瞬间被摧毁。\n\n这是一个有效的 SQL 命令，查询的同时将删除所有用户。\n\n数据库在这种情况下执行，它会变成两个 sql 查询：\n第一个 sql select 语句，它实际上不做任何事情；\n第二个 sql 会删除你的整个 Users 数据库；\n这就是 sql 注入，因此，直接拼接的 sql，不经过处理，是不安全的。\n安全的查询方法是需要使用参数化查询, 如下：\n\nuserId 会替换 sql 中的$1，这样 sql 执行就安全了。\n标签模板\n我们再看上面幻灯片中的 sql 语句，与上面两种操作数据不同的是他使用的是 ES6 中的 标签模板\nawait sql`INSERT INTO Bookmarks (slug) VALUES (${slug})`\n\n标签模板其实不是模板字符串，而是函数调用的一种特殊形式。“标签”指的就是函数，紧跟在后面的模板字符串就是它的参数。\ntag`hello`\n// 等同于\ntag(['hello'])\n\n因此在标签模版之前需要先定义函数\nfunction tag(stringArr, ...values){\n  // ...\n}\n\ntag 函数的第一个参数是模版字符串，它是一个数组，后面的参数为模版中传入的值，也就是上面的sql 是一个函数，执行代码等同于\nawait sql(['INSERT INTO Bookmarks (slug) VALUES (',')'], slug)\n\n因此幻灯片中的查询语句并不会直接在数据库上执行，而是经过了 sql 这个函数的封装，调用数据库的查询语言都在 sql 内部实现，它没有 sql 注入的风险。\n小结\nNext.js 14.0 加快了启动服务器时间和模块热替换，分别提速 50%和 94%，引入了部分预渲染，允许定义一个静态 HTML 壳，然后可以用<Suspense />流式传输动态内容； Server Actions 虽然引起了争议，那也只是大家工作之余的调侃，相比原先必须先写一个接口，再调接口，但对开发者来说是极大地简化了开发成本，可以直接请求数据库拿数据，对前端来说，真的太方便了。\n那么，你认为呢？\n以上就是本文全部内容，希望这篇文章对大家有所帮助，也可以参考我往期的文章或者在评论区交流你的想法和心得，欢迎一起探索前端。\n参考\nhttps://nextjs.org/blog/next-14\nhttps://youtu.be/2Ggf45daK7k?si=ZxrjR5o2PIMOpM7W",
-          "link": "https://juejin.cn/post/7297049953229766690",
-          "publishedOn": "2023-11-03T11:56:06.000Z",
-          "wordCount": 1180,
-          "title": "大家都在嘲笑 Next.js 14",
           "imageUrl": null
         }
       ]

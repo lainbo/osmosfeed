@@ -1798,6 +1798,61 @@ Rubick 插件是基于 npm 的方式进行安装和卸载的。Rubick 内置了 
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7297522590683168783"
+                        open
+                      >
+                        <summary class="article-expander__title">仅仅28行代码，就能实现一个【协同文档】</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7297522590683168783">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言
+大家好，我是林三心，用最通俗易懂的话讲最难的知识点是我的座右铭，基础是进阶的前提是我的初心~
+协同文档
+在平时的开发中，协同文档真的帮助到了我们很多，他可以应用到很多场景，比如：
+需求文档同步
+信息收集
+公司内部文档编写
+所以现阶段协同文档也是市面上很火的一种趋势，比较火的产品有：
+企微文档
+飞书文档
+语雀
+等等。。。。
+协同
+想要实现协同文档，其实有一个最大的痛点，那就是 协同。
+通俗点说就是：两个人同时编辑同一个文档，就会有冲突，那么这个冲突应该怎么解决？
+为了解决这个问题，市面上出现了两种算法（不是本文重点）
+OT （Operational transformation）
+CRDT（Conflict-free Replicated Data Type）
+这不是本文重点，如果不想看可以直接跳到下面的代码实战~
+OT
+
+实现协同文档
+接下来开始实现一个简单的协同文档！！！
+装库
+我们需要先安装几个库
+npm i yjs y-quill 
+      quill quill-cursors 
+      y-websocket
+
+yjs： 一个集成 CRDT 算法的同步库，是此次协同文档的核心
+quill： 一个富文本编辑器
+quill-cursors： 一个quill的插件，用于显示多个光标，因为多个用户共同编辑就会有多个光标
+y-quill： 可以理解为他能将yjs和quill融合起来，实现协同
+y-websocket： 一个yjs的库，作用是将数据同步到多个客户端
+客户端
+
+ 摸鱼沸点</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7297592806569164810"
                         open
                       >
@@ -2164,104 +2219,11 @@ Blue OS是用Rust编写的全球首款操作系统的系统框架
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-03 datetime="2023-11-03T11:56:06.000Z">2023-11-03</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-03 datetime="2023-11-03T11:56:06.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-03 datetime="2023-11-03T08:27:12.000Z">2023-11-03</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-03 datetime="2023-11-03T08:27:12.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7297049953229766690"
-                        open
-                      >
-                        <summary class="article-expander__title">大家都在嘲笑 Next.js 14</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7297049953229766690">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>上周 Next.js 14 发布了，该版本相较于 13，没有任何 API 变更，主要更新点是 Turbopack 带来了大幅的性能提升以及 Server Actions 功能进入稳定版本。
-
-Next.js 14 带来了三个主要新功能
-Turbopack：在 app router 和 page router 中通过了 5,000 个测试
-本地启动服务器时间快了约 50%
-热模块替换速度快了约 94%
-然而并不是所有的测试都通过了，当前只通过了 90% 的测试，所以 Turbopack 还不稳定。
-第二点 Server Actions 被标记为稳定。
-
-集成了缓存和重新验证
-简单的函数调用，与表单原生配合使用
-第三点 部分预渲染（预览）：快速的初始静态响应 + 流式动态内容
-其中第二点在 Twitter 中引起了巨大讨论，也就是下面这张图，
-
-大家都在拿这张图开玩笑，甚至出现了 &quot;use electronics&quot;。
-
-这种写法好像仿佛回到了 PHP 时代，前端后代码写在一个文件里，它非常容易理解，但是很多人在质疑代码的安全问题，Sql 没有使用占位符，它是否会受到SQL 注入攻击。
-那么我们来分析下，上面幻灯片中的代码是否存在安全问题，
-最主要是下面这句。
-await sql&#x60;INSERT INTO Bookmarks (slug) VALUES (${slug})&#x60;
-
-SQL 注入攻击
-首先来看下 Sql 是如何注入攻击的。
-比如，我们需要通过 Url 获得当前用户的 id，查询该用户的信息，使用以下代码来实现。
-
-一旦用户知道了程序的漏洞，使用以下 url 来访问，那么我们的程序将瞬间被摧毁。
-
-这是一个有效的 SQL 命令，查询的同时将删除所有用户。
-
-数据库在这种情况下执行，它会变成两个 sql 查询：
-第一个 sql select 语句，它实际上不做任何事情；
-第二个 sql 会删除你的整个 Users 数据库；
-这就是 sql 注入，因此，直接拼接的 sql，不经过处理，是不安全的。
-安全的查询方法是需要使用参数化查询, 如下：
-
-userId 会替换 sql 中的$1，这样 sql 执行就安全了。
-标签模板
-我们再看上面幻灯片中的 sql 语句，与上面两种操作数据不同的是他使用的是 ES6 中的 标签模板
-await sql&#x60;INSERT INTO Bookmarks (slug) VALUES (${slug})&#x60;
-
-标签模板其实不是模板字符串，而是函数调用的一种特殊形式。“标签”指的就是函数，紧跟在后面的模板字符串就是它的参数。
-tag&#x60;hello&#x60;
-// 等同于
-tag([&#x27;hello&#x27;])
-
-因此在标签模版之前需要先定义函数
-function tag(stringArr, ...values){
-  // ...
-}
-
-tag 函数的第一个参数是模版字符串，它是一个数组，后面的参数为模版中传入的值，也就是上面的sql 是一个函数，执行代码等同于
-await sql([&#x27;INSERT INTO Bookmarks (slug) VALUES (&#x27;,&#x27;)&#x27;], slug)
-
-因此幻灯片中的查询语句并不会直接在数据库上执行，而是经过了 sql 这个函数的封装，调用数据库的查询语言都在 sql 内部实现，它没有 sql 注入的风险。
-小结
-Next.js 14.0 加快了启动服务器时间和模块热替换，分别提速 50%和 94%，引入了部分预渲染，允许定义一个静态 HTML 壳，然后可以用流式传输动态内容； Server Actions 虽然引起了争议，那也只是大家工作之余的调侃，相比原先必须先写一个接口，再调接口，但对开发者来说是极大地简化了开发成本，可以直接请求数据库拿数据，对前端来说，真的太方便了。
-那么，你认为呢？
-以上就是本文全部内容，希望这篇文章对大家有所帮助，也可以参考我往期的文章或者在评论区交流你的想法和心得，欢迎一起探索前端。
-参考
-https://nextjs.org/blog/next-14
-https://youtu.be/2Ggf45daK7k?si&#x3D;ZxrjR5o2PIMOpM7W</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -4397,8 +4359,8 @@ ECH 非常巧妙地解决了域名加密。它采用双层格式，也就是说�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6832734885">
-        <time id="build-timestamp" datetime="2023-11-11T06:53:31.946Z">2023-11-11T06:53:31.946Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6833506205">
+        <time id="build-timestamp" datetime="2023-11-11T09:53:33.241Z">2023-11-11T09:53:33.241Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-11-11T06:53:31.972Z</id>
+    <id>urn:2023-11-11T09:53:33.261Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-11-11T06:53:31.972Z</updated>
+    <updated>2023-11-11T09:53:33.261Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -963,6 +963,102 @@ Rubick 插件是基于 npm 的方式进行安装和卸载的。Rubick 内置了 
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[仅仅28行代码，就能实现一个【协同文档】]]></title>
+        <id>https://juejin.cn/post/7297522590683168783</id>
+        <link href="https://juejin.cn/post/7297522590683168783"/>
+        <updated>2023-11-05T15:20:40.000Z</updated>
+        <summary type="html"><![CDATA[前言
+大家好，我是林三心，用最通俗易懂的话讲最难的知识点是我的座右铭，基础是进阶的前提是我的初心~
+协同文档
+在平时的开发中，协同文档真的帮助到了我们很多，他可以应用到很多场景，比如：
+需求文档同步
+信息收集
+公司内部文档编写
+所以现阶段协同文档也是市面上很火的一种趋势，比较火的产品有：
+企微文档
+飞书文档
+语雀
+等等。。。。
+协同
+想要实现协同文档，其实有一个最大的痛点，那就是 协同。
+通俗点说就是：两个人同时编辑同一个文档，就会有冲突，那么这个冲突应该怎么解决？
+为了解决这个问题，市面上出现了两种算法（不是本文重点）
+OT （Operational transformation）
+CRDT（Conflict-free Replicated Data Type）
+这不是本文重点，如果不想看可以直接跳到下面的代码实战~
+OT
+
+实现协同文档
+接下来开始实现一个简单的协同文档！！！
+装库
+我们需要先安装几个库
+npm i yjs y-quill 
+      quill quill-cursors 
+      y-websocket
+
+yjs： 一个集成 CRDT 算法的同步库，是此次协同文档的核心
+quill： 一个富文本编辑器
+quill-cursors： 一个quill的插件，用于显示多个光标，因为多个用户共同编辑就会有多个光标
+y-quill： 可以理解为他能将yjs和quill融合起来，实现协同
+y-websocket： 一个yjs的库，作用是将数据同步到多个客户端
+客户端
+<div id="app"></div>
+
+import * as Y from 'yjs';
+import { QuillBinding } from 'y-quill';
+import Quill from 'quill';
+import QuillCursors from 'quill-cursors';
+import { WebsocketProvider } from 'y-websocket';
+import 'quill/dist/quill.snow.css'; // 使用了 snow 主题色
+
+// 使用 cursors 插件
+Quill.register('modules/cursors', QuillCursors);
+const quill = new Quill(document.querySelector('#app'), {
+  modules: {
+    cursors: true,
+    toolbar: [
+      [{ header: [1, 2, false] }],
+      ['bold', 'italic', 'underline'],
+      ['image', 'code-block'],
+    ],
+    history: {
+      userOnly: true,
+    },
+  },
+  placeholder: '林三心不学挖掘机...',
+  theme: 'snow',
+});
+const ydoc = new Y.Doc(); // y 文档对象，保存需要共享的数据
+const ytext = ydoc.getText('quill'); // 创建名为 quill 的 Text 对象
+// 连接到 websocket 服务端
+const provider = new WebsocketProvider('ws://localhost:1234', 'quill-demo-room', ydoc);
+// 数据模型绑定，再绑上光标对象
+const binding = new QuillBinding(ytext, quill, provider.awareness);
+
+服务端
+只需要在终端里运行
+HOST=localhost PORT=1234 npx y-websocket
+
+
+效果
+现在就可以实现协同文档的效果啦！！！
+
+结语 & 加学习群 & 摸鱼群
+我是林三心
+一个待过小型toG型外包公司、大型外包公司、小公司、潜力型创业公司、大公司的作死型前端选手；
+一个偏前端的全干工程师；
+一个不正经的掘金作者；
+一个逗比的B站up主；
+一个不帅的小红书博主；
+一个喜欢打铁的篮球菜鸟；
+一个喜欢历史的乏味少年；
+一个喜欢rap的五音不全弱鸡
+如果你想一起学习前端，一起摸鱼，一起研究简历优化，一起研究面试进步，一起交流历史音乐篮球rap，可以来俺的摸鱼学习群哈哈，点这个，有7000多名前端小伙伴在等着一起学习哦 --> 摸鱼沸点]]></summary>
+        <author>
+            <name>Sunshine_Lin</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[qiankun？这次我选了wujie！]]></title>
         <id>https://juejin.cn/post/7297592806569164810</id>
         <link href="https://juejin.cn/post/7297592806569164810"/>
@@ -1174,76 +1270,6 @@ Blue OS是用Rust编写的全球首款操作系统的系统框架
 本以为着，这个玩意可能离我们很远，没想到Vivo在这方面走在了前列。不得不说，在操作系…]]></summary>
         <author>
             <name>前端小魔女</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[大家都在嘲笑 Next.js 14]]></title>
-        <id>https://juejin.cn/post/7297049953229766690</id>
-        <link href="https://juejin.cn/post/7297049953229766690"/>
-        <updated>2023-11-03T11:56:06.000Z</updated>
-        <summary type="html"><![CDATA[上周 Next.js 14 发布了，该版本相较于 13，没有任何 API 变更，主要更新点是 Turbopack 带来了大幅的性能提升以及 Server Actions 功能进入稳定版本。
-
-Next.js 14 带来了三个主要新功能
-Turbopack：在 app router 和 page router 中通过了 5,000 个测试
-本地启动服务器时间快了约 50%
-热模块替换速度快了约 94%
-然而并不是所有的测试都通过了，当前只通过了 90% 的测试，所以 Turbopack 还不稳定。
-第二点 Server Actions 被标记为稳定。
-
-集成了缓存和重新验证
-简单的函数调用，与表单原生配合使用
-第三点 部分预渲染（预览）：快速的初始静态响应 + 流式动态内容
-其中第二点在 Twitter 中引起了巨大讨论，也就是下面这张图，
-
-大家都在拿这张图开玩笑，甚至出现了 "use electronics"。
-
-这种写法好像仿佛回到了 PHP 时代，前端后代码写在一个文件里，它非常容易理解，但是很多人在质疑代码的安全问题，Sql 没有使用占位符，它是否会受到SQL 注入攻击。
-那么我们来分析下，上面幻灯片中的代码是否存在安全问题，
-最主要是下面这句。
-await sql`INSERT INTO Bookmarks (slug) VALUES (${slug})`
-
-SQL 注入攻击
-首先来看下 Sql 是如何注入攻击的。
-比如，我们需要通过 Url 获得当前用户的 id，查询该用户的信息，使用以下代码来实现。
-
-一旦用户知道了程序的漏洞，使用以下 url 来访问，那么我们的程序将瞬间被摧毁。
-
-这是一个有效的 SQL 命令，查询的同时将删除所有用户。
-
-数据库在这种情况下执行，它会变成两个 sql 查询：
-第一个 sql select 语句，它实际上不做任何事情；
-第二个 sql 会删除你的整个 Users 数据库；
-这就是 sql 注入，因此，直接拼接的 sql，不经过处理，是不安全的。
-安全的查询方法是需要使用参数化查询, 如下：
-
-userId 会替换 sql 中的$1，这样 sql 执行就安全了。
-标签模板
-我们再看上面幻灯片中的 sql 语句，与上面两种操作数据不同的是他使用的是 ES6 中的 标签模板
-await sql`INSERT INTO Bookmarks (slug) VALUES (${slug})`
-
-标签模板其实不是模板字符串，而是函数调用的一种特殊形式。“标签”指的就是函数，紧跟在后面的模板字符串就是它的参数。
-tag`hello`
-// 等同于
-tag(['hello'])
-
-因此在标签模版之前需要先定义函数
-function tag(stringArr, ...values){
-  // ...
-}
-
-tag 函数的第一个参数是模版字符串，它是一个数组，后面的参数为模版中传入的值，也就是上面的sql 是一个函数，执行代码等同于
-await sql(['INSERT INTO Bookmarks (slug) VALUES (',')'], slug)
-
-因此幻灯片中的查询语句并不会直接在数据库上执行，而是经过了 sql 这个函数的封装，调用数据库的查询语言都在 sql 内部实现，它没有 sql 注入的风险。
-小结
-Next.js 14.0 加快了启动服务器时间和模块热替换，分别提速 50%和 94%，引入了部分预渲染，允许定义一个静态 HTML 壳，然后可以用<Suspense />流式传输动态内容； Server Actions 虽然引起了争议，那也只是大家工作之余的调侃，相比原先必须先写一个接口，再调接口，但对开发者来说是极大地简化了开发成本，可以直接请求数据库拿数据，对前端来说，真的太方便了。
-那么，你认为呢？
-以上就是本文全部内容，希望这篇文章对大家有所帮助，也可以参考我往期的文章或者在评论区交流你的想法和心得，欢迎一起探索前端。
-参考
-https://nextjs.org/blog/next-14
-https://youtu.be/2Ggf45daK7k?si=ZxrjR5o2PIMOpM7W]]></summary>
-        <author>
-            <name>狂奔滴小马</name>
         </author>
     </entry>
     <entry>
