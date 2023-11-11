@@ -766,6 +766,75 @@ https://github.com/devlive-community/datacap/pull/472</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7299353265098899465"
+                        open
+                      >
+                        <summary class="article-expander__title">为什么真的有人讨厌 TailWindCSS ?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7299353265098899465">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: condensed-night-purple
+前言
+首先澄明本篇文章无任何引战的言论。只是客观事实的讨论为什么很多人不喜欢TailWindCSS。这就和讨论vue还是react哪一个才是前端的未来一样。每个人都有自己的判断，每个人都有自己的选择。我个人是比较偏向去拥抱一些新的变化的。且是在我尝试过使用TailWindCSS后得出的结论。但是依然有很多的开发者并不对TailWindCSS感兴趣，甚至有的开发者对此嗤之以鼻。下面我会详细分析为什么它并不是很讨喜
+官网文档并不是很友好
+
+虽然写的是中文文档,但是只有寥寥几句的中文。当阅读它的核心概念的时候是很难受的，没有办法进一步了解它的设计理念以及它的存在性。然后再往下面大概看一下,一大篇一大篇的各种CSS的介绍，在这里我相信已经劝退了很多第一次点进来想要认真学习一番的小伙伴。
+有一定的学习成本
+当我们不厌其烦的,耐着性子把所有的核心概念以及安装步骤都了解完以后，是不是就感觉差不多了解完了?其实真正折磨人的才开始。我们都知道CSS里有很多的外观类型, 尺寸, 颜色, 背景, 排版, 边框等等。TailWindCSS为每一个这样的外观类型定义了一套专属的 nameSpace。比如说设置字体的颜色大小等等都会使用text-[属性]
+排版类
+
+
+
+
+
+text-xs
+font-size: 0.75rem
+
+
+text-left
+text-align: left
+
+
+text-black
+color: rgb(0 0 0)
+
+
+text-clip
+text-overflow: clip
+
+
+
+可能看到这里觉得没有什么,挺好记的。但是文档给的不光是这一点..还有很多排版类相关的CSS属性。当我刚开始尝试使用TailWind去构建一个静态页面的时候，需要很频繁的去查阅文档。一遍又一遍，一遍又一遍。当然，TailWind 也知道可能这不是很方便。于是他们维护了一个VsCode插件去试着解决这个问题
+
+自带各种类名提示，并且鼠标放上去会显示真实的CSS是如何写的。虽然有这个插件，但是我仍然忘不了我频繁去查阅文档狼狈的样子。
+优点比较薄弱
+不用去思考变量名
+很明显的可以看出来,TailWindCss帮我们排除了去想CSS变量名而带来的心智负担，不用再去绞尽脑汁去想一个并不是很重要的CSS变量名。但是正常的思考命名，本来就是开发人员的基本职责，而且可以追踪我们为什么要取这个名字，可以思考某个变量名的背后逻辑。
+占用空间变小
+TailWind打包后的css文件确实占比传统打包方式后的css文件占比更小,但是CSS文件的占比从来不是我们项目优化所要思考的负载问题,几kb的文件真不用再去想如何优化了。
+违背了关注点分离原则
+由于不必自己编写 CSS 规则，Tailwind 的工作方式与大多数 CSS 框架不同。虽然这对于那些不熟悉 CSS 的人来说非常有用，但这也意味着 Tailwind 将样式规则与 HTML 文件混合在一起。
+这违背了“关注点分离”的原则。许多开发人员喜欢将页面结构和样式分开，声称使用类名CSS将会使 Tailwind 标记过程变得冗长。这也是比较大一部分开发者不喜欢TailWindCSS的主要原因。没办法专注做一件事，可能很多开发者更喜欢MVC模式尽可能去分离前端的代码。
+TailWind值得去花时间学习么？
+简而言之，使用 Tailwind 与其他 CSS 框架有很大不同。但是客观的来看待它的话可以将它分为两种
+对于熟悉 CSS, 希望从长远来看加快创建和设计过程的开发人员以及希望规范样式设计的团队来说,这无疑是一种比较好的解决方案。
+如果不熟悉 CSS 或者不想花时间学习新的 CSS 框架，或者嫌弃学习曲线太陡峭的开发人员来说这并不是一种好的选择。
+总结
+当然以上这些，这完全取决于个人需求和偏好。但是，如果优先考虑节省 CSS 样式设置时间和取名时间，那么绝对应该尝试一下 Tailwind。
+无论是否选择使用 Tailwind，很明显许多开发人员使用它都有充分的理由。由于它提供了更快的样式处理过程，并且是一个响应灵敏且稳定的框架，因此它会继续存在。
+Tailwind 可以帮助您节省时间并改变您设计网站的方式，因此花时间进行测试是值得的。至少我个人认为是这样的。希望各位客观看待技术框架
+若有感兴趣的伙伴,可阅读 我的个人专栏，如有错误，欢迎指正，共同进步。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7299037876636663847"
                         open
                       >
@@ -1460,6 +1529,53 @@ WX: xuxuxu_yyy
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7297983578548355099"
+                        open
+                      >
+                        <summary class="article-expander__title">vue3 setup 中国省市区三级联动options最简洁写法，无需任何库</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7297983578548355099">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>本前端仔在写页面的时候，发现表单里面有一个省市区的 options 组件要写，因为表单很多地方都会用到这个地址选择，我便以为很简单嘛。
+虽然很简单的一个功能，但是网络上能搜索到的教程大多都是需要配合 elementUI 等各种 UI 库的，但是我的项目并没有使用这些 UI 库，何况我只是想要拿到 一个地址字符串 而已，何必绑定 UI 库呢？
+1、地址三级联动制作思路
+思路其实很简单：
+1、一个地图 json 数据
+2、能够拿到 省份、市、区 的 options 数组来绑定就可以了
+3、选择一个省份市，对应的市要变化；选择市时，对应的区要变化
+这样的话，我们完全可以依赖 vue 强大的数据处理机制来解决
+2、地图json
+地图json数据我随便搜了一个： 中国省市区数据
+3、vue setup 语法糖写法
+我们点击上面的链接，下载了地图json数据，这里选择一个普通的就可以了，如图：
+
+将文件命名为 area.json ，然后在项目中引入：
+// 详细地址(省市区 详细地址)
+import areaObj from &#x27;../../public/area.json&#x27;;
+
+
+第一步：首先是处理省份options数组（这里json地图是键名为省份）：
+// 省
+const provinceArr &#x3D; Object.keys(areaObj)
+const province &#x3D; ref(provinceArr[0])
+
+
+这样就拿到了一个省份数组，这里随机默认选中第一个，北京市，这里 province 变量用来绑定输入框的值
+第二步：处理市的数据，关键就是使用计算属性来监听 省份的变化，省份一改变，市的数据也会跟着改变：
+// 市
+const cityArr &#x3D; computed(() &#x3D;&gt; {
+    return Object.keys(areaObj[province.value…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7297917491795132428"
                         open
                       >
@@ -1900,25 +2016,6 @@ https://github.com/devlive-community/incubator-notepad/releases/tag/1.0.0</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231104/t20231104_526474700.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市忠县发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231104/t20231104_526474700.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>忠县气象台2023年11月4日14时20分继续发布“大雾黄色预警信号”，预计5日0时至10时，涂井乡、石宝镇、汝溪镇、金声乡、野鹤镇、磨子土家族乡、乌杨街道、石子乡、白公街道、复兴镇、东溪镇、忠州街道、黄金镇、永丰镇、花桥镇、三汇镇、马灌镇、官坝镇、金鸡镇、石黄镇、兴峰乡、新生街道、白石镇、任家镇、双桂镇、拔山镇、洋渡镇、善广乡、新立镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -2055,43 +2152,6 @@ Blue OS是用Rust编写的全球首款操作系统的系统框架
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7297124052174848036"
-                        open
-                      >
-                        <summary class="article-expander__title">程序员的副业发展</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7297124052174848036">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: condensed-night-purple
-前言
-之前总有小伙伴问我，现在没有工作，或者想在空闲时间做一些程序员兼职，怎么做，做什么，能赚点外快
-因为我之前发别的文章的时候有捎带着说过一嘴我做一些副业，这里就说一下我是怎么做的，都做了什么
-希望能对你有些帮助~
-正文
-学生单
-学生单是我接过最多的，已经写了100多份毕设，上百份大作业了，这里给大家介绍一下
-像python这种的数据处理的大作业也很多，但是我个人不太会，所以没结过，我只说我做过的
-我大致做过几种单子，最多的是学生的单子，分为大作业单子和毕设单子
-大作业单一般指一个小作业，比如：
-几个web界面（大多是html、css、js）
-一个全栈的小demo，大多是jsp+SSM或者vue+springboot，之所以不算是毕设是因为，页面的数目不多，数据库表少，而且后端也很简单
-我不知道掘金这里能不能说价格，以防万一我就不说大致价格了，大家想参考价格可以去tb或者咸鱼之类的打听就行
-然后最多的就是毕设单子，一般就是一个全栈的项目
-最多的是vue+springboot的项目，需求量特别大，这里说一下，之前基本都是vue2的项目，现在很多学校要求vue3了，但是大部分商家vue3的模板很少，所以tb上接vue3的项目要么少，要么很贵，所以我觉得能接vue3和springboot项目的可以打一定的价格战，vue2的市面上价格差不多，模板差不多，不好竞争的
-少数vue+node的全栈项目，一般是express或者koa，价格和springboot差不多，但是需求量特别少
-uni+vue+springboot的项目，其实和vue+springboot项目差不多，因为单纯的vue+springboot项目太多了，所以现在很多人要求做个uni手机端，需求量适中
-.net项目，信管专业的学生用.net的很多，需求量不少，…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -2104,8 +2164,8 @@ uni+vue+springboot的项目，其实和vue+springboot项目差不多，因为单
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-03 datetime="2023-11-03T14:21:06.000Z">2023-11-03</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-03 datetime="2023-11-03T14:21:06.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-03 datetime="2023-11-03T11:56:06.000Z">2023-11-03</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-03 datetime="2023-11-03T11:56:06.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -2120,46 +2180,6 @@ uni+vue+springboot的项目，其实和vue+springboot项目差不多，因为单
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7297080018655412250"
-                        open
-                      >
-                        <summary class="article-expander__title">vue3打印解决方案：Vue-Plugin-HiPrint</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7297080018655412250">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Vue-Plugin-HiPrint 是一个Vue.js的插件，旨在提供一个简单而强大的打印解决方案。通过 Vue-Plugin-HiPrint，您可以轻松地在Vue.js应用程序中实现高度定制的打印功能。但是本文只简单介绍 Vue-Plugin-HiPrint 在vue3中如何使用固定模板打印的使用方法，以便可以快速集成并使用它。
-安装 Vue-Plugin-HiPrint
-要开始使用 Vue-Plugin-HiPrint，首先需要安装它。您可以使用 npm 或 yarn 进行安装：
-npm install vue-plugin-hiprint --save
-# 或
-yarn add vue-plugin-hiprint
-
-在 Vue 项目中引入 Vue-Plugin-HiPrint
-安装完成后，您需要在您的 Vue 项目中引入 Vue-Plugin-HiPrint。在您的 main.js 或任何其他入口文件中，您可以按以下方式引入它：
-1、main.js中引入
-import Vue from &#x27;vue&#x27;;
-import VuePluginHiPrint from &#x27;vue-plugin-hiprint&#x27;;
-
-Vue.use(VuePluginHiPrint);
-
-这会将 Vue-Plugin-HiPrint 注册为 Vue 插件，使其可用于您的整个应用程序。
-2、组件中引入
-import {hiPrintPlugin } from &#x27;vue-plugin-hiprint&#x27;
-
-创建打印模板
-在开始打印之前，您需要创建打印模板。Vue-Plugin-HiPrint 使用 HiPrint 作为底层打印引擎，它支持使用 HTML 和 CSS 创建高度自定义的打印模板。您可以创建一个包含您想要打印的内容的 HTML 模板，然后使用 CSS 样式进行格式化。
-请去demo预览里创建…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -4377,8 +4397,8 @@ ECH 非常巧妙地解决了域名加密。它采用双层格式，也就是说�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6831937385">
-        <time id="build-timestamp" datetime="2023-11-11T03:53:26.944Z">2023-11-11T03:53:26.944Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6832734885">
+        <time id="build-timestamp" datetime="2023-11-11T06:53:31.946Z">2023-11-11T06:53:31.946Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
