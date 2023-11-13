@@ -34,7 +34,7 @@
           "description": "想要提高网页的加载体验，其实有个非常简单且实用的技巧，那就是改变请求资源的加载优先级，这也可以改变？没错！",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/img-js-preload-fetch-priority/",
           "publishedOn": "2023-10-29T15:55:41.000Z",
-          "wordCount": 942,
+          "wordCount": 941,
           "title": "聊聊Web网页中资源加载的优先级",
           "imageUrl": null
         }
@@ -92,6 +92,16 @@
       "feedUrl": "https://rsshub.app/jike/user/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
+        {
+          "id": "https://m.okjike.com/originalPosts/655200ffde31fdaa4ed21976",
+          "author": null,
+          "description": "使用检索增强（Retrieval-Augmented Generation，RAG）可以缓解大模型的幻觉问题，从而避免大模型胡说八道，但传统的 RAG 存在一个很大的弊端——无论内容跟输入是否有足够的关联、对事实是否有足够的支撑，搜索模块都会不加区分地将内容召回，然后交给大模型来进行推理，这会很大程度降低大模型的多功能性，并导致生成质量不佳。\nSelf-RAG，https://selfrag.github.io，在一定程度上解决了这个问题。它设计了一个算法，将内容召回过程与大模型的推理过程进行了深度结合，大致思路如下：\n1）设计了一些标签，包括「是否检索」（Retrieve）、「内容是否相关」（ISREL）、「内容是否支撑事实」（ISSUP）、「内容是否可用」（ISUSE）等，可以理解它们是对检索内容进行评分的工具\n2）循环「推理->检索->过滤->评分」这个流程，在推理过程中，结合已有的信息和 LLM 的反馈，来判断要不要继续检索，过程中会获得足够多的包含了评分的内容\n3）根据已获得的信息的权重进行重新整理，将与内容相关、能够支撑事实以及高可用的内容保留下来\n4）可以进行全局设定，对于事实性要求高的推理任务，增加检索频次；对于创造性要求高的推理任务，减少检索频次\n这个算法思路的表现非常良好，只不过在过程中需要跟大模型进行多次交互，与 ToT（Tree of Thought） 类似，比较消耗资源。\n它有一个工程上的完整实现，可以戳这个项目：https://github.com/AkariAsai/self-rag",
+          "link": "https://m.okjike.com/originalPosts/655200ffde31fdaa4ed21976",
+          "publishedOn": "2023-11-13T10:57:03.000Z",
+          "wordCount": 455,
+          "title": "发布了: 使用检索增强（Retrieval-Augmented Generation，RAG）可以缓解大模型的幻觉问题，从而避免大模型胡说八道，但传统的 RAG 存在一个很大的弊端——无论内...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FgUA_WMG5Ea-LqVGHNKlm45cxX-hv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
         {
           "id": "https://m.okjike.com/originalPosts/6551c892b754c3dc3c67f577",
           "author": null,
@@ -181,16 +191,6 @@
           "wordCount": 453,
           "title": "发布了: 如何让小模型的推理效果在某些领域比 ChatGPT 这样的大模型还要更强？这篇论文提供了一个思路：https://arxiv.org/abs/2212.10071，借助思维链（CoT）逐...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fq7sGUElvWOLZq6yeH8S1Ln7bc5zv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/6550c29d859fc596df62b91d",
-          "author": null,
-          "description": "论阿里云重要性",
-          "link": "https://m.okjike.com/originalPosts/6550c29d859fc596df62b91d",
-          "publishedOn": "2023-11-12T12:18:37.000Z",
-          "wordCount": 481,
-          "title": "发布了: 论阿里云重要性",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FusLsJY3xmxWkaefQB_8gxOCjqZav3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         }
       ]
     },
@@ -306,6 +306,16 @@
       "feedUrl": "https://rsshub.app/zhubai/top20",
       "siteUrl": "http://analy.zhubai.wiki",
       "articles": [
+        {
+          "id": "https://open.zhubai.wiki/a/l/t/z/fp/oracle/2335656854984187904",
+          "author": "靳斯羽",
+          "description": "果然上网的还是少数人。   \n      \n   @国内国外   \n    \n   1.国家邮政局：“双11”当天全国快递业务量达6.39亿件，是平日业务量的1.87倍   \n    \n   2.民政部：今年前三季度全国569万对新人登记结婚，同比增加24.5万对   \n    \n   3.国家气候中心最新监测：厄尔尼诺事件已形成，最暖年纪录或再被打破   \n    \n   4.55个品牌被移出中华老字号   \n    \n   5.《中国智能网联汽车技术规程》自动驾驶测评规则发布   \n    \n   6.公安机关公开通缉缅北果敢自治区电信网络诈骗犯罪集团重要头目明学昌、明国平、明菊兰、明珍珍   \n    \n   7.网传江苏常州一企业主被约谈后自杀，官方通报：正调查   \n    \n   8.官方通报知名博主在大连遭遇“鬼秤”事件：已立案调查   \n    \n   9.襄阳健桥医院贩卖出生医学证明案件进展：6名嫌犯被批捕，13名公职人员被立案审查   \n    \n   10.涉嫌贩卖出生医学证明，广西南宁相关医院责任人已被采取刑事强制措施   \n    \n   11.联合调查组通报湖南怀化小学食堂吃出鼠头异物：疑似异物为兔头唇部   \n    \n   12.联合国开发计划署位于加沙地带的办公室遭炮击   \n    \n   13.司美格鲁肽再登神坛：17600例三期临床成功，心血管风险降低20%   \n    \n   14.韦伯在早期宇宙中发现银河系的孪生兄弟   \n      \n   @商业   \n    \n   1.PICO裁撤游戏工作室团队，日活前三VR音游《闪韵灵境》全员被裁   \n    \n   2.传安卓版本与鸿蒙将不再兼容，网易、美团急招鸿蒙开发员   \n    \n   3.华为悬赏 200 万解答技术难题   \n    \n   4.阿里云故障致多款应用「崩了」，疑控制台访问及 API 调用异常   \n    \n   5.京东零售 CEO 谈头部主播高佣金现象：一万个工厂养一个主播   \n    \n   6.菜鸟被证监会要求出具境外发行上市备案的补充材料   \n    \n   7.奶茶连锁品牌“1点点”否认倒闭传闻   \n    \n   8.中国银河澄清合并重组传闻：不存在筹划或其他应披露事项   \n    \n   9.晶圆代工成熟制程厂商大幅下调明年首季报价，联电等抢救产能利用率   \n    \n   10.Coach母公司第一财季中国收入增长   \n    \n   11.美国太空探索技术公司：重型运载火箭“星舰”或于一周内试飞   \n    \n   12.全球资管巨头先锋领航确认退出中国，关闭在中国的办公室   \n    \n   13.PS5 Slim 现已正式发售，标准版售价 499.99 美元   \n    \n   14.智能一体化氢燃料电池堆及模压石墨双极板研发商“三氢科技”获数千万元天使轮融资   \n    \n   15.钠离子电池硬炭负极材料供应商“容钠新能源”获数千万元A轮融资   \n    \n   16.精密零组件AI制造“量匠”获千万元天使轮融资",
+          "link": "https://open.zhubai.wiki/a/l/t/z/fp/oracle/2335656854984187904",
+          "publishedOn": "2023-11-13T01:16:42.000Z",
+          "wordCount": 441,
+          "title": "【1113早报】你不结婚总有人结的周一",
+          "imageUrl": null
+        },
         {
           "id": "https://open.zhubai.wiki/a/l/t/z/fp/oracle/2334568862857158656",
           "author": "靳斯羽",
@@ -454,16 +464,6 @@
           "publishedOn": "2023-11-07T01:16:55.000Z",
           "wordCount": 4153,
           "title": "独立产品灵感周刊 DecoHack #055 - 好玩有用的独立产品与开源项目",
-          "imageUrl": null
-        },
-        {
-          "id": "https://open.zhubai.wiki/a/l/t/z/fp/hungryturbo/2333328565267456000",
-          "author": "童欧巴",
-          "description": "美味值：🌟🌟🌟🌟🌟   \n    \n   口味：夏梦玫珑   \n    \n   \n        食堂技术周刊仓库地址：https://github.com/Geekhyt/weekly        \n   \n    \n   大家好，我是童欧巴。欢迎来到前端食堂技术周刊，我们先来看下上周的技术资讯。   \n    \n   技术资讯   \n    \n   \n        10 月登陆 Web 平台的新功能        \n    \n        TypeScript 5.3 RC        \n    \n        Remix ❤️ Vite        \n    \n        State of React 2023        \n    \n        Docusaurus 3.0        \n    \n        Deno 1.38        \n    \n        VS Code October 2023        \n    \n        ESLint Stylistic v1.0.0        \n   \n    \n   下面我们来看技术资料。   \n    \n   技术资料   \n    \n   1.        高并发的哲学原理        \n    \n   找出单点，进行拆分。   \n    \n   2.        聊聊 Web 网页中资源加载的优先级        \n    \n   Chrome 中，网络请求的优先级分成了 5 个等级：Highest、High、Medium、Low、Lowest。   \n    \n   3.        2023 年每个软件开发者都必须知道的关于 Unicode 的最基本的知识        \n    \n   总的来说，Unicode 不完美，但有一个能覆盖所有可能语言的编码、全世界都同意使用它、我们可以完全忘记编码和转换之类的东西的事实是一个奇迹。   \n    \n   4.        新版 React 文档中的九项最佳建议        \n    \n   每项建议都包含正确和错误示例，基于 React 核心团队的丰富经验，旨在帮助开发人员避免开发中的常见陷阱。   \n    \n   5.        浏览器和图形引擎渲染对比        \n    \n   从介绍浏览器渲染引擎开始，逐渐引出和图形引擎的比较，尝试从图形视角探索和理解浏览器的渲染原理。   \n        \n   6.        ECMAScript 装饰器的 10 年        \n    \n   装饰器经过 10 年打磨，早期采用的框架和库遇到了很多的缺陷，并提供了宝贵的学习经验，强调与 Web 平台协调的重要性，需要开发一个平台和社区一致的解决方案，同时保留装饰器的本质。目前，装饰器正走在越来越好的路上。   \n    \n   7.        如何实现在 Web 中渲染 Word 文档        \n    \n   纯手撸前端解析 Word 文件并渲染。   \n    \n   周刊赞助   \n    \n   整理周刊要花费大量的精力和时间，你可以通过以下方式支持我：   \n    \n   \n   将食堂分享给你的朋友；   \n    \n   订阅食堂的竹白付费专栏(食堂为你准备了专属的会员通讯，以及前端食堂数字花园知识库的访问权限)。   \n   \n    \n   订阅地址：       https://hungryturbo.zhubai.love/        \n    \n   知识星球   \n        \n   好了，以上就是本期的食堂周刊，观众老爷们如果觉得还不错，一键三连是对食堂老板最大的支持。   \n    \n   你的前端食堂，吃好每一顿饭，我们下期见。",
-          "link": "https://open.zhubai.wiki/a/l/t/z/fp/hungryturbo/2333328565267456000",
-          "publishedOn": "2023-11-06T15:04:55.000Z",
-          "wordCount": 2526,
-          "title": "前端食堂技术周刊第 103 期：10 月登陆 Web 平台的新功能、TS 5.3 RC、React 2023 状态、高并发的哲学原理、Web 资源加载优先级",
           "imageUrl": null
         },
         {
@@ -658,13 +658,33 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
-          "id": "https://juejin.cn/post/7300100800906788873",
-          "author": "沐渃清澄",
-          "description": "theme: smartblue\n前端“三清”\n在前端开发中，我们经常听到关于“三清”的说法，即 window、document、Object。这三者分别代表了 BOM（浏览器对象模型）、DOM（文档对象模型）以及 JS 的顶层对象。在这个体系中，我们通过 JavaScript 与浏览器进行深度交互，构建出丰富多彩的网页应用。同时，JS 类也是前端开发中常用的构建模块，通过构造函数和原型，我们能够创建出更为复杂的对象和功能。\nBOM\n首先让我们来了解BOM：\nBOM（浏览器对象模型）是一组用于与浏览器交互的对象，提供了 JavaScript 访问浏览器功能的接口。对于JavaScript：为了能够让JavaScript能控制浏览器的行为，JavaScript就有了一套自己的BOM接口。\n以下是 BOM 中一些常见的对象和功能：\n1. window 对象：\nwindow 对象是 BOM 的顶层对象，代表浏览器的一个窗口或一个标签页。window 对象包含了很多属性和方法，例如：\nwindow.innerWidth 和 window.innerHeight：获取浏览器窗口的内部宽度和高度。\nwindow.location：提供了与当前窗口中加载的文档有关的信息，比如当前 URL。\nwindow.document：表示当前窗口中加载的文档，即 DOM。\n2. 弹窗和对话框：\nwindow.alert()：弹出警告框。\nwindow.confirm()：弹出确认框，用户可以点击“确定”或“取消”。\nwindow.prompt()：弹出提示框，通常用于从用户获取输入。\n3. 定时器：\nwindow.setTimeout()：在一定时间后执行一次指定的函数。\nwindow.setInterval()：以指定的时间间隔重复执行指定的函数。\nwindow.clearTimeout() 和 …",
-          "link": "https://juejin.cn/post/7300100800906788873",
-          "publishedOn": "2023-11-12T08:32:22.000Z",
-          "wordCount": 1679,
-          "title": "让我们来深入了解一下前端“三清”是什么",
+          "id": "https://juejin.cn/post/7300102080902905867",
+          "author": "萌萌哒草头将军",
+          "description": "文章同步在公众号：萌萌哒草头将军，欢迎关注\n精彩推荐\n🎉Vue3优雅的监听localStorage变化🎉\nVue3如何优雅的加载大量图片🚀🚀🚀\nVue3优雅加载图片的一些动画Ⅱ🚀🚀🚀\nVue3使用hook封装常见的几种异步请求函数场景，让开发更加丝滑🚀🚀🚀\nVue3使用hook封装媒体查询和事件监听，使Vue的开发更加丝滑🚀🚀🚀\n开发中经常会遇到跨组件通信的场景。props 逐层传递的方法实在是太不优雅了，所以今天总结下可以更加简单的跨组件通信的一些方法。\n\n依赖注入\n\n<!-- App.vue -->\n<script setup lang=\"ts\">\nimport { ref, provide } from \"vue\";\nimport Child from \"./components/Child.vue\";\nconst count = ref(0)\nconst updateCount = () => count.value ++\nprovide(\"count\", {count, updateCount})\n</script>\n\n<template>\n  <h4>公众号：萌萌哒草头将军</h4>\n  <div>{{ count }}</div>\n  <button @click=\"updateCount\">change</button>\n  <Child />\n</template>\n\n<!-- Child.vue -->\n<template>\n  <Other />\n</template>\n  \n<script setup lang='ts'>\nimport Other from \"./other.vue\"\n</script>\n\n<!-- other.vue -->\n<template>\n  <div>{{ count }}</div>\n  <…",
+          "link": "https://juejin.cn/post/7300102080902905867",
+          "publishedOn": "2023-11-12T12:46:37.000Z",
+          "wordCount": 2158,
+          "title": "Vue3如何优雅的跨组件通信🚀🚀🚀",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7299743820434309147",
+          "author": "zxg_神说要有光",
+          "description": "大家平时都在写组件，当你写组件库里的组件，或者项目里的一些公共组件的时候，是需要提供文档的。\n这时候我们一般都会用 Storybook。\nStorybook 是非常流行的用来构建组件文档的工具。\n现在有 80k 的 star 了：\n\n那 Storybook 都提供了啥功能呢？\n我们试一下就知道了：\nnpx create-react-app --template typescript sb-test\n\n\n用 cra 创建个 react 项目。\n然后进入项目，执行 storybook 的初始化：\nnpx storybook@latest init\n\n\n打印的日志告诉你 storybook init 是在你的项目里添加 storybook 的最简单方式。\n执行 npm run storybook，就可以看到这样文档：\n\n这就是 storybook 生成的组件文档。\n这三个组件不是我们自己写的，是 storybook 初始化的时候自带了三个 demo 组件。\n我们可以用它来了解下 storybook 的功能。\n\nstorybook init 在项目里加了 2 个目录： .storybook 和 src/stories\n.storybook 下的是配置文件， src/stories 下的是组件。\n比如 Button.tsx 是这样的：\n\n传入几个参数，渲染出一个 button。\n然后 Button.stories.tsx 是这样的：\n\n导出的这几个 Story 类型的对象是啥呢？\n是这个：\n\n也就是 Button 组件传入不同参数的时候渲染的结果。\n我们加一个 Story 试试：\n\n页面多了一个 Button 的类型：\n\n也就是说，Storybook 把同一个组件传入不同 props 的情况，叫做一个 Story。\n别的地方可能叫做用例或变体，而在 Storybook 里叫做 sto…",
+          "link": "https://juejin.cn/post/7299743820434309147",
+          "publishedOn": "2023-11-11T14:00:38.000Z",
+          "wordCount": 1347,
+          "title": "想给组件加上文档？ 试试 Storybook",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7299750611921977356",
+          "author": "亿元程序员",
+          "description": "点击上方亿元程序员+关注和★星标\n\n引言\n大家好，最近我突然想起来我还有一款微信小游戏还没有上架，于是捣鼓了一天把游戏完善了一下，然后准备提交审核，却发现异常的艰难...\n1.为什么难？\n相信大家都大概知道，自从微信平台宣布\n9月1日起，微信小程序须完成备案后才可上架；若微信小程序已上架，需在2024年3月31日前完成备案，逾期未完成备案将于2024年4月1日起进行清退处理。”\n9月1日后小游戏想要上架，必须要经过备案这一步骤才行。\n\n其实从9月1日到现在已经过去2个月，根据前面了解到，小游戏进行备案，官方预估的时间大概是需要22个工作日。\n\n大家可能都这么想，多了这1个月多的时间，提前做下准备，其实还可以接受。\n但是，事实上好像并没有那么简单。。。\n2.还有哪些变化？\n通过MP后台我们可以发现，当我们点击提交发布的时候，会弹出请先完成备案的弹窗，即使我们的小游戏已经通过了审核，处于审核通过待发布的状态。\n\n点击立即备案，跳转到备案流程，我们可以看见官方预估时间，个人小游戏预计从备案到发布需时30 - 40个工作日，这是什么概念，比前面估计的备案时间还要多18个工作日，18个工作日满打满算需要24天。近一个月的时间。\n\n这个多的近一个月的时间从何而来？\n3.为什么久？\n首先备案之前需要比之前上架小游戏要多准备两份文件。\n第一份就是著作权自我声明。\n\n第二份就是授权书。\n\n不过这不是增加时间的主要，因为除去这两份文件的准备时间，审核时间仅需要1个工作日。\n\n接下来这个就是关键了，游戏内容介绍，这个内容，经常上架小游戏的小伙伴都知道，在9月1日之前基本上是当天提交当天就能够过审的。怎么现在需要20个工作日了？\n\n点击《游戏内容介绍提交指引》，我们可以看到目前官方的反馈是“近期单量较多，会尽快处理哈，耐心等下。”\n\n那么问题来了，为何近期单量剧增？\n4.笔者猜测\n1.不容马虎：小游戏备案是不容马虎的，所以审核时间长达22个工作日，正是如此，为了避免备案审核的堆积，需要将压力提前到前面的内容，即游戏内容审核。\n2.审核严格：为了能够更加顺利地完成备案，游戏内容的审核变得非常地严格。\n3.聪明人扎堆：就好像高速公路堵车效应一样，根据以往经验，想要避免堵车，特意提前或者延后出发，结果一群聪明人堵在路上。为了能够尽快进入备案环节，很多人会把一款游戏的demo或者半成品拿去提审，目的是想节省备案的时间用来开发优化，结果适得其反。\n4.发展迅猛：小游戏飞速发展，越来越多的人想投入到小游戏的开发当中。\n小游戏上架越来越难意味着什么？\n5.引发深思\n首先小游戏上架越来越难成功避免了“蹭热度”的游戏产生，原来每当新事物或者新热点出现时，会有一大批“蹭热度”的游戏争先上架，例如《羊了个羊》火了，会涌现一大批《猪了个猪》，《牛了个牛》。而且前面已发布的游戏想通过修改游戏名字去蹭热度的方式也受到了限制，需要通过微信认证流程改名。\n\n其次就是驱逐劣质游戏，小游戏上线节奏被放慢后，有更多的时间可以去对小游戏进行打磨和调优，着重优化调整游戏细节，或者花更多的时间去做一些运营相关的内容。\n结语\n在哪里可以看到如此清晰的思路，快跟上我的节奏！关注我，和我一起了解游戏行业最新动态，学习游戏开发技巧。\n我是\"亿元程序员\"，一位有着8年游戏行业经验的主程。在游戏开发中，希望能给到您帮助, 也希望通过您能帮助到大家。\nAD:笔者线上的小游戏《贪吃蛇掌机经典》《填色之旅》《重力迷宫球》大家可以自行点击搜索体验。\n实不相瞒，想要个赞和在看！请把该文章分享给你觉得有需要的其他小伙伴。谢谢！\n推荐专栏：\n和8年游戏主程一起学习设计模式\n8年主程手把手打造Cocos独立游戏开发框架\n从零开始开发贪吃蛇小游戏到上线系列\n游戏开发的技巧、心得、资讯\n点击下方绿色按钮+关注",
+          "link": "https://juejin.cn/post/7299750611921977356",
+          "publishedOn": "2023-11-11T05:00:51.000Z",
+          "wordCount": 787,
+          "title": "现在个人想上架微信小游戏已经这么难了吗...",
           "imageUrl": null
         },
         {
@@ -828,33 +848,13 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7298190770401001512",
-          "author": "前端小魔女",
-          "description": "highlight: a11y-dark\ntheme: Chinese-red\n不要乱说话。话说出去之前我们还是话的主人，话说出去之后我们就成了话的奴隶。\n大家好，我是柒八九。\n前言\n在我们项目开发中，Base64想必大家都不会很陌生，Base64是将二进制数据转换为文本的一种优雅方式，使存储和传输变得容易。但是，作为一个合格的程序员，我们应该有一种打破砂锅问到底的求助欲望。\n所以，今天我们来讲讲在各种语言中出镜率都高的离谱的Base64算法。今天，我们就用我们在初高中语文老师教我们的描述一个事物的三大步骤：1. 是什么，2. 如何工作，3. 为什么它很重要。来讲讲Base64算法。\n好了，天不早了，干点正事哇。\n\n我们能所学到的知识点\n前置知识点\n为什么会出现 Base64 编码\n什么是 Base64 编码？\nBase64 使用案例\nBase64 编码算法\n如何进行 Base64 编码和解码\n1. 前置知识点\n前置知识点，只是做一个概念的介绍，不会做深度解释。因为，这些概念在下面文章中会有出现，为了让行文更加的顺畅，所以将本该在文内的概念解释放到前面来。如果大家对这些概念熟悉，可以直接忽略\n同时，由于阅读我文章的群体有很多，所以有些知识点可能我视之若珍宝，尔视只如草芥，弃之如敝履。以下知识点，请酌情使用。\nRFC\nRFC，全称为Request for Comments，是一种用于定义互联网标准和协议的文件系列。\nRFC最早由互联网工程任务组（IETF）创建，用于记录和传播互联网协议、方法和最佳实践的提案、规范和讨论。\n每个 RFC 都有一个唯一的编号，通常以RFC开头，后面跟着一个数字，例如RFC 791、RFC 2616等。RFC文档通常包含了协议规范、技术说明、最佳实践、标准化提案等，以促进互联网技术的发展和互操作性。\n我们可以在IETF-datatracker中输入…",
-          "link": "https://juejin.cn/post/7298190770401001512",
-          "publishedOn": "2023-11-06T10:52:48.000Z",
-          "wordCount": 2238,
-          "title": "了不起的Base64",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7297522590683168783",
-          "author": "Sunshine_Lin",
-          "description": "前言\n大家好，我是林三心，用最通俗易懂的话讲最难的知识点是我的座右铭，基础是进阶的前提是我的初心~\n协同文档\n在平时的开发中，协同文档真的帮助到了我们很多，他可以应用到很多场景，比如：\n需求文档同步\n信息收集\n公司内部文档编写\n所以现阶段协同文档也是市面上很火的一种趋势，比较火的产品有：\n企微文档\n飞书文档\n语雀\n等等。。。。\n协同\n想要实现协同文档，其实有一个最大的痛点，那就是 协同。\n通俗点说就是：两个人同时编辑同一个文档，就会有冲突，那么这个冲突应该怎么解决？\n为了解决这个问题，市面上出现了两种算法（不是本文重点）\nOT （Operational transformation）\nCRDT（Conflict-free Replicated Data Type）\n这不是本文重点，如果不想看可以直接跳到下面的代码实战~\nOT\n\n实现协同文档\n接下来开始实现一个简单的协同文档！！！\n装库\n我们需要先安装几个库\nnpm i yjs y-quill \n      quill quill-cursors \n      y-websocket\n\nyjs： 一个集成 CRDT 算法的同步库，是此次协同文档的核心\nquill： 一个富文本编辑器\nquill-cursors： 一个quill的插件，用于显示多个光标，因为多个用户共同编辑就会有多个光标\ny-quill： 可以理解为他能将yjs和quill融合起来，实现协同\ny-websocket： 一个yjs的库，作用是将数据同步到多个客户端\n客户端\n<div id=\"app\"></div>\n\nimport * as Y from 'yjs';\nimport { QuillBinding } from 'y-quill';\nimport Quill from 'quill';\nimport QuillCursors from 'quill-cursors';\nimport { WebsocketProvider } from 'y-websocket';\nimport 'quill/dist/quill.snow.css'; // 使用了 snow 主题色\n\n// 使用 cursors 插件\nQuill.register('modules/cursors', QuillCursors);\nconst quill = new Quill(document.querySelector('#app'), {\n  modules: {\n    cursors: true,\n    toolbar: [\n      [{ header: [1, 2, false] }],\n      ['bold', 'italic', 'underline'],\n      ['image', 'code-block'],\n    ],\n    history: {\n      userOnly: true,\n    },\n  },\n  placeholder: '林三心不学挖掘机...',\n  theme: 'snow',\n});\nconst ydoc = new Y.Doc(); // y 文档对象，保存需要共享的数据\nconst ytext = ydoc.getText('quill'); // 创建名为 quill 的 Text 对象\n// 连接到 websocket 服务端\nconst provider = new WebsocketProvider('ws://localhost:1234', 'quill-demo-room', ydoc);\n// 数据模型绑定，再绑上光标对象\nconst binding = new QuillBinding(ytext, quill, provider.awareness);\n\n服务端\n只需要在终端里运行\nHOST=localhost PORT=1234 npx y-websocket\n\n\n效果\n现在就可以实现协同文档的效果啦！！！\n\n结语 & 加学习群 & 摸鱼群\n我是林三心\n一个待过小型toG型外包公司、大型外包公司、小公司、潜力型创业公司、大公司的作死型前端选手；\n一个偏前端的全干工程师；\n一个不正经的掘金作者；\n一个逗比的B站up主；\n一个不帅的小红书博主；\n一个喜欢打铁的篮球菜鸟；\n一个喜欢历史的乏味少年；\n一个喜欢rap的五音不全弱鸡\n如果你想一起学习前端，一起摸鱼，一起研究简历优化，一起研究面试进步，一起交流历史音乐篮球rap，可以来俺的摸鱼学习群哈哈，点这个，有7000多名前端小伙伴在等着一起学习哦 --> 摸鱼沸点",
-          "link": "https://juejin.cn/post/7297522590683168783",
-          "publishedOn": "2023-11-05T15:20:40.000Z",
-          "wordCount": 1193,
-          "title": "仅仅28行代码，就能实现一个【协同文档】",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7297526380333400083",
-          "author": "0522Skylar",
-          "description": "首先，简述一下这个需求的背景，产品希望能够让用户在微信内，打开一个h5页面，然后就能唤醒公司中维护的app，这个是为了能够更好的引流。\n唤醒app的三种方案\nIOS系统-Universal Link（通用链接）\nUniversal Links可以通过配置指定域名路径直接唤醒APP，一步到位\n具体配置看这篇文章\nhttps://juejin.cn/post/6937614343840202766\n遇到的问题：\napple-app-site-association文件放在app域名(假设： https://my.app.com/)下\n{\n    \"applinks\": {\n        \"apps\": [],\n        \"details\": [\n            {\n                \"appID\": \"******\",\n                \"paths\": [ \"/abc/*\" ]\n            },\n        ]\n    }\n}\n\n使用Universal Link其实就是跳转到一个页面(中间页)，地址：https://my.app.com/abc/index.html\n根据上面配置，这个地址是已经固定了的，这需要跟app域名保持一致，并且在paths配置里面的目录下，为了能够获取到apple-app-site-association文件\nconst universalLink = 'https://my.app.com/abc/index.html?redirectUrl=' + window.location.href\nlocation.replace(universalLink);\n\n如果未下载app，则会跳转失败，在中间页中处理，跳转失败后再返回到当前页面。\n<script>\n    function getQu…",
-          "link": "https://juejin.cn/post/7297526380333400083",
-          "publishedOn": "2023-11-05T09:04:44.000Z",
-          "wordCount": 2181,
-          "title": "微信内H5页面唤醒App",
+          "id": "https://juejin.cn/post/7298160530291376140",
+          "author": "零念",
+          "description": "theme: channing-cyan\nhighlight: a11y-dark\n随着大模型能力越来越卷，在垂直领域的落地也在加快，对于大模型代码生成能力而言，最简洁高效的方式就是集成为常用IDE的插件，在vscode的插件战场中，比较知名的就有\nGitHub Copilot, 智谱清言的codegeex, 讯飞星火的iFlyCode。\n那么我们就以开发一个简易的大模型对话插件，来探究一下vscode插件开发到发布的流程，研究一下文心一言大模型api的接入\n跟着操作大约30-60分钟，你需要\n安装vscode，npm/yarn等，node版本 >12.0\n最好有时间提前看一看 vscode 官网api开发文档\n万字长文 Action!\n一：首先明确插件开发方式\n如果你的插件只提供原生vscode能力，没有复杂的UI需求，只需要在vscode插件项目上开发即可，类似插件比如Volar Git History Eslint\n如果提供复杂UI交互，定制化界面，就需要在vscode插件内嵌iframe页面（用iframe展示线上web地址与使用vscode提供的一套UI组件皆可，详见第三节），我这里选择访问线上地址，因此需要开发一个vscode插件项目与一个vue3项目（其他框架亦可），类似的复杂插件比如 CodeGeeX iFlyCode，会将web页面展示在侧边栏中。\n\n本文主要讲解 如何在vscode插件中通过iframe展示web页面，获得更好的拓展性与可维护性\n二：新建一个Vscode 插件项目\n1. 官网教程地址\n开始你的第一个插件项目\n2. 一步一步来创建\n找到一个比较舒服的文件夹，打开cmd，通过以下命令安装 vscode项目脚手架，取的是 https://registry.npmjs.org 镜像源，因此可能会有科学问题\n  npm install -g yo …",
+          "link": "https://juejin.cn/post/7298160530291376140",
+          "publishedOn": "2023-11-06T09:51:48.000Z",
+          "wordCount": 4474,
+          "title": "发布自己的 vscode 大模型问答插件，vue+nodejs 接入文心一言api",
           "imageUrl": null
         }
       ]
@@ -864,6 +864,26 @@
       "feedUrl": "https://rsshub.app/juejin/pins/6824710202000932877",
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
+        {
+          "id": "7300809038245691444",
+          "author": "图码",
+          "description": "写了一个数据结构可视化的学习网站，不知道大家会用得到不 \n不知道为啥掘金抓取到的会是乱码 [衰]",
+          "link": "https://juejin.cn/pin/7300809038245691444",
+          "publishedOn": "2023-11-13T11:55:25.000Z",
+          "wordCount": 573,
+          "title": "写了一个数据结构可视化的学习网站，不知道大家会用得到不 不知道为啥掘金抓取到的会是乱码 [衰]",
+          "imageUrl": null
+        },
+        {
+          "id": "7300782146602434601",
+          "author": "qianmoq",
+          "description": "DataCap 版本 1.17.0 开发已经完成 81% 争取这周全部搞定，发新版",
+          "link": "https://juejin.cn/pin/7300782146602434601",
+          "publishedOn": "2023-11-13T10:25:01.000Z",
+          "wordCount": 599,
+          "title": "DataCap 版本 1.17.0 开发已经完成 81% 争取这周全部搞定，发新版",
+          "imageUrl": null
+        },
         {
           "id": "7300607227285946378",
           "author": "charlestang",
@@ -1042,26 +1062,6 @@
           "publishedOn": "2023-11-01T10:13:24.000Z",
           "wordCount": 575,
           "title": "今天又收到了一笔来自社区的回馈，我正在对微信或支付宝上的赞助者搭建一个感谢页，如果你赞助我，请备注或者联系我，留下你的github用户名，同时很高兴我的插件...",
-          "imageUrl": null
-        },
-        {
-          "id": "7296165821595533348",
-          "author": "陈随易",
-          "description": "[7018942344208580646#1024一起掘金#] 害怕electron的体积？恐惧tauri的上手难度？这里有个折中方案，neutralinojs，体积跟tauri一样小，开发难度比electron还低，小工具，小产品，值得一试，上车！",
-          "link": "https://juejin.cn/pin/7296165821595533348",
-          "publishedOn": "2023-11-01T02:00:45.000Z",
-          "wordCount": 527,
-          "title": "[7018942344208580646#1024一起掘金#] 害怕electron的体积？恐惧tauri的上手难度？这里有个折中方案，neutralinojs，体积跟tauri一样小，开发难度比electron还低...",
-          "imageUrl": null
-        },
-        {
-          "id": "7296017207099883583",
-          "author": "陈随易",
-          "description": "[7018942344208580646#1024一起掘金#] 现代化的浏览器扩展开发模板，支持热更新，支持vue、react等流行框架！开发浏览器扩展，打造小而美的产品利器！还说什么？上车！",
-          "link": "https://juejin.cn/pin/7296017207099883583",
-          "publishedOn": "2023-11-01T01:16:11.000Z",
-          "wordCount": 526,
-          "title": "[7018942344208580646#1024一起掘金#] 现代化的浏览器扩展开发模板，支持热更新，支持vue、react等流行框架！开发浏览器扩展，打造小而美的产品利器！还说什么？...",
           "imageUrl": null
         }
       ]
