@@ -51,8 +51,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-13 datetime="2023-11-13T15:28:56.000Z">2023-11-13</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-13 datetime="2023-11-13T15:28:56.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-14 datetime="2023-11-14T00:29:16.000Z">2023-11-14</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-14 datetime="2023-11-14T00:29:16.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -71,15 +71,236 @@
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/6552bf5cdc2460410cee1022"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 「人生最不幸处，是偶一失言，而祸不及；偶一失谋，而事俸成；偶一恣行，而获小利。后乃视为故常，而恬不为意。则莫大之患，由此生矣。」 ---- 李叔同</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6552bf5cdc2460410cee1022">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>「人生最不幸处，是偶一失言，而祸不及；偶一失谋，而事俸成；偶一恣行，而获小利。后乃视为故常，而恬不为意。则莫大之患，由此生矣。」
+----
+李叔同</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-13 datetime="2023-11-13T23:09:37.000Z">2023-11-13</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-13 datetime="2023-11-13T23:09:37.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Barret李靖的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/6552acb105c1e66933bb349f"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 一张有趣的耗时对比图。另外再补充几个栽过跟头的数据知识。 同机房内调用的 RT 是 100µs，上次正好遇到了一个监控告警，redis 平均时延从 100µs+ 飙...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6552acb105c1e66933bb349f">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Ftt1hsXBVNehXBTH9yrUTXumpXsTv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>一张有趣的耗时对比图。另外再补充几个栽过跟头的数据知识。
+同机房内调用的 RT 是 100µs，上次正好遇到了一个监控告警，redis 平均时延从 100µs+ 飙升到了 500µs+，原因是一个数据分区的有硬件故障，自动切换到了另外一个可用区，导致所有 proxy 节点与这个 data 节点变成了跨可用区调用，也就是变成了 1ms+，拉高平均耗时。
+同城跨可用区（AZ）调用一般在 1.9ms 以内，距离是 20~80km，这是标准要求；在光纤光缆中，每公里会造成 4.9µs 的延迟，电缆中的每个弯曲或缺陷都会降低网络速度；跨城调用，例如杭州到上海，时延会在 3.8ms~10.8ms 不等，主要看两个可用区之间的分布距离；在做异地灾备的时候，10ms 的时延基本就挺难接受了，因此异地灾备一般都是冷备，如果要做异地多活，就得考虑数据单元化，做水平 sharding，或者考虑做应用层做，数据弱一致。
+洲际时延是 100ms 以上，在不走专线的情况下，ping 一台海外机器，时延 100ms+ 都是很正常的，走专线会快很多，例如电信的 CN2（AS4809），联通的 CHI­NA169（AS4837）等，专线的价格会贵很多很多；可以使用 ping.pe 这个在线工具进行测试，它提供的 traceroute 包含了 AS 信息，可以确认自己走的是什么线路，也可以根据线路来判断服务商提供的主机网络是不是真的靠谱。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/655200ffde31fdaa4ed21976"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 使用检索增强（Retrieval-Augmented Generation，RAG）可以缓解大模型的幻觉问题，从而避免大模型胡说八道，但传统的 RAG 存在一个很大的弊端——无论内...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/655200ffde31fdaa4ed21976">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FgUA_WMG5Ea-LqVGHNKlm45cxX-hv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>使用检索增强（Retrieval-Augmented Generation，RAG）可以缓解大模型的幻觉问题，从而避免大模型胡说八道，但传统的 RAG 存在一个很大的弊端——无论内容跟输入是否有足够的关联、对事实是否有足够的支撑，搜索模块都会不加区分地将内容召回，然后交给大模型来进行推理，这会很大程度降低大模型的多功能性，并导致生成质量不佳。
+Self-RAG，https://selfrag.github.io，在一定程度上解决了这个问题。它设计了一个算法，将内容召回过程与大模型的推理过程进行了深度结合，大致思路如下：
+1）设计了一些标签，包括「是否检索」（Retrieve）、「内容是否相关」（ISREL）、「内容是否支撑事实」（ISSUP）、「内容是否可用」（ISUSE）等，可以理解它们是对检索内容进行评分的工具
+2）循环「推理-&gt;检索-&gt;过滤-&gt;评分」这个流程，在推理过程中，结合已有的信息和 LLM 的反馈，来判断要不要继续检索，过程中会获得足够多的包含了评分的内容
+3）根据已获得的信息的权重进行重新整理，将与内容相关、能够支撑事实以及高可用的内容保留下来
+4）可以进行全局设定，对于事实性要求高的推理任务，增加检索频次；对于创造性要求高的推理任务，减少检索频次
+这个算法思路的表现非常良好，只不过在过程中需要跟大模型进行多次交互，与 ToT（Tree of Thought） 类似，比较消耗资源。
+它有一个工程上的完整实现，可以戳这个项目：https://github.com/AkariAsai/self-rag</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/6551c892b754c3dc3c67f577"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 现代软件架构的真实写照😂</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6551c892b754c3dc3c67f577">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fgm9uHk79OE0cl4Q819ZwIl1Hitgv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>现代软件架构的真实写照😂</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/65518a25b754c3dc3c61c304"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 拉胯的云 SLA：https://mp.weixin.qq.com/s?__biz&#x3D;MzU5ODAyNTM5Ng&#x3D;&#x3D;&amp;mid&#x3D;2247485745&amp;idx&#x3D;3&amp;sn&#x3D;3d771a3b11b74fe9f5e8d11bb3c623a0 数据一定要考虑跨地域...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65518a25b754c3dc3c61c304">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fql9s6Sahk7qkWW46cpuFNSBBrWzv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>拉胯的云 SLA：https://mp.weixin.qq.com/s?__biz&#x3D;MzU5ODAyNTM5Ng&#x3D;&#x3D;&amp;mid&#x3D;2247485745&amp;idx&#x3D;3&amp;sn&#x3D;3d771a3b11b74fe9f5e8d11bb3c623a0
+数据一定要考虑跨地域备份，甚至本地冷备，这是一个血的教训，也是最近才明白的道理。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/6551807e05c1e66933a3b083"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 作者实践下来，算上 DBA、运维等成本，价格仍然比云要低很多，一千万的云成本，最高可以节省五百万。 对于成熟的中大型公司，面向未来三到五年做预算，...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6551807e05c1e66933a3b083">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fq8HT-swS_r_r7mP8pESAtIzGlY7v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>作者实践下来，算上 DBA、运维等成本，价格仍然比云要低很多，一千万的云成本，最高可以节省五百万。
+对于成熟的中大型公司，面向未来三到五年做预算，（部分）自建机房会是一个很大的优化点，在全面降本增效的大背景下，也是一个必然趋势吧。
+https://web.okjike.com/originalPost/65517c9fde31fdaa4ec50b61</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/65517c9fde31fdaa4ec50b61"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 云的价格确实贵的离谱，尤其是储存这块，作者分析说，价格比自己采购要贵上一百多倍，https://mp.weixin.qq.com/s?__biz&#x3D;MzU5ODAyNTM5Ng&#x3D;&#x3D;&amp;mid&#x3D;22474857...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65517c9fde31fdaa4ec50b61">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FmVbQbb-HS-6L2GtcHoMmRAI11dFv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>云的价格确实贵的离谱，尤其是储存这块，作者分析说，价格比自己采购要贵上一百多倍，https://mp.weixin.qq.com/s?__biz&#x3D;MzU5ODAyNTM5Ng&#x3D;&#x3D;&amp;mid&#x3D;2247485745&amp;idx&#x3D;1&amp;sn&#x3D;6109bb1be67f9e7e02124c4fc3b47ea3，硬件再加软件，那就更加可怕了。
+如果不考虑弹性，自建机房最快十天就可以把云上租赁的钱给省出来。倘若是一般性的储存需求，对小型企业和个体用户而言，可以考虑组装几个跨区域多点数据同步的 NAS，也是非常靠谱划算的。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/65516d41859fc596df6d22b0"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 特别想知道，去哪里可以索引到相关事件或者新闻。</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65516d41859fc596df6d22b0">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FshxKqqCe4V8z583NHjNBylyrkQQv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>特别想知道，去哪里可以索引到相关事件或者新闻。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >李继刚的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://m.okjike.com/originalPosts/655240b8834e87e36f1f1a72"
                         open
                       >
-                        <summary class="article-expander__title">发布了: 「标准会变成习惯，习惯会变成结果。」</summary>
+                        <summary class="article-expander__title">发布了: 「标准会变成习惯，习惯会变成结果。」 如果你做的和别人一样，你只能期望得到和别人一样的结果。想要不同的结果就必须提高标准。 ---- 万维钢</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/655240b8834e87e36f1f1a72">
                           <div class="article-summary-box-inner media-object">
                               <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
-                              <span>「标准会变成习惯，习惯会变成结果。」</span>
+                              <span>「标准会变成习惯，习惯会变成结果。」
+如果你做的和别人一样，你只能期望得到和别人一样的结果。想要不同的结果就必须提高标准。
+----
+万维钢</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
@@ -206,151 +427,6 @@
                             <span class="media-object__text">
                               <span>我今天发现了一个快捷键，在 Finder 下，列表模式，如果按 Cmd+ “+”，会让列表进入大图标列表模式，按 Cmd + “-&quot; 恢复为紧凑列表。第一次知道列表模式有两种形态。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Barret李靖的即刻动态</button>
-                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/655200ffde31fdaa4ed21976"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 使用检索增强（Retrieval-Augmented Generation，RAG）可以缓解大模型的幻觉问题，从而避免大模型胡说八道，但传统的 RAG 存在一个很大的弊端——无论内...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/655200ffde31fdaa4ed21976">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FgUA_WMG5Ea-LqVGHNKlm45cxX-hv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>使用检索增强（Retrieval-Augmented Generation，RAG）可以缓解大模型的幻觉问题，从而避免大模型胡说八道，但传统的 RAG 存在一个很大的弊端——无论内容跟输入是否有足够的关联、对事实是否有足够的支撑，搜索模块都会不加区分地将内容召回，然后交给大模型来进行推理，这会很大程度降低大模型的多功能性，并导致生成质量不佳。
-Self-RAG，https://selfrag.github.io，在一定程度上解决了这个问题。它设计了一个算法，将内容召回过程与大模型的推理过程进行了深度结合，大致思路如下：
-1）设计了一些标签，包括「是否检索」（Retrieve）、「内容是否相关」（ISREL）、「内容是否支撑事实」（ISSUP）、「内容是否可用」（ISUSE）等，可以理解它们是对检索内容进行评分的工具
-2）循环「推理-&gt;检索-&gt;过滤-&gt;评分」这个流程，在推理过程中，结合已有的信息和 LLM 的反馈，来判断要不要继续检索，过程中会获得足够多的包含了评分的内容
-3）根据已获得的信息的权重进行重新整理，将与内容相关、能够支撑事实以及高可用的内容保留下来
-4）可以进行全局设定，对于事实性要求高的推理任务，增加检索频次；对于创造性要求高的推理任务，减少检索频次
-这个算法思路的表现非常良好，只不过在过程中需要跟大模型进行多次交互，与 ToT（Tree of Thought） 类似，比较消耗资源。
-它有一个工程上的完整实现，可以戳这个项目：https://github.com/AkariAsai/self-rag</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/6551c892b754c3dc3c67f577"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 现代软件架构的真实写照😂</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6551c892b754c3dc3c67f577">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fgm9uHk79OE0cl4Q819ZwIl1Hitgv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>现代软件架构的真实写照😂</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/65518a25b754c3dc3c61c304"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 拉胯的云 SLA：https://mp.weixin.qq.com/s?__biz&#x3D;MzU5ODAyNTM5Ng&#x3D;&#x3D;&amp;mid&#x3D;2247485745&amp;idx&#x3D;3&amp;sn&#x3D;3d771a3b11b74fe9f5e8d11bb3c623a0 数据一定要考虑跨地域...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65518a25b754c3dc3c61c304">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fql9s6Sahk7qkWW46cpuFNSBBrWzv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>拉胯的云 SLA：https://mp.weixin.qq.com/s?__biz&#x3D;MzU5ODAyNTM5Ng&#x3D;&#x3D;&amp;mid&#x3D;2247485745&amp;idx&#x3D;3&amp;sn&#x3D;3d771a3b11b74fe9f5e8d11bb3c623a0
-数据一定要考虑跨地域备份，甚至本地冷备，这是一个血的教训，也是最近才明白的道理。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/6551807e05c1e66933a3b083"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 作者实践下来，算上 DBA、运维等成本，价格仍然比云要低很多，一千万的云成本，最高可以节省五百万。 对于成熟的中大型公司，面向未来三到五年做预算，...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6551807e05c1e66933a3b083">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fq8HT-swS_r_r7mP8pESAtIzGlY7v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>作者实践下来，算上 DBA、运维等成本，价格仍然比云要低很多，一千万的云成本，最高可以节省五百万。
-对于成熟的中大型公司，面向未来三到五年做预算，（部分）自建机房会是一个很大的优化点，在全面降本增效的大背景下，也是一个必然趋势吧。
-https://web.okjike.com/originalPost/65517c9fde31fdaa4ec50b61</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/65517c9fde31fdaa4ec50b61"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 云的价格确实贵的离谱，尤其是储存这块，作者分析说，价格比自己采购要贵上一百多倍，https://mp.weixin.qq.com/s?__biz&#x3D;MzU5ODAyNTM5Ng&#x3D;&#x3D;&amp;mid&#x3D;22474857...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65517c9fde31fdaa4ec50b61">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FmVbQbb-HS-6L2GtcHoMmRAI11dFv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>云的价格确实贵的离谱，尤其是储存这块，作者分析说，价格比自己采购要贵上一百多倍，https://mp.weixin.qq.com/s?__biz&#x3D;MzU5ODAyNTM5Ng&#x3D;&#x3D;&amp;mid&#x3D;2247485745&amp;idx&#x3D;1&amp;sn&#x3D;6109bb1be67f9e7e02124c4fc3b47ea3，硬件再加软件，那就更加可怕了。
-如果不考虑弹性，自建机房最快十天就可以把云上租赁的钱给省出来。倘若是一般性的储存需求，对小型企业和个体用户而言，可以考虑组装几个跨区域多点数据同步的 NAS，也是非常靠谱划算的。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/65516d41859fc596df6d22b0"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 特别想知道，去哪里可以索引到相关事件或者新闻。</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65516d41859fc596df6d22b0">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FshxKqqCe4V8z583NHjNBylyrkQQv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>特别想知道，去哪里可以索引到相关事件或者新闻。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -540,28 +616,6 @@ https://web.okjike.com/originalPost/65517c9fde31fdaa4ec50b61</span>
                             <span class="media-object__text">
                               <span>给研究 AI 的朋友推荐一款 AI 产品榜，aicpb.com，它收录了一万多款 AI 产品，覆盖了从访问量、时长、增长速度和营收等相关数据，并且对所有产品进行了维度细分，包含 100 多个子领域，较为全面。
 当前榜单按月更新，数据来源主要是 SimilarWeb 和 SensorTower，前者是一个著名的网站分析工具，后者是一家移动应用数据分析公司。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/6550da18834e87e36f0259df"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 如何让小模型的推理效果在某些领域比 ChatGPT 这样的大模型还要更强？这篇论文提供了一个思路：https://arxiv.org/abs/2212.10071，借助思维链（CoT）逐...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6550da18834e87e36f0259df">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fq7sGUElvWOLZq6yeH8S1Ln7bc5zv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>如何让小模型的推理效果在某些领域比 ChatGPT 这样的大模型还要更强？这篇论文提供了一个思路：https://arxiv.org/abs/2212.10071，借助思维链（CoT）逐步解决复杂推理任务的能力，可以使用大模型作为推理教师，针对一批数据集，让大模型给出详尽的解答思路，然后把问题和解题过程交给学生模型进行 Fine-tuning。
-这个解决思路也有一个专有名词，叫做“模型蒸馏”，其效果还是非常亮眼的，在保持同样的推理能力，甚至超越大模型的情况下，模型的大小降低到原来的 1/500~1/25。这可以帮助很多特定场景降低成本，例如使用自建的蒸馏小模型替代直接调用 ChatGPT，很多简单场景都适用，如果蒸馏出来的模型足够小，还可以直接在端侧（移动设备或嵌入式系统）部署，在用户本地完成推理，进一步降低服务成本。
-这个 Github 项目演示了如何利用大模型进行蒸馏来构建小模型：https://github.com/itsnamgyu/reasoning-teacher</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -1701,26 +1755,6 @@ import mpegts from &#x27;mpegts…</span>
                             <span class="media-object__text">
                               <span>一幅印象派风格的海洋画作，展示深蓝色的海水和波涛，画面中央有一个波峰正在翻滚，周围散发着带有黄色和白色的水花，类似于活力四射的海泡。背景的天空是渐变的，从蓝色到带有温暖色调的云朵。画风特征是厚重和有力的笔触，以及鲜明的色彩对比和动态的波涛。比例为宽屏16:9，重点在于捕捉光线在水面上的反射和波涛的动态美。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/654c837b05c1e66933436bea"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 「任何足够先进的技术，都与魔法无异」</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/654c837b05c1e66933436bea">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>「任何足够先进的技术，都与魔法无异」</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3290,63 +3324,11 @@ const isDateValid &#x3D; (...val) &#x3D;&gt; !Number.isNaN(new Da…</span>
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-06 datetime="2023-11-06T23:59:00.000Z">2023-11-06</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-06 datetime="2023-11-06T23:59:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-06 datetime="2023-11-06T12:41:02.000Z">2023-11-06</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-06 datetime="2023-11-06T12:41:02.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >国家应急广播 - 重庆预警信息</button>
-                  <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20231107/t20231107_526477641.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市黔江区发布大雾橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20231107/t20231107_526477641.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>黔江区气象台2023年11月7日7时40分发布“大雾橙色预警信号”，预计7日8时至11时，我区所有街道乡镇将出现能见度小于200米的雾，局部地区能见度小于50米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231107/t20231107_526477606.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市丰都县发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231107/t20231107_526477606.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>丰都县气象台2023年11月7日6时15分发布“大雾黄色预警信号”，预计7时至12时，社坛镇、虎威镇、树人镇、保合镇、十直镇、龙孔镇、高家镇、兴义镇、名山街道、三合街道、双路镇、湛普镇、包鸾镇、南天湖镇、三建乡、龙河镇、江池镇、栗子乡、都督乡、兴龙镇、仁沙镇、三元镇、许明寺镇、董家镇、双龙镇、青龙乡、暨龙镇、武平镇、太平坝乡、仙女湖镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -4222,8 +4204,8 @@ ECH 非常巧妙地解决了域名加密。它采用双层格式，也就是说�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6856151705">
-        <time id="build-timestamp" datetime="2023-11-13T21:52:22.601Z">2023-11-13T21:52:22.601Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6857876183">
+        <time id="build-timestamp" datetime="2023-11-14T01:15:03.139Z">2023-11-14T01:15:03.139Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

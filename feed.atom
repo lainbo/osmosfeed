@@ -1,16 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-11-13T21:52:22.622Z</id>
+    <id>urn:2023-11-14T01:15:03.158Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-11-13T21:52:22.622Z</updated>
+    <updated>2023-11-14T01:15:03.159Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
-        <title type="html"><![CDATA[发布了: 「标准会变成习惯，习惯会变成结果。」]]></title>
+        <title type="html"><![CDATA[发布了: 「人生最不幸处，是偶一失言，而祸不及；偶一失谋，而事俸成；偶一恣行，而获小利。后乃视为故常，而恬不为意。则莫大之患，由此生矣。」 ---- 李叔同]]></title>
+        <id>https://m.okjike.com/originalPosts/6552bf5cdc2460410cee1022</id>
+        <link href="https://m.okjike.com/originalPosts/6552bf5cdc2460410cee1022"/>
+        <updated>2023-11-14T00:29:16.000Z</updated>
+        <summary type="html"><![CDATA[「人生最不幸处，是偶一失言，而祸不及；偶一失谋，而事俸成；偶一恣行，而获小利。后乃视为故常，而恬不为意。则莫大之患，由此生矣。」
+----
+李叔同]]></summary>
+        <author>
+            <name>李继刚的即刻动态</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[发布了: 一张有趣的耗时对比图。另外再补充几个栽过跟头的数据知识。 同机房内调用的 RT 是 100µs，上次正好遇到了一个监控告警，redis 平均时延从 100µs+ 飙...]]></title>
+        <id>https://m.okjike.com/originalPosts/6552acb105c1e66933bb349f</id>
+        <link href="https://m.okjike.com/originalPosts/6552acb105c1e66933bb349f"/>
+        <updated>2023-11-13T23:09:37.000Z</updated>
+        <summary type="html"><![CDATA[一张有趣的耗时对比图。另外再补充几个栽过跟头的数据知识。
+同机房内调用的 RT 是 100µs，上次正好遇到了一个监控告警，redis 平均时延从 100µs+ 飙升到了 500µs+，原因是一个数据分区的有硬件故障，自动切换到了另外一个可用区，导致所有 proxy 节点与这个 data 节点变成了跨可用区调用，也就是变成了 1ms+，拉高平均耗时。
+同城跨可用区（AZ）调用一般在 1.9ms 以内，距离是 20~80km，这是标准要求；在光纤光缆中，每公里会造成 4.9µs 的延迟，电缆中的每个弯曲或缺陷都会降低网络速度；跨城调用，例如杭州到上海，时延会在 3.8ms~10.8ms 不等，主要看两个可用区之间的分布距离；在做异地灾备的时候，10ms 的时延基本就挺难接受了，因此异地灾备一般都是冷备，如果要做异地多活，就得考虑数据单元化，做水平 sharding，或者考虑做应用层做，数据弱一致。
+洲际时延是 100ms 以上，在不走专线的情况下，ping 一台海外机器，时延 100ms+ 都是很正常的，走专线会快很多，例如电信的 CN2（AS4809），联通的 CHI­NA169（AS4837）等，专线的价格会贵很多很多；可以使用 ping.pe 这个在线工具进行测试，它提供的 traceroute 包含了 AS 信息，可以确认自己走的是什么线路，也可以根据线路来判断服务商提供的主机网络是不是真的靠谱。]]></summary>
+        <author>
+            <name>Barret李靖的即刻动态</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[发布了: 「标准会变成习惯，习惯会变成结果。」 如果你做的和别人一样，你只能期望得到和别人一样的结果。想要不同的结果就必须提高标准。 ---- 万维钢]]></title>
         <id>https://m.okjike.com/originalPosts/655240b8834e87e36f1f1a72</id>
         <link href="https://m.okjike.com/originalPosts/655240b8834e87e36f1f1a72"/>
         <updated>2023-11-13T15:28:56.000Z</updated>
-        <summary type="html"><![CDATA[「标准会变成习惯，习惯会变成结果。」]]></summary>
+        <summary type="html"><![CDATA[「标准会变成习惯，习惯会变成结果。」
+如果你做的和别人一样，你只能期望得到和别人一样的结果。想要不同的结果就必须提高标准。
+----
+万维钢]]></summary>
         <author>
             <name>李继刚的即刻动态</name>
         </author>
@@ -266,18 +294,6 @@ https://web.okjike.com/originalPost/65517c9fde31fdaa4ec50b61]]></summary>
         <updated>2023-11-12T14:28:22.000Z</updated>
         <summary type="html"><![CDATA[给研究 AI 的朋友推荐一款 AI 产品榜，aicpb.com，它收录了一万多款 AI 产品，覆盖了从访问量、时长、增长速度和营收等相关数据，并且对所有产品进行了维度细分，包含 100 多个子领域，较为全面。
 当前榜单按月更新，数据来源主要是 SimilarWeb 和 SensorTower，前者是一个著名的网站分析工具，后者是一家移动应用数据分析公司。]]></summary>
-        <author>
-            <name>Barret李靖的即刻动态</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[发布了: 如何让小模型的推理效果在某些领域比 ChatGPT 这样的大模型还要更强？这篇论文提供了一个思路：https://arxiv.org/abs/2212.10071，借助思维链（CoT）逐...]]></title>
-        <id>https://m.okjike.com/originalPosts/6550da18834e87e36f0259df</id>
-        <link href="https://m.okjike.com/originalPosts/6550da18834e87e36f0259df"/>
-        <updated>2023-11-12T13:58:48.000Z</updated>
-        <summary type="html"><![CDATA[如何让小模型的推理效果在某些领域比 ChatGPT 这样的大模型还要更强？这篇论文提供了一个思路：https://arxiv.org/abs/2212.10071，借助思维链（CoT）逐步解决复杂推理任务的能力，可以使用大模型作为推理教师，针对一批数据集，让大模型给出详尽的解答思路，然后把问题和解题过程交给学生模型进行 Fine-tuning。
-这个解决思路也有一个专有名词，叫做“模型蒸馏”，其效果还是非常亮眼的，在保持同样的推理能力，甚至超越大模型的情况下，模型的大小降低到原来的 1/500~1/25。这可以帮助很多特定场景降低成本，例如使用自建的蒸馏小模型替代直接调用 ChatGPT，很多简单场景都适用，如果蒸馏出来的模型足够小，还可以直接在端侧（移动设备或嵌入式系统）部署，在用户本地完成推理，进一步降低服务成本。
-这个 Github 项目演示了如何利用大模型进行蒸馏来构建小模型：https://github.com/itsnamgyu/reasoning-teacher]]></summary>
         <author>
             <name>Barret李靖的即刻动态</name>
         </author>
@@ -1068,16 +1084,6 @@ new Promise(function (resolve, reject) {
         <summary type="html"><![CDATA[忠县气象台2023年11月9日14时50分发布“大雾黄色预警信号”，预计11月9日23时至10日10时，忠州街道、白公街道、新生街道、乌杨街道、涂井乡、石宝镇、汝溪镇、金声乡、野鹤镇、磨子土家族乡、石子乡、复兴镇、东溪镇、黄金镇、永丰镇、花桥镇、三汇镇、马灌镇、官坝镇、金鸡镇、石黄镇、兴峰乡、白石镇、任家镇、双桂镇、拔山镇、洋渡镇、善广乡、新立镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
         <author>
             <name>国家预警信息发布中心</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[发布了: 「任何足够先进的技术，都与魔法无异」]]></title>
-        <id>https://m.okjike.com/originalPosts/654c837b05c1e66933436bea</id>
-        <link href="https://m.okjike.com/originalPosts/654c837b05c1e66933436bea"/>
-        <updated>2023-11-09T07:00:11.000Z</updated>
-        <summary type="html"><![CDATA[「任何足够先进的技术，都与魔法无异」]]></summary>
-        <author>
-            <name>李继刚的即刻动态</name>
         </author>
     </entry>
     <entry>
@@ -2062,26 +2068,6 @@ const isDateValid = (...val) => !Number.isNaN(new Da…]]></summary>
    这个产品刚在 PH 上发布，还没有上线，看上去就是一个安装在…]]></summary>
         <author>
             <name>viggo</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[重庆市黔江区发布大雾橙色预警]]></title>
-        <id>http://www.cneb.gov.cn/yjxx/csyj/20231107/t20231107_526477641.html</id>
-        <link href="http://www.cneb.gov.cn/yjxx/csyj/20231107/t20231107_526477641.html"/>
-        <updated>2023-11-06T23:59:00.000Z</updated>
-        <summary type="html"><![CDATA[黔江区气象台2023年11月7日7时40分发布“大雾橙色预警信号”，预计7日8时至11时，我区所有街道乡镇将出现能见度小于200米的雾，局部地区能见度小于50米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
-        <author>
-            <name>国家预警信息发布中心</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[重庆市丰都县发布大雾黄色预警]]></title>
-        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20231107/t20231107_526477606.html</id>
-        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20231107/t20231107_526477606.html"/>
-        <updated>2023-11-06T22:26:00.000Z</updated>
-        <summary type="html"><![CDATA[丰都县气象台2023年11月7日6时15分发布“大雾黄色预警信号”，预计7时至12时，社坛镇、虎威镇、树人镇、保合镇、十直镇、龙孔镇、高家镇、兴义镇、名山街道、三合街道、双路镇、湛普镇、包鸾镇、南天湖镇、三建乡、龙河镇、江池镇、栗子乡、都督乡、兴龙镇、仁沙镇、三元镇、许明寺镇、董家镇、双龙镇、青龙乡、暨龙镇、武平镇、太平坝乡、仙女湖镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
-        <author>
-            <name>国家预警信息发布中心</name>
         </author>
     </entry>
     <entry>
