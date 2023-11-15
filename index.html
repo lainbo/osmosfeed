@@ -84,7 +84,7 @@
 这个董事会中的成员，是你真心佩服的大佬。可以是已故人士。
 把每个人的特点和思考方式给描述进去。
 在自己做决策时，和这个GPTs对话， 获取不同视角的建议。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -782,6 +782,156 @@ Self-RAG，https://selfrag.github.io，在一定程度上解决了这个问题�
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7300816733526376488"
+                        open
+                      >
+                        <summary class="article-expander__title">前端周报：Angular 17王者归来！Signal对Hook降维打击~JS 狂欢日演讲（2023 年第 46 周）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7300816733526376488">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>大家好，这里是大家的林语冰，您现在收看的是 2023 年第 46 周前端生态的技术周报（视频解说请临幸 前端周报@bilibili）。
+每周必看
+Angular 17 王者归来
+
+2010 年，始祖 AngularJS 破蛋，前卫的设计理念标志着前端现代化框架的开端。即使在后 ES6 时代如火如荼的前端框架“诸神之战”中，Angular 也不落下风。Angular 生态 13 年磨一剑，和始祖 AngularJS 早已胖若两人。
+在 Angular 13 周年的诞辰，Angular 团队官宣 v17 正式发布，重大升级包括但不限于：
+延迟视图优化性能和 DX（开发体验）
+混合渲染构建优化 87%，客户端渲染优化 67%
+官网重做得面目全非，交互式学习诉诸 Web Container 赋能
+详情请临幸官网~
+Signals 何以对 React Hooks 降维打击
+本视频讲述了 Signals（信号）相较于 React Hooks 的优势，且受到了 Preact 核心团队成员 M.H. 的一键三连。
+地球人都知道，Vue 和 React 都有涉及 Hook 的技术方案。但是大家可能不知道 Signals。Signals 是 Preact 和 Solid 推广的一种响应式方案，Angular 移植了 Signals。尤雨溪之前也发了朋友圈讲到，Signals 似乎指代绑定于 Signals 细粒度的视图更新，这也是 Vue 目前正在努力实现的方向。
+JS 狂欢日八大演讲
+JS 狂欢日是 JetBrains 2023 年度的一场虚拟活动，一口很长的一气举行了 8 场 JS 专题演讲，一天八次，直接给我看湿了。
+纯 JS 拿捏 DOM 操作
+地球人都知道，DOM 操作是前端爱好者必知必会的技能树，jQuery 转生成为 H5，而现在和我们梦幻联动的 JS 框架本质也是在底层封装了 …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7300809038246035508"
+                        open
+                      >
+                        <summary class="article-expander__title">让你说一说Sass、Less 的区别是什么，你知道吗？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7300809038246035508">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>引言
+Sass和Less是两种常见的CSS预处理器，它们都是CSS的一种抽象层，可以增加CSS代码的复用性，层级，mixin，变量，循环，函数等对编写以及开发UI组件都极为方便。虽然它们的功能类似，但是它们之间存在一些区别。
+我们在面试的时候就可能会遇到这样的一个问题，我们可能被问到是否了解过，使用过Sass和Less，而它们的区别又在哪？可能你知道但是又不太清晰，或者并不知道。
+那让我们一起来看看它们俩到底有什么区别吧：
+1. 编译环境不同
+Sass是在服务端处理的，需要使用编译工具将Sass代码编译成CSS文件。目前常用的编译工具有Dart-Sass和Node-Sass。举个例子，如果我们有一个Sass文件“style.scss”，我们可以使用Dart-Sass编译成CSS文件“style.css”的命令，就像这样：
+sass style.scss style.css  
+
+而Less则需要在客户端使用JavaScript引入Less文件，并使用Less.js将Less代码编译成CSS文件。举个例子，如果我们有一个Less文件“style.less”，我们就可以使用以下代码在HTML文件中引入Less文件：
+  
+  
+
+2. 变量符不同
+Sass使用$作为变量符，而Less使用@。举个例子，在Sass中，我们可以这样定义一个变量：
+$primary-color: #f00;  
+
+而在Less中，我们可以这样定义一个变量：
+@primary-color: #f00;  
+
+3. 条件语句不同
+Sass支…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7300122001768071168"
+                        open
+                      >
+                        <summary class="article-expander__title">Console党福音！封装 console.log 再也不用打注释了！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7300122001768071168">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>highlight: atelier-heath-light
+theme: github
+背景
+大家好~, 我是刚入职场不久的前端小帅，每周分享我的一丢丢想法，希望能够帮助到大家~
+众所周知，console在项目开发调试中是不可或缺的，在日常工作中经常会使用到它，但使用多了之后会发现，虽然它足够短小精炼，但耐不住用的多，再加上注释指示，工作量隐约还是不小的（懒惰），因此我对它进行小小的封装，让它用起来更短更方便，分享给大家，希望能够对大家开发有所帮助
+优势
+面向 Vue2
+拒绝通用的注释打印
+针对对象值自动序列化
+支持一行输出 N个变量打印
+支持输出data变量和局部变量
+支持限制特定页面输出变量
+更短的函数名
+示例：
+data() {
+    return {
+        joker: &#x27;jym&#x27;,
+        handsomeMan: &#x27;me&#x27;,
+        info: {
+            job: {
+                name: &#x27;专业炒粉&#x27;
+            }
+        }
+    }
+},
+methods: {
+    getJoker() {
+        const demo &#x3D; &#x27;test&#x27;
+        this.$c(&#x27;joker&#x27;, &#x27;handsomeMan&#x27;, &#x27;info&#x27;, &#x27;info.job.name&#x27;, { demo }) //输出语句
+    }
+}
+
+输出结果：
+
+~**是的，只需要一行代码！！！ **~
+是的，只需要一行代码！！！
+（如果是原来的console.log打印 光想就已经累了......）
+封装
+接下来看看是如何封装的吧~
+方法名再短点！
+// main.js
+Vue.prototype.$c &#x3D; function() {...}
+
+因为要全局使用，因此直接挂载到 Vue …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >沸点 - 开发工具推荐</button>
                   <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
                 </h3>
@@ -963,82 +1113,6 @@ Self-RAG，https://selfrag.github.io，在一定程度上解决了这个问题�
                 </section>
               </section>
             </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7300122001768071168"
-                        open
-                      >
-                        <summary class="article-expander__title">Console党福音！封装 console.log 再也不用打注释了！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7300122001768071168">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>highlight: atelier-heath-light
-theme: github
-背景
-大家好~, 我是刚入职场不久的前端小帅，每周分享我的一丢丢想法，希望能够帮助到大家~
-众所周知，console在项目开发调试中是不可或缺的，在日常工作中经常会使用到它，但使用多了之后会发现，虽然它足够短小精炼，但耐不住用的多，再加上注释指示，工作量隐约还是不小的（懒惰），因此我对它进行小小的封装，让它用起来更短更方便，分享给大家，希望能够对大家开发有所帮助
-优势
-面向 Vue2
-拒绝通用的注释打印
-针对对象值自动序列化
-支持一行输出 N个变量打印
-支持输出data变量和局部变量
-支持限制特定页面输出变量
-更短的函数名
-示例：
-data() {
-    return {
-        joker: &#x27;jym&#x27;,
-        handsomeMan: &#x27;me&#x27;,
-        info: {
-            job: {
-                name: &#x27;专业炒粉&#x27;
-            }
-        }
-    }
-},
-methods: {
-    getJoker() {
-        const demo &#x3D; &#x27;test&#x27;
-        this.$c(&#x27;joker&#x27;, &#x27;handsomeMan&#x27;, &#x27;info&#x27;, &#x27;info.job.name&#x27;, { demo }) //输出语句
-    }
-}
-
-输出结果：
-
-~**是的，只需要一行代码！！！ **~
-是的，只需要一行代码！！！
-（如果是原来的console.log打印 光想就已经累了......）
-封装
-接下来看看是如何封装的吧~
-方法名再短点！
-// main.js
-Vue.prototype.$c &#x3D; function() {...}
-
-因为要全局使用，因此直接挂载到 Vue …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -1048,8 +1122,8 @@ Vue.prototype.$c &#x3D; function() {...}
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-12 datetime="2023-11-12T14:33:53.000Z">2023-11-12</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-12 datetime="2023-11-12T14:33:53.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-12 datetime="2023-11-12T23:30:33.000Z">2023-11-12</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-12 datetime="2023-11-12T23:30:33.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -1060,62 +1134,55 @@ Vue.prototype.$c &#x3D; function() {...}
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7300207920284680233"
-                        open
-                      >
-                        <summary class="article-expander__title">github编程字体 https://monaspace.githubnext.com/</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7300207920284680233">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>github编程字体 https://monaspace.githubnext.com/</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7299855194388987938"
-                        open
-                      >
-                        <summary class="article-expander__title">打卡打卡打卡～</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7299855194388987938">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>打卡打卡打卡～</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >掘金前端本周最热</button>
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7300151966964613132"
+                        open
+                      >
+                        <summary class="article-expander__title">JS代码其实可以这样写</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7300151966964613132">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>日常工作中，我确实经常去帮大家review代码，长期以来，我发现有些个功能函数，JS其实可以稍微调整一下，或者换个方式来处理，代码就会看起来更清晰，更简洁，甚至效率更高，主要是还更好理解。
+下面我列举有5个案例，我们一起来看一下
+一、建议考虑使用FlatMap方法
+先来看一段同时使用filter和map方法遍历数组的代码。我相信这种场景大家一定碰到过。为了说明问题，这里我用简单的数字内容来举个例子。
+const squaredOddNumbers &#x3D; numbers
+    .filter(num &#x3D;&gt; num % 2 !&#x3D;&#x3D; 0)
+    .map(num &#x3D;&gt; num * num)
+
+console.log(squaredOddNumbers);
+// 输出：[1, 9, 25, 49, 81]
+
+上面代码这样写，没什么问题，而且方法的连用也是比较推荐的处理方式， 但是，还是请多想想，其实我们有更好的方式来处理这一类问题。
+现在我们看使用FlatMap如何实现的
+const numbers &#x3D; [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const squaredOddNumbers &#x3D; numbers.flatMap(num &#x3D;&gt; 
+    num % 2 !&#x3D;&#x3D; 0 ? [num * num] : []
+);
+
+console.log(squaredOddNumbers);
+// 输出：[1, 9, 25, 49, 81]
+
+使用FlatMap的好处是
+只要遍历一遍，而且不产生中间多余数组
+二、建议调整数组方法调用的顺序
+日常工作中写的比较多的数组方法有filter()，find()，map()，reduce()，在必要的场景下，我们也建议将这些个方法连起来一起调用。但是，一定要注意调用顺序，否则也会影响效率问题。
+比如下面这样：
+const …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -1170,6 +1237,58 @@ import Other from &quot;./other.vue&quot;
 {{ count }}
   &lt;…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7300207920284680233"
+                        open
+                      >
+                        <summary class="article-expander__title">github编程字体 https://monaspace.githubnext.com/</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7300207920284680233">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>github编程字体 https://monaspace.githubnext.com/</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7299855194388987938"
+                        open
+                      >
+                        <summary class="article-expander__title">打卡打卡打卡～</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7299855194388987938">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>打卡打卡打卡～</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2087,7 +2206,7 @@ new Promise(function (resolve, reject) {
                         data-accordion-key="https://juejin.cn/post/7299037777387175948"
                         open
                       >
-                        <summary class="article-expander__title">双十一狂欢 | 全场小册 6 折 Go，小米手环、摩卡壶、掘金周边等你来拿！</summary>
+                        <summary class="article-expander__title">双十一 6 折 Go | 小米手环、摩卡壶、掘金周边等你来！</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7299037777387175948">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
@@ -2709,85 +2828,6 @@ https://github.com/devlive-community/datacap/pull/472</span>
 在商城添加了顶栏显示积分，更直观
 使用表情符号简单的增加…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7298927261210361882"
-                        open
-                      >
-                        <summary class="article-expander__title">微信小程序全新渲染引擎Skyline（入门篇）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7298927261210361882">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: v-green
-前言
-最近看小程序文档的时候发现了 swiper 组件新增了 Skyline 特有的属性，直接使用竟然没有效果。
-
-不信邪的我打算来研究研究究竟什么是 Skyline！经过一系列文档阅读与实践，长时间闭门造车的我打开了新世界的大门，我惊讶的发现 Skyline 引擎很可能是微信小程序未来发展的重点方向，有着更类似原生的交互体验，新增的特性让人连连称叹，特以此文来总结性地介绍一下 Skyline。
-双线程模型
-了解 Skyline 之前，我们有必要重新复习一下什么是小程序的双线程模型。
-如官方文档所言，小程序的运行环境分成渲染层和逻辑层，其中 WXML 模板和 WXSS 样式工作在渲染层，JS 脚本工作在逻辑层。小程序的渲染层和逻辑层分别由2个线程管理：
-渲染层的界面使用了WebView 进行渲染，一个小程序存在多个界面，所以渲染层存在多个WebView线程；
-逻辑层采用JsCore线程运行JS脚本。
-这两个线程的通信会经由微信客户端（原生） 做中转，逻辑层发送网络请求也经由微信客户端 （原生） 转发，有了微信小程序客户端 （原生） 作为媒介系统，使得我们开发者能够专注于数据与逻辑。
-如上所述，小程序的通信模型如下图所示。
-
-什么是 Skyline 引擎
-前文提到，基于 WebView 和原生控件混合渲染的方式，小程序优化扩展了 Web 的基础能力，所以小程序相对于普通的Web页面有着更为良好的性能与体验。
-由于 Web 在移动端的表现与原生应用仍有一定差距，亦或许是 Web 的优化遇到了瓶颈，为了进一步优化小程序性能，微信在 WebView 渲染之外新增了一个渲染引擎，也就是我们本文的重磅主角： Skyline，它使用更精简高效的渲染管线，并带来诸多增强特性，让 Skyline 拥有更接近原生渲染的性能体验。
-Skyline 引擎 vs Web…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7298927261209346074"
-                        open
-                      >
-                        <summary class="article-expander__title">用Pixi.js做了一版Canvas的捕鱼游戏Demo</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7298927261209346074">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>开头就上源码
-github https://github.com/armomu/vue-material-admin
-预览地址 https://chenhuajie.gitee.io/vue-material-admin/#/graphics/pixijs
-玩Web3D的你们一定也要看看我的这个 Babylon物理角色控制器
-🤔️🤔️ 这几天闲着没事突发奇想搞点2D图形玩玩，前段时间时间接触了pixi.js就用它来试试水。
-决定用捕鱼达人的这种模式来试试水。🔥🔥
-🥱 🥱 肝了了好几天把基本的鱼游泳动画，随机游泳、炮台、射击撒网基本的逻辑写了
-上代码 ⬇️ ⬇️ ⬇️ ⬇️
-PIXI 实例入口
-pixi很简单由pixi生成了canvas dom（app.view）你它塞到的点HTML Dom里面就行了
-// 
-
-import { shallowRef, onMounted, onUnmounted } from &#x27;vue&#x27;;import * as PIXI from &#x27;pixi.js&#x27;;
-const pixiDom &#x3D; shallowRef();
-const screen &#x3D; {
-    width: 1024,
-    height: 580,
-};
-let app: PIXI.Application;
-onMounted(async () &#x3D;&gt; {
-    app &#x3D; new PIXI.Application({
-        width: screen.width,
-        height: screen.height,
-    });
-    addSceneBackground();
-    app.stage.eventMode &#x3D; &#x27;…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;12
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3476,79 +3516,6 @@ onMounted(async () &#x3D;&gt; {
     
    这个产品刚在 PH 上发布，还没有上线，看上去就是一个安装在…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;14
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7298641610431332378"
-                        open
-                      >
-                        <summary class="article-expander__title">轻量级埋点sdk搭建</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7298641610431332378">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: fancy
-引言
-借助埋点监控sdk,我们可以统计用户的点击，页面pv、uv，脚本错误、dom上报等关键信息等。
-一：项目初始化
-1.技术栈
-Ts
-rollup打包工具
-2.搭建项目
-npm init -y 
-tsc --init
-npm install typescript -D
-npm install rollup-plugin-dts -D
-npm install rollup-plugin-typescript2 -D
-
-dist:打包产物
-service:后端服务
-index.html:测试埋点
-
-3.配置package.json打包命令
-&quot;scripts&quot;: {
-    &quot;dev&quot;: &quot;rollup -c&quot;
-  },
-
-4.配置rollup.config.js
-import ts from &#x27;rollup-plugin-typescript2&#x27;
-import path from &#x27;path&#x27;
-import dts from &#x27;rollup-plugin-dts&#x27;;
-export default [{
-    //入口文件
-    input: &quot;./src/core/index.ts&quot;,
-    output: [
-        //打包esModule
-        {
-            file: path.resolve(__dirname, &#x27;./dist/index.esm.js&#x27;),
-            format: &quot;es&quot;,
-            name:&#x27;tracker&#x27;
-        },
-         //打包common js
-        {
-            file: path.resolve(__dirname, &#x27;./dist/index.cjs.js&#x27;),
-           …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4370,8 +4337,8 @@ ECH 非常巧妙地解决了域名加密。它采用双层格式，也就是说�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6875629770">
-        <time id="build-timestamp" datetime="2023-11-15T09:52:51.954Z">2023-11-15T09:52:51.954Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6877573883">
+        <time id="build-timestamp" datetime="2023-11-15T12:56:34.222Z">2023-11-15T12:56:34.222Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

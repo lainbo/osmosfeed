@@ -34,7 +34,7 @@
           "description": "应该是国内第一篇专门介绍用mp4box.js和VideoDecoder方法解码MP4视频序列帧的文章了。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/mp4box-js-webcodecs-mp4-canvas/",
           "publishedOn": "2023-11-14T16:37:18.000Z",
-          "wordCount": 1230,
+          "wordCount": 1229,
           "title": "mp4box.js加WebCodecs 解码MP4视频帧并渲染",
           "imageUrl": null
         },
@@ -44,7 +44,7 @@
           "description": "想要提高网页的加载体验，其实有个非常简单且实用的技巧，那就是改变请求资源的加载优先级，这也可以改变？没错！",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/img-js-preload-fetch-priority/",
           "publishedOn": "2023-10-29T15:55:41.000Z",
-          "wordCount": 950,
+          "wordCount": 951,
           "title": "聊聊Web网页中资源加载的优先级",
           "imageUrl": null
         }
@@ -215,7 +215,7 @@
           "description": "提个小建议：\n大家每个人都应该写一个属于自己的「私人董事会」GPTs。\n这个董事会中的成员，是你真心佩服的大佬。可以是已故人士。\n把每个人的特点和思考方式给描述进去。\n在自己做决策时，和这个GPTs对话， 获取不同视角的建议。",
           "link": "https://m.okjike.com/originalPosts/65548775de31fdaa4e066031",
           "publishedOn": "2023-11-15T08:55:17.000Z",
-          "wordCount": 443,
+          "wordCount": 463,
           "title": "发布了: 提个小建议： 大家每个人都应该写一个属于自己的「私人董事会」GPTs。 这个董事会中的成员，是你真心佩服的大佬。可以是已故人士。 把每个人的特点和思...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -648,6 +648,26 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7300816733526376488",
+          "author": "人猫神话",
+          "description": "大家好，这里是大家的林语冰，您现在收看的是 2023 年第 46 周前端生态的技术周报（视频解说请临幸 前端周报@bilibili）。\n每周必看\nAngular 17 王者归来\n\n2010 年，始祖 AngularJS 破蛋，前卫的设计理念标志着前端现代化框架的开端。即使在后 ES6 时代如火如荼的前端框架“诸神之战”中，Angular 也不落下风。Angular 生态 13 年磨一剑，和始祖 AngularJS 早已胖若两人。\n在 Angular 13 周年的诞辰，Angular 团队官宣 v17 正式发布，重大升级包括但不限于：\n延迟视图优化性能和 DX（开发体验）\n混合渲染构建优化 87%，客户端渲染优化 67%\n官网重做得面目全非，交互式学习诉诸 Web Container 赋能\n详情请临幸官网~\nSignals 何以对 React Hooks 降维打击\n本视频讲述了 Signals（信号）相较于 React Hooks 的优势，且受到了 Preact 核心团队成员 M.H. 的一键三连。\n地球人都知道，Vue 和 React 都有涉及 Hook 的技术方案。但是大家可能不知道 Signals。Signals 是 Preact 和 Solid 推广的一种响应式方案，Angular 移植了 Signals。尤雨溪之前也发了朋友圈讲到，Signals 似乎指代绑定于 Signals 细粒度的视图更新，这也是 Vue 目前正在努力实现的方向。\nJS 狂欢日八大演讲\nJS 狂欢日是 JetBrains 2023 年度的一场虚拟活动，一口很长的一气举行了 8 场 JS 专题演讲，一天八次，直接给我看湿了。\n纯 JS 拿捏 DOM 操作\n地球人都知道，DOM 操作是前端爱好者必知必会的技能树，jQuery 转生成为 H5，而现在和我们梦幻联动的 JS 框架本质也是在底层封装了 …",
+          "link": "https://juejin.cn/post/7300816733526376488",
+          "publishedOn": "2023-11-13T14:26:59.000Z",
+          "wordCount": 1216,
+          "title": "前端周报：Angular 17王者归来！Signal对Hook降维打击~JS 狂欢日演讲（2023 年第 46 周）",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7300809038246035508",
+          "author": "Yiko",
+          "description": "引言\nSass和Less是两种常见的CSS预处理器，它们都是CSS的一种抽象层，可以增加CSS代码的复用性，层级，mixin，变量，循环，函数等对编写以及开发UI组件都极为方便。虽然它们的功能类似，但是它们之间存在一些区别。\n我们在面试的时候就可能会遇到这样的一个问题，我们可能被问到是否了解过，使用过Sass和Less，而它们的区别又在哪？可能你知道但是又不太清晰，或者并不知道。\n那让我们一起来看看它们俩到底有什么区别吧：\n1. 编译环境不同\nSass是在服务端处理的，需要使用编译工具将Sass代码编译成CSS文件。目前常用的编译工具有Dart-Sass和Node-Sass。举个例子，如果我们有一个Sass文件“style.scss”，我们可以使用Dart-Sass编译成CSS文件“style.css”的命令，就像这样：\nsass style.scss style.css  \n\n而Less则需要在客户端使用JavaScript引入Less文件，并使用Less.js将Less代码编译成CSS文件。举个例子，如果我们有一个Less文件“style.less”，我们就可以使用以下代码在HTML文件中引入Less文件：\n<link rel=\"stylesheet/less\" href=\"style.less\">  \n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/less.js/3.11.1/less.min.js\"></script>  \n\n2. 变量符不同\nSass使用$作为变量符，而Less使用@。举个例子，在Sass中，我们可以这样定义一个变量：\n$primary-color: #f00;  \n\n而在Less中，我们可以这样定义一个变量：\n@primary-color: #f00;  \n\n3. 条件语句不同\nSass支…",
+          "link": "https://juejin.cn/post/7300809038246035508",
+          "publishedOn": "2023-11-13T13:46:22.000Z",
+          "wordCount": 1176,
+          "title": "让你说一说Sass、Less 的区别是什么，你知道吗？",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7300122001768071168",
           "author": "爱吃好果汁丶",
           "description": "highlight: atelier-heath-light\ntheme: github\n背景\n大家好~, 我是刚入职场不久的前端小帅，每周分享我的一丢丢想法，希望能够帮助到大家~\n众所周知，console在项目开发调试中是不可或缺的，在日常工作中经常会使用到它，但使用多了之后会发现，虽然它足够短小精炼，但耐不住用的多，再加上注释指示，工作量隐约还是不小的（懒惰），因此我对它进行小小的封装，让它用起来更短更方便，分享给大家，希望能够对大家开发有所帮助\n优势\n面向 Vue2\n拒绝通用的注释打印\n针对对象值自动序列化\n支持一行输出 N个变量打印\n支持输出data变量和局部变量\n支持限制特定页面输出变量\n更短的函数名\n示例：\ndata() {\n    return {\n        joker: 'jym',\n        handsomeMan: 'me',\n        info: {\n            job: {\n                name: '专业炒粉'\n            }\n        }\n    }\n},\nmethods: {\n    getJoker() {\n        const demo = 'test'\n        this.$c('joker', 'handsomeMan', 'info', 'info.job.name', { demo }) //输出语句\n    }\n}\n\n输出结果：\n\n~**是的，只需要一行代码！！！ **~\n是的，只需要一行代码！！！\n（如果是原来的console.log打印 光想就已经累了......）\n封装\n接下来看看是如何封装的吧~\n方法名再短点！\n// main.js\nVue.prototype.$c = function() {...}\n\n因为要全局使用，因此直接挂载到 Vue …",
@@ -655,6 +675,16 @@
           "publishedOn": "2023-11-13T00:55:28.000Z",
           "wordCount": 3127,
           "title": "Console党福音！封装 console.log 再也不用打注释了！",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7300151966964613132",
+          "author": "公号是前端必修课",
+          "description": "日常工作中，我确实经常去帮大家review代码，长期以来，我发现有些个功能函数，JS其实可以稍微调整一下，或者换个方式来处理，代码就会看起来更清晰，更简洁，甚至效率更高，主要是还更好理解。\n下面我列举有5个案例，我们一起来看一下\n一、建议考虑使用FlatMap方法\n先来看一段同时使用filter和map方法遍历数组的代码。我相信这种场景大家一定碰到过。为了说明问题，这里我用简单的数字内容来举个例子。\nconst squaredOddNumbers = numbers\n    .filter(num => num % 2 !== 0)\n    .map(num => num * num)\n\nconsole.log(squaredOddNumbers);\n// 输出：[1, 9, 25, 49, 81]\n\n上面代码这样写，没什么问题，而且方法的连用也是比较推荐的处理方式， 但是，还是请多想想，其实我们有更好的方式来处理这一类问题。\n现在我们看使用FlatMap如何实现的\nconst numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];\nconst squaredOddNumbers = numbers.flatMap(num => \n    num % 2 !== 0 ? [num * num] : []\n);\n\nconsole.log(squaredOddNumbers);\n// 输出：[1, 9, 25, 49, 81]\n\n使用FlatMap的好处是\n只要遍历一遍，而且不产生中间多余数组\n二、建议调整数组方法调用的顺序\n日常工作中写的比较多的数组方法有filter()，find()，map()，reduce()，在必要的场景下，我们也建议将这些个方法连起来一起调用。但是，一定要注意调用顺序，否则也会影响效率问题。\n比如下面这样：\nconst …",
+          "link": "https://juejin.cn/post/7300151966964613132",
+          "publishedOn": "2023-11-12T23:30:33.000Z",
+          "wordCount": 1515,
+          "title": "JS代码其实可以这样写",
           "imageUrl": null
         },
         {
@@ -783,8 +813,8 @@
           "description": "theme: Chinese-red\n双十一购物狂欢节来喽，这不仅是电商购物的盛宴，更是“充电学习”的绝佳时机！\n快来看这次册姐又为大家带来什么样的福利吧！\n全场 150+ 本小册低至 6 折，任君挑选，更有“满赠+抽奖”的多款礼品等着你，让你用更少的钱获得更多的知识！\n超低的价格、多样化的选择、精心挑选的礼品……心不心动？\n嗨！心动不如行动！快来选购适合自己的课程，开启你的技能提升之旅吧！\n⏰活动时间\n2023 年 11 月 10 日～2023 年 11 月 17 日\n🎁活动福利\n福利一：全场小册低至 6 折！更有入门教程免费学、分销返现赚钱！\n不论是新品小册，还是畅销小册，通通 6 折！对，全场、所有小册都是 6 折 ！！！\n购买小册戳👉：点击浏览小册列表\n想买但是不知道怎么选？看这里：掘金之「什么值得买」\n更有：\n入门教程免费读：Flutter 入门教程、 Java 入门教程、  TypeScript 入门教程\n分销返现赚钱钱：💰 掘金社区赚钱指南\n福利二：满 99 元/ 199 元/ 399 元，赠「好礼+抽奖」！可叠加！\n参与规则： 活动期间累计实付金额满 99 元的用户，可获得小册 5 折券 1 张；满 199 元/ 399 元的用户，可获得小册 5 折券 1 张和掘金周边实物礼品 1 份（从自己金额段的对应实物礼品中二选一）。各满额段，“实物”礼品不叠加~\nPS：满额计算口径以实付金额为准，计算时间段为 11 月 10 日～11 月 17 日，会员兑换券不包含在内哦！\n实付金额\n「礼品」名称\n图片\n\n\n\n\n满 99 元\n小册 5 折券（所有累计实付≥99 元都可获得，1 张/人；有效期 60 天，全部小册可用）\n\n\n\n满 199 元\n稀土掘金 Touch 系列「看见温暖」烛火加湿器 或者 稀土掘金好好学习系列无绳跳绳（二选一）\n \n\n\n满 399 元\n稀土掘金 Touch系列「围炉喝咖」摩卡壶 或者 稀土掘金HAWKING拍拍灯（二选一）\n \n\n\n\n🔥🤗福利再加码！！！\n活动期间实付金额满 99 元/ 199 元/ 399 元的用户，还可以参与自己满额所在梯度的抽奖活动。\n满额礼品和抽奖所中奖品可叠加。\n实付金额\n所抽「奖品」名称\n图片\n「奖品」数量\n\n\n\n\n满 99 元\n稀土掘金-码赛克系列 运动毛巾\n\n10 条\n\n\n满 199 元\n稀土掘金「4201」首发盲盒 （样式随机）\n\n5 个\n\n\n满 399 元\n稀土掘金Who Cares系列「我真的不困」咖啡杯\n\n3 个\n\n\n\n\n举例子说明：\nCase 1：小明同学在本次活动中实付 123 元（≥99 元），可获得 1 张「5 折券」；与此同时，小明还可以参与本梯度「运动毛巾」的抽奖活动。\nCase 2：小天同学在本次活动中实付 234 元（≥199 元），可获得 1 张「5 折券」，还可以从「加湿器」和「跳绳」中再挑选一个实物礼品；与此同时，还可以参与本梯度「盲盒」的抽奖。\nCase 3：小金同学在本次活动中实付 456 元（≥399 元），可获得 1 张「5 折券」，还可以从「摩卡壶」和「拍拍灯」中再挑选一个实物礼品；与此同时，还可以参与本梯度「咖啡杯」的抽奖。\n福利三：TOP 1 之土豪大奖！\n活动期间累计实付金额 TOP 1 ，可获得小米（MI）手环 8 Pro 一个。\n✨ 此奖品不与「满赠和抽奖」叠加，但可与「小册 5 折券」叠加。\n👀活动规则（必看）\n各活动满额计算口径以累计实付金额为准，计算时间段为 11 月 10 日～11 月 17 日，会员兑换券不计入。\n其中，满赠活动中，各阶段实物礼品不叠加，但可与小册 5 折券、抽奖奖品叠加；土豪奖不与「满赠和抽奖」叠加，但可与「小册 5 折券」叠加。\n各活动获奖名单：活动结束后的 5 个工作日内（ 预计 11 月 24 日）公布。\n优惠券领取：将于活动结束后的 5 个工作日内（11 月 24 日）发放到大家的掘金账户中，点击“个人头像-我的优惠”查看。\n\n实物礼品领取：\n活动结束后的 5 个工作日（11 月 24 日）内开始采集发货信息，届时请留意站内信/私信通知。\n信息发出后，请掘友们在 5 个工作日内完成填写，12 月 1 日 24 点截止。过期未填写视为放弃所有奖品，不予发放。\n多次提交问卷的，官方将以最新提交为准。\n信息采集完，将于 12 月 15 日前完成实物礼品发放。\n有任何疑问，可以通过 1️⃣站内私信掘金小册，2️⃣微信联系小册四姐@北比或小册五姐@北比",
           "link": "https://juejin.cn/post/7299037777387175948",
           "publishedOn": "2023-11-09T02:48:38.000Z",
-          "wordCount": 1245,
-          "title": "双十一狂欢 | 全场小册 6 折 Go，小米手环、摩卡壶、掘金周边等你来拿！",
+          "wordCount": 1331,
+          "title": "双十一 6 折 Go | 小米手环、摩卡壶、掘金周边等你来！",
           "imageUrl": null
         },
         {
@@ -805,36 +835,6 @@
           "publishedOn": "2023-11-08T15:35:52.000Z",
           "wordCount": 965,
           "title": "程序员男盆友给自己做了一款增进感情的小程序",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7298927261210361882",
-          "author": "阿李贝斯",
-          "description": "theme: v-green\n前言\n最近看小程序文档的时候发现了 swiper 组件新增了 Skyline 特有的属性，直接使用竟然没有效果。\n\n不信邪的我打算来研究研究究竟什么是 Skyline！经过一系列文档阅读与实践，长时间闭门造车的我打开了新世界的大门，我惊讶的发现 Skyline 引擎很可能是微信小程序未来发展的重点方向，有着更类似原生的交互体验，新增的特性让人连连称叹，特以此文来总结性地介绍一下 Skyline。\n双线程模型\n了解 Skyline 之前，我们有必要重新复习一下什么是小程序的双线程模型。\n如官方文档所言，小程序的运行环境分成渲染层和逻辑层，其中 WXML 模板和 WXSS 样式工作在渲染层，JS 脚本工作在逻辑层。小程序的渲染层和逻辑层分别由2个线程管理：\n渲染层的界面使用了WebView 进行渲染，一个小程序存在多个界面，所以渲染层存在多个WebView线程；\n逻辑层采用JsCore线程运行JS脚本。\n这两个线程的通信会经由微信客户端（原生） 做中转，逻辑层发送网络请求也经由微信客户端 （原生） 转发，有了微信小程序客户端 （原生） 作为媒介系统，使得我们开发者能够专注于数据与逻辑。\n如上所述，小程序的通信模型如下图所示。\n\n什么是 Skyline 引擎\n前文提到，基于 WebView 和原生控件混合渲染的方式，小程序优化扩展了 Web 的基础能力，所以小程序相对于普通的Web页面有着更为良好的性能与体验。\n由于 Web 在移动端的表现与原生应用仍有一定差距，亦或许是 Web 的优化遇到了瓶颈，为了进一步优化小程序性能，微信在 WebView 渲染之外新增了一个渲染引擎，也就是我们本文的重磅主角： Skyline，它使用更精简高效的渲染管线，并带来诸多增强特性，让 Skyline 拥有更接近原生渲染的性能体验。\nSkyline 引擎 vs Web…",
-          "link": "https://juejin.cn/post/7298927261210361882",
-          "publishedOn": "2023-11-08T10:58:50.000Z",
-          "wordCount": 1246,
-          "title": "微信小程序全新渲染引擎Skyline（入门篇）",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7298927261209346074",
-          "author": "AAA专业家电维修",
-          "description": "开头就上源码\ngithub https://github.com/armomu/vue-material-admin\n预览地址 https://chenhuajie.gitee.io/vue-material-admin/#/graphics/pixijs\n玩Web3D的你们一定也要看看我的这个 Babylon物理角色控制器\n🤔️🤔️ 这几天闲着没事突发奇想搞点2D图形玩玩，前段时间时间接触了pixi.js就用它来试试水。\n决定用捕鱼达人的这种模式来试试水。🔥🔥\n🥱 🥱 肝了了好几天把基本的鱼游泳动画，随机游泳、炮台、射击撒网基本的逻辑写了\n上代码 ⬇️ ⬇️ ⬇️ ⬇️\nPIXI 实例入口\npixi很简单由pixi生成了canvas dom（app.view）你它塞到的点HTML Dom里面就行了\n// <div class=\"pixijs\" ref=\"pixiDom\"></div>\nimport { shallowRef, onMounted, onUnmounted } from 'vue';import * as PIXI from 'pixi.js';\nconst pixiDom = shallowRef<HTMLDivElement>();\nconst screen = {\n    width: 1024,\n    height: 580,\n};\nlet app: PIXI.Application;\nonMounted(async () => {\n    app = new PIXI.Application({\n        width: screen.width,\n        height: screen.height,\n    });\n    addSceneBackground();\n    app.stage.eventMode = '…",
-          "link": "https://juejin.cn/post/7298927261209346074",
-          "publishedOn": "2023-11-08T08:16:06.000Z",
-          "wordCount": 3579,
-          "title": "用Pixi.js做了一版Canvas的捕鱼游戏Demo",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7298641610431332378",
-          "author": "前端兰博",
-          "description": "theme: fancy\n引言\n借助埋点监控sdk,我们可以统计用户的点击，页面pv、uv，脚本错误、dom上报等关键信息等。\n一：项目初始化\n1.技术栈\nTs\nrollup打包工具\n2.搭建项目\nnpm init -y \ntsc --init\nnpm install typescript -D\nnpm install rollup-plugin-dts -D\nnpm install rollup-plugin-typescript2 -D\n\ndist:打包产物\nservice:后端服务\nindex.html:测试埋点\n\n3.配置package.json打包命令\n\"scripts\": {\n    \"dev\": \"rollup -c\"\n  },\n\n4.配置rollup.config.js\nimport ts from 'rollup-plugin-typescript2'\nimport path from 'path'\nimport dts from 'rollup-plugin-dts';\nexport default [{\n    //入口文件\n    input: \"./src/core/index.ts\",\n    output: [\n        //打包esModule\n        {\n            file: path.resolve(__dirname, './dist/index.esm.js'),\n            format: \"es\",\n            name:'tracker'\n        },\n         //打包common js\n        {\n            file: path.resolve(__dirname, './dist/index.cjs.js'),\n           …",
-          "link": "https://juejin.cn/post/7298641610431332378",
-          "publishedOn": "2023-11-07T13:28:51.000Z",
-          "wordCount": 3946,
-          "title": "轻量级埋点sdk搭建",
           "imageUrl": null
         }
       ]
@@ -950,7 +950,7 @@
           "description": "[7073670907851440160#新人报道#]",
           "link": "https://juejin.cn/pin/7298669054638424115",
           "publishedOn": "2023-11-08T01:21:03.000Z",
-          "wordCount": 508,
+          "wordCount": 511,
           "title": "[7073670907851440160#新人报道#]",
           "imageUrl": null
         },
