@@ -44,7 +44,7 @@
           "description": "想要提高网页的加载体验，其实有个非常简单且实用的技巧，那就是改变请求资源的加载优先级，这也可以改变？没错！",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/img-js-preload-fetch-priority/",
           "publishedOn": "2023-10-29T15:55:41.000Z",
-          "wordCount": 950,
+          "wordCount": 951,
           "title": "聊聊Web网页中资源加载的优先级",
           "imageUrl": null
         }
@@ -158,7 +158,7 @@
           "description": "推荐一个在线免费专题：《高并发系统设计 40 问》，https://zq99299.github.io/note-architect/hc/，内容较为详实。涵盖了数据库、缓存、消息队列、分布式服务等，还包括性能管理、压测、控流、熔断等运维实战，看完还是有不少收获的。",
           "link": "https://m.okjike.com/originalPosts/6552cdf6f59114ac23c40414",
           "publishedOn": "2023-11-14T01:31:34.000Z",
-          "wordCount": 460,
+          "wordCount": 462,
           "title": "发布了: 推荐一个在线免费专题：《高并发系统设计 40 问》，https://zq99299.github.io/note-architect/hc/，内容较为详实。涵盖了数据库、缓存、消息队列、分布...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FkkIen_z1YJXnCpuuEkdjbgx7-3Yv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -622,16 +622,6 @@
           "wordCount": 523,
           "title": "重庆市忠县发布雷电黄色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231109/t20231109_526480057.html",
-          "author": "国家预警信息发布中心",
-          "description": "酉阳县气象台2023年11月9日1时30分发布“雷电黄色预警信号”，预计11月9日1时至8时，钟多街道、桃花源街道、小河镇、丁市镇、万木镇、后坪乡、清泉乡、天馆乡、两罾乡、龚滩镇、庙溪乡、苍岭镇、宜居乡、铜鼓镇、花田乡、双泉乡、浪坪乡、官清乡、李溪镇、板桥乡、楠木乡、板溪镇、龙潭镇、麻旺镇、酉水河镇、酉酬镇、可大乡、大溪镇、偏柏乡、涂市镇、腴地乡、泔溪镇、车田乡、五福镇、兴隆镇、毛坝乡、木叶乡、黑水镇将出现雷雨天气，局地伴有短时强降水、阵性大风等强对流天气，请注意防范。防御指南：1.政府及相关部门按照职责做好防雷工作；2.请注意防范大风可能造成棚舍和广告牌等搭建物的倒塌以及对高空作业、水域作业和航行的影响；3.密切关注天气，尽量避免户外活动。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231109/t20231109_526480057.html",
-          "publishedOn": "2023-11-08T17:52:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市酉阳土家族苗族自治县发布雷电黄色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -715,6 +705,16 @@
           "publishedOn": "2023-11-12T12:46:37.000Z",
           "wordCount": 2158,
           "title": "Vue3如何优雅的跨组件通信🚀🚀🚀",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7300036605100130358",
+          "author": "Yiko",
+          "description": "highlight: xcode\n引言\n图片懒加载是一种优化网页性能的技术，它可以在网页加载时只加载当前屏幕可视区域内的图片，而不会一次性加载所有图片，从而提高网页的加载速度、减少后台服务器压力，并提升用户体验。让我来详细介绍一下图片懒加载的原理及实现方法。\n一、原理\n实现图片懒加载的原理可以简单概括为以下几个步骤：\n1. 将图片地址存储到 data-xxx 属性上\n在 HTML 的 img 标签中，我们可以使用自定义的 data-xxx 属性来存储图片地址，例如：\n<img src=\"placeholder.jpg\" data-src=\"image.jpg\">  \n\n这样，我们就可以在图片加载时通过 JavaScript 获取到图片地址。\n2. 判断图片是否在可视区域\n通过计算每张图片的位置，我们可以判断当前图片是否在可视区域内。一般来说，我们可以通过以下两个方法来计算图片的位置：\n(1) getBoundingClientRect() 方法\n这个方法可以获取元素的大小、位置等信息，包括元素相对于视口的位置。通过计算元素的 top、bottom、left、right 等属性可以得出元素的位置信息，例如：\nconst rect = element.getBoundingClientRect();  \nconst top = rect.top;  \nconst bottom = rect.bottom;  \nconst left = rect.left;  \nconst right = rect.right;  \n\n(2) offsetTop 和 offsetHeight 属性\n这两个属性可以获取元素相对于其父元素的位置和大小。通过计算元素的 offsetTop 和 offsetHeight 属性可以得出元素的位置信息，例如：\nconst top = element.offs…",
+          "link": "https://juejin.cn/post/7300036605100130358",
+          "publishedOn": "2023-11-12T11:56:56.000Z",
+          "wordCount": 1273,
+          "title": "总是听说图片懒加载，那你能讲清楚吗？（一）",
           "imageUrl": null
         },
         {
@@ -845,16 +845,6 @@
           "publishedOn": "2023-11-09T00:50:42.000Z",
           "wordCount": 1155,
           "title": "以为 flv.js 直播超简单，结果被延迟和卡顿整疯了",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7298966889358196788",
-          "author": "嚣张农民",
-          "description": "前言\n又是无聊的一天，逛GitHub的时候发现一个给女朋友做了一个互动微信小程序，据说女朋友更爱自己了，所以当晚。。。。给自己做了丰盛的晚餐，我当即点开立马开发粘贴复制起来，想到做的小程序可以和未来的女朋友增进感觉，越加猩粪。。。\n回到正题，这个库有1.1k的star，推荐新人入坑原生小程序的可以学习\n项目地址：https://github.com/UxxHans/Rainbow-Cats-Personal-WeChat-MiniProgram\n\n云开发情侣互动小程序（做任务，攒积分，换商品）\n这是使用云开发能力构建的情侣互动小程序，可以跟女朋友互动哦，其中使用了云开发基础能力的使用：\n数据库：对文档型数据库进行读写和管理\n云函数：在云端运行的代码，开发者只需编写业务逻辑代码\n使用逻辑\n打个比方:\n女朋友发布任务->女朋友来做任务->做完后由你来确认完成->女朋友收到积分\n你发布商品(洗碗券)->女朋友使用积分购买->商品进入到女朋友的库存->女朋友拿着洗碗券叫你洗碗->你洗碗->女朋友将物品(洗碗券)标记为已使用(不可逆)\n这样做的原因是 不想给任何一方能自说自话 增加自己或者对方积分的能力[点击完成任务的人不能是获得积分的人也不能是自己]\n版本新增\n将所有非云函数的云逻辑封装为云函数\n新增了仓库系统，购买了的商品会存入仓库，然后再被使用\n新增了搜索框，可以搜索物品和任务\n新增了滑动窗，可以自动播放显示多张图片\n新增了商品和任务预设，添加商品或任务可以使用预设，非常迅速\n将新增按钮变为可拖拽的页面悬浮按钮\n购买，上架，新建任务的时间都会被记录并显示\n取消了点击左边圆圈来完成或者购买，统一改为左滑菜单\n左滑菜单统一用图标显示，更加精简\n使用特效升级了详细信息页面与添加页面的美观度\n添加任务或物品界面积分文本框改为滑块\n在商城添加了顶栏显示积分，更直观\n使用表情符号简单的增加…",
-          "link": "https://juejin.cn/post/7298966889358196788",
-          "publishedOn": "2023-11-08T15:35:52.000Z",
-          "wordCount": 965,
-          "title": "程序员男盆友给自己做了一款增进感情的小程序",
           "imageUrl": null
         }
       ]
