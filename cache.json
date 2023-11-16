@@ -34,7 +34,7 @@
           "description": "应该是国内第一篇专门介绍用mp4box.js和VideoDecoder方法解码MP4视频序列帧的文章了。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/mp4box-js-webcodecs-mp4-canvas/",
           "publishedOn": "2023-11-14T16:37:18.000Z",
-          "wordCount": 1230,
+          "wordCount": 1229,
           "title": "mp4box.js加WebCodecs 解码MP4视频帧并渲染",
           "imageUrl": null
         },
@@ -44,7 +44,7 @@
           "description": "想要提高网页的加载体验，其实有个非常简单且实用的技巧，那就是改变请求资源的加载优先级，这也可以改变？没错！",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/img-js-preload-fetch-priority/",
           "publishedOn": "2023-10-29T15:55:41.000Z",
-          "wordCount": 949,
+          "wordCount": 950,
           "title": "聊聊Web网页中资源加载的优先级",
           "imageUrl": null
         }
@@ -103,6 +103,16 @@
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/65558d1d84bcbc4a4698d6d7",
+          "author": null,
+          "description": "关于如何让 ChatGPT 更好地思考，之前提到过 CoT/SC/CoT-SC/ToT/Least-to-Most/Multi-Persona 等多种策略（https://web.okjike.com/originalPost/652faa1cbb3e3660e8041b7b），这些方法都是反复利用 LLM 自身的推理能力将推理结果优化到最佳。\n那有没有一种办法可以借助外部力量让推理结果更加准确呢？最常用到的就是 RAG/KG，其思路就是结合检索能力和知识图谱来解决幻觉问题；近期 Notion 也上架了它们的问答聊天功能，可以检索你在软件上历史沉淀，用到的就是 RAG。\nReAct，https://react-lm.github.io，这篇论文提到了一个新的思路，通过协同推理和行动来增强效果。简单来说，就是一边推理，一边对推理的结果进行批判性思考，如果认为推理结果不恰当，就从外部知识库获取内容，进一步思考。\n它的思路跟 CoT 是比较相近的，都是在推理过程中，step by step 解答问题，只不过引入了两个新的环节：思考→行动→行动输入→观察，加入更多外部信息可以辅助思考，整个过程也有点像增强学习。\n对应的工程实践在这里：https://github.com/ysymyth/ReAct，看代码实现还是比较简单的。",
+          "link": "https://m.okjike.com/originalPosts/65558d1d84bcbc4a4698d6d7",
+          "publishedOn": "2023-11-16T03:31:41.000Z",
+          "wordCount": 470,
+          "title": "发布了: 关于如何让 ChatGPT 更好地思考，之前提到过 CoT/SC/CoT-SC/ToT/Least-to-Most/Multi-Persona 等多种策略（https://web.okjike.com/originalPost/652faa...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FgfckftXOuKeeOYh9uov_N3Mofkqv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/65557eb8f59114ac23fcea1f",
           "author": null,
           "description": "多次看到有人推荐，可以跳过付费墙直接免费查看各大网站内容的 Chrome 插件，把源码 down 下来研究了下，原来核心代码只有一句：\nh++ps://webcache.googleusercontent.com/search?q=cache:${window.location.href}\n这些付费内容平台为了可以获得更多的流量，针对搜索引擎的爬虫是输出全文的，因此只需要通过 Google Cache Page 打开对应的网页，或者通过 Achieve 网站打开，就可以看到全文了。",
@@ -118,7 +128,7 @@
           "description": "最近研究 AI Agents 的论文比较多，看到一个宝藏知识库，LLM-Agent-Paper-List，https://github.com/WooooDyy/LLM-Agent-Paper-List，它对基于大模型的 Agents 进行了系统且全面的调查，列出了一些必读论文。内容主要包含三个部分：\n1）AI Agents 是感知环境、做出决策并采取行动的人造实体，因此详细阐述了这三个组件：大脑、感知和行动，包括知识、内存、推理和规划、可迁移性和泛化等等\n2）针对 Single-Agent / Multi-Agent / Human-Agent cooperation 列举了系列论文，讨论面向任务和生命周期的部署\n3）基于 Agents 的行为和个性，从个体性研究到社会性，最具代表的就是对“西部世界”的还原\n大部分论文都是 2023 年 3 月之后发表的，内容比较靠前，看到很多应用也在陆续尝试中，感兴趣的朋友可以花点时间研究一下。其中一小半我都看过，很有帮助。",
           "link": "https://m.okjike.com/originalPosts/655574e9834e87e36f5f315f",
           "publishedOn": "2023-11-16T01:48:25.000Z",
-          "wordCount": 487,
+          "wordCount": 503,
           "title": "发布了: 最近研究 AI Agents 的论文比较多，看到一个宝藏知识库，LLM-Agent-Paper-List，https://github.com/WooooDyy/LLM-Agent-Paper-List，它对基于大模型的 ...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FmOLpGiQ1aQcREWvTajmVYUrLNQqv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -128,7 +138,7 @@
           "description": "昨天跟一位美国回来的朋友吃饭，我问她美国程序员有没有 35 岁焦虑，她说感受不到，近期他们组里就来了一位超过 35 岁的程序员，之前是一名药剂师，中途转行，当前还处于比较初级的水平，她很佩服这位同事的勇气。\n我说，这种简历，在中国很可能连一个面试机会都拿不到，她很诧异，为什么拿不到面试机会呢？这种情况还蛮多的。嗯，为什么呢？",
           "link": "https://m.okjike.com/originalPosts/65556e1b7a3d420a1cbf8046",
           "publishedOn": "2023-11-16T01:19:23.000Z",
-          "wordCount": 480,
+          "wordCount": 468,
           "title": "发布了: 昨天跟一位美国回来的朋友吃饭，我问她美国程序员有没有 35 岁焦虑，她说感受不到，近期他们组里就来了一位超过 35 岁的程序员，之前是一名药剂师，中途...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -138,7 +148,7 @@
           "description": "推荐一个视频翻译工具，pyvideotrans，https://github.com/jianchang512/pyvideotrans，产品界面比较简洁，选择原语言和目标语言后，就会快速给视频生成新的字幕。\n作者在生成过程中做了一个优化，首先对视频和音频进行截断分片，然后并行生成内容，如果你的机器性能比较高，理论上可以设置更大的并发度，不过作者没有把这个参数给透出来。\n语音识别基于 openai-whisper 离线模型，文字翻译支持 Google/Baidu/ChatGPT/DeepL 等翻译接口，文字合成语音用的是 Microsoft Edge tts。\n实现这样一个工具比较考验工程能力，而 AI 应用层的建设也很依赖这种能力，可以尝试着多动手，玩一玩。",
           "link": "https://m.okjike.com/originalPosts/6554231d859fc596dfa5981a",
           "publishedOn": "2023-11-15T01:47:09.000Z",
-          "wordCount": 482,
+          "wordCount": 498,
           "title": "发布了: 推荐一个视频翻译工具，pyvideotrans，https://github.com/jianchang512/pyvideotrans，产品界面比较简洁，选择原语言和目标语言后，就会快速给视频生成...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fr1TwUDsS6X5-p7FMGrBWEEmO9UJ?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80"
         },
@@ -148,7 +158,7 @@
           "description": "这个网页（https://ig.ft.com/generative-ai/）以滚动交互的形式，十分生动地解释了大模型推理过程中几个重要的概念，认真看完以后，你就能够理解什么是 Token，什么是词群，如何通过概率推理出下一个 Token；什么是自注意力，如何通过自注意力理解上下文了；什么是词搜索和束搜索，如何生成高质量的文本等等。",
           "link": "https://m.okjike.com/originalPosts/65541cb184bcbc4a4679c60d",
           "publishedOn": "2023-11-15T01:19:45.000Z",
-          "wordCount": 463,
+          "wordCount": 479,
           "title": "发布了: 这个网页（https://ig.ft.com/generative-ai/）以滚动交互的形式，十分生动地解释了大模型推理过程中几个重要的概念，认真看完以后，你就能够理解什么是...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FrsRb9O0sA5K9tfg6JCywAfik72a?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80"
         },
@@ -158,7 +168,7 @@
           "description": "微软官方推出了专门的 AI 课程，Generative AI for Beginners，https://microsoft.github.io/generative-ai-for-beginners/，总共 12 节课，其中 6 节概念课，6 节编程课，我全部看了一遍，写的确实非常基础，学会以后，基本上你就可以自己去构建生成式 AI 应用了。\n概念课会告诉你 AI 的发展情况、了解 LLM 的工作原理、掌握 Prompt 的初级和高级用法；编程课会让你学会调用 OpenAI、处理图片、使用向量数据库、调用 Function、开发一个完成的 AI 应用。\n如果你担心自己编程能力不行，学不会编程课（大概率如此），可以看看这个教程，How to be a Programmer，https://braydie.gitbooks.io/how-to-be-a-programmer/content/zh/，它将一个程序员的技能划分为三个层级，入门、进阶和高级，教会你重点概念的原理、检索答案的姿势、调试代码的技巧、优化性能的方法等等；至于编码部分，我觉得你可以不用过多学习，交给 ChatGPT 就行，让 AI 帮你写代码。\n当然，你可以去 freeCodeCamp 学习编程，真正成为一名程序员，它提供了 3000 小时的免费课程，涵盖了编程涉及到的方方面面，https://www.freecodecamp.org/chinese/news/online-coding-classes-for-beginners-2022-guide/，包括 HTML/CSS/JavaScript 三件套、Python 课程、移动应用程序开发课程、游戏开发、C 系列、PHP 系列、数据库等等，应有皆有。",
           "link": "https://m.okjike.com/originalPosts/655405af84bcbc4a4677708a",
           "publishedOn": "2023-11-14T23:41:35.000Z",
-          "wordCount": 528,
+          "wordCount": 544,
           "title": "发布了: 微软官方推出了专门的 AI 课程，Generative AI for Beginners，https://microsoft.github.io/generative-ai-for-beginners/，总共 12 节课，其中 6 节概...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FrBSYlAnxnNdM6qjBbidXXslpiwWv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -168,7 +178,7 @@
           "description": "在公司的核心竞争力，在于对业务的理解，以及针对业务问题能够快速提供有效的解决方案。\n如果业务足够简单，也不足以支撑构建自己的核心竞争力。",
           "link": "https://m.okjike.com/originalPosts/6553ae2f84bcbc4a4673c353",
           "publishedOn": "2023-11-14T17:28:15.000Z",
-          "wordCount": 426,
+          "wordCount": 442,
           "title": "发布了: 在公司的核心竞争力，在于对业务的理解，以及针对业务问题能够快速提供有效的解决方案。 如果业务足够简单，也不足以支撑构建自己的核心竞争力。",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -178,7 +188,7 @@
           "description": "如何让 AI 根据使用者意图自动化控制网页？CopilotKit，https://github.com/RecursivelyAI/CopilotKit，给出了一个较为通用的解决方案，它的思路比较简单，大致如下：\n1）让 AI 结构化理解网页上的内容\n2）告诉 AI 可以对网页进行哪类操作，例如点击按钮、选择元素、删除模块等\n3）通过聊天窗口/语音控制等方式，告诉 AI 你期望它做什么事情\n下面这个视频就演示了，如何让 AI 帮助我们选择旅行目的地，通过对话的方式完成筛选。\nCopilotKit 项目作者对这类能力进行了前端程序化封装，通过 useMakeCopilotReadable 和 useMakeCopilotActionable 等函数，可以让程序快速实现 1 和 2 的操作，调用起来十分简单，几行代码就能搞定。\n详细文档：https://docs.copilotkit.ai/getting-started/quickstart-chatbot",
           "link": "https://m.okjike.com/originalPosts/65538f34834e87e36f3a4cae",
           "publishedOn": "2023-11-14T15:16:04.000Z",
-          "wordCount": 496,
+          "wordCount": 512,
           "title": "发布了: 如何让 AI 根据使用者意图自动化控制网页？CopilotKit，https://github.com/RecursivelyAI/CopilotKit，给出了一个较为通用的解决方案，它的思路比较简...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FnQHON-WayXy5bjWcaeFXyCcSKit?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80"
         },
@@ -188,19 +198,9 @@
           "description": "推荐一个在线免费专题：《高并发系统设计 40 问》，https://zq99299.github.io/note-architect/hc/，内容较为详实。涵盖了数据库、缓存、消息队列、分布式服务等，还包括性能管理、压测、控流、熔断等运维实战，看完还是有不少收获的。",
           "link": "https://m.okjike.com/originalPosts/6552cdf6f59114ac23c40414",
           "publishedOn": "2023-11-14T01:31:34.000Z",
-          "wordCount": 462,
+          "wordCount": 478,
           "title": "发布了: 推荐一个在线免费专题：《高并发系统设计 40 问》，https://zq99299.github.io/note-architect/hc/，内容较为详实。涵盖了数据库、缓存、消息队列、分布...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FkkIen_z1YJXnCpuuEkdjbgx7-3Yv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/6552c672834e87e36f268ab9",
-          "author": null,
-          "description": "一个朋友出去找工作，我问他算法面的多不多，他说有的公司比较多，但是大部分公司尤其是小创团队不怎么考算法，面到的算法基本都是 easy 或者 medium 的。\n我说算法刷了很容易忘记，你是怎么做的。他说，很简单，就是边学习边做笔记，刷题的时候把要点都记录下来，然后经常拿出来复习。\n这看起来像是一个“笨办法”，不过确实也是一个行之有效的好办法。回想学生时代，不都是这么做的么，理科类的公式理论就那么几个，每天靠做题训练养成肌肉记忆，有的同学还会建立一个错题本，每周回顾，纠正错误的肌肉记忆，刷算法也是同理。",
-          "link": "https://m.okjike.com/originalPosts/6552c672834e87e36f268ab9",
-          "publishedOn": "2023-11-14T00:59:30.000Z",
-          "wordCount": 433,
-          "title": "发布了: 一个朋友出去找工作，我问他算法面的多不多，他说有的公司比较多，但是大部分公司尤其是小创团队不怎么考算法，面到的算法基本都是 easy 或者 medium 的...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         }
       ]
     },
@@ -215,7 +215,7 @@
           "description": "提个小建议：\n大家每个人都应该写一个属于自己的「私人董事会」GPTs。\n这个董事会中的成员，是你真心佩服的大佬。可以是已故人士。\n把每个人的特点和思考方式给描述进去。\n在自己做决策时，和这个GPTs对话， 获取不同视角的建议。",
           "link": "https://m.okjike.com/originalPosts/65548775de31fdaa4e066031",
           "publishedOn": "2023-11-15T08:55:17.000Z",
-          "wordCount": 465,
+          "wordCount": 447,
           "title": "发布了: 提个小建议： 大家每个人都应该写一个属于自己的「私人董事会」GPTs。 这个董事会中的成员，是你真心佩服的大佬。可以是已故人士。 把每个人的特点和思...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -245,7 +245,7 @@
           "description": "对于绝大多数人而言，一万个，十万个GPTs 又有何益？ 奇淫乱技，脑洞大开，走马观花，体验一番，对己有何帮助？\nAI应是改变生产力的神器，不应是互联网kill time 的新玩具。\n外面太喧嚣热闹了，眼花缭乱。学一下大模型，深吸一口气，慢下来，一步步思考，你现在的工作流中，有哪一个环节可以引入AI 助力， 去写一个GPTs， 解决那个该死的问题，干活儿去！",
           "link": "https://m.okjike.com/originalPosts/65540e4b3c6228d753e6a44b",
           "publishedOn": "2023-11-15T00:18:19.000Z",
-          "wordCount": 476,
+          "wordCount": 458,
           "title": "发布了: 对于绝大多数人而言，一万个，十万个GPTs 又有何益？ 奇淫乱技，脑洞大开，走马观花，体验一番，对己有何帮助？ AI应是改变生产力的神器，不应是互联网k...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -255,7 +255,7 @@
           "description": "一个持续稳定赚钱的企业应该始终在追求并做到：提供有壁垒的差异化价值。\n1/ 差异化。 能让你避开内质化内卷价格战。\n2/ 价值。 做出不同是非常容易的事，但不同得对用户有价值，这个就很难了。 两者结合，即为创新。\n3/ 壁垒。 你的领跑身姿背后，始终有同行在紧盯着，抄你的最佳实践，只需极短时间。 除非，你有一个他们抄不了的东西，即 壁垒。",
           "link": "https://m.okjike.com/originalPosts/65539326de31fdaa4ef34fce",
           "publishedOn": "2023-11-14T15:32:54.000Z",
-          "wordCount": 460,
+          "wordCount": 442,
           "title": "发布了: 一个持续稳定赚钱的企业应该始终在追求并做到：提供有壁垒的差异化价值。 1/ 差异化。 能让你避开内质化内卷价格战。 2/ 价值。 做出不同是非常容易的事...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -275,7 +275,7 @@
           "description": "如果你不忙着求生，你就在忙着求死。\n----\n迪伦",
           "link": "https://m.okjike.com/originalPosts/6553118adc2460410cf66ba3",
           "publishedOn": "2023-11-14T06:19:54.000Z",
-          "wordCount": 449,
+          "wordCount": 431,
           "title": "发布了: 如果你不忙着求生，你就在忙着求死。 ---- 迪伦",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -285,7 +285,7 @@
           "description": "「人生最不幸处，是偶一失言，而祸不及；偶一失谋，而事俸成；偶一恣行，而获小利。后乃视为故常，而恬不为意。则莫大之患，由此生矣。」\n----\n李叔同",
           "link": "https://m.okjike.com/originalPosts/6552bf5cdc2460410cee1022",
           "publishedOn": "2023-11-14T00:29:16.000Z",
-          "wordCount": 440,
+          "wordCount": 422,
           "title": "发布了: 「人生最不幸处，是偶一失言，而祸不及；偶一失谋，而事俸成；偶一恣行，而获小利。后乃视为故常，而恬不为意。则莫大之患，由此生矣。」 ---- 李叔同",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -295,7 +295,7 @@
           "description": "「标准会变成习惯，习惯会变成结果。」\n如果你做的和别人一样，你只能期望得到和别人一样的结果。想要不同的结果就必须提高标准。\n----\n万维钢",
           "link": "https://m.okjike.com/originalPosts/655240b8834e87e36f1f1a72",
           "publishedOn": "2023-11-13T15:28:56.000Z",
-          "wordCount": 448,
+          "wordCount": 430,
           "title": "发布了: 「标准会变成习惯，习惯会变成结果。」 如果你做的和别人一样，你只能期望得到和别人一样的结果。想要不同的结果就必须提高标准。 ---- 万维钢",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -305,7 +305,7 @@
           "description": "21. [[https://chat.openai.com/g/g-1WkWjr71S-you-jian-you-hua-da-shi][邮件优化大师]] :: 你表意我补充\n22. [[https://chat.openai.com/g/g-99L4BgMrf-xiao-xi-pai-ban-da-shi][消息排版大师]] :: 群通知消息美化排版\n23. [[https://chat.openai.com/g/g-FBYTrT9IZ-lao-gong-guan][老公关]] :: 发表对公关稿件的意见\n24. [[https://chat.openai.com/g/g-YuWFbtHmh-ji-yi-da-shi][记忆大师]] :: 帮你记忆大段文本\n25. [[https://chat.openai.com/g/g-gBVsPjy6Z-slogan][Slogan]] :: 帮产品精练卖点\n26. [[https://chat.openai.com/g/g-ai4laYAj7-fen-xi-jing-pin-gong-si][分析竞品公司]] :: 竞品分析\n27. [[https://chat.openai.com/g/g-Gf8iHm6iN-xing-ye-diao-yan-fen-xi][行业调研分析]] :: 行研分析\n28. [[https://chat.openai.com/g/g-7dynwh00d-di-yi-xing-yuan-li-si-kao][第一性原理思考]] :: 从本质源头开始想\n29. [[https://chat.openai.com/g/g-pjHSx3OMZ-ji-suan-gai-lu][计算概率]] :: 解决你的概率题目\n30. [[https://chat.openai.com/g/g-6WKhGAhSF-gai-nian-guan-xi][概念关系]] :: 辨析相近概念的差异\n31. [[https://chat.openai.com/g/g-GBZMNv64K-tu-pian-ce-xie-da-shi][图片侧写大师]] :: 将上传图片进行侧写描述\n32. [[https://chat.openai.com/g/g-bamhWDPnW-xin-tiao-npc][心跳NPC]] :: 对话游戏\n33. [[https://chat.openai.com/g/g-j8rMW9OGH-url-fen-xi][URL分析]] :: 分析网站信息\n34. [[https://chat.openai.com/g/g-LNRTqjSt4-meta-prompt][Meta Prompt]] :: 帮你生成 Prompt 的 Prompt\n35. [[https://chat.openai.com/g/g-Yk4DRpJCC-chan-pin-qi-ming-qi][产品起名器]] :: 给产品起个名儿",
           "link": "https://m.okjike.com/originalPosts/6551b6f33c6228d753b7bcde",
           "publishedOn": "2023-11-13T05:41:07.000Z",
-          "wordCount": 541,
+          "wordCount": 523,
           "title": "发布了: 21. [[https://chat.openai.com/g/g-1WkWjr71S-you-jian-you-hua-da-shi][邮件优化大师]] :: 你表意我补充 22. [[https://chat.openai.com/g/g-99L4BgMr...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         }
@@ -442,7 +442,7 @@
           "description": "本周刊为    参考答案会员订阅内容    。   \n    \n   含 5 篇编辑精选的深度长文（附epub/pdf电子周刊）、6 条群友分享的优质内容、1 条健脑思维练习、1个新增信息源和1个参考工具。   \n    \n   涉及    思维方式、公司即产品、产品设计、理解世界、组织管理    等专题。   \n    \n    👉        点击加入会员        （手机网页端请微信扫码访问）   \n      \n   周刊目录   \n    \n    \n    \n   一、精选长文   \n    \n   【公司即产品】Notion 是如何打造产品的   \n    \n   【产品设计】微信背后的产品观   \n    \n   【思维方式】你的信念是大脑的帮手还是关系户？   \n    \n   【理解世界】步伐分层：复杂系统如何学习并持续学习   \n    \n   【组织管理】德鲁克：必须学会在没有指挥权和控制权的环境中进行管理   \n    \n    \n    \n   二、社群精华   \n    \n   【投资与财富】Acquired 访谈：查理·芒格   \n    \n   【创业之旅】Sam Altman的创业手册   \n    \n   【效率能量】习惯养成的最佳策略：逐渐攀升还是长久保持？   \n    \n   【写作与表达】我也有话要说——普通人的当众讲话的技能   \n    \n   【写作与表达】移除创造力的障碍   \n    \n   【积累内容资产】如何使用twitter   \n    \n    \n    \n   附：健脑练习-黄金圈法则   \n    \n            新增信息源-Edge（内容平台-集合世界上最聪明的思想）   \n    \n            参考工具-小码短链接   \n      \n   阅读地址   \n    \n        https://www.notion.so/ouranswers/Vol-26-Notion-0111ca8688dc4a95a34f566cfbd309b3?pvs=4        \n    \n   （还未加入知识库的会员朋友，请联系值日生       https://sourl.cn/mr8AYz       开通权限）   \n    \n   其中附     EPUB & PDF     资源，可导入微信读书、Kindle等电子阅读器沉浸阅读。",
           "link": "https://open.zhubai.wiki/a/l/t/z/fp/ouranswers/2333612687839678464",
           "publishedOn": "2023-11-07T09:53:55.000Z",
-          "wordCount": 35194,
+          "wordCount": null,
           "title": "参考周刊 Vol.26｜风靡全球的生产力工具：Notion 是如何打造产品的？",
           "imageUrl": null
         },
@@ -602,16 +602,6 @@
           "wordCount": 523,
           "title": "重庆市忠县发布大雾黄色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231109/t20231109_526480681.html",
-          "author": "国家预警信息发布中心",
-          "description": "巫溪县气象台2023年11月9日13时20分发布“大雾黄色预警信号”，受降雨影响，预计未来12小时，我县文峰镇、上磺镇、古路镇、塘坊镇、菱角镇、尖山镇、朝阳镇、通城镇、双阳乡、城厢镇、红池坝镇、宁厂镇、胜利乡、长桂乡等海拔600米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231109/t20231109_526480681.html",
-          "publishedOn": "2023-11-09T05:37:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市巫溪县发布大雾黄色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -643,7 +633,7 @@
           "description": "你好，我是古韵。\n今天我想聊的是，在我们写项目代码时，应该更加专注于业务逻辑的实现，而把定式代码交给js库或工程化自动处理，而我想说的是，请求逻辑其实也是可以继续简化的。\n你可能会说，用axios或fetch api就够了啊，哪有什么请求逻辑，那可能是你还没有意识到这个问题，作为一个前端开发，你肯定也遇到过这些问题：\n处理分页逻辑\n表单处理逻辑\n处理请求防抖逻辑\n处理轮询检查\n处理缓存处理\n处理加载状态\n处理错误处理\n验证码发送\n文件上传\n...\n这些问题，如果你正在使用 axios 或 fetch api，你需要编写大量的代码来处理这些问题，但我想说，他们其实更多的也都是固定的模板代码，也可以被精简掉。\n在今天你可以使用 alova 来处理它们，alova提供了大量日常业务中常用的请求模块，你只需要简单配置几行代码，alova 就能自动帮你管理请求状态，优化网络体验，那些烦人的分页逻辑、轮询检查、缓存处理，全都不用你操心了，让你更加专注于业务逻辑。\nalova的学习成本更低\nalova 借鉴了 axios 和ahooks-useRequest的设计，让大家更容易上手，学习成本更低。\nalova 官网在这里。\nalova 自从 2023 年 4 月份正式对外发布以来，在 Issues 和 Disscussion 中收到了来自世界各地的开发者积极参与的信息，深感荣幸。\n如果你也喜欢 alovajs，请在Github 仓库中贡献一颗 star，这对我们非常重要。\n有任何问题，你可以加入以下群聊咨询，也可以在github 仓库中发布 Discussions，如果遇到问题，也请在github 的 issues中提交，我们会在最快的时间解决。\n加入在 Discord 社区参与交流\n加入 QQ 频道社区参与交流\n下面我们来看看如何通过简单配置，就能帮你解决各种复杂场景下的请求问题。\n基…",
           "link": "https://juejin.cn/post/7301281320666693667",
           "publishedOn": "2023-11-15T03:35:02.000Z",
-          "wordCount": 2010,
+          "wordCount": 2065,
           "title": "alova来袭，你还在固守着axios吗？",
           "imageUrl": null
         },
@@ -653,7 +643,7 @@
           "description": "theme: condensed-night-purple\n前言\n兄弟们可能有的感受\n感受一：入职 初创公司 或者成立 新的团队 而只有你一个前端，不知道从何做起。\n感受一：天天写业务代码，感觉没啥技术含量,没沉淀，成长太慢，架构那边挺有趣的。\n感受二：天天写内部工具，觉得没啥提升，感觉要废。\n感受三：对一些框架的原理、源码、工具 研究较少，无法突破评级，成为leader。\n上面的感受都是一些兄弟们的典型感受（也包括我自己）。这时候不妨可以考虑一下，了解了解前端的基础建设，进而 搭建起一个坚实的底座和让自己得到一个提升\n正文开始——关于“基建”\n1.什么是基建？\n“技术基建”，就是研发团队的技术基础设施建设，一个团队通用技术能力的沉淀。\n小到文档规范，脚手架工具，大到工程化、各个领域工具链，凡是能促进业务效率、沟通成本都可以称作基建。\n网上看到的一句话，说的很好， “业务支撑是活在当下，技术基建是活好未来” 。\n2.基建的意义\n主要是为了以下几点：\n业务复用，提高效率： 基建可以提高单个人的工作产出和工作效率，可以从代码层面解决一些普遍性和常用性的业务问题\n规范、优化流程制度： 优异的流程制度必将带来正面的、积极的、有实效的业务支撑。\n更好面对未来业务发展： ，像建房子一样，好的地基可以建出万丈高楼。\n影响力建设、开源建设：建设结果对于业务的促进，更容易获得内部合作方的认可；沉淀下来的好的经验，可以对外输出分享，也是对影响力的有力帮助。\n基建搞什么\n1.核心：\n下手之前首先得记住总结出的核心概念：\n三个落地要素： 公司的团队规模、公司的业务、团队水平。\n四大基础特性： 技术的健全性、基建的稳定性、研发的效率性、业务的体验性\n根据结合落地和基础特性，来搭建不同\"重量\"和\"复杂度\"的基建系统。（毕竟每个公司的情况都不同）\n2.方向\n基建开始之前，首先得确定建设的策略及步骤，主要…",
           "link": "https://juejin.cn/post/7301150860825133110",
           "publishedOn": "2023-11-14T09:08:38.000Z",
-          "wordCount": 1289,
+          "wordCount": 1335,
           "title": "前端基建有哪些？大小公司偏重啥？🤨",
           "imageUrl": null
         },
@@ -663,7 +653,7 @@
           "description": "大家好，这里是大家的林语冰，您现在收看的是 2023 年第 46 周前端生态的技术周报（视频解说请临幸 前端周报@bilibili）。\n每周必看\nAngular 17 王者归来\n\n2010 年，始祖 AngularJS 破蛋，前卫的设计理念标志着前端现代化框架的开端。即使在后 ES6 时代如火如荼的前端框架“诸神之战”中，Angular 也不落下风。Angular 生态 13 年磨一剑，和始祖 AngularJS 早已胖若两人。\n在 Angular 13 周年的诞辰，Angular 团队官宣 v17 正式发布，重大升级包括但不限于：\n延迟视图优化性能和 DX（开发体验）\n混合渲染构建优化 87%，客户端渲染优化 67%\n官网重做得面目全非，交互式学习诉诸 Web Container 赋能\n详情请临幸官网~\nSignals 何以对 React Hooks 降维打击\n本视频讲述了 Signals（信号）相较于 React Hooks 的优势，且受到了 Preact 核心团队成员 M.H. 的一键三连。\n地球人都知道，Vue 和 React 都有涉及 Hook 的技术方案。但是大家可能不知道 Signals。Signals 是 Preact 和 Solid 推广的一种响应式方案，Angular 移植了 Signals。尤雨溪之前也发了朋友圈讲到，Signals 似乎指代绑定于 Signals 细粒度的视图更新，这也是 Vue 目前正在努力实现的方向。\nJS 狂欢日八大演讲\nJS 狂欢日是 JetBrains 2023 年度的一场虚拟活动，一口很长的一气举行了 8 场 JS 专题演讲，一天八次，直接给我看湿了。\n纯 JS 拿捏 DOM 操作\n地球人都知道，DOM 操作是前端爱好者必知必会的技能树，jQuery 转生成为 H5，而现在和我们梦幻联动的 JS 框架本质也是在底层封装了 …",
           "link": "https://juejin.cn/post/7300816733526376488",
           "publishedOn": "2023-11-13T14:26:59.000Z",
-          "wordCount": 1216,
+          "wordCount": 1393,
           "title": "前端周报：Angular 17王者归来！Signal对Hook降维打击~JS 狂欢日演讲（2023 年第 46 周）",
           "imageUrl": null
         },
@@ -673,7 +663,7 @@
           "description": "引言\nSass和Less是两种常见的CSS预处理器，它们都是CSS的一种抽象层，可以增加CSS代码的复用性，层级，mixin，变量，循环，函数等对编写以及开发UI组件都极为方便。虽然它们的功能类似，但是它们之间存在一些区别。\n我们在面试的时候就可能会遇到这样的一个问题，我们可能被问到是否了解过，使用过Sass和Less，而它们的区别又在哪？可能你知道但是又不太清晰，或者并不知道。\n那让我们一起来看看它们俩到底有什么区别吧：\n1. 编译环境不同\nSass是在服务端处理的，需要使用编译工具将Sass代码编译成CSS文件。目前常用的编译工具有Dart-Sass和Node-Sass。举个例子，如果我们有一个Sass文件“style.scss”，我们可以使用Dart-Sass编译成CSS文件“style.css”的命令，就像这样：\nsass style.scss style.css  \n\n而Less则需要在客户端使用JavaScript引入Less文件，并使用Less.js将Less代码编译成CSS文件。举个例子，如果我们有一个Less文件“style.less”，我们就可以使用以下代码在HTML文件中引入Less文件：\n<link rel=\"stylesheet/less\" href=\"style.less\">  \n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/less.js/3.11.1/less.min.js\"></script>  \n\n2. 变量符不同\nSass使用$作为变量符，而Less使用@。举个例子，在Sass中，我们可以这样定义一个变量：\n$primary-color: #f00;  \n\n而在Less中，我们可以这样定义一个变量：\n@primary-color: #f00;  \n\n3. 条件语句不同\nSass支…",
           "link": "https://juejin.cn/post/7300809038246035508",
           "publishedOn": "2023-11-13T13:46:22.000Z",
-          "wordCount": 1176,
+          "wordCount": 1181,
           "title": "让你说一说Sass、Less 的区别是什么，你知道吗？",
           "imageUrl": null
         },
@@ -683,7 +673,7 @@
           "description": "highlight: atelier-heath-light\ntheme: github\n背景\n大家好~, 我是刚入职场不久的前端小帅，每周分享我的一丢丢想法，希望能够帮助到大家~\n众所周知，console在项目开发调试中是不可或缺的，在日常工作中经常会使用到它，但使用多了之后会发现，虽然它足够短小精炼，但耐不住用的多，再加上注释指示，工作量隐约还是不小的（懒惰），因此我对它进行小小的封装，让它用起来更短更方便，分享给大家，希望能够对大家开发有所帮助\n优势\n面向 Vue2\n拒绝通用的注释打印\n针对对象值自动序列化\n支持一行输出 N个变量打印\n支持输出data变量和局部变量\n支持限制特定页面输出变量\n更短的函数名\n示例：\ndata() {\n    return {\n        joker: 'jym',\n        handsomeMan: 'me',\n        info: {\n            job: {\n                name: '专业炒粉'\n            }\n        }\n    }\n},\nmethods: {\n    getJoker() {\n        const demo = 'test'\n        this.$c('joker', 'handsomeMan', 'info', 'info.job.name', { demo }) //输出语句\n    }\n}\n\n输出结果：\n\n~**是的，只需要一行代码！！！ **~\n是的，只需要一行代码！！！\n（如果是原来的console.log打印 光想就已经累了......）\n封装\n接下来看看是如何封装的吧~\n方法名再短点！\n// main.js\nVue.prototype.$c = function() {...}\n\n因为要全局使用，因此直接挂载到 Vue …",
           "link": "https://juejin.cn/post/7300122001768071168",
           "publishedOn": "2023-11-13T00:55:28.000Z",
-          "wordCount": 3127,
+          "wordCount": 3226,
           "title": "Console党福音！封装 console.log 再也不用打注释了！",
           "imageUrl": null
         },
@@ -693,7 +683,7 @@
           "description": "日常工作中，我确实经常去帮大家review代码，长期以来，我发现有些个功能函数，JS其实可以稍微调整一下，或者换个方式来处理，代码就会看起来更清晰，更简洁，甚至效率更高，主要是还更好理解。\n下面我列举有5个案例，我们一起来看一下\n一、建议考虑使用FlatMap方法\n先来看一段同时使用filter和map方法遍历数组的代码。我相信这种场景大家一定碰到过。为了说明问题，这里我用简单的数字内容来举个例子。\nconst squaredOddNumbers = numbers\n    .filter(num => num % 2 !== 0)\n    .map(num => num * num)\n\nconsole.log(squaredOddNumbers);\n// 输出：[1, 9, 25, 49, 81]\n\n上面代码这样写，没什么问题，而且方法的连用也是比较推荐的处理方式， 但是，还是请多想想，其实我们有更好的方式来处理这一类问题。\n现在我们看使用FlatMap如何实现的\nconst numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];\nconst squaredOddNumbers = numbers.flatMap(num => \n    num % 2 !== 0 ? [num * num] : []\n);\n\nconsole.log(squaredOddNumbers);\n// 输出：[1, 9, 25, 49, 81]\n\n使用FlatMap的好处是\n只要遍历一遍，而且不产生中间多余数组\n二、建议调整数组方法调用的顺序\n日常工作中写的比较多的数组方法有filter()，find()，map()，reduce()，在必要的场景下，我们也建议将这些个方法连起来一起调用。但是，一定要注意调用顺序，否则也会影响效率问题。\n比如下面这样：\nconst …",
           "link": "https://juejin.cn/post/7300151966964613132",
           "publishedOn": "2023-11-12T23:30:33.000Z",
-          "wordCount": 1515,
+          "wordCount": 1607,
           "title": "JS代码其实可以这样写",
           "imageUrl": null
         },
@@ -703,7 +693,7 @@
           "description": "文章同步在公众号：萌萌哒草头将军，欢迎关注\n精彩推荐\n🎉Vue3优雅的监听localStorage变化🎉\nVue3如何优雅的加载大量图片🚀🚀🚀\nVue3优雅加载图片的一些动画Ⅱ🚀🚀🚀\nVue3使用hook封装常见的几种异步请求函数场景，让开发更加丝滑🚀🚀🚀\nVue3使用hook封装媒体查询和事件监听，使Vue的开发更加丝滑🚀🚀🚀\n开发中经常会遇到跨组件通信的场景。props 逐层传递的方法实在是太不优雅了，所以今天总结下可以更加简单的跨组件通信的一些方法。\n\n依赖注入\n\n<!-- App.vue -->\n<script setup lang=\"ts\">\nimport { ref, provide } from \"vue\";\nimport Child from \"./components/Child.vue\";\nconst count = ref(0)\nconst updateCount = () => count.value ++\nprovide(\"count\", {count, updateCount})\n</script>\n\n<template>\n  <h4>公众号：萌萌哒草头将军</h4>\n  <div>{{ count }}</div>\n  <button @click=\"updateCount\">change</button>\n  <Child />\n</template>\n\n<!-- Child.vue -->\n<template>\n  <Other />\n</template>\n  \n<script setup lang='ts'>\nimport Other from \"./other.vue\"\n</script>\n\n<!-- other.vue -->\n<template>\n  <div>{{ count }}</div>\n  <…",
           "link": "https://juejin.cn/post/7300102080902905867",
           "publishedOn": "2023-11-12T12:46:37.000Z",
-          "wordCount": 2158,
+          "wordCount": 2294,
           "title": "Vue3如何优雅的跨组件通信🚀🚀🚀",
           "imageUrl": null
         },
@@ -713,7 +703,7 @@
           "description": "highlight: xcode\n引言\n图片懒加载是一种优化网页性能的技术，它可以在网页加载时只加载当前屏幕可视区域内的图片，而不会一次性加载所有图片，从而提高网页的加载速度、减少后台服务器压力，并提升用户体验。让我来详细介绍一下图片懒加载的原理及实现方法。\n一、原理\n实现图片懒加载的原理可以简单概括为以下几个步骤：\n1. 将图片地址存储到 data-xxx 属性上\n在 HTML 的 img 标签中，我们可以使用自定义的 data-xxx 属性来存储图片地址，例如：\n<img src=\"placeholder.jpg\" data-src=\"image.jpg\">  \n\n这样，我们就可以在图片加载时通过 JavaScript 获取到图片地址。\n2. 判断图片是否在可视区域\n通过计算每张图片的位置，我们可以判断当前图片是否在可视区域内。一般来说，我们可以通过以下两个方法来计算图片的位置：\n(1) getBoundingClientRect() 方法\n这个方法可以获取元素的大小、位置等信息，包括元素相对于视口的位置。通过计算元素的 top、bottom、left、right 等属性可以得出元素的位置信息，例如：\nconst rect = element.getBoundingClientRect();  \nconst top = rect.top;  \nconst bottom = rect.bottom;  \nconst left = rect.left;  \nconst right = rect.right;  \n\n(2) offsetTop 和 offsetHeight 属性\n这两个属性可以获取元素相对于其父元素的位置和大小。通过计算元素的 offsetTop 和 offsetHeight 属性可以得出元素的位置信息，例如：\nconst top = element.offs…",
           "link": "https://juejin.cn/post/7300036605100130358",
           "publishedOn": "2023-11-12T11:56:56.000Z",
-          "wordCount": 1273,
+          "wordCount": 1349,
           "title": "总是听说图片懒加载，那你能讲清楚吗？（一）",
           "imageUrl": null
         },
@@ -723,7 +713,7 @@
           "description": "theme: hydrogen\nhighlight: a11y-dark\n前言\n在阅读《你不知道JavaScript 上卷》的时候，接触到一个编译器LHS查找和RHS。\n在日常编码中，我们通常关注代码的逻辑和功能，但很少深入思考编译器在幕后的工作。今天我们将学习一下LHS（Left-Hand Side）和RHS（Right-Hand Side）查询，它们在JavaScript编译和执行中的关键作用，以及在我们的日常开发中是如何发挥作用的。\n接下来就让我们来浅浅学习一下LHS和RHS\n正文\n很明显L为left,R为right\n所以我们大概可以猜到,用这样一句话解释：\n当变量出现在赋值操作的左侧时进行LHS查询，出现在右侧时进行RHS查询。\n说得更简单点RHS查询与简单地查找某个变量的值别无二致，而LHS查询则是试图找到变量的容器本身，从而可以对其赋值。\nLHS查询的学习\n1. LHS查询的概述\nLHS查询涉及变量的存储和初始化，是赋值操作的左侧操作数。\n编译器如何处理LHS查询，从变量声明到内存分配的全过程。\n我们来看这个案例！\nvar name = \"John\";\n// 在这个例子中，LHS查询负责为变量name分配内存并将其初始化为\"John\"\n\nRHS查询的学习\n1. RHS查询的本质\nRHS查询是获取变量值的右侧操作数，是为了得到变量的值。\n编译器如何在RHS查询中找到变量的值并传递给相应的操作。\n我们可以来看看这个案例,在我们输出这个name的时候，执行的RHS查询，负责获取变量name的值\ncodeconsole.log(name);\n// 在这个例子中，RHS查询负责获取变量name的值并传递给console.log\n\nLHS和RHS查询的细微差异\n1. 查询的方向与操作数\n强调LHS查询与RHS查询的本质区别在于操作数的方向，一个是赋值的左侧，一个是获取值的右侧。\n通过比较LHS和RHS查询在语法结构中的不同，加深读者对它们的理解。\n我们通过下面这个案例来分析LHS和RHS直接的差异！\n首先var x = 10执行的LHS查询，找到x的本身，并且把10赋值给x\n在var y = x这个语句当中，同时存在LHS和RHS,为什么呢？\n其中var y = 值这里肯定执行的LHS,负责找到y本身，并且赋值\n但是其中的值是x是一个变量，所以又要进行RHS查询获取到x的值!\nvar x = 10;\nvar y = x;\n// 在这里，x的RHS查询获取值，y的LHS查询分配内存并初始化\n\n2. 函数调用与查询操作\n分析函数调用中的LHS和RHS查询，探讨调用过程中参数的查询操作。\n通过例子展示函数调用背后的查询细节。\n来分析下面的案例：\n引擎首先会创建一个变量 result，它会在当前作用域中进行 LHS 引用。\n接着，引擎遇到 multiply(3, 4) 这个表达式，会进行 RHS 引用。它会在作用域中查找 multiply 函数。\n找到 multiply 函数后，引擎会创建一个新的执行上下文（execution context）用于调用 multiply 函数。这个执行上下文会包含参数 a 和 b，分别被赋值为 3 和 4。\nmultiply 函数执行，计算 3 * 4 的结果，返回 12。\n返回到主程序，将 result 赋值为 12。\n整个过程中，LHS 引用用于变量的赋值操作，RHS 引用用于变量值的检索操作。在这个例子中，multiply(3, 4) 的 RHS 引用触发了函数的调用，而 result 的 LHS 引用用于将函数调用的结果赋值给 result。\nfunction multiply(a, b) {\n  return a * b;\n}\nvar result = multiply(3, 4);\n// 函数调用中的LHS和RHS查询，以及赋值操作\n\n最后：\n总结一句话就是：\nRHS查询负责找到这个变量的值，而LHS查询则是为了找到变量的容器本身，然后将我们要给它赋的值装进去（赋值）！\n学习LHS和RHS查询，能够帮助我们理解JavaScript编译的运行机制，还能够帮助我们编写更高效、更健壮的代码。希望这篇文章能够为大家提供一些学习理解LHS和RHS查询的助力！\n如果您有任何疑问或想分享您的看法，欢迎各位留言！有不对的地方，也可以留言指正！愿编码之路愉快，happy coding！🚀\n参考文献《你不知道JavaScript  上卷》\n个人GITEE库：MycodeSpace: 主要应用的仓库，记录学习coding中的点点滴滴 (gitee.com)",
           "link": "https://juejin.cn/post/7299797852199649289",
           "publishedOn": "2023-11-11T15:55:46.000Z",
-          "wordCount": 1072,
+          "wordCount": 1137,
           "title": "浅聊JavaScript中的LHS和RHS查询",
           "imageUrl": null
         },
@@ -733,7 +723,7 @@
           "description": "大家平时都在写组件，当你写组件库里的组件，或者项目里的一些公共组件的时候，是需要提供文档的。\n这时候我们一般都会用 Storybook。\nStorybook 是非常流行的用来构建组件文档的工具。\n现在有 80k 的 star 了：\n\n那 Storybook 都提供了啥功能呢？\n我们试一下就知道了：\nnpx create-react-app --template typescript sb-test\n\n\n用 cra 创建个 react 项目。\n然后进入项目，执行 storybook 的初始化：\nnpx storybook@latest init\n\n\n打印的日志告诉你 storybook init 是在你的项目里添加 storybook 的最简单方式。\n执行 npm run storybook，就可以看到这样文档：\n\n这就是 storybook 生成的组件文档。\n这三个组件不是我们自己写的，是 storybook 初始化的时候自带了三个 demo 组件。\n我们可以用它来了解下 storybook 的功能。\n\nstorybook init 在项目里加了 2 个目录： .storybook 和 src/stories\n.storybook 下的是配置文件， src/stories 下的是组件。\n比如 Button.tsx 是这样的：\n\n传入几个参数，渲染出一个 button。\n然后 Button.stories.tsx 是这样的：\n\n导出的这几个 Story 类型的对象是啥呢？\n是这个：\n\n也就是 Button 组件传入不同参数的时候渲染的结果。\n我们加一个 Story 试试：\n\n页面多了一个 Button 的类型：\n\n也就是说，Storybook 把同一个组件传入不同 props 的情况，叫做一个 Story。\n别的地方可能叫做用例或变体，而在 Storybook 里叫做 sto…",
           "link": "https://juejin.cn/post/7299743820434309147",
           "publishedOn": "2023-11-11T14:00:38.000Z",
-          "wordCount": 1347,
+          "wordCount": 1387,
           "title": "想给组件加上文档？ 试试 Storybook",
           "imageUrl": null
         },
@@ -743,7 +733,7 @@
           "description": "点击上方亿元程序员+关注和★星标\n\n引言\n大家好，最近我突然想起来我还有一款微信小游戏还没有上架，于是捣鼓了一天把游戏完善了一下，然后准备提交审核，却发现异常的艰难...\n1.为什么难？\n相信大家都大概知道，自从微信平台宣布\n9月1日起，微信小程序须完成备案后才可上架；若微信小程序已上架，需在2024年3月31日前完成备案，逾期未完成备案将于2024年4月1日起进行清退处理。”\n9月1日后小游戏想要上架，必须要经过备案这一步骤才行。\n\n其实从9月1日到现在已经过去2个月，根据前面了解到，小游戏进行备案，官方预估的时间大概是需要22个工作日。\n\n大家可能都这么想，多了这1个月多的时间，提前做下准备，其实还可以接受。\n但是，事实上好像并没有那么简单。。。\n2.还有哪些变化？\n通过MP后台我们可以发现，当我们点击提交发布的时候，会弹出请先完成备案的弹窗，即使我们的小游戏已经通过了审核，处于审核通过待发布的状态。\n\n点击立即备案，跳转到备案流程，我们可以看见官方预估时间，个人小游戏预计从备案到发布需时30 - 40个工作日，这是什么概念，比前面估计的备案时间还要多18个工作日，18个工作日满打满算需要24天。近一个月的时间。\n\n这个多的近一个月的时间从何而来？\n3.为什么久？\n首先备案之前需要比之前上架小游戏要多准备两份文件。\n第一份就是著作权自我声明。\n\n第二份就是授权书。\n\n不过这不是增加时间的主要，因为除去这两份文件的准备时间，审核时间仅需要1个工作日。\n\n接下来这个就是关键了，游戏内容介绍，这个内容，经常上架小游戏的小伙伴都知道，在9月1日之前基本上是当天提交当天就能够过审的。怎么现在需要20个工作日了？\n\n点击《游戏内容介绍提交指引》，我们可以看到目前官方的反馈是“近期单量较多，会尽快处理哈，耐心等下。”\n\n那么问题来了，为何近期单量剧增？\n4.笔者猜测\n1.不容马虎：小游戏备案是不容马虎的，所以审核时间长达22个工作日，正是如此，为了避免备案审核的堆积，需要将压力提前到前面的内容，即游戏内容审核。\n2.审核严格：为了能够更加顺利地完成备案，游戏内容的审核变得非常地严格。\n3.聪明人扎堆：就好像高速公路堵车效应一样，根据以往经验，想要避免堵车，特意提前或者延后出发，结果一群聪明人堵在路上。为了能够尽快进入备案环节，很多人会把一款游戏的demo或者半成品拿去提审，目的是想节省备案的时间用来开发优化，结果适得其反。\n4.发展迅猛：小游戏飞速发展，越来越多的人想投入到小游戏的开发当中。\n小游戏上架越来越难意味着什么？\n5.引发深思\n首先小游戏上架越来越难成功避免了“蹭热度”的游戏产生，原来每当新事物或者新热点出现时，会有一大批“蹭热度”的游戏争先上架，例如《羊了个羊》火了，会涌现一大批《猪了个猪》，《牛了个牛》。而且前面已发布的游戏想通过修改游戏名字去蹭热度的方式也受到了限制，需要通过微信认证流程改名。\n\n其次就是驱逐劣质游戏，小游戏上线节奏被放慢后，有更多的时间可以去对小游戏进行打磨和调优，着重优化调整游戏细节，或者花更多的时间去做一些运营相关的内容。\n结语\n在哪里可以看到如此清晰的思路，快跟上我的节奏！关注我，和我一起了解游戏行业最新动态，学习游戏开发技巧。\n我是\"亿元程序员\"，一位有着8年游戏行业经验的主程。在游戏开发中，希望能给到您帮助, 也希望通过您能帮助到大家。\nAD:笔者线上的小游戏《贪吃蛇掌机经典》《填色之旅》《重力迷宫球》大家可以自行点击搜索体验。\n实不相瞒，想要个赞和在看！请把该文章分享给你觉得有需要的其他小伙伴。谢谢！\n推荐专栏：\n和8年游戏主程一起学习设计模式\n8年主程手把手打造Cocos独立游戏开发框架\n从零开始开发贪吃蛇小游戏到上线系列\n游戏开发的技巧、心得、资讯\n点击下方绿色按钮+关注",
           "link": "https://juejin.cn/post/7299750611921977356",
           "publishedOn": "2023-11-11T05:00:51.000Z",
-          "wordCount": 787,
+          "wordCount": 839,
           "title": "现在个人想上架微信小游戏已经这么难了吗...",
           "imageUrl": null
         },
@@ -753,7 +743,7 @@
           "description": "highlight: github\ntheme: smartblue\n掘金潜水几年第一次发文。新人求关注，求内推。\n7 月中领了大礼包后，一直没有马上找工作的想法。玩儿了俩月，考了个摩托 D 本。国庆节后开始刷题投简历，到今天也有一个月了。算上今天这个面试，一共只有两个面试。\n我都无语了，boss 打招呼已读不回，我开的会员强提醒他们，已读不回，要不不合适。前几天有带佬说可能是我简历问题，找他改了改，改完昨天又找他过了一遍，一会儿发完文章我赶紧改简历。周日还有场考试，还得再刷刷题。\nA 公司是前同事内推的；一面线上，二面线下\nB 公司是半个月前投的简历，可能是一直没有招到合适的人？才把我捞起来？B 司 995。线上面。\n俩公司都没过，也就不说那么多了，只探讨面试题部分。\n另：求内推机会，给个孩子个机会吧\n求内推机会，给个机会吧，我打招呼刷岗位都没空刷八股文了。\nA 公司\n一面，线上\n1. 浏览器拿到数据后的渲染过程\n浏览器在接收到网页的 HTML、CSS 和 JavaScript 数据后，经历一系列步骤来渲染网页，这个过程通常被称为浏览器的渲染过程。以下是浏览器渲染过程的主要步骤：\n解析 HTML 和构建 DOM 树：\n浏览器开始解析 HTML 数据，并构建文档对象模型（DOM）树，表示网页的结构和内容。DOM 树是一个树状结构，其中每个 HTML 元素都被表示为一个节点，包括文本、标签、属性等。\n解析 CSS 和构建 CSSOM 树：\n同时，浏览器也开始解析 CSS 数据，并构建 CSS 对象模型（CSSOM）树，表示网页的样式和布局信息。CSSOM 树与 DOM 树一一对应，每个元素都有对应的样式信息。\n合并 DOM 和 CSSOM，构建渲染树：\n浏览器将 DOM 树和 CSSOM 树合并，构建渲染树（Render Tree）。渲染树包含了需要渲染的页面内容，但不包括那…",
           "link": "https://juejin.cn/post/7299696650896080922",
           "publishedOn": "2023-11-10T10:31:52.000Z",
-          "wordCount": 6805,
+          "wordCount": 6820,
           "title": "？北京七年前端带专找工作竟如此坎坷？近一个月面试复盘（附总结答案），快来学习呀",
           "imageUrl": null
         },
@@ -763,7 +753,7 @@
           "description": "theme: cyanosis\n这周又是面了一周，今天是周五了，目前还没有一个offer。好几家面试都是聊的很好，问题回答的自我感觉挺好（可能面试官没觉得好），然后就没有了后续。这周一共面试了6家公司，目前有2家过了2面。下周约了3面线下，可能工资不会给的太多。其中最遗憾的一家是bitget，二面面试官迟到了10分钟，然后面了半个小时不到，面试官匆匆结束面试，整个过程我也没觉得讲的多差，反正草草收场让我有点懵逼，我后来问HR说没有后续了，很可能我是被当成KPI了。下周继续努力吧！！！\n以下是我这周的面试题。\n1. 天学网\n面试时间\n一面：2023/11/06 10:00 腾讯会议\n二面：2023/11/07 19:00 腾讯会议\n一面问题\n自我介绍\n介绍一下你在上家公司的主要工作\n介绍一个你之前过往工作中最满意的一个项目\n你在这个项目中做的性能优化的事情有哪些？\nwebworker中为什么能提升js执行的性能？\n你是怎么使用webworker的？\n浏览器内存你在实战中处理过吗？\n浏览器的垃圾回收机制是什么样的？\n你在做微前端的时候，为什么选择qiankun\nqiankun的原理了解哪些\n你在使用qiankun的时候，有没有发现这个框架的不足之处\n使用ts的时候，有没有什么心得\nts注解用过没有？是什么？\nwebpack熟悉吗？webpack打包流程是什么？\n你在公司制定前端规范的时候，都有哪些内容\n场景题：答案评分，根据给定的答案和作答打分，如何设计？\n二面问题\n问了一下工作经历\n说一个自己的满意的项目\n业务场景：负责的项目，用户反馈体验不友好，该如何优化\n做教学工具的，也算是教育行业，下周二面。\n2. 小黑盒\n面试时间\n一面：2023/11/06 15:00 牛客网面试\n面试问题\ncoding\n\n中位数\n孩子发糖果\n无重叠区间\n错一个直接挂。。。无情哈拉少。\n3. bit…",
           "link": "https://juejin.cn/post/7299392213481439243",
           "publishedOn": "2023-11-10T04:54:47.000Z",
-          "wordCount": 1077,
+          "wordCount": 1083,
           "title": "一周的努力化为泡影，前端找工作是很难",
           "imageUrl": null
         },
@@ -773,7 +763,7 @@
           "description": "theme: juejin\n\n前言\n重要的话放在前面，我是来给大家打鸡血、给信心的，为什么呢？\n在一段时间之前，这两个话题不断萦绕在社区被各大博主讨论，产生的负面情绪居多，这导致什么现象？\n在找我帮忙优化简历的部分JM中，担心几年后前端行业不复存在，自己该何去何从？\n在我前面发的文章# 当领导问我为什么选择typescript？评论区中，吐槽typescript最终变成anyscript，我都替TS无语了，你TM写成这样关我TS什么事？\n当然在我公司近期做技术选型时也出现就vue3要不要使用TS写也讨论了一番。\n所以导致找工作的没信心、消极、迷茫和内耗，岗位上的担心饭碗不保，害怕接触新事物，从而容易为情绪买单，这必然不是推动社区发展的好现象。\n透过现象看本质，当从另外的角度去看待这些问题时，或许你会更加平静面对~\n互联网文化\n有了互联网之后，信息高度透明是必然，好的文化能够被快速传播开，当然坏的更加容易。在过往别人看作是一件普普通通的事情，在经过互联网人与人情绪的传播发酵之后，它也会被瞬间沸腾起来，尤其是负面情绪，因为这是人性。\n在这种高速信息传输的时代，人们不断接受碎片化的知识，如短视频、公众号、小红书笔记等等，它们在无形之中消耗着本就有限的能量，大脑为了节省能量的损耗自动调节为节能状态，即能不思考就不思考，使得很多人没法用足够的能量去判断事物真假实虚，从而让消极的情绪轻而易举入侵，形成进一步的能量损耗，这就是内耗的根本原因，恰恰也是资本家最想看到的一幕。\n显然，前端已死、TS已死这种本身带有情绪引导的消极词语，正是大家都喜欢点进去看看的原因，这不，你现在就点进来了！！！看，这就是人性的弱点。\n不过请放心，我是正能量博主。接下来听我细细道来，大可不必杞人忧天，因为这是事物发展的基本规律！！！\n万物都有生命周期\n亘古至今，万事万物看似毫无章法在运行，其实不然，它们都处于在自己的生命周期中轮回。\n前端也好，TS也罢！大到国家，历史上有上百个国家经历过破产，如离我们比较近的斯里兰卡、加纳，再久一点阿根廷，连一个朝代、国家都能够死，一个行业又能算得上什么呢？\n从社会变革的角度来讲，当农业社会的发展不再能满足人们日益增加的物质需求时，工业革命爆发，推动全世界快速进入工业社会，此时人们物质需求基本达到供求平衡状态，难道就停滞了吗？不，更加高的环保话题让众多的工厂迁移到东南亚，这是过渡到商业社会的基本前提，我不再遍地看到工厂的存在，但是商场里面的商品依旧琳琅满目，这就是社会沿着生命周期发展的必然结果，每一个时代的使命不同而已。\n大的层面不太好理解是吧，好，那我再举个例子。\njQuery总用过吧，它曾经一度辉煌在大江南北，当然现在它基本上完成了自己的使命，退出了历史舞台，你能说他失败吗？当年骂骂咧咧写原生JS操作DOM的时候，你还不是一样觉得它很香吗？只是现在时代不同，仅此而已！\n前端、TS更加如此，时间问题而已，所以不必感到惊奇。现在你敢说老子打死都不用TS，反正以后都是会被pass掉的。当某家公司开出30k * 16薪，不还得转身就拿起它来啃，况且近年不少企业用TS得出最佳实践，难不成看别人不用就不用么，显然对于公司发展层面来看，这不现实。\n另外地，最近跟我交流过的一些朋友，担心前端几年后不复存在，焦虑、迷茫，真的大可不必！从发展阶段来说，目前顶多是过了如日中天的巅峰时期，还没退休都还算不上，至少在5-10年周期，会以某种意识形态存在。\n既然如此，在这个大环境下我们能够做些什么呢？\n当下的我们应何去何从？\n识时务者为俊杰！!\n行业的发展从萌芽、发展、顶峰、回调、消亡的过程，我们人也如此，你只需要把自己的技术能力，包括深度和广度稍微提升一点，多看看源码，坐地铁时候顺便学学Nest了解后端知识，培养自己的全局思考能力，能跑赢80%的人了，这是个反人性的过程，也是二八定律。\n培养思维能力，让自己在处于大浪潮的刺激当中依然能够理性看待事物的本质，保持积极、乐观、正能量的心态，保持早起、阅读、写作、运动、冥想，总之，任何消耗你能量的人和事，看多一眼都是你的不对！\n不要在内耗当中见证别人的成就，因为你也一样可以！",
           "link": "https://juejin.cn/post/7299354483567149119",
           "publishedOn": "2023-11-09T17:45:41.000Z",
-          "wordCount": 783,
+          "wordCount": 767,
           "title": "为什么这么多人会讨论“前端已死”、“TS已死”？",
           "imageUrl": null
         },
@@ -783,7 +773,7 @@
           "description": "highlight: darcula\ntheme: qklhk-chocolate\n在开发中可能有遇到过屏幕录制的需求，无论是教学、演示还是游戏录制，都需要通过屏幕录制来记录和分享内容。一般在App内H5页基于客户端能力实现的较多，现在浏览器中的 MediaRecorder 也提供了这种能力。MediaRecorder 是一种强大的技术，可以在浏览器端实现屏幕录制功能。本文将介绍如何使用JS MediaRecorder 实现屏幕录制。\n代码实现\n要实现屏幕录制，我们需要通过 navigator.mediaDevices.getDisplayMedia() 方法获取屏幕媒体流，这个方法会弹出一个选择窗口，让用户选择要录制的屏幕或窗口。但出于安全原因，发起录制时必须确保用户手势触发捕获，例如点击按钮：\nconst button = document.createElement(\"button\");\nbutton.innerHTML = \"capture\";\ndocument.body.append(button);\nbutton.addEventListener(\"click\", async () => {\n  // TODO\n});\n\n点击后，获取视频流并录制，获取到媒体流后，我们可以将其传给 MediaRecorder 对象后开始屏幕录制。\nconst stream = await navigator.mediaDevices.getDisplayMedia();\nconst recoder = new MediaRecorder(stream);\nrecoder.start();\n\n当用户停止共享屏幕时停止录制，调用 recoder.stop()即可停止录制。\n\nconst [video] = stream.getVideoTracks();\nvideo.addEvent…",
           "link": "https://juejin.cn/post/7299346813261512704",
           "publishedOn": "2023-11-09T14:04:17.000Z",
-          "wordCount": 1153,
+          "wordCount": 1211,
           "title": "20行JS代码实现屏幕录制",
           "imageUrl": null
         },
@@ -793,7 +783,7 @@
           "description": "大家好，这里是大家的林语冰，您现在收看的是 2023 年第 46 周 Vue 官方的技术周报。\n免责声明\n本文属于是语冰的直男翻译了属于是，仅供粉丝参考，视频解说请临幸 Vue 官方周报@bilibili，英文原味版请临幸 Weekly Vue News。\nVue 技术栈\nVue 何以对 React 降维打击\n\n这位大佬解释了祂选择入坑地表最强前端框架的原因。\n大佬起初在前端新手村是一位妥妥的 React 爱好者，后来深入探讨“前端框架战争”之后，最终在 Vue 和 React 之间选择了 Vue。大佬从学习曲线、官方文档、DX（开发体验）、设计哲学、心智模型等多维度系统比较了 Vue 和 React 的异同点，最终得出结论 —— 如果您非要在 Vue 和 React 之间二选一，不烦先试试 Vue。\n我们如何将企业级项目从 Vue 2 升级到 Vue 3\n前端团队如何在不阻碍新功能发布的前提下，将企业级项目从 Vue 2 “渐进增强”到 Vue 3。\n2022 年 7 月 1 日，Vue 团队官宣 Vue 2.7 正式发布，代号“Naruto（火影忍者）”，Vue 2.7 也是 Vue 2 的最后之舞，Vue 2 从此进入长期支持，生命倒计时 18 个月，只维护不更新。Vue 2 爱好者请注意，2023 年 12 月 31 日（即今年年底），Vue 2 将正式退役，结束其传奇的一生。\n诉诸 Pinia 作为 Vue 状态管理解决方案的福利\n\n本文探讨了选择 Pinia 作为 Vue 状态管理解决方案的福利。\n在 Vue 3 中，即使没有诉诸 Vuex 管理状态，App 的行为好像也没差啊，就响应式状态而言，reactive 黑魔法可以做到和 Vuex 图灵等价。本文的作者是“Pinia 之父兼 Vue Router 之父”E.S.M.，大佬告诉你事情并没那么简单。reac…",
           "link": "https://juejin.cn/post/7299346813261348864",
           "publishedOn": "2023-11-09T13:39:01.000Z",
-          "wordCount": 1327,
+          "wordCount": 1477,
           "title": "【译】Vue 官方周报：Vue2 退役倒计时！VueConf 多伦多进行时~Vueform 开源（2023 年第 46 周）",
           "imageUrl": null
         },
@@ -803,7 +793,7 @@
           "description": "theme: smartblue\nvue-draggable-plus\n前言\n前段时间偶然翻掘金的过程中发现有人宣传 vue 的拖拽库断代了，那么我也来蹭一下热度。\nSortablejs\nSortablejs 是一个功能强大的 JavaScript 拖拽库，并且提供了 vue 相关的组件 vue-draggable，并且在 vue3 的前期，提供了 vue-draggable-next，但是可能由于作者的生活过于繁忙的原因，这个库已经两年没有更新了，在当前 vue3 的版本中并不适用，于是乎本人突发奇想，写了一个 vue-draggable-plus（其实很久之前就写好了，没有可以宣传），它用于兼容 vue2.7 和 vue3 以上的版本，下面我们来介绍一下它。\nvue-draggable-plus\nvue-draggable-plus 它用于延续 vue-draggable 核心理念，提供 vue 组件用于双向绑定数据列表，实现拖拽排序、克隆等功能，同时它还支持函数式、指令式的使用方式，让你使用起来更加方便，废话不多生活，我们先上图\n\n更多演示请参考：demo\n安装\nnpm install vue-draggable-plus\n\n使用\nvue-draggable-plus 支持三种使用方式：组件使用、函数式使用、指令式使用\n下面我们来一一介绍：\n组件式使用：\n它和传统的vue组件的使用方式一样，支持双向绑定数据：\n<template>\n    <VueDraggable\n      v-model=\"list\"\n      :animation=\"150\"\n      ghostClass=\"ghost\"\n      @start=\"onStart\"\n      @update=\"onUpdate\"\n    >\n      <div\n        v-for=\"item…",
           "link": "https://juejin.cn/post/7299353745506615347",
           "publishedOn": "2023-11-09T11:18:14.000Z",
-          "wordCount": 1867,
+          "wordCount": 1948,
           "title": "听别人说Vue的拖拽库都断代了，我第一个不服",
           "imageUrl": null
         },
@@ -813,7 +803,7 @@
           "description": "theme: condensed-night-purple\n前言\n首先澄明本篇文章无任何引战的言论。只是客观事实的讨论为什么很多人不喜欢TailWindCSS。这就和讨论vue还是react哪一个才是前端的未来一样。每个人都有自己的判断，每个人都有自己的选择。我个人是比较偏向去拥抱一些新的变化的。且是在我尝试过使用TailWindCSS后得出的结论。但是依然有很多的开发者并不对TailWindCSS感兴趣，甚至有的开发者对此嗤之以鼻。下面我会详细分析为什么它并不是很讨喜\n官网文档并不是很友好\n\n虽然写的是中文文档,但是只有寥寥几句的中文。当阅读它的核心概念的时候是很难受的，没有办法进一步了解它的设计理念以及它的存在性。然后再往下面大概看一下,一大篇一大篇的各种CSS的介绍，在这里我相信已经劝退了很多第一次点进来想要认真学习一番的小伙伴。\n有一定的学习成本\n当我们不厌其烦的,耐着性子把所有的核心概念以及安装步骤都了解完以后，是不是就感觉差不多了解完了?其实真正折磨人的才开始。我们都知道CSS里有很多的外观类型, 尺寸, 颜色, 背景, 排版, 边框等等。TailWindCSS为每一个这样的外观类型定义了一套专属的 nameSpace。比如说设置字体的颜色大小等等都会使用text-[属性]\n排版类\n\n\n\n\n\ntext-xs\nfont-size: 0.75rem\n\n\ntext-left\ntext-align: left\n\n\ntext-black\ncolor: rgb(0 0 0)\n\n\ntext-clip\ntext-overflow: clip\n\n\n\n可能看到这里觉得没有什么,挺好记的。但是文档给的不光是这一点..还有很多排版类相关的CSS属性。当我刚开始尝试使用TailWind去构建一个静态页面的时候，需要很频繁的去查阅文档。一遍又一遍，一遍又一遍。当然，TailWind 也知道可能这不是很方便。于是他们维护了一个VsCode插件去试着解决这个问题\n\n自带各种类名提示，并且鼠标放上去会显示真实的CSS是如何写的。虽然有这个插件，但是我仍然忘不了我频繁去查阅文档狼狈的样子。\n优点比较薄弱\n不用去思考变量名\n很明显的可以看出来,TailWindCss帮我们排除了去想CSS变量名而带来的心智负担，不用再去绞尽脑汁去想一个并不是很重要的CSS变量名。但是正常的思考命名，本来就是开发人员的基本职责，而且可以追踪我们为什么要取这个名字，可以思考某个变量名的背后逻辑。\n占用空间变小\nTailWind打包后的css文件确实占比传统打包方式后的css文件占比更小,但是CSS文件的占比从来不是我们项目优化所要思考的负载问题,几kb的文件真不用再去想如何优化了。\n违背了关注点分离原则\n由于不必自己编写 CSS 规则，Tailwind 的工作方式与大多数 CSS 框架不同。虽然这对于那些不熟悉 CSS 的人来说非常有用，但这也意味着 Tailwind 将样式规则与 HTML 文件混合在一起。\n这违背了“关注点分离”的原则。许多开发人员喜欢将页面结构和样式分开，声称使用类名CSS将会使 Tailwind 标记过程变得冗长。这也是比较大一部分开发者不喜欢TailWindCSS的主要原因。没办法专注做一件事，可能很多开发者更喜欢MVC模式尽可能去分离前端的代码。\nTailWind值得去花时间学习么？\n简而言之，使用 Tailwind 与其他 CSS 框架有很大不同。但是客观的来看待它的话可以将它分为两种\n对于熟悉 CSS, 希望从长远来看加快创建和设计过程的开发人员以及希望规范样式设计的团队来说,这无疑是一种比较好的解决方案。\n如果不熟悉 CSS 或者不想花时间学习新的 CSS 框架，或者嫌弃学习曲线太陡峭的开发人员来说这并不是一种好的选择。\n总结\n当然以上这些，这完全取决于个人需求和偏好。但是，如果优先考虑节省 CSS 样式设置时间和取名时间，那么绝对应该尝试一下 Tailwind。\n无论是否选择使用 Tailwind，很明显许多开发人员使用它都有充分的理由。由于它提供了更快的样式处理过程，并且是一个响应灵敏且稳定的框架，因此它会继续存在。\nTailwind 可以帮助您节省时间并改变您设计网站的方式，因此花时间进行测试是值得的。至少我个人认为是这样的。希望各位客观看待技术框架\n若有感兴趣的伙伴,可阅读 我的个人专栏，如有错误，欢迎指正，共同进步。",
           "link": "https://juejin.cn/post/7299353265098899465",
           "publishedOn": "2023-11-09T07:25:07.000Z",
-          "wordCount": 884,
+          "wordCount": 967,
           "title": "为什么真的有人讨厌 TailWindCSS ?",
           "imageUrl": null
         },
@@ -823,7 +813,7 @@
           "description": "highlight: a11y-light\ntheme: scrolls-light\n前端不能失去事件循环机制，就好像西方不能失去耶路撒冷\n\nEvent Loop\n地球人都知道Javascript语言的一大特点就是单线程，这意味这它同一时间只能干一件事，特别的专一。而单线程就意味着所有任务都得排队来，前一个任务干完了才能执行下一个任务。\n所有同步任务在主线程上执行\n主线程之外，还存在个任务队列，异步任务有了运行结果，就会在任务队列中放置一个事件\n执行栈中所有的同步任务执行完毕，就会从任务队列中取事件进入执行栈开始执行\n主线程不断重复第三步\n主线程从任务队列中读取事件的过程是不断循环的，所以整个运行机制又称为Event Loop\n微任务与宏任务\n假如js按照真正的单线程执行的话，一旦遇到任务繁多的情况，势必执行效率会下降。为了解决这个问题，就需要利用微任务和宏任务来模拟“多线程”提高执行效率。通常我们把由宿主发起的任务称为宏任务，由JavaScript引擎发起的任务称为微任务。\n常见宏任务：setTimeout()，setInterval()，setImmediate()\n常见微任务：Promise().then(function(){})，new MutationObserver()，process.nextTick()\n需要注意的是Promise()这个构造函数属于同步任务，而.then()里面的函数才会被推入到微任务队列里。\n下面看一段代码：\nsetTimeout(function () {\n  console.log(1);\n});\n\nnew Promise(function (resolve, reject) {\n  console.log(2);\n  resolve(3);\n}).then(function (val) {\n  console.log(val);\n…",
           "link": "https://juejin.cn/post/7299346813256728610",
           "publishedOn": "2023-11-09T07:10:42.000Z",
-          "wordCount": 1311,
+          "wordCount": 1309,
           "title": "麦克阿瑟曾经说过：理解了Event Loop就理解了前端",
           "imageUrl": null
         },
@@ -833,7 +823,7 @@
           "description": "theme: Chinese-red\n双十一购物狂欢节来喽，这不仅是电商购物的盛宴，更是“充电学习”的绝佳时机！\n快来看这次册姐又为大家带来什么样的福利吧！\n全场 150+ 本小册低至 6 折，任君挑选，更有“满赠+抽奖”的多款礼品等着你，让你用更少的钱获得更多的知识！\n超低的价格、多样化的选择、精心挑选的礼品……心不心动？\n嗨！心动不如行动！快来选购适合自己的课程，开启你的技能提升之旅吧！\n⏰活动时间\n2023 年 11 月 10 日～2023 年 11 月 17 日\n🎁活动福利\n福利一：全场小册低至 6 折！更有入门教程免费学、分销返现赚钱！\n不论是新品小册，还是畅销小册，通通 6 折！对，全场、所有小册都是 6 折 ！！！\n购买小册戳👉：点击浏览小册列表\n想买但是不知道怎么选？看这里：掘金之「什么值得买」\n更有：\n入门教程免费读：Flutter 入门教程、 Java 入门教程、  TypeScript 入门教程\n分销返现赚钱钱：💰 掘金社区赚钱指南\n福利二：满 99 元/ 199 元/ 399 元，赠「好礼+抽奖」！可叠加！\n参与规则： 活动期间累计实付金额满 99 元的用户，可获得小册 5 折券 1 张；满 199 元/ 399 元的用户，可获得小册 5 折券 1 张和掘金周边实物礼品 1 份（从自己金额段的对应实物礼品中二选一）。各满额段，“实物”礼品不叠加~\nPS：满额计算口径以实付金额为准，计算时间段为 11 月 10 日～11 月 17 日，会员兑换券不包含在内哦！\n实付金额\n「礼品」名称\n图片\n\n\n\n\n满 99 元\n小册 5 折券（所有累计实付≥99 元都可获得，1 张/人；有效期 60 天，全部小册可用）\n\n\n\n满 199 元\n稀土掘金 Touch 系列「看见温暖」烛火加湿器 或者 稀土掘金好好学习系列无绳跳绳（二选一）\n \n\n\n满 399 元\n稀土掘金 Touch系列「围炉喝咖」摩卡壶 或者 稀土掘金HAWKING拍拍灯（二选一）\n \n\n\n\n🔥🤗福利再加码！！！\n活动期间实付金额满 99 元/ 199 元/ 399 元的用户，还可以参与自己满额所在梯度的抽奖活动。\n满额礼品和抽奖所中奖品可叠加。\n实付金额\n所抽「奖品」名称\n图片\n「奖品」数量\n\n\n\n\n满 99 元\n稀土掘金-码赛克系列 运动毛巾\n\n10 条\n\n\n满 199 元\n稀土掘金「4201」首发盲盒 （样式随机）\n\n5 个\n\n\n满 399 元\n稀土掘金Who Cares系列「我真的不困」咖啡杯\n\n3 个\n\n\n\n\n举例子说明：\nCase 1：小明同学在本次活动中实付 123 元（≥99 元），可获得 1 张「5 折券」；与此同时，小明还可以参与本梯度「运动毛巾」的抽奖活动。\nCase 2：小天同学在本次活动中实付 234 元（≥199 元），可获得 1 张「5 折券」，还可以从「加湿器」和「跳绳」中再挑选一个实物礼品；与此同时，还可以参与本梯度「盲盒」的抽奖。\nCase 3：小金同学在本次活动中实付 456 元（≥399 元），可获得 1 张「5 折券」，还可以从「摩卡壶」和「拍拍灯」中再挑选一个实物礼品；与此同时，还可以参与本梯度「咖啡杯」的抽奖。\n福利三：TOP 1 之土豪大奖！\n活动期间累计实付金额 TOP 1 ，可获得小米（MI）手环 8 Pro 一个。\n✨ 此奖品不与「满赠和抽奖」叠加，但可与「小册 5 折券」叠加。\n👀活动规则（必看）\n各活动满额计算口径以累计实付金额为准，计算时间段为 11 月 10 日～11 月 17 日，会员兑换券不计入。\n其中，满赠活动中，各阶段实物礼品不叠加，但可与小册 5 折券、抽奖奖品叠加；土豪奖不与「满赠和抽奖」叠加，但可与「小册 5 折券」叠加。\n各活动获奖名单：活动结束后的 5 个工作日内（ 预计 11 月 24 日）公布。\n优惠券领取：将于活动结束后的 5 个工作日内（11 月 24 日）发放到大家的掘金账户中，点击“个人头像-我的优惠”查看。\n\n实物礼品领取：\n活动结束后的 5 个工作日（11 月 24 日）内开始采集发货信息，届时请留意站内信/私信通知。\n信息发出后，请掘友们在 5 个工作日内完成填写，12 月 1 日 24 点截止。过期未填写视为放弃所有奖品，不予发放。\n多次提交问卷的，官方将以最新提交为准。\n信息采集完，将于 12 月 15 日前完成实物礼品发放。\n有任何疑问，可以通过 1️⃣站内私信掘金小册，2️⃣微信联系小册四姐@北比或小册五姐@北比",
           "link": "https://juejin.cn/post/7299037777387175948",
           "publishedOn": "2023-11-09T02:48:38.000Z",
-          "wordCount": 1331,
+          "wordCount": 1321,
           "title": "双十一 6 折 Go | 小米手环、摩卡壶、掘金周边等你来！",
           "imageUrl": null
         }
