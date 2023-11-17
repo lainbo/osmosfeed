@@ -686,6 +686,8 @@ oh-package.json5 是工程级依赖配置文件，用于记录引入包的配置
 theme: Chinese-red
 字数越少，事情越大。
 号外，号外。
+2023-11-17 修改，由于官方已经把这个问题给修正了，然后我又给大家找了几个平替的网站。
+具体可参考白嫖ChatGPT4.0 (第二弹)
 现在ChatGPT4由于月费有点小贵，所以我也在观望之中。但是呢，今天在某个论坛中无意中刷到一个帖子。然后说是白嫖ChatGPT4的功能。然后，抱着试一试的态度把玩了一下。发现真的好用。
 所以，独乐乐不如众乐乐，所以把这个方式给大家。（但是，不知道官方修复速度哈，反正截止我写这篇文章之前(2023.11.16 17:59)，我还是可以用的）
 其实，方法很简单就是在我们平时访问chatGPT的浏览器链接上。输入https://chat.openai.com/?model&#x3D;gpt-4-gizmo。
@@ -952,6 +954,28 @@ theme: devui-blue
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7301574863776038949"
+                        open
+                      >
+                        <summary class="article-expander__title">一个22届被裁前端思想上得转变</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7301574863776038949">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>距离上篇文章已经过去了三个多月，这个三个月，经历了技术攻坚，然后裁员，退房，回老家，找工作。短短的几个月，就经历社会的一次次毒打，特别是找工作，虽然算上实习我也有两年了，奈何有一年是实习经历，投的简历基本投不出去，投出去了，也很少面试机会。加上我也比较菜吧。所以吃了不少苦。这一篇呢主要是给大家分享一下，我学习思想上的转变。
+背景以及唠叨
+抛出问题，你觉得什么样的人算得上大佬？或者是怎样得人会成为大佬？这是我去面试了一家创业公司，老板跟问我的。我当时得回答是：对框架原理有着比较深得理解得，知道的比较多，各种技术都有一定得了解。当时他没有否认也没有同意，而是说了一句，拥有一颗好奇心。你有没有想过浏览器是怎么运行起来得，它是怎么组成得，你有追寻得去想过嘛。当时得我陷入了沉思。老板是技术出身，自己创业了十几年，今年是第四次创业，他得两个想法也是两个产品，一个我听说过，一个我是第一次听说。老板跟我介绍了很多，可能我们都是从农村出来，来到大城市里聊得比较来。说句实话那天去了那边面试，也挺震惊我的，都是密密麻麻得创业公司，只有几平米。也看到了一群年轻人在创业。以前都是在电影上见到过，当现实中见到真的还是挺震惊得。老板也看出了我的震惊，来了一句这不是很正常的事嘛。因为最后个人的原因，觉得跟老板混还是风险太高了，加上他那创业的地方太小了，都没我住的地方大 ，我是有点接受不了的。
+对啊，你有想过浏览器到底是什么运行，怎么编译的嘛，那天我回去思考了很久，说真的也挺感谢老板给我分享了很多，让我的见识又增长了。在面试过程中，说句心里话，遇到一个好的面试官，不仅是你在回答他的问题，他也会分享他的看法，和一些事。所幸我遇到了好几位面试官这样的面试官。有时候面试不仅是去一家公司工作，一边提问，一边回答，它其实也是知己遇知音的一个过程，也是知识一种分享的过程。 线下面试有个好处，就是能够很清晰表达自己的想法…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -1896,47 +1920,6 @@ import Other from &quot;./other.vue&quot;
 {{ count }}
   &lt;…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7300036605100130358"
-                        open
-                      >
-                        <summary class="article-expander__title">总是听说图片懒加载，那你能讲清楚吗？（一）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7300036605100130358">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>highlight: xcode
-引言
-图片懒加载是一种优化网页性能的技术，它可以在网页加载时只加载当前屏幕可视区域内的图片，而不会一次性加载所有图片，从而提高网页的加载速度、减少后台服务器压力，并提升用户体验。让我来详细介绍一下图片懒加载的原理及实现方法。
-一、原理
-实现图片懒加载的原理可以简单概括为以下几个步骤：
-1. 将图片地址存储到 data-xxx 属性上
-在 HTML 的 img 标签中，我们可以使用自定义的 data-xxx 属性来存储图片地址，例如：
-  
-
-这样，我们就可以在图片加载时通过 JavaScript 获取到图片地址。
-2. 判断图片是否在可视区域
-通过计算每张图片的位置，我们可以判断当前图片是否在可视区域内。一般来说，我们可以通过以下两个方法来计算图片的位置：
-(1) getBoundingClientRect() 方法
-这个方法可以获取元素的大小、位置等信息，包括元素相对于视口的位置。通过计算元素的 top、bottom、left、right 等属性可以得出元素的位置信息，例如：
-const rect &#x3D; element.getBoundingClientRect();  
-const top &#x3D; rect.top;  
-const bottom &#x3D; rect.bottom;  
-const left &#x3D; rect.left;  
-const right &#x3D; rect.right;  
-
-(2) offsetTop 和 offsetHeight 属性
-这两个属性可以获取元素相对于其父元素的位置和大小。通过计算元素的 offsetTop 和 offsetHeight 属性可以得出元素的位置信息，例如：
-const top &#x3D; element.offs…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4428,8 +4411,8 @@ ECH 非常巧妙地解决了域名加密。它采用双层格式，也就是说�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6904247179">
-        <time id="build-timestamp" datetime="2023-11-17T12:56:48.603Z">2023-11-17T12:56:48.603Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6906170438">
+        <time id="build-timestamp" datetime="2023-11-17T15:52:41.050Z">2023-11-17T15:52:41.050Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
