@@ -51,11 +51,71 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-17 datetime="2023-11-17T11:37:11.000Z">2023-11-17</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-17 datetime="2023-11-17T11:37:11.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-17 datetime="2023-11-17T17:31:36.000Z">2023-11-17</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-17 datetime="2023-11-17T17:31:36.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Barret李靖的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/6557a3787c074abd87e91dfd"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 很多时候，需要的是一个决策，而不是一个正确的决策。 决策对了，皆大欢喜；决策错了，再接再厉；不下决策，止步不前，一切也就无从谈起。</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6557a3787c074abd87e91dfd">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>很多时候，需要的是一个决策，而不是一个正确的决策。
+决策对了，皆大欢喜；决策错了，再接再厉；不下决策，止步不前，一切也就无从谈起。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/6556fb1787a8e03bd1d1b83c"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 什么是 AI Agent？相比原生 LLM 的推理，Agent 能带来了哪些能力？为什么 Agent 需要具备这些能力？ 人类在决策的时候有两种思维模式，诺奖得主 Daniel ...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6556fb1787a8e03bd1d1b83c">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FsJEtNu97d6yxZNai2y_oC_mTEcDv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>什么是 AI Agent？相比原生 LLM 的推理，Agent 能带来了哪些能力？为什么 Agent 需要具备这些能力？
+人类在决策的时候有两种思维模式，诺奖得主 Daniel Kahneman 称之为第一系统和第二系统思维。第一系统（System 1）是快速的、习惯性的、无意识的，第二系统（System 2）是深思熟虑的、自主的、有意识的。
+LLM 的作用就是进行 Next Token Generation，它的表现跟 System 1 基本一致，也正因为这本能式的推理反应，LLM 会出现很多思维谬误和幻觉问题；AI Agent 可以帮助 LLM 搭建一套框架来进行深度思考和分析，激发 System 2 的潜力，从而做出更复杂和可靠的决策，之前提到过很多让 ChatGPT 加强思考的方法，例如 CoT（Chain of Thought）和 ToT（Tree of Thought）等，都是为了阻止 LLM 直线式思考，让它在触碰最终答案之前，迂回几次，试探更多的路径，剔除掉更多低置信度的选项。
+这篇文论（https://arxiv.org/pdf/2309.07864.pdf）对 Agent 做了一个新的定义：具有自主性、反应性、积极性和社交能力特征的智能实体。人类的终极目标是期望 AI 能够自规划执行解决复杂的问题，很显然，单凭 CoT/ToT 这些简单的 System 2 思考策略是远远不够的，那还需要哪些东西呢？
+目前已知的能够很好提升效果的办法包括：1）让多 Agents 进行相互系统；2）能够与环境进行交互；3）具备中短期甚至长期的记忆能力；4）能够在寻求答案的过程中更智能的决策和选择最佳路径。ChatGPT 的 GPTs 提供了上传资料、执行代码、函数调用等能力，本质上也是在补齐 System 2 的能力，等到 GPTs 的生态丰富之后，也可以实现 GPTs 之间的调用，这样就很容易构造一个西部世界了。
+十分推荐阅读这篇文章的第一部分，《关于 AI agent 的四个关键问题》，https://mp.weixin.qq.com/s/JYu_oXWbWbasT1fcBRo-cA，文章的第二部分和第三部分讲的是基于 AI Agent 的一些业界实践，以及未来需要去解决的一些问题，文章通俗易懂。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -155,45 +215,6 @@
 a/ 别人都是笨蛋，说的全是错的，和自己学到的，看到的，实践到的全都不一样。
 b/ 每个人都是宝藏，一件事，竟然还能有这么多不同视角和理解；原来高层和低层看到的天空竟然有这么大的不同；原来三人行，必有我师是这么回事。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Barret李靖的即刻动态</button>
-                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/6556fb1787a8e03bd1d1b83c"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 什么是 AI Agent？相比原生 LLM 的推理，Agent 能带来了哪些能力？为什么 Agent 需要具备这些能力？ 人类在决策的时候有两种思维模式，诺奖得主 Daniel ...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6556fb1787a8e03bd1d1b83c">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FsJEtNu97d6yxZNai2y_oC_mTEcDv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>什么是 AI Agent？相比原生 LLM 的推理，Agent 能带来了哪些能力？为什么 Agent 需要具备这些能力？
-人类在决策的时候有两种思维模式，诺奖得主 Daniel Kahneman 称之为第一系统和第二系统思维。第一系统（System 1）是快速的、习惯性的、无意识的，第二系统（System 2）是深思熟虑的、自主的、有意识的。
-LLM 的作用就是进行 Next Token Generation，它的表现跟 System 1 基本一致，也正因为这本能式的推理反应，LLM 会出现很多思维谬误和幻觉问题；AI Agent 可以帮助 LLM 搭建一套框架来进行深度思考和分析，激发 System 2 的潜力，从而做出更复杂和可靠的决策，之前提到过很多让 ChatGPT 加强思考的方法，例如 CoT（Chain of Thought）和 ToT（Tree of Thought）等，都是为了阻止 LLM 直线式思考，让它在触碰最终答案之前，迂回几次，试探更多的路径，剔除掉更多低置信度的选项。
-这篇文论（https://arxiv.org/pdf/2309.07864.pdf）对 Agent 做了一个新的定义：具有自主性、反应性、积极性和社交能力特征的智能实体。人类的终极目标是期望 AI 能够自规划执行解决复杂的问题，很显然，单凭 CoT/ToT 这些简单的 System 2 思考策略是远远不够的，那还需要哪些东西呢？
-目前已知的能够很好提升效果的办法包括：1）让多 Agents 进行相互系统；2）能够与环境进行交互；3）具备中短期甚至长期的记忆能力；4）能够在寻求答案的过程中更智能的决策和选择最佳路径。ChatGPT 的 GPTs 提供了上传资料、执行代码、函数调用等能力，本质上也是在补齐 System 2 的能力，等到 GPTs 的生态丰富之后，也可以实现 GPTs 之间的调用，这样就很容易构造一个西部世界了。
-十分推荐阅读这篇文章的第一部分，《关于 AI agent 的四个关键问题》，https://mp.weixin.qq.com/s/JYu_oXWbWbasT1fcBRo-cA，文章的第二部分和第三部分讲的是基于 AI Agent 的一些业界实践，以及未来需要去解决的一些问题，文章通俗易懂。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -394,25 +415,6 @@ AI 是一个新事物，带来了很多前所未有的问题。
                   <a class="source-heading__link" href="https://store.epicgames.com/zh-CN/free-games?lang&#x3D;zh-CN">Open</a>
                 </h3>
                 <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://store.epicgames.com/zh-CN/p/surviving-the-aftermath"
-                        open
-                      >
-                        <summary class="article-expander__title">《Surviving the Aftermath》</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://store.epicgames.com/zh-CN/p/surviving-the-aftermath">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>在末日后的未来世界存活下来并努力繁荣兴盛。资源稀少，但希望犹存！建造出足以防范灾难的终极聚居地，保护你的聚居地居民，在几近废墟的世界中恢复文明。
-
-Free Now to 2023-11-23T16:00:00.000Z</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -1216,48 +1218,11 @@ alova 自从 2023 年 4 月份正式对外发布以来，在 Issues 和 Disscuss
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-14 datetime="2023-11-14T23:41:35.000Z">2023-11-14</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-14 datetime="2023-11-14T23:41:35.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-14 datetime="2023-11-14T16:37:18.000Z">2023-11-14</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-14 datetime="2023-11-14T16:37:18.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Barret李靖的即刻动态</button>
-                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/655405af84bcbc4a4677708a"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 微软官方推出了专门的 AI 课程，Generative AI for Beginners，https://microsoft.github.io/generative-ai-for-beginners/，总共 12 节课，其中 6 节概...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/655405af84bcbc4a4677708a">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FrBSYlAnxnNdM6qjBbidXXslpiwWv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>微软官方推出了专门的 AI 课程，Generative AI for Beginners，https://microsoft.github.io/generative-ai-for-beginners/，总共 12 节课，其中 6 节概念课，6 节编程课，我全部看了一遍，写的确实非常基础，学会以后，基本上你就可以自己去构建生成式 AI 应用了。
-概念课会告诉你 AI 的发展情况、了解 LLM 的工作原理、掌握 Prompt 的初级和高级用法；编程课会让你学会调用 OpenAI、处理图片、使用向量数据库、调用 Function、开发一个完成的 AI 应用。
-如果你担心自己编程能力不行，学不会编程课（大概率如此），可以看看这个教程，How to be a Programmer，https://braydie.gitbooks.io/how-to-be-a-programmer/content/zh/，它将一个程序员的技能划分为三个层级，入门、进阶和高级，教会你重点概念的原理、检索答案的姿势、调试代码的技巧、优化性能的方法等等；至于编码部分，我觉得你可以不用过多学习，交给 ChatGPT 就行，让 AI 帮你写代码。
-当然，你可以去 freeCodeCamp 学习编程，真正成为一名程序员，它提供了 3000 小时的免费课程，涵盖了编程涉及到的方方面面，https://www.freecodecamp.org/chinese/news/online-coding-classes-for-beginners-2022-guide/，包括 HTML/CSS/JavaScript 三件套、Python 课程、移动应用程序开发课程、游戏开发、C 系列、PHP 系列、数据库等等，应有皆有。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -4411,8 +4376,8 @@ ECH 非常巧妙地解决了域名加密。它采用双层格式，也就是说�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6907929413">
-        <time id="build-timestamp" datetime="2023-11-17T18:52:32.218Z">2023-11-17T18:52:32.218Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6909426177">
+        <time id="build-timestamp" datetime="2023-11-17T21:52:50.410Z">2023-11-17T21:52:50.410Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
