@@ -862,25 +862,6 @@ theme: devui-blue
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://store.epicgames.com/zh-CN/p/surviving-the-aftermath"
-                        open
-                      >
-                        <summary class="article-expander__title">《Surviving the Aftermath》</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://store.epicgames.com/zh-CN/p/surviving-the-aftermath">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>在末日后的未来世界存活下来并努力繁荣兴盛。资源稀少，但希望犹存！建造出足以防范灾难的终极聚居地，保护你的聚居地居民，在几近废墟的世界中恢复文明。
-
-Free Now to 2023-11-23T16:00:00.000Z</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://store.epicgames.com/zh-CN/p/earthlock-e7d979"
                         open
                       >
@@ -1245,6 +1226,50 @@ scene.add(ambientLight)
 directionalLight &#x3D; new THREE.DirectionalLight(0xffffff, 40);
 directionalLight.position.copy(camera.posi…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7301516165384929318"
+                        open
+                      >
+                        <summary class="article-expander__title">国际化终极方案——全自动翻译国际化（支持一键翻译多国语言，不入侵业务代码）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7301516165384929318">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: cyanosis
+前言
+Hi~大家好，今天给大家介绍一个关于国际化的vite插件 vite-plugin-auto-i18n ，一个自动翻译的关于i18n的vite插件。
+做过国际化的朋友都知道，国际化通常都是用 i18n 手动去项目中替换对应的文字，然后在项目里维护一个国际化配置map实现的，这种方式非常低效，一个大型项目可能要测试产品一起工作几个星期才行。有没有什么办法可以无需更改业务代码又能自动生成翻译呢？
+答案是有的，就是这个基于谷歌翻译api和babel的自动翻译插件————vite-plugin-auto-i18n
+注：插件基于babel去解析页面中的目标字符，然后统一翻译，翻译结束之后会生成一个json的配置文件，如果认为谷歌翻译不准确，就可以通过修改json文件的内容更换翻译内容。而且翻译的key是基于hash算法生成类似对称加密，相同的字符key都是一样的，所以不会反复翻译。同时翻译是统一收集字符之后再组装翻译文本，翻译之后然后切割翻译内容写入json配置，不用担心发出大量翻译请求。
+感兴趣的朋友希望可以跑一下demo，跑完就知道这个工具的强大了
+介绍
+基于谷歌翻译api的vite自动翻译插件。
+支持框架：Vue2、Vue3、React
+支持文件类型：js, ts, jsx, tsx, vue
+插件中文readme：https://www.npmjs.com/package/vite-plugin-auto-i18n?activeTab&#x3D;code
+特点：
+一键翻译
+无需改动业务代码
+支持新增语言自动补全配置
+支持翻译多国语言
+使用
+安装
+npm i vite-plugin-auto-i18n -D # yarn add vite-plugin-auto-i18n -D
+
+演示
+
+演示图对应业务源码 (部分）
+
+可以看到通过这个插件，无需改动业…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2116,44 +2141,11 @@ const top &#x3D; element.offs…</span>
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-11 datetime="2023-11-11T17:57:00.000Z">2023-11-11</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-11 datetime="2023-11-11T17:57:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-11 datetime="2023-11-11T14:00:38.000Z">2023-11-11</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-11 datetime="2023-11-11T14:00:38.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >国家应急广播 - 重庆预警信息</button>
-                  <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/lanseyj/20231112/t20231112_526483411.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市万州区发布大风蓝色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/lanseyj/20231112/t20231112_526483411.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>万州区气象台2023年11月12日01时30分发布“大风蓝色预警信号”，预计未来12小时，我区太安镇、白羊镇、黄柏乡、太龙镇、大周镇、陈家坝街道、高峰街道等镇乡街风力可达6级，局地阵风可达7级以上，请注意防范。政府及相关部门按照职责做好防大风工作；关好门窗，加固围板、棚架、广告牌等易被风吹动的搭建物，妥善安置易受大风影响的室外物品，遮盖建筑物资；相关水域水上作业和过往船舶采取积极的应对措施，如回港避风或者绕道航行等；行人注意尽量少骑自行车，刮风时不要在广告牌、临时搭建物等下面逗留；有关部门和单位注意森林、草原等防火。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -2165,87 +2157,6 @@ const top &#x3D; element.offs…</span>
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7299797852199649289"
-                        open
-                      >
-                        <summary class="article-expander__title">浅聊JavaScript中的LHS和RHS查询</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7299797852199649289">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: hydrogen
-highlight: a11y-dark
-前言
-在阅读《你不知道JavaScript 上卷》的时候，接触到一个编译器LHS查找和RHS。
-在日常编码中，我们通常关注代码的逻辑和功能，但很少深入思考编译器在幕后的工作。今天我们将学习一下LHS（Left-Hand Side）和RHS（Right-Hand Side）查询，它们在JavaScript编译和执行中的关键作用，以及在我们的日常开发中是如何发挥作用的。
-接下来就让我们来浅浅学习一下LHS和RHS
-正文
-很明显L为left,R为right
-所以我们大概可以猜到,用这样一句话解释：
-当变量出现在赋值操作的左侧时进行LHS查询，出现在右侧时进行RHS查询。
-说得更简单点RHS查询与简单地查找某个变量的值别无二致，而LHS查询则是试图找到变量的容器本身，从而可以对其赋值。
-LHS查询的学习
-1. LHS查询的概述
-LHS查询涉及变量的存储和初始化，是赋值操作的左侧操作数。
-编译器如何处理LHS查询，从变量声明到内存分配的全过程。
-我们来看这个案例！
-var name &#x3D; &quot;John&quot;;
-// 在这个例子中，LHS查询负责为变量name分配内存并将其初始化为&quot;John&quot;
-
-RHS查询的学习
-1. RHS查询的本质
-RHS查询是获取变量值的右侧操作数，是为了得到变量的值。
-编译器如何在RHS查询中找到变量的值并传递给相应的操作。
-我们可以来看看这个案例,在我们输出这个name的时候，执行的RHS查询，负责获取变量name的值
-codeconsole.log(name);
-// 在这个例子中，RHS查询负责获取变量name的值并传递给console.log
-
-LHS和RHS查询的细微差异
-1. 查询的方向与操作数
-强调LHS查询与RHS查询的本质区别在于操作数的方向，一个是赋值的左侧，一个是获取值的右侧。
-通过比较LHS和RHS查询在语法结构中的不同，加深读者对它们的理解。
-我们通过下面这个案例来分析LHS和RHS直接的差异！
-首先var x &#x3D; 10执行的LHS查询，找到x的本身，并且把10赋值给x
-在var y &#x3D; x这个语句当中，同时存在LHS和RHS,为什么呢？
-其中var y &#x3D; 值这里肯定执行的LHS,负责找到y本身，并且赋值
-但是其中的值是x是一个变量，所以又要进行RHS查询获取到x的值!
-var x &#x3D; 10;
-var y &#x3D; x;
-// 在这里，x的RHS查询获取值，y的LHS查询分配内存并初始化
-
-2. 函数调用与查询操作
-分析函数调用中的LHS和RHS查询，探讨调用过程中参数的查询操作。
-通过例子展示函数调用背后的查询细节。
-来分析下面的案例：
-引擎首先会创建一个变量 result，它会在当前作用域中进行 LHS 引用。
-接着，引擎遇到 multiply(3, 4) 这个表达式，会进行 RHS 引用。它会在作用域中查找 multiply 函数。
-找到 multiply 函数后，引擎会创建一个新的执行上下文（execution context）用于调用 multiply 函数。这个执行上下文会包含参数 a 和 b，分别被赋值为 3 和 4。
-multiply 函数执行，计算 3 * 4 的结果，返回 12。
-返回到主程序，将 result 赋值为 12。
-整个过程中，LHS 引用用于变量的赋值操作，RHS 引用用于变量值的检索操作。在这个例子中，multiply(3, 4) 的 RHS 引用触发了函数的调用，而 result 的 LHS 引用用于将函数调用的结果赋值给 result。
-function multiply(a, b) {
-  return a * b;
-}
-var result &#x3D; multiply(3, 4);
-// 函数调用中的LHS和RHS查询，以及赋值操作
-
-最后：
-总结一句话就是：
-RHS查询负责找到这个变量的值，而LHS查询则是为了找到变量的容器本身，然后将我们要给它赋的值装进去（赋值）！
-学习LHS和RHS查询，能够帮助我们理解JavaScript编译的运行机制，还能够帮助我们编写更高效、更健壮的代码。希望这篇文章能够为大家提供一些学习理解LHS和RHS查询的助力！
-如果您有任何疑问或想分享您的看法，欢迎各位留言！有不对的地方，也可以留言指正！愿编码之路愉快，happy coding！🚀
-参考文献《你不知道JavaScript  上卷》
-个人GITEE库：MycodeSpace: 主要应用的仓库，记录学习coding中的点点滴滴 (gitee.com)</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -4295,8 +4206,8 @@ https://datacap.edurt.io/release/latest.html</span>
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6914883988">
-        <time id="build-timestamp" datetime="2023-11-18T15:52:39.686Z">2023-11-18T15:52:39.686Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6915704316">
+        <time id="build-timestamp" datetime="2023-11-18T18:52:41.072Z">2023-11-18T18:52:41.072Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
