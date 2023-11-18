@@ -51,6 +51,54 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-18 datetime="2023-11-18T03:04:20.000Z">2023-11-18</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-18 datetime="2023-11-18T03:04:20.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >李继刚的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/655829b4ee2e07f7ace77af9"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: Sam是铸剑师，奈何不是执剑人。</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/655829b4ee2e07f7ace77af9">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Sam是铸剑师，奈何不是执剑人。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-17 datetime="2023-11-17T17:31:36.000Z">2023-11-17</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-17 datetime="2023-11-17T17:31:36.000Z"></time>
           </button>
@@ -81,7 +129,7 @@
                             <span class="media-object__text">
                               <span>很多时候，需要的是一个决策，而不是一个正确的决策。
 决策对了，皆大欢喜；决策错了，再接再厉；不下决策，止步不前，一切也就无从谈起。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -662,27 +710,6 @@ h++ps://webcache.googleusercontent.com/search?q&#x3D;cache:${window.location.hre
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7301909438587338793"
-                        open
-                      >
-                        <summary class="article-expander__title">只需一步，免费访问ChatGPT-4</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7301909438587338793">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>访问ChatGPT-4
-现在注册也不需要手机号了，已经注册的用户直接访问下面链接，然后直接聊天就行可以使用GPT-4模型。
-点击链接直接访问：https://chat.openai.com/?model&#x3D;gpt-4-gizmo</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7301955975337361447"
                         open
                       >
@@ -1037,6 +1064,52 @@ theme: devui-blue
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7301486808236130345"
+                        open
+                      >
+                        <summary class="article-expander__title">threejs渲染高级感可视化涡轮模型</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7301486808236130345">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: jzman
+好久没写可视化方面的帖子了，最近在网上找灵感，发现一张图个人感觉不错，正好现有技术也可以实现，使用到的技术vite + typescript + threejs
+灵感图
+准备工作
+找模型
+扒拉半天的模型网站，找到一个差不多的模型。都是涡轮、部件、机械等关键词[模型地址](turbine-01 - Download Free 3D model by Karan.Dhindsa (@Karan.Dhindsa) [e03a3c7] (sketchfab.com))
+主要工作
+加载模型
+文中使用到的很多方法是之前文章有提过的，感兴趣的同学可以翻一下，使用之前写的gltfloader方法将下载的模型加载出来，并使用模型中自带场景scene渲染3d世界
+
+async function loadModel() {
+    const res &#x3D; await loadGltf(&#x27;../src/assets/models/机械零件/1/scene.gltf&#x27;)
+    // 使用模型原有场景
+    scene &#x3D; res.scene
+
+    init()
+    animate();
+}
+
+加载效果
+
+镜头、灯光等参数
+灯光采用的AmbientLight环境光和DirectionalLight平行光，将平行光位置设置在相机所在位置，并且在镜头转动时，实时修改平行光位置，这样可以保证模型始终能够被光线照到
+const ambientLight &#x3D; new AmbientLight(0xffffff, 40);
+scene.add(ambientLight)
+
+directionalLight &#x3D; new THREE.DirectionalLight(0xffffff, 40);
+directionalLight.position.copy(camera.posi…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7301281320666693667"
                         open
                       >
@@ -1129,28 +1202,6 @@ alova 自从 2023 年 4 月份正式对外发布以来，在 Issues 和 Disscuss
                               <span>关于习惯, 总结两句:
 1. 你不可能依靠意志力去克服旧习惯, 只能通过新习惯去覆盖旧习惯
 2. 养成新习惯的落地公式: if A then B. 把触发器和落地动作简单成这个</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/655444874382067787288f54"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 我的脑海中，进行着一场葬礼；悼念者络绎不绝；不停的走着，踩踏着；直到仪式的氛围渐浓；当所有人进入，仪式开始，敲鼓的声音，沉重有力；敲打着，敲打...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/655444874382067787288f54">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>我的脑海中，进行着一场葬礼；悼念者络绎不绝；不停的走着，踩踏着；直到仪式的氛围渐浓；当所有人进入，仪式开始，敲鼓的声音，沉重有力；敲打着，敲打着，直到我的意识变得麻木；我听到他们抬起棺材，沉重的脚步，摇摇晃晃；我的灵魂，吱呀作响；四周，丧钟响起，天堂，就像是一个钟；存在，就是一个耳朵；安静的我，如同异类；在此孤独，在此腐朽；失去依靠，理性开始崩溃；我从高处坠落，跌入一个又一个世界，终于，看清。
-----
-《 我觉得脑子里有一场葬礼》  艾米莉·狄金森</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
@@ -1900,6 +1951,47 @@ import Other from &quot;./other.vue&quot;
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7300036605100130358"
+                        open
+                      >
+                        <summary class="article-expander__title">总是听说图片懒加载，那你能讲清楚吗？（一）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7300036605100130358">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>highlight: xcode
+引言
+图片懒加载是一种优化网页性能的技术，它可以在网页加载时只加载当前屏幕可视区域内的图片，而不会一次性加载所有图片，从而提高网页的加载速度、减少后台服务器压力，并提升用户体验。让我来详细介绍一下图片懒加载的原理及实现方法。
+一、原理
+实现图片懒加载的原理可以简单概括为以下几个步骤：
+1. 将图片地址存储到 data-xxx 属性上
+在 HTML 的 img 标签中，我们可以使用自定义的 data-xxx 属性来存储图片地址，例如：
+  
+
+这样，我们就可以在图片加载时通过 JavaScript 获取到图片地址。
+2. 判断图片是否在可视区域
+通过计算每张图片的位置，我们可以判断当前图片是否在可视区域内。一般来说，我们可以通过以下两个方法来计算图片的位置：
+(1) getBoundingClientRect() 方法
+这个方法可以获取元素的大小、位置等信息，包括元素相对于视口的位置。通过计算元素的 top、bottom、left、right 等属性可以得出元素的位置信息，例如：
+const rect &#x3D; element.getBoundingClientRect();  
+const top &#x3D; rect.top;  
+const bottom &#x3D; rect.bottom;  
+const left &#x3D; rect.left;  
+const right &#x3D; rect.right;  
+
+(2) offsetTop 和 offsetHeight 属性
+这两个属性可以获取元素相对于其父元素的位置和大小。通过计算元素的 offsetTop 和 offsetHeight 属性可以得出元素的位置信息，例如：
+const top &#x3D; element.offs…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -2106,8 +2198,6 @@ RHS查询负责找到这个变量的值，而LHS查询则是为了找到变量�
 如果您有任何疑问或想分享您的看法，欢迎各位留言！有不对的地方，也可以留言指正！愿编码之路愉快，happy coding！🚀
 参考文献《你不知道JavaScript  上卷》
 个人GITEE库：MycodeSpace: 主要应用的仓库，记录学习coding中的点点滴滴 (gitee.com)</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2253,63 +2343,11 @@ AD:笔者线上的小游戏《贪吃蛇掌机经典》《填色之旅》《重�
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-10 datetime="2023-11-10T10:31:52.000Z">2023-11-10</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-10 datetime="2023-11-10T10:31:52.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-10 datetime="2023-11-10T03:57:59.000Z">2023-11-10</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-10 datetime="2023-11-10T03:57:59.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7299696650896080922"
-                        open
-                      >
-                        <summary class="article-expander__title">？北京七年前端带专找工作竟如此坎坷？近一个月面试复盘（附总结答案），快来学习呀</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7299696650896080922">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>highlight: github
-theme: smartblue
-掘金潜水几年第一次发文。新人求关注，求内推。
-7 月中领了大礼包后，一直没有马上找工作的想法。玩儿了俩月，考了个摩托 D 本。国庆节后开始刷题投简历，到今天也有一个月了。算上今天这个面试，一共只有两个面试。
-我都无语了，boss 打招呼已读不回，我开的会员强提醒他们，已读不回，要不不合适。前几天有带佬说可能是我简历问题，找他改了改，改完昨天又找他过了一遍，一会儿发完文章我赶紧改简历。周日还有场考试，还得再刷刷题。
-A 公司是前同事内推的；一面线上，二面线下
-B 公司是半个月前投的简历，可能是一直没有招到合适的人？才把我捞起来？B 司 995。线上面。
-俩公司都没过，也就不说那么多了，只探讨面试题部分。
-另：求内推机会，给个孩子个机会吧
-求内推机会，给个机会吧，我打招呼刷岗位都没空刷八股文了。
-A 公司
-一面，线上
-1. 浏览器拿到数据后的渲染过程
-浏览器在接收到网页的 HTML、CSS 和 JavaScript 数据后，经历一系列步骤来渲染网页，这个过程通常被称为浏览器的渲染过程。以下是浏览器渲染过程的主要步骤：
-解析 HTML 和构建 DOM 树：
-浏览器开始解析 HTML 数据，并构建文档对象模型（DOM）树，表示网页的结构和内容。DOM 树是一个树状结构，其中每个 HTML 元素都被表示为一个节点，包括文本、标签、属性等。
-解析 CSS 和构建 CSSOM 树：
-同时，浏览器也开始解析 CSS 数据，并构建 CSS 对象模型（CSSOM）树，表示网页的样式和布局信息。CSSOM 树与 DOM 树一一对应，每个元素都有对应的样式信息。
-合并 DOM 和 CSSOM，构建渲染树：
-浏览器将 DOM 树和 CSSOM 树合并，构建渲染树（Render Tree）。渲染树包含了需要渲染的页面内容，但不包括那…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;23
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -2880,8 +2918,6 @@ Case 3：小金同学在本次活动中实付 456 元（≥399 元），可获�
 多次提交问卷的，官方将以最新提交为准。
 信息采集完，将于 12 月 15 日前完成实物礼品发放。
 有任何疑问，可以通过 1️⃣站内私信掘金小册，2️⃣微信联系小册四姐@北比或小册五姐@北比</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4385,8 +4421,8 @@ ECH 非常巧妙地解决了域名加密。它采用双层格式，也就是说�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6910836710">
-        <time id="build-timestamp" datetime="2023-11-18T01:15:02.719Z">2023-11-18T01:15:02.719Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6911643979">
+        <time id="build-timestamp" datetime="2023-11-18T03:52:42.855Z">2023-11-18T03:52:42.855Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
