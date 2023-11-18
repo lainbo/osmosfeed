@@ -10,18 +10,7 @@
       "title": "Lainbo's Blog",
       "feedUrl": "https://www.jason-liang.com/rss/feed.xml",
       "siteUrl": "https://www.jason-liang.com/",
-      "articles": [
-        {
-          "id": "https://www.jason-liang.com/article/chatgpt-best-practice",
-          "author": null,
-          "description": "在这个AI井喷式爆发的时代，谁和GPT做朋友，谁就遥遥领先",
-          "link": "https://www.jason-liang.com/article/chatgpt-best-practice",
-          "publishedOn": "2023-10-20T00:00:00.000Z",
-          "wordCount": 507,
-          "title": "Chat GPT最佳实践",
-          "imageUrl": "https://www.notion.so/images/page-cover/nasa_earth_grid.jpg"
-        }
-      ]
+      "articles": []
     },
     {
       "title": "张鑫旭-鑫空间-鑫生活",
@@ -34,7 +23,7 @@
           "description": "应该是国内第一篇专门介绍用mp4box.js和VideoDecoder方法解码MP4视频序列帧的文章了。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/mp4box-js-webcodecs-mp4-canvas/",
           "publishedOn": "2023-11-14T16:37:18.000Z",
-          "wordCount": 1234,
+          "wordCount": 1232,
           "title": "mp4box.js加WebCodecs 解码MP4视频帧并渲染",
           "imageUrl": null
         },
@@ -44,7 +33,7 @@
           "description": "想要提高网页的加载体验，其实有个非常简单且实用的技巧，那就是改变请求资源的加载优先级，这也可以改变？没错！",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/img-js-preload-fetch-priority/",
           "publishedOn": "2023-10-29T15:55:41.000Z",
-          "wordCount": 949,
+          "wordCount": 948,
           "title": "聊聊Web网页中资源加载的优先级",
           "imageUrl": null
         }
@@ -94,16 +83,6 @@
           "wordCount": null,
           "title": "科技爱好者周刊（第 275 期）：彼得·蒂尔的实验",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.ruanyifeng.com/blog/2023/10/weekly-issue-274.html",
-          "author": null,
-          "description": "这里记录每周值得分享的科技内容，周五发布。\n本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。\n封面图\n\n上图是最近落成的成都科幻馆，位于成都市郫都区菁蓉湖畔，可用于举办展览、会议等各种活动。10月18日，第81届世界科幻大会和雨果奖在这里开幕。（via）\n加密通信的最后一块拼图\n十一期间，世界最大的 CDN 服务商 Cloudflare 发了一篇博客文章，宣称解决了\"加密通信的最后一块拼图\"。\n\n这件事挺重要的，可能会影响很多人，本周我想好好谈谈。\n我先问大家，HTTPS 链接是加密通信吗？\n\n你可以说它是，因为通信内容确实是加密的，外界无法窥测和篡改。\n但是，它又不是彻底的加密通信，有一个地方是不加密的，那就是域名。中间人可以看到，你访问什么网站。\n为什么域名不加密呢？\n因为加密的密钥放在服务器上，而服务器只有知道域名，才知道发送哪一把密钥。所以，密钥的发送，必须在知道域名之后。\nCloudflare 解决的就是这个问题，它发明了一种新技术，叫做 ECH。\n\nECH 非常巧妙地解决了域名加密。它采用双层格式，也就是说，域名分了两层。外层是明文的，统一发送到 cloudflare-ech.com，内层是加密的，存放真正的域名。\n中间人只能看到你在访问 cloudflare-ech.com，看不到内层的域名，从而达到保密的效果。\n好了，技术介绍就说到这里，下面就是我的感想。我当时一看到 ECH 的细节，不禁就产生了疑问。\n如果 cloudflare-ech.com 发生故障，或者种种原因无法访问，那么所有 Cloudflare 托管的网站是否都无法访问？\n这是很现实的问题，因为 Cloudflare 是世界最大 CDN 服务商，很多网站都放在上面。而且，它对免费用户都启用了 ECH，还无法关闭（这是…",
-          "link": "http://www.ruanyifeng.com/blog/2023/10/weekly-issue-274.html",
-          "publishedOn": "2023-10-20T00:15:40.000Z",
-          "wordCount": null,
-          "title": "科技爱好者周刊（第 274 期）：加密通信的最后一块拼图",
-          "imageUrl": null
         }
       ]
     },
@@ -118,7 +97,7 @@
           "description": "世界很大",
           "link": "https://m.okjike.com/originalPosts/655836897c074abd87f219e8",
           "publishedOn": "2023-11-18T03:59:05.000Z",
-          "wordCount": 496,
+          "wordCount": 460,
           "title": "发布了: 世界很大",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fo_UmvotO_fc5712wkM-5WHr6jEmv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
         },
@@ -607,6 +586,16 @@
       "feedUrl": "https://rsshub.app/juejin/trending/frontend/weekly",
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
+        {
+          "id": "https://juejin.cn/post/7302310196310294580",
+          "author": "前端小魔女",
+          "description": "highlight: a11y-dark\ntheme: Chinese-red\n不是花钱的买不起，是免费的有更高的性价比\n大家好，我是柒八九。一个专注于前端开发技术/Rust及AI应用知识分享的Coder。\n前言\n为了兑现给大家的承诺，在高铁上奋笔疾书。如果下文中有措辞不正确的地方，请大家海涵。\n\n在昨天(2023-11-16)发布了一篇白嫖 ChatGPT4的推文,是昨天无意之中发现了ChatGPT4的 bug,然后在简单的研究了一下。随后就发布了一篇算是急文，然后简单的告诉了大家如何白嫖使用ChatGPT4.0的功能。\n本来，想着大家能白嫖几天，然后试用一下gpt4.0那些引以为傲的功能，奈何今天早上 6 点多醒来。打开软件，发现大家在评论区都在说，这个bug已经被修复了。其实，在内心大家都知道，这个bug肯定会被修复的。但是，没想到这么快。\n我是昨天下午 4 点知道的，然后今天早上差不多 6 点多，已经不能用了。大批网友戏称，获得了ChatGPT4.0一天体验卡。评论区无不充斥着后悔没早点看到推文。\n所以呢，本着我们一贯行文的宗旨，分享是一种态度。所以，今天我们来介绍几种白嫖那些需要付费使用的方法。然后再介绍几种在平时生活和开发中可能会用到的AI工具。(算是利用AI为我们降本增效)\n这里有一个大基调，就是下文中我们默认大家都有属于自己的 🪜。并且下文中有些工具也需要github 账号或者Google邮箱。如果没有，那就需要自寻办法了，具体原因懂得都懂。（如果实在搞不到可以私聊哈）\n好了，天不早了，干点正事哇。\n\n我们能所学到的知识点\n免费的网站\n浏览器插件\n在VScode使用AI功能\n1. 免费的网站\n给大家看一个好玩的截图。\n\n这是一个可以免费使用ChatGPT4.0和Claude 2的网站。让我们来简单介绍一下各自的功能。\nChatGPT4\n如上面截图所描述的，…",
+          "link": "https://juejin.cn/post/7302310196310294580",
+          "publishedOn": "2023-11-17T11:30:33.000Z",
+          "wordCount": 1094,
+          "title": "白嫖ChatGPT4.0 (第二弹)",
+          "imageUrl": null
+        },
         {
           "id": "https://juejin.cn/post/7302254338855338003",
           "author": "doudou_sir",
