@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-11-18T03:52:42.875Z</id>
+    <id>urn:2023-11-18T06:52:43.624Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-11-18T03:52:42.875Z</updated>
+    <updated>2023-11-18T06:52:43.624Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[发布了: A 2D 8-bit pixel style social media banner, featuring a beard chinese young man. there is a blank box with text 'Arthur'. simple elements surr...]]></title>
+        <id>https://m.okjike.com/originalPosts/6558442cf9a492630bd92673</id>
+        <link href="https://m.okjike.com/originalPosts/6558442cf9a492630bd92673"/>
+        <updated>2023-11-18T04:57:16.000Z</updated>
+        <summary type="html"><![CDATA[A 2D 8-bit pixel style social media banner, featuring a beard chinese young man. there is a blank box with text 'Arthur'. simple elements surrounding the man. banner aspect ratio]]></summary>
+        <author>
+            <name>李继刚的即刻动态</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[发布了: 世界很大]]></title>
+        <id>https://m.okjike.com/originalPosts/655836897c074abd87f219e8</id>
+        <link href="https://m.okjike.com/originalPosts/655836897c074abd87f219e8"/>
+        <updated>2023-11-18T03:59:05.000Z</updated>
+        <summary type="html"><![CDATA[世界很大]]></summary>
+        <author>
+            <name>Barret李靖的即刻动态</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[发布了: Sam是铸剑师，奈何不是执剑人。]]></title>
         <id>https://m.okjike.com/originalPosts/655829b4ee2e07f7ace77af9</id>
@@ -179,6 +199,46 @@ AI 是一个新事物，带来了很多前所未有的问题。
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[别再抱怨后端一次性传给你 1w 条数据了，几行代码教会你虚拟滚动！]]></title>
+        <id>https://juejin.cn/post/7301911743487590452</id>
+        <link href="https://juejin.cn/post/7301911743487590452"/>
+        <updated>2023-11-16T16:30:35.000Z</updated>
+        <summary type="html"><![CDATA[如果后端一次性传给你 1 万条数据，该怎么办，当然是让他圆润的走开，哈哈，开个玩笑。虽然这种情况很少，不过我在实际开发中还真遇到了类似的情况，接下来我将基于 vue3 实现一个简单的虚拟滚动。
+我们都知道，如果一次性展示所有的数据，那么会造成页面卡顿，虚拟滚动的原理就是将数据根据滚动条的位置进行动态截取，只渲染可视区域的数据，这样浏览器的性能就会大大提升，废话不多说，我们开始。
+具体实现
+首先，我们先模拟 500 条数据
+const data = new Array(500).fill(0).map((_, i) => i); // 模拟真实数据
+
+然后准备以下几个容器：
+<template>
+  <div class="view-container">
+    <div class="content-container"></div>
+    <div class="item-container">
+      <div class="item"></div>
+    </div>
+  </div>
+</template>
+
+view-container是展示数据的可视区域，即可滚动的区域
+content-container是用来撑起滚动条的区域，它的高度是实际的数据长度乘以每条数据的高度，它的作用只是用来撑起滚动条
+item-container是实际渲染数据的区域
+item则是具体渲染的数据
+我们给这几个容器一点样式:
+.view-container {
+  height: 400px;
+  width: 200px;
+  border: 1px solid red;
+  overflow-y: scroll;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+…]]></summary>
+        <author>
+            <name>路遥知码li</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[发布了: 免费内容+广告模式： 内容生产者就会倾向于讨好广告主，而不是读者。 收费内容(服务)模式： 内容生产者只能倾向于读者。 这天下就没有免费的午餐，现在...]]></title>
         <id>https://m.okjike.com/originalPosts/65564182ee2e07f7acc3b726</id>
         <link href="https://m.okjike.com/originalPosts/65564182ee2e07f7acc3b726"/>
@@ -188,18 +248,6 @@ AI 是一个新事物，带来了很多前所未有的问题。
 这天下就没有免费的午餐，现在越来越倾向于付费内容或服务，从逻辑上收获效率和效果都应该更高。]]></summary>
         <author>
             <name>李继刚的即刻动态</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[《Surviving the Aftermath》]]></title>
-        <id>https://store.epicgames.com/zh-CN/p/surviving-the-aftermath</id>
-        <link href="https://store.epicgames.com/zh-CN/p/surviving-the-aftermath"/>
-        <updated>2023-11-16T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[在末日后的未来世界存活下来并努力繁荣兴盛。资源稀少，但希望犹存！建造出足以防范灾难的终极聚居地，保护你的聚居地居民，在几近废墟的世界中恢复文明。
-
-Free Now to 2023-11-23T16:00:00.000Z]]></summary>
-        <author>
-            <name>Paradox Interactive</name>
         </author>
     </entry>
     <entry>
@@ -583,18 +631,6 @@ directionalLight.position.copy(camera.posi…]]></summary>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[发布了: 关于习惯, 总结两句: 1. 你不可能依靠意志力去克服旧习惯, 只能通过新习惯去覆盖旧习惯 2. 养成新习惯的落地公式: if A then B. 把触发器和落地动作简单...]]></title>
-        <id>https://m.okjike.com/originalPosts/65545cfd3c6228d753eeeefd</id>
-        <link href="https://m.okjike.com/originalPosts/65545cfd3c6228d753eeeefd"/>
-        <updated>2023-11-15T05:54:05.000Z</updated>
-        <summary type="html"><![CDATA[关于习惯, 总结两句:
-1. 你不可能依靠意志力去克服旧习惯, 只能通过新习惯去覆盖旧习惯
-2. 养成新习惯的落地公式: if A then B. 把触发器和落地动作简单成这个]]></summary>
-        <author>
-            <name>李继刚的即刻动态</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[alova来袭，你还在固守着axios吗？]]></title>
         <id>https://juejin.cn/post/7301281320666693667</id>
         <link href="https://juejin.cn/post/7301281320666693667"/>
@@ -637,16 +673,6 @@ alova 自从 2023 年 4 月份正式对外发布以来，在 Issues 和 Disscuss
 作者在生成过程中做了一个优化，首先对视频和音频进行截断分片，然后并行生成内容，如果你的机器性能比较高，理论上可以设置更大的并发度，不过作者没有把这个参数给透出来。
 语音识别基于 openai-whisper 离线模型，文字翻译支持 Google/Baidu/ChatGPT/DeepL 等翻译接口，文字合成语音用的是 Microsoft Edge tts。
 实现这样一个工具比较考验工程能力，而 AI 应用层的建设也很依赖这种能力，可以尝试着多动手，玩一玩。]]></summary>
-        <author>
-            <name>Barret李靖的即刻动态</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[发布了: 这个网页（https://ig.ft.com/generative-ai/）以滚动交互的形式，十分生动地解释了大模型推理过程中几个重要的概念，认真看完以后，你就能够理解什么是...]]></title>
-        <id>https://m.okjike.com/originalPosts/65541cb184bcbc4a4679c60d</id>
-        <link href="https://m.okjike.com/originalPosts/65541cb184bcbc4a4679c60d"/>
-        <updated>2023-11-15T01:19:45.000Z</updated>
-        <summary type="html"><![CDATA[这个网页（https://ig.ft.com/generative-ai/）以滚动交互的形式，十分生动地解释了大模型推理过程中几个重要的概念，认真看完以后，你就能够理解什么是 Token，什么是词群，如何通过概率推理出下一个 Token；什么是自注意力，如何通过自注意力理解上下文了；什么是词搜索和束搜索，如何生成高质量的文本等等。]]></summary>
         <author>
             <name>Barret李靖的即刻动态</name>
         </author>
@@ -1249,68 +1275,6 @@ storybook init 在项目里加了 2 个目录： .storybook 和 src/stories
 别的地方可能叫做用例或变体，而在 Storybook 里叫做 sto…]]></summary>
         <author>
             <name>zxg_神说要有光</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[现在个人想上架微信小游戏已经这么难了吗...]]></title>
-        <id>https://juejin.cn/post/7299750611921977356</id>
-        <link href="https://juejin.cn/post/7299750611921977356"/>
-        <updated>2023-11-11T05:00:51.000Z</updated>
-        <summary type="html"><![CDATA[点击上方亿元程序员+关注和★星标
-
-引言
-大家好，最近我突然想起来我还有一款微信小游戏还没有上架，于是捣鼓了一天把游戏完善了一下，然后准备提交审核，却发现异常的艰难...
-1.为什么难？
-相信大家都大概知道，自从微信平台宣布
-9月1日起，微信小程序须完成备案后才可上架；若微信小程序已上架，需在2024年3月31日前完成备案，逾期未完成备案将于2024年4月1日起进行清退处理。”
-9月1日后小游戏想要上架，必须要经过备案这一步骤才行。
-
-其实从9月1日到现在已经过去2个月，根据前面了解到，小游戏进行备案，官方预估的时间大概是需要22个工作日。
-
-大家可能都这么想，多了这1个月多的时间，提前做下准备，其实还可以接受。
-但是，事实上好像并没有那么简单。。。
-2.还有哪些变化？
-通过MP后台我们可以发现，当我们点击提交发布的时候，会弹出请先完成备案的弹窗，即使我们的小游戏已经通过了审核，处于审核通过待发布的状态。
-
-点击立即备案，跳转到备案流程，我们可以看见官方预估时间，个人小游戏预计从备案到发布需时30 - 40个工作日，这是什么概念，比前面估计的备案时间还要多18个工作日，18个工作日满打满算需要24天。近一个月的时间。
-
-这个多的近一个月的时间从何而来？
-3.为什么久？
-首先备案之前需要比之前上架小游戏要多准备两份文件。
-第一份就是著作权自我声明。
-
-第二份就是授权书。
-
-不过这不是增加时间的主要，因为除去这两份文件的准备时间，审核时间仅需要1个工作日。
-
-接下来这个就是关键了，游戏内容介绍，这个内容，经常上架小游戏的小伙伴都知道，在9月1日之前基本上是当天提交当天就能够过审的。怎么现在需要20个工作日了？
-
-点击《游戏内容介绍提交指引》，我们可以看到目前官方的反馈是“近期单量较多，会尽快处理哈，耐心等下。”
-
-那么问题来了，为何近期单量剧增？
-4.笔者猜测
-1.不容马虎：小游戏备案是不容马虎的，所以审核时间长达22个工作日，正是如此，为了避免备案审核的堆积，需要将压力提前到前面的内容，即游戏内容审核。
-2.审核严格：为了能够更加顺利地完成备案，游戏内容的审核变得非常地严格。
-3.聪明人扎堆：就好像高速公路堵车效应一样，根据以往经验，想要避免堵车，特意提前或者延后出发，结果一群聪明人堵在路上。为了能够尽快进入备案环节，很多人会把一款游戏的demo或者半成品拿去提审，目的是想节省备案的时间用来开发优化，结果适得其反。
-4.发展迅猛：小游戏飞速发展，越来越多的人想投入到小游戏的开发当中。
-小游戏上架越来越难意味着什么？
-5.引发深思
-首先小游戏上架越来越难成功避免了“蹭热度”的游戏产生，原来每当新事物或者新热点出现时，会有一大批“蹭热度”的游戏争先上架，例如《羊了个羊》火了，会涌现一大批《猪了个猪》，《牛了个牛》。而且前面已发布的游戏想通过修改游戏名字去蹭热度的方式也受到了限制，需要通过微信认证流程改名。
-
-其次就是驱逐劣质游戏，小游戏上线节奏被放慢后，有更多的时间可以去对小游戏进行打磨和调优，着重优化调整游戏细节，或者花更多的时间去做一些运营相关的内容。
-结语
-在哪里可以看到如此清晰的思路，快跟上我的节奏！关注我，和我一起了解游戏行业最新动态，学习游戏开发技巧。
-我是"亿元程序员"，一位有着8年游戏行业经验的主程。在游戏开发中，希望能给到您帮助, 也希望通过您能帮助到大家。
-AD:笔者线上的小游戏《贪吃蛇掌机经典》《填色之旅》《重力迷宫球》大家可以自行点击搜索体验。
-实不相瞒，想要个赞和在看！请把该文章分享给你觉得有需要的其他小伙伴。谢谢！
-推荐专栏：
-和8年游戏主程一起学习设计模式
-8年主程手把手打造Cocos独立游戏开发框架
-从零开始开发贪吃蛇小游戏到上线系列
-游戏开发的技巧、心得、资讯
-点击下方绿色按钮+关注]]></summary>
-        <author>
-            <name>亿元程序员</name>
         </author>
     </entry>
     <entry>
