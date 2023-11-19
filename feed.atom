@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-11-19T09:52:40.788Z</id>
+    <id>urn:2023-11-19T12:55:17.033Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-11-19T09:52:40.788Z</updated>
+    <updated>2023-11-19T12:55:17.033Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -439,18 +439,6 @@ item则是具体渲染的数据
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[《Surviving the Aftermath》]]></title>
-        <id>https://store.epicgames.com/zh-CN/p/surviving-the-aftermath</id>
-        <link href="https://store.epicgames.com/zh-CN/p/surviving-the-aftermath"/>
-        <updated>2023-11-16T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[在末日后的未来世界存活下来并努力繁荣兴盛。资源稀少，但希望犹存！建造出足以防范灾难的终极聚居地，保护你的聚居地居民，在几近废墟的世界中恢复文明。
-
-Free Now to 2023-11-23T16:00:00.000Z]]></summary>
-        <author>
-            <name>Paradox Interactive</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[EARTHLOCK]]></title>
         <id>https://store.epicgames.com/zh-CN/p/earthlock-e7d979</id>
         <link href="https://store.epicgames.com/zh-CN/p/earthlock-e7d979"/>
@@ -568,6 +556,37 @@ Dev.to上的一篇文章汇总了35种不同的针对初学者的学习资源，
 所以，大家赶紧用起来啊。]]></summary>
         <author>
             <name>前端小魔女</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[因为原生，选择一家公司（前端如何防笔试作弊）]]></title>
+        <id>https://juejin.cn/post/7301908233291300900</id>
+        <link href="https://juejin.cn/post/7301908233291300900"/>
+        <updated>2023-11-16T07:56:45.000Z</updated>
+        <summary type="html"><![CDATA[theme: v-green
+highlight: a11y-dark
+也是前几天的笔试题，让我了解和巩固了一些原生js的api。感谢贵公司收留我，自己也会努力提升自己的技术。
+
+如何通过浏览器api调用摄像头，录音设备？
+navigator可以获取当前浏览器的信息。
+navigator.mediaDevices 该对象可提供对相机和麦克风等媒体输入设备的连接访问，也包括屏幕共享。
+navigator.mediaDevices.getUserMedia 会提示用户给予使用媒体输入的许可。可以传入参数指定了请求的媒体类型和相对应的参数。 他会返回一个Promise对象，成功的回调会返回一个流媒体对象mediaStream。
+在低版本浏览器中，我们可以使用URL.createObjectURL(mediaStream)来进行视频预览。但是在高版本浏览器中这种方式被禁止了，我们需要使用vedioDom.srcObject = mediaStream进行预览。
+
+// 想要获取一个最接近 400x400 的相机分辨率
+    const constraints = { audio: true, video: { width: 400, height: 400 } };
+
+    navigator.mediaDevices
+      .getUserMedia(constraints)
+      .then(function (mediaStream) {
+        console.log("me", mediaStream)
+        var video = document.querySelector("video");
+        console.log("%O", video)
+
+        // 旧的浏览器可能没有 srcObject
+      …]]></summary>
+        <author>
+            <name>Spirited_Away</name>
         </author>
     </entry>
     <entry>
@@ -1299,54 +1318,6 @@ const top = element.offs…]]></summary>
         <summary type="html"><![CDATA[打卡打卡打卡～]]></summary>
         <author>
             <name>Simon_He</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[想给组件加上文档？ 试试 Storybook]]></title>
-        <id>https://juejin.cn/post/7299743820434309147</id>
-        <link href="https://juejin.cn/post/7299743820434309147"/>
-        <updated>2023-11-11T14:00:38.000Z</updated>
-        <summary type="html"><![CDATA[大家平时都在写组件，当你写组件库里的组件，或者项目里的一些公共组件的时候，是需要提供文档的。
-这时候我们一般都会用 Storybook。
-Storybook 是非常流行的用来构建组件文档的工具。
-现在有 80k 的 star 了：
-
-那 Storybook 都提供了啥功能呢？
-我们试一下就知道了：
-npx create-react-app --template typescript sb-test
-
-
-用 cra 创建个 react 项目。
-然后进入项目，执行 storybook 的初始化：
-npx storybook@latest init
-
-
-打印的日志告诉你 storybook init 是在你的项目里添加 storybook 的最简单方式。
-执行 npm run storybook，就可以看到这样文档：
-
-这就是 storybook 生成的组件文档。
-这三个组件不是我们自己写的，是 storybook 初始化的时候自带了三个 demo 组件。
-我们可以用它来了解下 storybook 的功能。
-
-storybook init 在项目里加了 2 个目录： .storybook 和 src/stories
-.storybook 下的是配置文件， src/stories 下的是组件。
-比如 Button.tsx 是这样的：
-
-传入几个参数，渲染出一个 button。
-然后 Button.stories.tsx 是这样的：
-
-导出的这几个 Story 类型的对象是啥呢？
-是这个：
-
-也就是 Button 组件传入不同参数的时候渲染的结果。
-我们加一个 Story 试试：
-
-页面多了一个 Button 的类型：
-
-也就是说，Storybook 把同一个组件传入不同 props 的情况，叫做一个 Story。
-别的地方可能叫做用例或变体，而在 Storybook 里叫做 sto…]]></summary>
-        <author>
-            <name>zxg_神说要有光</name>
         </author>
     </entry>
     <entry>

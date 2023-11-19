@@ -137,7 +137,7 @@
           "description": "推荐一个检索和学习论文的强大工具，Aminer，https://www.aminer.cn，它是由清华大学计算机系研发的学术信息挖掘平台，可以很大程度帮助我们降低检索和学习论文的门槛，十分有用。\n如果你有一个明确的研究方向，可以在它的「必读论文」模块中找到对应的优质论文集（如图一），这些内容都是由 AI 初筛 + 学者复核后呈现出来的，可以为自己省去海量的信息挖掘时间。\n你也可以使用它的检索工具，根据具体的关键词找到最新、最热或者最高引用的论文（如图二），在左侧可以根据不同的期刊、顶会对查询结果进行二次过滤；如果 SCI / CCF 的分类不能满足你的需求，你还可以下载一个叫做 easyScholar 的 Chrome 插件，它可以在搜索结果中增加更多的期刊分级（如图三），分级信息可以让我们一眼看出论文的含金量。\nGoogle Scholar 是数据更新效率最高的学术信息挖掘工具，如果你对实时性要求比较高，可以结合 Google 学术工具一起看，也可以直接去各个顶会的官网查看最新 accept paper，非专业研究一般也用不上。\nAminer 还提供了一个 ChatBot 工具（如图四），支持全库对话和单篇对话，全库精选了 600w+ 的优质论文，单篇对话支持在平台论文详情页直接发起，也支持上传 PDF 后跟它交流，背后应该是对接了一个 LLM，理解能力还不错。\n另外，关于 AI 的研究，还推荐订阅 Hugging Face 的 Daily Papers，https://huggingface.co/papers，它也是通过 AI + 人工复核的方式，结合平台热度给用户每日推荐最热/最佳内容，你可以注册一个账号，订阅到自己的邮箱。",
           "link": "https://m.okjike.com/originalPosts/655627aaee2e07f7acc17bb1",
           "publishedOn": "2023-11-16T14:31:06.000Z",
-          "wordCount": 544,
+          "wordCount": 536,
           "title": "发布了: 推荐一个检索和学习论文的强大工具，Aminer，https://www.aminer.cn，它是由清华大学计算机系研发的学术信息挖掘平台，可以很大程度帮助我们降低检索和...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FuqGydNBznI4cHSpYTdy3iqqQrKnv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -650,16 +650,6 @@
       "siteUrl": "https://store.epicgames.com/zh-CN/free-games?lang=zh-CN",
       "articles": [
         {
-          "id": "https://store.epicgames.com/zh-CN/p/surviving-the-aftermath",
-          "author": "Paradox Interactive",
-          "description": "在末日后的未来世界存活下来并努力繁荣兴盛。资源稀少，但希望犹存！建造出足以防范灾难的终极聚居地，保护你的聚居地居民，在几近废墟的世界中恢复文明。\n\nFree Now to 2023-11-23T16:00:00.000Z",
-          "link": "https://store.epicgames.com/zh-CN/p/surviving-the-aftermath",
-          "publishedOn": "2023-11-16T16:00:00.000Z",
-          "wordCount": null,
-          "title": "《Surviving the Aftermath》",
-          "imageUrl": null
-        },
-        {
           "id": "https://store.epicgames.com/zh-CN/p/earthlock-e7d979",
           "author": "Snowcastle Games",
           "description": "别让可爱的卡通艺术风格骗了。这款游戏颇具挑战。日式角色扮演游戏的铁粉们一定会爱上它，休闲玩家则可能想要另作选择。投入时间赏玩，EARTHLOCK 将为你带来深刻的游戏玩法，并考验最具谋略的玩家。\n\nFree Now to 2023-11-23T16:00:00.000Z",
@@ -734,6 +724,16 @@
           "publishedOn": "2023-11-16T10:26:50.000Z",
           "wordCount": 904,
           "title": "白嫖ChatGPT4",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7301908233291300900",
+          "author": "Spirited_Away",
+          "description": "theme: v-green\nhighlight: a11y-dark\n也是前几天的笔试题，让我了解和巩固了一些原生js的api。感谢贵公司收留我，自己也会努力提升自己的技术。\n\n如何通过浏览器api调用摄像头，录音设备？\nnavigator可以获取当前浏览器的信息。\nnavigator.mediaDevices 该对象可提供对相机和麦克风等媒体输入设备的连接访问，也包括屏幕共享。\nnavigator.mediaDevices.getUserMedia 会提示用户给予使用媒体输入的许可。可以传入参数指定了请求的媒体类型和相对应的参数。 他会返回一个Promise对象，成功的回调会返回一个流媒体对象mediaStream。\n在低版本浏览器中，我们可以使用URL.createObjectURL(mediaStream)来进行视频预览。但是在高版本浏览器中这种方式被禁止了，我们需要使用vedioDom.srcObject = mediaStream进行预览。\n\n// 想要获取一个最接近 400x400 的相机分辨率\n    const constraints = { audio: true, video: { width: 400, height: 400 } };\n\n    navigator.mediaDevices\n      .getUserMedia(constraints)\n      .then(function (mediaStream) {\n        console.log(\"me\", mediaStream)\n        var video = document.querySelector(\"video\");\n        console.log(\"%O\", video)\n\n        // 旧的浏览器可能没有 srcObject\n      …",
+          "link": "https://juejin.cn/post/7301908233291300900",
+          "publishedOn": "2023-11-16T07:56:45.000Z",
+          "wordCount": 1736,
+          "title": "因为原生，选择一家公司（前端如何防笔试作弊）",
           "imageUrl": null
         },
         {
@@ -854,16 +854,6 @@
           "publishedOn": "2023-11-12T11:56:56.000Z",
           "wordCount": 1349,
           "title": "总是听说图片懒加载，那你能讲清楚吗？（一）",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7299743820434309147",
-          "author": "zxg_神说要有光",
-          "description": "大家平时都在写组件，当你写组件库里的组件，或者项目里的一些公共组件的时候，是需要提供文档的。\n这时候我们一般都会用 Storybook。\nStorybook 是非常流行的用来构建组件文档的工具。\n现在有 80k 的 star 了：\n\n那 Storybook 都提供了啥功能呢？\n我们试一下就知道了：\nnpx create-react-app --template typescript sb-test\n\n\n用 cra 创建个 react 项目。\n然后进入项目，执行 storybook 的初始化：\nnpx storybook@latest init\n\n\n打印的日志告诉你 storybook init 是在你的项目里添加 storybook 的最简单方式。\n执行 npm run storybook，就可以看到这样文档：\n\n这就是 storybook 生成的组件文档。\n这三个组件不是我们自己写的，是 storybook 初始化的时候自带了三个 demo 组件。\n我们可以用它来了解下 storybook 的功能。\n\nstorybook init 在项目里加了 2 个目录： .storybook 和 src/stories\n.storybook 下的是配置文件， src/stories 下的是组件。\n比如 Button.tsx 是这样的：\n\n传入几个参数，渲染出一个 button。\n然后 Button.stories.tsx 是这样的：\n\n导出的这几个 Story 类型的对象是啥呢？\n是这个：\n\n也就是 Button 组件传入不同参数的时候渲染的结果。\n我们加一个 Story 试试：\n\n页面多了一个 Button 的类型：\n\n也就是说，Storybook 把同一个组件传入不同 props 的情况，叫做一个 Story。\n别的地方可能叫做用例或变体，而在 Storybook 里叫做 sto…",
-          "link": "https://juejin.cn/post/7299743820434309147",
-          "publishedOn": "2023-11-11T14:00:38.000Z",
-          "wordCount": 1387,
-          "title": "想给组件加上文档？ 试试 Storybook",
           "imageUrl": null
         },
         {

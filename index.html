@@ -1130,6 +1130,46 @@ Dev.to上的一篇文章汇总了35种不同的针对初学者的学习资源，
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7301908233291300900"
+                        open
+                      >
+                        <summary class="article-expander__title">因为原生，选择一家公司（前端如何防笔试作弊）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7301908233291300900">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: v-green
+highlight: a11y-dark
+也是前几天的笔试题，让我了解和巩固了一些原生js的api。感谢贵公司收留我，自己也会努力提升自己的技术。
+
+如何通过浏览器api调用摄像头，录音设备？
+navigator可以获取当前浏览器的信息。
+navigator.mediaDevices 该对象可提供对相机和麦克风等媒体输入设备的连接访问，也包括屏幕共享。
+navigator.mediaDevices.getUserMedia 会提示用户给予使用媒体输入的许可。可以传入参数指定了请求的媒体类型和相对应的参数。 他会返回一个Promise对象，成功的回调会返回一个流媒体对象mediaStream。
+在低版本浏览器中，我们可以使用URL.createObjectURL(mediaStream)来进行视频预览。但是在高版本浏览器中这种方式被禁止了，我们需要使用vedioDom.srcObject &#x3D; mediaStream进行预览。
+
+// 想要获取一个最接近 400x400 的相机分辨率
+    const constraints &#x3D; { audio: true, video: { width: 400, height: 400 } };
+
+    navigator.mediaDevices
+      .getUserMedia(constraints)
+      .then(function (mediaStream) {
+        console.log(&quot;me&quot;, mediaStream)
+        var video &#x3D; document.querySelector(&quot;video&quot;);
+        console.log(&quot;%O&quot;, video)
+
+        // 旧的浏览器可能没有 srcObject
+      …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7301574930868879411"
                         open
                       >
@@ -1229,25 +1269,6 @@ theme: devui-blue
                   <a class="source-heading__link" href="https://store.epicgames.com/zh-CN/free-games?lang&#x3D;zh-CN">Open</a>
                 </h3>
                 <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://store.epicgames.com/zh-CN/p/surviving-the-aftermath"
-                        open
-                      >
-                        <summary class="article-expander__title">《Surviving the Aftermath》</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://store.epicgames.com/zh-CN/p/surviving-the-aftermath">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>在末日后的未来世界存活下来并努力繁荣兴盛。资源稀少，但希望犹存！建造出足以防范灾难的终极聚居地，保护你的聚居地居民，在几近废墟的世界中恢复文明。
-
-Free Now to 2023-11-23T16:00:00.000Z</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -2438,91 +2459,6 @@ const top &#x3D; element.offs…</span>
                             <span class="media-object__text">
                               <span>打卡打卡打卡～</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-11 datetime="2023-11-11T14:00:38.000Z">2023-11-11</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-11 datetime="2023-11-11T14:00:38.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7299743820434309147"
-                        open
-                      >
-                        <summary class="article-expander__title">想给组件加上文档？ 试试 Storybook</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7299743820434309147">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>大家平时都在写组件，当你写组件库里的组件，或者项目里的一些公共组件的时候，是需要提供文档的。
-这时候我们一般都会用 Storybook。
-Storybook 是非常流行的用来构建组件文档的工具。
-现在有 80k 的 star 了：
-
-那 Storybook 都提供了啥功能呢？
-我们试一下就知道了：
-npx create-react-app --template typescript sb-test
-
-
-用 cra 创建个 react 项目。
-然后进入项目，执行 storybook 的初始化：
-npx storybook@latest init
-
-
-打印的日志告诉你 storybook init 是在你的项目里添加 storybook 的最简单方式。
-执行 npm run storybook，就可以看到这样文档：
-
-这就是 storybook 生成的组件文档。
-这三个组件不是我们自己写的，是 storybook 初始化的时候自带了三个 demo 组件。
-我们可以用它来了解下 storybook 的功能。
-
-storybook init 在项目里加了 2 个目录： .storybook 和 src/stories
-.storybook 下的是配置文件， src/stories 下的是组件。
-比如 Button.tsx 是这样的：
-
-传入几个参数，渲染出一个 button。
-然后 Button.stories.tsx 是这样的：
-
-导出的这几个 Story 类型的对象是啥呢？
-是这个：
-
-也就是 Button 组件传入不同参数的时候渲染的结果。
-我们加一个 Story 试试：
-
-页面多了一个 Button 的类型：
-
-也就是说，Storybook 把同一个组件传入不同 props 的情况，叫做一个 Story。
-别的地方可能叫做用例或变体，而在 Storybook 里叫做 sto…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4453,8 +4389,8 @@ https://github.com/devlive-community/incubator-notepad/releases/tag/1.0.0</span>
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6919733894">
-        <time id="build-timestamp" datetime="2023-11-19T09:52:40.768Z">2023-11-19T09:52:40.768Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6920613423">
+        <time id="build-timestamp" datetime="2023-11-19T12:55:17.013Z">2023-11-19T12:55:17.013Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
