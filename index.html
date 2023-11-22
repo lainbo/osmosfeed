@@ -1083,6 +1083,49 @@ va…</span>
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7302724955699822631"
+                        open
+                      >
+                        <summary class="article-expander__title">「前端添加水印」你真的了解全面吗？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7302724955699822631">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: juejin
+
+背景
+在古茗日常业务中，经常会给加盟商下发各种资料，例如：奶茶的配方、设备的清洗、卫生的标准等等等。这些资料都是一些内部资料，从信息安全维度不能被泄露和盗取出去。所以会给下发的资料加上水印。这些资料可能是纯文本，也可能是文本加图片的。因此，我们要做好以下两个方面：
+通过对页面增加水印，可以从系统级别防止别人盗取我们的页面信息
+通过对单独的图片加水印 - 防止图片保存时没有水印
+页面水印
+方案设计
+实现页面水印的方式有很多，可以看一些常用页面加水印的方案，具体如下：
+方案一：fixed 定位的 div 元素，重复渲染 div 元素来添加水印。会创建很多无关的 DOM 元素
+方案二：fixed 定位 canvas 元素，重复填充水印。始终会创建一个无关的 canvas 元素
+方案三：canvas + 伪类。不会创建无关元素，且兼容性好
+方案四：svg + 伪类。不会创建无关元素，但兼容性略差于 canvas
+这些方案，都有一个通用的缺点，那就是将元素删掉，或者将类名删掉，都能去除页面水印。
+基于实现成本和安全性维度的考虑，最终方案选型：方案三，同时增加了通过MutationObserver - Web API 接口参考 | MDN 解决了删除类名导致水印删除的问题。
+核心功能点：
+把签名信息，通过 Canvas 生成背景图
+利用伪类将背景图添加到需要生成水印的区域上
+通过 MutationObserver , 解决了删除类名导致水印删除的问题
+代码实现
+把签名信息，通过Canvas生成背景图
+利用 Canvas 来绘制背景图，背景内容为水印的内容
+通过 toDataURL 将 Canvas 转换成图片，格式为 image/png
+interface IImgOptions {
+  content: string[]; // 水印的内容，可传递多个水…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -2314,25 +2357,6 @@ theme: devui-blue
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://store.epicgames.com/zh-CN/p/surviving-the-aftermath"
-                        open
-                      >
-                        <summary class="article-expander__title">《Surviving the Aftermath》</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://store.epicgames.com/zh-CN/p/surviving-the-aftermath">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>在末日后的未来世界存活下来并努力繁荣兴盛。资源稀少，但希望犹存！建造出足以防范灾难的终极聚居地，保护你的聚居地居民，在几近废墟的世界中恢复文明。
-
-Free Now to 2023-11-23T16:00:00.000Z</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://store.epicgames.com/zh-CN/p/earthlock-e7d979"
                         open
                       >
@@ -2921,50 +2945,6 @@ scene.add(ambientLight)
 directionalLight &#x3D; new THREE.DirectionalLight(0xffffff, 40);
 directionalLight.position.copy(camera.posi…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;10
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7301516165384929318"
-                        open
-                      >
-                        <summary class="article-expander__title">国际化终极方案——全自动翻译国际化（支持一键翻译多国语言，不入侵业务代码）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7301516165384929318">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: cyanosis
-前言
-Hi~大家好，今天给大家介绍一个关于国际化的vite插件 vite-plugin-auto-i18n ，一个自动翻译的关于i18n的vite插件。
-做过国际化的朋友都知道，国际化通常都是用 i18n 手动去项目中替换对应的文字，然后在项目里维护一个国际化配置map实现的，这种方式非常低效，一个大型项目可能要测试产品一起工作几个星期才行。有没有什么办法可以无需更改业务代码又能自动生成翻译呢？
-答案是有的，就是这个基于谷歌翻译api和babel的自动翻译插件————vite-plugin-auto-i18n
-注：插件基于babel去解析页面中的目标字符，然后统一翻译，翻译结束之后会生成一个json的配置文件，如果认为谷歌翻译不准确，就可以通过修改json文件的内容更换翻译内容。而且翻译的key是基于hash算法生成类似对称加密，相同的字符key都是一样的，所以不会反复翻译。同时翻译是统一收集字符之后再组装翻译文本，翻译之后然后切割翻译内容写入json配置，不用担心发出大量翻译请求。
-感兴趣的朋友希望可以跑一下demo，跑完就知道这个工具的强大了
-介绍
-基于谷歌翻译api的vite自动翻译插件。
-支持框架：Vue2、Vue3、React
-支持文件类型：js, ts, jsx, tsx, vue
-插件中文readme：https://www.npmjs.com/package/vite-plugin-auto-i18n?activeTab&#x3D;code
-特点：
-一键翻译
-无需改动业务代码
-支持新增语言自动补全配置
-支持翻译多国语言
-使用
-安装
-npm i vite-plugin-auto-i18n -D # yarn add vite-plugin-auto-i18n -D
-
-演示
-
-演示图对应业务源码 (部分）
-
-可以看到通过这个插件，无需改动业…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4618,8 +4598,8 @@ Case 3：小金同学在本次活动中实付 456 元（≥399 元），可获�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6955587911">
-        <time id="build-timestamp" datetime="2023-11-22T09:52:59.862Z">2023-11-22T09:52:59.862Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6957591727">
+        <time id="build-timestamp" datetime="2023-11-22T12:57:07.622Z">2023-11-22T12:57:07.622Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

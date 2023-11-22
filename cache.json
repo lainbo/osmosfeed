@@ -23,7 +23,7 @@
           "description": "滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/",
           "publishedOn": "2023-11-21T16:14:41.000Z",
-          "wordCount": 1288,
+          "wordCount": 1289,
           "title": "cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "剪映中的视频特效虽多，其实就两类，一类改变原始像素，一类叠加混合，本文通过精简的源码和精致的案例给大家介绍具体如何实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/video-effect-js-filter-pixijs-webgl-3d/",
           "publishedOn": "2023-11-19T15:12:20.000Z",
-          "wordCount": 1229,
+          "wordCount": 1231,
           "title": "剪映APP的视频特效如何在Web中JS实现",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "应该是国内第一篇专门介绍用mp4box.js和VideoDecoder方法解码MP4视频序列帧的文章了。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/mp4box-js-webcodecs-mp4-canvas/",
           "publishedOn": "2023-11-14T16:37:18.000Z",
-          "wordCount": 1231,
+          "wordCount": 1242,
           "title": "mp4box.js加WebCodecs 解码MP4视频帧并渲染",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "想要提高网页的加载体验，其实有个非常简单且实用的技巧，那就是改变请求资源的加载优先级，这也可以改变？没错！",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/img-js-preload-fetch-priority/",
           "publishedOn": "2023-10-29T15:55:41.000Z",
-          "wordCount": 953,
+          "wordCount": 955,
           "title": "聊聊Web网页中资源加载的优先级",
           "imageUrl": null
         }
@@ -800,16 +800,6 @@
       "siteUrl": "https://store.epicgames.com/zh-CN/free-games?lang=zh-CN",
       "articles": [
         {
-          "id": "https://store.epicgames.com/zh-CN/p/surviving-the-aftermath",
-          "author": "Paradox Interactive",
-          "description": "在末日后的未来世界存活下来并努力繁荣兴盛。资源稀少，但希望犹存！建造出足以防范灾难的终极聚居地，保护你的聚居地居民，在几近废墟的世界中恢复文明。\n\nFree Now to 2023-11-23T16:00:00.000Z",
-          "link": "https://store.epicgames.com/zh-CN/p/surviving-the-aftermath",
-          "publishedOn": "2023-11-16T16:00:00.000Z",
-          "wordCount": null,
-          "title": "《Surviving the Aftermath》",
-          "imageUrl": null
-        },
-        {
           "id": "https://store.epicgames.com/zh-CN/p/earthlock-e7d979",
           "author": "Snowcastle Games",
           "description": "别让可爱的卡通艺术风格骗了。这款游戏颇具挑战。日式角色扮演游戏的铁粉们一定会爱上它，休闲玩家则可能想要另作选择。投入时间赏玩，EARTHLOCK 将为你带来深刻的游戏玩法，并考验最具谋略的玩家。\n\nFree Now to 2023-11-23T16:00:00.000Z",
@@ -844,6 +834,16 @@
           "publishedOn": "2023-11-20T01:40:55.000Z",
           "wordCount": 1681,
           "title": "手撸 Electron 自动更新，再繁琐也要搞懂它",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7302724955699822631",
+          "author": "古茗前端团队",
+          "description": "theme: juejin\n\n背景\n在古茗日常业务中，经常会给加盟商下发各种资料，例如：奶茶的配方、设备的清洗、卫生的标准等等等。这些资料都是一些内部资料，从信息安全维度不能被泄露和盗取出去。所以会给下发的资料加上水印。这些资料可能是纯文本，也可能是文本加图片的。因此，我们要做好以下两个方面：\n通过对页面增加水印，可以从系统级别防止别人盗取我们的页面信息\n通过对单独的图片加水印 - 防止图片保存时没有水印\n页面水印\n方案设计\n实现页面水印的方式有很多，可以看一些常用页面加水印的方案，具体如下：\n方案一：fixed 定位的 div 元素，重复渲染 div 元素来添加水印。会创建很多无关的 DOM 元素\n方案二：fixed 定位 canvas 元素，重复填充水印。始终会创建一个无关的 canvas 元素\n方案三：canvas + 伪类。不会创建无关元素，且兼容性好\n方案四：svg + 伪类。不会创建无关元素，但兼容性略差于 canvas\n这些方案，都有一个通用的缺点，那就是将元素删掉，或者将类名删掉，都能去除页面水印。\n基于实现成本和安全性维度的考虑，最终方案选型：方案三，同时增加了通过MutationObserver - Web API 接口参考 | MDN 解决了删除类名导致水印删除的问题。\n核心功能点：\n把签名信息，通过 Canvas 生成背景图\n利用伪类将背景图添加到需要生成水印的区域上\n通过 MutationObserver , 解决了删除类名导致水印删除的问题\n代码实现\n把签名信息，通过Canvas生成背景图\n利用 Canvas 来绘制背景图，背景内容为水印的内容\n通过 toDataURL 将 Canvas 转换成图片，格式为 image/png\ninterface IImgOptions {\n  content: string[]; // 水印的内容，可传递多个水…",
+          "link": "https://juejin.cn/post/7302724955699822631",
+          "publishedOn": "2023-11-20T00:18:52.000Z",
+          "wordCount": 3330,
+          "title": "「前端添加水印」你真的了解全面吗？",
           "imageUrl": null
         },
         {
@@ -1004,16 +1004,6 @@
           "publishedOn": "2023-11-15T10:12:07.000Z",
           "wordCount": 2953,
           "title": "threejs渲染高级感可视化涡轮模型",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7301516165384929318",
-          "author": "欧文总",
-          "description": "theme: cyanosis\n前言\nHi~大家好，今天给大家介绍一个关于国际化的vite插件 vite-plugin-auto-i18n ，一个自动翻译的关于i18n的vite插件。\n做过国际化的朋友都知道，国际化通常都是用 i18n 手动去项目中替换对应的文字，然后在项目里维护一个国际化配置map实现的，这种方式非常低效，一个大型项目可能要测试产品一起工作几个星期才行。有没有什么办法可以无需更改业务代码又能自动生成翻译呢？\n答案是有的，就是这个基于谷歌翻译api和babel的自动翻译插件————vite-plugin-auto-i18n\n注：插件基于babel去解析页面中的目标字符，然后统一翻译，翻译结束之后会生成一个json的配置文件，如果认为谷歌翻译不准确，就可以通过修改json文件的内容更换翻译内容。而且翻译的key是基于hash算法生成类似对称加密，相同的字符key都是一样的，所以不会反复翻译。同时翻译是统一收集字符之后再组装翻译文本，翻译之后然后切割翻译内容写入json配置，不用担心发出大量翻译请求。\n感兴趣的朋友希望可以跑一下demo，跑完就知道这个工具的强大了\n介绍\n基于谷歌翻译api的vite自动翻译插件。\n支持框架：Vue2、Vue3、React\n支持文件类型：js, ts, jsx, tsx, vue\n插件中文readme：https://www.npmjs.com/package/vite-plugin-auto-i18n?activeTab=code\n特点：\n一键翻译\n无需改动业务代码\n支持新增语言自动补全配置\n支持翻译多国语言\n使用\n安装\nnpm i vite-plugin-auto-i18n -D # yarn add vite-plugin-auto-i18n -D\n\n演示\n\n演示图对应业务源码 (部分）\n\n可以看到通过这个插件，无需改动业…",
-          "link": "https://juejin.cn/post/7301516165384929318",
-          "publishedOn": "2023-11-15T10:03:55.000Z",
-          "wordCount": 1673,
-          "title": "国际化终极方案——全自动翻译国际化（支持一键翻译多国语言，不入侵业务代码）",
           "imageUrl": null
         },
         {
