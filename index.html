@@ -51,6 +51,83 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-22 datetime="2023-11-22T02:31:32.000Z">2023-11-22</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-22 datetime="2023-11-22T02:31:32.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Barret李靖的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/655d680487a8e03bd1530190"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 一般论文中用到的数据集都要公开出处的，例如 Distil-Whisper 中用到的是下图的数据集，2w 多小时的音频。 OpenAI 开源的 Whisper 属于是开了先河了，论...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/655d680487a8e03bd1530190">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fv98lVCzwWb3f9jZUlj7rRWoHGvcv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>一般论文中用到的数据集都要公开出处的，例如 Distil-Whisper 中用到的是下图的数据集，2w 多小时的音频。
+OpenAI 开源的 Whisper 属于是开了先河了，论文里头的数据集，有 68w 小时的音频素材，没有提供出处。学术成果卓著，但是行为还是有争议的。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/655d60e6c185872f7fc87f7c"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: Distil-Whisper：让语音识别的速度提高 5.8 倍，参数减少 51%，准确度保持在 99%。 Whisper 在语音识别方面表现卓著，但是它有一个明显的缺点：训练出来...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/655d60e6c185872f7fc87f7c">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FvtDLTPvTEuvTasbJdEBKjvXYRiU?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Distil-Whisper：让语音识别的速度提高 5.8 倍，参数减少 51%，准确度保持在 99%。
+Whisper 在语音识别方面表现卓著，但是它有一个明显的缺点：训练出来的小模型支持的语言比较少，而大模型推理速度又很慢。如果你有海量的数据需要处理，或者对实时性要求略高，那使用 Whisper 可能会让你比较头疼。
+你可以使用工程手段来加速推理，例如将语音分片后并发处理然后合并结果，但这里涉及到本地计算资源瓶颈的问题，以及合并分片时容错处理的问题，工程复杂度比较高。
+《Distil-Whisper: Robust Knowledge Distillation via Large-Scale Pseudo Labelling
+》，https://arxiv.org/abs/2311.00430，这篇文论提到了一个优化方案，它使用 Whisper 的 Large-v2 model 生成了一系列的 soft targets（也就是概率分布），然后复制 Whisper 网络的第一层和最后一层解码器，最后生成了一个更小、更快效果更好的蒸馏模型 Distil-Whisper。论文数据写的是：速度提高了 5.8 倍，参数减少了 51%，准确度保持在 99%。
+这个模型的效果之所以不错，主要还是得益于训练数据的完备，它结合了九个公开可用的语音识别数据集，合并后包含 21170 小时的语音数据，涵盖超过 18260 名说话者和 10 个不同的领域；自从 Whisper 大力出奇迹（它从互联网爬取了 68w 小时的数据，未公开）以后，相信后续语音领域的论文都会配置更庞大的数据集。
+Distil-Whisper 目前开源在 Hugging Face 上，模型地址：https://huggingface.co/distil-whisper/distil-large-v2，同时还提供了一个可在线测试的 Demo：https://huggingface.co/spaces/Xenova/distil-whisper-web，这个 Demo 会把模型下载到本地，然后通过 WebGPU 直接在网页上跑起来，测试了下效果，还是挺不错的。
+目前仅支持英文，如果想让它支持中文，需要使用同样海量的中文语料数据，重新做一次知识蒸馏，但我觉得即便是这样做，效果也不一定好，因为 Whisper 本身对中文、韩语等支持就不太优秀，这个信息可以从 Whisper 的论文中找到数据支撑。
+下面这个视频是 Whisper 和 Distil-Whisper 的对比效果：</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-21 datetime="2023-11-21T16:59:25.000Z">2023-11-21</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-21 datetime="2023-11-21T16:59:25.000Z"></time>
           </button>
@@ -629,48 +706,6 @@ wget --random-wait -r -p -e robots&#x3D;off -U mozilla Website_URL ​​​
 二十多年过去，前端技术不断拓展自己的边界，有一个论坛叫做 D2（Mobile Developer &amp; Frontend Developer Technology Conference），从 2007 年开始，一直记录着整个前端技术的演进和变化。在 Github 找到了一份厚重的历史沉淀，https://github.com/d2forum，它记录了过去 17 年里每一届 D2 的主题介绍和演讲 PPT。
 今年 D2 论坛重新搬到了线下，主题是「立新」，https://d2.alibabatech.com，它包括几个核心主题：工程&amp;研发、创新体验、原生技术&amp;内核、端云协同等，感兴趣的朋友可以报名看一看，在日趋成熟的前端行业，大家探索的方向发生了哪些变化，同时，又有了哪些新的机会。
 据我所知，现在很大公司都已经取消了“前端工程师”这个岗位 title，随之而来的是端工程师、产品工程师等，岗位命名的变化也意味着用人单位的要求发生了一些变化，你可以在 D2 设置的开放沙龙中找到一些答案，同时也可以提交自己对这个行业的疑惑，都有机会被放到沙龙上进行圆桌交流：https://survey.taobao.com/apps/zhiliao/PhygVk9mM</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/655b3a0228560066731d66a9"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: screenshot-to-code， https://github.com/abi/screenshot-to-code，这个项目演示了，如何使用 GPT-4 Vision 和 DALL-E 3 将设计稿/网页截图转换成源码...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/655b3a0228560066731d66a9">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FqvUcm8ag_8gxhK5K5cF9c-tXrYYv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>screenshot-to-code， https://github.com/abi/screenshot-to-code，这个项目演示了，如何使用 GPT-4 Vision 和 DALL-E 3 将设计稿/网页截图转换成源码（HTML + Tailwind CSS），还原度非常高。
-本来以为项目做了很多工程化的工作来优化生成结果，扒了下源码，没想到 Prompt 如此简单（如图二）。也就是说，使用 ChatGPT 已经可以完全胜任切图工作了，效率提升 1000x。
-为了让大家可以直接玩耍，作者还开发了一个网页，填写自己的 OpenAI Key，就可以体验“截图转代码”的整个过程了：https://picoapps.xyz/free-tools/screenshot-to-code</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/655abb5cee2e07f7ac184d0d"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 一件事情放到心里，三天不删除就会变成一种负担，对于能够及时处理的任务，花5 到10分钟快速解决，这也是 GTD 中提到的一个要点，不要塞满你的 todolist...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/655abb5cee2e07f7ac184d0d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>一件事情放到心里，三天不删除就会变成一种负担，对于能够及时处理的任务，花5 到10分钟快速解决，这也是 GTD 中提到的一个要点，不要塞满你的 todolist。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -2182,6 +2217,25 @@ theme: devui-blue
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://store.epicgames.com/zh-CN/p/surviving-the-aftermath"
+                        open
+                      >
+                        <summary class="article-expander__title">《Surviving the Aftermath》</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://store.epicgames.com/zh-CN/p/surviving-the-aftermath">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>在末日后的未来世界存活下来并努力繁荣兴盛。资源稀少，但希望犹存！建造出足以防范灾难的终极聚居地，保护你的聚居地居民，在几近废墟的世界中恢复文明。
+
+Free Now to 2023-11-23T16:00:00.000Z</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://store.epicgames.com/zh-CN/p/earthlock-e7d979"
                         open
                       >
@@ -2813,7 +2867,7 @@ npm i vite-plugin-auto-i18n -D # yarn add vite-plugin-auto-i18n -D
 演示图对应业务源码 (部分）
 
 可以看到通过这个插件，无需改动业…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4225,7 +4279,7 @@ Case 3：小金同学在本次活动中实付 456 元（≥399 元），可获�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>[7073670907851440160#新人报道#]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4486,8 +4540,8 @@ Case 3：小金同学在本次活动中实付 456 元（≥399 元），可获�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6951557028">
-        <time id="build-timestamp" datetime="2023-11-22T01:15:37.158Z">2023-11-22T01:15:37.158Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6952642847">
+        <time id="build-timestamp" datetime="2023-11-22T03:53:11.079Z">2023-11-22T03:53:11.079Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
