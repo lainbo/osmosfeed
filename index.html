@@ -51,8 +51,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-23 datetime="2023-11-23T02:44:01.000Z">2023-11-23</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-23 datetime="2023-11-23T02:44:01.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-23 datetime="2023-11-23T03:38:12.000Z">2023-11-23</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-23 datetime="2023-11-23T03:38:12.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -67,6 +67,29 @@
                   <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/655ec924c0f0b2f92d45308f"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 《向量数据库》，https://guangzhengli.com/blog/zh/vector-database/，这是一篇值得阅读的长文，它介绍了向量数据库的方方面面，包括 Vector Embedding...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/655ec924c0f0b2f92d45308f">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fn9liHBMQPF3N4FBIWh-OTvXS-XTv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>《向量数据库》，https://guangzhengli.com/blog/zh/vector-database/，这是一篇值得阅读的长文，它介绍了向量数据库的方方面面，包括 Vector Embeddings、Similarity Search、Similarity Measurement、Filtering 等等，单纯从实现角度来看，技术复杂度并不高。
+短短几个月，各大数据库厂商也增加了对向量的支持，https://github.com/openai/openai-cookbook/tree/main/examples/vector_databases，可以在这篇 OpenAI 写的文档里找到各自对应的代码参考。
+但随着 LLM 底层能力的提升，如今的 ChatGPT 已经支持了 128k 的上下文，而且在 GPTs 中也默认提供了检索能力，这波操作，针对大部分需求场景来说，可以直接免除对向量数据库的调用了。随之而来的，也是向量数据库风投的“降温”。
+《向量数据库凉了吗？》，https://mp.weixin.qq.com/s/0eBZ4zyX6XjBQO0GqlANnw，这篇文章给出了一个观点：“专用向量数据库陷入了一个死局之中：小需求 OpenAI 亲自下场解决了，标准需求被加装向量扩展的现有成熟数据库抢占，超大需求也几乎没什么实现的门槛。留给专用向量数据库的生态位也许能足以支持一家专用向量数据库内核厂商活下来，但想做成一个产业是不可能了。”，感兴趣的也可以读一读。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -894,28 +917,6 @@ wget --random-wait -r -p -e robots&#x3D;off -U mozilla Website_URL ​​​
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/655c08057c074abd873e06aa"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 之前简单写了一个 cloudflare-proxy， https://github.com/barretlee/cloudflare-proxy，来解决ChatGPT 客户端访问 api.openai.com 时被墙的问题，现在...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/655c08057c074abd873e06aa">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FrCVAIOgyptlxsvv5MV_AxrXS88jv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>之前简单写了一个 cloudflare-proxy， https://github.com/barretlee/cloudflare-proxy，来解决ChatGPT 客户端访问 api.openai.com 时被墙的问题，现在不用这么麻烦了，Cloudflare 自己推出了 AI Gateway。
-只需要点击两下，它就会帮你创建出一个 AI 网关，支持对接到 OpenAI/Azure/HuggingFace/Replicate 等等 LLM Service，并且提供了缓存、速率限制以及请求重试、模型回退等功能，每次调用都会详细记录，方便异常时进行溯源，算是在提供代理的同时，对 AI 接口调用又增加了一层保护锁🔐。
-配置好以后，它会提供一个格式为 h++ps://gateway.ai.cloudflare.com/v1/ACCOUNT_TAG/GATEWAY 的 API 网关，在你的 ChatBot 客户端或者代码程序中，替换掉 api.openai.com 即可正常使用。看到 OpenCat 已经支持了，👍🏻</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -1239,6 +1240,169 @@ function setTokens(data) {
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7303392509664247835"
+                        open
+                      >
+                        <summary class="article-expander__title">为什么没有人能讲清楚 BFC？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7303392509664247835">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: vuepress
+highlight: monokai
+一、你看得懂权威的解释吗？
+1. CSS 规范中对 BFC 的描述
+CSS 规范(英文) | 中文翻译
+浮动，绝对定位的元素，非块盒的块容器（例如inline-blocks，table-cells和table-captions），以及’overflow’不为’visible’的块盒（当该值已被传播到视口时除外（except when that value has been propagated to the viewport））会为其内容建立新的块格式化上下文
+在一个块格式化上下文中，盒在垂直方向一个接一个地放置，从包含块的顶部开始。两个兄弟盒之间的垂直距离由&#x27;margin&#x27;属性决定。同一个块格式化上下文中的相邻块级盒之间的垂直外边距会合并
+在一个块格式化上下文中，每个盒的左外边界（left outer edge）挨着包含块的左外边界（对于从右向左的格式化，右外边界挨着）。即使存在浮动（尽管一个盒的行框可能会因为浮动而收缩 译注：环绕浮动元素放置的行框比正常的行短一些），这也成立。除非该盒建立了一个新的块格式化上下文（这种情况下，该盒自身可能会因为浮动变窄）
+2. MDN 对 BFC 的描述
+MDN链接
+区块格式化上下文（Block Formatting Context，BFC）是 Web 页面的可视 CSS 渲染的一部分，是块级盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。
+下列方式会创建块格式化上下文：
+文档的根元素（
+）。
+浮动元素（即 float 值不为 none 的元素）。
+绝对定位元素（position 值为 absolute 或 fixed 的元素）。
+行内块元素（display 值为 inline-block 的元素）。
+表格单元格（display 值为 table…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7302965547087298601"
+                        open
+                      >
+                        <summary class="article-expander__title">TensorFlow.js，让你的应用更加高级，更具逼格</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7302965547087298601">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: cyanosis
+哦哦哦，最近，又有一个新词蹦进俺这本就不大的脑里，并在脑子里来回转圈，在好奇心的促使下，我开始试着去了解了一下它，那它究竟是什么呢，标题已经告诉你答案了，TensorFlow.js。
+可能会有人问了：TensorFlow.js 不是早就推出了吗，咋现在才知道。俺吧，天生脑子就不太好，学东西就慢，对知识这种东西有选择性障碍，这样解释你可还满意😔。
+
+唠叨唠叨
+TensorFlow 对于学习前端的应该比较陌生，它主要是用在人工智能领域的，俺在网上找了一篇文章TensorFlow 简介_tensorflow简介-CSDN博客，帮助你简单理解 TensorFlow 是干啥的，其实吧，这东西本来是跟咱们干前端的是毫无关系的，但谁知道，前端都是卷王，一个比一个能卷。就在2018， TensorFlow 开发者峰会上，TensorFlow 宣布重大更新：增加支持JavaScript，并推出开源库 TensorFlow.js ，用户可以完全在浏览器定义、训练和运行机器学习模型。好家伙，这下，跟咱们前端就有关系了（俺只能说，谷歌，你是懂得卷死前端滴😭）。
+TensorFlow.js 相当于把 TensorFlow 中的一些核心功能移植到了JavaScript中去，它主要是可以应用在开发一些比较轻量级的前端应用上的一些小的功能模块。
+啥是TensorFlow.js
+TensorFlow.js(tfjs) 是一个用于在浏览器或 Node.js 中创建、训练和部署机器学习模型的 JavaScript 库，由 Nikhil Thorat 和 Daniel Smilkov 在谷歌创建，最初名为 Deeplearn.js，2018 年被合并到 TensorFlow 团队，更名为 TensorFlow.js。
+它能在前端开发上干啥用
+运行模型
+它可以在我们的浏览器上运行…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7302724955700264999"
+                        open
+                      >
+                        <summary class="article-expander__title">手撸 Electron 自动更新，再繁琐也要搞懂它</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7302724955700264999">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>大家好，我是杨成功。
+Electron 的自动更新不会像 React Native 一样直接下载 Web 代码静默更新，因为它还有主进程（Node.js）代码，因此需要走安装流程。
+在 Electron 中，使用第三方包 electron-updater 来实现自动更新的功能。
+📣 📣 我的新书《前端开发实战派》快要出版了，在公众号精选文章 《我写了一本书》下评论，我会选择 3 位朋友赠书。
+为什么不用 autoUpdater？
+如果细看 Electron 文档，会发现官方提供了一个 autoUpdater 功能来实现自动更新，如图：
+
+相比 autoUpdater，第三方包 electron-updater 有以下优势：
+不需要搭建专门的更新服务（如 Hazel、Nuts 等）。
+同时支持 macOS 和 Windows 签名。
+支持获取下载进度，等等。
+最主要的优势还是支持自定义更新服务。公司发布新版本安装包，上传到自己的静态服务器最方便，而不是还要再搭建一个专门的更新服务。
+当然获取下载进度也很重要，否则用户干等着，体验非常差。后面我们会实现下载进度提示。
+接入 electron-updater 并检测更新
+（1）安装 electron-updater，命令如下：
+$ yarn add electron-updater
+
+（2）新建 update.js 文件，在该文件中编写更新逻辑。
+定义一个 checkUpdate() 方法，在该方法中执行 autoUpdater.checkForUpdatesAndNotify() 来检测是否有新版本。
+当更新完成后，执行 autoUpdater.quitAndInstall() 方法来安装更新后的应用包。代码如下：
+const { autoUpdater } &#x3D; require(&#x27;electron-updater&#x27;);
+va…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7302724955699822631"
+                        open
+                      >
+                        <summary class="article-expander__title">「前端添加水印」你真的了解全面吗？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7302724955699822631">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: juejin
+
+背景
+在古茗日常业务中，经常会给加盟商下发各种资料，例如：奶茶的配方、设备的清洗、卫生的标准等等等。这些资料都是一些内部资料，从信息安全维度不能被泄露和盗取出去。所以会给下发的资料加上水印。这些资料可能是纯文本，也可能是文本加图片的。因此，我们要做好以下两个方面：
+通过对页面增加水印，可以从系统级别防止别人盗取我们的页面信息
+通过对单独的图片加水印 - 防止图片保存时没有水印
+页面水印
+方案设计
+实现页面水印的方式有很多，可以看一些常用页面加水印的方案，具体如下：
+方案一：fixed 定位的 div 元素，重复渲染 div 元素来添加水印。会创建很多无关的 DOM 元素
+方案二：fixed 定位 canvas 元素，重复填充水印。始终会创建一个无关的 canvas 元素
+方案三：canvas + 伪类。不会创建无关元素，且兼容性好
+方案四：svg + 伪类。不会创建无关元素，但兼容性略差于 canvas
+这些方案，都有一个通用的缺点，那就是将元素删掉，或者将类名删掉，都能去除页面水印。
+基于实现成本和安全性维度的考虑，最终方案选型：方案三，同时增加了通过MutationObserver - Web API 接口参考 | MDN 解决了删除类名导致水印删除的问题。
+核心功能点：
+把签名信息，通过 Canvas 生成背景图
+利用伪类将背景图添加到需要生成水印的区域上
+通过 MutationObserver , 解决了删除类名导致水印删除的问题
+代码实现
+把签名信息，通过Canvas生成背景图
+利用 Canvas 来绘制背景图，背景内容为水印的内容
+通过 toDataURL 将 Canvas 转换成图片，格式为 image/png
+interface IImgOptions {
+  content: string[]; // 水印的内容，可传递多个水…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >李继刚的即刻动态</button>
                   <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
                 </h3>
@@ -1390,133 +1554,6 @@ function setTokens(data) {
                             <span class="media-object__text">
                               <span>JYM想入手一台二手mac book作为开发机，有推荐的配置吗？，官网的新机太贵了，个人觉得它不值那个价格（其实是买不起[流泪]）</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7302965547087298601"
-                        open
-                      >
-                        <summary class="article-expander__title">TensorFlow.js，让你的应用更加高级，更具逼格</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7302965547087298601">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: cyanosis
-哦哦哦，最近，又有一个新词蹦进俺这本就不大的脑里，并在脑子里来回转圈，在好奇心的促使下，我开始试着去了解了一下它，那它究竟是什么呢，标题已经告诉你答案了，TensorFlow.js。
-可能会有人问了：TensorFlow.js 不是早就推出了吗，咋现在才知道。俺吧，天生脑子就不太好，学东西就慢，对知识这种东西有选择性障碍，这样解释你可还满意😔。
-
-唠叨唠叨
-TensorFlow 对于学习前端的应该比较陌生，它主要是用在人工智能领域的，俺在网上找了一篇文章TensorFlow 简介_tensorflow简介-CSDN博客，帮助你简单理解 TensorFlow 是干啥的，其实吧，这东西本来是跟咱们干前端的是毫无关系的，但谁知道，前端都是卷王，一个比一个能卷。就在2018， TensorFlow 开发者峰会上，TensorFlow 宣布重大更新：增加支持JavaScript，并推出开源库 TensorFlow.js ，用户可以完全在浏览器定义、训练和运行机器学习模型。好家伙，这下，跟咱们前端就有关系了（俺只能说，谷歌，你是懂得卷死前端滴😭）。
-TensorFlow.js 相当于把 TensorFlow 中的一些核心功能移植到了JavaScript中去，它主要是可以应用在开发一些比较轻量级的前端应用上的一些小的功能模块。
-啥是TensorFlow.js
-TensorFlow.js(tfjs) 是一个用于在浏览器或 Node.js 中创建、训练和部署机器学习模型的 JavaScript 库，由 Nikhil Thorat 和 Daniel Smilkov 在谷歌创建，最初名为 Deeplearn.js，2018 年被合并到 TensorFlow 团队，更名为 TensorFlow.js。
-它能在前端开发上干啥用
-运行模型
-它可以在我们的浏览器上运行…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7302724955700264999"
-                        open
-                      >
-                        <summary class="article-expander__title">手撸 Electron 自动更新，再繁琐也要搞懂它</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7302724955700264999">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>大家好，我是杨成功。
-Electron 的自动更新不会像 React Native 一样直接下载 Web 代码静默更新，因为它还有主进程（Node.js）代码，因此需要走安装流程。
-在 Electron 中，使用第三方包 electron-updater 来实现自动更新的功能。
-📣 📣 我的新书《前端开发实战派》快要出版了，在公众号精选文章 《我写了一本书》下评论，我会选择 3 位朋友赠书。
-为什么不用 autoUpdater？
-如果细看 Electron 文档，会发现官方提供了一个 autoUpdater 功能来实现自动更新，如图：
-
-相比 autoUpdater，第三方包 electron-updater 有以下优势：
-不需要搭建专门的更新服务（如 Hazel、Nuts 等）。
-同时支持 macOS 和 Windows 签名。
-支持获取下载进度，等等。
-最主要的优势还是支持自定义更新服务。公司发布新版本安装包，上传到自己的静态服务器最方便，而不是还要再搭建一个专门的更新服务。
-当然获取下载进度也很重要，否则用户干等着，体验非常差。后面我们会实现下载进度提示。
-接入 electron-updater 并检测更新
-（1）安装 electron-updater，命令如下：
-$ yarn add electron-updater
-
-（2）新建 update.js 文件，在该文件中编写更新逻辑。
-定义一个 checkUpdate() 方法，在该方法中执行 autoUpdater.checkForUpdatesAndNotify() 来检测是否有新版本。
-当更新完成后，执行 autoUpdater.quitAndInstall() 方法来安装更新后的应用包。代码如下：
-const { autoUpdater } &#x3D; require(&#x27;electron-updater&#x27;);
-va…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7302724955699822631"
-                        open
-                      >
-                        <summary class="article-expander__title">「前端添加水印」你真的了解全面吗？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7302724955699822631">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: juejin
-
-背景
-在古茗日常业务中，经常会给加盟商下发各种资料，例如：奶茶的配方、设备的清洗、卫生的标准等等等。这些资料都是一些内部资料，从信息安全维度不能被泄露和盗取出去。所以会给下发的资料加上水印。这些资料可能是纯文本，也可能是文本加图片的。因此，我们要做好以下两个方面：
-通过对页面增加水印，可以从系统级别防止别人盗取我们的页面信息
-通过对单独的图片加水印 - 防止图片保存时没有水印
-页面水印
-方案设计
-实现页面水印的方式有很多，可以看一些常用页面加水印的方案，具体如下：
-方案一：fixed 定位的 div 元素，重复渲染 div 元素来添加水印。会创建很多无关的 DOM 元素
-方案二：fixed 定位 canvas 元素，重复填充水印。始终会创建一个无关的 canvas 元素
-方案三：canvas + 伪类。不会创建无关元素，且兼容性好
-方案四：svg + 伪类。不会创建无关元素，但兼容性略差于 canvas
-这些方案，都有一个通用的缺点，那就是将元素删掉，或者将类名删掉，都能去除页面水印。
-基于实现成本和安全性维度的考虑，最终方案选型：方案三，同时增加了通过MutationObserver - Web API 接口参考 | MDN 解决了删除类名导致水印删除的问题。
-核心功能点：
-把签名信息，通过 Canvas 生成背景图
-利用伪类将背景图添加到需要生成水印的区域上
-通过 MutationObserver , 解决了删除类名导致水印删除的问题
-代码实现
-把签名信息，通过Canvas生成背景图
-利用 Canvas 来绘制背景图，背景内容为水印的内容
-通过 toDataURL 将 Canvas 转换成图片，格式为 image/png
-interface IImgOptions {
-  content: string[]; // 水印的内容，可传递多个水…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2242,6 +2279,41 @@ module.exports &#x3D; {
 硬件互助，资源共享
 搭载 HarmonyOS 的每个设备都不是孤立的，在系统层让多终端融为一体，成为“超级终端”，终端之间能力互助…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7301947438885191695"
+                        open
+                      >
+                        <summary class="article-expander__title">前端新人们，这些知识tips你必须要知道</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7301947438885191695">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>highlight: a11y-dark
+theme: orange
+
+这篇文章收录了本人在前端学习实践中遇到的一些问题及解决，可供前端新人进行学习和参考，下面先展示一些可能有用的文档/文章/网站：
+文档：
+【Chrome 扩展开发文档】：https://wizardforcel.gitbooks.io/chrome-doc/content/index.html
+【Docker — 从入门到实践】：https://yeasy.gitbook.io/docker_practice
+文章：
+【前端系统进阶笔记 &amp; 面试指南】：https://interview.poetries.top
+【来用Vite+React快速开发浏览器插件】：https://juejin.cn/post/7152697551760654349
+【前端工程化】配置React+ts项目完整的代码及样式格式和git提交规范】：https://juejin.cn/post/7101596844181962788
+网站：
+【jQuery插件库】：https://www.jq22.com/
+1 、关于package.json里面，尖角号（^）和波浪线（~）的区别
+在package.json里面，我们可以使用尖角号（^）和波浪线（~）来表示不同的包版本。这些符号通常被用于定义一个包所需的最小版本或允许更新的版本范围。
+尖角号（^）通常用于指定主要版本号不变，允许安装新的次要版本和修补程序版本。例如，如果我们在package.json中指定&quot;dependencies&quot;对象的某个包的版本为&quot;^1.2.3&quot;，那么npm将会安装大于等于1.2.3版本，并且小于2.0.0版本的最新版本。
+波浪线（~）通常用于指定包的修补程序版本不变，允许安装新的次要版本和主要版本。例如，如果我们在package.json中指定&quot;depende…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;27
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3009,98 +3081,6 @@ Free Now to 2023-11-23T16:00:00.000Z</span>
    
    …</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;44
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7301574863776038949"
-                        open
-                      >
-                        <summary class="article-expander__title">一个22届被裁前端思想上得转变</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7301574863776038949">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>距离上篇文章已经过去了三个多月，这个三个月，经历了技术攻坚，然后裁员，退房，回老家，找工作。短短的几个月，就经历社会的一次次毒打，特别是找工作，虽然算上实习我也有两年了，奈何有一年是实习经历，投的简历基本投不出去，投出去了，也很少面试机会。加上我也比较菜吧。所以吃了不少苦。这一篇呢主要是给大家分享一下，我学习思想上的转变。
-背景以及唠叨
-抛出问题，你觉得什么样的人算得上大佬？或者是怎样得人会成为大佬？这是我去面试了一家创业公司，老板跟问我的。我当时得回答是：对框架原理有着比较深得理解得，知道的比较多，各种技术都有一定得了解。当时他没有否认也没有同意，而是说了一句，拥有一颗好奇心。你有没有想过浏览器是怎么运行起来得，它是怎么组成得，你有追寻得去想过嘛。当时得我陷入了沉思。老板是技术出身，自己创业了十几年，今年是第四次创业，他得两个想法也是两个产品，一个我听说过，一个我是第一次听说。老板跟我介绍了很多，可能我们都是从农村出来，来到大城市里聊得比较来。说句实话那天去了那边面试，也挺震惊我的，都是密密麻麻得创业公司，只有几平米。也看到了一群年轻人在创业。以前都是在电影上见到过，当现实中见到真的还是挺震惊得。老板也看出了我的震惊，来了一句这不是很正常的事嘛。因为最后个人的原因，觉得跟老板混还是风险太高了，加上他那创业的地方太小了，都没我住的地方大 ，我是有点接受不了的。
-对啊，你有想过浏览器到底是什么运行，怎么编译的嘛，那天我回去思考了很久，说真的也挺感谢老板给我分享了很多，让我的见识又增长了。在面试过程中，说句心里话，遇到一个好的面试官，不仅是你在回答他的问题，他也会分享他的看法，和一些事。所幸我遇到了好几位面试官这样的面试官。有时候面试不仅是去一家公司工作，一边提问，一边回答，它其实也是知己遇知音的一个过程，也是知识一种分享的过程。 线下面试有个好处，就是能够很清晰表达自己的想法…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7301531655638401078"
-                        open
-                      >
-                        <summary class="article-expander__title">修复vue官网的样式小bug（pr已被merge）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7301531655638401078">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>1.发现问题
-今天在某个群里看到，一个老哥说，他发现了一个vue官网的bug。
-
-右面的小目录，往下滚动之后，最上面有一小部分无法正常显示。
-
-如果把最上面的类似广告条的东西关掉，则可以恢复正常显示。
-2.定位bug
-打开控制台，找到侧边这个小目录的样式。
-
-调整发现，基本就是top值的问题，调整top值即可。
-直接在vue的官网源码repo中，搜索aside-container这个类，发现是搜不到的。
-vue官网和vue的很多社区一样，用的是vitepress，所以现在有一个小疑问，这个bug究竟是在vue的官网repo改，还是vitepress呢？
-我们在vitepress的源码repo中搜索，可以发现aside-container这个类的定位是fixed，而vue官网是sticky定位。
-查找commit记录可以发现，vitepress在之前的某次commit已经将定位改为fixed :
-https://github.com/vuejs/vitepress/commit/aecdeb9b216803f407fe3b48574bf7664262ef01
-查找vue的官网repo的package.json文件，可以大致发现，官网所用的vitepress版本可能是比较靠前的。所以说，可能这个bug修复的话，应该是在vue官网的repo这边修复了，vitepress的版本已经在这之后迭代过。
-3.修复bug
-之后我在github提了issue，大概说了下我的想法：https://github.com/vuejs/docs/issues/2571
-很快就有维护者来回复了：
-
-我发现这位大佬，正好是vitepress的核心贡献者，应该对这些非常熟悉，他说是--vt-banner-height这里的事情。
---vt-banner-height从哪里来的呢？
-那我们回过头来看一下原来的top值：
-
-可以看到，--vt-banner-height这个值，可能是没有定义过的。
-所以这个修复的话，可能会有两个思路：1.左面的值，定义出来/2.修改右面的值，改为70px。
-改左面值的话，公共变量应该比较舒服，但是当时全局都没有定义过。
-
-当时发现了这段代码，important用上了，所以第一次commit就在这里把右面的值改出来了，效果倒是可以生效，但是优雅性可能不够高。
-意料之中，后来回复我的老哥，还是选择了定义出左面的值，在这个pr中再次进行了修改：
-https://github.com/vuejs/docs/commit/4485782293cc4979420fb994873e4ba11b8e3587
-之后就是merge pr，部署，很快的就修复了。
-
-
-4.尾声
-之前给vuex修过一个链接配置的问题(  https://juejin.cn/post/7264921718422421558  )，
-算上这次，大概可以算给vue社区修复了两次bug:)
-笔者本科大四，欢迎关注掘金和github https://github.com/heygsc</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4374,6 +4354,7 @@ https://github.com/devlive-community/datacap/pull/472</span>
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>theme: Chinese-red
+👉双 11 活动获奖名单
 双十一购物狂欢节来喽，这不仅是电商购物的盛宴，更是“充电学习”的绝佳时机！
 快来看这次册姐又为大家带来什么样的福利吧！
 全场 150+ 本小册低至 6 折，任君挑选，更有“满赠+抽奖”的多款礼品等着你，让你用更少的钱获得更多的知识！
@@ -4660,8 +4641,8 @@ Case 3：小金同学在本次活动中实付 456 元（≥399 元），可获�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6965385522">
-        <time id="build-timestamp" datetime="2023-11-23T03:53:05.167Z">2023-11-23T03:53:05.167Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6966474215">
+        <time id="build-timestamp" datetime="2023-11-23T06:53:00.861Z">2023-11-23T06:53:00.861Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
