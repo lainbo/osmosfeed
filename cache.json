@@ -23,7 +23,7 @@
           "description": "滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/",
           "publishedOn": "2023-11-21T16:14:41.000Z",
-          "wordCount": 1292,
+          "wordCount": 1291,
           "title": "cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "剪映中的视频特效虽多，其实就两类，一类改变原始像素，一类叠加混合，本文通过精简的源码和精致的案例给大家介绍具体如何实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/video-effect-js-filter-pixijs-webgl-3d/",
           "publishedOn": "2023-11-19T15:12:20.000Z",
-          "wordCount": 1233,
+          "wordCount": 1234,
           "title": "剪映APP的视频特效如何在Web中JS实现",
           "imageUrl": null
         },
@@ -121,6 +121,16 @@
       "feedUrl": "https://rsshub.app/jike/user/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
+        {
+          "id": "https://m.okjike.com/originalPosts/6560abf3ee2e07f7ac996ee9",
+          "author": null,
+          "description": "十多年前刚接触 Web 开发时，能做的事情比较简单，唯一的网络交互工具只有 XMLHttpRequest，当时互联网的代表作是 Gmail 网页版，把 AJAX 用到了巅峰。\n现在可以做的事情就比较多了，Websocket 解决了实时双向通信的问题，使得浏览器和服务器之间的通信更加高效；WebTransport 允许使用 HTTP/3 协议进行交互，提供了更好的性能和安全性，尤其是在高延迟和不可靠的网络环境下，表现也很出色；WebRTC 使得浏览器之间可以进行点对点的音视频通信，而且无需通过服务器进行中转，这让实时通信变得更加高效和低延迟。\n而最新的提案 Direct Sockets 终于也被搬到了台面上，https://github.com/WICG/direct-sockets/blob/main/docs/explainer.md，它可以创建  TCP/UDP 套接字，直接拼齐了 Web 协议的最后一块版图，未来浏览器即服务器😅\n当然，考虑到一些安全原因，目前它只能被用在 Isolated Web Apps 中，IWA 不像网页，并非直接托管在实时的 Web 服务器上，而是以 Web Bundle 的形式被分发到浏览器，需要经过开发人员签名才能被分发和使用。关于 IWA，这里有一个演示：https://github.com/GoogleChromeLabs/telnet-client\n浏览器未来可以做的事情将越来越多，结合 WebAssembly 跨语言编译，以后任意语言的程序员都可以在 Web 上分发自己的 IWA 程序了。",
+          "link": "https://m.okjike.com/originalPosts/6560abf3ee2e07f7ac996ee9",
+          "publishedOn": "2023-11-24T13:58:11.000Z",
+          "wordCount": 526,
+          "title": "发布了: 十多年前刚接触 Web 开发时，能做的事情比较简单，唯一的网络交互工具只有 XMLHttpRequest，当时互联网的代表作是 Gmail 网页版，把 AJAX 用到了巅峰。 ...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FttgLeT-X-cPAAdkqOk58L-bEoAVv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
         {
           "id": "https://m.okjike.com/originalPosts/65607149c306429d19c5c5c4",
           "author": null,
@@ -210,16 +220,6 @@
           "wordCount": 542,
           "title": "发布了: 看到一个超炫酷的量子纠缠实现效果，其原理是通过 window.getScreenDetails() 获取窗口详细位置，然后通过 LocalStorage 共享窗口信息来实现的，这个创...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FnrlevyncY05zNJsfDRW36r5tAd_?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/655eb1d4f9a492630b5c7da2",
-          "author": null,
-          "description": "《如何阅读一篇论文》，https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf，看到 Srinivasan Keshav 教授在很多年前就写了一篇文献，给研究人员和论文审稿人提出了一些建议，也是“三遍法”，更为系统和详细：\n1）5~10min，鸟瞰纸张，回答五个问题：类别/上下文/正确性/贡献点/明晰性\n2）最多 1h，看图表和参考文献，确认准确性，事实依据是否充分；善用划词评论，跟论文作者对话\n3）初学者 5h，老手 1h，假设自己是创作者，以同样的命题重新实现论文，对比本篇论文的创新性，审视细节、挑战内容\n也有人说还有第 0 步，那就是上社交媒体看看，有多少人赞同/不赞同这篇论文🐶",
-          "link": "https://m.okjike.com/originalPosts/655eb1d4f9a492630b5c7da2",
-          "publishedOn": "2023-11-23T01:58:44.000Z",
-          "wordCount": 468,
-          "title": "发布了: 《如何阅读一篇论文》，https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf，看到 Srinivasan Keshav 教授在很多年前就写了一篇文献，...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FiobHpVZoscUam70TjSfoup4eIsuv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         }
       ]
     },
@@ -1157,6 +1157,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7302359255331930147",
+          "author": "去伪存真",
+          "description": "背景\n上周在工作中遇到一个历史遗留缺陷，在管理后台配置的emoji表情，在有些手机上，部分emoji图标显示成方框格子，这个问题要是放在平时比较忙碌的时候，随便找个理由就能把产品和测试糊弄过去，但上周工作不算饱和，工作不饱和的时候，人的求知欲就比较旺盛，于是决定探究一下。这是后端接口返回的emoji编码：\n{\n  \"ret\": 0,\n  \"retmsg\": \"ok\",\n  \"retdata\": {\n    \"content\": [\n      {\n        // ...\n        \"momentText\": \"\\uD83D\\uDE43\\uD83E\\uDD17\\uD83E\\uDD10\\uD83D\\uDE1C\\uD83D\\uDE2A\\uD83E\\uDD12\\uD83E\\uDD12\\uD83E\\uDDB7\\uD83E\\uDDB5\\uD83E\\uDD1B\\uD83D\\uDC48\\uD83E\\uDD1A\\uD83D\\uDE40\\uD83D\\uDE48\\uD83D\\uDC47\\uD83D\\uDC9C\\uD83D\\uDC97\\uD83E\\uDDE1\\uD83E\\uDD0E\\uD83D\\uDCA2\\uD83E\\uDD4B\\uD83C\\uDFD3\\uD83E\\uDD4E\\uD83C\\uDF81\\uD83C\\uDFB6\\uD83C\\uDFB6\\uD83C\\uDFBC\\uD83D\\uDD14\\uD83E\\uDE93\\uD83E\\uDE79\\uD83E\\uDDEC♉♌\\uD83D\\uDEC4\\uD83D\\uDD1B\\uD83D\\uDFE0\\uD83D\\uDD34\\uD83D\\uDFE8\\uD83D\\uDD39\\uD83C\\uDE50\\n天天好心情\",\n      },\n    ],\n  },\n}\n\n这是正常的显示：\n\n这是部分emoji图标显示成方框的情形：\n\nemoji的前世今生\n1…",
+          "link": "https://juejin.cn/post/7302359255331930147",
+          "publishedOn": "2023-11-18T11:58:45.000Z",
+          "wordCount": 1237,
+          "title": "部分emoji表情在手机上显示不出来，什么情况？",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7302618003886194714",
           "author": "指尖上的生活",
           "description": "效果\n金币从初始位置散开后逐个飞向指定位置，这是游戏中很常用的一个动画，效果如下：\n\n本文使用Cocos Creator 2.4.11版本。\n思路\n这个效果中，分成两个阶段：\n一定数量的金币从一个起点散开\n这些金币逐一飞向终点\n计算金币的初始散开位置\n生成圆周上的等分点\n金币散开的位置看似随机，但实际上是围绕起点形成一个圆。对于圆上的等分点，我们可以利用基本的三角函数来计算。例如，若要将圆分成8等分，每个点之间的夹角就是45度（360度/8）。已知圆心坐标和半径，就可以计算出每个等分点的坐标，如下图\n\n随机偏移\n为了让金币的位置看起来更自然，我们对每个点的位置进行随机偏移。这可以通过在计算出的坐标上加上一个随机向量来实现，从而让金币围绕起点呈现随机分布的效果。\n\n位置代码如下：\n/**\n   * 以某点为圆心，生成圆周上等分点的坐标\n   * @param {number} radius 半径\n   * @param {cc.Vec2} pos 圆心坐标\n   * @param {number} count 等分点数量\n   * @param {number} randomScope 等分点的随机波动范围\n   * @returns {cc.Vec2[]} 返回等分点坐标\n   */\n  getCirclePosition(radius: number, pos: cc.Vec2, count: number, randomScope: number = 60): cc.Vec2[] {\n    let positions = [];\n    let radians = (Math.PI / 180) * Math.round(360 / count);\n    for (let i = 0; i < count; i++) {\n      let x = pos.x + …",
@@ -1174,16 +1184,6 @@
           "publishedOn": "2023-11-18T09:27:38.000Z",
           "wordCount": 2655,
           "title": "用 HTML5实战打击乐Demo 虚拟类应用开发你真的掌握吗？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7302310196310294580",
-          "author": "前端小魔女",
-          "description": "highlight: a11y-dark\ntheme: Chinese-red\n不是花钱的买不起，是免费的有更高的性价比\n大家好，我是柒八九。一个专注于前端开发技术/Rust及AI应用知识分享的Coder。\n前言\n为了兑现给大家的承诺，在高铁上奋笔疾书。如果下文中有措辞不正确的地方，请大家海涵。\n\n在昨天(2023-11-16)发布了一篇白嫖 ChatGPT4的推文,是昨天无意之中发现了ChatGPT4的 bug,然后在简单的研究了一下。随后就发布了一篇算是急文，然后简单的告诉了大家如何白嫖使用ChatGPT4.0的功能。\n本来，想着大家能白嫖几天，然后试用一下gpt4.0那些引以为傲的功能，奈何今天早上 6 点多醒来。打开软件，发现大家在评论区都在说，这个bug已经被修复了。其实，在内心大家都知道，这个bug肯定会被修复的。但是，没想到这么快。\n我是昨天下午 4 点知道的，然后今天早上差不多 6 点多，已经不能用了。大批网友戏称，获得了ChatGPT4.0一天体验卡。评论区无不充斥着后悔没早点看到推文。\n所以呢，本着我们一贯行文的宗旨，分享是一种态度。所以，今天我们来介绍几种白嫖那些需要付费使用的方法。然后再介绍几种在平时生活和开发中可能会用到的AI工具。(算是利用AI为我们降本增效)\n这里有一个大基调，就是下文中我们默认大家都有属于自己的 🪜。并且下文中有些工具也需要github 账号或者Google邮箱。如果没有，那就需要自寻办法了，具体原因懂得都懂。（如果实在搞不到可以私聊哈）\n好了，天不早了，干点正事哇。\n\n我们能所学到的知识点\n免费的网站\n浏览器插件\n在VScode使用AI功能\n1. 免费的网站\n给大家看一个好玩的截图。\n\n这是一个可以免费使用ChatGPT4.0和Claude 2的网站。让我们来简单介绍一下各自的功能。\nChatGPT4\n如上面截图所描述的，…",
-          "link": "https://juejin.cn/post/7302310196310294580",
-          "publishedOn": "2023-11-17T11:30:33.000Z",
-          "wordCount": 1050,
-          "title": "白嫖ChatGPT4.0 (第二弹)",
           "imageUrl": null
         },
         {
