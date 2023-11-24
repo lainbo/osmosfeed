@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-11-24T15:52:53.619Z</id>
+    <id>urn:2023-11-24T18:53:16.039Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-11-24T15:52:53.619Z</updated>
+    <updated>2023-11-24T18:53:16.039Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -403,6 +403,31 @@ localStorage本地存储器，同一域名下的多页面共享。
   <canvas …]]></summary>
         <author>
             <name>Mark大熊</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Vue3] 历数 ref 四宗罪，现在开始用 reactive]]></title>
+        <id>https://juejin.cn/post/7304537142122070066</id>
+        <link href="https://juejin.cn/post/7304537142122070066"/>
+        <updated>2023-11-23T08:40:21.000Z</updated>
+        <summary type="html"><![CDATA[又看到一个谈 ref 和 reactive 的文章，文章举了一堆似是而非的例子说明 reactive 不好。在文章末尾，还加了一句“官方文档建议”，说“因为 reactive() 的局限性,所以建议使用 ref() 作为声明响应式状态的主要 API”
+作为一个坚定的 reactive 拥护者和使用者，我觉得是时候出来反驳几句了。
+为什么要有 ref
+谈 ref 和 reactive 就不得不谈到这两者的核心：Proxy。它通过创建一个对象的代理，从而实现对此对象操作的拦截和自定义。细节就不详细说了，但是从定义上可以看到，Proxy 创建的一定是对象的代理。
+这个设计是合理的。因为 Proxy 本身返回一个新对象，因为语法上的限制，没法操作原始值本身
+const original = { a: 1 }
+let proxy = new Proxy(original /* 原始对象 */, {} /* 拦截器组 */);
+
+console.log(proxy); // Proxy(Object) {a: 1}，注意前面的 Proxy(Object)
+console.log(proxy === original); // false。proxy 本身是一个新的代理对象，和原始对象不是同一个引用
+proxy = { b: 2 }; // 这个操作会吧 proxy 对象本身冲掉
+console.log(proxy) // { b: 2 }，注意前面的 Proxy(Object) 没了
+
+可以看到，语法设计上用户没法操作被代理的对象本身。reactive 作为 Proxy 的直接封装，这个限制被延续到了 reactive 上。所以 reactive 只支持对象类型，不支持基本数据类型（原始类型）。但是基本类型也需要支持响应式，该怎么办呢？
+很简单，找个对象包一下就行了
+const x =…]]></summary>
+        <author>
+            <name>CarterLi</name>
         </author>
     </entry>
     <entry>
@@ -1407,36 +1432,6 @@ function checkNodesRendered() {
         <summary type="html"><![CDATA[兄弟们冲，到下周前还能体验一下，不要错过哦[嘿哈]]]></summary>
         <author>
             <name>Simon_He</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[部分emoji表情在手机上显示不出来，什么情况？]]></title>
-        <id>https://juejin.cn/post/7302359255331930147</id>
-        <link href="https://juejin.cn/post/7302359255331930147"/>
-        <updated>2023-11-18T11:58:45.000Z</updated>
-        <summary type="html"><![CDATA[背景
-上周在工作中遇到一个历史遗留缺陷，在管理后台配置的emoji表情，在有些手机上，部分emoji图标显示成方框格子，这个问题要是放在平时比较忙碌的时候，随便找个理由就能把产品和测试糊弄过去，但上周工作不算饱和，工作不饱和的时候，人的求知欲就比较旺盛，于是决定探究一下。这是后端接口返回的emoji编码：
-{
-  "ret": 0,
-  "retmsg": "ok",
-  "retdata": {
-    "content": [
-      {
-        // ...
-        "momentText": "\uD83D\uDE43\uD83E\uDD17\uD83E\uDD10\uD83D\uDE1C\uD83D\uDE2A\uD83E\uDD12\uD83E\uDD12\uD83E\uDDB7\uD83E\uDDB5\uD83E\uDD1B\uD83D\uDC48\uD83E\uDD1A\uD83D\uDE40\uD83D\uDE48\uD83D\uDC47\uD83D\uDC9C\uD83D\uDC97\uD83E\uDDE1\uD83E\uDD0E\uD83D\uDCA2\uD83E\uDD4B\uD83C\uDFD3\uD83E\uDD4E\uD83C\uDF81\uD83C\uDFB6\uD83C\uDFB6\uD83C\uDFBC\uD83D\uDD14\uD83E\uDE93\uD83E\uDE79\uD83E\uDDEC♉♌\uD83D\uDEC4\uD83D\uDD1B\uD83D\uDFE0\uD83D\uDD34\uD83D\uDFE8\uD83D\uDD39\uD83C\uDE50\n天天好心情",
-      },
-    ],
-  },
-}
-
-这是正常的显示：
-
-这是部分emoji图标显示成方框的情形：
-
-emoji的前世今生
-1…]]></summary>
-        <author>
-            <name>去伪存真</name>
         </author>
     </entry>
     <entry>

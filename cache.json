@@ -33,7 +33,7 @@
           "description": "剪映中的视频特效虽多，其实就两类，一类改变原始像素，一类叠加混合，本文通过精简的源码和精致的案例给大家介绍具体如何实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/video-effect-js-filter-pixijs-webgl-3d/",
           "publishedOn": "2023-11-19T15:12:20.000Z",
-          "wordCount": 1234,
+          "wordCount": 1232,
           "title": "剪映APP的视频特效如何在Web中JS实现",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "想要提高网页的加载体验，其实有个非常简单且实用的技巧，那就是改变请求资源的加载优先级，这也可以改变？没错！",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/img-js-preload-fetch-priority/",
           "publishedOn": "2023-10-29T15:55:41.000Z",
-          "wordCount": 956,
+          "wordCount": 957,
           "title": "聊聊Web网页中资源加载的优先级",
           "imageUrl": null
         }
@@ -157,7 +157,7 @@
           "description": "《揭秘 VPN 背后的黑灰产组织》，https://paper.seebug.org/3062/，这篇文章介绍了如何通过网络空间“行为测绘”和”交叉测绘”锁定攻击者身份和网络分布，进而分析攻击对象和攻击手法，找到了活跃在中国大陆的两个黑客组织。文章中提到几个有趣的点：\n1）攻击者比较喜欢控制家用路由器和摄像头，存在攻击行为的 16582 个 IP 节点中，一小半都属于这类\n2）控制了家用设备后，会进行“网络资产”拓展，通过端口扫描、漏洞识别、后门注入等一系列方式拓展更多受控终端\n3）攻击行为集中在网络信息收集（爬虫、SQL 注入等）和恶意扫描，恶意扫描的目的是拓展资产；而信息收集，大概率是为了出售数据，以此牟利\n4）整个空间测绘的关键围绕 IP 危险性定级、证书收敛（识别核心攻击源）、攻击手法识别（攻击意图分析）等操作，经验可复用性还是比较强的\n传统的网络攻击行为分析，依赖恶意样本和攻击现场，因此会部署超大量的网络蜜罐抓取特征，这篇文章算是提出了一个更开阔的思路，使用空间测绘从网络分布上定位源头，不过这比较依赖丰富的样本库，例如需要对海量的网络 IP 做标记、对各类攻击手法有深入了解，并且要求掌握攻击流量。\n我特别好奇攻击流量是如何掌握的，难道是在 BGP 节点上部署了流量侦测模块？",
           "link": "https://m.okjike.com/originalPosts/6560555b87a8e03bd192731d",
           "publishedOn": "2023-11-24T07:48:43.000Z",
-          "wordCount": 480,
+          "wordCount": 481,
           "title": "发布了: 《揭秘 VPN 背后的黑灰产组织》，https://paper.seebug.org/3062/，这篇文章介绍了如何通过网络空间“行为测绘”和”交叉测绘”锁定攻击者身份和网络分...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FmeFEujAsu3hPqu0DEk2LRfjHDAEv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -197,7 +197,7 @@
           "description": "哈哈哈，干就对了。",
           "link": "https://m.okjike.com/originalPosts/655ee7acf9a492630b623bda",
           "publishedOn": "2023-11-23T05:48:28.000Z",
-          "wordCount": 474,
+          "wordCount": 493,
           "title": "发布了: 哈哈哈，干就对了。",
           "imageUrl": "https://cdnv2.ruguoapp.com/FimNtjYaugGPR5SXjpImZQ6fVEjJv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -1027,6 +1027,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7304537142122070066",
+          "author": "CarterLi",
+          "description": "又看到一个谈 ref 和 reactive 的文章，文章举了一堆似是而非的例子说明 reactive 不好。在文章末尾，还加了一句“官方文档建议”，说“因为 reactive() 的局限性,所以建议使用 ref() 作为声明响应式状态的主要 API”\n作为一个坚定的 reactive 拥护者和使用者，我觉得是时候出来反驳几句了。\n为什么要有 ref\n谈 ref 和 reactive 就不得不谈到这两者的核心：Proxy。它通过创建一个对象的代理，从而实现对此对象操作的拦截和自定义。细节就不详细说了，但是从定义上可以看到，Proxy 创建的一定是对象的代理。\n这个设计是合理的。因为 Proxy 本身返回一个新对象，因为语法上的限制，没法操作原始值本身\nconst original = { a: 1 }\nlet proxy = new Proxy(original /* 原始对象 */, {} /* 拦截器组 */);\n\nconsole.log(proxy); // Proxy(Object) {a: 1}，注意前面的 Proxy(Object)\nconsole.log(proxy === original); // false。proxy 本身是一个新的代理对象，和原始对象不是同一个引用\nproxy = { b: 2 }; // 这个操作会吧 proxy 对象本身冲掉\nconsole.log(proxy) // { b: 2 }，注意前面的 Proxy(Object) 没了\n\n可以看到，语法设计上用户没法操作被代理的对象本身。reactive 作为 Proxy 的直接封装，这个限制被延续到了 reactive 上。所以 reactive 只支持对象类型，不支持基本数据类型（原始类型）。但是基本类型也需要支持响应式，该怎么办呢？\n很简单，找个对象包一下就行了\nconst x =…",
+          "link": "https://juejin.cn/post/7304537142122070066",
+          "publishedOn": "2023-11-23T08:40:21.000Z",
+          "wordCount": 2545,
+          "title": "[Vue3] 历数 ref 四宗罪，现在开始用 reactive",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7304267413615312923",
           "author": "龙马_崛",
           "description": "theme: z-blue\n多个 if else分支优化\n请看下面代码\nif (row.tianrunStatus == true) {\n  if (row.tianrunSyncStatus == 'APPLYING') {\n    return '启用(申请中)'\n  } else if (row.tianrunSyncStatus == 'APPLY_FAILURE') {\n    return '启用(申请失败)'\n  } else if (row.tianrunSyncStatus == 'APPLY_SUCCESS') {\n    return '启用(申请成功)'\n  } else if (row.tianrunSyncStatus == 'SYNCHRONIZING') {\n    return '启用(同步中)'\n  } else if (row.tianrunSyncStatus == 'SYNC_SUCCEEDED') {\n    return '启用(同步成功)'\n  } else if (row.tianrunSyncStatus == 'SYNC_FAILED') {\n    return '启用(同步失败)'\n  } else {\n    return '启用'\n  }\n} else if (row.tianrunStatus == false) {\n  if (row.tianrunSyncStatus == 'SYNCHRONIZING') {\n    return '禁用(同步中)'\n  } else if (row.tianrunSyncStatus == 'SYNC_SUCCEEDED') {\n    return '禁用(同步成功)'\n  } else if (row.tianrunSyncStatus == 'SYNC_FAILE…",
@@ -1157,16 +1167,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7302359255331930147",
-          "author": "去伪存真",
-          "description": "背景\n上周在工作中遇到一个历史遗留缺陷，在管理后台配置的emoji表情，在有些手机上，部分emoji图标显示成方框格子，这个问题要是放在平时比较忙碌的时候，随便找个理由就能把产品和测试糊弄过去，但上周工作不算饱和，工作不饱和的时候，人的求知欲就比较旺盛，于是决定探究一下。这是后端接口返回的emoji编码：\n{\n  \"ret\": 0,\n  \"retmsg\": \"ok\",\n  \"retdata\": {\n    \"content\": [\n      {\n        // ...\n        \"momentText\": \"\\uD83D\\uDE43\\uD83E\\uDD17\\uD83E\\uDD10\\uD83D\\uDE1C\\uD83D\\uDE2A\\uD83E\\uDD12\\uD83E\\uDD12\\uD83E\\uDDB7\\uD83E\\uDDB5\\uD83E\\uDD1B\\uD83D\\uDC48\\uD83E\\uDD1A\\uD83D\\uDE40\\uD83D\\uDE48\\uD83D\\uDC47\\uD83D\\uDC9C\\uD83D\\uDC97\\uD83E\\uDDE1\\uD83E\\uDD0E\\uD83D\\uDCA2\\uD83E\\uDD4B\\uD83C\\uDFD3\\uD83E\\uDD4E\\uD83C\\uDF81\\uD83C\\uDFB6\\uD83C\\uDFB6\\uD83C\\uDFBC\\uD83D\\uDD14\\uD83E\\uDE93\\uD83E\\uDE79\\uD83E\\uDDEC♉♌\\uD83D\\uDEC4\\uD83D\\uDD1B\\uD83D\\uDFE0\\uD83D\\uDD34\\uD83D\\uDFE8\\uD83D\\uDD39\\uD83C\\uDE50\\n天天好心情\",\n      },\n    ],\n  },\n}\n\n这是正常的显示：\n\n这是部分emoji图标显示成方框的情形：\n\nemoji的前世今生\n1…",
-          "link": "https://juejin.cn/post/7302359255331930147",
-          "publishedOn": "2023-11-18T11:58:45.000Z",
-          "wordCount": 1237,
-          "title": "部分emoji表情在手机上显示不出来，什么情况？",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7302618003886194714",
           "author": "指尖上的生活",
           "description": "效果\n金币从初始位置散开后逐个飞向指定位置，这是游戏中很常用的一个动画，效果如下：\n\n本文使用Cocos Creator 2.4.11版本。\n思路\n这个效果中，分成两个阶段：\n一定数量的金币从一个起点散开\n这些金币逐一飞向终点\n计算金币的初始散开位置\n生成圆周上的等分点\n金币散开的位置看似随机，但实际上是围绕起点形成一个圆。对于圆上的等分点，我们可以利用基本的三角函数来计算。例如，若要将圆分成8等分，每个点之间的夹角就是45度（360度/8）。已知圆心坐标和半径，就可以计算出每个等分点的坐标，如下图\n\n随机偏移\n为了让金币的位置看起来更自然，我们对每个点的位置进行随机偏移。这可以通过在计算出的坐标上加上一个随机向量来实现，从而让金币围绕起点呈现随机分布的效果。\n\n位置代码如下：\n/**\n   * 以某点为圆心，生成圆周上等分点的坐标\n   * @param {number} radius 半径\n   * @param {cc.Vec2} pos 圆心坐标\n   * @param {number} count 等分点数量\n   * @param {number} randomScope 等分点的随机波动范围\n   * @returns {cc.Vec2[]} 返回等分点坐标\n   */\n  getCirclePosition(radius: number, pos: cc.Vec2, count: number, randomScope: number = 60): cc.Vec2[] {\n    let positions = [];\n    let radians = (Math.PI / 180) * Math.round(360 / count);\n    for (let i = 0; i < count; i++) {\n      let x = pos.x + …",
@@ -1229,7 +1229,7 @@
           "description": "[7073670907851440160#新人报道#]",
           "link": "https://juejin.cn/pin/7304538151480442918",
           "publishedOn": "2023-11-23T13:52:07.000Z",
-          "wordCount": 452,
+          "wordCount": 455,
           "title": "[7073670907851440160#新人报道#]",
           "imageUrl": null
         },
@@ -1289,7 +1289,7 @@
           "description": "[7073670907851440160#新人报道#] 新人报道",
           "link": "https://juejin.cn/pin/7303043433107128354",
           "publishedOn": "2023-11-20T08:02:16.000Z",
-          "wordCount": 458,
+          "wordCount": 461,
           "title": "[7073670907851440160#新人报道#] 新人报道",
           "imageUrl": null
         },
