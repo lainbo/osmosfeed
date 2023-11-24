@@ -321,6 +321,45 @@
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7304563142956810259"
+                        open
+                      >
+                        <summary class="article-expander__title">Vite 5 官宣！（译）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7304563142956810259">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>大家好，这里是大家的林语冰。一个月前尤雨溪在 ViteConf 大会上就透露了 Vite 一年来的成果、现状和未来规划，企图诉诸 Rust “锈化”重构 Rollup，今年年底 Vite 生态还会有大动作。
+2023 年 11 月 16 日，Vite 团队官宣：Vite 5 正式发布！
+
+免责声明
+本文属于是语冰的直男翻译了属于是，仅供粉丝参考，英文原味版请临幸 Vite 5.0 is out!(https://vitejs.dev/blog/announcing-vite5.html)。
+Vite 4 (https://cn.vitejs.dev/blog/announcing-vite4) 大约在一年前官宣，它为前端生态积基树本。Vite 的 npm 周下载量从 2_500_000 暴涨至 7_500_000，因为新兴项目不断构建于同一共享基建上。框架持续推陈出新，除了 Astro、Nuxt、SvelteKit、Solid Start、Qwik City 等之外，我们还瞄到新兴框架的强势加入，使前端生态系统更加给力。RedwoodJS 和 Remix “切换赛道”到 Vite 为 React 生态系统的增量采用铺平了道路。Vitest 的增长速度甚至比 Vite 更青出于蓝。Vitest 团队一直在努力打工，且不日就会官宣 Vitest 1.0。当 Vite 与 Storybook、Nx 和 Playwright 等其他工具“梦幻联动”时，Vite 的故事还在继续，前端环境大抵相同，Vite 在 Deno 和 Bun 中都能奏效。
+一个月前，我们举办了第二届 ViteConf 多人活动，由 StackBlitz 主办。与去年一样，前端生态中的大多数项目都聚众群聊、共享想法并互换微信，不断扩大共享空间。我们还看到新的拼图填充了元框架工具带，比如 Volar 和 Nitro…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >沸点 - 开发工具推荐</button>
                   <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
                 </h3>
@@ -2873,53 +2912,6 @@ function checkNodesRendered() {
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7302618003886194714"
-                        open
-                      >
-                        <summary class="article-expander__title">实现金币飞入钱包的动画</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7302618003886194714">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>效果
-金币从初始位置散开后逐个飞向指定位置，这是游戏中很常用的一个动画，效果如下：
-
-本文使用Cocos Creator 2.4.11版本。
-思路
-这个效果中，分成两个阶段：
-一定数量的金币从一个起点散开
-这些金币逐一飞向终点
-计算金币的初始散开位置
-生成圆周上的等分点
-金币散开的位置看似随机，但实际上是围绕起点形成一个圆。对于圆上的等分点，我们可以利用基本的三角函数来计算。例如，若要将圆分成8等分，每个点之间的夹角就是45度（360度/8）。已知圆心坐标和半径，就可以计算出每个等分点的坐标，如下图
-
-随机偏移
-为了让金币的位置看起来更自然，我们对每个点的位置进行随机偏移。这可以通过在计算出的坐标上加上一个随机向量来实现，从而让金币围绕起点呈现随机分布的效果。
-
-位置代码如下：
-/**
-   * 以某点为圆心，生成圆周上等分点的坐标
-   * @param {number} radius 半径
-   * @param {cc.Vec2} pos 圆心坐标
-   * @param {number} count 等分点数量
-   * @param {number} randomScope 等分点的随机波动范围
-   * @returns {cc.Vec2[]} 返回等分点坐标
-   */
-  getCirclePosition(radius: number, pos: cc.Vec2, count: number, randomScope: number &#x3D; 60): cc.Vec2[] {
-    let positions &#x3D; [];
-    let radians &#x3D; (Math.PI / 180) * Math.round(360 / count);
-    for (let i &#x3D; 0; i &lt; count; i++) {
-      let x &#x3D; pos.x + …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7302308334203404325"
                         open
                       >
@@ -4865,8 +4857,8 @@ Skyline
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6984047931">
-        <time id="build-timestamp" datetime="2023-11-24T18:53:16.018Z">2023-11-24T18:53:16.018Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6985057528">
+        <time id="build-timestamp" datetime="2023-11-24T21:53:10.648Z">2023-11-24T21:53:10.648Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

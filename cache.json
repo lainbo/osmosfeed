@@ -43,7 +43,7 @@
           "description": "应该是国内第一篇专门介绍用mp4box.js和VideoDecoder方法解码MP4视频序列帧的文章了。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/mp4box-js-webcodecs-mp4-canvas/",
           "publishedOn": "2023-11-14T16:37:18.000Z",
-          "wordCount": 1246,
+          "wordCount": 1243,
           "title": "mp4box.js加WebCodecs 解码MP4视频帧并渲染",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "想要提高网页的加载体验，其实有个非常简单且实用的技巧，那就是改变请求资源的加载优先级，这也可以改变？没错！",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/img-js-preload-fetch-priority/",
           "publishedOn": "2023-10-29T15:55:41.000Z",
-          "wordCount": 957,
+          "wordCount": 956,
           "title": "聊聊Web网页中资源加载的优先级",
           "imageUrl": null
         }
@@ -197,7 +197,7 @@
           "description": "哈哈哈，干就对了。",
           "link": "https://m.okjike.com/originalPosts/655ee7acf9a492630b623bda",
           "publishedOn": "2023-11-23T05:48:28.000Z",
-          "wordCount": 493,
+          "wordCount": 474,
           "title": "发布了: 哈哈哈，干就对了。",
           "imageUrl": "https://cdnv2.ruguoapp.com/FimNtjYaugGPR5SXjpImZQ6fVEjJv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -1007,6 +1007,16 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
+          "id": "https://juejin.cn/post/7304563142956810259",
+          "author": "人猫神话",
+          "description": "大家好，这里是大家的林语冰。一个月前尤雨溪在 ViteConf 大会上就透露了 Vite 一年来的成果、现状和未来规划，企图诉诸 Rust “锈化”重构 Rollup，今年年底 Vite 生态还会有大动作。\n2023 年 11 月 16 日，Vite 团队官宣：Vite 5 正式发布！\n\n免责声明\n本文属于是语冰的直男翻译了属于是，仅供粉丝参考，英文原味版请临幸 Vite 5.0 is out!(https://vitejs.dev/blog/announcing-vite5.html)。\nVite 4 (https://cn.vitejs.dev/blog/announcing-vite4) 大约在一年前官宣，它为前端生态积基树本。Vite 的 npm 周下载量从 2_500_000 暴涨至 7_500_000，因为新兴项目不断构建于同一共享基建上。框架持续推陈出新，除了 Astro、Nuxt、SvelteKit、Solid Start、Qwik City 等之外，我们还瞄到新兴框架的强势加入，使前端生态系统更加给力。RedwoodJS 和 Remix “切换赛道”到 Vite 为 React 生态系统的增量采用铺平了道路。Vitest 的增长速度甚至比 Vite 更青出于蓝。Vitest 团队一直在努力打工，且不日就会官宣 Vitest 1.0。当 Vite 与 Storybook、Nx 和 Playwright 等其他工具“梦幻联动”时，Vite 的故事还在继续，前端环境大抵相同，Vite 在 Deno 和 Bun 中都能奏效。\n一个月前，我们举办了第二届 ViteConf 多人活动，由 StackBlitz 主办。与去年一样，前端生态中的大多数项目都聚众群聊、共享想法并互换微信，不断扩大共享空间。我们还看到新的拼图填充了元框架工具带，比如 Volar 和 Nitro…",
+          "link": "https://juejin.cn/post/7304563142956810259",
+          "publishedOn": "2023-11-24T02:51:09.000Z",
+          "wordCount": 1652,
+          "title": "Vite 5 官宣！（译）",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7304531203771301923",
           "author": "魔术师卡颂",
           "description": "大家好，我卡颂。\n最近被一段酷炫的量子纠缠效果刷屏了：\n\n原作者是@_nonfigurativ_，一位艺术家、程序员。\n\n今天简单讲讲他的核心原理。\n欢迎围观朋友圈、加入人类高质量前端交流群，带飞\n基础概念\n首先我们需要知道两个概念：\n屏幕坐标系，屏幕左上角就是屏幕坐标系的圆点\n窗口坐标系，页面窗口左上角就是窗口坐标系的圆点\n\n如果只用一台电脑，不外接屏幕的话，我们会有：\n一个屏幕坐标系\n打开几个页面，每个页面有各自的窗口坐标系\n如果外接了屏幕（或外接pad），那么就存在多个屏幕坐标系，这种情况的计算需要用到管理屏幕设备的API —— window.getScreenDetails，在本文的讨论中不涉及这种情况。\n当我们打开一个新页面窗口，窗口的左上角就是窗口坐标系的圆点，如果要在页面正中间画个圆，那圆心的窗口坐标系坐标应该是(window.innerWidth / 2, window.innerHeight / 2)\n\n对于一个打开的窗口：\n他的左上角相对于屏幕顶部的距离为window.screenTop\n他的左上角相对于屏幕左边的距离为window.screenLeft\n\n所以，我们可以轻松得出圆的圆心在屏幕坐标系中的坐标：\n\n位置检测\n在效果中，当打开两个页面，他们能感知到对方的位置并作出反应，这是如何实现的呢？\n\n当前，我们已经知道圆心在屏幕坐标系中的坐标。如果打开多个页面，就会获得多个圆心的屏幕坐标系坐标。\n现在需要做的，就是让这些页面互相知道对方的坐标，这样就能向对应的方向做出连接的特效。\n同源网站跨页面通信的方式有很多，比如：\nWindow.postMessage\nLocalStorage、SessionStorage\nSharedWorker\nBroadcastChannel\n甚至Cookie也能用于跨页面通信（可以在同源的所有页面之间共享）。\n在这里作者使用的是LocalStorage：\n\n只需要为每个页面生成一个唯一ID：\nconst pageId = Math.random().toString(36).substring(2); // 生成一个随机的页面ID\n\n每当将圆心最新坐标存储进LocalStorage时：\nlocalStorage.setItem(\n  pageId,\n  JSON.stringify({\n    x: window.screenX,\n    y: window.screenY,\n    width: window.innerWidth,\n    height: window.innerHeight,\n  })\n);\n\n在另一个页面通过监听storage事件就能获取对方圆心的屏幕坐标系坐标：\nwindow.addEventListener(\"storage\", (event) => {\n  if (event.key !== pageId) {\n    // 来自另一个页面\n    const { x, y } = JSON.parse(event.newValue);\n    // ...\n  }\n});\n\n再将对方圆心的屏幕坐标系坐标转换为自身的窗口坐标系坐标，并在该坐标绘制一个圆，就能达到类似窗口叠加后，下面窗口的画面出现在上面窗口内的效果。\n通俗的讲，所有页面都会绘制其他页面的圆，只是有些圆在页面窗口外，看不见罢了。\n\n考虑到页面性能，检测圆心的屏幕坐标系坐标、渲染圆相关操作可以放到requestAnimationFrame回调中执行。\n后记\n上述只是该效果的核心原理。要完全复刻效果，还得考虑：\n渲染大量粒子（我们示例中用圆代替），且多窗口通信时的性能问题\n窗口移动时的阻尼效果\n当前的实现是在同一个屏幕坐标系中，如果要跨屏幕实现，需要使用window.getScreenDetails\n不得不感叹跨界（作者是艺术家 + 程序员）迸发的想象力真的不一般。",
@@ -1164,16 +1174,6 @@
           "publishedOn": "2023-11-19T03:17:53.000Z",
           "wordCount": 1907,
           "title": "代码刚上线，页面就白屏了",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7302618003886194714",
-          "author": "指尖上的生活",
-          "description": "效果\n金币从初始位置散开后逐个飞向指定位置，这是游戏中很常用的一个动画，效果如下：\n\n本文使用Cocos Creator 2.4.11版本。\n思路\n这个效果中，分成两个阶段：\n一定数量的金币从一个起点散开\n这些金币逐一飞向终点\n计算金币的初始散开位置\n生成圆周上的等分点\n金币散开的位置看似随机，但实际上是围绕起点形成一个圆。对于圆上的等分点，我们可以利用基本的三角函数来计算。例如，若要将圆分成8等分，每个点之间的夹角就是45度（360度/8）。已知圆心坐标和半径，就可以计算出每个等分点的坐标，如下图\n\n随机偏移\n为了让金币的位置看起来更自然，我们对每个点的位置进行随机偏移。这可以通过在计算出的坐标上加上一个随机向量来实现，从而让金币围绕起点呈现随机分布的效果。\n\n位置代码如下：\n/**\n   * 以某点为圆心，生成圆周上等分点的坐标\n   * @param {number} radius 半径\n   * @param {cc.Vec2} pos 圆心坐标\n   * @param {number} count 等分点数量\n   * @param {number} randomScope 等分点的随机波动范围\n   * @returns {cc.Vec2[]} 返回等分点坐标\n   */\n  getCirclePosition(radius: number, pos: cc.Vec2, count: number, randomScope: number = 60): cc.Vec2[] {\n    let positions = [];\n    let radians = (Math.PI / 180) * Math.round(360 / count);\n    for (let i = 0; i < count; i++) {\n      let x = pos.x + …",
-          "link": "https://juejin.cn/post/7302618003886194714",
-          "publishedOn": "2023-11-18T11:02:44.000Z",
-          "wordCount": 2329,
-          "title": "实现金币飞入钱包的动画",
           "imageUrl": null
         },
         {
