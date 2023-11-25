@@ -192,7 +192,7 @@
 1）我经常会把社交媒体当成学习和研究的记事本，记录很多图文、链接等内容，直到有一天我查询自己笔记的时候，发现链接打不开了，连原始链接是啥都不知道了；另外，格外奇特的是，有些平台在包含诸如 github.com 超链接时，发布会失败，🤷‍♂️
 2）曾经收到过网信办和公安局电话，通知我个人博客涉黄违规，要求立即整改，原因是十多年前写的一篇文章里引用了一个外链，而这个外链因为没有续期被抢注成了黄色网站，当时还为此被要求写保证书，🤷‍♂️
 而将超链接转成文本就不会有这些问题。当然也有其他策略，你或许也在大量网站上看到过，当点击超链接时，它并不会跳出当前网站，而是进入到一个中间页，提醒你该链接可能不安全。而它几乎从来都是安全的，🤷‍♂️</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -956,62 +956,38 @@ Free Now to 2023-11-30T16:00:00.000Z</span>
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7304538151480442918"
-                        open
-                      >
-                        <summary class="article-expander__title">[7073670907851440160#新人报道#]</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7304538151480442918">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>[7073670907851440160#新人报道#]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7304263961238880291"
-                        open
-                      >
-                        <summary class="article-expander__title">有没有人用rpgmaker业余做点小游戏的，一起交流呀[调皮]</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7304263961238880291">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>有没有人用rpgmaker业余做点小游戏的，一起交流呀[调皮]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >掘金前端本周最热</button>
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7304538151480803366"
+                        open
+                      >
+                        <summary class="article-expander__title">electron 和 tauri 都不想用，那就自己写个想用的吧</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7304538151480803366">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言
+在《屠龙少年终成恶龙，前端转产品的我给前端挖了个坑》这篇文章里，有讲到我是如何把我们的前端带坑里去。同时评论区有一条评论 你那个demo.exe是用什么实现的?可以直接套壳现有的系统？ 看起来好像是在坑外徘徊不定若有所思的样子。因此我打算写本文把他踹坑里去，能踹一个是一个。
+不想用 electron 和 tauri ？那我们一起来写个像 electron 的垃圾玩意吧~ 我们的目标是：前端程序员无需会三方语言就可独立完成桌面程序，创建托盘程序和服务、读写文件、处理进程、剪贴板这些都没有问题，预计整体体积不超过1M。
+为什么做
+我当前已经使用 nodejs 开发一个命令行程序，这个程序的工具方式是，从网络上获取动态的配置，然后读取这个配置进行启动。启动后就能去做其他额外的事情了，而不需要管这个程序。因为这个程序只是一个辅助工具。
+但是目前有一些痛点：
+每次启动的时候我都得先找到项目目录，然后运行 node xxx.js，然后启动一个黑框框，然后我再最小化这个框。启动步骤相当麻烦并且有一个不用管的窗口在任务栏，相当碍眼。
+有很多方法可以处理启动问题，比如 pm2/快捷链接/全局安装/制作 PKG 安装包等。但各自有各自的问题，这里不一一列举。
+对于有一个黑框需要最小化到任务栏问题，我尝试过使用 node child_process 的 detached&#x3D;false, windowsHide&#x3D;true 等参数配合 pm2 都是没有用的，黑框还是会弹出。 假设有用，我要的也不仅如此。
+我觉得这个工具不错，我想要把这个工具发给别人使用，虽然这个工具是 nodejs 写的，但我不希望别人还要去学习安装 nodejs 环境。虽然这个工具是命令行启动，并支持参数配置，但我希望像常规程序一样，别人点击一个图标就能启动，可以从界面上配置参数。可以在界面上看到程序的实时日志，最小化之后，变…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -1168,6 +1144,58 @@ console.log(proxy) // { b: 2 }，注意前面的 Proxy(Object) 没了
 很简单，找个对象包一下就行了
 const x &#x3D;…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7304538151480442918"
+                        open
+                      >
+                        <summary class="article-expander__title">[7073670907851440160#新人报道#]</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7304538151480442918">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>[7073670907851440160#新人报道#]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7304263961238880291"
+                        open
+                      >
+                        <summary class="article-expander__title">有没有人用rpgmaker业余做点小游戏的，一起交流呀[调皮]</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7304263961238880291">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>有没有人用rpgmaker业余做点小游戏的，一起交流呀[调皮]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3052,6 +3080,45 @@ function checkNodesRendered() {
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7302359255331930147"
+                        open
+                      >
+                        <summary class="article-expander__title">部分emoji表情在手机上显示不出来，什么情况？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7302359255331930147">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>背景
+上周在工作中遇到一个历史遗留缺陷，在管理后台配置的emoji表情，在有些手机上，部分emoji图标显示成方框格子，这个问题要是放在平时比较忙碌的时候，随便找个理由就能把产品和测试糊弄过去，但上周工作不算饱和，工作不饱和的时候，人的求知欲就比较旺盛，于是决定探究一下。这是后端接口返回的emoji编码：
+{
+  &quot;ret&quot;: 0,
+  &quot;retmsg&quot;: &quot;ok&quot;,
+  &quot;retdata&quot;: {
+    &quot;content&quot;: [
+      {
+        // ...
+        &quot;momentText&quot;: &quot;\uD83D\uDE43\uD83E\uDD17\uD83E\uDD10\uD83D\uDE1C\uD83D\uDE2A\uD83E\uDD12\uD83E\uDD12\uD83E\uDDB7\uD83E\uDDB5\uD83E\uDD1B\uD83D\uDC48\uD83E\uDD1A\uD83D\uDE40\uD83D\uDE48\uD83D\uDC47\uD83D\uDC9C\uD83D\uDC97\uD83E\uDDE1\uD83E\uDD0E\uD83D\uDCA2\uD83E\uDD4B\uD83C\uDFD3\uD83E\uDD4E\uD83C\uDF81\uD83C\uDFB6\uD83C\uDFB6\uD83C\uDFBC\uD83D\uDD14\uD83E\uDE93\uD83E\uDE79\uD83E\uDDEC♉♌\uD83D\uDEC4\uD83D\uDD1B\uD83D\uDFE0\uD83D\uDD34\uD83D\uDFE8\uD83D\uDD39\uD83C\uDE50\n天天好心情&quot;,
+      },
+    ],
+  },
+}
+
+这是正常的显示：
+
+这是部分emoji图标显示成方框的情形：
+
+emoji的前世今生
+1…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7302308334203404325"
                         open
                       >
@@ -3098,108 +3165,11 @@ A
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-17 datetime="2023-11-17T09:54:56.000Z">2023-11-17</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-17 datetime="2023-11-17T09:54:56.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-17 datetime="2023-11-17T00:10:10.000Z">2023-11-17</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-17 datetime="2023-11-17T00:10:10.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7302041173866299418"
-                        open
-                      >
-                        <summary class="article-expander__title">基于 node-ssh 开发前端部署脚本</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7302041173866299418">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: smartblue
-前言
-当在前端开发中涉及部署时，自动化工具和脚本可以大大简化和改善部署流程。node.js 的 node-ssh 库为开发人员提供了一种便捷的方式来执行远程服务器上的 ssh 操作，使得前端部署脚本的开发变得更加高效。本文将介绍如何使用 node-ssh 开发前端部署脚本，以简化部署流程并提高效率。
-什么是 node-ssh？
-node-ssh 是一个 node.js 库，用于在 node.js 环境中执行 ssh 操作。它为开发人员提供了通过 ssh 协议连接远程服务器的功能，可以执行诸如上传文件、执行命令等操作。
-初始化项目
-确定结构
-创建项目目录，并使用 npm init 或者 yarn init 初始化项目。
-ssh-publish/
-  ├── config.js    # 配置文件
-  ├── index.js     # 入口文件
-  ├── package.json
-  └── ...
-
-安装插件
-安装 node-ssh、命令行插件 commander 、命令行交互插件 inquirer、文件和目录操作插件 glob、控制台字符样式插件 chalk。
-注意 inquirer v9 使用了 esm 模块，如果使用 commonjs 需要使用 v8 版本。
-yarn add node-ssh commander inquirer@^8.0.0 glob chalk
-
-编写脚本
-配置文件
-// config.js
-module.exports &#x3D; {
-  option: {
-    dev: {
-      remoteDir: &quot;服务器项目目录&quot;,
-      host: &quot;服务器 ip 地址&quot;,
-      port: &quot;端口&quot;,
-      username: &quot;服务器用户名&quot;,
-      passdword: &quot;服务器密…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7301947438885191695"
-                        open
-                      >
-                        <summary class="article-expander__title">前端新人们，这些知识tips你必须要知道</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7301947438885191695">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>highlight: a11y-dark
-theme: orange
-
-这篇文章收录了本人在前端学习实践中遇到的一些问题及解决，可供前端新人进行学习和参考，下面先展示一些可能有用的文档/文章/网站：
-文档：
-【Chrome 扩展开发文档】：https://wizardforcel.gitbooks.io/chrome-doc/content/index.html
-【Docker — 从入门到实践】：https://yeasy.gitbook.io/docker_practice
-文章：
-【前端系统进阶笔记 &amp; 面试指南】：https://interview.poetries.top
-【来用Vite+React快速开发浏览器插件】：https://juejin.cn/post/7152697551760654349
-【前端工程化】配置React+ts项目完整的代码及样式格式和git提交规范】：https://juejin.cn/post/7101596844181962788
-网站：
-【jQuery插件库】：https://www.jq22.com/
-1 、关于package.json里面，尖角号（^）和波浪线（~）的区别
-在package.json里面，我们可以使用尖角号（^）和波浪线（~）来表示不同的包版本。这些符号通常被用于定义一个包所需的最小版本或允许更新的版本范围。
-尖角号（^）通常用于指定主要版本号不变，允许安装新的次要版本和修补程序版本。例如，如果我们在package.json中指定&quot;dependencies&quot;对象的某个包的版本为&quot;^1.2.3&quot;，那么npm将会安装大于等于1.2.3版本，并且小于2.0.0版本的最新版本。
-波浪线（~）通常用于指定包的修补程序版本不变，允许安装新的次要版本和主要版本。例如，如果我们在package.json中指定&quot;depende…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;27
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -4929,76 +4899,10 @@ Skyline
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-27 datetime="2023-10-27T00:05:35.000Z">2023-10-27</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-27 datetime="2023-10-27T00:05:35.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >阮一峰的网络日志</button>
-                  <a class="source-heading__link" href="http://www.ruanyifeng.com/blog/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.ruanyifeng.com/blog/2023/10/weekly-issue-275.html"
-                        open
-                      >
-                        <summary class="article-expander__title">科技爱好者周刊（第 275 期）：彼得·蒂尔的实验</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.ruanyifeng.com/blog/2023/10/weekly-issue-275.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>这里记录每周值得分享的科技内容，周五发布。
-本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。
-封面图
-
-令人意想不到，上图这栋看上去很时尚的建筑，竟然是印度的第三个南极考察站---- Bharathi 站，建于2012年。（via）
-彼得·蒂尔的实验
-彼得·蒂尔（Peter Thiel，1967-）是美国著名的风险投资家。
-
-他有两件事，非常有名。第一件，1998年参与创办 PayPal，四年后以15亿美元被收购，他获利5500万美元。
-第二件，他是 Facebook 的第一个投资人。2004年，Facebook 还没成立，他就给了扎克伯格50万美元。八年后，这笔投资价值20亿美元。
-他还出过一本畅销书，书名叫《从0到1》。这是2012年他的斯坦福大学创业课的讲义。
-
-今天不谈这些事情，我只想谈谈，他的一个离经叛道的实验，让我有极大的共鸣。
-这个实验就是验证，创业者到底要不要读（完）大学。
-彼得·蒂尔一直认为，很多有才华的年轻人，都被大学耽误了。 虽然他本人是斯坦福大学的文学学士和法学博士，但是他公开说，自己读完学位，只是因为不知道还能干什么。
-&quot;我看到那些与我一样的年轻人，而感到内疚。
-你不知道自己的人生该做什么，所以你拿到了本科学位。你不知道本科学位可以做什么，所以你又拿到了研究生学位。
-我就是这样选择了法学院，那是一个人不知道还能做什么时的安全选择。我对自己的大学生活没有什么大遗憾，但如果重来一次，我会思考更多的选择。&quot;
-他的言下之意就是，如果当年有人指点，告诉他怎么创业，他可能也会退学。
-
-2010年，他做了一个空前大胆的决定，成立&quot;蒂尔奖学金&quot;（Thiel Fellowship），每年资助20名左右的大学生，一人10万美元，条件是你必须退学创业。
-舆论一片哗然，指责他极其不负责任，进行错…</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6988373710">
-        <time id="build-timestamp" datetime="2023-11-25T09:53:10.243Z">2023-11-25T09:53:10.243Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6989205936">
+        <time id="build-timestamp" datetime="2023-11-25T12:55:14.281Z">2023-11-25T12:55:14.281Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

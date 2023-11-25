@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-11-25T09:53:10.264Z</id>
+    <id>urn:2023-11-25T12:55:14.302Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-11-25T09:53:10.264Z</updated>
+    <updated>2023-11-25T12:55:14.302Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -277,6 +277,25 @@ Vite 4 (https://cn.vitejs.dev/blog/announcing-vite4) 大约在一年前官宣，
 Free Now to 2023-11-30T16:00:00.000Z]]></summary>
         <author>
             <name>Frontier Developments</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[electron 和 tauri 都不想用，那就自己写个想用的吧]]></title>
+        <id>https://juejin.cn/post/7304538151480803366</id>
+        <link href="https://juejin.cn/post/7304538151480803366"/>
+        <updated>2023-11-23T15:49:25.000Z</updated>
+        <summary type="html"><![CDATA[前言
+在《屠龙少年终成恶龙，前端转产品的我给前端挖了个坑》这篇文章里，有讲到我是如何把我们的前端带坑里去。同时评论区有一条评论 你那个demo.exe是用什么实现的?可以直接套壳现有的系统？ 看起来好像是在坑外徘徊不定若有所思的样子。因此我打算写本文把他踹坑里去，能踹一个是一个。
+不想用 electron 和 tauri ？那我们一起来写个像 electron 的垃圾玩意吧~ 我们的目标是：前端程序员无需会三方语言就可独立完成桌面程序，创建托盘程序和服务、读写文件、处理进程、剪贴板这些都没有问题，预计整体体积不超过1M。
+为什么做
+我当前已经使用 nodejs 开发一个命令行程序，这个程序的工具方式是，从网络上获取动态的配置，然后读取这个配置进行启动。启动后就能去做其他额外的事情了，而不需要管这个程序。因为这个程序只是一个辅助工具。
+但是目前有一些痛点：
+每次启动的时候我都得先找到项目目录，然后运行 node xxx.js，然后启动一个黑框框，然后我再最小化这个框。启动步骤相当麻烦并且有一个不用管的窗口在任务栏，相当碍眼。
+有很多方法可以处理启动问题，比如 pm2/快捷链接/全局安装/制作 PKG 安装包等。但各自有各自的问题，这里不一一列举。
+对于有一个黑框需要最小化到任务栏问题，我尝试过使用 node child_process 的 detached=false, windowsHide=true 等参数配合 pm2 都是没有用的，黑框还是会弹出。 假设有用，我要的也不仅如此。
+我觉得这个工具不错，我想要把这个工具发给别人使用，虽然这个工具是 nodejs 写的，但我不希望别人还要去学习安装 nodejs 环境。虽然这个工具是命令行启动，并支持参数配置，但我希望像常规程序一样，别人点击一个图标就能启动，可以从界面上配置参数。可以在界面上看到程序的实时日志，最小化之后，变…]]></summary>
+        <author>
+            <name>程序媛李李李李李蕾</name>
         </author>
     </entry>
     <entry>
@@ -1504,6 +1523,36 @@ function checkNodesRendered() {
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[部分emoji表情在手机上显示不出来，什么情况？]]></title>
+        <id>https://juejin.cn/post/7302359255331930147</id>
+        <link href="https://juejin.cn/post/7302359255331930147"/>
+        <updated>2023-11-18T11:58:45.000Z</updated>
+        <summary type="html"><![CDATA[背景
+上周在工作中遇到一个历史遗留缺陷，在管理后台配置的emoji表情，在有些手机上，部分emoji图标显示成方框格子，这个问题要是放在平时比较忙碌的时候，随便找个理由就能把产品和测试糊弄过去，但上周工作不算饱和，工作不饱和的时候，人的求知欲就比较旺盛，于是决定探究一下。这是后端接口返回的emoji编码：
+{
+  "ret": 0,
+  "retmsg": "ok",
+  "retdata": {
+    "content": [
+      {
+        // ...
+        "momentText": "\uD83D\uDE43\uD83E\uDD17\uD83E\uDD10\uD83D\uDE1C\uD83D\uDE2A\uD83E\uDD12\uD83E\uDD12\uD83E\uDDB7\uD83E\uDDB5\uD83E\uDD1B\uD83D\uDC48\uD83E\uDD1A\uD83D\uDE40\uD83D\uDE48\uD83D\uDC47\uD83D\uDC9C\uD83D\uDC97\uD83E\uDDE1\uD83E\uDD0E\uD83D\uDCA2\uD83E\uDD4B\uD83C\uDFD3\uD83E\uDD4E\uD83C\uDF81\uD83C\uDFB6\uD83C\uDFB6\uD83C\uDFBC\uD83D\uDD14\uD83E\uDE93\uD83E\uDE79\uD83E\uDDEC♉♌\uD83D\uDEC4\uD83D\uDD1B\uD83D\uDFE0\uD83D\uDD34\uD83D\uDFE8\uD83D\uDD39\uD83C\uDE50\n天天好心情",
+      },
+    ],
+  },
+}
+
+这是正常的显示：
+
+这是部分emoji图标显示成方框的情形：
+
+emoji的前世今生
+1…]]></summary>
+        <author>
+            <name>去伪存真</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[用 HTML5实战打击乐Demo 虚拟类应用开发你真的掌握吗？]]></title>
         <id>https://juejin.cn/post/7302308334203404325</id>
         <link href="https://juejin.cn/post/7302308334203404325"/>
@@ -1534,71 +1583,6 @@ HTML代码
         <div class="key" data-k…]]></summary>
         <author>
             <name>sAnL1ng</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[基于 node-ssh 开发前端部署脚本]]></title>
-        <id>https://juejin.cn/post/7302041173866299418</id>
-        <link href="https://juejin.cn/post/7302041173866299418"/>
-        <updated>2023-11-17T09:54:56.000Z</updated>
-        <summary type="html"><![CDATA[theme: smartblue
-前言
-当在前端开发中涉及部署时，自动化工具和脚本可以大大简化和改善部署流程。node.js 的 node-ssh 库为开发人员提供了一种便捷的方式来执行远程服务器上的 ssh 操作，使得前端部署脚本的开发变得更加高效。本文将介绍如何使用 node-ssh 开发前端部署脚本，以简化部署流程并提高效率。
-什么是 node-ssh？
-node-ssh 是一个 node.js 库，用于在 node.js 环境中执行 ssh 操作。它为开发人员提供了通过 ssh 协议连接远程服务器的功能，可以执行诸如上传文件、执行命令等操作。
-初始化项目
-确定结构
-创建项目目录，并使用 npm init 或者 yarn init 初始化项目。
-ssh-publish/
-  ├── config.js    # 配置文件
-  ├── index.js     # 入口文件
-  ├── package.json
-  └── ...
-
-安装插件
-安装 node-ssh、命令行插件 commander 、命令行交互插件 inquirer、文件和目录操作插件 glob、控制台字符样式插件 chalk。
-注意 inquirer v9 使用了 esm 模块，如果使用 commonjs 需要使用 v8 版本。
-yarn add node-ssh commander inquirer@^8.0.0 glob chalk
-
-编写脚本
-配置文件
-// config.js
-module.exports = {
-  option: {
-    dev: {
-      remoteDir: "服务器项目目录",
-      host: "服务器 ip 地址",
-      port: "端口",
-      username: "服务器用户名",
-      passdword: "服务器密…]]></summary>
-        <author>
-            <name>醒来明月</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[前端新人们，这些知识tips你必须要知道]]></title>
-        <id>https://juejin.cn/post/7301947438885191695</id>
-        <link href="https://juejin.cn/post/7301947438885191695"/>
-        <updated>2023-11-17T03:55:27.000Z</updated>
-        <summary type="html"><![CDATA[highlight: a11y-dark
-theme: orange
-
-这篇文章收录了本人在前端学习实践中遇到的一些问题及解决，可供前端新人进行学习和参考，下面先展示一些可能有用的文档/文章/网站：
-文档：
-【Chrome 扩展开发文档】：https://wizardforcel.gitbooks.io/chrome-doc/content/index.html
-【Docker — 从入门到实践】：https://yeasy.gitbook.io/docker_practice
-文章：
-【前端系统进阶笔记 & 面试指南】：https://interview.poetries.top
-【来用Vite+React快速开发浏览器插件】：https://juejin.cn/post/7152697551760654349
-【前端工程化】配置React+ts项目完整的代码及样式格式和git提交规范】：https://juejin.cn/post/7101596844181962788
-网站：
-【jQuery插件库】：https://www.jq22.com/
-1 、关于package.json里面，尖角号（^）和波浪线（~）的区别
-在package.json里面，我们可以使用尖角号（^）和波浪线（~）来表示不同的包版本。这些符号通常被用于定义一个包所需的最小版本或允许更新的版本范围。
-尖角号（^）通常用于指定主要版本号不变，允许安装新的次要版本和修补程序版本。例如，如果我们在package.json中指定"dependencies"对象的某个包的版本为"^1.2.3"，那么npm将会安装大于等于1.2.3版本，并且小于2.0.0版本的最新版本。
-波浪线（~）通常用于指定包的修补程序版本不变，允许安装新的次要版本和主要版本。例如，如果我们在package.json中指定"depende…]]></summary>
-        <author>
-            <name>明远湖之鱼</name>
         </author>
     </entry>
     <entry>
@@ -2720,37 +2704,6 @@ Skyline
         <summary type="html"><![CDATA[想要提高网页的加载体验，其实有个非常简单且实用的技巧，那就是改变请求资源的加载优先级，这也可以改变？没错！]]></summary>
         <author>
             <name>张 鑫旭</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[科技爱好者周刊（第 275 期）：彼得·蒂尔的实验]]></title>
-        <id>http://www.ruanyifeng.com/blog/2023/10/weekly-issue-275.html</id>
-        <link href="http://www.ruanyifeng.com/blog/2023/10/weekly-issue-275.html"/>
-        <updated>2023-10-27T00:05:35.000Z</updated>
-        <summary type="html"><![CDATA[这里记录每周值得分享的科技内容，周五发布。
-本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。
-封面图
-
-令人意想不到，上图这栋看上去很时尚的建筑，竟然是印度的第三个南极考察站---- Bharathi 站，建于2012年。（via）
-彼得·蒂尔的实验
-彼得·蒂尔（Peter Thiel，1967-）是美国著名的风险投资家。
-
-他有两件事，非常有名。第一件，1998年参与创办 PayPal，四年后以15亿美元被收购，他获利5500万美元。
-第二件，他是 Facebook 的第一个投资人。2004年，Facebook 还没成立，他就给了扎克伯格50万美元。八年后，这笔投资价值20亿美元。
-他还出过一本畅销书，书名叫《从0到1》。这是2012年他的斯坦福大学创业课的讲义。
-
-今天不谈这些事情，我只想谈谈，他的一个离经叛道的实验，让我有极大的共鸣。
-这个实验就是验证，创业者到底要不要读（完）大学。
-彼得·蒂尔一直认为，很多有才华的年轻人，都被大学耽误了。 虽然他本人是斯坦福大学的文学学士和法学博士，但是他公开说，自己读完学位，只是因为不知道还能干什么。
-"我看到那些与我一样的年轻人，而感到内疚。
-你不知道自己的人生该做什么，所以你拿到了本科学位。你不知道本科学位可以做什么，所以你又拿到了研究生学位。
-我就是这样选择了法学院，那是一个人不知道还能做什么时的安全选择。我对自己的大学生活没有什么大遗憾，但如果重来一次，我会思考更多的选择。"
-他的言下之意就是，如果当年有人指点，告诉他怎么创业，他可能也会退学。
-
-2010年，他做了一个空前大胆的决定，成立"蒂尔奖学金"（Thiel Fellowship），每年资助20名左右的大学生，一人10万美元，条件是你必须退学创业。
-舆论一片哗然，指责他极其不负责任，进行错…]]></summary>
-        <author>
-            <name>阮一峰的网络日志</name>
         </author>
     </entry>
 </feed>
