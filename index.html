@@ -1249,6 +1249,56 @@ const x &#x3D;…</span>
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7304533060514971657"
+                        open
+                      >
+                        <summary class="article-expander__title">买不起劳力士，一气之下熬夜写一个</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7304533060514971657">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: fancy
+最近喜欢研究起了手表，对劳力士这款“百事圈”实在是心水的不行啊！
+心痒难耐无奈钱包不支持，作为一个前端程序员，买不起的东西该怎么办？
+当然是自己做一个啊！
+说干就干，熬夜自己做了个“百事圈”出来！源码在最后！
+先看成品
+
+还是有那么六七成相像了吧！主要还是在颜色选择和细节处理上要花些功夫，无奈通过单纯的平面很难展现出“材质感”。
+
+虽然质感比不上人家吧，但咱们这个走时精准度肯定比那钢砣子强不是🐶。
+除了实现了手表的“走时”这个基础功能外，还把日历窗、GMT双时区功能、外圈旋转功能也一并实现啦！图片里不好展示，大家可以看完文章，自行领取源码来玩玩！
+实现思路
+本想想用尽量多的CSS来实现，但CSS实现这种较为复杂的动态功能还是有些头疼，所以还是把思路放到了用canvas来实现。
+小小构思后手表被分为三个模块：
+表盘
+
+表圈
+
+表针
+
+先在html结构中建立三个canvas标签：
+
+  
+  
+  
+  
+  
+  
+
+
+并在JS中响应地对三个canvas进行初始化。
+每个canvas画布绘制的第一步，我们首先用getContext(&quot;2d&quot;)方法来获取到canvas画布的二维渲染上下文，并且为了能让画面清晰度更高，我们使用.scale()方法对canvas进行四倍缩放，这样我们可以得到一个清…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;22
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -2466,6 +2516,71 @@ bd：代表页体（body），用于放…</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7303342257792073747"
+                        open
+                      >
+                        <summary class="article-expander__title">历时半年，我发布了一款习惯打卡小程序</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7303342257792073747">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>半年多前，我一直困扰于如何记录习惯打卡情况，在参考了市面上绝大多数的习惯培养程序后，终于创建并发布了这款习惯打卡小程序。
+“我的小日常打卡”小程序主要提供习惯打卡和专注训练功能。致力于培养用户养成一个个好的习惯，改掉生活中的拖延症！
+
+代码技术
+服务端：使用PHP+MySQL编写服务端接口
+前端：使用UniApp开发并封装成微信小程序
+图片存储：使用七牛云存储日志图片
+界面截图介绍
+一、首页打卡界面
+显示当天需要打卡的习惯，点击白色圈的图片即可打卡成功；（可操作单个习惯一天打卡多次）
+
+习惯显示列表
+
+二、习惯统计
+支持按天、按周、按月、按年度显示打卡情况；
+当天打卡数据显示
+
+日历使用的是uniapp自带的uni-calendar组件，只是自行修改了样式，样式代码如下：
+
+.uni-calendar--hook&gt;&gt;&gt;.uni-calendar__content {
+border-radius: 20rpx;
+font-weight: 500;
+}
+
+/* 日历头部 */
+.uni-calendar--hook&gt;&gt;&gt;.uni-calendar__header {
+height: 40px;
+}
+
+/* 日历星期 */
+.uni-calendar--hook&gt;&gt;&gt;.uni-calendar__weeks-day {
+height: 35px;
+font-weight: normal;
+}
+
+.uni-calendar--hook&gt;&gt;&gt;.uni-calendar__backtoday {
+top: auto;
+}
+
+/* 日历主体 */
+/* 已打卡和补卡设置 */
+.uni-calendar--hook&gt;&gt;&gt;.uni-calendar-item__weeks-box-item {
+height: 60rpx;
+width: 60rpx;
+}
+
+.u…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7302965547087298601"
                         open
                       >
@@ -2803,39 +2918,22 @@ interface IImgOptions {
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7302367564838567962"
+                        data-accordion-key="https://juejin.cn/post/7302439422672666659"
                         open
                       >
-                        <summary class="article-expander__title">代码刚上线，页面就白屏了</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7302367564838567962">
+                        <summary class="article-expander__title">2023最后一个稳定版Flutter 3.16 新特性介绍</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7302439422672666659">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>前言
-白屏一直是一个前端开发谈之变色的问题。
-“什么？我的页面刚上线就白屏了，是报错了，还是兼容性问题，还是性能问题，多刷新几次就好了，用户网络不行吧。”
-简单来说，白屏就是用户打开前端页面什么有没有。
-这是一个很重要的质量指标。
-那么我们如何监控页面白屏异常呢？
-白屏异常检测主要分为两个部分，一个是如何检测，一个是什么时候检测，
-检测方案
-首先明确一点，页面打开慢，白屏时间长，不等于白屏；页面就是白色图，不等于白屏。
-关键节点是否渲染
-在当前SPA页面都是挂在根节点之下，通过查看关键dom是否渲染，如查看dom的高度heigt属性是否存在，如果存在，则证明关键dom已经渲染，页面不是白屏，反之，则判断页面是白屏
-实现思路
-在上面的代码中，我们首先使用querySelectorAll方法选中了具有 .critical-node类名的关键节点。然后，通过checkNodesRendered函数检测这些节点是否已经渲染，如果有任何一个节点的高度为0，即判断为未渲染，将返回false。最后，在页面加载完成后调用checkNodesRendered函数来判断页面状态。
-// 获取关键节点
-const criticalNodes &#x3D; Array.from(document.querySelectorAll(&#x27;.critical-node&#x27;));
-
-// 检测节点渲染
-function checkNodesRendered() {
-  let allNodesRendered &#x3D; true;
-  
-  for (const node of criticalNodes) {
-    if (node.offsetHeight &#x3D;&#x3D;&#x3D; 0 || node.clientHeight &#x3D;&#x3D;&#x3D; 0) {
-      allNodesRendered &#x3D; false;
-      break;
- …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
+                              <span>Flutter 3.16 默认采用 Material 3 主题，Android 平台预览 Impeller，DevTools 扩展等等
+Flutter在每个季度通常都会有个稳定版本的发布。在2023 Q4的更新中为大家带来的是Flutter 3.16。这个版本将 Material 3 设为新的默认主题，并为 Android 带来了 Impeller 预览，支持为 DevTools 添加扩展等等！与此同时，我们在这个版本还可以看到Flutter Casual Games Toolkit 的重大更新。
+在距离上一个版本发布仅三个月的时间里，共有145 位社区成员合并了 928 个拉取请求，其中有 40 位社区成员首次贡献了他们的 Flutter 代码！
+接下来，就跟我一起继续阅读，了解 Flutter 社区为这个最新版本做出的所有新增和改进吧！
+框架
+Material 3 成为新的默认主题
+从 3.10 版本（2023 年 5 月）开始，Material 库已更新以符合最新的 Material Design 规范。更改包括新的组件和组件主题，以及更新的组件外观。在 3.16 版本之前，这些更改是“选择加入”的，使用 useMaterial3 主题标志。从此版本开始，默认情况下 useMaterial3 为 true。（#130764）
+您仍然可以通过在 MaterialApp 主题中指定 useMaterial3: false 来选择退出 Material 库的 M3 版本，但 Material 2 最终将被弃用和移除。此外，一些小部件不仅需要更新，还需要一个全新的实现。因此，当您看到它作为 Material 3 运行时，您的 UI 可能会显得有些奇怪。为了解决这个问题，请手动迁移到新的小部件，例如 NavigationBar。有关更多详细信息，请查看 GitHub 上的 Ma…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2951,97 +3049,6 @@ function checkNodesRendered() {
                             <span class="media-object__text">
                               <span>兄弟们冲，到下周前还能体验一下，不要错过哦[嘿哈]</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7302359255331930147"
-                        open
-                      >
-                        <summary class="article-expander__title">部分emoji表情在手机上显示不出来，什么情况？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7302359255331930147">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>背景
-上周在工作中遇到一个历史遗留缺陷，在管理后台配置的emoji表情，在有些手机上，部分emoji图标显示成方框格子，这个问题要是放在平时比较忙碌的时候，随便找个理由就能把产品和测试糊弄过去，但上周工作不算饱和，工作不饱和的时候，人的求知欲就比较旺盛，于是决定探究一下。这是后端接口返回的emoji编码：
-{
-  &quot;ret&quot;: 0,
-  &quot;retmsg&quot;: &quot;ok&quot;,
-  &quot;retdata&quot;: {
-    &quot;content&quot;: [
-      {
-        // ...
-        &quot;momentText&quot;: &quot;\uD83D\uDE43\uD83E\uDD17\uD83E\uDD10\uD83D\uDE1C\uD83D\uDE2A\uD83E\uDD12\uD83E\uDD12\uD83E\uDDB7\uD83E\uDDB5\uD83E\uDD1B\uD83D\uDC48\uD83E\uDD1A\uD83D\uDE40\uD83D\uDE48\uD83D\uDC47\uD83D\uDC9C\uD83D\uDC97\uD83E\uDDE1\uD83E\uDD0E\uD83D\uDCA2\uD83E\uDD4B\uD83C\uDFD3\uD83E\uDD4E\uD83C\uDF81\uD83C\uDFB6\uD83C\uDFB6\uD83C\uDFBC\uD83D\uDD14\uD83E\uDE93\uD83E\uDE79\uD83E\uDDEC♉♌\uD83D\uDEC4\uD83D\uDD1B\uD83D\uDFE0\uD83D\uDD34\uD83D\uDFE8\uD83D\uDD39\uD83C\uDE50\n天天好心情&quot;,
-      },
-    ],
-  },
-}
-
-这是正常的显示：
-
-这是部分emoji图标显示成方框的情形：
-
-emoji的前世今生
-1…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7302308334203404325"
-                        open
-                      >
-                        <summary class="article-expander__title">用 HTML5实战打击乐Demo 虚拟类应用开发你真的掌握吗？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7302308334203404325">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: smartblue
-序言
-我还记得初中时候很喜欢玩一款游戏叫别踩白块，通过点击黑块来发出声音并且每个不同得黑块有不同的音调串联起来模拟歌曲得弹奏很有意思。然后到现在更新迭代了一大批更高级得音游，那么这些音游如果放在PC端是不是也可以通过敲击键盘来实现打击乐得效果呢？所以今天我们就通过使用HTML5里的一些新特性来实现虚拟类应用开发——打击乐，开始前我们先来看看这个打击乐得效果：
-jvideo
-接下来我会为大家详细地讲述本次实战的过程。首先就是给HTML页面编写实现元素添加和框架搭建，然后编写CSS文件给这些元素添加样式，最后再编写JS文件实现事件与元素与操作的交互（元素的动态效果和动作反馈）。
-准备工作
-首先我们需要准备九个打击乐的音效和一张背景图，大家如果没有的话可以去我的国内Gitee仓库中下载
-记得给博主仓库点个收藏哦3q♥
-HTML代码
-
-
-
-    
-    
-    HTML5商业化开发细节
-    
-A
-            clap
-        
-        &lt;div class&#x3D;&quot;key&quot; data-k…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4777,8 +4784,8 @@ Skyline
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6994798017">
-        <time id="build-timestamp" datetime="2023-11-26T09:52:48.574Z">2023-11-26T09:52:48.574Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6995686203">
+        <time id="build-timestamp" datetime="2023-11-26T12:55:48.335Z">2023-11-26T12:55:48.335Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

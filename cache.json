@@ -23,7 +23,7 @@
           "description": "滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/",
           "publishedOn": "2023-11-21T16:14:41.000Z",
-          "wordCount": 1290,
+          "wordCount": 1292,
           "title": "cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "剪映中的视频特效虽多，其实就两类，一类改变原始像素，一类叠加混合，本文通过精简的源码和精致的案例给大家介绍具体如何实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/video-effect-js-filter-pixijs-webgl-3d/",
           "publishedOn": "2023-11-19T15:12:20.000Z",
-          "wordCount": 1231,
+          "wordCount": 1234,
           "title": "剪映APP的视频特效如何在Web中JS实现",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "应该是国内第一篇专门介绍用mp4box.js和VideoDecoder方法解码MP4视频序列帧的文章了。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/mp4box-js-webcodecs-mp4-canvas/",
           "publishedOn": "2023-11-14T16:37:18.000Z",
-          "wordCount": 1244,
+          "wordCount": 1246,
           "title": "mp4box.js加WebCodecs 解码MP4视频帧并渲染",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "想要提高网页的加载体验，其实有个非常简单且实用的技巧，那就是改变请求资源的加载优先级，这也可以改变？没错！",
           "link": "https://www.zhangxinxu.com/wordpress/2023/10/img-js-preload-fetch-priority/",
           "publishedOn": "2023-10-29T15:55:41.000Z",
-          "wordCount": 955,
+          "wordCount": 957,
           "title": "聊聊Web网页中资源加载的优先级",
           "imageUrl": null
         }
@@ -197,7 +197,7 @@
           "description": "哈哈哈，干就对了。",
           "link": "https://m.okjike.com/originalPosts/655ee7acf9a492630b623bda",
           "publishedOn": "2023-11-23T05:48:28.000Z",
-          "wordCount": 494,
+          "wordCount": 508,
           "title": "发布了: 哈哈哈，干就对了。",
           "imageUrl": "https://cdnv2.ruguoapp.com/FimNtjYaugGPR5SXjpImZQ6fVEjJv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -1017,6 +1017,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7304533060514971657",
+          "author": "坐着的飞饼",
+          "description": "theme: fancy\n最近喜欢研究起了手表，对劳力士这款“百事圈”实在是心水的不行啊！\n心痒难耐无奈钱包不支持，作为一个前端程序员，买不起的东西该怎么办？\n当然是自己做一个啊！\n说干就干，熬夜自己做了个“百事圈”出来！源码在最后！\n先看成品\n\n还是有那么六七成相像了吧！主要还是在颜色选择和细节处理上要花些功夫，无奈通过单纯的平面很难展现出“材质感”。\n\n虽然质感比不上人家吧，但咱们这个走时精准度肯定比那钢砣子强不是🐶。\n除了实现了手表的“走时”这个基础功能外，还把日历窗、GMT双时区功能、外圈旋转功能也一并实现啦！图片里不好展示，大家可以看完文章，自行领取源码来玩玩！\n实现思路\n本想想用尽量多的CSS来实现，但CSS实现这种较为复杂的动态功能还是有些头疼，所以还是把思路放到了用canvas来实现。\n小小构思后手表被分为三个模块：\n表盘\n\n表圈\n\n表针\n\n先在html结构中建立三个canvas标签：\n<div class=\"watch-box\">\n  <!-- 表针 -->\n  <canvas id=\"watchPointer\" width=\"1800\" height=\"1800\"></canvas>\n  <!-- 表盘 -->\n  <canvas id=\"dial\" width=\"1800\" height=\"1800\"></canvas>\n  <!-- 表圈 -->\n  <canvas id=\"bezel\" width=\"1800\" height=\"1800\"></canvas>\n</div>\n\n并在JS中响应地对三个canvas进行初始化。\n每个canvas画布绘制的第一步，我们首先用getContext(\"2d\")方法来获取到canvas画布的二维渲染上下文，并且为了能让画面清晰度更高，我们使用.scale()方法对canvas进行四倍缩放，这样我们可以得到一个清…",
+          "link": "https://juejin.cn/post/7304533060514971657",
+          "publishedOn": "2023-11-23T08:01:30.000Z",
+          "wordCount": 6479,
+          "title": "买不起劳力士，一气之下熬夜写一个",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7304267413615312923",
           "author": "龙马_崛",
           "description": "theme: z-blue\n多个 if else分支优化\n请看下面代码\nif (row.tianrunStatus == true) {\n  if (row.tianrunSyncStatus == 'APPLYING') {\n    return '启用(申请中)'\n  } else if (row.tianrunSyncStatus == 'APPLY_FAILURE') {\n    return '启用(申请失败)'\n  } else if (row.tianrunSyncStatus == 'APPLY_SUCCESS') {\n    return '启用(申请成功)'\n  } else if (row.tianrunSyncStatus == 'SYNCHRONIZING') {\n    return '启用(同步中)'\n  } else if (row.tianrunSyncStatus == 'SYNC_SUCCEEDED') {\n    return '启用(同步成功)'\n  } else if (row.tianrunSyncStatus == 'SYNC_FAILED') {\n    return '启用(同步失败)'\n  } else {\n    return '启用'\n  }\n} else if (row.tianrunStatus == false) {\n  if (row.tianrunSyncStatus == 'SYNCHRONIZING') {\n    return '禁用(同步中)'\n  } else if (row.tianrunSyncStatus == 'SYNC_SUCCEEDED') {\n    return '禁用(同步成功)'\n  } else if (row.tianrunSyncStatus == 'SYNC_FAILE…",
@@ -1052,7 +1062,7 @@
           "description": "前端转产品3周左右，把自己的一些感受通过《我转产品了-前端转产品是一种什么样的体验》这篇文章与大家分享，评论区惊现一波大佬。由于比较忙，不知不觉好像转眼间已经又过去一个多月，这次趁着周末没有开成会，给大家分享一下最近的『趣事』。\n目前在并行中的一个项目主要是类似文件管理的功能，在这个项目中主要是旁听的角色，这个项目的产品和需求是由公司的一产品朋友来做。在文章中产品功能描述部分由于众所周知的原因，我只会粗略的提一下。\n客户说的\n用于简化传统 OA 系统的某些繁复操作。最好能编辑、预览，如果没有的话也可以，先上一版。\n我们准备给客户做的\n我们给客户画了第一批原型，浏览器登录一个网址，注册一个账号、密码…… 然后在文件系统中可能在线预览图片、PDF、word、excel 之类的。\n客户其实想要的\n在演示的时候，第一个界面，客户质问为什么我们的系统还需要输入网址？还需要登录？大家一脸懵逼。然后解释因为数据是服务器器上的，在浏览器里输入地址，就能访问我们的系统了。然后如果不使用用户名和密码登录的话就不知道谁是谁。\n客户说：『我们云桌面对每个人都是唯一的啊，不需要再搞一个账户……』\n我们说：『因为我们系统是在浏览器里的，浏览器是访问不了操作系统里的用户信息的，所以需要注册一个用户密码……如果觉得麻烦，我们也可以后台先注册后，然后登录之后记住登录状态，就不用每次都登录了。』\n客户：『行吧。』\n然后讲业务流程……\n当讲到某文档的审核功能时，比如如果审核人需要对 word 进入批注，需要下载，然后添加批注，再上传到审核意见附件中。\n客户：『为什么要下载？』\n我们：『因为我们的是浏览器。』\n客户：『行吧。』\n矛盾分析\n经过了几周、几轮之后的演示，客户还经常时不时问一些为什么我们系统不能直接进行某操作的想法。想要不用写到这里大家都很清楚了，客户想做的东西其实是一个便于操作的文件管理系统。要实现最…",
           "link": "https://juejin.cn/post/7303798788720115749",
           "publishedOn": "2023-11-21T13:07:25.000Z",
-          "wordCount": 1075,
+          "wordCount": 1098,
           "title": "屠龙少年终成恶龙，前端转产品的我给前端挖了个坑",
           "imageUrl": null
         },
@@ -1097,6 +1107,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7303342257792073747",
+          "author": "宋小羽",
+          "description": "半年多前，我一直困扰于如何记录习惯打卡情况，在参考了市面上绝大多数的习惯培养程序后，终于创建并发布了这款习惯打卡小程序。\n“我的小日常打卡”小程序主要提供习惯打卡和专注训练功能。致力于培养用户养成一个个好的习惯，改掉生活中的拖延症！\n\n代码技术\n服务端：使用PHP+MySQL编写服务端接口\n前端：使用UniApp开发并封装成微信小程序\n图片存储：使用七牛云存储日志图片\n界面截图介绍\n一、首页打卡界面\n显示当天需要打卡的习惯，点击白色圈的图片即可打卡成功；（可操作单个习惯一天打卡多次）\n\n习惯显示列表\n\n二、习惯统计\n支持按天、按周、按月、按年度显示打卡情况；\n当天打卡数据显示\n\n日历使用的是uniapp自带的uni-calendar组件，只是自行修改了样式，样式代码如下：\n<style scoped>\n.uni-calendar--hook>>>.uni-calendar__content {\nborder-radius: 20rpx;\nfont-weight: 500;\n}\n\n/* 日历头部 */\n.uni-calendar--hook>>>.uni-calendar__header {\nheight: 40px;\n}\n\n/* 日历星期 */\n.uni-calendar--hook>>>.uni-calendar__weeks-day {\nheight: 35px;\nfont-weight: normal;\n}\n\n.uni-calendar--hook>>>.uni-calendar__backtoday {\ntop: auto;\n}\n\n/* 日历主体 */\n/* 已打卡和补卡设置 */\n.uni-calendar--hook>>>.uni-calendar-item__weeks-box-item {\nheight: 60rpx;\nwidth: 60rpx;\n}\n\n.u…",
+          "link": "https://juejin.cn/post/7303342257792073747",
+          "publishedOn": "2023-11-20T08:51:45.000Z",
+          "wordCount": 1424,
+          "title": "历时半年，我发布了一款习惯打卡小程序",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7302965547087298601",
           "author": "doudou_sir",
           "description": "theme: cyanosis\n哦哦哦，最近，又有一个新词蹦进俺这本就不大的脑里，并在脑子里来回转圈，在好奇心的促使下，我开始试着去了解了一下它，那它究竟是什么呢，标题已经告诉你答案了，TensorFlow.js。\n可能会有人问了：TensorFlow.js 不是早就推出了吗，咋现在才知道。俺吧，天生脑子就不太好，学东西就慢，对知识这种东西有选择性障碍，这样解释你可还满意😔。\n\n唠叨唠叨\nTensorFlow 对于学习前端的应该比较陌生，它主要是用在人工智能领域的，俺在网上找了一篇文章TensorFlow 简介_tensorflow简介-CSDN博客，帮助你简单理解 TensorFlow 是干啥的，其实吧，这东西本来是跟咱们干前端的是毫无关系的，但谁知道，前端都是卷王，一个比一个能卷。就在2018， TensorFlow 开发者峰会上，TensorFlow 宣布重大更新：增加支持JavaScript，并推出开源库 TensorFlow.js ，用户可以完全在浏览器定义、训练和运行机器学习模型。好家伙，这下，跟咱们前端就有关系了（俺只能说，谷歌，你是懂得卷死前端滴😭）。\nTensorFlow.js 相当于把 TensorFlow 中的一些核心功能移植到了JavaScript中去，它主要是可以应用在开发一些比较轻量级的前端应用上的一些小的功能模块。\n啥是TensorFlow.js\nTensorFlow.js(tfjs) 是一个用于在浏览器或 Node.js 中创建、训练和部署机器学习模型的 JavaScript 库，由 Nikhil Thorat 和 Daniel Smilkov 在谷歌创建，最初名为 Deeplearn.js，2018 年被合并到 TensorFlow 团队，更名为 TensorFlow.js。\n它能在前端开发上干啥用\n运行模型\n它可以在我们的浏览器上运行…",
@@ -1137,33 +1157,13 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7302367564838567962",
-          "author": "虎妞先生",
-          "description": "前言\n白屏一直是一个前端开发谈之变色的问题。\n“什么？我的页面刚上线就白屏了，是报错了，还是兼容性问题，还是性能问题，多刷新几次就好了，用户网络不行吧。”\n简单来说，白屏就是用户打开前端页面什么有没有。\n这是一个很重要的质量指标。\n那么我们如何监控页面白屏异常呢？\n白屏异常检测主要分为两个部分，一个是如何检测，一个是什么时候检测，\n检测方案\n首先明确一点，页面打开慢，白屏时间长，不等于白屏；页面就是白色图，不等于白屏。\n关键节点是否渲染\n在当前SPA页面都是挂在根节点之下，通过查看关键dom是否渲染，如查看dom的高度heigt属性是否存在，如果存在，则证明关键dom已经渲染，页面不是白屏，反之，则判断页面是白屏\n实现思路\n在上面的代码中，我们首先使用querySelectorAll方法选中了具有 .critical-node类名的关键节点。然后，通过checkNodesRendered函数检测这些节点是否已经渲染，如果有任何一个节点的高度为0，即判断为未渲染，将返回false。最后，在页面加载完成后调用checkNodesRendered函数来判断页面状态。\n// 获取关键节点\nconst criticalNodes = Array.from(document.querySelectorAll('.critical-node'));\n\n// 检测节点渲染\nfunction checkNodesRendered() {\n  let allNodesRendered = true;\n  \n  for (const node of criticalNodes) {\n    if (node.offsetHeight === 0 || node.clientHeight === 0) {\n      allNodesRendered = false;\n      break;\n …",
-          "link": "https://juejin.cn/post/7302367564838567962",
-          "publishedOn": "2023-11-19T03:17:53.000Z",
-          "wordCount": 1907,
-          "title": "代码刚上线，页面就白屏了",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7302359255331930147",
-          "author": "去伪存真",
-          "description": "背景\n上周在工作中遇到一个历史遗留缺陷，在管理后台配置的emoji表情，在有些手机上，部分emoji图标显示成方框格子，这个问题要是放在平时比较忙碌的时候，随便找个理由就能把产品和测试糊弄过去，但上周工作不算饱和，工作不饱和的时候，人的求知欲就比较旺盛，于是决定探究一下。这是后端接口返回的emoji编码：\n{\n  \"ret\": 0,\n  \"retmsg\": \"ok\",\n  \"retdata\": {\n    \"content\": [\n      {\n        // ...\n        \"momentText\": \"\\uD83D\\uDE43\\uD83E\\uDD17\\uD83E\\uDD10\\uD83D\\uDE1C\\uD83D\\uDE2A\\uD83E\\uDD12\\uD83E\\uDD12\\uD83E\\uDDB7\\uD83E\\uDDB5\\uD83E\\uDD1B\\uD83D\\uDC48\\uD83E\\uDD1A\\uD83D\\uDE40\\uD83D\\uDE48\\uD83D\\uDC47\\uD83D\\uDC9C\\uD83D\\uDC97\\uD83E\\uDDE1\\uD83E\\uDD0E\\uD83D\\uDCA2\\uD83E\\uDD4B\\uD83C\\uDFD3\\uD83E\\uDD4E\\uD83C\\uDF81\\uD83C\\uDFB6\\uD83C\\uDFB6\\uD83C\\uDFBC\\uD83D\\uDD14\\uD83E\\uDE93\\uD83E\\uDE79\\uD83E\\uDDEC♉♌\\uD83D\\uDEC4\\uD83D\\uDD1B\\uD83D\\uDFE0\\uD83D\\uDD34\\uD83D\\uDFE8\\uD83D\\uDD39\\uD83C\\uDE50\\n天天好心情\",\n      },\n    ],\n  },\n}\n\n这是正常的显示：\n\n这是部分emoji图标显示成方框的情形：\n\nemoji的前世今生\n1…",
-          "link": "https://juejin.cn/post/7302359255331930147",
-          "publishedOn": "2023-11-18T11:58:45.000Z",
-          "wordCount": 1237,
-          "title": "部分emoji表情在手机上显示不出来，什么情况？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7302308334203404325",
-          "author": "sAnL1ng",
-          "description": "theme: smartblue\n序言\n我还记得初中时候很喜欢玩一款游戏叫别踩白块，通过点击黑块来发出声音并且每个不同得黑块有不同的音调串联起来模拟歌曲得弹奏很有意思。然后到现在更新迭代了一大批更高级得音游，那么这些音游如果放在PC端是不是也可以通过敲击键盘来实现打击乐得效果呢？所以今天我们就通过使用HTML5里的一些新特性来实现虚拟类应用开发——打击乐，开始前我们先来看看这个打击乐得效果：\njvideo\n接下来我会为大家详细地讲述本次实战的过程。首先就是给HTML页面编写实现元素添加和框架搭建，然后编写CSS文件给这些元素添加样式，最后再编写JS文件实现事件与元素与操作的交互（元素的动态效果和动作反馈）。\n准备工作\n首先我们需要准备九个打击乐的音效和一张背景图，大家如果没有的话可以去我的国内Gitee仓库中下载\n记得给博主仓库点个收藏哦3q♥\nHTML代码\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>HTML5商业化开发细节</title>\n    <link rel=\"stylesheet\" href=\"./common.css\">\n</head>\n<body>\n    <div class=\"keys\">\n        <div class=\"key\" data-key=\"65\">\n            <div>A</div>\n            <span class=\"sound\">clap</span>\n        </div>\n        <div class=\"key\" data-k…",
-          "link": "https://juejin.cn/post/7302308334203404325",
-          "publishedOn": "2023-11-18T09:27:38.000Z",
-          "wordCount": 2655,
-          "title": "用 HTML5实战打击乐Demo 虚拟类应用开发你真的掌握吗？",
+          "id": "https://juejin.cn/post/7302439422672666659",
+          "author": "CrazyCodeBoy",
+          "description": "Flutter 3.16 默认采用 Material 3 主题，Android 平台预览 Impeller，DevTools 扩展等等\nFlutter在每个季度通常都会有个稳定版本的发布。在2023 Q4的更新中为大家带来的是Flutter 3.16。这个版本将 Material 3 设为新的默认主题，并为 Android 带来了 Impeller 预览，支持为 DevTools 添加扩展等等！与此同时，我们在这个版本还可以看到Flutter Casual Games Toolkit 的重大更新。\n在距离上一个版本发布仅三个月的时间里，共有145 位社区成员合并了 928 个拉取请求，其中有 40 位社区成员首次贡献了他们的 Flutter 代码！\n接下来，就跟我一起继续阅读，了解 Flutter 社区为这个最新版本做出的所有新增和改进吧！\n框架\nMaterial 3 成为新的默认主题\n从 3.10 版本（2023 年 5 月）开始，Material 库已更新以符合最新的 Material Design 规范。更改包括新的组件和组件主题，以及更新的组件外观。在 3.16 版本之前，这些更改是“选择加入”的，使用 useMaterial3 主题标志。从此版本开始，默认情况下 useMaterial3 为 true。（#130764）\n您仍然可以通过在 MaterialApp 主题中指定 useMaterial3: false 来选择退出 Material 库的 M3 版本，但 Material 2 最终将被弃用和移除。此外，一些小部件不仅需要更新，还需要一个全新的实现。因此，当您看到它作为 Material 3 运行时，您的 UI 可能会显得有些奇怪。为了解决这个问题，请手动迁移到新的小部件，例如 NavigationBar。有关更多详细信息，请查看 GitHub 上的 Ma…",
+          "link": "https://juejin.cn/post/7302439422672666659",
+          "publishedOn": "2023-11-19T13:25:17.000Z",
+          "wordCount": 2017,
+          "title": "2023最后一个稳定版Flutter 3.16 新特性介绍",
           "imageUrl": null
         }
       ]
