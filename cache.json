@@ -23,7 +23,7 @@
           "description": "滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/",
           "publishedOn": "2023-11-21T16:14:41.000Z",
-          "wordCount": 1286,
+          "wordCount": 1287,
           "title": "cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用",
           "imageUrl": null
         },
@@ -112,6 +112,26 @@
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/65645187c306429d1911f4e2",
+          "author": null,
+          "description": "看到一个屏蔽 Youtube 广告的新思路，https://chromewebstore.google.com/detail/ad-speedup-skip-video-ads/pcjlckhhhmlefmobnnoolakplfppdchi，代码十分简单，也超级鸡贼。\n使用 MutationObserver API 识别到页面正在播放广告时（某些 DOM 节点会附加 ad-showing 之类的 class name），给 Video 自动设置成 16 倍速，10s 的广告不到 1s 就播放完毕😂",
+          "link": "https://m.okjike.com/originalPosts/65645187c306429d1911f4e2",
+          "publishedOn": "2023-11-27T08:21:27.000Z",
+          "wordCount": 509,
+          "title": "发布了: 看到一个屏蔽 Youtube 广告的新思路，https://chromewebstore.google.com/detail/ad-speedup-skip-video-ads/pcjlckhhhmlefmobnnoolakplfppdchi，代码十...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FpIBkHFnCLAZtYlydYZb4ipSscrAv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
+        {
+          "id": "https://m.okjike.com/originalPosts/65643af05682fbc62eff3aad",
+          "author": null,
+          "description": "NordPass 公布了 2023 年 Top200 常见密码，https://nordpass.com/most-common-passwords-list/，其中“123456” 5 年 4 次登顶常见密码榜，可被 1 秒破解😂\n现在大多数的浏览器和系统层面都支持了原生的密码管理能力，十分建议针对不同的网站生成不同密码。个人使用的是 1Password，已经五六年了。",
+          "link": "https://m.okjike.com/originalPosts/65643af05682fbc62eff3aad",
+          "publishedOn": "2023-11-27T06:45:04.000Z",
+          "wordCount": 498,
+          "title": "发布了: NordPass 公布了 2023 年 Top200 常见密码，https://nordpass.com/most-common-passwords-list/，其中“123456” 5 年 4 次登顶常见密码榜，可被 1 秒破...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FmlnhE4WrMOJM7vwwjFyWoEG7L1Tv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/6563dd9f552e503d7c6cbe7d",
           "author": null,
           "description": "软件 GUI 使用 start/stop 来标注状态，无数次弄错，难道不应该是 running/stopped 么？\n对于这个软件来说，应该还有一个 starting。",
@@ -167,7 +187,7 @@
           "description": "《揭秘 VPN 背后的黑灰产组织》，https://paper.seebug.org/3062/，这篇文章介绍了如何通过网络空间“行为测绘”和”交叉测绘”锁定攻击者身份和网络分布，进而分析攻击对象和攻击手法，找到了活跃在中国大陆的两个黑客组织。文章中提到几个有趣的点：\n1）攻击者比较喜欢控制家用路由器和摄像头，存在攻击行为的 16582 个 IP 节点中，一小半都属于这类\n2）控制了家用设备后，会进行“网络资产”拓展，通过端口扫描、漏洞识别、后门注入等一系列方式拓展更多受控终端\n3）攻击行为集中在网络信息收集（爬虫、SQL 注入等）和恶意扫描，恶意扫描的目的是拓展资产；而信息收集，大概率是为了出售数据，以此牟利\n4）整个空间测绘的关键围绕 IP 危险性定级、证书收敛（识别核心攻击源）、攻击手法识别（攻击意图分析）等操作，经验可复用性还是比较强的\n传统的网络攻击行为分析，依赖恶意样本和攻击现场，因此会部署超大量的网络蜜罐抓取特征，这篇文章算是提出了一个更开阔的思路，使用空间测绘从网络分布上定位源头，不过这比较依赖丰富的样本库，例如需要对海量的网络 IP 做标记、对各类攻击手法有深入了解，并且要求掌握攻击流量。\n我特别好奇攻击流量是如何掌握的，难道是在 BGP 节点上部署了流量侦测模块？",
           "link": "https://m.okjike.com/originalPosts/6560555b87a8e03bd192731d",
           "publishedOn": "2023-11-24T07:48:43.000Z",
-          "wordCount": 481,
+          "wordCount": 483,
           "title": "发布了: 《揭秘 VPN 背后的黑灰产组织》，https://paper.seebug.org/3062/，这篇文章介绍了如何通过网络空间“行为测绘”和”交叉测绘”锁定攻击者身份和网络分...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FmeFEujAsu3hPqu0DEk2LRfjHDAEv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -190,26 +210,6 @@
           "wordCount": 491,
           "title": "发布了: 国内很多 APP 都会识别用户“摇一摇”的动作，来强跳其他 APP，但是从行业标准来看，基本都违反了他们自己制定的《APP 用户权益保护测评规范》。 找到一...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fj_PdE8mGN6z7r2ceiOTz96j7nHov3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/655f0cee5682fbc62e976a40",
-          "author": null,
-          "description": "推荐一个超实用的网站，Papers with code，https://paperswithcode.com，它是一个论文和对应工程实现（含代码、数据集、测试方法等）的索引工具，下次你看到别人推荐优质论文时，可以直接用它去找代码实现。\n有些论文价值很大，会被多次实现（如图二），但工程质量有高有低，你可以在这个网站详情页看到不同实现的 star 数量，择优学习；详情页还包含了数据集、测试方法、关联论文等等，你甚至还可以通过数据集去反查关联论文，简直是研究神器。\n之前我都是去 Google 检索或者去 Aminer 上查看，有了这个工具就方便多了。",
-          "link": "https://m.okjike.com/originalPosts/655f0cee5682fbc62e976a40",
-          "publishedOn": "2023-11-23T08:27:26.000Z",
-          "wordCount": 539,
-          "title": "发布了: 推荐一个超实用的网站，Papers with code，https://paperswithcode.com，它是一个论文和对应工程实现（含代码、数据集、测试方法等）的索引工具，下次你...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fm_sY8ms05u4KNC_p1QbP-uvIxACv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/655ee7acf9a492630b623bda",
-          "author": null,
-          "description": "哈哈哈，干就对了。",
-          "link": "https://m.okjike.com/originalPosts/655ee7acf9a492630b623bda",
-          "publishedOn": "2023-11-23T05:48:28.000Z",
-          "wordCount": 508,
-          "title": "发布了: 哈哈哈，干就对了。",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FimNtjYaugGPR5SXjpImZQ6fVEjJv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         }
       ]
     },
@@ -744,16 +744,6 @@
           "wordCount": 523,
           "title": "重庆市忠县发布大雾黄色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231120/t20231120_526492282.html",
-          "author": "国家预警信息发布中心",
-          "description": "万州区气象台2023年11月20日15时发布“大雾黄色预警信号”，预计20日23时30分至21日10时，陈家坝街道、百安坝街道、五桥街道、高笋塘街道、太白街道、高峰街道、双河口街道、新田镇、长岭镇、分水镇等镇乡街将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。有关部门和单位按照职责做好防雾准备工作；机场、高速公路、轮渡码头等单位加强交通管理，保障安全；驾驶人员注意雾的变化，小心驾驶；户外活动注意安全。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231120/t20231120_526492282.html",
-          "publishedOn": "2023-11-20T07:25:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市万州区发布大雾黄色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -779,6 +769,16 @@
       "feedUrl": "https://rsshub.app/juejin/trending/frontend/weekly",
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
+        {
+          "id": "https://juejin.cn/post/7304932252827287604",
+          "author": "写前端的刻猫猫",
+          "description": "theme: smartblue\n75% of my life is programming, 5% is debugging, 10% is sleep, 5% eating meals, 1% socializing, 3% snacking, 1% wondering the meaning of life\n写这篇文章的目的在于分享一些个人觉得质量比较高的前端资源，可以减少初学者面对学习资源的信息差，保持输入的是流行和前沿的技术，资源不限于 知名开发者 / 博主，文档，视频，书籍，演示网站，工具 等，除了书籍外，资源都是免费 / 开源的， 同时尽量保证资源是支持中英文的，如果只有英文但啃得费劲，可以借助类似 沉浸式翻译 之类的工具提高阅读效率和理解文章。\n文字很容易被误解，所以写作时，最好写得友好一点，笔者这里只是抛砖引玉，初探行业的一角，如有未提及的领域，欢迎各位看官在评论区补充其他高质量资源，这样文章也可以持续不断更新。 文章篇幅较长，建议结合目录跳转使用。\n题外话\n作为一名初入行的开发者，深刻体会到这行业不仅有较高的门槛，即便是入行之后，也需要不断保持学习来适应技术的进步和提高自身的竞争力，以下是个人参加工作以来的一些体会：\n问别人前要先问问自己，学会如何提问，不要做伸手党 - 提问的智慧\n培养自学能力，没有自学能力的人是没有未来的\n代码不能写的太烂吧，不然会被同事鄙视的 (别骂了，别骂了，这坨屎是我写的，大佬带带💔)，感到吃力要及时弥补差距\n学习需要持之以恒，半途而废最可耻，先有学习的习惯，再谈学习的效果。想维持长期的热情，需要给自己找到持续的正向反馈。\n学好英语，因为先进的生产力工具掌握在英文区，打破信息差\n善于发现问题，解决问题, 从问题中成长 是每位开发者需要锻炼的能力，善于使用 Google,  StackOverflow，和 ChatGPT 能帮助…",
+          "link": "https://juejin.cn/post/7304932252827287604",
+          "publishedOn": "2023-11-25T11:58:35.000Z",
+          "wordCount": 3055,
+          "title": "2023最全高质量前端资源分享",
+          "imageUrl": null
+        },
         {
           "id": "https://juejin.cn/post/7304839912876163108",
           "author": "月弦笙音",
@@ -950,13 +950,13 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7302965547087298601",
-          "author": "doudou_sir",
-          "description": "theme: cyanosis\n哦哦哦，最近，又有一个新词蹦进俺这本就不大的脑里，并在脑子里来回转圈，在好奇心的促使下，我开始试着去了解了一下它，那它究竟是什么呢，标题已经告诉你答案了，TensorFlow.js。\n可能会有人问了：TensorFlow.js 不是早就推出了吗，咋现在才知道。俺吧，天生脑子就不太好，学东西就慢，对知识这种东西有选择性障碍，这样解释你可还满意😔。\n\n唠叨唠叨\nTensorFlow 对于学习前端的应该比较陌生，它主要是用在人工智能领域的，俺在网上找了一篇文章TensorFlow 简介_tensorflow简介-CSDN博客，帮助你简单理解 TensorFlow 是干啥的，其实吧，这东西本来是跟咱们干前端的是毫无关系的，但谁知道，前端都是卷王，一个比一个能卷。就在2018， TensorFlow 开发者峰会上，TensorFlow 宣布重大更新：增加支持JavaScript，并推出开源库 TensorFlow.js ，用户可以完全在浏览器定义、训练和运行机器学习模型。好家伙，这下，跟咱们前端就有关系了（俺只能说，谷歌，你是懂得卷死前端滴😭）。\nTensorFlow.js 相当于把 TensorFlow 中的一些核心功能移植到了JavaScript中去，它主要是可以应用在开发一些比较轻量级的前端应用上的一些小的功能模块。\n啥是TensorFlow.js\nTensorFlow.js(tfjs) 是一个用于在浏览器或 Node.js 中创建、训练和部署机器学习模型的 JavaScript 库，由 Nikhil Thorat 和 Daniel Smilkov 在谷歌创建，最初名为 Deeplearn.js，2018 年被合并到 TensorFlow 团队，更名为 TensorFlow.js。\n它能在前端开发上干啥用\n运行模型\n它可以在我们的浏览器上运行…",
-          "link": "https://juejin.cn/post/7302965547087298601",
-          "publishedOn": "2023-11-20T04:41:24.000Z",
-          "wordCount": 2518,
-          "title": "TensorFlow.js，让你的应用更加高级，更具逼格",
+          "id": "https://juejin.cn/post/7303360094426546216",
+          "author": "网易云音乐技术团队",
+          "description": "本文作者：凯尔希\n本文主要是介绍下云音乐低代码研发方式，在中后台领域的落地实战路径、成果总结\n前言\n笔者负责一个业务型的前端团队，支撑云音乐数据相关的B端产品，需求吞吐量一直是一个关注的重点\n\n但想要提升团队交付量，无非两个方向，增加人手，研发提效，加人显然不符合当前的经济环境，并且很有可能演变成 “面多加水，水多加面” 的人力黑洞，通过低代码的方式，对现有生产过程的进行改造，进而提升生产力，是一个相对可行的方案\n1.业务痛点\n1.1 产品线较多，跨部门协同效率很低\n由于是跨部门支撑，缺乏其他职能角色，对接的流程比较乱，且后端团队规模远超前端，各业务组竞相锁定人力，团队割裂，目标混乱，前端很难做出价值\n1.2 团队水位低，需求吞吐量很难提升\n基层成员因能力受限，不能有效参与日常业务，需求大量积压在头部成员手中，导致交付吞吐量很难提升\n\n2.如何将低代码落地到业务中\n2.1 外部协作流程重构\n2.1.1 分类分级保障标准\n我们将过去混乱的产品线进行分类，将保障标准与业务价值锚定，将前端资源进行聚焦\n\n\n2.1.2 研发元信息标准化\n为了进一步约束上游需求侧的产出，理清合作边界，减少业务侧对前端的强绑定，我们依托内部的技术产品对研发流程进行了元信息标准化，为低代码落地创造 “技术条件”\nOvermind：云音乐自研产品，具备排期、拆分任务等事项管理，人力可视化的能力\nOX：云音乐自研产品，具备将 Java 代码解析为接口文档的能力，接口即文档\n\n2.1.3 双周评审PK机制\n为了保证上述方案能够落地，前端主导发起双周评审PK，需求先在后端内部PK，再根据 “分级保障标准”，一部被分流给后端搭建，一部分被挤出，我们会为其提供必要的使用培训、落地辅导，为低代码落地创造 “机制保障”\n\n2.2 团队研发模式转型\n在处理完流程机制上的问题后，需要对内进行研发模式转型\n2.2.1 混合式…",
+          "link": "https://juejin.cn/post/7303360094426546216",
+          "publishedOn": "2023-11-20T08:20:02.000Z",
+          "wordCount": 987,
+          "title": "低代码在云音乐数据业务中的落地实践与思考",
           "imageUrl": null
         },
         {
@@ -968,16 +968,6 @@
           "wordCount": 4533,
           "title": "nest 中绝对的核心 ioc di、mvc、aop",
           "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7302439422672666659",
-          "author": "CrazyCodeBoy",
-          "description": "Flutter 3.16 默认采用 Material 3 主题，Android 平台预览 Impeller，DevTools 扩展等等\nFlutter在每个季度通常都会有个稳定版本的发布。在2023 Q4的更新中为大家带来的是Flutter 3.16。这个版本将 Material 3 设为新的默认主题，并为 Android 带来了 Impeller 预览，支持为 DevTools 添加扩展等等！与此同时，我们在这个版本还可以看到Flutter Casual Games Toolkit 的重大更新。\n在距离上一个版本发布仅三个月的时间里，共有145 位社区成员合并了 928 个拉取请求，其中有 40 位社区成员首次贡献了他们的 Flutter 代码！\n接下来，就跟我一起继续阅读，了解 Flutter 社区为这个最新版本做出的所有新增和改进吧！\n框架\nMaterial 3 成为新的默认主题\n从 3.10 版本（2023 年 5 月）开始，Material 库已更新以符合最新的 Material Design 规范。更改包括新的组件和组件主题，以及更新的组件外观。在 3.16 版本之前，这些更改是“选择加入”的，使用 useMaterial3 主题标志。从此版本开始，默认情况下 useMaterial3 为 true。（#130764）\n您仍然可以通过在 MaterialApp 主题中指定 useMaterial3: false 来选择退出 Material 库的 M3 版本，但 Material 2 最终将被弃用和移除。此外，一些小部件不仅需要更新，还需要一个全新的实现。因此，当您看到它作为 Material 3 运行时，您的 UI 可能会显得有些奇怪。为了解决这个问题，请手动迁移到新的小部件，例如 NavigationBar。有关更多详细信息，请查看 GitHub 上的 Ma…",
-          "link": "https://juejin.cn/post/7302439422672666659",
-          "publishedOn": "2023-11-19T13:25:17.000Z",
-          "wordCount": 2017,
-          "title": "2023最后一个稳定版Flutter 3.16 新特性介绍",
-          "imageUrl": null
         }
       ]
     },
@@ -986,6 +976,16 @@
       "feedUrl": "https://rsshub.app/juejin/pins/6824710202000932877",
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
+        {
+          "id": "7305983860168458303",
+          "author": "轻舟已过万重山",
+          "description": "给 Spring Web 开发者开发了一款 IDEA 插件：Feign-Helper，为什么叫 Feign-Helper ？因为核心功能其实是Spring Cloud Feign 接口与和对应的 Controller 源码间互相跳转（源码在同一个工程内），顺便提供 Spring Web HTTP API 检索（按两下 Shift 键打开，有个 URL 选项卡），现在送优惠码：https://aboat365.com/feign-helper/2023/11/27/v2ex-Feign-Helper-%E4%BC%98%E6%83%A0%E7%A0%81.html",
+          "link": "https://juejin.cn/pin/7305983860168458303",
+          "publishedOn": "2023-11-27T08:10:18.000Z",
+          "wordCount": 534,
+          "title": "给 Spring Web 开发者开发了一款 IDEA 插件：Feign-Helper，为什么叫 Feign-Helper ？因为核心功能其实是Spring Cloud Feign 接口与和对应的 Controller 源码间...",
+          "imageUrl": null
+        },
         {
           "id": "7305576845100924928",
           "author": "麻不烧",
@@ -1022,7 +1022,7 @@
           "description": "[7073670907851440160#新人报道#]",
           "link": "https://juejin.cn/pin/7304538151480442918",
           "publishedOn": "2023-11-23T13:52:07.000Z",
-          "wordCount": 453,
+          "wordCount": 456,
           "title": "[7073670907851440160#新人报道#]",
           "imageUrl": null
         },
@@ -1082,7 +1082,7 @@
           "description": "[7073670907851440160#新人报道#] 新人报道",
           "link": "https://juejin.cn/pin/7303043433107128354",
           "publishedOn": "2023-11-20T08:02:16.000Z",
-          "wordCount": 461,
+          "wordCount": 464,
           "title": "[7073670907851440160#新人报道#] 新人报道",
           "imageUrl": null
         },
@@ -1174,16 +1174,6 @@
           "publishedOn": "2023-11-13T07:03:52.000Z",
           "wordCount": 502,
           "title": "今天，注册和安装了 Codeium，其实就是一个和 Copilot 一样的定位，区别就是针对 Indivisual 个人是免费使用的，这点有很大的优势。Copilot 如果没有 popular op...",
-          "imageUrl": null
-        },
-        {
-          "id": "7300460850011193398",
-          "author": "charlestang",
-          "description": "我今天发现了一个快捷键，在 Finder 下，列表模式，如果按 Cmd+ “+”，会让列表进入大图标列表模式，按 Cmd + “-\" 恢复为紧凑列表。第一次知道列表模式有两种形态。",
-          "link": "https://juejin.cn/pin/7300460850011193398",
-          "publishedOn": "2023-11-13T03:31:36.000Z",
-          "wordCount": 485,
-          "title": "我今天发现了一个快捷键，在 Finder 下，列表模式，如果按 Cmd+ “+”，会让列表进入大图标列表模式，按 Cmd + “-\" 恢复为紧凑列表。第一次知道列表模式有两种...",
           "imageUrl": null
         }
       ]
