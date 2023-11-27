@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-11-27T12:56:38.377Z</id>
+    <id>urn:2023-11-27T15:52:19.472Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-11-27T12:56:38.377Z</updated>
+    <updated>2023-11-27T15:52:19.472Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -293,6 +293,30 @@
         <summary type="html"><![CDATA[南川区气象台2023年11月24日16时发布“大风蓝色预警信号”，预计11月24日15时至25日4时，东城街道、西城街道、南城街道、三泉镇、头渡镇、金山镇、德隆镇、水江镇、峰岩乡、鸣玉镇、楠竹山镇、山王坪镇风力可达6级，局地阵风可达7级以上，请注意防范。]]></summary>
         <author>
             <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Taro | 高性能小程序的最佳实践]]></title>
+        <id>https://juejin.cn/post/7304584222963613715</id>
+        <link href="https://juejin.cn/post/7304584222963613715"/>
+        <updated>2023-11-24T08:06:33.000Z</updated>
+        <summary type="html"><![CDATA[前言
+作为一个开放式的跨端跨框架解决方案，Taro 在大量的小程序和 H5 应用中得到了广泛应用。我们经常收到开发者的反馈，例如“渲染速度较慢”、“滑动不够流畅”、“性能与原生应用相比有差距” 等。这表明性能问题一直是困扰开发者的一个重要问题。
+熟悉 Taro 的开发者应该知道，相比于 Taro 1/2，Taro 3 是一个更加注重运行时而轻量化编译时的框架。它的优势在于提供了更高效的代码编写方式，并拥有更丰富的生态系统。然而，这也意味着在性能方面可能会有一些损耗。
+但是，使用 Taro 3 并不意味着我们必须牺牲应用的性能。事实上，Taro 已经提供了一系列的性能优化方法，并且不断探索更加极致的优化方案。
+本文将为大家提供一些小程序开发的最佳实践，帮助大家最大程度地提升小程序应用的性能表现。
+一、如何提升初次渲染性能
+如果初次渲染的数据量非常大，可能会导致页面在加载过程中出现一段时间的白屏。为了解决这个问题，Taro 提供了预渲染功能（Prerender）。
+使用 Prerender 非常简单，只需在项目根目录下的 config 文件夹中找到 index.js/dev.js/prod.js 三者中的任意一个项目配置文件，并根据项目情况进行修改。在编译时，Taro CLI 会根据你的配置自动启动预渲染功能。
+const config = {
+  ...
+  mini: {
+    prerender: {
+      match: 'pages/shop/**', // 所有以 `pages/shop/` 开头的页面都参与 prerender
+      include: ['pages/any/way/index'], // `pages/any/way/index` 也会参与 prerender
+      exclude: ['pages/shop/index/ind…]]></summary>
+        <author>
+            <name>凹凸实验室</name>
         </author>
     </entry>
     <entry>
@@ -1043,20 +1067,6 @@ HR 面根据公司不同，在整个面试流程中出现的位置也不相同�
         <summary type="html"><![CDATA[「你会感到无聊，可能是因为你的想象力睡着了。」]]></summary>
         <author>
             <name>李继刚的即刻动态</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[WebAssembly照亮了 Web端软件的未来]]></title>
-        <id>https://juejin.cn/post/7304053759880364058</id>
-        <link href="https://juejin.cn/post/7304053759880364058"/>
-        <updated>2023-11-22T05:18:50.000Z</updated>
-        <summary type="html"><![CDATA[WebAssembly的发展历程相对较短，但影响深远。WebAssembly 于 2015 年首次发布，先驱技术是来自Mozilla的asm.js和Google Native Client，最初的实现是基于asm.js的功能集。自2017年3月由WebAssembly创造的MVP的预览版发布以来，WebAssembly发展迅速，目前已经部署到了所有主流浏览器。到了2019年，WebAssembly 1.0成为了W3C推荐的标准，这打破了之前仅用JavaScript来进行Web开发的局面。那么什么是WebAssembly? 这篇文章让你从多方面了解WebAssembly这一技术。
-WebAssembly是什么？
-WebAssembly（简称Wasm）是一种新型的、可以在现代Web浏览器中运行的代码。这是一种低级类汇编语言，其二进制格式紧凑，为诸如 C、C++和 Rust 等低级源语言提供一个高效的编译目标，以便它们可以在Web上运行。开发者通过自选语言编写代码，然后将其编译为WebAssembly字节码进行运行。字节码在客户端（通常是Web浏览器）上运行，在那里它被编译为可执行机器码并以接近原生的速度执行。
-由于Wasm提供给浏览器的是以二进制格式编译的代码，节省了下载和解析JavaScript代码时间，使代码执行效率更高。此外，WASM提供了开发者手动管理内存的选项，以及可以直接访问内存的特性，从而提升了运行效率。WebAssembly不仅具有高效的解析和执行能力，还有着硬件和操作系统无关的低级虚拟机模型，提供了安全的运行环境。当前，WASM可以兼容主流的Web浏览器，例如Chrome、Edge、Firefox、Opera和Safari。
-WASM被设计为与JavaScript协同工作，以此实现Web平台上的高性能应用。综合来看，WASM在Web平台上表现出近乎原生的开发速…]]></summary>
-        <author>
-            <name>PHP是世界上最好的语言</name>
         </author>
     </entry>
     <entry>
