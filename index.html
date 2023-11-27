@@ -51,11 +51,44 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-27 datetime="2023-11-27T00:32:00.000Z">2023-11-27</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-27 datetime="2023-11-27T00:32:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-27 datetime="2023-11-27T00:51:20.000Z">2023-11-27</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-27 datetime="2023-11-27T00:51:20.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7305576845100924928"
+                        open
+                      >
+                        <summary class="article-expander__title">实现了一款目前AI还做不到的文字转图片应用，灵感来源于微信读书，已上线，支持各种模板。可前来体验，今天会发博客，让大家对它有个更清晰的认识。线上体验http...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7305576845100924928">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>实现了一款目前AI还做不到的文字转图片应用，灵感来源于微信读书，已上线，支持各种模板。可前来体验，今天会发博客，让大家对它有个更清晰的认识。线上体验https://anyphoto.space/playground</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -681,6 +714,95 @@
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7304598711992598566"
+                        open
+                      >
+                        <summary class="article-expander__title">浏览器跨标签星球火了，简单探究一下实现原理</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7304598711992598566">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>一、前言
+最近 推特上 一位懂设计和写代码的大神一个两个浏览器之间 星球粒子交互的动画火了， 让人看了大呼脑洞大开， 浏览器竟然还能这么玩！！！
+准备自己也搞搞玩一下
+
+二、实现
+原作者的粒子动画非常炫酷， 但是不是我们本文重点， 我们通过一个元素在不同窗口的拖拽实现一个可以变幻的例子来学习一下原理， 后续在实现一个稍微复杂的多窗口的小游戏。关于粒子动画的内容，有兴趣的小伙伴可以自己实现
+其实实现类似的功能需要的难点并不多，不在乎以下几个步骤
+1、 屏幕坐标和窗口坐标转换
+2、 跨标签通讯
+1、 先来看第一个点， 获取屏幕坐标与窗口坐标
+// 屏幕坐标转换为窗口坐标
+const screenToClient &#x3D; (screenX, screenY) &#x3D;&gt; {
+  const clienX &#x3D; screenX - window.screenX;
+  const clienY &#x3D; screenY - window.screenY - barHeight();
+  return [clienX, clienY];
+};
+
+// 窗口坐标转换为屏幕坐标
+const clientToScreen &#x3D; (clienX, clienY) &#x3D;&gt; {
+  const screenX &#x3D; clienX + window.screenX;
+  const screenY &#x3D; clienY + window.screenY + barHeight();
+  return [screenX, screenY];
+};
+
+我们先简单实现一个卡片， 通过url上面传递颜色值， 设置定位
+在卡片本上设置上点击拖动等事件
+
+
+  
+    
+    &lt;meta name&#x3D;&quot;viewpor…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7304563142956810259"
+                        open
+                      >
+                        <summary class="article-expander__title">Vite 5 官宣！（译）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7304563142956810259">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>大家好，这里是大家的林语冰。一个月前尤雨溪在 ViteConf 大会上就透露了 Vite 一年来的成果、现状和未来规划，企图诉诸 Rust “锈化”重构 Rollup，今年年底 Vite 生态还会有大动作。
+2023 年 11 月 16 日，Vite 团队官宣：Vite 5 正式发布！
+
+免责声明
+本文属于是语冰的直男翻译了属于是，仅供粉丝参考，英文原味版请临幸 Vite 5.0 is out!。
+Vite 4 大约在一年前官宣，它为前端生态积基树本。Vite 的 npm 周下载量从 2_500_000 暴涨至 7_500_000，因为新兴项目不断构建于同一共享基建上。框架持续推陈出新，除了 Astro、Nuxt、SvelteKit、Solid Start、Qwik City 等之外，我们还瞄到新兴框架的强势加入，使前端生态系统更加给力。RedwoodJS 和 Remix “切换赛道”到 Vite 为 React 生态系统的增量采用铺平了道路。Vitest 的增长速度甚至比 Vite 更青出于蓝。Vitest 团队一直在努力打工，且不日就会官宣 Vitest 1.0。当 Vite 与 Storybook、Nx 和 Playwright 等其他工具“梦幻联动”时，Vite 的故事还在继续，前端环境大抵相同，Vite 在 Deno 和 Bun 中都能奏效。
+一个月前，我们举办了第二届 ViteConf 多人活动，由 StackBlitz 主办。与去年一样，前端生态中的大多数项目都聚众群聊、共享想法并互换微信，不断扩大共享空间。我们还看到新的拼图填充了元框架工具带，比如 Volar 和 Nitro。Rollup 团队同年同日官宣了 Rollup 4，这是 Lukas 去年开始的传统。
+六个月前，Vite 4.3 官宣。此版本显著优化了开发服务器的性能。虽然但是，Vite 尚存一大…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >李继刚的即刻动态</button>
                   <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
                 </h3>
@@ -703,46 +825,6 @@
 有了这个概念，可以反思下自己在这个链条中的位置。 
 每天阅读的信息源生产者是谁？ 看到的信息经过别人加工了么？ 是别人分享后才看到还是直接订阅的？ 分享链路往上回溯源头会经过几个媒体平台？</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7304563142956810259"
-                        open
-                      >
-                        <summary class="article-expander__title">Vite 5 官宣！（译）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7304563142956810259">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>大家好，这里是大家的林语冰。一个月前尤雨溪在 ViteConf 大会上就透露了 Vite 一年来的成果、现状和未来规划，企图诉诸 Rust “锈化”重构 Rollup，今年年底 Vite 生态还会有大动作。
-2023 年 11 月 16 日，Vite 团队官宣：Vite 5 正式发布！
-
-免责声明
-本文属于是语冰的直男翻译了属于是，仅供粉丝参考，英文原味版请临幸 Vite 5.0 is out!。
-Vite 4 大约在一年前官宣，它为前端生态积基树本。Vite 的 npm 周下载量从 2_500_000 暴涨至 7_500_000，因为新兴项目不断构建于同一共享基建上。框架持续推陈出新，除了 Astro、Nuxt、SvelteKit、Solid Start、Qwik City 等之外，我们还瞄到新兴框架的强势加入，使前端生态系统更加给力。RedwoodJS 和 Remix “切换赛道”到 Vite 为 React 生态系统的增量采用铺平了道路。Vitest 的增长速度甚至比 Vite 更青出于蓝。Vitest 团队一直在努力打工，且不日就会官宣 Vitest 1.0。当 Vite 与 Storybook、Nx 和 Playwright 等其他工具“梦幻联动”时，Vite 的故事还在继续，前端环境大抵相同，Vite 在 Deno 和 Bun 中都能奏效。
-一个月前，我们举办了第二届 ViteConf 多人活动，由 StackBlitz 主办。与去年一样，前端生态中的大多数项目都聚众群聊、共享想法并互换微信，不断扩大共享空间。我们还看到新的拼图填充了元框架工具带，比如 Volar 和 Nitro。Rollup 团队同年同日官宣了 Rollup 4，这是 Lukas 去年开始的传统。
-六个月前，Vite 4.3 官宣。此版本显著优化了开发服务器的性能。虽然但是，Vite 尚存一大…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2724,89 +2806,6 @@ TensorFlow.js(tfjs) 是一个用于在浏览器或 Node.js 中创建、训练和
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7302724955700264999"
-                        open
-                      >
-                        <summary class="article-expander__title">手撸 Electron 自动更新，再繁琐也要搞懂它</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7302724955700264999">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>大家好，我是杨成功。
-Electron 的自动更新不会像 React Native 一样直接下载 Web 代码静默更新，因为它还有主进程（Node.js）代码，因此需要走安装流程。
-在 Electron 中，使用第三方包 electron-updater 来实现自动更新的功能。
-📣 📣 我的新书《前端开发实战派》快要出版了，在公众号精选文章 《我写了一本书》下评论，我会选择 3 位朋友赠书。
-为什么不用 autoUpdater？
-如果细看 Electron 文档，会发现官方提供了一个 autoUpdater 功能来实现自动更新，如图：
-
-相比 autoUpdater，第三方包 electron-updater 有以下优势：
-不需要搭建专门的更新服务（如 Hazel、Nuts 等）。
-同时支持 macOS 和 Windows 签名。
-支持获取下载进度，等等。
-最主要的优势还是支持自定义更新服务。公司发布新版本安装包，上传到自己的静态服务器最方便，而不是还要再搭建一个专门的更新服务。
-当然获取下载进度也很重要，否则用户干等着，体验非常差。后面我们会实现下载进度提示。
-接入 electron-updater 并检测更新
-（1）安装 electron-updater，命令如下：
-$ yarn add electron-updater
-
-（2）新建 update.js 文件，在该文件中编写更新逻辑。
-定义一个 checkUpdate() 方法，在该方法中执行 autoUpdater.checkForUpdatesAndNotify() 来检测是否有新版本。
-当更新完成后，执行 autoUpdater.quitAndInstall() 方法来安装更新后的应用包。代码如下：
-const { autoUpdater } &#x3D; require(&#x27;electron-updater&#x27;);
-va…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7302724955699822631"
-                        open
-                      >
-                        <summary class="article-expander__title">「前端添加水印」你真的了解全面吗？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7302724955699822631">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: juejin
-
-背景
-在古茗日常业务中，经常会给加盟商下发各种资料，例如：奶茶的配方、设备的清洗、卫生的标准等等等。这些资料都是一些内部资料，从信息安全维度不能被泄露和盗取出去。所以会给下发的资料加上水印。这些资料可能是纯文本，也可能是文本加图片的。因此，我们要做好以下两个方面：
-通过对页面增加水印，可以从系统级别防止别人盗取我们的页面信息
-通过对单独的图片加水印 - 防止图片保存时没有水印
-页面水印
-方案设计
-实现页面水印的方式有很多，可以看一些常用页面加水印的方案，具体如下：
-方案一：fixed 定位的 div 元素，重复渲染 div 元素来添加水印。会创建很多无关的 DOM 元素
-方案二：fixed 定位 canvas 元素，重复填充水印。始终会创建一个无关的 canvas 元素
-方案三：canvas + 伪类。不会创建无关元素，且兼容性好
-方案四：svg + 伪类。不会创建无关元素，但兼容性略差于 canvas
-这些方案，都有一个通用的缺点，那就是将元素删掉，或者将类名删掉，都能去除页面水印。
-基于实现成本和安全性维度的考虑，最终方案选型：方案三，同时增加了通过MutationObserver - Web API 接口参考 | MDN 解决了删除类名导致水印删除的问题。
-核心功能点：
-把签名信息，通过 Canvas 生成背景图
-利用伪类将背景图添加到需要生成水印的区域上
-通过 MutationObserver , 解决了删除类名导致水印删除的问题
-代码实现
-把签名信息，通过Canvas生成背景图
-利用 Canvas 来绘制背景图，背景内容为水印的内容
-通过 toDataURL 将 Canvas 转换成图片，格式为 image/png
-interface IImgOptions {
-  content: string[]; // 水印的内容，可传递多个水…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -2980,6 +2979,75 @@ Material 3 成为新的默认主题
 从 3.10 版本（2023 年 5 月）开始，Material 库已更新以符合最新的 Material Design 规范。更改包括新的组件和组件主题，以及更新的组件外观。在 3.16 版本之前，这些更改是“选择加入”的，使用 useMaterial3 主题标志。从此版本开始，默认情况下 useMaterial3 为 true。（#130764）
 您仍然可以通过在 MaterialApp 主题中指定 useMaterial3: false 来选择退出 Material 库的 M3 版本，但 Material 2 最终将被弃用和移除。此外，一些小部件不仅需要更新，还需要一个全新的实现。因此，当您看到它作为 Material 3 运行时，您的 UI 可能会显得有些奇怪。为了解决这个问题，请手动迁移到新的小部件，例如 NavigationBar。有关更多详细信息，请查看 GitHub 上的 Ma…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7302367564839010330"
+                        open
+                      >
+                        <summary class="article-expander__title">开启鸿蒙HarmonyOS之旅（一：准备工作以及ArkTS基础语法）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7302367564839010330">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: condensed-night-purple
+前言
+这里是鸿蒙开发的指南，这几天鸿蒙开发引起了大家的注意，咱们不去讨论那些有的没的东西，只进行内容学习，于是我结合官网和例子准备给大家一份使用手册
+这里不讨论鸿蒙开发的好坏，如果你想了解或者是学习，那么我希望这篇文章会对你有帮助~
+咱们开始吧~
+DevEco Studio下载
+可以先进入到官网
+华为HarmonyOS智能终端操作系统官网 | 应用设备分布式开发者生态
+然后找到下载项就可以了
+
+正常下载安装即可
+
+当然跟常规的IDE一样，DevEco Studio，也可以进行一些设置
+
+选择settings，即可配置
+
+让你新建一个项目的时候，可能需要下载一些环境，这个时候根据提示下载就行
+大概是这些内容
+
+然后新建项目
+
+
+完事就是这个样子的，wow~熟悉的感觉又来了
+
+新建页面
+
+然后点击preview可以进行手机端预览
+
+
+我们还可以通过模拟器来更好地观看效果
+
+
+
+点击next,然后需要进行下载
+最后
+
+
+我写完才发现，官方已经给文档了....
+运行Hello World-华为开发者学堂 (huawei.com)
+关于IDE不进行过多篇幅的介绍，其实IDE都大差不差，具体用到的东西，后面项目的会讲到的~
+ArkTS基础
+
+
+在官方文档中我们可得知，鸿蒙主要开发语言是ArkTS，并且我们知道了，ArkTS是基于TS的，并在TS基础上拓展了一些内容，那么对于掌握TS的朋友，入手会简单很多
+官网其实写的很不错，给了例子，也给了ArcTS的组成图
+
+
+通过每个部分的大概定义，我们其实可以大概就知道怎么个写法了
+但是有的大家可能一下子不知道，大概给大家解释下
+build()方法：这里指ArcTS的声明式UI描述，其实就是描述UI的结构
+Column、Text、Divider、Button：…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3385,53 +3453,6 @@ AI 是一个新事物，带来了很多前所未有的问题。
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-12 datetime="2023-11-12T14:33:53.000Z">2023-11-12</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-12 datetime="2023-11-12T14:33:53.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7300207920284680233"
-                        open
-                      >
-                        <summary class="article-expander__title">github编程字体 https://monaspace.githubnext.com/</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7300207920284680233">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>github编程字体 https://monaspace.githubnext.com/</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-10 datetime="2023-11-10T03:57:59.000Z">2023-11-10</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-10 datetime="2023-11-10T03:57:59.000Z"></time>
           </button>
@@ -3648,8 +3669,8 @@ AI 是一个新事物，带来了很多前所未有的问题。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/6999337701">
-        <time id="build-timestamp" datetime="2023-11-27T01:14:45.762Z">2023-11-27T01:14:45.762Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7000385728">
+        <time id="build-timestamp" datetime="2023-11-27T03:52:28.077Z">2023-11-27T03:52:28.077Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
