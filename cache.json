@@ -23,7 +23,7 @@
           "description": "滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/",
           "publishedOn": "2023-11-21T16:14:41.000Z",
-          "wordCount": 1286,
+          "wordCount": 1288,
           "title": "cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "剪映中的视频特效虽多，其实就两类，一类改变原始像素，一类叠加混合，本文通过精简的源码和精致的案例给大家介绍具体如何实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/video-effect-js-filter-pixijs-webgl-3d/",
           "publishedOn": "2023-11-19T15:12:20.000Z",
-          "wordCount": 1228,
+          "wordCount": 1229,
           "title": "剪映APP的视频特效如何在Web中JS实现",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "应该是国内第一篇专门介绍用mp4box.js和VideoDecoder方法解码MP4视频序列帧的文章了。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/mp4box-js-webcodecs-mp4-canvas/",
           "publishedOn": "2023-11-14T16:37:18.000Z",
-          "wordCount": 1239,
+          "wordCount": 1245,
           "title": "mp4box.js加WebCodecs 解码MP4视频帧并渲染",
           "imageUrl": null
         }
@@ -107,7 +107,7 @@
           "description": "self-operating-computer，https://github.com/OthersideAI/self-operating-computer，这个项目演示了如何让 GPT-4V 来控制自己的电脑，你需要做的就是告诉它完成一个怎样的任务，例如，打开 Google Docs 写一篇文章，然后发布并分享给同事。\n它的 Prompt 写的比较简单，定义了一个可以与机器交互的 DSL，主要包含三种动作：Click/Type/Search，分别对应 mouse_click/keyboard_type/mac_search 几个封装好的系统函数。\n每次程序执行动作时，都会携带任务目标、上一步执行结果以及当前屏幕截图作为上下文，然后将信息传递给 ChatGPT，并让它给出下一步操作指示。\n这个项目中 Prompt 的定制化程度偏高，说明完成复杂的工作还比较有挑战，如果参考之前提到的 Mutil-Agent 方案，https://twitter.com/Barret_China/status/1712408323851788505，做出来效果应该会更好一些。",
           "link": "https://m.okjike.com/originalPosts/65655c79552e503d7c8ca657",
           "publishedOn": "2023-11-28T03:20:25.000Z",
-          "wordCount": 482,
+          "wordCount": 480,
           "title": "发布了: self-operating-computer，https://github.com/OthersideAI/self-operating-computer，这个项目演示了如何让 GPT-4V 来控制自己的电脑，你需要做的就是...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fp4nz7ZOuFV9p7rWZnpVtarRKDwiv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -147,7 +147,7 @@
           "description": "Progressive Web Apps (PWAs) 推出已经有八年多的时间了，https://medium.com/@julianneagu/progressive-web-app-pwa-statistics-2023-46950788b513，这篇文章给出了一份 2023 年的统计报告，其中提到 2019 年 PWA 的全球市场价值为 11.3 亿美元，而 2027 年预计会达到 104.4 亿美元，普及率还会持续增长，今年的增长量就有 25%~30%。\n在 Github 上找到一个 PWA Demo，https://github.com/gokulkrishh/demo-progressive-web-app，它使用了 Service Worker + Background Sync + Push API + Background Fetch 等能力做了演示，项目不仅可以在网络断开的情况下运行，也可以将断网情况下发起的网络请求缓存起来，待网络恢复时再重新执行（Sync API），也支持远端向本地直接推送消息（Push API），项目整体体验已接近 Native APP。事实上，这些能力在好几年前就开始支持了，当前各浏览器的兼容度已经超过 98%。\nService Worker 是可以在关闭网页后在后台继续保持运行的，一经注册，除非被主动移除，它会一直跑下去，你可以打开 chrome://serviceworker-internals/ 查看已经安装了 Service Worker 网站。这项能力很强大，同时也可能会被滥用，不少浏览器插件就开启了这个能力，并且正在长期地、默默地收集着用户的数据，建议在这个页面上将不需要的 SW 全部停止注册。\n很少看到有网站会完整兼容站点的离线访问，事实上结合前面提到的几个 API 并不难实现，如果是工具类站点，可以考虑全站离线，这会带来更好的用户体验。\nPWA 未来可以做的事情还比较多，https://www.enonic.com/blog/state-of-progressive-web-apps，这篇文章就提到了 PWA 的几个发展趋势，包括跟语音、AI 和手势等技术结合，近期也看到很多 LLM 可以直接在浏览器上跑起来了，背后的技术包括两部分，一个是 Service Worker，另外一个是 WebGPU，未来“端智能”或许是一个值得去追逐的话题。",
           "link": "https://m.okjike.com/originalPosts/6564bd4287a8e03bd1ebe9ab",
           "publishedOn": "2023-11-27T16:01:06.000Z",
-          "wordCount": 572,
+          "wordCount": 599,
           "title": "发布了: Progressive Web Apps (PWAs) 推出已经有八年多的时间了，https://medium.com/@julianneagu/progressive-web-app-pwa-statistics-2023-46950788b513，这...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FvAN7Z3dwMcWkCZKIFkbbN5F0Juhv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -187,7 +187,7 @@
           "description": "为啥在国内社交媒体分享内容时，链接需要写成类似 h++ps://example.com？吃过两个亏：\n1）我经常会把社交媒体当成学习和研究的记事本，记录很多图文、链接等内容，直到有一天我查询自己笔记的时候，发现链接打不开了，连原始链接是啥都不知道了；另外，格外奇特的是，有些平台在包含诸如 github.com 超链接时，发布会失败，🤷‍♂️\n2）曾经收到过网信办和公安局电话，通知我个人博客涉黄违规，要求立即整改，原因是十多年前写的一篇文章里引用了一个外链，而这个外链因为没有续期被抢注成了黄色网站，当时还为此被要求写保证书，🤷‍♂️\n而将超链接转成文本就不会有这些问题。当然也有其他策略，你或许也在大量网站上看到过，当点击超链接时，它并不会跳出当前网站，而是进入到一个中间页，提醒你该链接可能不安全。而它几乎从来都是安全的，🤷‍♂️",
           "link": "https://m.okjike.com/originalPosts/656147fcee24e3db8e0a4f31",
           "publishedOn": "2023-11-25T01:03:56.000Z",
-          "wordCount": 514,
+          "wordCount": 500,
           "title": "发布了: 为啥在国内社交媒体分享内容时，链接需要写成类似 h++ps://example.com？吃过两个亏： 1）我经常会把社交媒体当成学习和研究的记事本，记录很多图文、链...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -208,6 +208,16 @@
       "feedUrl": "https://rsshub.app/jike/user/752D3103-1107-43A0-BA49-20EC29D09E36",
       "siteUrl": "https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36",
       "articles": [
+        {
+          "id": "https://m.okjike.com/reposts/6565dd1d278f95df6f28ea29",
+          "author": null,
+          "description": "模型和算力有了，以后每个人的私有数据就带劲了。\n你在每个社交平台的动态，每篇博客文章，每年的思考总结笔记，都可以喂进ai，打造虚拟自己。\n\n转发 @数字生命卡兹克: 这个东西有点牛逼。。。",
+          "link": "https://m.okjike.com/reposts/6565dd1d278f95df6f28ea29",
+          "publishedOn": "2023-11-28T12:29:17.000Z",
+          "wordCount": 389,
+          "title": "转发了: 模型和算力有了，以后每个人的私有数据就带劲了。 你在每个社交平台的动态，每篇博客文章，每年的思考总结笔记，都可以喂进ai，打造虚拟自己。",
+          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+        },
         {
           "id": "https://m.okjike.com/originalPosts/65658bff552e503d7c9197f3",
           "author": null,
@@ -296,16 +306,6 @@
           "publishedOn": "2023-11-22T06:24:04.000Z",
           "wordCount": 429,
           "title": "发布了: 「你会感到无聊，可能是因为你的想象力睡着了。」",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/655ce1ed87a8e03bd14ab626",
-          "author": null,
-          "description": "个人原则中应添加一条：要区分目的和手段。\n手指月，月是目的，手是手段。\n杯接水，喝杯中水是目的， 接水是手段。\n工作， 价值是目的， 职场是手段。\n千万别犯追着手段咬死不放，忘了目的为何的毛病。",
-          "link": "https://m.okjike.com/originalPosts/655ce1ed87a8e03bd14ab626",
-          "publishedOn": "2023-11-21T16:59:25.000Z",
-          "wordCount": 429,
-          "title": "发布了: 个人原则中应添加一条：要区分目的和手段。 手指月，月是目的，手是手段。 杯接水，喝杯中水是目的， 接水是手段。 工作， 价值是目的， 职场是手段。 ...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         }
       ]
@@ -962,7 +962,7 @@
           "description": "我开发的Chrome扩展 - 掘金Plus已经在Chrome扩展商店发布成功了。初个版本支持配置文章模版和一键导入功能。\n欢迎大家在Chrome扩展商店搜索掘金Plus下载试用。\nhttps://chromewebstore.google.com/detail/%E6%8E%98%E9%87%91plus/bcpbkeiagppbpjinfdbknmaibfjaeobi?hl=zh-CN&utm_source=ext_sidebar",
           "link": "https://juejin.cn/pin/7306327158129983503",
           "publishedOn": "2023-11-28T08:52:24.000Z",
-          "wordCount": 469,
+          "wordCount": 468,
           "title": "我开发的Chrome扩展 - 掘金Plus已经在Chrome扩展商店发布成功了。初个版本支持配置文章模版和一键导入功能。 欢迎大家在Chrome扩展商店搜索掘金Plus下载试用。 h...",
           "imageUrl": null
         },
@@ -972,7 +972,7 @@
           "description": "好不容易给开发者朋友开发的插件工具，适配了掘金，知乎，csdn，baijiahao，网易和搜狐等等，支持等众多开发博客，还有隐藏免费功能。博客显示效果优秀。桶子门，这么好的东西，竟然没人知道(爱读v2)，目前下载量稀缺[流泪]",
           "link": "https://juejin.cn/pin/7306019445406761012",
           "publishedOn": "2023-11-28T00:47:02.000Z",
-          "wordCount": 458,
+          "wordCount": 455,
           "title": "好不容易给开发者朋友开发的插件工具，适配了掘金，知乎，csdn，baijiahao，网易和搜狐等等，支持等众多开发博客，还有隐藏免费功能。博客显示效果优秀。桶子门...",
           "imageUrl": null
         },
@@ -982,7 +982,7 @@
           "description": "给 Spring Web 开发者开发了一款 IDEA 插件：Feign-Helper，为什么叫 Feign-Helper ？因为核心功能其实是Spring Cloud Feign 接口与和对应的 Controller 源码间互相跳转（源码在同一个工程内），顺便提供 Spring Web HTTP API 检索（按两下 Shift 键打开，有个 URL 选项卡），现在送优惠码：https://aboat365.com/feign-helper/2023/11/27/v2ex-Feign-Helper-%E4%BC%98%E6%83%A0%E7%A0%81.html",
           "link": "https://juejin.cn/pin/7305983860168458303",
           "publishedOn": "2023-11-27T08:10:18.000Z",
-          "wordCount": 543,
+          "wordCount": 540,
           "title": "给 Spring Web 开发者开发了一款 IDEA 插件：Feign-Helper，为什么叫 Feign-Helper ？因为核心功能其实是Spring Cloud Feign 接口与和对应的 Controller 源码间...",
           "imageUrl": null
         },
@@ -992,7 +992,7 @@
           "description": "实现了一款目前AI还做不到的文字转图片应用，灵感来源于微信读书，已上线，支持各种模板。可前来体验，今天会发博客，让大家对它有个更清晰的认识。线上体验https://anyphoto.space/playground",
           "link": "https://juejin.cn/pin/7305576845100924928",
           "publishedOn": "2023-11-27T00:51:20.000Z",
-          "wordCount": 461,
+          "wordCount": 458,
           "title": "实现了一款目前AI还做不到的文字转图片应用，灵感来源于微信读书，已上线，支持各种模板。可前来体验，今天会发博客，让大家对它有个更清晰的认识。线上体验http...",
           "imageUrl": null
         },
@@ -1002,7 +1002,7 @@
           "description": "等会北京了，好好开发后续功能",
           "link": "https://juejin.cn/pin/7304997932444286985",
           "publishedOn": "2023-11-26T06:34:07.000Z",
-          "wordCount": 458,
+          "wordCount": 455,
           "title": "等会北京了，好好开发后续功能",
           "imageUrl": null
         },
@@ -1012,7 +1012,7 @@
           "description": "语雀？你怎么回事儿，又崩了啊",
           "link": "https://juejin.cn/pin/7304558952179335204",
           "publishedOn": "2023-11-24T02:20:51.000Z",
-          "wordCount": 457,
+          "wordCount": 454,
           "title": "语雀？你怎么回事儿，又崩了啊",
           "imageUrl": null
         },
@@ -1032,7 +1032,7 @@
           "description": "有没有人用rpgmaker业余做点小游戏的，一起交流呀[调皮]",
           "link": "https://juejin.cn/pin/7304263961238880291",
           "publishedOn": "2023-11-23T02:06:16.000Z",
-          "wordCount": 458,
+          "wordCount": 455,
           "title": "有没有人用rpgmaker业余做点小游戏的，一起交流呀[调皮]",
           "imageUrl": null
         },
@@ -1042,7 +1042,7 @@
           "description": "谷歌留痕助手\n谷歌留痕助手关键词随机切换，并且启用域名\n例如：如何挑选西瓜,福州火车站如何去闽侯,www.baidu.com广州和香港的关系如何,华清宫儿童票如何定,长城地势如何 关键词可以自定义放入联系方式和需要推送的广告内容\n加入我们的软件会员，享受专属优惠和更多高级服务！",
           "link": "https://juejin.cn/pin/7304263961237749795",
           "publishedOn": "2023-11-22T14:05:36.000Z",
-          "wordCount": 466,
+          "wordCount": 463,
           "title": "谷歌留痕助手 谷歌留痕助手关键词随机切换，并且启用域名 例如：如何挑选西瓜,福州火车站如何去闽侯,www.baidu.com广州和香港的关系如何,华清宫儿童票如何定,长...",
           "imageUrl": null
         },
@@ -1052,7 +1052,7 @@
           "description": "v0.0.83 支持从ui库按需导入组件的场景，提供属性的代码提示了🥰",
           "link": "https://juejin.cn/pin/7304077830714163209",
           "publishedOn": "2023-11-22T06:45:33.000Z",
-          "wordCount": 471,
+          "wordCount": 468,
           "title": "v0.0.83 支持从ui库按需导入组件的场景，提供属性的代码提示了🥰",
           "imageUrl": null
         },
@@ -1062,7 +1062,7 @@
           "description": "https://join.meetsidekick.com/hajv5，优弧推荐的浏览器用着还可以，挺好看的，主要是快",
           "link": "https://juejin.cn/pin/7303739766105178152",
           "publishedOn": "2023-11-21T08:42:01.000Z",
-          "wordCount": 460,
+          "wordCount": 457,
           "title": "https://join.meetsidekick.com/hajv5，优弧推荐的浏览器用着还可以，挺好看的，主要是快",
           "imageUrl": null
         },
@@ -1072,7 +1072,7 @@
           "description": "有人知道iVX这个低代码平台吗？",
           "link": "https://juejin.cn/pin/7303423871709495331",
           "publishedOn": "2023-11-20T10:19:44.000Z",
-          "wordCount": 457,
+          "wordCount": 454,
           "title": "有人知道iVX这个低代码平台吗？",
           "imageUrl": null
         },
@@ -1092,7 +1092,7 @@
           "description": "最近除了 arc 浏览器外，我又体验了一款浏览器，感觉挺不错。绝对推荐。https://join.meetsidekick.com/csnap",
           "link": "https://juejin.cn/pin/7303138588858433570",
           "publishedOn": "2023-11-20T06:58:07.000Z",
-          "wordCount": 477,
+          "wordCount": 476,
           "title": "最近除了 arc 浏览器外，我又体验了一款浏览器，感觉挺不错。绝对推荐。https://join.meetsidekick.com/csnap",
           "imageUrl": null
         },
@@ -1112,7 +1112,7 @@
           "description": "今天的目标是开发一个Vscode插件。\n名字我都想好了，叫躺平，英文名称Lying。\n等我搞完把思路和开发过程发出来。",
           "link": "https://juejin.cn/pin/7302356049562157096",
           "publishedOn": "2023-11-19T00:09:52.000Z",
-          "wordCount": 459,
+          "wordCount": 456,
           "title": "今天的目标是开发一个Vscode插件。 名字我都想好了，叫躺平，英文名称Lying。 等我搞完把思路和开发过程发出来。",
           "imageUrl": null
         },
@@ -1122,7 +1122,7 @@
           "description": "兄弟们冲，到下周前还能体验一下，不要错过哦[嘿哈]",
           "link": "https://juejin.cn/pin/7302423635193085962",
           "publishedOn": "2023-11-18T16:57:10.000Z",
-          "wordCount": 466,
+          "wordCount": 463,
           "title": "兄弟们冲，到下周前还能体验一下，不要错过哦[嘿哈]",
           "imageUrl": null
         },
@@ -1132,7 +1132,7 @@
           "description": "向大家推荐一款基于 VUE3+TS 的图片预览插件。支持传入图片初始旋转角度。 鼠标滚轮缩放。鼠标拖动预览图查看。缩放，旋转，原图查看。自带节流机制，兼顾性能。感觉可以的话，请动动小手，点个星星~[送心][送心]",
           "link": "https://juejin.cn/pin/7300965441844936745",
           "publishedOn": "2023-11-14T06:07:19.000Z",
-          "wordCount": 475,
+          "wordCount": 472,
           "title": "向大家推荐一款基于 VUE3+TS 的图片预览插件。支持传入图片初始旋转角度。 鼠标滚轮缩放。鼠标拖动预览图查看。缩放，旋转，原图查看。自带节流机制，兼顾性能。...",
           "imageUrl": null
         },
@@ -1142,7 +1142,7 @@
           "description": "写了一个数据结构可视化的学习网站，不知道大家会用得到不 \n不知道为啥掘金抓取到的会是乱码 [衰]",
           "link": "https://juejin.cn/pin/7300809038245691444",
           "publishedOn": "2023-11-13T11:55:25.000Z",
-          "wordCount": 468,
+          "wordCount": 465,
           "title": "写了一个数据结构可视化的学习网站，不知道大家会用得到不 不知道为啥掘金抓取到的会是乱码 [衰]",
           "imageUrl": null
         }
