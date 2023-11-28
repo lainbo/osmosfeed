@@ -18,12 +18,22 @@
       "siteUrl": "https://www.zhangxinxu.com/wordpress",
       "articles": [
         {
+          "id": "https://www.zhangxinxu.com/wordpress/?p=11070",
+          "author": "张 鑫旭",
+          "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
+          "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
+          "publishedOn": "2023-11-28T16:21:17.000Z",
+          "wordCount": 996,
+          "title": "本地MP3封面图、时长等信息的JS读取",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.zhangxinxu.com/wordpress/?p=11060",
           "author": "张 鑫旭",
           "description": "滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/",
           "publishedOn": "2023-11-21T16:14:41.000Z",
-          "wordCount": 1288,
+          "wordCount": 1290,
           "title": "cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用",
           "imageUrl": null
         },
@@ -33,7 +43,7 @@
           "description": "剪映中的视频特效虽多，其实就两类，一类改变原始像素，一类叠加混合，本文通过精简的源码和精致的案例给大家介绍具体如何实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/video-effect-js-filter-pixijs-webgl-3d/",
           "publishedOn": "2023-11-19T15:12:20.000Z",
-          "wordCount": 1229,
+          "wordCount": 1228,
           "title": "剪映APP的视频特效如何在Web中JS实现",
           "imageUrl": null
         },
@@ -43,7 +53,7 @@
           "description": "应该是国内第一篇专门介绍用mp4box.js和VideoDecoder方法解码MP4视频序列帧的文章了。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/mp4box-js-webcodecs-mp4-canvas/",
           "publishedOn": "2023-11-14T16:37:18.000Z",
-          "wordCount": 1245,
+          "wordCount": 1246,
           "title": "mp4box.js加WebCodecs 解码MP4视频帧并渲染",
           "imageUrl": null
         }
@@ -102,12 +112,22 @@
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/65660614c306429d1937a624",
+          "author": null,
+          "description": "OpenAI 推出的开源免费 Whisper 在语音识别领域（ASR）可以说无出其右，不过它有一个较大的局限性，就是无法进行说话人分类（Speaker diarization），尤其是在重叠语音检测（Overlapped speech detection）方面，Whisper 在训练过程中只识别了一个声音，同时将其他声音视为背景噪声。\n社区有一个发展了多年的音频处理工具包，pyannote-audio，https://github.com/pyannote/pyannote-audio，它具备非常强大的音频分析、处理、识别和分类能力，在多人同时讲话的时候，也可以很准确地区分说话者内容，只不过它的 ASR 能力还是比不过 Whisper。\n有人想到结合两者的能力，并做了一个工程化的实践，https://colab.research.google.com/drive/12W6bR-C6NIEjAML19JubtzHPIlVxdaUq，大致思路如下：\n1）通过 pyannote-audio 将不同 speaker 的音轨时间片段给识别出来\n2）将不同 speaker 的声音按照各自的时间片段进行合并，空白处使用静音填充\n3）将分离的多个 speaker 音频交给 Whisper 进行语音识别\n4）最后将识别的内容按照 speaker 和时间顺序进行还原\n这个实验还演示了如何使用 yt-dlp 从 Youtube 下载视频，如何使用 pydub 分离音频，以及解决了 Whisper 和 pyannote-audio 安装时的依赖冲突问题，算是一个比较完整的解决方案，不过这个思路需要对音频进行多次分析（取决于 speaker 数量），性能一般。\nhttps://medium.com/@xriteshsharmax/speaker-diarization-using-whisper-asr-and-pyannote-f0141c85d59a，这篇文章提出了一个性能稍微优秀一点点的方案，仍然是通过工程手段解决问题：\n1）首先利用 pyannote-audio 根据静音、暂停和说话者变化等特征，将音频流分割为更小的片段\n2）对于每个片段，将不同说话者的语音特征提取出来（Speaker Embedding）\n3）将分割的片段极其衍生的更多片段进行聚类（Clustering）和打标（Labeling）\n4）最后交给 Whisper 进行语音识别\n这部分工程的实现已被作者整理成一个开源项目：https://github.com/riteshhere/Speaker_diarization，目前还没有找到更优的解决方案，不知道有经验的朋友都是如何去做的？",
+          "link": "https://m.okjike.com/originalPosts/65660614c306429d1937a624",
+          "publishedOn": "2023-11-28T15:24:04.000Z",
+          "wordCount": 552,
+          "title": "发布了: OpenAI 推出的开源免费 Whisper 在语音识别领域（ASR）可以说无出其右，不过它有一个较大的局限性，就是无法进行说话人分类（Speaker diarization），尤...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/65655c79552e503d7c8ca657",
           "author": null,
           "description": "self-operating-computer，https://github.com/OthersideAI/self-operating-computer，这个项目演示了如何让 GPT-4V 来控制自己的电脑，你需要做的就是告诉它完成一个怎样的任务，例如，打开 Google Docs 写一篇文章，然后发布并分享给同事。\n它的 Prompt 写的比较简单，定义了一个可以与机器交互的 DSL，主要包含三种动作：Click/Type/Search，分别对应 mouse_click/keyboard_type/mac_search 几个封装好的系统函数。\n每次程序执行动作时，都会携带任务目标、上一步执行结果以及当前屏幕截图作为上下文，然后将信息传递给 ChatGPT，并让它给出下一步操作指示。\n这个项目中 Prompt 的定制化程度偏高，说明完成复杂的工作还比较有挑战，如果参考之前提到的 Mutil-Agent 方案，https://twitter.com/Barret_China/status/1712408323851788505，做出来效果应该会更好一些。",
           "link": "https://m.okjike.com/originalPosts/65655c79552e503d7c8ca657",
           "publishedOn": "2023-11-28T03:20:25.000Z",
-          "wordCount": 480,
+          "wordCount": 482,
           "title": "发布了: self-operating-computer，https://github.com/OthersideAI/self-operating-computer，这个项目演示了如何让 GPT-4V 来控制自己的电脑，你需要做的就是...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fp4nz7ZOuFV9p7rWZnpVtarRKDwiv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -190,16 +210,6 @@
           "wordCount": 500,
           "title": "发布了: 为啥在国内社交媒体分享内容时，链接需要写成类似 h++ps://example.com？吃过两个亏： 1）我经常会把社交媒体当成学习和研究的记事本，记录很多图文、链...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/6560abf3ee2e07f7ac996ee9",
-          "author": null,
-          "description": "十多年前刚接触 Web 开发时，能做的事情比较简单，唯一的网络交互工具只有 XMLHttpRequest，当时互联网的代表作是 Gmail 网页版，把 AJAX 用到了巅峰。\n现在可以做的事情就比较多了，Websocket 解决了实时双向通信的问题，使得浏览器和服务器之间的通信更加高效；WebTransport 允许使用 HTTP/3 协议进行交互，提供了更好的性能和安全性，尤其是在高延迟和不可靠的网络环境下，表现也很出色；WebRTC 使得浏览器之间可以进行点对点的音视频通信，而且无需通过服务器进行中转，这让实时通信变得更加高效和低延迟。\n而最新的提案 Direct Sockets 终于也被搬到了台面上，https://github.com/WICG/direct-sockets/blob/main/docs/explainer.md，它可以创建  TCP/UDP 套接字，直接拼齐了 Web 协议的最后一块版图，未来浏览器即服务器😅\n当然，考虑到一些安全原因，目前它只能被用在 Isolated Web Apps 中，IWA 不像网页，并非直接托管在实时的 Web 服务器上，而是以 Web Bundle 的形式被分发到浏览器，需要经过开发人员签名才能被分发和使用。关于 IWA，这里有一个演示：https://github.com/GoogleChromeLabs/telnet-client\n浏览器未来可以做的事情将越来越多，结合 WebAssembly 跨语言编译，以后任意语言的程序员都可以在 Web 上分发自己的 IWA 程序了。",
-          "link": "https://m.okjike.com/originalPosts/6560abf3ee2e07f7ac996ee9",
-          "publishedOn": "2023-11-24T13:58:11.000Z",
-          "wordCount": 532,
-          "title": "发布了: 十多年前刚接触 Web 开发时，能做的事情比较简单，唯一的网络交互工具只有 XMLHttpRequest，当时互联网的代表作是 Gmail 网页版，把 AJAX 用到了巅峰。 ...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FttgLeT-X-cPAAdkqOk58L-bEoAVv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         }
       ]
     },

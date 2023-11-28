@@ -51,11 +51,181 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-28 datetime="2023-11-28T12:29:17.000Z">2023-11-28</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-28 datetime="2023-11-28T12:29:17.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-28 datetime="2023-11-28T16:21:17.000Z">2023-11-28</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-28 datetime="2023-11-28T16:21:17.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >张鑫旭-鑫空间-鑫生活</button>
+                  <a class="source-heading__link" href="https://www.zhangxinxu.com/wordpress">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.zhangxinxu.com/wordpress/?p&#x3D;11070"
+                        open
+                      >
+                        <summary class="article-expander__title">本地MP3封面图、时长等信息的JS读取</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Barret李靖的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/65660614c306429d1937a624"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: OpenAI 推出的开源免费 Whisper 在语音识别领域（ASR）可以说无出其右，不过它有一个较大的局限性，就是无法进行说话人分类（Speaker diarization），尤...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65660614c306429d1937a624">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>OpenAI 推出的开源免费 Whisper 在语音识别领域（ASR）可以说无出其右，不过它有一个较大的局限性，就是无法进行说话人分类（Speaker diarization），尤其是在重叠语音检测（Overlapped speech detection）方面，Whisper 在训练过程中只识别了一个声音，同时将其他声音视为背景噪声。
+社区有一个发展了多年的音频处理工具包，pyannote-audio，https://github.com/pyannote/pyannote-audio，它具备非常强大的音频分析、处理、识别和分类能力，在多人同时讲话的时候，也可以很准确地区分说话者内容，只不过它的 ASR 能力还是比不过 Whisper。
+有人想到结合两者的能力，并做了一个工程化的实践，https://colab.research.google.com/drive/12W6bR-C6NIEjAML19JubtzHPIlVxdaUq，大致思路如下：
+1）通过 pyannote-audio 将不同 speaker 的音轨时间片段给识别出来
+2）将不同 speaker 的声音按照各自的时间片段进行合并，空白处使用静音填充
+3）将分离的多个 speaker 音频交给 Whisper 进行语音识别
+4）最后将识别的内容按照 speaker 和时间顺序进行还原
+这个实验还演示了如何使用 yt-dlp 从 Youtube 下载视频，如何使用 pydub 分离音频，以及解决了 Whisper 和 pyannote-audio 安装时的依赖冲突问题，算是一个比较完整的解决方案，不过这个思路需要对音频进行多次分析（取决于 speaker 数量），性能一般。
+https://medium.com/@xriteshsharmax/speaker-diarization-using-whisper-asr-and-pyannote-f0141c85d59a，这篇文章提出了一个性能稍微优秀一点点的方案，仍然是通过工程手段解决问题：
+1）首先利用 pyannote-audio 根据静音、暂停和说话者变化等特征，将音频流分割为更小的片段
+2）对于每个片段，将不同说话者的语音特征提取出来（Speaker Embedding）
+3）将分割的片段极其衍生的更多片段进行聚类（Clustering）和打标（Labeling）
+4）最后交给 Whisper 进行语音识别
+这部分工程的实现已被作者整理成一个开源项目：https://github.com/riteshhere/Speaker_diarization，目前还没有找到更优的解决方案，不知道有经验的朋友都是如何去做的？</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/65655c79552e503d7c8ca657"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: self-operating-computer，https://github.com/OthersideAI/self-operating-computer，这个项目演示了如何让 GPT-4V 来控制自己的电脑，你需要做的就是...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65655c79552e503d7c8ca657">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fp4nz7ZOuFV9p7rWZnpVtarRKDwiv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>self-operating-computer，https://github.com/OthersideAI/self-operating-computer，这个项目演示了如何让 GPT-4V 来控制自己的电脑，你需要做的就是告诉它完成一个怎样的任务，例如，打开 Google Docs 写一篇文章，然后发布并分享给同事。
+它的 Prompt 写的比较简单，定义了一个可以与机器交互的 DSL，主要包含三种动作：Click/Type/Search，分别对应 mouse_click/keyboard_type/mac_search 几个封装好的系统函数。
+每次程序执行动作时，都会携带任务目标、上一步执行结果以及当前屏幕截图作为上下文，然后将信息传递给 ChatGPT，并让它给出下一步操作指示。
+这个项目中 Prompt 的定制化程度偏高，说明完成复杂的工作还比较有挑战，如果参考之前提到的 Mutil-Agent 方案，https://twitter.com/Barret_China/status/1712408323851788505，做出来效果应该会更好一些。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/656553582856006673eb0fc3"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: Stephen Wolfram 是一名著作等身的初代程序员，他在 Youtube 上发布了一个 3h+ 的视频，《What is ChatGPT doing...and why does it work?》，https://w...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/656553582856006673eb0fc3">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FmyQN2_qKnkBWJ1yoV98MEMzNuvHv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Stephen Wolfram 是一名著作等身的初代程序员，他在 Youtube 上发布了一个 3h+ 的视频，《What is ChatGPT doing...and why does it work?》，https://www.youtube.com/watch?v&#x3D;flXrLGPY3SU，介绍了什么是 ChatGPT，以及它是如何工作的。
+同时也整理了一份文字稿：https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/，把深奥的理论说得通俗易懂，如沐春风。
+可以结合上次分享的这个动画网页来享用：https://ig.ft.com/generative-ai/</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/656548b9c306429d192415f2"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 想让浏览器网址栏支持站内检索，例如输入「twitter + tab 键」就可以直接开始 Twitter 的站内搜索： 站长可以使用 OpenSearch 协议在站点内增加一个 XML...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/656548b9c306429d192415f2">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FkNv8R-rps2tQHMn1E07FcaEfz16v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>想让浏览器网址栏支持站内检索，例如输入「twitter + tab 键」就可以直接开始 Twitter 的站内搜索：
+站长可以使用 OpenSearch 协议在站点内增加一个 XML 描述文件，通过 type 为 search 的 rel  link 标签告诉浏览器即可：
+
+
+这个效果与在 Chrome 配置项增加搜索引擎是一样的。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/656534102856006673e7c37f"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 你就是你，不需要太多的理由来支撑现在的你。 如果想去改变，改变就好了。</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/656534102856006673e7c37f">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>你就是你，不需要太多的理由来支撑现在的你。
+如果想去改变，改变就好了。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -253,110 +423,6 @@ https://chromewebstore.google.com/detail/%E6%8E%98%E9%87%91plus/bcpbkeiagppbpjin
                             <span class="media-object__text">
                               <span>秀山县气象台2023年11月28日8时20分发布“大雾黄色预警信号”，预计未来6小时内，我县涌洞镇、平凯街道、钟灵镇、隘口镇、龙凤坝镇、膏田镇、溶溪镇、梅江镇等乡镇街道将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Barret李靖的即刻动态</button>
-                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/65655c79552e503d7c8ca657"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: self-operating-computer，https://github.com/OthersideAI/self-operating-computer，这个项目演示了如何让 GPT-4V 来控制自己的电脑，你需要做的就是...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65655c79552e503d7c8ca657">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fp4nz7ZOuFV9p7rWZnpVtarRKDwiv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>self-operating-computer，https://github.com/OthersideAI/self-operating-computer，这个项目演示了如何让 GPT-4V 来控制自己的电脑，你需要做的就是告诉它完成一个怎样的任务，例如，打开 Google Docs 写一篇文章，然后发布并分享给同事。
-它的 Prompt 写的比较简单，定义了一个可以与机器交互的 DSL，主要包含三种动作：Click/Type/Search，分别对应 mouse_click/keyboard_type/mac_search 几个封装好的系统函数。
-每次程序执行动作时，都会携带任务目标、上一步执行结果以及当前屏幕截图作为上下文，然后将信息传递给 ChatGPT，并让它给出下一步操作指示。
-这个项目中 Prompt 的定制化程度偏高，说明完成复杂的工作还比较有挑战，如果参考之前提到的 Mutil-Agent 方案，https://twitter.com/Barret_China/status/1712408323851788505，做出来效果应该会更好一些。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/656553582856006673eb0fc3"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: Stephen Wolfram 是一名著作等身的初代程序员，他在 Youtube 上发布了一个 3h+ 的视频，《What is ChatGPT doing...and why does it work?》，https://w...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/656553582856006673eb0fc3">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FmyQN2_qKnkBWJ1yoV98MEMzNuvHv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Stephen Wolfram 是一名著作等身的初代程序员，他在 Youtube 上发布了一个 3h+ 的视频，《What is ChatGPT doing...and why does it work?》，https://www.youtube.com/watch?v&#x3D;flXrLGPY3SU，介绍了什么是 ChatGPT，以及它是如何工作的。
-同时也整理了一份文字稿：https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/，把深奥的理论说得通俗易懂，如沐春风。
-可以结合上次分享的这个动画网页来享用：https://ig.ft.com/generative-ai/</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/656548b9c306429d192415f2"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 想让浏览器网址栏支持站内检索，例如输入「twitter + tab 键」就可以直接开始 Twitter 的站内搜索： 站长可以使用 OpenSearch 协议在站点内增加一个 XML...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/656548b9c306429d192415f2">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FkNv8R-rps2tQHMn1E07FcaEfz16v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>想让浏览器网址栏支持站内检索，例如输入「twitter + tab 键」就可以直接开始 Twitter 的站内搜索：
-站长可以使用 OpenSearch 协议在站点内增加一个 XML 描述文件，通过 type 为 search 的 rel  link 标签告诉浏览器即可：
-
-
-这个效果与在 Chrome 配置项增加搜索引擎是一样的。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/656534102856006673e7c37f"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 你就是你，不需要太多的理由来支撑现在的你。 如果想去改变，改变就好了。</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/656534102856006673e7c37f">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>你就是你，不需要太多的理由来支撑现在的你。
-如果想去改变，改变就好了。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1222,49 +1288,11 @@ Babel：Babel 解析器（以前叫 Babylon）是 Babel 编译器中使用的 Ja
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-24 datetime="2023-11-24T13:58:11.000Z">2023-11-24</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-24 datetime="2023-11-24T13:58:11.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-24 datetime="2023-11-24T09:11:00.000Z">2023-11-24</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-24 datetime="2023-11-24T09:11:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Barret李靖的即刻动态</button>
-                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/6560abf3ee2e07f7ac996ee9"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 十多年前刚接触 Web 开发时，能做的事情比较简单，唯一的网络交互工具只有 XMLHttpRequest，当时互联网的代表作是 Gmail 网页版，把 AJAX 用到了巅峰。 ...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6560abf3ee2e07f7ac996ee9">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FttgLeT-X-cPAAdkqOk58L-bEoAVv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>十多年前刚接触 Web 开发时，能做的事情比较简单，唯一的网络交互工具只有 XMLHttpRequest，当时互联网的代表作是 Gmail 网页版，把 AJAX 用到了巅峰。
-现在可以做的事情就比较多了，Websocket 解决了实时双向通信的问题，使得浏览器和服务器之间的通信更加高效；WebTransport 允许使用 HTTP/3 协议进行交互，提供了更好的性能和安全性，尤其是在高延迟和不可靠的网络环境下，表现也很出色；WebRTC 使得浏览器之间可以进行点对点的音视频通信，而且无需通过服务器进行中转，这让实时通信变得更加高效和低延迟。
-而最新的提案 Direct Sockets 终于也被搬到了台面上，https://github.com/WICG/direct-sockets/blob/main/docs/explainer.md，它可以创建  TCP/UDP 套接字，直接拼齐了 Web 协议的最后一块版图，未来浏览器即服务器😅
-当然，考虑到一些安全原因，目前它只能被用在 Isolated Web Apps 中，IWA 不像网页，并非直接托管在实时的 Web 服务器上，而是以 Web Bundle 的形式被分发到浏览器，需要经过开发人员签名才能被分发和使用。关于 IWA，这里有一个演示：https://github.com/GoogleChromeLabs/telnet-client
-浏览器未来可以做的事情将越来越多，结合 WebAssembly 跨语言编译，以后任意语言的程序员都可以在 Web 上分发自己的 IWA 程序了。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -3531,8 +3559,8 @@ AI 是一个新事物，带来了很多前所未有的问题。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7021278405">
-        <time id="build-timestamp" datetime="2023-11-28T15:52:15.739Z">2023-11-28T15:52:15.739Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7023203663">
+        <time id="build-timestamp" datetime="2023-11-28T18:52:51.077Z">2023-11-28T18:52:51.077Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
