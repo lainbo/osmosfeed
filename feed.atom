@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-11-28T03:52:42.979Z</id>
+    <id>urn:2023-11-28T06:52:23.701Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-11-28T03:52:42.979Z</updated>
+    <updated>2023-11-28T06:52:23.701Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[发布了: self-operating-computer，https://github.com/OthersideAI/self-operating-computer，这个项目演示了如何让 GPT-4V 来控制自己的电脑，你需要做的就是...]]></title>
+        <id>https://m.okjike.com/originalPosts/65655c79552e503d7c8ca657</id>
+        <link href="https://m.okjike.com/originalPosts/65655c79552e503d7c8ca657"/>
+        <updated>2023-11-28T03:20:25.000Z</updated>
+        <summary type="html"><![CDATA[self-operating-computer，https://github.com/OthersideAI/self-operating-computer，这个项目演示了如何让 GPT-4V 来控制自己的电脑，你需要做的就是告诉它完成一个怎样的任务，例如，打开 Google Docs 写一篇文章，然后发布并分享给同事。
+它的 Prompt 写的比较简单，定义了一个可以与机器交互的 DSL，主要包含三种动作：Click/Type/Search，分别对应 mouse_click/keyboard_type/mac_search 几个封装好的系统函数。
+每次程序执行动作时，都会携带任务目标、上一步执行结果以及当前屏幕截图作为上下文，然后将信息传递给 ChatGPT，并让它给出下一步操作指示。
+这个项目中 Prompt 的定制化程度偏高，说明完成复杂的工作还比较有挑战，如果参考之前提到的 Mutil-Agent 方案，https://twitter.com/Barret_China/status/1712408323851788505，做出来效果应该会更好一些。]]></summary>
+        <author>
+            <name>Barret李靖的即刻动态</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[发布了: Stephen Wolfram 是一名著作等身的初代程序员，他在 Youtube 上发布了一个 3h+ 的视频，《What is ChatGPT doing...and why does it work?》，https://w...]]></title>
         <id>https://m.okjike.com/originalPosts/656553582856006673eb0fc3</id>
@@ -48,7 +61,7 @@
         <updated>2023-11-28T00:47:02.000Z</updated>
         <summary type="html"><![CDATA[好不容易给开发者朋友开发的插件工具，适配了掘金，知乎，csdn，baijiahao，网易和搜狐等等，支持等众多开发博客，还有隐藏免费功能。博客显示效果优秀。桶子门，这么好的东西，竟然没人知道(爱读v2)，目前下载量稀缺[流泪]]]></summary>
         <author>
-            <name>用户1959928395922</name>
+            <name>Simbaba</name>
         </author>
     </entry>
     <entry>
@@ -356,16 +369,6 @@ PWA 未来可以做的事情还比较多，https://www.enonic.com/blog/state-of-
 而最新的提案 Direct Sockets 终于也被搬到了台面上，https://github.com/WICG/direct-sockets/blob/main/docs/explainer.md，它可以创建  TCP/UDP 套接字，直接拼齐了 Web 协议的最后一块版图，未来浏览器即服务器😅
 当然，考虑到一些安全原因，目前它只能被用在 Isolated Web Apps 中，IWA 不像网页，并非直接托管在实时的 Web 服务器上，而是以 Web Bundle 的形式被分发到浏览器，需要经过开发人员签名才能被分发和使用。关于 IWA，这里有一个演示：https://github.com/GoogleChromeLabs/telnet-client
 浏览器未来可以做的事情将越来越多，结合 WebAssembly 跨语言编译，以后任意语言的程序员都可以在 Web 上分发自己的 IWA 程序了。]]></summary>
-        <author>
-            <name>Barret李靖的即刻动态</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[发布了: 把错误的事情做对了并不会比把正确的事情做错了好。]]></title>
-        <id>https://m.okjike.com/originalPosts/65607149c306429d19c5c5c4</id>
-        <link href="https://m.okjike.com/originalPosts/65607149c306429d19c5c5c4"/>
-        <updated>2023-11-24T09:47:53.000Z</updated>
-        <summary type="html"><![CDATA[把错误的事情做对了并不会比把正确的事情做错了好。]]></summary>
         <author>
             <name>Barret李靖的即刻动态</name>
         </author>
@@ -1716,16 +1719,6 @@ AI 是一个新事物，带来了很多前所未有的问题。
 好莱坞的演员工会最近正在罢工，他们的主要诉求就是，制片公司不能使用 AI 演员，不能剥夺真人演员的演出机会。可见这些专业人士，已…]]></summary>
         <author>
             <name>阮一峰的网络日志</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[聊聊Web网页中资源加载的优先级]]></title>
-        <id>https://www.zhangxinxu.com/wordpress/?p=11038</id>
-        <link href="https://www.zhangxinxu.com/wordpress/2023/10/img-js-preload-fetch-priority/"/>
-        <updated>2023-10-29T15:55:41.000Z</updated>
-        <summary type="html"><![CDATA[想要提高网页的加载体验，其实有个非常简单且实用的技巧，那就是改变请求资源的加载优先级，这也可以改变？没错！]]></summary>
-        <author>
-            <name>张 鑫旭</name>
         </author>
     </entry>
 </feed>
