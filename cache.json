@@ -23,7 +23,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": 1000,
+          "wordCount": 999,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/",
           "publishedOn": "2023-11-21T16:14:41.000Z",
-          "wordCount": 1287,
+          "wordCount": 1289,
           "title": "cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用",
           "imageUrl": null
         },
@@ -112,12 +112,42 @@
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/656765d4278f95df6f4a5a99",
+          "author": null,
+          "description": "卸载炒股软件之前，我全仓了两支股票，一支是哔哩哔哩，一支是拼多多。\n。。\n。。\n。。\n。\n可惜，中途爆仓了一次😂",
+          "link": "https://m.okjike.com/originalPosts/656765d4278f95df6f4a5a99",
+          "publishedOn": "2023-11-29T16:24:52.000Z",
+          "wordCount": 468,
+          "title": "发布了: 卸载炒股软件之前，我全仓了两支股票，一支是哔哩哔哩，一支是拼多多。 。 。 。 。 。 。 。 可惜，中途爆仓了一次😂",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+        },
+        {
+          "id": "https://m.okjike.com/originalPosts/656764445682fbc62e4448f7",
+          "author": null,
+          "description": "最近 AI 研究多了，睡觉也开始魔怔了，梦里都在思考和归纳AI Agents 存在哪些范式，倒是让我给想明白了……",
+          "link": "https://m.okjike.com/originalPosts/656764445682fbc62e4448f7",
+          "publishedOn": "2023-11-29T16:18:12.000Z",
+          "wordCount": 459,
+          "title": "发布了: 最近 AI 研究多了，睡觉也开始魔怔了，梦里都在思考和归纳AI Agents 存在哪些范式，倒是让我给想明白了……",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+        },
+        {
+          "id": "https://m.okjike.com/originalPosts/65675c9587a8e03bd123c9de",
+          "author": null,
+          "description": "AI 辅助阅读并自动总结网页概要的工具多如牛毛，但把这件事情做好却并不容易，因为网页上存在太多乱七八糟的 DOM，包括导航菜单、广告和推荐模块等等，如果不抓核心内容直接无脑扔给 AI 处理，那效果一定是不佳的，尤其是杂乱内容占比过高时。\n做了一些技术调研，找到如下几个工具/库，它们均可以辅助提取网页概要，不过各自的思路存在一些差异：\n1）Readability，https://github.com/mozilla/readability，是一种基于规则的方法，被 Mozilla Firefox 浏览器的阅读模式使用，它通过检查 HTML 元素的标签名称、文本数量、链接密度以及满足主要内容标准的文本模式来提取主要内容\n2）DOM Distiller，https://github.com/chromium/dom-distiller，是 Google Chrome 浏览器的阅读模式，它是一种混合方法，使用了 Boilerpipe 分类器和一些规则，有点类似于 Readability\n3）Web2Text，https://github.com/dalab/web2text，是基于深度神经网络的分类器，使用了 CNN 模型和包括单词计数、标点符号存在和停用词数量等 128 个结构和文本特征来确定每个文本块是否属于主要内容\n4）Boilernet，https://github.com/mrjleo/boilernet，是基于深度神经网络的分类器，使用 LSTM 将网页的文本节点视为由单词和 DOM 树根路径组成的文本块序列\n这些方法在不同的数据集和语言环境下会表现出不同的性能。https://arxiv.org/abs/2110.14164，这篇论文给出了一个新的思路：通过使用视觉特征从网页中提取主要内容，算法分为三个步骤：网格化、居中和扩展：\n1）首先，算法创建一个类似棋盘的网格，用于近似用户首次浏览网页的区域\n2）然后，从浏览器窗口、网页文档和网格的中心点确定三个中心点；这些中心点被认为与主要内容接近，它们最近的文本节点很可能是主要内容的后代叶节点\n3）最后，算法通过从叶节点开始沿着 DOM 树向上遍历来提取主要内容\n通过使用这些通用的特征，该算法在多语言环境下表现都还不错，并在实验中优于现有的主要内容提取方法：在最长公共子序列（LCS）F1 得分方面，该方法的平均性能比现有方法提高了 14%；特别是在英语数据集中，性能提高了 25%，在非英语数据集中提高了 16%。\n这篇论文没有找到对应的代码实现，感兴趣的同学可以撸一个出来，价值还挺大的。",
+          "link": "https://m.okjike.com/originalPosts/65675c9587a8e03bd123c9de",
+          "publishedOn": "2023-11-29T15:45:25.000Z",
+          "wordCount": 513,
+          "title": "发布了: AI 辅助阅读并自动总结网页概要的工具多如牛毛，但把这件事情做好却并不容易，因为网页上存在太多乱七八糟的 DOM，包括导航菜单、广告和推荐模块等等，...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FiGVTwYkq3rSlmda2Ocjj7ej6oQ7v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/6567485d5682fbc62e41bac1",
           "author": null,
           "description": "学到两个读 arxiv PDF 论文的新技巧：\n1）将域名中的 x 更换成 5，会跳转到 HTML 版本\n2）将域名中的 v 更换成 w，会跳转到一个 AI Chat with PDF 版本\n为了避免每次都手动修改，写了几句油猴脚本，会在 header 位置自动附加这两个链接：https://greasyfork.org/zh-CN/scripts/481023-arxiv-extensions",
           "link": "https://m.okjike.com/originalPosts/6567485d5682fbc62e41bac1",
           "publishedOn": "2023-11-29T14:19:09.000Z",
-          "wordCount": 495,
+          "wordCount": 515,
           "title": "发布了: 学到两个读 arxiv PDF 论文的新技巧： 1）将域名中的 x 更换成 5，会跳转到 HTML 版本 2）将域名中的 v 更换成 w，会跳转到一个 AI Chat with PDF 版本 ...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FhUheb7sywfzmzkcN6k-6hMCUrBNv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -180,36 +210,6 @@
           "wordCount": 511,
           "title": "发布了: 想让浏览器网址栏支持站内检索，例如输入「twitter + tab 键」就可以直接开始 Twitter 的站内搜索： 站长可以使用 OpenSearch 协议在站点内增加一个 XML...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FkNv8R-rps2tQHMn1E07FcaEfz16v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/656534102856006673e7c37f",
-          "author": null,
-          "description": "你就是你，不需要太多的理由来支撑现在的你。\n如果想去改变，改变就好了。",
-          "link": "https://m.okjike.com/originalPosts/656534102856006673e7c37f",
-          "publishedOn": "2023-11-28T00:28:00.000Z",
-          "wordCount": 443,
-          "title": "发布了: 你就是你，不需要太多的理由来支撑现在的你。 如果想去改变，改变就好了。",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/6564bd4287a8e03bd1ebe9ab",
-          "author": null,
-          "description": "Progressive Web Apps (PWAs) 推出已经有八年多的时间了，https://medium.com/@julianneagu/progressive-web-app-pwa-statistics-2023-46950788b513，这篇文章给出了一份 2023 年的统计报告，其中提到 2019 年 PWA 的全球市场价值为 11.3 亿美元，而 2027 年预计会达到 104.4 亿美元，普及率还会持续增长，今年的增长量就有 25%~30%。\n在 Github 上找到一个 PWA Demo，https://github.com/gokulkrishh/demo-progressive-web-app，它使用了 Service Worker + Background Sync + Push API + Background Fetch 等能力做了演示，项目不仅可以在网络断开的情况下运行，也可以将断网情况下发起的网络请求缓存起来，待网络恢复时再重新执行（Sync API），也支持远端向本地直接推送消息（Push API），项目整体体验已接近 Native APP。事实上，这些能力在好几年前就开始支持了，当前各浏览器的兼容度已经超过 98%。\nService Worker 是可以在关闭网页后在后台继续保持运行的，一经注册，除非被主动移除，它会一直跑下去，你可以打开 chrome://serviceworker-internals/ 查看已经安装了 Service Worker 网站。这项能力很强大，同时也可能会被滥用，不少浏览器插件就开启了这个能力，并且正在长期地、默默地收集着用户的数据，建议在这个页面上将不需要的 SW 全部停止注册。\n很少看到有网站会完整兼容站点的离线访问，事实上结合前面提到的几个 API 并不难实现，如果是工具类站点，可以考虑全站离线，这会带来更好的用户体验。\nPWA 未来可以做的事情还比较多，https://www.enonic.com/blog/state-of-progressive-web-apps，这篇文章就提到了 PWA 的几个发展趋势，包括跟语音、AI 和手势等技术结合，近期也看到很多 LLM 可以直接在浏览器上跑起来了，背后的技术包括两部分，一个是 Service Worker，另外一个是 WebGPU，未来“端智能”或许是一个值得去追逐的话题。",
-          "link": "https://m.okjike.com/originalPosts/6564bd4287a8e03bd1ebe9ab",
-          "publishedOn": "2023-11-27T16:01:06.000Z",
-          "wordCount": 599,
-          "title": "发布了: Progressive Web Apps (PWAs) 推出已经有八年多的时间了，https://medium.com/@julianneagu/progressive-web-app-pwa-statistics-2023-46950788b513，这...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FvAN7Z3dwMcWkCZKIFkbbN5F0Juhv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/65645187c306429d1911f4e2",
-          "author": null,
-          "description": "看到一个屏蔽 Youtube 广告的新思路，https://chromewebstore.google.com/detail/ad-speedup-skip-video-ads/pcjlckhhhmlefmobnnoolakplfppdchi，代码十分简单，也超级鸡贼。\n使用 MutationObserver API 识别到页面正在播放广告时（某些 DOM 节点会附加 ad-showing 之类的 class name），给 Video 自动设置成 16 倍速，10s 的广告不到 1s 就播放完毕😂",
-          "link": "https://m.okjike.com/originalPosts/65645187c306429d1911f4e2",
-          "publishedOn": "2023-11-27T08:21:27.000Z",
-          "wordCount": 509,
-          "title": "发布了: 看到一个屏蔽 Youtube 广告的新思路，https://chromewebstore.google.com/detail/ad-speedup-skip-video-ads/pcjlckhhhmlefmobnnoolakplfppdchi，代码十...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FpIBkHFnCLAZtYlydYZb4ipSscrAv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         }
       ]
     },
@@ -264,7 +264,7 @@
           "description": "模型和算力有了，以后每个人的私有数据就带劲了。\n你在每个社交平台的动态，每篇博客文章，每年的思考总结笔记，都可以喂进ai，打造虚拟自己。\n\n转发 @数字生命卡兹克: 这个东西有点牛逼。。。",
           "link": "https://m.okjike.com/reposts/6565dd1d278f95df6f28ea29",
           "publishedOn": "2023-11-28T12:29:17.000Z",
-          "wordCount": 389,
+          "wordCount": 393,
           "title": "转发了: 模型和算力有了，以后每个人的私有数据就带劲了。 你在每个社交平台的动态，每篇博客文章，每年的思考总结笔记，都可以喂进ai，打造虚拟自己。",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -693,16 +693,6 @@
           "publishedOn": "2023-11-22T22:49:00.000Z",
           "wordCount": 523,
           "title": "重庆市开州区发布大雾黄色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231123/t20231123_526495549.html",
-          "author": "国家预警信息发布中心",
-          "description": "云阳县气象台2023年11月23日2时30分发布“大雾黄色预警信号”，预计未来12小时，全县各乡镇（街道）将出现能见度小于500米的大雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231123/t20231123_526495549.html",
-          "publishedOn": "2023-11-22T18:41:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市云阳县发布大雾黄色预警",
           "imageUrl": null
         }
       ]
