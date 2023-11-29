@@ -51,11 +51,93 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-29 datetime="2023-11-29T07:23:47.000Z">2023-11-29</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-29 datetime="2023-11-29T07:23:47.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-29 datetime="2023-11-29T14:19:09.000Z">2023-11-29</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-29 datetime="2023-11-29T14:19:09.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Barret李靖的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/6567485d5682fbc62e41bac1"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 学到两个读 arxiv PDF 论文的新技巧： 1）将域名中的 x 更换成 5，会跳转到 HTML 版本 2）将域名中的 v 更换成 w，会跳转到一个 AI Chat with PDF 版本 ...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6567485d5682fbc62e41bac1">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FhUheb7sywfzmzkcN6k-6hMCUrBNv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>学到两个读 arxiv PDF 论文的新技巧：
+1）将域名中的 x 更换成 5，会跳转到 HTML 版本
+2）将域名中的 v 更换成 w，会跳转到一个 AI Chat with PDF 版本
+为了避免每次都手动修改，写了几句油猴脚本，会在 header 位置自动附加这两个链接：https://greasyfork.org/zh-CN/scripts/481023-arxiv-extensions</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/65669b09ee2e07f7ac0edd42"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: FunASR 是一个基础语音识别工具包，https://github.com/alibaba-damo-academy/FunASR，相比 pyannote-audio 它的内容更加全面，包括了语音识别（ASR）、...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65669b09ee2e07f7ac0edd42">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FvgA7oqxSixlZRkNLCIDF4A0rlDNv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>FunASR 是一个基础语音识别工具包，https://github.com/alibaba-damo-academy/FunASR，相比 pyannote-audio 它的内容更加全面，包括了语音识别（ASR）、语音端点检测（VAD）、标点恢复、语言模型、说话人验证、说话人分离和多人对话语音识别等模块，而且提供了非常多的预训练模型，https://alibaba-damo-academy.github.io/FunASR/en/model_zoo/modelscope_models.html，可供推理和微调。
+需要特别提到它的两个模块，一个是基于前馈顺序记忆网络（FSMN-VAD）的语音活动检测模型，另外一个是基于可控时延 Transformer（CT-Transformer），相比 OpenAI 的 Whisper 这两块能力还是比较突出的。
+前者用于识别语音中的有效声音部分，过滤掉无效噪声和静音部分，可以大量减少幻觉问题；后者用于在生成的文本中添加标点符号和去除语气停顿等不流畅的部分，它的原理是通过实时进行标点预测和语气停顿检测，将标点符号和语气停顿插入到识别文本中的适当位置。另外，参与这些模型训练的数据质量非常高，都是有人工标注且数据量庞大（6w+ 小时）的工业数据。
+从 Whisper 论文的一张图中看到，数据集体量和词错率是呈负相关的，Whisper 用了 68w 小时的数据，从这个角度来看，FunASR 不会有太大的优势。只不过 Whisper 参与训练的中文数据占比并不高，而且中英文训练本身也存在一定的差异，因此 FunASR 的中文效果有可能会比 Whisper 更优秀。
+当前 FunASR 大部分模块还只支持 CPU 推理，GPU 兼容还在建设中，因此它的一个特点就是慢，https://blog.csdn.net/Elysion_Daniel/article/details/133901358，这篇文章提到，Whisper 4s 能搞定的事儿，交给 FunASR 需要 33s，不过优势也较为显著，FunASR 的标点符号清晰，而且准确率很高。
+我翻了一下 FunASR 的 Github issues，https://github.com/alibaba-damo-academy/FunASR/issues，Bug 量还是挺大的，当然，这无可厚非，毕竟还是一个比较新的产品，距离走向成熟还需要一段时间；Bug 集中在内存回收和时间戳不准等几个问题上，都是能让使用者头疼的问题点。如果你对中文语音识别有强烈诉求，可以考虑围观下，也可以尝鲜试一试。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/65668866c9ed8caff0dd943c"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 怀念他的方式就是践行他的智慧，🕯</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65668866c9ed8caff0dd943c">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>怀念他的方式就是践行他的智慧，🕯</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -67,6 +149,26 @@
                   <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/656737bf87a8e03bd1206f6a"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 如果有人写一首rap，韵脚用普通话唱并不押韵，但用某个方言唱出来却刚好押韵的很，会不会有点炸烈？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/656737bf87a8e03bd1206f6a">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>如果有人写一首rap，韵脚用普通话唱并不押韵，但用某个方言唱出来却刚好押韵的很，会不会有点炸烈？</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -224,65 +326,6 @@ https://gptsmenu.com
 支持一键收藏❤️你喜欢的 GPT
 Chrome 导航插件，提高你的工作效率</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Barret李靖的即刻动态</button>
-                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/65669b09ee2e07f7ac0edd42"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: FunASR 是一个基础语音识别工具包，https://github.com/alibaba-damo-academy/FunASR，相比 pyannote-audio 它的内容更加全面，包括了语音识别（ASR）、...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65669b09ee2e07f7ac0edd42">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FvgA7oqxSixlZRkNLCIDF4A0rlDNv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>FunASR 是一个基础语音识别工具包，https://github.com/alibaba-damo-academy/FunASR，相比 pyannote-audio 它的内容更加全面，包括了语音识别（ASR）、语音端点检测（VAD）、标点恢复、语言模型、说话人验证、说话人分离和多人对话语音识别等模块，而且提供了非常多的预训练模型，https://alibaba-damo-academy.github.io/FunASR/en/model_zoo/modelscope_models.html，可供推理和微调。
-需要特别提到它的两个模块，一个是基于前馈顺序记忆网络（FSMN-VAD）的语音活动检测模型，另外一个是基于可控时延 Transformer（CT-Transformer），相比 OpenAI 的 Whisper 这两块能力还是比较突出的。
-前者用于识别语音中的有效声音部分，过滤掉无效噪声和静音部分，可以大量减少幻觉问题；后者用于在生成的文本中添加标点符号和去除语气停顿等不流畅的部分，它的原理是通过实时进行标点预测和语气停顿检测，将标点符号和语气停顿插入到识别文本中的适当位置。另外，参与这些模型训练的数据质量非常高，都是有人工标注且数据量庞大（6w+ 小时）的工业数据。
-从 Whisper 论文的一张图中看到，数据集体量和词错率是呈负相关的，Whisper 用了 68w 小时的数据，从这个角度来看，FunASR 不会有太大的优势。只不过 Whisper 参与训练的中文数据占比并不高，而且中英文训练本身也存在一定的差异，因此 FunASR 的中文效果有可能会比 Whisper 更优秀。
-当前 FunASR 大部分模块还只支持 CPU 推理，GPU 兼容还在建设中，因此它的一个特点就是慢，https://blog.csdn.net/Elysion_Daniel/article/details/133901358，这篇文章提到，Whisper 4s 能搞定的事儿，交给 FunASR 需要 33s，不过优势也较为显著，FunASR 的标点符号清晰，而且准确率很高。
-我翻了一下 FunASR 的 Github issues，https://github.com/alibaba-damo-academy/FunASR/issues，Bug 量还是挺大的，当然，这无可厚非，毕竟还是一个比较新的产品，距离走向成熟还需要一段时间；Bug 集中在内存回收和时间戳不准等几个问题上，都是能让使用者头疼的问题点。如果你对中文语音识别有强烈诉求，可以考虑围观下，也可以尝鲜试一试。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/65668866c9ed8caff0dd943c"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 怀念他的方式就是践行他的智慧，🕯</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65668866c9ed8caff0dd943c">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>怀念他的方式就是践行他的智慧，🕯</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -716,6 +759,49 @@ https://medium.com/@xriteshsharmax/speaker-diarization-using-whisper-asr-and-pya
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7306040473542213644"
+                        open
+                      >
+                        <summary class="article-expander__title">浏览器跨 Tab 窗口通信原理及应用实践</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7306040473542213644">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>最近，相信大家一定被这么个动效给刷屏了：
+
+以至于，基于这个效果的二次创作层出不穷，眼花缭乱。
+基于跨窗口通信的弹弹球：
+
+基于跨窗口通信的 Flippy Bird：
+
+我也尝试制作了一个跨 Tab 窗口的 CSS 动画联动，效果如下：
+
+代码不多，核心代码 200 行，感兴趣的可以戳这里：Github - broadcastAnimation
+当然，本文的核心不是去一一剖析上面的效果具体的实现方式，而是讲讲其中比较关键的一个技术点：
+而是应用如何在多窗口下进行互相通信。
+
+所谓多窗口下进行互相通信，是指在浏览器中，不同窗口（包括不同标签页、不同浏览器窗口甚至不同浏览器实例）之间进行数据传输和通信的能力。
+当然，本文我们探讨的是纯前端的跨 Tab 页面通信，在非纯前端的方式下，我们可以借助诸如 Web Socket 等方式，藉由后端这个中间载体，进行跨页面通信。
+
+因此，本文我们更多的重心将放在，如何基于纯前端技术，实现多窗口下进行互相通信。
+为了实现跨窗口通信，它应该需要具备以下能力：
+数据传输能力：能够将数据从一个窗口发送到另一个窗口，以及接收来自其他窗口的数据。
+实时性：能够实现实时或近实时的数据传输，以便及时更新不同窗口的内容。
+安全性：确保通信过程中的数据安全，防止恶意窃取或篡改通信数据。当然，这个不是本文讨论的重点，但是是实际应用中不应该忽视的一个重点。
+方式一：Broadcast Channel()
+Broadcast Channel 是一个较新的 Web API，用于在不同的浏览器窗口、标签页或框架之间实现跨窗口通信。它基于发布-订阅模式，允许一个窗口发送消息，并由其他窗口接收。
+其核心步骤如下：
+创建一个 BroadcastChannel 对象：在发送和接收消息之前，首先需要在每个窗口中创建一个 BroadcastChannel 对象，使用相同的频道名称进…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7306033185934622731"
                         open
                       >
@@ -983,27 +1069,6 @@ PWA 未来可以做的事情还比较多，https://www.enonic.com/blog/state-of-
                             <span class="media-object__text">
                               <span>看到一个屏蔽 Youtube 广告的新思路，https://chromewebstore.google.com/detail/ad-speedup-skip-video-ads/pcjlckhhhmlefmobnnoolakplfppdchi，代码十分简单，也超级鸡贼。
 使用 MutationObserver API 识别到页面正在播放广告时（某些 DOM 节点会附加 ad-showing 之类的 class name），给 Video 自动设置成 16 倍速，10s 的广告不到 1s 就播放完毕😂</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/65643af05682fbc62eff3aad"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: NordPass 公布了 2023 年 Top200 常见密码，https://nordpass.com/most-common-passwords-list/，其中“123456” 5 年 4 次登顶常见密码榜，可被 1 秒破...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65643af05682fbc62eff3aad">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FmlnhE4WrMOJM7vwwjFyWoEG7L1Tv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>NordPass 公布了 2023 年 Top200 常见密码，https://nordpass.com/most-common-passwords-list/，其中“123456” 5 年 4 次登顶常见密码榜，可被 1 秒破解😂
-现在大多数的浏览器和系统层面都支持了原生的密码管理能力，十分建议针对不同的网站生成不同密码。个人使用的是 1Password，已经五六年了。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -2168,28 +2233,6 @@ Vite 4 大约在一年前官宣，它为前端生态积基树本。Vite 的 npm 
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/655f3ccff9a492630b6ac35a"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 面对上位者，请把自己当个人 面对下位者，请把对方当个人 难乎？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/655f3ccff9a492630b6ac35a">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>面对上位者，请把自己当个人
-面对下位者，请把对方当个人
-难乎？</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -2421,6 +2464,39 @@ console.log(proxy) // { b: 2 }，注意前面的 Proxy(Object) 没了
 很简单，找个对象包一下就行了
 const x &#x3D;…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7304538094735753228"
+                        open
+                      >
+                        <summary class="article-expander__title">用 Addon 增强 Node.js 和 Electron 应用的原生能力</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7304538094735753228">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: nico
+作者：傅泽楠
+前言
+Node.js Addon 是 Node.js 中为 JavaScript 环境提供 C/C++ 交互能力的机制。其形态十分类似 Java 的 JNI，都是通过提供一套 C/C++ SDK，用于在 C/C++ 中创建函数方法、进行数据转换，以便 JavaScript / Java 等语言进行调用。这样编写的代码通常叫做 Bindings。
+此外还有基于 C ABI Calling Convention (例如 stdcall / System-V 等标准) 直接进行跨语言调用的方案，例如 Rust FFI、Python 的 ctypes、Node.js 的 ffi 包等。这两者的差别在于 Rust 等原生语言是直接针对平台来将函数调用编译为机器码，而 ctypes 和 ffi 包则是基于 libffi 动态生成机器码来完成函数调用的。和 Node.js Addon 的差别则在于调用和类型转换的开销上。
+本文将围绕 Node.js Addon 进行介绍，即创建一个 Bindings 来增强 Node.js 或 Electron 应用的原生能力，使其可以和系统进行交互，或者使用一些基于 C/C++ 编写的第三方库。
+Node.js 和 Electron 的关系
+Electron 在主进程和渲染进程中都包含了完整的 Node.js 环境，因此本文既适用于 Node.js 程序，也适用于 Electron 程序。
+Node.js Addon 的类型
+在 Node.js 的 Addon，有三种类型：
+
+本文主要介绍 Node-API 的原理，以及以 node-addon-api 作为例子。
+Node-API 基本原理
+
+Node.js 本质上是一个动态链接库（即 Windows 下的 .dll 文件、MacOS 下的 .dylib 文件、L…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;12
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2759,133 +2835,6 @@ const x &#x3D;…</span>
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7304268647101939731"
-                        open
-                      >
-                        <summary class="article-expander__title">设计呀，你是真会给前端找事呀！！！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7304268647101939731">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>背景
-设计：我想要的你听明白了吗，你做出来的和我想要的差距很大，你怎么没有一点审美（你个臭男人，你怎么不按我画的做）！
-我：啊？这样自适应不是很好吗，适配了大部分机型呀，而且不会有啥显示的兼容性，避免不必要的客户咨询和客户投诉。
-设计： 你上一家公司就是因为有你这样的优秀员工才倒闭的吧？！
-我：啊？ntm和产品是一家的是吗？
-我该如何应对
-先看我实现的
-
-在看看设计想要的
-
-总结一下：
-1.一个的时候宽度固定，不管屏幕多大都占屏幕的一半。
-2.俩个的时候，各占屏幕的一半，当屏幕过小的时候两个并排展示换行。
-3.三个的时候，上面俩，下面一个，且宽度要一样。
-4.大于三个的时候，以此类推。
-有句话叫做什么，乍一看很合理，细想一下，这不是扯淡么。
-所以我又和设计进行了亲切的对话
-我：两个的时候你能考虑到小屏的问题，那一个和三个的时候你为啥不考虑，难道你脑袋有泡，在想一个和三个的时候泡刚好堵住了？
-设计： 你天天屌不拉几的，我就要这样，这样好看，你懂个毛的设计，你知道什么是美感和人体工学设计，视觉效果拉满吗？
-我：啊？我的姑奶奶耶，你是不是和产品一个学校毕业的，咋就一根筋呢？
-产品：ui说的对，我听ui的。汪汪汪（🐶）
-当时那个画面就像是，就像是：
-而我就像是
-
-那咋办，写呗，我能咋办？
-我月黑风夜，
-黑衣傍我身，
-潜入尔等房，
-打你小屁屁？
-代码实现
-    {
-        this.click(value)
-      }}
-    &gt;
-      ...
-    
-
-   .themeSelectBtnBg {
-       display: flex;
-       &amp;:nth-child(2n - 1) {
-         margin-left: 0;
-         margin-right: 10px;
-       }
-       &amp;:nth-child(2n) {
-         margin-left: 0;
-         margin-right: 0;
-       }
-       
-   }
-   // 奇数的情况，宽度动态计算，将元素挤下去
-   .group-odd-number {
-    // 需要减去padding的宽度
-    width: calc(50% - 7.5px);
-   }
-   
-   .group-even-number {
-     justify-content: space-between;
-     @media screen and (max-width:360px) {
-        justify-content: unset;
-        margin-right: unset;
-        flex: 1;
-        flex-wrap: wrap;
-      }
-   }
-
-行吧，咱就这样吧</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7304267413615312923"
-                        open
-                      >
-                        <summary class="article-expander__title">看到if else很多就很烦</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7304267413615312923">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: z-blue
-多个 if else分支优化
-请看下面代码
-if (row.tianrunStatus &#x3D;&#x3D; true) {
-  if (row.tianrunSyncStatus &#x3D;&#x3D; &#x27;APPLYING&#x27;) {
-    return &#x27;启用(申请中)&#x27;
-  } else if (row.tianrunSyncStatus &#x3D;&#x3D; &#x27;APPLY_FAILURE&#x27;) {
-    return &#x27;启用(申请失败)&#x27;
-  } else if (row.tianrunSyncStatus &#x3D;&#x3D; &#x27;APPLY_SUCCESS&#x27;) {
-    return &#x27;启用(申请成功)&#x27;
-  } else if (row.tianrunSyncStatus &#x3D;&#x3D; &#x27;SYNCHRONIZING&#x27;) {
-    return &#x27;启用(同步中)&#x27;
-  } else if (row.tianrunSyncStatus &#x3D;&#x3D; &#x27;SYNC_SUCCEEDED&#x27;) {
-    return &#x27;启用(同步成功)&#x27;
-  } else if (row.tianrunSyncStatus &#x3D;&#x3D; &#x27;SYNC_FAILED&#x27;) {
-    return &#x27;启用(同步失败)&#x27;
-  } else {
-    return &#x27;启用&#x27;
-  }
-} else if (row.tianrunStatus &#x3D;&#x3D; false) {
-  if (row.tianrunSyncStatus &#x3D;&#x3D; &#x27;SYNCHRONIZING&#x27;) {
-    return &#x27;禁用(同步中)&#x27;
-  } else if (row.tianrunSyncStatus &#x3D;&#x3D; &#x27;SYNC_SUCCEEDED&#x27;) {
-    return &#x27;禁用(同步成功)&#x27;
-  } else if (row.tianrunSyncStatus &#x3D;&#x3D; &#x27;SYNC_FAILE…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -3547,8 +3496,8 @@ AI 是一个新事物，带来了很多前所未有的问题。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7032852602">
-        <time id="build-timestamp" datetime="2023-11-29T12:56:14.823Z">2023-11-29T12:56:14.823Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7035100986">
+        <time id="build-timestamp" datetime="2023-11-29T15:52:26.928Z">2023-11-29T15:52:26.928Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
