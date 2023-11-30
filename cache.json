@@ -23,7 +23,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": 999,
+          "wordCount": 1004,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/",
           "publishedOn": "2023-11-21T16:14:41.000Z",
-          "wordCount": 1287,
+          "wordCount": 1291,
           "title": "cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "剪映中的视频特效虽多，其实就两类，一类改变原始像素，一类叠加混合，本文通过精简的源码和精致的案例给大家介绍具体如何实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/video-effect-js-filter-pixijs-webgl-3d/",
           "publishedOn": "2023-11-19T15:12:20.000Z",
-          "wordCount": 1226,
+          "wordCount": 1232,
           "title": "剪映APP的视频特效如何在Web中JS实现",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "应该是国内第一篇专门介绍用mp4box.js和VideoDecoder方法解码MP4视频序列帧的文章了。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/mp4box-js-webcodecs-mp4-canvas/",
           "publishedOn": "2023-11-14T16:37:18.000Z",
-          "wordCount": 1244,
+          "wordCount": 1247,
           "title": "mp4box.js加WebCodecs 解码MP4视频帧并渲染",
           "imageUrl": null
         }
@@ -137,7 +137,7 @@
           "description": "AI 辅助阅读并自动总结网页概要的工具多如牛毛，但把这件事情做好却并不容易，因为网页上存在太多乱七八糟的 DOM，包括导航菜单、广告和推荐模块等等，如果不抓核心内容直接无脑扔给 AI 处理，那效果一定是不佳的，尤其是杂乱内容占比过高时。\n做了一些技术调研，找到如下几个工具/库，它们均可以辅助提取网页概要，不过各自的思路存在一些差异：\n1）Readability，https://github.com/mozilla/readability，是一种基于规则的方法，被 Mozilla Firefox 浏览器的阅读模式使用，它通过检查 HTML 元素的标签名称、文本数量、链接密度以及满足主要内容标准的文本模式来提取主要内容\n2）DOM Distiller，https://github.com/chromium/dom-distiller，是 Google Chrome 浏览器的阅读模式，它是一种混合方法，使用了 Boilerpipe 分类器和一些规则，有点类似于 Readability\n3）Web2Text，https://github.com/dalab/web2text，是基于深度神经网络的分类器，使用了 CNN 模型和包括单词计数、标点符号存在和停用词数量等 128 个结构和文本特征来确定每个文本块是否属于主要内容\n4）Boilernet，https://github.com/mrjleo/boilernet，是基于深度神经网络的分类器，使用 LSTM 将网页的文本节点视为由单词和 DOM 树根路径组成的文本块序列\n这些方法在不同的数据集和语言环境下会表现出不同的性能。https://arxiv.org/abs/2110.14164，这篇论文给出了一个新的思路：通过使用视觉特征从网页中提取主要内容，算法分为三个步骤：网格化、居中和扩展：\n1）首先，算法创建一个类似棋盘的网格，用于近似用户首次浏览网页的区域\n2）然后，从浏览器窗口、网页文档和网格的中心点确定三个中心点；这些中心点被认为与主要内容接近，它们最近的文本节点很可能是主要内容的后代叶节点\n3）最后，算法通过从叶节点开始沿着 DOM 树向上遍历来提取主要内容\n通过使用这些通用的特征，该算法在多语言环境下表现都还不错，并在实验中优于现有的主要内容提取方法：在最长公共子序列（LCS）F1 得分方面，该方法的平均性能比现有方法提高了 14%；特别是在英语数据集中，性能提高了 25%，在非英语数据集中提高了 16%。\n这篇论文没有找到对应的代码实现，感兴趣的同学可以撸一个出来，价值还挺大的。",
           "link": "https://m.okjike.com/originalPosts/65675c9587a8e03bd123c9de",
           "publishedOn": "2023-11-29T15:45:25.000Z",
-          "wordCount": 513,
+          "wordCount": 517,
           "title": "发布了: AI 辅助阅读并自动总结网页概要的工具多如牛毛，但把这件事情做好却并不容易，因为网页上存在太多乱七八糟的 DOM，包括导航菜单、广告和推荐模块等等，...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FiGVTwYkq3rSlmda2Ocjj7ej6oQ7v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -264,7 +264,7 @@
           "description": "模型和算力有了，以后每个人的私有数据就带劲了。\n你在每个社交平台的动态，每篇博客文章，每年的思考总结笔记，都可以喂进ai，打造虚拟自己。\n\n转发 @数字生命卡兹克: 这个东西有点牛逼。。。",
           "link": "https://m.okjike.com/reposts/6565dd1d278f95df6f28ea29",
           "publishedOn": "2023-11-28T12:29:17.000Z",
-          "wordCount": 389,
+          "wordCount": 393,
           "title": "转发了: 模型和算力有了，以后每个人的私有数据就带劲了。 你在每个社交平台的动态，每篇博客文章，每年的思考总结笔记，都可以喂进ai，打造虚拟自己。",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -325,6 +325,16 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231130/t20231130_526503424.html",
+          "author": "国家预警信息发布中心",
+          "description": "巴南区气象台2023年11月30日8时40分发布“大雾黄色预警信号”，预计30日9时至20时，我区姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231130/t20231130_526503424.html",
+          "publishedOn": "2023-11-30T00:58:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市巴南区发布大雾黄色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231128/t20231128_526501523.html",
           "author": "国家预警信息发布中心",
@@ -624,76 +634,6 @@
           "wordCount": 523,
           "title": "重庆市巫溪县发布大雾黄色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231123/t20231123_526495749.html",
-          "author": "国家预警信息发布中心",
-          "description": "石柱县气象台2023年11月23日8时30分发布“大雾黄色预警信号”，预计23日8时30分至12时，黄水镇、枫木镇、临溪镇、石家乡、王家乡、河嘴乡、冷水镇、金竹乡、中益乡、沙子镇、新乐乡、洗新乡、黄鹤镇、金铃乡、三益乡、桥头镇、万朝镇、龙沙镇、鱼池镇、沿溪镇、悦崃镇、王场镇、西沱镇、黎场乡、龙潭乡、下路街道、三星乡、六塘乡、马武镇、万安街道、南宾街道、三河镇、大歇镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231123/t20231123_526495749.html",
-          "publishedOn": "2023-11-23T01:04:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市石柱土家族自治县发布大雾黄色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231123/t20231123_526495639.html",
-          "author": "国家预警信息发布中心",
-          "description": "长寿区气象台2023年11月23日07时30分发布“大雾黄色预警信号”：预计2023年11月23日07时30分至12时，洪湖镇、万顺镇、葛兰镇、八颗街道、凤城街道、晏家街道、江南街道、但渡镇、菩提街道、渡舟街道、邻封镇、新市街道、双龙镇、长寿湖镇、云集镇、龙河镇、石堰镇、云台镇、海棠镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231123/t20231123_526495639.html",
-          "publishedOn": "2023-11-22T23:50:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市长寿区发布大雾黄色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231123/t20231123_526495628.html",
-          "author": "国家预警信息发布中心",
-          "description": "涪陵区气象台2023年11月23日7时发布“大雾黄色预警信号”，预计11月23日7时至12时，南沱镇、马鞍街道、李渡街道、江北街道、龙桥街道、白涛街道、敦仁街道、崇义街道、江东街道、清溪镇、义和街道、石沱镇、蔺市街道、荔枝街道、珍溪镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。防御指南：1.有关部门和单位按照职责做好防雾准备工作；2.机场、高速公路、轮渡码头等单位加强交通管理，保障安全；3.驾驶人员注意雾的变化，小心驾驶；4.户外活动注意安全。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231123/t20231123_526495628.html",
-          "publishedOn": "2023-11-22T23:31:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市涪陵区发布大雾黄色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231123/t20231123_526495625.html",
-          "author": "国家预警信息发布中心",
-          "description": "南川区气象台2023年11月23日7时发布“大雾黄色预警信号”，预计未来6小时，东城街道、西城街道、南城街道、鸣玉镇、白沙镇、太平场镇、大观镇、兴隆镇、民主镇、冷水关镇、水江镇、山王坪镇、三泉镇、庆元镇、古花镇、南平镇、乾丰镇、黎香湖镇、石溪镇、神童镇、石莲镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231123/t20231123_526495625.html",
-          "publishedOn": "2023-11-22T23:23:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市南川区发布大雾黄色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231123/t20231123_526495615.html",
-          "author": "国家预警信息发布中心",
-          "description": "綦江区气象台2023年11月23日6时50分发布“大雾黄色预警信号”，预计23日7时至12时，我区全部镇街将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231123/t20231123_526495615.html",
-          "publishedOn": "2023-11-22T23:00:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市綦江区发布大雾黄色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231123/t20231123_526495606.html",
-          "author": "国家预警信息发布中心",
-          "description": "梁平区气象台2023年11月23日6时40分发布“大雾黄色预警信号”，预计23日7时至11时，曲水镇、安胜镇、星桥镇、合兴街道、文化镇、复平镇、大观镇、紫照镇、柏家镇、石安镇、金带街道、蟠龙镇、双桂街道、福禄镇、梁山街道、礼让镇、竹山镇、袁驿镇、龙胜乡、明达镇、龙门镇、虎城镇、新盛镇、荫平镇、铁门乡、屏锦镇、云龙镇、和林镇、回龙镇、聚奎镇、仁贤街道、七星镇、碧山镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231123/t20231123_526495606.html",
-          "publishedOn": "2023-11-22T22:55:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市梁平区发布大雾黄色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231123/t20231123_526495601.html",
-          "author": "国家预警信息发布中心",
-          "description": "开州区气象局2023年11月23日6时30分发布“大雾黄色预警信号”，预计11月23日06时至12时，我区大部分乡镇（街道）将出现能见度小于500米的雾，局部地区能见度小于200米。请各地注意防范大雾天气可能造成的影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231123/t20231123_526495601.html",
-          "publishedOn": "2023-11-22T22:49:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市开州区发布大雾黄色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -927,6 +867,16 @@
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
         {
+          "id": "7306783965532799028",
+          "author": "皮这一下很开心",
+          "description": "有什么适合手机端app界面开发的简单框架，之前一直只是用响应式布局来凑合手机端[我想静静][我想静静][我想静静][我想静静]",
+          "link": "https://juejin.cn/pin/7306783965532799028",
+          "publishedOn": "2023-11-29T23:49:45.000Z",
+          "wordCount": 436,
+          "title": "有什么适合手机端app界面开发的简单框架，之前一直只是用响应式布局来凑合手机端[我想静静][我想静静][我想静静][我想静静]",
+          "imageUrl": null
+        },
+        {
           "id": "7306697644062048283",
           "author": "黑恶势力",
           "description": "刚切换成flutter开发，上午做了个vscode插件把UI稿内容自动转换成flutter的响应式布局省点力气。人老了不喜欢没接触过的东西，现在才入坑是不都算末班车了==\nhttps://github.com/balabalapupu/css-to-widget\n之前还有个ui稿自动转换成原子化样式\nhttps://github.com/balabalapupu/vscode-auto-atomic-css",
@@ -1114,16 +1064,6 @@
           "publishedOn": "2023-11-20T06:58:07.000Z",
           "wordCount": 468,
           "title": "最近除了 arc 浏览器外，我又体验了一款浏览器，感觉挺不错。绝对推荐。https://join.meetsidekick.com/csnap",
-          "imageUrl": null
-        },
-        {
-          "id": "7302637885869637673",
-          "author": "惊蛰445",
-          "description": "JYM想入手一台二手mac book作为开发机，有推荐的配置吗？，官网的新机太贵了，个人觉得它不值那个价格（其实是买不起[流泪]）",
-          "link": "https://juejin.cn/pin/7302637885869637673",
-          "publishedOn": "2023-11-20T01:17:23.000Z",
-          "wordCount": 443,
-          "title": "JYM想入手一台二手mac book作为开发机，有推荐的配置吗？，官网的新机太贵了，个人觉得它不值那个价格（其实是买不起[流泪]）",
           "imageUrl": null
         }
       ]
