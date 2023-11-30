@@ -51,11 +51,96 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-30 datetime="2023-11-30T02:50:34.000Z">2023-11-30</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-30 datetime="2023-11-30T02:50:34.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-30 datetime="2023-11-30T05:26:28.000Z">2023-11-30</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-30 datetime="2023-11-30T05:26:28.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Barret李靖的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/65681d04c9ed8caff000ff02"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: pdf2htmlEX 是一个值得推荐的 PDF 转 HTML 工具，https://github.com/pdf2htmlEX/pdf2htmlEX，它生成的内容还原度非常高，几乎与原 PDF 一致。 我去扒了...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65681d04c9ed8caff000ff02">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FoOxF-r_StpSAUGMX5gRLl1jd-cQv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>pdf2htmlEX 是一个值得推荐的 PDF 转 HTML 工具，https://github.com/pdf2htmlEX/pdf2htmlEX，它生成的内容还原度非常高，几乎与原 PDF 一致。
+我去扒了下这个项目的历史，https://github.com/coolwanglu/pdf2htmlEX/wiki/Author%27s-Words，作者因朋友抱怨没有一个在线 PDF viewer，于是他就撸了一个将 PDF 转成 HTML 的“玩具”，时间是 2013 年，也有十年历史了。
+pdf2htmlEX 背后使用的是 poppler 这个渲染库，而 poppler 背后使用的是  xpdf-3.0，它是一个免费的 PDF 查看器和工具包，包括文本提取器、图像转换器、HTML 转换器等。Chrome 自家也撸了一个 PDF 渲染引擎，叫做 pdfium，项目地址在这里：https://pdfium.googlesource.com/pdfium
+项目在 2018 年就被作者归档了，为了可以让社区更好地贡献代码，新开了一个 repo 延续，在这个 repo 中，作者对打包过程做了封装，并且锁定了两个重要依赖的版本（poppler 和 Fontforge）。
+我在 Mac 下一直没有成功安装，看到有人提了一个兼容的 PR，状态还是 work in progress：https://github.com/pdf2htmlEX/pdf2htmlEX/pull/18，都五年了，应该是没有下文了😂</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/6567f01a5682fbc62e4c6537"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: Cloudflare Worker 已经支持了 Puppeteer 无头浏览器渲染了，它可以用于创建屏幕截图、抓取页面和测试 Web 应用程序等任务，https://developers.cloudfl...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6567f01a5682fbc62e4c6537">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FtUyYge-fqIOnoNqfQ9nIK2FAhbkv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Cloudflare Worker 已经支持了 Puppeteer 无头浏览器渲染了，它可以用于创建屏幕截图、抓取页面和测试 Web 应用程序等任务，https://developers.cloudflare.com/browser-rendering/
+略有不同的是，Cloudflare fork 了 Puppeteer 代码做了一些修改，关键代码在这里：https://github.com/cloudflare/puppeteer/blob/main/src/puppeteer-core.ts#L65，看完逻辑大概能 get 到他们优化的策略：
+1）首先在云端预热一批 Chrome/Chromium 会话窗口，有点类似 Serverless Function 的冷启动
+2）每次发起 Puppeteer 任务的时候，会通过 API 从会话池中获取一个 ws 连接地址，这块工作在框架和工具层面做了完善的处理（网页上配置不了，需要走 CLI）
+3）云端对回话窗口池进行自动伸缩容管理，同时也会对获取 ws 连接的任务做队列管理
+这样的架构设计可以很好地保障整体服务的稳定。目前一个账户 1min 内可以启动 2 个实例，并发数也只有 2，而且超过 60s 任务没结束被 kill。为了避免长时间占用资源，还是做了比较多的限制。
+当前这个能力还在 beta 阶段，可以通过官网加入到 waitlist，不过我发现，直接进 discord 找他们的运营可以快速获取权限。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/6567dd70c9ed8caff0fa16ef"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 放下往往是最难的。事情在真实世界已经结束了，在心里却还在延续；当事人都已经放下了，旁观者却还穷追不舍。 放下，放过别人，也是放过自己。</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6567dd70c9ed8caff0fa16ef">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>放下往往是最难的。事情在真实世界已经结束了，在心里却还在延续；当事人都已经放下了，旁观者却还穷追不舍。
+放下，放过别人，也是放过自己。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -126,41 +211,6 @@
                 </section>
               </section>
             </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Barret李靖的即刻动态</button>
-                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/6567dd70c9ed8caff0fa16ef"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 放下往往是最难的。事情在真实世界已经结束了，在心里却还在延续；当事人都已经放下了，旁观者却还穷追不舍。 放下，放过别人，也是放过自己。</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6567dd70c9ed8caff0fa16ef">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>放下往往是最难的。事情在真实世界已经结束了，在心里却还在延续；当事人都已经放下了，旁观者却还穷追不舍。
-放下，放过别人，也是放过自己。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -170,11 +220,113 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-29 datetime="2023-11-29T16:24:52.000Z">2023-11-29</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-29 datetime="2023-11-29T16:24:52.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-29 datetime="2023-11-29T23:49:45.000Z">2023-11-29</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-29 datetime="2023-11-29T23:49:45.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7306783965532799028"
+                        open
+                      >
+                        <summary class="article-expander__title">有什么适合手机端app界面开发的简单框架，之前一直只是用响应式布局来凑合手机端[我想静静][我想静静][我想静静][我想静静]</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7306783965532799028">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>有什么适合手机端app界面开发的简单框架，之前一直只是用响应式布局来凑合手机端[我想静静][我想静静][我想静静][我想静静]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7306697644062048283"
+                        open
+                      >
+                        <summary class="article-expander__title">刚切换成flutter开发，上午做了个vscode插件把UI稿内容自动转换成flutter的响应式布局省点力气。人老了不喜欢没接触过的东西，现在才入坑是不都算末班车了&#x3D;&#x3D; htt...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7306697644062048283">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>刚切换成flutter开发，上午做了个vscode插件把UI稿内容自动转换成flutter的响应式布局省点力气。人老了不喜欢没接触过的东西，现在才入坑是不都算末班车了&#x3D;&#x3D;
+https://github.com/balabalapupu/css-to-widget
+之前还有个ui稿自动转换成原子化样式
+https://github.com/balabalapupu/vscode-auto-atomic-css</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7306447457151402018"
+                        open
+                      >
+                        <summary class="article-expander__title">flutter 写的 windows 端 图片比对、批量裁剪导出工具，链接还可兑换70次。 http://go.microsoft.com/fwlink/?LinkId&#x3D;532540&amp;mstoken&#x3D;XJ3RV-4CX7J-QCTGM-7DKQ3-D...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7306447457151402018">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>flutter 写的 windows 端 图片比对、批量裁剪导出工具，链接还可兑换70次。
+http://go.microsoft.com/fwlink/?LinkId&#x3D;532540&amp;mstoken&#x3D;XJ3RV-4CX7J-QCTGM-7DKQ3-DMDKZ
+欢迎吐槽。
+小bug 懒得改，大bug 不会改
+已知：窗口尺寸改变时，文件名位置某些情况不能自适应</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7306423214494646306"
+                        open
+                      >
+                        <summary class="article-expander__title">[7304512653450280998#GPTs 的奇思妙用#] https://gptsmenu.com 一个第三方 GPTs 存储网站 目前收录超 1w ➕GPTs 支持一键收藏❤️你喜欢的 GPT Chrome 导航插件...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7306423214494646306">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>[7304512653450280998#GPTs 的奇思妙用#]
+https://gptsmenu.com
+一个第三方 GPTs 存储网站
+目前收录超 1w ➕GPTs
+支持一键收藏❤️你喜欢的 GPT
+Chrome 导航插件，提高你的工作效率</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -456,11 +608,104 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-28 datetime="2023-11-28T16:21:17.000Z">2023-11-28</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-28 datetime="2023-11-28T16:21:17.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-28 datetime="2023-11-28T22:45:46.000Z">2023-11-28</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-28 datetime="2023-11-28T22:45:46.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7306423214494023714"
+                        open
+                      >
+                        <summary class="article-expander__title">最近开发Chrome扩展的过程中发现，原生的HTML+js+css开发写起来确实很累，效率也低。于是想着自己搭一套vite+react+ts+antd且支持多页面的框架用来开发Chrome扩...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7306423214494023714">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>最近开发Chrome扩展的过程中发现，原生的HTML+js+css开发写起来确实很累，效率也低。于是想着自己搭一套vite+react+ts+antd且支持多页面的框架用来开发Chrome扩展程序。不过在调研的过程中发现了Plasmo这个Chrome开发SDK，一举解决了我的所有诉求，这两天有时间就开搞吧。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7306356456102019124"
+                        open
+                      >
+                        <summary class="article-expander__title">用例图(PlanUML) 用例图是软件工程中的一种可视化表示方法，用于描述系统角色与系统本身之间的交互。它通过说明用例和与用例交互的角色来捕捉系统的动态行为。这...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7306356456102019124">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>用例图(PlanUML)
+用例图是软件工程中的一种可视化表示方法，用于描述系统角色与系统本身之间的交互。它通过说明用例和与用例交互的角色来捕捉系统的动态行为。这些图表对于明确系统的功能要求和了解用户如何与系统交互至关重要。通过提供一个高层次的视图，用例图可以帮助利益相关者了解系统的功能及其潜在价值。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7306327158129983503"
+                        open
+                      >
+                        <summary class="article-expander__title">我开发的Chrome扩展 - 掘金Plus已经在Chrome扩展商店发布成功了。初个版本支持配置文章模版和一键导入功能。 欢迎大家在Chrome扩展商店搜索掘金Plus下载试用。 h...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7306327158129983503">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>我开发的Chrome扩展 - 掘金Plus已经在Chrome扩展商店发布成功了。初个版本支持配置文章模版和一键导入功能。
+欢迎大家在Chrome扩展商店搜索掘金Plus下载试用。
+https://chromewebstore.google.com/detail/%E6%8E%98%E9%87%91plus/bcpbkeiagppbpjinfdbknmaibfjaeobi?hl&#x3D;zh-CN&amp;utm_source&#x3D;ext_sidebar</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7306019445406761012"
+                        open
+                      >
+                        <summary class="article-expander__title">好不容易给开发者朋友开发的插件工具，适配了掘金，知乎，csdn，baijiahao，网易和搜狐等等，支持等众多开发博客，还有隐藏免费功能。博客显示效果优秀。桶子门...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7306019445406761012">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>好不容易给开发者朋友开发的插件工具，适配了掘金，知乎，csdn，baijiahao，网易和搜狐等等，支持等众多开发博客，还有隐藏免费功能。博客显示效果优秀。桶子门，这么好的东西，竟然没人知道(爱读v2)，目前下载量稀缺[流泪]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -531,51 +776,6 @@ https://medium.com/@xriteshsharmax/speaker-diarization-using-whisper-asr-and-pya
 3）将分割的片段极其衍生的更多片段进行聚类（Clustering）和打标（Labeling）
 4）最后交给 Whisper 进行语音识别
 这部分工程的实现已被作者整理成一个开源项目：https://github.com/riteshhere/Speaker_diarization，目前还没有找到更优的解决方案，不知道有经验的朋友都是如何去做的？</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/65655c79552e503d7c8ca657"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: self-operating-computer，https://github.com/OthersideAI/self-operating-computer，这个项目演示了如何让 GPT-4V 来控制自己的电脑，你需要做的就是...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65655c79552e503d7c8ca657">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fp4nz7ZOuFV9p7rWZnpVtarRKDwiv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>self-operating-computer，https://github.com/OthersideAI/self-operating-computer，这个项目演示了如何让 GPT-4V 来控制自己的电脑，你需要做的就是告诉它完成一个怎样的任务，例如，打开 Google Docs 写一篇文章，然后发布并分享给同事。
-它的 Prompt 写的比较简单，定义了一个可以与机器交互的 DSL，主要包含三种动作：Click/Type/Search，分别对应 mouse_click/keyboard_type/mac_search 几个封装好的系统函数。
-每次程序执行动作时，都会携带任务目标、上一步执行结果以及当前屏幕截图作为上下文，然后将信息传递给 ChatGPT，并让它给出下一步操作指示。
-这个项目中 Prompt 的定制化程度偏高，说明完成复杂的工作还比较有挑战，如果参考之前提到的 Mutil-Agent 方案，https://twitter.com/Barret_China/status/1712408323851788505，做出来效果应该会更好一些。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/656553582856006673eb0fc3"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: Stephen Wolfram 是一名著作等身的初代程序员，他在 Youtube 上发布了一个 3h+ 的视频，《What is ChatGPT doing...and why does it work?》，https://w...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/656553582856006673eb0fc3">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FmyQN2_qKnkBWJ1yoV98MEMzNuvHv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Stephen Wolfram 是一名著作等身的初代程序员，他在 Youtube 上发布了一个 3h+ 的视频，《What is ChatGPT doing...and why does it work?》，https://www.youtube.com/watch?v&#x3D;flXrLGPY3SU，介绍了什么是 ChatGPT，以及它是如何工作的。
-同时也整理了一份文字稿：https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/，把深奥的理论说得通俗易懂，如沐春风。
-可以结合上次分享的这个动画网页来享用：https://ig.ft.com/generative-ai/</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -1094,6 +1294,9 @@ DOM scripting is expensive, and it&#x27;s a common perf…</span>
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>theme: awesome-green
+Emoji“爬虫”
+在该项目中，自己实现了个简易的emoji组件库，为了方便让大家也能一键下载所有emoji，并帮你生成供组件展示的数据源。我写了个算是“爬虫”工具吧，大家可以下载体验下，我根据数据源，简单做了个demo图，如下
+
 简介
 本篇文章将重点介绍如何将一个灵感从构思到实际应用的过程，并以实现一个功能复杂的文字转图形应用为例。阅读完后，你也可以根据类似的思路来开发您自己的开源产品。在线体验
 示例图
@@ -1112,10 +1315,60 @@ Github项目地址：anyphoto-web
 核心npm工具库
 前面我已经提到了，我的职业是一名前端开发者，所以最开始我想到的就是开发一个全局的npm工具库，供开发者可在本地全局安装，然后通过终端命令实现快速生成个性化图片
 一段时间的折腾后，还算比较顺利，我完成了所有核心模块功能的实现（这其实也归功于我之前写过类似的应用）
-如果你看过我之前的文章，你会知道我之前做过一个draw-md-keyword的工具，它的作用是能够快速地识别出一个markdown文件中的关键字，然后生成一张随机风格的关键词云图，它的主要使用场景是帮助那些喜欢写博客文章的同学快速地识别出一篇markdown文件中的核心关键字，然后在一张图片上呈现出来
-再一个就是之前封装过一个上传图片至云对象存储的工具包，它将一切跟上传有关的逻辑封装在其中，用户不需要关注任何细节，只需要配置必要的字段，即可进行上传图片到云端
-…</span>
+如果你看过我之前的文章，你会知道我之前做过一个draw-md-keyword的工具，它的作用是能够快速地识别出一个markdown文件中的关键字，然后生成一张随机风格的关键词云图，它的主要使用场景是帮助那些喜欢写博客文章的同学快速地…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7305983860168458303"
+                        open
+                      >
+                        <summary class="article-expander__title">给 Spring Web 开发者开发了一款 IDEA 插件：Feign-Helper，为什么叫 Feign-Helper ？因为核心功能其实是Spring Cloud Feign 接口与和对应的 Controller 源码间...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7305983860168458303">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>给 Spring Web 开发者开发了一款 IDEA 插件：Feign-Helper，为什么叫 Feign-Helper ？因为核心功能其实是Spring Cloud Feign 接口与和对应的 Controller 源码间互相跳转（源码在同一个工程内），顺便提供 Spring Web HTTP API 检索（按两下 Shift 键打开，有个 URL 选项卡），现在送优惠码：https://aboat365.com/feign-helper/2023/11/27/v2ex-Feign-Helper-%E4%BC%98%E6%83%A0%E7%A0%81.html</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7305576845100924928"
+                        open
+                      >
+                        <summary class="article-expander__title">实现了一款目前AI还做不到的文字转图片应用，灵感来源于微信读书，已上线，支持各种模板。可前来体验，今天会发博客，让大家对它有个更清晰的认识。线上体验http...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7305576845100924928">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>实现了一款目前AI还做不到的文字转图片应用，灵感来源于微信读书，已上线，支持各种模板。可前来体验，今天会发博客，让大家对它有个更清晰的认识。线上体验https://anyphoto.space/playground</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1220,6 +1473,39 @@ Github项目地址：anyphoto-web
                             <span class="media-object__text">
                               <span>万州区气象台2023年11月26日14时20分发布“大雾黄色预警信号”，预计26日23时30分至27日10时30分，陈家坝街道、长坪乡、新乡镇、燕山乡、溪口乡、百安坝街道、铁峰乡、双河口街道、九池街道、孙家镇等镇乡街将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。有关部门和单位按照职责做好防雾准备工作；机场、高速公路、轮渡码头等单位加强交通管理，保障安全；驾驶人员注意雾的变化，小心驾驶；户外活动注意安全。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7304997932444286985"
+                        open
+                      >
+                        <summary class="article-expander__title">等会北京了，好好开发后续功能</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7304997932444286985">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>等会北京了，好好开发后续功能</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1757,6 +2043,39 @@ Vite 4 大约在一年前官宣，它为前端生态积基树本。Vite 的 npm 
 信息从生产，加工，传播，到最终被各种媒体呈现给用户的链条。
 有了这个概念，可以反思下自己在这个链条中的位置。 
 每天阅读的信息源生产者是谁？ 看到的信息经过别人加工了么？ 是别人分享后才看到还是直接订阅的？ 分享链路往上回溯源头会经过几个媒体平台？</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7304558952179335204"
+                        open
+                      >
+                        <summary class="article-expander__title">语雀？你怎么回事儿，又崩了啊</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7304558952179335204">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>语雀？你怎么回事儿，又崩了啊</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
@@ -2321,6 +2640,58 @@ Node.js 本质上是一个动态链接库（即 Windows 下的 .dll 文件、Mac
                 </section>
               </section>
             </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7304538151480442918"
+                        open
+                      >
+                        <summary class="article-expander__title">[7073670907851440160#新人报道#]</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7304538151480442918">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>[7073670907851440160#新人报道#]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7304263961238880291"
+                        open
+                      >
+                        <summary class="article-expander__title">有没有人用rpgmaker业余做点小游戏的，一起交流呀[调皮]</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7304263961238880291">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>有没有人用rpgmaker业余做点小游戏的，一起交流呀[调皮]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -2330,11 +2701,66 @@ Node.js 本质上是一个动态链接库（即 Windows 下的 .dll 文件、Mac
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-22 datetime="2023-11-22T05:18:50.000Z">2023-11-22</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-22 datetime="2023-11-22T05:18:50.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-22 datetime="2023-11-22T14:05:36.000Z">2023-11-22</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-22 datetime="2023-11-22T14:05:36.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7304263961237749795"
+                        open
+                      >
+                        <summary class="article-expander__title">谷歌留痕助手 谷歌留痕助手关键词随机切换，并且启用域名 例如：如何挑选西瓜,福州火车站如何去闽侯,www.baidu.com广州和香港的关系如何,华清宫儿童票如何定,长...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7304263961237749795">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>谷歌留痕助手
+谷歌留痕助手关键词随机切换，并且启用域名
+例如：如何挑选西瓜,福州火车站如何去闽侯,www.baidu.com广州和香港的关系如何,华清宫儿童票如何定,长城地势如何 关键词可以自定义放入联系方式和需要推送的广告内容
+加入我们的软件会员，享受专属优惠和更多高级服务！</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7304077830714163209"
+                        open
+                      >
+                        <summary class="article-expander__title">v0.0.83 支持从ui库按需导入组件的场景，提供属性的代码提示了🥰</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7304077830714163209">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>v0.0.83 支持从ui库按需导入组件的场景，提供属性的代码提示了🥰</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -2419,6 +2845,39 @@ WASM被设计为与JavaScript协同工作，以此实现Web平台上的高性能
                 </section>
               </section>
             </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7303739766105178152"
+                        open
+                      >
+                        <summary class="article-expander__title">https://join.meetsidekick.com/hajv5，优弧推荐的浏览器用着还可以，挺好看的，主要是快</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7303739766105178152">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>https://join.meetsidekick.com/hajv5，优弧推荐的浏览器用着还可以，挺好看的，主要是快</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -2428,11 +2887,82 @@ WASM被设计为与JavaScript协同工作，以此实现Web平台上的高性能
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-20 datetime="2023-11-20T08:20:02.000Z">2023-11-20</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-20 datetime="2023-11-20T08:20:02.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-20 datetime="2023-11-20T10:19:44.000Z">2023-11-20</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-20 datetime="2023-11-20T10:19:44.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7303423871709495331"
+                        open
+                      >
+                        <summary class="article-expander__title">有人知道iVX这个低代码平台吗？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7303423871709495331">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>有人知道iVX这个低代码平台吗？</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7303043433107128354"
+                        open
+                      >
+                        <summary class="article-expander__title">[7073670907851440160#新人报道#] 新人报道</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7303043433107128354">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>[7073670907851440160#新人报道#] 新人报道</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7303138588858433570"
+                        open
+                      >
+                        <summary class="article-expander__title">最近除了 arc 浏览器外，我又体验了一款浏览器，感觉挺不错。绝对推荐。https://join.meetsidekick.com/csnap</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7303138588858433570">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>最近除了 arc 浏览器外，我又体验了一款浏览器，感觉挺不错。绝对推荐。https://join.meetsidekick.com/csnap</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -2834,8 +3364,8 @@ AI 是一个新事物，带来了很多前所未有的问题。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7041780423">
-        <time id="build-timestamp" datetime="2023-11-30T03:52:56.475Z">2023-11-30T03:52:56.475Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7043038399">
+        <time id="build-timestamp" datetime="2023-11-30T06:52:18.600Z">2023-11-30T06:52:18.600Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

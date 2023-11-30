@@ -23,7 +23,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": 1008,
+          "wordCount": 1004,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/",
           "publishedOn": "2023-11-21T16:14:41.000Z",
-          "wordCount": 1295,
+          "wordCount": 1292,
           "title": "cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "剪映中的视频特效虽多，其实就两类，一类改变原始像素，一类叠加混合，本文通过精简的源码和精致的案例给大家介绍具体如何实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/video-effect-js-filter-pixijs-webgl-3d/",
           "publishedOn": "2023-11-19T15:12:20.000Z",
-          "wordCount": 1234,
+          "wordCount": 1230,
           "title": "剪映APP的视频特效如何在Web中JS实现",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "应该是国内第一篇专门介绍用mp4box.js和VideoDecoder方法解码MP4视频序列帧的文章了。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/mp4box-js-webcodecs-mp4-canvas/",
           "publishedOn": "2023-11-14T16:37:18.000Z",
-          "wordCount": 1251,
+          "wordCount": 1248,
           "title": "mp4box.js加WebCodecs 解码MP4视频帧并渲染",
           "imageUrl": null
         }
@@ -112,6 +112,26 @@
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/65681d04c9ed8caff000ff02",
+          "author": null,
+          "description": "pdf2htmlEX 是一个值得推荐的 PDF 转 HTML 工具，https://github.com/pdf2htmlEX/pdf2htmlEX，它生成的内容还原度非常高，几乎与原 PDF 一致。\n我去扒了下这个项目的历史，https://github.com/coolwanglu/pdf2htmlEX/wiki/Author%27s-Words，作者因朋友抱怨没有一个在线 PDF viewer，于是他就撸了一个将 PDF 转成 HTML 的“玩具”，时间是 2013 年，也有十年历史了。\npdf2htmlEX 背后使用的是 poppler 这个渲染库，而 poppler 背后使用的是  xpdf-3.0，它是一个免费的 PDF 查看器和工具包，包括文本提取器、图像转换器、HTML 转换器等。Chrome 自家也撸了一个 PDF 渲染引擎，叫做 pdfium，项目地址在这里：https://pdfium.googlesource.com/pdfium\n项目在 2018 年就被作者归档了，为了可以让社区更好地贡献代码，新开了一个 repo 延续，在这个 repo 中，作者对打包过程做了封装，并且锁定了两个重要依赖的版本（poppler 和 Fontforge）。\n我在 Mac 下一直没有成功安装，看到有人提了一个兼容的 PR，状态还是 work in progress：https://github.com/pdf2htmlEX/pdf2htmlEX/pull/18，都五年了，应该是没有下文了😂",
+          "link": "https://m.okjike.com/originalPosts/65681d04c9ed8caff000ff02",
+          "publishedOn": "2023-11-30T05:26:28.000Z",
+          "wordCount": 542,
+          "title": "发布了: pdf2htmlEX 是一个值得推荐的 PDF 转 HTML 工具，https://github.com/pdf2htmlEX/pdf2htmlEX，它生成的内容还原度非常高，几乎与原 PDF 一致。 我去扒了...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FoOxF-r_StpSAUGMX5gRLl1jd-cQv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
+        {
+          "id": "https://m.okjike.com/originalPosts/6567f01a5682fbc62e4c6537",
+          "author": null,
+          "description": "Cloudflare Worker 已经支持了 Puppeteer 无头浏览器渲染了，它可以用于创建屏幕截图、抓取页面和测试 Web 应用程序等任务，https://developers.cloudflare.com/browser-rendering/\n略有不同的是，Cloudflare fork 了 Puppeteer 代码做了一些修改，关键代码在这里：https://github.com/cloudflare/puppeteer/blob/main/src/puppeteer-core.ts#L65，看完逻辑大概能 get 到他们优化的策略：\n1）首先在云端预热一批 Chrome/Chromium 会话窗口，有点类似 Serverless Function 的冷启动\n2）每次发起 Puppeteer 任务的时候，会通过 API 从会话池中获取一个 ws 连接地址，这块工作在框架和工具层面做了完善的处理（网页上配置不了，需要走 CLI）\n3）云端对回话窗口池进行自动伸缩容管理，同时也会对获取 ws 连接的任务做队列管理\n这样的架构设计可以很好地保障整体服务的稳定。目前一个账户 1min 内可以启动 2 个实例，并发数也只有 2，而且超过 60s 任务没结束被 kill。为了避免长时间占用资源，还是做了比较多的限制。\n当前这个能力还在 beta 阶段，可以通过官网加入到 waitlist，不过我发现，直接进 discord 找他们的运营可以快速获取权限。",
+          "link": "https://m.okjike.com/originalPosts/6567f01a5682fbc62e4c6537",
+          "publishedOn": "2023-11-30T02:14:50.000Z",
+          "wordCount": 533,
+          "title": "发布了: Cloudflare Worker 已经支持了 Puppeteer 无头浏览器渲染了，它可以用于创建屏幕截图、抓取页面和测试 Web 应用程序等任务，https://developers.cloudfl...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FtUyYge-fqIOnoNqfQ9nIK2FAhbkv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/6567dd70c9ed8caff0fa16ef",
           "author": null,
           "description": "放下往往是最难的。事情在真实世界已经结束了，在心里却还在延续；当事人都已经放下了，旁观者却还穷追不舍。\n放下，放过别人，也是放过自己。",
@@ -147,7 +167,7 @@
           "description": "AI 辅助阅读并自动总结网页概要的工具多如牛毛，但把这件事情做好却并不容易，因为网页上存在太多乱七八糟的 DOM，包括导航菜单、广告和推荐模块等等，如果不抓核心内容直接无脑扔给 AI 处理，那效果一定是不佳的，尤其是杂乱内容占比过高时。\n做了一些技术调研，找到如下几个工具/库，它们均可以辅助提取网页概要，不过各自的思路存在一些差异：\n1）Readability，https://github.com/mozilla/readability，是一种基于规则的方法，被 Mozilla Firefox 浏览器的阅读模式使用，它通过检查 HTML 元素的标签名称、文本数量、链接密度以及满足主要内容标准的文本模式来提取主要内容\n2）DOM Distiller，https://github.com/chromium/dom-distiller，是 Google Chrome 浏览器的阅读模式，它是一种混合方法，使用了 Boilerpipe 分类器和一些规则，有点类似于 Readability\n3）Web2Text，https://github.com/dalab/web2text，是基于深度神经网络的分类器，使用了 CNN 模型和包括单词计数、标点符号存在和停用词数量等 128 个结构和文本特征来确定每个文本块是否属于主要内容\n4）Boilernet，https://github.com/mrjleo/boilernet，是基于深度神经网络的分类器，使用 LSTM 将网页的文本节点视为由单词和 DOM 树根路径组成的文本块序列\n这些方法在不同的数据集和语言环境下会表现出不同的性能。https://arxiv.org/abs/2110.14164，这篇论文给出了一个新的思路：通过使用视觉特征从网页中提取主要内容，算法分为三个步骤：网格化、居中和扩展：\n1）首先，算法创建一个类似棋盘的网格，用于近似用户首次浏览网页的区域\n2）然后，从浏览器窗口、网页文档和网格的中心点确定三个中心点；这些中心点被认为与主要内容接近，它们最近的文本节点很可能是主要内容的后代叶节点\n3）最后，算法通过从叶节点开始沿着 DOM 树向上遍历来提取主要内容\n通过使用这些通用的特征，该算法在多语言环境下表现都还不错，并在实验中优于现有的主要内容提取方法：在最长公共子序列（LCS）F1 得分方面，该方法的平均性能比现有方法提高了 14%；特别是在英语数据集中，性能提高了 25%，在非英语数据集中提高了 16%。\n这篇论文没有找到对应的代码实现，感兴趣的同学可以撸一个出来，价值还挺大的。",
           "link": "https://m.okjike.com/originalPosts/65675c9587a8e03bd123c9de",
           "publishedOn": "2023-11-29T15:45:25.000Z",
-          "wordCount": 521,
+          "wordCount": 551,
           "title": "发布了: AI 辅助阅读并自动总结网页概要的工具多如牛毛，但把这件事情做好却并不容易，因为网页上存在太多乱七八糟的 DOM，包括导航菜单、广告和推荐模块等等，...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FiGVTwYkq3rSlmda2Ocjj7ej6oQ7v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -190,26 +210,6 @@
           "wordCount": 552,
           "title": "发布了: OpenAI 推出的开源免费 Whisper 在语音识别领域（ASR）可以说无出其右，不过它有一个较大的局限性，就是无法进行说话人分类（Speaker diarization），尤...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/65655c79552e503d7c8ca657",
-          "author": null,
-          "description": "self-operating-computer，https://github.com/OthersideAI/self-operating-computer，这个项目演示了如何让 GPT-4V 来控制自己的电脑，你需要做的就是告诉它完成一个怎样的任务，例如，打开 Google Docs 写一篇文章，然后发布并分享给同事。\n它的 Prompt 写的比较简单，定义了一个可以与机器交互的 DSL，主要包含三种动作：Click/Type/Search，分别对应 mouse_click/keyboard_type/mac_search 几个封装好的系统函数。\n每次程序执行动作时，都会携带任务目标、上一步执行结果以及当前屏幕截图作为上下文，然后将信息传递给 ChatGPT，并让它给出下一步操作指示。\n这个项目中 Prompt 的定制化程度偏高，说明完成复杂的工作还比较有挑战，如果参考之前提到的 Mutil-Agent 方案，https://twitter.com/Barret_China/status/1712408323851788505，做出来效果应该会更好一些。",
-          "link": "https://m.okjike.com/originalPosts/65655c79552e503d7c8ca657",
-          "publishedOn": "2023-11-28T03:20:25.000Z",
-          "wordCount": 482,
-          "title": "发布了: self-operating-computer，https://github.com/OthersideAI/self-operating-computer，这个项目演示了如何让 GPT-4V 来控制自己的电脑，你需要做的就是...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fp4nz7ZOuFV9p7rWZnpVtarRKDwiv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/656553582856006673eb0fc3",
-          "author": null,
-          "description": "Stephen Wolfram 是一名著作等身的初代程序员，他在 Youtube 上发布了一个 3h+ 的视频，《What is ChatGPT doing...and why does it work?》，https://www.youtube.com/watch?v=flXrLGPY3SU，介绍了什么是 ChatGPT，以及它是如何工作的。\n同时也整理了一份文字稿：https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/，把深奥的理论说得通俗易懂，如沐春风。\n可以结合上次分享的这个动画网页来享用：https://ig.ft.com/generative-ai/",
-          "link": "https://m.okjike.com/originalPosts/656553582856006673eb0fc3",
-          "publishedOn": "2023-11-28T02:41:28.000Z",
-          "wordCount": 520,
-          "title": "发布了: Stephen Wolfram 是一名著作等身的初代程序员，他在 Youtube 上发布了一个 3h+ 的视频，《What is ChatGPT doing...and why does it work?》，https://w...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FmyQN2_qKnkBWJ1yoV98MEMzNuvHv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         }
       ]
     },
@@ -224,7 +224,7 @@
           "description": "计算机领域有一个经典的\"X-Y\" 问题\n\"X-Y\"问题是一个问题解决策略的概念，其中 X 是你真正面临的问题，而 Y 是你认为的解决方案。当你尝试获取 Y 的信息或怎么做 Y 时，你实际上避开了真正的问题 X。\n举例来说，假设你正在编写一个程序，需要解析一种特定格式的数据（这是你的 X 问题）。你决定使用某种特定的库来解析这种数据，但遇到困难（你现在的 Y 问题）。你可能会询问关于这个库的问题，而不是你实际面对的如何解析这种格式的数据的问题。通过构造出一个 X-Y 问题，你可能限制了别人能给出的帮助，因为他们被限制在你选择的方案，而不是实际问题。\n最好的方法是描述你的实际问题（X——如何解析特定格式的数据），然后才告诉别人你试图怎么解决（你的 Y——使用某个特定的库）。这样他们既可以在你遇到困难的方法上给予帮助，也可以提供其他可能的更好的解决方案。",
           "link": "https://m.okjike.com/originalPosts/6567f87a552e503d7cc45d8e",
           "publishedOn": "2023-11-30T02:50:34.000Z",
-          "wordCount": 457,
+          "wordCount": 461,
           "title": "发布了: 计算机领域有一个经典的\"X-Y\" 问题 \"X-Y\"问题是一个问题解决策略的概念，其中 X 是你真正面临的问题，而 Y 是你认为的解决方案。当你尝试获取 Y 的信息...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -692,10 +692,10 @@
         {
           "id": "https://juejin.cn/post/7305694682772242483",
           "author": "麻不烧",
-          "description": "theme: awesome-green\n简介\n本篇文章将重点介绍如何将一个灵感从构思到实际应用的过程，并以实现一个功能复杂的文字转图形应用为例。阅读完后，你也可以根据类似的思路来开发您自己的开源产品。在线体验\n示例图\n更多示例图可在网站中查看\n\n\n\n\n项目源码\n在线体验：anyphoto.space\nGithub项目地址：anyphoto-web\n背景\n前段时间，在使用微信读书App应用的时候，遇到一些比较精彩的文案，想要分享给朋友。虽然应用本身已经提供了一些基础模板供用户使用，但是我发现好像很多东西都是固定的，比如说字体、背景颜色、边距等。而我本身作为前端开发者，是很想自定义一些样式和布局的\n于是，我便做了一个可高度定制化的图片生成器，接下来要讲的是近两个月来，我的一些实践和思考及产出\n注: 当下无论是Npm工具包（暂未发布）还是可视化在线网站都在不断地更新和维护，由于时间的原因，网站暂未集成所有配置项，但已支持大部分核心功能，可自行体验\n核心npm工具库\n前面我已经提到了，我的职业是一名前端开发者，所以最开始我想到的就是开发一个全局的npm工具库，供开发者可在本地全局安装，然后通过终端命令实现快速生成个性化图片\n一段时间的折腾后，还算比较顺利，我完成了所有核心模块功能的实现（这其实也归功于我之前写过类似的应用）\n如果你看过我之前的文章，你会知道我之前做过一个draw-md-keyword的工具，它的作用是能够快速地识别出一个markdown文件中的关键字，然后生成一张随机风格的关键词云图，它的主要使用场景是帮助那些喜欢写博客文章的同学快速地识别出一篇markdown文件中的核心关键字，然后在一张图片上呈现出来\n再一个就是之前封装过一个上传图片至云对象存储的工具包，它将一切跟上传有关的逻辑封装在其中，用户不需要关注任何细节，只需要配置必要的字段，即可进行上传图片到云端\n…",
+          "description": "theme: awesome-green\nEmoji“爬虫”\n在该项目中，自己实现了个简易的emoji组件库，为了方便让大家也能一键下载所有emoji，并帮你生成供组件展示的数据源。我写了个算是“爬虫”工具吧，大家可以下载体验下，我根据数据源，简单做了个demo图，如下\n\n简介\n本篇文章将重点介绍如何将一个灵感从构思到实际应用的过程，并以实现一个功能复杂的文字转图形应用为例。阅读完后，你也可以根据类似的思路来开发您自己的开源产品。在线体验\n示例图\n更多示例图可在网站中查看\n\n\n\n\n项目源码\n在线体验：anyphoto.space\nGithub项目地址：anyphoto-web\n背景\n前段时间，在使用微信读书App应用的时候，遇到一些比较精彩的文案，想要分享给朋友。虽然应用本身已经提供了一些基础模板供用户使用，但是我发现好像很多东西都是固定的，比如说字体、背景颜色、边距等。而我本身作为前端开发者，是很想自定义一些样式和布局的\n于是，我便做了一个可高度定制化的图片生成器，接下来要讲的是近两个月来，我的一些实践和思考及产出\n注: 当下无论是Npm工具包（暂未发布）还是可视化在线网站都在不断地更新和维护，由于时间的原因，网站暂未集成所有配置项，但已支持大部分核心功能，可自行体验\n核心npm工具库\n前面我已经提到了，我的职业是一名前端开发者，所以最开始我想到的就是开发一个全局的npm工具库，供开发者可在本地全局安装，然后通过终端命令实现快速生成个性化图片\n一段时间的折腾后，还算比较顺利，我完成了所有核心模块功能的实现（这其实也归功于我之前写过类似的应用）\n如果你看过我之前的文章，你会知道我之前做过一个draw-md-keyword的工具，它的作用是能够快速地识别出一个markdown文件中的关键字，然后生成一张随机风格的关键词云图，它的主要使用场景是帮助那些喜欢写博客文章的同学快速地…",
           "link": "https://juejin.cn/post/7305694682772242483",
           "publishedOn": "2023-11-27T03:35:31.000Z",
-          "wordCount": 2291,
+          "wordCount": 2270,
           "title": "从0到1，带你入门全栈开发，助力跳槽涨薪",
           "imageUrl": null
         },
@@ -847,6 +847,213 @@
           "publishedOn": "2023-11-20T08:20:02.000Z",
           "wordCount": 987,
           "title": "低代码在云音乐数据业务中的落地实践与思考",
+          "imageUrl": null
+        }
+      ]
+    },
+    {
+      "title": "沸点 - 开发工具推荐",
+      "feedUrl": "https://rsshub.app/juejin/pins/6824710202000932877",
+      "siteUrl": "https://juejin.cn/pins/recommended",
+      "articles": [
+        {
+          "id": "7306783965532799028",
+          "author": "皮这一下很开心",
+          "description": "有什么适合手机端app界面开发的简单框架，之前一直只是用响应式布局来凑合手机端[我想静静][我想静静][我想静静][我想静静]",
+          "link": "https://juejin.cn/pin/7306783965532799028",
+          "publishedOn": "2023-11-29T23:49:45.000Z",
+          "wordCount": 437,
+          "title": "有什么适合手机端app界面开发的简单框架，之前一直只是用响应式布局来凑合手机端[我想静静][我想静静][我想静静][我想静静]",
+          "imageUrl": null
+        },
+        {
+          "id": "7306697644062048283",
+          "author": "黑恶势力",
+          "description": "刚切换成flutter开发，上午做了个vscode插件把UI稿内容自动转换成flutter的响应式布局省点力气。人老了不喜欢没接触过的东西，现在才入坑是不都算末班车了==\nhttps://github.com/balabalapupu/css-to-widget\n之前还有个ui稿自动转换成原子化样式\nhttps://github.com/balabalapupu/vscode-auto-atomic-css",
+          "link": "https://juejin.cn/pin/7306697644062048283",
+          "publishedOn": "2023-11-29T03:42:00.000Z",
+          "wordCount": 449,
+          "title": "刚切换成flutter开发，上午做了个vscode插件把UI稿内容自动转换成flutter的响应式布局省点力气。人老了不喜欢没接触过的东西，现在才入坑是不都算末班车了== htt...",
+          "imageUrl": null
+        },
+        {
+          "id": "7306447457151402018",
+          "author": "邋遢",
+          "description": "flutter 写的 windows 端 图片比对、批量裁剪导出工具，链接还可兑换70次。\nhttp://go.microsoft.com/fwlink/?LinkId=532540&mstoken=XJ3RV-4CX7J-QCTGM-7DKQ3-DMDKZ\n欢迎吐槽。\n小bug 懒得改，大bug 不会改\n已知：窗口尺寸改变时，文件名位置某些情况不能自适应",
+          "link": "https://juejin.cn/pin/7306447457151402018",
+          "publishedOn": "2023-11-29T02:15:44.000Z",
+          "wordCount": 473,
+          "title": "flutter 写的 windows 端 图片比对、批量裁剪导出工具，链接还可兑换70次。 http://go.microsoft.com/fwlink/?LinkId=532540&mstoken=XJ3RV-4CX7J-QCTGM-7DKQ3-D...",
+          "imageUrl": null
+        },
+        {
+          "id": "7306423214494646306",
+          "author": "5921",
+          "description": "[7304512653450280998#GPTs 的奇思妙用#]\nhttps://gptsmenu.com\n一个第三方 GPTs 存储网站\n目前收录超 1w ➕GPTs\n支持一键收藏❤️你喜欢的 GPT\nChrome 导航插件，提高你的工作效率",
+          "link": "https://juejin.cn/pin/7306423214494646306",
+          "publishedOn": "2023-11-29T01:39:49.000Z",
+          "wordCount": 501,
+          "title": "[7304512653450280998#GPTs 的奇思妙用#] https://gptsmenu.com 一个第三方 GPTs 存储网站 目前收录超 1w ➕GPTs 支持一键收藏❤️你喜欢的 GPT Chrome 导航插件...",
+          "imageUrl": null
+        },
+        {
+          "id": "7306423214494023714",
+          "author": "EvenZhu",
+          "description": "最近开发Chrome扩展的过程中发现，原生的HTML+js+css开发写起来确实很累，效率也低。于是想着自己搭一套vite+react+ts+antd且支持多页面的框架用来开发Chrome扩展程序。不过在调研的过程中发现了Plasmo这个Chrome开发SDK，一举解决了我的所有诉求，这两天有时间就开搞吧。",
+          "link": "https://juejin.cn/pin/7306423214494023714",
+          "publishedOn": "2023-11-28T22:45:46.000Z",
+          "wordCount": 444,
+          "title": "最近开发Chrome扩展的过程中发现，原生的HTML+js+css开发写起来确实很累，效率也低。于是想着自己搭一套vite+react+ts+antd且支持多页面的框架用来开发Chrome扩...",
+          "imageUrl": null
+        },
+        {
+          "id": "7306356456102019124",
+          "author": "在这儿不行",
+          "description": "用例图(PlanUML)\n用例图是软件工程中的一种可视化表示方法，用于描述系统角色与系统本身之间的交互。它通过说明用例和与用例交互的角色来捕捉系统的动态行为。这些图表对于明确系统的功能要求和了解用户如何与系统交互至关重要。通过提供一个高层次的视图，用例图可以帮助利益相关者了解系统的功能及其潜在价值。",
+          "link": "https://juejin.cn/pin/7306356456102019124",
+          "publishedOn": "2023-11-28T12:09:45.000Z",
+          "wordCount": 445,
+          "title": "用例图(PlanUML) 用例图是软件工程中的一种可视化表示方法，用于描述系统角色与系统本身之间的交互。它通过说明用例和与用例交互的角色来捕捉系统的动态行为。这...",
+          "imageUrl": null
+        },
+        {
+          "id": "7306327158129983503",
+          "author": "EvenZhu",
+          "description": "我开发的Chrome扩展 - 掘金Plus已经在Chrome扩展商店发布成功了。初个版本支持配置文章模版和一键导入功能。\n欢迎大家在Chrome扩展商店搜索掘金Plus下载试用。\nhttps://chromewebstore.google.com/detail/%E6%8E%98%E9%87%91plus/bcpbkeiagppbpjinfdbknmaibfjaeobi?hl=zh-CN&utm_source=ext_sidebar",
+          "link": "https://juejin.cn/pin/7306327158129983503",
+          "publishedOn": "2023-11-28T08:52:24.000Z",
+          "wordCount": 457,
+          "title": "我开发的Chrome扩展 - 掘金Plus已经在Chrome扩展商店发布成功了。初个版本支持配置文章模版和一键导入功能。 欢迎大家在Chrome扩展商店搜索掘金Plus下载试用。 h...",
+          "imageUrl": null
+        },
+        {
+          "id": "7306019445406761012",
+          "author": "Simbaba",
+          "description": "好不容易给开发者朋友开发的插件工具，适配了掘金，知乎，csdn，baijiahao，网易和搜狐等等，支持等众多开发博客，还有隐藏免费功能。博客显示效果优秀。桶子门，这么好的东西，竟然没人知道(爱读v2)，目前下载量稀缺[流泪]",
+          "link": "https://juejin.cn/pin/7306019445406761012",
+          "publishedOn": "2023-11-28T00:47:02.000Z",
+          "wordCount": 443,
+          "title": "好不容易给开发者朋友开发的插件工具，适配了掘金，知乎，csdn，baijiahao，网易和搜狐等等，支持等众多开发博客，还有隐藏免费功能。博客显示效果优秀。桶子门...",
+          "imageUrl": null
+        },
+        {
+          "id": "7305983860168458303",
+          "author": "轻舟已过万重山",
+          "description": "给 Spring Web 开发者开发了一款 IDEA 插件：Feign-Helper，为什么叫 Feign-Helper ？因为核心功能其实是Spring Cloud Feign 接口与和对应的 Controller 源码间互相跳转（源码在同一个工程内），顺便提供 Spring Web HTTP API 检索（按两下 Shift 键打开，有个 URL 选项卡），现在送优惠码：https://aboat365.com/feign-helper/2023/11/27/v2ex-Feign-Helper-%E4%BC%98%E6%83%A0%E7%A0%81.html",
+          "link": "https://juejin.cn/pin/7305983860168458303",
+          "publishedOn": "2023-11-27T08:10:18.000Z",
+          "wordCount": 525,
+          "title": "给 Spring Web 开发者开发了一款 IDEA 插件：Feign-Helper，为什么叫 Feign-Helper ？因为核心功能其实是Spring Cloud Feign 接口与和对应的 Controller 源码间...",
+          "imageUrl": null
+        },
+        {
+          "id": "7305576845100924928",
+          "author": "麻不烧",
+          "description": "实现了一款目前AI还做不到的文字转图片应用，灵感来源于微信读书，已上线，支持各种模板。可前来体验，今天会发博客，让大家对它有个更清晰的认识。线上体验https://anyphoto.space/playground",
+          "link": "https://juejin.cn/pin/7305576845100924928",
+          "publishedOn": "2023-11-27T00:51:20.000Z",
+          "wordCount": 443,
+          "title": "实现了一款目前AI还做不到的文字转图片应用，灵感来源于微信读书，已上线，支持各种模板。可前来体验，今天会发博客，让大家对它有个更清晰的认识。线上体验http...",
+          "imageUrl": null
+        },
+        {
+          "id": "7304997932444286985",
+          "author": "qianmoq",
+          "description": "等会北京了，好好开发后续功能",
+          "link": "https://juejin.cn/pin/7304997932444286985",
+          "publishedOn": "2023-11-26T06:34:07.000Z",
+          "wordCount": 440,
+          "title": "等会北京了，好好开发后续功能",
+          "imageUrl": null
+        },
+        {
+          "id": "7304558952179335204",
+          "author": "小赵赵",
+          "description": "语雀？你怎么回事儿，又崩了啊",
+          "link": "https://juejin.cn/pin/7304558952179335204",
+          "publishedOn": "2023-11-24T02:20:51.000Z",
+          "wordCount": 439,
+          "title": "语雀？你怎么回事儿，又崩了啊",
+          "imageUrl": null
+        },
+        {
+          "id": "7304538151480442918",
+          "author": "tombosky",
+          "description": "[7073670907851440160#新人报道#]",
+          "link": "https://juejin.cn/pin/7304538151480442918",
+          "publishedOn": "2023-11-23T13:52:07.000Z",
+          "wordCount": 461,
+          "title": "[7073670907851440160#新人报道#]",
+          "imageUrl": null
+        },
+        {
+          "id": "7304263961238880291",
+          "author": "有毒的水母",
+          "description": "有没有人用rpgmaker业余做点小游戏的，一起交流呀[调皮]",
+          "link": "https://juejin.cn/pin/7304263961238880291",
+          "publishedOn": "2023-11-23T02:06:16.000Z",
+          "wordCount": 440,
+          "title": "有没有人用rpgmaker业余做点小游戏的，一起交流呀[调皮]",
+          "imageUrl": null
+        },
+        {
+          "id": "7304263961237749795",
+          "author": "用户23009015515",
+          "description": "谷歌留痕助手\n谷歌留痕助手关键词随机切换，并且启用域名\n例如：如何挑选西瓜,福州火车站如何去闽侯,www.baidu.com广州和香港的关系如何,华清宫儿童票如何定,长城地势如何 关键词可以自定义放入联系方式和需要推送的广告内容\n加入我们的软件会员，享受专属优惠和更多高级服务！",
+          "link": "https://juejin.cn/pin/7304263961237749795",
+          "publishedOn": "2023-11-22T14:05:36.000Z",
+          "wordCount": 448,
+          "title": "谷歌留痕助手 谷歌留痕助手关键词随机切换，并且启用域名 例如：如何挑选西瓜,福州火车站如何去闽侯,www.baidu.com广州和香港的关系如何,华清宫儿童票如何定,长...",
+          "imageUrl": null
+        },
+        {
+          "id": "7304077830714163209",
+          "author": "Simon_He",
+          "description": "v0.0.83 支持从ui库按需导入组件的场景，提供属性的代码提示了🥰",
+          "link": "https://juejin.cn/pin/7304077830714163209",
+          "publishedOn": "2023-11-22T06:45:33.000Z",
+          "wordCount": 453,
+          "title": "v0.0.83 支持从ui库按需导入组件的场景，提供属性的代码提示了🥰",
+          "imageUrl": null
+        },
+        {
+          "id": "7303739766105178152",
+          "author": "前端胡_歌",
+          "description": "https://join.meetsidekick.com/hajv5，优弧推荐的浏览器用着还可以，挺好看的，主要是快",
+          "link": "https://juejin.cn/pin/7303739766105178152",
+          "publishedOn": "2023-11-21T08:42:01.000Z",
+          "wordCount": 442,
+          "title": "https://join.meetsidekick.com/hajv5，优弧推荐的浏览器用着还可以，挺好看的，主要是快",
+          "imageUrl": null
+        },
+        {
+          "id": "7303423871709495331",
+          "author": "代码生成器研究",
+          "description": "有人知道iVX这个低代码平台吗？",
+          "link": "https://juejin.cn/pin/7303423871709495331",
+          "publishedOn": "2023-11-20T10:19:44.000Z",
+          "wordCount": 439,
+          "title": "有人知道iVX这个低代码平台吗？",
+          "imageUrl": null
+        },
+        {
+          "id": "7303043433107128354",
+          "author": "Five_moons",
+          "description": "[7073670907851440160#新人报道#] 新人报道",
+          "link": "https://juejin.cn/pin/7303043433107128354",
+          "publishedOn": "2023-11-20T08:02:16.000Z",
+          "wordCount": 469,
+          "title": "[7073670907851440160#新人报道#] 新人报道",
+          "imageUrl": null
+        },
+        {
+          "id": "7303138588858433570",
+          "author": "优弧",
+          "description": "最近除了 arc 浏览器外，我又体验了一款浏览器，感觉挺不错。绝对推荐。https://join.meetsidekick.com/csnap",
+          "link": "https://juejin.cn/pin/7303138588858433570",
+          "publishedOn": "2023-11-20T06:58:07.000Z",
+          "wordCount": 468,
+          "title": "最近除了 arc 浏览器外，我又体验了一款浏览器，感觉挺不错。绝对推荐。https://join.meetsidekick.com/csnap",
           "imageUrl": null
         }
       ]
