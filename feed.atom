@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-11-30T15:53:07.006Z</id>
+    <id>urn:2023-11-30T18:53:08.210Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-11-30T15:53:07.006Z</updated>
+    <updated>2023-11-30T18:53:08.210Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[《Mighty Fight Federation》]]></title>
+        <id>https://store.epicgames.com/zh-CN/p/mighty-fight-federation</id>
+        <link href="https://store.epicgames.com/zh-CN/p/mighty-fight-federation"/>
+        <updated>2023-11-30T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[在这款竞技场格斗游戏中，你可以将对手打进墙壁，轰至空中，并紧随其后使用快速的击飞攻击进行追击。从 14 位具有各自独立的游玩风格的人物中进行选择。在 1v1 比赛中进行决斗，或是和其他战士们组队作战，另外还可以拥抱大乱斗的混乱。
+
+Free Now to 2023-12-07T16:00:00.000Z]]></summary>
+        <author>
+            <name>Forthright Entertainment, INC</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Jitsu Squad]]></title>
+        <id>https://store.epicgames.com/zh-CN/p/jitsu-squad-af3f2f</id>
+        <link href="https://store.epicgames.com/zh-CN/p/jitsu-squad-af3f2f"/>
+        <updated>2023-11-30T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Jitsu Squad is a Marvel vs Capcom inspired 4 player co-op TAG TEAM beat ‘em up with epic character transformations and fast paced combat.
+
+Free Now to 2023-12-07T16:00:00.000Z]]></summary>
+        <author>
+            <name>Tanuki Creative Studio</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[jy们，推荐一个好用的富文本编辑器，谢谢]]></title>
         <id>7307125383785234473</id>
@@ -464,6 +488,68 @@ Broadcast Channel 是一个较新的 Web API，用于在不同的浏览器窗口
 创建一个 BroadcastChannel 对象：在发送和接收消息之前，首先需要在每个窗口中创建一个 BroadcastChannel 对象，使用相同的频道名称进…]]></summary>
         <author>
             <name>Chokcoco</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[前端验证码破解]]></title>
+        <id>https://juejin.cn/post/7306062725213044774</id>
+        <link href="https://juejin.cn/post/7306062725213044774"/>
+        <updated>2023-11-28T02:16:12.000Z</updated>
+        <summary type="html"><![CDATA[最近受够了公司内部站点每次登陆都需要填写用户名和密码，还有输入验证码。
+要是能够直接跳过登陆页面就好啦。
+说干就干，决定使用油猴插件实现自动登陆功能。
+其中最难解决的就是验证码破解，花了一天的时间完美解决，现在整理出来。
+1.分析验证码
+
+
+
+
+
+
+
+
+
+
+
+
+
+分析验证码，是破解验证码一切工作的开始。
+验证码有哪些特征？
+是否容易破解？
+采用什么策略破解？
+特征总结
+这里仅是总结一下公司网站验证码(上面验证码图片)的特征。
+仅有字母(大小写)和数字，并且剔除了难以区分的字符:1、i、I、l、L、0、o、O。
+同一字符每次出现的大小、粗细、倾斜都一致(容易做成标准的字符样本库)
+首字符开始的位置一致(方便裁剪左侧背景)
+有干扰线和背景色，颜色相较于字符都比较亮(方便通过阈值来区分像素是否属于字符)
+制定破解策略
+根据上一步分析的验证码特征来制定破解该验证码的策略。
+制作标准样本库
+使用标准样本对验证码图片进行卷积比对(下面会有介绍)
+2.制作样本库
+请求获取验证码
+提取图片像素
+二值化(将像素处理成0和1)
+用canvas绘制二值化后的验证码(白底黑字，也可等比放大以便查看和截图)
+从绘制的二值化后的验证码上截取合适的字符
+处理字符截图(去白边，去噪点)
+还原图片的放大比例(若之前有放大处理)
+保存为模板字符串
+获取验证码
+// 返回图片base64数据
+function getVerifyCode() {
+  return fetch(VERIFY_CODE_API)
+    .then(rsp => rsp.json())
+    .then(data => `data:image/png;base64,${data.data}`)
+}
+
+将base64数据转成像素
+使用canvas。
+// 支持base64数据或本地图片路径
+async function getIma…]]></summary>
+        <author>
+            <name>奇幻心灵</name>
         </author>
     </entry>
     <entry>
@@ -1223,37 +1309,6 @@ Vite 4 大约在一年前官宣，它为前端生态积基树本。Vite 的 npm 
         <summary type="html"><![CDATA[丰都县气象台2023年11月24日7时35分发布“大雾黄色预警信号”，预计8时至12时，社坛镇、虎威镇、树人镇、保合镇、十直镇、龙孔镇、高家镇、兴义镇、名山街道、三合街道、双路镇、湛普镇、包鸾镇、南天湖镇、三建乡、龙河镇、江池镇、栗子乡、都督乡、兴龙镇、仁沙镇、三元镇、许明寺镇、董家镇、双龙镇、青龙乡、暨龙镇、武平镇、太平坝乡、仙女湖镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
         <author>
             <name>国家预警信息发布中心</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Deliver Us Mars]]></title>
-        <id>https://store.epicgames.com/zh-CN/p/deliver-us-mars</id>
-        <link href="https://store.epicgames.com/zh-CN/p/deliver-us-mars"/>
-        <updated>2023-11-23T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Deliver Us Mars is an atmospheric sci-fi adventure taking you on a suspense-fuelled, high-stakes mission to recover the ARK colony ships stolen by the mysterious Outward.
-
-Free Now to 2023-11-30T16:00:00.000Z]]></summary>
-        <author>
-            <name>Frontier Developments</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[electron 和 tauri 都不想用，那就自己写个想用的吧]]></title>
-        <id>https://juejin.cn/post/7304538151480803366</id>
-        <link href="https://juejin.cn/post/7304538151480803366"/>
-        <updated>2023-11-23T15:49:25.000Z</updated>
-        <summary type="html"><![CDATA[前言
-在《屠龙少年终成恶龙，前端转产品的我给前端挖了个坑》这篇文章里，有讲到我是如何把我们的前端带坑里去。同时评论区有一条评论 你那个demo.exe是用什么实现的?可以直接套壳现有的系统？ 看起来好像是在坑外徘徊不定若有所思的样子。因此我打算写本文把他踹坑里去，能踹一个是一个。
-不想用 electron 和 tauri ？那我们一起来写个像 electron 的垃圾玩意吧~ 我们的目标是：前端程序员无需会三方语言就可独立完成桌面程序，创建托盘程序和服务、读写文件、处理进程、剪贴板这些都没有问题，预计整体体积不超过1M。
-为什么做
-我当前已经使用 nodejs 开发一个命令行程序，这个程序的工具方式是，从网络上获取动态的配置，然后读取这个配置进行启动。启动后就能去做其他额外的事情了，而不需要管这个程序。因为这个程序只是一个辅助工具。
-但是目前有一些痛点：
-每次启动的时候我都得先找到项目目录，然后运行 node xxx.js，然后启动一个黑框框，然后我再最小化这个框。启动步骤相当麻烦并且有一个不用管的窗口在任务栏，相当碍眼。
-有很多方法可以处理启动问题，比如 pm2/快捷链接/全局安装/制作 PKG 安装包等。但各自有各自的问题，这里不一一列举。
-对于有一个黑框需要最小化到任务栏问题，我尝试过使用 node child_process 的 detached=false, windowsHide=true 等参数配合 pm2 都是没有用的，黑框还是会弹出。 假设有用，我要的也不仅如此。
-我觉得这个工具不错，我想要把这个工具发给别人使用，虽然这个工具是 nodejs 写的，但我不希望别人还要去学习安装 nodejs 环境。虽然这个工具是命令行启动，并支持参数配置，但我希望像常规程序一样，别人点击一个图标就能启动，可以从界面上配置参数。可以在界面上看到程序的实时日志，最小化之后，变…]]></summary>
-        <author>
-            <name>程序媛李李李李李蕾</name>
         </author>
     </entry>
     <entry>

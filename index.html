@@ -51,11 +51,63 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-30 datetime="2023-11-30T12:08:08.000Z">2023-11-30</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-30 datetime="2023-11-30T12:08:08.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-30 datetime="2023-11-30T16:00:00.000Z">2023-11-30</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-30 datetime="2023-11-30T16:00:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Epic Games Store - Free Games</button>
+                  <a class="source-heading__link" href="https://store.epicgames.com/zh-CN/free-games?lang&#x3D;zh-CN">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://store.epicgames.com/zh-CN/p/mighty-fight-federation"
+                        open
+                      >
+                        <summary class="article-expander__title">《Mighty Fight Federation》</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://store.epicgames.com/zh-CN/p/mighty-fight-federation">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>在这款竞技场格斗游戏中，你可以将对手打进墙壁，轰至空中，并紧随其后使用快速的击飞攻击进行追击。从 14 位具有各自独立的游玩风格的人物中进行选择。在 1v1 比赛中进行决斗，或是和其他战士们组队作战，另外还可以拥抱大乱斗的混乱。
+
+Free Now to 2023-12-07T16:00:00.000Z</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://store.epicgames.com/zh-CN/p/jitsu-squad-af3f2f"
+                        open
+                      >
+                        <summary class="article-expander__title">Jitsu Squad</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://store.epicgames.com/zh-CN/p/jitsu-squad-af3f2f">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Jitsu Squad is a Marvel vs Capcom inspired 4 player co-op TAG TEAM beat ‘em up with epic character transformations and fast paced combat.
+
+Free Now to 2023-12-07T16:00:00.000Z</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -945,6 +997,77 @@ Broadcast Channel 是一个较新的 Web API，用于在不同的浏览器窗口
 其核心步骤如下：
 创建一个 BroadcastChannel 对象：在发送和接收消息之前，首先需要在每个窗口中创建一个 BroadcastChannel 对象，使用相同的频道名称进…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7306062725213044774"
+                        open
+                      >
+                        <summary class="article-expander__title">前端验证码破解</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7306062725213044774">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>最近受够了公司内部站点每次登陆都需要填写用户名和密码，还有输入验证码。
+要是能够直接跳过登陆页面就好啦。
+说干就干，决定使用油猴插件实现自动登陆功能。
+其中最难解决的就是验证码破解，花了一天的时间完美解决，现在整理出来。
+1.分析验证码
+
+
+
+
+
+
+
+
+
+
+
+
+
+分析验证码，是破解验证码一切工作的开始。
+验证码有哪些特征？
+是否容易破解？
+采用什么策略破解？
+特征总结
+这里仅是总结一下公司网站验证码(上面验证码图片)的特征。
+仅有字母(大小写)和数字，并且剔除了难以区分的字符:1、i、I、l、L、0、o、O。
+同一字符每次出现的大小、粗细、倾斜都一致(容易做成标准的字符样本库)
+首字符开始的位置一致(方便裁剪左侧背景)
+有干扰线和背景色，颜色相较于字符都比较亮(方便通过阈值来区分像素是否属于字符)
+制定破解策略
+根据上一步分析的验证码特征来制定破解该验证码的策略。
+制作标准样本库
+使用标准样本对验证码图片进行卷积比对(下面会有介绍)
+2.制作样本库
+请求获取验证码
+提取图片像素
+二值化(将像素处理成0和1)
+用canvas绘制二值化后的验证码(白底黑字，也可等比放大以便查看和截图)
+从绘制的二值化后的验证码上截取合适的字符
+处理字符截图(去白边，去噪点)
+还原图片的放大比例(若之前有放大处理)
+保存为模板字符串
+获取验证码
+// 返回图片base64数据
+function getVerifyCode() {
+  return fetch(VERIFY_CODE_API)
+    .then(rsp &#x3D;&gt; rsp.json())
+    .then(data &#x3D;&gt; &#x60;data:image/png;base64,${data.data}&#x60;)
+}
+
+将base64数据转成像素
+使用canvas。
+// 支持base64数据或本地图片路径
+async function getIma…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;18
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2433,24 +2556,43 @@ Vite 4 大约在一年前官宣，它为前端生态积基树本。Vite 的 npm 
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Epic Games Store - Free Games</button>
-                  <a class="source-heading__link" href="https://store.epicgames.com/zh-CN/free-games?lang&#x3D;zh-CN">Open</a>
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
                 </h3>
                 <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://store.epicgames.com/zh-CN/p/deliver-us-mars"
+                        data-accordion-key="7304538151480442918"
                         open
                       >
-                        <summary class="article-expander__title">Deliver Us Mars</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://store.epicgames.com/zh-CN/p/deliver-us-mars">
+                        <summary class="article-expander__title">[7073670907851440160#新人报道#]</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7304538151480442918">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>Deliver Us Mars is an atmospheric sci-fi adventure taking you on a suspense-fuelled, high-stakes mission to recover the ARK colony ships stolen by the mysterious Outward.
-
-Free Now to 2023-11-30T16:00:00.000Z</span>
+                              <span>[7073670907851440160#新人报道#]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7304263961238880291"
+                        open
+                      >
+                        <summary class="article-expander__title">有没有人用rpgmaker业余做点小游戏的，一起交流呀[调皮]</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7304263961238880291">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>有没有人用rpgmaker业余做点小游戏的，一起交流呀[调皮]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2470,34 +2612,6 @@ Free Now to 2023-11-30T16:00:00.000Z</span>
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7304538151480803366"
-                        open
-                      >
-                        <summary class="article-expander__title">electron 和 tauri 都不想用，那就自己写个想用的吧</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7304538151480803366">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-在《屠龙少年终成恶龙，前端转产品的我给前端挖了个坑》这篇文章里，有讲到我是如何把我们的前端带坑里去。同时评论区有一条评论 你那个demo.exe是用什么实现的?可以直接套壳现有的系统？ 看起来好像是在坑外徘徊不定若有所思的样子。因此我打算写本文把他踹坑里去，能踹一个是一个。
-不想用 electron 和 tauri ？那我们一起来写个像 electron 的垃圾玩意吧~ 我们的目标是：前端程序员无需会三方语言就可独立完成桌面程序，创建托盘程序和服务、读写文件、处理进程、剪贴板这些都没有问题，预计整体体积不超过1M。
-为什么做
-我当前已经使用 nodejs 开发一个命令行程序，这个程序的工具方式是，从网络上获取动态的配置，然后读取这个配置进行启动。启动后就能去做其他额外的事情了，而不需要管这个程序。因为这个程序只是一个辅助工具。
-但是目前有一些痛点：
-每次启动的时候我都得先找到项目目录，然后运行 node xxx.js，然后启动一个黑框框，然后我再最小化这个框。启动步骤相当麻烦并且有一个不用管的窗口在任务栏，相当碍眼。
-有很多方法可以处理启动问题，比如 pm2/快捷链接/全局安装/制作 PKG 安装包等。但各自有各自的问题，这里不一一列举。
-对于有一个黑框需要最小化到任务栏问题，我尝试过使用 node child_process 的 detached&#x3D;false, windowsHide&#x3D;true 等参数配合 pm2 都是没有用的，黑框还是会弹出。 假设有用，我要的也不仅如此。
-我觉得这个工具不错，我想要把这个工具发给别人使用，虽然这个工具是 nodejs 写的，但我不希望别人还要去学习安装 nodejs 环境。虽然这个工具是命令行启动，并支持参数配置，但我希望像常规程序一样，别人点击一个图标就能启动，可以从界面上配置参数。可以在界面上看到程序的实时日志，最小化之后，变…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -2663,58 +2777,6 @@ Node.js 本质上是一个动态链接库（即 Windows 下的 .dll 文件、Mac
 并在JS中响应地对三个canvas进行初始化。
 每个canvas画布绘制的第一步，我们首先用getContext(&quot;2d&quot;)方法来获取到canvas画布的二维渲染上下文，并且为了能让画面清晰度更高，我们使用.scale()方法对canvas进行四倍缩放，这样我们可以得到一个清…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;22
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7304538151480442918"
-                        open
-                      >
-                        <summary class="article-expander__title">[7073670907851440160#新人报道#]</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7304538151480442918">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>[7073670907851440160#新人报道#]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7304263961238880291"
-                        open
-                      >
-                        <summary class="article-expander__title">有没有人用rpgmaker业余做点小游戏的，一起交流呀[调皮]</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7304263961238880291">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>有没有人用rpgmaker业余做点小游戏的，一起交流呀[调皮]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4513,8 +4575,8 @@ AI 是一个新事物，带来了很多前所未有的问题。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7048927585">
-        <time id="build-timestamp" datetime="2023-11-30T15:53:06.985Z">2023-11-30T15:53:06.985Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7050965173">
+        <time id="build-timestamp" datetime="2023-11-30T18:53:08.190Z">2023-11-30T18:53:08.190Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
