@@ -9,7 +9,7 @@
     {
       "title": "Lainbo's Blog",
       "feedUrl": "https://www.jason-liang.com/rss/feed.xml",
-      "siteUrl": "https://www.jason-liang.com/",
+      "siteUrl": "https://www.lainbo.me/",
       "articles": []
     },
     {
@@ -23,7 +23,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": 1004,
+          "wordCount": 1008,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/",
           "publishedOn": "2023-11-21T16:14:41.000Z",
-          "wordCount": 1291,
+          "wordCount": 1295,
           "title": "cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "剪映中的视频特效虽多，其实就两类，一类改变原始像素，一类叠加混合，本文通过精简的源码和精致的案例给大家介绍具体如何实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/video-effect-js-filter-pixijs-webgl-3d/",
           "publishedOn": "2023-11-19T15:12:20.000Z",
-          "wordCount": 1232,
+          "wordCount": 1234,
           "title": "剪映APP的视频特效如何在Web中JS实现",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "应该是国内第一篇专门介绍用mp4box.js和VideoDecoder方法解码MP4视频序列帧的文章了。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/mp4box-js-webcodecs-mp4-canvas/",
           "publishedOn": "2023-11-14T16:37:18.000Z",
-          "wordCount": 1247,
+          "wordCount": 1251,
           "title": "mp4box.js加WebCodecs 解码MP4视频帧并渲染",
           "imageUrl": null
         }
@@ -112,6 +112,16 @@
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/6567dd70c9ed8caff0fa16ef",
+          "author": null,
+          "description": "放下往往是最难的。事情在真实世界已经结束了，在心里却还在延续；当事人都已经放下了，旁观者却还穷追不舍。\n放下，放过别人，也是放过自己。",
+          "link": "https://m.okjike.com/originalPosts/6567dd70c9ed8caff0fa16ef",
+          "publishedOn": "2023-11-30T00:55:12.000Z",
+          "wordCount": 442,
+          "title": "发布了: 放下往往是最难的。事情在真实世界已经结束了，在心里却还在延续；当事人都已经放下了，旁观者却还穷追不舍。 放下，放过别人，也是放过自己。",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/656765d4278f95df6f4a5a99",
           "author": null,
           "description": "卸载炒股软件之前，我全仓了两支股票，一支是哔哩哔哩，一支是拼多多。\n。。\n。。\n。。\n。\n可惜，中途爆仓了一次😂",
@@ -137,7 +147,7 @@
           "description": "AI 辅助阅读并自动总结网页概要的工具多如牛毛，但把这件事情做好却并不容易，因为网页上存在太多乱七八糟的 DOM，包括导航菜单、广告和推荐模块等等，如果不抓核心内容直接无脑扔给 AI 处理，那效果一定是不佳的，尤其是杂乱内容占比过高时。\n做了一些技术调研，找到如下几个工具/库，它们均可以辅助提取网页概要，不过各自的思路存在一些差异：\n1）Readability，https://github.com/mozilla/readability，是一种基于规则的方法，被 Mozilla Firefox 浏览器的阅读模式使用，它通过检查 HTML 元素的标签名称、文本数量、链接密度以及满足主要内容标准的文本模式来提取主要内容\n2）DOM Distiller，https://github.com/chromium/dom-distiller，是 Google Chrome 浏览器的阅读模式，它是一种混合方法，使用了 Boilerpipe 分类器和一些规则，有点类似于 Readability\n3）Web2Text，https://github.com/dalab/web2text，是基于深度神经网络的分类器，使用了 CNN 模型和包括单词计数、标点符号存在和停用词数量等 128 个结构和文本特征来确定每个文本块是否属于主要内容\n4）Boilernet，https://github.com/mrjleo/boilernet，是基于深度神经网络的分类器，使用 LSTM 将网页的文本节点视为由单词和 DOM 树根路径组成的文本块序列\n这些方法在不同的数据集和语言环境下会表现出不同的性能。https://arxiv.org/abs/2110.14164，这篇论文给出了一个新的思路：通过使用视觉特征从网页中提取主要内容，算法分为三个步骤：网格化、居中和扩展：\n1）首先，算法创建一个类似棋盘的网格，用于近似用户首次浏览网页的区域\n2）然后，从浏览器窗口、网页文档和网格的中心点确定三个中心点；这些中心点被认为与主要内容接近，它们最近的文本节点很可能是主要内容的后代叶节点\n3）最后，算法通过从叶节点开始沿着 DOM 树向上遍历来提取主要内容\n通过使用这些通用的特征，该算法在多语言环境下表现都还不错，并在实验中优于现有的主要内容提取方法：在最长公共子序列（LCS）F1 得分方面，该方法的平均性能比现有方法提高了 14%；特别是在英语数据集中，性能提高了 25%，在非英语数据集中提高了 16%。\n这篇论文没有找到对应的代码实现，感兴趣的同学可以撸一个出来，价值还挺大的。",
           "link": "https://m.okjike.com/originalPosts/65675c9587a8e03bd123c9de",
           "publishedOn": "2023-11-29T15:45:25.000Z",
-          "wordCount": 517,
+          "wordCount": 521,
           "title": "发布了: AI 辅助阅读并自动总结网页概要的工具多如牛毛，但把这件事情做好却并不容易，因为网页上存在太多乱七八糟的 DOM，包括导航菜单、广告和推荐模块等等，...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FiGVTwYkq3rSlmda2Ocjj7ej6oQ7v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -147,7 +157,7 @@
           "description": "学到两个读 arxiv PDF 论文的新技巧：\n1）将域名中的 x 更换成 5，会跳转到 HTML 版本\n2）将域名中的 v 更换成 w，会跳转到一个 AI Chat with PDF 版本\n为了避免每次都手动修改，写了几句油猴脚本，会在 header 位置自动附加这两个链接：https://greasyfork.org/zh-CN/scripts/481023-arxiv-extensions",
           "link": "https://m.okjike.com/originalPosts/6567485d5682fbc62e41bac1",
           "publishedOn": "2023-11-29T14:19:09.000Z",
-          "wordCount": 528,
+          "wordCount": 539,
           "title": "发布了: 学到两个读 arxiv PDF 论文的新技巧： 1）将域名中的 x 更换成 5，会跳转到 HTML 版本 2）将域名中的 v 更换成 w，会跳转到一个 AI Chat with PDF 版本 ...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FhUheb7sywfzmzkcN6k-6hMCUrBNv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -200,16 +210,6 @@
           "wordCount": 520,
           "title": "发布了: Stephen Wolfram 是一名著作等身的初代程序员，他在 Youtube 上发布了一个 3h+ 的视频，《What is ChatGPT doing...and why does it work?》，https://w...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FmyQN2_qKnkBWJ1yoV98MEMzNuvHv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/656548b9c306429d192415f2",
-          "author": null,
-          "description": "想让浏览器网址栏支持站内检索，例如输入「twitter + tab 键」就可以直接开始 Twitter 的站内搜索：\n站长可以使用 OpenSearch 协议在站点内增加一个 XML 描述文件，通过 type 为 search 的 rel  link 标签告诉浏览器即可：\n\n\n这个效果与在 Chrome 配置项增加搜索引擎是一样的。",
-          "link": "https://m.okjike.com/originalPosts/656548b9c306429d192415f2",
-          "publishedOn": "2023-11-28T01:56:09.000Z",
-          "wordCount": 511,
-          "title": "发布了: 想让浏览器网址栏支持站内检索，例如输入「twitter + tab 键」就可以直接开始 Twitter 的站内搜索： 站长可以使用 OpenSearch 协议在站点内增加一个 XML...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FkNv8R-rps2tQHMn1E07FcaEfz16v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         }
       ]
     },
@@ -218,6 +218,16 @@
       "feedUrl": "https://rsshub.app/jike/user/752D3103-1107-43A0-BA49-20EC29D09E36",
       "siteUrl": "https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36",
       "articles": [
+        {
+          "id": "https://m.okjike.com/originalPosts/6567f87a552e503d7cc45d8e",
+          "author": null,
+          "description": "计算机领域有一个经典的\"X-Y\" 问题\n\"X-Y\"问题是一个问题解决策略的概念，其中 X 是你真正面临的问题，而 Y 是你认为的解决方案。当你尝试获取 Y 的信息或怎么做 Y 时，你实际上避开了真正的问题 X。\n举例来说，假设你正在编写一个程序，需要解析一种特定格式的数据（这是你的 X 问题）。你决定使用某种特定的库来解析这种数据，但遇到困难（你现在的 Y 问题）。你可能会询问关于这个库的问题，而不是你实际面对的如何解析这种格式的数据的问题。通过构造出一个 X-Y 问题，你可能限制了别人能给出的帮助，因为他们被限制在你选择的方案，而不是实际问题。\n最好的方法是描述你的实际问题（X——如何解析特定格式的数据），然后才告诉别人你试图怎么解决（你的 Y——使用某个特定的库）。这样他们既可以在你遇到困难的方法上给予帮助，也可以提供其他可能的更好的解决方案。",
+          "link": "https://m.okjike.com/originalPosts/6567f87a552e503d7cc45d8e",
+          "publishedOn": "2023-11-30T02:50:34.000Z",
+          "wordCount": 457,
+          "title": "发布了: 计算机领域有一个经典的\"X-Y\" 问题 \"X-Y\"问题是一个问题解决策略的概念，其中 X 是你真正面临的问题，而 Y 是你认为的解决方案。当你尝试获取 Y 的信息...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+        },
         {
           "id": "https://m.okjike.com/originalPosts/656737bf87a8e03bd1206f6a",
           "author": null,
@@ -306,16 +316,6 @@
           "publishedOn": "2023-11-24T02:53:55.000Z",
           "wordCount": 435,
           "title": "发布了: 生态学中经常用到一个词「食物链」 网络世界中也应该有一个对应的词「信息链」 信息从生产，加工，传播，到最终被各种媒体呈现给用户的链条。 有了这个...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/655fd826c0f0b2f92d5a92e1",
-          "author": null,
-          "description": "app 后续会不会退化(进化)为api？",
-          "link": "https://m.okjike.com/originalPosts/655fd826c0f0b2f92d5a92e1",
-          "publishedOn": "2023-11-23T22:54:30.000Z",
-          "wordCount": 428,
-          "title": "发布了: app 后续会不会退化(进化)为api？",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         }
       ]
@@ -624,16 +624,6 @@
           "wordCount": 523,
           "title": "重庆市万州区发布大雾黄色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231123/t20231123_526495801.html",
-          "author": "国家预警信息发布中心",
-          "description": "巫溪县气象台2023年11月23日9时发布“大雾黄色预警信号”，预计23日09时至14时，我县文峰镇、上磺镇、古路镇、塘坊镇、菱角镇、尖山镇、朝阳镇、通城镇、双阳乡、胜利乡、城厢镇、宁厂镇、红池坝镇、长桂乡等海拔500米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231123/t20231123_526495801.html",
-          "publishedOn": "2023-11-23T01:23:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市巫溪县发布大雾黄色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -677,6 +667,16 @@
           "publishedOn": "2023-11-28T00:31:35.000Z",
           "wordCount": 1631,
           "title": "尝试用 three.js 实现了这个跨窗口的粒子动画",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7305977418699817011",
+          "author": "叶落风尘",
+          "description": "theme: z-blue\n前端新趋势？有了Web Component，还用纠结Vue或React？\n什么是Web Component\nWeb Component 的概念最早在 2011 年被 Google 提出，并在 2018 年 V1 版本开始被主流浏览器所支持（除了 IE）。Web Component 规范正式成为 W3C 的推荐标准。与Vue和React类似，都是基于组件化思想用于构建用户界面的一种框架，不同的是Web Component是使用封装的自定义HTML元素来创建可复用的组件，与此同时，它能够完美解决Html、css、js的复用问题，做到沙箱隔离，在任何地方使用都不会受到代码冲突影响。类似于我们熟知的html的video、audio标签。\n基础认知\nweb component 主要由三项主要技术组成\nCustom element（自定义元素）：一组 JavaScript API，允许你定义 custom elements 及其行为，然后可以在你的用户界面中按照需要使用它们。\n以下是一个简单的hello word例子：\n<body>\n    <hello-word />\n    <script>\n        class HelloWord extends HTMLElement {\n            constructor() {\n                super();\n                this.append(\"hello world\");\n            }\n        }\n        window.customElements.define(\"hello-word\", HelloWord); \n    </script>\n</body>\n\n通过上述在页面上能显示hello word，实现了一个简单的自定…",
+          "link": "https://juejin.cn/post/7305977418699817011",
+          "publishedOn": "2023-11-27T08:57:58.000Z",
+          "wordCount": 1582,
+          "title": "前端新趋势？有了Web Component，还用纠结Vue或React？",
           "imageUrl": null
         },
         {
@@ -840,16 +840,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7303798788720115749",
-          "author": "程序媛李李李李李蕾",
-          "description": "前端转产品3周左右，把自己的一些感受通过《我转产品了-前端转产品是一种什么样的体验》这篇文章与大家分享，评论区惊现一波大佬。由于比较忙，不知不觉好像转眼间已经又过去一个多月，这次趁着周末没有开成会，给大家分享一下最近的『趣事』。\n目前在并行中的一个项目主要是类似文件管理的功能，在这个项目中主要是旁听的角色，这个项目的产品和需求是由公司的一产品朋友来做。在文章中产品功能描述部分由于众所周知的原因，我只会粗略的提一下。\n客户说的\n用于简化传统 OA 系统的某些繁复操作。最好能编辑、预览，如果没有的话也可以，先上一版。\n我们准备给客户做的\n我们给客户画了第一批原型，浏览器登录一个网址，注册一个账号、密码…… 然后在文件系统中可能在线预览图片、PDF、word、excel 之类的。\n客户其实想要的\n在演示的时候，第一个界面，客户质问为什么我们的系统还需要输入网址？还需要登录？大家一脸懵逼。然后解释因为数据是服务器器上的，在浏览器里输入地址，就能访问我们的系统了。然后如果不使用用户名和密码登录的话就不知道谁是谁。\n客户说：『我们云桌面对每个人都是唯一的啊，不需要再搞一个账户……』\n我们说：『因为我们系统是在浏览器里的，浏览器是访问不了操作系统里的用户信息的，所以需要注册一个用户密码……如果觉得麻烦，我们也可以后台先注册后，然后登录之后记住登录状态，就不用每次都登录了。』\n客户：『行吧。』\n然后讲业务流程……\n当讲到某文档的审核功能时，比如如果审核人需要对 word 进入批注，需要下载，然后添加批注，再上传到审核意见附件中。\n客户：『为什么要下载？』\n我们：『因为我们的是浏览器。』\n客户：『行吧。』\n矛盾分析\n经过了几周、几轮之后的演示，客户还经常时不时问一些为什么我们系统不能直接进行某操作的想法。想要不用写到这里大家都很清楚了，客户想做的东西其实是一个便于操作的文件管理系统。要实现最…",
-          "link": "https://juejin.cn/post/7303798788720115749",
-          "publishedOn": "2023-11-21T13:07:25.000Z",
-          "wordCount": 1098,
-          "title": "屠龙少年终成恶龙，前端转产品的我给前端挖了个坑",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7303360094426546216",
           "author": "网易云音乐技术团队",
           "description": "本文作者：凯尔希\n本文主要是介绍下云音乐低代码研发方式，在中后台领域的落地实战路径、成果总结\n前言\n笔者负责一个业务型的前端团队，支撑云音乐数据相关的B端产品，需求吞吐量一直是一个关注的重点\n\n但想要提升团队交付量，无非两个方向，增加人手，研发提效，加人显然不符合当前的经济环境，并且很有可能演变成 “面多加水，水多加面” 的人力黑洞，通过低代码的方式，对现有生产过程的进行改造，进而提升生产力，是一个相对可行的方案\n1.业务痛点\n1.1 产品线较多，跨部门协同效率很低\n由于是跨部门支撑，缺乏其他职能角色，对接的流程比较乱，且后端团队规模远超前端，各业务组竞相锁定人力，团队割裂，目标混乱，前端很难做出价值\n1.2 团队水位低，需求吞吐量很难提升\n基层成员因能力受限，不能有效参与日常业务，需求大量积压在头部成员手中，导致交付吞吐量很难提升\n\n2.如何将低代码落地到业务中\n2.1 外部协作流程重构\n2.1.1 分类分级保障标准\n我们将过去混乱的产品线进行分类，将保障标准与业务价值锚定，将前端资源进行聚焦\n\n\n2.1.2 研发元信息标准化\n为了进一步约束上游需求侧的产出，理清合作边界，减少业务侧对前端的强绑定，我们依托内部的技术产品对研发流程进行了元信息标准化，为低代码落地创造 “技术条件”\nOvermind：云音乐自研产品，具备排期、拆分任务等事项管理，人力可视化的能力\nOX：云音乐自研产品，具备将 Java 代码解析为接口文档的能力，接口即文档\n\n2.1.3 双周评审PK机制\n为了保证上述方案能够落地，前端主导发起双周评审PK，需求先在后端内部PK，再根据 “分级保障标准”，一部被分流给后端搭建，一部分被挤出，我们会为其提供必要的使用培训、落地辅导，为低代码落地创造 “机制保障”\n\n2.2 团队研发模式转型\n在处理完流程机制上的问题后，需要对内进行研发模式转型\n2.2.1 混合式…",
@@ -857,213 +847,6 @@
           "publishedOn": "2023-11-20T08:20:02.000Z",
           "wordCount": 987,
           "title": "低代码在云音乐数据业务中的落地实践与思考",
-          "imageUrl": null
-        }
-      ]
-    },
-    {
-      "title": "沸点 - 开发工具推荐",
-      "feedUrl": "https://rsshub.app/juejin/pins/6824710202000932877",
-      "siteUrl": "https://juejin.cn/pins/recommended",
-      "articles": [
-        {
-          "id": "7306783965532799028",
-          "author": "皮这一下很开心",
-          "description": "有什么适合手机端app界面开发的简单框架，之前一直只是用响应式布局来凑合手机端[我想静静][我想静静][我想静静][我想静静]",
-          "link": "https://juejin.cn/pin/7306783965532799028",
-          "publishedOn": "2023-11-29T23:49:45.000Z",
-          "wordCount": 436,
-          "title": "有什么适合手机端app界面开发的简单框架，之前一直只是用响应式布局来凑合手机端[我想静静][我想静静][我想静静][我想静静]",
-          "imageUrl": null
-        },
-        {
-          "id": "7306697644062048283",
-          "author": "黑恶势力",
-          "description": "刚切换成flutter开发，上午做了个vscode插件把UI稿内容自动转换成flutter的响应式布局省点力气。人老了不喜欢没接触过的东西，现在才入坑是不都算末班车了==\nhttps://github.com/balabalapupu/css-to-widget\n之前还有个ui稿自动转换成原子化样式\nhttps://github.com/balabalapupu/vscode-auto-atomic-css",
-          "link": "https://juejin.cn/pin/7306697644062048283",
-          "publishedOn": "2023-11-29T03:42:00.000Z",
-          "wordCount": 449,
-          "title": "刚切换成flutter开发，上午做了个vscode插件把UI稿内容自动转换成flutter的响应式布局省点力气。人老了不喜欢没接触过的东西，现在才入坑是不都算末班车了== htt...",
-          "imageUrl": null
-        },
-        {
-          "id": "7306447457151402018",
-          "author": "邋遢",
-          "description": "flutter 写的 windows 端 图片比对、批量裁剪导出工具，链接还可兑换70次。\nhttp://go.microsoft.com/fwlink/?LinkId=532540&mstoken=XJ3RV-4CX7J-QCTGM-7DKQ3-DMDKZ\n欢迎吐槽。\n小bug 懒得改，大bug 不会改\n已知：窗口尺寸改变时，文件名位置某些情况不能自适应",
-          "link": "https://juejin.cn/pin/7306447457151402018",
-          "publishedOn": "2023-11-29T02:15:44.000Z",
-          "wordCount": 473,
-          "title": "flutter 写的 windows 端 图片比对、批量裁剪导出工具，链接还可兑换70次。 http://go.microsoft.com/fwlink/?LinkId=532540&mstoken=XJ3RV-4CX7J-QCTGM-7DKQ3-D...",
-          "imageUrl": null
-        },
-        {
-          "id": "7306423214494646306",
-          "author": "5921",
-          "description": "[7304512653450280998#GPTs 的奇思妙用#]\nhttps://gptsmenu.com\n一个第三方 GPTs 存储网站\n目前收录超 1w ➕GPTs\n支持一键收藏❤️你喜欢的 GPT\nChrome 导航插件，提高你的工作效率",
-          "link": "https://juejin.cn/pin/7306423214494646306",
-          "publishedOn": "2023-11-29T01:39:49.000Z",
-          "wordCount": 501,
-          "title": "[7304512653450280998#GPTs 的奇思妙用#] https://gptsmenu.com 一个第三方 GPTs 存储网站 目前收录超 1w ➕GPTs 支持一键收藏❤️你喜欢的 GPT Chrome 导航插件...",
-          "imageUrl": null
-        },
-        {
-          "id": "7306423214494023714",
-          "author": "EvenZhu",
-          "description": "最近开发Chrome扩展的过程中发现，原生的HTML+js+css开发写起来确实很累，效率也低。于是想着自己搭一套vite+react+ts+antd且支持多页面的框架用来开发Chrome扩展程序。不过在调研的过程中发现了Plasmo这个Chrome开发SDK，一举解决了我的所有诉求，这两天有时间就开搞吧。",
-          "link": "https://juejin.cn/pin/7306423214494023714",
-          "publishedOn": "2023-11-28T22:45:46.000Z",
-          "wordCount": 444,
-          "title": "最近开发Chrome扩展的过程中发现，原生的HTML+js+css开发写起来确实很累，效率也低。于是想着自己搭一套vite+react+ts+antd且支持多页面的框架用来开发Chrome扩...",
-          "imageUrl": null
-        },
-        {
-          "id": "7306356456102019124",
-          "author": "在这儿不行",
-          "description": "用例图(PlanUML)\n用例图是软件工程中的一种可视化表示方法，用于描述系统角色与系统本身之间的交互。它通过说明用例和与用例交互的角色来捕捉系统的动态行为。这些图表对于明确系统的功能要求和了解用户如何与系统交互至关重要。通过提供一个高层次的视图，用例图可以帮助利益相关者了解系统的功能及其潜在价值。",
-          "link": "https://juejin.cn/pin/7306356456102019124",
-          "publishedOn": "2023-11-28T12:09:45.000Z",
-          "wordCount": 445,
-          "title": "用例图(PlanUML) 用例图是软件工程中的一种可视化表示方法，用于描述系统角色与系统本身之间的交互。它通过说明用例和与用例交互的角色来捕捉系统的动态行为。这...",
-          "imageUrl": null
-        },
-        {
-          "id": "7306327158129983503",
-          "author": "EvenZhu",
-          "description": "我开发的Chrome扩展 - 掘金Plus已经在Chrome扩展商店发布成功了。初个版本支持配置文章模版和一键导入功能。\n欢迎大家在Chrome扩展商店搜索掘金Plus下载试用。\nhttps://chromewebstore.google.com/detail/%E6%8E%98%E9%87%91plus/bcpbkeiagppbpjinfdbknmaibfjaeobi?hl=zh-CN&utm_source=ext_sidebar",
-          "link": "https://juejin.cn/pin/7306327158129983503",
-          "publishedOn": "2023-11-28T08:52:24.000Z",
-          "wordCount": 457,
-          "title": "我开发的Chrome扩展 - 掘金Plus已经在Chrome扩展商店发布成功了。初个版本支持配置文章模版和一键导入功能。 欢迎大家在Chrome扩展商店搜索掘金Plus下载试用。 h...",
-          "imageUrl": null
-        },
-        {
-          "id": "7306019445406761012",
-          "author": "Simbaba",
-          "description": "好不容易给开发者朋友开发的插件工具，适配了掘金，知乎，csdn，baijiahao，网易和搜狐等等，支持等众多开发博客，还有隐藏免费功能。博客显示效果优秀。桶子门，这么好的东西，竟然没人知道(爱读v2)，目前下载量稀缺[流泪]",
-          "link": "https://juejin.cn/pin/7306019445406761012",
-          "publishedOn": "2023-11-28T00:47:02.000Z",
-          "wordCount": 443,
-          "title": "好不容易给开发者朋友开发的插件工具，适配了掘金，知乎，csdn，baijiahao，网易和搜狐等等，支持等众多开发博客，还有隐藏免费功能。博客显示效果优秀。桶子门...",
-          "imageUrl": null
-        },
-        {
-          "id": "7305983860168458303",
-          "author": "轻舟已过万重山",
-          "description": "给 Spring Web 开发者开发了一款 IDEA 插件：Feign-Helper，为什么叫 Feign-Helper ？因为核心功能其实是Spring Cloud Feign 接口与和对应的 Controller 源码间互相跳转（源码在同一个工程内），顺便提供 Spring Web HTTP API 检索（按两下 Shift 键打开，有个 URL 选项卡），现在送优惠码：https://aboat365.com/feign-helper/2023/11/27/v2ex-Feign-Helper-%E4%BC%98%E6%83%A0%E7%A0%81.html",
-          "link": "https://juejin.cn/pin/7305983860168458303",
-          "publishedOn": "2023-11-27T08:10:18.000Z",
-          "wordCount": 525,
-          "title": "给 Spring Web 开发者开发了一款 IDEA 插件：Feign-Helper，为什么叫 Feign-Helper ？因为核心功能其实是Spring Cloud Feign 接口与和对应的 Controller 源码间...",
-          "imageUrl": null
-        },
-        {
-          "id": "7305576845100924928",
-          "author": "麻不烧",
-          "description": "实现了一款目前AI还做不到的文字转图片应用，灵感来源于微信读书，已上线，支持各种模板。可前来体验，今天会发博客，让大家对它有个更清晰的认识。线上体验https://anyphoto.space/playground",
-          "link": "https://juejin.cn/pin/7305576845100924928",
-          "publishedOn": "2023-11-27T00:51:20.000Z",
-          "wordCount": 443,
-          "title": "实现了一款目前AI还做不到的文字转图片应用，灵感来源于微信读书，已上线，支持各种模板。可前来体验，今天会发博客，让大家对它有个更清晰的认识。线上体验http...",
-          "imageUrl": null
-        },
-        {
-          "id": "7304997932444286985",
-          "author": "qianmoq",
-          "description": "等会北京了，好好开发后续功能",
-          "link": "https://juejin.cn/pin/7304997932444286985",
-          "publishedOn": "2023-11-26T06:34:07.000Z",
-          "wordCount": 440,
-          "title": "等会北京了，好好开发后续功能",
-          "imageUrl": null
-        },
-        {
-          "id": "7304558952179335204",
-          "author": "小赵赵",
-          "description": "语雀？你怎么回事儿，又崩了啊",
-          "link": "https://juejin.cn/pin/7304558952179335204",
-          "publishedOn": "2023-11-24T02:20:51.000Z",
-          "wordCount": 439,
-          "title": "语雀？你怎么回事儿，又崩了啊",
-          "imageUrl": null
-        },
-        {
-          "id": "7304538151480442918",
-          "author": "tombosky",
-          "description": "[7073670907851440160#新人报道#]",
-          "link": "https://juejin.cn/pin/7304538151480442918",
-          "publishedOn": "2023-11-23T13:52:07.000Z",
-          "wordCount": 460,
-          "title": "[7073670907851440160#新人报道#]",
-          "imageUrl": null
-        },
-        {
-          "id": "7304263961238880291",
-          "author": "有毒的水母",
-          "description": "有没有人用rpgmaker业余做点小游戏的，一起交流呀[调皮]",
-          "link": "https://juejin.cn/pin/7304263961238880291",
-          "publishedOn": "2023-11-23T02:06:16.000Z",
-          "wordCount": 440,
-          "title": "有没有人用rpgmaker业余做点小游戏的，一起交流呀[调皮]",
-          "imageUrl": null
-        },
-        {
-          "id": "7304263961237749795",
-          "author": "用户23009015515",
-          "description": "谷歌留痕助手\n谷歌留痕助手关键词随机切换，并且启用域名\n例如：如何挑选西瓜,福州火车站如何去闽侯,www.baidu.com广州和香港的关系如何,华清宫儿童票如何定,长城地势如何 关键词可以自定义放入联系方式和需要推送的广告内容\n加入我们的软件会员，享受专属优惠和更多高级服务！",
-          "link": "https://juejin.cn/pin/7304263961237749795",
-          "publishedOn": "2023-11-22T14:05:36.000Z",
-          "wordCount": 448,
-          "title": "谷歌留痕助手 谷歌留痕助手关键词随机切换，并且启用域名 例如：如何挑选西瓜,福州火车站如何去闽侯,www.baidu.com广州和香港的关系如何,华清宫儿童票如何定,长...",
-          "imageUrl": null
-        },
-        {
-          "id": "7304077830714163209",
-          "author": "Simon_He",
-          "description": "v0.0.83 支持从ui库按需导入组件的场景，提供属性的代码提示了🥰",
-          "link": "https://juejin.cn/pin/7304077830714163209",
-          "publishedOn": "2023-11-22T06:45:33.000Z",
-          "wordCount": 453,
-          "title": "v0.0.83 支持从ui库按需导入组件的场景，提供属性的代码提示了🥰",
-          "imageUrl": null
-        },
-        {
-          "id": "7303739766105178152",
-          "author": "前端胡_歌",
-          "description": "https://join.meetsidekick.com/hajv5，优弧推荐的浏览器用着还可以，挺好看的，主要是快",
-          "link": "https://juejin.cn/pin/7303739766105178152",
-          "publishedOn": "2023-11-21T08:42:01.000Z",
-          "wordCount": 442,
-          "title": "https://join.meetsidekick.com/hajv5，优弧推荐的浏览器用着还可以，挺好看的，主要是快",
-          "imageUrl": null
-        },
-        {
-          "id": "7303423871709495331",
-          "author": "代码生成器研究",
-          "description": "有人知道iVX这个低代码平台吗？",
-          "link": "https://juejin.cn/pin/7303423871709495331",
-          "publishedOn": "2023-11-20T10:19:44.000Z",
-          "wordCount": 439,
-          "title": "有人知道iVX这个低代码平台吗？",
-          "imageUrl": null
-        },
-        {
-          "id": "7303043433107128354",
-          "author": "Five_moons",
-          "description": "[7073670907851440160#新人报道#] 新人报道",
-          "link": "https://juejin.cn/pin/7303043433107128354",
-          "publishedOn": "2023-11-20T08:02:16.000Z",
-          "wordCount": 468,
-          "title": "[7073670907851440160#新人报道#] 新人报道",
-          "imageUrl": null
-        },
-        {
-          "id": "7303138588858433570",
-          "author": "优弧",
-          "description": "最近除了 arc 浏览器外，我又体验了一款浏览器，感觉挺不错。绝对推荐。https://join.meetsidekick.com/csnap",
-          "link": "https://juejin.cn/pin/7303138588858433570",
-          "publishedOn": "2023-11-20T06:58:07.000Z",
-          "wordCount": 468,
-          "title": "最近除了 arc 浏览器外，我又体验了一款浏览器，感觉挺不错。绝对推荐。https://join.meetsidekick.com/csnap",
           "imageUrl": null
         }
       ]
