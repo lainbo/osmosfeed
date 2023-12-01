@@ -241,6 +241,71 @@ APP开发助手iOS APP上架到App Store的辅助工具，解决iOS APP上架繁
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7307451255432249354"
+                        open
+                      >
+                        <summary class="article-expander__title">华为自研的前端框架是什么样的？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7307451255432249354">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>大家好，我卡颂。
+最近，华为开源了一款前端框架 —— openInula。根据官网提供的信息，这款框架有3大核心能力：
+响应式API
+
+兼容ReactAPI
+
+官方提供6大核心组件
+
+并且，在官方宣传视频里提到 —— 这是款大模型驱动的智能框架。
+那么，这究竟是款什么样的前端框架呢？我在第一时间体验了Demo，阅读了框架源码，并采访了框架核心开发者。本文将包括两部分内容：
+对框架核心开发者陈超涛的采访
+卡颂作为一个老前端，阅读框架源码后的一些分析
+免费领取卡颂原创React教程（原价359）、加入人类高质量前端群
+采访核心开发者
+开发Inula的初衷是？
+回答：
+华为内部对于业务中强依赖的软件，考虑到竞争力，通常会开发一个内部使用的版本。
+Inula在华为内部，从立项到现在两年多，基本替换了公司内绝大部分React项目。
+卡颂补充背景知识：Inula兼容React 95% API，最初开发的目的就是为了替换华为内部使用的React。为了方便理解，你可以将Inula类比于华为内部的React
+为什么开源？
+回答：
+华为对于自研软件的公司策略，只要是公司内部做的，觉得还ok的自研都会开源。
+接下来的提问涉及到官网宣传的内容
+宣传片提到的大模型赋能、智能框架是什么意思？
+回答：
+这主要是Inula团队与其他外部团队在AI、低代码方向的一些探索。比如：
+团队与上海交大的一个团队在探索大模型赋能chrome调试业务代码方面有些合作，目的是为了自动定位问题
+团队与华为内部的大模型编辑器团队合作，探索框架与编辑器定制可能性
+以上还都属于探索阶段。
+Inula未来有明确的发展方向么？
+回答：
+团队正在探索引入响应式API，相比于React的虚拟DOM方案，响应式API能够提高运行时性能。24年可能会从Vue composition API中寻求些借鉴。
+新的发展方向会在项目仓库以RFC的形…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >国家应急广播 - 重庆预警信息</button>
                   <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
                 </h3>
@@ -2202,8 +2267,8 @@ const restaurant &#x3D; {
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-25 datetime="2023-11-25T15:46:39.000Z">2023-11-25</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-25 datetime="2023-11-25T15:46:39.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-25 datetime="2023-11-25T11:58:35.000Z">2023-11-25</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-25 datetime="2023-11-25T11:58:35.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -2218,50 +2283,6 @@ const restaurant &#x3D; {
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7304991873415626788"
-                        open
-                      >
-                        <summary class="article-expander__title">MutationObserver 都被传烂了，你怎么到现在都还不会？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7304991873415626788">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: juejin
-highlight: agate
-第一次听说MutationObserver的时候，大家应该都和我是一样的，通过Vue的nextTick的实现来认识的；
-后来又有一个面试题，说是如何将一个任务放到微队列中执行，网上的解答方案中也会出现MutationObserver；
-但是直到现在我都很少看到有人去讲这个API，当我深入这个API之后，我发现这个API真很有用，所以他不讲，你不讲，那我来讲吧。
-什么是 MutationObserver
-可以看MDN的介绍MutationObserver：
-
-简单点来说，MutationObserver是一个构造函数，可以用来监听某个节点的变化，当节点发生变化时，可以执行一些回调函数。
-但是它不会立即执行，首先你需要调用MutationObserver的observe方法，传入你想要监听的节点，以及一些配置，然后当节点发生变化时，就会执行你传入的回调函数。
-MutationObserver 的使用
-MutationObserver的使用非常简单，直接看代码：
-const observer &#x3D; new MutationObserver((mutations) &#x3D;&gt; {
-  console.log(mutations);
-});
-
-observer.observe(document.body, {
-  childList: true,
-  subtree: true,
-  attributes: true,
-  characterData: true,
-});
-
-上面的代码中，我们创建了一个MutationObserver实例，然后调用observe方法，传入了document.body，以及一些配置，然后当document.body发生变化时，就会执行我们传入的回调函数。
-
-知道大家都不爱看文档，那我就直接开始整活了…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -4571,8 +4592,8 @@ AI 是一个新事物，带来了很多前所未有的问题。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7060279155">
-        <time id="build-timestamp" datetime="2023-12-01T12:56:49.578Z">2023-12-01T12:56:49.578Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7062198516">
+        <time id="build-timestamp" datetime="2023-12-01T15:53:06.415Z">2023-12-01T15:53:06.415Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
