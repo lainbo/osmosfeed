@@ -51,11 +51,110 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-02 datetime="2023-12-02T07:48:53.000Z">2023-12-02</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-02 datetime="2023-12-02T07:48:53.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-02 datetime="2023-12-02T16:35:48.000Z">2023-12-02</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-02 datetime="2023-12-02T16:35:48.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Barret李靖的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/656b5ce487a8e03bd172f95d"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 推荐一款语音识别 APP，Whisper Transcription，这几天正好内购 Lifetime 限免中，原价是 88 元/年，可以下载体验下。 这款软件基本属于对 Whisper 模型...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/656b5ce487a8e03bd172f95d">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fp6X5RlqxoUVrmqzCHK58ovIoFt9v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>推荐一款语音识别 APP，Whisper Transcription，这几天正好内购 Lifetime 限免中，原价是 88 元/年，可以下载体验下。
+这款软件基本属于对 Whisper 模型的本地套壳，附加了诸多体验优化和额外功能模块。看来在大模型时代只要肯动手，还是有很多机会的😄
+软件大小只有 10Mb，要支持语音识别，需要从远端将大模型下载到本地，官方 Whisper 提供了 tiny/base/small/medium/large 等不同 size 的模型，需要 large 版本（~1.5Gb）才支持多语言，这个软件竟然所有版本都支持，看来是经过了一次微调。我试了下 tiny 版本，基本可用，large 版本下载太慢了，还没测试。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/656b4d80f9a492630b60440b"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 经常看到社区推出各种 LLM，有 7B、13B、60B 等等，这些数值代表着模型的参数量，大家都知道数值越大，意味着模型的规模越大，那这些参数量到底是如何被...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/656b4d80f9a492630b60440b">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FrlcXQvDtUdJZSRH8rr7bC3viLTvv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>经常看到社区推出各种 LLM，有 7B、13B、60B 等等，这些数值代表着模型的参数量，大家都知道数值越大，意味着模型的规模越大，那这些参数量到底是如何被计算出来的呢？
+ChatGPT 中的 GPT 全称是 Generative Pre-trained Transformer，它是基于 Transformer 架构建设的，市面上的大模型基本也采用此架构，它们都是四层设计，分别是：
+1）Embedding 层：用于将输入的标记（token）映射到高维的词嵌入空间，参数的数量取决于词汇表的大小和词嵌入的维度
+2）Transformer 层：每个 Transformer 层包括多个子层，例如自注意力层（self-attention layer）和前馈神经网络层（feedforward neural network layer）；参数的数量取决于每个子层的权重和偏置参数数量，以及模型中的 Transformer 层数
+3）Layer Normalization：归一化层通常用于规范模型中间层的输出，这些层的参数数量取决于归一化层的输入维度
+4）Output 层：大多数语言模型在最后添加一个用于分类的线性层，用于将模型的输出映射到分类标签
+大模型的参数量就是上面四层的参数总量之和。为了一探究竟，我在 Hugging Face 上找了个稍小的模型，dolly-v2-3b，它是 Databricks 创建的一个 28 亿参数 LLM ，源自 EleutherAI 的 Pythia-2.8b，使用 model.named_parameters() 可以打印模型中的所有参数（如图一），可以清晰看到每一层的参数量，将其累加：
+128716800 + (2560 * 4 + 19660800 + 7680 + 6553600 + 2560 + 26214400 * 2 + 10240 + 2560) * 32 + 2560 * 2 + 128716800 &#x3D; 2775086080
+结果是 27.7 亿参数，四舍五入就是 28 亿。这种计算方式非常精确，也有更快捷的方式估算出大模型的参数总量，看到一篇文章，https://zhuanlan.zhihu.com/p/624740065，提供了一个估算的方法（如图二），由于 Transformer 这一层的模式比较固定，而且参数量最大，因此仅计算这一层即可，文章推到出可以使用 12 * L * H^2 作为公式来进行估算，其中 L 为模型层数，H 为隐藏层维度。
+dolly-v2-3b 的层数是 32，隐藏层维度是 7680（如图三），按照公式计算出来的结果是 22 亿，相差不大。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >李继刚的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/656b5167ee2e07f7ac709f06"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 一条动态</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/656b5167ee2e07f7ac709f06">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fjq15klZC661ykWc9bnKEvDTe-U_v3.png?imageMogr2/auto-orient/crop/!x3747.5a0a0/thumbnail/x300" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>即刻App，享受探索、表达和创造</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -1192,60 +1291,6 @@ Chrome 导航插件，提高你的工作效率</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/65675c9587a8e03bd123c9de"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: AI 辅助阅读并自动总结网页概要的工具多如牛毛，但把这件事情做好却并不容易，因为网页上存在太多乱七八糟的 DOM，包括导航菜单、广告和推荐模块等等，...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65675c9587a8e03bd123c9de">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FiGVTwYkq3rSlmda2Ocjj7ej6oQ7v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>AI 辅助阅读并自动总结网页概要的工具多如牛毛，但把这件事情做好却并不容易，因为网页上存在太多乱七八糟的 DOM，包括导航菜单、广告和推荐模块等等，如果不抓核心内容直接无脑扔给 AI 处理，那效果一定是不佳的，尤其是杂乱内容占比过高时。
-做了一些技术调研，找到如下几个工具/库，它们均可以辅助提取网页概要，不过各自的思路存在一些差异：
-1）Readability，https://github.com/mozilla/readability，是一种基于规则的方法，被 Mozilla Firefox 浏览器的阅读模式使用，它通过检查 HTML 元素的标签名称、文本数量、链接密度以及满足主要内容标准的文本模式来提取主要内容
-2）DOM Distiller，https://github.com/chromium/dom-distiller，是 Google Chrome 浏览器的阅读模式，它是一种混合方法，使用了 Boilerpipe 分类器和一些规则，有点类似于 Readability
-3）Web2Text，https://github.com/dalab/web2text，是基于深度神经网络的分类器，使用了 CNN 模型和包括单词计数、标点符号存在和停用词数量等 128 个结构和文本特征来确定每个文本块是否属于主要内容
-4）Boilernet，https://github.com/mrjleo/boilernet，是基于深度神经网络的分类器，使用 LSTM 将网页的文本节点视为由单词和 DOM 树根路径组成的文本块序列
-这些方法在不同的数据集和语言环境下会表现出不同的性能。https://arxiv.org/abs/2110.14164，这篇论文给出了一个新的思路：通过使用视觉特征从网页中提取主要内容，算法分为三个步骤：网格化、居中和扩展：
-1）首先，算法创建一个类似棋盘的网格，用于近似用户首次浏览网页的区域
-2）然后，从浏览器窗口、网页文档和网格的中心点确定三个中心点；这些中心点被认为与主要内容接近，它们最近的文本节点很可能是主要内容的后代叶节点
-3）最后，算法通过从叶节点开始沿着 DOM 树向上遍历来提取主要内容
-通过使用这些通用的特征，该算法在多语言环境下表现都还不错，并在实验中优于现有的主要内容提取方法：在最长公共子序列（LCS）F1 得分方面，该方法的平均性能比现有方法提高了 14%；特别是在英语数据集中，性能提高了 25%，在非英语数据集中提高了 16%。
-这篇论文没有找到对应的代码实现，感兴趣的同学可以撸一个出来，价值还挺大的。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/6567485d5682fbc62e41bac1"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 学到两个读 arxiv PDF 论文的新技巧： 1）将域名中的 x 更换成 5，会跳转到 HTML 版本 2）将域名中的 v 更换成 w，会跳转到一个 AI Chat with PDF 版本 ...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6567485d5682fbc62e41bac1">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FhUheb7sywfzmzkcN6k-6hMCUrBNv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>学到两个读 arxiv PDF 论文的新技巧：
-1）将域名中的 x 更换成 5，会跳转到 HTML 版本
-2）将域名中的 v 更换成 w，会跳转到一个 AI Chat with PDF 版本
-为了避免每次都手动修改，写了几句油猴脚本，会在 header 位置自动附加这两个链接：https://greasyfork.org/zh-CN/scripts/481023-arxiv-extensions</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -1840,43 +1885,6 @@ const width &#x3D; 512;
 const size &#x3D; 256;
 const count &#x3D; width ** 2; // 我们总共要实时计…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >李继刚的即刻动态</button>
-                  <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/reposts/6565dd1d278f95df6f28ea29"
-                        open
-                      >
-                        <summary class="article-expander__title">转发了: 模型和算力有了，以后每个人的私有数据就带劲了。 你在每个社交平台的动态，每篇博客文章，每年的思考总结笔记，都可以喂进ai，打造虚拟自己。</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/reposts/6565dd1d278f95df6f28ea29">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>模型和算力有了，以后每个人的私有数据就带劲了。
-你在每个社交平台的动态，每篇博客文章，每年的思考总结笔记，都可以喂进ai，打造虚拟自己。
-
-转发 @数字生命卡兹克: 这个东西有点牛逼。。。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4507,8 +4515,8 @@ AI 是一个新事物，带来了很多前所未有的问题。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7071162640">
-        <time id="build-timestamp" datetime="2023-12-02T15:53:00.932Z">2023-12-02T15:53:00.932Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7071992969">
+        <time id="build-timestamp" datetime="2023-12-02T18:53:07.072Z">2023-12-02T18:53:07.072Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
