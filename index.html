@@ -367,6 +367,65 @@ Inula未来有明确的发展方向么？
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7307470097663934491"
+                        open
+                      >
+                        <summary class="article-expander__title">短链服务？自己用 Nest 写一个</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7307470097663934491">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>生活中我们经常遇到需要短链的场景。
+比如一段很长的 url：
+
+分享出去很不方便。
+这时候就可以通过短链服务把它缩短：
+
+点击短链会跳转到原链接：
+
+这种在短信里很常见：
+
+因为短信是按照字数收费的，太长不但阅读体验不好，费用也高。
+所以都会生成短链之后再加到短信里。
+那短链是怎么实现的呢？
+很容易想到的思路是这样的：
+用 0、1、2、3、4、5 的递增 id 标识每个 url，把映射关系存到数据库里。
+这样访问短链的时候从数据库中查出对应的长链接，返回 302 重定向即可。
+比如刚才的短链服务就是通过 302 把短链重定向到长链：
+
+这里也可以用 301。
+301 是永久重定向，就是重定向一次之后，下次浏览器就不会再访问短链，会直接访问长链接。
+302 是临时重定向，下次访问短链依然会先访问短链服务，返回 302 后再重定向到长链。
+这两种都可以，301 的话，短链服务压力小，不过 302 每次都会先访问短链服务，这样可以记录链接的访问次数等数据。
+比如刚才我们用的短链服务，就会记录这个链接的访问记录：
+
+还可以做一些分析：
+
+所以访问记录也挺有价值的。
+一般短链服务都是用 302 来重定向。
+每个 url 的 id 我们会用 Base64 或者 Base62 编码：
+const data &#x3D; &#x27;123456&#x27;;
+const buff &#x3D; Buffer.from(data);
+const base64data &#x3D; buff.toString(&#x27;base64&#x27;);
+
+console.log(base64data);
+
+
+base64 就是 26 个大写字母、26 个小写字母、10 个数字、2 个特殊字符，一共 64 个字符。
+而 base62 则是去掉了两个特殊字符，一共 62 个字符。
+做短链的话，我们用 base62 比较多。
+安装用到的包：
+npm install b…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7307181589272231972"
                         open
                       >
@@ -1304,6 +1363,64 @@ Chrome 导航插件，提高你的工作效率</span>
                 </section>
               </section>
             </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7306450197629370387"
+                        open
+                      >
+                        <summary class="article-expander__title">reveal.js：免费、强大的演示框架 | 开源日报 No.89</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7306450197629370387">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>hakimel/reveal.js
+Stars: 65.3k  License: MIT
+
+reveal.js 是一个开源的 HTML 演示框架，可以让任何人通过 web 浏览器免费创建精美的演示文稿。其强大功能包括嵌套幻灯片、Markdown 支持、自动动画、PDF 导出、演讲者备注、LaTeX 排版和广泛的 API。
+核心优势如下：
+允许使用者通过 web 浏览器免费创建精美的演示
+强大功能集合：嵌套幻灯片、Markdown 支持等
+kubeshark/kubeshark
+Stars: 9.9k  License: Apache-2.0
+
+Kubeshark 是一个针对 Kubernetes 的 API 流量分析工具，提供实时、协议级别的可视化能力，捕获和监控所有进出容器、Pod、节点和集群的流量和数据包。它类似于重新设计过的用于 Kubernetes的 TCPDump 和 Wireshark。
+显著改善性能
+优化资源利用率
+实时流量监控
+协议级别可见性
+manticoresoftware/manticoresearch
+Stars: 6.7k  License: GPL-2.0
+
+Manticore Search 是一个易于使用的开源快速搜索数据库，是 Elasticsearch 的良好替代品。它与其他解决方案的区别在于：
+它非常快，并且比其他替代产品更具成本效益。
+具有现代多线程架构和高效查询并行化能力，可以充分利用所有 CPU 核心以实现最快响应时间。
+强大而迅捷的全文搜索功能无缝适用于小型和大型数据集。
+通过 Manticore Columnar Library 提供列存储支持，可处理超出内存容量范围之外的庞大数据集。
+以下是该项目关键特性和核心优势：
+182 倍快过 MySQL 处理小规模数据 (可复现)
+29 倍快过 Elasticsearch 进行日志分析…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -2018,6 +2135,42 @@ Custom element（自定义元素）：一组 JavaScript API，允许你定义 cu
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7306017890074673167"
+                        open
+                      >
+                        <summary class="article-expander__title">作为跨境电商团队，如何优化网站首屏性能</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7306017890074673167">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>导语：电商成功的敲门砖——首屏加载速度。在数字时代，网站性能如同电商的门面，迅速打开是前提，迟滞就容易失去商机。网站首屏性能就好比商店大门的开合，承载着用户留存的关键。秒开易成就交易，缓慢的加载则好比提前预埋了失望离开的种子。尤其在商业的较量中，首屏加载时间作为衡量性能的一环至关重要。
+前言
+我司是一家跨境电商公司，为北美、欧洲等几十个国家提供高质量的家居、户外和宠物用品等。为了给消费者打造便捷、愉悦的购物体验，利用好广告流量，保证最好的用户转化，尤其是随着狂欢的万圣节、抢购狂潮的黑色星期五和圣诞节等节日的来临，网站的性能面临更为激烈的挑战。
+
+当前存在的问题
+
+当前，我司面临的两大严峻问题愈发凸显：
+复杂监控难题： 必须同时监控美洲和欧洲十几个国家，全面观察整体访问情况、性能和错误。实时排查用户错误或卡顿以进行优化增加了难度。构建一个能够应对上百万访问和上亿点击量的监控平台，以及相应的数据收集和存储系统显得异常复杂，对团队提出了更高的技术、架构和管理要求。
+用户体验不佳： 首屏加载速度缓慢成为一个突出问题，直接影响用户的整体体验。这不仅对用户浏览产品和下单的过程造成了显著不便，更可能导致用户流失。改善首屏加载速度成为提升用户满意度和促进业务增长的迫切需求。解决这一问题不仅需要技术上的创新，还需要深入理解用户需求和行为，从而为他们提供更为流畅和愉悦的在线购物体验。
+优化历程
+首先，让我们回顾一下我们在前期所了解到的一些关键想法，这些需求对于深入了解和优化网站性能至关重要:
+网站访问的pv、uv和分布
+网站加载时间
+网站核心指标
+关键网络请求的性能
+CDN的性能
+针对上述需求，最初我们采用了实现核心需求的方法，即手写代码以收集部分性能指标。然而，随着时间的推移，我们逐渐认识到这种方式存在一些不可忽视的问题。
+首先，维护这部分代码非常耗费精力。这要求我们拥有专门负责编写和维护监…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7306018455462150179"
                         open
                       >
@@ -2539,132 +2692,11 @@ SDK 的全称是 Software Development Kit，翻译过来是软件开发工具包
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-24 datetime="2023-11-24T08:06:33.000Z">2023-11-24</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-24 datetime="2023-11-24T08:06:33.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-24 datetime="2023-11-24T02:20:51.000Z">2023-11-24</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-24 datetime="2023-11-24T02:20:51.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7304584222963613715"
-                        open
-                      >
-                        <summary class="article-expander__title">Taro | 高性能小程序的最佳实践</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7304584222963613715">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-作为一个开放式的跨端跨框架解决方案，Taro 在大量的小程序和 H5 应用中得到了广泛应用。我们经常收到开发者的反馈，例如“渲染速度较慢”、“滑动不够流畅”、“性能与原生应用相比有差距” 等。这表明性能问题一直是困扰开发者的一个重要问题。
-熟悉 Taro 的开发者应该知道，相比于 Taro 1/2，Taro 3 是一个更加注重运行时而轻量化编译时的框架。它的优势在于提供了更高效的代码编写方式，并拥有更丰富的生态系统。然而，这也意味着在性能方面可能会有一些损耗。
-但是，使用 Taro 3 并不意味着我们必须牺牲应用的性能。事实上，Taro 已经提供了一系列的性能优化方法，并且不断探索更加极致的优化方案。
-本文将为大家提供一些小程序开发的最佳实践，帮助大家最大程度地提升小程序应用的性能表现。
-一、如何提升初次渲染性能
-如果初次渲染的数据量非常大，可能会导致页面在加载过程中出现一段时间的白屏。为了解决这个问题，Taro 提供了预渲染功能（Prerender）。
-使用 Prerender 非常简单，只需在项目根目录下的 config 文件夹中找到 index.js/dev.js/prod.js 三者中的任意一个项目配置文件，并根据项目情况进行修改。在编译时，Taro CLI 会根据你的配置自动启动预渲染功能。
-const config &#x3D; {
-  ...
-  mini: {
-    prerender: {
-      match: &#x27;pages/shop/**&#x27;, // 所有以 &#x60;pages/shop/&#x60; 开头的页面都参与 prerender
-      include: [&#x27;pages/any/way/index&#x27;], // &#x60;pages/any/way/index&#x60; 也会参与 prerender
-      exclude: [&#x27;pages/shop/index/ind…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7304839912876163108"
-                        open
-                      >
-                        <summary class="article-expander__title">【构建工具】vite2没捂热，vite5又来了，性能大幅提升！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7304839912876163108">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Jym好😘，我是月弦笙音，今天给大家分享  vite5重磅发布有哪些新东西 ，嘎嘎的😍，看下面
-vite2还没焐热，vite5又来了！！！
-就在一周前vite5重磅发布了！性能大幅提升!
-请看下面：下面是翻译过来的，原文：Vite 5.0 发布！ |维特 (vitejs.dev)
-Vite 4 大约在一年前发布，它为生态系统奠定了坚实的基础。每周的 npm 下载量从 2 万跃升至 5 万，因为项目不断建立在共享的基础设施上。框架不断创新，除了 Astro、Nuxt、SvelteKit、Solid Start、Qwik City 等之外，我们还看到了新框架的加入，使生态系统更加强大。RedwoodJS 和 Remix 切换到 Vite 为 React 生态系统的进一步采用铺平了道路。Vitest 的增长速度比 Vite 更快。其团队一直在努力工作，并将很快发布Vitest 7.5。当 Vite 与 Storybook、Nx 和 Playwright 等其他工具一起使用时，Vite 的故事不断改进，环境也是如此，Vite 开发人员在 Deno 和 Bun 中都可以工作。
-一个月前，我们举办了第二届 ViteConf，由 StackBlitz 主办。与去年一样，生态系统中的大多数项目都聚集在一起分享想法并建立联系，以不断扩大共享空间。我们还看到新的部分补充了元框架工具带，如 Volar 和 Nitro。Rollup 团队在同一天发布了 Rollup 4，这是 Lukas 去年开始的传统。
-六个月前，Vite 4.3 发布。此版本显著提高了开发服务器的性能。但是，仍有很大的改进空间。在 ViteConf 上，Evan You 公布了 Vite 开发 Rolldown 的长期计划，Rolldown 是一个具有兼容 API 的 Rollup 的 Rust 端口。一旦它准备好了，我们…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7304598711992598566"
-                        open
-                      >
-                        <summary class="article-expander__title">浏览器跨标签星球火了，简单探究一下实现原理</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7304598711992598566">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>一、前言
-最近 推特上 一位懂设计和写代码的大神一个两个浏览器之间 星球粒子交互的动画火了， 让人看了大呼脑洞大开， 浏览器竟然还能这么玩！！！
-准备自己也搞搞玩一下
-
-二、实现
-原作者的粒子动画非常炫酷， 但是不是我们本文重点， 我们通过一个元素在不同窗口的拖拽实现一个可以变幻的例子来学习一下原理， 后续在实现一个稍微复杂的多窗口的小游戏。关于粒子动画的内容，有兴趣的小伙伴可以自己实现
-其实实现类似的功能需要的难点并不多，不在乎以下几个步骤
-1、 屏幕坐标和窗口坐标转换
-2、 跨标签通讯
-1、 先来看第一个点， 获取屏幕坐标与窗口坐标
-// 屏幕坐标转换为窗口坐标
-const screenToClient &#x3D; (screenX, screenY) &#x3D;&gt; {
-  const clienX &#x3D; screenX - window.screenX;
-  const clienY &#x3D; screenY - window.screenY - barHeight();
-  return [clienX, clienY];
-};
-
-// 窗口坐标转换为屏幕坐标
-const clientToScreen &#x3D; (clienX, clienY) &#x3D;&gt; {
-  const screenX &#x3D; clienX + window.screenX;
-  const screenY &#x3D; clienY + window.screenY + barHeight();
-  return [screenX, screenY];
-};
-
-我们先简单实现一个卡片， 通过url上面传递颜色值， 设置定位
-在卡片本上设置上点击拖动等事件
-
-
-  
-    
-    &lt;meta name&#x3D;&quot;viewpor…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -4442,78 +4474,10 @@ AI 是一个新事物，带来了很多前所未有的问题。
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-03 datetime="2023-11-03T00:02:33.000Z">2023-11-03</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-03 datetime="2023-11-03T00:02:33.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >阮一峰的网络日志</button>
-                  <a class="source-heading__link" href="http://www.ruanyifeng.com/blog/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.ruanyifeng.com/blog/2023/11/weekly-issue-276.html"
-                        open
-                      >
-                        <summary class="article-expander__title">科技爱好者周刊（第 276 期）：内容行业的衰落</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.ruanyifeng.com/blog/2023/11/weekly-issue-276.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>这里记录每周值得分享的科技内容，周五发布。
-本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。
-封面图
-
-山西平陆县有一条大裂缝，非常笔直，长约10公里，当地称为&quot;划沟&quot;。它的形成原因未知，可能与地震有关。（via）
-内容行业的衰落
-现在的 AI 技术，每天都在进化。我有一种感觉，普通人大概没意识到，它马上就要改变人类社会了。
-历史上，这种事一再发生。在你不知不觉中，某些大事件悄悄酝酿，突然就冲击到了你的生活，将你的人生全部打乱，你却毫无准备。
-首当其冲，受到 AI 冲击的将是内容行业。我们以后消费的内容，绝大部分将都是 AI 参与生成的。
-文字、图像、声音这三个内容领域，我就不举例了，相关报道太多了。我们来看看，难度最高的视频生成，AI 现在到了什么程度。
-上个月，日本有一条饮料广告（B 站，Youtube）。
-
-
-看上去，这条广告很普通，模特拿着饮料又唱又跳。但是，这个模特不是真人，而是 AI 生成的。
-她的动作、表情、嘴型如此自然，毫无破绽。以后我们还需要真人模特吗？
-不仅模特没有了用武之地，而且明星偶像也可以被 AI 取代。今年上半年，韩国就成立了 AI 女团 MAVE。
-
-
-四个成员都是 AI 生成的，还有自己的单曲和 MV，大家可以去看一下（ B 站，Youtube）。你看了以后，大概会觉得，真人偶像以后不好当了。
-事实上，迪斯尼已经在公映的电影里面，加入了 AI 演员。
-
-
-上面是今年的新片《舞会契约》（Prom Pact）的截图，里面有一个镜头一晃而过。网友注意到，第二排的观众明显是 AI 生成的。制片公司为了省钱，不用群众演员，就用 AI 把人加上去了。
-好莱坞的演员工会最近正在罢工，他们的主要诉求就是，制片公司不能使用 AI 演员，不能剥夺真人演员的演出机会。可见这些专业人士，已…</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7069464149">
-        <time id="build-timestamp" datetime="2023-12-02T09:52:56.835Z">2023-12-02T09:52:56.835Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7070322688">
+        <time id="build-timestamp" datetime="2023-12-02T12:55:13.499Z">2023-12-02T12:55:13.499Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
