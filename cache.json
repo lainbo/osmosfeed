@@ -23,7 +23,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": 1013,
+          "wordCount": 1012,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/",
           "publishedOn": "2023-11-21T16:14:41.000Z",
-          "wordCount": 1294,
+          "wordCount": 1293,
           "title": "cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "应该是国内第一篇专门介绍用mp4box.js和VideoDecoder方法解码MP4视频序列帧的文章了。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/mp4box-js-webcodecs-mp4-canvas/",
           "publishedOn": "2023-11-14T16:37:18.000Z",
-          "wordCount": 1250,
+          "wordCount": 1249,
           "title": "mp4box.js加WebCodecs 解码MP4视频帧并渲染",
           "imageUrl": null
         }
@@ -127,7 +127,7 @@
           "description": "论文，我认为就是写的比较专业的博客，它的格式非常八股，基本都是按照这样的结构来呈现的：标题 → 概要 → 导言 → 方法 → 实验 → 结论。\n下文较长，主要提到了几个检索方法和阅读工具，强烈推荐下 PopAI， https://bit.ly/412xQbH，体验做的很不错。\n很多朋友说论文读起来太晦涩且耗时，但事实上阅读论文是 ROI 比较高的一件事情，尤其是 AI 盛行的当下，大量科研人员都以论文的形式来呈现自己的研究成果，他们在写论文之前，会把行业最前沿的信息都研究个遍，然后自己动手实践，并提出更新、更好的解决方案。所以我认为学会读论文，以及挖掘对自己工作有帮助的论文是比较重要的一件事情。\n检索论文，我的思路有两个。\n一个是「有什么办法可以解决问题」，通过问题关键词去索引内容，例如检索“如何识别多人同时说话”，我找到了语音识别（ASR），然后找到了 Whisper，然后找到了《Robust Speech Recognition via Large-Scale Weak Supervision》这篇论文，过程中也找到了很多其他的论文。\n另外一个是「为什么这个方法可以解决问题」，去研究技术背后的东西，例如检索“为什么 pyannote-audio 可以区分不同的人说话”，我找到了 Speaker Diarization，然后找到了《A Reinforcement Learning Framework for Online Speaker Diarization》这篇论文，从这篇论文又了解到了更多其他方法，回到思路一，继续研究。\n检索工具上，之前推荐过 aminer.cn 这个网站，它有一个“必读论文”板块（如图一），放了很多精挑细选的专题模块，可能刚好跟你的研究方向是匹配的；但大部分情况下，你进到这个网站时，也不知道该搜什么关键词，所以刚开始还得去 Google 或社交媒体去检索行业先驱的博客或推文，去看看一些综述性的介绍，再去找更多更细节的关键词。\n关于读论文，之前分享过一篇文章《如何阅读一篇论文》，它提到了“三遍阅读法”，我也是这么践行的；当然，也离不开工具上的辅助，主要包括两类。\n第一类是 Summary 工具，如果每出一篇论文都去精读，那时间上肯定是不划算的，关键也没这个必要；Summary 的工具比较多，上面提到的 aminer 也自带了这个能力。\n这里推荐下 PopAI，https://bit.ly/412xQbH，最近看论文和读长篇 PDF 都用的非常多，它支持针对 arxiv 的论文转存后直接进行 AI Chat，省却了下载 PDF 文件的过程（如图二）。\n第二类是精读工具，对大多数人来说，语言是第一阻碍，尤其是论文里铺天盖地的专业词汇，让人望而生畏；我用的比较多的是“沉浸式翻译”这个 Chrome 插件，它支持将 PDF 直接进行在线对照翻译，免费版的翻译质量有点一般，但也基本够用了（如图三）。\n论文的实验结果基本都是以图表形式呈现的，因此精读的一个重要环节是读懂图表，这部分也可以借助 AI 的能力来理解得更透彻，PopAI 在这块做的也还不错，它背后接入了 GPT-4V 的 API，可以对论文里的图片进行详细解读，另外，还支持在聊天框内直接粘贴图片跟它交互，比较方便（如图四）。\n如果论文正好是自己想要内容，还有一个非常实用的工具，叫做 Papers with code，paperswithcode.com，之前也推荐过，它可以根据论文帮你找到对应的 Github 代码实现，以及用到的数据集和测试方法，这也是我用的比较多的。\n顺带提一嘴，涉及到 AI 的代码仓库，建议直接去 Google Colab 上跑，它的下载速度可以达到 200Mb/s，相比本地，会更加高效。\n以上，是近几个月研究 AI 和论文的一点经验。如果你在学习过程中用到了其他好用的辅助工具或者方法，也欢迎推荐和分享！",
           "link": "https://m.okjike.com/originalPosts/656970b9c9ed8caff01c6b0a",
           "publishedOn": "2023-12-01T05:35:53.000Z",
-          "wordCount": 675,
+          "wordCount": 674,
           "title": "发布了: 论文，我认为就是写的比较专业的博客，它的格式非常八股，基本都是按照这样的结构来呈现的：标题 → 概要 → 导言 → 方法 → 实验 → 结论。 下文较长...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FkOYUim9n_AR-I37SdFsYOlPCbzzv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -157,7 +157,7 @@
           "description": "pdf2htmlEX 是一个值得推荐的 PDF 转 HTML 工具，https://github.com/pdf2htmlEX/pdf2htmlEX，它生成的内容还原度非常高，几乎与原 PDF 一致。\n我去扒了下这个项目的历史，https://github.com/coolwanglu/pdf2htmlEX/wiki/Author%27s-Words，作者因朋友抱怨没有一个在线 PDF viewer，于是他就撸了一个将 PDF 转成 HTML 的“玩具”，时间是 2013 年，也有十年历史了。\npdf2htmlEX 背后使用的是 poppler 这个渲染库，而 poppler 背后使用的是  xpdf-3.0，它是一个免费的 PDF 查看器和工具包，包括文本提取器、图像转换器、HTML 转换器等。Chrome 自家也撸了一个 PDF 渲染引擎，叫做 pdfium，项目地址在这里：https://pdfium.googlesource.com/pdfium\n项目在 2018 年就被作者归档了，为了可以让社区更好地贡献代码，新开了一个 repo 延续，在这个 repo 中，作者对打包过程做了封装，并且锁定了两个重要依赖的版本（poppler 和 Fontforge）。\n我在 Mac 下一直没有成功安装，看到有人提了一个兼容的 PR，状态还是 work in progress：https://github.com/pdf2htmlEX/pdf2htmlEX/pull/18，都五年了，应该是没有下文了😂",
           "link": "https://m.okjike.com/originalPosts/65681d04c9ed8caff000ff02",
           "publishedOn": "2023-11-30T05:26:28.000Z",
-          "wordCount": 553,
+          "wordCount": 564,
           "title": "发布了: pdf2htmlEX 是一个值得推荐的 PDF 转 HTML 工具，https://github.com/pdf2htmlEX/pdf2htmlEX，它生成的内容还原度非常高，几乎与原 PDF 一致。 我去扒了...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FoOxF-r_StpSAUGMX5gRLl1jd-cQv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -207,7 +207,7 @@
           "description": "AI 辅助阅读并自动总结网页概要的工具多如牛毛，但把这件事情做好却并不容易，因为网页上存在太多乱七八糟的 DOM，包括导航菜单、广告和推荐模块等等，如果不抓核心内容直接无脑扔给 AI 处理，那效果一定是不佳的，尤其是杂乱内容占比过高时。\n做了一些技术调研，找到如下几个工具/库，它们均可以辅助提取网页概要，不过各自的思路存在一些差异：\n1）Readability，https://github.com/mozilla/readability，是一种基于规则的方法，被 Mozilla Firefox 浏览器的阅读模式使用，它通过检查 HTML 元素的标签名称、文本数量、链接密度以及满足主要内容标准的文本模式来提取主要内容\n2）DOM Distiller，https://github.com/chromium/dom-distiller，是 Google Chrome 浏览器的阅读模式，它是一种混合方法，使用了 Boilerpipe 分类器和一些规则，有点类似于 Readability\n3）Web2Text，https://github.com/dalab/web2text，是基于深度神经网络的分类器，使用了 CNN 模型和包括单词计数、标点符号存在和停用词数量等 128 个结构和文本特征来确定每个文本块是否属于主要内容\n4）Boilernet，https://github.com/mrjleo/boilernet，是基于深度神经网络的分类器，使用 LSTM 将网页的文本节点视为由单词和 DOM 树根路径组成的文本块序列\n这些方法在不同的数据集和语言环境下会表现出不同的性能。https://arxiv.org/abs/2110.14164，这篇论文给出了一个新的思路：通过使用视觉特征从网页中提取主要内容，算法分为三个步骤：网格化、居中和扩展：\n1）首先，算法创建一个类似棋盘的网格，用于近似用户首次浏览网页的区域\n2）然后，从浏览器窗口、网页文档和网格的中心点确定三个中心点；这些中心点被认为与主要内容接近，它们最近的文本节点很可能是主要内容的后代叶节点\n3）最后，算法通过从叶节点开始沿着 DOM 树向上遍历来提取主要内容\n通过使用这些通用的特征，该算法在多语言环境下表现都还不错，并在实验中优于现有的主要内容提取方法：在最长公共子序列（LCS）F1 得分方面，该方法的平均性能比现有方法提高了 14%；特别是在英语数据集中，性能提高了 25%，在非英语数据集中提高了 16%。\n这篇论文没有找到对应的代码实现，感兴趣的同学可以撸一个出来，价值还挺大的。",
           "link": "https://m.okjike.com/originalPosts/65675c9587a8e03bd123c9de",
           "publishedOn": "2023-11-29T15:45:25.000Z",
-          "wordCount": 558,
+          "wordCount": 563,
           "title": "发布了: AI 辅助阅读并自动总结网页概要的工具多如牛毛，但把这件事情做好却并不容易，因为网页上存在太多乱七八糟的 DOM，包括导航菜单、广告和推荐模块等等，...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FiGVTwYkq3rSlmda2Ocjj7ej6oQ7v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -217,7 +217,7 @@
           "description": "学到两个读 arxiv PDF 论文的新技巧：\n1）将域名中的 x 更换成 5，会跳转到 HTML 版本\n2）将域名中的 v 更换成 w，会跳转到一个 AI Chat with PDF 版本\n为了避免每次都手动修改，写了几句油猴脚本，会在 header 位置自动附加这两个链接：https://greasyfork.org/zh-CN/scripts/481023-arxiv-extensions",
           "link": "https://m.okjike.com/originalPosts/6567485d5682fbc62e41bac1",
           "publishedOn": "2023-11-29T14:19:09.000Z",
-          "wordCount": 542,
+          "wordCount": 551,
           "title": "发布了: 学到两个读 arxiv PDF 论文的新技巧： 1）将域名中的 x 更换成 5，会跳转到 HTML 版本 2）将域名中的 v 更换成 w，会跳转到一个 AI Chat with PDF 版本 ...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FhUheb7sywfzmzkcN6k-6hMCUrBNv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         }
@@ -721,16 +721,6 @@
           "wordCount": 523,
           "title": "重庆市云阳县发布大雾黄色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231125/t20231125_526498263.html",
-          "author": "国家预警信息发布中心",
-          "description": "南川区气象台2023年11月25日8时40分发布“大风蓝色预警信号”，预计11月25日8时至18时，三泉镇、水江镇、南城街道、鸣玉镇、骑龙镇风力可达6级，金佛山北坡风力可达8级，请注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231125/t20231125_526498263.html",
-          "publishedOn": "2023-11-25T01:34:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市南川区发布大风蓝色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -974,12 +964,22 @@
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
         {
+          "id": "7307514532275372067",
+          "author": "Lorin洛林",
+          "description": "[7210228048107896891#每日快讯#]  重要通知丨 JumpServer 开源堡垒机 V2 社区版即将停止维护\n根据《关于 JumpServer 开源堡垒机 V2 版本产品生命周期的相关说明》，JumpServer 开源堡垒机 V2 版本（社区版）将于 2023 年 12 月 31 日停止维护支持。",
+          "link": "https://juejin.cn/pin/7307514532275372067",
+          "publishedOn": "2023-12-02T02:23:58.000Z",
+          "wordCount": 640,
+          "title": "[7210228048107896891#每日快讯#] 重要通知丨 JumpServer 开源堡垒机 V2 社区版即将停止维护 根据《关于 JumpServer 开源堡垒机 V2 版本产品生命周期的相关说明...",
+          "imageUrl": null
+        },
+        {
           "id": "7307451430595624975",
           "author": "River_何",
           "description": "预告：visualization-collection将实现两个跨域页面的量子纠缠效果，而且是纯前端实现，不想错过的赶紧点上关注啦[玫瑰][玫瑰][玫瑰]\n应用地址: https://hepengwei.cn\n源码地址: https://github.com/hepengwei/visualization-collection",
           "link": "https://juejin.cn/pin/7307451430595624975",
           "publishedOn": "2023-12-01T09:39:01.000Z",
-          "wordCount": 510,
+          "wordCount": 539,
           "title": "预告：visualization-collection将实现两个跨域页面的量子纠缠效果，而且是纯前端实现，不想错过的赶紧点上关注啦[玫瑰][玫瑰][玫瑰] 应用地址: https://hepengw...",
           "imageUrl": null
         },
@@ -989,7 +989,7 @@
           "description": "2023开发者必备iOS开发工具\n在进行iOS开发工作时，利用并熟练使用恰当的工具可以让工作效率得到大幅度提高。下边会介绍一些在进行iOS开发工作时常用的一些工具，本文并不对其进行展开，对使用方法及工作原理感兴趣的同学可以自行进行更深入的研究。\n开发工具 Postman Postman是一个接口测试工具。在做接口测试的时Postman相当于一个客户端，它可以模拟用户发起的各类HTTP请求，将请求数据发送至服务端并获取对应的响应结果，从而验证响应中的结果数据是否和预期值相匹配，并确保开发人员能够及时处理接口中的bug，进而保证产品上线之后的稳定性和安全性。它主要是用来模拟各种HTTP请求的，如get/post/delete/put等等。Postman与浏览器的区别在于有的浏览器不能输出Json格式，而Postman更直观接口返回的结果。\nipaguard\nIpa Guard是一款功能强大的ipa混淆工具，不需要ios app源码，直接对ipa文件进行混淆加密。可对IOS ipa文件的代码，代码库，资源文件等进行混淆保护。 可以根据设置对函数名、变量名、类名等关键代码进行重命名和混淆处理，降低代码的可读性，增加ipa破解反编译难度。可以对图片，资源，配置等进行修改名称，修改md5。只要是ipa都可以，不限制OC，Swift，Flutter，React Native，H5类app。\nMLeaksFinder\nMLeaksFinder是WeRead团队开源的一款检测iOS内存泄漏的框架，其使用非常简单，只需将文件加入项目中，如果有内存泄漏，3秒后自动弹出alert来捕捉循环引用。使得可以在开发快速找到80%内存泄漏，而使用Xcode Leak工具更适合大范围的，全部的寻找泄漏点。\nappuploder\nAPP开发助手iOS APP上架到App Store的辅助工具，解决iOS APP上架繁琐费时的情况，帮助跨平台APP开发者上架苹果应用,在没有配置Mac苹果机的情况，实现iOS证书申请，创建iOS开发者证书、iOS发布证书等各类证书，iOS开发者在Windows、Linux或Mac系统中上传IPA到App Store,简化iOS APP上架流程！在任何电脑中轻松快速上架你的APP。",
           "link": "https://juejin.cn/pin/7307502467825942555",
           "publishedOn": "2023-12-01T08:34:18.000Z",
-          "wordCount": 525,
+          "wordCount": 602,
           "title": "2023开发者必备iOS开发工具 在进行iOS开发工作时，利用并熟练使用恰当的工具可以让工作效率得到大幅度提高。下边会介绍一些在进行iOS开发工作时常用的一些工具，...",
           "imageUrl": null
         },
@@ -999,7 +999,7 @@
           "description": "求助 求助 安装pandas时这个问题怎么解决 跟着gpt在终端操作也没有解决",
           "link": "https://juejin.cn/pin/7307451430594510863",
           "publishedOn": "2023-12-01T06:56:58.000Z",
-          "wordCount": 513,
+          "wordCount": 542,
           "title": "求助 求助 安装pandas时这个问题怎么解决 跟着gpt在终端操作也没有解决",
           "imageUrl": null
         },
@@ -1019,7 +1019,7 @@
           "description": "将 大模型 和 code review 结合 ，针对于 Gitlab MR 进行 code review 辅助项目评审[赞]\n项目地址：https://github.com/mimo-x/Code-Review-GPT-Gitlab/\n文章介绍：https://juejin.cn/post/7292692843415945225",
           "link": "https://juejin.cn/pin/7307221821903732786",
           "publishedOn": "2023-12-01T02:03:12.000Z",
-          "wordCount": 569,
+          "wordCount": 598,
           "title": "将 大模型 和 code review 结合 ，针对于 Gitlab MR 进行 code review 辅助项目评审[赞] 项目地址：https://github.com/mimo-x/Code-Review-GPT-Gitlab/ 文章介...",
           "imageUrl": null
         },
@@ -1029,7 +1029,7 @@
           "description": "jy们，推荐一个好用的富文本编辑器，谢谢",
           "link": "https://juejin.cn/pin/7307125383785234473",
           "publishedOn": "2023-11-30T12:08:08.000Z",
-          "wordCount": 506,
+          "wordCount": 535,
           "title": "jy们，推荐一个好用的富文本编辑器，谢谢",
           "imageUrl": null
         },
@@ -1039,7 +1039,7 @@
           "description": "有什么适合手机端app界面开发的简单框架，之前一直只是用响应式布局来凑合手机端[我想静静][我想静静][我想静静][我想静静]",
           "link": "https://juejin.cn/pin/7306783965532799028",
           "publishedOn": "2023-11-29T23:49:45.000Z",
-          "wordCount": 500,
+          "wordCount": 529,
           "title": "有什么适合手机端app界面开发的简单框架，之前一直只是用响应式布局来凑合手机端[我想静静][我想静静][我想静静][我想静静]",
           "imageUrl": null
         },
@@ -1049,7 +1049,7 @@
           "description": "刚切换成flutter开发，上午做了个vscode插件把UI稿内容自动转换成flutter的响应式布局省点力气。人老了不喜欢没接触过的东西，现在才入坑是不都算末班车了==\nhttps://github.com/balabalapupu/css-to-widget\n之前还有个ui稿自动转换成原子化样式\nhttps://github.com/balabalapupu/vscode-auto-atomic-css",
           "link": "https://juejin.cn/pin/7306697644062048283",
           "publishedOn": "2023-11-29T03:42:00.000Z",
-          "wordCount": 509,
+          "wordCount": 538,
           "title": "刚切换成flutter开发，上午做了个vscode插件把UI稿内容自动转换成flutter的响应式布局省点力气。人老了不喜欢没接触过的东西，现在才入坑是不都算末班车了== htt...",
           "imageUrl": null
         },
@@ -1059,7 +1059,7 @@
           "description": "flutter 写的 windows 端 图片比对、批量裁剪导出工具，链接还可兑换70次。\nhttp://go.microsoft.com/fwlink/?LinkId=532540&mstoken=XJ3RV-4CX7J-QCTGM-7DKQ3-DMDKZ\n欢迎吐槽。\n小bug 懒得改，大bug 不会改\n已知：窗口尺寸改变时，文件名位置某些情况不能自适应",
           "link": "https://juejin.cn/pin/7306447457151402018",
           "publishedOn": "2023-11-29T02:15:44.000Z",
-          "wordCount": 536,
+          "wordCount": 565,
           "title": "flutter 写的 windows 端 图片比对、批量裁剪导出工具，链接还可兑换70次。 http://go.microsoft.com/fwlink/?LinkId=532540&mstoken=XJ3RV-4CX7J-QCTGM-7DKQ3-D...",
           "imageUrl": null
         },
@@ -1079,7 +1079,7 @@
           "description": "最近开发Chrome扩展的过程中发现，原生的HTML+js+css开发写起来确实很累，效率也低。于是想着自己搭一套vite+react+ts+antd且支持多页面的框架用来开发Chrome扩展程序。不过在调研的过程中发现了Plasmo这个Chrome开发SDK，一举解决了我的所有诉求，这两天有时间就开搞吧。",
           "link": "https://juejin.cn/pin/7306423214494023714",
           "publishedOn": "2023-11-28T22:45:46.000Z",
-          "wordCount": 504,
+          "wordCount": 533,
           "title": "最近开发Chrome扩展的过程中发现，原生的HTML+js+css开发写起来确实很累，效率也低。于是想着自己搭一套vite+react+ts+antd且支持多页面的框架用来开发Chrome扩...",
           "imageUrl": null
         },
@@ -1089,7 +1089,7 @@
           "description": "用例图(PlanUML)\n用例图是软件工程中的一种可视化表示方法，用于描述系统角色与系统本身之间的交互。它通过说明用例和与用例交互的角色来捕捉系统的动态行为。这些图表对于明确系统的功能要求和了解用户如何与系统交互至关重要。通过提供一个高层次的视图，用例图可以帮助利益相关者了解系统的功能及其潜在价值。",
           "link": "https://juejin.cn/pin/7306356456102019124",
           "publishedOn": "2023-11-28T12:09:45.000Z",
-          "wordCount": 505,
+          "wordCount": 534,
           "title": "用例图(PlanUML) 用例图是软件工程中的一种可视化表示方法，用于描述系统角色与系统本身之间的交互。它通过说明用例和与用例交互的角色来捕捉系统的动态行为。这...",
           "imageUrl": null
         },
@@ -1099,7 +1099,7 @@
           "description": "我开发的Chrome扩展 - 掘金Plus已经在Chrome扩展商店发布成功了。初个版本支持配置文章模版和一键导入功能。\n欢迎大家在Chrome扩展商店搜索掘金Plus下载试用。\nhttps://chromewebstore.google.com/detail/%E6%8E%98%E9%87%91plus/bcpbkeiagppbpjinfdbknmaibfjaeobi?hl=zh-CN&utm_source=ext_sidebar",
           "link": "https://juejin.cn/pin/7306327158129983503",
           "publishedOn": "2023-11-28T08:52:24.000Z",
-          "wordCount": 520,
+          "wordCount": 549,
           "title": "我开发的Chrome扩展 - 掘金Plus已经在Chrome扩展商店发布成功了。初个版本支持配置文章模版和一键导入功能。 欢迎大家在Chrome扩展商店搜索掘金Plus下载试用。 h...",
           "imageUrl": null
         },
@@ -1109,7 +1109,7 @@
           "description": "好不容易给开发者朋友开发的插件工具，适配了掘金，知乎，csdn，baijiahao，网易和搜狐等等，支持等众多开发博客，还有隐藏免费功能。博客显示效果优秀。桶子门，这么好的东西，竟然没人知道(爱读v2)，目前下载量稀缺[流泪]",
           "link": "https://juejin.cn/pin/7306019445406761012",
           "publishedOn": "2023-11-28T00:47:02.000Z",
-          "wordCount": 506,
+          "wordCount": 535,
           "title": "好不容易给开发者朋友开发的插件工具，适配了掘金，知乎，csdn，baijiahao，网易和搜狐等等，支持等众多开发博客，还有隐藏免费功能。博客显示效果优秀。桶子门...",
           "imageUrl": null
         },
@@ -1119,7 +1119,7 @@
           "description": "给 Spring Web 开发者开发了一款 IDEA 插件：Feign-Helper，为什么叫 Feign-Helper ？因为核心功能其实是Spring Cloud Feign 接口与和对应的 Controller 源码间互相跳转（源码在同一个工程内），顺便提供 Spring Web HTTP API 检索（按两下 Shift 键打开，有个 URL 选项卡），现在送优惠码：https://aboat365.com/feign-helper/2023/11/27/v2ex-Feign-Helper-%E4%BC%98%E6%83%A0%E7%A0%81.html",
           "link": "https://juejin.cn/pin/7305983860168458303",
           "publishedOn": "2023-11-27T08:10:18.000Z",
-          "wordCount": 588,
+          "wordCount": 617,
           "title": "给 Spring Web 开发者开发了一款 IDEA 插件：Feign-Helper，为什么叫 Feign-Helper ？因为核心功能其实是Spring Cloud Feign 接口与和对应的 Controller 源码间...",
           "imageUrl": null
         },
@@ -1129,7 +1129,7 @@
           "description": "实现了一款目前AI还做不到的文字转图片应用，灵感来源于微信读书，已上线，支持各种模板。可前来体验，今天会发博客，让大家对它有个更清晰的认识。线上体验https://anyphoto.space/playground",
           "link": "https://juejin.cn/pin/7305576845100924928",
           "publishedOn": "2023-11-27T00:51:20.000Z",
-          "wordCount": 506,
+          "wordCount": 535,
           "title": "实现了一款目前AI还做不到的文字转图片应用，灵感来源于微信读书，已上线，支持各种模板。可前来体验，今天会发博客，让大家对它有个更清晰的认识。线上体验http...",
           "imageUrl": null
         },
@@ -1139,7 +1139,7 @@
           "description": "等会北京了，好好开发后续功能",
           "link": "https://juejin.cn/pin/7304997932444286985",
           "publishedOn": "2023-11-26T06:34:07.000Z",
-          "wordCount": 503,
+          "wordCount": 532,
           "title": "等会北京了，好好开发后续功能",
           "imageUrl": null
         },
@@ -1149,7 +1149,7 @@
           "description": "语雀？你怎么回事儿，又崩了啊",
           "link": "https://juejin.cn/pin/7304558952179335204",
           "publishedOn": "2023-11-24T02:20:51.000Z",
-          "wordCount": 502,
+          "wordCount": 531,
           "title": "语雀？你怎么回事儿，又崩了啊",
           "imageUrl": null
         },
@@ -1161,16 +1161,6 @@
           "publishedOn": "2023-11-23T13:52:07.000Z",
           "wordCount": 466,
           "title": "[7073670907851440160#新人报道#]",
-          "imageUrl": null
-        },
-        {
-          "id": "7304263961238880291",
-          "author": "有毒的水母",
-          "description": "有没有人用rpgmaker业余做点小游戏的，一起交流呀[调皮]",
-          "link": "https://juejin.cn/pin/7304263961238880291",
-          "publishedOn": "2023-11-23T02:06:16.000Z",
-          "wordCount": 503,
-          "title": "有没有人用rpgmaker业余做点小游戏的，一起交流呀[调皮]",
           "imageUrl": null
         }
       ]
