@@ -23,7 +23,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": 1010,
+          "wordCount": 1011,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         },
@@ -877,6 +877,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7305359585107738661",
+          "author": "慕仲卿",
+          "description": "最近在做的一个前端小项目，需要一种比较炫酷的字体，在网上找到了iconfont中的刀隶体，感觉还不错，本文记录了如何在前端项目中使用这种字体的步骤。\n1. 找到刀隶体生成的网站\n访问下面这个网站就可以了：\n阿里妈妈刀隶体字体\nhttps://www.iconfont.cn/fonts/detail?spm=a313x.fonts_index.i1.d9df05512.694c3a81FVS3lT&cnid=1ntUmJ7Q4Jhw\n2. 生成自己想要的字并下载到本地\n找到文本输入框\n\n然后输入自己想要展示的字体：我是一只小青蛙，最爱说笑话\n\n最后点击下载子集按钮\n\n下载好的压缩包：\n\n将压缩包中的内容复制到剪切板：\n\n3. 项目中引入\n在项目中创建管理字体的目录\nmkdir -p src/assets/font\n\n然后到font目录下粘贴复制的字体文件夹\n最后在项目的根样式文件中(一般来说是src/index.css)引入新字体:\n@font-face {\n  font-family: \"DaoLiTi\";\n  font-weight: 400;\n  src: url(\"./assets/font/jHsMvOZ7UDEO/XBddIp4y0BmM.woff2\") format(\"woff2\"),\n       url(\"./assets/font/jHsMvOZ7UDEO/XBddIp4y0BmM.woff\") format(\"woff\");\n  font-display: swap;\n}\n\nbody {\n  font-family: 'DaoLiTi', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',\n    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',\n    sans-serif;\n}\n\n4. 新字体使用及效果\n<span style={{fontFamily: 'DaoLiTi'}}>我是一只小青蛙，最爱说笑话</span>\n\njcode\n5. 注意点\nDaoLiTi这个名字是可以自定义的，但是在样式文件中的无论什么地方使用的时候都不能少了引号。\n此外就是除了“我是一只小青蛙，最爱说笑话”，其他字是没有刀隶体效果的！",
+          "link": "https://juejin.cn/post/7305359585107738661",
+          "publishedOn": "2023-11-26T16:04:05.000Z",
+          "wordCount": 891,
+          "title": "阿里妈妈刀隶体使用",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7304991873415626788",
           "author": "田八",
           "description": "theme: juejin\nhighlight: agate\n第一次听说MutationObserver的时候，大家应该都和我是一样的，通过Vue的nextTick的实现来认识的；\n后来又有一个面试题，说是如何将一个任务放到微队列中执行，网上的解答方案中也会出现MutationObserver；\n但是直到现在我都很少看到有人去讲这个API，当我深入这个API之后，我发现这个API真很有用，所以他不讲，你不讲，那我来讲吧。\n什么是 MutationObserver\n可以看MDN的介绍MutationObserver：\n\n简单点来说，MutationObserver是一个构造函数，可以用来监听某个节点的变化，当节点发生变化时，可以执行一些回调函数。\n但是它不会立即执行，首先你需要调用MutationObserver的observe方法，传入你想要监听的节点，以及一些配置，然后当节点发生变化时，就会执行你传入的回调函数。\nMutationObserver 的使用\nMutationObserver的使用非常简单，直接看代码：\nconst observer = new MutationObserver((mutations) => {\n  console.log(mutations);\n});\n\nobserver.observe(document.body, {\n  childList: true,\n  subtree: true,\n  attributes: true,\n  characterData: true,\n});\n\n上面的代码中，我们创建了一个MutationObserver实例，然后调用observe方法，传入了document.body，以及一些配置，然后当document.body发生变化时，就会执行我们传入的回调函数。\n\n知道大家都不爱看文档，那我就直接开始整活了…",
@@ -884,16 +894,6 @@
           "publishedOn": "2023-11-25T15:46:39.000Z",
           "wordCount": 1908,
           "title": "MutationObserver 都被传烂了，你怎么到现在都还不会？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7304932252827287604",
-          "author": "写前端的刻猫猫",
-          "description": "theme: smartblue\n75% of my life is programming, 5% is debugging, 10% is sleep, 5% eating meals, 1% socializing, 3% snacking, 1% wondering the meaning of life\n写这篇文章的目的在于分享一些个人觉得质量比较高的前端资源，可以减少初学者面对学习资源的信息差，保持输入的是流行和前沿的技术，资源不限于 知名开发者 / 博主，文档，视频，书籍，演示网站，工具 等，除了书籍外，资源都是免费 / 开源的， 同时尽量保证资源是支持中英文的，如果只有英文但啃得费劲，可以借助类似 沉浸式翻译 之类的工具提高阅读效率和理解文章。\n文字很容易被误解，所以写作时，最好写得友好一点，笔者这里只是抛砖引玉，初探行业的一角，如有未提及的领域，欢迎各位看官在评论区补充其他高质量资源，这样文章也可以持续不断更新。 文章篇幅较长，建议结合目录跳转使用。\n题外话\n作为一名初入行的开发者，深刻体会到这行业不仅有较高的门槛，即便是入行之后，也需要不断保持学习来适应技术的进步和提高自身的竞争力，以下是个人参加工作以来的一些体会：\n问别人前要先问问自己，学会如何提问，不要做伸手党 - 提问的智慧\n培养自学能力，没有自学能力的人是没有未来的\n代码不能写的太烂吧，不然会被同事鄙视的 (别骂了，别骂了，这坨屎是我写的，大佬带带💔)，感到吃力要及时弥补差距\n学习需要持之以恒，半途而废最可耻，先有学习的习惯，再谈学习的效果。想维持长期的热情，需要给自己找到持续的正向反馈。\n学好英语，因为先进的生产力工具掌握在英文区，打破信息差\n善于发现问题，解决问题, 从问题中成长 是每位开发者需要锻炼的能力，善于使用 Google,  StackOverflow，和 ChatGPT 能帮助…",
-          "link": "https://juejin.cn/post/7304932252827287604",
-          "publishedOn": "2023-11-25T11:58:35.000Z",
-          "wordCount": 3055,
-          "title": "2023最全高质量前端资源分享",
           "imageUrl": null
         },
         {

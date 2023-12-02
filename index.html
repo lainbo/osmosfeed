@@ -2494,6 +2494,67 @@ const restaurant &#x3D; {
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7305359585107738661"
+                        open
+                      >
+                        <summary class="article-expander__title">阿里妈妈刀隶体使用</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7305359585107738661">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>最近在做的一个前端小项目，需要一种比较炫酷的字体，在网上找到了iconfont中的刀隶体，感觉还不错，本文记录了如何在前端项目中使用这种字体的步骤。
+1. 找到刀隶体生成的网站
+访问下面这个网站就可以了：
+阿里妈妈刀隶体字体
+https://www.iconfont.cn/fonts/detail?spm&#x3D;a313x.fonts_index.i1.d9df05512.694c3a81FVS3lT&amp;cnid&#x3D;1ntUmJ7Q4Jhw
+2. 生成自己想要的字并下载到本地
+找到文本输入框
+
+然后输入自己想要展示的字体：我是一只小青蛙，最爱说笑话
+
+最后点击下载子集按钮
+
+下载好的压缩包：
+
+将压缩包中的内容复制到剪切板：
+
+3. 项目中引入
+在项目中创建管理字体的目录
+mkdir -p src/assets/font
+
+然后到font目录下粘贴复制的字体文件夹
+最后在项目的根样式文件中(一般来说是src/index.css)引入新字体:
+@font-face {
+  font-family: &quot;DaoLiTi&quot;;
+  font-weight: 400;
+  src: url(&quot;./assets/font/jHsMvOZ7UDEO/XBddIp4y0BmM.woff2&quot;) format(&quot;woff2&quot;),
+       url(&quot;./assets/font/jHsMvOZ7UDEO/XBddIp4y0BmM.woff&quot;) format(&quot;woff&quot;);
+  font-display: swap;
+}
+
+body {
+  font-family: &#x27;DaoLiTi&#x27;, -apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, &#x27;Roboto&#x27;, &#x27;Oxygen&#x27;,
+    &#x27;Ubuntu&#x27;, &#x27;Cantarell&#x27;, &#x27;Fira Sans&#x27;, &#x27;Droid Sans&#x27;, &#x27;Helvetica Neue&#x27;,
+    sans-serif;
+}
+
+4. 新字体使用及效果
+我是一只小青蛙，最爱说笑话
+
+jcode
+5. 注意点
+DaoLiTi这个名字是可以自定义的，但是在样式文件中的无论什么地方使用的时候都不能少了引号。
+此外就是除了“我是一只小青蛙，最爱说笑话”，其他字是没有刀隶体效果的！</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -2593,36 +2654,6 @@ observer.observe(document.body, {
 
 知道大家都不爱看文档，那我就直接开始整活了…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7304932252827287604"
-                        open
-                      >
-                        <summary class="article-expander__title">2023最全高质量前端资源分享</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7304932252827287604">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: smartblue
-75% of my life is programming, 5% is debugging, 10% is sleep, 5% eating meals, 1% socializing, 3% snacking, 1% wondering the meaning of life
-写这篇文章的目的在于分享一些个人觉得质量比较高的前端资源，可以减少初学者面对学习资源的信息差，保持输入的是流行和前沿的技术，资源不限于 知名开发者 / 博主，文档，视频，书籍，演示网站，工具 等，除了书籍外，资源都是免费 / 开源的， 同时尽量保证资源是支持中英文的，如果只有英文但啃得费劲，可以借助类似 沉浸式翻译 之类的工具提高阅读效率和理解文章。
-文字很容易被误解，所以写作时，最好写得友好一点，笔者这里只是抛砖引玉，初探行业的一角，如有未提及的领域，欢迎各位看官在评论区补充其他高质量资源，这样文章也可以持续不断更新。 文章篇幅较长，建议结合目录跳转使用。
-题外话
-作为一名初入行的开发者，深刻体会到这行业不仅有较高的门槛，即便是入行之后，也需要不断保持学习来适应技术的进步和提高自身的竞争力，以下是个人参加工作以来的一些体会：
-问别人前要先问问自己，学会如何提问，不要做伸手党 - 提问的智慧
-培养自学能力，没有自学能力的人是没有未来的
-代码不能写的太烂吧，不然会被同事鄙视的 (别骂了，别骂了，这坨屎是我写的，大佬带带💔)，感到吃力要及时弥补差距
-学习需要持之以恒，半途而废最可耻，先有学习的习惯，再谈学习的效果。想维持长期的热情，需要给自己找到持续的正向反馈。
-学好英语，因为先进的生产力工具掌握在英文区，打破信息差
-善于发现问题，解决问题, 从问题中成长 是每位开发者需要锻炼的能力，善于使用 Google,  StackOverflow，和 ChatGPT 能帮助…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4476,8 +4507,8 @@ AI 是一个新事物，带来了很多前所未有的问题。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7070322688">
-        <time id="build-timestamp" datetime="2023-12-02T12:55:13.499Z">2023-12-02T12:55:13.499Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7071162640">
+        <time id="build-timestamp" datetime="2023-12-02T15:53:00.932Z">2023-12-02T15:53:00.932Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
