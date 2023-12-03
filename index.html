@@ -1487,6 +1487,66 @@ Chrome 导航插件，提高你的工作效率</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7306447498994303016"
+                        open
+                      >
+                        <summary class="article-expander__title">一种更好的前端组件结构：组件树</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7306447498994303016">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>本文翻译自 A Better Frontend Component Structure: Component Trees，作者：William Bernting， 略有删改。
+
+自很久以前遵循互联网上的建议以来，我一直采用了某种“能工作就行”的组件结构。
+场景
+让我们首先想象一个简化的前端应用程序目录结构，如下所示：
+public/
+  some-image.jpg
+pages/
+  index.tsx
+
+components/
+  Heading.tsx
+  Logo.tsx
+  Layout.tsx
+  BoxContainer.tsx
+  Footer.tsx
+
+问题所在
+上面的简单应用程序结构很难解释这些组件之间是如何相互作用的。
+例如，您可能会猜测Layout.tsx导入Footer.tsx和Header.tsx，而这又可能导入BoxContainer.tsx。但这仅仅从文件结构上是不清楚的。
+更糟糕的是，随着应用程序的增长，组件列表将变得越来越难以推断它们是如何依赖的。
+简单方法：扁平组件结构
+通常首先想到的是将组件组织到语义正确的目录中。
+下面是这种方法的典型结果：
+public/
+  some-image.jpg
+pages/
+  index.tsx
+
+components/
+  layout/
+    Layout.tsx
+    Heading.tsx
+    Footer.tsx
+  common/
+    Heading.tsx
+    BoxContainer.tsx
+
+问题#1：很难扩展好名字
+作为一个开发人员，您会尝试为每个目录创建好的名称和分类，如containers、headings等。
+问题是您需要为目录考虑更多的分类，而不仅仅是组件名称。
+你经常会忍不住说，“我就把这个移到公共目录吧。”拥有common目录是你所追求的目标相悖的反模式，…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7306450197629370387"
                         open
                       >
@@ -1910,6 +1970,146 @@ function getVerifyCode() {
 // 支持base64数据或本地图片路径
 async function getIma…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;18
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7306062725212930086"
+                        open
+                      >
+                        <summary class="article-expander__title">前端离线地图 - 下载瓦片地图</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7306062725212930086">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: juejin
+前言
+离线地图？接到需要做离线地图这个需求的时候我还在问公司的负责人要腾讯地图的key。结果晚上开会就突然说项目需要内网部署，必须要使用离线地图。一脸懵逼的我心想幸好还没有开始接腾讯地图（无用功没做）。
+经过我两天的调研，基本的离线地图方案就是下载地图瓦片来使用第三方库将它们拼接起来。达到显示离线地图的效果。其中地图瓦片不可能放到客户端，需要提前下载好图片。然后放到服务器通过启动一个http-server来实现文件静态访问。
+目录
+如何下载地图瓦片
+
+软件下载
+瓦片层级解释
+如何启动本地http-server来使得瓦片地图可以访问
+如何下载瓦片地图
+先说软件下载某度网盘下载。7天有效。
+链接: https://pan.baidu.com/s/1hzQjtccl6uDUPEPm4tl4kA  密码: la63
+
+软件下载
+打开以上链接你下载完成之后会是一个rar的压缩包，解压之后得到如下。并点击红框文件启动。
+
+启动之后你会看到如下界面。我这边想要拉取高德地图的瓦片，故如图选择高德地图-街道图。
+
+至此我们就可以开始下载。下载前我们需要了解下地图级别这个选项
+瓦片层级解释
+级别
+比例尺
+
+
+
+
+19级
+20m
+
+
+18级
+50m
+
+
+17级
+100m
+
+
+16级
+200m
+
+
+15级
+500m
+
+
+14级
+1km
+
+
+13级
+2km
+
+
+12级
+5km
+
+
+11级
+10km
+
+
+10级
+20km
+
+
+9级
+25km
+
+
+8级
+50km
+
+
+7级
+100km
+
+
+6级
+200km
+
+
+5级
+500km
+
+
+4级
+1000km
+
+
+3级
+2000km
+
+
+2级
+5000km
+
+
+1级
+10000km
+
+
+
+由上表可见，如果想比例尺越小则级别越高，比例尺越大则级别越小。说人话就是你想要数据越详细则就需要级别越高，数据越小则级别越小。
+通过选择级别可以看到明显区别⬇️⬇️
+
+
+如上两张图可见。下载0-8的级别的综合才1972张图片瓦片，而比例尺越高的9-10就有27466张图片瓦片。
+自己可以根据需要下载。我们下载完成之后是如下的目录结构。
+mappabc/roadmap/
+全局安装http-server然后使用终端进入该目录运行
+// 全局安装http-server
+npm i http-server  -g
+// 如果是mac可能需要加sudo
+
+// 安装完成之后字节在上文提到的目录运行
+http-server
+
+如果你是第一次执行大概率结果如下
+
+至此下载瓦片地图的操作结束。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2476,25 +2676,6 @@ export default defineConfig({
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231126/t20231126_526499044.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市忠县发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231126/t20231126_526499044.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>忠县气象台2023年11月26日15时40分继续发布“大雾黄色预警信号”，预计11月26日23时至27日10时，涂井乡、石宝镇、汝溪镇、金声乡、野鹤镇、磨子土家族乡、乌杨街道、石子乡、白公街道、复兴镇、东溪镇、忠州街道、黄金镇、永丰镇、花桥镇、三汇镇、马灌镇、官坝镇、金鸡镇、石黄镇、兴峰乡、新生街道、白石镇、任家镇、双桂镇、拔山镇、洋渡镇、善广乡、新立镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -2635,129 +2816,6 @@ DaoLiTi这个名字是可以自定义的，但是在样式文件中的无论什�
                             <span class="media-object__text">
                               <span>等会北京了，好好开发后续功能</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-25 datetime="2023-11-25T15:46:39.000Z">2023-11-25</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-25 datetime="2023-11-25T15:46:39.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7304991873415626788"
-                        open
-                      >
-                        <summary class="article-expander__title">MutationObserver 都被传烂了，你怎么到现在都还不会？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7304991873415626788">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: juejin
-highlight: agate
-第一次听说MutationObserver的时候，大家应该都和我是一样的，通过Vue的nextTick的实现来认识的；
-后来又有一个面试题，说是如何将一个任务放到微队列中执行，网上的解答方案中也会出现MutationObserver；
-但是直到现在我都很少看到有人去讲这个API，当我深入这个API之后，我发现这个API真很有用，所以他不讲，你不讲，那我来讲吧。
-什么是 MutationObserver
-可以看MDN的介绍MutationObserver：
-
-简单点来说，MutationObserver是一个构造函数，可以用来监听某个节点的变化，当节点发生变化时，可以执行一些回调函数。
-但是它不会立即执行，首先你需要调用MutationObserver的observe方法，传入你想要监听的节点，以及一些配置，然后当节点发生变化时，就会执行你传入的回调函数。
-MutationObserver 的使用
-MutationObserver的使用非常简单，直接看代码：
-const observer &#x3D; new MutationObserver((mutations) &#x3D;&gt; {
-  console.log(mutations);
-});
-
-observer.observe(document.body, {
-  childList: true,
-  subtree: true,
-  attributes: true,
-  characterData: true,
-});
-
-上面的代码中，我们创建了一个MutationObserver实例，然后调用observe方法，传入了document.body，以及一些配置，然后当document.body发生变化时，就会执行我们传入的回调函数。
-
-知道大家都不爱看文档，那我就直接开始整活了…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7304975276445057060"
-                        open
-                      >
-                        <summary class="article-expander__title">前端工程化 → 深入SDK架构设计</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7304975276445057060">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: channing-cyan
-highlight: vs2015
-前置知识
-SDK 的全称是 Software Development Kit，翻译过来是软件开发工具包，这是一种被用来辅助开发某类软件而编写的特定软件包，其主要是为宿主系统提供服务的。
-接口设计原则
-单一职责原则(Single Responsibility Principle：SRP)
-
-定义：应该有且仅有一个原因引起类的变化
-应该根据实际业务情况而定，关注变化点，在实际使用时，类很难做到职责单一，但是接口的职责应该尽量单一
-里氏替换原则(Liskov Substitution Principle：LSP)
-
-定义：所有引用基类的地方必须可以透明的使用器子类的对象。其目的是为良好的继承定义了一个规范
-规范：
-
-在类中调用其他类时务必要使用父类或接口，如果不能使用父类或接口，则说明了类的设计已经违背开LSP原则
-子类必须完全实现父类的方法
-子类可以拓展自身的属性和方法
-覆盖或重写父类的方法时输出的结果可以被缩小，输入的参数可以被放大
-依赖倒置原则(Dependence Inversion Principle：DIP)
-
-定义：High level modules should not depend upon low level modules.Both should depend upon abstractions.Abstractions should not depend upon details.Details should depend upon abstractions：面向接口编程
-具体含义拆分
-
-高层模块不应该依赖于低层模块。两者都应该依赖其抽象
-抽象不应该依赖于细节
-细节应该依赖于抽象
-接口隔离原则
-
-定义：
-
-客户端不应该依赖其不需要的接口
-类间的依赖关系应该建立在最小的接口之上
-…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4527,8 +4585,8 @@ AI 是一个新事物，带来了很多前所未有的问题。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7075279627">
-        <time id="build-timestamp" datetime="2023-12-03T06:52:48.167Z">2023-12-03T06:52:48.167Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7076079308">
+        <time id="build-timestamp" datetime="2023-12-03T09:52:52.390Z">2023-12-03T09:52:52.390Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
