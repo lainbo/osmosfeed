@@ -23,7 +23,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": 1015,
+          "wordCount": 1018,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "剪映中的视频特效虽多，其实就两类，一类改变原始像素，一类叠加混合，本文通过精简的源码和精致的案例给大家介绍具体如何实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/video-effect-js-filter-pixijs-webgl-3d/",
           "publishedOn": "2023-11-19T15:12:20.000Z",
-          "wordCount": 1236,
+          "wordCount": 1235,
           "title": "剪映APP的视频特效如何在Web中JS实现",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "应该是国内第一篇专门介绍用mp4box.js和VideoDecoder方法解码MP4视频序列帧的文章了。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/mp4box-js-webcodecs-mp4-canvas/",
           "publishedOn": "2023-11-14T16:37:18.000Z",
-          "wordCount": 1254,
+          "wordCount": 1253,
           "title": "mp4box.js加WebCodecs 解码MP4视频帧并渲染",
           "imageUrl": null
         }
@@ -177,7 +177,7 @@
           "description": "pdf2htmlEX 是一个值得推荐的 PDF 转 HTML 工具，https://github.com/pdf2htmlEX/pdf2htmlEX，它生成的内容还原度非常高，几乎与原 PDF 一致。\n我去扒了下这个项目的历史，https://github.com/coolwanglu/pdf2htmlEX/wiki/Author%27s-Words，作者因朋友抱怨没有一个在线 PDF viewer，于是他就撸了一个将 PDF 转成 HTML 的“玩具”，时间是 2013 年，也有十年历史了。\npdf2htmlEX 背后使用的是 poppler 这个渲染库，而 poppler 背后使用的是  xpdf-3.0，它是一个免费的 PDF 查看器和工具包，包括文本提取器、图像转换器、HTML 转换器等。Chrome 自家也撸了一个 PDF 渲染引擎，叫做 pdfium，项目地址在这里：https://pdfium.googlesource.com/pdfium\n项目在 2018 年就被作者归档了，为了可以让社区更好地贡献代码，新开了一个 repo 延续，在这个 repo 中，作者对打包过程做了封装，并且锁定了两个重要依赖的版本（poppler 和 Fontforge）。\n我在 Mac 下一直没有成功安装，看到有人提了一个兼容的 PR，状态还是 work in progress：https://github.com/pdf2htmlEX/pdf2htmlEX/pull/18，都五年了，应该是没有下文了😂",
           "link": "https://m.okjike.com/originalPosts/65681d04c9ed8caff000ff02",
           "publishedOn": "2023-11-30T05:26:28.000Z",
-          "wordCount": 570,
+          "wordCount": 567,
           "title": "发布了: pdf2htmlEX 是一个值得推荐的 PDF 转 HTML 工具，https://github.com/pdf2htmlEX/pdf2htmlEX，它生成的内容还原度非常高，几乎与原 PDF 一致。 我去扒了...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FoOxF-r_StpSAUGMX5gRLl1jd-cQv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -718,7 +718,7 @@
         },
         {
           "id": "https://juejin.cn/post/7307181589272231972",
-          "author": "Jianei",
+          "author": "阿昀",
           "description": "省流地址：https://sinan.fun\n萌芽\n事情是这样的，Laravel 框架对前端构建的支持越来越友好，很早就关注到官方文档中提及到了 Webpack、Vue、React、Vite 等相关技术结合框架的应用。而我一直都是在跟随着框架的升级，来更新自身的技术栈。所以，便有了学习下前端的想法。\n不得不感叹现在前端技术的迭代速度，从 Webpack 到 Vite，Vue2 Options 到 Vue3 Composition，tailwind 到 unocss... 对于使只涉及jquery、layui等相关前端知识的后端震大惊，都已经卷到这种程度了吗？\n在b站过了一遍 Vue 视频后，感觉对于各种招式胸有成竹。那不如，实践一下，从零实现一个技术社区？\n开始\n既然是自己当产品来设计，那就没什么讲究了，界面不丑，得用最新的技术栈，然后能跑起来就行。\n分析自身平时关注内容的一些习惯：「找自身技术栈更新资讯」、「技术社区寻找问题思路」、「总结踩过的一些坑」、「收藏整理一些资源」…社区MVP版的想法，便是能够快速地聚合各渠道技术资讯，有更新时能够进行消息通知；能够整理相关的技术文档，类似于Dash；对于常用的网址能够进行简单地收纳整理。\n开始最为头疼的是完全不懂设计，比如内容发布页希望能够发布帖子、rss源、收纳开源库文档、发布导航链，但我的设计图可能长这样\n\n参考 Reddit，调整一下\n\n界面设计是很头疼的部分，常在颜色、边距来回调，可能实现后改来改去又回到了初版，又或者是升级 UI 框架样式产生了差异... 会出现各种预期以外的问题，如果有懂设计的朋友可以多提些建议，thks！\n\n效果图\n全局快捷工具栏，使用 commmad + k 、ctrl+k或者 /  快捷键唤起\n\n首页\n\n首页-暗黑模式\n\n详情页\n\n详情页-暗黑模式\n\nRSS 信息展示\n\nRSS 信息展示-暗黑模式\n\n用户资料页\n\n用户资料页-暗黑模式\n\n欢迎掘金朋友们前来观光👏",
           "link": "https://juejin.cn/post/7307181589272231972",
           "publishedOn": "2023-12-01T03:42:10.000Z",
