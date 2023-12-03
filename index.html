@@ -1587,6 +1587,95 @@ Manticore Search 是一个易于使用的开源快速搜索数据库，是 Elast
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7306404340679557170"
+                        open
+                      >
+                        <summary class="article-expander__title">前端接口容灾</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7306404340679557170">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>开篇
+你说，万一接口挂了会怎么样？
+还能咋样，白屏呗。
+有没有不白屏的方案？
+有啊，还挺简单的。
+容我细细细细分析。
+原因就是接口挂了，拿不到数据了。那把数据储存起来就可以解决问题。
+思考
+存哪里?
+第一时间反应浏览器本地存储，想起了四兄弟。
+选型对比
+特性
+cookie
+localStorage
+sessionStorage
+indexDB
+
+
+
+
+数据生命周期
+服务器或者客户端都可以设置、有过期时间
+一直存在
+关闭页面就清空
+一直存在
+
+
+数据储存大小
+4KB
+5MB
+5MB
+动态，很大 大于250MB
+
+
+与服务器通信
+每次都带在header中
+不带
+不带
+不带
+
+
+兼容性
+都支持
+都支持
+都支持
+IE不支持，其他主流都支持
+
+
+
+考虑到需要存储的数据量，5MB 一定不够的，所以选择了 IndexDB。
+考虑新用户或者长时间未访问老用户，会取不到缓存数据与陈旧的数据。
+因此准备上云，用阿里云存储，用 CDN 来保障。
+总结下：线上 CDN、线下 IndexDB。
+整体方案
+整体流程图
+
+CDN
+先讲讲线上 CDN。
+通常情况下可以让后端支撑，本质就是更新策略问题，这里不细说。
+我们讲讲另外一种方案，单独启个 Node 服务更新 CDN 数据。
+流程图
+
+劫持逻辑
+劫持所有接口，判断接口状态与缓存标识。从而进行更新数据、获取数据、缓存策略三种操作
+通过配置白名单来控制接口存与取
+axios.interceptors.response.use(
+      async (resp) &#x3D;&gt; {
+        const { config } &#x3D; resp
+        const { url } &#x3D; config
+        // 是否有缓存tag，用于更新CDN数据。目前是定时服务在跑，访问页面带上tag
+        if (this.hasCdnTag() …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -4177,67 +4266,6 @@ Yung Pueblo
                 </section>
               </section>
             </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7303360094426546216"
-                        open
-                      >
-                        <summary class="article-expander__title">低代码在云音乐数据业务中的落地实践与思考</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7303360094426546216">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>本文作者：凯尔希
-本文主要是介绍下云音乐低代码研发方式，在中后台领域的落地实战路径、成果总结
-前言
-笔者负责一个业务型的前端团队，支撑云音乐数据相关的B端产品，需求吞吐量一直是一个关注的重点
-
-但想要提升团队交付量，无非两个方向，增加人手，研发提效，加人显然不符合当前的经济环境，并且很有可能演变成 “面多加水，水多加面” 的人力黑洞，通过低代码的方式，对现有生产过程的进行改造，进而提升生产力，是一个相对可行的方案
-1.业务痛点
-1.1 产品线较多，跨部门协同效率很低
-由于是跨部门支撑，缺乏其他职能角色，对接的流程比较乱，且后端团队规模远超前端，各业务组竞相锁定人力，团队割裂，目标混乱，前端很难做出价值
-1.2 团队水位低，需求吞吐量很难提升
-基层成员因能力受限，不能有效参与日常业务，需求大量积压在头部成员手中，导致交付吞吐量很难提升
-
-2.如何将低代码落地到业务中
-2.1 外部协作流程重构
-2.1.1 分类分级保障标准
-我们将过去混乱的产品线进行分类，将保障标准与业务价值锚定，将前端资源进行聚焦
-
-
-2.1.2 研发元信息标准化
-为了进一步约束上游需求侧的产出，理清合作边界，减少业务侧对前端的强绑定，我们依托内部的技术产品对研发流程进行了元信息标准化，为低代码落地创造 “技术条件”
-Overmind：云音乐自研产品，具备排期、拆分任务等事项管理，人力可视化的能力
-OX：云音乐自研产品，具备将 Java 代码解析为接口文档的能力，接口即文档
-
-2.1.3 双周评审PK机制
-为了保证上述方案能够落地，前端主导发起双周评审PK，需求先在后端内部PK，再根据 “分级保障标准”，一部被分流给后端搭建，一部分被挤出，我们会为其提供必要的使用培训、落地辅导，为低代码落地创造 “机制保障”
-
-2.2 团队研发模式转型
-在处理完流程机制上的问题后，需要对内进行研发模式转型
-2.2.1 混合式…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -4585,8 +4613,8 @@ AI 是一个新事物，带来了很多前所未有的问题。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7076992091">
-        <time id="build-timestamp" datetime="2023-12-03T12:55:35.272Z">2023-12-03T12:55:35.272Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7077872701">
+        <time id="build-timestamp" datetime="2023-12-03T15:53:07.906Z">2023-12-03T15:53:07.906Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

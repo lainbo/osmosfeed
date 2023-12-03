@@ -23,7 +23,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": 1018,
+          "wordCount": 1016,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/",
           "publishedOn": "2023-11-21T16:14:41.000Z",
-          "wordCount": 1297,
+          "wordCount": 1296,
           "title": "cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "应该是国内第一篇专门介绍用mp4box.js和VideoDecoder方法解码MP4视频序列帧的文章了。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/mp4box-js-webcodecs-mp4-canvas/",
           "publishedOn": "2023-11-14T16:37:18.000Z",
-          "wordCount": 1253,
+          "wordCount": 1252,
           "title": "mp4box.js加WebCodecs 解码MP4视频帧并渲染",
           "imageUrl": null
         }
@@ -177,7 +177,7 @@
           "description": "pdf2htmlEX 是一个值得推荐的 PDF 转 HTML 工具，https://github.com/pdf2htmlEX/pdf2htmlEX，它生成的内容还原度非常高，几乎与原 PDF 一致。\n我去扒了下这个项目的历史，https://github.com/coolwanglu/pdf2htmlEX/wiki/Author%27s-Words，作者因朋友抱怨没有一个在线 PDF viewer，于是他就撸了一个将 PDF 转成 HTML 的“玩具”，时间是 2013 年，也有十年历史了。\npdf2htmlEX 背后使用的是 poppler 这个渲染库，而 poppler 背后使用的是  xpdf-3.0，它是一个免费的 PDF 查看器和工具包，包括文本提取器、图像转换器、HTML 转换器等。Chrome 自家也撸了一个 PDF 渲染引擎，叫做 pdfium，项目地址在这里：https://pdfium.googlesource.com/pdfium\n项目在 2018 年就被作者归档了，为了可以让社区更好地贡献代码，新开了一个 repo 延续，在这个 repo 中，作者对打包过程做了封装，并且锁定了两个重要依赖的版本（poppler 和 Fontforge）。\n我在 Mac 下一直没有成功安装，看到有人提了一个兼容的 PR，状态还是 work in progress：https://github.com/pdf2htmlEX/pdf2htmlEX/pull/18，都五年了，应该是没有下文了😂",
           "link": "https://m.okjike.com/originalPosts/65681d04c9ed8caff000ff02",
           "publishedOn": "2023-11-30T05:26:28.000Z",
-          "wordCount": 567,
+          "wordCount": 570,
           "title": "发布了: pdf2htmlEX 是一个值得推荐的 PDF 转 HTML 工具，https://github.com/pdf2htmlEX/pdf2htmlEX，它生成的内容还原度非常高，几乎与原 PDF 一致。 我去扒了...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FoOxF-r_StpSAUGMX5gRLl1jd-cQv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -254,7 +254,7 @@
           "description": "36. [[https://chat.openai.com/g/g-2D5N2UfMn-wo-cuo-liao][我错了]] :: 真诚道歉\n37. [[https://chat.openai.com/g/g-5HkDxo4K2-yi-dan-ci-yi-gu-shi][一单词一故事]] :: 谐音故事记忆法\n38. [[https://chat.openai.com/g/g-fetheHd6f-gong-wen-bi-gan-zi][公文笔杆子]] :: 公文写作\n39. [[https://chat.openai.com/g/g-GyuL9XmsN-mo-neng-de-dalle][万能的Dalle]] :: 批量生成图\n40. [[https://chat.openai.com/g/g-O9GOjQhRC-feng-kuang-xing-qi-si][疯狂星期四]] :: KFC 段子",
           "link": "https://m.okjike.com/originalPosts/65686b18c306429d1969ecb5",
           "publishedOn": "2023-11-30T10:59:36.000Z",
-          "wordCount": 545,
+          "wordCount": 535,
           "title": "发布了: 36. [[https://chat.openai.com/g/g-2D5N2UfMn-wo-cuo-liao][我错了]] :: 真诚道歉 37. [[https://chat.openai.com/g/g-5HkDxo4K2-yi-dan-ci-yi-gu-shi]...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -757,6 +757,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7306404340679557170",
+          "author": "政采云技术",
+          "description": "开篇\n你说，万一接口挂了会怎么样？\n还能咋样，白屏呗。\n有没有不白屏的方案？\n有啊，还挺简单的。\n容我细细细细分析。\n原因就是接口挂了，拿不到数据了。那把数据储存起来就可以解决问题。\n思考\n存哪里?\n第一时间反应浏览器本地存储，想起了四兄弟。\n选型对比\n特性\ncookie\nlocalStorage\nsessionStorage\nindexDB\n\n\n\n\n数据生命周期\n服务器或者客户端都可以设置、有过期时间\n一直存在\n关闭页面就清空\n一直存在\n\n\n数据储存大小\n4KB\n5MB\n5MB\n动态，很大 大于250MB\n\n\n与服务器通信\n每次都带在header中\n不带\n不带\n不带\n\n\n兼容性\n都支持\n都支持\n都支持\nIE不支持，其他主流都支持\n\n\n\n考虑到需要存储的数据量，5MB 一定不够的，所以选择了 IndexDB。\n考虑新用户或者长时间未访问老用户，会取不到缓存数据与陈旧的数据。\n因此准备上云，用阿里云存储，用 CDN 来保障。\n总结下：线上 CDN、线下 IndexDB。\n整体方案\n整体流程图\n\nCDN\n先讲讲线上 CDN。\n通常情况下可以让后端支撑，本质就是更新策略问题，这里不细说。\n我们讲讲另外一种方案，单独启个 Node 服务更新 CDN 数据。\n流程图\n\n劫持逻辑\n劫持所有接口，判断接口状态与缓存标识。从而进行更新数据、获取数据、缓存策略三种操作\n通过配置白名单来控制接口存与取\naxios.interceptors.response.use(\n      async (resp) => {\n        const { config } = resp\n        const { url } = config\n        // 是否有缓存tag，用于更新CDN数据。目前是定时服务在跑，访问页面带上tag\n        if (this.hasCdnTag() …",
+          "link": "https://juejin.cn/post/7306404340679557170",
+          "publishedOn": "2023-11-29T01:43:21.000Z",
+          "wordCount": 1956,
+          "title": "前端接口容灾",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7306375760331554828",
           "author": "前端小付",
           "description": "highlight: atom-one-dark\ntheme: cyanosis\n前言\n我们公司系统用的ui框架是antd，antd默认的下拉框只能显示名称，但是有些数据名称可能重复，比如说人名，这时候用户在选择的时候，希望看到更多的信息来区分，比如说工号或角色。\n基于上面情况我们系统封装了两套组件，下面和大家分享一下。\n表单实现\n背景\n因为我们系统使用的是antd，下拉框大部分场景都是配合Form组件使用。前段时间解决bug，看了一下antd form的源码，这里我自己简单实现一下Form组件，先让大家了解一下Form原理。\n\n看一下上面的代码，很多新手可能会感到好奇，Input组件加了一个FormItem后，怎么就把值设置到了Form表单里，还能通过form实例获取到Input的值，下面我们来实现一下。\n实现思路\nForm组件核心是在FormItem组件使用了React.cloneElement对子组件进行克隆，并且可以对组件实例注入属性。\nFormItem组件就是把onChange方法注入到子组件的属性里，然后拦截Input组件onChange事件，最后在方法里把值收集保存到form组件中。\nFormItem实现\nimport React from 'react';\nimport { FormContext } from './context';\nimport { useMemo } from 'react';\n\nfunction FormItem({ label, name, children }) {\n\n  // 从全局上下文中获取form已经收集的值和设置值的方法\n  const { values, setValues } = React.useContext(FormContext);\n\n  const childNodes = useMemo(() => R…",
@@ -885,16 +895,6 @@
           "wordCount": 891,
           "title": "阿里妈妈刀隶体使用",
           "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7303360094426546216",
-          "author": "网易云音乐技术团队",
-          "description": "本文作者：凯尔希\n本文主要是介绍下云音乐低代码研发方式，在中后台领域的落地实战路径、成果总结\n前言\n笔者负责一个业务型的前端团队，支撑云音乐数据相关的B端产品，需求吞吐量一直是一个关注的重点\n\n但想要提升团队交付量，无非两个方向，增加人手，研发提效，加人显然不符合当前的经济环境，并且很有可能演变成 “面多加水，水多加面” 的人力黑洞，通过低代码的方式，对现有生产过程的进行改造，进而提升生产力，是一个相对可行的方案\n1.业务痛点\n1.1 产品线较多，跨部门协同效率很低\n由于是跨部门支撑，缺乏其他职能角色，对接的流程比较乱，且后端团队规模远超前端，各业务组竞相锁定人力，团队割裂，目标混乱，前端很难做出价值\n1.2 团队水位低，需求吞吐量很难提升\n基层成员因能力受限，不能有效参与日常业务，需求大量积压在头部成员手中，导致交付吞吐量很难提升\n\n2.如何将低代码落地到业务中\n2.1 外部协作流程重构\n2.1.1 分类分级保障标准\n我们将过去混乱的产品线进行分类，将保障标准与业务价值锚定，将前端资源进行聚焦\n\n\n2.1.2 研发元信息标准化\n为了进一步约束上游需求侧的产出，理清合作边界，减少业务侧对前端的强绑定，我们依托内部的技术产品对研发流程进行了元信息标准化，为低代码落地创造 “技术条件”\nOvermind：云音乐自研产品，具备排期、拆分任务等事项管理，人力可视化的能力\nOX：云音乐自研产品，具备将 Java 代码解析为接口文档的能力，接口即文档\n\n2.1.3 双周评审PK机制\n为了保证上述方案能够落地，前端主导发起双周评审PK，需求先在后端内部PK，再根据 “分级保障标准”，一部被分流给后端搭建，一部分被挤出，我们会为其提供必要的使用培训、落地辅导，为低代码落地创造 “机制保障”\n\n2.2 团队研发模式转型\n在处理完流程机制上的问题后，需要对内进行研发模式转型\n2.2.1 混合式…",
-          "link": "https://juejin.cn/post/7303360094426546216",
-          "publishedOn": "2023-11-20T08:20:02.000Z",
-          "wordCount": 987,
-          "title": "低代码在云音乐数据业务中的落地实践与思考",
-          "imageUrl": null
         }
       ]
     },
@@ -969,7 +969,7 @@
           "description": "[7073670907851440160#新人报道#] 在最新的vscode 1.84.2发布笔记里面有一款白色的主题，还挺好看的，不知道有没有人知道主题名字",
           "link": "https://juejin.cn/pin/7307451430587400227",
           "publishedOn": "2023-12-01T05:37:56.000Z",
-          "wordCount": 463,
+          "wordCount": 460,
           "title": "[7073670907851440160#新人报道#] 在最新的vscode 1.84.2发布笔记里面有一款白色的主题，还挺好看的，不知道有没有人知道主题名字",
           "imageUrl": null
         },
