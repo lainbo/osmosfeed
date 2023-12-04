@@ -51,8 +51,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-04 datetime="2023-12-04T00:22:00.000Z">2023-12-04</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-04 datetime="2023-12-04T00:22:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-04 datetime="2023-12-04T02:02:00.000Z">2023-12-04</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-04 datetime="2023-12-04T02:02:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -67,6 +67,25 @@
                   <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231204/t20231204_526506996.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市巫溪县发布大雾黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231204/t20231204_526506996.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>巫溪县气象台2023年12月4日9时40分发布“大雾黄色预警信号”，预计12月4日10时至14时，我县文峰镇、上磺镇、古路镇、塘坊镇、菱角镇、尖山镇、朝阳镇、通城镇、双阳乡、胜利乡、城厢镇、宁厂镇、红池坝镇、长桂乡等海拔500米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -1768,6 +1787,111 @@ Free Now to 2023-12-07T16:00:00.000Z</span>
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7307146429004333094"
+                        open
+                      >
+                        <summary class="article-expander__title">three.js实现3D汽车展厅效果展示</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7307146429004333094">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>今天简单实现一个three.js的小Demo，加强自己对three知识的掌握与学习，只有在项目中才能灵活将所学知识运用起来，话不多说直接开始。
+项目搭建
+本案例还是借助框架书写three项目，借用vite构建工具搭建vue项目，搭建完成之后，用编辑器打开该项目，在终端执行 npm i 安装一下依赖，安装完成之后终端在安装 npm i three 即可。
+因为我搭建的是vue3项目，为了便于代码的可读性，所以我将three.js代码单独抽离放在一个组件当中，在App根组件中进入引入该组件。具体如下：
+
+  
+  
+
+ 
+
+import CarShowroom from &#x27;./components/CarShowroom.vue&#x27;;
+
+ 
+
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+
+初始化three.js代码
+three.js开启必须用到的基础代码如下：
+导入three库：
+import * as THREE from &#x27;three&#x27;
+
+初始化场景：
+const scene &#x3D; new THREE.Scene()
+
+初始化相机：
+// 创建相机
+const camera &#x3D; new THREE.PerspectiveCamera(40,window.innerWidth / window.innerHeight,0.1,1000)
+camera.position.set(4.25,1.4,-4.5)
+
+初始化渲染器：
+// 创建渲染器
+const renderer &#x3D; new THREE.WebGLRenderer…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;15
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7307057492059471899"
+                        open
+                      >
+                        <summary class="article-expander__title">终于把国外大佬的跨窗口量子纠缠粒子效果给肝出来</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7307057492059471899">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言
+上篇文章 尝试实现了国外大佬用Web做出来跨窗口渲染动画效果 - 掘金 反响很大，但是仅仅只是实现了跨窗口动画效果，严格说就没有动画，还有些bug和遗憾，尤其是粒子效果，得入three.js坑，怎么办？跳啊！
+硬肝了两天，实在肝不动了，看效果吧。
+第一版v2效果，大粒子，粒子数量较少：
+
+第二版v2.1，小粒子，粒子数量多：
+
+three.js
+官方文档：https://threejs.org/，中文文档：three.js docs
+我第一次接触three.js，之前只是听说过，比如能弄车展啥的，感觉很厉害，就想借此机会学习下，跳进坑里才发现，这坑也太深了。随便找个教程，里面各种名词就给我弄吐了。
+先按文档 three.js docs 画个立方体，跑起来了，但是我想要球体啊，还有粒子围着中心转，这么多api学不起啊，搜教程也是杂乱无章，无从学起，咋整？找现成的啊！
+看到官网有很多现成的例子，找了一个相近的：https://threejs.org/examples/#webgl_sprites，截了个静态图长这样：
+
+找源码：three.js/examples/webgl_sprites.html at master · mrdoob/three.js，copy到本地，代码就200行，用到的three api就几个，搜下api大概了解代码各部分的功能，基本都能看懂，然后删了多余功能，一个粒子绕球中心旋转功能就出来了。
+现在关于粒子移动、渲染、球体旋转缩放等变化api都已经基本搞懂了，然后就是痛苦折磨的计算调试了，不想再回忆了。
+动画效果的移动都是靠循环对象、计算坐标，改变粒子的position来实现的，感觉应该会有更好的现成api能简化这个过程，而且有缓冲、阻尼效果等。如果有更好的例子，欢迎大佬分享。
+总结下用到的api吧，就几个：
+构造方法
+THREE.Perspec…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >沸点 - 开发工具推荐</button>
                   <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
                 </h3>
@@ -1866,57 +1990,6 @@ Free Now to 2023-12-07T16:00:00.000Z</span>
 举例来说，假设你正在编写一个程序，需要解析一种特定格式的数据（这是你的 X 问题）。你决定使用某种特定的库来解析这种数据，但遇到困难（你现在的 Y 问题）。你可能会询问关于这个库的问题，而不是你实际面对的如何解析这种格式的数据的问题。通过构造出一个 X-Y 问题，你可能限制了别人能给出的帮助，因为他们被限制在你选择的方案，而不是实际问题。
 最好的方法是描述你的实际问题（X——如何解析特定格式的数据），然后才告诉别人你试图怎么解决（你的 Y——使用某个特定的库）。这样他们既可以在你遇到困难的方法上给予帮助，也可以提供其他可能的更好的解决方案。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7307057492059471899"
-                        open
-                      >
-                        <summary class="article-expander__title">终于把国外大佬的跨窗口量子纠缠粒子效果给肝出来</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7307057492059471899">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-上篇文章 尝试实现了国外大佬用Web做出来跨窗口渲染动画效果 - 掘金 反响很大，但是仅仅只是实现了跨窗口动画效果，严格说就没有动画，还有些bug和遗憾，尤其是粒子效果，得入three.js坑，怎么办？跳啊！
-硬肝了两天，实在肝不动了，看效果吧。
-第一版v2效果，大粒子，粒子数量较少：
-
-第二版v2.1，小粒子，粒子数量多：
-
-three.js
-官方文档：https://threejs.org/，中文文档：three.js docs
-我第一次接触three.js，之前只是听说过，比如能弄车展啥的，感觉很厉害，就想借此机会学习下，跳进坑里才发现，这坑也太深了。随便找个教程，里面各种名词就给我弄吐了。
-先按文档 three.js docs 画个立方体，跑起来了，但是我想要球体啊，还有粒子围着中心转，这么多api学不起啊，搜教程也是杂乱无章，无从学起，咋整？找现成的啊！
-看到官网有很多现成的例子，找了一个相近的：https://threejs.org/examples/#webgl_sprites，截了个静态图长这样：
-
-找源码：three.js/examples/webgl_sprites.html at master · mrdoob/three.js，copy到本地，代码就200行，用到的three api就几个，搜下api大概了解代码各部分的功能，基本都能看懂，然后删了多余功能，一个粒子绕球中心旋转功能就出来了。
-现在关于粒子移动、渲染、球体旋转缩放等变化api都已经基本搞懂了，然后就是痛苦折磨的计算调试了，不想再回忆了。
-动画效果的移动都是靠循环对象、计算坐标，改变粒子的position来实现的，感觉应该会有更好的现成api能简化这个过程，而且有缓冲、阻尼效果等。如果有更好的例子，欢迎大佬分享。
-总结下用到的api吧，就几个：
-构造方法
-THREE.Perspec…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3958,47 +4031,6 @@ Github项目地址：anyphoto-web
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7305434729527181322"
-                        open
-                      >
-                        <summary class="article-expander__title">vue3 + ts + svg + ECharts 实现双十一数据大屏</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7305434729527181322">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>这不双十一刚过十几天，本篇文章就来介绍下如何使用 vue3 + ts + svg + ECharts 实现一个如下所示的双十一数据大屏页面：
-
-创建项目
-执行命令 npm create vue@latest 创建基于 Vite 构建的 vue3 项目，功能选择如下：
-
-我选择使用 pnpm 安装项目依赖：pnpm i，各安装包的版本号可见于下图：
-
-在 vite.config.ts 中添加配置，以便在项目启动时能自动打开浏览器：
-export default defineConfig({
-  // ...
-  server: {
-    open: true
-  }
-})
-
-现在，就可以通过 pnpm dev 启动新建的项目了。
-大屏适配
-大屏适配的方案有很多，比如 rem、vw 和 flex 布局等，我选择使用缩放（scale）的方式来适配大屏，因为该方案使用起来比较简单，也不用考虑第三方库的单位等问题。
-假设设计稿的尺寸为 1920 * 1080px，为了保证效果，在大屏中放大时应该保持宽高比 designRatio 不变，designRatio 为 1920 / 1080 ≈ 1.78。放大的倍数 scaleRatio，可以分为以下 2 种情况计算：
-当用于展示的设备屏幕的宽高比 deviceRatio 等于或小于设计稿的宽高比 designRatio 时，我们可以按照两者的宽度之比进行缩放，即让设计稿保持宽高比的情况下放大到与设备等宽，在高度上可能留有空白；
-当设备屏幕的宽高比 deviceRatio 大于设计稿宽高比 designRatio 时，也就是说设备为超宽屏，scaleRatio 应该按照两者的高度之比决定，即让设计稿保持宽高比的情况下放大到与设备等高，在宽度上可能留有空白，所以还要做个居中布局。
-具体代码我封装成了一个 hook：
-// 屏幕适配，src…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -4607,8 +4639,8 @@ AI 是一个新事物，带来了很多前所未有的问题。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7080704301">
-        <time id="build-timestamp" datetime="2023-12-04T01:15:49.000Z">2023-12-04T01:15:49.000Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7081785041">
+        <time id="build-timestamp" datetime="2023-12-04T03:53:28.268Z">2023-12-04T03:53:28.268Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
