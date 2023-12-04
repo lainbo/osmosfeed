@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-12-04T06:53:14.435Z</id>
+    <id>urn:2023-12-04T09:53:23.060Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-12-04T06:53:14.435Z</updated>
+    <updated>2023-12-04T09:53:23.060Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[重庆市梁平区发布大雾黄色预警]]></title>
+        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20231204/t20231204_526507473.html</id>
+        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20231204/t20231204_526507473.html"/>
+        <updated>2023-12-04T08:32:00.000Z</updated>
+        <summary type="html"><![CDATA[梁平区气象台2023年12月4日16时10分发布“大雾黄色预警信号”，预计12月4日23时至5日9时，新盛镇、虎城镇、竹山镇、龙门镇、文化镇、龙胜乡、袁驿镇、碧山镇、七星镇、屏锦镇、回龙镇、荫平镇、云龙镇、和林镇、聚奎镇、礼让镇、明达镇、仁贤街道、安胜镇、星桥镇、合兴街道、复平镇、梁山街道、双桂街道、金带街道、大观镇、铁门乡、蟠龙镇、曲水镇、福禄镇、石安镇、紫照镇、柏家镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
+        <author>
+            <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[重庆市万州区发布大雾黄色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/huangsyj/20231204/t20231204_526507326.html</id>
@@ -956,6 +966,51 @@ Free Now to 2023-12-07T16:00:00.000Z]]></summary>
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[three.js实现3D汽车展厅效果展示]]></title>
+        <id>https://juejin.cn/post/7307146429004333094</id>
+        <link href="https://juejin.cn/post/7307146429004333094"/>
+        <updated>2023-11-30T14:48:08.000Z</updated>
+        <summary type="html"><![CDATA[今天简单实现一个three.js的小Demo，加强自己对three知识的掌握与学习，只有在项目中才能灵活将所学知识运用起来，话不多说直接开始。
+项目搭建
+本案例还是借助框架书写three项目，借用vite构建工具搭建vue项目，搭建完成之后，用编辑器打开该项目，在终端执行 npm i 安装一下依赖，安装完成之后终端在安装 npm i three 即可。
+因为我搭建的是vue3项目，为了便于代码的可读性，所以我将three.js代码单独抽离放在一个组件当中，在App根组件中进入引入该组件。具体如下：
+<template>
+  <!-- 3D汽车展厅 -->
+  <CarShowroom></CarShowroom>
+</template>
+ 
+<script setup>
+import CarShowroom from './components/CarShowroom.vue';
+</script>
+ 
+<style lang="less">
+  *{
+    margin: 0;
+    padding: 0;
+  }
+</style>
+
+初始化three.js代码
+three.js开启必须用到的基础代码如下：
+导入three库：
+import * as THREE from 'three'
+
+初始化场景：
+const scene = new THREE.Scene()
+
+初始化相机：
+// 创建相机
+const camera = new THREE.PerspectiveCamera(40,window.innerWidth / window.innerHeight,0.1,1000)
+camera.position.set(4.25,1.4,-4.5)
+
+初始化渲染器：
+// 创建渲染器
+const renderer = new THREE.WebGLRenderer…]]></summary>
+        <author>
+            <name>亦世凡华</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[麦赳究 30]]></title>
         <id>https://open.zhubai.wiki/a/l/t/z/pq/zjustfun/2342005433240064000</id>
         <link href="https://open.zhubai.wiki/a/l/t/z/pq/zjustfun/2342005433240064000"/>
@@ -1175,6 +1230,7 @@ Quickly Log
 执行 Cmd + Shift + K 就会将当前页面匹配到的console.log语句自动删除
 一键切换注释
 执行 Cmd + Shift + J 就会将当前页面匹配到的console.log语句前面自动打上注释，再执行就会取消注释
+快捷键都是可以更改的 vscode左下角的设置icon点开 点击键盘快捷方式 输入 Quickly Log进行更改
 以上就是目前插件支持的功能了，欢迎大家去Vscode下载使用
 
 TODO
@@ -1439,6 +1495,33 @@ components/
 你经常会忍不住说，“我就把这个移到公共目录吧。”拥有common目录是你所追求的目标相悖的反模式，…]]></summary>
         <author>
             <name>南城FE</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[打造聊天框丝滑滚动体验：AI 聊天框的翻转之道 ——— 聊天框发送消息后自动滚动到底部（前端框架通用）]]></title>
+        <id>https://juejin.cn/post/7306693980959588379</id>
+        <link href="https://juejin.cn/post/7306693980959588379"/>
+        <updated>2023-11-29T06:44:35.000Z</updated>
+        <summary type="html"><![CDATA[逐字渲染的挑战
+最近在开发AI聊天助手的时候，遇到了一个很有趣的滚动问题。我们需要开发一个类似微信聊天框的交互体验：
+每当聊天框中展示新消息时，需要将聊天框滚动到底部，展示最新消息。
+
+如果在 web 什么也不做，聊天体验可能是这样的，需要用户手动滚动到最新消息：
+
+试想一下如何在 web 中实现微信的效果。每当聊天框中接收到新消息时，都需要调用滚动方法滚动到消息底部。
+element.scrollIntoView({ behavior: "smooth", block: "end");
+
+对于普通的聊天工具来说，这样实现没有什么大问题，因为聊天框接收到每条消息的长度都是确定的。但是 AI 大模型一般都是逐字渲染的，AI 助手聊天框接受的消息体大小不是固定的，而是会随着 AI 大模型的输出不断变大。如果仍使用 scrollIntoView 来滚动到底部，就需要监听消息体的变化，每次消息更新时都要通过 JavaScript 调用一次滚动方法，会造成一些问题：
+频繁的 JavaScript 滚动调用。每输出一个文字要滚动一次，听起来就会性能焦虑。
+AI 正在输出内容时，用户无法滚动查看历史消息。用户向上滚动查看历史消息，会被 Javascript 不断执行的 scrollIntoView 打断。需要写特殊逻辑才能避免这个情况。
+通过监听数据变化频繁的执行滚动，基于浏览器单线程的设计，不可避免的会造成滚动行为的滞后，导致聊天体验不够丝滑。
+自然列表：灵感来源
+聊天框接收到新消息时滚动到最新位置，总感觉这应该是一个很自然的行为，不需要这么多 Javascript 代码去实现滚动行为。
+于是联想到了 Excel 表格，当我们在表格中第一行插入一行，这一行后边的内容会被很自然的挤下去。并不需要做什么滚动，这一行就会出现在最顶部的位置。
+
+想到这里惊讶的发现，聊天框实际上不就是一个倒过来…]]></summary>
+        <author>
+            <name>lrwlf</name>
         </author>
     </entry>
     <entry>
@@ -1857,6 +1940,31 @@ function FormItem({ label, name, children }) {
   const childNodes = useMemo(() => R…]]></summary>
         <author>
             <name>前端小付</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[字节常考：请求并发数量限制]]></title>
+        <id>https://juejin.cn/post/7306407473280466981</id>
+        <link href="https://juejin.cn/post/7306407473280466981"/>
+        <updated>2023-11-28T15:35:22.000Z</updated>
+        <summary type="html"><![CDATA[theme: smartblue
+前端异步请求并发控制是指在客户端（通常是在浏览器中）管理和控制同时发出的异步请求的数量的技术。在进行网络请求，如使用 AJAX 与服务器交互时，可能会有多个请求同时发送。如果不加以控制，大量并发的请求可能会导致服务器压力过大，或者在客户端造成性能问题。
+为了实现并发控制，你可以使用多种策略，其中一些策略包括：
+队列: 创建一个请求队列，并且同时只处理一定数量的请求。一旦当前处理的请求完成，就从队列中取出下一个请求进行处理。
+批处理: 将多个请求合并成一个批量请求，如果 API 支持的话。这减少了请求数量，但可能需要服务器端的支持。
+节流: 在特定时间内限制请求的数量。例如，每秒只允许发出一个请求。
+防抖: 如果有大量连续的请求，在一定的延迟后只执行最后一次请求，这通常用于搜索框等场景。
+Promise 控制: 使用 Promise.all 来管理多个请求，或者使用 Promise.race 来处理多个请求中最快返回的结果。
+我们先来手动实现一个并发请求控制，你可以创建一个管理请求的队列，并通过设置一个最大并发数来控制同时进行的请求数量。
+当一个请求完成时，你可以从队列中取出下一个请求并执行它。以下是一个简单的 JavaScript 例子，它展示了如何使用 Promise 来管理并发请求。
+假设我们有一个 sendRequest 函数，这个函数接收一个 url，并返回一个 Promise。我们的目标是控制这些请求的并发数。
+class RequestQueue {
+  constructor(maxConcurrent) {
+    this.maxConcurrent = maxConcurrent; // 设置最大并发数
+    this.currentRunning = 0; // 当前正在运行的请求数
+    this.queue =…]]></summary>
+        <author>
+            <name>云牧</name>
         </author>
     </entry>
     <entry>
@@ -2459,77 +2567,6 @@ const count = width ** 2; // 我们总共要实时计…]]></summary>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[前端新趋势？有了Web Component，还用纠结Vue或React？]]></title>
-        <id>https://juejin.cn/post/7305977418699817011</id>
-        <link href="https://juejin.cn/post/7305977418699817011"/>
-        <updated>2023-11-27T08:57:58.000Z</updated>
-        <summary type="html"><![CDATA[theme: z-blue
-前端新趋势？有了Web Component，还用纠结Vue或React？
-什么是Web Component
-Web Component 的概念最早在 2011 年被 Google 提出，并在 2018 年 V1 版本开始被主流浏览器所支持（除了 IE）。Web Component 规范正式成为 W3C 的推荐标准。与Vue和React类似，都是基于组件化思想用于构建用户界面的一种框架，不同的是Web Component是使用封装的自定义HTML元素来创建可复用的组件，与此同时，它能够完美解决Html、css、js的复用问题，做到沙箱隔离，在任何地方使用都不会受到代码冲突影响。类似于我们熟知的html的video、audio标签。
-基础认知
-web component 主要由三项主要技术组成
-Custom element（自定义元素）：一组 JavaScript API，允许你定义 custom elements 及其行为，然后可以在你的用户界面中按照需要使用它们。
-以下是一个简单的hello word例子：
-<body>
-    <hello-word />
-    <script>
-        class HelloWord extends HTMLElement {
-            constructor() {
-                super();
-                this.append("hello world");
-            }
-        }
-        window.customElements.define("hello-word", HelloWord); 
-    </script>
-</body>
-
-通过上述在页面上能显示hello word，实现了一个简单的自定…]]></summary>
-        <author>
-            <name>叶落风尘</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[强如 Rust 也免不了内存泄漏]]></title>
-        <id>https://juejin.cn/post/7306018817687945268</id>
-        <link href="https://juejin.cn/post/7306018817687945268"/>
-        <updated>2023-11-27T08:50:10.000Z</updated>
-        <summary type="html"><![CDATA[序言
-Rust 以其内存安全性而闻名。虽然在 Rust 中创建内存泄漏并不容易，但是需要清楚，“无内存泄漏”并不是 Rust 提供的安全保证的一部分。
-实际上，在系统编程语言中，有时候你需要允许内存泄漏。以 FFI 为例，如果你的资源在被另一种语言使用后被释放，那就产生了问题。
-本文将探究，什么样的操作会在 Rust 中引起内存泄露，我们又该通过什么方式来检测出 Rust 程序的内存泄露问题。
-如何引起内存泄露
-在 Rust 程序中，以下操作可能导致内存泄漏：
-调用 std::mem::forget 函数。
-创建循环引用的 Rc 指针：
-若在 Rc 指针之间形成循环，这将导致内存永久无法释放。为了打破循环，你可以使用 Weak 指针。举例来说，假设我们有一棵树，在父节点到子节点的连接中，我们可以使用强 Rc 指针，而在子节点到父节点的连接上，我们可以使用 Weak 指针。
-使用 Box::leak 创建静态引用。
-在 FFI 情况下使用 Box::into_raw。
-如何检测出内存泄露问题
-LeakSanitizer
-LeakSanitizer 是由 LLVM 项目提供的一个开源工具，它是一个独立的运行时库，目的是检测进程的内存泄漏问题。
-当 LeakSanitizer 检测到可能的内存泄漏时，它会生成一份详细报告，包含泄露类型以及泄漏发生的位置。这在排查内存泄漏问题时相当有用。
-你可以通过使用 -Z sanitizer=leak 选项在编译和运行时启用 LeakSanitizer：
-RUSTFLAGS="-Z sanitizer=leak" cargo +nightly run
-
-这样 Rust 就会打开 LeakSanitizer 并在运行程序时对内存泄漏进行检测。
-请注意，LeakSanitizer 目前仅适用于 x86_64 Linux 和 x86_64 macOS。
-Valgrind
-首先，你需要安装 Valgrind。但需要注意的是，Valgrind 目前还不支持 M1/M2 的 Mac 系统。
-在终端中输入以下的命令来运行 Valgrind：
-valgrind --leak-check=full target/debug/your_program
-
-这个命令将会启动 Valgrind，并使用 --leak-check=full 选项来对 your_program 运行全面的内存泄漏检查。
-参考资料
-How to find a memory leak in a Rust program?
-How to detect reference cycle memory leaks?
-Is it possible to cause a memory leak in Rust?
-Clang 18.0.0git documentation - LeakSanitizer]]></summary>
-        <author>
-            <name>聪聪正在递归下降</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[给 Spring Web 开发者开发了一款 IDEA 插件：Feign-Helper，为什么叫 Feign-Helper ？因为核心功能其实是Spring Cloud Feign 接口与和对应的 Controller 源码间...]]></title>
         <id>7305983860168458303</id>
         <link href="https://juejin.cn/pin/7305983860168458303"/>
@@ -2564,39 +2601,6 @@ CDN的性能
 首先，维护这部分代码非常耗费精力。这要求我们拥有专门负责编写和维护监…]]></summary>
         <author>
             <name>小古的运维日记</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2024年了，虚拟DOM该何去何从]]></title>
-        <id>https://juejin.cn/post/7306018455462150179</id>
-        <link href="https://juejin.cn/post/7306018455462150179"/>
-        <updated>2023-11-27T06:50:39.000Z</updated>
-        <summary type="html"><![CDATA[本文作者：Hello
-诞生之初
-从命令式到声明式
-在上古流行的字符串拼接时代，jQuery一家独大，当时 jQuery 的语法还是停留在那种命令式 DOM 操作之中，
-$("ol li").click(function() {})
-let li = $("<li>我是一个li</li>");
-$("ol").append(li);
-
-而在 2013 年，Facebook 的 Jordan Walke 提出来了：把 2010 年 FaceBook 做出来的 XHP 的拓展功能迁移到 Javascript 中，形成以 JSX 作为拓展的新编码形式，并且把写法由命令式转变为声明式，像这样：
-//声明一个 data列表
-const Component = (
-  <ul>
-    {data.map(item => <MyItem data={item} />)}
-  </ul>
-);
-
-而在声明式框架的建立之时，需要 DOM 操作这种 “行为”，交给框架处理，并引发一些思考：
-既然 DOM 操作集中交给框架了，那框架岂不是可以去 “批处理” DOM 操作，更好的减少开销？
-既然开始写声明式了，那如何让数据和 DOM 关联起来？如果每次数据发生变化，该如何监听数据源？
-虚拟 DOM 乍现
-计算机科学领域的任何问题都可以通过增加一个间接的中间层来解决.  --------David Wheeler
-而当时虚拟 DOM，也就是在代码和实际 DOM 操作，由框架做了一层中间层，从而实现 代码 -> 虚拟 DOM 树 -> 真实 DOM 树；
-这个概念是由 React率先开拓，随后被许多不同的框架采用，并且当时有一本书《高性能的 javascript》，具体在第三章开头，里面有个观点就是：
-DOM scripting is expensive, and it's a common perf…]]></summary>
-        <author>
-            <name>网易云音乐技术团队</name>
         </author>
     </entry>
     <entry>

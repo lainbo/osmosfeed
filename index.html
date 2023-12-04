@@ -51,8 +51,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-04 datetime="2023-12-04T06:40:00.000Z">2023-12-04</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-04 datetime="2023-12-04T06:40:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-04 datetime="2023-12-04T08:32:00.000Z">2023-12-04</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-04 datetime="2023-12-04T08:32:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -67,6 +67,25 @@
                   <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231204/t20231204_526507473.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市梁平区发布大雾黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231204/t20231204_526507473.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>梁平区气象台2023年12月4日16时10分发布“大雾黄色预警信号”，预计12月4日23时至5日9时，新盛镇、虎城镇、竹山镇、龙门镇、文化镇、龙胜乡、袁驿镇、碧山镇、七星镇、屏锦镇、回龙镇、荫平镇、云龙镇、和林镇、聚奎镇、礼让镇、明达镇、仁贤街道、安胜镇、星桥镇、合兴街道、复平镇、梁山街道、双桂街道、金带街道、大观镇、铁门乡、蟠龙镇、曲水镇、福禄镇、石安镇、紫照镇、柏家镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -1884,6 +1903,183 @@ Free Now to 2023-12-07T16:00:00.000Z</span>
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7307146429004333094"
+                        open
+                      >
+                        <summary class="article-expander__title">three.js实现3D汽车展厅效果展示</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7307146429004333094">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>今天简单实现一个three.js的小Demo，加强自己对three知识的掌握与学习，只有在项目中才能灵活将所学知识运用起来，话不多说直接开始。
+项目搭建
+本案例还是借助框架书写three项目，借用vite构建工具搭建vue项目，搭建完成之后，用编辑器打开该项目，在终端执行 npm i 安装一下依赖，安装完成之后终端在安装 npm i three 即可。
+因为我搭建的是vue3项目，为了便于代码的可读性，所以我将three.js代码单独抽离放在一个组件当中，在App根组件中进入引入该组件。具体如下：
+
+  
+  
+
+ 
+
+import CarShowroom from &#x27;./components/CarShowroom.vue&#x27;;
+
+ 
+
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+
+初始化three.js代码
+three.js开启必须用到的基础代码如下：
+导入three库：
+import * as THREE from &#x27;three&#x27;
+
+初始化场景：
+const scene &#x3D; new THREE.Scene()
+
+初始化相机：
+// 创建相机
+const camera &#x3D; new THREE.PerspectiveCamera(40,window.innerWidth / window.innerHeight,0.1,1000)
+camera.position.set(4.25,1.4,-4.5)
+
+初始化渲染器：
+// 创建渲染器
+const renderer &#x3D; new THREE.WebGLRenderer…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;15
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7307057492059471899"
+                        open
+                      >
+                        <summary class="article-expander__title">终于把国外大佬的跨窗口量子纠缠粒子效果给肝出来</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7307057492059471899">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言
+上篇文章 尝试实现了国外大佬用Web做出来跨窗口渲染动画效果 - 掘金 反响很大，但是仅仅只是实现了跨窗口动画效果，严格说就没有动画，还有些bug和遗憾，尤其是粒子效果，得入three.js坑，怎么办？跳啊！
+硬肝了两天，实在肝不动了，看效果吧。
+第一版v2效果，大粒子，粒子数量较少：
+
+第二版v2.1，小粒子，粒子数量多：
+
+three.js
+官方文档：https://threejs.org/，中文文档：three.js docs
+我第一次接触three.js，之前只是听说过，比如能弄车展啥的，感觉很厉害，就想借此机会学习下，跳进坑里才发现，这坑也太深了。随便找个教程，里面各种名词就给我弄吐了。
+先按文档 three.js docs 画个立方体，跑起来了，但是我想要球体啊，还有粒子围着中心转，这么多api学不起啊，搜教程也是杂乱无章，无从学起，咋整？找现成的啊！
+看到官网有很多现成的例子，找了一个相近的：https://threejs.org/examples/#webgl_sprites，截了个静态图长这样：
+
+找源码：three.js/examples/webgl_sprites.html at master · mrdoob/three.js，copy到本地，代码就200行，用到的three api就几个，搜下api大概了解代码各部分的功能，基本都能看懂，然后删了多余功能，一个粒子绕球中心旋转功能就出来了。
+现在关于粒子移动、渲染、球体旋转缩放等变化api都已经基本搞懂了，然后就是痛苦折磨的计算调试了，不想再回忆了。
+动画效果的移动都是靠循环对象、计算坐标，改变粒子的position来实现的，感觉应该会有更好的现成api能简化这个过程，而且有缓冲、阻尼效果等。如果有更好的例子，欢迎大佬分享。
+总结下用到的api吧，就几个：
+构造方法
+THREE.Perspec…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7306806944046678052"
+                        open
+                      >
+                        <summary class="article-expander__title">还在手打console.log？快来试试这个vscode插件 Quickly Log！！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7306806944046678052">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: channing-cyan
+背景
+作为一枚前端开发人员，尤其是在写业务代码的时候，避免不了需要经常在控制台打印变量来查看数据（反正我是这样哈哈哈哈哈），那么就需要频繁的来写console.log()，然后在里面再输入自己想要查看的变量名。
+思考
+既然我们需要频繁的来进行这个操作，那么我们是不是可以把它像代码片段一样来保存下来，然后配置一个激活他的快捷键来进行使用
+在左下角这里选择用户代码片段
+
+然后选择想要使代码片段生效的文件类型，比如我这里选择的tsx
+选择了对应的文件类型，对应的代码片段只会在这个类型的文件里生效，想要在其他类型的文件里也使用同样的代码片段需要去对应的类型文件中复制一份
+
+把对应的代码片段写入
+&quot;Print to console&quot;: {
+    // 说明
+    &quot;description&quot;: &quot;Log output to console&quot;,
+    // 快捷键
+    &quot;prefix&quot;: &quot;cl&quot;,
+    // 输出内容
+    &quot;body&quot;: [&quot;console.log($1)&quot;]
+},
+
+这样我们就配置好了一个简易的代码片段，使用的时候只需要敲出来 ’cl‘就会出现我们的代码提示
+
+这样我们就解决了这个问题（我自己也是使用这个方法很久）
+更进一步
+目前我们通过代码片段已经解决了这个问题，但是还是会有一些不方便的地方
+我们只能在写好代码片段的类型文件中使用，我们现在使用 .tsx，突然要写 .vue 了使用的时候发现没有生效，就又要再去配置一次
+如果我们目前的 console.log 比较多，那么控制台上就会看到输出了一堆的变量，根本搞不清哪个打印是对应的哪个变量
+有时候会遗忘删掉 console.log 语句 (也可以通过配置husky，在commit的时候进行校验解决)
+为了解决这些问题，我们更进一步，来通过写一个vscode插件解决
+Quickly Log
+这个插件最开始只是对vscode插件开发的好奇，加上自己确实有这方面的需求才开始编写的。编写成插件就可以有效的解决了需要重复配置代码片段的问题。
+这里介绍下插件的功能，不对代码具体介绍，感兴趣的可以去github上看下代码 https://github.com/Richard-Zhang1019/quickly-log
+功能
+提示配置
+只需要将光标移动到变量附近，然后使用快捷键 Cmd + Shift + L，就会在下一行输出语句
+
+这里也支持携带上变量所在的行号以及文件名
+
+当然这些都是可以配置的，可以根据自己的喜好来配置输出的提示内容
+
+如果是简洁党也可全都取消勾选，效果就和直接使用上面提到的代码片段一样，但是会支持自动将变量放入console.log()的括号内
+一键clear
+执行 Cmd + Shift + K 就会将当前页面匹配到的console.log语句自动删除
+一键切换注释
+执行 Cmd + Shift + J 就会将当前页面匹配到的console.log语句前面自动打上注释，再执行就会取消注释
+快捷键都是可以更改的 vscode左下角的设置icon点开 点击键盘快捷方式 输入 Quickly Log进行更改
+以上就是目前插件支持的功能了，欢迎大家去Vscode下载使用
+
+TODO
+目前有些场景的打印是有问题的
+比如下面这样的换行场景，我们希望在光标放在a，b，c这里的时候，会在第21行这里插入console.log语句，但是目前只会在光标的下一行插入，还需要手动移动到下面
+
+
+之前有试过通过判断是否在 {} 内来输入到整个语句之后，但是情况不太理想，后续再考虑解决</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >沸点 - 开发工具推荐</button>
                   <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
                 </h3>
@@ -1982,128 +2178,6 @@ Free Now to 2023-12-07T16:00:00.000Z</span>
 举例来说，假设你正在编写一个程序，需要解析一种特定格式的数据（这是你的 X 问题）。你决定使用某种特定的库来解析这种数据，但遇到困难（你现在的 Y 问题）。你可能会询问关于这个库的问题，而不是你实际面对的如何解析这种格式的数据的问题。通过构造出一个 X-Y 问题，你可能限制了别人能给出的帮助，因为他们被限制在你选择的方案，而不是实际问题。
 最好的方法是描述你的实际问题（X——如何解析特定格式的数据），然后才告诉别人你试图怎么解决（你的 Y——使用某个特定的库）。这样他们既可以在你遇到困难的方法上给予帮助，也可以提供其他可能的更好的解决方案。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7307057492059471899"
-                        open
-                      >
-                        <summary class="article-expander__title">终于把国外大佬的跨窗口量子纠缠粒子效果给肝出来</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7307057492059471899">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-上篇文章 尝试实现了国外大佬用Web做出来跨窗口渲染动画效果 - 掘金 反响很大，但是仅仅只是实现了跨窗口动画效果，严格说就没有动画，还有些bug和遗憾，尤其是粒子效果，得入three.js坑，怎么办？跳啊！
-硬肝了两天，实在肝不动了，看效果吧。
-第一版v2效果，大粒子，粒子数量较少：
-
-第二版v2.1，小粒子，粒子数量多：
-
-three.js
-官方文档：https://threejs.org/，中文文档：three.js docs
-我第一次接触three.js，之前只是听说过，比如能弄车展啥的，感觉很厉害，就想借此机会学习下，跳进坑里才发现，这坑也太深了。随便找个教程，里面各种名词就给我弄吐了。
-先按文档 three.js docs 画个立方体，跑起来了，但是我想要球体啊，还有粒子围着中心转，这么多api学不起啊，搜教程也是杂乱无章，无从学起，咋整？找现成的啊！
-看到官网有很多现成的例子，找了一个相近的：https://threejs.org/examples/#webgl_sprites，截了个静态图长这样：
-
-找源码：three.js/examples/webgl_sprites.html at master · mrdoob/three.js，copy到本地，代码就200行，用到的three api就几个，搜下api大概了解代码各部分的功能，基本都能看懂，然后删了多余功能，一个粒子绕球中心旋转功能就出来了。
-现在关于粒子移动、渲染、球体旋转缩放等变化api都已经基本搞懂了，然后就是痛苦折磨的计算调试了，不想再回忆了。
-动画效果的移动都是靠循环对象、计算坐标，改变粒子的position来实现的，感觉应该会有更好的现成api能简化这个过程，而且有缓冲、阻尼效果等。如果有更好的例子，欢迎大佬分享。
-总结下用到的api吧，就几个：
-构造方法
-THREE.Perspec…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7306806944046678052"
-                        open
-                      >
-                        <summary class="article-expander__title">还在手打console.log？快来试试这个vscode插件 Quickly Log！！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7306806944046678052">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: channing-cyan
-背景
-作为一枚前端开发人员，尤其是在写业务代码的时候，避免不了需要经常在控制台打印变量来查看数据（反正我是这样哈哈哈哈哈），那么就需要频繁的来写console.log()，然后在里面再输入自己想要查看的变量名。
-思考
-既然我们需要频繁的来进行这个操作，那么我们是不是可以把它像代码片段一样来保存下来，然后配置一个激活他的快捷键来进行使用
-在左下角这里选择用户代码片段
-
-然后选择想要使代码片段生效的文件类型，比如我这里选择的tsx
-选择了对应的文件类型，对应的代码片段只会在这个类型的文件里生效，想要在其他类型的文件里也使用同样的代码片段需要去对应的类型文件中复制一份
-
-把对应的代码片段写入
-&quot;Print to console&quot;: {
-    // 说明
-    &quot;description&quot;: &quot;Log output to console&quot;,
-    // 快捷键
-    &quot;prefix&quot;: &quot;cl&quot;,
-    // 输出内容
-    &quot;body&quot;: [&quot;console.log($1)&quot;]
-},
-
-这样我们就配置好了一个简易的代码片段，使用的时候只需要敲出来 ’cl‘就会出现我们的代码提示
-
-这样我们就解决了这个问题（我自己也是使用这个方法很久）
-更进一步
-目前我们通过代码片段已经解决了这个问题，但是还是会有一些不方便的地方
-我们只能在写好代码片段的类型文件中使用，我们现在使用 .tsx，突然要写 .vue 了使用的时候发现没有生效，就又要再去配置一次
-如果我们目前的 console.log 比较多，那么控制台上就会看到输出了一堆的变量，根本搞不清哪个打印是对应的哪个变量
-有时候会遗忘删掉 console.log 语句 (也可以通过配置husky，在commit的时候进行校验解决)
-为了解决这些问题，我们更进一步，来通过写一个vscode插件解决
-Quickly Log
-这个插件最开始只是对vscode插件开发的好奇，加上自己确实有这方面的需求才开始编写的。编写成插件就可以有效的解决了需要重复配置代码片段的问题。
-这里介绍下插件的功能，不对代码具体介绍，感兴趣的可以去github上看下代码 https://github.com/Richard-Zhang1019/quickly-log
-功能
-提示配置
-只需要将光标移动到变量附近，然后使用快捷键 Cmd + Shift + L，就会在下一行输出语句
-
-这里也支持携带上变量所在的行号以及文件名
-
-当然这些都是可以配置的，可以根据自己的喜好来配置输出的提示内容
-
-如果是简洁党也可全都取消勾选，效果就和直接使用上面提到的代码片段一样，但是会支持自动将变量放入console.log()的括号内
-一键clear
-执行 Cmd + Shift + K 就会将当前页面匹配到的console.log语句自动删除
-一键切换注释
-执行 Cmd + Shift + J 就会将当前页面匹配到的console.log语句前面自动打上注释，再执行就会取消注释
-以上就是目前插件支持的功能了，欢迎大家去Vscode下载使用
-
-TODO
-目前有些场景的打印是有问题的
-比如下面这样的换行场景，我们希望在光标放在a，b，c这里的时候，会在第21行这里插入console.log语句，但是目前只会在光标的下一行插入，还需要手动移动到下面
-
-
-之前有试过通过判断是否在 {} 内来输入到整个语句之后，但是情况不太理想，后续再考虑解决</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2798,6 +2872,42 @@ components/
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7306693980959588379"
+                        open
+                      >
+                        <summary class="article-expander__title">打造聊天框丝滑滚动体验：AI 聊天框的翻转之道 ——— 聊天框发送消息后自动滚动到底部（前端框架通用）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7306693980959588379">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>逐字渲染的挑战
+最近在开发AI聊天助手的时候，遇到了一个很有趣的滚动问题。我们需要开发一个类似微信聊天框的交互体验：
+每当聊天框中展示新消息时，需要将聊天框滚动到底部，展示最新消息。
+
+如果在 web 什么也不做，聊天体验可能是这样的，需要用户手动滚动到最新消息：
+
+试想一下如何在 web 中实现微信的效果。每当聊天框中接收到新消息时，都需要调用滚动方法滚动到消息底部。
+element.scrollIntoView({ behavior: &quot;smooth&quot;, block: &quot;end&quot;);
+
+对于普通的聊天工具来说，这样实现没有什么大问题，因为聊天框接收到每条消息的长度都是确定的。但是 AI 大模型一般都是逐字渲染的，AI 助手聊天框接受的消息体大小不是固定的，而是会随着 AI 大模型的输出不断变大。如果仍使用 scrollIntoView 来滚动到底部，就需要监听消息体的变化，每次消息更新时都要通过 JavaScript 调用一次滚动方法，会造成一些问题：
+频繁的 JavaScript 滚动调用。每输出一个文字要滚动一次，听起来就会性能焦虑。
+AI 正在输出内容时，用户无法滚动查看历史消息。用户向上滚动查看历史消息，会被 Javascript 不断执行的 scrollIntoView 打断。需要写特殊逻辑才能避免这个情况。
+通过监听数据变化频繁的执行滚动，基于浏览器单线程的设计，不可避免的会造成滚动行为的滞后，导致聊天体验不够丝滑。
+自然列表：灵感来源
+聊天框接收到新消息时滚动到最新位置，总感觉这应该是一个很自然的行为，不需要这么多 Javascript 代码去实现滚动行为。
+于是联想到了 Excel 表格，当我们在表格中第一行插入一行，这一行后边的内容会被很自然的挤下去。并不需要做什么滚动，这一行就会出现在最顶部的位置。
+
+想到这里惊讶的发现，聊天框实际上不就是一个倒过来…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7306450197629370387"
                         open
                       >
@@ -3008,6 +3118,8 @@ axios.interceptors.response.use(
                               <span>我开发的Chrome扩展 - 掘金Plus已经在Chrome扩展商店发布成功了。初个版本支持配置文章模版和一键导入功能。
 欢迎大家在Chrome扩展商店搜索掘金Plus下载试用。
 https://chromewebstore.google.com/detail/%E6%8E%98%E9%87%91plus/bcpbkeiagppbpjinfdbknmaibfjaeobi?hl&#x3D;zh-CN&amp;utm_source&#x3D;ext_sidebar</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3025,6 +3137,8 @@ https://chromewebstore.google.com/detail/%E6%8E%98%E9%87%91plus/bcpbkeiagppbpjin
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>好不容易给开发者朋友开发的插件工具，适配了掘金，知乎，csdn，baijiahao，网易和搜狐等等，支持等众多开发博客，还有隐藏免费功能。博客显示效果优秀。桶子门，这么好的东西，竟然没人知道(爱读v2)，目前下载量稀缺[流泪]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3113,6 +3227,40 @@ function FormItem({ label, name, children }) {
 
   const childNodes &#x3D; useMemo(() &#x3D;&gt; R…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;22
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7306407473280466981"
+                        open
+                      >
+                        <summary class="article-expander__title">字节常考：请求并发数量限制</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7306407473280466981">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: smartblue
+前端异步请求并发控制是指在客户端（通常是在浏览器中）管理和控制同时发出的异步请求的数量的技术。在进行网络请求，如使用 AJAX 与服务器交互时，可能会有多个请求同时发送。如果不加以控制，大量并发的请求可能会导致服务器压力过大，或者在客户端造成性能问题。
+为了实现并发控制，你可以使用多种策略，其中一些策略包括：
+队列: 创建一个请求队列，并且同时只处理一定数量的请求。一旦当前处理的请求完成，就从队列中取出下一个请求进行处理。
+批处理: 将多个请求合并成一个批量请求，如果 API 支持的话。这减少了请求数量，但可能需要服务器端的支持。
+节流: 在特定时间内限制请求的数量。例如，每秒只允许发出一个请求。
+防抖: 如果有大量连续的请求，在一定的延迟后只执行最后一次请求，这通常用于搜索框等场景。
+Promise 控制: 使用 Promise.all 来管理多个请求，或者使用 Promise.race 来处理多个请求中最快返回的结果。
+我们先来手动实现一个并发请求控制，你可以创建一个管理请求的队列，并通过设置一个最大并发数来控制同时进行的请求数量。
+当一个请求完成时，你可以从队列中取出下一个请求并执行它。以下是一个简单的 JavaScript 例子，它展示了如何使用 Promise 来管理并发请求。
+假设我们有一个 sendRequest 函数，这个函数接收一个 url，并返回一个 Promise。我们的目标是控制这些请求的并发数。
+class RequestQueue {
+  constructor(maxConcurrent) {
+    this.maxConcurrent &#x3D; maxConcurrent; // 设置最大并发数
+    this.currentRunning &#x3D; 0; // 当前正在运行的请求数
+    this.queue &#x3D;…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3876,44 +4024,23 @@ const count &#x3D; width ** 2; // 我们总共要实时计…</span>
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
                 </h3>
                 <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7305977418699817011"
+                        data-accordion-key="7305983860168458303"
                         open
                       >
-                        <summary class="article-expander__title">前端新趋势？有了Web Component，还用纠结Vue或React？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7305977418699817011">
+                        <summary class="article-expander__title">给 Spring Web 开发者开发了一款 IDEA 插件：Feign-Helper，为什么叫 Feign-Helper ？因为核心功能其实是Spring Cloud Feign 接口与和对应的 Controller 源码间...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7305983860168458303">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>theme: z-blue
-前端新趋势？有了Web Component，还用纠结Vue或React？
-什么是Web Component
-Web Component 的概念最早在 2011 年被 Google 提出，并在 2018 年 V1 版本开始被主流浏览器所支持（除了 IE）。Web Component 规范正式成为 W3C 的推荐标准。与Vue和React类似，都是基于组件化思想用于构建用户界面的一种框架，不同的是Web Component是使用封装的自定义HTML元素来创建可复用的组件，与此同时，它能够完美解决Html、css、js的复用问题，做到沙箱隔离，在任何地方使用都不会受到代码冲突影响。类似于我们熟知的html的video、audio标签。
-基础认知
-web component 主要由三项主要技术组成
-Custom element（自定义元素）：一组 JavaScript API，允许你定义 custom elements 及其行为，然后可以在你的用户界面中按照需要使用它们。
-以下是一个简单的hello word例子：
-
-    
-    
-        class HelloWord extends HTMLElement {
-            constructor() {
-                super();
-                this.append(&quot;hello world&quot;);
-            }
-        }
-        window.customElements.define(&quot;hello-word&quot;, HelloWord); 
-    
-
-
-通过上述在页面上能显示hello word，实现了一个简单的自定…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
+                              <span>给 Spring Web 开发者开发了一款 IDEA 插件：Feign-Helper，为什么叫 Feign-Helper ？因为核心功能其实是Spring Cloud Feign 接口与和对应的 Controller 源码间互相跳转（源码在同一个工程内），顺便提供 Spring Web HTTP API 检索（按两下 Shift 键打开，有个 URL 选项卡），现在送优惠码：https://aboat365.com/feign-helper/2023/11/27/v2ex-Feign-Helper-%E4%BC%98%E6%83%A0%E7%A0%81.html</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3924,51 +4051,35 @@ Custom element（自定义元素）：一组 JavaScript API，允许你定义 cu
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7306018817687945268"
+                        data-accordion-key="7305576845100924928"
                         open
                       >
-                        <summary class="article-expander__title">强如 Rust 也免不了内存泄漏</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7306018817687945268">
+                        <summary class="article-expander__title">实现了一款目前AI还做不到的文字转图片应用，灵感来源于微信读书，已上线，支持各种模板。可前来体验，今天会发博客，让大家对它有个更清晰的认识。线上体验http...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7305576845100924928">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>序言
-Rust 以其内存安全性而闻名。虽然在 Rust 中创建内存泄漏并不容易，但是需要清楚，“无内存泄漏”并不是 Rust 提供的安全保证的一部分。
-实际上，在系统编程语言中，有时候你需要允许内存泄漏。以 FFI 为例，如果你的资源在被另一种语言使用后被释放，那就产生了问题。
-本文将探究，什么样的操作会在 Rust 中引起内存泄露，我们又该通过什么方式来检测出 Rust 程序的内存泄露问题。
-如何引起内存泄露
-在 Rust 程序中，以下操作可能导致内存泄漏：
-调用 std::mem::forget 函数。
-创建循环引用的 Rc 指针：
-若在 Rc 指针之间形成循环，这将导致内存永久无法释放。为了打破循环，你可以使用 Weak 指针。举例来说，假设我们有一棵树，在父节点到子节点的连接中，我们可以使用强 Rc 指针，而在子节点到父节点的连接上，我们可以使用 Weak 指针。
-使用 Box::leak 创建静态引用。
-在 FFI 情况下使用 Box::into_raw。
-如何检测出内存泄露问题
-LeakSanitizer
-LeakSanitizer 是由 LLVM 项目提供的一个开源工具，它是一个独立的运行时库，目的是检测进程的内存泄漏问题。
-当 LeakSanitizer 检测到可能的内存泄漏时，它会生成一份详细报告，包含泄露类型以及泄漏发生的位置。这在排查内存泄漏问题时相当有用。
-你可以通过使用 -Z sanitizer&#x3D;leak 选项在编译和运行时启用 LeakSanitizer：
-RUSTFLAGS&#x3D;&quot;-Z sanitizer&#x3D;leak&quot; cargo +nightly run
-
-这样 Rust 就会打开 LeakSanitizer 并在运行程序时对内存泄漏进行检测。
-请注意，LeakSanitizer 目前仅适用于 x86_64 Linux 和 x86_64 macOS。
-Valgrind
-首先，你需要安装 Valgrind。但需要注意的是，Valgrind 目前还不支持 M1/M2 的 Mac 系统。
-在终端中输入以下的命令来运行 Valgrind：
-valgrind --leak-check&#x3D;full target/debug/your_program
-
-这个命令将会启动 Valgrind，并使用 --leak-check&#x3D;full 选项来对 your_program 运行全面的内存泄漏检查。
-参考资料
-How to find a memory leak in a Rust program?
-How to detect reference cycle memory leaks?
-Is it possible to cause a memory leak in Rust?
-Clang 18.0.0git documentation - LeakSanitizer</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
+                              <span>实现了一款目前AI还做不到的文字转图片应用，灵感来源于微信读书，已上线，支持各种模板。可前来体验，今天会发博客，让大家对它有个更清晰的认识。线上体验https://anyphoto.space/playground</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
                       </details>
                     </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
@@ -4000,91 +4111,6 @@ CDN的性能
 首先，维护这部分代码非常耗费精力。这要求我们拥有专门负责编写和维护监…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7306018455462150179"
-                        open
-                      >
-                        <summary class="article-expander__title">2024年了，虚拟DOM该何去何从</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7306018455462150179">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>本文作者：Hello
-诞生之初
-从命令式到声明式
-在上古流行的字符串拼接时代，jQuery一家独大，当时 jQuery 的语法还是停留在那种命令式 DOM 操作之中，
-$(&quot;ol li&quot;).click(function() {})
-let li &#x3D; $(&quot;
-我是一个li
-&quot;);
-$(&quot;ol&quot;).append(li);
-
-而在 2013 年，Facebook 的 Jordan Walke 提出来了：把 2010 年 FaceBook 做出来的 XHP 的拓展功能迁移到 Javascript 中，形成以 JSX 作为拓展的新编码形式，并且把写法由命令式转变为声明式，像这样：
-//声明一个 data列表
-const Component &#x3D; (
-  
- )}
-  
- 虚拟 DOM 树 -&gt; 真实 DOM 树；
-这个概念是由 React率先开拓，随后被许多不同的框架采用，并且当时有一本书《高性能的 javascript》，具体在第三章开头，里面有个观点就是：
-DOM scripting is expensive, and it&#x27;s a common perf…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;16
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7305983860168458303"
-                        open
-                      >
-                        <summary class="article-expander__title">给 Spring Web 开发者开发了一款 IDEA 插件：Feign-Helper，为什么叫 Feign-Helper ？因为核心功能其实是Spring Cloud Feign 接口与和对应的 Controller 源码间...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7305983860168458303">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>给 Spring Web 开发者开发了一款 IDEA 插件：Feign-Helper，为什么叫 Feign-Helper ？因为核心功能其实是Spring Cloud Feign 接口与和对应的 Controller 源码间互相跳转（源码在同一个工程内），顺便提供 Spring Web HTTP API 检索（按两下 Shift 键打开，有个 URL 选项卡），现在送优惠码：https://aboat365.com/feign-helper/2023/11/27/v2ex-Feign-Helper-%E4%BC%98%E6%83%A0%E7%A0%81.html</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7305576845100924928"
-                        open
-                      >
-                        <summary class="article-expander__title">实现了一款目前AI还做不到的文字转图片应用，灵感来源于微信读书，已上线，支持各种模板。可前来体验，今天会发博客，让大家对它有个更清晰的认识。线上体验http...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7305576845100924928">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>实现了一款目前AI还做不到的文字转图片应用，灵感来源于微信读书，已上线，支持各种模板。可前来体验，今天会发博客，让大家对它有个更清晰的认识。线上体验https://anyphoto.space/playground</span>
                             </span>
                           </div>
                         </a>
@@ -4249,6 +4275,8 @@ const restaurant &#x3D; {
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>等会北京了，好好开发后续功能</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4644,8 +4672,8 @@ AI 是一个新事物，带来了很多前所未有的问题。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7083061421">
-        <time id="build-timestamp" datetime="2023-12-04T06:53:14.415Z">2023-12-04T06:53:14.415Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7084825468">
+        <time id="build-timestamp" datetime="2023-12-04T09:53:23.039Z">2023-12-04T09:53:23.039Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
