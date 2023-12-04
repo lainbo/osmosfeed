@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-12-04T18:53:18.729Z</id>
+    <id>urn:2023-12-04T21:53:08.830Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-12-04T18:53:18.729Z</updated>
+    <updated>2023-12-04T21:53:08.830Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -485,6 +485,39 @@ dolly-v2-3b 的层数是 32，隐藏层维度是 7680（如图三），按照公
 根据《关于 JumpServer 开源堡垒机 V2 版本产品生命周期的相关说明》，JumpServer 开源堡垒机 V2 版本（社区版）将于 2023 年 12 月 31 日停止维护支持。]]></summary>
         <author>
             <name>Lorin洛林</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Electron 自动更新，绕过 latest.yml 使用自定义接口]]></title>
+        <id>https://juejin.cn/post/7307723753907486757</id>
+        <link href="https://juejin.cn/post/7307723753907486757"/>
+        <updated>2023-12-01T23:27:43.000Z</updated>
+        <summary type="html"><![CDATA[大家好，我是杨成功。
+在上一篇文章《手撸 Electron 自动更新，再繁琐也要搞懂它》中，我们详细介绍了 Electron 自动更新的全流程。
+简单来说，就是打包生成 latest.yml 文件和安装包，并上传到服务器。客户端打开时访问服务端的 latest.yml 地址，判断是否有新版本，有则自动下载新包并更新。
+对于以上的更新流程，很多朋友在评论区留言表示不够灵活，比如：
+只能自动更新吗？能不能通过后端接口来判断是否更新？
+必须要用 latest.yml 吗？能不能绕开它？
+如何区分 Window、Mac、Mac M1 三种安装包？
+下面我们一一解答这些问题，并手撸一个更灵活的自动更新接口。
+如何本地测试更新？
+在开发阶段想测试一下检测更新的流程走没走通，可能不太好测试，因为 Electron 默认在开发环境下会绕过更新检测。
+开发环境下 Electron 启动后，如果接入了自动更新，主进程控制台会打印下面的信息：
+Skip checkForUpdates because application is not packed and dev update config is not forced
+意思是当前是开发环境，未打包，所以绕过检测。Electron 通过 app.isPackaged 的值来判断是否打包，那么在开发环境下，我们可以修改一下这个值：
+import { app } from 'electron';
+
+// 未打包时是开发环境
+if (!app.isPackaged) {
+  Object.defineProperty(app, 'isPackaged', {
+    get: () => true,
+  });
+}
+
+重新运行，大概率会看到第二个错误：
+Error: ENOENT: no such file or directory /xxxx/ap…]]></summary>
+        <author>
+            <name>杨成功</name>
         </author>
     </entry>
     <entry>
@@ -1961,31 +1994,6 @@ function FormItem({ label, name, children }) {
   const childNodes = useMemo(() => R…]]></summary>
         <author>
             <name>前端小付</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[字节常考：请求并发数量限制]]></title>
-        <id>https://juejin.cn/post/7306407473280466981</id>
-        <link href="https://juejin.cn/post/7306407473280466981"/>
-        <updated>2023-11-28T15:35:22.000Z</updated>
-        <summary type="html"><![CDATA[theme: smartblue
-前端异步请求并发控制是指在客户端（通常是在浏览器中）管理和控制同时发出的异步请求的数量的技术。在进行网络请求，如使用 AJAX 与服务器交互时，可能会有多个请求同时发送。如果不加以控制，大量并发的请求可能会导致服务器压力过大，或者在客户端造成性能问题。
-为了实现并发控制，你可以使用多种策略，其中一些策略包括：
-队列: 创建一个请求队列，并且同时只处理一定数量的请求。一旦当前处理的请求完成，就从队列中取出下一个请求进行处理。
-批处理: 将多个请求合并成一个批量请求，如果 API 支持的话。这减少了请求数量，但可能需要服务器端的支持。
-节流: 在特定时间内限制请求的数量。例如，每秒只允许发出一个请求。
-防抖: 如果有大量连续的请求，在一定的延迟后只执行最后一次请求，这通常用于搜索框等场景。
-Promise 控制: 使用 Promise.all 来管理多个请求，或者使用 Promise.race 来处理多个请求中最快返回的结果。
-我们先来手动实现一个并发请求控制，你可以创建一个管理请求的队列，并通过设置一个最大并发数来控制同时进行的请求数量。
-当一个请求完成时，你可以从队列中取出下一个请求并执行它。以下是一个简单的 JavaScript 例子，它展示了如何使用 Promise 来管理并发请求。
-假设我们有一个 sendRequest 函数，这个函数接收一个 url，并返回一个 Promise。我们的目标是控制这些请求的并发数。
-class RequestQueue {
-  constructor(maxConcurrent) {
-    this.maxConcurrent = maxConcurrent; // 设置最大并发数
-    this.currentRunning = 0; // 当前正在运行的请求数
-    this.queue =…]]></summary>
-        <author>
-            <name>云牧</name>
         </author>
     </entry>
     <entry>

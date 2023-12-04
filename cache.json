@@ -33,7 +33,7 @@
           "description": "滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/",
           "publishedOn": "2023-11-21T16:14:41.000Z",
-          "wordCount": 1293,
+          "wordCount": 1292,
           "title": "cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "剪映中的视频特效虽多，其实就两类，一类改变原始像素，一类叠加混合，本文通过精简的源码和精致的案例给大家介绍具体如何实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/video-effect-js-filter-pixijs-webgl-3d/",
           "publishedOn": "2023-11-19T15:12:20.000Z",
-          "wordCount": 1233,
+          "wordCount": 1231,
           "title": "剪映APP的视频特效如何在Web中JS实现",
           "imageUrl": null
         },
@@ -697,6 +697,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7307723753907486757",
+          "author": "杨成功",
+          "description": "大家好，我是杨成功。\n在上一篇文章《手撸 Electron 自动更新，再繁琐也要搞懂它》中，我们详细介绍了 Electron 自动更新的全流程。\n简单来说，就是打包生成 latest.yml 文件和安装包，并上传到服务器。客户端打开时访问服务端的 latest.yml 地址，判断是否有新版本，有则自动下载新包并更新。\n对于以上的更新流程，很多朋友在评论区留言表示不够灵活，比如：\n只能自动更新吗？能不能通过后端接口来判断是否更新？\n必须要用 latest.yml 吗？能不能绕开它？\n如何区分 Window、Mac、Mac M1 三种安装包？\n下面我们一一解答这些问题，并手撸一个更灵活的自动更新接口。\n如何本地测试更新？\n在开发阶段想测试一下检测更新的流程走没走通，可能不太好测试，因为 Electron 默认在开发环境下会绕过更新检测。\n开发环境下 Electron 启动后，如果接入了自动更新，主进程控制台会打印下面的信息：\nSkip checkForUpdates because application is not packed and dev update config is not forced\n意思是当前是开发环境，未打包，所以绕过检测。Electron 通过 app.isPackaged 的值来判断是否打包，那么在开发环境下，我们可以修改一下这个值：\nimport { app } from 'electron';\n\n// 未打包时是开发环境\nif (!app.isPackaged) {\n  Object.defineProperty(app, 'isPackaged', {\n    get: () => true,\n  });\n}\n\n重新运行，大概率会看到第二个错误：\nError: ENOENT: no such file or directory /xxxx/ap…",
+          "link": "https://juejin.cn/post/7307723753907486757",
+          "publishedOn": "2023-12-01T23:27:43.000Z",
+          "wordCount": 1816,
+          "title": "Electron 自动更新，绕过 latest.yml 使用自定义接口",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7307469610423664655",
           "author": "小酒星小杜",
           "description": "theme: scrolls-light\n故事的开始\n在一个风和日丽的下午，我正喝着女神请的9.9咖啡，逛着掘金摸着🐟，一切的一切都是这么的美好。\n霎那间，只见耳边响起了声音，”系统觉醒中，请。。“，啊？我都外挂到账了？\n呸，是”帅哥，领导叫你去开会“。\n”哦“，某位帅哥站了起来，撇了撇帅气的刘海，走向了办公室。\n\n会议室情节\n”咦，不是开会吗，怎么就只有领导一个人“。\n昏暗的灯光，发着亮光的屏幕，在幽闭的空间里气氛显得有那么一丝的~~~暧昧，不对，是紧张。\n”帅哥你来了，那我直接说事情吧“，领导说到。\n突然我察觉到那么一丝不安，但是现在走好像来不及了，房门紧闭，领导又有三头六臂，凭着我这副一米八五，吴彦祖的颜值的身躯根本就逃不了。\n”是这样的，上面有个新需求，我看完之后发现我们目前的项目技术包袱有点重，做起来比较麻烦，看看你做个项目技术栈升级提高的方案吧“。\n听到这里我松了一口气，还好只是升级提高的方案，不是把屁股抬高的方案。\n\n进入正题\n分析了公司项目当前的技术栈，确实存在比较杂乱的情况，一堆的技术包袱，惨不忍睹，但还是能跑的，人和项目都能跑。\n技术栈：vue2全家桶 + vuetify + 某位前辈自己开发的组件库 + 某位前辈搞的半成品bff\n我用了一分钟的时间做足了思想功课，这次的升级决定采用增量升级的方案，为什么用增量升级，因为线上的项目，需求还在开发，为了稳定和尽量少的投入人力，所以采取增量升级。\n这里会有很多小伙伴问，什么是增量升级啊，我会说，自己百度\n又经过了一分钟的思想斗争，决定使用微前端的方案进行技术升级，框架选择阿里的qiankun。\n这里又会有小伙伴说，为什么用qiankun啊，我会说，下面会说\n\n微前端---qiankun\n为什么使用微前端，最主要是考虑到他与技术栈无关，能够忽略掉一些历史的包袱。\n为什么要用qiankun，最主要还是考虑到稳定…",
@@ -807,16 +817,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7306407473280466981",
-          "author": "云牧",
-          "description": "theme: smartblue\n前端异步请求并发控制是指在客户端（通常是在浏览器中）管理和控制同时发出的异步请求的数量的技术。在进行网络请求，如使用 AJAX 与服务器交互时，可能会有多个请求同时发送。如果不加以控制，大量并发的请求可能会导致服务器压力过大，或者在客户端造成性能问题。\n为了实现并发控制，你可以使用多种策略，其中一些策略包括：\n队列: 创建一个请求队列，并且同时只处理一定数量的请求。一旦当前处理的请求完成，就从队列中取出下一个请求进行处理。\n批处理: 将多个请求合并成一个批量请求，如果 API 支持的话。这减少了请求数量，但可能需要服务器端的支持。\n节流: 在特定时间内限制请求的数量。例如，每秒只允许发出一个请求。\n防抖: 如果有大量连续的请求，在一定的延迟后只执行最后一次请求，这通常用于搜索框等场景。\nPromise 控制: 使用 Promise.all 来管理多个请求，或者使用 Promise.race 来处理多个请求中最快返回的结果。\n我们先来手动实现一个并发请求控制，你可以创建一个管理请求的队列，并通过设置一个最大并发数来控制同时进行的请求数量。\n当一个请求完成时，你可以从队列中取出下一个请求并执行它。以下是一个简单的 JavaScript 例子，它展示了如何使用 Promise 来管理并发请求。\n假设我们有一个 sendRequest 函数，这个函数接收一个 url，并返回一个 Promise。我们的目标是控制这些请求的并发数。\nclass RequestQueue {\n  constructor(maxConcurrent) {\n    this.maxConcurrent = maxConcurrent; // 设置最大并发数\n    this.currentRunning = 0; // 当前正在运行的请求数\n    this.queue =…",
-          "link": "https://juejin.cn/post/7306407473280466981",
-          "publishedOn": "2023-11-28T15:35:22.000Z",
-          "wordCount": 1953,
-          "title": "字节常考：请求并发数量限制",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7306423214493237282",
           "author": "Sunshine_Lin",
           "description": "前言\n大家好，我是林三心，用最通俗易懂的话讲最难的知识点是我的座右铭，基础是进阶的前提是我的初心~\n背景\n事情是这样的，我的组员在写一个项目，项目里有一个 Home.vue 页面，大概结构是这样，Home.vue 就是本项目的首页，项目初始化后加载的顺序是 App.vue -> Home.vue\n\n在 App.vue 加载的时候，项目需要去请求本项目所需要使用到的字典，这部分逻辑写在了 Pinia 中，大概代码如下\n\n接着会在 App.vue 的 onMounted 中去执行 setup 方法，去请求所有字典，这应该也是很多项目中初始化数据的方式~\n\n接着，在 Home.vue 初始化的时候，需要去使用这些字典去完成某些操作，且只是初始化时需要完成这个操作\n\n我们到控制台中看到，确实能获取到所有字典，那就说明没问题了吗？？？？？\n\n生产事故\n问题来了，昨天服务器不知道咋的，字典接口响应很慢，差不多有2秒，我们可以来模拟一下，看看什么效果，我这里使用 setTimeout 来模拟请求2秒\n\n好，现在来看看 Home.vue 里输出了什么\n\n完蛋，Home.vue 初始化时拿不到数据，做不了对应操作，在发版日的晚上12点的时候，测试那边反馈了这个 BUG，我马上赶过去看了一下，马上就看出了问题所在，其实很多人也能看出来\n因为请求太久了，导致 Home.vue 在 onMounted 时拿不到数据，执行不了后续操作，导致页面 BUG\n解决问题\n我并没有急，我让我的组员自己想想应该怎么解决，锻炼一下他解决问题的能力，他觉得加个 watch 是不是就可以了！！！\n\n但是可惜的是，并不会触发监听，只能换一种办法，他查了一下百度，说可以用 Pinia 的 $subscribe 方法，就可以监听 Pinia 数据的变化了~\n\n看看效果，确实能监听到变化，但是变化了几次就会执行几次啊，他说那就用防抖去做。。。。\n\n我说防抖也有问题啊。。比如我们只需要 setup 执行后引起的变化监听，而不需要其他，就比如这个 otherSetup 也会引起变化监听，但我们并不想要这次变化\n\n这种写法的不确定性太大了，而且不太合理，肯定不能这么写啊！！！\n\n巧用 Promise\n最后还是我帮他解决的，我觉得问题有两个：\n1、组员在做项目的时候没考虑兜底\n2、组件的基础不够扎实\n在做这种需求的时候肯定要考虑到请求响应慢的时候的兜底啊，不能想当然。再有就是基础不够扎实，这种场景一看就可以使用 Promise 去兜底\n我先封装一个函数，这函数返回两个东西\nreadyResolve： 一个resolve函数\nonReady： 接收回调函数，只有在readyResolve执行后才会执行\n\n接着回到 Pinia 文件中，首先将 onReady 暴露出去\n\n接着在 setup 执行完的时候去执行 readyResolve 函数，为了提高可读性，我这里使用 Promise.all 代替之前的写法\n\n然后到 Home.vue 页面中，只需要往 onTestStoreSteuped 中传回调函数即可\n\n最终达到了想要的效果，无论请求多久，Home.vue 中的操作始终能在请求之后去执行\n\n而且这样做的好处就是，无论你有多少页面需要使用请求后的数据，都可以往 onTestStoreSteuped 中传回调，请求完都会一一执行的~\n通过这次的生产事故，我告诫组员们，平时学的东西要在开发项目中想一下怎么应用，而不是只是死记硬背，没有实践，那么这样只会是纸上谈兵罢了，没啥卵用，应付应付面试可能可以，做项目写的代码质量不会高的~\n结语 & 加学习群 & 摸鱼群\n我是林三心\n一个待过小型toG型外包公司、大型外包公司、小公司、潜力型创业公司、大公司的作死型前端选手；\n一个偏前端的全干工程师；\n一个不正经的掘金作者；\n一个逗比的B站up主；\n一个不帅的小红书博主；\n一个喜欢打铁的篮球菜鸟；\n一个喜欢历史的乏味少年；\n一个喜欢rap的五音不全弱鸡\n如果你想一起学习前端，一起摸鱼，一起研究简历优化，一起研究面试进步，一起交流历史音乐篮球rap，可以来俺的摸鱼学习群哈哈，点这个，有7000多名前端小伙伴在等着一起学习哦 --> 摸鱼沸点",
@@ -899,7 +899,7 @@
           "description": "[7210002980895916043#挑战每日一条沸点#] yiapi（易接口），完成启动流程图~\nhttps://github.com/chenbimo/yicode",
           "link": "https://juejin.cn/pin/7307619217960304655",
           "publishedOn": "2023-12-03T00:05:52.000Z",
-          "wordCount": 462,
+          "wordCount": 44,
           "title": "[7210002980895916043#挑战每日一条沸点#] yiapi（易接口），完成启动流程图~ https://github.com/chenbimo/yicode",
           "imageUrl": null
         },
@@ -909,7 +909,7 @@
           "description": "gpt4的语音版本，将大模型用在了面试垂直领域应用：https://interview.dog?spurce=nk_1202",
           "link": "https://juejin.cn/pin/7307596762222706722",
           "publishedOn": "2023-12-02T07:48:53.000Z",
-          "wordCount": 525,
+          "wordCount": 44,
           "title": "gpt4的语音版本，将大模型用在了面试垂直领域应用：https://interview.dog?spurce=nk_1202",
           "imageUrl": null
         },
@@ -919,7 +919,7 @@
           "description": "[7210228048107896891#每日快讯#]  重要通知丨 JumpServer 开源堡垒机 V2 社区版即将停止维护\n根据《关于 JumpServer 开源堡垒机 V2 版本产品生命周期的相关说明》，JumpServer 开源堡垒机 V2 版本（社区版）将于 2023 年 12 月 31 日停止维护支持。",
           "link": "https://juejin.cn/pin/7307514532275372067",
           "publishedOn": "2023-12-02T02:23:58.000Z",
-          "wordCount": 703,
+          "wordCount": 44,
           "title": "[7210228048107896891#每日快讯#] 重要通知丨 JumpServer 开源堡垒机 V2 社区版即将停止维护 根据《关于 JumpServer 开源堡垒机 V2 版本产品生命周期的相关说明...",
           "imageUrl": null
         },
@@ -929,7 +929,7 @@
           "description": "预告：visualization-collection将实现两个跨域页面的量子纠缠效果，而且是纯前端实现，不想错过的赶紧点上关注啦[玫瑰][玫瑰][玫瑰]\n应用地址: https://hepengwei.cn\n源码地址: https://github.com/hepengwei/visualization-collection",
           "link": "https://juejin.cn/pin/7307451430595624975",
           "publishedOn": "2023-12-01T09:39:01.000Z",
-          "wordCount": 536,
+          "wordCount": 44,
           "title": "预告：visualization-collection将实现两个跨域页面的量子纠缠效果，而且是纯前端实现，不想错过的赶紧点上关注啦[玫瑰][玫瑰][玫瑰] 应用地址: https://hepengw...",
           "imageUrl": null
         },
@@ -939,7 +939,7 @@
           "description": "2023开发者必备iOS开发工具\n在进行iOS开发工作时，利用并熟练使用恰当的工具可以让工作效率得到大幅度提高。下边会介绍一些在进行iOS开发工作时常用的一些工具，本文并不对其进行展开，对使用方法及工作原理感兴趣的同学可以自行进行更深入的研究。\n开发工具 Postman Postman是一个接口测试工具。在做接口测试的时Postman相当于一个客户端，它可以模拟用户发起的各类HTTP请求，将请求数据发送至服务端并获取对应的响应结果，从而验证响应中的结果数据是否和预期值相匹配，并确保开发人员能够及时处理接口中的bug，进而保证产品上线之后的稳定性和安全性。它主要是用来模拟各种HTTP请求的，如get/post/delete/put等等。Postman与浏览器的区别在于有的浏览器不能输出Json格式，而Postman更直观接口返回的结果。\nipaguard\nIpa Guard是一款功能强大的ipa混淆工具，不需要ios app源码，直接对ipa文件进行混淆加密。可对IOS ipa文件的代码，代码库，资源文件等进行混淆保护。 可以根据设置对函数名、变量名、类名等关键代码进行重命名和混淆处理，降低代码的可读性，增加ipa破解反编译难度。可以对图片，资源，配置等进行修改名称，修改md5。只要是ipa都可以，不限制OC，Swift，Flutter，React Native，H5类app。\nMLeaksFinder\nMLeaksFinder是WeRead团队开源的一款检测iOS内存泄漏的框架，其使用非常简单，只需将文件加入项目中，如果有内存泄漏，3秒后自动弹出alert来捕捉循环引用。使得可以在开发快速找到80%内存泄漏，而使用Xcode Leak工具更适合大范围的，全部的寻找泄漏点。\nappuploder\nAPP开发助手iOS APP上架到App Store的辅助工具，解决iOS APP上架繁琐费时的情况，帮助跨平台APP开发者上架苹果应用,在没有配置Mac苹果机的情况，实现iOS证书申请，创建iOS开发者证书、iOS发布证书等各类证书，iOS开发者在Windows、Linux或Mac系统中上传IPA到App Store,简化iOS APP上架流程！在任何电脑中轻松快速上架你的APP。",
           "link": "https://juejin.cn/pin/7307502467825942555",
           "publishedOn": "2023-12-01T08:34:18.000Z",
-          "wordCount": 599,
+          "wordCount": 44,
           "title": "2023开发者必备iOS开发工具 在进行iOS开发工作时，利用并熟练使用恰当的工具可以让工作效率得到大幅度提高。下边会介绍一些在进行iOS开发工作时常用的一些工具，...",
           "imageUrl": null
         },
@@ -949,7 +949,7 @@
           "description": "求助 求助 安装pandas时这个问题怎么解决 跟着gpt在终端操作也没有解决",
           "link": "https://juejin.cn/pin/7307451430594510863",
           "publishedOn": "2023-12-01T06:56:58.000Z",
-          "wordCount": 542,
+          "wordCount": 44,
           "title": "求助 求助 安装pandas时这个问题怎么解决 跟着gpt在终端操作也没有解决",
           "imageUrl": null
         },
@@ -959,7 +959,7 @@
           "description": "[7073670907851440160#新人报道#] 在最新的vscode 1.84.2发布笔记里面有一款白色的主题，还挺好看的，不知道有没有人知道主题名字",
           "link": "https://juejin.cn/pin/7307451430587400227",
           "publishedOn": "2023-12-01T05:37:56.000Z",
-          "wordCount": 476,
+          "wordCount": 44,
           "title": "[7073670907851440160#新人报道#] 在最新的vscode 1.84.2发布笔记里面有一款白色的主题，还挺好看的，不知道有没有人知道主题名字",
           "imageUrl": null
         },
@@ -969,7 +969,7 @@
           "description": "将 大模型 和 code review 结合 ，针对于 Gitlab MR 进行 code review 辅助项目评审[赞]\n项目地址：https://github.com/mimo-x/Code-Review-GPT-Gitlab/\n文章介绍：https://juejin.cn/post/7292692843415945225",
           "link": "https://juejin.cn/pin/7307221821903732786",
           "publishedOn": "2023-12-01T02:03:12.000Z",
-          "wordCount": 595,
+          "wordCount": 44,
           "title": "将 大模型 和 code review 结合 ，针对于 Gitlab MR 进行 code review 辅助项目评审[赞] 项目地址：https://github.com/mimo-x/Code-Review-GPT-Gitlab/ 文章介...",
           "imageUrl": null
         },
@@ -979,7 +979,7 @@
           "description": "jy们，推荐一个好用的富文本编辑器，谢谢",
           "link": "https://juejin.cn/pin/7307125383785234473",
           "publishedOn": "2023-11-30T12:08:08.000Z",
-          "wordCount": 532,
+          "wordCount": 44,
           "title": "jy们，推荐一个好用的富文本编辑器，谢谢",
           "imageUrl": null
         },
@@ -989,7 +989,7 @@
           "description": "有什么适合手机端app界面开发的简单框架，之前一直只是用响应式布局来凑合手机端[我想静静][我想静静][我想静静][我想静静]",
           "link": "https://juejin.cn/pin/7306783965532799028",
           "publishedOn": "2023-11-29T23:49:45.000Z",
-          "wordCount": 526,
+          "wordCount": 44,
           "title": "有什么适合手机端app界面开发的简单框架，之前一直只是用响应式布局来凑合手机端[我想静静][我想静静][我想静静][我想静静]",
           "imageUrl": null
         },
@@ -999,7 +999,7 @@
           "description": "刚切换成flutter开发，上午做了个vscode插件把UI稿内容自动转换成flutter的响应式布局省点力气。人老了不喜欢没接触过的东西，现在才入坑是不都算末班车了==\nhttps://github.com/balabalapupu/css-to-widget\n之前还有个ui稿自动转换成原子化样式\nhttps://github.com/balabalapupu/vscode-auto-atomic-css",
           "link": "https://juejin.cn/pin/7306697644062048283",
           "publishedOn": "2023-11-29T03:42:00.000Z",
-          "wordCount": 535,
+          "wordCount": 44,
           "title": "刚切换成flutter开发，上午做了个vscode插件把UI稿内容自动转换成flutter的响应式布局省点力气。人老了不喜欢没接触过的东西，现在才入坑是不都算末班车了== htt...",
           "imageUrl": null
         },
@@ -1009,7 +1009,7 @@
           "description": "flutter 写的 windows 端 图片比对、批量裁剪导出工具，链接还可兑换70次。\nhttp://go.microsoft.com/fwlink/?LinkId=532540&mstoken=XJ3RV-4CX7J-QCTGM-7DKQ3-DMDKZ\n欢迎吐槽。\n小bug 懒得改，大bug 不会改\n已知：窗口尺寸改变时，文件名位置某些情况不能自适应",
           "link": "https://juejin.cn/pin/7306447457151402018",
           "publishedOn": "2023-11-29T02:15:44.000Z",
-          "wordCount": 562,
+          "wordCount": 44,
           "title": "flutter 写的 windows 端 图片比对、批量裁剪导出工具，链接还可兑换70次。 http://go.microsoft.com/fwlink/?LinkId=532540&mstoken=XJ3RV-4CX7J-QCTGM-7DKQ3-D...",
           "imageUrl": null
         },
@@ -1019,7 +1019,7 @@
           "description": "[7304512653450280998#GPTs 的奇思妙用#]\nhttps://gptsmenu.com\n一个第三方 GPTs 存储网站\n目前收录超 1w ➕GPTs\n支持一键收藏❤️你喜欢的 GPT\nChrome 导航插件，提高你的工作效率",
           "link": "https://juejin.cn/pin/7306423214494646306",
           "publishedOn": "2023-11-29T01:39:49.000Z",
-          "wordCount": 512,
+          "wordCount": 44,
           "title": "[7304512653450280998#GPTs 的奇思妙用#] https://gptsmenu.com 一个第三方 GPTs 存储网站 目前收录超 1w ➕GPTs 支持一键收藏❤️你喜欢的 GPT Chrome 导航插件...",
           "imageUrl": null
         },
@@ -1029,7 +1029,7 @@
           "description": "最近开发Chrome扩展的过程中发现，原生的HTML+js+css开发写起来确实很累，效率也低。于是想着自己搭一套vite+react+ts+antd且支持多页面的框架用来开发Chrome扩展程序。不过在调研的过程中发现了Plasmo这个Chrome开发SDK，一举解决了我的所有诉求，这两天有时间就开搞吧。",
           "link": "https://juejin.cn/pin/7306423214494023714",
           "publishedOn": "2023-11-28T22:45:46.000Z",
-          "wordCount": 530,
+          "wordCount": 44,
           "title": "最近开发Chrome扩展的过程中发现，原生的HTML+js+css开发写起来确实很累，效率也低。于是想着自己搭一套vite+react+ts+antd且支持多页面的框架用来开发Chrome扩...",
           "imageUrl": null
         },
@@ -1039,7 +1039,7 @@
           "description": "用例图(PlanUML)\n用例图是软件工程中的一种可视化表示方法，用于描述系统角色与系统本身之间的交互。它通过说明用例和与用例交互的角色来捕捉系统的动态行为。这些图表对于明确系统的功能要求和了解用户如何与系统交互至关重要。通过提供一个高层次的视图，用例图可以帮助利益相关者了解系统的功能及其潜在价值。",
           "link": "https://juejin.cn/pin/7306356456102019124",
           "publishedOn": "2023-11-28T12:09:45.000Z",
-          "wordCount": 531,
+          "wordCount": 44,
           "title": "用例图(PlanUML) 用例图是软件工程中的一种可视化表示方法，用于描述系统角色与系统本身之间的交互。它通过说明用例和与用例交互的角色来捕捉系统的动态行为。这...",
           "imageUrl": null
         },
@@ -1049,7 +1049,7 @@
           "description": "我开发的Chrome扩展 - 掘金Plus已经在Chrome扩展商店发布成功了。初个版本支持配置文章模版和一键导入功能。\n欢迎大家在Chrome扩展商店搜索掘金Plus下载试用。\nhttps://chromewebstore.google.com/detail/%E6%8E%98%E9%87%91plus/bcpbkeiagppbpjinfdbknmaibfjaeobi?hl=zh-CN&utm_source=ext_sidebar",
           "link": "https://juejin.cn/pin/7306327158129983503",
           "publishedOn": "2023-11-28T08:52:24.000Z",
-          "wordCount": 548,
+          "wordCount": 44,
           "title": "我开发的Chrome扩展 - 掘金Plus已经在Chrome扩展商店发布成功了。初个版本支持配置文章模版和一键导入功能。 欢迎大家在Chrome扩展商店搜索掘金Plus下载试用。 h...",
           "imageUrl": null
         },
@@ -1059,7 +1059,7 @@
           "description": "好不容易给开发者朋友开发的插件工具，适配了掘金，知乎，csdn，baijiahao，网易和搜狐等等，支持等众多开发博客，还有隐藏免费功能。博客显示效果优秀。桶子门，这么好的东西，竟然没人知道(爱读v2)，目前下载量稀缺[流泪]",
           "link": "https://juejin.cn/pin/7306019445406761012",
           "publishedOn": "2023-11-28T00:47:02.000Z",
-          "wordCount": 532,
+          "wordCount": 44,
           "title": "好不容易给开发者朋友开发的插件工具，适配了掘金，知乎，csdn，baijiahao，网易和搜狐等等，支持等众多开发博客，还有隐藏免费功能。博客显示效果优秀。桶子门...",
           "imageUrl": null
         },
@@ -1069,7 +1069,7 @@
           "description": "给 Spring Web 开发者开发了一款 IDEA 插件：Feign-Helper，为什么叫 Feign-Helper ？因为核心功能其实是Spring Cloud Feign 接口与和对应的 Controller 源码间互相跳转（源码在同一个工程内），顺便提供 Spring Web HTTP API 检索（按两下 Shift 键打开，有个 URL 选项卡），现在送优惠码：https://aboat365.com/feign-helper/2023/11/27/v2ex-Feign-Helper-%E4%BC%98%E6%83%A0%E7%A0%81.html",
           "link": "https://juejin.cn/pin/7305983860168458303",
           "publishedOn": "2023-11-27T08:10:18.000Z",
-          "wordCount": 614,
+          "wordCount": 44,
           "title": "给 Spring Web 开发者开发了一款 IDEA 插件：Feign-Helper，为什么叫 Feign-Helper ？因为核心功能其实是Spring Cloud Feign 接口与和对应的 Controller 源码间...",
           "imageUrl": null
         },
@@ -1079,7 +1079,7 @@
           "description": "实现了一款目前AI还做不到的文字转图片应用，灵感来源于微信读书，已上线，支持各种模板。可前来体验，今天会发博客，让大家对它有个更清晰的认识。线上体验https://anyphoto.space/playground",
           "link": "https://juejin.cn/pin/7305576845100924928",
           "publishedOn": "2023-11-27T00:51:20.000Z",
-          "wordCount": 532,
+          "wordCount": 44,
           "title": "实现了一款目前AI还做不到的文字转图片应用，灵感来源于微信读书，已上线，支持各种模板。可前来体验，今天会发博客，让大家对它有个更清晰的认识。线上体验http...",
           "imageUrl": null
         },
@@ -1089,7 +1089,7 @@
           "description": "等会北京了，好好开发后续功能",
           "link": "https://juejin.cn/pin/7304997932444286985",
           "publishedOn": "2023-11-26T06:34:07.000Z",
-          "wordCount": 529,
+          "wordCount": 44,
           "title": "等会北京了，好好开发后续功能",
           "imageUrl": null
         }
