@@ -486,16 +486,16 @@ ICLR 是机器学习领域重要的学术会议之一，每年举办一次，202
                         data-accordion-key="https://m.okjike.com/originalPosts/656f10a0278f95df6fe061d3"
                         open
                       >
-                        <summary class="article-expander__title">发布了: 关于如何写好 Prompt 这件小事 ━━━━━━━━━━━━━━━━━━ 如果只能说一句， 我会说： 清晰表达你想要的。 如果能再多说一句， 我会说： 把 ...</summary>
+                        <summary class="article-expander__title">发布了: 关于如何写好 Prompt 这件小事 ━━━━━━━━━━━━━━━━━━ 如果只能说一句， 我想说： 清晰表达你想要的。 如果能再多说一句， 我想说： 把 ...</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/656f10a0278f95df6fe061d3">
                           <div class="article-summary-box-inner media-object">
                               <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>关于如何写好 Prompt 这件小事
 ━━━━━━━━━━━━━━━━━━
-如果只能说一句， 我会说： 清晰表达你想要的。
-如果能再多说一句， 我会说： 把 AI 当成人来沟通。
-如果, 如果能让我再多说一句， 我会说： 请给对方「踏脚石」。
+如果只能说一句， 我想说： 清晰表达你想要的。
+如果能再多说一句， 我想说： 把 AI 当成人来沟通。
+如果, 如果能再多说一句， 我想说： 请给对方「踏脚石」。
 目前我日常所用的所有技巧， 全部可以装入上面三句话。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
@@ -750,6 +750,56 @@ ICLR 是机器学习领域重要的学术会议之一，每年举办一次，202
 环境
 remote 在我看来其实只分三种。发达国家远程、第三世界国家远程、国内远程。恰恰好，我都经历过，所以我应该是有 话语权 去说这个话的。…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7308553288399355930"
+                        open
+                      >
+                        <summary class="article-expander__title">flutter：快速建构App，常用三方库汇总。【涵盖各种功能和业务】</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7308553288399355930">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>highlight: androidstudio
+theme: hydrogen
+引言
+想要快速构建自己的APP，需要掌握一些基础知识和技能。本篇将项目中常用的三方库做了整理汇总，可以根据自己的需求和项目特点进行选择。无论你是新手还是老手，都可以从这些推荐的三方常用库中受益。
+前言
+本篇列举的三方库都是小编自己项目里确切使用过的。下面从职责划分的维度，对常用三方库进行整理归纳。
+欢迎评论区补充、交流学习。
+App 架构
+1. 屏幕适配
+flutter_screenutil:
+flutter 屏幕适配方案，用于调整屏幕和字体大小的flutter插件，让你的UI在不同尺寸的屏幕上都能显示合理的布局!
+// 用法示例：
+// 初始化方式：
+ScreenUtilInit(
+  // 填入设计稿中的尺寸
+  designSize: const Size(960, 540),
+  builder: (context, widget) {
+    return const HomePage();
+  },
+)
+
+// 如何适配尺寸：使用.w、.h 标识宽高即可
+Container(
+  width: 50.w,
+  height:200.h
+)
+
+虽然对代码有侵入性，但确是目前比较常用的适配方案，小编在 Android、iOS、windows 等平台中均使用的该库进行适配。
+2. 路由
+fluro: 组件化开发中，路由是必不可少的成员之一，用于模块间依赖解耦。fluro 是我们早期使用的一个路由库，使用方式简单，因为它本身不支持路由返回 widget，后期我们自己内部封装了一个库替代。
+/// Push a route with custom RouteSettings if you don&#x27;t want to use path params
+FluroRouter.appRouter.…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;18
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1626,7 +1676,7 @@ function cross(v1, v2) {
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>gpt4的语音版本，将大模型用在了面试垂直领域应用：https://interview.dog?spurce&#x3D;nk_1202</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3081,7 +3131,7 @@ TODO
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>有什么适合手机端app界面开发的简单框架，之前一直只是用响应式布局来凑合手机端[我想静静][我想静静][我想静静][我想静静]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3806,48 +3856,6 @@ https://chromewebstore.google.com/detail/%E6%8E%98%E9%87%91plus/bcpbkeiagppbpjin
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7306375760331554828"
-                        open
-                      >
-                        <summary class="article-expander__title">封装一个用户体验非常棒的下拉选择框</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7306375760331554828">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>highlight: atom-one-dark
-theme: cyanosis
-前言
-我们公司系统用的ui框架是antd，antd默认的下拉框只能显示名称，但是有些数据名称可能重复，比如说人名，这时候用户在选择的时候，希望看到更多的信息来区分，比如说工号或角色。
-基于上面情况我们系统封装了两套组件，下面和大家分享一下。
-表单实现
-背景
-因为我们系统使用的是antd，下拉框大部分场景都是配合Form组件使用。前段时间解决bug，看了一下antd form的源码，这里我自己简单实现一下Form组件，先让大家了解一下Form原理。
-
-看一下上面的代码，很多新手可能会感到好奇，Input组件加了一个FormItem后，怎么就把值设置到了Form表单里，还能通过form实例获取到Input的值，下面我们来实现一下。
-实现思路
-Form组件核心是在FormItem组件使用了React.cloneElement对子组件进行克隆，并且可以对组件实例注入属性。
-FormItem组件就是把onChange方法注入到子组件的属性里，然后拦截Input组件onChange事件，最后在方法里把值收集保存到form组件中。
-FormItem实现
-import React from &#x27;react&#x27;;
-import { FormContext } from &#x27;./context&#x27;;
-import { useMemo } from &#x27;react&#x27;;
-
-function FormItem({ label, name, children }) {
-
-  // 从全局上下文中获取form已经收集的值和设置值的方法
-  const { values, setValues } &#x3D; React.useContext(FormContext);
-
-  const childNodes &#x3D; useMemo(() &#x3D;&gt; R…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;22
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7306407473280466981"
                         open
                       >
@@ -3950,8 +3958,6 @@ onReady： 接收回调函数，只有在readyResolve执行后才会执行
 一个喜欢历史的乏味少年；
 一个喜欢rap的五音不全弱鸡
 如果你想一起学习前端，一起摸鱼，一起研究简历优化，一起研究面试进步，一起交流历史音乐篮球rap，可以来俺的摸鱼学习群哈哈，点这个，有7000多名前端小伙伴在等着一起学习哦 --&gt; 摸鱼沸点</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4666,8 +4672,8 @@ AI 是一个新事物，带来了很多前所未有的问题。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7103214360">
-        <time id="build-timestamp" datetime="2023-12-05T15:53:29.513Z">2023-12-05T15:53:29.513Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7105239768">
+        <time id="build-timestamp" datetime="2023-12-05T18:53:26.843Z">2023-12-05T18:53:26.843Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
