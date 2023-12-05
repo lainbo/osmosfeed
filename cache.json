@@ -23,7 +23,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": 1013,
+          "wordCount": 1012,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/",
           "publishedOn": "2023-11-21T16:14:41.000Z",
-          "wordCount": 1295,
+          "wordCount": 1292,
           "title": "cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "剪映中的视频特效虽多，其实就两类，一类改变原始像素，一类叠加混合，本文通过精简的源码和精致的案例给大家介绍具体如何实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/video-effect-js-filter-pixijs-webgl-3d/",
           "publishedOn": "2023-11-19T15:12:20.000Z",
-          "wordCount": 1233,
+          "wordCount": 1232,
           "title": "剪映APP的视频特效如何在Web中JS实现",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "应该是国内第一篇专门介绍用mp4box.js和VideoDecoder方法解码MP4视频序列帧的文章了。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/mp4box-js-webcodecs-mp4-canvas/",
           "publishedOn": "2023-11-14T16:37:18.000Z",
-          "wordCount": 1250,
+          "wordCount": 1248,
           "title": "mp4box.js加WebCodecs 解码MP4视频帧并渲染",
           "imageUrl": null
         }
@@ -111,6 +111,26 @@
       "feedUrl": "https://rsshub.app/jike/user/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
+        {
+          "id": "https://m.okjike.com/originalPosts/656f0036ee2e07f7acb7b4db",
+          "author": null,
+          "description": "清华大学的唐杰教授团队，也是之前推荐的 Aminer 论文学习工具的创始人，整理了一份 ICLR 2024 的论文合集，共 47 篇，https://www.aminer.cn/topic/65409b681512231370cbf681，他提到“明年 LLM + Agent 必然大火”，感兴趣的朋友可以提前学习下。\nICLR 是机器学习领域重要的学术会议之一，每年举办一次，2024 年的论文审稿尚未完成，但 openreview 已经可以查看了，这里的信息可以帮助提前预判技术发展的一些新趋势。\n对应的 Github 合集地址：https://github.com/lafmdp/Awesome-Papers-Autonomous-Agent，这个月的学习任务又加重了😅",
+          "link": "https://m.okjike.com/originalPosts/656f0036ee2e07f7acb7b4db",
+          "publishedOn": "2023-12-05T10:49:26.000Z",
+          "wordCount": 489,
+          "title": "发布了: 清华大学的唐杰教授团队，也是之前推荐的 Aminer 论文学习工具的创始人，整理了一份 ICLR 2024 的论文合集，共 47 篇，https://www.aminer.cn/topic/654...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FuDWHgFirgGOa8ZkQCkKOZx-bLyPv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
+        {
+          "id": "https://m.okjike.com/originalPosts/656ef07ed027b7ac8ca79bf1",
+          "author": null,
+          "description": "GPT-4V-Act，https://github.com/ddupont808/GPT-4V-Act，这个项目演示了让 GPT-4V 来控制自己的浏览器，例如执行任务“随机播放一首音乐”，浏览器会自己进入搜索引擎，完成输入、搜索、点击、选择等操作，整个思考（Observe）过程都由 AI 来完成。\n与之前分享的 self-operation-computer 实现上存在一些差异，之前项目会把任务目标、上一步结果和当前的截图扔给 GPT-4V，而这个项目会先对截图进行一次预处理，叫做 labeling，给网页上的元素标号——实现原理很简单，就是遍历元素，获取元素的网页布局位置，然后为其增加一个边框和标号。\n有了 labeling 操作，GPT-4V 在理解网页的时候可以做到更加聚焦和准确，而且返回指令的时候，也可以明确告知浏览器去操作哪个元素。\n- 实现 labeling 的操作，在这里：https://github.com/ddupont808/GPT-4V-Act/blob/main/preload-view.js#L154 \n- Prompt 有点 TS 风格，十分简洁：https://github.com/ddupont808/GPT-4V-Act/blob/main/main.js#L13",
+          "link": "https://m.okjike.com/originalPosts/656ef07ed027b7ac8ca79bf1",
+          "publishedOn": "2023-12-05T09:42:22.000Z",
+          "wordCount": 541,
+          "title": "发布了: GPT-4V-Act，https://github.com/ddupont808/GPT-4V-Act，这个项目演示了让 GPT-4V 来控制自己的浏览器，例如执行任务“随机播放一首音乐”，浏览器会自...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FjouFClIWX5LFgDwItl83SetUvET?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80"
+        },
         {
           "id": "https://m.okjike.com/originalPosts/656ed157c306429d19e52978",
           "author": null,
@@ -190,26 +210,6 @@
           "wordCount": 633,
           "title": "发布了: 经常看到社区推出各种 LLM，有 7B、13B、60B 等等，这些数值代表着模型的参数量，大家都知道数值越大，意味着模型的规模越大，那这些参数量到底是如何被...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FrlcXQvDtUdJZSRH8rr7bC3viLTvv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/656970b9c9ed8caff01c6b0a",
-          "author": null,
-          "description": "论文，我认为就是写的比较专业的博客，它的格式非常八股，基本都是按照这样的结构来呈现的：标题 → 概要 → 导言 → 方法 → 实验 → 结论。\n下文较长，主要提到了几个检索方法和阅读工具，强烈推荐下 PopAI， https://bit.ly/412xQbH，体验做的很不错。\n很多朋友说论文读起来太晦涩且耗时，但事实上阅读论文是 ROI 比较高的一件事情，尤其是 AI 盛行的当下，大量科研人员都以论文的形式来呈现自己的研究成果，他们在写论文之前，会把行业最前沿的信息都研究个遍，然后自己动手实践，并提出更新、更好的解决方案。所以我认为学会读论文，以及挖掘对自己工作有帮助的论文是比较重要的一件事情。\n检索论文，我的思路有两个。\n一个是「有什么办法可以解决问题」，通过问题关键词去索引内容，例如检索“如何识别多人同时说话”，我找到了语音识别（ASR），然后找到了 Whisper，然后找到了《Robust Speech Recognition via Large-Scale Weak Supervision》这篇论文，过程中也找到了很多其他的论文。\n另外一个是「为什么这个方法可以解决问题」，去研究技术背后的东西，例如检索“为什么 pyannote-audio 可以区分不同的人说话”，我找到了 Speaker Diarization，然后找到了《A Reinforcement Learning Framework for Online Speaker Diarization》这篇论文，从这篇论文又了解到了更多其他方法，回到思路一，继续研究。\n检索工具上，之前推荐过 aminer.cn 这个网站，它有一个“必读论文”板块（如图一），放了很多精挑细选的专题模块，可能刚好跟你的研究方向是匹配的；但大部分情况下，你进到这个网站时，也不知道该搜什么关键词，所以刚开始还得去 Google 或社交媒体去检索行业先驱的博客或推文，去看看一些综述性的介绍，再去找更多更细节的关键词。\n关于读论文，之前分享过一篇文章《如何阅读一篇论文》，它提到了“三遍阅读法”，我也是这么践行的；当然，也离不开工具上的辅助，主要包括两类。\n第一类是 Summary 工具，如果每出一篇论文都去精读，那时间上肯定是不划算的，关键也没这个必要；Summary 的工具比较多，上面提到的 aminer 也自带了这个能力。\n这里推荐下 PopAI，https://bit.ly/412xQbH，最近看论文和读长篇 PDF 都用的非常多，它支持针对 arxiv 的论文转存后直接进行 AI Chat，省却了下载 PDF 文件的过程（如图二）。\n第二类是精读工具，对大多数人来说，语言是第一阻碍，尤其是论文里铺天盖地的专业词汇，让人望而生畏；我用的比较多的是“沉浸式翻译”这个 Chrome 插件，它支持将 PDF 直接进行在线对照翻译，免费版的翻译质量有点一般，但也基本够用了（如图三）。\n论文的实验结果基本都是以图表形式呈现的，因此精读的一个重要环节是读懂图表，这部分也可以借助 AI 的能力来理解得更透彻，PopAI 在这块做的也还不错，它背后接入了 GPT-4V 的 API，可以对论文里的图片进行详细解读，另外，还支持在聊天框内直接粘贴图片跟它交互，比较方便（如图四）。\n如果论文正好是自己想要内容，还有一个非常实用的工具，叫做 Papers with code，paperswithcode.com，之前也推荐过，它可以根据论文帮你找到对应的 Github 代码实现，以及用到的数据集和测试方法，这也是我用的比较多的。\n顺带提一嘴，涉及到 AI 的代码仓库，建议直接去 Google Colab 上跑，它的下载速度可以达到 200Mb/s，相比本地，会更加高效。\n以上，是近几个月研究 AI 和论文的一点经验。如果你在学习过程中用到了其他好用的辅助工具或者方法，也欢迎推荐和分享！",
-          "link": "https://m.okjike.com/originalPosts/656970b9c9ed8caff01c6b0a",
-          "publishedOn": "2023-12-01T05:35:53.000Z",
-          "wordCount": 641,
-          "title": "发布了: 论文，我认为就是写的比较专业的博客，它的格式非常八股，基本都是按照这样的结构来呈现的：标题 → 概要 → 导言 → 方法 → 实验 → 结论。 下文较长...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FkOYUim9n_AR-I37SdFsYOlPCbzzv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/65692f52c306429d1976ac7c",
-          "author": null,
-          "description": "《揭秘拼多多：市值超越阿里，它是怎么做到的？》https://mp.weixin.qq.com/s/q6VnNrWvV2Jh9UuTl96dWQ，这篇文章的画面感很强，逻辑性也很强，重新认识了拼多多的文化。\n比较好奇的是，这种文化，如果换了主帅，还会不会持续下去；假设公司遇到了危机，没有足够的钱留住员工时，文化还能传承么？",
-          "link": "https://m.okjike.com/originalPosts/65692f52c306429d1976ac7c",
-          "publishedOn": "2023-12-01T00:56:50.000Z",
-          "wordCount": 452,
-          "title": "发布了: 《揭秘拼多多：市值超越阿里，它是怎么做到的？》https://mp.weixin.qq.com/s/q6VnNrWvV2Jh9UuTl96dWQ，这篇文章的画面感很强，逻辑性也很强，重新认识...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FmuXpHc71Sm86xwt5ePwQTsfX8y0v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         }
       ]
     },
@@ -219,12 +219,22 @@
       "siteUrl": "https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/656f10a0278f95df6fe061d3",
+          "author": null,
+          "description": "关于如何写好 Prompt 这件小事\n━━━━━━━━━━━━━━━━━━\n如果只能说一句， 我会说： 清晰表达你想要的。\n如果能再多说一句， 我会说： 把 AI 当成人来沟通。\n如果, 如果能让我再多说一句， 我会说： 请给对方「踏脚石」。\n目前我日常所用的所有技巧， 全部可以装入上面三句话。",
+          "link": "https://m.okjike.com/originalPosts/656f10a0278f95df6fe061d3",
+          "publishedOn": "2023-12-05T11:59:28.000Z",
+          "wordCount": 451,
+          "title": "发布了: 关于如何写好 Prompt 这件小事 ━━━━━━━━━━━━━━━━━━ 如果只能说一句， 我会说： 清晰表达你想要的。 如果能再多说一句， 我会说： 把 ...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/656ec824ee2e07f7acb23e4b",
           "author": null,
           "description": "即刻App，享受探索、表达和创造",
           "link": "https://m.okjike.com/originalPosts/656ec824ee2e07f7acb23e4b",
           "publishedOn": "2023-12-05T06:50:12.000Z",
-          "wordCount": 445,
+          "wordCount": 449,
           "title": "发布了: 一条动态",
           "imageUrl": "https://cdnv2.ruguoapp.com/FhtkL5mhkmaeJLiPKiYC6paQ5HIFv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
         },
@@ -244,7 +254,7 @@
           "description": "如何截图",
           "link": "https://m.okjike.com/originalPosts/656e9a5bd027b7ac8c9ee2a2",
           "publishedOn": "2023-12-05T03:34:51.000Z",
-          "wordCount": 436,
+          "wordCount": 438,
           "title": "发布了: 如何截图",
           "imageUrl": "https://cdnv2.ruguoapp.com/FuckpotCe1w4BL7TadLn5V-06zOXv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
         },
@@ -254,7 +264,7 @@
           "description": "即刻App，享受探索、表达和创造",
           "link": "https://m.okjike.com/originalPosts/656de958d027b7ac8c936bfc",
           "publishedOn": "2023-12-04T14:59:36.000Z",
-          "wordCount": 433,
+          "wordCount": 435,
           "title": "发布了: 一条动态",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fsx6OrXgEofw1QQLY19iGVCRX__Ev3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -294,7 +304,7 @@
           "description": "有一个指标我觉得大家可以关注下：\n群里各人发言的平均消息长度。\n直观感觉该指标和思考深度成正相关。\n(叠buff：忽略转发的大段文字情况)",
           "link": "https://m.okjike.com/originalPosts/656db24ec9ed8caff06e237d",
           "publishedOn": "2023-12-04T11:04:46.000Z",
-          "wordCount": 422,
+          "wordCount": 424,
           "title": "发布了: 有一个指标我觉得大家可以关注下： 群里各人发言的平均消息长度。 直观感觉该指标和思考深度成正相关。 (叠buff：忽略转发的大段文字情况)",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -304,18 +314,8 @@
           "description": "道德经有言：\n道生一，一生二，二生三，三生万物。\n我们日常处理的信息就是万物，日常会思考：\n其中的三是什么？\n往上一层的二(阴阳对抗力量)是什么？ \n再往上一层的一是什么？\n它的道是什么？\n这种抽象训练的结果，常常会总结出一个无法直接指导落地实践的「常识」，但随时时间的推移，却越发感受到这些简单常识的力量。",
           "link": "https://m.okjike.com/originalPosts/656caee0278f95df6fb07b1a",
           "publishedOn": "2023-12-03T16:37:52.000Z",
-          "wordCount": 426,
+          "wordCount": 428,
           "title": "发布了: 道德经有言： 道生一，一生二，二生三，三生万物。 我们日常处理的信息就是万物，日常会思考： 其中的三是什么？ 往上一层的二(阴阳对抗力量)是什么？ ...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/656caa72c9ed8caff059d1f0",
-          "author": null,
-          "description": "马克思说：\n“哲学家只是用不同的方式解释世界，而问题在于改变世界。”",
-          "link": "https://m.okjike.com/originalPosts/656caa72c9ed8caff059d1f0",
-          "publishedOn": "2023-12-03T16:18:58.000Z",
-          "wordCount": 424,
-          "title": "发布了: 马克思说： “哲学家只是用不同的方式解释世界，而问题在于改变世界。”",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         }
       ]
@@ -533,6 +533,16 @@
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
         {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231205/t20231205_526509174.html",
+          "author": "国家预警信息发布中心",
+          "description": "丰都县气象台2023年12月5日20时50分发布“大雾黄色预警信号”，预计6日0时至11时，社坛镇、虎威镇、树人镇、保合镇、十直镇、龙孔镇、高家镇、兴义镇、名山街道、三合街道、双路镇、湛普镇、包鸾镇、南天湖镇、三建乡、龙河镇、江池镇、栗子乡、都督乡、兴龙镇、仁沙镇、三元镇、许明寺镇、董家镇、双龙镇、青龙乡、暨龙镇、武平镇、太平坝乡、仙女湖镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231205/t20231205_526509174.html",
+          "publishedOn": "2023-12-05T12:54:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市丰都县发布大雾黄色预警",
+          "imageUrl": null
+        },
+        {
           "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231205/t20231205_526509015.html",
           "author": "国家预警信息发布中心",
           "description": "忠县气象台2023年12月5日17时10分发布“大雾黄色预警信号”，预计12月5日23时至6日10时，忠州街道、白公街道、新生街道、乌杨街道、任家镇、洋渡镇、石子乡、磨子土家族乡、东溪镇、复兴镇、黄金镇、涂井乡、石宝镇、野鹤镇、兴峰乡、汝溪镇、金声乡、官坝镇、石黄镇、三汇镇、白石镇、永丰镇、马灌镇、拔山镇、花桥镇、金鸡镇、新立镇、善广乡、双桂镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
@@ -727,6 +737,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7308536984028856346",
+          "author": "阳阳羊",
+          "description": "highlight: a11y-dark\n本文的讲解是建立在类型转换的基础上，如果对类型转换机制不了解的同学可以先阅读一下我的上一篇文章（看了一天的官方文档，终于搞懂了 JS 类型转换机制 - 掘金 (juejin.cn)）\n在 JavaScript 学习过程中，往往出现一些与我们常理相违背的结果，比如我们今天的论题[] == ![] ，它的返回的结果竟然是true ，这着实让初学者感到困惑。因为根据直觉，[]和![]两者应该是不相等的。面试官恰恰就会抓住这一点，对程序员们进行考察。\n而本文将结合官方文档对该题进行深度剖析。\n看看官方文档怎么说\n关于 ==\n关于==，文档这样描述：Annotated ES5 11.9.1\n\n\n根据官方文档，我总结了以下 == 的隐式转换规则，一些简单的就忽略掉了：\n类型相同的比较：\n（1）如果类型是 Undefined 或 Null，返回 true。\nnull == null; // true\n\n（2）如果一个是 +0，另一个是 -0，返回 true：\n+0 == -0; // true\n\n（3）如果类型是对象，二者引用同一个对象，返回 true，反之返回 false。\n{} == {}; // false\n\nnull 和 undefined 比较： 仅当它们之间的比较时，返回 true。\nnull == undefined; // true\n\nNaN 比较： NaN 与任何值比较都返回 false，包括NaN自己。\nNaN == NaN;   // false\n\n字符串与数字比较： 如果其中一个操作数是字符串，另一个是数字，将字符串转换为数字，然后进行比较。\n'5' == 5;   // true，将字符串 '5' 转换为数字 5 进行比较\n\n布尔值与非布尔值比较： 布尔值无法直接比较，需先将布尔值转换为数字（true 转换为 1，fal…",
+          "link": "https://juejin.cn/post/7308536984028856346",
+          "publishedOn": "2023-12-04T04:44:28.000Z",
+          "wordCount": 1162,
+          "title": "面试官 ：[] == ! [] 为什么返回 true ？",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7307889500545400851",
           "author": "Shaka",
           "description": "theme: condensed-night-purple\n前言\n本文将会带着大家做一个完整的项目，但是不包含后端，如果需要后端云开发的话，后期再给大家补上\n本来最开始是想带着大家做鸿蒙官方的CodeLabs的，但是我看现在网上已经出了很多教程，尤其是机构，他们到时候应该会以视频教学的方式带着大家做，所以我就不做CodeLabs了，决定自己做一个单出的Demo，因为自己做的话需要设计等因素，所以拖了蛮长时间的\n最后的项目代码我传到了Gitee上供大家参考，因为我自己也懒得用Github...\n好的，我们开始吧\n登陆页面\n我们新建项目，选择空模板就行了，创建完是这个样子的\n\n我现在需要添加一个登录页和注册页，就直接新建两个Page\n\n我现在想新建一个常量的文件，用来存放一些常量，例如一些文字大小，颜色等等\n\n于是新建一个common并且新建一个Constant.ets\n然后我先定义一下我登陆页面标题的内容数据，这种数据的格式推荐是大写，然后多个单词用_进行分割\n\n然后在登陆页面使用\n\n然后输入框我们用TextInput组件来完成\n\n我们先简单做成这种效果，然后我们把一些别的地方也会用到的公共的常量拿出来\n\n然后我们在Login中使用\n\n这里可能有人会说，为什么不封装一个Form组件呢？其实我最开始也是这么想的，因为登陆和注册都需要一个表单，但是在写的过程中我发现其实也并不怎么省事，而且我设想的后期的登陆和注册页面可能区别较大\n当然，如果这里你想封装一个Form组件的话是完全可以的~\n现在我们想获取到输入框的值，并且希望点击Button进行页面跳转，跳转到Index\n\n\n这里顺便传了个参数，其实这个用户名密码应该存在应用里的，但是这里就当是复习一下传参吧\n然后Index接收\n\n现在的效果是这样的\n\n然后我们同样的逻辑，搞一下注册页面\n注册页面\n\n我们先在这里加一行，可以跳转到注…",
@@ -734,6 +754,16 @@
           "publishedOn": "2023-12-03T09:06:57.000Z",
           "wordCount": 1525,
           "title": "实战篇：带着大家用鸿蒙HarmonyOS做项目（一）",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7307856698975158298",
+          "author": "hhzzcc",
+          "description": "前言\n微信公众号：前端不只是切图\n代码运行的最终效果在文章最后\n什么是凸包\n本篇文章主要阐述如何在canvas上实现凸包的效果，我们先来看看下什么是凸包，先上附图\n\n从上面的图可以看出，图中的内容包含点p0-点p12，而红框部分就是凸包，可以看出其由最外围的点连接构成刚好把所有的内容都包住，就像橡皮筋勒紧的效果，当运用到canvas上时，点相当于canvas上的像素\nAndrew算法\n本文主要使用Andrew算法实现凸包的效果，先上个gif图，看下这个算法的全貌\n\n可能刚开始看有点懵逼，没事，其实算法思路并不复杂，继续往下看，以下是随便勾勒的canvas，其内容像是一个五角星\n\n由于我们需要操作像素点，可以通过ctx.getImageData()拿到整个canvas的所有像素点，再做逐一分析，首先，我们要找到一个起始点，即最小的x坐标，这个点一定是在凸包上的\n\n可以通过上到下然后从左到右遍历canvas的imageData，当遇到第一个alpha通道不为0的像素，就是我们要找的起始点，然后我们将它的坐标入栈，继续遍历，找下一个点\n\n如图所示，我们往右行进一步，其实就是x坐标 +1（现实中像素点是很小的，图中为了方便理解就点的比较大），我们从下往上遍历当前x坐标下y轴上的每个点，就是上图中红线的部分，找到第一个alpha通道不为0的像素，我们把这个像素的坐标入栈，现在我们栈的长度是2，我们以此方法继续行进\n\n如上图，由于没有特殊情况，到这里我们可以一直把点入栈，那什么是特殊情况呢，我们继续往右行进，把图片放大一些方便理解\n\n当前我们的栈顶是p2，其前一个元素是p1，将p1 -> p2作为一个向量我们记作prev，下一个点是p3，再将p2 -> p3作为一个向量我们记作next，Andrew算法的核心是，当next向量在prev向量的左侧，我们可以把点p3直接入栈，如果next向量在prev向量的右侧，那栈顶元素(p2)出栈，然后继续以当前栈顶前一个元素(p1的上一个元素)和栈顶元素(p1)组成向量prev，栈顶元素(p1)和p3组成向量next，进行方向比较，如果向量next还是在向量prev的右侧就继续把栈顶元素出栈，继续往前比较，直到比较到是左侧，才将p3入栈，然后才继续向右行进\n向量通过终点坐标 - 起始坐标 得到\nfunction create(v1, v2) {\n    return {\n        x: v2.x - v1.x,\n        y: v2.y - v1.y\n    };\n}\n\n向量方向通过叉乘得到，结果大于0就是右侧\nfunction cross(v1, v2) {\n    return v1.x * v2.y - v2.x * v1.y;\n}\n\n然后我们按照以上的规则，继续向右进行\n\n由于我们一开始是从下到上，从左到右遍历，所以最终我们得到是4个点形成的一个下凸包区域\n\n之后我们只需要再从上到下，从右到左，将会得到一个上凸包的区域，合并两个凸包数组就是我们要的的凸包拉\n最终效果\n以上的图都是纯手画的，有点手残，我们看下最终代码的效果\n\n\n\n这里在canvas上把计算后凸包的各个点做了ctx.moveTo()连接，并通过ctx.fill()的形式绘制，同时增加了描边的宽度，整体看起来会好看些。",
+          "link": "https://juejin.cn/post/7307856698975158298",
+          "publishedOn": "2023-12-02T09:32:34.000Z",
+          "wordCount": 762,
+          "title": "canvas 凸包效果",
           "imageUrl": null
         },
         {
@@ -884,26 +914,6 @@
           "publishedOn": "2023-11-28T13:34:06.000Z",
           "wordCount": 879,
           "title": "晚上12点，帮组员解决Vue3异步引发的线上BUG",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7306017890074673167",
-          "author": "小古的运维日记",
-          "description": "导语：电商成功的敲门砖——首屏加载速度。在数字时代，网站性能如同电商的门面，迅速打开是前提，迟滞就容易失去商机。网站首屏性能就好比商店大门的开合，承载着用户留存的关键。秒开易成就交易，缓慢的加载则好比提前预埋了失望离开的种子。尤其在商业的较量中，首屏加载时间作为衡量性能的一环至关重要。\n前言\n我司是一家跨境电商公司，为北美、欧洲等几十个国家提供高质量的家居、户外和宠物用品等。为了给消费者打造便捷、愉悦的购物体验，利用好广告流量，保证最好的用户转化，尤其是随着狂欢的万圣节、抢购狂潮的黑色星期五和圣诞节等节日的来临，网站的性能面临更为激烈的挑战。\n\n当前存在的问题\n\n当前，我司面临的两大严峻问题愈发凸显：\n复杂监控难题： 必须同时监控美洲和欧洲十几个国家，全面观察整体访问情况、性能和错误。实时排查用户错误或卡顿以进行优化增加了难度。构建一个能够应对上百万访问和上亿点击量的监控平台，以及相应的数据收集和存储系统显得异常复杂，对团队提出了更高的技术、架构和管理要求。\n用户体验不佳： 首屏加载速度缓慢成为一个突出问题，直接影响用户的整体体验。这不仅对用户浏览产品和下单的过程造成了显著不便，更可能导致用户流失。改善首屏加载速度成为提升用户满意度和促进业务增长的迫切需求。解决这一问题不仅需要技术上的创新，还需要深入理解用户需求和行为，从而为他们提供更为流畅和愉悦的在线购物体验。\n优化历程\n首先，让我们回顾一下我们在前期所了解到的一些关键想法，这些需求对于深入了解和优化网站性能至关重要:\n网站访问的pv、uv和分布\n网站加载时间\n网站核心指标\n关键网络请求的性能\nCDN的性能\n针对上述需求，最初我们采用了实现核心需求的方法，即手写代码以收集部分性能指标。然而，随着时间的推移，我们逐渐认识到这种方式存在一些不可忽视的问题。\n首先，维护这部分代码非常耗费精力。这要求我们拥有专门负责编写和维护监…",
-          "link": "https://juejin.cn/post/7306017890074673167",
-          "publishedOn": "2023-11-27T07:46:54.000Z",
-          "wordCount": 946,
-          "title": "作为跨境电商团队，如何优化网站首屏性能",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7305572311812423691",
-          "author": "ChasingTarget",
-          "description": "JavaScript 每日一篇，记录自学JavaScript语言的点点滴滴。\n除了for循环♻️，for-of,for-each循环♻️也是一个不错的选择\n先说for-of循环♻️\n认识for-of循环♻️\nMDN上对for-of循环的详细介绍： https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of\nfor(const /* 循环对象集合中的每个元素 */ of /* 循环对象集合 */ ){\n  /* 循环体 */\n  /* 你可以在循环体中取出循环对象集合中的每一个元素 */\n}\n\n通过for-of循环♻️，可以对数组Array、对象Object等可迭代变量进行像键值对一样的循环遍历操作。换句话说，你不需要亲自创建索引来依次遍历并取出集合中的每一个元素；此循环会将集合中的每一个元素创建对应的索引，通过索引来遍历整个数组中的元素。\n另外，如果你觉得这样不好记忆，你可以换一种方式：在英文中，The color of books 指的是图书的颜色。图书是一个整体，而每一本书的封皮颜色都是不同的，是图书整体中的个体。通过这种方式可以很快的理解for-of循环机制。\n使用for-of循环遍历数组元素\nrestaurant对象\nconst restaurant = {\n    name: '意大利🇮🇹经典',\n    location: 'Via Angelo Tavanti 23, 佛罗伦萨, 意大利',\n    categories: ['意大利', '比萨店', '素食', '有机'],\n    starterMenu: ['佛卡夏', '意式烤面包', '大蒜面包', '卡普雷塞沙'],\n    mainMenu: ['披萨', '意大利面', '烩饭'…",
-          "link": "https://juejin.cn/post/7305572311812423691",
-          "publishedOn": "2023-11-26T16:24:43.000Z",
-          "wordCount": 1774,
-          "title": "JavaScript高级循环方法",
           "imageUrl": null
         }
       ]
