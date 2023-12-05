@@ -23,7 +23,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": 1012,
+          "wordCount": 1011,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "剪映中的视频特效虽多，其实就两类，一类改变原始像素，一类叠加混合，本文通过精简的源码和精致的案例给大家介绍具体如何实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/video-effect-js-filter-pixijs-webgl-3d/",
           "publishedOn": "2023-11-19T15:12:20.000Z",
-          "wordCount": 1232,
+          "wordCount": 1231,
           "title": "剪映APP的视频特效如何在Web中JS实现",
           "imageUrl": null
         },
@@ -224,7 +224,7 @@
           "description": "关于如何写好 Prompt 这件小事\n━━━━━━━━━━━━━━━━━━\n如果只能说一句， 我想说： 清晰表达你想要的。\n如果能再多说一句， 我想说： 把 AI 当成人来沟通。\n如果, 如果能再多说一句， 我想说： 请给对方「踏脚石」。\n目前我日常所用的所有技巧， 全部可以装入上面三句话。",
           "link": "https://m.okjike.com/originalPosts/656f10a0278f95df6fe061d3",
           "publishedOn": "2023-12-05T11:59:28.000Z",
-          "wordCount": 472,
+          "wordCount": 490,
           "title": "发布了: 关于如何写好 Prompt 这件小事 ━━━━━━━━━━━━━━━━━━ 如果只能说一句， 我想说： 清晰表达你想要的。 如果能再多说一句， 我想说： 把 ...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -244,7 +244,7 @@
           "description": "所有人的观点都是盲人摸象。\n━━━━━━━━━━━━━━━━━━\n每个人都有自己的成长经历(朋友, 教育, 师长, 同事, 书籍), 这些独特的经历也就意味着你是在以某一个独特的视角在看待这个世界。\n「道可道，非常道。」 道体就像是那头大象， 每个人表述自己对大象的观察都是自己所站角度的观测结果，都无法真正「正确且完整」地描述出那头大象。\n既然所有人都是错的，当然「我」所说的也是错的。\n从这个角度来看, 开源的好处就在于, 可以同时吸纳不同角度的使用者的观测结果, 提升「合道」的可能性。\n人也应该如何， 开放自己，接纳世界不同视角意见的反馈。",
           "link": "https://m.okjike.com/originalPosts/656e9fe8d027b7ac8c9f7caa",
           "publishedOn": "2023-12-05T03:58:32.000Z",
-          "wordCount": 456,
+          "wordCount": 458,
           "title": "发布了: 所有人的观点都是盲人摸象。 ━━━━━━━━━━━━━━━━━━ 每个人都有自己的成长经历(朋友, 教育, 师长, 同事, 书籍), 这些独特的经历也就意味...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fq6gBK7eLwMgKanRzeyAYi2ESu9wv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -822,7 +822,7 @@
           "description": "大家好，我是杨成功。\n在上一篇文章《手撸 Electron 自动更新，再繁琐也要搞懂它》中，我们详细介绍了 Electron 自动更新的全流程。\n简单来说，就是打包生成 latest.yml 文件和安装包，并上传到服务器。客户端打开时访问服务端的 latest.yml 地址，判断是否有新版本，有则自动下载新包并更新。\n对于以上的更新流程，很多朋友在评论区留言表示不够灵活，比如：\n只能自动更新吗？能不能通过后端接口来判断是否更新？\n必须要用 latest.yml 吗？能不能绕开它？\n如何区分 Window、Mac、Mac M1 三种安装包？\n下面我们一一解答这些问题，并手撸一个更灵活的自动更新接口。\n如何本地测试更新？\n在开发阶段想测试一下检测更新的流程走没走通，可能不太好测试，因为 Electron 默认在开发环境下会绕过更新检测。\n开发环境下 Electron 启动后，如果接入了自动更新，主进程控制台会打印下面的信息：\nSkip checkForUpdates because application is not packed and dev update config is not forced\n意思是当前是开发环境，未打包，所以绕过检测。Electron 通过 app.isPackaged 的值来判断是否打包，那么在开发环境下，我们可以修改一下这个值：\nimport { app } from 'electron';\n\n// 未打包时是开发环境\nif (!app.isPackaged) {\n  Object.defineProperty(app, 'isPackaged', {\n    get: () => true,\n  });\n}\n\n重新运行，大概率会看到第二个错误：\nError: ENOENT: no such file or directory /xxxx/ap…",
           "link": "https://juejin.cn/post/7307723753907486757",
           "publishedOn": "2023-12-01T23:27:43.000Z",
-          "wordCount": 1816,
+          "wordCount": 44,
           "title": "Electron 自动更新，绕过 latest.yml 使用自定义接口",
           "imageUrl": null
         },
@@ -832,7 +832,7 @@
           "description": "故事从0.1+0.2说起\n0.1+0.2是否等于0.3呢?\n这是一个前端人耳熟能详的故事，每一个初入前端世界的人，应该都会被它来一次灵魂拷问。它的出现，似乎打破了人们以往对于代码世界“执行严谨、一丝不苟”的刻板印象。然而，这看起来“不够严谨”的形成原因，却正是因为底层代码执行的足够严谨！\n在初入前端世界的时候，有那么一瞬，我甚至在想难道是底层对于0.1和0.2有一种特殊的感情？\n然而事实并非如此，能被底层这种庞然大物看上并针对的，当然不会只有0.1和0.2这两个看起来平平无奇的数字，而是包含了这两个数字在内的一批特殊存在。\n如下图所示：\n\n当然，除上述图片内的数字之外，还有更多的其他数字也在这反常理的队列之内。\n然而，这篇文章我们并不是来深入讨论这些特殊的数字在进行数学计算时，与底层究竟产生了什么样的恩怨纠葛。我们只需要简单知道：在计算机世界中，所有信息最后都是以二进制存储的，可是数字中的小数部分在按照一定规则转换为二进制时，有些数字会产生无限循环的现象，但计算机精度位数是有限的，所以对超出位数的部分做了四舍五入的计算，因此造成了精度的丢失。\n本文仅仅针对以上现象，结合日常开发的实践，讨论一些解决问题的方法。\n初步解决\n既然是因为小数部分在转换二进制时做了四舍五入的处理，那么计算时先将小数转为整数再计算是不是就可以了？\n依据上面的思想，在javascript中进行小数计算，通常会采用放大倍数取整之后再计算，得出结果之后再缩小还原的技术方案。\n例：计算0.1+0.2，通常会将0.1和0.2放大10倍，相加之后再缩小10倍\n代码如下：\n  /**\n   * 已知：a为0.1，b为0.2\n   * 求：a与b的和\n   * */\n  const a = 0.1;\n  const b = 0.2;\n  const result = ((a * 10) + (b * 10)) / 1…",
           "link": "https://juejin.cn/post/7307469610424369167",
           "publishedOn": "2023-12-01T09:56:21.000Z",
-          "wordCount": 2249,
+          "wordCount": 44,
           "title": "老生常谈，JS中数学计算精度问题的解决方案",
           "imageUrl": null
         },
@@ -892,7 +892,7 @@
           "description": "前言\n上篇文章 尝试实现了国外大佬用Web做出来跨窗口渲染动画效果 - 掘金 反响很大，但是仅仅只是实现了跨窗口动画效果，严格说就没有动画，还有些bug和遗憾，尤其是粒子效果，得入three.js坑，怎么办？跳啊！\n硬肝了两天，实在肝不动了，看效果吧。\n第一版v2效果，大粒子，粒子数量较少：\n\n第二版v2.1，小粒子，粒子数量多：\n\nthree.js\n官方文档：https://threejs.org/，中文文档：three.js docs\n我第一次接触three.js，之前只是听说过，比如能弄车展啥的，感觉很厉害，就想借此机会学习下，跳进坑里才发现，这坑也太深了。随便找个教程，里面各种名词就给我弄吐了。\n先按文档 three.js docs 画个立方体，跑起来了，但是我想要球体啊，还有粒子围着中心转，这么多api学不起啊，搜教程也是杂乱无章，无从学起，咋整？找现成的啊！\n看到官网有很多现成的例子，找了一个相近的：https://threejs.org/examples/#webgl_sprites，截了个静态图长这样：\n\n找源码：three.js/examples/webgl_sprites.html at master · mrdoob/three.js，copy到本地，代码就200行，用到的three api就几个，搜下api大概了解代码各部分的功能，基本都能看懂，然后删了多余功能，一个粒子绕球中心旋转功能就出来了。\n现在关于粒子移动、渲染、球体旋转缩放等变化api都已经基本搞懂了，然后就是痛苦折磨的计算调试了，不想再回忆了。\n动画效果的移动都是靠循环对象、计算坐标，改变粒子的position来实现的，感觉应该会有更好的现成api能简化这个过程，而且有缓冲、阻尼效果等。如果有更好的例子，欢迎大佬分享。\n总结下用到的api吧，就几个：\n构造方法\nTHREE.Perspec…",
           "link": "https://juejin.cn/post/7307057492059471899",
           "publishedOn": "2023-11-30T08:59:22.000Z",
-          "wordCount": 1019,
+          "wordCount": 44,
           "title": "终于把国外大佬的跨窗口量子纠缠粒子效果给肝出来",
           "imageUrl": null
         },
@@ -902,7 +902,7 @@
           "description": "theme: channing-cyan\n背景\n作为一枚前端开发人员，尤其是在写业务代码的时候，避免不了需要经常在控制台打印变量来查看数据（反正我是这样哈哈哈哈哈），那么就需要频繁的来写console.log()，然后在里面再输入自己想要查看的变量名。\n思考\n既然我们需要频繁的来进行这个操作，那么我们是不是可以把它像代码片段一样来保存下来，然后配置一个激活他的快捷键来进行使用\n在左下角这里选择用户代码片段\n\n然后选择想要使代码片段生效的文件类型，比如我这里选择的tsx\n选择了对应的文件类型，对应的代码片段只会在这个类型的文件里生效，想要在其他类型的文件里也使用同样的代码片段需要去对应的类型文件中复制一份\n\n把对应的代码片段写入\n\"Print to console\": {\n    // 说明\n    \"description\": \"Log output to console\",\n    // 快捷键\n    \"prefix\": \"cl\",\n    // 输出内容\n    \"body\": [\"console.log($1)\"]\n},\n\n这样我们就配置好了一个简易的代码片段，使用的时候只需要敲出来 ’cl‘就会出现我们的代码提示\n\n这样我们就解决了这个问题（我自己也是使用这个方法很久）\n更进一步\n目前我们通过代码片段已经解决了这个问题，但是还是会有一些不方便的地方\n我们只能在写好代码片段的类型文件中使用，我们现在使用 .tsx，突然要写 .vue 了使用的时候发现没有生效，就又要再去配置一次\n如果我们目前的 console.log 比较多，那么控制台上就会看到输出了一堆的变量，根本搞不清哪个打印是对应的哪个变量\n有时候会遗忘删掉 console.log 语句 (也可以通过配置husky，在commit的时候进行校验解决)\n为了解决这些问题，我们更进一步，来通过写一个vscode插件解决\nQuickly Log\n这个插件最开始只是对vscode插件开发的好奇，加上自己确实有这方面的需求才开始编写的。编写成插件就可以有效的解决了需要重复配置代码片段的问题。\n这里介绍下插件的功能，不对代码具体介绍，感兴趣的可以去github上看下代码 https://github.com/Richard-Zhang1019/quickly-log\n功能\n提示配置\n只需要将光标移动到变量附近，然后使用快捷键 Cmd + Shift + L，就会在下一行输出语句\n\n这里也支持携带上变量所在的行号以及文件名\n\n当然这些都是可以配置的，可以根据自己的喜好来配置输出的提示内容\n\n如果是简洁党也可全都取消勾选，效果就和直接使用上面提到的代码片段一样，但是会支持自动将变量放入console.log()的括号内\n一键clear\n执行 Cmd + Shift + K 就会将当前页面匹配到的console.log语句自动删除\n一键切换注释\n执行 Cmd + Shift + J 就会将当前页面匹配到的console.log语句前面自动打上注释，再执行就会取消注释\n快捷键都是可以更改的 vscode左下角的设置icon点开 点击键盘快捷方式 输入 Quickly Log进行更改\n以上就是目前插件支持的功能了，欢迎大家去Vscode下载使用\n\nTODO\n目前有些场景的打印是有问题的\n比如下面这样的换行场景，我们希望在光标放在a，b，c这里的时候，会在第21行这里插入console.log语句，但是目前只会在光标的下一行插入，还需要手动移动到下面\n\n\n之前有试过通过判断是否在 {} 内来输入到整个语句之后，但是情况不太理想，后续再考虑解决",
           "link": "https://juejin.cn/post/7306806944046678052",
           "publishedOn": "2023-11-30T03:00:00.000Z",
-          "wordCount": 1054,
+          "wordCount": 44,
           "title": "还在手打console.log？快来试试这个vscode插件 Quickly Log！！",
           "imageUrl": null
         },
@@ -912,7 +912,7 @@
           "description": "本文翻译自 A Better Frontend Component Structure: Component Trees，作者：William Bernting， 略有删改。\n\n自很久以前遵循互联网上的建议以来，我一直采用了某种“能工作就行”的组件结构。\n场景\n让我们首先想象一个简化的前端应用程序目录结构，如下所示：\npublic/\n  some-image.jpg\npages/\n  index.tsx\n\ncomponents/\n  Heading.tsx\n  Logo.tsx\n  Layout.tsx\n  BoxContainer.tsx\n  Footer.tsx\n\n问题所在\n上面的简单应用程序结构很难解释这些组件之间是如何相互作用的。\n例如，您可能会猜测Layout.tsx导入Footer.tsx和Header.tsx，而这又可能导入BoxContainer.tsx。但这仅仅从文件结构上是不清楚的。\n更糟糕的是，随着应用程序的增长，组件列表将变得越来越难以推断它们是如何依赖的。\n简单方法：扁平组件结构\n通常首先想到的是将组件组织到语义正确的目录中。\n下面是这种方法的典型结果：\npublic/\n  some-image.jpg\npages/\n  index.tsx\n\ncomponents/\n  layout/\n    Layout.tsx\n    Heading.tsx\n    Footer.tsx\n  common/\n    Heading.tsx\n    BoxContainer.tsx\n\n问题#1：很难扩展好名字\n作为一个开发人员，您会尝试为每个目录创建好的名称和分类，如containers、headings等。\n问题是您需要为目录考虑更多的分类，而不仅仅是组件名称。\n你经常会忍不住说，“我就把这个移到公共目录吧。”拥有common目录是你所追求的目标相悖的反模式，…",
           "link": "https://juejin.cn/post/7306447498994303016",
           "publishedOn": "2023-11-29T12:13:18.000Z",
-          "wordCount": 1658,
+          "wordCount": 44,
           "title": "一种更好的前端组件结构：组件树",
           "imageUrl": null
         },
@@ -922,7 +922,7 @@
           "description": "hakimel/reveal.js\nStars: 65.3k  License: MIT\n\nreveal.js 是一个开源的 HTML 演示框架，可以让任何人通过 web 浏览器免费创建精美的演示文稿。其强大功能包括嵌套幻灯片、Markdown 支持、自动动画、PDF 导出、演讲者备注、LaTeX 排版和广泛的 API。\n核心优势如下：\n允许使用者通过 web 浏览器免费创建精美的演示\n强大功能集合：嵌套幻灯片、Markdown 支持等\nkubeshark/kubeshark\nStars: 9.9k  License: Apache-2.0\n\nKubeshark 是一个针对 Kubernetes 的 API 流量分析工具，提供实时、协议级别的可视化能力，捕获和监控所有进出容器、Pod、节点和集群的流量和数据包。它类似于重新设计过的用于 Kubernetes的 TCPDump 和 Wireshark。\n显著改善性能\n优化资源利用率\n实时流量监控\n协议级别可见性\nmanticoresoftware/manticoresearch\nStars: 6.7k  License: GPL-2.0\n\nManticore Search 是一个易于使用的开源快速搜索数据库，是 Elasticsearch 的良好替代品。它与其他解决方案的区别在于：\n它非常快，并且比其他替代产品更具成本效益。\n具有现代多线程架构和高效查询并行化能力，可以充分利用所有 CPU 核心以实现最快响应时间。\n强大而迅捷的全文搜索功能无缝适用于小型和大型数据集。\n通过 Manticore Columnar Library 提供列存储支持，可处理超出内存容量范围之外的庞大数据集。\n以下是该项目关键特性和核心优势：\n182 倍快过 MySQL 处理小规模数据 (可复现)\n29 倍快过 Elasticsearch 进行日志分析…",
           "link": "https://juejin.cn/post/7306450197629370387",
           "publishedOn": "2023-11-29T04:38:06.000Z",
-          "wordCount": 981,
+          "wordCount": 44,
           "title": "reveal.js：免费、强大的演示框架 | 开源日报 No.89",
           "imageUrl": null
         },
@@ -932,7 +932,7 @@
           "description": "开篇\n你说，万一接口挂了会怎么样？\n还能咋样，白屏呗。\n有没有不白屏的方案？\n有啊，还挺简单的。\n容我细细细细分析。\n原因就是接口挂了，拿不到数据了。那把数据储存起来就可以解决问题。\n思考\n存哪里?\n第一时间反应浏览器本地存储，想起了四兄弟。\n选型对比\n特性\ncookie\nlocalStorage\nsessionStorage\nindexDB\n\n\n\n\n数据生命周期\n服务器或者客户端都可以设置、有过期时间\n一直存在\n关闭页面就清空\n一直存在\n\n\n数据储存大小\n4KB\n5MB\n5MB\n动态，很大 大于250MB\n\n\n与服务器通信\n每次都带在header中\n不带\n不带\n不带\n\n\n兼容性\n都支持\n都支持\n都支持\nIE不支持，其他主流都支持\n\n\n\n考虑到需要存储的数据量，5MB 一定不够的，所以选择了 IndexDB。\n考虑新用户或者长时间未访问老用户，会取不到缓存数据与陈旧的数据。\n因此准备上云，用阿里云存储，用 CDN 来保障。\n总结下：线上 CDN、线下 IndexDB。\n整体方案\n整体流程图\n\nCDN\n先讲讲线上 CDN。\n通常情况下可以让后端支撑，本质就是更新策略问题，这里不细说。\n我们讲讲另外一种方案，单独启个 Node 服务更新 CDN 数据。\n流程图\n\n劫持逻辑\n劫持所有接口，判断接口状态与缓存标识。从而进行更新数据、获取数据、缓存策略三种操作\n通过配置白名单来控制接口存与取\naxios.interceptors.response.use(\n      async (resp) => {\n        const { config } = resp\n        const { url } = config\n        // 是否有缓存tag，用于更新CDN数据。目前是定时服务在跑，访问页面带上tag\n        if (this.hasCdnTag() …",
           "link": "https://juejin.cn/post/7306404340679557170",
           "publishedOn": "2023-11-29T01:43:21.000Z",
-          "wordCount": 1956,
+          "wordCount": 44,
           "title": "前端接口容灾",
           "imageUrl": null
         },
@@ -942,7 +942,7 @@
           "description": "theme: smartblue\n前端异步请求并发控制是指在客户端（通常是在浏览器中）管理和控制同时发出的异步请求的数量的技术。在进行网络请求，如使用 AJAX 与服务器交互时，可能会有多个请求同时发送。如果不加以控制，大量并发的请求可能会导致服务器压力过大，或者在客户端造成性能问题。\n为了实现并发控制，你可以使用多种策略，其中一些策略包括：\n队列: 创建一个请求队列，并且同时只处理一定数量的请求。一旦当前处理的请求完成，就从队列中取出下一个请求进行处理。\n批处理: 将多个请求合并成一个批量请求，如果 API 支持的话。这减少了请求数量，但可能需要服务器端的支持。\n节流: 在特定时间内限制请求的数量。例如，每秒只允许发出一个请求。\n防抖: 如果有大量连续的请求，在一定的延迟后只执行最后一次请求，这通常用于搜索框等场景。\nPromise 控制: 使用 Promise.all 来管理多个请求，或者使用 Promise.race 来处理多个请求中最快返回的结果。\n我们先来手动实现一个并发请求控制，你可以创建一个管理请求的队列，并通过设置一个最大并发数来控制同时进行的请求数量。\n当一个请求完成时，你可以从队列中取出下一个请求并执行它。以下是一个简单的 JavaScript 例子，它展示了如何使用 Promise 来管理并发请求。\n假设我们有一个 sendRequest 函数，这个函数接收一个 url，并返回一个 Promise。我们的目标是控制这些请求的并发数。\nclass RequestQueue {\n  constructor(maxConcurrent) {\n    this.maxConcurrent = maxConcurrent; // 设置最大并发数\n    this.currentRunning = 0; // 当前正在运行的请求数\n    this.queue =…",
           "link": "https://juejin.cn/post/7306407473280466981",
           "publishedOn": "2023-11-28T15:35:22.000Z",
-          "wordCount": 1953,
+          "wordCount": 44,
           "title": "字节常考：请求并发数量限制",
           "imageUrl": null
         },
