@@ -51,11 +51,63 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-05 datetime="2023-12-05T00:32:00.000Z">2023-12-05</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-05 datetime="2023-12-05T00:32:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-05 datetime="2023-12-05T01:16:00.000Z">2023-12-05</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-05 datetime="2023-12-05T01:16:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7308643782376161334"
+                        open
+                      >
+                        <summary class="article-expander__title">你有遇到鼠标一放就生成一条线的eclipse吗</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7308643782376161334">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>你有遇到鼠标一放就生成一条线的eclipse吗</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7308782773866233882"
+                        open
+                      >
+                        <summary class="article-expander__title">高效的学习平台和更快捷面试平台.</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7308782773866233882">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>高效的学习平台和更快捷面试平台.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -1137,6 +1189,46 @@ if (!app.isPackaged) {
 重新运行，大概率会看到第二个错误：
 Error: ENOENT: no such file or directory /xxxx/ap…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7307469610424369167"
+                        open
+                      >
+                        <summary class="article-expander__title">老生常谈，JS中数学计算精度问题的解决方案</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7307469610424369167">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>故事从0.1+0.2说起
+0.1+0.2是否等于0.3呢?
+这是一个前端人耳熟能详的故事，每一个初入前端世界的人，应该都会被它来一次灵魂拷问。它的出现，似乎打破了人们以往对于代码世界“执行严谨、一丝不苟”的刻板印象。然而，这看起来“不够严谨”的形成原因，却正是因为底层代码执行的足够严谨！
+在初入前端世界的时候，有那么一瞬，我甚至在想难道是底层对于0.1和0.2有一种特殊的感情？
+然而事实并非如此，能被底层这种庞然大物看上并针对的，当然不会只有0.1和0.2这两个看起来平平无奇的数字，而是包含了这两个数字在内的一批特殊存在。
+如下图所示：
+
+当然，除上述图片内的数字之外，还有更多的其他数字也在这反常理的队列之内。
+然而，这篇文章我们并不是来深入讨论这些特殊的数字在进行数学计算时，与底层究竟产生了什么样的恩怨纠葛。我们只需要简单知道：在计算机世界中，所有信息最后都是以二进制存储的，可是数字中的小数部分在按照一定规则转换为二进制时，有些数字会产生无限循环的现象，但计算机精度位数是有限的，所以对超出位数的部分做了四舍五入的计算，因此造成了精度的丢失。
+本文仅仅针对以上现象，结合日常开发的实践，讨论一些解决问题的方法。
+初步解决
+既然是因为小数部分在转换二进制时做了四舍五入的处理，那么计算时先将小数转为整数再计算是不是就可以了？
+依据上面的思想，在javascript中进行小数计算，通常会采用放大倍数取整之后再计算，得出结果之后再缩小还原的技术方案。
+例：计算0.1+0.2，通常会将0.1和0.2放大10倍，相加之后再缩小10倍
+代码如下：
+  /**
+   * 已知：a为0.1，b为0.2
+   * 求：a与b的和
+   * */
+  const a &#x3D; 0.1;
+  const b &#x3D; 0.2;
+  const result &#x3D; ((a * 10) + (b * 10)) / 1…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3245,8 +3337,6 @@ axios.interceptors.response.use(
                             <span class="media-object__text">
                               <span>用例图(PlanUML)
 用例图是软件工程中的一种可视化表示方法，用于描述系统角色与系统本身之间的交互。它通过说明用例和与用例交互的角色来捕捉系统的动态行为。这些图表对于明确系统的功能要求和了解用户如何与系统交互至关重要。通过提供一个高层次的视图，用例图可以帮助利益相关者了解系统的功能及其潜在价值。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3714,45 +3804,6 @@ http-server
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7306033185934622731"
-                        open
-                      >
-                        <summary class="article-expander__title">尝试用 three.js 实现了这个跨窗口的粒子动画</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7306033185934622731">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>相信不久前大家已经被这个粒子动画给刷屏了吧：
-
-之前看过很多人都在分析跟这个效果相关的跨窗口通信技术，尽管这样是挺好，但我依旧有点纳闷：为什么没有人讲讲背后的粒子特效是怎么实现的呢？
-于是乎，我花了一整个周末，把这个粒子特效给肝了出来。尽管可能跟原特效相比有一点差距，但也表明了这种效果是可以实现的。
-
-在线体验：https://entangled-fxhash.netlify.app/
-本文就让我们来看看实现这个粒子特效有哪些要点吧~
-GPGPU
-当我第一眼看到原特效时，发现那个球体是由大量的粒子组成的，第一反应就是THREE.Points，但是又转念一想，光这个是不够的，因为在粒子量足够大的情况下，同时渲染大量的运动粒子肯定会遇到性能上的瓶颈。
-然后，我又想到了另一个技术——GPGPU，中文翻译是“图形处理器通用计算”，尽管这个概念看上去很复杂，但其实也很简单——利用GPU的并行特性来执行一些和图形渲染无关的计算任务，如模拟粒子系统等。在粒子非常多的情况下，用它就能满足性能上的需求。
-three.js的官方文档上有一个模拟鸟群飞行的效果，就用到了这个技术，可以把鸟群飞行看作是一个不断运动着的粒子系统。
-
-那么如何使用GPGPU呢？大致步骤如下：
-创建GPGPU对象，three.js里是GPUComputationRenderer；
-创建数据纹理，用来存储需要GPU计算的数据；
-创建GPGPU变量，每个变量需要一个对应的Compute Shader（计算着色器），用来处理变量的计算逻辑；
-初始化GPGPU，并在渲染循环中使其不断计算，将GPGPU变量计算得来的结果作为纹理变量赋给需要的材质。
-以下是我的粒子效果用到的相关代码：
-const width &#x3D; 512;
-const size &#x3D; 256;
-const count &#x3D; width ** 2; // 我们总共要实时计…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -4024,25 +4075,6 @@ const count &#x3D; width ** 2; // 我们总共要实时计…</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231128/t20231128_526500999.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市万州区发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231128/t20231128_526500999.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>万州区气象台2023年11月28日08时50分发布“大雾黄色预警信号”，预计28日08时55分至28日10时30分，陈家坝街道、百安坝街道、双河口街道、新田镇等镇乡街将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。有关部门和单位按照职责做好防雾准备工作；机场、高速公路、轮渡码头等单位加强交通管理，保障安全；驾驶人员注意雾的变化，小心驾驶；户外活动注意安全。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -4083,25 +4115,6 @@ const count &#x3D; width ** 2; // 我们总共要实时计…</span>
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>给 Spring Web 开发者开发了一款 IDEA 插件：Feign-Helper，为什么叫 Feign-Helper ？因为核心功能其实是Spring Cloud Feign 接口与和对应的 Controller 源码间互相跳转（源码在同一个工程内），顺便提供 Spring Web HTTP API 检索（按两下 Shift 键打开，有个 URL 选项卡），现在送优惠码：https://aboat365.com/feign-helper/2023/11/27/v2ex-Feign-Helper-%E4%BC%98%E6%83%A0%E7%A0%81.html</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7305576845100924928"
-                        open
-                      >
-                        <summary class="article-expander__title">实现了一款目前AI还做不到的文字转图片应用，灵感来源于微信读书，已上线，支持各种模板。可前来体验，今天会发博客，让大家对它有个更清晰的认识。线上体验http...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7305576845100924928">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>实现了一款目前AI还做不到的文字转图片应用，灵感来源于微信读书，已上线，支持各种模板。可前来体验，今天会发博客，让大家对它有个更清晰的认识。线上体验https://anyphoto.space/playground</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -4286,39 +4299,6 @@ const restaurant &#x3D; {
     starterMenu: [&#x27;佛卡夏&#x27;, &#x27;意式烤面包&#x27;, &#x27;大蒜面包&#x27;, &#x27;卡普雷塞沙&#x27;],
     mainMenu: [&#x27;披萨&#x27;, &#x27;意大利面&#x27;, &#x27;烩饭&#x27;…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7304997932444286985"
-                        open
-                      >
-                        <summary class="article-expander__title">等会北京了，好好开发后续功能</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7304997932444286985">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>等会北京了，好好开发后续功能</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4715,8 +4695,8 @@ AI 是一个新事物，带来了很多前所未有的问题。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7094803147">
-        <time id="build-timestamp" datetime="2023-12-05T01:15:53.854Z">2023-12-05T01:15:53.854Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7095943409">
+        <time id="build-timestamp" datetime="2023-12-05T03:53:22.408Z">2023-12-05T03:53:22.408Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
