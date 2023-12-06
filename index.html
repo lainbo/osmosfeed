@@ -51,11 +51,93 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-06 datetime="2023-12-06T00:45:00.000Z">2023-12-06</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-06 datetime="2023-12-06T00:45:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-06 datetime="2023-12-06T02:16:26.000Z">2023-12-06</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-06 datetime="2023-12-06T02:16:26.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Barret李靖的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/656fd97ac306429d19f81b01"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 训练 GPT 过程中，有一个 RLHF 环节，就是“从人类的反馈中强化学习”，包括了奖励建模（RM）和强化学习（RL）。 RM 建立了一套打分机制，评估不同推理...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/656fd97ac306429d19f81b01">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fl4J59PTvpmWR12FreTnOQ9kzb1Kv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>训练 GPT 过程中，有一个 RLHF 环节，就是“从人类的反馈中强化学习”，包括了奖励建模（RM）和强化学习（RL）。
+RM 建立了一套打分机制，评估不同推理路径下的完成质量，而 RL 则是根据外部反馈针对不同推理路径的结果给予评分，本质是一个熵减过程，将低概率的结果降权，将符合人类偏好的结果进行加权。
+RL 会降低 LLM 的创造力，因为它在训练过程中将大量较低概率的推理路径做了弱化，得到的结果确定性比较强，同时这也会降低 LLM 胡说八道的概率。
+有点类似我们在调用 ChatGPT 的时候调低 temperature 参数（小于 1），这会导致高概率的 token 相比低概率 token 出现的概率变得更高，这块的原理之前在介绍知识蒸馏的时候提到过：https://twitter.com/Barret_China/status/1726867315504079264
+当然还有 top_k 和 top_p 参数，也是相似的原理，例如大模型推理下一个 token 时，A 的概率是 0.7，B 的概率是 0.2，C 的概率是 0.1，如果 top_k 设置为 2，那么 C 这个选项就被干掉了，因为只取前两个；如果 top_p 设置为 0.8，那么 B 和 C 同样也会被干掉，因为 A + B 的概率已经超过了 0.8，因此只取第一个选项。这也是一组针对模型输出创造性和确定性的控制参数。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/656fd357278f95df6fec8939"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: GPT 的训练 pipline 有四个阶段，分别是：预训练、监督微调（SFT）、奖励建模（RM）、强化学习（RLHF），除了奖励建模阶段的模型，其他三个都是可以被直...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/656fd357278f95df6fec8939">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FjY6t6c_O--C5lncL_mxvNOw-gLzv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>GPT 的训练 pipline 有四个阶段，分别是：预训练、监督微调（SFT）、奖励建模（RM）、强化学习（RLHF），除了奖励建模阶段的模型，其他三个都是可以被直接拿出来做推理使用的。
+这部分知识，微软做了一个很给力的视频教程《State of GPT》，https://build.microsoft.com/en-US/sessions/db3f4859-cd30-4445-a0cd-553c3304f8e2，推荐学习。
+理论上越到后面的阶段，推理效果越好，我们在市面上看到的大量模型都是预训练模型，真实被投入到使用的时候，一般还会根据实际需要，结合业务的数据集，进行监督微调或者强化学习。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/656fcddcee2e07f7acc4c626"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: LaTeXML，https://math.nist.gov/~BMiller/LaTeXML/，这是一个持续更新了快 20 年的老项目，它可以将 LaTeX 格式良好地转换成 XML/HTML/MathML 等格式，...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/656fcddcee2e07f7acc4c626">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FsJOxhSgIgwTna1gBtldNtXyq1ikv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>LaTeXML，https://math.nist.gov/~BMiller/LaTeXML/，这是一个持续更新了快 20 年的老项目，它可以将 LaTeX 格式良好地转换成 XML/HTML/MathML 等格式，看到不少项目都依赖了它。
+例如，https://www.arxiv-vanity.com，标语是“让你不必再眯着眼睛看论文”，它就把 arxiv 论文转换成了 HTML，并做了响应式布局，还提供了检索入口。
+如图二，看起来效果确实好多了，项目源码在这里：https://github.com/arxiv-vanity/arxiv-vanity，你也可以根据文档自己托管一个类似的服务。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -834,6 +916,8 @@ ICLR 是机器学习领域重要的学术会议之一，每年举办一次，202
 那回到正题，有很多小伙伴都关心如何 remote。 我觉得从三个方面去谈这件事情把，环境、技术能力、社交能力， 这三个方面的排序对于我来说是 运气 &gt; 技术能力 &gt;&#x3D; 社交 &gt; 环境（本来只有3个的，但运气不好做啥都没用。）
 环境
 remote 在我看来其实只分三种。发达国家远程、第三世界国家远程、国内远程。恰恰好，我都经历过，所以我应该是有 话语权 去说这个话的。…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -998,6 +1082,50 @@ NaN &#x3D;&#x3D; NaN;   // false
 
 布尔值与非布尔值比较： 布尔值无法直接比较，需先将布尔值转换为数字（true 转换为 1，fal…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7308434215811956786"
+                        open
+                      >
+                        <summary class="article-expander__title">思维导图 + 文字 &#x3D; 让你一次性学会正则表达式</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7308434215811956786">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: cyanosis
+highlight: androidstudio
+当学习成为了习惯，知识也就变成了常识。 感谢各位的 关注、点赞、收藏和评论。
+新视频和文章会第一时间在微信公众号发送，欢迎关注：李永宁lyn
+文章已收录到 github 仓库 liyongning/blog，欢迎 Watch 和 Star。
+为什么要学正则表达式
+为什么要学习正则表达式？相信很多人没有思考过这个问题，每一次学习正则表达式都是因为 “需要”，这个需要可能是各种各样的原因，比如：日常工作、看源码、面试
+日常工作
+其实很多人认为不会正则也不影响日常工作，确实，很多需要正则的地方用普通的代码也可以实现，比如：将 2021-10-04 替换成 2021/10/04
+正则方式
+const str &#x3D; &#x27;2021-10-04&#x27;
+const formatStr &#x3D; str.replace(/-/g, &#x27;/&#x27;)
+// 2021/10/04
+console.log(formatStr)
+
+普通代码
+const str &#x3D; &#x27;2021-10-04&#x27;
+const strArr &#x3D; str.split(&#x27;-&#x27;)
+const formatStr &#x3D; &#x60;${strArr[0]}/${strArr[1]}/${strArr[2]}&#x60;
+// 2021/10/04
+console.log(formatStr)
+
+两种方式都能实现我们的需要，但是可以看到这个简单的例子用普通代码实现明显代码量大并且复杂；况且这只是一个最简单的例子，稍微复杂一点的需求，代码量和复杂度会有更明显的区别。
+看源码
+这里的源码不止是某个框架的源码，比如工作中你接手的某个业务项目，其中有一些正则表达式，你要理解代码在做什么，这时候你就需要去百度、google 现查、现学正则表达式的各种语法。
+看框架、库的源码，比如 Vue 框架的编译器的 解…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1189,50 +1317,6 @@ RestGPT 采用迭代式从粗到精的在线规划框架，让 LLM 逐步找到�
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/656d931f278f95df6fc1538a"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 有自媒体怼“比亚迪方程豹汽车”的油耗太高，于是方程豹将用户详细的行车数据公之于众，提出他这个测试方法不靠谱（最快都飙到 180 了），而且存在危险...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/656d931f278f95df6fc1538a">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>有自媒体怼“比亚迪方程豹汽车”的油耗太高，于是方程豹将用户详细的行车数据公之于众，提出他这个测试方法不靠谱（最快都飙到 180 了），而且存在危险驾驶问题。
-我比较关心的是：
-1）车辆行驶数据属于用户个人隐私数据，平台能否未经用户授权直接对外披露？
-2）行车数据是否可以存到本地而不同步云端，我买辆车还得把个人隐私数据送给平台？
-“应警方调取证据的需求”，平台查阅了用户数据，这没啥问题，但是查阅了之后直接对公众披露，又得到了谁的授权呢？</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/656d5231278f95df6fbadb90"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 《AI Agents 大爆发：软件 2.0 雏形初现，OpenAI 的下一步》https://foresightnews.pro/article/detail/37157，这篇文章也十分推荐，提到了很多概念和论...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/656d5231278f95df6fbadb90">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fu50TvyQoj6-zpuBigLUh2V1obugv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>《AI Agents 大爆发：软件 2.0 雏形初现，OpenAI 的下一步》https://foresightnews.pro/article/detail/37157，这篇文章也十分推荐，提到了很多概念和论文索引，值得深入解下。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -1384,41 +1468,7 @@ RestGPT 采用迭代式从粗到精的在线规划框架，让 LLM 逐步找到�
 注册页面
 
 我们先在这里加一行，可以跳转到注…</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Barret李靖的即刻动态</button>
-                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/656bf7bd5682fbc62e9ad249"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 学校布置了一个诗歌朗诵活动，孩子跟我说不想参加，她担心自己做的不够好。 我思考了一个问题，她做的足够好又如何，好或者不好并不是唯一评判标准，如...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/656bf7bd5682fbc62e9ad249">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>学校布置了一个诗歌朗诵活动，孩子跟我说不想参加，她担心自己做的不够好。
-我思考了一个问题，她做的足够好又如何，好或者不好并不是唯一评判标准，如果做的不开心，家长再多的教导甚至威压都只会适得其反。
-所以我经常跟孩子讲道理，去讨论一些原则性问题和底线问题，孩子听懂了以后会做出自己的选择，作为父母，更多的还是支持加鼓励，仅此而已。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1724,6 +1774,8 @@ function cross(v1, v2) {
 
 
 这里在canvas上把计算后凸包的各个点做了ctx.moveTo()连接，并通过ctx.fill()的形式绘制，同时增加了描边的宽度，整体看起来会好看些。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1845,6 +1897,8 @@ if (!app.isPackaged) {
 
 重新运行，大概率会看到第二个错误：
 Error: ENOENT: no such file or directory /xxxx/ap…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1883,6 +1937,8 @@ Error: ENOENT: no such file or directory /xxxx/ap…</span>
   const a &#x3D; 0.1;
   const b &#x3D; 0.2;
   const result &#x3D; ((a * 10) + (b * 10)) / 1…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1925,6 +1981,8 @@ Error: ENOENT: no such file or directory /xxxx/ap…</span>
 微前端---qiankun
 为什么使用微前端，最主要是考虑到他与技术栈无关，能够忽略掉一些历史的包袱。
 为什么要用qiankun，最主要还是考虑到稳定…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1974,6 +2032,8 @@ Inula未来有明确的发展方向么？
 回答：
 团队正在探索引入响应式API，相比于React的虚拟DOM方案，响应式API能够提高运行时性能。24年可能会从Vue composition API中寻求些借鉴。
 新的发展方向会在项目仓库以RFC的形…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2031,6 +2091,8 @@ base64 就是 26 个大写字母、26 个小写字母、10 个数字、2 个特�
 做短链的话，我们用 base62 比较多。
 安装用到的包：
 npm install b…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2081,6 +2143,8 @@ RSS 信息展示-暗黑模式
 用户资料页-暗黑模式
 
 欢迎掘金朋友们前来观光👏</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2957,6 +3021,8 @@ camera.position.set(4.25,1.4,-4.5)
 初始化渲染器：
 // 创建渲染器
 const renderer &#x3D; new THREE.WebGLRenderer…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;15
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2992,6 +3058,8 @@ three.js
 总结下用到的api吧，就几个：
 构造方法
 THREE.Perspec…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3062,6 +3130,8 @@ TODO
 
 
 之前有试过通过判断是否在 {} 内来输入到整个语句之后，但是情况不太理想，后续再考虑解决</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3638,6 +3708,44 @@ components/
 作为一个开发人员，您会尝试为每个目录创建好的名称和分类，如containers、headings等。
 问题是您需要为目录考虑更多的分类，而不仅仅是组件名称。
 你经常会忍不住说，“我就把这个移到公共目录吧。”拥有common目录是你所追求的目标相悖的反模式，…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7306693980959588379"
+                        open
+                      >
+                        <summary class="article-expander__title">打造聊天框丝滑滚动体验：AI 聊天框的翻转之道 ——— 聊天框发送消息后自动滚动到底部（前端框架通用）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7306693980959588379">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>逐字渲染的挑战
+最近在开发AI聊天助手的时候，遇到了一个很有趣的滚动问题。我们需要开发一个类似微信聊天框的交互体验：
+每当聊天框中展示新消息时，需要将聊天框滚动到底部，展示最新消息。
+
+如果在 web 什么也不做，聊天体验可能是这样的，需要用户手动滚动到最新消息：
+
+试想一下如何在 web 中实现微信的效果。每当聊天框中接收到新消息时，都需要调用滚动方法滚动到消息底部。
+element.scrollIntoView({ behavior: &quot;smooth&quot;, block: &quot;end&quot;);
+
+对于普通的聊天工具来说，这样实现没有什么大问题，因为聊天框接收到每条消息的长度都是确定的。但是 AI 大模型一般都是逐字渲染的，AI 助手聊天框接受的消息体大小不是固定的，而是会随着 AI 大模型的输出不断变大。如果仍使用 scrollIntoView 来滚动到底部，就需要监听消息体的变化，每次消息更新时都要通过 JavaScript 调用一次滚动方法，会造成一些问题：
+频繁的 JavaScript 滚动调用。每输出一个文字要滚动一次，听起来就会性能焦虑。
+AI 正在输出内容时，用户无法滚动查看历史消息。用户向上滚动查看历史消息，会被 Javascript 不断执行的 scrollIntoView 打断。需要写特殊逻辑才能避免这个情况。
+通过监听数据变化频繁的执行滚动，基于浏览器单线程的设计，不可避免的会造成滚动行为的滞后，导致聊天体验不够丝滑。
+自然列表：灵感来源
+聊天框接收到新消息时滚动到最新位置，总感觉这应该是一个很自然的行为，不需要这么多 Javascript 代码去实现滚动行为。
+于是联想到了 Excel 表格，当我们在表格中第一行插入一行，这一行后边的内容会被很自然的挤下去。并不需要做什么滚动，这一行就会出现在最顶部的位置。
+
+想到这里惊讶的发现，聊天框实际上不就是一个倒过来…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3680,93 +3788,8 @@ Manticore Search 是一个易于使用的开源快速搜索数据库，是 Elast
 以下是该项目关键特性和核心优势：
 182 倍快过 MySQL 处理小规模数据 (可复现)
 29 倍快过 Elasticsearch 进行日志分析…</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7306404340679557170"
-                        open
-                      >
-                        <summary class="article-expander__title">前端接口容灾</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7306404340679557170">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>开篇
-你说，万一接口挂了会怎么样？
-还能咋样，白屏呗。
-有没有不白屏的方案？
-有啊，还挺简单的。
-容我细细细细分析。
-原因就是接口挂了，拿不到数据了。那把数据储存起来就可以解决问题。
-思考
-存哪里?
-第一时间反应浏览器本地存储，想起了四兄弟。
-选型对比
-特性
-cookie
-localStorage
-sessionStorage
-indexDB
-
-
-
-
-数据生命周期
-服务器或者客户端都可以设置、有过期时间
-一直存在
-关闭页面就清空
-一直存在
-
-
-数据储存大小
-4KB
-5MB
-5MB
-动态，很大 大于250MB
-
-
-与服务器通信
-每次都带在header中
-不带
-不带
-不带
-
-
-兼容性
-都支持
-都支持
-都支持
-IE不支持，其他主流都支持
-
-
-
-考虑到需要存储的数据量，5MB 一定不够的，所以选择了 IndexDB。
-考虑新用户或者长时间未访问老用户，会取不到缓存数据与陈旧的数据。
-因此准备上云，用阿里云存储，用 CDN 来保障。
-总结下：线上 CDN、线下 IndexDB。
-整体方案
-整体流程图
-
-CDN
-先讲讲线上 CDN。
-通常情况下可以让后端支撑，本质就是更新策略问题，这里不细说。
-我们讲讲另外一种方案，单独启个 Node 服务更新 CDN 数据。
-流程图
-
-劫持逻辑
-劫持所有接口，判断接口状态与缓存标识。从而进行更新数据、获取数据、缓存策略三种操作
-通过配置白名单来控制接口存与取
-axios.interceptors.response.use(
-      async (resp) &#x3D;&gt; {
-        const { config } &#x3D; resp
-        const { url } &#x3D; config
-        // 是否有缓存tag，用于更新CDN数据。目前是定时服务在跑，访问页面带上tag
-        if (this.hasCdnTag() …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3934,83 +3957,8 @@ class RequestQueue {
     this.maxConcurrent &#x3D; maxConcurrent; // 设置最大并发数
     this.currentRunning &#x3D; 0; // 当前正在运行的请求数
     this.queue &#x3D;…</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7306423214493237282"
-                        open
-                      >
-                        <summary class="article-expander__title">晚上12点，帮组员解决Vue3异步引发的线上BUG</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7306423214493237282">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-大家好，我是林三心，用最通俗易懂的话讲最难的知识点是我的座右铭，基础是进阶的前提是我的初心~
-背景
-事情是这样的，我的组员在写一个项目，项目里有一个 Home.vue 页面，大概结构是这样，Home.vue 就是本项目的首页，项目初始化后加载的顺序是 App.vue -&gt; Home.vue
-
-在 App.vue 加载的时候，项目需要去请求本项目所需要使用到的字典，这部分逻辑写在了 Pinia 中，大概代码如下
-
-接着会在 App.vue 的 onMounted 中去执行 setup 方法，去请求所有字典，这应该也是很多项目中初始化数据的方式~
-
-接着，在 Home.vue 初始化的时候，需要去使用这些字典去完成某些操作，且只是初始化时需要完成这个操作
-
-我们到控制台中看到，确实能获取到所有字典，那就说明没问题了吗？？？？？
-
-生产事故
-问题来了，昨天服务器不知道咋的，字典接口响应很慢，差不多有2秒，我们可以来模拟一下，看看什么效果，我这里使用 setTimeout 来模拟请求2秒
-
-好，现在来看看 Home.vue 里输出了什么
-
-完蛋，Home.vue 初始化时拿不到数据，做不了对应操作，在发版日的晚上12点的时候，测试那边反馈了这个 BUG，我马上赶过去看了一下，马上就看出了问题所在，其实很多人也能看出来
-因为请求太久了，导致 Home.vue 在 onMounted 时拿不到数据，执行不了后续操作，导致页面 BUG
-解决问题
-我并没有急，我让我的组员自己想想应该怎么解决，锻炼一下他解决问题的能力，他觉得加个 watch 是不是就可以了！！！
-
-但是可惜的是，并不会触发监听，只能换一种办法，他查了一下百度，说可以用 Pinia 的 $subscribe 方法，就可以监听 Pinia 数据的变化了~
-
-看看效果，确实能监听到变化，但是变化了几次就会执行几次啊，他说那就用防抖去做。。。。
-
-我说防抖也有问题啊。。比如我们只需要 setup 执行后引起的变化监听，而不需要其他，就比如这个 otherSetup 也会引起变化监听，但我们并不想要这次变化
-
-这种写法的不确定性太大了，而且不太合理，肯定不能这么写啊！！！
-
-巧用 Promise
-最后还是我帮他解决的，我觉得问题有两个：
-1、组员在做项目的时候没考虑兜底
-2、组件的基础不够扎实
-在做这种需求的时候肯定要考虑到请求响应慢的时候的兜底啊，不能想当然。再有就是基础不够扎实，这种场景一看就可以使用 Promise 去兜底
-我先封装一个函数，这函数返回两个东西
-readyResolve： 一个resolve函数
-onReady： 接收回调函数，只有在readyResolve执行后才会执行
-
-接着回到 Pinia 文件中，首先将 onReady 暴露出去
-
-接着在 setup 执行完的时候去执行 readyResolve 函数，为了提高可读性，我这里使用 Promise.all 代替之前的写法
-
-然后到 Home.vue 页面中，只需要往 onTestStoreSteuped 中传回调函数即可
-
-最终达到了想要的效果，无论请求多久，Home.vue 中的操作始终能在请求之后去执行
-
-而且这样做的好处就是，无论你有多少页面需要使用请求后的数据，都可以往 onTestStoreSteuped 中传回调，请求完都会一一执行的~
-通过这次的生产事故，我告诫组员们，平时学的东西要在开发项目中想一下怎么应用，而不是只是死记硬背，没有实践，那么这样只会是纸上谈兵罢了，没啥卵用，应付应付面试可能可以，做项目写的代码质量不会高的~
-结语 &amp; 加学习群 &amp; 摸鱼群
-我是林三心
-一个待过小型toG型外包公司、大型外包公司、小公司、潜力型创业公司、大公司的作死型前端选手；
-一个偏前端的全干工程师；
-一个不正经的掘金作者；
-一个逗比的B站up主；
-一个不帅的小红书博主；
-一个喜欢打铁的篮球菜鸟；
-一个喜欢历史的乏味少年；
-一个喜欢rap的五音不全弱鸡
-如果你想一起学习前端，一起摸鱼，一起研究简历优化，一起研究面试进步，一起交流历史音乐篮球rap，可以来俺的摸鱼学习群哈哈，点这个，有7000多名前端小伙伴在等着一起学习哦 --&gt; 摸鱼沸点</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4725,8 +4673,8 @@ AI 是一个新事物，带来了很多前所未有的问题。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7108812815">
-        <time id="build-timestamp" datetime="2023-12-06T01:15:51.130Z">2023-12-06T01:15:51.130Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7109939519">
+        <time id="build-timestamp" datetime="2023-12-06T03:53:28.106Z">2023-12-06T03:53:28.106Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
