@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-12-06T15:53:09.848Z</id>
+    <id>urn:2023-12-06T18:53:18.521Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-12-06T15:53:09.848Z</updated>
+    <updated>2023-12-06T18:53:18.521Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[发布了: 斯坦福开源的 Alpaca 是基于 LLaMa-7B 训练出来的，它的效果可以跟 173B 的 GPT-3.5 媲美，可见知识蒸馏+微调的魅力有多大；而 LaMini-LM，https://arxi...]]></title>
+        <id>https://m.okjike.com/originalPosts/65708b2d552e503d7c6f7e42</id>
+        <link href="https://m.okjike.com/originalPosts/65708b2d552e503d7c6f7e42"/>
+        <updated>2023-12-06T14:54:37.000Z</updated>
+        <summary type="html"><![CDATA[斯坦福开源的 Alpaca 是基于 LLaMa-7B 训练出来的，它的效果可以跟 173B 的 GPT-3.5 媲美，可见知识蒸馏+微调的魅力有多大；而 LaMini-LM，https://arxiv.org/abs/2304.14402，在模型缩小了将近 10 倍的情况下，其效果仍能与 Aplpaca 比肩，那它是如何保持优秀的推理效果的呢？
+对比 Alpaca 和 LaMini-LM 的架构图，两者之间并没有太大的差异，唯一的区别是，Alpaca 用到的数据集是 5w 条，而 LaMini-LM 用到了 258w 条，另外，它微调的模型有好几个，分别是 T5 / Flan-T5 / Cereberas-GPT / GPT-2 / GPT-Neo，入参数量从 61M 到 1.5B 不等，效果均非常不错。这足以说明，数据集的规模、复杂度和多样性会直接影响微调效果。
+LaMini-LM 的局限性也是比较明显的，通过微调产生的模型有几个通病，一个是在多轮对话的效果上会差很多，想必要构建多轮对话的数据集也是一个比较复杂的问题；另外一点是逻辑推理能力不足，尤其是涉及到解决编码、数学问题时，效果较差。
+需要注意的是，并非数据集越庞大，微调的效果就越好，《AlpaGasus: Training A Better Alpaca with Fewer Data》，https://arxiv.org/abs/2307.08701，这篇论文将训练 Alpaca 的数据做了过滤，从 52k 删减到只剩下 9k 的高质量数据，使用相似的方法训练出了 AlpaGasus，其效果比 Alpaca 要更好。另外，它的训练周期也因此有了较快提速，从 80min 降低到了 14min。感兴趣的朋友也可以读一读。]]></summary>
+        <author>
+            <name>Barret李靖的即刻动态</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[重庆市垫江县发布大雾黄色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/huangsyj/20231206/t20231206_526510629.html</id>
@@ -355,16 +368,6 @@ TypeScr…]]></summary>
 目前我日常所用的所有技巧， 全部可以装入上面三句话。]]></summary>
         <author>
             <name>李继刚的即刻动态</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[发布了: 更新下脚本，https://greasyfork.org/zh-CN/scripts/481023-arxiv-extensions，增加了一个 arxiv-vanity.com 的 HTML 版本入口，网站将 PDF 转换成 HTML...]]></title>
-        <id>https://m.okjike.com/originalPosts/656f06bfc306429d19ea607f</id>
-        <link href="https://m.okjike.com/originalPosts/656f06bfc306429d19ea607f"/>
-        <updated>2023-12-05T11:17:19.000Z</updated>
-        <summary type="html"><![CDATA[更新下脚本，https://greasyfork.org/zh-CN/scripts/481023-arxiv-extensions，增加了一个 arxiv-vanity.com 的 HTML 版本入口，网站将 PDF 转换成 HTML 是一个异步增量处理过程，ar5iv 有可能没有转换过当前这篇论文，可以试试 vanity。]]></summary>
-        <author>
-            <name>Barret李靖的即刻动态</name>
         </author>
     </entry>
     <entry>
