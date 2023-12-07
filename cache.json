@@ -23,7 +23,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": 1011,
+          "wordCount": 1012,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "剪映中的视频特效虽多，其实就两类，一类改变原始像素，一类叠加混合，本文通过精简的源码和精致的案例给大家介绍具体如何实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/video-effect-js-filter-pixijs-webgl-3d/",
           "publishedOn": "2023-11-19T15:12:20.000Z",
-          "wordCount": 1232,
+          "wordCount": 1231,
           "title": "剪映APP的视频特效如何在Web中JS实现",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "应该是国内第一篇专门介绍用mp4box.js和VideoDecoder方法解码MP4视频序列帧的文章了。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/mp4box-js-webcodecs-mp4-canvas/",
           "publishedOn": "2023-11-14T16:37:18.000Z",
-          "wordCount": 1249,
+          "wordCount": 1248,
           "title": "mp4box.js加WebCodecs 解码MP4视频帧并渲染",
           "imageUrl": null
         }
@@ -111,6 +111,16 @@
       "feedUrl": "https://rsshub.app/jike/user/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
+        {
+          "id": "https://m.okjike.com/originalPosts/6571c9f88a7c5ba8aef6fc20",
+          "author": null,
+          "description": "之前分享过两个 AI 控制浏览器的项目，self-operating-computer 和 GPT-4V-Act，都是利用 GPT 的多模态能力来理解网页并做出行动，虽然视频演示比较顺畅，但在应对稍复杂网页或长距离任务时，成功率并不高，难以被投入到生产环境。\n《Multimodal Web Navigation with Instruction-Finetuned Foundation Models》，https://arxiv.org/abs/2305.11854，这是来自 ICLR 的最新顶会论文，提出了一个新的解决方案 WebGUM，它设计了适用于离线微调的更有效的奖励模型，能以一种多模式（HTML + 截图）的方式获得对网页的深刻理解，在给出指令后，推理出下一步 Action 的准确度大大提升。\n换个方便理解的说法：以前的解决方案相当于让通用大模型来解数学题，优化手段全靠 Prompt，成功率一般，而 WebGUM 是经过大量数据微调的专门解数学题的模型，它很小巧也更强大。\n目前这篇论文还没有在 Github 上提供工程化的代码实现，从论文数据来看，未来做网页自动化任务的成本将会大大降低，无需与昂贵的 GPT-4V 频繁交互，在本地便可以跑起来。要知道，之前跟 GPT 在线交互的 Demo，跑一次就需要花费几美刀，很不便宜😂\n---\nhttps://sites.google.com/view/mm-webnav/，这里给出了一些数据对比，底部有 Demo 演示。训练出来的 WebGUM 只有 3B，在 MiniWob 数据集上测试时，比之前最好的离线模型 WebN-T5 提高了 45.8%，取得了 94.2% 的成功率；在 WebShop 数据集上测试时，比 PaLM 的 540B 在线模型效果更好，成功率有 45%；在 Mind2Web 数据集上测试时，比 GPT-4 的效果更好。总的来说，它找到了一条更好的路径来提高智能体的基础多模态感知、HTML 理解和多步骤推理的能力，显着优于之前的工作。",
+          "link": "https://m.okjike.com/originalPosts/6571c9f88a7c5ba8aef6fc20",
+          "publishedOn": "2023-12-07T13:34:48.000Z",
+          "wordCount": 560,
+          "title": "发布了: 之前分享过两个 AI 控制浏览器的项目，self-operating-computer 和 GPT-4V-Act，都是利用 GPT 的多模态能力来理解网页并做出行动，虽然视频演示比较顺畅...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FoQQwIrM0SbTMtznJ7RG6CkRPYORv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
         {
           "id": "https://m.okjike.com/originalPosts/65718d5ad027b7ac8cdc18f7",
           "author": null,
@@ -200,16 +210,6 @@
           "wordCount": 442,
           "title": "发布了: 文字的目的是为了沟通，优美的文字可以，有瑕疵的当然也可以。 沟通的过程中，纠结于文字的瑕疵，忘记了最初的目的，得不偿失。 语言也是同理，英文流利...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/656fd97ac306429d19f81b01",
-          "author": null,
-          "description": "训练 GPT 过程中，有一个 RLHF 环节，就是“从人类的反馈中强化学习”，包括了奖励建模（RM）和强化学习（RL）。\nRM 建立了一套打分机制，评估不同推理路径下的完成质量，而 RL 则是根据外部反馈针对不同推理路径的结果给予评分，本质是一个熵减过程，将低概率的结果降权，将符合人类偏好的结果进行加权。\nRL 会降低 LLM 的创造力，因为它在训练过程中将大量较低概率的推理路径做了弱化，得到的结果确定性比较强，同时这也会降低 LLM 胡说八道的概率。\n有点类似我们在调用 ChatGPT 的时候调低 temperature 参数（小于 1），这会导致高概率的 token 相比低概率 token 出现的概率变得更高，这块的原理之前在介绍知识蒸馏的时候提到过：https://twitter.com/Barret_China/status/1726867315504079264\n当然还有 top_k 和 top_p 参数，也是相似的原理，例如大模型推理下一个 token 时，A 的概率是 0.7，B 的概率是 0.2，C 的概率是 0.1，如果 top_k 设置为 2，那么 C 这个选项就被干掉了，因为只取前两个；如果 top_p 设置为 0.8，那么 B 和 C 同样也会被干掉，因为 A + B 的概率已经超过了 0.8，因此只取第一个选项。这也是一组针对模型输出创造性和确定性的控制参数。",
-          "link": "https://m.okjike.com/originalPosts/656fd97ac306429d19f81b01",
-          "publishedOn": "2023-12-06T02:16:26.000Z",
-          "wordCount": 556,
-          "title": "发布了: 训练 GPT 过程中，有一个 RLHF 环节，就是“从人类的反馈中强化学习”，包括了奖励建模（RM）和强化学习（RL）。 RM 建立了一套打分机制，评估不同推理...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fl4J59PTvpmWR12FreTnOQ9kzb1Kv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         }
       ]
     },
@@ -532,6 +532,16 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231207/t20231207_526511805.html",
+          "author": "国家预警信息发布中心",
+          "description": "重庆市铜梁区气象台2023年12月7日20时40分发布“大雾黄色预警信号”，预计12月8日05时至10时，蒲吕街道、巴川街道、东城街道、旧县街道、南城街道、高楼镇、安居镇、少云镇、白羊镇、平滩镇、西河镇、围龙镇、华兴镇等大部镇街将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。防御指南：1.车辆驾驶及户外活动注意安全。2.机场、高速公路、水上交通等单位加强交通管理。3.相关部门和乡镇街道按照职责，做好大雾防范应对工作。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231207/t20231207_526511805.html",
+          "publishedOn": "2023-12-07T12:56:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市铜梁区发布大雾黄色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231207/t20231207_526511540.html",
           "author": "国家预警信息发布中心",
