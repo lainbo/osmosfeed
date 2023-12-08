@@ -33,7 +33,7 @@
           "description": "滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/",
           "publishedOn": "2023-11-21T16:14:41.000Z",
-          "wordCount": 1292,
+          "wordCount": 1293,
           "title": "cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "剪映中的视频特效虽多，其实就两类，一类改变原始像素，一类叠加混合，本文通过精简的源码和精致的案例给大家介绍具体如何实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/video-effect-js-filter-pixijs-webgl-3d/",
           "publishedOn": "2023-11-19T15:12:20.000Z",
-          "wordCount": 1231,
+          "wordCount": 1232,
           "title": "剪映APP的视频特效如何在Web中JS实现",
           "imageUrl": null
         },
@@ -64,6 +64,16 @@
       "feedUrl": "https://feeds.feedburner.com/ruanyifeng",
       "siteUrl": "http://www.ruanyifeng.com/blog/",
       "articles": [
+        {
+          "id": "http://www.ruanyifeng.com/blog/2023/12/weekly-issue-281.html",
+          "author": null,
+          "description": "这里记录每周值得分享的科技内容，周五发布。\n本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。\n封面图\n\n甘肃张掖市的马蹄寺，在绝壁上凿有70多个古代石窟，非常壮观。可惜历史上破损严重，造像保存下来的很少。（via）\n新基建的政策选择\n上周某一天，我看到百度的热搜榜，置顶是一条新闻《加快新型基础设施建设》。\n\n我很奇怪，这条新闻为什么置顶？\n基础设施建设不是一直在搞吗，为什么现在突然强调\"新基建\"？\n后来，我想了想。现在是年底，这会不会跟明年的政府工作安排有关。\n这段时间，各部门都在准备明年的工作计划，投资项目现在就要基本定下来了。宏观经济目前有一些困难，就更需要政府多投几个项目了。\n以前，政府投的都是基础设施：高铁、高速公路、机场、港口、电厂...... 可以这样说，经过几十年不断的建设，中国的基础设施已经世界一流了。\n\n经济效益好的基建项目，差不多都已经建造了，有些地方甚至出现了冗余，高速公路造好了，却没有足够的人流、车流。\n传统的基建项目，如果明年继续大量投资，其中很多可能就会缺乏经济合理性。造好以后，偿还贷款的压力很大，对经济的拉动作用也有限。\n因此，政府迫切需要寻找新的投资领域。\n现在的热搜榜置顶，可能就是一种舆论准备，暗示明年将会大量投资\"新基建\"项目，而不是传统的基建项目。\n\n那么，\"新基建\"到底是指哪些项目？\n百度百科有一个\"新基建\"条目（上图），里面提到它包括七个领域。\n5G 基站\n特高压\n城际高速铁路，城市轨道交通\n新能源汽车充电桩\n大数据中心\n人工智能\n工业互联网\n也就是说，上面七个领域可能就是政府明年投资的主要方向。\n\n其中，除了第2项（特高压）、第3项（城际交通）和第4项（新能源充电桩），其他四项都是 IT 相关。\n5G 基站 => 数字通信\n大数据中心 => 算力\n人工智…",
+          "link": "http://www.ruanyifeng.com/blog/2023/12/weekly-issue-281.html",
+          "publishedOn": "2023-12-08T00:10:30.000Z",
+          "wordCount": null,
+          "title": "科技爱好者周刊（第 281 期）：新基建的政策选择",
+          "imageUrl": null
+        },
         {
           "id": "http://www.ruanyifeng.com/blog/2023/12/weekly-issue-280.html",
           "author": null,
@@ -112,12 +122,22 @@
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/6572729fabd469472776054b",
+          "author": null,
+          "description": "半年前，我跟几个算法做的比较资深的朋友聊 AI。他们对 AI 未来的发展持悲观态度，从数学层面看，AlexNet/Transformer/ResNet 等这些东西，它们并不复杂，大模型无非只是将这些本不复杂的东西进行了调优和组合，最后“大力出奇迹”，而这些能力、奇迹似乎老早之前便已经存在。\n渐渐地，我开始能够明白他们的悲观。在冰冷的数字、符号和公式面前，在繁多的模型、数据集和测试方法面前，技术的本质显得过于赤裸，技术研究中时间的流逝模糊了前方的视野，以至于未来都陷入了眼前看似美妙的概率之中。\n在应用层，我们或许是幸运的。不需要过多地涉足底层，站在巨人的肩膀上，几行代码就可以调动整个生态筑起的武器库，完成一个个不可思议的推理变幻，也只有当求知欲强盛的时候，才会往下窥探。对比之下，学习的动力也不尽相同。",
+          "link": "https://m.okjike.com/originalPosts/6572729fabd469472776054b",
+          "publishedOn": "2023-12-08T01:34:23.000Z",
+          "wordCount": 534,
+          "title": "发布了: 半年前，我跟几个算法做的比较资深的朋友聊 AI。他们对 AI 未来的发展持悲观态度，从数学层面看，AlexNet/Transformer/ResNet 等这些东西，它们并不复杂...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/657265b6abd46947277498ba",
           "author": null,
           "description": "大学微积分这门课，很深刻的记得，课全翘了，考试之前临阵磨枪，公式在纸上写的都快飞起来了，考试现场还在一个个推导公式再做题。\n没想到十多年后又得捡起来🥲",
           "link": "https://m.okjike.com/originalPosts/657265b6abd46947277498ba",
           "publishedOn": "2023-12-08T00:39:18.000Z",
-          "wordCount": 470,
+          "wordCount": 510,
           "title": "发布了: 大学微积分这门课，很深刻的记得，课全翘了，考试之前临阵磨枪，公式在纸上写的都快飞起来了，考试现场还在一个个推导公式再做题。 没想到十多年后又得...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FjLrZVMYPXqelGlvm19m0PLS_Mbmv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -200,16 +220,6 @@
           "wordCount": 455,
           "title": "发布了: 学习本身是一件痛苦的事情，我是通过分享和传播知识的方式来对抗这种痛苦，因为可以随时获得正反馈，获得学习之外的快乐。💪 还有一种更强的正反馈，...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fj_K0hPEOvOk2oiyGAEamuZv7oJ2v3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/656ff0a4278f95df6fef70bb",
-          "author": null,
-          "description": "复旦大学张奇教授团队写了一本在线免费的电子书，《大规模语言模型：从理论到实践》，https://intro-llm.github.io，大概有 300 页篇幅，将大模型从理论到实战的每个阶段都描述的较为清楚。\n全文在线阅读地址：https://intro-llm.github.io/chapter/LLM-TAP.pdf",
-          "link": "https://m.okjike.com/originalPosts/656ff0a4278f95df6fef70bb",
-          "publishedOn": "2023-12-06T03:55:16.000Z",
-          "wordCount": 470,
-          "title": "发布了: 复旦大学张奇教授团队写了一本在线免费的电子书，《大规模语言模型：从理论到实践》，https://intro-llm.github.io，大概有 300 页篇幅，将大模型从理论...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FjV7XqDTBIdUhRCDzxlhNeu86DO1v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         }
       ]
     },
@@ -1017,6 +1027,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7308946214107775026",
+          "author": "凹凸实验室",
+          "description": "纯血鸿蒙即将到来\n在今年 8 月的「2023年华为开发者大会（HDC.Together）」上，华为正式官宣「鸿蒙Next」，这个更新的版本将移除所有的 AOSP 代码，彻底与 Android 切割，使其成为一个完全自主研发的操作系统，这将去掉 40%左右多余的代码，使系统变得更加简洁、流畅。同时，会上也预告了将在明年 1 月份发布面向所有开发者的预览版，意味着还有一个多月纯血的鸿蒙就要与所有开发者见面了，这不禁令人热血沸腾，分外期待。\n\n图一·鸿蒙 Next 计划\n而近期关于鸿蒙的消息不断，各大互联网厂商，如阿里、美团、去哪儿、小红书等等，都已经官宣开展了开发 ArkUI 版原生鸿蒙应用的消息，同时也都在各个招聘渠道公开高薪招聘鸿蒙工程师和专家，仿佛偌大的鸿蒙生态即将全面铺开，这对于对鸿蒙适配呈观望态度的开发者来说无疑是巨大的强心剂，鸿蒙应用开发，似乎真的行了。\n\n图二·业界多家互联网公司渲染开发鸿蒙原生应用\n鸿蒙 ArkUI 是怎么个事儿\n好了，吹了一波鸿蒙的彩虹屁，让我们来看看，鸿蒙应用开发是个怎么个事儿。\n从鸿蒙官网我们可以了解到，鸿蒙应用开发使用方舟框架，即 ArkUI 框架，它支持两种方式，一种是使用 ArkTS，也就是声明式的开发范式，另一种是使用 JS，即类 Web 的开发范式，让我们来看看这两种开发范式的区别。\n声明式开发范式：采用基于 TypeScript 声明式UI语法扩展而来的 ArkTS 语言，从组件、动画和状态管理三个维度提供 UI 绘制能力。\n类Web开发范式：采用经典的 HML、CSS、JavaScript 三段式开发方式，即使用 HML 标签文件搭建布局、使用 CSS 文件描述样式、使用 JavaScript 文件处理逻辑。该范式更符合于 Web 前端开发者的使用习惯，便于快速将已有的 Web 应用改造成方舟开发框架应用。\n\n图三·ArkUI…",
+          "link": "https://juejin.cn/post/7308946214107775026",
+          "publishedOn": "2023-12-05T12:41:53.000Z",
+          "wordCount": 1098,
+          "title": "使用 Taro 开发鸿蒙原生应用 —— 当 Taro 遇到纯血鸿蒙",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7308923428149395491",
           "author": "江米小枣tonylua",
           "description": "1. TS不香了？\n2023年，几条关于 Typescript 的新闻打破了沉寂，让没什么新活好整的前端开发圈子又热闹了一番。\n\n先是 GitHub 的报告称：“TypeScript 取代 Java 成为第三受欢迎语言”。\n在其当年度 Octoverse 开源状态报告中，在最流行的编程语言方面，TypeScript 越来越受欢迎，首次取代 Java 成为 GitHub 上 OSS 项目中第三大最受欢迎的语言，其用户群增长了 37%。\n而 Stack Overflow 发布的 2023 年开发者调查报告也显示，JavaScript 连续 11 年成为最流行编程语言，使用占比达 63.61%，TypeScript 则排名第五，使用占比 38.87%。\n\n更大的争议则来自于：2023年9月，Ruby on Rails 作者 DHH 宣布移除其团队开源项目 Turbo 8 中的 TypeScript 代码\n他认为，TypeScript 对他来说只是阻碍。不仅因为它需要显式的编译步骤，还因为它用类型编程污染了代码，很影响开发体验。\n无独有偶，不久前，知名前端 UI 框架 Svelte 也宣布从 TypeScript 切换到 JavaScript。负责 Svelte 编译器的开发者说，改用 JSDoc 后，代码不需要编译构建即可进行调试 —— 简化了编译器的开发工作。\nSvelte 不是第一个放弃 TypeScript 的前端框架。早在 2020 年，Deno 就迁移了一部分內部 TypeScript 代码到 JavaScript，以减少构建时间。\n如此一来，今年短期内已经有几个项目从 TypeScript 切换到 JavaScript 了，这个状况就很令人迷惑。难道从 TypeScript 切回 JavaScript 已经成了当下的新潮流？这难道不是在开历史的倒车吗？\nTypeScr…",
@@ -1077,22 +1097,12 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7308434215811956786",
-          "author": "李永宁",
-          "description": "theme: cyanosis\nhighlight: androidstudio\n当学习成为了习惯，知识也就变成了常识。 感谢各位的 关注、点赞、收藏和评论。\n新视频和文章会第一时间在微信公众号发送，欢迎关注：李永宁lyn\n文章已收录到 github 仓库 liyongning/blog，欢迎 Watch 和 Star。\n为什么要学正则表达式\n为什么要学习正则表达式？相信很多人没有思考过这个问题，每一次学习正则表达式都是因为 “需要”，这个需要可能是各种各样的原因，比如：日常工作、看源码、面试\n日常工作\n其实很多人认为不会正则也不影响日常工作，确实，很多需要正则的地方用普通的代码也可以实现，比如：将 2021-10-04 替换成 2021/10/04\n正则方式\nconst str = '2021-10-04'\nconst formatStr = str.replace(/-/g, '/')\n// 2021/10/04\nconsole.log(formatStr)\n\n普通代码\nconst str = '2021-10-04'\nconst strArr = str.split('-')\nconst formatStr = `${strArr[0]}/${strArr[1]}/${strArr[2]}`\n// 2021/10/04\nconsole.log(formatStr)\n\n两种方式都能实现我们的需要，但是可以看到这个简单的例子用普通代码实现明显代码量大并且复杂；况且这只是一个最简单的例子，稍微复杂一点的需求，代码量和复杂度会有更明显的区别。\n看源码\n这里的源码不止是某个框架的源码，比如工作中你接手的某个业务项目，其中有一些正则表达式，你要理解代码在做什么，这时候你就需要去百度、google 现查、现学正则表达式的各种语法。\n看框架、库的源码，比如 Vue 框架的编译器的 解…",
-          "link": "https://juejin.cn/post/7308434215811956786",
-          "publishedOn": "2023-12-04T00:01:01.000Z",
-          "wordCount": 2546,
-          "title": "思维导图 + 文字 = 让你一次性学会正则表达式",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7307889500545400851",
           "author": "Shaka",
           "description": "theme: condensed-night-purple\n前言\n本文将会带着大家做一个完整的项目，但是不包含后端，如果需要后端云开发的话，后期再给大家补上\n本来最开始是想带着大家做鸿蒙官方的CodeLabs的，但是我看现在网上已经出了很多教程，尤其是机构，他们到时候应该会以视频教学的方式带着大家做，所以我就不做CodeLabs了，决定自己做一个单出的Demo，因为自己做的话需要设计等因素，所以拖了蛮长时间的\n最后的项目代码我传到了Gitee上供大家参考，因为我自己也懒得用Github...\n好的，我们开始吧\n登陆页面\n我们新建项目，选择空模板就行了，创建完是这个样子的\n\n我现在需要添加一个登录页和注册页，就直接新建两个Page\n\n我现在想新建一个常量的文件，用来存放一些常量，例如一些文字大小，颜色等等\n\n于是新建一个common并且新建一个Constant.ets\n然后我先定义一下我登陆页面标题的内容数据，这种数据的格式推荐是大写，然后多个单词用_进行分割\n\n然后在登陆页面使用\n\n然后输入框我们用TextInput组件来完成\n\n我们先简单做成这种效果，然后我们把一些别的地方也会用到的公共的常量拿出来\n\n然后我们在Login中使用\n\n这里可能有人会说，为什么不封装一个Form组件呢？其实我最开始也是这么想的，因为登陆和注册都需要一个表单，但是在写的过程中我发现其实也并不怎么省事，而且我设想的后期的登陆和注册页面可能区别较大\n当然，如果这里你想封装一个Form组件的话是完全可以的~\n现在我们想获取到输入框的值，并且希望点击Button进行页面跳转，跳转到Index\n\n\n这里顺便传了个参数，其实这个用户名密码应该存在应用里的，但是这里就当是复习一下传参吧\n然后Index接收\n\n现在的效果是这样的\n\n然后我们同样的逻辑，搞一下注册页面\n注册页面\n\n我们先在这里加一行，可以跳转到注…",
           "link": "https://juejin.cn/post/7307889500545400851",
           "publishedOn": "2023-12-03T09:06:57.000Z",
-          "wordCount": 1525,
+          "wordCount": 1510,
           "title": "实战篇：带着大家用鸿蒙HarmonyOS做项目（一）",
           "imageUrl": null
         },
@@ -1219,7 +1229,7 @@
           "description": "有用过gpt3.5的jy吗，我怎么感觉这gpt智商有点低呢，是我使用方式不对吗",
           "link": "https://juejin.cn/pin/7308905139405324307",
           "publishedOn": "2023-12-05T06:37:17.000Z",
-          "wordCount": 529,
+          "wordCount": 544,
           "title": "有用过gpt3.5的jy吗，我怎么感觉这gpt智商有点低呢，是我使用方式不对吗",
           "imageUrl": null
         },
@@ -1249,7 +1259,7 @@
           "description": "[7210002980895916043#挑战每日一条沸点#] yiapi（易接口），完成启动流程图~\nhttps://github.com/chenbimo/yicode",
           "link": "https://juejin.cn/pin/7307619217960304655",
           "publishedOn": "2023-12-03T00:05:52.000Z",
-          "wordCount": 469,
+          "wordCount": 461,
           "title": "[7210002980895916043#挑战每日一条沸点#] yiapi（易接口），完成启动流程图~ https://github.com/chenbimo/yicode",
           "imageUrl": null
         },
@@ -1259,7 +1269,7 @@
           "description": "gpt4的语音版本，将大模型用在了面试垂直领域应用：https://interview.dog?spurce=nk_1202",
           "link": "https://juejin.cn/pin/7307596762222706722",
           "publishedOn": "2023-12-02T07:48:53.000Z",
-          "wordCount": 522,
+          "wordCount": 44,
           "title": "gpt4的语音版本，将大模型用在了面试垂直领域应用：https://interview.dog?spurce=nk_1202",
           "imageUrl": null
         },
@@ -1299,7 +1309,7 @@
           "description": "求助 求助 安装pandas时这个问题怎么解决 跟着gpt在终端操作也没有解决",
           "link": "https://juejin.cn/pin/7307451430594510863",
           "publishedOn": "2023-12-01T06:56:58.000Z",
-          "wordCount": 536,
+          "wordCount": 551,
           "title": "求助 求助 安装pandas时这个问题怎么解决 跟着gpt在终端操作也没有解决",
           "imageUrl": null
         },
