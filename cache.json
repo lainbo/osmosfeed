@@ -23,7 +23,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": 1011,
+          "wordCount": 1009,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/",
           "publishedOn": "2023-11-21T16:14:41.000Z",
-          "wordCount": 1293,
+          "wordCount": 1291,
           "title": "cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "剪映中的视频特效虽多，其实就两类，一类改变原始像素，一类叠加混合，本文通过精简的源码和精致的案例给大家介绍具体如何实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/video-effect-js-filter-pixijs-webgl-3d/",
           "publishedOn": "2023-11-19T15:12:20.000Z",
-          "wordCount": 1232,
+          "wordCount": 1229,
           "title": "剪映APP的视频特效如何在Web中JS实现",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "应该是国内第一篇专门介绍用mp4box.js和VideoDecoder方法解码MP4视频序列帧的文章了。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/mp4box-js-webcodecs-mp4-canvas/",
           "publishedOn": "2023-11-14T16:37:18.000Z",
-          "wordCount": 1248,
+          "wordCount": 1247,
           "title": "mp4box.js加WebCodecs 解码MP4视频帧并渲染",
           "imageUrl": null
         }
@@ -127,7 +127,7 @@
           "description": "半年前，我跟几个算法做的比较资深的朋友聊 AI。他们对 AI 未来的发展持悲观态度，从数学层面看，AlexNet/Transformer/ResNet 等这些东西，它们并不复杂，大模型无非只是将这些本不复杂的东西进行了调优和组合，最后“大力出奇迹”，而这些能力、奇迹似乎老早之前便已经存在。\n渐渐地，我开始能够明白他们的悲观。在冰冷的数字、符号和公式面前，在繁多的模型、数据集和测试方法面前，技术的本质显得过于赤裸，技术研究中时间的流逝模糊了前方的视野，以至于未来都陷入了眼前看似美妙的概率之中。\n在应用层，我们或许是幸运的。不需要过多地涉足底层，站在巨人的肩膀上，几行代码就可以调动整个生态筑起的武器库，完成一个个不可思议的推理变幻，也只有当求知欲强盛的时候，才会往下窥探。对比之下，学习的动力也不尽相同。",
           "link": "https://m.okjike.com/originalPosts/6572729fabd469472776054b",
           "publishedOn": "2023-12-08T01:34:23.000Z",
-          "wordCount": 534,
+          "wordCount": 568,
           "title": "发布了: 半年前，我跟几个算法做的比较资深的朋友聊 AI。他们对 AI 未来的发展持悲观态度，从数学层面看，AlexNet/Transformer/ResNet 等这些东西，它们并不复杂...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -1097,6 +1097,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7308434215811956786",
+          "author": "李永宁",
+          "description": "theme: cyanosis\nhighlight: androidstudio\n当学习成为了习惯，知识也就变成了常识。 感谢各位的 关注、点赞、收藏和评论。\n新视频和文章会第一时间在微信公众号发送，欢迎关注：李永宁lyn\n文章已收录到 github 仓库 liyongning/blog，欢迎 Watch 和 Star。\n为什么要学正则表达式\n为什么要学习正则表达式？相信很多人没有思考过这个问题，每一次学习正则表达式都是因为 “需要”，这个需要可能是各种各样的原因，比如：日常工作、看源码、面试\n日常工作\n其实很多人认为不会正则也不影响日常工作，确实，很多需要正则的地方用普通的代码也可以实现，比如：将 2021-10-04 替换成 2021/10/04\n正则方式\nconst str = '2021-10-04'\nconst formatStr = str.replace(/-/g, '/')\n// 2021/10/04\nconsole.log(formatStr)\n\n普通代码\nconst str = '2021-10-04'\nconst strArr = str.split('-')\nconst formatStr = `${strArr[0]}/${strArr[1]}/${strArr[2]}`\n// 2021/10/04\nconsole.log(formatStr)\n\n两种方式都能实现我们的需要，但是可以看到这个简单的例子用普通代码实现明显代码量大并且复杂；况且这只是一个最简单的例子，稍微复杂一点的需求，代码量和复杂度会有更明显的区别。\n看源码\n这里的源码不止是某个框架的源码，比如工作中你接手的某个业务项目，其中有一些正则表达式，你要理解代码在做什么，这时候你就需要去百度、google 现查、现学正则表达式的各种语法。\n看框架、库的源码，比如 Vue 框架的编译器的 解…",
+          "link": "https://juejin.cn/post/7308434215811956786",
+          "publishedOn": "2023-12-04T00:01:01.000Z",
+          "wordCount": 2546,
+          "title": "思维导图 + 文字 = 让你一次性学会正则表达式",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7307889500545400851",
           "author": "Shaka",
           "description": "theme: condensed-night-purple\n前言\n本文将会带着大家做一个完整的项目，但是不包含后端，如果需要后端云开发的话，后期再给大家补上\n本来最开始是想带着大家做鸿蒙官方的CodeLabs的，但是我看现在网上已经出了很多教程，尤其是机构，他们到时候应该会以视频教学的方式带着大家做，所以我就不做CodeLabs了，决定自己做一个单出的Demo，因为自己做的话需要设计等因素，所以拖了蛮长时间的\n最后的项目代码我传到了Gitee上供大家参考，因为我自己也懒得用Github...\n好的，我们开始吧\n登陆页面\n我们新建项目，选择空模板就行了，创建完是这个样子的\n\n我现在需要添加一个登录页和注册页，就直接新建两个Page\n\n我现在想新建一个常量的文件，用来存放一些常量，例如一些文字大小，颜色等等\n\n于是新建一个common并且新建一个Constant.ets\n然后我先定义一下我登陆页面标题的内容数据，这种数据的格式推荐是大写，然后多个单词用_进行分割\n\n然后在登陆页面使用\n\n然后输入框我们用TextInput组件来完成\n\n我们先简单做成这种效果，然后我们把一些别的地方也会用到的公共的常量拿出来\n\n然后我们在Login中使用\n\n这里可能有人会说，为什么不封装一个Form组件呢？其实我最开始也是这么想的，因为登陆和注册都需要一个表单，但是在写的过程中我发现其实也并不怎么省事，而且我设想的后期的登陆和注册页面可能区别较大\n当然，如果这里你想封装一个Form组件的话是完全可以的~\n现在我们想获取到输入框的值，并且希望点击Button进行页面跳转，跳转到Index\n\n\n这里顺便传了个参数，其实这个用户名密码应该存在应用里的，但是这里就当是复习一下传参吧\n然后Index接收\n\n现在的效果是这样的\n\n然后我们同样的逻辑，搞一下注册页面\n注册页面\n\n我们先在这里加一行，可以跳转到注…",
@@ -1177,16 +1187,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7307146429004333094",
-          "author": "亦世凡华",
-          "description": "今天简单实现一个three.js的小Demo，加强自己对three知识的掌握与学习，只有在项目中才能灵活将所学知识运用起来，话不多说直接开始。\n项目搭建\n本案例还是借助框架书写three项目，借用vite构建工具搭建vue项目，搭建完成之后，用编辑器打开该项目，在终端执行 npm i 安装一下依赖，安装完成之后终端在安装 npm i three 即可。\n因为我搭建的是vue3项目，为了便于代码的可读性，所以我将three.js代码单独抽离放在一个组件当中，在App根组件中进入引入该组件。具体如下：\n<template>\n  <!-- 3D汽车展厅 -->\n  <CarShowroom></CarShowroom>\n</template>\n \n<script setup>\nimport CarShowroom from './components/CarShowroom.vue';\n</script>\n \n<style lang=\"less\">\n  *{\n    margin: 0;\n    padding: 0;\n  }\n</style>\n\n初始化three.js代码\nthree.js开启必须用到的基础代码如下：\n导入three库：\nimport * as THREE from 'three'\n\n初始化场景：\nconst scene = new THREE.Scene()\n\n初始化相机：\n// 创建相机\nconst camera = new THREE.PerspectiveCamera(40,window.innerWidth / window.innerHeight,0.1,1000)\ncamera.position.set(4.25,1.4,-4.5)\n\n初始化渲染器：\n// 创建渲染器\nconst renderer = new THREE.WebGLRenderer…",
-          "link": "https://juejin.cn/post/7307146429004333094",
-          "publishedOn": "2023-11-30T14:48:08.000Z",
-          "wordCount": 4571,
-          "title": "three.js实现3D汽车展厅效果展示",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7307057492059471899",
           "author": "Mark大熊",
           "description": "前言\n上篇文章 尝试实现了国外大佬用Web做出来跨窗口渲染动画效果 - 掘金 反响很大，但是仅仅只是实现了跨窗口动画效果，严格说就没有动画，还有些bug和遗憾，尤其是粒子效果，得入three.js坑，怎么办？跳啊！\n硬肝了两天，实在肝不动了，看效果吧。\n第一版v2效果，大粒子，粒子数量较少：\n\n第二版v2.1，小粒子，粒子数量多：\n\nthree.js\n官方文档：https://threejs.org/，中文文档：three.js docs\n我第一次接触three.js，之前只是听说过，比如能弄车展啥的，感觉很厉害，就想借此机会学习下，跳进坑里才发现，这坑也太深了。随便找个教程，里面各种名词就给我弄吐了。\n先按文档 three.js docs 画个立方体，跑起来了，但是我想要球体啊，还有粒子围着中心转，这么多api学不起啊，搜教程也是杂乱无章，无从学起，咋整？找现成的啊！\n看到官网有很多现成的例子，找了一个相近的：https://threejs.org/examples/#webgl_sprites，截了个静态图长这样：\n\n找源码：three.js/examples/webgl_sprites.html at master · mrdoob/three.js，copy到本地，代码就200行，用到的three api就几个，搜下api大概了解代码各部分的功能，基本都能看懂，然后删了多余功能，一个粒子绕球中心旋转功能就出来了。\n现在关于粒子移动、渲染、球体旋转缩放等变化api都已经基本搞懂了，然后就是痛苦折磨的计算调试了，不想再回忆了。\n动画效果的移动都是靠循环对象、计算坐标，改变粒子的position来实现的，感觉应该会有更好的现成api能简化这个过程，而且有缓冲、阻尼效果等。如果有更好的例子，欢迎大佬分享。\n总结下用到的api吧，就几个：\n构造方法\nTHREE.Perspec…",
@@ -1229,7 +1229,7 @@
           "description": "有用过gpt3.5的jy吗，我怎么感觉这gpt智商有点低呢，是我使用方式不对吗",
           "link": "https://juejin.cn/pin/7308905139405324307",
           "publishedOn": "2023-12-05T06:37:17.000Z",
-          "wordCount": 544,
+          "wordCount": 531,
           "title": "有用过gpt3.5的jy吗，我怎么感觉这gpt智商有点低呢，是我使用方式不对吗",
           "imageUrl": null
         },
@@ -1261,16 +1261,6 @@
           "publishedOn": "2023-12-03T00:05:52.000Z",
           "wordCount": 461,
           "title": "[7210002980895916043#挑战每日一条沸点#] yiapi（易接口），完成启动流程图~ https://github.com/chenbimo/yicode",
-          "imageUrl": null
-        },
-        {
-          "id": "7307596762222706722",
-          "author": "狗狗向前冲",
-          "description": "gpt4的语音版本，将大模型用在了面试垂直领域应用：https://interview.dog?spurce=nk_1202",
-          "link": "https://juejin.cn/pin/7307596762222706722",
-          "publishedOn": "2023-12-02T07:48:53.000Z",
-          "wordCount": 44,
-          "title": "gpt4的语音版本，将大模型用在了面试垂直领域应用：https://interview.dog?spurce=nk_1202",
           "imageUrl": null
         },
         {
@@ -1309,7 +1299,7 @@
           "description": "求助 求助 安装pandas时这个问题怎么解决 跟着gpt在终端操作也没有解决",
           "link": "https://juejin.cn/pin/7307451430594510863",
           "publishedOn": "2023-12-01T06:56:58.000Z",
-          "wordCount": 551,
+          "wordCount": 538,
           "title": "求助 求助 安装pandas时这个问题怎么解决 跟着gpt在终端操作也没有解决",
           "imageUrl": null
         },
@@ -1319,7 +1309,7 @@
           "description": "[7073670907851440160#新人报道#] 在最新的vscode 1.84.2发布笔记里面有一款白色的主题，还挺好看的，不知道有没有人知道主题名字",
           "link": "https://juejin.cn/pin/7307451430587400227",
           "publishedOn": "2023-12-01T05:37:56.000Z",
-          "wordCount": 462,
+          "wordCount": 44,
           "title": "[7073670907851440160#新人报道#] 在最新的vscode 1.84.2发布笔记里面有一款白色的主题，还挺好看的，不知道有没有人知道主题名字",
           "imageUrl": null
         },
@@ -1329,7 +1319,7 @@
           "description": "将 大模型 和 code review 结合 ，针对于 Gitlab MR 进行 code review 辅助项目评审[赞]\n项目地址：https://github.com/mimo-x/Code-Review-GPT-Gitlab/\n文章介绍：https://juejin.cn/post/7292692843415945225",
           "link": "https://juejin.cn/pin/7307221821903732786",
           "publishedOn": "2023-12-01T02:03:12.000Z",
-          "wordCount": 592,
+          "wordCount": 44,
           "title": "将 大模型 和 code review 结合 ，针对于 Gitlab MR 进行 code review 辅助项目评审[赞] 项目地址：https://github.com/mimo-x/Code-Review-GPT-Gitlab/ 文章介...",
           "imageUrl": null
         },
@@ -1339,7 +1329,7 @@
           "description": "jy们，推荐一个好用的富文本编辑器，谢谢",
           "link": "https://juejin.cn/pin/7307125383785234473",
           "publishedOn": "2023-11-30T12:08:08.000Z",
-          "wordCount": 529,
+          "wordCount": 44,
           "title": "jy们，推荐一个好用的富文本编辑器，谢谢",
           "imageUrl": null
         },
@@ -1349,7 +1339,7 @@
           "description": "有什么适合手机端app界面开发的简单框架，之前一直只是用响应式布局来凑合手机端[我想静静][我想静静][我想静静][我想静静]",
           "link": "https://juejin.cn/pin/7306783965532799028",
           "publishedOn": "2023-11-29T23:49:45.000Z",
-          "wordCount": 523,
+          "wordCount": 44,
           "title": "有什么适合手机端app界面开发的简单框架，之前一直只是用响应式布局来凑合手机端[我想静静][我想静静][我想静静][我想静静]",
           "imageUrl": null
         },
@@ -1359,7 +1349,7 @@
           "description": "刚切换成flutter开发，上午做了个vscode插件把UI稿内容自动转换成flutter的响应式布局省点力气。人老了不喜欢没接触过的东西，现在才入坑是不都算末班车了==\nhttps://github.com/balabalapupu/css-to-widget\n之前还有个ui稿自动转换成原子化样式\nhttps://github.com/balabalapupu/vscode-auto-atomic-css",
           "link": "https://juejin.cn/pin/7306697644062048283",
           "publishedOn": "2023-11-29T03:42:00.000Z",
-          "wordCount": 532,
+          "wordCount": 44,
           "title": "刚切换成flutter开发，上午做了个vscode插件把UI稿内容自动转换成flutter的响应式布局省点力气。人老了不喜欢没接触过的东西，现在才入坑是不都算末班车了== htt...",
           "imageUrl": null
         },
@@ -1369,7 +1359,7 @@
           "description": "flutter 写的 windows 端 图片比对、批量裁剪导出工具，链接还可兑换70次。\nhttp://go.microsoft.com/fwlink/?LinkId=532540&mstoken=XJ3RV-4CX7J-QCTGM-7DKQ3-DMDKZ\n欢迎吐槽。\n小bug 懒得改，大bug 不会改\n已知：窗口尺寸改变时，文件名位置某些情况不能自适应",
           "link": "https://juejin.cn/pin/7306447457151402018",
           "publishedOn": "2023-11-29T02:15:44.000Z",
-          "wordCount": 559,
+          "wordCount": 44,
           "title": "flutter 写的 windows 端 图片比对、批量裁剪导出工具，链接还可兑换70次。 http://go.microsoft.com/fwlink/?LinkId=532540&mstoken=XJ3RV-4CX7J-QCTGM-7DKQ3-D...",
           "imageUrl": null
         },
@@ -1379,7 +1369,7 @@
           "description": "[7304512653450280998#GPTs 的奇思妙用#]\nhttps://gptsmenu.com\n一个第三方 GPTs 存储网站\n目前收录超 1w ➕GPTs\n支持一键收藏❤️你喜欢的 GPT\nChrome 导航插件，提高你的工作效率",
           "link": "https://juejin.cn/pin/7306423214494646306",
           "publishedOn": "2023-11-29T01:39:49.000Z",
-          "wordCount": 512,
+          "wordCount": 44,
           "title": "[7304512653450280998#GPTs 的奇思妙用#] https://gptsmenu.com 一个第三方 GPTs 存储网站 目前收录超 1w ➕GPTs 支持一键收藏❤️你喜欢的 GPT Chrome 导航插件...",
           "imageUrl": null
         },
@@ -1389,7 +1379,7 @@
           "description": "最近开发Chrome扩展的过程中发现，原生的HTML+js+css开发写起来确实很累，效率也低。于是想着自己搭一套vite+react+ts+antd且支持多页面的框架用来开发Chrome扩展程序。不过在调研的过程中发现了Plasmo这个Chrome开发SDK，一举解决了我的所有诉求，这两天有时间就开搞吧。",
           "link": "https://juejin.cn/pin/7306423214494023714",
           "publishedOn": "2023-11-28T22:45:46.000Z",
-          "wordCount": 527,
+          "wordCount": 44,
           "title": "最近开发Chrome扩展的过程中发现，原生的HTML+js+css开发写起来确实很累，效率也低。于是想着自己搭一套vite+react+ts+antd且支持多页面的框架用来开发Chrome扩...",
           "imageUrl": null
         },
@@ -1399,7 +1389,7 @@
           "description": "用例图(PlanUML)\n用例图是软件工程中的一种可视化表示方法，用于描述系统角色与系统本身之间的交互。它通过说明用例和与用例交互的角色来捕捉系统的动态行为。这些图表对于明确系统的功能要求和了解用户如何与系统交互至关重要。通过提供一个高层次的视图，用例图可以帮助利益相关者了解系统的功能及其潜在价值。",
           "link": "https://juejin.cn/pin/7306356456102019124",
           "publishedOn": "2023-11-28T12:09:45.000Z",
-          "wordCount": 528,
+          "wordCount": 44,
           "title": "用例图(PlanUML) 用例图是软件工程中的一种可视化表示方法，用于描述系统角色与系统本身之间的交互。它通过说明用例和与用例交互的角色来捕捉系统的动态行为。这...",
           "imageUrl": null
         },
@@ -1409,8 +1399,18 @@
           "description": "我开发的Chrome扩展 - 掘金Plus已经在Chrome扩展商店发布成功了。初个版本支持配置文章模版和一键导入功能。\n欢迎大家在Chrome扩展商店搜索掘金Plus下载试用。\nhttps://chromewebstore.google.com/detail/%E6%8E%98%E9%87%91plus/bcpbkeiagppbpjinfdbknmaibfjaeobi?hl=zh-CN&utm_source=ext_sidebar",
           "link": "https://juejin.cn/pin/7306327158129983503",
           "publishedOn": "2023-11-28T08:52:24.000Z",
-          "wordCount": 545,
+          "wordCount": 44,
           "title": "我开发的Chrome扩展 - 掘金Plus已经在Chrome扩展商店发布成功了。初个版本支持配置文章模版和一键导入功能。 欢迎大家在Chrome扩展商店搜索掘金Plus下载试用。 h...",
+          "imageUrl": null
+        },
+        {
+          "id": "7306019445406761012",
+          "author": "Simbaba",
+          "description": "好不容易给开发者朋友开发的插件工具，适配了掘金，知乎，csdn，baijiahao，网易和搜狐等等，支持等众多开发博客，还有隐藏免费功能。博客显示效果优秀。桶子门，这么好的东西，竟然没人知道(爱读v2)，目前下载量稀缺[流泪]",
+          "link": "https://juejin.cn/pin/7306019445406761012",
+          "publishedOn": "2023-11-28T00:47:02.000Z",
+          "wordCount": 44,
+          "title": "好不容易给开发者朋友开发的插件工具，适配了掘金，知乎，csdn，baijiahao，网易和搜狐等等，支持等众多开发博客，还有隐藏免费功能。博客显示效果优秀。桶子门...",
           "imageUrl": null
         }
       ]
