@@ -23,7 +23,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": 1011,
+          "wordCount": 1017,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/",
           "publishedOn": "2023-11-21T16:14:41.000Z",
-          "wordCount": 1292,
+          "wordCount": 1297,
           "title": "cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "剪映中的视频特效虽多，其实就两类，一类改变原始像素，一类叠加混合，本文通过精简的源码和精致的案例给大家介绍具体如何实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/video-effect-js-filter-pixijs-webgl-3d/",
           "publishedOn": "2023-11-19T15:12:20.000Z",
-          "wordCount": 1230,
+          "wordCount": 1236,
           "title": "剪映APP的视频特效如何在Web中JS实现",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "应该是国内第一篇专门介绍用mp4box.js和VideoDecoder方法解码MP4视频序列帧的文章了。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/mp4box-js-webcodecs-mp4-canvas/",
           "publishedOn": "2023-11-14T16:37:18.000Z",
-          "wordCount": 1247,
+          "wordCount": 1254,
           "title": "mp4box.js加WebCodecs 解码MP4视频帧并渲染",
           "imageUrl": null
         }
@@ -111,6 +111,36 @@
       "feedUrl": "https://rsshub.app/jike/user/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
+        {
+          "id": "https://m.okjike.com/originalPosts/6576cc7d60830f16ae0ad962",
+          "author": null,
+          "description": "Github 花了一年多的时间，将他们的 1200 台 MySQL 集群从 v5.6 升级到了 v8.0，https://github.blog/2023-12-07-upgrading-github-com-to-mysql-8-0/，过程中需要遵循服务的 SLO 和 SLA，做了非常多的工作，值得借鉴阅读。\n过去几年，随着业务规模的增长，我也实践了多次数据库的运维和变更，首先从 MySQL v5.6 迁移到 OceanBase-MySQL，在早期版本的 OB 中挣扎了一年多，建设大量的监控和应急措施来应对执行计划淘汰不及时和处理一些兼容性的问题；后来随着业务的增长，数据库体量增加，数据规模超过了 2Tb，又经历了一次数据库的扩容和版本升级，这个阶段数据的各种问题都暴露出来了，例如主从流量分配不均、单表超过一亿性能异常、热点库 CPU 暴涨、业务扩容带来的连接池不够等等，解决问题的同时，也在规范团队对数据库的使用，趣味性比较强；再后来随着业务的继续增长，又开始建设异地灾备，实现数据的异地同步和容灾切换，学到了不少。\n但相比 Github 这个规模，解决的问题，还是小巫见大巫，它的 QPS 达到了 550w，极其恐怖。Github 采用的是分库分表的设计，在数据库调用这一层上，做的相对比较复杂，架构的复杂自然也带来了工具和工程的复杂度，从而增加了大量的运维成本，这篇文章提到了一些对抗软件复杂度的方法和细节，包括回滚机制的设计、混合版本提供服务等，比较有意思。只不过对细节的描述偏少，估计是不方便对外。",
+          "link": "https://m.okjike.com/originalPosts/6576cc7d60830f16ae0ad962",
+          "publishedOn": "2023-12-11T08:46:53.000Z",
+          "wordCount": 508,
+          "title": "发布了: Github 花了一年多的时间，将他们的 1200 台 MySQL 集群从 v5.6 升级到了 v8.0，https://github.blog/2023-12-07-upgrading-github-com-to-mysql-8-0/，...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fhe21pyFrQhHfnTP-P9Vuet-R4e7v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
+        {
+          "id": "https://m.okjike.com/originalPosts/6576c17960830f16ae09c044",
+          "author": null,
+          "description": "D2 终端技术大会，这个技术大会开了 18 年，今年刚好成年，还是一如既往的干货满满。\n- 今年的主题：https://d2.alibabatech.com\n- 过去 17 年的主题集锦：https://github.com/orgs/d2forum/repositories\n最想看的还是 AI 对前端的影响，好多大厂都在钻研自己的底层基础设施和上层应用，它们都计划着从哪些角度切入，又做了哪些事情呢？\n上次看到红杉资本的一个趋势报告，其中提到，大小厂使用 AI 更多还是「降低成本 & 提升效率」，并不在创新上。报告地址：https://dnipkggqxh.feishu.cn/wiki/QOi3wnLgZi2vAmkl1wlcRoVWnAe?table=tblixSnDTlmOTvgr&view=vewcpAOiiE",
+          "link": "https://m.okjike.com/originalPosts/6576c17960830f16ae09c044",
+          "publishedOn": "2023-12-11T07:59:53.000Z",
+          "wordCount": 481,
+          "title": "发布了: D2 终端技术大会，这个技术大会开了 18 年，今年刚好成年，还是一如既往的干货满满。 - 今年的主题：https://d2.alibabatech.com - 过去 17 年的主题集...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FtLzMOVzqUBOiwdchavbEi--KuR_v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
+        {
+          "id": "https://m.okjike.com/originalPosts/6576afa7ec195a00b7a1ac5c",
+          "author": null,
+          "description": "推荐一个可以远程调试任意 Web 网页的工具包，page-spy-web，https://github.com/HuolalaTech/page-spy-web，你可以像使用 Chrome Devtools 一样，查看一个远程网页的控制台输出、网络请求、缓存信息以及页面内容，也可以直接下发 JS 指令，对网页进行控制。\n它的使用场景还是比较丰富的，例如用户页面白屏，更换无数姿势都无法复现的时候，例如线下门店安装前端应用，需要跑到人家店里去的时候，都可以考虑使用这个工具，它能够实时查看用户侧的网页异常，了解端侧详细信息，也可以远程控制或调试前端应用。当然，这些操作都需要考虑到隐私问题，获得用户授权。\n这个项目的部署十分简单，一句命令就可以搞定，部署之后，所有放置了 SDK 的网页都会使用  Websocket 与 Server 维持长链接，调试过程涉及到的通讯协议在这个仓库：https://github.com/HuolalaTech/page-spy，感兴趣的可以看一下。",
+          "link": "https://m.okjike.com/originalPosts/6576afa7ec195a00b7a1ac5c",
+          "publishedOn": "2023-12-11T06:43:51.000Z",
+          "wordCount": 528,
+          "title": "发布了: 推荐一个可以远程调试任意 Web 网页的工具包，page-spy-web，https://github.com/HuolalaTech/page-spy-web，你可以像使用 Chrome Devtools 一样，查看...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FmI0tprSh0qy38sGCu3e76yDXl8N?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80"
+        },
         {
           "id": "https://m.okjike.com/originalPosts/657660df8a7c5ba8ae49e14b",
           "author": null,
@@ -180,36 +210,6 @@
           "wordCount": 452,
           "title": "发布了: 金V成就达成✌️",
           "imageUrl": "https://cdnv2.ruguoapp.com/FgMYaj4GRrxRYqsSl8K1_Tf6vX_Dv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/65753ef8ec195a00b78589d2",
-          "author": null,
-          "description": "OpenAI 联合创始人、研究科学家 John Schulman 认为，RLHF 才是 ChatGPT 的秘密武器（secret sauce）。训练数据的体量固然重要，但是让 ChatGPT 更容易推断出用户的意图，产生质变的根本原因是已在 InstructGPT（ChatGPT 前身）使用的 “人类反馈的强化学习（RLHF）” 技术。\nGoogle 最近写了一篇论文《RLAIF: Scaling Reinforcement Learning from Human Feedback with AI Feedback》，https://arxiv.org/abs/2309.00267，提出了使用 AI Feedback (RLAIF) 来进行强化学习，根据人类评估者的评价，在摘要、有帮助的对话生成和无害对话生成等任务中，RLAIF 取得了与 RLHF 相当或更好的性能。\n结合 OpenAI Q*（Q-Star）项目的爆料，“AI 具备了自主学习和自我改进的能力，模型可进行自主决策，并且可能已具备轻微自我意识”，有研究者猜测与强化学习中的 Q-learning 算法相关。这个方向的最新资料值得跟踪学习下。\n奖励模型是强化学习中的重要组成部分，OpenAI 训练中涉及到这一块的公开内容是比较少的，《The History and Risks of Reinforcement Learning and Human Feedback》，https://arxiv.org/abs/2310.13595，这篇论文强调了奖励模型缺乏透明度和严格评估，并呼吁在该领域进行更全面的研究和透明度。\n奖励模型的设计直接影响了 AI 与用户进行正常交流时所表现出的道德判断、价值观念和偏见，如果 AI 具备了轻微的自我意识，那么这部分内容的公开透明在未来也会变得更加重要。",
-          "link": "https://m.okjike.com/originalPosts/65753ef8ec195a00b78589d2",
-          "publishedOn": "2023-12-10T04:30:48.000Z",
-          "wordCount": 556,
-          "title": "发布了: OpenAI 联合创始人、研究科学家 John Schulman 认为，RLHF 才是 ChatGPT 的秘密武器（secret sauce）。训练数据的体量固然重要，但是让 ChatGPT 更容易...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FpZU_h7fI9LNyI3gmKNi_6B9lar2v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/65746de979cb2b9f35c882ef",
-          "author": null,
-          "description": "今天是高密度信息输入和输出的一天，吃根雪糕，给脑子降降温，CPU 着火了。",
-          "link": "https://m.okjike.com/originalPosts/65746de979cb2b9f35c882ef",
-          "publishedOn": "2023-12-09T13:38:49.000Z",
-          "wordCount": 443,
-          "title": "发布了: 今天是高密度信息输入和输出的一天，吃根雪糕，给脑子降降温，CPU 着火了。",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/6574698dec195a00b778b0b5",
-          "author": null,
-          "description": "使用 Stable Diffusion 已经可以生成如此逼真且复杂的短视频了，可以想象下两年之后电影行业会变成怎么样，这完全是在颠覆！视频作者是 x.com/AIWarper，制作过程的复杂点在于：多个角色交互、多个种族、超快的交互速度。",
-          "link": "https://m.okjike.com/originalPosts/6574698dec195a00b778b0b5",
-          "publishedOn": "2023-12-09T13:20:13.000Z",
-          "wordCount": 498,
-          "title": "发布了: 使用 Stable Diffusion 已经可以生成如此逼真且复杂的短视频了，可以想象下两年之后电影行业会变成怎么样，这完全是在颠覆！视频作者是 x.com/AIWarper...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FqNYLuRsyIIvsx36GB9kitVx7co7?imageMogr2/auto-orient/heic-exif/1/format/jpeg?imageView2/0/w/200/h/200/format/jpeg/q/80"
         }
       ]
     },
@@ -325,6 +325,26 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231211/t20231211_526515796.html",
+          "author": "国家预警信息发布中心",
+          "description": "万州区气象台2023年12月11日16时30分继续发布“大雾黄色预警信号”，预计11日22时30分至12日09时30分，陈家坝、百安坝、五桥、新田、双河口、龙都、高峰、长坪、溪口、燕山、新乡、罗田等镇乡街将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。有关部门和单位按照职责做好防雾准备工作；机场、高速公路、轮渡码头等单位加强交通管理，保障安全；驾驶人员注意雾的变化，小心驾驶；户外活动注意安全。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231211/t20231211_526515796.html",
+          "publishedOn": "2023-12-11T09:14:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市万州区发布大雾黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231211/t20231211_526515544.html",
+          "author": "国家预警信息发布中心",
+          "description": "忠县气象台2023年12月11日14时30分继续发布“大雾黄色预警信号”，预计12月11日23时至12日10时，忠州街道、白公街道、新生街道、乌杨街道、涂井乡、石宝镇、汝溪镇、金声乡、野鹤镇、磨子土家族乡、石子乡、复兴镇、东溪镇、黄金镇、永丰镇、花桥镇、三汇镇、马灌镇、官坝镇、金鸡镇、石黄镇、兴峰乡、白石镇、任家镇、双桂镇、拔山镇、洋渡镇、善广乡、新立镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231211/t20231211_526515544.html",
+          "publishedOn": "2023-12-11T07:02:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市忠县发布大雾黄色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231211/t20231211_526515170.html",
           "author": "国家预警信息发布中心",
@@ -1014,16 +1034,6 @@
           "wordCount": 523,
           "title": "重庆市涪陵区发布大雾黄色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231204/t20231204_526507473.html",
-          "author": "国家预警信息发布中心",
-          "description": "梁平区气象台2023年12月4日16时10分发布“大雾黄色预警信号”，预计12月4日23时至5日9时，新盛镇、虎城镇、竹山镇、龙门镇、文化镇、龙胜乡、袁驿镇、碧山镇、七星镇、屏锦镇、回龙镇、荫平镇、云龙镇、和林镇、聚奎镇、礼让镇、明达镇、仁贤街道、安胜镇、星桥镇、合兴街道、复平镇、梁山街道、双桂街道、金带街道、大观镇、铁门乡、蟠龙镇、曲水镇、福禄镇、石安镇、紫照镇、柏家镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231204/t20231204_526507473.html",
-          "publishedOn": "2023-12-04T08:32:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市梁平区发布大雾黄色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -1067,6 +1077,26 @@
           "publishedOn": "2023-12-10T14:36:36.000Z",
           "wordCount": 666,
           "title": "一个30岁老前端的人生经历（学习+工作+婚姻+孩子），给迷茫的朋友一点激励。",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7310786554488881190",
+          "author": "3iggins",
+          "description": "前言\n也是找了许久的工作，终于在这周入职新公司了。\n本文就是想简单分享一下自己离职、找工作的经历和入职新公司一周后的一些感想吧。\n离职\n其实我在上一家公司就呆了几个月，但是整个过程中内耗非常严重，常常焦虑到失眠，有次甚至失眠到半夜四点起来跑步缓解焦虑。\n后面觉得这样下去也不是办法，咬咬牙就裸辞了（大伙们还是不要学我，多少是有些任性了）。\n提出辞职的时候其实同事和领导也有挽留，提出可以让我休息几天，调整放松一下。不过当时觉得既然提出了辞职，再呆下去其实也不好，最后还是走了。\n离职后还是会基本每天写代码保持手感\n离职后其实并没有完全放松摆烂，还是会在网上看一些知识点，每天抽点时间出来写写学习记录和学点新东西。因为我怕自己太放松的话，不利于后续复习找工作，所以还是会写点东西保持手感。\n重新找工作，面试机会很少\n说实话，面试机会真的很少，在招聘软件上和人事沟通，基本都是已读不回。找工作全程有回复的可能都是一些外包公司，但是其实我个人感觉我是没什么机会去这些外包公司的，一方面个人不太愿意去外包，另一方面就是其实外包大概率不会要我这种非科班的且工作经验不足三年的（2021年毕业的），外包人事和你聊天基本就是三连问：\n请问你是四年全日制、学信网可查、本科学历吗？请问你的上一份工作离职原因是什么？请问你上一份工作的薪资以及你的期望薪资是多少？\n然后你给他一顿回复，接下来就是问你要个学信网截图，就没有后续了。\n找工作过程本来就很煎熬，后来看到新闻说今年除夕不放假，心里也想过要不直接现在收拾东西回家过年算了，工作什么的过完年再说，但是我哥和我大学舍友都劝我耐下心继续找找，加上我离职并没有告诉家人，最后还是没直接回家，而是试着再找一个月试试。\n转机 - 11月\n前面在招聘软件上问了几百个都没几个面试机会，已经是聊怕了。开始以为是自己的打招呼语不对，引不起对面的兴趣，所以期间招呼语改了很多次，从开…",
+          "link": "https://juejin.cn/post/7310786554488881190",
+          "publishedOn": "2023-12-10T06:10:12.000Z",
+          "wordCount": 710,
+          "title": "入职新公司一周了",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7310143510103064585",
+          "author": "三一习惯",
+          "description": "随着经济的下行以及移动互联网发展趋于成熟，对软件开发人员的需求大大减少，互联网行业所有的公司都在降本增效，合并通道，降薪裁员的新闻层出不穷。\n但相比其他行业，互联网行业的从业者薪资还是比较可观的，但要求也比之前高了很多，需要大家掌握更多的技能和在某些技术领域深耕。\n本文，我们就聊聊，掌握了哪些技能，能让前端同学，收入高且稳定。\n端智能\n首推的是端智能，很多行业大咖都认为，随着ChatGPT的横空出世，开启了第四次工业革命，很多产品都可以用大模型重做一遍。当前，我创业的方向，也和大模型有关。\n当前的大模型主要还跑在云端，但云端的成本高，大模型的未来在端智能，这也是小米创始人雷军在今年一次发布会上提出的观点。\n在2023年8月14日的雷军年度演讲中，雷军宣布小米已经在手机端跑通13亿参数的大模型，部分场景效果媲美云端。\n目前，端上大模型的可行性和前景已经得到了业内的普遍认可，国内外各个科技大厂在大模型的端侧部署领域均开始布局，目前大量工程已在PC端、手机端实现大模型的离线部署，更有部分App登陆应用商店，只需下载即可畅通无阻地对话。\n我们相信，在不久的将来，端上大模型推理将会成为智能应用的重要组成部分，为用户带来更加便捷、智能的体验。\n我在美团从零研发了web端智能推理引擎，当时立项时，就给老板画饼，美团每天的几百亿推理调用，如果有一半用端智能替代的话，每年能为公司节省上亿元。\n要想掌握端智能，需要学习深度学习的基本知识，还要掌握图形学和C++编程，通过webgl或webassembly 技术实现在Web端执行深度学习算法。\n图形学\n前面提到的端智能，只是涉及到了图形学中的webgl计算，但图形学的未来在元宇宙，通过3D渲染，实现VR、AR、XR等各种R。\n计算机图形学是一门快速发展的领域，涵盖了三维建模、渲染、动画、虚拟现实等众多技术和应用。在电影、广告、游戏等领域中，计算机…",
+          "link": "https://juejin.cn/post/7310143510103064585",
+          "publishedOn": "2023-12-09T00:58:41.000Z",
+          "wordCount": 667,
+          "title": "前端学哪些技能饭碗越铁收入还高",
           "imageUrl": null
         },
         {
@@ -1200,6 +1230,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7308782855941242906",
+          "author": "自信阿杜",
+          "description": "highlight: a11y-dark\n引言\n发展历史\nWeb Components 技术的发展历程可以分为以下几个阶段：\n2011 年，Google 开始开发 Polymer 项目，旨在创建一种基于 Web 标准的新型 Web 应用开发框架。\n2013 年，W3C 开始制定 Web Components 标准，包括 Custom Elements、HTML Templates 和 Shadow DOM 等技术。\n2015 年，Web Components 1.0 草案发布。\n2017 年，Web Components 1.0 正式标准发布。\n2018 年，Chrome 63 正式支持 Web Components 技术。\n2019 年，Web Components 技术开始逐渐被更多的前端开发人员使用，成为前端开发的基础设施之一\n谁在使用\n1. youtube\n\n2. github\n\n3.quark-design(哈啰)\n\n4.Vue也支持web Components\n\n目标\n了解web Components是什么。本文不是全面教程，只是一个简单演示，如果需要全面学习的话可以点我 进行全面学习\nWeb Components的基本概念\nWeb Component 是一套不同的技术，允许你创建可重用的定制元素（它们的功能封装在你的代码之外）并且在你的 web 应用中使用它们。\n如图， Web Components主要包括了下面的三个技术\n\nCustom Elements\n概念\n由 Web 开发人员定义行为的 HTML 元素，扩展了浏览器中可用的元素集\n实现方式有两种\n自定义内置元素 继承自标准的 HTML 元素，例如HTMLParagraphElement\n独立自定义元素继承自 HTML 元素基类HTMLElement\n例子\n如果你有vue的基础的话，vue的语法中有一个动…",
+          "link": "https://juejin.cn/post/7308782855941242906",
+          "publishedOn": "2023-12-05T10:47:40.000Z",
+          "wordCount": 2320,
+          "title": "Web Components的前世今生",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7308899425149354035",
           "author": "掘金酱",
           "description": "theme: cyanosis\n\n用一个关键词总结你的2023年，你会选择哪个词呢？是突飞猛进、油门狂轰？是充满挑战、迎接变革？还是自我审视、克服困难？无论是哪一个，这一年一定都是难以忘却的一年。2023年我们都在不断探索，逆风而上~与掘友们聊聊那些难忘的时刻吧！愿我们明年都能够继续乘风而上 🎉\n活动时间：\n2023年12月06日-2024年1月20日\n获奖名单公布：活动结束后的7个工作日\n如何参与：\n在 # 我的2023年度关键词 话题下发布年终总结内容相关的文章，即可成功参与活动，选题参考如下：\n2023年的技术变革以及2024年的技术趋势展望；\n分享自己2023年的难忘事件以及自己2024年的愿望；\n分享2023年的求职经历，描述当前的就业形势，以及自己对未来的职业规划；\n或许23年遇到了有史以来最大的BUG，还记得是怎么解决的吗？记录一下吧；\n23年在技术写作上的成就以及经历；\n23年与掘金的故事\n......\n文章要求：\n文章要求\n具体内容\n\n\n\n\n文章类型\n年度技术盘点/预测、技术学习、工作职业成长、人生感悟、生活总结类文章等\n\n\n文章分类\n除年度技术盘点/预测类文章，其他均需选择阅读和代码人生分类，否则不推荐\n\n\n文章内容\n文章要求原创，内容符合掘金社区的内容标准和规范， 正文字数不得少于650，不得有广告/洗稿/凑字数等行为（GPT生成文章不可获奖），如果发现有一篇抄袭/洗稿的文章，以及发现违规刷阅读量、用僵尸账号评论点赞的，都将直接取消所有文章的获奖资格。\n\n\n\n奖品设置：\n常规奖项：\n奖项名称\n获奖条件\n奖品名称\n\n\n\n\n\nBest30\n第1名\nBrateck升降站立式办公桌\n\n\n\n\n第2名\n雷蛇黑寡妇蜘蛛机械键盘\n\n\n\n\n第3名\n智云手机稳定器\n\n\n\n\n第4-10名\n稀土掘金「能量加满」无线充电座\n\n\n\n\n第11-20名\n稀土掘金「4201 World」盲盒\n\n\n\n\n第21-30名\n稀土掘金「解码」皮革帆布袋\n\n\n\n阳光普照\n成功参与年终总结征文活动的用户（文章需要符合上述要求）\n稀土掘金who cares解压工卡套\n\n\n\n\n个性总结奖：\n奖项名称\n获奖条件\n奖品名称\n图片\n\n\n\n\n掘金 2023 年度个人总结——前沿技术瞭望官\n从2023年的技术变革以及2024年的技术趋势展望类文章中评选*3\n「前沿技术瞭望官」实体证书+记忆棉U型枕颈枕\n\n\n\n掘金 2023 年度个人总结——年度最有趣关键词奖\n评选出最有创意、最有趣的年度关键词*3名\n「年度最有趣关键词」实体证书+抖音文创【为独特喝彩】 “丑丑”杯\n\n\n\n掘金 2023 年度个人总结——women power\n女性开发者、架构师或IT从业者（产品、运营、测试等）*3名\n「women power」实体证书+抖音文创帆布包\n\n\n\n掘金 2023 年度个人总结——最具AIGC范儿奖\n2023年是AIGC爆火的一年，写出今年你与AIGC的故事，评选3名最具AIGC范儿奖\n「最具AIGC范儿」实体证书+抖音文创电脑支架\n\n\n\n\n活动Q&A\nQ：投稿数量有限制吗？\nA：没有。\nQ：一篇文章可以参与多个社区活动吗？\nA：不行。一篇文章只能参与一个社区活动，可以写多篇文章参与不同的活动。\nQ: 写了多篇文章，可以多次获得阳光普照奖吗？\nA：不可以\nQ：各项奖品是叠加的吗，可以同时获得的吗？\nA：Best30奖项不可以重复获得，如果多篇文章上榜则取最高奖励发放，但是Best30与阳光普照以及个性总结奖能够同时获得",
@@ -1228,36 +1268,6 @@
           "wordCount": 5526,
           "title": "flutter：快速建构App，常用三方库汇总。【涵盖各种功能和业务】",
           "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7308371444371718144",
-          "author": "liunnn1994",
-          "description": "theme: channing-cyan\n开源指北，如何参与 170k 的顶级项目\n写在前面\n几个月前在公司搞了一个开源的前端基建组织，在推动的过程中发现很多小伙伴对于开源这件事很陌生，几乎所有的开发者都会享受到开源项目所带来的便利甚至是收益，当有些人想要参与时却不得其门而入。\n我本人也对一些开源项目有过一些贡献，比如代码类的： element-plus, Ant Design Vue，文档类的：MDN Web Docs, You Dont Know JS 等等，本文就以 You-Dont-Know-JS-zh-CN 这个项目为例来分享一下如何参与开源项目的。\nTIP: You Dont Know JS （中文：《你不知道的 JavaScript》）是一本关于 JavaScript 的开源书籍，目前在 GitHub 拥有超过 170k+ star。\n而我的项目 You-Dont-Know-JS-zh-CN 是原作者授权的第二版的社区中文翻译。除了提供源码外还提供了在线版以及 PDF 离线版。\n如果你觉得文章有用请给我的项目点一个 star ~~~///(^v^)\\...。\n开源的概念\n「开源」一词对应英文 Open Source，最初起源于软件开发领域，因此也称为「开放源代码」，对应的软件则称为开源软件 (Open Source Software)。除了我们熟知的开源软件以外，开源的表现形式还有开源硬件 (Open Source Hardware)、开放设计 (Open Design)、开放文档 (Open Document)。\n找到一个项目\n万事开头难，很多人纠结的第一步就是如何开始参与开源。是自己写一个？还是参与某个项目？参与哪个项目？我的建议是从工作中寻找灵感，先做点小事。\n比如  element-plus 和 Ant Design Vue 这两个项目是我在工作中实际应用到的，参与的契机就是在使用时发现项目存在 bug，于是提交了 pr 来修复。\n有了目标以后你就可以开始你的第一次贡献了。\n开源项目礼节\n当你准备为第三方仓库贡献你的力量时，很多小伙伴会纠结的一点是如何开始？\n万幸，开源社区发展到现在已经有了约定俗成的内容，比如 Mozilla 总结了一套开源项目礼节。而几乎所有希望社区参与的项目都会有贡献指南。\n在贡献指南中你可以看到如何为项目贡献代码、应该遵循哪些规范、应该在什么时间 （提出问题/代码提交/测试等） 做什么事 （issue 规范/单元测试） 等等。当你了解基本规则以后就可以着手相应的工作了。\n比如在给 You Dont Know JS 贡献前，与原作者沟通是否可以做一个中文版的，有哪些限制 （比如版权）。经过确认后按照作者的指南进行贡献就可以了。\n切记，在开源社区中基本都是陌生人相互协作，甚至有很多不同国家和地区的人，所以遵守礼节尤为重要！\n调整心态\n做开源很明确的是你不会像工作一样，可以拿到收入 （起码初期肯定是用爱发电）。那么做开源一定是让自己感到 Happy，就像雷军在演讲中说的「因为我想我写得这么牛，也该让大家看一看嘛」。\n给第三方贡献还好，因为不是主要的维护者，一般不会占用很大的精力。但是你决定做一个自己主导的开源项目时就会遇到很多非技术上的问题。会有人给你提各种各样的需求，出现各种各样的声音：\n加个 xxx 吧\n我觉得 xxx 更好\n你这个设计不合理，应该这么做\n...\n对于这些声音来说你首先要做的就是学会拒绝，拒绝不合理的需求，拒绝不想做的事情！在你的开源项目中你才是主导者，回到上面讲的：做开源一定是让自己感到 Happy！\n请谨记八字真言：关你屁事，关我屁事！\n延迟满足\n上面已经说了，做开源很难通过商业化赚钱，那么就要学会延迟满足。\n最好理解的就是你的项目在经过一段时间的沉淀被大家认可后那会很有成就感。\n\n当然做出流行的开源项目还是有些难度的，那么一开始就要抱着好奇和学习的心态。\n比如逛 GitHub trending 时，发现超级好玩的东西，感叹一下卧槽这人好牛逼，这个代码写的真是 6，我也来整一个。\n那么就算你的项目在开源社区无人问津，但是做项目本身的过程也会让你受益良多。\n善用社区资源\n开源社区发展到现在已经非常丰富了。当你要实现一些东西的时候可以看看社区里有没有能利用的资源。\n比如在我的项目中：\n通过开源项目申请 GitHub Copilot，使用 Ai 来辅助\nCI/CD 使用 GitHub Actions 实现自动化\n域名使用 JS.ORG\n在线版的 pass 平台部署使用 Netlify\n...\n以上这些都是免费的。\n最后\n虽然做开源本身并没有带来金钱的反馈，但是在过程中你可能会认识志同道合的朋友、学习到工作中接触不到的知识。\n这些都会在未来某个时间给你带来正向的反馈。\n当然如果你觉得文章有用的话请给我的项目点一个 star ~~~///(^v^)\\...。",
-          "link": "https://juejin.cn/post/7308371444371718144",
-          "publishedOn": "2023-12-04T08:57:43.000Z",
-          "wordCount": 1136,
-          "title": "开源指北，如何参与 170k 的顶级项目",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7308536984028856346",
-          "author": "阳阳羊",
-          "description": "highlight: a11y-dark\n本文的讲解是建立在类型转换的基础上，如果对类型转换机制不了解的同学可以先阅读一下我的上一篇文章（看了一天的官方文档，终于搞懂了 JS 类型转换机制 - 掘金 (juejin.cn)）\n在 JavaScript 学习过程中，往往出现一些与我们常理相违背的结果，比如我们今天的论题[] == ![] ，它的返回的结果竟然是true ，这着实让初学者感到困惑。因为根据直觉，[]和![]两者应该是不相等的。面试官恰恰就会抓住这一点，对程序员们进行考察。\n而本文将结合官方文档对该题进行深度剖析。\n看看官方文档怎么说\n关于 ==\n关于==，文档这样描述：Annotated ES5 11.9.1\n\n\n根据官方文档，我总结了以下 == 的隐式转换规则，一些简单的就忽略掉了：\n类型相同的比较：\n（1）如果类型是 Undefined 或 Null，返回 true。\nnull == null; // true\n\n（2）如果一个是 +0，另一个是 -0，返回 true：\n+0 == -0; // true\n\n（3）如果类型是对象，二者引用同一个对象，返回 true，反之返回 false。\n{} == {}; // false\n\nnull 和 undefined 比较： 仅当它们之间的比较时，返回 true。\nnull == undefined; // true\n\nNaN 比较： NaN 与任何值比较都返回 false，包括NaN自己。\nNaN == NaN;   // false\n\n字符串与数字比较： 如果其中一个操作数是字符串，另一个是数字，将字符串转换为数字，然后进行比较。\n'5' == 5;   // true，将字符串 '5' 转换为数字 5 进行比较\n\n布尔值与非布尔值比较： 布尔值无法直接比较，需先将布尔值转换为数字（true 转换为 1，fal…",
-          "link": "https://juejin.cn/post/7308536984028856346",
-          "publishedOn": "2023-12-04T04:44:28.000Z",
-          "wordCount": 1162,
-          "title": "面试官 ：[] == ! [] 为什么返回 true ？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7307889500545400851",
-          "author": "Shaka",
-          "description": "theme: condensed-night-purple\n前言\n本文将会带着大家做一个完整的项目，但是不包含后端，如果需要后端云开发的话，后期再给大家补上\n本来最开始是想带着大家做鸿蒙官方的CodeLabs的，但是我看现在网上已经出了很多教程，尤其是机构，他们到时候应该会以视频教学的方式带着大家做，所以我就不做CodeLabs了，决定自己做一个单出的Demo，因为自己做的话需要设计等因素，所以拖了蛮长时间的\n最后的项目代码我传到了Gitee上供大家参考，因为我自己也懒得用Github...\n好的，我们开始吧\n登陆页面\n我们新建项目，选择空模板就行了，创建完是这个样子的\n\n我现在需要添加一个登录页和注册页，就直接新建两个Page\n\n我现在想新建一个常量的文件，用来存放一些常量，例如一些文字大小，颜色等等\n\n于是新建一个common并且新建一个Constant.ets\n然后我先定义一下我登陆页面标题的内容数据，这种数据的格式推荐是大写，然后多个单词用_进行分割\n\n然后在登陆页面使用\n\n然后输入框我们用TextInput组件来完成\n\n我们先简单做成这种效果，然后我们把一些别的地方也会用到的公共的常量拿出来\n\n然后我们在Login中使用\n\n这里可能有人会说，为什么不封装一个Form组件呢？其实我最开始也是这么想的，因为登陆和注册都需要一个表单，但是在写的过程中我发现其实也并不怎么省事，而且我设想的后期的登陆和注册页面可能区别较大\n当然，如果这里你想封装一个Form组件的话是完全可以的~\n现在我们想获取到输入框的值，并且希望点击Button进行页面跳转，跳转到Index\n\n\n这里顺便传了个参数，其实这个用户名密码应该存在应用里的，但是这里就当是复习一下传参吧\n然后Index接收\n\n现在的效果是这样的\n\n然后我们同样的逻辑，搞一下注册页面\n注册页面\n\n我们先在这里加一行，可以跳转到注…",
-          "link": "https://juejin.cn/post/7307889500545400851",
-          "publishedOn": "2023-12-03T09:06:57.000Z",
-          "wordCount": 1510,
-          "title": "实战篇：带着大家用鸿蒙HarmonyOS做项目（一）",
-          "imageUrl": null
         }
       ]
     },
@@ -1282,7 +1292,7 @@
           "description": "[7073670907851440160#新人报道#] 大家觉得低代码工具好用吗，你是否尝试体验过低代码工具，并应用在你的工作中",
           "link": "https://juejin.cn/pin/7310047627669159988",
           "publishedOn": "2023-12-08T10:51:54.000Z",
-          "wordCount": 452,
+          "wordCount": 455,
           "title": "[7073670907851440160#新人报道#] 大家觉得低代码工具好用吗，你是否尝试体验过低代码工具，并应用在你的工作中",
           "imageUrl": null
         },
@@ -1392,7 +1402,7 @@
           "description": "[7073670907851440160#新人报道#] 在最新的vscode 1.84.2发布笔记里面有一款白色的主题，还挺好看的，不知道有没有人知道主题名字",
           "link": "https://juejin.cn/pin/7307451430587400227",
           "publishedOn": "2023-12-01T05:37:56.000Z",
-          "wordCount": 461,
+          "wordCount": 464,
           "title": "[7073670907851440160#新人报道#] 在最新的vscode 1.84.2发布笔记里面有一款白色的主题，还挺好看的，不知道有没有人知道主题名字",
           "imageUrl": null
         },
