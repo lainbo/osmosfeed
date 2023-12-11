@@ -502,7 +502,7 @@
                               <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>保持专注。无论是当下，还是短期的未来，专注到一件事情上，专注到一个主题上，持续投入。产生的效果会超出自己的期望。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -701,7 +701,7 @@ Google 最近写了一篇论文《RLAIF: Scaling Reinforcement Learning from Hum
                               <img src="https://cdnv2.ruguoapp.com/FlABW5DlkPKBFFy8U5yOrUSzbzr0v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>即刻App，享受探索、表达和创造</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2282,35 +2282,70 @@ convertMp4ToMp3(inputVideoPath, outputAudioPath)
                         <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7309290887363477545">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>theme: v-green
-声明
-开局先声明下，俺把代码拿走只是为了以后方便施展cv大法的，不干坏事哦！大家发心要正哦！俺只是压抑不住分享欲，整个教学文来的！
-背景
-上个月俺正经历大礼包危机，小道消息刚传出来的时候，俺便以迅雷不及掩耳的速度，pull下了俺们前端组的所有代码仓，不论是俺的遗产，还是别人的遗产，都是必须带走滴！！！
-
-but听俺的语气，各位看官就能猜到🤔，俺成功的🐶了下来，大礼包没拿成🥹（啊呸呸呸，谁爱拿大礼包谁拿去）。俺🐶下来的第一件事，当然是给各位看官分享，俺是如何以迅雷不及掩耳的速度down代码仓滴啦！！！
-ready？go！！！正文开始～ 撒花迎接🎉
-
-拿到group下的所有代码仓
-第一步，俺得先把俺们前端组下的所有代码仓的名字先拿到手，俺就开始研究。
-
-
-然后，运用俺们前端界的f12大法，你就发现了拿到group下仓库的接口。
-
-拿到接口后，俺就发现，这破接口是分页的，没法一下子获取所有的，一页默认就20条。
-
-偏偏俺们组有147个仓库，超出了100个，再by the way一下，组下有多少个仓库在这看哈～
-
-不怕不怕，就这点小事还能难倒俺？有总数不就行了，大不了循环嘛～
-
-const getJson &#x3D; () &#x3D;&gt; 
+                              <span>const getJson &#x3D; () &#x3D;&gt; 
 new Promise(async (resolve) &#x3D;&gt; {
   const total &#x3D; 147 // 可以换成你们的仓库总数哦
-  const perPage &#x3D; 100 // 100条就100条！我计算一下还不行！
-  const size &#x3D; Math.ceil(total / perPage) // 诺，我算出来了，我就请求2次嘛，哼～
+  const perPage &#x3D; 100 // 一次请求条数，固定的
+  const size &#x3D; Math.ceil(total / perPage) 
   let res &#x3D; []
-  for (let i &#x3D; 1; i &lt;&#x3D; size; i++) {
-    const url &#x3D; &#x60;http://gitlab.这是我们…</span>
+  for (let i &#x3D; 1; i &#x3D; size){
+      resolve(res)
+    }
+  }
+})
+
+
+const getRepos &#x3D; async ()&#x3D;&gt;{
+  const json &#x3D; await getJson()
+  console.log(&#x27;仓库总数&#x27;,json.length);
+  const res &#x3D; json.reduce((prev, curr) &#x3D;&gt; {
+    // 这个正则是匹配仓库名的，front是我们公司前端组的组名，你们换成你们自己公司的哈，接口上有的噢
+    const name &#x3D; /\/front\/([a-zA-Z-_0-9]*)/.exec(curr.relative_path)[1]
+    prev +&#x3D; &#x60;&quot;${name}&quot;\n&#x60;
+    return prev
+  }, &#x27;&#x27;)
+  return res
+}
+
+
+console.log(await getRepos())
+
+#! /bin/bash
+
+read -p &quot;是否在当前文件夹下克隆代码(yes/no):&quot; flag
+
+if [ &quot;$flag&quot; !&#x3D; &quot;yes&quot; ];then
+echo &quot;请输入yes&quot; exit
+fi
+
+echo &quot;正在当前文件夹下克隆前端所有代码.....请稍后&quot;
+
+# 定义一个包含多个仓库URL的列表
+# (把刚刚复制的数据粘贴将来即可)
+repos&#x3D;(
+  &quot;repo-name1&quot;
+  &quot;repo-name2&quot;
+  ...
+ )
+ 
+# 遍历数组中的每个URL，并执行 git clone
+for repo in &quot;${repos[@]}&quot;
+do
+  # 如果仓库已拉取过
+  if [ -d &quot;$repo&quot; ] &amp;&amp; [ -d &quot;$repo/.git&quot; ]; then
+    # 进入该目录
+    cd &quot;$repo&quot;
+    # 切换到master
+    git checkout master
+    # 拉取最新代码
+    git pull
+    # 切回到原始目录，以便处理下一个仓库
+    cd ..
+  else 
+  # 仓库未拉取过，clone下来
+   git clone &quot;http://gitlab.xxx.com/xxx/$repo.git&quot;
+  fi
+done</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
@@ -3241,25 +3276,6 @@ A：Best30奖项不可以重复获得，如果多篇文章上榜则取最高奖�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>梁平区气象台2023年12月4日16时10分发布“大雾黄色预警信号”，预计12月4日23时至5日9时，新盛镇、虎城镇、竹山镇、龙门镇、文化镇、龙胜乡、袁驿镇、碧山镇、七星镇、屏锦镇、回龙镇、荫平镇、云龙镇、和林镇、聚奎镇、礼让镇、明达镇、仁贤街道、安胜镇、星桥镇、合兴街道、复平镇、梁山街道、双桂街道、金带街道、大观镇、铁门乡、蟠龙镇、曲水镇、福禄镇、石安镇、紫照镇、柏家镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231204/t20231204_526507326.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市万州区发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231204/t20231204_526507326.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>万州区气象台2023年12月4日14时20分发布“大雾黄色预警信号”，预计4日23时至5日09时，陈家坝街道、百安坝街道、双河口街道、新田镇、孙家镇、分水镇、九池街道等镇乡街将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。有关部门和单位按照职责做好防雾准备工作；机场、高速公路、轮渡码头等单位加强交通管理，保障安全；驾驶人员注意雾的变化，小心驾驶；户外活动注意安全。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -4357,8 +4373,8 @@ AI 是一个新事物，带来了很多前所未有的问题。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7162680701">
-        <time id="build-timestamp" datetime="2023-12-11T03:52:07.417Z">2023-12-11T03:52:07.417Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7163932782">
+        <time id="build-timestamp" datetime="2023-12-11T06:52:42.540Z">2023-12-11T06:52:42.540Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
