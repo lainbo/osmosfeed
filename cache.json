@@ -23,7 +23,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": 1013,
+          "wordCount": 1010,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         },
@@ -33,7 +33,7 @@
           "description": "滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/",
           "publishedOn": "2023-11-21T16:14:41.000Z",
-          "wordCount": 1293,
+          "wordCount": 1291,
           "title": "cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用",
           "imageUrl": null
         },
@@ -43,7 +43,7 @@
           "description": "剪映中的视频特效虽多，其实就两类，一类改变原始像素，一类叠加混合，本文通过精简的源码和精致的案例给大家介绍具体如何实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/video-effect-js-filter-pixijs-webgl-3d/",
           "publishedOn": "2023-11-19T15:12:20.000Z",
-          "wordCount": 1233,
+          "wordCount": 1232,
           "title": "剪映APP的视频特效如何在Web中JS实现",
           "imageUrl": null
         },
@@ -53,7 +53,7 @@
           "description": "应该是国内第一篇专门介绍用mp4box.js和VideoDecoder方法解码MP4视频序列帧的文章了。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/mp4box-js-webcodecs-mp4-canvas/",
           "publishedOn": "2023-11-14T16:37:18.000Z",
-          "wordCount": 1251,
+          "wordCount": 1247,
           "title": "mp4box.js加WebCodecs 解码MP4视频帧并渲染",
           "imageUrl": null
         }
@@ -112,6 +112,16 @@
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/6577bb2560830f16ae1bb140",
+          "author": null,
+          "description": "跟领英 10w+ followers 的分手信，🤪",
+          "link": "https://m.okjike.com/originalPosts/6577bb2560830f16ae1bb140",
+          "publishedOn": "2023-12-12T01:45:09.000Z",
+          "wordCount": 461,
+          "title": "发布了: 跟领英 10w+ followers 的分手信，🤪",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FqvZ0pv-xW0ZAHAl-qRQDT07mMJZv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/6577ab25492ec2e1bb061db4",
           "author": null,
           "description": "大学课程重解题，轻解决问题，科技进步太快，课程更新太慢，信息断档，因此大学生出来啥都得重新学一遍。",
@@ -147,7 +157,7 @@
           "description": "在大厂，有两种角色基本上是很难跟他们实时交流的，一个是法务，一个是财务，每次发消息都是半天或者一天后回应，而且只回应一两句，接着开始下一轮等待。\n这两个角色到底有多忙😂",
           "link": "https://m.okjike.com/originalPosts/6576d4ba8a7c5ba8ae55cdc8",
           "publishedOn": "2023-12-11T09:22:02.000Z",
-          "wordCount": 518,
+          "wordCount": 504,
           "title": "发布了: 在大厂，有两种角色基本上是很难跟他们实时交流的，一个是法务，一个是财务，每次发消息都是半天或者一天后回应，而且只回应一两句，接着开始下一轮等待...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -157,7 +167,7 @@
           "description": "Github 花了一年多的时间，将他们的 1200 台 MySQL 集群从 v5.6 升级到了 v8.0，https://github.blog/2023-12-07-upgrading-github-com-to-mysql-8-0/，过程中需要遵循服务的 SLO 和 SLA，做了非常多的工作，值得借鉴阅读。\n过去几年，随着业务规模的增长，我也实践了多次数据库的运维和变更，首先从 MySQL v5.6 迁移到 OceanBase-MySQL，在早期版本的 OB 中挣扎了一年多，建设大量的监控和应急措施来应对执行计划淘汰不及时和处理一些兼容性的问题；后来随着业务的增长，数据库体量增加，数据规模超过了 2Tb，又经历了一次数据库的扩容和版本升级，这个阶段数据的各种问题都暴露出来了，例如主从流量分配不均、单表超过一亿性能异常、热点库 CPU 暴涨、业务扩容带来的连接池不够等等，解决问题的同时，也在规范团队对数据库的使用，趣味性比较强；再后来随着业务的继续增长，又开始建设异地灾备，实现数据的异地同步和容灾切换，学到了不少。\n但相比 Github 这个规模，解决的问题，还是小巫见大巫，它的 QPS 达到了 550w，极其恐怖。Github 采用的是分库分表的设计，在数据库调用这一层上，做的相对比较复杂，架构的复杂自然也带来了工具和工程的复杂度，从而增加了大量的运维成本，这篇文章提到了一些对抗软件复杂度的方法和细节，包括回滚机制的设计、混合版本提供服务等，比较有意思。只不过对细节的描述偏少，估计是不方便对外。",
           "link": "https://m.okjike.com/originalPosts/6576cc7d60830f16ae0ad962",
           "publishedOn": "2023-12-11T08:46:53.000Z",
-          "wordCount": 508,
+          "wordCount": 509,
           "title": "发布了: Github 花了一年多的时间，将他们的 1200 台 MySQL 集群从 v5.6 升级到了 v8.0，https://github.blog/2023-12-07-upgrading-github-com-to-mysql-8-0/，...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fhe21pyFrQhHfnTP-P9Vuet-R4e7v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -199,16 +209,6 @@
           "publishedOn": "2023-12-11T00:46:03.000Z",
           "wordCount": 420,
           "title": "转发了: 专注，其实就是在做减法，将自己的注意力聚焦到当前最重要的事情上，这需要的不仅仅是对事情优先级的了解，更重要的是有去承担“失去一部分”的勇气。",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/6576435e492ec2e1bbe9624e",
-          "author": null,
-          "description": "保持专注。无论是当下，还是短期的未来，专注到一件事情上，专注到一个主题上，持续投入。产生的效果会超出自己的期望。",
-          "link": "https://m.okjike.com/originalPosts/6576435e492ec2e1bbe9624e",
-          "publishedOn": "2023-12-10T23:01:50.000Z",
-          "wordCount": 468,
-          "title": "发布了: 保持专注。无论是当下，还是短期的未来，专注到一件事情上，专注到一个主题上，持续投入。产生的效果会超出自己的期望。",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         }
       ]
@@ -1282,7 +1282,7 @@
           "description": "这个vue中动态的属性和事件提示的插件，目前是只针对sponsor体验的，如果star超过1000的话，我会free to everyone",
           "link": "https://juejin.cn/pin/7310132538169081891",
           "publishedOn": "2023-12-10T02:32:23.000Z",
-          "wordCount": 475,
+          "wordCount": 466,
           "title": "这个vue中动态的属性和事件提示的插件，目前是只针对sponsor体验的，如果star超过1000的话，我会free to everyone",
           "imageUrl": null
         },
@@ -1292,7 +1292,7 @@
           "description": "[7073670907851440160#新人报道#] 大家觉得低代码工具好用吗，你是否尝试体验过低代码工具，并应用在你的工作中",
           "link": "https://juejin.cn/pin/7310047627669159988",
           "publishedOn": "2023-12-08T10:51:54.000Z",
-          "wordCount": 455,
+          "wordCount": 458,
           "title": "[7073670907851440160#新人报道#] 大家觉得低代码工具好用吗，你是否尝试体验过低代码工具，并应用在你的工作中",
           "imageUrl": null
         },
@@ -1302,7 +1302,7 @@
           "description": "IDEA 推荐一款好用插件 CodeGeex，今天刚装上，用起来还不错。",
           "link": "https://juejin.cn/pin/7310032602130432063",
           "publishedOn": "2023-12-08T07:15:21.000Z",
-          "wordCount": 470,
+          "wordCount": 461,
           "title": "IDEA 推荐一款好用插件 CodeGeex，今天刚装上，用起来还不错。",
           "imageUrl": null
         },
@@ -1312,7 +1312,7 @@
           "description": "设计师的日常",
           "link": "https://juejin.cn/pin/7308909489155096591",
           "publishedOn": "2023-12-05T13:39:45.000Z",
-          "wordCount": 457,
+          "wordCount": 448,
           "title": "设计师的日常",
           "imageUrl": null
         },
@@ -1322,7 +1322,7 @@
           "description": "有用过gpt3.5的jy吗，我怎么感觉这gpt智商有点低呢，是我使用方式不对吗",
           "link": "https://juejin.cn/pin/7308905139405324307",
           "publishedOn": "2023-12-05T06:37:17.000Z",
-          "wordCount": 462,
+          "wordCount": 453,
           "title": "有用过gpt3.5的jy吗，我怎么感觉这gpt智商有点低呢，是我使用方式不对吗",
           "imageUrl": null
         },
@@ -1332,7 +1332,7 @@
           "description": "你有遇到鼠标一放就生成一条线的eclipse吗",
           "link": "https://juejin.cn/pin/7308643782376161334",
           "publishedOn": "2023-12-05T01:16:00.000Z",
-          "wordCount": 463,
+          "wordCount": 454,
           "title": "你有遇到鼠标一放就生成一条线的eclipse吗",
           "imageUrl": null
         },
@@ -1342,7 +1342,7 @@
           "description": "高效的学习平台和更快捷面试平台.",
           "link": "https://juejin.cn/pin/7308782773866233882",
           "publishedOn": "2023-12-05T00:59:07.000Z",
-          "wordCount": 457,
+          "wordCount": 448,
           "title": "高效的学习平台和更快捷面试平台.",
           "imageUrl": null
         },
@@ -1362,7 +1362,7 @@
           "description": "[7210228048107896891#每日快讯#]  重要通知丨 JumpServer 开源堡垒机 V2 社区版即将停止维护\n根据《关于 JumpServer 开源堡垒机 V2 版本产品生命周期的相关说明》，JumpServer 开源堡垒机 V2 版本（社区版）将于 2023 年 12 月 31 日停止维护支持。",
           "link": "https://juejin.cn/pin/7307514532275372067",
           "publishedOn": "2023-12-02T02:23:58.000Z",
-          "wordCount": 618,
+          "wordCount": 693,
           "title": "[7210228048107896891#每日快讯#] 重要通知丨 JumpServer 开源堡垒机 V2 社区版即将停止维护 根据《关于 JumpServer 开源堡垒机 V2 版本产品生命周期的相关说明...",
           "imageUrl": null
         },
@@ -1372,7 +1372,7 @@
           "description": "预告：visualization-collection将实现两个跨域页面的量子纠缠效果，而且是纯前端实现，不想错过的赶紧点上关注啦[玫瑰][玫瑰][玫瑰]\n应用地址: https://hepengwei.cn\n源码地址: https://github.com/hepengwei/visualization-collection",
           "link": "https://juejin.cn/pin/7307451430595624975",
           "publishedOn": "2023-12-01T09:39:01.000Z",
-          "wordCount": 466,
+          "wordCount": 457,
           "title": "预告：visualization-collection将实现两个跨域页面的量子纠缠效果，而且是纯前端实现，不想错过的赶紧点上关注啦[玫瑰][玫瑰][玫瑰] 应用地址: https://hepengw...",
           "imageUrl": null
         },
@@ -1382,7 +1382,7 @@
           "description": "2023开发者必备iOS开发工具\n在进行iOS开发工作时，利用并熟练使用恰当的工具可以让工作效率得到大幅度提高。下边会介绍一些在进行iOS开发工作时常用的一些工具，本文并不对其进行展开，对使用方法及工作原理感兴趣的同学可以自行进行更深入的研究。\n开发工具 Postman Postman是一个接口测试工具。在做接口测试的时Postman相当于一个客户端，它可以模拟用户发起的各类HTTP请求，将请求数据发送至服务端并获取对应的响应结果，从而验证响应中的结果数据是否和预期值相匹配，并确保开发人员能够及时处理接口中的bug，进而保证产品上线之后的稳定性和安全性。它主要是用来模拟各种HTTP请求的，如get/post/delete/put等等。Postman与浏览器的区别在于有的浏览器不能输出Json格式，而Postman更直观接口返回的结果。\nipaguard\nIpa Guard是一款功能强大的ipa混淆工具，不需要ios app源码，直接对ipa文件进行混淆加密。可对IOS ipa文件的代码，代码库，资源文件等进行混淆保护。 可以根据设置对函数名、变量名、类名等关键代码进行重命名和混淆处理，降低代码的可读性，增加ipa破解反编译难度。可以对图片，资源，配置等进行修改名称，修改md5。只要是ipa都可以，不限制OC，Swift，Flutter，React Native，H5类app。\nMLeaksFinder\nMLeaksFinder是WeRead团队开源的一款检测iOS内存泄漏的框架，其使用非常简单，只需将文件加入项目中，如果有内存泄漏，3秒后自动弹出alert来捕捉循环引用。使得可以在开发快速找到80%内存泄漏，而使用Xcode Leak工具更适合大范围的，全部的寻找泄漏点。\nappuploder\nAPP开发助手iOS APP上架到App Store的辅助工具，解决iOS APP上架繁琐费时的情况，帮助跨平台APP开发者上架苹果应用,在没有配置Mac苹果机的情况，实现iOS证书申请，创建iOS开发者证书、iOS发布证书等各类证书，iOS开发者在Windows、Linux或Mac系统中上传IPA到App Store,简化iOS APP上架流程！在任何电脑中轻松快速上架你的APP。",
           "link": "https://juejin.cn/pin/7307502467825942555",
           "publishedOn": "2023-12-01T08:34:18.000Z",
-          "wordCount": 529,
+          "wordCount": 520,
           "title": "2023开发者必备iOS开发工具 在进行iOS开发工作时，利用并熟练使用恰当的工具可以让工作效率得到大幅度提高。下边会介绍一些在进行iOS开发工作时常用的一些工具，...",
           "imageUrl": null
         },
@@ -1402,7 +1402,7 @@
           "description": "[7073670907851440160#新人报道#] 在最新的vscode 1.84.2发布笔记里面有一款白色的主题，还挺好看的，不知道有没有人知道主题名字",
           "link": "https://juejin.cn/pin/7307451430587400227",
           "publishedOn": "2023-12-01T05:37:56.000Z",
-          "wordCount": 464,
+          "wordCount": 467,
           "title": "[7073670907851440160#新人报道#] 在最新的vscode 1.84.2发布笔记里面有一款白色的主题，还挺好看的，不知道有没有人知道主题名字",
           "imageUrl": null
         },
@@ -1412,7 +1412,7 @@
           "description": "将 大模型 和 code review 结合 ，针对于 Gitlab MR 进行 code review 辅助项目评审[赞]\n项目地址：https://github.com/mimo-x/Code-Review-GPT-Gitlab/\n文章介绍：https://juejin.cn/post/7292692843415945225",
           "link": "https://juejin.cn/pin/7307221821903732786",
           "publishedOn": "2023-12-01T02:03:12.000Z",
-          "wordCount": 525,
+          "wordCount": 516,
           "title": "将 大模型 和 code review 结合 ，针对于 Gitlab MR 进行 code review 辅助项目评审[赞] 项目地址：https://github.com/mimo-x/Code-Review-GPT-Gitlab/ 文章介...",
           "imageUrl": null
         },
@@ -1422,7 +1422,7 @@
           "description": "jy们，推荐一个好用的富文本编辑器，谢谢",
           "link": "https://juejin.cn/pin/7307125383785234473",
           "publishedOn": "2023-11-30T12:08:08.000Z",
-          "wordCount": 462,
+          "wordCount": 453,
           "title": "jy们，推荐一个好用的富文本编辑器，谢谢",
           "imageUrl": null
         },
@@ -1432,7 +1432,7 @@
           "description": "有什么适合手机端app界面开发的简单框架，之前一直只是用响应式布局来凑合手机端[我想静静][我想静静][我想静静][我想静静]",
           "link": "https://juejin.cn/pin/7306783965532799028",
           "publishedOn": "2023-11-29T23:49:45.000Z",
-          "wordCount": 456,
+          "wordCount": 447,
           "title": "有什么适合手机端app界面开发的简单框架，之前一直只是用响应式布局来凑合手机端[我想静静][我想静静][我想静静][我想静静]",
           "imageUrl": null
         },
@@ -1442,7 +1442,7 @@
           "description": "刚切换成flutter开发，上午做了个vscode插件把UI稿内容自动转换成flutter的响应式布局省点力气。人老了不喜欢没接触过的东西，现在才入坑是不都算末班车了==\nhttps://github.com/balabalapupu/css-to-widget\n之前还有个ui稿自动转换成原子化样式\nhttps://github.com/balabalapupu/vscode-auto-atomic-css",
           "link": "https://juejin.cn/pin/7306697644062048283",
           "publishedOn": "2023-11-29T03:42:00.000Z",
-          "wordCount": 465,
+          "wordCount": 456,
           "title": "刚切换成flutter开发，上午做了个vscode插件把UI稿内容自动转换成flutter的响应式布局省点力气。人老了不喜欢没接触过的东西，现在才入坑是不都算末班车了== htt...",
           "imageUrl": null
         },
@@ -1452,7 +1452,7 @@
           "description": "flutter 写的 windows 端 图片比对、批量裁剪导出工具，链接还可兑换70次。\nhttp://go.microsoft.com/fwlink/?LinkId=532540&mstoken=XJ3RV-4CX7J-QCTGM-7DKQ3-DMDKZ\n欢迎吐槽。\n小bug 懒得改，大bug 不会改\n已知：窗口尺寸改变时，文件名位置某些情况不能自适应",
           "link": "https://juejin.cn/pin/7306447457151402018",
           "publishedOn": "2023-11-29T02:15:44.000Z",
-          "wordCount": 492,
+          "wordCount": 483,
           "title": "flutter 写的 windows 端 图片比对、批量裁剪导出工具，链接还可兑换70次。 http://go.microsoft.com/fwlink/?LinkId=532540&mstoken=XJ3RV-4CX7J-QCTGM-7DKQ3-D...",
           "imageUrl": null
         },
@@ -1472,7 +1472,7 @@
           "description": "最近开发Chrome扩展的过程中发现，原生的HTML+js+css开发写起来确实很累，效率也低。于是想着自己搭一套vite+react+ts+antd且支持多页面的框架用来开发Chrome扩展程序。不过在调研的过程中发现了Plasmo这个Chrome开发SDK，一举解决了我的所有诉求，这两天有时间就开搞吧。",
           "link": "https://juejin.cn/pin/7306423214494023714",
           "publishedOn": "2023-11-28T22:45:46.000Z",
-          "wordCount": 460,
+          "wordCount": 451,
           "title": "最近开发Chrome扩展的过程中发现，原生的HTML+js+css开发写起来确实很累，效率也低。于是想着自己搭一套vite+react+ts+antd且支持多页面的框架用来开发Chrome扩...",
           "imageUrl": null
         }
