@@ -1236,6 +1236,56 @@ theme: devui-blue
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7310423470546354239"
+                        open
+                      >
+                        <summary class="article-expander__title">学会Grid之后，我觉得再也没有我搞不定的布局了</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7310423470546354239">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: juejin
+highlight: a11y-dark
+说到布局很多人的感觉应该都是恐惧，为此很多人都背过一些很经典的布局方案，例如：圣杯布局、双飞翼布局等非常耳熟的名词；
+为了实现这些布局我们有很多种实现方案，例如：table布局、float布局、定位布局等，当然现在比较流行的肯定是flex布局；
+flex布局属于弹性布局，所谓弹性也可以理解为响应式布局，而同为响应式布局的还有Grid布局；
+Grid布局是一种二维布局，可以理解为flex布局的升级版，它的出现让我们在布局方面有了更多的选择，废话不多说，下面开始全程高能；
+本篇不会过多介绍grid的基础内容，更多的是一些布局的实现方案和一些小技巧；
+常见布局
+所谓的常见布局只是我们在日常开发中经常会遇到的布局，例如：圣杯布局、双飞翼布局这种名词我个人觉得不用太过于去在意；
+因为这类布局最后的解释都会变成几行几列，内容在哪一行哪一列，而这些就非常直观的对标了grid的特性；
+接下来我们来一起看看一些非常常见的布局，并且用grid来实现；
+1. 顶部 + 内容
+
+
+
+
+    
+    Title
+    
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: grid;
+            grid-template-rows: 60px 1fr;
+            height: 100vh;
+        }
+
+        .header {
+        …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;12
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7310549035965890614"
                         open
                       >
@@ -2005,6 +2055,54 @@ Hello everyone～
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7310041127181107209"
+                        open
+                      >
+                        <summary class="article-expander__title">uniapp + vue3 + vite4 + pinia + axios + uniapp-router-next + uview-plus + ts 搭建小程序开发模板，让开发如丝般顺滑</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7310041127181107209">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>关于脚手架 cli 的创建以及发布，还有其它更多模板(vue3、react)的搭建，请参考我的上一篇文章
+目前该模板支持了：
+husky、eslint、prettier、stylelint、tsc 等规范
+uview-plus 组件库，自动按需导入的，无需在页面导入直接使用
+pinia 作为状态管理，pinia-plugin-unistorage 作为缓存处理
+axios 处理请求，uniapp-axios-adapter 适配小程序
+mock 手动处理
+uniapp-router-next 封装路由，让开发习惯跟 vue-router 保持一致
+使用 vscode 开发
+使用 ts 开发
+请注意插件的版本号，某些插件版本不同可能会报错，这里都不会再让你踩坑，后续会添加一些通用组件及方法。可先下载模板后，再看文章。如果觉得该模板还行，可否给仓库一个 star 🙏
+init 项目
+官网地址
+全局安装 vue-cli
+npm install -g @vue/cli
+
+创建 uni-app
+npx degit dcloudio/uni-preset-vue#vite-ts my-vue3-project
+
+若执行报错，直接去下载模板
+使用 vscode 开发
+安装插件:
+VSCode 安装 uniapp 代码提示插件： uniapp-snippet 、uni-app-schemas
+VSCode 安装一键创建页面、组件、分包 插件: uni-create-view
+在微信开发者工具打开
+自行使用邮箱注册一个新的小程序，保存 appid
+在 src/manifest.json 中填入 appid
+修改 package.json，仅保留对微信小程序的支持，方便调试，今后想加其它端的自行网上查找添加
+&quot;scripts&quot;: {
+    &quot;dev&quot;: &quot;uni -p mp-weixin&quot;…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -2802,25 +2900,6 @@ input.on(Input.EventType.KEY_D…</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231206/t20231206_526510295.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市忠县发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231206/t20231206_526510295.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>忠县气象台2023年12月6日17时10分继续发布“大雾黄色预警信号”，预计12月6日23时至7日10时，忠州街道、白公街道、新生街道、乌杨街道、涂井乡、石宝镇、汝溪镇、金声乡、野鹤镇、磨子土家族乡、石子乡、复兴镇、东溪镇、黄金镇、永丰镇、花桥镇、三汇镇、马灌镇、官坝镇、金鸡镇、石黄镇、兴峰乡、白石镇、任家镇、双桂镇、拔山镇、洋渡镇、善广乡、新立镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -3020,82 +3099,6 @@ done</span>
 对每个任务划分好难度，根据组员能力差异给到最优解
 学会…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7309040097936474175"
-                        open
-                      >
-                        <summary class="article-expander__title">没用的东西，你连个内存泄漏都排查不出来！！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7309040097936474175">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>背景 (书接上回)
-ui妹子的无理要求，我通通满足了。但是不出意外的话，意外就出来了。
-此功能在上线之后，我们的业务在客户app内使用刷脸的时候会因为内存过高导致app将webview杀死。
-然后我们leader爆了，让我排查问题。可是可是，我哪里会排查内存泄漏呀。
-我：我不会。你自己不会上吗？你tm天天端个茶，抽个烟，翘个二郎腿，色眯眯的看着ui妹妹。
-领导：污蔑，你纯粹就是污蔑。我tm现在就可以让你滚蛋，你信吗？
-我：我怕你个鸟哦，我还不知道你啥水平，你tm能写出来个防抖节流，我就给你磕头。
-领导：hi～ui妹妹，今天过的好吗，来，哥哥这里有茶喝。（此时ui妹妹路过）。你赶快给我干活，以后ui妹妹留给你。
-艹！你早这么说不就好了。
-开始学习
-Chrome devTools查看内存情况
-打开Chrome的无痕模式，这样做的目的是为了屏蔽掉Chrome插件对我们之后测试内存占用情况的影响
-打开开发者工具，找到Performance这一栏，可以看到其内部带着一些功能按钮，例如：开始录制按钮；刷新页面按钮；清空记录按钮；记录并可视化js内存、节点、事件监听器按钮；触发垃圾回收机制按钮等
-
-简单录制一下百度页面，看看我们能获得什么，如下动图所示：
-
-从上图中我们可以看到，在页面从零到加载完成这个过程中JS Heap（js堆内存）、documents（文档）、Nodes（DOM节点）、Listeners（监听器）、GPU memory（GPU内存）的最低值、最高值以及随时间的走势曲线，这也是我们主要关注的点
-看看开发者工具中的Memory一栏，其主要是用于记录页面堆内存的具体情况以及js堆内存随加载时间线动态的分配情况
-
-堆快照就像照相机一样，能记录你当前页面的堆内存情况，每快照一次就会产生一条快照记录
-
-如上图所示，刚开始执行了一次快照，记录了当时堆内存空间占用为33.7MB，然…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7309040097936343103"
-                        open
-                      >
-                        <summary class="article-expander__title">这一年遇到的奇怪bug</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7309040097936343103">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>position sticky 失效
-在 Iphone6 plus 上使用 position sticky 不生效
-解决办法：
-position: sticky;  
-position: -webkit-sticky; // 兼容写法需要写在下面
-
-参考 position sticky 失效 – 有点另类的写法
-new Date().toLocaleDateString() 获取当前的日期字符串无效
-当系统语言是新加坡英语的时候，使用这个方法获取当前的日期字符串会出现 Invalid Date，toLocaleDateString 是有两个参数的，不指定语言就会出现这个问题，而且只在手机上出现，不太好排查，new Date().toLocaleDateString(&#x27;en-Us&#x27;) 调用的时候指定语言就没问题了；
-参考 Date.prototype.toLocaleDateString()
-两行溢出显示省略号但是部分手机上出现第三行截断痕迹
-
-例如设置了高度为36px，line-height 18px，但是出现了第三行截断痕迹，应该是文字 baseline 的对其方式问题，试着设置 vertical-align 也不行。解决办法就是不给文字的盒子设置高度，如果一定要个高度兜底，可以在文字的盒子再套一个盒子，在套的那个盒子设置高度。
-泰文字体文本溢出隐藏，但是第二行出现截断痕迹
-原因，应该是泰语的字体行高要求比较高，暂时的解决办法：加高文本行高
-useEffect 首次获取 dom 的 clientHeight 不对
-初步感觉是因为 css 样式加载慢了，导致第一次获取到的高度是没有样式的高度，而且又是偶现的；所以在这个组件或者 hooks 重新 render 的时候去获取高度，如果获取到最新的高度发生变化，去同步修改 state 保存的高度。
-import { useEff…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4137,8 +4140,8 @@ AI 是一个新事物，带来了很多前所未有的问题。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7191744013">
-        <time id="build-timestamp" datetime="2023-12-13T06:52:26.623Z">2023-12-13T06:52:26.623Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7193469990">
+        <time id="build-timestamp" datetime="2023-12-13T09:52:34.815Z">2023-12-13T09:52:34.815Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
