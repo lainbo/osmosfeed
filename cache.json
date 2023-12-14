@@ -34,7 +34,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": 1012,
+          "wordCount": 1013,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         },
@@ -44,7 +44,7 @@
           "description": "滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/",
           "publishedOn": "2023-11-21T16:14:41.000Z",
-          "wordCount": 1293,
+          "wordCount": 1294,
           "title": "cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用",
           "imageUrl": null
         },
@@ -54,18 +54,8 @@
           "description": "剪映中的视频特效虽多，其实就两类，一类改变原始像素，一类叠加混合，本文通过精简的源码和精致的案例给大家介绍具体如何实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/video-effect-js-filter-pixijs-webgl-3d/",
           "publishedOn": "2023-11-19T15:12:20.000Z",
-          "wordCount": 1233,
+          "wordCount": 1234,
           "title": "剪映APP的视频特效如何在Web中JS实现",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.zhangxinxu.com/wordpress/?p=11043",
-          "author": "张 鑫旭",
-          "description": "应该是国内第一篇专门介绍用mp4box.js和VideoDecoder方法解码MP4视频序列帧的文章了。",
-          "link": "https://www.zhangxinxu.com/wordpress/2023/11/mp4box-js-webcodecs-mp4-canvas/",
-          "publishedOn": "2023-11-14T16:37:18.000Z",
-          "wordCount": 1250,
-          "title": "mp4box.js加WebCodecs 解码MP4视频帧并渲染",
           "imageUrl": null
         }
       ]
@@ -123,6 +113,16 @@
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/657a7bccf0da80ccb5025b41",
+          "author": null,
+          "description": "一款让你 cat 文件时，输出彩虹效果文本的命令行工具，lolcat，https://github.com/busyloop/lolcat，看了下源码，竟然是 ruby 写的。",
+          "link": "https://m.okjike.com/originalPosts/657a7bccf0da80ccb5025b41",
+          "publishedOn": "2023-12-14T03:51:40.000Z",
+          "wordCount": 494,
+          "title": "发布了: 一款让你 cat 文件时，输出彩虹效果文本的命令行工具，lolcat，https://github.com/busyloop/lolcat，看了下源码，竟然是 ruby 写的。",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FiZ-9B-VtNDjVrYkXAp7w6bbDTLEv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/657a6b8dabd4694727116e1f",
           "author": null,
           "description": "分享一个 video 和 gif 互转，以及对 gif 帧率、大小做调整的组合技能，个人使用频度还是挺高的。\n1. 将 video 转换成 gif\n推荐使用gifski，https://gif.ski，这个工具底层使用 pngquant 做了优化，可以较高压缩但不丢失质量地提取视频每帧内容。使用起来非常简单：\ngifski --fps 30 --width 320 -o anim.gif video.mp4\nfps 是帧率，width 是宽度，关键是导出速度快的惊人，瞬间出来。这个命令同样也适用于对 gif 做调整，将 video.mp4 更换成 gif 原图即可：\ngifski --fps 10 --width 180 -o output.gif anim.gif\n它还有一个强大的功能，就是将多张图片转换成 gif，给孩子拍照后制作 gif 图片时，用的比较多：\ngifski -o file.gif barret*.png\n它有一个对应的非官方 GUI 客户端可供使用（如图一），Gifski，https://github.com/sindresorhus/Gifski\n2. 将 gif 转换成 video\nffmpeg 是一个跨平台的针对 video/audio 进行录制、转换和处理的强大工具，使用非常广泛，它支持多种方式对视频进行截取，例如截取 START_TIME 开始长度为 DURATION 的视频片段：\nffmpeg -i input.mp4 -ss START_TIME -t DURATION -c copy output.mp4\n事实上，ffmpeg 也支持将 video 转换成 gif，将 -c 参数修改成下方的 -vf 即可，相比上面的 gifski 压缩效果没那么好\nffmpeg -i input.mp4 -ss START_TIME -t DURATION -vf \"fps=10,scale=320:-1\" output.gif\n同样也有一个非官方客户端（如图二），Axiom，https://github.com/MattMcManis/Axiom，这个客户端还内置了 Youtube Downloader，可以直接将油管视频下载下来进行处理。\n3. 在线工具推荐\nezgif，https://ezgif.com，是一个功能强大的 gif 工具集（如图三），一般性的需求都可以满足，复杂点的需求例如合并多个 gif，我之前操作过，失败了，还是转到本地处理比较合适。\n我平时更多还是使用线上工具，除非对质量有比较高的要求，或者视频过大，上传非常慢。",
@@ -148,7 +148,7 @@
           "description": "Python 中可以使用双下划线来表示私有变量，例如 __name，直接访问私有变量会报错，提示不存在，但有趣的是，通过访问 _classname__name 能够获得这个私有变量的值。\n有一句广为流传的格言说：“We are all consenting adults here”（我们都是成年人），这句话表达了很多 Python 程序员的一个共同观点：“那就是开放比封闭要好，我们应该自己对自己的行为负责，而不是从语言层面来限制对数据或方法的访问”。\n这句话说的很有道理，但其实背后的技术逻辑不是这样。在Python中，使用双下划线作为变量或属性前缀会触发名称修饰（name mangling）机制，名称修饰是一种用于改变变量名以防止命名冲突的机制。",
           "link": "https://m.okjike.com/originalPosts/657a53c0f0da80ccb5fe7056",
           "publishedOn": "2023-12-14T01:00:48.000Z",
-          "wordCount": 478,
+          "wordCount": 485,
           "title": "发布了: Python 中可以使用双下划线来表示私有变量，例如 __name，直接访问私有变量会报错，提示不存在，但有趣的是，通过访问 _classname__name 能够获得这个私...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FvhNkJjPqWkAOJbafxOpbUJjJ5uXv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -211,16 +211,6 @@
           "wordCount": 466,
           "title": "发布了: 又重新听了一遍罗翔的《如何在阅读中超越有限的今生》，他的语言总是可以促使人去寻找内心的平静，不卑不亢。他认为阅读分为四个境界，分别是： 1）在读...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/6578fba360830f16ae34b351",
-          "author": null,
-          "description": "让孩子看到自己的笃定，他也会从中学到笃定。\n当我们告诉孩子一个谎言时，孩子也会学着撒谎，更糟的是，他会认为某些事情必须隐藏起来，他将不相信他的准则，也不会清楚地表达自己的想法。",
-          "link": "https://m.okjike.com/originalPosts/6578fba360830f16ae34b351",
-          "publishedOn": "2023-12-13T00:32:35.000Z",
-          "wordCount": 453,
-          "title": "发布了: 让孩子看到自己的笃定，他也会从中学到笃定。 当我们告诉孩子一个谎言时，孩子也会学着撒谎，更糟的是，他会认为某些事情必须隐藏起来，他将不相信他的...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FrxMR_46s3bs5AQ5uxEW8HZeTjZIv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
         }
       ]
     },
@@ -869,7 +859,7 @@
           "description": "大家好，这里是大家的林语冰。\n今天尤大（Evan You，尤雨溪）又双叒叕发朋友圈了，Vue 3.4 beta（公测版）将于本周正式发布，且期望在今年年底尘埃落定。\n\n所以，本期《前端翻译计划》共享的是尤大亲笔的官方博客，Vue 团队官宣 Vue 3.3 正式发布，一起来重温今年五月 Vue 3.3 的升级大纲，为 Vue 3.4 预热前戏。\n免责声明\n本文属于是语冰的直男翻译了属于是，仅供粉丝参考，英文原味版请临幸 Announcing Vue 3.3。\n\n今天，我们十分鸡冻，普大喜奔 —— Vue 3.3（代号“浪客剑心”）正式发布！\n此版本聚焦于优化 UX（开发体验） —— 尤其是 SFC（单文件组件）<script setup> 和 TS（TypeScript）梦幻联动。联手 Vue 语言工具（曾用名 Volar） 的 1.6 版本，我们搞定了一大坨用 TS 写 Vue 的痼疾。\n本文概述了 Vue 3.3 的亮点功能。关于更新的完整清单，请传送 GitHub 完整更新日志。\n依赖更新\n当升级到 Vue 3.3 时，建议同时更新以下依赖：\nvolar/vue-tsc@^1.6.4\nvite@^4.3.5\n@vitejs/plugin-vue@^4.2.0\nvue-loader@^17.1.0（如果使用了 webpack/vue-cli）\nVue 3.3 版本速览：\n优化 <script setup> + TS DX（开发体验）\n\n支持宏中的导入类型和复杂类型\n泛型组件\n更符合人体工程学的 definedEmits\n携带 definedSlots 的类型插槽\n实验性功能\n\n响应式 props 解构\ndefineModel\n其他重要功能\n\ndefineOptions\n更好地支持 getter 与 toRef 和 toValue 一起使用\n支持 JSX 导入源\n优化维护基…",
           "link": "https://juejin.cn/post/7311603123570933796",
           "publishedOn": "2023-12-12T08:53:01.000Z",
-          "wordCount": 1755,
+          "wordCount": 1748,
           "title": "Vue 3.3 官宣升级！Vue 3.4 预热。",
           "imageUrl": null
         },
