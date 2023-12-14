@@ -17,9 +17,9 @@
           "description": "近期因为一些笔记软件的服务崩溃导致大家都在说要Local first，但Notion确实有一些令人无法割舍的功能，所以这里提供了一种折中的方案，通过设置GitHub Action，定期自动备份Notion数据至GitHub仓库。这种做法不仅提高了数据安全性，也实现了有效的容灾措施，降低了因依赖单一服务而导致数据丢失的风险",
           "link": "https://www.lainbo.me/article/auto-backup-notion",
           "publishedOn": "2023-12-11T00:00:00.000Z",
-          "wordCount": 398,
+          "wordCount": null,
           "title": "利用GitHub Action自动备份Notion数据",
-          "imageUrl": "https://www.notion.so/images/page-cover/nasa_earth_grid.jpg"
+          "imageUrl": null
         }
       ]
     },
@@ -34,7 +34,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": 1013,
+          "wordCount": null,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         },
@@ -44,7 +44,7 @@
           "description": "滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/",
           "publishedOn": "2023-11-21T16:14:41.000Z",
-          "wordCount": 1294,
+          "wordCount": null,
           "title": "cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用",
           "imageUrl": null
         },
@@ -54,7 +54,7 @@
           "description": "剪映中的视频特效虽多，其实就两类，一类改变原始像素，一类叠加混合，本文通过精简的源码和精致的案例给大家介绍具体如何实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/video-effect-js-filter-pixijs-webgl-3d/",
           "publishedOn": "2023-11-19T15:12:20.000Z",
-          "wordCount": 1233,
+          "wordCount": null,
           "title": "剪映APP的视频特效如何在Web中JS实现",
           "imageUrl": null
         }
@@ -118,9 +118,9 @@
           "description": "一款让你 cat 文件时，输出彩虹效果文本的命令行工具，lolcat，https://github.com/busyloop/lolcat，看了下源码，竟然是 ruby 写的。",
           "link": "https://m.okjike.com/originalPosts/657a7bccf0da80ccb5025b41",
           "publishedOn": "2023-12-14T03:51:40.000Z",
-          "wordCount": 494,
+          "wordCount": null,
           "title": "发布了: 一款让你 cat 文件时，输出彩虹效果文本的命令行工具，lolcat，https://github.com/busyloop/lolcat，看了下源码，竟然是 ruby 写的。",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FiZ-9B-VtNDjVrYkXAp7w6bbDTLEv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/657a6b8dabd4694727116e1f",
@@ -128,9 +128,9 @@
           "description": "分享一个 video 和 gif 互转，以及对 gif 帧率、大小做调整的组合技能，个人使用频度还是挺高的。\n1. 将 video 转换成 gif\n推荐使用gifski，https://gif.ski，这个工具底层使用 pngquant 做了优化，可以较高压缩但不丢失质量地提取视频每帧内容。使用起来非常简单：\ngifski --fps 30 --width 320 -o anim.gif video.mp4\nfps 是帧率，width 是宽度，关键是导出速度快的惊人，瞬间出来。这个命令同样也适用于对 gif 做调整，将 video.mp4 更换成 gif 原图即可：\ngifski --fps 10 --width 180 -o output.gif anim.gif\n它还有一个强大的功能，就是将多张图片转换成 gif，给孩子拍照后制作 gif 图片时，用的比较多：\ngifski -o file.gif barret*.png\n它有一个对应的非官方 GUI 客户端可供使用（如图一），Gifski，https://github.com/sindresorhus/Gifski\n2. 将 gif 转换成 video\nffmpeg 是一个跨平台的针对 video/audio 进行录制、转换和处理的强大工具，使用非常广泛，它支持多种方式对视频进行截取，例如截取 START_TIME 开始长度为 DURATION 的视频片段：\nffmpeg -i input.mp4 -ss START_TIME -t DURATION -c copy output.mp4\n事实上，ffmpeg 也支持将 video 转换成 gif，将 -c 参数修改成下方的 -vf 即可，相比上面的 gifski 压缩效果没那么好\nffmpeg -i input.mp4 -ss START_TIME -t DURATION -vf \"fps=10,scale=320:-1\" output.gif\n同样也有一个非官方客户端（如图二），Axiom，https://github.com/MattMcManis/Axiom，这个客户端还内置了 Youtube Downloader，可以直接将油管视频下载下来进行处理。\n3. 在线工具推荐\nezgif，https://ezgif.com，是一个功能强大的 gif 工具集（如图三），一般性的需求都可以满足，复杂点的需求例如合并多个 gif，我之前操作过，失败了，还是转到本地处理比较合适。\n我平时更多还是使用线上工具，除非对质量有比较高的要求，或者视频过大，上传非常慢。",
           "link": "https://m.okjike.com/originalPosts/657a6b8dabd4694727116e1f",
           "publishedOn": "2023-12-14T02:42:21.000Z",
-          "wordCount": 632,
+          "wordCount": null,
           "title": "发布了: 分享一个 video 和 gif 互转，以及对 gif 帧率、大小做调整的组合技能，个人使用频度还是挺高的。 1. 将 video 转换成 gif 推荐使用gifski，https://gif...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FvsxgebZ8Ktzwi_2FSCUs_mW6W4cv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/657a58c1ec195a00b7eade1e",
@@ -138,9 +138,9 @@
           "description": "微博现在真会玩，已经开 AI 专题了",
           "link": "https://m.okjike.com/originalPosts/657a58c1ec195a00b7eade1e",
           "publishedOn": "2023-12-14T01:22:09.000Z",
-          "wordCount": 459,
+          "wordCount": null,
           "title": "发布了: 微博现在真会玩，已经开 AI 专题了",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FmGp2ndnr86UOeFvrdr3DpaPEv5ev3.jpg?imageMogr2/auto-orient/crop/!x2700a0a0/thumbnail/x300"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/657a53c0f0da80ccb5fe7056",
@@ -148,9 +148,9 @@
           "description": "Python 中可以使用双下划线来表示私有变量，例如 __name，直接访问私有变量会报错，提示不存在，但有趣的是，通过访问 _classname__name 能够获得这个私有变量的值。\n有一句广为流传的格言说：“We are all consenting adults here”（我们都是成年人），这句话表达了很多 Python 程序员的一个共同观点：“那就是开放比封闭要好，我们应该自己对自己的行为负责，而不是从语言层面来限制对数据或方法的访问”。\n这句话说的很有道理，但其实背后的技术逻辑不是这样。在Python中，使用双下划线作为变量或属性前缀会触发名称修饰（name mangling）机制，名称修饰是一种用于改变变量名以防止命名冲突的机制。",
           "link": "https://m.okjike.com/originalPosts/657a53c0f0da80ccb5fe7056",
           "publishedOn": "2023-12-14T01:00:48.000Z",
-          "wordCount": 485,
+          "wordCount": null,
           "title": "发布了: Python 中可以使用双下划线来表示私有变量，例如 __name，直接访问私有变量会报错，提示不存在，但有趣的是，通过访问 _classname__name 能够获得这个私...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FvhNkJjPqWkAOJbafxOpbUJjJ5uXv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/657a4b08492ec2e1bb3be444",
@@ -158,9 +158,9 @@
           "description": "起太早，咖啡店都没开门，只好先面向瀑布编程了😇",
           "link": "https://m.okjike.com/originalPosts/657a4b08492ec2e1bb3be444",
           "publishedOn": "2023-12-14T00:23:36.000Z",
-          "wordCount": 452,
+          "wordCount": null,
           "title": "发布了: 起太早，咖啡店都没开门，只好先面向瀑布编程了😇",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FmFjrN20qgEXgak57CwWyRn52Loxv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/6579e2d3f0da80ccb5f8f68f",
@@ -168,9 +168,9 @@
           "description": "人往往会忽视自己已经拥有的，却无比关切刚刚失去的，即便失去的只是微小的一部分。",
           "link": "https://m.okjike.com/originalPosts/6579e2d3f0da80ccb5f8f68f",
           "publishedOn": "2023-12-13T16:58:59.000Z",
-          "wordCount": 442,
+          "wordCount": null,
           "title": "发布了: 人往往会忽视自己已经拥有的，却无比关切刚刚失去的，即便失去的只是微小的一部分。",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/6579c251979083134acd8c83",
@@ -178,9 +178,9 @@
           "description": "同一段 Python 代码，直接使用 python 命令执行，返回的结果是图一，而使用 REPL 执行，返回的结果是图二，实在是没琢磨明白到底是哪里出现的问题导致了差异。\n这段代码涉及了好几个知识点：\n1）在 Python 中一切都是对象，包括数字、字符串等\n2）is 是用来判断引用是否相同的，而 == 是用来判断值是否相同的\n3）Python 有一个优化策略，会把频繁使用的对象缓存起来，启动时 [-5, 256] 区间的数字会被默认创建并缓存\n4）为进一步提升性能，在不同代码块中，新创建整数对象时，如果该对象已被创建，那么直接引用\n因此正确的答案应该是 True，False，False。从字节码来看，两边的输出也是一致的，没想明白的是，为啥左侧直接使用 python file.py 执行的结果是三个 True。",
           "link": "https://m.okjike.com/originalPosts/6579c251979083134acd8c83",
           "publishedOn": "2023-12-13T14:40:17.000Z",
-          "wordCount": 594,
+          "wordCount": null,
           "title": "发布了: 同一段 Python 代码，直接使用 python 命令执行，返回的结果是图一，而使用 REPL 执行，返回的结果是图二，实在是没琢磨明白到底是哪里出现的问题导致了...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FpbFKJjPnn4ElZ15g2P5o9p1q5L7v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/65792d478a7c5ba8ae83d3c8",
@@ -188,9 +188,9 @@
           "description": "一个朋友问我关于国内“政治性压抑”的看法。\n当我们在意大环境的时候，放眼全球，任何一个国家，其实负面信息都会多于正面，这跟疫情有关，也跟我们自己的立场有关，因为我们是在社会“拼搏向上”的那群人，注定了需要通过自己的努力付出来换取回报，而这种方式的价值交换，也注定了对我们是不公的，资本永远在上头。\n昨天跟一位在法国的朋友聊，他用三个词概括了所处的环境：“左、通胀和不稳定”，感叹每个个体都不容易。在国内更多还是卷，经济也比较低迷，关于“政治性压抑”的问题，我觉得取决于对政治的关注度，我也认识好多朋友，十分在意“政治性压抑”，因为他们长期活跃在网络上，并且期望有一个宽松的网络言论环境，但是在中国，这几乎是不可能的。\n我觉得，还是要关注具体的人，做具体的事情，聚焦到自己的「影响面」，而不是「关注面」，关注面越大，越不容易聚焦，内心的焦虑感也会越强。",
           "link": "https://m.okjike.com/originalPosts/65792d478a7c5ba8ae83d3c8",
           "publishedOn": "2023-12-13T04:04:23.000Z",
-          "wordCount": 477,
+          "wordCount": null,
           "title": "发布了: 一个朋友问我关于国内“政治性压抑”的看法。 当我们在意大环境的时候，放眼全球，任何一个国家，其实负面信息都会多于正面，这跟疫情有关，也跟我们自...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/6579262879cb2b9f35221a8c",
@@ -198,9 +198,9 @@
           "description": "项目聚集的不同领域“专家”越多，向前推进的阻力就越大，他们总是会站在自己的立场，批判性地提出项目中的诸多问题，同时为了避免己方承担过多职责，会以一种偏颇式甚至“胡诌式”的方式给出反对意见，并甩锅给关联方。\n控制最小的决策域，又会演变成了执行环节的脱钩，因为在执行过程中大家缺乏最大程度的共识。这种矛盾是难以调和的。",
           "link": "https://m.okjike.com/originalPosts/6579262879cb2b9f35221a8c",
           "publishedOn": "2023-12-13T03:34:00.000Z",
-          "wordCount": 441,
+          "wordCount": null,
           "title": "发布了: 项目聚集的不同领域“专家”越多，向前推进的阻力就越大，他们总是会站在自己的立场，批判性地提出项目中的诸多问题，同时为了避免己方承担过多职责，会...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/657906fa8a7c5ba8ae7ffdfa",
@@ -208,9 +208,9 @@
           "description": "又重新听了一遍罗翔的《如何在阅读中超越有限的今生》，他的语言总是可以促使人去寻找内心的平静，不卑不亢。他认为阅读分为四个境界，分别是：\n1）在读书中逃避世界。以读书来对抗对抗局限和焦虑，寻找笃定；承认自己的无知，才是开启智慧的大门；真正的智慧，是否定性的智慧。\n2）在读书中营造世界。文字是道德上的泡泡浴；残酷的事实，被文字粉饰，也会变得不再残酷；罗素说支撑自己活下来三件事情：对爱情的追求、对知识的追求、对人类苦难不可遏制的同情心\n3）在读书中理解世界。真实的世界总是不美好的，在书籍中获得足够的力量，总有一天，还是需要进入这个真实的世界；在人类的总经验中做出选择\n4）在读书中超越世界。今生活着的唯一目标就是超越前生，超越蝇营狗苟，进入世界，改变世界；如果你这一生收获的全是鲜花和掌声，那就得思考一下，这一生是否有坚持自己的理想；与自己的时代狭路相逢\n这是一个内部分享，没有公开链接，我整理了下在交流的过程中，他提到的书籍列表以及豆瓣评分：\n- 《阅读是一座随身携带的避难所》，8.6\n- 《赎罪》，8.6\n- 《长日将尽》，8.9\n- 《哲学的故事》，8.8\n- 《德兰修女传》，8.8\n- 《被淹没与被拯救的》，9.5\n- 《蝇王》，8.1\n- 《驴皮记》，8.3\n- 《莎士比亚悲剧》，9.3\n- 《教堂尖塔》，7.6\n- 《白痴》，9.4\n斯威格说，让我们泰然若属，与自己的时代狭路相逢，与自己当下的时刻狭路相逢，做好人生中每一个节点该做的事情，我们有太多要做的事情，但是我们做的事情太少了。\n罗翔的很多思考，也是从书中获得的，甚至将书中的世界观、人生观和价值观融入到了自己的行为准则中，这些书籍值得读一读。",
           "link": "https://m.okjike.com/originalPosts/657906fa8a7c5ba8ae7ffdfa",
           "publishedOn": "2023-12-13T01:20:58.000Z",
-          "wordCount": 466,
+          "wordCount": null,
           "title": "发布了: 又重新听了一遍罗翔的《如何在阅读中超越有限的今生》，他的语言总是可以促使人去寻找内心的平静，不卑不亢。他认为阅读分为四个境界，分别是： 1）在读...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+          "imageUrl": null
         }
       ]
     },
@@ -285,19 +285,19 @@
           "description": "星期几也能影响llm输出？？\nhttps://twitter.com/emollick/status/1734280779537035478?s=20",
           "link": "https://m.okjike.com/originalPosts/6577dedff0da80ccb5cd27e6",
           "publishedOn": "2023-12-12T04:17:35.000Z",
-          "wordCount": 441,
+          "wordCount": null,
           "title": "发布了: 星期几也能影响llm输出？？ https://twitter.com/emollick/status/1734280779537035478?s=20",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fp_YUljVRnIV7M_UryRiIdUwxk4Fv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/65758edfec195a00b78bf6c4",
           "author": null,
-          "description": "即刻App，享受探索、表达和创造",
+          "description": "",
           "link": "https://m.okjike.com/originalPosts/65758edfec195a00b78bf6c4",
           "publishedOn": "2023-12-10T10:11:43.000Z",
-          "wordCount": 457,
+          "wordCount": null,
           "title": "发布了: 一条动态",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FlABW5DlkPKBFFy8U5yOrUSzbzr0v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/6573f46c492ec2e1bbc1e65d",
@@ -305,9 +305,9 @@
           "description": "读研时被导师逼着读论文，当成任务作业去完成。\n谁能想到，在ai时代，每天会追着新论文更新，如饥似渴地阅读和实验效果。",
           "link": "https://m.okjike.com/originalPosts/6573f46c492ec2e1bbc1e65d",
           "publishedOn": "2023-12-09T05:00:28.000Z",
-          "wordCount": 429,
+          "wordCount": null,
           "title": "发布了: 读研时被导师逼着读论文，当成任务作业去完成。 谁能想到，在ai时代，每天会追着新论文更新，如饥似渴地阅读和实验效果。",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/657344f260830f16aecbdcf0",
@@ -315,9 +315,9 @@
           "description": "转发消息的限定规则\n━━━━━━━━━━━━━━\n1/ 它是真的吗？(无判定不转发)\n2/ 转发它对其它人有好处吗？(无价值不转发)\n3/ 真的需要你来转发吗？(无认可不转发)",
           "link": "https://m.okjike.com/originalPosts/657344f260830f16aecbdcf0",
           "publishedOn": "2023-12-08T16:31:46.000Z",
-          "wordCount": 437,
+          "wordCount": null,
           "title": "发布了: 转发消息的限定规则 ━━━━━━━━━━━━━━ 1/ 它是真的吗？(无判定不转发) 2/ 转发它对其它人有好处吗？(无价值不转发) 3/ 真的需要你来转发吗...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+          "imageUrl": null
         }
       ]
     },
@@ -327,12 +327,342 @@
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
         {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520922.html",
+          "author": "国家预警信息发布中心",
+          "description": "江津区气象台2023年12月14日20时30分发布“寒潮黄色预警信号”，预计12月14日21时至17日8时，贾嗣镇、支坪镇、杜市镇、鼎山街道、圣泉街道、珞璜镇、夏坝镇、广兴镇、四面山镇、西湖镇、嘉平镇、四屏镇、柏林镇、中山镇、石门镇、油溪镇、龙华镇、几江街道、先锋镇、吴滩镇、德感街道、双福街道、蔡家镇、永兴镇、塘河镇、慈云镇、朱杨镇、石蟆镇、白沙镇、李市镇日平均气温将要下降8℃以上，山口河谷地区阵风可达4-6级，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520922.html",
+          "publishedOn": "2023-12-14T12:52:00.000Z",
+          "wordCount": null,
+          "title": "重庆市江津区发布寒潮黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520910.html",
+          "author": "国家预警信息发布中心",
+          "description": "巫山县气象台2023年12月14日20时20分发布“寒潮黄色预警信号”，预计12月14日21时至17日8时，龙溪镇、福田镇、大昌镇、双龙镇、竹贤乡、平河乡、官阳镇、当阳乡、巫峡镇、金坪乡、骡坪镇、两坪乡、高唐街道、龙门街道、三溪乡、抱龙镇、建平乡、曲尺乡、大溪乡、庙宇镇、红椿乡、铜鼓镇、官渡镇、邓家乡、笃坪乡、培石乡日平均气温将要下降8℃以上。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520910.html",
+          "publishedOn": "2023-12-14T12:46:00.000Z",
+          "wordCount": null,
+          "title": "重庆市巫山县发布寒潮黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20231214/t20231214_526520906.html",
+          "author": "国家预警信息发布中心",
+          "description": "黔江区气象台2023年12月14日20时20分发布“寒潮橙色预警信号”，预计12月14日21时至17日8时，我区城南街道、五里镇、马喇镇、水市镇、白土乡等全部乡镇街道日平均气温将要下降10℃以上，山口河谷地区阵风可达5～7级，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20231214/t20231214_526520906.html",
+          "publishedOn": "2023-12-14T12:46:00.000Z",
+          "wordCount": null,
+          "title": "重庆市黔江区发布寒潮橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520890.html",
+          "author": "国家预警信息发布中心",
+          "description": "万盛经开区气象台2023年12月14日20时20分发布“寒潮黄色预警信号”，预计12月14日21时至16日21时，万东镇、东林街道、万盛街道、金桥镇、丛林镇、关坝镇、石林镇、青年镇、黑山镇、南桐镇日平均气温将要下降8℃以上，山口河谷地区阵风可达6-7级，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520890.html",
+          "publishedOn": "2023-12-14T12:37:00.000Z",
+          "wordCount": null,
+          "title": "重庆市万盛经开区发布寒潮黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20231214/t20231214_526520883.html",
+          "author": "国家预警信息发布中心",
+          "description": "石柱县气象台2023年12月14日19时50分发布“寒潮橙色预警信号”，预计12月14日20时至16日20时，黄水镇、枫木镇、临溪镇、石家乡、王家乡、河嘴乡、冷水镇、金竹乡、中益乡、沙子镇、新乐乡、洗新乡、黄鹤镇、金铃乡、三益乡、桥头镇、万朝镇、龙沙镇、鱼池镇、沿溪镇、悦崃镇、王场镇、西沱镇、黎场乡、龙潭乡、下路街道、三星乡、六塘乡、马武镇、万安街道、南宾街道、三河镇、大歇镇日平均气温将要下降10℃以上，山口河谷地区阵风可达6-7级，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20231214/t20231214_526520883.html",
+          "publishedOn": "2023-12-14T12:34:00.000Z",
+          "wordCount": null,
+          "title": "重庆市石柱土家族自治县发布寒潮橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520879.html",
+          "author": "国家预警信息发布中心",
+          "description": "荣昌区气象台2023年12月14日20时15分发布“寒潮黄色预警信号”，预计12月14日21时至16日20时，我区全部镇街日平均气温将要下降8℃以上，阵风可达4～6级，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520879.html",
+          "publishedOn": "2023-12-14T12:34:00.000Z",
+          "wordCount": null,
+          "title": "重庆市荣昌区发布寒潮黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520875.html",
+          "author": "国家预警信息发布中心",
+          "description": "巫溪县气象台2023年12月14日20时10分发布“寒潮黄色预警信号”，预计12月14日20时至17日8时，我县全部乡镇（街道）日平均气温将要下降8-10℃，高海拔及山口河谷地区有6-7级阵风，请加强防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520875.html",
+          "publishedOn": "2023-12-14T12:31:00.000Z",
+          "wordCount": null,
+          "title": "重庆市巫溪县发布寒潮黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520876.html",
+          "author": "国家预警信息发布中心",
+          "description": "彭水自治县气象台2023年12月14日19时50分发布“寒潮黄色预警信号”，预计12月14日20时至17日08时，龙射镇、汉葭街道、高谷镇、鹿鸣乡、平安镇、保家镇、长生镇、岩东乡、绍庆街道、靛水街道、龙塘乡、润溪乡、黄家镇、朗溪乡、石盘乡、万足镇、新田镇、桑柘镇、乔梓乡、走马乡、郁山镇、联合乡、普子镇、太原镇、三义乡、石柳乡、棣棠乡、芦塘乡、龙溪镇、大同镇、鹿角镇、大垭乡等乡镇（街道）48小时内日平均气温将要下降8℃以上，局地阵风可达4—6级，请注意防范。防御指南：1.做好防寒保暖，注意用火、用电安全，燃煤取暖注意防范一氧化碳中毒。2.农、林、养殖业做好作物、树木与牲畜防冻害措施；设施农业生产企业和农户及时采取防护措施。3.相关部门和乡镇街道按照职责，做好寒潮防范应对工作。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520876.html",
+          "publishedOn": "2023-12-14T12:31:00.000Z",
+          "wordCount": null,
+          "title": "重庆市彭水苗族土家族自治县发布寒潮黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520861.html",
+          "author": "国家预警信息发布中心",
+          "description": "綦江区气象台2023年12月14日20时10分发布“寒潮黄色预警信号”，预计12月14日22时至17日8时，石壕镇、打通镇、丁山镇、东溪镇、赶水镇、安稳镇、扶欢镇、郭扶镇、中峰镇、永新镇、篆塘镇、古南街道、三江街道、文龙街道、通惠街道、新盛街道、横山镇、三角镇、石角镇、永城镇、隆盛镇48小时内日平均气温将要下降8℃以上。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520861.html",
+          "publishedOn": "2023-12-14T12:24:00.000Z",
+          "wordCount": null,
+          "title": "重庆市綦江区发布寒潮黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520863.html",
+          "author": "国家预警信息发布中心",
+          "description": "垫江县气象台2023年12月14日20时发布“寒潮黄色预警信号”。预计12月14日20时至16日20时，桂阳街道、桂溪街道、太平镇、澄溪镇、沙坪镇、普顺镇、永安镇、高安镇、三溪镇等所有乡镇（街道）日平均气温将下降8~10℃，山口河谷地区阵风可达4~6级。请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520863.html",
+          "publishedOn": "2023-12-14T12:24:00.000Z",
+          "wordCount": null,
+          "title": "重庆市垫江县发布寒潮黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20231214/t20231214_526520855.html",
+          "author": "国家预警信息发布中心",
+          "description": "云阳县气象台2023年12月14日19时50分发布“寒潮橙色预警信号”，预计12月14日20时至17日8时，我县日平均气温将要下降10℃以上，山口河谷地区阵风可达6-7级，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20231214/t20231214_526520855.html",
+          "publishedOn": "2023-12-14T12:20:00.000Z",
+          "wordCount": null,
+          "title": "重庆市云阳县发布寒潮橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520856.html",
+          "author": "国家预警信息发布中心",
+          "description": "万州区气象台2023年12月14日19时57分发布“寒潮黄色预警信号”，预计12月14日20时至17日08时，长滩镇、太安镇、白羊镇、陈家坝街道、罗田镇、走马镇、恒合土家族乡、龙驹镇、普子乡、白土镇、茨竹乡、地宝土家族乡、梨树乡、李河镇、后山镇、高梁镇等全部镇乡街道日平均气温将要下降8-10℃。做好防寒保暖，注意用火、用电安全，燃煤取暖注意防范一氧化碳中毒。农、林、养殖业做好作物、树木与牲畜防冻害措施；设施农业生产企业和农户及时采取防护措施。相关部门和乡镇街道按照职责，做好寒潮防范应对工作。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520856.html",
+          "publishedOn": "2023-12-14T12:20:00.000Z",
+          "wordCount": null,
+          "title": "重庆市万州区发布寒潮黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520837.html",
+          "author": "国家预警信息发布中心",
+          "description": "渝北区气象台2023年12月14日19时50分发布“寒潮黄色预警信号”，预计12月14日20时至17日8时，石船镇、大盛镇、洛碛镇、龙兴镇、统景镇、大湾镇、双龙湖街道、茨竹镇、木耳镇、古路镇、仙桃街道、双凤桥街道、王家街道、兴隆镇、龙塔街道、龙溪街道、龙山街道、玉峰山镇、宝圣湖街道、两路街道、悦来街道、回兴街道日平均气温将要下降8℃以上。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520837.html",
+          "publishedOn": "2023-12-14T12:13:00.000Z",
+          "wordCount": null,
+          "title": "重庆市渝北区发布寒潮黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520832.html",
+          "author": "国家预警信息发布中心",
+          "description": "开州区气象局2023年12月14日20时发布“寒潮黄色预警信号”，预计12月14日20时至17日8时，我区大部分乡镇（街道）日平均气温将要下降8℃以上，冷空气影响时山口河谷地区有4～6级阵风，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520832.html",
+          "publishedOn": "2023-12-14T12:10:00.000Z",
+          "wordCount": null,
+          "title": "重庆市开州区发布寒潮黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520831.html",
+          "author": "国家预警信息发布中心",
+          "description": "涪陵区气象台2023年12月14日19时50分发布“寒潮黄色预警信号”，12月14日20时至17日8时，马鞍街道、李渡街道、江北街道、龙桥街道、白涛街道、敦仁街道、崇义街道、江东街道、清溪镇、义和街道、石沱镇、新妙镇、蔺市街道、荔枝街道、南沱镇、珍溪镇、龙潭镇、青羊镇、马武镇、同乐镇、增福镇、大顺镇、百胜镇、罗云镇、焦石镇日平均气温将要下降8～10℃,大木乡、武陵山乡日平均气温将要下降10～12℃。防御指南：做好防寒保暖，注意用火、用电安全，燃煤取暖注意防范一氧化碳中毒;农、林、养殖业做好作物、树木与牲畜防冻害措施；设施农业生产企业和农户及时采取防护措施;相关部门和乡镇街道按照职责，做好寒潮防范应对工作。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520831.html",
+          "publishedOn": "2023-12-14T12:10:00.000Z",
+          "wordCount": null,
+          "title": "重庆市涪陵区发布寒潮黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520823.html",
+          "author": "国家预警信息发布中心",
+          "description": "大足区气象台2023年12月14日19时55分发布“寒潮黄色预警信号”:预计12月14日20时至16日20时我区玉龙镇、雍溪镇、金山镇、万古镇、国梁镇、回龙镇、石马镇、拾万镇、古龙镇、三驱镇、棠香街道、智凤街道、龙岗街道、宝顶镇、高升镇、铁山镇、中敖镇、高坪镇、龙滩子街道、通桥街道、邮亭镇、双路街道、龙水镇、珠溪镇、龙石镇、季家镇、宝兴镇等镇街48小时内日平均气温将要下降8℃以上，山口河谷地区阵风可达5-7级，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520823.html",
+          "publishedOn": "2023-12-14T12:07:00.000Z",
+          "wordCount": null,
+          "title": "重庆市大足区发布寒潮黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520813.html",
+          "author": "国家预警信息发布中心",
+          "description": "璧山区气象台2023年12月14日19时20分发布“寒潮黄色预警信号”，预计12月14日20时至16日20时，八塘镇、七塘镇、大路街道、璧城街道、福禄镇、大兴镇、璧泉街道、河边镇、正兴镇、丁家街道、三合镇、广普镇、健龙镇、来凤街道、青杠街道48小时内日平均气温将要下降8℃以上，部分镇街阵风可达4-6级，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520813.html",
+          "publishedOn": "2023-12-14T12:05:00.000Z",
+          "wordCount": null,
+          "title": "重庆市璧山区发布寒潮黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520804.html",
+          "author": "国家预警信息发布中心",
+          "description": "南川区气象台2023年12月14日20时发布“寒潮黄色预警信号”，预计12月14日20时至17日8时，楠竹山镇、石墙镇、峰岩乡、中桥乡、骑龙镇、民主镇、冷水关镇、德隆镇、庆元镇、古花镇、三泉镇、合溪镇、大有镇、头渡镇、山王坪镇、水江镇、大观镇、福寿镇、鸣玉镇、河图镇、太平场镇、乾丰镇、黎香湖镇、白沙镇、石溪镇、南平镇、石莲镇、兴隆镇、金山镇、南城街道、神童镇、东城街道、西城街道、木凉镇48小时内日平均气温将要下降8℃以上，或者已下降8℃以上并可能持续。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520804.html",
+          "publishedOn": "2023-12-14T12:02:00.000Z",
+          "wordCount": null,
+          "title": "重庆市南川区发布寒潮黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520803.html",
+          "author": "国家预警信息发布中心",
+          "description": "武隆区气象台2023年12月14日19时20分发布“寒潮黄色预警信号”，预计12月14日20时至16日20时，我区凤山街道、芙蓉街道、仙女山街道等全部乡镇街道48小时内日平均气温将要下降8℃以上，山口河谷地区阵风可达6-7级，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520803.html",
+          "publishedOn": "2023-12-14T12:02:00.000Z",
+          "wordCount": null,
+          "title": "重庆市武隆区发布寒潮黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520789.html",
+          "author": "国家预警信息发布中心",
+          "description": "长寿区气象台2023年12月14日19时40分发布“寒潮黄色预警信号”，预计12月14日20时至16日20时，菩提街道、凤城街道、晏家街道、江南街道、渡舟街道、八颗街道、新市街道、但渡镇、邻封镇、长寿湖镇、云集镇、龙河镇、双龙镇、葛兰镇、万顺镇、洪湖镇、石堰镇、云台镇、海棠镇日平均气温将要下降8~10℃。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520789.html",
+          "publishedOn": "2023-12-14T11:58:00.000Z",
+          "wordCount": null,
+          "title": "重庆市长寿区发布寒潮黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520774.html",
+          "author": "国家预警信息发布中心",
+          "description": "巴南区气象台2023年12月14日19时40分发布“寒潮黄色预警信号”，预计12月14日20时至17日8时，姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇日平均气温将要下降8℃以上，山口河谷地区阵风可达4-6级，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520774.html",
+          "publishedOn": "2023-12-14T11:53:00.000Z",
+          "wordCount": null,
+          "title": "重庆市巴南区发布寒潮黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520773.html",
+          "author": "国家预警信息发布中心",
+          "description": "永川区气象台2023年12月14日19时50分发布“寒潮黄色预警信号”，预计12月14日20时至16日20时，我区茶山竹海街道、陈食街道、临江镇、板桥镇、中山路街道、大安街道、金龙镇、南大街街道、青峰镇、双石镇、胜利路街道、三教镇、红炉镇、来苏镇、卫星湖街道等镇街48小时内日平均气温将要下降8℃以上，局地阵风可达4-6级，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520773.html",
+          "publishedOn": "2023-12-14T11:53:00.000Z",
+          "wordCount": null,
+          "title": "重庆市永川区发布寒潮黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520763.html",
+          "author": "国家预警信息发布中心",
+          "description": "丰都县气象台2023年12月14日19时20分发布“寒潮黄色预警信号”，预计12月14日20时至17日8时，我县双路镇、龙孔镇、江池镇、兴义镇、十直镇、高家镇、太平坝乡、暨龙镇、都督乡、武平镇、南天湖镇、三建乡、龙河镇、栗子乡、兴龙镇、保合镇、仁沙镇、三元镇、双龙镇、青龙乡、许明寺镇、董家镇、仙女湖镇、包鸾镇、三合街道、湛普镇、虎威镇、名山街道、社坛镇、树人镇等地日平均气温将下降8℃～10℃。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520763.html",
+          "publishedOn": "2023-12-14T11:51:00.000Z",
+          "wordCount": null,
+          "title": "重庆市丰都县发布寒潮黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520754.html",
+          "author": "国家预警信息发布中心",
+          "description": "北碚区气象台2023年12月14日19时30分发布“寒潮黄色预警信号”，预计12月14日20时至16日20时，北碚区全部镇街48小时内日平均气温将要下降8℃以上。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520754.html",
+          "publishedOn": "2023-12-14T11:49:00.000Z",
+          "wordCount": null,
+          "title": "重庆市北碚区发布寒潮黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20231214/t20231214_526520756.html",
+          "author": "国家预警信息发布中心",
+          "description": "石柱县气象台2023年12月14日19时发布“冰雹橙色预警信号”，预计12月14日19时至22时，枫木镇、黄水镇、中益乡、桥头镇、三益乡、沙子镇、冷水镇、金竹乡、金铃乡、洗新乡、新乐乡将出现冰雹，并伴有雷电、阵性大风等强对流天气，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20231214/t20231214_526520756.html",
+          "publishedOn": "2023-12-14T11:49:00.000Z",
+          "wordCount": null,
+          "title": "重庆市石柱土家族自治县发布冰雹橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520744.html",
+          "author": "国家预警信息发布中心",
+          "description": "忠县气象台2023年12月14日19时30分发布“寒潮黄色预警信号”，预计12月14日20时至17日8时，忠州街道、白公街道、乌杨街道、新生街道、石子乡、白石镇、黄金镇、新立镇、汝溪镇、金声乡、野鹤镇、双桂镇、花桥镇、金鸡镇、善广乡、官坝镇、兴峰乡、石黄镇、三汇镇、马灌镇、拔山镇、永丰镇、洋渡镇、任家镇、东溪镇、磨子土家族乡、复兴镇、涂井乡、石宝镇日平均气温将要下降8～10℃。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520744.html",
+          "publishedOn": "2023-12-14T11:43:00.000Z",
+          "wordCount": null,
+          "title": "重庆市忠县发布寒潮黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231214/t20231214_526520731.html",
+          "author": "国家预警信息发布中心",
+          "description": "开州区气象局2023年12月14日19时25分发布“大风蓝色预警信号”：预计12月14日19时至15日8时，南雅镇、谭家镇、和谦镇、温泉镇、义和镇、中和镇、临江镇、铁桥镇、天和镇、紫水乡、敦好镇、关面乡、大进镇、九龙山镇、正安街道、大德镇、竹溪镇、河堰镇风力可达6级，局地阵风可达7级以上，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231214/t20231214_526520731.html",
+          "publishedOn": "2023-12-14T11:37:00.000Z",
+          "wordCount": null,
+          "title": "重庆市开州区发布大风蓝色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520725.html",
+          "author": "国家预警信息发布中心",
+          "description": "酉阳县气象台2023年12月14日19时10分发布“寒潮黄色预警信号”，预计12月14日20时至16日20时，我县桃花源街道、钟多街道、毛坝乡等全部乡镇48小时内日平均气温将要下降8℃以上，山口河谷地区阵风可达6-7级，请注意防范。防御指南：1.做好防寒保暖，注意用火、用电安全，燃煤取暖注意防范一氧化碳中毒。2.农、林、养殖业做好作物、树木与牲畜防冻害措施；设施农业生产企业和农户及时采取防护措施。3.相关部门和乡镇街道按照职责，做好寒潮防范应对工作。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520725.html",
+          "publishedOn": "2023-12-14T11:33:00.000Z",
+          "wordCount": null,
+          "title": "重庆市酉阳土家族苗族自治县发布寒潮黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231214/t20231214_526520703.html",
+          "author": "国家预警信息发布中心",
+          "description": "奉节县气象台2023年12月14日18时50分发布“大风蓝色预警信号”，预计未来12小时，我县夔门街道、鱼复街道、永安街道、康坪乡、羊市镇、安坪镇、五马镇、青龙镇、甲高镇、新民镇、吐祥镇、朱衣镇等乡镇（街道）风力可达4-6级，局地阵风可达7级以上，请注意防范。防御指南：1.关好门窗，非必要不外出。妥善处置窗台、阳台等室外搁置物。2.暂停户外高空作业。不在玻璃门窗、广告牌、脚手架、塔吊等较易发生危险区域逗留；加固围板、棚架等搭建物。3.行驶车辆及船舶注意采取避风措施。4.相关部门和乡镇街道按照职责，做好大风防范应对工作。",
+          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231214/t20231214_526520703.html",
+          "publishedOn": "2023-12-14T11:15:00.000Z",
+          "wordCount": null,
+          "title": "重庆市奉节县发布大风蓝色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20231214/t20231214_526520705.html",
+          "author": "国家预警信息发布中心",
+          "description": "巫山县气象台2023年12月14日19时发布“冰雹橙色预警信号”，预计12月14日19时至15日2时，龙溪镇、福田镇、大昌镇、官阳镇、竹贤乡、当阳乡、双龙镇、金坪乡、平河乡、骡坪镇、红椿乡、庙宇镇、铜鼓镇、官渡镇、建平乡、抱龙镇、笃坪乡、邓家乡、培石乡、两坪乡、三溪乡、大溪乡、曲尺乡、巫峡镇、龙门街道、高唐街道将出现冰雹，并伴有雷电、阵性大风、短时强降水等强对流天气，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20231214/t20231214_526520705.html",
+          "publishedOn": "2023-12-14T11:15:00.000Z",
+          "wordCount": null,
+          "title": "重庆市巫山县发布冰雹橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20231214/t20231214_526520669.html",
+          "author": "国家预警信息发布中心",
+          "description": "巫溪县气象台2023年12月14日18时40分发布“冰雹橙色预警信号”，预计未来6小时，我县上磺镇、古路镇、峰灵镇、城厢镇、柏杨街道、宁河街道、凤凰镇、通城镇可能将出现冰雹，并伴有雷电、阵性大风、短时强降水等强对流天气，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20231214/t20231214_526520669.html",
+          "publishedOn": "2023-12-14T10:58:00.000Z",
+          "wordCount": null,
+          "title": "重庆市巫溪县发布冰雹橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231214/t20231214_526520664.html",
+          "author": "国家预警信息发布中心",
+          "description": "合川区气象台2023年12月14日18时50分发布“寒潮蓝色预警信号”，预计12月14日20时至16日20时，我区三汇镇、清平镇、土场镇、龙凤镇等全部镇街48小时内日平均气温将要下降6℃以上，山口河谷地区阵风可达4-6级，请以上各地注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231214/t20231214_526520664.html",
+          "publishedOn": "2023-12-14T10:56:00.000Z",
+          "wordCount": null,
+          "title": "重庆市合川区发布寒潮蓝色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231214/t20231214_526520628.html",
+          "author": "国家预警信息发布中心",
+          "description": "巫溪县气象台2023年12月14日18时发布“大风蓝色预警信号”，预计未来12小时，我县宁厂镇、大河乡、天星乡、城厢镇、宁河街道、柏杨街道、双阳乡、兰英乡、通城镇、胜利乡、凤凰镇、徐家镇、白鹿镇等高海拔及山口河谷地区阵风可达7级以上，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231214/t20231214_526520628.html",
+          "publishedOn": "2023-12-14T10:27:00.000Z",
+          "wordCount": null,
+          "title": "重庆市巫溪县发布大风蓝色预警",
+          "imageUrl": null
+        },
+        {
           "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231214/t20231214_526520480.html",
           "author": "国家预警信息发布中心",
           "description": "武隆区气象台2023年12月14日16时50分发布“大风蓝色预警信号”，目前我区凤山街道、芙蓉街道已出现7级以上大风且仍将持续，预计未来12小时内羊角街道、白马镇、仙女山街道、江口镇、鸭江镇、和顺镇、凤来镇、庙垭乡、平桥镇等乡镇街道风力可达7级，局地阵风可达8级以上，请注意防范。",
           "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231214/t20231214_526520480.html",
           "publishedOn": "2023-12-14T09:33:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市武隆区发布大风蓝色预警",
           "imageUrl": null
         },
@@ -342,7 +672,7 @@
           "description": "万州区气象台2023年12月14日16时55分发布“大风蓝色预警信号”，预计到15日10时，我区太安镇、白羊镇、黄柏乡、太龙镇、大周镇、陈家坝街道、恒合乡等镇乡街将出现阵性大风及雷电，风力可达6级，局地阵风可达7级以上，请注意防范。政府及相关部门按照职责做好防大风工作；关好门窗，加固围板、棚架、广告牌等易被风吹动的搭建物，妥善安置易受大风影响的室外物品，遮盖建筑物资；相关水域水上作业和过往船舶采取积极的应对措施，如回港避风或者绕道航行等；行人注意尽量少骑自行车，刮风时不要在广告牌、临时搭建物等下面逗留；有关部门和单位注意森林、草原等防火。",
           "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231214/t20231214_526520456.html",
           "publishedOn": "2023-12-14T09:28:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市万州区发布大风蓝色预警",
           "imageUrl": null
         },
@@ -352,7 +682,7 @@
           "description": "城口县气象台2023年12月14日15时20分发布“道路结冰黄色预警信号”，预计12月14日20时至17日20时，我县所有乡镇（街道）海拔600米以上的地区路表温度将低于0℃，可能出现对交通有影响的道路结冰，请注意防范。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526520056.html",
           "publishedOn": "2023-12-14T07:33:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市城口县发布道路结冰黄色预警",
           "imageUrl": null
         },
@@ -362,7 +692,7 @@
           "description": "巫山县气象台2023年12月14日9时10分继续发布“大风蓝色预警信号”，预计14日9时至21时，巫峡镇、龙门街道、高唐街道、两坪乡、三溪乡、建平乡、曲尺乡、大溪乡、庙宇镇、铜鼓镇、红椿乡、官渡镇、抱龙镇、培石乡、笃坪乡、邓家乡风力可达7级，局地阵风可达8级以上，请注意防范。",
           "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231214/t20231214_526519344.html",
           "publishedOn": "2023-12-14T01:25:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市巫山县发布大风蓝色预警",
           "imageUrl": null
         },
@@ -372,7 +702,7 @@
           "description": "大足区气象台2023年12月14日07时20分发布“大雾黄色预警信号”:预计14日07时30分-10时我区龙岗街道、棠香街道、玉龙镇、雍溪镇、金山镇、万古镇、国梁镇、回龙镇、石马镇、拾万镇、古龙镇、三驱镇、智凤街道、宝顶镇、高升镇、铁山镇、中敖镇、高坪镇、龙滩子街道、通桥街道、邮亭镇、双路街道、龙水镇、珠溪镇、龙石镇、季家镇、宝兴镇等镇街将出现能见度小于500米的雾，局部地区能见度小于200米。请注意预防大雾天气可能造成的危害。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231214/t20231214_526519161.html",
           "publishedOn": "2023-12-13T23:31:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市大足区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -382,7 +712,7 @@
           "description": "开州区气象局2023年12月13日22时20分发布“大风蓝色预警信号”，预计12月13日22时至14日8时，满月镇、大进镇、关面乡、雪宝山镇、麻柳乡、敦好镇、紫水乡、高桥镇、谭家镇、和谦镇、温泉镇、天和镇、三汇口乡、河堰镇、九龙山镇风力可达6级，局地阵风可达7级以上，请注意防范。",
           "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231213/t20231213_526519073.html",
           "publishedOn": "2023-12-13T14:31:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市开州区发布大风蓝色预警",
           "imageUrl": null
         },
@@ -392,7 +722,7 @@
           "description": "秀山县气象台2023年12月13日18时发布“大风蓝色预警信号”，我县川河盖站已出现7级阵风，预计未来12小时内我县涌洞、隘口镇等高海拔乡镇仍可能出现7级阵风，请注意防范。防御指南：1.关好门窗，非必要不外出。妥善处置窗台、阳台等室外搁置物。2.暂停户外高空作业。不在玻璃门窗、广告牌、脚手架、塔吊等较易发生危险区域逗留；加固围板、棚架等搭建物。3.行驶车辆及船舶注意采取避风措施。4.相关部门和乡镇街道按照职责，做好大风防范应对工作。",
           "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231213/t20231213_526518928.html",
           "publishedOn": "2023-12-13T11:01:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市秀山土家族苗族自治县发布大风蓝色预警",
           "imageUrl": null
         },
@@ -402,7 +732,7 @@
           "description": "巫山县气象台2023年12月13日18时发布“大风蓝色预警信号”，预计12月13日18时至14日6时，巫峡镇、龙门街道、高唐街道、两坪乡、三溪乡、建平乡、曲尺乡、大溪乡、庙宇镇、铜鼓镇、红椿乡、官渡镇、抱龙镇、培石乡、笃坪乡、邓家乡风力可达6级，局地阵风可达7级以上，请注意防范。",
           "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231213/t20231213_526518852.html",
           "publishedOn": "2023-12-13T10:21:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市巫山县发布大风蓝色预警",
           "imageUrl": null
         },
@@ -412,7 +742,7 @@
           "description": "江津区气象台2023年12月12日21时发布“大风蓝色预警信号”，预计12月12日21时至13日08时，广兴镇、四面山镇等镇街风力可达6级，局地阵风可达7级以上，请注意防范。",
           "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231212/t20231212_526517469.html",
           "publishedOn": "2023-12-12T13:11:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市江津区发布大风蓝色预警",
           "imageUrl": null
         },
@@ -422,7 +752,7 @@
           "description": "綦江区气象台2023年12月12日19时50分发布“大风蓝色预警信号”，目前我区已出现7级阵风，预计未来12小时，文龙街道、通惠街道、古南街道、横山镇、三江街道、东溪镇、赶水镇风力可达6级，局地阵风可达7级以上，请注意防范。",
           "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231212/t20231212_526517429.html",
           "publishedOn": "2023-12-12T12:15:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市綦江区发布大风蓝色预警",
           "imageUrl": null
         },
@@ -432,7 +762,7 @@
           "description": "涪陵区气象台2023年12月11日23时45分发布“大雾黄色预警信号”，预计12月12日00时至12时，马鞍街道、李渡街道、江北街道、龙桥街道、白涛街道、敦仁街道、崇义街道、江东街道、清溪镇、义和街道、石沱镇、蔺市街道、荔枝街道、南沱镇、珍溪镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231212/t20231212_526516191.html",
           "publishedOn": "2023-12-11T15:55:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市涪陵区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -442,7 +772,7 @@
           "description": "綦江区气象台2023年12月11日22时50分发布“大雾黄色预警信号”，预计12月11日23时至12日11时，我区全部镇街将出现能见度小于500米的雾，局部地区能见度小于200米。请注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231211/t20231211_526516178.html",
           "publishedOn": "2023-12-11T15:04:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市綦江区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -452,7 +782,7 @@
           "description": "云阳县气象台2023年12月11日18时50分继续发布“大雾黄色预警信号”，预计11日20时至12日8时，全县各乡镇（街道）将出现能见度小于500米的大雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231211/t20231211_526515991.html",
           "publishedOn": "2023-12-11T10:58:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市云阳县发布大雾黄色预警",
           "imageUrl": null
         },
@@ -462,7 +792,7 @@
           "description": "万州区气象台2023年12月11日16时30分继续发布“大雾黄色预警信号”，预计11日22时30分至12日09时30分，陈家坝、百安坝、五桥、新田、双河口、龙都、高峰、长坪、溪口、燕山、新乡、罗田等镇乡街将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。有关部门和单位按照职责做好防雾准备工作；机场、高速公路、轮渡码头等单位加强交通管理，保障安全；驾驶人员注意雾的变化，小心驾驶；户外活动注意安全。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231211/t20231211_526515796.html",
           "publishedOn": "2023-12-11T09:14:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市万州区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -472,7 +802,7 @@
           "description": "忠县气象台2023年12月11日14时30分继续发布“大雾黄色预警信号”，预计12月11日23时至12日10时，忠州街道、白公街道、新生街道、乌杨街道、涂井乡、石宝镇、汝溪镇、金声乡、野鹤镇、磨子土家族乡、石子乡、复兴镇、东溪镇、黄金镇、永丰镇、花桥镇、三汇镇、马灌镇、官坝镇、金鸡镇、石黄镇、兴峰乡、白石镇、任家镇、双桂镇、拔山镇、洋渡镇、善广乡、新立镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231211/t20231211_526515544.html",
           "publishedOn": "2023-12-11T07:02:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市忠县发布大雾黄色预警",
           "imageUrl": null
         },
@@ -482,7 +812,7 @@
           "description": "万州区气象台2023年12月11日09时30分继续发布“大雾黄色预警信号”，预计11日09时35分至11日16时，陈家坝、百安坝、五桥、新田、双河口、龙都、高峰、武陵、长坪、溪口、燕山、新乡等镇乡街将继续出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。有关部门和单位按照职责做好防雾准备工作；机场、高速公路、轮渡码头等单位加强交通管理，保障安全；驾驶人员注意雾的变化，小心驾驶；户外活动注意安全。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231211/t20231211_526515170.html",
           "publishedOn": "2023-12-11T02:00:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市万州区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -492,7 +822,7 @@
           "description": "巴南区气象台2023年12月11日9时继续发布“大雾黄色预警信号”，预计11日9时至12日9时，我区姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231211/t20231211_526515122.html",
           "publishedOn": "2023-12-11T01:26:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市巴南区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -502,7 +832,7 @@
           "description": "云阳县气象台2023年12月11日8时30分继续发布“大雾黄色预警信号”，预计11日9时至11日20时，全县各乡镇（街道）将出现能见度小于500米的大雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231211/t20231211_526515056.html",
           "publishedOn": "2023-12-11T00:52:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市云阳县发布大雾黄色预警",
           "imageUrl": null
         },
@@ -512,7 +842,7 @@
           "description": "永川区气象台2023年12月11日8时40分发布“大雾黄色预警信号”，预计11日8时40分至11时，我区全部镇街将出现能见度小于500米的雨雾，局部地区能见度小于200米。请各地注意防范雨雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231211/t20231211_526515039.html",
           "publishedOn": "2023-12-11T00:48:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市永川区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -522,7 +852,7 @@
           "description": "潼南区气象台2023年12月11日7时30分发布“大雾黄色预警信号”，预计12月11日8时至11时，我区大佛、梓潼、桂林、双江等镇街将出现能见度小于500米的雾，局部地区能见度小于200米。请注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231211/t20231211_526514949.html",
           "publishedOn": "2023-12-10T23:49:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市潼南区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -532,7 +862,7 @@
           "description": "大足区气象台2023年12月11日07时25分发布“大雾黄色预警信号”:预计11日07时30分-10时我区龙岗街道、棠香街道、玉龙镇、雍溪镇、金山镇、万古镇、国梁镇、回龙镇、石马镇、拾万镇、古龙镇、三驱镇、智凤街道、宝顶镇、高升镇、铁山镇、中敖镇、高坪镇、龙滩子街道、通桥街道、邮亭镇、双路街道、龙水镇、珠溪镇、龙石镇、季家镇、宝兴镇等镇街将出现能见度小于500米的雾，局部地区能见度小于200米。请注意预防大雾天气可能造成的危害。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231211/t20231211_526514946.html",
           "publishedOn": "2023-12-10T23:37:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市大足区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -542,7 +872,7 @@
           "description": "璧山区气象台2023年12月11日6时10分发布“大雾黄色预警信号”，预计12月11日7时至10时，八塘镇、七塘镇、大路街道、河边镇、璧城街道、福禄镇、璧泉街道、大兴镇、青杠街道、丁家街道、正兴镇、来凤街道、健龙镇、三合镇、广普镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231211/t20231211_526514912.html",
           "publishedOn": "2023-12-10T22:31:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市璧山区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -552,7 +882,7 @@
           "description": "涪陵区气象台2023年12月11日6时20分发布“大雾黄色预警信号”，预计12月11日6时20分至13时，马鞍街道、李渡街道、江北街道、龙桥街道、白涛街道、敦仁街道、崇义街道、江东街道、清溪镇、义和街道、石沱镇、蔺市街道、荔枝街道、南沱镇、珍溪镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231211/t20231211_526514910.html",
           "publishedOn": "2023-12-10T22:27:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市涪陵区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -562,7 +892,7 @@
           "description": "江津区气象台2023年12月10日21时30分发布“大雾黄色预警信号”，预计11日1时至11时，贾嗣镇、支坪镇、杜市镇、鼎山街道、珞璜镇、夏坝镇、广兴镇、西湖镇、嘉平镇、油溪镇、龙华镇、几江街道、圣泉街道、先锋镇、德感街道、双福街道、慈云镇、李市镇、四面山镇、四屏镇、柏林镇、中山镇、蔡家镇等镇街将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231210/t20231210_526514739.html",
           "publishedOn": "2023-12-10T13:59:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市江津区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -572,7 +902,7 @@
           "description": "万盛经开区气象台2023年12月10日20时15分发布“大雾黄色预警信号”，预计10日21时至11日9时，万东镇、金桥镇、黑山镇、石林镇、丛林镇、关坝镇、青年镇、南桐镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231210/t20231210_526514684.html",
           "publishedOn": "2023-12-10T12:30:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市万盛经开区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -582,7 +912,7 @@
           "description": "巫溪县气象台2023年12月10日19时20分继续发布“大雾黄色预警信号”，预计12月10日20时至11日10时，我县文峰镇、上磺镇、古路镇、塘坊镇、菱角镇、尖山镇、朝阳镇、通城镇、双阳乡、胜利乡、城厢镇、宁厂镇、红池坝镇、长桂乡等海拔600米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231210/t20231210_526514654.html",
           "publishedOn": "2023-12-10T11:34:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市巫溪县发布大雾黄色预警",
           "imageUrl": null
         },
@@ -592,7 +922,7 @@
           "description": "云阳县气象台2023年12月10日18时16分发布“大雾黄色预警信号”，预计10日20时至11日8时，全县各乡镇（街道）将出现能见度小于500米的大雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231210/t20231210_526514627.html",
           "publishedOn": "2023-12-10T10:35:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市云阳县发布大雾黄色预警",
           "imageUrl": null
         },
@@ -602,7 +932,7 @@
           "description": "巴南区气象台2023年12月10日15时30分继续发布“大雾黄色预警信号”，预计12月10日15时至11日9时，姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231210/t20231210_526514467.html",
           "publishedOn": "2023-12-10T08:09:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市巴南区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -612,7 +942,7 @@
           "description": "万州区气象台2023年12月10日15时10分发布“大雾黄色预警信号”，预计10日21时至11日09时，陈家坝街道、百安坝街道、长坪乡、武陵镇、新乡镇、分水镇、孙家镇等镇乡街将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。有关部门和单位按照职责做好防雾准备工作；机场、高速公路、轮渡码头等单位加强交通管理，保障安全；驾驶人员注意雾的变化，小心驾驶；户外活动注意安全。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231210/t20231210_526514443.html",
           "publishedOn": "2023-12-10T07:41:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市万州区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -622,7 +952,7 @@
           "description": "忠县气象台2023年12月10日14时30分继续发布“大雾黄色预警信号”，预计12月10日23时至11日10时，忠州街道、白公街道、乌杨街道、新生街道、涂井乡、石宝镇、汝溪镇、金声乡、野鹤镇、磨子土家族乡、石子乡、复兴镇、东溪镇、黄金镇、永丰镇、花桥镇、三汇镇、马灌镇、官坝镇、金鸡镇、石黄镇、兴峰乡、白石镇、任家镇、双桂镇、拔山镇、洋渡镇、善广乡、新立镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231210/t20231210_526514365.html",
           "publishedOn": "2023-12-10T06:38:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市忠县发布大雾黄色预警",
           "imageUrl": null
         },
@@ -632,7 +962,7 @@
           "description": "巫溪县气象台2023年12月10日10时20分发布“大雾黄色预警信号”，预计10日10时30分至20时30分，我县文峰镇、上磺镇、古路镇、塘坊镇、菱角镇、尖山镇、朝阳镇、通城镇、双阳乡、胜利乡、城厢镇、宁厂镇、红池坝镇、长桂乡等海拔600米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231210/t20231210_526514241.html",
           "publishedOn": "2023-12-10T02:31:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市巫溪县发布大雾黄色预警",
           "imageUrl": null
         },
@@ -642,7 +972,7 @@
           "description": "巴南区气象台2023年12月10日8时50分发布“大雾黄色预警信号”，预计10日9时至15时，姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231210/t20231210_526514113.html",
           "publishedOn": "2023-12-10T01:00:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市巴南区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -652,7 +982,7 @@
           "description": "涪陵区气象台2023年12月10日03时20分发布“大雾橙色预警信号”，预计12月10日03时20分至12时，马鞍街道、李渡街道、江北街道、龙桥街道、白涛街道、敦仁街道、崇义街道、江东街道、清溪镇、南沱镇、义和街道、石沱镇、蔺市街道、荔枝街道、珍溪镇将出现能见度小于200米的雾，局部地区能见度小于50米。请以上各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/csyj/20231210/t20231210_526513985.html",
           "publishedOn": "2023-12-09T19:26:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市涪陵区发布大雾橙色预警",
           "imageUrl": null
         },
@@ -662,7 +992,7 @@
           "description": "万州区气象台2023年12月9日16时发布“大雾黄色预警信号”，预计9日23时至10日10时，陈家坝街道、百安坝街道、长坪乡、武陵镇、新乡镇、新田镇等镇乡街将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。有关部门和单位按照职责做好防雾准备工作；机场、高速公路、轮渡码头等单位加强交通管理，保障安全；驾驶人员注意雾的变化，小心驾驶；户外活动注意安全。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231209/t20231209_526513667.html",
           "publishedOn": "2023-12-09T08:21:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市万州区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -672,7 +1002,7 @@
           "description": "忠县气象台2023年12月9日14时30分继续发布“大雾黄色预警信号”，预计12月9日23时至10日10时，忠州街道、白公街道、乌杨街道、新生街道、涂井乡、石宝镇、汝溪镇、金声乡、野鹤镇、磨子土家族乡、石子乡、复兴镇、东溪镇、黄金镇、永丰镇、花桥镇、三汇镇、马灌镇、官坝镇、金鸡镇、石黄镇、兴峰乡、白石镇、任家镇、双桂镇、拔山镇、洋渡镇、善广乡、新立镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231209/t20231209_526513596.html",
           "publishedOn": "2023-12-09T06:43:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市忠县发布大雾黄色预警",
           "imageUrl": null
         },
@@ -682,7 +1012,7 @@
           "description": "长寿区气象台2023年12月9日9时升级发布“大雾橙色预警信号”，预计9日9时至12时，江南街道、晏家街道、凤城街道、菩提街道、渡舟街道、但渡镇、八颗街道、新市街道、邻封镇、长寿湖镇、云集镇、龙河镇、石堰镇、葛兰镇、双龙镇、云台镇、海棠镇、万顺镇、洪湖镇将出现能见度小于200米的雾，局部地区能见度小于50米。请以上各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/csyj/20231209/t20231209_526513344.html",
           "publishedOn": "2023-12-09T01:21:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市长寿区发布大雾橙色预警",
           "imageUrl": null
         },
@@ -692,7 +1022,7 @@
           "description": "万州区气象台2023年12月9日08时22分发布“大雾黄色预警信号”，预计9日08时23分至9日10时50分，陈家坝街道、百安坝街道、长坪乡、武陵镇、新乡镇、新田镇等镇乡街将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。有关部门和单位按照职责做好防雾准备工作；机场、高速公路、轮渡码头等单位加强交通管理，保障安全；驾驶人员注意雾的变化，小心驾驶；户外活动注意安全。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231209/t20231209_526513246.html",
           "publishedOn": "2023-12-09T00:41:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市万州区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -702,7 +1032,7 @@
           "description": "涪陵区气象台2023年12月9日7时40分发布“大雾黄色预警信号”，预计12月9日7时40分至12时，南沱镇、马鞍街道、李渡街道、江北街道、龙桥街道、白涛街道、敦仁街道、崇义街道、江东街道、清溪镇、义和街道、石沱镇、蔺市街道、荔枝街道、珍溪镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。防御指南：有关部门和单位按照职责做好防雾准备工作；机场、高速公路、轮渡码头等单位加强交通管理，保障安全；驾驶人员注意雾的变化，小心驾驶；户外活动注意安全。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231209/t20231209_526513215.html",
           "publishedOn": "2023-12-09T00:07:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市涪陵区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -712,7 +1042,7 @@
           "description": "长寿区气象台2023年12月9日7时30分发布“大雾黄色预警信号”：预计9日8时至12时，江南街道、凤城街道、菩提街道、渡舟街道、晏家街道、八颗街道、新市街道、但渡镇、长寿湖镇、邻封镇、双龙镇、云集镇、龙河镇、葛兰镇、万顺镇、洪湖镇、石堰镇、云台镇、海棠镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231209/t20231209_526513207.html",
           "publishedOn": "2023-12-08T23:56:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市长寿区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -722,7 +1052,7 @@
           "description": "巴南区气象台2023年12月9日7时40分发布“大雾黄色预警信号”，预计9日7时至12时，姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231209/t20231209_526513206.html",
           "publishedOn": "2023-12-08T23:50:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市巴南区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -732,7 +1062,7 @@
           "description": "垫江县气象台2023年12月9日6时30分发布“大雾黄色预警信号”。预计12月9日6时至11时，杠家镇、永平镇、坪山镇、三溪镇、裴兴镇、大石乡、沙河乡、白家镇、鹤游镇、砚台镇、高峰镇、高安镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231209/t20231209_526513172.html",
           "publishedOn": "2023-12-08T22:34:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市垫江县发布大雾黄色预警",
           "imageUrl": null
         },
@@ -742,7 +1072,7 @@
           "description": "璧山区气象台2023年12月9日5时20分发布“大雾黄色预警信号”，预计9日5时至11时，八塘镇、七塘镇、大路街道、河边镇、福禄镇、璧城街道、璧泉街道、大兴镇、正兴镇、来凤街道、青杠街道、健龙镇、丁家街道、广普镇、三合镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231209/t20231209_526513162.html",
           "publishedOn": "2023-12-08T22:02:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市璧山区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -752,7 +1082,7 @@
           "description": "潼南区气象台2023年12月9日5时30分发布“大雾黄色预警信号”，预计12月9日6时至12时，我区全部镇街将出现能见度小于500米的雾，局部地区能见度小于200米。请注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231209/t20231209_526513160.html",
           "publishedOn": "2023-12-08T21:48:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市潼南区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -762,7 +1092,7 @@
           "description": "永川区气象台2023年12月9日2时25分发布“大雾黄色预警信号”，预计9日3时至11时，我区全部镇街将出现能见度小于500米的雾，局部地区能见度小于200米。请各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231209/t20231209_526513154.html",
           "publishedOn": "2023-12-08T18:29:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市永川区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -772,7 +1102,7 @@
           "description": "巫溪县气象台2023年12月8日22时50分发布“大雾黄色预警信号”，预计12月9日2时至11时，我县文峰镇、上磺镇、古路镇、塘坊镇、菱角镇、尖山镇、朝阳镇、通城镇、双阳乡、胜利乡、城厢镇、宁厂镇、红池坝镇、长桂乡等海拔600米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231208/t20231208_526513112.html",
           "publishedOn": "2023-12-08T15:08:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市巫溪县发布大雾黄色预警",
           "imageUrl": null
         },
@@ -782,7 +1112,7 @@
           "description": "江津区气象台2023年12月8日22时10分发布“大雾黄色预警信号”，预计9日1时至11时，贾嗣镇、支坪镇、鼎山街道、珞璜镇、西湖镇、石门镇、油溪镇、龙华镇、几江街道、圣泉街道、先锋镇、吴滩镇、德感街道、永兴镇、塘河镇、慈云镇、朱杨镇、石蟆镇、白沙镇、李市镇等镇街将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231208/t20231208_526513105.html",
           "publishedOn": "2023-12-08T14:36:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市江津区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -792,7 +1122,7 @@
           "description": "忠县气象台2023年12月8日16时10分继续发布“大雾黄色预警信号”，预计12月8日23时至9日10时，忠州街道、白公街道、新生街道、乌杨街道、涂井乡、石宝镇、汝溪镇、金声乡、野鹤镇、磨子土家族乡、石子乡、复兴镇、东溪镇、黄金镇、永丰镇、花桥镇、三汇镇、马灌镇、官坝镇、金鸡镇、石黄镇、兴峰乡、白石镇、任家镇、双桂镇、拔山镇、洋渡镇、善广乡、新立镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231208/t20231208_526512655.html",
           "publishedOn": "2023-12-08T08:32:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市忠县发布大雾黄色预警",
           "imageUrl": null
         },
@@ -802,7 +1132,7 @@
           "description": "巫溪县气象台2023年12月8日8时30分发布“大雾黄色预警信号”，预计8日8时30分至12时，我县文峰镇、上磺镇、古路镇、塘坊镇、菱角镇、尖山镇、朝阳镇、通城镇、双阳乡、胜利乡、城厢镇、宁厂镇、红池坝镇、长桂乡等海拔600米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231208/t20231208_526512014.html",
           "publishedOn": "2023-12-08T00:38:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市巫溪县发布大雾黄色预警",
           "imageUrl": null
         },
@@ -812,7 +1142,7 @@
           "description": "江津区气象台2023年12月8日7时40分发布“大雾黄色预警信号”，预计8日7时至11时，贾嗣镇、支坪镇、杜市镇、鼎山街道、珞璜镇、夏坝镇、广兴镇、四面山镇、西湖镇、嘉平镇、四屏镇、柏林镇、中山镇、石门镇、油溪镇、龙华镇、几江街道、圣泉街道、先锋镇、吴滩镇、德感街道、双福街道、蔡家镇、永兴镇、塘河镇、慈云镇、朱杨镇、石蟆镇、白沙镇、李市镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231208/t20231208_526511948.html",
           "publishedOn": "2023-12-07T23:54:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市江津区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -822,7 +1152,7 @@
           "description": "永川区气象台2023年12月8日7时10分发布“大雾黄色预警信号”，预计8日7时至11时，我区全部镇街将出现能见度小于500米的雾，局部地区能见度小于200米。请各地注意防范大雾天气可能造成的影响。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231208/t20231208_526511934.html",
           "publishedOn": "2023-12-07T23:19:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市永川区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -832,7 +1162,7 @@
           "description": "大足区气象台2023年12月8日06时50分发布“大雾黄色预警信号”:预计8日07时-11时我区龙岗街道、棠香街道、玉龙镇、雍溪镇、金山镇、万古镇、国梁镇、回龙镇、石马镇、拾万镇、古龙镇、三驱镇、智凤街道、宝顶镇、高升镇、铁山镇、中敖镇、高坪镇、龙滩子街道、通桥街道、邮亭镇、双路街道、龙水镇、珠溪镇、龙石镇、季家镇、宝兴镇等镇街将出现能见度小于500米的雾，局部地区能见度小于200米。请注意预防大雾天气可能造成的危害。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231208/t20231208_526511926.html",
           "publishedOn": "2023-12-07T22:56:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市大足区发布大雾黄色预警",
           "imageUrl": null
         },
@@ -842,7 +1172,7 @@
           "description": "重庆市铜梁区气象台2023年12月7日20时40分发布“大雾黄色预警信号”，预计12月8日05时至10时，蒲吕街道、巴川街道、东城街道、旧县街道、南城街道、高楼镇、安居镇、少云镇、白羊镇、平滩镇、西河镇、围龙镇、华兴镇等大部镇街将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。防御指南：1.车辆驾驶及户外活动注意安全。2.机场、高速公路、水上交通等单位加强交通管理。3.相关部门和乡镇街道按照职责，做好大雾防范应对工作。",
           "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231207/t20231207_526511805.html",
           "publishedOn": "2023-12-07T12:56:00.000Z",
-          "wordCount": 523,
+          "wordCount": null,
           "title": "重庆市铜梁区发布大雾黄色预警",
           "imageUrl": null
         }
@@ -859,7 +1189,7 @@
           "description": "大家好，我是大澈！\n本文约1200+字，整篇阅读大约需要2分钟。\n感谢关注微信公众号：“程序员大澈”，然后免费加入问答群，从此让解决问题的你不再孤单！\n1. 资讯速览\n就在前阵子，前端人都用过的工具VSCode，迎来了它的1.85新版本。\n此次版本更新，带来了较大变动，下面先总体看一下：\n\n翻译过来就是这样子：\n欢迎使用 2023 年 11 月发布的 Visual Studio Code。此版本中有许多更新，我们希望您会喜欢，其中一些主要亮点包括：\n浮动编辑器窗口 - 将编辑器拖放到桌面上。\n无障碍视图工作流程 - 更顺畅地往返于无障碍视图。\n更精细的扩展更新控制 - 选择要自动更新的扩展。\n源代码控制传入和传出视图 - 轻松查看待处理的存储库更改。\nJavaScript 堆快照 - 可视化堆快照，包括内存对象图。\nTypeScript 从嵌入提示转到定义 - 从嵌入提示悬停跳转到定义。\nPython 类型层次结构显示 - 快速查看和导航复杂的类型关系。\nGitHub Copilot 更新 - 内联聊天改进、Rust 代码解释。\n预览：扩展的粘性滚动支持 - 在树视图和终端中粘性滚动。\n2. 资讯详述\nVSCode此次版本的更新，虽然变动挺多，但还是那句话，很多东西我们根本用不到，更不更新真的是无所谓哈。\n下面列举两个新特性，我觉得在项目中特别有用。\n2.1 浮动编辑器窗口\nVSCode 在其最新版本1.8.5中，引入了一个备受期待的功能：浮动编辑器窗口。\n这项新功能，允许用户将编辑器从主窗口中拖出，形成独立的轻量级窗口。在任何一个窗口中对编辑器所做的更改，都会即时反映到其它所有打开该编辑器的窗口中。\n简单来说，就是我们在项目中分屏时，可以直接从编辑器当前窗口拖出，并放置在另一个屏幕上。\n\n值得一提的是，既然终端和搜索结果都可以作为编辑器打开，现在这些功能也可以在单独的窗口中使用了！\n\n2.2 系统资源可直接CV\n此前，将文件从系统资源管理器移动到VSCode，通常需要打开文件资源管理器，再手动复制文件到相应目录中。\n但在最新版本中，增加了一个实用的新功能：可直接从操作系统的资源管理器中，粘贴文件到VSCode的目录里。\n这意味着，用户现在可以更方便的，从他们的电脑文件系统中复制需要的静态资源文件，并直接粘贴到VSCode的项目目录中，而不需要再去做打开文件资源管理器这种浪费时间的操作。\n\n结语\n建立这个平台的初衷：\n打造一个仅包含前端问题的问答平台，让大家高效搜索处理同样问题。\n通过不断积累问题，一起练习逻辑思维，并顺便学习相关的知识点。\n遇到难题，遇到有共鸣的问题，一起讨论，一起沉淀，一起成长。\n感谢关注微信公众号：“程序员大澈”，然后免费加入问答群，从此让解决问题的你不再孤单！",
           "link": "https://juejin.cn/post/7311597716785938451",
           "publishedOn": "2023-12-12T14:35:00.000Z",
-          "wordCount": 755,
+          "wordCount": null,
           "title": "技术资讯：VSCode大更新，这两个功能终于有了",
           "imageUrl": null
         },
@@ -869,7 +1199,7 @@
           "description": "大家好，这里是大家的林语冰。\n今天尤大（Evan You，尤雨溪）又双叒叕发朋友圈了，Vue 3.4 beta（公测版）将于本周正式发布，且期望在今年年底尘埃落定。\n\n所以，本期《前端翻译计划》共享的是尤大亲笔的官方博客，Vue 团队官宣 Vue 3.3 正式发布，一起来重温今年五月 Vue 3.3 的升级大纲，为 Vue 3.4 预热前戏。\n免责声明\n本文属于是语冰的直男翻译了属于是，仅供粉丝参考，英文原味版请临幸 Announcing Vue 3.3。\n\n今天，我们十分鸡冻，普大喜奔 —— Vue 3.3（代号“浪客剑心”）正式发布！\n此版本聚焦于优化 UX（开发体验） —— 尤其是 SFC（单文件组件）<script setup> 和 TS（TypeScript）梦幻联动。联手 Vue 语言工具（曾用名 Volar） 的 1.6 版本，我们搞定了一大坨用 TS 写 Vue 的痼疾。\n本文概述了 Vue 3.3 的亮点功能。关于更新的完整清单，请传送 GitHub 完整更新日志。\n依赖更新\n当升级到 Vue 3.3 时，建议同时更新以下依赖：\nvolar/vue-tsc@^1.6.4\nvite@^4.3.5\n@vitejs/plugin-vue@^4.2.0\nvue-loader@^17.1.0（如果使用了 webpack/vue-cli）\nVue 3.3 版本速览：\n优化 <script setup> + TS DX（开发体验）\n\n支持宏中的导入类型和复杂类型\n泛型组件\n更符合人体工程学的 definedEmits\n携带 definedSlots 的类型插槽\n实验性功能\n\n响应式 props 解构\ndefineModel\n其他重要功能\n\ndefineOptions\n更好地支持 getter 与 toRef 和 toValue 一起使用\n支持 JSX 导入源\n优化维护基…",
           "link": "https://juejin.cn/post/7311603123570933796",
           "publishedOn": "2023-12-12T08:53:01.000Z",
-          "wordCount": 1748,
+          "wordCount": null,
           "title": "Vue 3.3 官宣升级！Vue 3.4 预热。",
           "imageUrl": null
         },
@@ -879,7 +1209,7 @@
           "description": "Ant Design Mini\n经过一段时间的开发与不断的努力，我们兴奋地宣布，Ant Desigin Mini 组件库中已有 16 个核心组件完成了微信小程序的适配工作！现在你不仅可以在支付宝小程序中使用 Ant Desigin Mini 组件库，也可以在微信小程序中使用了！\n目前这项适配正处于 Beta 阶段，我们诚挚地邀请大家前来体验。首批适配的组件包括：Button、Slider、Container、Icon、Loading、Switch、Tag、Input、Calendar、List、Result、Popover、Mask、Stepper、Popup、Checkbox\n先来看看 Demo 效果：\n\n我们的官网文档、Demo 都已同步更新双端切换能力：\n\n你可以参考以下文档进行接入：\n接入支付宝小程序：https://ant-design-mini.antgroup.com/guide/quick-start\n接入微信小程序：https://ant-design-mini.antgroup.com/guide/using-wechat\n使用 uni-app 接入：https://ant-design-mini.antgroup.com/guide/using-uni-app\n双平台无法对齐的特性\n受制于各平台框架设计，以下这些特性存在差异：\n两个平台的事件 API 不同。支付宝小程序可以把实例上通过 props 传递给子组件，而微信需要在 data 里传递函数。视图层的写法也所有不同。\n\n下面是 Calendar 在两种平台的使用方式。\n\n微信小程序\nPage({\n  data:{\n    handleFormat() {\n}\n  }\n})\n\n<calendar onFormat=\"{{handleFormat}}\" />\n\n  - 支付宝小程序\n\nPage({\n …",
           "link": "https://juejin.cn/post/7311603519570952246",
           "publishedOn": "2023-12-12T07:59:05.000Z",
-          "wordCount": 2015,
+          "wordCount": null,
           "title": "Ant Design Mini 支持微信小程序啦！",
           "imageUrl": null
         },
@@ -889,7 +1219,7 @@
           "description": "前言\n小编所在的团队叫 “Cuckoo FE” （Cuckoo：布谷鸟，多数种类为灰褐或褐色，喙强壮而稍向下弯，一只幼鸟一天能吃39只蚱蜢），寓意朴实能干，下文中工程化实践各类体系也是以Cuckoo开头。\n目前前端团队成员接近20人，归属字节商业化业务中台，承担海外商业化交易流程建设，为字节内部出海产品提供商业变现能力，整体技术方向以PC中台为主（90%+），另外包含部分移动端项目。\n从一个故事说起\n小马加入公司不久，最近刚接手一个新需求。凭借以往经验，这是一个small case，很快的给了排期，准备开干。没多久，他就向他的mentor提了第一个问题：“怎么创建项目？”，mentor很快就丢过来一个仓库，并回复道“你拿着这个项目去copy下改改”。小马愣了一下，不敢多问，立马开始操作，一顿CV猛如虎，项目终于跑起来，心想“快了，只要项目跑起来就快了”。接着小马在开发过程中遇到一个比较通用的功能，又问mentor有没有类似组件，没多久mentor又丢过来一个仓库，并在链接下评论：“你在xx文件下找找xx组件，应该修改修改就能用”，小马又把项目跑起来了，细研究了源码，果然能用，很开心又解决了一个问题。这样类似问题一个接一个，mentor也都能很快的给出答复。时间很快，在mentor的加持下到了联调那一天，小马心里长舒一口气“终于可以用真实数据跑一把了”，结果在浏览器刷新的那一刻，页面白了，虽然屏幕有点脏，但显的格外的白，这终究还是没有超出预期啊。这一调又是一堆问题，要么是成功码不对，要么是该有的字段没有，有了结构也不对，小马跑过去问后端怎么回事，后端回道“你应该没看最新文档”，小马打开文档对比了下：“嗯，是已经有很多不一样的了，但和现在的接口返回好像也不完全一样吧”，最终小马还是选择了相信接口返回的json。又是一顿折腾准备提测，小马又问mentor“怎么部署啊？”，ment…",
           "link": "https://juejin.cn/post/7311596602249134106",
           "publishedOn": "2023-12-12T07:11:37.000Z",
-          "wordCount": 1202,
+          "wordCount": null,
           "title": "字节三年，谈谈一线团队如何搞工程化一（全景篇）",
           "imageUrl": null
         },
@@ -899,7 +1229,7 @@
           "description": "前言\nJetBrains是一家位于捷克的软件开发公司，有很多知名的开发IDE都是他们家的，比如IntelliJ IDEA、CLion、PyCharm、WebStorm等等，还有Kotlin编程语言也是JetBrains开发的，后来成为Android官方开发语言。\n自2017年JetBrains发布第一个年度报告以来，各种指标也备受开发人员关注，是编程领域的风向标。\n2023年度报告是JetBrains汇集了来自全球 26,348 位开发者的洞察，其中也有我的一份。\n这份报告涵盖的主题也很多，包括编程语言、工具、技术等等，甚至包括年龄和收入，并增加了人工智能发展趋势，包括开发者对于AI的接受度和顾虑等。\n下面一起来看看这份2023年度报告中有哪些值得我们关注和有趣的地方。\n原文：https://www.jetbrains.com/zh-cn/lp/devecosystem-2023/?map=2&map=2\n编程语言\n编程语言是开发者的工具箱，不同的工具用来处理完成不同的工作，而什么样的编程语言更出色，也一直是广大开发者讨论的一个热门话题。\n\nObjective-C 客观来讲已经退休了\n过去六年，Objective-C 失去了三分之二的用户，似乎即将走到生命的尽头。在过去一年中，只有不到 2% 的程序员至少使用过一次，只有 11 名调查参与者报告说该语言是他们的主要语言。Objective-C 使用率的下降速度甚至超过了 COBOL 和 Perl。\n这种语言自 1984 年推出以来一直发展良好，直到 Apple 于 2014 年发布其继承者 Swift。由于存在其他跨平台语言，例如 Kotlin、Dart 等，iOS 开发者的选择余地很大，几乎没有理由继续使用 Objective-C。\n而iOS开发者在国内的处境也越来越难了啊...\n对 Rust 的信任：成长的故事\nRust…",
           "link": "https://juejin.cn/post/7311150820579147839",
           "publishedOn": "2023-12-11T17:58:34.000Z",
-          "wordCount": 1123,
+          "wordCount": null,
           "title": "JetBrains2023年度报告，编程领域的风向标",
           "imageUrl": null
         },
@@ -909,7 +1239,7 @@
           "description": "背景\n这几天看到好多文章标题都是类似于：\n不用 ref 的 xx 个理由\n不用 reactive 的 xx 个理由\n历数 ref 的 xx 宗罪\n我就很不解，到底是什么原因导致有这两批人：\n抵触 ref 的人\n抵触 reactive 的人\n看了这些文章，我可以总结出他们的想法\n抵触 reactive 的人\n抵触 reactive 的人，他们的想法大概就是：\n1、Vue 官方推荐 ref\n2、reactive 有类型限制，ref 没有\n3、reactive 使用不当会丢失响应式，比如解构\n4、reactive 无法修改整个对象的值\n抵触 ref 的人\n抵触 ref 的人，他们的想法大概就是：\n1、ref 的底层其实就是 reactive，用 ref 相当于多了一层，耗费性能\n2、ref 的 .value 用起来很麻烦，增加使用者心里负担\n3、ref 到模板的时候会解掉 value 这一层，这时候也会耗费性能\n把我整笑了~\n说实话，看到这些文章，有点把我整笑了，其实你要用 ref 或者 reactive 都没错，但是没比必要那么抵触，编程很多时候并不是非黑即白啊。。。\n既然 Vue3 推出了 ref 和 reactive，那就说明他们都有存在的必要，在项目中不同的场景去运用他们，我觉得才是最好的，而不是用一个不用另一个，不止这两个，还有很多其他好用的 Vue3 API\n我想针对这两批人的想法做一个回应：\n回应 -> 抵触 reactive 的人\n1、官方是推荐，不是抵触\n2、reactive 既然有类型限制，那就在特定时候用 reactive 就行\n3、使用不当会丢失响应式？那就是开发者对于 Vue3 API 的使用还不熟\n4、用 Object.assign 就可以修改整个对象的值\n回应 -> 抵触 ref 的人\n1、耗费性能的话，这么久了，也没人贴出到底耗费了多少性能？\n2、…",
           "link": "https://juejin.cn/post/7311226497111916563",
           "publishedOn": "2023-12-11T12:47:19.000Z",
-          "wordCount": 1468,
+          "wordCount": null,
           "title": "天天看到有人抵触ref，有人抵触reactive，把我整笑了",
           "imageUrl": null
         },
@@ -919,7 +1249,7 @@
           "description": "highlight: zenburn\ntheme: devui-blue\n\n一、前言\n本文是 从零到亿系统性的建立前端构建知识体系✨\n中的第十篇。\n随着前端项目规模的不断扩大，构建时间和性能成为开发者们日益关注的焦点。\n在这个背景下，esbuild 以惊人的速度和卓越的性能迅速吸引了众多开发者的目光。\n\n近两年来，esbuild 的 npm 下载量也呈现出迅猛增长的趋势，一副要和老大哥 Webpack 争一争这头把交椅的味道。\n在一些开发者眼中，esbuild 不仅是一个构建工具，更像是一个革命先驱。它对现代前端构建范式发起了一场革命，让我们突然意识到，前端工具的选择并非局限于 Node.js，还包括像 Golang、Rust 这样的新兴技术栈。\n本文将从实际需求出发，深入调研 esbuild 的应用场景。和大家探讨一下：esbuild 到底是名副其实还是虚有其表？\n二、调研目录\n为了满足生产环境的构建需求，调研内容如下：\n基本特性：\n\n是否支持 .js、.jsx、.ts、.tsx（要求能在 .js 中写 jsx 语法）\n是否支持 .css、.module.css、.less、.module.less\n是否支持不同文件格式之间的互相引用（比如 .css 文件中引入 .less）\n是否支持字体图标\n是否支持常规的图片资源（在 .js / .css / .less / .html 中的引用）\n其他资源文件处理：.json、.txt、.data 等\n配置路径别名缩短引用路径\n提供 html 模版，将打包后的文件插入到 html 模版中\n在 NodeJs 环境和 Web 环境中获取环境变量（判断是开发环境还是生产环境）\n生成 source-map 文件，最起码要有开发环境模式和生产环境模式\n性能优化：\n\n资源文件解析转换：比如当图片资源小于 8kb 时，转换为 base64 格式\n…",
           "link": "https://juejin.cn/post/7310168607342624808",
           "publishedOn": "2023-12-11T00:14:07.000Z",
-          "wordCount": 8758,
+          "wordCount": null,
           "title": "Esbuild深度调研：吹了三年，能上生产了吗？",
           "imageUrl": null
         },
@@ -929,7 +1259,7 @@
           "description": "theme: juejin\n你好，我是 Kagol。\nVue 是一款易学易用，性能出色，适用场景丰富的渐进式 JavaScript 框架，深受广大开发者的喜爱，Vue3 更是推出了 Composition API，让逻辑复用更友好。\n马上就到 2024 年了，如果你的项目正在使用 Vue3，或者打算升级 Vue3，以下 Vue3 组件库或许是不错的选择。\nElement Plus\n\nElement UI 是国内使用最广泛的 Vue2 组件库之一，而 Element Plus 是 Element UI 的升级版，基于 Vue3 和 TypeScript，提供了 70 多个易于使用的组件。\n官网：https://element-plus.org/\nGitHub：https://github.com/element-plus/element-plus\nNPM：https://www.npmjs.com/package/element-plus\nElement Plus 于 2020年9月发布第一个 Beta 版本，2022年2月发布第一个稳定版本 v2.0.0，目前基主要由社区开发者在维护。\n以下是截止到 2023.12.9 的数据情况：\n指标\n数值\n\n\n\n\nStar\n22k\n\n\nNPM 周下载\n155,168\n\n\nIssue\n1251(Open)+4682(Closed)\n\n\nPR\n397+6027\n\n\n贡献者\n540\n\n\n组件数\n70\n\n\n\nVuetify\n\nVuetify 基于 Material Design 设计规范，提供 80 多个组件，拥有动态主题、全局默认值、应用框架等丰富而强大的特性，它以提供给开发者丰富的工具，给用户良好而丰富的使用体验为最终目标。\n官网：https://vuetifyjs.com/\nGitHub：https://github.com/vueti…",
           "link": "https://juejin.cn/post/7310786618390380581",
           "publishedOn": "2023-12-10T23:57:47.000Z",
-          "wordCount": 1460,
+          "wordCount": null,
           "title": "2024 年最值得推荐的 7 个 Vue3 组件库",
           "imageUrl": null
         },
@@ -939,7 +1269,7 @@
           "description": "theme: juejin\nhighlight: a11y-dark\n说到布局很多人的感觉应该都是恐惧，为此很多人都背过一些很经典的布局方案，例如：圣杯布局、双飞翼布局等非常耳熟的名词；\n为了实现这些布局我们有很多种实现方案，例如：table布局、float布局、定位布局等，当然现在比较流行的肯定是flex布局；\nflex布局属于弹性布局，所谓弹性也可以理解为响应式布局，而同为响应式布局的还有Grid布局；\nGrid布局是一种二维布局，可以理解为flex布局的升级版，它的出现让我们在布局方面有了更多的选择，废话不多说，下面开始全程高能；\n本篇不会过多介绍grid的基础内容，更多的是一些布局的实现方案和一些小技巧；\n常见布局\n所谓的常见布局只是我们在日常开发中经常会遇到的布局，例如：圣杯布局、双飞翼布局这种名词我个人觉得不用太过于去在意；\n因为这类布局最后的解释都会变成几行几列，内容在哪一行哪一列，而这些就非常直观的对标了grid的特性；\n接下来我们来一起看看一些非常常见的布局，并且用grid来实现；\n1. 顶部 + 内容\n\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Title</title>\n    <style>\n        html, body {\n            margin: 0;\n            padding: 0;\n        }\n\n        body {\n            display: grid;\n            grid-template-rows: 60px 1fr;\n            height: 100vh;\n        }\n\n        .header {\n        …",
           "link": "https://juejin.cn/post/7310423470546354239",
           "publishedOn": "2023-12-10T15:06:30.000Z",
-          "wordCount": 3689,
+          "wordCount": null,
           "title": "学会Grid之后，我觉得再也没有我搞不定的布局了",
           "imageUrl": null
         },
@@ -949,7 +1279,7 @@
           "description": "前言\n我93年的，还差几天就到30周岁生日。做前端开发大概也有6、7年，算是老前端了。\n2023\n写作\n在掘金看文章已经很多年了，学到了很多东西。今年三月份在掘金写下了第一篇文章，开始的想法是把自己的开发笔记整理一下写成文章，来巩固一下自己的知识，没想到在写文章分享的过程中帮助了很多人，也得到了很多人认可，让我写文章分享的动力也越来越强，基本每周都会写一篇，闲在没事的时候基本都是在构思下一篇文章写什么。希望明年能写更多的文章，帮助更多的人。\n写作给我带来了什么\n巩固知识。把自己学到的东西，分享出去，印象更深刻了。\n更多的机会。写作过程中，有大厂私信我，给我一些面试机会，这个时候的面试机会还是很宝贵的，不过因为一些原因都拒绝了。\n快乐。很多人私信我说很感谢我分享的东西，让他们学到了很多东西。看到这些感谢的话，自己得到认可，还是很开心的。\n钱。写文章参与掘金的金石计划活动，陆陆续续差不多获得了接近1000的收入，每次拿到钱，带着老婆孩子去吃顿好的，还是不错的。\n降薪\n今年公司受大环境影响，裁了一部分人，留下来的人也都降薪了。开始有点接受不了，想跑，但是因为是在上海嘉定郊区，附近找不到好的工作，最近的也要1个小时的地铁，并且小孩刚上一年级，上海基本不可能跨区转校，所以打消了换工作的念头，只能在公司了干下去，相信公司会好起来的。\n家庭\n看了上面肯定有倔友怀疑，30岁小孩怎么能上一年级？不错我大四结的婚，还是奉子成婚，所以早早的有了孩子。\n因为自己小时候是留守儿童，不想让自己孩子过留守儿童的生活，所以孩子一直是和我们在一起，记得我刚出来工作的时候，一个月才3500，我老婆全职带孩子，这些薪资刚够花销，生活过的比较拮据，有时候还要靠我父母接济。\n现在收入稍微好了一些，但是我们还没有买房子，存款也不多，在别人看来压力可能会有点大，但是我心比较大，平时消费欲望也比较低，对钱不是那么渴望，一…",
           "link": "https://juejin.cn/post/7310549035965890614",
           "publishedOn": "2023-12-10T14:36:36.000Z",
-          "wordCount": 708,
+          "wordCount": null,
           "title": "一个30岁老前端的人生经历（学习+工作+婚姻+孩子），给迷茫的朋友一点激励。",
           "imageUrl": null
         },
@@ -959,7 +1289,7 @@
           "description": "theme: fancy\nHello everyone～\n笔者前段时间参加了快手国际化的面试，一面有一道题目当时做了好久，一直没有做出来，后面事情太多了，自己又比较懒散，就没有整理。这段时间很多事情都告一段落了，我也觉得我可以继续整理题目了。\n当时我和面试官的对话 be like：\n面试官：“页面上有100个li，你知道怎么实现”点击li能console.log里面的内容“这个功能吗。”\n我：“这个应该不难的吧，我对每一个li做监听不就好了，点击直接做展示。”\n面试官：“那你在实习的时候会这样写代码吗？”\n我当时就汗流浃背了，我说这个方向只是因为我只想到了这个，其他不会啊（）\n我：“我实习的时候应该不会这样写吧。”\n面试官：“为什么？”\n我：“因为对100个li做事件监听，一个方面是性能上的开销比较大，第二个是这个写法很笨，扩展能力不强，如果再新增li的话，那我又要重新去绑定。”\n面试官：“那你知道还有什么其他的方法吗”\n我：“我理解应该可以用事件捕获来做这个事情，但是具体的写法我不太了解”\n面试官就去到了下一个问题，没为难我（）\n最后面完差不多30min就约下一面了，但由于自己的身体原因，后面就直接把面试全部推掉了。\n那么我们来聊聊具体的实现方式吧～\n实现方法一：\n通过document.querySelectorAll('#myList li')获取所有的<li>元素。然后，使用forEach方法为每个<li>元素添加点击事件监听器。当用户点击任何一个<li>元素时，回调函数将打印该元素的内容到控制台。请记得根据你的实际需要修改代码中的<ul>的id和添加更多的<li>元素。\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"w…",
           "link": "https://juejin.cn/post/7310448854628565007",
           "publishedOn": "2023-12-10T13:25:41.000Z",
-          "wordCount": 1212,
+          "wordCount": null,
           "title": "快手面试官：页面上有100个li，你知道怎么实现”点击li能console.log里面的内容“这个功能吗。",
           "imageUrl": null
         },
@@ -969,7 +1299,7 @@
           "description": "前言\n也是找了许久的工作，终于在这周入职新公司了。\n本文就是想简单分享一下自己离职、找工作的经历和入职新公司一周后的一些感想吧。\n离职\n其实我在上一家公司就呆了几个月，但是整个过程中内耗非常严重，常常焦虑到失眠，有次甚至失眠到半夜四点起来跑步缓解焦虑。\n后面觉得这样下去也不是办法，咬咬牙就裸辞了（大伙们还是不要学我，多少是有些任性了）。\n提出辞职的时候其实同事和领导也有挽留，提出可以让我休息几天，调整放松一下。不过当时觉得既然提出了辞职，再呆下去其实也不好，最后还是走了。\n离职后还是会基本每天写代码保持手感\n离职后其实并没有完全放松摆烂，还是会在网上看一些知识点，每天抽点时间出来写写学习记录和学点新东西。因为我怕自己太放松的话，不利于后续复习找工作，所以还是会写点东西保持手感。\n重新找工作，面试机会很少\n说实话，面试机会真的很少，在招聘软件上和人事沟通，基本都是已读不回。找工作全程有回复的可能都是一些外包公司，但是其实我个人感觉我是没什么机会去这些外包公司的，一方面个人不太愿意去外包，另一方面就是其实外包大概率不会要我这种非科班的且工作经验不足三年的（2021年毕业的），外包人事和你聊天基本就是三连问：\n请问你是四年全日制、学信网可查、本科学历吗？请问你的上一份工作离职原因是什么？请问你上一份工作的薪资以及你的期望薪资是多少？\n然后你给他一顿回复，接下来就是问你要个学信网截图，就没有后续了。\n找工作过程本来就很煎熬，后来看到新闻说今年除夕不放假，心里也想过要不直接现在收拾东西回家过年算了，工作什么的过完年再说，但是我哥和我大学舍友都劝我耐下心继续找找，加上我离职并没有告诉家人，最后还是没直接回家，而是试着再找一个月试试。\n转机 - 11月\n前面在招聘软件上问了几百个都没几个面试机会，已经是聊怕了。开始以为是自己的打招呼语不对，引不起对面的兴趣，所以期间招呼语改了很多次，从开…",
           "link": "https://juejin.cn/post/7310786554488881190",
           "publishedOn": "2023-12-10T06:10:12.000Z",
-          "wordCount": 773,
+          "wordCount": null,
           "title": "入职新公司一周了",
           "imageUrl": null
         },
@@ -979,7 +1309,7 @@
           "description": "随着经济的下行以及移动互联网发展趋于成熟，对软件开发人员的需求大大减少，互联网行业所有的公司都在降本增效，合并通道，降薪裁员的新闻层出不穷。\n但相比其他行业，互联网行业的从业者薪资还是比较可观的，但要求也比之前高了很多，需要大家掌握更多的技能和在某些技术领域深耕。\n本文，我们就聊聊，掌握了哪些技能，能让前端同学，收入高且稳定。\n端智能\n首推的是端智能，很多行业大咖都认为，随着ChatGPT的横空出世，开启了第四次工业革命，很多产品都可以用大模型重做一遍。当前，我创业的方向，也和大模型有关。\n当前的大模型主要还跑在云端，但云端的成本高，大模型的未来在端智能，这也是小米创始人雷军在今年一次发布会上提出的观点。\n在2023年8月14日的雷军年度演讲中，雷军宣布小米已经在手机端跑通13亿参数的大模型，部分场景效果媲美云端。\n目前，端上大模型的可行性和前景已经得到了业内的普遍认可，国内外各个科技大厂在大模型的端侧部署领域均开始布局，目前大量工程已在PC端、手机端实现大模型的离线部署，更有部分App登陆应用商店，只需下载即可畅通无阻地对话。\n我们相信，在不久的将来，端上大模型推理将会成为智能应用的重要组成部分，为用户带来更加便捷、智能的体验。\n我在美团从零研发了web端智能推理引擎，当时立项时，就给老板画饼，美团每天的几百亿推理调用，如果有一半用端智能替代的话，每年能为公司节省上亿元。\n要想掌握端智能，需要学习深度学习的基本知识，还要掌握图形学和C++编程，通过webgl或webassembly 技术实现在Web端执行深度学习算法。\n图形学\n前面提到的端智能，只是涉及到了图形学中的webgl计算，但图形学的未来在元宇宙，通过3D渲染，实现VR、AR、XR等各种R。\n计算机图形学是一门快速发展的领域，涵盖了三维建模、渲染、动画、虚拟现实等众多技术和应用。在电影、广告、游戏等领域中，计算机…",
           "link": "https://juejin.cn/post/7310143510103064585",
           "publishedOn": "2023-12-09T00:58:41.000Z",
-          "wordCount": 770,
+          "wordCount": null,
           "title": "前端学哪些技能饭碗越铁收入还高",
           "imageUrl": null
         },
@@ -989,7 +1319,7 @@
           "description": "关于脚手架 cli 的创建以及发布，还有其它更多模板(vue3、react)的搭建，请参考我的上一篇文章\n目前该模板支持了：\nhusky、eslint、prettier、stylelint、tsc 等规范\nuview-plus 组件库，自动按需导入的，无需在页面导入直接使用\npinia 作为状态管理，pinia-plugin-unistorage 作为缓存处理\naxios 处理请求，uniapp-axios-adapter 适配小程序\nmock 手动处理\nuniapp-router-next 封装路由，让开发习惯跟 vue-router 保持一致\n使用 vscode 开发\n使用 ts 开发\n请注意插件的版本号，某些插件版本不同可能会报错，这里都不会再让你踩坑，后续会添加一些通用组件及方法。可先下载模板后，再看文章。如果觉得该模板还行，可否给仓库一个 star 🙏\ninit 项目\n官网地址\n全局安装 vue-cli\nnpm install -g @vue/cli\n\n创建 uni-app\nnpx degit dcloudio/uni-preset-vue#vite-ts my-vue3-project\n\n若执行报错，直接去下载模板\n使用 vscode 开发\n安装插件:\nVSCode 安装 uniapp 代码提示插件： uniapp-snippet 、uni-app-schemas\nVSCode 安装一键创建页面、组件、分包 插件: uni-create-view\n在微信开发者工具打开\n自行使用邮箱注册一个新的小程序，保存 appid\n在 src/manifest.json 中填入 appid\n修改 package.json，仅保留对微信小程序的支持，方便调试，今后想加其它端的自行网上查找添加\n\"scripts\": {\n    \"dev\": \"uni -p mp-weixin\"…",
           "link": "https://juejin.cn/post/7310041127181107209",
           "publishedOn": "2023-12-08T10:00:53.000Z",
-          "wordCount": 2640,
+          "wordCount": null,
           "title": "uniapp + vue3 + vite4 + pinia + axios + uniapp-router-next + uview-plus + ts 搭建小程序开发模板，让开发如丝般顺滑",
           "imageUrl": null
         },
@@ -999,7 +1329,7 @@
           "description": "引言\n2023-12-06 是我在酷家乐的最后一天，想把我在酷家乐这 4 年主导落地的项目做个总结，聊聊每个项目的创立背景、结果成败，以及反思。\n为了防止业务敏感信息泄漏，文中不会涉及到任何业务情况，项目结果数据，项目截图等内容。\n19 相遇\n时间来到 19 年 8 月，那是我加入酷家乐的日子。作为 IC 投入到酷家乐用户增长团队，当时团队主要在做激励体系、积分抽奖、酷签到、勋章等 To C 促活业务。\n新业务\n19 年 10 月，用户平台线成立 “设计圈” 新项目，是个 To B 的 SaaS 业务，目的是打通企业内部设计孤岛，让企业内部设计师共享、共建、共成长。后被大家戏称 “小主站”，即主站的子功能 SaaS 化。\n过程中我统一所有前台页面启动逻辑，增加启动的中间件机制，中间件机制也是首次被引入到页面启动流程中，对于多页、统一的场景至关重要；对于管理后台，引入当时比较前沿的 UForm（即现在的 Formily），并进行业务定制的封装，目的是简化表单、表格等场景的开发工作，而此动作也提效明显。在此感谢阿里对开源的贡献。\n反思：\n多页应用，需要有入口做全局逻辑的管控。而落地做法很多：html 入口/JS 统一使用固定的 boot 逻辑等等\n垂直领域能做一定的技术轮子。例如：表单表格的管理后台场景，需要有垂直领域的组件来做提效，基础组件还不够\n过程中担任 SM ，反推自己以全局视角考虑问题，并且关注团队成员的任务与过程\n20 回归\n20 年 2 月一半精力回归用户增长团队，直到 6 月份完全回归。\n小程序平台\n20 年 1 月，公司内部小程序业务增多，需要做一定的基础设施，以提升整体的开发效率。前端团队老大，推动成立“小程序平台”专项虚拟小组，由几个小程序的业务团队同学（设计圈也有小程序业务），以及基架组转岗过来的同学组成。\n我主动负责其中的 CI/CD 部分，接入 De…",
           "link": "https://juejin.cn/post/7310028335480619027",
           "publishedOn": "2023-12-08T09:59:54.000Z",
-          "wordCount": 2140,
+          "wordCount": null,
           "title": "我在酷家乐这 4 年，项目成败与反思",
           "imageUrl": null
         },
@@ -1009,7 +1339,7 @@
           "description": "各种 UI 库的 Select，你们能不能人性化一点！\n最近在云效上合并代码，本想着懒的目的输入了非连续的关键字搜索分支，结果...\n\n大概逻辑就是，搜索时必须输入连续的字母，比如，要找 “master-alpha”分支，非要输入 master-al 才能搜到，像图中输入 masal 就完全搜索不到。这导致了很多场景下使用起来很不方便，例如我们只记得几个非连续的关键字，或者懒得打那么多连续的关键字来搜索，用户体验较差。\n然后我又看了几个流行组件库的 Select。\nElement-ui\n\nAntd\n\nNaive-ui\n\n全军覆没！\n那我们来自己实现一个吧！先来两个实战图。\n不带高亮的非连续搜索\n\n带高亮的非连续搜索\n\n实现不带高亮的非连续搜索\n以vue3+ElementUI为例，在这里将会用到一个小小的js库叫sdm2来实现非连续的字符串匹配。\n视图部分\n<el-select\n  v-model=\"value\"\n  size=\"large\"\n  placeholder=\"Filter options\"\n  filterable\n  :filter-method=\"q => (query = q)\">\n  <el-option\n    v-for=\"item in optionsComputed\"\n    :key=\"item.value\"\n    :value=\"item.value\"\n    :label=\"item.label\">\n  </el-option>\n</el-select>\n\n没有什么特别的，就是加了个filterMethod函数将关键词赋值给query状态，然后optionsComputed按query值根据关键词进行筛选\nimport { match } from 'sdm2';\n\nconst options = [/* 选项列表 */];\nconst …",
           "link": "https://juejin.cn/post/7310104657212178459",
           "publishedOn": "2023-12-08T09:00:12.000Z",
-          "wordCount": 1312,
+          "wordCount": null,
           "title": "喊话各大流行UI库，你们的Select组件到底行不行啊？",
           "imageUrl": null
         },
@@ -1019,7 +1349,7 @@
           "description": "theme: smartblue\nVue Naive Admin 从2022年2月开始开源，其简单易上手的特性广受好评，当时发过一篇推文，感兴趣的朋友可以重温一下，Vite+Vue3+Unocss+NaiveUI+Pinia搭建一套优雅的后台管理模板，真香 - 掘金 (juejin.cn)\n回顾开源\nVue Naive Admin 开源一年零十个月，收获了 1.2k Star, gitee 上也有 260+ 的 Star，建了两个微信交流群，总人数 500+，成绩不算优秀，但贵在坚持。\nVue Naive Admin 2.0 是什么？\n源码: vue-naive-admin (github.com)\n体验: https://admin.isme.top\n简介\nVue Naive Admin 2.0 是一款极简风格的后台管理模板，包含前后端解决方案，前端使用 Vite + Vue3 + Pinia + Unocss，后端使用 Nestjs + TypeOrm + MySql + Redis，简单易用，赏心悦目，历经十几次重构和细节打磨，诚意满满！！\n设计理念\nVue Naive Admin 2022年2月开始开源，2023年 12月 发布 2.0 版本，从 1.0 到现在的 2.0，一直秉持着简单即正义的理念，旨在帮助中小企业、在校大学生及个人开发者快速上手开发后台管理项目，为了降低使用者的学习成本，没有使用当前看似“主流”的 TypeScript（前端），而是使用 JavaScript, 这也使得 Vue Naive Admin 成为了市面上少有的 使用 JavaScript 的 Vue3 后台管理模板，而且还算优秀，得到了大量朋友的认可和喜爱。\n这里就不讨论为什么使用 JavaScript 而不使用 TypeScript了，各自的优缺点大家都清楚，需要 TypeScrip…",
           "link": "https://juejin.cn/post/7309921568493977637",
           "publishedOn": "2023-12-08T02:22:54.000Z",
-          "wordCount": 1193,
+          "wordCount": null,
           "title": "一个极致轻量的 Vue3 后台管理，继 1.2k Star 后，终迎 2.0 版本，这次有点东西",
           "imageUrl": null
         },
@@ -1029,7 +1359,7 @@
           "description": "theme: nico\nhighlight: idea\n同学们大家好，忙里偷闲把我在业务中封装的很多请求实用工具分享给大家，为了大家使用方便（也是为了我的开发团队使用方便)，我将工具做成了一个库。不占用大家的时间我们直接进入正题，先丢仓库链接，然后介绍这个库是什么东西。 (最近业务压力略大，行文有些潦草，希望大家包涵)\n库名: @varlet/axle\ngithub: https://github.com/varletjs/axle\n设计原则\n完全继承 axios 的所有能力，并保留访问 axios 原始对象的能力，不破坏 axios 本身的行为。\n介绍\n基于 axios 的渐进式请求工具。 它不会破坏 axios 原有的能力，帮助您更轻松地处理请求。\n快速开始\n安装\n# 通过 npm, yarn, pnpm 安装\n\n# npm\nnpm i @varlet/axle -S\n\n#yarn\nyarn add @varlet/axle\n\n#pnpm\npnpm add @varlet/axle\n\n发送请求\nAxle 归一化了请求函数的参数，并针对不同的业务需求，扩展了更多请求函数，下面是一个简单的例子。\nimport { createAxle } from '@varlet/axle'\n\nconst axle = createAxle(/** @see https://axios-http.com **/)\n\naxle.get('/url', { current: 1, pageSize: 10 }, { headers: {} })\naxle.post('/url', { name: 'Axle' }, { headers: {} })\n\n配置\nAxle 完全支持 axios 的所有配置能力。\nconst axle = createAxle(/** @see https://ax…",
           "link": "https://juejin.cn/post/7309775437942456330",
           "publishedOn": "2023-12-07T14:44:28.000Z",
-          "wordCount": 3108,
+          "wordCount": null,
           "title": "💪 增强你的 axios，分享一个基于 axios 的渐进式请求工具 - @varlet/axle",
           "imageUrl": null
         },
@@ -1039,7 +1369,7 @@
           "description": "const getJson = () => \nnew Promise(async (resolve) => {\n  const total = 147 // 可以换成你们的仓库总数哦\n  const perPage = 100 // 一次请求条数，固定的\n  const size = Math.ceil(total / perPage) \n  let res = []\n  for (let i = 1; i <= size; i++) {\n    const url = `http://gitlab.xxx.com/groups/xxx/-/children.json?page=${i}&per_page=${perPage}`\n    const response = await fetch(url, {\n      method: 'get',\n      credentials: 'include' // 不写这个属性，请求的时候不会携带cookie哦！\n    })\n    const data = await response.json()\n    res.push(...data)\n    if(i >= size){\n      resolve(res)\n    }\n  }\n})\n\n\nconst getRepos = async ()=>{\n  const json = await getJson()\n  console.log('仓库总数',json.length);\n  const res = json.reduce((prev, curr) => {\n    // 这个正则是匹配仓库名的，front是我们公司前端组的组名，你们换成你们自己公司的哈，接口上有的噢\n    const name = /\\/front\\/([a-zA-Z-_0-9]*)/.exec(curr.relative_path)[1]\n    prev += `\"${name}\"\\n`\n    return prev\n  }, '')\n  return res\n}\n\n\nconsole.log(await getRepos())\n\n#! /bin/bash\n\nread -p \"是否在当前文件夹下克隆代码(yes/no):\" flag\n\nif [ \"$flag\" != \"yes\" ];then\necho \"请输入yes\" exit\nfi\n\necho \"正在当前文件夹下克隆前端所有代码.....请稍后\"\n\n# 定义一个包含多个仓库URL的列表\n# (把刚刚复制的数据粘贴将来即可)\nrepos=(\n  \"repo-name1\"\n  \"repo-name2\"\n  ...\n )\n \n# 遍历数组中的每个URL，并执行 git clone\nfor repo in \"${repos[@]}\"\ndo\n  # 如果仓库已拉取过\n  if [ -d \"$repo\" ] && [ -d \"$repo/.git\" ]; then\n    # 进入该目录\n    cd \"$repo\"\n    # 切换到master\n    git checkout master\n    # 拉取最新代码\n    git pull\n    # 切回到原始目录，以便处理下一个仓库\n    cd ..\n  else \n  # 仓库未拉取过，clone下来\n   git clone \"http://gitlab.xxx.com/xxx/$repo.git\"\n  fi\ndone",
           "link": "https://juejin.cn/post/7309290887363477545",
           "publishedOn": "2023-12-06T10:50:41.000Z",
-          "wordCount": 1469,
+          "wordCount": null,
           "title": "拉取gitlab项目脚本",
           "imageUrl": null
         },
@@ -1049,7 +1379,7 @@
           "description": "highlight: a11y-dark\n引言\n发展历史\nWeb Components 技术的发展历程可以分为以下几个阶段：\n2011 年，Google 开始开发 Polymer 项目，旨在创建一种基于 Web 标准的新型 Web 应用开发框架。\n2013 年，W3C 开始制定 Web Components 标准，包括 Custom Elements、HTML Templates 和 Shadow DOM 等技术。\n2015 年，Web Components 1.0 草案发布。\n2017 年，Web Components 1.0 正式标准发布。\n2018 年，Chrome 63 正式支持 Web Components 技术。\n2019 年，Web Components 技术开始逐渐被更多的前端开发人员使用，成为前端开发的基础设施之一\n谁在使用\n1. youtube\n\n2. github\n\n3.quark-design(哈啰)\n\n4.Vue也支持web Components\n\n目标\n了解web Components是什么。本文不是全面教程，只是一个简单演示，如果需要全面学习的话可以点我 进行全面学习\nWeb Components的基本概念\nWeb Component 是一套不同的技术，允许你创建可重用的定制元素（它们的功能封装在你的代码之外）并且在你的 web 应用中使用它们。\n如图， Web Components主要包括了下面的三个技术\n\nCustom Elements\n概念\n由 Web 开发人员定义行为的 HTML 元素，扩展了浏览器中可用的元素集\n实现方式有两种\n自定义内置元素 继承自标准的 HTML 元素，例如HTMLParagraphElement\n独立自定义元素继承自 HTML 元素基类HTMLElement\n例子\n如果你有vue的基础的话，vue的语法中有一个动…",
           "link": "https://juejin.cn/post/7308782855941242906",
           "publishedOn": "2023-12-05T10:47:40.000Z",
-          "wordCount": 2282,
+          "wordCount": null,
           "title": "Web Components的前世今生",
           "imageUrl": null
         }
@@ -1066,7 +1396,7 @@
           "description": "Visualization Collection应用终于上线了量子纠缠效果，大家赶紧来玩一玩，还是隐藏款的，看你能找到它吗[奸笑]\n应用地址(PC端)：https://hepengwei.cn\n源码地址：https://github.com/hepengwei/visualization-collection",
           "link": "https://juejin.cn/pin/7312272742077956122",
           "publishedOn": "2023-12-14T08:22:58.000Z",
-          "wordCount": 457,
+          "wordCount": null,
           "title": "Visualization Collection应用终于上线了量子纠缠效果，大家赶紧来玩一玩，还是隐藏款的，看你能找到它吗[奸笑] 应用地址(PC端)：https://hepengwei.cn 源码地址...",
           "imageUrl": null
         },
@@ -1076,7 +1406,7 @@
           "description": "招聘岗位需求：\n需求2中级go服务器开发：20000-30000\n需求1高级IOS/Android开发工程师：27000-35000\n需求1中级IOS/Android开发工程师：18000-27000\n工作时间：\n周一到周五早10点到晚8点\n周六周日双休\n不包吃住\n微信：xiaobai990q",
           "link": "https://juejin.cn/pin/7311876701910843401",
           "publishedOn": "2023-12-13T11:19:34.000Z",
-          "wordCount": 456,
+          "wordCount": null,
           "title": "招聘岗位需求： 需求2中级go服务器开发：20000-30000 需求1高级IOS/Android开发工程师：27000-35000 需求1中级IOS/Android开发工程师：18000-27000 工作时间： ...",
           "imageUrl": null
         },
@@ -1086,7 +1416,7 @@
           "description": "1分钟撸一个页面，html之父都完成不了，而我可以，xmd用它",
           "link": "https://juejin.cn/pin/7311895107531669513",
           "publishedOn": "2023-12-13T09:52:23.000Z",
-          "wordCount": 461,
+          "wordCount": null,
           "title": "1分钟撸一个页面，html之父都完成不了，而我可以，xmd用它",
           "imageUrl": null
         },
@@ -1096,7 +1426,7 @@
           "description": "招聘岗位需求：\n需求2中级go服务器开发：20000-30000\n需求1高级IOS/Android开发工程师：27000-35000\n需求1中级IOS/Android开发工程师：18000-27000\n工作时间：\n周一到周五早10点到晚8点\n周六周日双休\n不包吃住\n（游戏研发公司）\n微信：xiaobai990q",
           "link": "https://juejin.cn/pin/7311602994572525595",
           "publishedOn": "2023-12-12T10:42:21.000Z",
-          "wordCount": 456,
+          "wordCount": null,
           "title": "招聘岗位需求： 需求2中级go服务器开发：20000-30000 需求1高级IOS/Android开发工程师：27000-35000 需求1中级IOS/Android开发工程师：18000-27000 工作时间： ...",
           "imageUrl": null
         },
@@ -1106,7 +1436,7 @@
           "description": "招聘：Php 高级工程师\n职位描述：\n1. 负责系统服务端设计和开发，参与项目需求分析、系统设计、测试用例评审等。\n2. 参与系统架构、性能、安全、扩展等设计和实现及相关优化等。\n3. 根据产品及相关需求，积极配合相关人员，按时完成产品迭代上线。\n任职要求:\n1.计算机及相关专业大专及以上学历，具有 5 年以上 PHP 开发经验;\n2.PHP 基础扎实，精通 Phalcon，laravel, Yii 等框架，对生产系统故障排查有实际工作经\n验；\n3.有大流量并发场景的开发经验，熟悉多进程框架 Swoole、Workman 等。\n4.精通 Mysql、mongoDB，Hbase 等数据库，对数据库有较强的设计能力,对 MySQL 有较深入\n的认识， 具有索引优化、查询优化和存储优化经验、熟练掌握关系数据库理论;\n5.精通 LNMP 环境相关配置和优化, 能独立搭建服务器环境以及项目线上部署;\n6.精通 Redis、Memcache 缓存,对其使用场景及其限制有深入认识;\n7.思维活跃，逻辑清晰，善于思辨和抽象，具备良好的沟通表达和团队协作能力;\n8.有分布式、集群、高并发、高负载、高可用系统或大型网站开发经验者优先；\n9.有 java 开发经验者优先，或能快速学习并掌握 Spring ,zookeeper，kafka，hbase。\n10.自我驱动力强，有强烈的事业心和责任感，结果导向，具备良好的协调推动能力和抗压能\n力微信：xiaobai990q",
           "link": "https://juejin.cn/pin/7311602994571182107",
           "publishedOn": "2023-12-12T07:36:16.000Z",
-          "wordCount": 545,
+          "wordCount": null,
           "title": "招聘：Php 高级工程师 职位描述： 1. 负责系统服务端设计和开发，参与项目需求分析、系统设计、测试用例评审等。 2. 参与系统架构、性能、安全、扩展等设计和实...",
           "imageUrl": null
         },
@@ -1116,7 +1446,7 @@
           "description": "这个vue中动态的属性和事件提示的插件，目前是只针对sponsor体验的，如果star超过1000的话，我会free to everyone",
           "link": "https://juejin.cn/pin/7310132538169081891",
           "publishedOn": "2023-12-10T02:32:23.000Z",
-          "wordCount": 468,
+          "wordCount": null,
           "title": "这个vue中动态的属性和事件提示的插件，目前是只针对sponsor体验的，如果star超过1000的话，我会free to everyone",
           "imageUrl": null
         },
@@ -1126,7 +1456,7 @@
           "description": "[7073670907851440160#新人报道#] 大家觉得低代码工具好用吗，你是否尝试体验过低代码工具，并应用在你的工作中",
           "link": "https://juejin.cn/pin/7310047627669159988",
           "publishedOn": "2023-12-08T10:51:54.000Z",
-          "wordCount": 458,
+          "wordCount": null,
           "title": "[7073670907851440160#新人报道#] 大家觉得低代码工具好用吗，你是否尝试体验过低代码工具，并应用在你的工作中",
           "imageUrl": null
         },
@@ -1136,7 +1466,7 @@
           "description": "IDEA 推荐一款好用插件 CodeGeex，今天刚装上，用起来还不错。",
           "link": "https://juejin.cn/pin/7310032602130432063",
           "publishedOn": "2023-12-08T07:15:21.000Z",
-          "wordCount": 466,
+          "wordCount": null,
           "title": "IDEA 推荐一款好用插件 CodeGeex，今天刚装上，用起来还不错。",
           "imageUrl": null
         },
@@ -1146,7 +1476,7 @@
           "description": "设计师的日常",
           "link": "https://juejin.cn/pin/7308909489155096591",
           "publishedOn": "2023-12-05T13:39:45.000Z",
-          "wordCount": 450,
+          "wordCount": null,
           "title": "设计师的日常",
           "imageUrl": null
         },
@@ -1156,7 +1486,7 @@
           "description": "有用过gpt3.5的jy吗，我怎么感觉这gpt智商有点低呢，是我使用方式不对吗",
           "link": "https://juejin.cn/pin/7308905139405324307",
           "publishedOn": "2023-12-05T06:37:17.000Z",
-          "wordCount": 455,
+          "wordCount": null,
           "title": "有用过gpt3.5的jy吗，我怎么感觉这gpt智商有点低呢，是我使用方式不对吗",
           "imageUrl": null
         },
@@ -1166,7 +1496,7 @@
           "description": "你有遇到鼠标一放就生成一条线的eclipse吗",
           "link": "https://juejin.cn/pin/7308643782376161334",
           "publishedOn": "2023-12-05T01:16:00.000Z",
-          "wordCount": 456,
+          "wordCount": null,
           "title": "你有遇到鼠标一放就生成一条线的eclipse吗",
           "imageUrl": null
         },
@@ -1176,7 +1506,7 @@
           "description": "高效的学习平台和更快捷面试平台.",
           "link": "https://juejin.cn/pin/7308782773866233882",
           "publishedOn": "2023-12-05T00:59:07.000Z",
-          "wordCount": 450,
+          "wordCount": null,
           "title": "高效的学习平台和更快捷面试平台.",
           "imageUrl": null
         },
@@ -1186,7 +1516,7 @@
           "description": "[7210002980895916043#挑战每日一条沸点#] yiapi（易接口），完成启动流程图~\nhttps://github.com/chenbimo/yicode",
           "link": "https://juejin.cn/pin/7307619217960304655",
           "publishedOn": "2023-12-03T00:05:52.000Z",
-          "wordCount": 478,
+          "wordCount": null,
           "title": "[7210002980895916043#挑战每日一条沸点#] yiapi（易接口），完成启动流程图~ https://github.com/chenbimo/yicode",
           "imageUrl": null
         },
@@ -1196,7 +1526,7 @@
           "description": "[7210228048107896891#每日快讯#]  重要通知丨 JumpServer 开源堡垒机 V2 社区版即将停止维护\n根据《关于 JumpServer 开源堡垒机 V2 版本产品生命周期的相关说明》，JumpServer 开源堡垒机 V2 版本（社区版）将于 2023 年 12 月 31 日停止维护支持。",
           "link": "https://juejin.cn/pin/7307514532275372067",
           "publishedOn": "2023-12-02T02:23:58.000Z",
-          "wordCount": 671,
+          "wordCount": null,
           "title": "[7210228048107896891#每日快讯#] 重要通知丨 JumpServer 开源堡垒机 V2 社区版即将停止维护 根据《关于 JumpServer 开源堡垒机 V2 版本产品生命周期的相关说明...",
           "imageUrl": null
         },
@@ -1206,7 +1536,7 @@
           "description": "预告：visualization-collection将实现两个跨域页面的量子纠缠效果，而且是纯前端实现，不想错过的赶紧点上关注啦[玫瑰][玫瑰][玫瑰]\n应用地址: https://hepengwei.cn\n源码地址: https://github.com/hepengwei/visualization-collection",
           "link": "https://juejin.cn/pin/7307451430595624975",
           "publishedOn": "2023-12-01T09:39:01.000Z",
-          "wordCount": 459,
+          "wordCount": null,
           "title": "预告：visualization-collection将实现两个跨域页面的量子纠缠效果，而且是纯前端实现，不想错过的赶紧点上关注啦[玫瑰][玫瑰][玫瑰] 应用地址: https://hepengw...",
           "imageUrl": null
         },
@@ -1216,7 +1546,7 @@
           "description": "2023开发者必备iOS开发工具\n在进行iOS开发工作时，利用并熟练使用恰当的工具可以让工作效率得到大幅度提高。下边会介绍一些在进行iOS开发工作时常用的一些工具，本文并不对其进行展开，对使用方法及工作原理感兴趣的同学可以自行进行更深入的研究。\n开发工具 Postman Postman是一个接口测试工具。在做接口测试的时Postman相当于一个客户端，它可以模拟用户发起的各类HTTP请求，将请求数据发送至服务端并获取对应的响应结果，从而验证响应中的结果数据是否和预期值相匹配，并确保开发人员能够及时处理接口中的bug，进而保证产品上线之后的稳定性和安全性。它主要是用来模拟各种HTTP请求的，如get/post/delete/put等等。Postman与浏览器的区别在于有的浏览器不能输出Json格式，而Postman更直观接口返回的结果。\nipaguard\nIpa Guard是一款功能强大的ipa混淆工具，不需要ios app源码，直接对ipa文件进行混淆加密。可对IOS ipa文件的代码，代码库，资源文件等进行混淆保护。 可以根据设置对函数名、变量名、类名等关键代码进行重命名和混淆处理，降低代码的可读性，增加ipa破解反编译难度。可以对图片，资源，配置等进行修改名称，修改md5。只要是ipa都可以，不限制OC，Swift，Flutter，React Native，H5类app。\nMLeaksFinder\nMLeaksFinder是WeRead团队开源的一款检测iOS内存泄漏的框架，其使用非常简单，只需将文件加入项目中，如果有内存泄漏，3秒后自动弹出alert来捕捉循环引用。使得可以在开发快速找到80%内存泄漏，而使用Xcode Leak工具更适合大范围的，全部的寻找泄漏点。\nappuploder\nAPP开发助手iOS APP上架到App Store的辅助工具，解决iOS APP上架繁琐费时的情况，帮助跨平台APP开发者上架苹果应用,在没有配置Mac苹果机的情况，实现iOS证书申请，创建iOS开发者证书、iOS发布证书等各类证书，iOS开发者在Windows、Linux或Mac系统中上传IPA到App Store,简化iOS APP上架流程！在任何电脑中轻松快速上架你的APP。",
           "link": "https://juejin.cn/pin/7307502467825942555",
           "publishedOn": "2023-12-01T08:34:18.000Z",
-          "wordCount": 522,
+          "wordCount": null,
           "title": "2023开发者必备iOS开发工具 在进行iOS开发工作时，利用并熟练使用恰当的工具可以让工作效率得到大幅度提高。下边会介绍一些在进行iOS开发工作时常用的一些工具，...",
           "imageUrl": null
         },
@@ -1226,7 +1556,7 @@
           "description": "求助 求助 安装pandas时这个问题怎么解决 跟着gpt在终端操作也没有解决",
           "link": "https://juejin.cn/pin/7307451430594510863",
           "publishedOn": "2023-12-01T06:56:58.000Z",
-          "wordCount": 471,
+          "wordCount": null,
           "title": "求助 求助 安装pandas时这个问题怎么解决 跟着gpt在终端操作也没有解决",
           "imageUrl": null
         },
@@ -1236,7 +1566,7 @@
           "description": "[7073670907851440160#新人报道#] 在最新的vscode 1.84.2发布笔记里面有一款白色的主题，还挺好看的，不知道有没有人知道主题名字",
           "link": "https://juejin.cn/pin/7307451430587400227",
           "publishedOn": "2023-12-01T05:37:56.000Z",
-          "wordCount": 467,
+          "wordCount": null,
           "title": "[7073670907851440160#新人报道#] 在最新的vscode 1.84.2发布笔记里面有一款白色的主题，还挺好看的，不知道有没有人知道主题名字",
           "imageUrl": null
         },
@@ -1246,7 +1576,7 @@
           "description": "将 大模型 和 code review 结合 ，针对于 Gitlab MR 进行 code review 辅助项目评审[赞]\n项目地址：https://github.com/mimo-x/Code-Review-GPT-Gitlab/\n文章介绍：https://juejin.cn/post/7292692843415945225",
           "link": "https://juejin.cn/pin/7307221821903732786",
           "publishedOn": "2023-12-01T02:03:12.000Z",
-          "wordCount": 518,
+          "wordCount": null,
           "title": "将 大模型 和 code review 结合 ，针对于 Gitlab MR 进行 code review 辅助项目评审[赞] 项目地址：https://github.com/mimo-x/Code-Review-GPT-Gitlab/ 文章介...",
           "imageUrl": null
         },
@@ -1256,7 +1586,7 @@
           "description": "jy们，推荐一个好用的富文本编辑器，谢谢",
           "link": "https://juejin.cn/pin/7307125383785234473",
           "publishedOn": "2023-11-30T12:08:08.000Z",
-          "wordCount": 455,
+          "wordCount": null,
           "title": "jy们，推荐一个好用的富文本编辑器，谢谢",
           "imageUrl": null
         }
