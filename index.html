@@ -51,6 +51,166 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-14 datetime="2023-12-14T02:42:21.000Z">2023-12-14</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-14 datetime="2023-12-14T02:42:21.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Barret李靖的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/657a6b8dabd4694727116e1f"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 分享一个 video 和 gif 互转，以及对 gif 帧率、大小做调整的组合技能，个人使用频度还是挺高的。 1. 将 video 转换成 gif 推荐使用gifski，https://gif...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/657a6b8dabd4694727116e1f">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FvsxgebZ8Ktzwi_2FSCUs_mW6W4cv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>分享一个 video 和 gif 互转，以及对 gif 帧率、大小做调整的组合技能，个人使用频度还是挺高的。
+1. 将 video 转换成 gif
+推荐使用gifski，https://gif.ski，这个工具底层使用 pngquant 做了优化，可以较高压缩但不丢失质量地提取视频每帧内容。使用起来非常简单：
+gifski --fps 30 --width 320 -o anim.gif video.mp4
+fps 是帧率，width 是宽度，关键是导出速度快的惊人，瞬间出来。这个命令同样也适用于对 gif 做调整，将 video.mp4 更换成 gif 原图即可：
+gifski --fps 10 --width 180 -o output.gif anim.gif
+它还有一个强大的功能，就是将多张图片转换成 gif，给孩子拍照后制作 gif 图片时，用的比较多：
+gifski -o file.gif barret*.png
+它有一个对应的非官方 GUI 客户端可供使用（如图一），Gifski，https://github.com/sindresorhus/Gifski
+2. 将 gif 转换成 video
+ffmpeg 是一个跨平台的针对 video/audio 进行录制、转换和处理的强大工具，使用非常广泛，它支持多种方式对视频进行截取，例如截取 START_TIME 开始长度为 DURATION 的视频片段：
+ffmpeg -i input.mp4 -ss START_TIME -t DURATION -c copy output.mp4
+事实上，ffmpeg 也支持将 video 转换成 gif，将 -c 参数修改成下方的 -vf 即可，相比上面的 gifski 压缩效果没那么好
+ffmpeg -i input.mp4 -ss START_TIME -t DURATION -vf &quot;fps&#x3D;10,scale&#x3D;320:-1&quot; output.gif
+同样也有一个非官方客户端（如图二），Axiom，https://github.com/MattMcManis/Axiom，这个客户端还内置了 Youtube Downloader，可以直接将油管视频下载下来进行处理。
+3. 在线工具推荐
+ezgif，https://ezgif.com，是一个功能强大的 gif 工具集（如图三），一般性的需求都可以满足，复杂点的需求例如合并多个 gif，我之前操作过，失败了，还是转到本地处理比较合适。
+我平时更多还是使用线上工具，除非对质量有比较高的要求，或者视频过大，上传非常慢。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/657a58c1ec195a00b7eade1e"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 微博现在真会玩，已经开 AI 专题了</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/657a58c1ec195a00b7eade1e">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FmGp2ndnr86UOeFvrdr3DpaPEv5ev3.jpg?imageMogr2/auto-orient/crop/!x2700a0a0/thumbnail/x300" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>微博现在真会玩，已经开 AI 专题了</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/657a53c0f0da80ccb5fe7056"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: Python 中可以使用双下划线来表示私有变量，例如 __name，直接访问私有变量会报错，提示不存在，但有趣的是，通过访问 _classname__name 能够获得这个私...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/657a53c0f0da80ccb5fe7056">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FvhNkJjPqWkAOJbafxOpbUJjJ5uXv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Python 中可以使用双下划线来表示私有变量，例如 __name，直接访问私有变量会报错，提示不存在，但有趣的是，通过访问 _classname__name 能够获得这个私有变量的值。
+有一句广为流传的格言说：“We are all consenting adults here”（我们都是成年人），这句话表达了很多 Python 程序员的一个共同观点：“那就是开放比封闭要好，我们应该自己对自己的行为负责，而不是从语言层面来限制对数据或方法的访问”。
+这句话说的很有道理，但其实背后的技术逻辑不是这样。在Python中，使用双下划线作为变量或属性前缀会触发名称修饰（name mangling）机制，名称修饰是一种用于改变变量名以防止命名冲突的机制。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/657a4b08492ec2e1bb3be444"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 起太早，咖啡店都没开门，只好先面向瀑布编程了😇</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/657a4b08492ec2e1bb3be444">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FmFjrN20qgEXgak57CwWyRn52Loxv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>起太早，咖啡店都没开门，只好先面向瀑布编程了😇</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >国家应急广播 - 重庆预警信息</button>
+                  <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/lanseyj/20231214/t20231214_526519344.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市巫山县发布大风蓝色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/lanseyj/20231214/t20231214_526519344.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>巫山县气象台2023年12月14日9时10分继续发布“大风蓝色预警信号”，预计14日9时至21时，巫峡镇、龙门街道、高唐街道、两坪乡、三溪乡、建平乡、曲尺乡、大溪乡、庙宇镇、铜鼓镇、红椿乡、官渡镇、抱龙镇、培石乡、笃坪乡、邓家乡风力可达7级，局地阵风可达8级以上，请注意防范。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-13 datetime="2023-12-13T23:31:00.000Z">2023-12-13</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-13 datetime="2023-12-13T23:31:00.000Z"></time>
           </button>
@@ -299,26 +459,6 @@
                             <span class="media-object__text">
                               <span>让孩子看到自己的笃定，他也会从中学到笃定。
 当我们告诉孩子一个谎言时，孩子也会学着撒谎，更糟的是，他会认为某些事情必须隐藏起来，他将不相信他的准则，也不会清楚地表达自己的想法。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/6578f73f8a7c5ba8ae7e57b4"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 不用担心你的孩子不听你说话……他们整天都在观察你。—特蕾莎修女</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6578f73f8a7c5ba8ae7e57b4">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FiIWGsYBhJV-2ZJA3BMoeM5E8d6Yv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>不用担心你的孩子不听你说话……他们整天都在观察你。—特蕾莎修女</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -707,88 +847,6 @@ defineOptions
 从一个故事说起
 小马加入公司不久，最近刚接手一个新需求。凭借以往经验，这是一个small case，很快的给了排期，准备开干。没多久，他就向他的mentor提了第一个问题：“怎么创建项目？”，mentor很快就丢过来一个仓库，并回复道“你拿着这个项目去copy下改改”。小马愣了一下，不敢多问，立马开始操作，一顿CV猛如虎，项目终于跑起来，心想“快了，只要项目跑起来就快了”。接着小马在开发过程中遇到一个比较通用的功能，又问mentor有没有类似组件，没多久mentor又丢过来一个仓库，并在链接下评论：“你在xx文件下找找xx组件，应该修改修改就能用”，小马又把项目跑起来了，细研究了源码，果然能用，很开心又解决了一个问题。这样类似问题一个接一个，mentor也都能很快的给出答复。时间很快，在mentor的加持下到了联调那一天，小马心里长舒一口气“终于可以用真实数据跑一把了”，结果在浏览器刷新的那一刻，页面白了，虽然屏幕有点脏，但显的格外的白，这终究还是没有超出预期啊。这一调又是一堆问题，要么是成功码不对，要么是该有的字段没有，有了结构也不对，小马跑过去问后端怎么回事，后端回道“你应该没看最新文档”，小马打开文档对比了下：“嗯，是已经有很多不一样的了，但和现在的接口返回好像也不完全一样吧”，最终小马还是选择了相信接口返回的json。又是一顿折腾准备提测，小马又问mentor“怎么部署啊？”，ment…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Barret李靖的即刻动态</button>
-                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/657863408a7c5ba8ae7666ef"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 推荐阅读宝玉写的这篇《2023 年，我患上了 AI 焦虑症！》，https://mp.weixin.qq.com/s/LbRvR1VXpZoDilyyMGGeFw，作者提到了自己如何患上了 AI 焦虑症，...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/657863408a7c5ba8ae7666ef">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>推荐阅读宝玉写的这篇《2023 年，我患上了 AI 焦虑症！》，https://mp.weixin.qq.com/s/LbRvR1VXpZoDilyyMGGeFw，作者提到了自己如何患上了 AI 焦虑症，又是如何克服它，并且成功地把 AI 变成自己的得力助手，让自己成为善用 AI 的人。
-我克服 AI 焦虑的办法就是去理解它。过去几个月一直在尝试掀开 AI 的面纱，遇到一个问题就搞明白一个问题，每次都多了解一点。
-搞明白的过程中，学会了使用工具，也产生了更多的疑惑，这会敦促我进一步学习，依次循环。有的时候，一个专题学明白了，会陷入迷茫，不知道下一步该学啥，这个时候，我会去思考利用 AI 能帮我解决啥实际的问题，有了问题就有了课题，能研究的东西又多了。
-最后发现，一切又回到了数学和理论，所以不得不去复习基础知识，去研究论文。整个学习周期会很漫长，但也是一种乐趣。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/6578504579cb2b9f3513c717"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 童年时期，在面临困境时，所习得的应对模式会一直延续到成年，因此当孩子在遇到困难时，或心灵受挫时，需要正确地引导他们从困境中走出来，而不是让他们...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6578504579cb2b9f3513c717">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FjWpla05IsMXFsJc8Wmeon3R_TScv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>童年时期，在面临困境时，所习得的应对模式会一直延续到成年，因此当孩子在遇到困难时，或心灵受挫时，需要正确地引导他们从困境中走出来，而不是让他们自行产生一种消极应对的机制来“保护”自己。
-人类的大脑分为两部分，左半球更加理性，负责语言交流和逻辑，而右半球更依赖直觉，负责图像和情感，童年的创伤性记忆恰恰就记录在右半球。
-为了淡化孩子的创伤画面，真正需要做的，就是帮助孩子开口，谈论他所看到或所感受到的事情，他大脑的左半球就会与右半球进行沟通，这会促使孩子大脑内负责语言和逻辑的一侧帮助负责图像和情感的另一侧处理他所遭受的创伤经历。这个过程称为“整合创伤经历”，这有点像优化 ChatGPT 时使用 Chain of thought 来调优输出结果，将思考过程透明化，让思考正确有序地进行。
-我发现，这个方法对于成人也同样有效，在遭遇了一些事情，内心出现压抑、无法释怀时，静下心来，找到一个正确的方式与自己沟通，例如，将内心的所想写出来，并进行反思；也可以找一个倾诉的对象，将情感表达出来。尽可能地让大脑理性的一面去占据主导地位，我时常如此。
-图片引自《孩子的大脑》。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/65781e7c79cb2b9f350eff31"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 二十年前，Python 核心开发者 Tim Peter 写了一篇“Python之禅”，《The Zen of Python》，https://peps.python.org/pep-0020/，给编程工作者一些倡导和...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65781e7c79cb2b9f350eff31">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fh6i79XTYy04SUTv1Uxhu7_1nyClv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>二十年前，Python 核心开发者 Tim Peter 写了一篇“Python之禅”，《The Zen of Python》，https://peps.python.org/pep-0020/，给编程工作者一些倡导和建议，现在仍然适用。
-在 Python 交互工具中输入“import this”即可看到：</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1265,6 +1323,40 @@ theme: devui-blue
                             <span class="media-object__text">
                               <span>永川区气象台2023年12月11日8时40分发布“大雾黄色预警信号”，预计11日8时40分至11时，我区全部镇街将出现能见度小于500米的雨雾，局部地区能见度小于200米。请各地注意防范雨雾天气可能造成的影响。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Lainbo&#x27;s Blog</button>
+                  <a class="source-heading__link" href="https://www.lainbo.me/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.lainbo.me/article/auto-backup-notion"
+                        open
+                      >
+                        <summary class="article-expander__title">利用GitHub Action自动备份Notion数据</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.lainbo.me/article/auto-backup-notion">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://www.notion.so/images/page-cover/nasa_earth_grid.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>近期因为一些笔记软件的服务崩溃导致大家都在说要Local first，但Notion确实有一些令人无法割舍的功能，所以这里提供了一种折中的方案，通过设置GitHub Action，定期自动备份Notion数据至GitHub仓库。这种做法不仅提高了数据安全性，也实现了有效的容灾措施，降低了因依赖单一服务而导致数据丢失的风险</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3889,8 +3981,8 @@ AI 是一个新事物，带来了很多前所未有的问题。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7203162876">
-        <time id="build-timestamp" datetime="2023-12-14T01:14:54.677Z">2023-12-14T01:14:54.677Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7204251440">
+        <time id="build-timestamp" datetime="2023-12-14T03:52:30.896Z">2023-12-14T03:52:30.896Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
