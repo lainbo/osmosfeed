@@ -34,7 +34,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": 1011,
+          "wordCount": 1012,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         },
@@ -44,7 +44,7 @@
           "description": "滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/",
           "publishedOn": "2023-11-21T16:14:41.000Z",
-          "wordCount": 1293,
+          "wordCount": 1292,
           "title": "cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用",
           "imageUrl": null
         },
@@ -54,7 +54,7 @@
           "description": "剪映中的视频特效虽多，其实就两类，一类改变原始像素，一类叠加混合，本文通过精简的源码和精致的案例给大家介绍具体如何实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/video-effect-js-filter-pixijs-webgl-3d/",
           "publishedOn": "2023-11-19T15:12:20.000Z",
-          "wordCount": 1232,
+          "wordCount": 1231,
           "title": "剪映APP的视频特效如何在Web中JS实现",
           "imageUrl": null
         }
@@ -123,12 +123,42 @@
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/657bc996abd46947272d447b",
+          "author": null,
+          "description": "OpenAI 最新的一篇论文《Weak-to-strong Generalization》，https://cdn.openai.com/papers/weak-to-strong-generalization.pdf，读起来还是很让人兴奋的，它甚至提供了 1000 万美元的资助计划，期望更多人参与进来解决这篇论文提出的问题：如何让弱监督模型强化比它更强的模型，以构建超人类人工智能系统，例如，如何使用 GPT-2 作为监督模型让 GPT-4 变得更强。\n为什么这件事情如此重要？之前我们聊过，“人类反馈的强化学习”（RLHF）在 ChatGPT 的训练过程中起到了至关重要的作用，https://twitter.com/Barret_China/status/1733705613375570118，可随着 GPT 能力的提升，人类也开始从强监督者角色转变成了弱监督者，举个栗子，GPT 未来能够编写数百万行新颖且具有潜在危险的计算机代码，即使是人类专家也很难理解，那这个时候人类就无法去指导和控制 AI 进行工作了，更不用说帮助 AI 变得更加智能。\n那 AI 的进化岂不是要停止不前？需要怎么办呢？很显然，提升人类自己肯定是不够的，因为再怎么努力也赶不上机器的学习效率，因此 OpenAI 提出了一个让弱监督 AI（替代人类身份）来调优更强的 AI 的想法。\n它们通过实验证明，GPT-2 调优 GPT-4 可以得到一个 GPT-3~3.5 的水平，但额外发现了一个有趣的现象是，GPT-2 在调优的过程中变得更加聪明了，假设有一个跟人类差不多水平的 AI 去调优一个更强的 GPT（如 GPT-5），在调优的过程中，这个 AI 可以获得比当前更强的水平，从而就可以更进一步让 GPT-5 演化到 GPT-6 了，听起来还是比较振奋人心的。\n为了让大家可以更好地参与到这个项目中，OpenAI 开源了他们使用弱监督 AI 调优更强 AI 的代码，https://github.com/openai/weak-to-strong，感兴趣的可以去学习下。",
+          "link": "https://m.okjike.com/originalPosts/657bc996abd46947272d447b",
+          "publishedOn": "2023-12-15T03:35:50.000Z",
+          "wordCount": 543,
+          "title": "发布了: OpenAI 最新的一篇论文《Weak-to-strong Generalization》，https://cdn.openai.com/papers/weak-to-strong-generalization.pdf，读起来还是很让人兴奋...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FtmPssYplXw5gI6hi_r_mlLe37Uav3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
+        {
+          "id": "https://m.okjike.com/reposts/657ba471f0da80ccb518dde5",
+          "author": null,
+          "description": "👍🏻，独立开发这四个字很迷人\n\n转发 @赖嘉伟Gary: 独立开发之新增驱动开发\n以下是上周六我参加 @哥飞 深圳线下分享会的演讲内容。\n一、独立开发做产品的经典误区\n在进入今天的正题之前，我想先聊一下新手做产品的一个经典误区，就是一上来就开始写代码。\n他可能看到市面上一些成功的产品，觉得自己也能做，最经典的就是独立开发三件套：ToDo，记账，日记。其实这些大众需求不是不能做，只是作为产品新手很难把一个大众需求做出差异化。\n还有一种是从自身需求出发，做了一个不痛不痒的小工具，这个场景可能自己遇到，但是市面上不存在这个痛点或者有更多更好的解决方案。\n前期选品没选好，后期还要花几个月甚至更长时间来「打磨」产品，最后推出市场发现数据惨淡，这还不算烂尾的。\n新手常常会高估了自己的产品能力。尤其是程序员，在公司并不需要思考那么多产品、设计、运营上的问题，但轮到自己做产品，才明白写代码只是最后一步的开始。\n二、做产品也有 aha moment\n进入正题，为什么新增那么重要？最直接的原因，我们新手做产品一定要有正反馈，而新增就是最核心的指标。\n产品设计有个说法叫 aha moment，大意是用户感受到产品价值的时刻，翻译可以叫「顿悟时刻」，粗俗点说就是「爽点」。\n做产品也是类似的，新增爆发就是那个爽点。分享最近一年我自己的案例：年初做了一个 AIGC 相关的公众号，最高单日新增 40000 关注；年中跟飞哥学新词 SEO，关键词排名第一，第一个站第一周就获得 10K 访客；出海产品发布第一周收入破 $1000。还有飞哥群里各位的优秀案例……\n每次数据暴涨的时刻都是一个强烈的正反馈，而且这些产品并不是完善之后才推出市场的，恰恰是产品都没做好，流量突然就来了，担心用户流失甚至投诉，但我们要的就是这种兴奋得睡不着觉的感觉，让人上瘾。\n三、新增、新增，新增！\n重要的事情说三遍。产品的生命力不…",
+          "link": "https://m.okjike.com/reposts/657ba471f0da80ccb518dde5",
+          "publishedOn": "2023-12-15T00:57:21.000Z",
+          "wordCount": 572,
+          "title": "转发了: 👍🏻，独立开发这四个字很迷人",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+        },
+        {
+          "id": "https://m.okjike.com/originalPosts/657ba0fd60830f16ae6a9f74",
+          "author": null,
+          "description": "好的产品做出来，同时也需要配备好的运营，酒香也怕巷子深。\n遇到过好几个做的不错的开源产品，默默无闻大半年，关注量不足 1k，稍稍推广，一夜之间就增长了两三倍的关注量。这本身也是给做开源产品的人的最大正反馈。",
+          "link": "https://m.okjike.com/originalPosts/657ba0fd60830f16ae6a9f74",
+          "publishedOn": "2023-12-15T00:42:37.000Z",
+          "wordCount": 461,
+          "title": "发布了: 好的产品做出来，同时也需要配备好的运营，酒香也怕巷子深。 遇到过好几个做的不错的开源产品，默默无闻大半年，关注量不足 1k，稍稍推广，一夜之间就增...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/657b213934cced9e317d4982",
           "author": null,
           "description": "一个疑问：经济能不能被唱衰？",
           "link": "https://m.okjike.com/originalPosts/657b213934cced9e317d4982",
           "publishedOn": "2023-12-14T15:37:29.000Z",
-          "wordCount": 475,
+          "wordCount": 471,
           "title": "发布了: 一个疑问：经济能不能被唱衰？",
           "imageUrl": "https://cdnv2.ruguoapp.com/FiHyoWYgFsq101X6mOY-a3X08cyvv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
         },
@@ -191,36 +221,6 @@
           "wordCount": 494,
           "title": "发布了: 一款让你 cat 文件时，输出彩虹效果文本的命令行工具，lolcat，https://github.com/busyloop/lolcat，看了下源码，竟然是 ruby 写的。",
           "imageUrl": "https://cdnv2.ruguoapp.com/FiZ-9B-VtNDjVrYkXAp7w6bbDTLEv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/657a6b8dabd4694727116e1f",
-          "author": null,
-          "description": "分享一个 video 和 gif 互转，以及对 gif 帧率、大小做调整的组合技能，个人使用频度还是挺高的。\n1. 将 video 转换成 gif\n推荐使用gifski，https://gif.ski，这个工具底层使用 pngquant 做了优化，可以较高压缩但不丢失质量地提取视频每帧内容。使用起来非常简单：\ngifski --fps 30 --width 320 -o anim.gif video.mp4\nfps 是帧率，width 是宽度，关键是导出速度快的惊人，瞬间出来。这个命令同样也适用于对 gif 做调整，将 video.mp4 更换成 gif 原图即可：\ngifski --fps 10 --width 180 -o output.gif anim.gif\n它还有一个强大的功能，就是将多张图片转换成 gif，给孩子拍照后制作 gif 图片时，用的比较多：\ngifski -o file.gif barret*.png\n它有一个对应的非官方 GUI 客户端可供使用（如图一），Gifski，https://github.com/sindresorhus/Gifski\n2. 将 gif 转换成 video\nffmpeg 是一个跨平台的针对 video/audio 进行录制、转换和处理的强大工具，使用非常广泛，它支持多种方式对视频进行截取，例如截取 START_TIME 开始长度为 DURATION 的视频片段：\nffmpeg -i input.mp4 -ss START_TIME -t DURATION -c copy output.mp4\n事实上，ffmpeg 也支持将 video 转换成 gif，将 -c 参数修改成下方的 -vf 即可，相比上面的 gifski 压缩效果没那么好\nffmpeg -i input.mp4 -ss START_TIME -t DURATION -vf \"fps=10,scale=320:-1\" output.gif\n同样也有一个非官方客户端（如图二），Axiom，https://github.com/MattMcManis/Axiom，这个客户端还内置了 Youtube Downloader，可以直接将油管视频下载下来进行处理。\n3. 在线工具推荐\nezgif，https://ezgif.com，是一个功能强大的 gif 工具集（如图三），一般性的需求都可以满足，复杂点的需求例如合并多个 gif，我之前操作过，失败了，还是转到本地处理比较合适。\n我平时更多还是使用线上工具，除非对质量有比较高的要求，或者视频过大，上传非常慢。",
-          "link": "https://m.okjike.com/originalPosts/657a6b8dabd4694727116e1f",
-          "publishedOn": "2023-12-14T02:42:21.000Z",
-          "wordCount": 632,
-          "title": "发布了: 分享一个 video 和 gif 互转，以及对 gif 帧率、大小做调整的组合技能，个人使用频度还是挺高的。 1. 将 video 转换成 gif 推荐使用gifski，https://gif...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FvsxgebZ8Ktzwi_2FSCUs_mW6W4cv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/657a58c1ec195a00b7eade1e",
-          "author": null,
-          "description": "微博现在真会玩，已经开 AI 专题了",
-          "link": "https://m.okjike.com/originalPosts/657a58c1ec195a00b7eade1e",
-          "publishedOn": "2023-12-14T01:22:09.000Z",
-          "wordCount": 459,
-          "title": "发布了: 微博现在真会玩，已经开 AI 专题了",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FmGp2ndnr86UOeFvrdr3DpaPEv5ev3.jpg?imageMogr2/auto-orient/crop/!x2700a0a0/thumbnail/x300"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/657a53c0f0da80ccb5fe7056",
-          "author": null,
-          "description": "Python 中可以使用双下划线来表示私有变量，例如 __name，直接访问私有变量会报错，提示不存在，但有趣的是，通过访问 _classname__name 能够获得这个私有变量的值。\n有一句广为流传的格言说：“We are all consenting adults here”（我们都是成年人），这句话表达了很多 Python 程序员的一个共同观点：“那就是开放比封闭要好，我们应该自己对自己的行为负责，而不是从语言层面来限制对数据或方法的访问”。\n这句话说的很有道理，但其实背后的技术逻辑不是这样。在Python中，使用双下划线作为变量或属性前缀会触发名称修饰（name mangling）机制，名称修饰是一种用于改变变量名以防止命名冲突的机制。",
-          "link": "https://m.okjike.com/originalPosts/657a53c0f0da80ccb5fe7056",
-          "publishedOn": "2023-12-14T01:00:48.000Z",
-          "wordCount": 485,
-          "title": "发布了: Python 中可以使用双下划线来表示私有变量，例如 __name，直接访问私有变量会报错，提示不存在，但有趣的是，通过访问 _classname__name 能够获得这个私...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FvhNkJjPqWkAOJbafxOpbUJjJ5uXv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         }
       ]
     },
@@ -336,6 +336,26 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521595.html",
+          "author": "国家预警信息发布中心",
+          "description": "巫山县气象台2023年12月15日10时50分继续发布“大风蓝色预警信号”，预计15日11时至23时，两坪乡、三溪乡、高唐街道、龙门街道、巫峡镇、骡坪镇、金坪乡、双龙镇、福田镇、龙溪镇、大昌镇、官阳镇、当阳乡、平河乡、竹贤乡可能受大风影响或者已经受大风影响，阵风可达7级以上，或者已达阵风7级并可能持续。",
+          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521595.html",
+          "publishedOn": "2023-12-15T03:07:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市巫山县发布大风蓝色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521520.html",
+          "author": "国家预警信息发布中心",
+          "description": "潼南区气象台2023年12月15日10时10分发布“寒潮蓝色预警信号”，目前我区全部镇街已受冷空气影响，气温已下降2～3℃。预计此次降温过程将持续至17日，日平均气温还将下降6℃以上，山口河谷地区将出现4～6级阵风，请注意防范。",
+          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521520.html",
+          "publishedOn": "2023-12-15T02:32:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市潼南区发布寒潮蓝色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521246.html",
           "author": "国家预警信息发布中心",
@@ -1234,6 +1254,16 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
+          "id": "https://juejin.cn/post/7311871555528998966",
+          "author": "蔓越莓曲奇",
+          "description": "Element 系列的组件库自 Vue2 出现以来，就已经成为大部分开发者的首选 UI 组件库，直至今天，Element UI 跟 Element Plus 的周下载量都维持在 10w 以上 ,Element 系列组件库相信是大部分 Vue 初学者的入坑首选工具，7 年前，Element-UI 发布了他的第一个版本，但在 7 年后的现在，在搭建新项目时，Vue3 开发者或许应该对 Element Plus 说再见了。\n\n\n项目背景\nElement UI 组件如此受欢迎，我觉的有三点因素\n背靠饿了么大厂，有专业团队支持维护\n花裤衩大佬 Vue-admin 的开源项目相互成就\n培训班教学项目以及大学生课程作业的广告效应\n因此，当 Vue 发布了新版本 Vue3 时，为了选取配套的组件库，Element Plus 成为了大部分人的首选。事实上，饿了么官方并没有 Vue3 版本的组件库计划，后续社区内展开了 Element3 的开源教培项目，20 年 Element-Plus 官方版本正式发布，后续由饿了么与开源工作者共同维护，但  Element Plus 的组件一定程度上借鉴了 Element UI 的设计与思路，以至于后续维护上都存在许多问题。\n事实上，我个人对 Element Plus 有着较为复杂的情感，一方面社区大量开源开发者参与其中，推动了 Vue3 生态的发展，相信很多开发者跟我一样，在 GitHub 上的 第一个 PR 是通过 Element Plus 完成的，但另一方面当 Element Plus 落地到公司项目生产，业务对外交付时，很难说它是一个优秀的框架。\n项目问题\n审美疲劳的 UI 设计\n\n\n\n\n上图是我选取的 Github 上 start 星数比较多的模板项目，不能说这些项目有什么问题，只能说就是那个味。最近的一个月内，我发现了 chrome，网易云都重…",
+          "link": "https://juejin.cn/post/7311871555528998966",
+          "publishedOn": "2023-12-13T15:33:06.000Z",
+          "wordCount": 1520,
+          "title": "为什么我不再使用 Element Plus",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7311597716785938451",
           "author": "程序员大澈",
           "description": "大家好，我是大澈！\n本文约1200+字，整篇阅读大约需要2分钟。\n感谢关注微信公众号：“程序员大澈”，然后免费加入问答群，从此让解决问题的你不再孤单！\n1. 资讯速览\n就在前阵子，前端人都用过的工具VSCode，迎来了它的1.85新版本。\n此次版本更新，带来了较大变动，下面先总体看一下：\n\n翻译过来就是这样子：\n欢迎使用 2023 年 11 月发布的 Visual Studio Code。此版本中有许多更新，我们希望您会喜欢，其中一些主要亮点包括：\n浮动编辑器窗口 - 将编辑器拖放到桌面上。\n无障碍视图工作流程 - 更顺畅地往返于无障碍视图。\n更精细的扩展更新控制 - 选择要自动更新的扩展。\n源代码控制传入和传出视图 - 轻松查看待处理的存储库更改。\nJavaScript 堆快照 - 可视化堆快照，包括内存对象图。\nTypeScript 从嵌入提示转到定义 - 从嵌入提示悬停跳转到定义。\nPython 类型层次结构显示 - 快速查看和导航复杂的类型关系。\nGitHub Copilot 更新 - 内联聊天改进、Rust 代码解释。\n预览：扩展的粘性滚动支持 - 在树视图和终端中粘性滚动。\n2. 资讯详述\nVSCode此次版本的更新，虽然变动挺多，但还是那句话，很多东西我们根本用不到，更不更新真的是无所谓哈。\n下面列举两个新特性，我觉得在项目中特别有用。\n2.1 浮动编辑器窗口\nVSCode 在其最新版本1.8.5中，引入了一个备受期待的功能：浮动编辑器窗口。\n这项新功能，允许用户将编辑器从主窗口中拖出，形成独立的轻量级窗口。在任何一个窗口中对编辑器所做的更改，都会即时反映到其它所有打开该编辑器的窗口中。\n简单来说，就是我们在项目中分屏时，可以直接从编辑器当前窗口拖出，并放置在另一个屏幕上。\n\n值得一提的是，既然终端和搜索结果都可以作为编辑器打开，现在这些功能也可以在单独的窗口中使用了！\n\n2.2 系统资源可直接CV\n此前，将文件从系统资源管理器移动到VSCode，通常需要打开文件资源管理器，再手动复制文件到相应目录中。\n但在最新版本中，增加了一个实用的新功能：可直接从操作系统的资源管理器中，粘贴文件到VSCode的目录里。\n这意味着，用户现在可以更方便的，从他们的电脑文件系统中复制需要的静态资源文件，并直接粘贴到VSCode的项目目录中，而不需要再去做打开文件资源管理器这种浪费时间的操作。\n\n结语\n建立这个平台的初衷：\n打造一个仅包含前端问题的问答平台，让大家高效搜索处理同样问题。\n通过不断积累问题，一起练习逻辑思维，并顺便学习相关的知识点。\n遇到难题，遇到有共鸣的问题，一起讨论，一起沉淀，一起成长。\n感谢关注微信公众号：“程序员大澈”，然后免费加入问答群，从此让解决问题的你不再孤单！",
@@ -1394,16 +1424,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7309921568493977637",
-          "author": "大脸怪",
-          "description": "theme: smartblue\nVue Naive Admin 从2022年2月开始开源，其简单易上手的特性广受好评，当时发过一篇推文，感兴趣的朋友可以重温一下，Vite+Vue3+Unocss+NaiveUI+Pinia搭建一套优雅的后台管理模板，真香 - 掘金 (juejin.cn)\n回顾开源\nVue Naive Admin 开源一年零十个月，收获了 1.2k Star, gitee 上也有 260+ 的 Star，建了两个微信交流群，总人数 500+，成绩不算优秀，但贵在坚持。\nVue Naive Admin 2.0 是什么？\n源码: vue-naive-admin (github.com)\n体验: https://admin.isme.top\n简介\nVue Naive Admin 2.0 是一款极简风格的后台管理模板，包含前后端解决方案，前端使用 Vite + Vue3 + Pinia + Unocss，后端使用 Nestjs + TypeOrm + MySql + Redis，简单易用，赏心悦目，历经十几次重构和细节打磨，诚意满满！！\n设计理念\nVue Naive Admin 2022年2月开始开源，2023年 12月 发布 2.0 版本，从 1.0 到现在的 2.0，一直秉持着简单即正义的理念，旨在帮助中小企业、在校大学生及个人开发者快速上手开发后台管理项目，为了降低使用者的学习成本，没有使用当前看似“主流”的 TypeScript（前端），而是使用 JavaScript, 这也使得 Vue Naive Admin 成为了市面上少有的 使用 JavaScript 的 Vue3 后台管理模板，而且还算优秀，得到了大量朋友的认可和喜爱。\n这里就不讨论为什么使用 JavaScript 而不使用 TypeScript了，各自的优缺点大家都清楚，需要 TypeScrip…",
-          "link": "https://juejin.cn/post/7309921568493977637",
-          "publishedOn": "2023-12-08T02:22:54.000Z",
-          "wordCount": 1193,
-          "title": "一个极致轻量的 Vue3 后台管理，继 1.2k Star 后，终迎 2.0 版本，这次有点东西",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7309775437942456330",
           "author": "耗子君QAQ",
           "description": "theme: nico\nhighlight: idea\n同学们大家好，忙里偷闲把我在业务中封装的很多请求实用工具分享给大家，为了大家使用方便（也是为了我的开发团队使用方便)，我将工具做成了一个库。不占用大家的时间我们直接进入正题，先丢仓库链接，然后介绍这个库是什么东西。 (最近业务压力略大，行文有些潦草，希望大家包涵)\n库名: @varlet/axle\ngithub: https://github.com/varletjs/axle\n设计原则\n完全继承 axios 的所有能力，并保留访问 axios 原始对象的能力，不破坏 axios 本身的行为。\n介绍\n基于 axios 的渐进式请求工具。 它不会破坏 axios 原有的能力，帮助您更轻松地处理请求。\n快速开始\n安装\n# 通过 npm, yarn, pnpm 安装\n\n# npm\nnpm i @varlet/axle -S\n\n#yarn\nyarn add @varlet/axle\n\n#pnpm\npnpm add @varlet/axle\n\n发送请求\nAxle 归一化了请求函数的参数，并针对不同的业务需求，扩展了更多请求函数，下面是一个简单的例子。\nimport { createAxle } from '@varlet/axle'\n\nconst axle = createAxle(/** @see https://axios-http.com **/)\n\naxle.get('/url', { current: 1, pageSize: 10 }, { headers: {} })\naxle.post('/url', { name: 'Axle' }, { headers: {} })\n\n配置\nAxle 完全支持 axios 的所有配置能力。\nconst axle = createAxle(/** @see https://ax…",
@@ -1506,7 +1526,7 @@
           "description": "[7073670907851440160#新人报道#] 大家觉得低代码工具好用吗，你是否尝试体验过低代码工具，并应用在你的工作中",
           "link": "https://juejin.cn/pin/7310047627669159988",
           "publishedOn": "2023-12-08T10:51:54.000Z",
-          "wordCount": 456,
+          "wordCount": 457,
           "title": "[7073670907851440160#新人报道#] 大家觉得低代码工具好用吗，你是否尝试体验过低代码工具，并应用在你的工作中",
           "imageUrl": null
         },
@@ -1566,7 +1586,7 @@
           "description": "[7210002980895916043#挑战每日一条沸点#] yiapi（易接口），完成启动流程图~\nhttps://github.com/chenbimo/yicode",
           "link": "https://juejin.cn/pin/7307619217960304655",
           "publishedOn": "2023-12-03T00:05:52.000Z",
-          "wordCount": 476,
+          "wordCount": 484,
           "title": "[7210002980895916043#挑战每日一条沸点#] yiapi（易接口），完成启动流程图~ https://github.com/chenbimo/yicode",
           "imageUrl": null
         },
@@ -1616,7 +1636,7 @@
           "description": "[7073670907851440160#新人报道#] 在最新的vscode 1.84.2发布笔记里面有一款白色的主题，还挺好看的，不知道有没有人知道主题名字",
           "link": "https://juejin.cn/pin/7307451430587400227",
           "publishedOn": "2023-12-01T05:37:56.000Z",
-          "wordCount": 465,
+          "wordCount": 466,
           "title": "[7073670907851440160#新人报道#] 在最新的vscode 1.84.2发布笔记里面有一款白色的主题，还挺好看的，不知道有没有人知道主题名字",
           "imageUrl": null
         },
