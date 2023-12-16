@@ -34,7 +34,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": 1014,
+          "wordCount": 1013,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         },
@@ -44,7 +44,7 @@
           "description": "滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/",
           "publishedOn": "2023-11-21T16:14:41.000Z",
-          "wordCount": 1295,
+          "wordCount": 1294,
           "title": "cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用",
           "imageUrl": null
         },
@@ -54,7 +54,7 @@
           "description": "剪映中的视频特效虽多，其实就两类，一类改变原始像素，一类叠加混合，本文通过精简的源码和精致的案例给大家介绍具体如何实现。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/video-effect-js-filter-pixijs-webgl-3d/",
           "publishedOn": "2023-11-19T15:12:20.000Z",
-          "wordCount": 1234,
+          "wordCount": 1233,
           "title": "剪映APP的视频特效如何在Web中JS实现",
           "imageUrl": null
         }
@@ -235,7 +235,7 @@
           "description": "子绝四：勿意，勿必，勿固，勿我。\n《论语·子罕》\n——————————————————\n刚扫了一圈几个群，明显感受到的一个现象，〝我〞字越多，思维越自我，讨论越低效。\n大家不是在围绕大象各抒己方视角观察，互通有无，而是各说各话，力求战胜他人观点。\n热热闹闹，但又孤孤单单。\n应该搞一个GPTs， 分析群里聊天记录中的「含〝我〞量」，即〝我〞字在消息条数中出现的比率。\n含〝我〞量和讨论的质量通常成反比。\n语言会影响思考角度，慎之。",
           "link": "https://m.okjike.com/originalPosts/657c6511979083134a029882",
           "publishedOn": "2023-12-15T14:39:13.000Z",
-          "wordCount": 458,
+          "wordCount": 457,
           "title": "发布了: 子绝四：勿意，勿必，勿固，勿我。 《论语·子罕》 —————————————————— 刚扫了一圈几个群，明显感受到的一个现象，〝我〞字越多，思...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -1485,16 +1485,6 @@
           "wordCount": 523,
           "title": "重庆市忠县发布大雾黄色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/csyj/20231209/t20231209_526513344.html",
-          "author": "国家预警信息发布中心",
-          "description": "长寿区气象台2023年12月9日9时升级发布“大雾橙色预警信号”，预计9日9时至12时，江南街道、晏家街道、凤城街道、菩提街道、渡舟街道、但渡镇、八颗街道、新市街道、邻封镇、长寿湖镇、云集镇、龙河镇、石堰镇、葛兰镇、双龙镇、云台镇、海棠镇、万顺镇、洪湖镇将出现能见度小于200米的雾，局部地区能见度小于50米。请以上各地注意防范大雾天气可能造成的影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/csyj/20231209/t20231209_526513344.html",
-          "publishedOn": "2023-12-09T01:21:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市长寿区发布大雾橙色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -1503,6 +1493,16 @@
       "feedUrl": "https://rsshub.app/juejin/trending/frontend/weekly",
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
+        {
+          "id": "https://juejin.cn/post/7312338839695212571",
+          "author": "mysteryven",
+          "description": "告诉大家一个好消息，OxLint 现在正式发布了！可能有些同学不了解，简单介绍一下，它和 ESLint 一样，是一个 JavaScript 代码检查工具，只是它不需要任何复杂的配置，就能帮助我们捕捉错误或无用代码。它使用 Rust 编写，速度非常地快，和 ESLint 对比起来，大概快 50 ~ 100 倍。\n尤大也惊叹它的速度之快：\n\n放个图给大家感受一下：\n\n更详细的性能对比请前往 bench-javascript-linter。\n如何使用\nOxLint并非旨在完全取代ESLint，毕竟 ESLint 生态已经很完善了，有些时候我们并不关注它的性能问题，但当ESLint 的速度成为工作流程瓶颈时，可以把它当做一个增强工具。\n比如有些项目会在 lint-staged 或者 CI 设置运行 ESLint，如果有一个大项目本来在 lint-staged 阶段要花费 10 秒，现在就连 1 秒都不到，连给你接水摸鱼的时间都没了（狗头保命）。\n说了这些，我们看看怎么用。要在JavaScript / TypeScript 代码库中测试 OxLint，只需在存储库的根目录下执行以下命令：\nnpx oxlint@latest # npm\npnpm dlx oxlint@latest # pnpm\nyarn dlx oxlint@latest # yarn\nbunx oxlint@latest # bun\ndeno run oxlint@latest # deno\n\n如果有报错，命令行就会抛出详细的警告。同时，我们也有 VSCode 插件，在插件市场搜索 oxc 就可以搜到。\n更多内容，请阅读我们的 安装指南。\n设计\n1. 比 ESLint 快 50-100 倍\n在实际场景中，Shopify 告称他们的原本需要运行 75 分钟 ESLint，现在仅需10秒。\n这是来自 Jason Miller，Shopify DX 和 Preact 作者的消息：\noxlint对我们来说是一个巨大的胜利。我们以前的lint设置需要运行 75 分钟，因此我们在CI中分配了 40 多个工作程序。\n相比之下，oxlint 在单个工作程序上对相同代码库的 lint 大约需要 10 秒钟，而且输出更易于解释。\n当我们迁移时，甚至发现了一些旧设置中隐藏或跳过的几个错误！\nOXlint 专门为性能设计，在其中，利用 Rust 和并行处理是其中的关键因素。\n2. 为正确性进行代码检查\nOxLint默认识别错误、冗余或混乱的代码 — 优先考虑正确性而不是一些吹毛求疵的规则（分类为 perf、suspicious、pedantic 或 style）。\n它的分类借鉴自了 clippy 的分类规则。初次见，可能会觉得很不适应，但是一旦熟悉，就会觉得这样的的分类是如此的方便，好用！\n运行默认模式（不加任何参数，直接 npx oxlint）识别出来的错误，一般都是需要修正的错误。\n3. 使用便捷\n现在配置新的 JavaScript / TypeScript 代码库变得越来越复杂。遇到兼容性问题的可能性很高，可能导致数小时的时间浪费。这就是为什么我们设计 OXLint 以零配置的方式出现的原因。别说配置文件了，Node.js 也不是必需的！\n我们工具的大多数调整可以通过命令行完成，目前兼容 ESLint 的配置文件的工作也在进行中。\n4. 增强诊断\n理解 lint 工具的信息可能具有挑战性。Oxlint 旨在通过定位根本原因并提供有用的信息来简化这一过程，也就是说，我们的报错信息比较容易读懂。看一个例子：\n如果我们想在 vscode中运行一下性能相关的 lint 规则： oxlint -D perf：\n得到的结果如下：\n\n5. 统一的规则\nOxlint 目前尚未提供插件系统，但我们正在积极整合来自流行插件如 TypeScript、React、Jest、Unicorn、JSX-a11y和 Import 的规则。\n我们认识到在 JavaScript 生态系统中插件的重要性，并且也正在研究基于 DSL 的插件系统。\n然而，你可能会喜欢一个独立的 lint 工具 — 无需管理一系列插件依赖项，不想解决兼容性问题、或者由于版本限制而求助于分支插件。\n感谢大家阅读到这，希望大家可以使用 OxLint 获得更愉悦的开发体验，也预祝大家即将到来的元旦假期快乐！\n要开始使用，请查阅安装指南，或者了解更多关于oxc项目的信息。\n我们项目还有很多好玩的东西，欢迎来玩 👉 https://oxc-project.github.io/",
+          "link": "https://juejin.cn/post/7312338839695212571",
+          "publishedOn": "2023-12-14T13:19:39.000Z",
+          "wordCount": 1092,
+          "title": "OxLint 发布了，比 ESLint 快 50 倍！",
+          "imageUrl": null
+        },
         {
           "id": "https://juejin.cn/post/7311871555528998966",
           "author": "蔓越莓曲奇",
@@ -1654,16 +1654,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7310143510103064585",
-          "author": "三一习惯",
-          "description": "随着经济的下行以及移动互联网发展趋于成熟，对软件开发人员的需求大大减少，互联网行业所有的公司都在降本增效，合并通道，降薪裁员的新闻层出不穷。\n但相比其他行业，互联网行业的从业者薪资还是比较可观的，但要求也比之前高了很多，需要大家掌握更多的技能和在某些技术领域深耕。\n本文，我们就聊聊，掌握了哪些技能，能让前端同学，收入高且稳定。\n端智能\n首推的是端智能，很多行业大咖都认为，随着ChatGPT的横空出世，开启了第四次工业革命，很多产品都可以用大模型重做一遍。当前，我创业的方向，也和大模型有关。\n当前的大模型主要还跑在云端，但云端的成本高，大模型的未来在端智能，这也是小米创始人雷军在今年一次发布会上提出的观点。\n在2023年8月14日的雷军年度演讲中，雷军宣布小米已经在手机端跑通13亿参数的大模型，部分场景效果媲美云端。\n目前，端上大模型的可行性和前景已经得到了业内的普遍认可，国内外各个科技大厂在大模型的端侧部署领域均开始布局，目前大量工程已在PC端、手机端实现大模型的离线部署，更有部分App登陆应用商店，只需下载即可畅通无阻地对话。\n我们相信，在不久的将来，端上大模型推理将会成为智能应用的重要组成部分，为用户带来更加便捷、智能的体验。\n我在美团从零研发了web端智能推理引擎，当时立项时，就给老板画饼，美团每天的几百亿推理调用，如果有一半用端智能替代的话，每年能为公司节省上亿元。\n要想掌握端智能，需要学习深度学习的基本知识，还要掌握图形学和C++编程，通过webgl或webassembly 技术实现在Web端执行深度学习算法。\n图形学\n前面提到的端智能，只是涉及到了图形学中的webgl计算，但图形学的未来在元宇宙，通过3D渲染，实现VR、AR、XR等各种R。\n计算机图形学是一门快速发展的领域，涵盖了三维建模、渲染、动画、虚拟现实等众多技术和应用。在电影、广告、游戏等领域中，计算机…",
-          "link": "https://juejin.cn/post/7310143510103064585",
-          "publishedOn": "2023-12-09T00:58:41.000Z",
-          "wordCount": 756,
-          "title": "前端学哪些技能饭碗越铁收入还高",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7310041127181107209",
           "author": "_jiang",
           "description": "关于脚手架 cli 的创建以及发布，还有其它更多模板(vue3、react)的搭建，请参考我的上一篇文章\n目前该模板支持了：\nhusky、eslint、prettier、stylelint、tsc 等规范\nuview-plus 组件库，自动按需导入的，无需在页面导入直接使用\npinia 作为状态管理，pinia-plugin-unistorage 作为缓存处理\naxios 处理请求，uniapp-axios-adapter 适配小程序\nmock 手动处理\nuniapp-router-next 封装路由，让开发习惯跟 vue-router 保持一致\n使用 vscode 开发\n使用 ts 开发\n请注意插件的版本号，某些插件版本不同可能会报错，这里都不会再让你踩坑，后续会添加一些通用组件及方法。可先下载模板后，再看文章。如果觉得该模板还行，可否给仓库一个 star 🙏\ninit 项目\n官网地址\n全局安装 vue-cli\nnpm install -g @vue/cli\n\n创建 uni-app\nnpx degit dcloudio/uni-preset-vue#vite-ts my-vue3-project\n\n若执行报错，直接去下载模板\n使用 vscode 开发\n安装插件:\nVSCode 安装 uniapp 代码提示插件： uniapp-snippet 、uni-app-schemas\nVSCode 安装一键创建页面、组件、分包 插件: uni-create-view\n在微信开发者工具打开\n自行使用邮箱注册一个新的小程序，保存 appid\n在 src/manifest.json 中填入 appid\n修改 package.json，仅保留对微信小程序的支持，方便调试，今后想加其它端的自行网上查找添加\n\"scripts\": {\n    \"dev\": \"uni -p mp-weixin\"…",
@@ -1796,7 +1786,7 @@
           "description": "IDEA 推荐一款好用插件 CodeGeex，今天刚装上，用起来还不错。",
           "link": "https://juejin.cn/pin/7310032602130432063",
           "publishedOn": "2023-12-08T07:15:21.000Z",
-          "wordCount": 44,
+          "wordCount": 473,
           "title": "IDEA 推荐一款好用插件 CodeGeex，今天刚装上，用起来还不错。",
           "imageUrl": null
         },
@@ -1806,7 +1796,7 @@
           "description": "设计师的日常",
           "link": "https://juejin.cn/pin/7308909489155096591",
           "publishedOn": "2023-12-05T13:39:45.000Z",
-          "wordCount": 44,
+          "wordCount": 457,
           "title": "设计师的日常",
           "imageUrl": null
         },
@@ -1816,7 +1806,7 @@
           "description": "有用过gpt3.5的jy吗，我怎么感觉这gpt智商有点低呢，是我使用方式不对吗",
           "link": "https://juejin.cn/pin/7308905139405324307",
           "publishedOn": "2023-12-05T06:37:17.000Z",
-          "wordCount": 44,
+          "wordCount": 462,
           "title": "有用过gpt3.5的jy吗，我怎么感觉这gpt智商有点低呢，是我使用方式不对吗",
           "imageUrl": null
         },
@@ -1826,7 +1816,7 @@
           "description": "你有遇到鼠标一放就生成一条线的eclipse吗",
           "link": "https://juejin.cn/pin/7308643782376161334",
           "publishedOn": "2023-12-05T01:16:00.000Z",
-          "wordCount": 44,
+          "wordCount": 463,
           "title": "你有遇到鼠标一放就生成一条线的eclipse吗",
           "imageUrl": null
         },
@@ -1836,7 +1826,7 @@
           "description": "高效的学习平台和更快捷面试平台.",
           "link": "https://juejin.cn/pin/7308782773866233882",
           "publishedOn": "2023-12-05T00:59:07.000Z",
-          "wordCount": 44,
+          "wordCount": 457,
           "title": "高效的学习平台和更快捷面试平台.",
           "imageUrl": null
         },
@@ -1846,7 +1836,7 @@
           "description": "[7210002980895916043#挑战每日一条沸点#] yiapi（易接口），完成启动流程图~\nhttps://github.com/chenbimo/yicode",
           "link": "https://juejin.cn/pin/7307619217960304655",
           "publishedOn": "2023-12-03T00:05:52.000Z",
-          "wordCount": 44,
+          "wordCount": 473,
           "title": "[7210002980895916043#挑战每日一条沸点#] yiapi（易接口），完成启动流程图~ https://github.com/chenbimo/yicode",
           "imageUrl": null
         },
@@ -1856,7 +1846,7 @@
           "description": "[7210228048107896891#每日快讯#]  重要通知丨 JumpServer 开源堡垒机 V2 社区版即将停止维护\n根据《关于 JumpServer 开源堡垒机 V2 版本产品生命周期的相关说明》，JumpServer 开源堡垒机 V2 版本（社区版）将于 2023 年 12 月 31 日停止维护支持。",
           "link": "https://juejin.cn/pin/7307514532275372067",
           "publishedOn": "2023-12-02T02:23:58.000Z",
-          "wordCount": 44,
+          "wordCount": 665,
           "title": "[7210228048107896891#每日快讯#] 重要通知丨 JumpServer 开源堡垒机 V2 社区版即将停止维护 根据《关于 JumpServer 开源堡垒机 V2 版本产品生命周期的相关说明...",
           "imageUrl": null
         },
@@ -1866,7 +1856,7 @@
           "description": "预告：visualization-collection将实现两个跨域页面的量子纠缠效果，而且是纯前端实现，不想错过的赶紧点上关注啦[玫瑰][玫瑰][玫瑰]\n应用地址: https://hepengwei.cn\n源码地址: https://github.com/hepengwei/visualization-collection",
           "link": "https://juejin.cn/pin/7307451430595624975",
           "publishedOn": "2023-12-01T09:39:01.000Z",
-          "wordCount": 44,
+          "wordCount": 466,
           "title": "预告：visualization-collection将实现两个跨域页面的量子纠缠效果，而且是纯前端实现，不想错过的赶紧点上关注啦[玫瑰][玫瑰][玫瑰] 应用地址: https://hepengw...",
           "imageUrl": null
         },
@@ -1876,7 +1866,7 @@
           "description": "2023开发者必备iOS开发工具\n在进行iOS开发工作时，利用并熟练使用恰当的工具可以让工作效率得到大幅度提高。下边会介绍一些在进行iOS开发工作时常用的一些工具，本文并不对其进行展开，对使用方法及工作原理感兴趣的同学可以自行进行更深入的研究。\n开发工具 Postman Postman是一个接口测试工具。在做接口测试的时Postman相当于一个客户端，它可以模拟用户发起的各类HTTP请求，将请求数据发送至服务端并获取对应的响应结果，从而验证响应中的结果数据是否和预期值相匹配，并确保开发人员能够及时处理接口中的bug，进而保证产品上线之后的稳定性和安全性。它主要是用来模拟各种HTTP请求的，如get/post/delete/put等等。Postman与浏览器的区别在于有的浏览器不能输出Json格式，而Postman更直观接口返回的结果。\nipaguard\nIpa Guard是一款功能强大的ipa混淆工具，不需要ios app源码，直接对ipa文件进行混淆加密。可对IOS ipa文件的代码，代码库，资源文件等进行混淆保护。 可以根据设置对函数名、变量名、类名等关键代码进行重命名和混淆处理，降低代码的可读性，增加ipa破解反编译难度。可以对图片，资源，配置等进行修改名称，修改md5。只要是ipa都可以，不限制OC，Swift，Flutter，React Native，H5类app。\nMLeaksFinder\nMLeaksFinder是WeRead团队开源的一款检测iOS内存泄漏的框架，其使用非常简单，只需将文件加入项目中，如果有内存泄漏，3秒后自动弹出alert来捕捉循环引用。使得可以在开发快速找到80%内存泄漏，而使用Xcode Leak工具更适合大范围的，全部的寻找泄漏点。\nappuploder\nAPP开发助手iOS APP上架到App Store的辅助工具，解决iOS APP上架繁琐费时的情况，帮助跨平台APP开发者上架苹果应用,在没有配置Mac苹果机的情况，实现iOS证书申请，创建iOS开发者证书、iOS发布证书等各类证书，iOS开发者在Windows、Linux或Mac系统中上传IPA到App Store,简化iOS APP上架流程！在任何电脑中轻松快速上架你的APP。",
           "link": "https://juejin.cn/pin/7307502467825942555",
           "publishedOn": "2023-12-01T08:34:18.000Z",
-          "wordCount": 44,
+          "wordCount": 529,
           "title": "2023开发者必备iOS开发工具 在进行iOS开发工作时，利用并熟练使用恰当的工具可以让工作效率得到大幅度提高。下边会介绍一些在进行iOS开发工作时常用的一些工具，...",
           "imageUrl": null
         },
@@ -1886,7 +1876,7 @@
           "description": "求助 求助 安装pandas时这个问题怎么解决 跟着gpt在终端操作也没有解决",
           "link": "https://juejin.cn/pin/7307451430594510863",
           "publishedOn": "2023-12-01T06:56:58.000Z",
-          "wordCount": 44,
+          "wordCount": 478,
           "title": "求助 求助 安装pandas时这个问题怎么解决 跟着gpt在终端操作也没有解决",
           "imageUrl": null
         },
@@ -1896,7 +1886,7 @@
           "description": "[7073670907851440160#新人报道#] 在最新的vscode 1.84.2发布笔记里面有一款白色的主题，还挺好看的，不知道有没有人知道主题名字",
           "link": "https://juejin.cn/pin/7307451430587400227",
           "publishedOn": "2023-12-01T05:37:56.000Z",
-          "wordCount": 44,
+          "wordCount": 463,
           "title": "[7073670907851440160#新人报道#] 在最新的vscode 1.84.2发布笔记里面有一款白色的主题，还挺好看的，不知道有没有人知道主题名字",
           "imageUrl": null
         },
@@ -1906,7 +1896,7 @@
           "description": "将 大模型 和 code review 结合 ，针对于 Gitlab MR 进行 code review 辅助项目评审[赞]\n项目地址：https://github.com/mimo-x/Code-Review-GPT-Gitlab/\n文章介绍：https://juejin.cn/post/7292692843415945225",
           "link": "https://juejin.cn/pin/7307221821903732786",
           "publishedOn": "2023-12-01T02:03:12.000Z",
-          "wordCount": 44,
+          "wordCount": 525,
           "title": "将 大模型 和 code review 结合 ，针对于 Gitlab MR 进行 code review 辅助项目评审[赞] 项目地址：https://github.com/mimo-x/Code-Review-GPT-Gitlab/ 文章介...",
           "imageUrl": null
         }
