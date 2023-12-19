@@ -51,11 +51,137 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-19 datetime="2023-12-19T05:07:38.000Z">2023-12-19</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-19 datetime="2023-12-19T05:07:38.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-19 datetime="2023-12-19T08:21:25.000Z">2023-12-19</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-19 datetime="2023-12-19T08:21:25.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Barret李靖的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/6581528579cb2b9f35c44323"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 很多人喜欢咀嚼现成的知识点，而对知识点背后的 Why 视而不见（或惰于了解），事实上，先搞清楚 Why 才是获取知识的「捷径」。</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6581528579cb2b9f35c44323">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>很多人喜欢咀嚼现成的知识点，而对知识点背后的 Why 视而不见（或惰于了解），事实上，先搞清楚 Why 才是获取知识的「捷径」。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/658150cd979083134a5fdbcc"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: Python 解释器会先将源码编译成字节码，再开始执行，因此有些细微的优化是可以省略的，例如图一中的时间表达式会在编译过程被处理成一个常量。 如何更加...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/658150cd979083134a5fdbcc">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Python 解释器会先将源码编译成字节码，再开始执行，因此有些细微的优化是可以省略的，例如图一中的时间表达式会在编译过程被处理成一个常量。
+如何更加优雅地处理数字和字符串，也推荐阅读这篇文章：https://github.com/piglei/one-python-craftsman/blob/master/zh_CN/3-tips-on-numbers-and-strings.md</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/65813f2b60830f16aed91c79"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 在类定义中，通常可以使用 self/this 等关键词直接访问类中的对象和属性，Python 在这个细节的设计也是独树一帜，它约定函数入参的第一个参数必须是 sel...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65813f2b60830f16aed91c79">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FqGYFPZSBIVt7p5fYvgJDsQHwEnIv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>在类定义中，通常可以使用 self/this 等关键词直接访问类中的对象和属性，Python 在这个细节的设计也是独树一帜，它约定函数入参的第一个参数必须是 self：
+class C:
+  a &#x3D; 1
+  def meth(self, x):
+    print(self.a)
+但这个设计在函数调用报错时，会带来一些迷惑性，例如：
+c &#x3D; C()
+# TypeError: meth() takes 2 positional arguments but 3 were given
+c.meth(1, 2)
+明明入参 2 个，报错的时候却说提供了 3 个入参。Bruce Eckel 在 08 年写了一篇提案《参数列表中的 Self：冗余并不显式》，https://www.artima.com/weblogs/viewpost.jsp?thread&#x3D;239003，尝试用魔法打败魔法 —— 在 Python 社区中，对于语法的设计，基本都遵循 Pythoniciy 原则 —— 这不符合第二条原则：“Explicit is better than implicit”，报错蕴含的信息过于隐式。
+Python 之父 Guido 隔了一个月回了一篇《为什么显式的 self 必须保留》，https://neopythonic.blogspot.com/2008/10/why-explicit-self-has-to-stay.html，文中提到 self 在函数调用时是隐式传入的，关于报错的迷惑性表示认可，但是将 self 省略不认可，原因有三个：
+1）c.meth(x) 完全等同于 C.meth(c, x)，保留 self 可以强调两者之间的等价性
+2）保留 self 可以允许通过向类插入函数来动态修改类，创建相应的方法，因为没有 self 入参新增的函数会报错
+3）在使用装饰器时，无法确定是否需要给装饰器函数添加 self 入参，因为 staticmethod 不需要，而 classmethod 需要
+个人认为 Guido 是站在 Python 整体设计不要大改的前提下来回应的，因为 Python 具备动态修改类的能力，因为类装饰器存在不同的类型，所以去掉 self 不合理，这样的推论就有失偏颇了。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/658114ed71cfacf609548b48"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: Python 的 lambda 匿名函数看起来就是一个半发育状态的多余存在，常常用于简单的数据处理，例如 filter/map/sort 等。相比 def 函数，lambda 更像是一个...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/658114ed71cfacf609548b48">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FhWUDD-SGHNiAbPo3TBfhXljlc5Fv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Python 的 lambda 匿名函数看起来就是一个半发育状态的多余存在，常常用于简单的数据处理，例如 filter/map/sort 等。相比 def 函数，lambda 更像是一个「小函数」，它支持多个入参，但只允许执行一个表达式，这跟少写几行代码的 def 函数有啥本质区别呢😂
+事实上，连 Python 之父 Guido 也嫌弃这个 lambda 的存在（https://www.artima.com/weblogs/viewpost.jsp?thread&#x3D;98196），如果不是为了保持向前兼容性，可能这玩意儿在早期版本中就已经夭折；当有人提出要在 lambda 中支持多行表达式的时候，直接被 Guido 摁在地上摩擦（https://www.artima.com/weblogs/viewpost.jsp?thread&#x3D;147358），Guido 的态度是，“不能光顾着解决一个问题/实现某种功能，就引入缺乏 Pythonicity 的语言设计。”
+我个人觉得 lambda 的存在还是让 Python 这门语言变得更加有趣味性，既然都可以容忍 [x for x in list if x &gt; 1] 这种奇特的列表解析式和生成器表达式存在，为啥不能接受 lambda 这种小函数存在呢，单单从对代码紧凑型这点来说，lambda 也是值得尝试使用的😄</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/6581082560830f16aed35d2f"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 看论文实在是太耗费时间，一篇写的不错的论文，想大概搞明白需要至少 2 小时，如果想彻底搞明白，那就得跑一跑代码，5 小时起步。像我这种半吊子进场的...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6581082560830f16aed35d2f">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>看论文实在是太耗费时间，一篇写的不错的论文，想大概搞明白需要至少 2 小时，如果想彻底搞明白，那就得跑一跑代码，5 小时起步。像我这种半吊子进场的初学者，一大堆概念还整不明白，加上中途跑出去学概念的时间，一两篇论文够我一两天时间的了。
+这也是为啥我决定把论文放一放，先把  Python 折腾明白，再把神经网络折腾明白的原因，磨刀不误砍柴工。</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -114,60 +240,6 @@
 此文件记录自己每日遇到的问题(难题，需自动化的事情，痛点，看不惯的流程等等)。
 每天不用多，一至三条即可。
 坚持一个月，过来评论交流效果。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Barret李靖的即刻动态</button>
-                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/658114ed71cfacf609548b48"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: Python 的 lambda 匿名函数看起来就是一个半发育状态的多余存在，常常用于简单的数据处理，例如 filter/map/sort 等。相比 def 函数，lambda 更像是一个...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/658114ed71cfacf609548b48">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Python 的 lambda 匿名函数看起来就是一个半发育状态的多余存在，常常用于简单的数据处理，例如 filter/map/sort 等。相比 def 函数，lambda 更像是一个「小函数」，它支持多个入参，但只允许执行一个表达式，这跟少写几行代码的 def 函数有啥本质区别呢😂
-事实上，连 Python 之父 Guido 也嫌弃这个 lambda 的存在（https://www.artima.com/weblogs/viewpost.jsp?thread&#x3D;98196），如果不是为了保持向前兼容性，可能这玩意儿在早期版本中就已经夭折；当有人提出要在 lambda 中支持多行表达式的时候，直接被 Guido 摁在地上摩擦（https://www.artima.com/weblogs/viewpost.jsp?thread&#x3D;147358），Guido 的态度是，“不能光顾着解决一个问题/实现某种功能，就引入缺乏 Pythonicity 的语言设计。”
-我个人觉得 lambda 的存在还是让 Python 这门语言变得更加有趣味性，既然都可以容忍 [x for x in list if x &gt; 1] 这种奇特的列表解析式和生成器表达式存在，为啥不能接受 lambda 这种小函数存在呢，单单从对代码紧凑型这点来说，lambda 也是值得尝试使用的😄</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/6581082560830f16aed35d2f"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 看论文实在是太耗费时间，一篇写的不错的论文，想大概搞明白需要至少 2 小时，如果想彻底搞明白，那就得跑一跑代码，5 小时起步。像我这种半吊子进场的...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6581082560830f16aed35d2f">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>看论文实在是太耗费时间，一篇写的不错的论文，想大概搞明白需要至少 2 小时，如果想彻底搞明白，那就得跑一跑代码，5 小时起步。像我这种半吊子进场的初学者，一大堆概念还整不明白，加上中途跑出去学概念的时间，一两篇论文够我一两天时间的了。
-这也是为啥我决定把论文放一放，先把  Python 折腾明白，再把神经网络折腾明白的原因，磨刀不误砍柴工。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -493,11 +565,8 @@ Python 设计哲学注重“可读性胜过一切”，原则性很强，反观 
                         <summary class="article-expander__title">发布了: 我绝对是只专注于 Jithub 程序员的，其他的都是擦边命中😂</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/657fe838f0da80ccb56c1d7b">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FtSUzMMb4UqHDuwSDrwKJV393x7Uv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>我绝对是只专注于 Jithub 程序员的，其他的都是擦边命中😂</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -533,29 +602,11 @@ Python 设计哲学注重“可读性胜过一切”，原则性很强，反观 
                         <summary class="article-expander__title">发布了: 有朋友问我，怎么做好自媒体，从最近几个月的观察来看，最重要的一个技巧就是「专注」，专注做一件事情，专注在一个领域，持续不断地挖掘有用的信息或者...</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/657f95170972668b3e81b430">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>有朋友问我，怎么做好自媒体，从最近几个月的观察来看，最重要的一个技巧就是「专注」，专注做一件事情，专注在一个领域，持续不断地挖掘有用的信息或者价值点，刚开始可能没人看到，但是三个月、半年以后，沉淀的信息就会产生魔力。看到了好几个因为专注而做的特别棒的自媒体。
 我不是一个能够保持长期专注的人，好奇心特别强，兴趣点太分散，时间投入过于不均衡，相比之下，做的并不好。我现在更多还是把社交媒体当做学习工具，输出是为了验证自己是不是学明白了，如果你看到我在输出，那必然是有了新的输入，如果输出的内容能“教会”别人，那我认为自己的理解基本到位了。
 保持专注，学会做减法，有的时候也是一件比较痛苦的事情，这需要有“放弃一些东西”的勇气，但说实话，我们能够把握的东西本就寥寥无几，又何必担心那些已经被放弃的呢~</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/657f8f8c8a7c5ba8aeff66ea"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 最近发微博得到了这种待遇，好在原因是正向的。 微博看我发布的内容质量还不错，把我加到了一个特殊涨粉通道，涨粉过程中，对内容的审核力度似乎是：从...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/657f8f8c8a7c5ba8aeff66ea">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/FiZP9bKxpc8lI8HYmYzlX6FiC01Uv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>最近发微博得到了这种待遇，好在原因是正向的。
-微博看我发布的内容质量还不错，把我加到了一个特殊涨粉通道，涨粉过程中，对内容的审核力度似乎是：从机审变成了人审。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -772,82 +823,11 @@ Android 系统分别被 Sansung、Xiaomi、Oppo、Vivo 瓜分了，但是它们�
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-17 datetime="2023-12-17T23:45:56.000Z">2023-12-17</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-17 datetime="2023-12-17T23:45:56.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-17 datetime="2023-12-17T13:42:38.000Z">2023-12-17</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-17 datetime="2023-12-17T13:42:38.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Barret李靖的即刻动态</button>
-                  <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/reposts/657f88340972668b3e80915b"
-                        open
-                      >
-                        <summary class="article-expander__title">转发了: 好内容值得被看见🫡，另外也推荐下这位博主的《Python 潮流周刊》，https://github.com/chinesehuazhou/python-weekly，从中英文的 250+ 信息源，每周...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/reposts/657f88340972668b3e80915b">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>好内容值得被看见🫡，另外也推荐下这位博主的《Python 潮流周刊》，https://github.com/chinesehuazhou/python-weekly，从中英文的 250+ 信息源，每周精选最值得分享的文章、教程、开源项目、软件工具、播客和视频、热门话题等内容，可以关注下。
-目标是帮助所有读者精进 Python 技术，并增长职业和副业的收入，跟博主一起学习和进步。
-
-转发 @豌豆花下猫: Python为什么系列有幸被 @Barret李靖 大佬推荐，推特才一天时间就近 10 万+了！第一次亲身感受这么猛的流量热度，建立3年的项目也终于从900star突破到了1.3K！说起来Python潮流周刊的star数已过940，我有预感要在2024年到来之际，同时完成首个1K和双1K成就啦！加油，再接再厉！
-Python周刊：https://github.com/chinesehuazhou/python-weekly
-Python为什么：https://github.com/chinesehuazhou/python-whydo</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/657ea31734cced9e31bef61d"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 有人在看完 Jeremy 教授的 “fast.ai” 深度学习课程后，把他每节课提到的学习建议和忠告都总结了下来：https://forums.fast.ai/t/things-jeremy-says-t...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/657ea31734cced9e31bef61d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/Fpkj3X9vqu5c6D1YUiYnwo9XJNW6v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>有人在看完 Jeremy 教授的 “fast.ai” 深度学习课程后，把他每节课提到的学习建议和忠告都总结了下来：https://forums.fast.ai/t/things-jeremy-says-to-do/36682/1，这些内容（或称之为原则）对研究 AI 的很多人来说，都很有价值，可以少走弯路，我摘录了几句：
-- 不要试图停下来理解所有知识点
-- 请运行代码，真正运行代码。不要深入理论。玩转代码，看看输入什么、输出什么。
-- 多数公司花费太多时间收集数据。先拿少量，看看效果如何。
-- 如果使用数据集，最好引用创建者并给予感谢
-- 习惯使用术语（参数 parameters、层 layers、激活 activations 等）并准确使用它们。
-- 对于“我应该尝试一下吗？”这个问题的答案是，尝试一下看看。
-- 始终确保验证集和训练集以相同方式标准化。
-- Python 中的协程值得学习，我们将大量使用它们。
-- 在神经网络数据预处理时，经验法则是尽可能保留原始数据。
-在学习之前，这位学习者向已经通过课程的人询问建议，得到的回答有两个：
-1. “最好认真倾听 Jeremy 的意见，并按照他的建议安排自己的时间”
-2. “后悔没有听 Jeremy 的建议，刚开始不要花大量时间在理论上，不要尝试立即理解一切”</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -869,7 +849,6 @@ Python为什么：https://github.com/chinesehuazhou/python-whydo</span>
                         <summary class="article-expander__title">发布了: 忌好为人师 —————————————— 每个人的成长环境不同，拥有资源不同，价值观也有差异。 看到别人的事情妄加点评建议甚至指导对方做事，在我...</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/657eface79cb2b9f3596a501">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>忌好为人师
 ——————————————
@@ -877,8 +856,6 @@ Python为什么：https://github.com/chinesehuazhou/python-whydo</span>
 看到别人的事情妄加点评建议甚至指导对方做事，在我看来，都有点越界。
 较好的状态，应是孔子所说：不愤不启；不悱不发。
 对方有所思但未得果，开始寻求观点碰撞讨论，此时再发表你的想法建议，刚刚好。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2298,6 +2275,112 @@ Ian H. Wilson（前通用电气高管）</span>
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7312510748310863887"
+                        open
+                      >
+                        <summary class="article-expander__title">探究 width:100%与width:auto区别</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7312510748310863887">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>highlight: arduino-light
+theme: cyanosis
+width:100%与width:auto区别
+一、 width属性介绍
+width 属性用于设置元素的宽度。width 默认设置内容区域的宽度，但如果 box-sizing 属性被设置为 border-box，就转而设置边框区域的宽度。
+二、 话不多说，直接上代码看效果
+
+
+  
+Document
+  
+child1:  width:auto
+child2:  width:100%
+    
+  
+
+
+
+
+三、 分析比较
+我们给parent设置了padding:20px 内边距，给两个child都设置了margin:20px的外边距。child1的width属性是auto,child2的width属性是100%。
+很明显地看到两个child的不同表现，child1的宽度是可以适应的，不会溢出其父元素。
+$child1最终的宽度值: 540px &#x3D; 600px(父元素宽度) - 20px (child1 外边距) * 2 - 10px *2  (child1 边框值) - 0px (child1 内边距) $
+
+而child2的宽度则是和父元素一样大最终溢出了其父元素。
+$child2最终的宽度值: 600px &#x3D; 600px(父元素宽度)  $
+
+四、 结论
+width:100% : 子元素的 content 撑满父元素的content，如果子元素还有 padding、border等属性，或者是在父元素上设置了边距和填充，都有可能会造成子元素区域溢出显示;
+width:auto :  是子元素的 content+padding+border+margin 等撑满父元素的 content 区域。
+所以，在开发中尽量还是选择 width:auto ,因为当从边距、填充或边框添加额外空间时，它将尽可能努力保持元素与其父容器的宽度相同。而宽度：100%将使元素与父容器一样宽。额外的间距将添加到元素的大小，而不考虑父元素。这通常会导致问题。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7312374060435030053"
+                        open
+                      >
+                        <summary class="article-expander__title">Eslint 会被 Oxlint 干掉吗？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7312374060435030053">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>大家好，我卡颂。
+最近，一款基于Rust的linter工具Oxlint在国外前端圈引起热烈讨论，很多大佬给出了高度评价。
+他相比于老大哥Eslint有什么优势？未来他会取代老大哥么？本文让我们来聊聊这个话题。
+免费领取卡颂原创React教程（原价359）、加入人类高质量前端群
+Oxc与Oxlint
+oxlint是Oxc项目旗下的一款产品，Oxc作为一款Rust实现的前端工具链集合，包括：
+linter，即oxlint，对标Eslint，本文的主角
+Parser，即oxc_parser，用于解析.js(x)和.ts(x)，对标swc，基准测试据称比swc快2倍
+
+Resolver，解析esm、cjs文件路径，对标webpack/enhanced-resolve，基准测试据称比webpack快28倍
+formatter，对标Prettier，还未公布
+transpiler，对标babel，用于将高级语法转译为低级语法，还未公布
+minifier，代码压缩工具，还未公布
+与Oxc抱有同样设计理念（都是基于Rust开发的工具链工具）的还有Biome与Ruff，其中：
+Biome比较命途多舛。他的前身是Rome，由Babel作者Sebastian McKenzie开发，和Oxc一样目标语言是JS
+Ruff的目标语言是Python
+Oxlint的介绍
+Oxlint之所以引发热烈讨论，主要原因是他的性能太炸裂了。
+尤大用Oxlint跑了Vue3仓库，～590个文件跑～200条规则，仅用时50ms。
+
+我自己（苹果M1 pro，32G）跑一个大概50个文件的小项目，也只用了18ms，官方宣称的在基准测试中比Eslint快50～100倍果然不是空穴来风。
+
+当然，除了性能优势，Oxlint与老大哥Eslint还有很多区别。接下来我们从3个角度对比Oxlint与Eslint：
+易用性
+诊断可读…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >竹白百科 - TOP20</button>
                   <a class="source-heading__link" href="http://analy.zhubai.wiki">Open</a>
                 </h3>
@@ -2340,63 +2423,6 @@ Ian H. Wilson（前通用电气高管）</span>
    全文内容   
     
    在晨光初照时收拾床铺，品尝清晨的第一杯咖啡，上班路上匆忙买下一块羊角面包，在地铁上听最喜欢的播客……尽管我…</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7312374060435030053"
-                        open
-                      >
-                        <summary class="article-expander__title">Eslint 会被 Oxlint 干掉吗？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7312374060435030053">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>大家好，我卡颂。
-最近，一款基于Rust的linter工具Oxlint在国外前端圈引起热烈讨论，很多大佬给出了高度评价。
-他相比于老大哥Eslint有什么优势？未来他会取代老大哥么？本文让我们来聊聊这个话题。
-免费领取卡颂原创React教程（原价359）、加入人类高质量前端群
-Oxc与Oxlint
-oxlint是Oxc项目旗下的一款产品，Oxc作为一款Rust实现的前端工具链集合，包括：
-linter，即oxlint，对标Eslint，本文的主角
-Parser，即oxc_parser，用于解析.js(x)和.ts(x)，对标swc，基准测试据称比swc快2倍
-
-Resolver，解析esm、cjs文件路径，对标webpack/enhanced-resolve，基准测试据称比webpack快28倍
-formatter，对标Prettier，还未公布
-transpiler，对标babel，用于将高级语法转译为低级语法，还未公布
-minifier，代码压缩工具，还未公布
-与Oxc抱有同样设计理念（都是基于Rust开发的工具链工具）的还有Biome与Ruff，其中：
-Biome比较命途多舛。他的前身是Rome，由Babel作者Sebastian McKenzie开发，和Oxc一样目标语言是JS
-Ruff的目标语言是Python
-Oxlint的介绍
-Oxlint之所以引发热烈讨论，主要原因是他的性能太炸裂了。
-尤大用Oxlint跑了Vue3仓库，～590个文件跑～200条规则，仅用时50ms。
-
-我自己（苹果M1 pro，32G）跑一个大概50个文件的小项目，也只用了18ms，官方宣称的在基准测试中比Eslint快50～100倍果然不是空穴来风。
-
-当然，除了性能优势，Oxlint与老大哥Eslint还有很多区别。接下来我们从3个角度对比Oxlint与Eslint：
-易用性
-诊断可读…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3720,6 +3746,8 @@ Oxlint 目前尚未提供插件系统，但我们正在积极整合来自流行�
 感谢大家阅读到这，希望大家可以使用 OxLint 获得更愉悦的开发体验，也预祝大家即将到来的元旦假期快乐！
 要开始使用，请查阅安装指南，或者了解更多关于oxc项目的信息。
 我们项目还有很多好玩的东西，欢迎来玩 👉 https://oxc-project.github.io/</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3934,6 +3962,8 @@ Element UI 组件如此受欢迎，我觉的有三点因素
 
 
 上图是我选取的 Github 上 start 星数比较多的模板项目，不能说这些项目有什么问题，只能说就是那个味。最近的一个月内，我发现了 chrome，网易云都重…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4007,6 +4037,8 @@ Element UI 组件如此受欢迎，我觉的有三点因素
 通过不断积累问题，一起练习逻辑思维，并顺便学习相关的知识点。
 遇到难题，遇到有共鸣的问题，一起讨论，一起沉淀，一起成长。
 感谢关注微信公众号：“程序员大澈”，然后免费加入问答群，从此让解决问题的你不再孤单！</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4169,6 +4201,8 @@ filterOddNumbers([1, 2, 3, 4, 5]).then(console.log); // 输出: [1, 3, 5]
 2. 控制并发数
 在处理诸如文件上传等场景时，可能需要限制同时进行的异步操作数量以避免系统资源耗尽。
 async function asyncPool(poolLimit, array, it…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4262,8 +4296,6 @@ async function asyncPool(poolLimit, array, it…</span>
     
    Snapchat推出AI生成照片功能   
 …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4481,8 +4513,6 @@ async function asyncPool(poolLimit, array, it…</span>
    28.电助力自行车品牌TEZEUS获千万元天使轮融资   
     
    29.模数转换芯片ATDC 研发商“湃睿半导体”获数千万元A轮融资</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4797,6 +4827,8 @@ async function asyncPool(poolLimit, array, it…</span>
    30.新生活数码品牌企业“倍思科技”获数亿元A+轮融资   
     
    31.汽车底盘件制造企业“琳顿”获近2000万元天使轮融资</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4866,6 +4898,8 @@ VSCode 在其最新版本1.8.5中，引入了一个备受期待的功能：浮�
 通过不断积累问题，一起练习逻辑思维，并顺便学习相关的知识点。
 遇到难题，遇到有共鸣的问题，一起讨论，一起沉淀，一起成长。
 感谢关注微信公众号：“程序员大澈”，然后免费加入问答群，从此让解决问题的你不再孤单！</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4915,74 +4949,8 @@ defineOptions
 更好地支持 getter 与 toRef 和 toValue 一起使用
 支持 JSX 导入源
 优化维护基…</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7311603519570952246"
-                        open
-                      >
-                        <summary class="article-expander__title">Ant Design Mini 支持微信小程序啦！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7311603519570952246">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Ant Design Mini
-经过一段时间的开发与不断的努力，我们兴奋地宣布，Ant Desigin Mini 组件库中已有 16 个核心组件完成了微信小程序的适配工作！现在你不仅可以在支付宝小程序中使用 Ant Desigin Mini 组件库，也可以在微信小程序中使用了！
-目前这项适配正处于 Beta 阶段，我们诚挚地邀请大家前来体验。首批适配的组件包括：Button、Slider、Container、Icon、Loading、Switch、Tag、Input、Calendar、List、Result、Popover、Mask、Stepper、Popup、Checkbox
-先来看看 Demo 效果：
-
-我们的官网文档、Demo 都已同步更新双端切换能力：
-
-你可以参考以下文档进行接入：
-接入支付宝小程序：https://ant-design-mini.antgroup.com/guide/quick-start
-接入微信小程序：https://ant-design-mini.antgroup.com/guide/using-wechat
-使用 uni-app 接入：https://ant-design-mini.antgroup.com/guide/using-uni-app
-双平台无法对齐的特性
-受制于各平台框架设计，以下这些特性存在差异：
-两个平台的事件 API 不同。支付宝小程序可以把实例上通过 props 传递给子组件，而微信需要在 data 里传递函数。视图层的写法也所有不同。
-
-下面是 Calendar 在两种平台的使用方式。
-
-微信小程序
-Page({
-  data:{
-    handleFormat() {
-}
-  }
-})
-
-
-
-  - 支付宝小程序
-
-Page({
- …</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7311596602249134106"
-                        open
-                      >
-                        <summary class="article-expander__title">字节三年，谈谈一线团队如何搞工程化一（全景篇）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7311596602249134106">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-小编所在的团队叫 “Cuckoo FE” （Cuckoo：布谷鸟，多数种类为灰褐或褐色，喙强壮而稍向下弯，一只幼鸟一天能吃39只蚱蜢），寓意朴实能干，下文中工程化实践各类体系也是以Cuckoo开头。
-目前前端团队成员接近20人，归属字节商业化业务中台，承担海外商业化交易流程建设，为字节内部出海产品提供商业变现能力，整体技术方向以PC中台为主（90%+），另外包含部分移动端项目。
-从一个故事说起
-小马加入公司不久，最近刚接手一个新需求。凭借以往经验，这是一个small case，很快的给了排期，准备开干。没多久，他就向他的mentor提了第一个问题：“怎么创建项目？”，mentor很快就丢过来一个仓库，并回复道“你拿着这个项目去copy下改改”。小马愣了一下，不敢多问，立马开始操作，一顿CV猛如虎，项目终于跑起来，心想“快了，只要项目跑起来就快了”。接着小马在开发过程中遇到一个比较通用的功能，又问mentor有没有类似组件，没多久mentor又丢过来一个仓库，并在链接下评论：“你在xx文件下找找xx组件，应该修改修改就能用”，小马又把项目跑起来了，细研究了源码，果然能用，很开心又解决了一个问题。这样类似问题一个接一个，mentor也都能很快的给出答复。时间很快，在mentor的加持下到了联调那一天，小马心里长舒一口气“终于可以用真实数据跑一把了”，结果在浏览器刷新的那一刻，页面白了，虽然屏幕有点脏，但显的格外的白，这终究还是没有超出预期啊。这一调又是一堆问题，要么是成功码不对，要么是该有的字段没有，有了结构也不对，小马跑过去问后端怎么回事，后端回道“你应该没看最新文档”，小马打开文档对比了下：“嗯，是已经有很多不一样的了，但和现在的接口返回好像也不完全一样吧”，最终小马还是选择了相信接口返回的json。又是一顿折腾准备提测，小马又问mentor“怎么部署啊？”，ment…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5229,8 +5197,6 @@ Page({
    好了，以上就是本期的食堂周刊，观众老爷们如果觉得还不错，一键三连是对食堂老板最大的支持。   
     
    你的前端食堂，吃好每一顿饭，我们下期见。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5299,8 +5265,6 @@ Page({
    3.        Phew Tab        
     
    使用 AI 自动对标签页进行分组的 Chrome 扩展，产品正在开发中，可以…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;45
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5736,6 +5700,8 @@ Page({
 小程序平台
 20 年 1 月，公司内部小程序业务增多，需要做一定的基础设施，以提升整体的开发效率。前端团队老大，推动成立“小程序平台”专项虚拟小组，由几个小程序的业务团队同学（设计圈也有小程序业务），以及基架组转岗过来的同学组成。
 我主动负责其中的 CI/CD 部分，接入 De…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5788,6 +5754,8 @@ React Notes 项目（目的在于深入理解服务端组件、客户端组件�
 一本可供开发 Next.js 项目时随时翻阅的技术指导手册；
 一份关于 Next.js 的面试问题指导。
 限时 6 折，还能叠加双 12 满赠！</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5955,6 +5923,137 @@ React Notes 项目（目的在于深入理解服务端组件、客户端组件�
                             <span class="media-object__text">
                               <span>高效的学习平台和更快捷面试平台.</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-04 datetime="2023-12-04T03:16:15.000Z">2023-12-04</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-04 datetime="2023-12-04T03:16:15.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7308536984028004378"
+                        open
+                      >
+                        <summary class="article-expander__title">🎁 双 12 狂欢购，全场 6 折，无线充电座、咖啡杯、杜邦特包、鼠标垫等礼品等着你~</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7308536984028004378">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: Chinese-red
+错过双十一，不要遗憾，双十二购物节我们继续“狂欢”，为你带来更多优惠！
+全场 160+ 本小册低至 6 折，抽奖、满额赠礼等四重福利送不停……
+无线充电座、咖啡杯、杜邦特包、鼠标垫等精选好礼等你来拿～
+买到就是赚到，千万别再错过！
+⏰活动时间
+2023 年 12 月 4 日～2023 年 12 月 15 日
+🎁请查收：你的四重福利
+🔥福利一：全场 160+ 本小册，尽享 6 折！
+不论是新品小册，还是畅销小册，全部 6 折购！
+购买小册戳👉：点击浏览小册列表
+想买但是不知道怎么选？看这里：掘金之「什么值得买」
+附加惊喜：
+入门教程免费领取：Node.js 入门教程、TypeScript 入门教程、Java 入门教程、Flutter 入门教程
+分销返现赚零花钱：💰 掘金社区赚钱指南
+🤗福利二：满 88 元即可参与抽奖，赢取价值 119 元咖啡杯
+活动期间累计实付金额满 88 元即可参与抽奖👇🏻，活动结束后由运营统一抽取。抽奖所中奖品可与下面的满额礼品叠加。
+PS：满额计算口径以实付金额为准，计算时间段为 12 月 4 日～12 月 15 日，会员兑换券不包含在内哦！
+实付金额
+奖品数量
+奖品名称
+图片
+
+
+
+
+满 88 元
+20
+稀土掘金Who Cares系列「我真的不困」咖啡杯
+
+
+
+
+❤️福利三：满 188 元/ 288 元/ 388 元，赠好礼！
+活动期间累计实付金额满 188 元/ 288 元/ 388 元，即可获得对应满额段掘金周边实物礼品 1 份。各满额段，“实物”礼品不叠加，但可与上面的抽奖奖品叠加～
+PS：满额计算口径以实付金额为准，计算时间段为 12 月 4 日～12 月 15 日，会员兑换券不包含在内哦！
+实付金额
+礼品名称
+图片
+
+
+
+
+满 188 元
+Who Cares系列「丢掉包袱」杜邦特包
+
+
+
+满 288 元
+稀土掘金 「解码系列」皮革鼠标垫
+
+
+
+满 388 元
+稀土掘金 Touch系列「能量加满」无线充电座
+
+
+
+
+🥳福利四：转发文章集赞，抢 YOYO 抱枕，让你这个冬天暖暖哒～
+转发本篇活动文章到朋友圈，集齐 5 个赞，截图并回复至评论区，即可参与抽奖👇🏻！
+建议：获奖结果公布之前，请尽量保留满 5 赞的朋友圈或者保存满 5 赞的朋友圈截图哦～
+奖品数量
+奖品名称
+图片
+
+
+
+
+5
+JUEJIN FRIDENS Yoyo抱枕
+
+
+
+
+👀活动规则（必看）
+各活动满额计算口径以累计实付金额为准，计算时间段为 12 月 4 日～12 月 15 日，会员兑换券不计入。
+其中，满赠活动中，各阶段实物礼品不叠加，但可与抽奖奖品叠加。
+各活动获奖名单：活动结束后的 5 个工作日内（ 预计 12 月 22 日）公布。
+实物礼品领取：
+活动结束后的 5 个工作日（12 月 22 日）内开始采集发货信息，届时请留意站内信/私信通知。
+信息发出后，请掘友们在 5 个工作日内完成填写，12 月 29 日 24 点截止。过期未填写视为放弃所有奖品，不予发放。
+多次提交问卷的，官方将以最新提交为准。
+信息采集完，将于明年 1 月 12 日前完成实物礼品发放。
+有任何疑问，可以通过 1️⃣站内私信掘金小册，2️⃣微信联系小册四姐@北比或小册五姐@北比</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -6198,53 +6297,6 @@ APP开发助手iOS APP上架到App Store的辅助工具，解决iOS APP上架繁
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-28 datetime="2023-11-28T16:21:17.000Z">2023-11-28</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-28 datetime="2023-11-28T16:21:17.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >张鑫旭-鑫空间-鑫生活</button>
-                  <a class="source-heading__link" href="https://www.zhangxinxu.com/wordpress">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.zhangxinxu.com/wordpress/?p&#x3D;11070"
-                        open
-                      >
-                        <summary class="article-expander__title">本地MP3封面图、时长等信息的JS读取</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-24 datetime="2023-11-24T00:06:05.000Z">2023-11-24</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-24 datetime="2023-11-24T00:06:05.000Z"></time>
           </button>
@@ -6306,57 +6358,10 @@ APP开发助手iOS APP上架到App Store的辅助工具，解决iOS APP上架繁
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-21 datetime="2023-11-21T16:14:41.000Z">2023-11-21</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-21 datetime="2023-11-21T16:14:41.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >张鑫旭-鑫空间-鑫生活</button>
-                  <a class="source-heading__link" href="https://www.zhangxinxu.com/wordpress">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.zhangxinxu.com/wordpress/?p&#x3D;11060"
-                        open
-                      >
-                        <summary class="article-expander__title">cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7258386590">
-        <time id="build-timestamp" datetime="2023-12-19T06:57:52.674Z">2023-12-19T06:57:52.674Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7260118419">
+        <time id="build-timestamp" datetime="2023-12-19T09:57:31.823Z">2023-12-19T09:57:31.823Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
