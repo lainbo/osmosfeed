@@ -34,7 +34,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": 1016,
+          "wordCount": 1012,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         },
@@ -44,7 +44,7 @@
           "description": "滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/",
           "publishedOn": "2023-11-21T16:14:41.000Z",
-          "wordCount": 1292,
+          "wordCount": 1288,
           "title": "cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用",
           "imageUrl": null
         }
@@ -103,6 +103,16 @@
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/658114ed71cfacf609548b48",
+          "author": null,
+          "description": "Python 的 lambda 匿名函数看起来就是一个半发育状态的多余存在，常常用于简单的数据处理，例如 filter/map/sort 等。相比 def 函数，lambda 更像是一个「小函数」，它支持多个入参，但只允许执行一个表达式，这跟少写几行代码的 def 函数有啥本质区别呢😂\n事实上，连 Python 之父 Guido 也嫌弃这个 lambda 的存在（https://www.artima.com/weblogs/viewpost.jsp?thread=98196），如果不是为了保持向前兼容性，可能这玩意儿在早期版本中就已经夭折；当有人提出要在 lambda 中支持多行表达式的时候，直接被 Guido 摁在地上摩擦（https://www.artima.com/weblogs/viewpost.jsp?thread=147358），Guido 的态度是，“不能光顾着解决一个问题/实现某种功能，就引入缺乏 Pythonicity 的语言设计。”\n我个人觉得 lambda 的存在还是让 Python 这门语言变得更加有趣味性，既然都可以容忍 [x for x in list if x > 1] 这种奇特的列表解析式和生成器表达式存在，为啥不能接受 lambda 这种小函数存在呢，单单从对代码紧凑型这点来说，lambda 也是值得尝试使用的😄",
+          "link": "https://m.okjike.com/originalPosts/658114ed71cfacf609548b48",
+          "publishedOn": "2023-12-19T03:58:37.000Z",
+          "wordCount": null,
+          "title": "发布了: Python 的 lambda 匿名函数看起来就是一个半发育状态的多余存在，常常用于简单的数据处理，例如 filter/map/sort 等。相比 def 函数，lambda 更像是一个...",
+          "imageUrl": null
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/6581082560830f16aed35d2f",
           "author": null,
           "description": "看论文实在是太耗费时间，一篇写的不错的论文，想大概搞明白需要至少 2 小时，如果想彻底搞明白，那就得跑一跑代码，5 小时起步。像我这种半吊子进场的初学者，一大堆概念还整不明白，加上中途跑出去学概念的时间，一两篇论文够我一两天时间的了。\n这也是为啥我决定把论文放一放，先把  Python 折腾明白，再把神经网络折腾明白的原因，磨刀不误砍柴工。",
@@ -118,7 +128,7 @@
           "description": "使用 Node.js 的工具快速启动一个文件系统服务的方法：npx http-server，它的原理是使用 npm 从远程拉取 http-server 包，然后本地启动，很方便但效率一般。\n而 Python 内置了 http.server，通过 -m（module）参数可以直接拉起本地模块：python -m http.server，更快也更简单。\n其实 Python 还内置了很多其他的实用模块，例如：\n1）json.tool，可以在命令行直接完成 json 的格式化：get_json_string | python -m json.tool\n2）PyInstaller，可以直接将 python_file 打包成一个不依赖 Python 环境的可执行文件，十分利于小程序的分发：python -m PyInstaller python_file\n3）timeit，可以测试代码的耗时，它会执行 500 遍，取最快的一次结果，并给出平均耗时：python -m timeit python_code\n诸如此类的 tricks 非常多，你也可以在这里可以找到 Python 所有的 build-in libraries：https://docs.python.org/zh-cn/3/library/index.html，挖掘不一样的玩法，还可以考虑自定义一些内置库塞进去，方便自己日常使用。",
           "link": "https://m.okjike.com/originalPosts/65805d3e492ec2e1bbb527fe",
           "publishedOn": "2023-12-18T14:54:54.000Z",
-          "wordCount": 522,
+          "wordCount": 521,
           "title": "发布了: 使用 Node.js 的工具快速启动一个文件系统服务的方法：npx http-server，它的原理是使用 npm 从远程拉取 http-server 包，然后本地启动，很方便但效率一...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -158,9 +168,9 @@
           "description": "有朋友问我，怎么做好自媒体，从最近几个月的观察来看，最重要的一个技巧就是「专注」，专注做一件事情，专注在一个领域，持续不断地挖掘有用的信息或者价值点，刚开始可能没人看到，但是三个月、半年以后，沉淀的信息就会产生魔力。看到了好几个因为专注而做的特别棒的自媒体。\n我不是一个能够保持长期专注的人，好奇心特别强，兴趣点太分散，时间投入过于不均衡，相比之下，做的并不好。我现在更多还是把社交媒体当做学习工具，输出是为了验证自己是不是学明白了，如果你看到我在输出，那必然是有了新的输入，如果输出的内容能“教会”别人，那我认为自己的理解基本到位了。\n保持专注，学会做减法，有的时候也是一件比较痛苦的事情，这需要有“放弃一些东西”的勇气，但说实话，我们能够把握的东西本就寥寥无几，又何必担心那些已经被放弃的呢~",
           "link": "https://m.okjike.com/originalPosts/657f95170972668b3e81b430",
           "publishedOn": "2023-12-18T00:40:55.000Z",
-          "wordCount": 472,
+          "wordCount": null,
           "title": "发布了: 有朋友问我，怎么做好自媒体，从最近几个月的观察来看，最重要的一个技巧就是「专注」，专注做一件事情，专注在一个领域，持续不断地挖掘有用的信息或者...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/657f8f8c8a7c5ba8aeff66ea",
@@ -191,16 +201,6 @@
           "wordCount": 508,
           "title": "发布了: 有人在看完 Jeremy 教授的 “fast.ai” 深度学习课程后，把他每节课提到的学习建议和忠告都总结了下来：https://forums.fast.ai/t/things-jeremy-says-t...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fpkj3X9vqu5c6D1YUiYnwo9XJNW6v3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/657e5f080972668b3e6bd84b",
-          "author": null,
-          "description": "甲流特效药，医生说，一天见效，试一试🥲",
-          "link": "https://m.okjike.com/originalPosts/657e5f080972668b3e6bd84b",
-          "publishedOn": "2023-12-17T02:38:00.000Z",
-          "wordCount": 456,
-          "title": "发布了: 甲流特效药，医生说，一天见效，试一试🥲",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Frrr6i9nlYTithzYJ1O0Hbu3qTQNv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
         }
       ]
     },
@@ -209,6 +209,26 @@
       "feedUrl": "https://rsshub.app/jike/user/752D3103-1107-43A0-BA49-20EC29D09E36",
       "siteUrl": "https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36",
       "articles": [
+        {
+          "id": "https://m.okjike.com/reposts/6581251a60830f16aed67252",
+          "author": null,
+          "description": "基于此认知，最近最喜欢的词是「碰撞」。\n把自己设想为盲人，你的认知来自于探索对象的反馈(直接碰撞)和其它盲人的探索交流(间接碰撞)。\n多样性为什么重要，因为大家不同视角的反馈结果可以一块交流碰撞，可以更接近大象本体。\n\n转发 @李继刚: 所有人的观点都是盲人摸象。\n━━━━━━━━━━━━━━\n每个人都有自己的成长经历(朋友, 教育, 师长, 同事, 书籍), 这些独特的经历也就意味着你是在以某一个独特的视角在看待这个世界。\n「道可道，非常道。」 道体就像是那头大象， 每个人表述自己对大象的观察都是自己所站角度的观测结果，都无法真正「正确且完整」地描述出那头大象。\n既然所有人都是错的，当然「我」所说的也是错的。\n从这个角度来看, 开源的好处就在于, 可以同时吸纳不同角度的使用者的观测结果, 提升「合道」的可能性。\n人也应该如何， 开放自己，接纳世界不同视角意见的反馈。",
+          "link": "https://m.okjike.com/reposts/6581251a60830f16aed67252",
+          "publishedOn": "2023-12-19T05:07:38.000Z",
+          "wordCount": 447,
+          "title": "转发了: 基于此认知，最近最喜欢的词是「碰撞」。 把自己设想为盲人，你的认知来自于探索对象的反馈(直接碰撞)和其它盲人的探索交流(间接碰撞)。 多样性为什么重...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+        },
+        {
+          "id": "https://m.okjike.com/originalPosts/658121d90972668b3ea1b76f",
+          "author": null,
+          "description": "创新最好来自于自身体感，那如何增加感知？ 我自己有一个小技巧：\n在笔记系统中新建一个文件，名为：problems。\n此文件记录自己每日遇到的问题(难题，需自动化的事情，痛点，看不惯的流程等等)。\n每天不用多，一至三条即可。\n坚持一个月，过来评论交流效果。",
+          "link": "https://m.okjike.com/originalPosts/658121d90972668b3ea1b76f",
+          "publishedOn": "2023-12-19T04:53:45.000Z",
+          "wordCount": 473,
+          "title": "发布了: 创新最好来自于自身体感，那如何增加感知？ 我自己有一个小技巧： 在笔记系统中新建一个文件，名为：problems。 此文件记录自己每日遇到的问题(难题，需...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+        },
         {
           "id": "https://m.okjike.com/originalPosts/658020f634cced9e31dcac29",
           "author": null,
@@ -225,9 +245,9 @@
           "description": "「沉浸式翻译」这个插件的功能，应该作为浏览器和读书软件的标准内置功能。\n打通信息壁垒的神器。",
           "link": "https://m.okjike.com/originalPosts/657fef5e979083134a43fc4c",
           "publishedOn": "2023-12-18T07:06:06.000Z",
-          "wordCount": 435,
+          "wordCount": null,
           "title": "发布了: 「沉浸式翻译」这个插件的功能，应该作为浏览器和读书软件的标准内置功能。 打通信息壁垒的神器。",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+          "imageUrl": null
         },
         {
           "id": "https://m.okjike.com/originalPosts/657fd32f79cb2b9f35a578c6",
@@ -288,26 +308,6 @@
           "wordCount": 439,
           "title": "发布了: 你的所有知识都是关于过去的，你的所有决定都是关于未来的，无论多么复杂都无法改变这一事实。 Ian H. Wilson（前通用电气高管）",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/657ac1f071cfacf609db94d8",
-          "author": null,
-          "description": "每个网络都有一个「传播率」，每个社区也都是一个网络。那么：\n微博，小红书， 抖音， 知乎， 即刻的信息传播率分别是多少？",
-          "link": "https://m.okjike.com/originalPosts/657ac1f071cfacf609db94d8",
-          "publishedOn": "2023-12-14T08:50:56.000Z",
-          "wordCount": 446,
-          "title": "发布了: 每个网络都有一个「传播率」，每个社区也都是一个网络。那么： 微博，小红书， 抖音， 知乎， 即刻的信息传播率分别是多少？",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fifc4Spzr-pIWAuGLKcFgrXWA3gqv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/6579cbeef0da80ccb5f735a0",
-          "author": null,
-          "description": "什么是信息差？\n━━━━━━━━━━━━━━\n香农说，信息的本质就是消除不确定性。\n你还在探索和试错，而别人已经拿到了确定的结果，这就是信息差。\n《单干》",
-          "link": "https://m.okjike.com/originalPosts/6579cbeef0da80ccb5f735a0",
-          "publishedOn": "2023-12-13T15:21:18.000Z",
-          "wordCount": 430,
-          "title": "发布了: 什么是信息差？ ━━━━━━━━━━━━━━ 香农说，信息的本质就是消除不确定性。 你还在探索和试错，而别人已经拿到了确定的结果，这就是信息差。 ...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         }
       ]
     },
@@ -332,7 +332,7 @@
           "description": "本内容节选自「参考答案」知识库。   \n    \n   「参考答案」致力于为职场人严选通识性深度阅读内容，希望在算法推荐之外，给大家提供另一种内容消费选择。    \n    \n   如果你觉得内容比较有启发，欢迎：   \n    \n    👉        点击加入会员        （手机网页端请微信扫码访问）   \n      \n   推荐序   \n    \n   本文核心介绍了    “有意识曲线”这个概念。    曲线的横轴是意识，纵轴是能量。在这个曲线中有三种形态，对应我们生活中的三种行为。   \n    \n   消耗能量最少，投入意识最少的是习惯（Habits）。消耗能量居中，投入意识居中的是日常行为（Routines）。消耗能量最多，投入意识最多的是仪式（Rituals）。   \n    \n   这三者是可以相互转换的，日常行为可以通过一系列的技巧转变为习惯。日常行为也可以通过投入更多的意识来转变为仪式。   \n    \n   习惯就像一种无意识的冲动，一旦触发就会自动执行。    她可以帮我们大脑以更少的能量和更快的速度作出行动。比如，我们都希望健身能成为一种习惯。   \n    \n   而仪式则需要我们全身心的投入，在这种投入中，我们可以有更多收获和满足感。我们常说的“仪式感”其实就是在描述这种行为。   \n    \n   日常事项就属于混沌的中间状态，也是我们做事情最容易出现的状态。   \n    \n   我读完的感受是，我们应该尽可能让我们的生活充满习惯和仪式，少一些日常事项。如果用开车做比喻的话，要么就是智能的自动驾驶（习惯），省事省心。要么就是纯手动驾驶，享受油门轰鸣人车合一的快感。   \n      \n   全文内容   \n    \n   在晨光初照时收拾床铺，品尝清晨的第一杯咖啡，上班路上匆忙买下一块羊角面包，在地铁上听最喜欢的播客……尽管我…",
           "link": "https://open.zhubai.wiki/a/l/t/z/fp/ouranswers/2347295276735311872",
           "publishedOn": "2023-12-15T04:03:38.000Z",
-          "wordCount": 7702,
+          "wordCount": null,
           "title": "如何对抗无聊重复的生活：建立仪式，而非Routine",
           "imageUrl": null
         },
@@ -392,7 +392,7 @@
           "description": "本周刊为    参考答案会员订阅内容    。   \n    \n   含 5 篇编辑精选的深度长文（附epub/pdf电子周刊）、4 条群友分享的优质内容、1本参考书籍、1个新增信息源。   \n    \n   涉及    思维方式、品牌营销、世界是如何运转的、如何找到人生方向、提出好问题    等专题。   \n    \n    👉        点击加入会员        （手机网页端请微信扫码访问）   \n      \n   周刊目录   \n    \n   \n一、精选长文   \n    \n   【品牌营销】万字经典长文：营销短视症   \n    \n   【思维方式】费曼给学生的回信：永远不要做无名之辈   \n    \n   【世界是如何运转的】如何达到无限增长的临界点？   \n    \n   【如何找到人生方向】YC 联合创始人：你不一定要做别人的拼图   \n    \n   【提出好问题】霍华德·马克思：知识的幻觉   \n    \n    \n    \n   二、社群精华   \n    \n   【科技世界】计算机历史-Ted Nelson   \n    \n   【知识管理】Ness Labs 专访 Heptabase 联合创始人 Alan Chan   \n    \n   【知识管理】2023年度书单（来自纽约客、卫报等）   \n    \n   【思维方式】行动产生信息   \n    \n    \n    \n   附：新增信息源-Stripe Press-Ideas for progress   \n    \n   参考书籍-It Doesn't Have to Be Crazy at Work《工作何须卖命》   \n      \n   阅读地址   \n    \n        https://www.notion.so/ouranswers/Vol-31-a5889d0be3eb401ea306a1ad54f45454?pvs=4        \n    \n   （还未加入知识库的会员朋友，请联系值日生       https://sourl.cn/mr8AYz       开通权限）   \n    \n   其中附     EPUB & PDF     资源，可导入微信读书、Kindle等电子阅读器沉浸阅读。",
           "link": "https://open.zhubai.wiki/a/l/t/z/fp/ouranswers/2346572760303648768",
           "publishedOn": "2023-12-13T04:12:37.000Z",
-          "wordCount": 48759,
+          "wordCount": null,
           "title": "参考周刊 Vol.31｜永远不要做无名之辈",
           "imageUrl": null
         },
@@ -442,7 +442,7 @@
           "description": "是出了什么问题吗突然订阅人数就减半了……   \n      \n   @国内国外   \n    \n   1.国务院办公厅印发《关于加快内外贸一体化发展的若干措施》   \n    \n   2.自然资源部：加强规划与土地政策融合，支持城市更新   \n    \n   3.国务院办公厅：鼓励发展反向定制（C2M），培育一批中国特色品牌厂商折扣店   \n    \n   4.中央网信办发布“餐饮外卖类”App个人信息收集情况测试报告   \n    \n   5.2023年中国海洋油气产量有望再创新高   \n    \n   6.南水北调中线一期工程累计向北方调水超605亿立方米   \n    \n   7.全国高铁营业里程达4.37万公里   \n    \n   8.浙江省教育厅厅长毛宏芳突发疾病逝世   \n    \n   9.深圳证券交易所与沙特交易所集团签署合作备忘录   \n    \n   10.广东将发放3亿元消费券提振信心   \n    \n   11.民航华北空管局与波音签署合作备忘录   \n    \n   12.中国驻菲律宾大使就菲律宾在南海侵权挑衅向菲方提出严正交涉   \n    \n   13.美国未来一年通胀预期降至2021年4月以来最低   \n    \n   14.美国SEC据称正调查投顾机构的AI使用情况   \n    \n   15.力箭一号遥三火箭出厂，计划明年1月进行“一箭五星”发射   \n    \n   16.仿人脑神经：剑桥大学最新研究登上 Nature 子刊，人造大脑成 AI 新方向   \n      \n   @商业   \n    \n   1.微信视频号电商GMV超千亿元，微信支付团队将参与建设   \n    \n   2.阅文拟6亿收购腾讯动漫相关业务及IP资产，未来三年与腾讯合作短剧300部   \n    \n   3.TikTok 与印尼科技公司 GoTo 达成合作发展电商业务，将向合资企业投资超 15 亿美元   \n    \n   4.京东：发帖造谣“刘姓商人涉嫌违法被抓”的违法人员已被行政拘留   \n    \n   5.余承东发文回应懂车帝测试：坑人的测试   \n    \n   6.理想汽车：11月提前达成全年目标，本月挑战月销5万辆目标   \n    \n   7.李斌回应蔚来与合肥对赌1200亿：没有这回事   \n    \n   8.知行汽车科技：预计12月20日港股IPO上市，发售价29.65港元/股   \n    \n   9.汤姆猫：公司海外研发团队已接入Google大模型   \n    \n   10.海天瑞声：大模型向多模态发展后，将会产生更多新型数据需求   \n    \n   11.贾佳亚团队推出多模态大模型LLaMA-VID   \n    \n   12.李宁回应香港买楼导致股价大跌：在港设立总部加速国际化，预明年拓展海外业务   \n    \n   13.保利发展：拟10亿元-20亿元回购公司股份   \n    \n   14.中马传动：公司实际控制人之一吴良行逝世   \n    \n   15.泸州老窖回应核心产品降价：结算价未改变，系利润分配前置   \n    \n   16.律师称杨丞琳演唱会机构或被罚款：将处违法所得8到10倍罚款   \n    \n   17.仁宝集团拟赴印度设厂，预计明年评估选址   \n    \n   18.苹果发布 iOS 17.2 正式版，带来新的「手记」App   \n    \n   19.苹果计划2024年彻底改革iPad产品线，以减少混乱并提高销量   \n    \n   20.苹果加大推动空间音频，采用杜比全景声制作音乐将获得更高版税   \n    \n   21.微软与美国劳联-产联就人工智能等达成协议   \n    \n   22.高盛将美联储首次降息预期时间提前到2024年第三季度   \n    \n   23.美国玩具巨头孩之宝计划再裁员   \n    \n   24.波音在战略部门裁员超过预期   \n    \n   25.西方石油宣布以120亿美元收购石油公司CrownRock   \n    \n   26.汇丰将收购新加坡房地产投资管理公司SilkRoad Property   \n    \n   27.日本乐天计划两个月内推出专有模型   \n    \n   28.沙特电信有意收购葡萄牙电信运营商Altice Portugal   \n    \n   29.全产业链一体化石英企业“弘扬石英”获近亿元B轮融资   \n    \n   30.新生活数码品牌企业“倍思科技”获数亿元A+轮融资   \n    \n   31.汽车底盘件制造企业“琳顿”获近2000万元天使轮融资",
           "link": "https://open.zhubai.wiki/a/l/t/z/fp/oracle/2346169236646379520",
           "publishedOn": "2023-12-12T01:29:09.000Z",
-          "wordCount": 441,
+          "wordCount": null,
           "title": "【1212早报】推送人数突然砍半的周二",
           "imageUrl": null
         },
@@ -512,7 +512,7 @@
           "description": "📰 设计资讯   \n    \n   Figma 变量更新   \n    \n   Figma 新增了对变量的一些更新！   \n    \n   现在可以将变量绑定到:单独的圆角、图层不透明度、布局网格、嵌套实例等。   \n    \n        https://twitter.com/figma/status/1732449424872534047        \n    \n   UXtools 2023 年度调研   \n    \n   今年的设计工具调研，毫无悬念 Figma 稳居第一遥遥领先。Adobe 的 Photoshop 和 Illustration 略有增长。。今年调研数据中国也提供了不少样本。   \n    \n        https://uxtools.co/survey/2023/ui-design        \n            \n   PANTONE 2024年度代表色   \n    \n   12月7日，PANTONE 2024年度代表色「PANTONE 13-1023 Peach Fuzz 柔和桃」正式公布。柔和桃表现出我们对照顾自我与他人的渴望，这是柔软温和的蜜桃色色调，以极具包容力的精神丰富了身心灵。   \n    \n        https://www.pantone.com/hk/tc/color-of-the-year/2024        \n        \n   🏆 产品推荐   \n    \n   设计师的导航工具：Uxmap   \n    \n   提供多种预设场景，每个场景中包含一下常用工具的网站标签。   \n    \n        https://www.uxmap.cn/page/#/uxmap/home        \n        \n   在 Figma 中创建流程图   \n    \n   使用原生 Fig…",
           "link": "https://open.zhubai.wiki/a/l/t/z/fp/moonvy/2345628763141808128",
           "publishedOn": "2023-12-10T13:41:30.000Z",
-          "wordCount": 29264,
+          "wordCount": null,
           "title": "Moonvy 月维设计素材周刊 第 093 期",
           "imageUrl": null
         }
@@ -1676,8 +1676,18 @@
           "description": "theme: smartblue\n一、写在前面\n作为一名开发者，大家在开发过程中是不是经常遇到各种各样的文件，比如xlsx、word、ppt等办公类型的文件格式，还有pdf这种便携式的打印格式文件等。\n但是通常情况下我们都是使用一个相关的第三方库，比如用 sheet.js 来解析xlsx，mammoth.js 来解析wrod，pptxjs 来解析ppt，如果这些库你不知道的话，你可以好好研究一下他们的文档，照着文档满足你的业务需求是肯定没问题的。\n但是本文并不尝试跟大家过一遍这些库是如何使用的，因为笔者认为做一个API调用工程师意义并不大，本文的目的是跟大家分享这些文件的本质，从而能够在平常的开发中即便遇到棘手的问题，大家也能够从容的解决，而不会被第三方库所绑架。\n如果你对以下问题有兴趣，那么仔细阅读本篇文章，你一定会有收获！\n办公文件发展史？\n前端为什么可以解析这些文件？\n第三库是怎么解析这些文件的？原理是什么？\nPDF是如何保持布局的稳定性的？\n准备好我们开始发车！ let`s get start it!\n二、办公文件的本质\n历史\n中国的 蔡伦 在公元105年发明了造纸术，它让人们进入了一个崭新的时代。从此纸张如一头猛兽闯入千家万户，人们可以在纸张上记录、编写、传播信息。\n技术的突破往往会催生出新的需求，这种在纸张上记录、编写、和传播信息的需要渐渐成为人们生活不可或缺的一部分，历史、文学、科学、艺术、日常事物都需要依赖于这种技术，因为承载了信息，纸张慢慢被人们称为文件，无论从哪个角度来看，文件的出现都是人类文明史上浓墨重彩的一笔。\n纸张统治了世界将近2000年，或许未来在相当长的时间内它还将一直存在，但是20世纪末，互联网的出现让纸质的文件地位出现了动摇，甚至大有退出历史舞台的趋势。人们发现将一切的纸张文件电子化会有令人意想不到的收益。电子文件传播更迅速、编写更方便、记…",
           "link": "https://juejin.cn/post/7313048171797544997",
           "publishedOn": "2023-12-16T08:16:40.000Z",
-          "wordCount": 2137,
+          "wordCount": 2286,
           "title": "前端是怎么解析Excel、PDF、Word、PPT等文件的？",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7313048145529487369",
+          "author": "游仙好梦",
+          "description": "最近有个需求需要实现自定义首页布局，需要将屏幕按照 6 列 4 行进行等分成多个格子，然后将组件可拖拽对应格子进行渲染展示。\n\n对比一些已有的插件，发现想要实现产品的交互效果，没有现成可用的。本身功能并不是太过复杂，于是决定自己基于 vue 手撸一个简易的 Grid 拖拽布局。\n完整源码在此，在线体验\n概况\n需要实现 Grid 拖拽布局，主要了解这两个东西就行\n拖放 API，关于拖放 API 介绍文章有很多 ，可以直接看 MDN 里拖放 API介绍，可以说很详细了。\nGrid 布局， Grid 布局与 Flex 布局很相似，但是 Grid 像是二维布局，Flex 则为一维布局，Grid 布局远比 Flex 布局强大。MDN 关于网格布局介绍\n需要实现主要包含：\n组件物料栏拖拽到布局容器\n布局容器 Grid 布局\n放置时是否重叠判断\n拖拽时样式\n放置后样式\n容器内二次拖拽\n拖放操作实现\n拖拽中主要使用到的事件如下\n被拖拽元素事件：\n事件\n触发时刻\n\n\n\n\ndragstart\n当用户开始拖拽一个元素或选中的文本时触发。\n\n\ndrag\n当拖拽元素或选中的文本时触发。\n\n\ndragend\n当拖拽操作结束时触发\n\n\n\n\n放置容器事件：\n事件\n触发时刻\n\n\n\n\ndragenter\n当拖拽元素或选中的文本到一个可释放目标时触发。\n\n\ndragleave\n当拖拽元素或选中的文本离开一个可释放目标时触发。\n\n\ndragover\n当元素或选中的文本被拖到一个可释放目标上时触发。\n\n\ndrop\n当元素或选中的文本在可释放目标上被释放时触发。\n\n\n\n可拖拽元素\n让一个元素能够拖拽只需要给元素设置 draggable=\"true\" 即可拖拽，拖拽事件 API 提供了 DataTransfer 对象，可以用于设置拖拽数据信息，但是仅仅只能 drop 事件中获取到，但是我们需要在拖拽中就需要获取到拖拽信…",
+          "link": "https://juejin.cn/post/7313048145529487369",
+          "publishedOn": "2023-12-16T06:54:10.000Z",
+          "wordCount": 2963,
+          "title": "手撸一个简易 Grid 拖拽布局",
           "imageUrl": null
         },
         {
@@ -1706,7 +1716,7 @@
           "description": "告诉大家一个好消息，OxLint 现在正式发布了！可能有些同学不了解，简单介绍一下，它和 ESLint 一样，是一个 JavaScript 代码检查工具，只是它不需要任何复杂的配置，就能帮助我们捕捉错误或无用代码。它使用 Rust 编写，速度非常地快，和 ESLint 对比起来，大概快 50 ~ 100 倍。\n尤大也惊叹它的速度之快：\n\n放个图给大家感受一下：\n\n更详细的性能对比请前往 bench-javascript-linter。\n如何使用\nOxLint并非旨在完全取代ESLint，毕竟 ESLint 生态已经很完善了，有些时候我们并不关注它的性能问题，但当ESLint 的速度成为工作流程瓶颈时，可以把它当做一个增强工具。\n比如有些项目会在 lint-staged 或者 CI 设置运行 ESLint，如果有一个大项目本来在 lint-staged 阶段要花费 10 秒，现在就连 1 秒都不到，连给你接水摸鱼的时间都没了（狗头保命）。\n说了这些，我们看看怎么用。要在JavaScript / TypeScript 代码库中测试 OxLint，只需在存储库的根目录下执行以下命令：\nnpx oxlint@latest # npm\npnpm dlx oxlint@latest # pnpm\nyarn dlx oxlint@latest # yarn\nbunx oxlint@latest # bun\ndeno run oxlint@latest # deno\n\n如果有报错，命令行就会抛出详细的警告。同时，我们也有 VSCode 插件，在插件市场搜索 oxc 就可以搜到。\n更多内容，请阅读我们的 安装指南。\n设计\n1. 比 ESLint 快 50-100 倍\n在实际场景中，Shopify 告称他们的原本需要运行 75 分钟 ESLint，现在仅需10秒。\n这是来自 Jason Miller，Shopify DX 和 Preact 作者的消息：\noxlint对我们来说是一个巨大的胜利。我们以前的lint设置需要运行 75 分钟，因此我们在CI中分配了 40 多个工作程序。\n相比之下，oxlint 在单个工作程序上对相同代码库的 lint 大约需要 10 秒钟，而且输出更易于解释。\n当我们迁移时，甚至发现了一些旧设置中隐藏或跳过的几个错误！\nOXlint 专门为性能设计，在其中，利用 Rust 和并行处理是其中的关键因素。\n2. 为正确性进行代码检查\nOxLint默认识别错误、冗余或混乱的代码 — 优先考虑正确性而不是一些吹毛求疵的规则（分类为 perf、suspicious、pedantic 或 style）。\n它的分类借鉴自了 clippy 的分类规则。初次见，可能会觉得很不适应，但是一旦熟悉，就会觉得这样的的分类是如此的方便，好用！\n运行默认模式（不加任何参数，直接 npx oxlint）识别出来的错误，一般都是需要修正的错误。\n3. 使用便捷\n现在配置新的 JavaScript / TypeScript 代码库变得越来越复杂。遇到兼容性问题的可能性很高，可能导致数小时的时间浪费。这就是为什么我们设计 OXLint 以零配置的方式出现的原因。别说配置文件了，Node.js 也不是必需的！\n我们工具的大多数调整可以通过命令行完成，目前兼容 ESLint 的配置文件的工作也在进行中。\n4. 增强诊断\n理解 lint 工具的信息可能具有挑战性。Oxlint 旨在通过定位根本原因并提供有用的信息来简化这一过程，也就是说，我们的报错信息比较容易读懂。看一个例子：\n如果我们想在 vscode中运行一下性能相关的 lint 规则： oxlint -D perf：\n得到的结果如下：\n\n5. 统一的规则\nOxlint 目前尚未提供插件系统，但我们正在积极整合来自流行插件如 TypeScript、React、Jest、Unicorn、JSX-a11y和 Import 的规则。\n我们认识到在 JavaScript 生态系统中插件的重要性，并且也正在研究基于 DSL 的插件系统。\n然而，你可能会喜欢一个独立的 lint 工具 — 无需管理一系列插件依赖项，不想解决兼容性问题、或者由于版本限制而求助于分支插件。\n感谢大家阅读到这，希望大家可以使用 OxLint 获得更愉悦的开发体验，也预祝大家即将到来的元旦假期快乐！\n要开始使用，请查阅安装指南，或者了解更多关于oxc项目的信息。\n我们项目还有很多好玩的东西，欢迎来玩 👉 https://oxc-project.github.io/",
           "link": "https://juejin.cn/post/7312338839695212571",
           "publishedOn": "2023-12-14T13:19:39.000Z",
-          "wordCount": 1092,
+          "wordCount": 44,
           "title": "OxLint 发布了，比 ESLint 快 50 倍！",
           "imageUrl": null
         },
@@ -1726,7 +1736,7 @@
           "description": "Element 系列的组件库自 Vue2 出现以来，就已经成为大部分开发者的首选 UI 组件库，直至今天，Element UI 跟 Element Plus 的周下载量都维持在 10w 以上 ,Element 系列组件库相信是大部分 Vue 初学者的入坑首选工具，7 年前，Element-UI 发布了他的第一个版本，但在 7 年后的现在，在搭建新项目时，Vue3 开发者或许应该对 Element Plus 说再见了。\n\n\n项目背景\nElement UI 组件如此受欢迎，我觉的有三点因素\n背靠饿了么大厂，有专业团队支持维护\n花裤衩大佬 Vue-admin 的开源项目相互成就\n培训班教学项目以及大学生课程作业的广告效应\n因此，当 Vue 发布了新版本 Vue3 时，为了选取配套的组件库，Element Plus 成为了大部分人的首选。事实上，饿了么官方并没有 Vue3 版本的组件库计划，后续社区内展开了 Element3 的开源教培项目，20 年 Element-Plus 官方版本正式发布，后续由饿了么与开源工作者共同维护，但  Element Plus 的组件一定程度上借鉴了 Element UI 的设计与思路，以至于后续维护上都存在许多问题。\n事实上，我个人对 Element Plus 有着较为复杂的情感，一方面社区大量开源开发者参与其中，推动了 Vue3 生态的发展，相信很多开发者跟我一样，在 GitHub 上的 第一个 PR 是通过 Element Plus 完成的，但另一方面当 Element Plus 落地到公司项目生产，业务对外交付时，很难说它是一个优秀的框架。\n项目问题\n审美疲劳的 UI 设计\n\n\n\n\n上图是我选取的 Github 上 start 星数比较多的模板项目，不能说这些项目有什么问题，只能说就是那个味。最近的一个月内，我发现了 chrome，网易云都重…",
           "link": "https://juejin.cn/post/7311871555528998966",
           "publishedOn": "2023-12-13T15:33:06.000Z",
-          "wordCount": 1542,
+          "wordCount": 44,
           "title": "为什么我不再使用 Element Plus",
           "imageUrl": null
         },
@@ -1736,7 +1746,7 @@
           "description": "大家好，我是大澈！\n本文约1200+字，整篇阅读大约需要3分钟。\n感谢关注微信公众号：“程序员大澈”，然后免费加入问答群，从此让解决问题的你不再孤单！\n1. 干货速览\n这两天老粉会发现，大澈在功能问题的内容基础上，增加了技术资讯、实用干货这两个专栏。主要目的是尽量为大家多输出一些东西吧，让大家在看功能问题实现这种枯燥技术文章的过程中，添加一些别样的小乐趣。\n\n然后，今天大澈精心整理了4个十分不错的Vue库，分享给大家。\n以便大家在项目中遇到此类需求时，能有一个印象，知道有这么一个可以用的东西，不至于两眼空空蛮干哈。\n下面先速览一下干货列表：\n-    第一个库，点击波纹效果。\n-    第二个库，hook函数工具库。这个库强烈推荐！\n-    第三个库，关键词高亮。\n-    第四个库，签名绘图。这个库用于手写签名需求超丝滑！\n\n2. 干货详述\n2.1 v-wave\n第一个库，点击波纹效果。\n一个指令搞定点击波纹效果，具有原生安卓风格的动画延迟和取消特性。这个插件使用 CSS 变换实现波纹，不影响元素外观，能自动适应波纹颜色，并支持各种定位的元素。\n开箱即用，为您提供与其所应用的元素的文本颜色相匹配的波纹，并具有响应式波纹感觉的合理默认值。\n您可以以每个元素为基础更改波纹的外观和感觉，或者通过修改全局默认值来更改波纹的外观和感觉。\n传送门：https://github.com/justintaddei/v-wave\n\n\n2.2 vue-hooks-plus\n第二个库，hook函数工具库。\n一个高性能且极致简约的 Vue3 Hooks 库，拥有以下丰富特性：\n🏄🏼‍♂️ 易学易用\n🔋 支持 SSR\n🛸 丰富的 Hooks\n🏟️ 覆盖大部分业务场景\n🦾 首选 useRequest，强大的请求中间层\n🎪 交互式 demo，身临其境\n🎯 使用 TypeScript 构建，提供完整的类型定义文件\n🪄 支持按需加载，减少打包体积\n🤺 演练场，大有用武之地\n🔐 测试完善，安全可靠\n最重要的，他有一个简洁明了的文档，包括：中文文档和英文国际化文档。\n传送门：https://github.com/InhiblabCore/vue-hooks-plus\n\n2.3 vue-word-highlighter\n第三个库，关键词高亮。\n一个用于 Vue 2 和 Vue 3 的单词高亮库。这个库提供了一种简便的方法来高亮显示文本中的特定单词或短语。\n要使用它，只需为 props 提供搜索词，为默认槽提供文本正文，即可轻松实现关键词高亮效果。\n传送门：https://github.com/kawamataryo/vue-word-highlighter\n\n2.4 v-perfect-signature\n第四个库，签名绘图。\n一个基于 Vue 2 和 Vue3 构建的压力敏感签名绘图库。\n它基于perfect-freehand构建，提供了一种简单的方式在 Vue 应用中实现手写签名功能。\n传送门：https://github.com/wobsoriano/v-perfect-signature\n\n结语\n建立这个平台的初衷：\n打造一个仅包含前端问题的问答平台，让大家高效搜索处理同样问题。\n通过不断积累问题，一起练习逻辑思维，并顺便学习相关的知识点。\n遇到难题，遇到有共鸣的问题，一起讨论，一起沉淀，一起成长。\n感谢关注微信公众号：“程序员大澈”，然后免费加入问答群，从此让解决问题的你不再孤单！",
           "link": "https://juejin.cn/post/7311904486965084201",
           "publishedOn": "2023-12-13T15:13:56.000Z",
-          "wordCount": 866,
+          "wordCount": 44,
           "title": "实用干货：推荐4个超级好用的Vue库，你可能不知道！",
           "imageUrl": null
         },
@@ -1776,7 +1786,7 @@
           "description": "7个Js async/await高级用法\nJavaScript的异步编程已经从回调(Callback)演进到Promise，再到如今广泛使用的async/await语法。后者不仅让异步代码更加简洁，而且更贴近同步代码的逻辑与结构，大大增强了代码的可读性与可维护性。在掌握了基础用法之后，下面将介绍一些高级用法，以便充分利用async/await实现更复杂的异步流程控制。\n1. async/await与高阶函数\n当需要对数组中的元素执行异步操作时，可结合async/await与数组的高阶函数（如map、filter等）。\n// 异步过滤函数\nasync function asyncFilter(array, predicate) {\n    const results = await Promise.all(array.map(predicate));\n\n    return array.filter((_value, index) => results[index]);\n}\n\n// 示例\nasync function isOddNumber(n) {\n    await delay(100); // 模拟异步操作\n    return n % 2 !== 0;\n}\n\nasync function filterOddNumbers(numbers) {\n    return asyncFilter(numbers, isOddNumber);\n}\n\nfilterOddNumbers([1, 2, 3, 4, 5]).then(console.log); // 输出: [1, 3, 5]\n\n2. 控制并发数\n在处理诸如文件上传等场景时，可能需要限制同时进行的异步操作数量以避免系统资源耗尽。\nasync function asyncPool(poolLimit, array, it…",
           "link": "https://juejin.cn/post/7311603994928513076",
           "publishedOn": "2023-12-13T01:45:38.000Z",
-          "wordCount": 1634,
+          "wordCount": 44,
           "title": "7个Js async/await高级用法",
           "imageUrl": null
         },
@@ -1786,7 +1796,7 @@
           "description": "大家好，我是大澈！\n本文约1200+字，整篇阅读大约需要2分钟。\n感谢关注微信公众号：“程序员大澈”，然后免费加入问答群，从此让解决问题的你不再孤单！\n1. 资讯速览\n就在前阵子，前端人都用过的工具VSCode，迎来了它的1.85新版本。\n此次版本更新，带来了较大变动，下面先总体看一下：\n\n翻译过来就是这样子：\n欢迎使用 2023 年 11 月发布的 Visual Studio Code。此版本中有许多更新，我们希望您会喜欢，其中一些主要亮点包括：\n浮动编辑器窗口 - 将编辑器拖放到桌面上。\n无障碍视图工作流程 - 更顺畅地往返于无障碍视图。\n更精细的扩展更新控制 - 选择要自动更新的扩展。\n源代码控制传入和传出视图 - 轻松查看待处理的存储库更改。\nJavaScript 堆快照 - 可视化堆快照，包括内存对象图。\nTypeScript 从嵌入提示转到定义 - 从嵌入提示悬停跳转到定义。\nPython 类型层次结构显示 - 快速查看和导航复杂的类型关系。\nGitHub Copilot 更新 - 内联聊天改进、Rust 代码解释。\n预览：扩展的粘性滚动支持 - 在树视图和终端中粘性滚动。\n2. 资讯详述\nVSCode此次版本的更新，虽然变动挺多，但还是那句话，很多东西我们根本用不到，更不更新真的是无所谓哈。\n下面列举两个新特性，我觉得在项目中特别有用。\n2.1 浮动编辑器窗口\nVSCode 在其最新版本1.8.5中，引入了一个备受期待的功能：浮动编辑器窗口。\n这项新功能，允许用户将编辑器从主窗口中拖出，形成独立的轻量级窗口。在任何一个窗口中对编辑器所做的更改，都会即时反映到其它所有打开该编辑器的窗口中。\n简单来说，就是我们在项目中分屏时，可以直接从编辑器当前窗口拖出，并放置在另一个屏幕上。\n\n值得一提的是，既然终端和搜索结果都可以作为编辑器打开，现在这些功能也可以在单独的窗口中使用了！\n\n2.2 系统资源可直接CV\n此前，将文件从系统资源管理器移动到VSCode，通常需要打开文件资源管理器，再手动复制文件到相应目录中。\n但在最新版本中，增加了一个实用的新功能：可直接从操作系统的资源管理器中，粘贴文件到VSCode的目录里。\n这意味着，用户现在可以更方便的，从他们的电脑文件系统中复制需要的静态资源文件，并直接粘贴到VSCode的项目目录中，而不需要再去做打开文件资源管理器这种浪费时间的操作。\n\n结语\n建立这个平台的初衷：\n打造一个仅包含前端问题的问答平台，让大家高效搜索处理同样问题。\n通过不断积累问题，一起练习逻辑思维，并顺便学习相关的知识点。\n遇到难题，遇到有共鸣的问题，一起讨论，一起沉淀，一起成长。\n感谢关注微信公众号：“程序员大澈”，然后免费加入问答群，从此让解决问题的你不再孤单！",
           "link": "https://juejin.cn/post/7311597716785938451",
           "publishedOn": "2023-12-12T14:35:00.000Z",
-          "wordCount": 891,
+          "wordCount": 44,
           "title": "技术资讯：VSCode大更新，这两个功能终于有了",
           "imageUrl": null
         },
@@ -1796,7 +1806,7 @@
           "description": "大家好，这里是大家的林语冰。\n今天尤大（Evan You，尤雨溪）又双叒叕发朋友圈了，Vue 3.4 beta（公测版）将于本周正式发布，且期望在今年年底尘埃落定。\n\n所以，本期《前端翻译计划》共享的是尤大亲笔的官方博客，Vue 团队官宣 Vue 3.3 正式发布，一起来重温今年五月 Vue 3.3 的升级大纲，为 Vue 3.4 预热前戏。\n免责声明\n本文属于是语冰的直男翻译了属于是，仅供粉丝参考，英文原味版请临幸 Announcing Vue 3.3。\n\n今天，我们十分鸡冻，普大喜奔 —— Vue 3.3（代号“浪客剑心”）正式发布！\n此版本聚焦于优化 UX（开发体验） —— 尤其是 SFC（单文件组件）<script setup> 和 TS（TypeScript）梦幻联动。联手 Vue 语言工具（曾用名 Volar） 的 1.6 版本，我们搞定了一大坨用 TS 写 Vue 的痼疾。\n本文概述了 Vue 3.3 的亮点功能。关于更新的完整清单，请传送 GitHub 完整更新日志。\n依赖更新\n当升级到 Vue 3.3 时，建议同时更新以下依赖：\nvolar/vue-tsc@^1.6.4\nvite@^4.3.5\n@vitejs/plugin-vue@^4.2.0\nvue-loader@^17.1.0（如果使用了 webpack/vue-cli）\nVue 3.3 版本速览：\n优化 <script setup> + TS DX（开发体验）\n\n支持宏中的导入类型和复杂类型\n泛型组件\n更符合人体工程学的 definedEmits\n携带 definedSlots 的类型插槽\n实验性功能\n\n响应式 props 解构\ndefineModel\n其他重要功能\n\ndefineOptions\n更好地支持 getter 与 toRef 和 toValue 一起使用\n支持 JSX 导入源\n优化维护基…",
           "link": "https://juejin.cn/post/7311603123570933796",
           "publishedOn": "2023-12-12T08:53:01.000Z",
-          "wordCount": 1637,
+          "wordCount": 44,
           "title": "Vue 3.3 官宣升级！Vue 3.4 预热。",
           "imageUrl": null
         },
@@ -1806,7 +1816,7 @@
           "description": "Ant Design Mini\n经过一段时间的开发与不断的努力，我们兴奋地宣布，Ant Desigin Mini 组件库中已有 16 个核心组件完成了微信小程序的适配工作！现在你不仅可以在支付宝小程序中使用 Ant Desigin Mini 组件库，也可以在微信小程序中使用了！\n目前这项适配正处于 Beta 阶段，我们诚挚地邀请大家前来体验。首批适配的组件包括：Button、Slider、Container、Icon、Loading、Switch、Tag、Input、Calendar、List、Result、Popover、Mask、Stepper、Popup、Checkbox\n先来看看 Demo 效果：\n\n我们的官网文档、Demo 都已同步更新双端切换能力：\n\n你可以参考以下文档进行接入：\n接入支付宝小程序：https://ant-design-mini.antgroup.com/guide/quick-start\n接入微信小程序：https://ant-design-mini.antgroup.com/guide/using-wechat\n使用 uni-app 接入：https://ant-design-mini.antgroup.com/guide/using-uni-app\n双平台无法对齐的特性\n受制于各平台框架设计，以下这些特性存在差异：\n两个平台的事件 API 不同。支付宝小程序可以把实例上通过 props 传递给子组件，而微信需要在 data 里传递函数。视图层的写法也所有不同。\n\n下面是 Calendar 在两种平台的使用方式。\n\n微信小程序\nPage({\n  data:{\n    handleFormat() {\n}\n  }\n})\n\n<calendar onFormat=\"{{handleFormat}}\" />\n\n  - 支付宝小程序\n\nPage({\n …",
           "link": "https://juejin.cn/post/7311603519570952246",
           "publishedOn": "2023-12-12T07:59:05.000Z",
-          "wordCount": 2114,
+          "wordCount": 44,
           "title": "Ant Design Mini 支持微信小程序啦！",
           "imageUrl": null
         },
@@ -1816,18 +1826,8 @@
           "description": "前言\n小编所在的团队叫 “Cuckoo FE” （Cuckoo：布谷鸟，多数种类为灰褐或褐色，喙强壮而稍向下弯，一只幼鸟一天能吃39只蚱蜢），寓意朴实能干，下文中工程化实践各类体系也是以Cuckoo开头。\n目前前端团队成员接近20人，归属字节商业化业务中台，承担海外商业化交易流程建设，为字节内部出海产品提供商业变现能力，整体技术方向以PC中台为主（90%+），另外包含部分移动端项目。\n从一个故事说起\n小马加入公司不久，最近刚接手一个新需求。凭借以往经验，这是一个small case，很快的给了排期，准备开干。没多久，他就向他的mentor提了第一个问题：“怎么创建项目？”，mentor很快就丢过来一个仓库，并回复道“你拿着这个项目去copy下改改”。小马愣了一下，不敢多问，立马开始操作，一顿CV猛如虎，项目终于跑起来，心想“快了，只要项目跑起来就快了”。接着小马在开发过程中遇到一个比较通用的功能，又问mentor有没有类似组件，没多久mentor又丢过来一个仓库，并在链接下评论：“你在xx文件下找找xx组件，应该修改修改就能用”，小马又把项目跑起来了，细研究了源码，果然能用，很开心又解决了一个问题。这样类似问题一个接一个，mentor也都能很快的给出答复。时间很快，在mentor的加持下到了联调那一天，小马心里长舒一口气“终于可以用真实数据跑一把了”，结果在浏览器刷新的那一刻，页面白了，虽然屏幕有点脏，但显的格外的白，这终究还是没有超出预期啊。这一调又是一堆问题，要么是成功码不对，要么是该有的字段没有，有了结构也不对，小马跑过去问后端怎么回事，后端回道“你应该没看最新文档”，小马打开文档对比了下：“嗯，是已经有很多不一样的了，但和现在的接口返回好像也不完全一样吧”，最终小马还是选择了相信接口返回的json。又是一顿折腾准备提测，小马又问mentor“怎么部署啊？”，ment…",
           "link": "https://juejin.cn/post/7311596602249134106",
           "publishedOn": "2023-12-12T07:11:37.000Z",
-          "wordCount": 1159,
+          "wordCount": 44,
           "title": "字节三年，谈谈一线团队如何搞工程化一（全景篇）",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7311194549354315813",
-          "author": "编程的平行世界",
-          "description": "经常在各大社群中看到关于“如何自定义一个组件”这样的问题讨论。在探讨的过程中，经常会涉及到“如何更好的设置自定义组件中的文本”的问题。那么这篇文章让我们一起来聊聊。\n为什么这样处理自定义组件中的文本不是一个好的方法？\n让我们来看一个常见的封装组件，封装了一个标题，还有标题下的一些淡灰色的正文。\nclass MyTitleText extends StatelessWidget {\n  const MyTitleText({\n    Key? key,\n    required this.titleText,\n    required this.content,\n    this.titleStyle =\n        const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),\n  }) : super(key: key);\n  final String titleText;\n  final String content;\n  final TextStyle titleStyle;\n\n  @override\n  Widget build(BuildContext context) {\n    return Column(\n      mainAxisAlignment: MainAxisAlignment.start,\n      crossAxisAlignment: CrossAxisAlignment.start,\n      children: [\n        Text(\n          titleText,\n          style: titleStyle,\n        ),\n        const SizedBox(\n          height: 6,\n        ),\n…",
-          "link": "https://juejin.cn/post/7311194549354315813",
-          "publishedOn": "2023-12-11T09:00:19.000Z",
-          "wordCount": 1839,
-          "title": "请不要再把String或Style直接传递给自定义的组件了！",
           "imageUrl": null
         },
         {
@@ -1836,7 +1836,7 @@
           "description": "引言\n2023-12-06 是我在酷家乐的最后一天，想把我在酷家乐这 4 年主导落地的项目做个总结，聊聊每个项目的创立背景、结果成败，以及反思。\n为了防止业务敏感信息泄漏，文中不会涉及到任何业务情况，项目结果数据，项目截图等内容。\n19 相遇\n时间来到 19 年 8 月，那是我加入酷家乐的日子。作为 IC 投入到酷家乐用户增长团队，当时团队主要在做激励体系、积分抽奖、酷签到、勋章等 To C 促活业务。\n新业务\n19 年 10 月，用户平台线成立 “设计圈” 新项目，是个 To B 的 SaaS 业务，目的是打通企业内部设计孤岛，让企业内部设计师共享、共建、共成长。后被大家戏称 “小主站”，即主站的子功能 SaaS 化。\n过程中我统一所有前台页面启动逻辑，增加启动的中间件机制，中间件机制也是首次被引入到页面启动流程中，对于多页、统一的场景至关重要；对于管理后台，引入当时比较前沿的 UForm（即现在的 Formily），并进行业务定制的封装，目的是简化表单、表格等场景的开发工作，而此动作也提效明显。在此感谢阿里对开源的贡献。\n反思：\n多页应用，需要有入口做全局逻辑的管控。而落地做法很多：html 入口/JS 统一使用固定的 boot 逻辑等等\n垂直领域能做一定的技术轮子。例如：表单表格的管理后台场景，需要有垂直领域的组件来做提效，基础组件还不够\n过程中担任 SM ，反推自己以全局视角考虑问题，并且关注团队成员的任务与过程\n20 回归\n20 年 2 月一半精力回归用户增长团队，直到 6 月份完全回归。\n小程序平台\n20 年 1 月，公司内部小程序业务增多，需要做一定的基础设施，以提升整体的开发效率。前端团队老大，推动成立“小程序平台”专项虚拟小组，由几个小程序的业务团队同学（设计圈也有小程序业务），以及基架组转岗过来的同学组成。\n我主动负责其中的 CI/CD 部分，接入 De…",
           "link": "https://juejin.cn/post/7310028335480619027",
           "publishedOn": "2023-12-08T09:59:54.000Z",
-          "wordCount": 2016,
+          "wordCount": 44,
           "title": "我在酷家乐这 4 年，项目成败与反思",
           "imageUrl": null
         },
@@ -1846,7 +1846,7 @@
           "description": "theme: Chinese-red\n\n\n\nNext.js 是一个构建于 Node.js 之上的开源 Web 开发框架，它扩展了最新的 React 特性，集成了基于 Rust 的 JavaScript 工具，可以帮助你快速创建全栈 Web 应用 （full-stack Web applications） 。\n对于有一定 React 基础的同学，Next.js 毫无疑问是进阶全栈工程师的最佳选择！\nReact 官方文档优先推荐的创建项目的方式便是使用 Next.js。目前 Next.js 在 GitHub 已有 115k star， Npm 周下载量 495W 左右，堪称最受欢迎的 Node.js 开发框架之一。\n\nNext.js 提供了开箱即用的 create-next-app脚手架，内置支持 TypeScript、ESLint，零配置即可实现自动编译和打包。支持服务端渲染（SSR）、客户端渲染（CSR）、静态站点生成（SSG）、增量静态再生（ISR）、以及流式加载（Streaming）。\nv13 版本提供了基于 React Server Component 全新的路由解决方案 App Router 以及服务端数据更改方案 Server Actions。当然不止这些，Next.js 同时提供了现代 Web 应用开发常见的解决方案如：路由、渲染、中间件、数据获取、缓存、样式、国际化、元数据、Edge Runtime 等。\n尽管是在业界非常受欢迎的框架，但 Next.js 文档在国内汉化方面十分落后，能搜到的中文文档基本都停留在非常老的版本且处于无人维护状态， 而 Next.js 官方文档早已全部重写，提供了多达百篇的详细介绍。加上 Next.js 2022 年底推出 v13 版本，提供了全新的功能，然而这些内容在国内也没有系统完整的介绍，能搜到的更多是单篇的粗略介绍，技术细节寥寥。\n这就导致大家在使用 Next.js 的时候可以快速上手，但对于高阶的 API 却知之甚少。有更简单便捷的实现方案却不知道，对于一些细枝末节上的问题需要多次深入英文文档翻找，对于一些没有过多解释的地方更需要反复测试和理解，这无疑增大了使用 Next.js 的成本。\n基于此，掘金小册联合掘金签约作者「冴羽」，推出了《Next.js 开发指南》\n\n\n\n冴羽曾经完整的整理过 TypeScript 文档，啃过 ECMAScript 规范，阅读英文文档倒也算顺畅，日常项目中也有在使用 Next.js，对于 Next.js 有一些自己的心得。\n为了帮助大家系统全面的掌握 Next.js，这本小册将分为“基础篇、实战篇、原理篇、面试篇”四大板块：\n基础篇： 基于最新的 Next.js 官方文档，循序渐进讲解 Next.js App Router、高级路由功能、路由处理程序、中间件、数据获取与缓存、React Server Component、Streaming、Edge Runtime、Tailwind CSS、内置优化组件、MDX、静态导出、路由段配置、环境变量、Draft Mode、Next CLI 及配置项、国际化、常用 API 方法等内容。\n本不想写的如此详细，但考虑到国内目前还没有系统完整的介绍文档，愿以此小册作为基石，作为大家开发 Next.js 项目时的必备指导手册。\n实战篇： 学技术尤其不能纸上谈兵，基础篇的知识细节也许过于零碎，实战篇的目的在于帮助你将这些知识融会贯通。我们会写 3 个完整的全栈项目，包括：\nReact Notes 项目（目的在于深入理解服务端组件、客户端组件的特性）\n博客项目（目的在于深入理解 Next.js 渲染方式与 MDX）\n移动端 HTML5 项目 （仿 APP 样式，目的在于学习 Next.js 最佳实践）\n相关的技术选型有 Ant Design + MongoDB + Mongoose + Redis + Nginx，会提供完整的源码供大家调试学习。\n源码篇： Next.js 的源码阅读不算容易，我将从源码的角度帮助大家理解 Next.js 的运行原理与实现，让大家在使用 Next.js API 的时候，知其然知其所以然。遇到问题的时候，能追根溯源，彻底的解决问题。\n面试篇： 最后，我会对面试中常问的 Next.js 相关问题做一份整理，告诉大家解题思路的同时提供一份自己的答案，帮助大家在面试的时候有所准备。\n\n现在，低调务实优秀的中国好青年们，让我们一起开始学习 Next.js 吧！\n你会学到什么？\n循序渐进、系统全面的的建立 Next.js 知识体系；\n学习 Next.js 最新的技术特性，了解技术前沿实践；\n了解 Next.js 的运行原理，知其所以然；\n一本可供开发 Next.js 项目时随时翻阅的技术指导手册；\n一份关于 Next.js 的面试问题指导。\n限时 6 折，还能叠加双 12 满赠！",
           "link": "https://juejin.cn/post/7310061802465542194",
           "publishedOn": "2023-12-08T07:59:51.000Z",
-          "wordCount": 1193,
+          "wordCount": 44,
           "title": "🔥 60 小节，带你搞定 Next.js，进阶全栈工程师！",
           "imageUrl": null
         }
@@ -1963,7 +1963,7 @@
           "description": "[7073670907851440160#新人报道#] 大家觉得低代码工具好用吗，你是否尝试体验过低代码工具，并应用在你的工作中",
           "link": "https://juejin.cn/pin/7310047627669159988",
           "publishedOn": "2023-12-08T10:51:54.000Z",
-          "wordCount": 464,
+          "wordCount": 465,
           "title": "[7073670907851440160#新人报道#] 大家觉得低代码工具好用吗，你是否尝试体验过低代码工具，并应用在你的工作中",
           "imageUrl": null
         },
@@ -2023,7 +2023,7 @@
           "description": "[7210002980895916043#挑战每日一条沸点#] yiapi（易接口），完成启动流程图~\nhttps://github.com/chenbimo/yicode",
           "link": "https://juejin.cn/pin/7307619217960304655",
           "publishedOn": "2023-12-03T00:05:52.000Z",
-          "wordCount": 472,
+          "wordCount": 475,
           "title": "[7210002980895916043#挑战每日一条沸点#] yiapi（易接口），完成启动流程图~ https://github.com/chenbimo/yicode",
           "imageUrl": null
         },
@@ -2033,7 +2033,7 @@
           "description": "[7210228048107896891#每日快讯#]  重要通知丨 JumpServer 开源堡垒机 V2 社区版即将停止维护\n根据《关于 JumpServer 开源堡垒机 V2 版本产品生命周期的相关说明》，JumpServer 开源堡垒机 V2 版本（社区版）将于 2023 年 12 月 31 日停止维护支持。",
           "link": "https://juejin.cn/pin/7307514532275372067",
           "publishedOn": "2023-12-02T02:23:58.000Z",
-          "wordCount": 44,
+          "wordCount": 671,
           "title": "[7210228048107896891#每日快讯#] 重要通知丨 JumpServer 开源堡垒机 V2 社区版即将停止维护 根据《关于 JumpServer 开源堡垒机 V2 版本产品生命周期的相关说明...",
           "imageUrl": null
         },
@@ -2043,7 +2043,7 @@
           "description": "预告：visualization-collection将实现两个跨域页面的量子纠缠效果，而且是纯前端实现，不想错过的赶紧点上关注啦[玫瑰][玫瑰][玫瑰]\n应用地址: https://hepengwei.cn\n源码地址: https://github.com/hepengwei/visualization-collection",
           "link": "https://juejin.cn/pin/7307451430595624975",
           "publishedOn": "2023-12-01T09:39:01.000Z",
-          "wordCount": 44,
+          "wordCount": 470,
           "title": "预告：visualization-collection将实现两个跨域页面的量子纠缠效果，而且是纯前端实现，不想错过的赶紧点上关注啦[玫瑰][玫瑰][玫瑰] 应用地址: https://hepengw...",
           "imageUrl": null
         },
@@ -2053,7 +2053,7 @@
           "description": "2023开发者必备iOS开发工具\n在进行iOS开发工作时，利用并熟练使用恰当的工具可以让工作效率得到大幅度提高。下边会介绍一些在进行iOS开发工作时常用的一些工具，本文并不对其进行展开，对使用方法及工作原理感兴趣的同学可以自行进行更深入的研究。\n开发工具 Postman Postman是一个接口测试工具。在做接口测试的时Postman相当于一个客户端，它可以模拟用户发起的各类HTTP请求，将请求数据发送至服务端并获取对应的响应结果，从而验证响应中的结果数据是否和预期值相匹配，并确保开发人员能够及时处理接口中的bug，进而保证产品上线之后的稳定性和安全性。它主要是用来模拟各种HTTP请求的，如get/post/delete/put等等。Postman与浏览器的区别在于有的浏览器不能输出Json格式，而Postman更直观接口返回的结果。\nipaguard\nIpa Guard是一款功能强大的ipa混淆工具，不需要ios app源码，直接对ipa文件进行混淆加密。可对IOS ipa文件的代码，代码库，资源文件等进行混淆保护。 可以根据设置对函数名、变量名、类名等关键代码进行重命名和混淆处理，降低代码的可读性，增加ipa破解反编译难度。可以对图片，资源，配置等进行修改名称，修改md5。只要是ipa都可以，不限制OC，Swift，Flutter，React Native，H5类app。\nMLeaksFinder\nMLeaksFinder是WeRead团队开源的一款检测iOS内存泄漏的框架，其使用非常简单，只需将文件加入项目中，如果有内存泄漏，3秒后自动弹出alert来捕捉循环引用。使得可以在开发快速找到80%内存泄漏，而使用Xcode Leak工具更适合大范围的，全部的寻找泄漏点。\nappuploder\nAPP开发助手iOS APP上架到App Store的辅助工具，解决iOS APP上架繁琐费时的情况，帮助跨平台APP开发者上架苹果应用,在没有配置Mac苹果机的情况，实现iOS证书申请，创建iOS开发者证书、iOS发布证书等各类证书，iOS开发者在Windows、Linux或Mac系统中上传IPA到App Store,简化iOS APP上架流程！在任何电脑中轻松快速上架你的APP。",
           "link": "https://juejin.cn/pin/7307502467825942555",
           "publishedOn": "2023-12-01T08:34:18.000Z",
-          "wordCount": 44,
+          "wordCount": 533,
           "title": "2023开发者必备iOS开发工具 在进行iOS开发工作时，利用并熟练使用恰当的工具可以让工作效率得到大幅度提高。下边会介绍一些在进行iOS开发工作时常用的一些工具，...",
           "imageUrl": null
         }
