@@ -51,6 +51,53 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-20 datetime="2023-12-20T02:24:00.000Z">2023-12-20</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-20 datetime="2023-12-20T02:24:00.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7314365534106222630"
+                        open
+                      >
+                        <summary class="article-expander__title">审核中 升级了系统，清理了存储。电脑还能再用用[哭笑]</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7314365534106222630">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>审核中 升级了系统，清理了存储。电脑还能再用用[哭笑]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-19 datetime="2023-12-19T23:42:00.000Z">2023-12-19</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-19 datetime="2023-12-19T23:42:00.000Z"></time>
           </button>
@@ -957,6 +1004,7 @@ Android 系统分别被 Sansung、Xiaomi、Oppo、Vivo 瓜分了，但是它们�
                             <span class="media-object__text">
                               <span>theme: channing-cyan
 Flutter 下拉刷新花式玩法 - 掘金 (juejin.cn)
+Flutter到鸿蒙,不是有手就行吗? (列表加载更多) - 掘金 (juejin.cn)
 前言
 五年前，有人告诉我，你可以错过其他技术，但千万不要错过 Flutter 。然而此刻，有人告诉我，如果你错过了鸿蒙，恐怕要错过下个时代了。
 作为发展了 5 年的 FlutterCandies 社区，我们已拥有 70+ 的 Flutter 组件。我们当然也不会止步于 Flutter 。我们希望把我们的 Flutter 组件也能带到鸿蒙生态当中，HarmonyCandies 便是为了这一刻。
@@ -979,9 +1027,7 @@ pull_to_refresh_notification 来实现一个可以自定义任何效果的下拉
 
 安装
 你可以通过下面的命令来下载安装
-ohpm install @candies/pull_to_refresh
-参数
-PullToRef…</span>
+ohpm…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;22
                                   min&hairsp;)</span>
                             </span>
@@ -4408,6 +4454,92 @@ Element UI 组件如此受欢迎，我觉的有三点因素
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7311932190442324003"
+                        open
+                      >
+                        <summary class="article-expander__title">复刻antfu大佬的svg签名效果</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7311932190442324003">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>I love three things in the world, the sun the moon and you, the sun is for the day, the moon is for the night and you forever
+前言
+在逛antfu大佬的个人网站时，看到一个很有风格的艺术签名，而且就像在网页上自动签字的效果一样，感觉很酷呢！
+
+好了，不羡慕了，我立刻，马上想要一个。
+准备工作
+先了解 SVG，以及SVG的动画，还有如何设计线条，有了方向，有了疑问，接下来就好说了，向着方向，解决疑问就ok了，这里我查看了三篇大佬的博文：
+How SVG Line Animation Works
+Animated line drawing in SVG
+Animated SVG logo
+感兴趣可以去看看，或者接着看这篇文章
+线条设计
+这里我使用了 figma 工具来进行设计：
+先找一个你想要的艺术连体字
+使用 figma 钢笔工具，按照这个连体字打点描绘
+将打点完成的线条导出为 SVG
+
+最终SVG效果：
+
+自己觉得满意就行
+SVG图形
+在这种线段图形中，有两个重要的属性stroke-dasharray和stroke-dashoffset
+stroke-dasharray:允许您指定线条的渲染部分的长度，然后指定间隙的长度
+stroke-dashoffset:允许您更改 dasharray 的开始位置
+当stroke-dasharray和stroke-dashoffset其实都是一个足够大的值（超过了线条的长度）时，这时会是一个完整的图案，随着 dashoffset 减小变成0的过程就是一个绘画的过程了，最后通过css添加上动画，就可以让这个 svg 看起来自动签名的感觉了。
+
+动画
+@media (prefers-reduced-motion) {
+  path {
+    animation: none !important;
+    stroke-dasharray: unset !important;
+  }
+}
+@keyframes grow {
+  0% {
+    stroke-dashoffset: 1px;
+    stroke-dasharray: 0 600px;
+    opacity: 0;
+    stroke: #00aeef;
+  }
+  10% {
+    opacity: 1;
+  }
+  40% {
+    stroke-dasharray: 600px 0;
+    stroke: #ed1c24;
+  }
+  /* Moving back */
+  85% {
+    stroke-dasharray: 600px 0;
+    stroke: #8cd790;
+  }
+  95%,
+  to {
+    stroke-dasharray: 0 600px;
+    stroke: #f69f37;
+  }
+}
+path {
+  stroke-dashoffset: 1px;
+  stroke-dasharray: 600px 0;
+  animation: grow 10s ease forwards infinite;
+  transform-origin: center;
+  stroke: #303030;
+  animation-delay: 0s;
+}
+
+记得 dasharray 的长度一定要大于等于svg中线条的长度，不然就会变成分段线条</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7311876701910908937"
                         open
                       >
@@ -4448,6 +4580,55 @@ localStorage.setItem(&#x27;b&#x27;…</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7311876701909614601"
+                        open
+                      >
+                        <summary class="article-expander__title">flutter：【实战篇】MLKIT 实现OCR文本识别，再也不用付费SDK了</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7311876701909614601">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>highlight: androidstudio
+theme: channing-cyan
+引言
+最近项目里要用到 OCR 拍照识别文本的能力。小编一开始想要的是接入百度的 OCR sdk，奈何领导直接说不批任何费用，看来只能另谋出路了。
+于是，小编找到了这个库 google_mlkit_text_recognition，该库支持传入图片识别文本，最重要的还是免费。
+闲话不多说，先来一张实现的效果图：
+
+拍照支持局部识别，下面来说说实现步骤。
+实现方式
+为了实现拍照识别，分别依赖了下面三个库：
+dependencies:
+  flutter:
+    sdk: flutter
+  camera: ^0.10.2+1
+  google_mlkit_commons: ^0.5.0
+  google_mlkit_text_recognition: ^0.9.0
+
+通过 camera 库实现相机预览能力
+CameraPreview(
+  cameraController,
+)
+
+并且相机开启预览后 cameraController 可以拿到每一帧的图片数据
+cameraController.startImageStream(_processCameraImage);
+
+将每一帧的图片数据，调用文本识别的google库，返回该图像内所有识别到的文本内容（注意：这里要自行做节流处理，我们不需要每帧都进行图像分析的开销）
+Future _processCameraImage(CameraImage image) async {
+  final WriteBuffer allBytes &#x3D; WriteBuffer();
+  for (final Plane plane in image.planes) {
+    allBytes.putUint8List(plane.bytes);
+  …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7311707089498390547"
                         open
                       >
@@ -4468,100 +4649,6 @@ Redux 在前端生态的状态管理库领域赫赫有名或臭名昭著，有�
 话说回来，以前 up 主的思想钢印是大型项目才需要 TS，现在 Redux 的源码有且仅有几百行，也使用 TS 重构，某种意义上也说明 TS/静态类型方案真正实现全民普及。
 关于“Redu…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7311681326712487999"
-                        open
-                      >
-                        <summary class="article-expander__title">带圆角的虚线边框？CSS 不在话下</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7311681326712487999">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>今天，我们来看这么一个非常常见的切图场景，我们需要一个带圆角的虚线边框，像是这样：
-
-这个我们使用 CSS 还是可以轻松解决的，代码也很简单，核心代码：
-div {
-    border-radius: 25px;
-    border: 2px dashed #aaa;
-}
-
-但是，原生的 dashed 有一个问题，就是我们无法控制虚线的单段长度与间隙。
-假设，我们要这么一个效果呢虚线效果呢：
-
-此时，由于无法控制 border: 2px dashed #aaa 产生的虚线的单段长度与线段之间的间隙，border 方案就不再适用了。
-那么，在 CSS 中，我们还有其它方式能够实现带圆角，且虚线的单段长度与线段之间间隙可控的方式吗？
-本文，我们就一起探讨探讨。
-实现不带圆角的虚线效果
-上面的场景，使用 CSS 实现起来比较麻烦的地方在于，图形有一个 border-radius。
-如果不带圆角，我们可以使用渐变，很容易的模拟虚线效果。
-我们可以使用线性渐变，轻松的模拟虚线的效果：
-div {
-    width: 150px;
-    height: 100px;
-    background: linear-gradient(90deg, #333 50%, transparent 0) repeat-x;
-    background-size: 4px 1px;
-    background-position: 0 0;
-}
-
-看看，使用渐变模拟的虚线如下：
-
-解释一下上面的代码：
-linear-gradient(90deg, #333 50%, transparent 0)，实现一段渐变内容，100% - 50% 的内容是 #333 颜色，剩下的一半 50% - 0 的颜色是透明色 transprent
-repeat-x 表示只在 x 方向重复
-background-…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7311603994928513076"
-                        open
-                      >
-                        <summary class="article-expander__title">7个Js async/await高级用法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7311603994928513076">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>7个Js async/await高级用法
-JavaScript的异步编程已经从回调(Callback)演进到Promise，再到如今广泛使用的async/await语法。后者不仅让异步代码更加简洁，而且更贴近同步代码的逻辑与结构，大大增强了代码的可读性与可维护性。在掌握了基础用法之后，下面将介绍一些高级用法，以便充分利用async/await实现更复杂的异步流程控制。
-1. async/await与高阶函数
-当需要对数组中的元素执行异步操作时，可结合async/await与数组的高阶函数（如map、filter等）。
-// 异步过滤函数
-async function asyncFilter(array, predicate) {
-    const results &#x3D; await Promise.all(array.map(predicate));
-
-    return array.filter((_value, index) &#x3D;&gt; results[index]);
-}
-
-// 示例
-async function isOddNumber(n) {
-    await delay(100); // 模拟异步操作
-    return n % 2 !&#x3D;&#x3D; 0;
-}
-
-async function filterOddNumbers(numbers) {
-    return asyncFilter(numbers, isOddNumber);
-}
-
-filterOddNumbers([1, 2, 3, 4, 5]).then(console.log); // 输出: [1, 3, 5]
-
-2. 控制并发数
-在处理诸如文件上传等场景时，可能需要限制同时进行的异步操作数量以避免系统资源耗尽。
-async function asyncPool(poolLimit, array, it…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -6283,54 +6370,6 @@ https://github.com/chenbimo/yicode</span>
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-02 datetime="2023-12-02T02:23:58.000Z">2023-12-02</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-02 datetime="2023-12-02T02:23:58.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7307514532275372067"
-                        open
-                      >
-                        <summary class="article-expander__title">[7210228048107896891#每日快讯#] 重要通知丨 JumpServer 开源堡垒机 V2 社区版即将停止维护 根据《关于 JumpServer 开源堡垒机 V2 版本产品生命周期的相关说明...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7307514532275372067">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>[7210228048107896891#每日快讯#]  重要通知丨 JumpServer 开源堡垒机 V2 社区版即将停止维护
-根据《关于 JumpServer 开源堡垒机 V2 版本产品生命周期的相关说明》，JumpServer 开源堡垒机 V2 版本（社区版）将于 2023 年 12 月 31 日停止维护支持。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-01 datetime="2023-12-01T00:14:11.000Z">2023-12-01</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-01 datetime="2023-12-01T00:14:11.000Z"></time>
           </button>
@@ -6555,8 +6594,8 @@ https://github.com/chenbimo/yicode</span>
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7269621020">
-        <time id="build-timestamp" datetime="2023-12-20T01:11:21.192Z">2023-12-20T01:11:21.192Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7270752643">
+        <time id="build-timestamp" datetime="2023-12-20T03:53:05.362Z">2023-12-20T03:53:05.362Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
