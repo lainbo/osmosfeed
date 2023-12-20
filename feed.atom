@@ -1,10 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-12-20T09:53:00.003Z</id>
+    <id>urn:2023-12-20T12:53:26.042Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-12-20T09:53:00.003Z</updated>
+    <updated>2023-12-20T12:53:26.042Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[发布了: 信息更新的有多快，它的半衰期有多短。 openai的内斗，按小时反转更新的信息，今天还看吗？ 东方家的超级个体和组织意志的battle，四处流传的消息，今天...]]></title>
+        <id>https://m.okjike.com/originalPosts/6582b7af34cced9e3112a554</id>
+        <link href="https://m.okjike.com/originalPosts/6582b7af34cced9e3112a554"/>
+        <updated>2023-12-20T09:45:19.000Z</updated>
+        <summary type="html"><![CDATA[信息更新的有多快，它的半衰期有多短。
+openai的内斗，按小时反转更新的信息，今天还看吗？
+东方家的超级个体和组织意志的battle，四处流传的消息，今天还看吗？]]></summary>
+        <author>
+            <name>李继刚的即刻动态</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[7073670907851440160#新人报道#] 想做一款计算个人所得税的浏览器插件]]></title>
+        <id>7314519123177242636</id>
+        <link href="https://juejin.cn/pin/7314519123177242636"/>
+        <updated>2023-12-20T09:27:47.000Z</updated>
+        <summary type="html"><![CDATA[[7073670907851440160#新人报道#] 想做一款计算个人所得税的浏览器插件]]></summary>
+        <author>
+            <name>林晓州</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[重庆市秀山土家族苗族自治县发布霜冻蓝色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/lanseyj/20231220/t20231220_526528476.html</id>
@@ -470,20 +492,6 @@ GoFullPage - Full Page Screen Capture 📸
 觉得不错可以 点个小星星 支持一下哦 🌹]]></summary>
         <author>
             <name>dombro</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[发布了: 年底了，想在群里抽奖送一把键盘。 怎么抽？ 一种办法是用小助手类的小程序，需要大家点击参与，最后显示一下谁中了。 这种方式感觉有点重，没必要大家...]]></title>
-        <id>https://m.okjike.com/originalPosts/657fd32f79cb2b9f35a578c6</id>
-        <link href="https://m.okjike.com/originalPosts/657fd32f79cb2b9f35a578c6"/>
-        <updated>2023-12-18T05:05:51.000Z</updated>
-        <summary type="html"><![CDATA[年底了，想在群里抽奖送一把键盘。
-怎么抽？ 
-一种办法是用小助手类的小程序，需要大家点击参与，最后显示一下谁中了。 这种方式感觉有点重，没必要大家再点一下才能参与，同时广告展示的阶段体验也不够舒服。
-另外一种办法是用random函数，随机生成一个数字，对应大家的入群顺序。 这方法足够简单，但需要手动去数对应到谁，同时也过于简单，没有仪式感。
-我理想中的群抽奖工具，应是获取群内大家微信头像，然后3d 滚动，最后阻尼效果降速，某人头像居中中奖。 全程无需群友参与，坐看动效就成。 不知道有没有类似的抽奖工具。]]></summary>
-        <author>
-            <name>李继刚的即刻动态</name>
         </author>
     </entry>
     <entry>
@@ -2546,6 +2554,83 @@ Element UI 组件如此受欢迎，我觉的有三点因素
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[复刻antfu大佬的svg签名效果]]></title>
+        <id>https://juejin.cn/post/7311932190442324003</id>
+        <link href="https://juejin.cn/post/7311932190442324003"/>
+        <updated>2023-12-13T13:30:05.000Z</updated>
+        <summary type="html"><![CDATA[I love three things in the world, the sun the moon and you, the sun is for the day, the moon is for the night and you forever
+前言
+在逛antfu大佬的个人网站时，看到一个很有风格的艺术签名，而且就像在网页上自动签字的效果一样，感觉很酷呢！
+
+好了，不羡慕了，我立刻，马上想要一个。
+准备工作
+先了解 SVG，以及SVG的动画，还有如何设计线条，有了方向，有了疑问，接下来就好说了，向着方向，解决疑问就ok了，这里我查看了三篇大佬的博文：
+How SVG Line Animation Works
+Animated line drawing in SVG
+Animated SVG logo
+感兴趣可以去看看，或者接着看这篇文章
+线条设计
+这里我使用了 figma 工具来进行设计：
+先找一个你想要的艺术连体字
+使用 figma 钢笔工具，按照这个连体字打点描绘
+将打点完成的线条导出为 SVG
+
+最终SVG效果：
+
+自己觉得满意就行
+SVG图形
+在这种线段图形中，有两个重要的属性stroke-dasharray和stroke-dashoffset
+stroke-dasharray:允许您指定线条的渲染部分的长度，然后指定间隙的长度
+stroke-dashoffset:允许您更改 dasharray 的开始位置
+当stroke-dasharray和stroke-dashoffset其实都是一个足够大的值（超过了线条的长度）时，这时会是一个完整的图案，随着 dashoffset 减小变成0的过程就是一个绘画的过程了，最后通过css添加上动画，就可以让这个 svg 看起来自动签名的感觉了。
+
+动画
+@media (prefers-reduced-motion) {
+  path {
+    animation: none !important;
+    stroke-dasharray: unset !important;
+  }
+}
+@keyframes grow {
+  0% {
+    stroke-dashoffset: 1px;
+    stroke-dasharray: 0 600px;
+    opacity: 0;
+    stroke: #00aeef;
+  }
+  10% {
+    opacity: 1;
+  }
+  40% {
+    stroke-dasharray: 600px 0;
+    stroke: #ed1c24;
+  }
+  /* Moving back */
+  85% {
+    stroke-dasharray: 600px 0;
+    stroke: #8cd790;
+  }
+  95%,
+  to {
+    stroke-dasharray: 0 600px;
+    stroke: #f69f37;
+  }
+}
+path {
+  stroke-dashoffset: 1px;
+  stroke-dasharray: 600px 0;
+  animation: grow 10s ease forwards infinite;
+  transform-origin: center;
+  stroke: #303030;
+  animation-delay: 0s;
+}
+
+记得 dasharray 的长度一定要大于等于svg中线条的长度，不然就会变成分段线条]]></summary>
+        <author>
+            <name>陪我去看海</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[localStorage 竟然支持存储 JavaScript 几乎所有数据类型！！！]]></title>
         <id>https://juejin.cn/post/7311876701910908937</id>
         <link href="https://juejin.cn/post/7311876701910908937"/>
@@ -2595,26 +2680,6 @@ localStorage.setItem('b'…]]></summary>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[重庆市秀山土家族苗族自治县发布大风蓝色预警]]></title>
-        <id>http://www.cneb.gov.cn/yjxx/lanseyj/20231213/t20231213_526518928.html</id>
-        <link href="http://www.cneb.gov.cn/yjxx/lanseyj/20231213/t20231213_526518928.html"/>
-        <updated>2023-12-13T11:01:00.000Z</updated>
-        <summary type="html"><![CDATA[秀山县气象台2023年12月13日18时发布“大风蓝色预警信号”，我县川河盖站已出现7级阵风，预计未来12小时内我县涌洞、隘口镇等高海拔乡镇仍可能出现7级阵风，请注意防范。防御指南：1.关好门窗，非必要不外出。妥善处置窗台、阳台等室外搁置物。2.暂停户外高空作业。不在玻璃门窗、广告牌、脚手架、塔吊等较易发生危险区域逗留；加固围板、棚架等搭建物。3.行驶车辆及船舶注意采取避风措施。4.相关部门和乡镇街道按照职责，做好大风防范应对工作。]]></summary>
-        <author>
-            <name>国家预警信息发布中心</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[重庆市巫山县发布大风蓝色预警]]></title>
-        <id>http://www.cneb.gov.cn/yjxx/lanseyj/20231213/t20231213_526518852.html</id>
-        <link href="http://www.cneb.gov.cn/yjxx/lanseyj/20231213/t20231213_526518852.html"/>
-        <updated>2023-12-13T10:21:00.000Z</updated>
-        <summary type="html"><![CDATA[巫山县气象台2023年12月13日18时发布“大风蓝色预警信号”，预计12月13日18时至14日6时，巫峡镇、龙门街道、高唐街道、两坪乡、三溪乡、建平乡、曲尺乡、大溪乡、庙宇镇、铜鼓镇、红椿乡、官渡镇、抱龙镇、培石乡、笃坪乡、邓家乡风力可达6级，局地阵风可达7级以上，请注意防范。]]></summary>
-        <author>
-            <name>国家预警信息发布中心</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[1分钟撸一个页面，html之父都完成不了，而我可以，xmd用它]]></title>
         <id>7311895107531669513</id>
         <link href="https://juejin.cn/pin/7311895107531669513"/>
@@ -2622,46 +2687,6 @@ localStorage.setItem('b'…]]></summary>
         <summary type="html"><![CDATA[1分钟撸一个页面，html之父都完成不了，而我可以，xmd用它]]></summary>
         <author>
             <name>Simon_He</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[flutter：【实战篇】MLKIT 实现OCR文本识别，再也不用付费SDK了]]></title>
-        <id>https://juejin.cn/post/7311876701909614601</id>
-        <link href="https://juejin.cn/post/7311876701909614601"/>
-        <updated>2023-12-13T09:13:00.000Z</updated>
-        <summary type="html"><![CDATA[highlight: androidstudio
-theme: channing-cyan
-引言
-最近项目里要用到 OCR 拍照识别文本的能力。小编一开始想要的是接入百度的 OCR sdk，奈何领导直接说不批任何费用，看来只能另谋出路了。
-于是，小编找到了这个库 google_mlkit_text_recognition，该库支持传入图片识别文本，最重要的还是免费。
-闲话不多说，先来一张实现的效果图：
-
-拍照支持局部识别，下面来说说实现步骤。
-实现方式
-为了实现拍照识别，分别依赖了下面三个库：
-dependencies:
-  flutter:
-    sdk: flutter
-  camera: ^0.10.2+1
-  google_mlkit_commons: ^0.5.0
-  google_mlkit_text_recognition: ^0.9.0
-
-通过 camera 库实现相机预览能力
-CameraPreview(
-  cameraController,
-)
-
-并且相机开启预览后 cameraController 可以拿到每一帧的图片数据
-cameraController.startImageStream(_processCameraImage);
-
-将每一帧的图片数据，调用文本识别的google库，返回该图像内所有识别到的文本内容（注意：这里要自行做节流处理，我们不需要每帧都进行图像分析的开销）
-Future _processCameraImage(CameraImage image) async {
-  final WriteBuffer allBytes = WriteBuffer();
-  for (final Plane plane in image.planes) {
-    allBytes.putUint8List(plane.bytes);
-  …]]></summary>
-        <author>
-            <name>李小轰_Rex</name>
         </author>
     </entry>
     <entry>
@@ -3736,17 +3761,6 @@ JUEJIN FRIDENS Yoyo抱枕
 有任何疑问，可以通过 1️⃣站内私信掘金小册，2️⃣微信联系小册四姐@北比或小册五姐@北比]]></summary>
         <author>
             <name>掘金小册</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[7210002980895916043#挑战每日一条沸点#] yiapi（易接口），完成启动流程图~ https://github.com/chenbimo/yicode]]></title>
-        <id>7307619217960304655</id>
-        <link href="https://juejin.cn/pin/7307619217960304655"/>
-        <updated>2023-12-03T00:05:52.000Z</updated>
-        <summary type="html"><![CDATA[[7210002980895916043#挑战每日一条沸点#] yiapi（易接口），完成启动流程图~
-https://github.com/chenbimo/yicode]]></summary>
-        <author>
-            <name>前端之虎陈随易</name>
         </author>
     </entry>
     <entry>
