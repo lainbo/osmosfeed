@@ -34,7 +34,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": 1013,
+          "wordCount": 1012,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         },
@@ -44,7 +44,7 @@
           "description": "滤镜效果大体分两类，一类是算法滤镜，另外一类则是颜色映射滤镜，本文就将介绍如何使用pixi.js在WebGL中应用颜色映射滤镜。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/",
           "publishedOn": "2023-11-21T16:14:41.000Z",
-          "wordCount": 1288,
+          "wordCount": 1289,
           "title": "cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用",
           "imageUrl": null
         }
@@ -102,6 +102,16 @@
       "feedUrl": "https://rsshub.app/jike/user/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
+        {
+          "id": "https://m.okjike.com/originalPosts/6582279e8a7c5ba8ae34a704",
+          "author": null,
+          "description": "手机其实不是一个好的阅读工具，因为它太容易让人专注，而大部分的阅读是不需要那么保持专注的，快速扫一眼即可，在 PC 上以更大的屏幕、更快的滚动速度，可以更好地支撑这一点。\n但是手机是一个很好的思考和记录工具，随时随地，懒得打字还可以语音记录，比如这条。",
+          "link": "https://m.okjike.com/originalPosts/6582279e8a7c5ba8ae34a704",
+          "publishedOn": "2023-12-19T23:30:38.000Z",
+          "wordCount": 498,
+          "title": "发布了: 手机其实不是一个好的阅读工具，因为它太容易让人专注，而大部分的阅读是不需要那么保持专注的，快速扫一眼即可，在 PC 上以更大的屏幕、更快的滚动速度...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+        },
         {
           "id": "https://m.okjike.com/originalPosts/6581c3b4979083134a6b89a3",
           "author": null,
@@ -191,16 +201,6 @@
           "wordCount": 544,
           "title": "发布了: 使用 Node.js 的工具快速启动一个文件系统服务的方法：npx http-server，它的原理是使用 npm 从远程拉取 http-server 包，然后本地启动，很方便但效率一...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/6580440079cb2b9f35b007f9",
-          "author": null,
-          "description": "Python 语言设计有一些奇特之处，它经常让人迷惑到底应该使用方法调用还是函数调用，例如 len(str) 和 str.len()，sorted(list) 和 list.sort() 等。\n在一封 06 年的邮件中，Python 之父 Guido van Rossum 解释了这个问题，https://mail.python.org/pipermail/python-3000/2006-November/004643.html，他提出了两点：1）前缀表示法的可读性更强，它在数学中也有着长期的传统；2）更易于理解操作类型：可直接预判结果的类型，以及确定入参是某种容器。\nPython 设计哲学注重“可读性胜过一切”，原则性很强，反观 JavaScript，到处都是语法糖，自然也不会有这种编码过程中的困惑了……🐶",
-          "link": "https://m.okjike.com/originalPosts/6580440079cb2b9f35b007f9",
-          "publishedOn": "2023-12-18T13:07:12.000Z",
-          "wordCount": 485,
-          "title": "发布了: Python 语言设计有一些奇特之处，它经常让人迷惑到底应该使用方法调用还是函数调用，例如 len(str) 和 str.len()，sorted(list) 和 list.sort() 等。 在...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fn40iKdePKMSqEtBJu-zbPRmWheCv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         }
       ]
     },
@@ -255,7 +255,7 @@
           "description": "年底了，想在群里抽奖送一把键盘。\n怎么抽？ \n一种办法是用小助手类的小程序，需要大家点击参与，最后显示一下谁中了。 这种方式感觉有点重，没必要大家再点一下才能参与，同时广告展示的阶段体验也不够舒服。\n另外一种办法是用random函数，随机生成一个数字，对应大家的入群顺序。 这方法足够简单，但需要手动去数对应到谁，同时也过于简单，没有仪式感。\n我理想中的群抽奖工具，应是获取群内大家微信头像，然后3d 滚动，最后阻尼效果降速，某人头像居中中奖。 全程无需群友参与，坐看动效就成。 不知道有没有类似的抽奖工具。",
           "link": "https://m.okjike.com/originalPosts/657fd32f79cb2b9f35a578c6",
           "publishedOn": "2023-12-18T05:05:51.000Z",
-          "wordCount": 449,
+          "wordCount": 469,
           "title": "发布了: 年底了，想在群里抽奖送一把键盘。 怎么抽？ 一种办法是用小助手类的小程序，需要大家点击参与，最后显示一下谁中了。 这种方式感觉有点重，没必要大家...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -523,6 +523,16 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231220/t20231220_526527704.html",
+          "author": "国家预警信息发布中心",
+          "description": "大足区气象台2023年12月20日07时25分发布“大雾黄色预警信号”:预计20日07时30分-11时我区龙岗街道、棠香街道、玉龙镇、雍溪镇、金山镇、万古镇、国梁镇、回龙镇、石马镇、拾万镇、古龙镇、三驱镇、智凤街道、宝顶镇、高升镇、铁山镇、中敖镇、高坪镇、龙滩子街道、通桥街道、邮亭镇、双路街道、龙水镇、珠溪镇、龙石镇、季家镇、宝兴镇等镇街将出现能见度小于500米的雾。请注意预防大雾天气可能造成的危害。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231220/t20231220_526527704.html",
+          "publishedOn": "2023-12-19T23:42:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市大足区发布大雾黄色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231219/t20231219_526527633.html",
           "author": "国家预警信息发布中心",
