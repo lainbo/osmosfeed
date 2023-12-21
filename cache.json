@@ -93,6 +93,16 @@
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/65846e9b34cced9e313642f3",
+          "author": null,
+          "description": "程序在运转一段时间后，内存因泄露而持续增长，或者因碎片化占用导致分配内存不足，最后被系统 Kill 出现 OOM 报错的问题十分常见，无论是什么语言编写的代码，只要业务流量足够大，或者用户输入足够复杂，就比较容易出现此类问题。\n内存管理一般会涉及到三层：用户程序层、C 运行时库层和内核层。\n如果是因为用户程序层导致的内存使用不当，这类问题是比较好排查的，一般可以在 OOM 之前，通过 heap profiling 将大内存块给分析出来，例如 Node.js 可以使用 llnode/andb 等工具进行排查，Python 可以使用 Heapy/objgraph 等工具排查。\n但如果内存问题出现在 C 运行时库层（glibc），定位起来就较为麻烦了。glibc 是介于用户程序层和内核层之间的一个内存管理器，用户程序一般不会直接向内核申请内存，因为两个 context 之间的切换开销比较大，而是通过 glibc 预先从内核申请一大块内存，然后用户程序再向 glibc 申请资源，只有资源不足的时候，glibc 才会再次向内核继续申请资源。\n这也意味着 glibc 需要完成复杂的内存分配和回收工作，好在业界已经有非常成熟的实现，如 ptmalloc/tcmalloc/jemalloc 等等，其中 ptmalloc 是 glibc 默认内存管理器，它是一个标准实现，tcmalloc 是 Google 家提供的，jemalloc 是 Facebook 家提供的，后两者在多线程/进程情况下，以及小内存的分配效率上，都有着明显的优势。\n如果内存问题出现在 glibc 上，使用 gdb 一般都可以找到问题，但存在一个缺陷是，gdb 可以定位到 glibc 上具体的内存开销问题，但无法与上层（如 Node.js/Python）业务代码进行关联。好在不同的语言都有自己的配套工具，例如 Node.js 可以使用 andb 来排查 glibc 内存，它针对 ptmalloc 实现了一份内存调试指令，再例如 Python 可以使用 tracemalloc 来定位问题。\n工具的使用存在一定的门槛，需要对内存的结构有深入了解，之前分享过一个调试案例：https://twitter.com/Barret_China/status/1694172176273097115，可以参考。\n在近期正好又经历了一次比较有趣的碎片化内存占用问题的排查，现象如图所示，十分诡异，最终发现是 ptmalloc 的内存分配机制的问题，简单来说，就是碎片化内存在收回时，由于与 top chunk 相邻的内存块还存在引用，没有及时回收，导致一整串碎片化内存都无法回收，这是 ptmalloc 自身的一大缺陷，而 tcmalloc 和 jemalloc 上都有较大的改善。\n解决方案也比较简单，尝试将 ptmalloc 直接替换成 jemalloc 后，OOM 问题立马就消失了，就连日常内存的占用都降低了很多。\n如果你的业务堆外内存也经常飙高，甚至出现 OOM，也可以考虑更换成其他内存管理器，大概率也是可以解决问题，关于这一点，Node.js 社区存在一些有价值的讨论和问题复现代码：https://github.com/nodejs/node/issues/21973\n另外，也推荐阅读这篇文章：《ptmalloc、tcmalloc与jemalloc对比分析》，https://www.cyningsun.com/07-07-2018/memory-allocator-contrasts.html，这是“微信看一看”团队将 ptmalloc 更换成 tcmalloc 后，机器 CPU 陡增造成业务停摆引发的一次排查和研究，最后发现是 tcmalloc 的自旋锁带来的性能问题，更换成 jemalloc 就恢复了，这篇文章从系统视角和用户视角分别分析了不同内存管理器的实现原理，讲的很精彩。",
+          "link": "https://m.okjike.com/originalPosts/65846e9b34cced9e313642f3",
+          "publishedOn": "2023-12-21T16:58:03.000Z",
+          "wordCount": 630,
+          "title": "发布了: 程序在运转一段时间后，内存因泄露而持续增长，或者因碎片化占用导致分配内存不足，最后被系统 Kill 出现 OOM 报错的问题十分常见，无论是什么语言编写...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fnprv8YXxeYapUZ-orhVh1HBeMQPv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/6582f31d71cfacf6097f57fb",
           "author": null,
           "description": "局域网文件互传，推荐 ShareDrop， https://sharedrop.io，这款产品是基于 WebRTC 实现的 P2P 传输，局域网内文件互传的效率非常高。\n使用方式很简单，电脑和手机（或其他终端）同时打开这个网址就行了，它会通过STUN（Session Traversal Utilities for NAT）服务器来获取本地网络地址和端口，然后在局域网内建立点对点连接，安全性也很高。",
@@ -181,16 +191,6 @@
           "wordCount": 455,
           "title": "发布了: Python 解释器会先将源码编译成字节码，再开始执行，因此有些细微的优化是可以省略的，例如图一中的时间表达式会在编译过程被处理成一个常量。 如何更加...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FuSEFG0ICy6y7_S2MgNpkty8yQRZv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/65813f2b60830f16aed91c79",
-          "author": null,
-          "description": "在类定义中，通常可以使用 self/this 等关键词直接访问类中的对象和属性，Python 在这个细节的设计也是独树一帜，它约定函数入参的第一个参数必须是 self：\nclass C:\n  a = 1\n  def meth(self, x):\n    print(self.a)\n但这个设计在函数调用报错时，会带来一些迷惑性，例如：\nc = C()\n# TypeError: meth() takes 2 positional arguments but 3 were given\nc.meth(1, 2)\n明明入参 2 个，报错的时候却说提供了 3 个入参。Bruce Eckel 在 08 年写了一篇提案《参数列表中的 Self：冗余并不显式》，https://www.artima.com/weblogs/viewpost.jsp?thread=239003，尝试用魔法打败魔法 —— 在 Python 社区中，对于语法的设计，基本都遵循 Pythoniciy 原则 —— 这不符合第二条原则：“Explicit is better than implicit”，报错蕴含的信息过于隐式。\nPython 之父 Guido 隔了一个月回了一篇《为什么显式的 self 必须保留》，https://neopythonic.blogspot.com/2008/10/why-explicit-self-has-to-stay.html，文中提到 self 在函数调用时是隐式传入的，关于报错的迷惑性表示认可，但是将 self 省略不认可，原因有三个：\n1）c.meth(x) 完全等同于 C.meth(c, x)，保留 self 可以强调两者之间的等价性\n2）保留 self 可以允许通过向类插入函数来动态修改类，创建相应的方法，因为没有 self 入参新增的函数会报错\n3）在使用装饰器时，无法确定是否需要给装饰器函数添加 self 入参，因为 staticmethod 不需要，而 classmethod 需要\n个人认为 Guido 是站在 Python 整体设计不要大改的前提下来回应的，因为 Python 具备动态修改类的能力，因为类装饰器存在不同的类型，所以去掉 self 不合理，这样的推论就有失偏颇了。",
-          "link": "https://m.okjike.com/originalPosts/65813f2b60830f16aed91c79",
-          "publishedOn": "2023-12-19T06:58:51.000Z",
-          "wordCount": 610,
-          "title": "发布了: 在类定义中，通常可以使用 self/this 等关键词直接访问类中的对象和属性，Python 在这个细节的设计也是独树一帜，它约定函数入参的第一个参数必须是 sel...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FqGYFPZSBIVt7p5fYvgJDsQHwEnIv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         }
       ]
     },
@@ -1453,7 +1453,7 @@
           "description": "[7073670907851440160#新人报道#] 想做一款计算个人所得税的浏览器插件",
           "link": "https://juejin.cn/pin/7314519123177242636",
           "publishedOn": "2023-12-20T09:27:47.000Z",
-          "wordCount": 462,
+          "wordCount": 459,
           "title": "[7073670907851440160#新人报道#] 想做一款计算个人所得税的浏览器插件",
           "imageUrl": null
         },
@@ -1473,7 +1473,7 @@
           "description": "[7210002980895916043#挑战每日一条沸点#] 2024年，改变世界的前端仓库，麻烦点个star关注下，且看前端之虎陈随易，如何破局！\nhttps://github.com/chenbimo/yicode",
           "link": "https://juejin.cn/pin/7314190092129484800",
           "publishedOn": "2023-12-19T12:46:20.000Z",
-          "wordCount": 472,
+          "wordCount": 499,
           "title": "[7210002980895916043#挑战每日一条沸点#] 2024年，改变世界的前端仓库，麻烦点个star关注下，且看前端之虎陈随易，如何破局！ https://github.com/chenbimo/yic...",
           "imageUrl": null
         },
@@ -1593,7 +1593,7 @@
           "description": "[7073670907851440160#新人报道#] 大家觉得低代码工具好用吗，你是否尝试体验过低代码工具，并应用在你的工作中",
           "link": "https://juejin.cn/pin/7310047627669159988",
           "publishedOn": "2023-12-08T10:51:54.000Z",
-          "wordCount": 463,
+          "wordCount": 460,
           "title": "[7073670907851440160#新人报道#] 大家觉得低代码工具好用吗，你是否尝试体验过低代码工具，并应用在你的工作中",
           "imageUrl": null
         },
