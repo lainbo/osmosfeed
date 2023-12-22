@@ -34,7 +34,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": 1021,
+          "wordCount": 1025,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         }
@@ -102,6 +102,26 @@
       "feedUrl": "https://rsshub.app/jike/user/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
+        {
+          "id": "https://m.okjike.com/originalPosts/658513d960830f16ae280d03",
+          "author": null,
+          "description": "看到 Python 有 threading 模块，本以为它可以很好地支持高并发，但实际跑起来效果并不好，比单线程更慢。图二中 8 个并发比图一慢了 0.4s。\n研究之后才发现，原来 threading 底层实现并没有支持调用多个 CPU，它是一个假的并发模块😅\nPython 是采用基于栈的解释器来运行字节码的，通过全局解释器锁（global interpreter lock，GIL）的机制来确保抢占式的多线程环境相互之间不受干扰。简单来说，多个线程是通过排队抢锁的机制来轮流执行的，每个线程在抢到锁之后，都会进行一次 context 切换，这也是“并发”执行更慢的原因。\n那为什么大家经常用 Python 进行并发爬虫不觉得慢呢，那是因为在爬虫应用中，通常涉及到的任务主要是网络请求、文件读写等 I/O 操作，而不是 CPU 密集型的计算任务，反而可以在 I/O 等待的过程中发起了更多任务，充分压榨 CPU 的性能。\n要让 Python 真正利用起多核 CPU，可以使用 multiprocessing 模块，它会在每个进程内都启动一个 GIL，这样进程之间就不存在抢锁问题了，只不过对内存的开销要大很多😅",
+          "link": "https://m.okjike.com/originalPosts/658513d960830f16ae280d03",
+          "publishedOn": "2023-12-22T04:43:05.000Z",
+          "wordCount": 541,
+          "title": "发布了: 看到 Python 有 threading 模块，本以为它可以很好地支持高并发，但实际跑起来效果并不好，比单线程更慢。图二中 8 个并发比图一慢了 0.4s。 研究之后才...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fot8tPenRGLZ5v9rube_3tYfLXbIv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
+        {
+          "id": "https://m.okjike.com/originalPosts/6584fec80972668b3ef1578d",
+          "author": null,
+          "description": "这是一个可以复现内存碎片化的 Node.js 示例，每次添加的内存块有 4Mb，在 ptmalloc 内存管理策略中，这块内存会从 mmap 上分配， 由于 top chunk 附近的内存块被占用，无法完成回缩，造成了内存飙升。\n更换成 jemalloc 后，问题消失。另外提一下，在 MacOS 上更换 jemalloc 是比较简单的：\n1）brew install jemalloc，安装动态链接库\n2）jemalloc node code.js，会重置 DYLD_INSERT_LIBRARIES 环境变量替换内存管理器",
+          "link": "https://m.okjike.com/originalPosts/6584fec80972668b3ef1578d",
+          "publishedOn": "2023-12-22T03:13:12.000Z",
+          "wordCount": 500,
+          "title": "发布了: 这是一个可以复现内存碎片化的 Node.js 示例，每次添加的内存块有 4Mb，在 ptmalloc 内存管理策略中，这块内存会从 mmap 上分配， 由于 top chunk 附近...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/FgRfqtKqHlbHW33e9ougSN-ghgsKv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
+        },
         {
           "id": "https://m.okjike.com/originalPosts/6584d6fb1f0812cca59988c9",
           "author": null,
@@ -180,26 +200,6 @@
           "publishedOn": "2023-12-19T15:42:50.000Z",
           "wordCount": 479,
           "title": "发布了: 花了差不多两个月时间，清空了所有历史 Todo 任务和 Read Later 的文章，也把自半年前打开的浏览器 Tabs 全部给 close 掉了，稍一有空就开始处理，信息...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/6581ac58f0da80ccb5921893",
-          "author": null,
-          "description": "推荐一个内容比较全面的 Python 免费在线学习资料，《Python Cookbook in Chinese》 3rd Edition，https://python3-cookbook.readthedocs.io/zh-cn/latest/index.html，它的受众是想深入理解 Python 语言机制和现代编程风格的有经验的 Python 程序员；原作者是 David Beazley ，https://www.dabeaz.com，有着接近 40 年的开发经验。\n这本书大部分内容集中于标准库、框架和应用程序中广泛使用的高级技术，包括元编程、并发编程、测试和调试、C语言拓展等等（如图一）。\n你也可以把它的项目代码克隆下来，https://github.com/yidao620c/python3-cookbook，直接进入到 notebook/ipynb 目录，在 VSCode 上一边看书，一边执行代码，Jupyter notebook 的学习体验做的还是非常不错的（如图二）。\n如果你对 Python 基础知识还不够了解，推荐先看看《Python 语言基础 50 课》，https://github.com/jackfrued/Python-Core-50-Courses，跟着文档或视频把代码敲一遍，差不多也就入门了（如图三）。\n我陆陆续续学习了一周，内容差不多都看完了。对有足够编程经验的人来说，Python 的学习门槛并不高。\n在探索了一圈后发现，Python 社区的建设是真的相当完善，尤其是文档，内容丰富且质量非常高，我觉得这跟 Python 之父 Guido 有着莫大的关系，Python 的发展基本都围绕高质量的文档和讨论进行的（如图四）。\n如果有对 Python 的发展做贡献的想法，可以关注 Python Enhancement Proposals (PEPs)，https://peps.python.org/，这里列举了 Python 社区从 2000 年至今的所有新特性、变更和改进的标准文档，参与 PEP 的讨论和实现，可以对 Python 语言的发展产生实质性的影响。",
-          "link": "https://m.okjike.com/originalPosts/6581ac58f0da80ccb5921893",
-          "publishedOn": "2023-12-19T14:44:40.000Z",
-          "wordCount": 589,
-          "title": "发布了: 推荐一个内容比较全面的 Python 免费在线学习资料，《Python Cookbook in Chinese》 3rd Edition，https://python3-cookbook.readthedocs.io/zh-cn/late...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FkCl3RfHo0HgR-W9EbBenFjTD95Jv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/6581528579cb2b9f35c44323",
-          "author": null,
-          "description": "很多人喜欢咀嚼现成的知识点，而对知识点背后的 Why 视而不见（或惰于了解），事实上，先搞清楚 Why 才是获取知识的「捷径」。",
-          "link": "https://m.okjike.com/originalPosts/6581528579cb2b9f35c44323",
-          "publishedOn": "2023-12-19T08:21:25.000Z",
-          "wordCount": 481,
-          "title": "发布了: 很多人喜欢咀嚼现成的知识点，而对知识点背后的 Why 视而不见（或惰于了解），事实上，先搞清楚 Why 才是获取知识的「捷径」。",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         }
       ]
@@ -1062,146 +1062,6 @@
           "wordCount": 523,
           "title": "重庆市巴南区发布大风蓝色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521886.html",
-          "author": "国家预警信息发布中心",
-          "description": "长寿区气象台2023年12月15日14时10分发布“大风蓝色预警信号”，预计未来12小时内，江南街道、晏家街道、凤城街道、菩提街道、渡舟街道、八颗街道、新市街道、但渡镇、长寿湖镇、邻封镇、云集镇、双龙镇、龙河镇、葛兰镇、洪湖镇、石堰镇、万顺镇、云台镇、海棠镇可能受大风影响或者已经受大风影响，阵风可达7级以上，或者已达阵风7级并可能持续。",
-          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521886.html",
-          "publishedOn": "2023-12-15T06:44:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市长寿区发布大风蓝色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521847.html",
-          "author": "国家预警信息发布中心",
-          "description": "渝北区气象台2023年12月15日13时55分发布“大风蓝色预警信号”，预计12月15日14时至16日8时，石船镇、大盛镇、洛碛镇、龙兴镇、统景镇、大湾镇、双龙湖街道、茨竹镇、木耳镇、古路镇、仙桃街道、双凤桥街道、王家街道、兴隆镇、龙塔街道、龙溪街道、龙山街道、玉峰山镇、宝圣湖街道、两路街道、悦来街道、回兴街道可能受大风影响，阵风可达7级以上，请注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521847.html",
-          "publishedOn": "2023-12-15T06:14:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市渝北区发布大风蓝色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521846.html",
-          "author": "国家预警信息发布中心",
-          "description": "荣昌区气象台2023年12月15日13时52分发布“大风蓝色预警信号”，预计12月15日14时至16日2时，昌元街道、双河街道、峰高街道、直升镇、万灵镇、古昌镇、昌州街道、仁义镇、清流镇、铜鼓镇、观胜镇、远觉镇、吴家镇、河包镇、荣隆镇、安富街道、清升镇、广顺街道、清江镇、龙集镇、盘龙镇可能受大风影响，阵风可达7级以上，请以上各地注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521846.html",
-          "publishedOn": "2023-12-15T06:12:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市荣昌区发布大风蓝色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521837.html",
-          "author": "国家预警信息发布中心",
-          "description": "江津区气象台2023年12月15日13时30分发布“大风蓝色预警信号”，预计未来12小时内，贾嗣镇、支坪镇、杜市镇、鼎山街道、圣泉街道、珞璜镇、夏坝镇、广兴镇、四面山镇、西湖镇、嘉平镇、四屏镇、柏林镇、中山镇、石门镇、油溪镇、龙华镇、几江街道、先锋镇、吴滩镇、德感街道、双福街道、蔡家镇、永兴镇、塘河镇、慈云镇、朱杨镇、石蟆镇、白沙镇、李市镇12小时内可能受大风影响或者已经受大风影响，阵风可达7级以上，或者已达阵风7级并可能持续，请注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521837.html",
-          "publishedOn": "2023-12-15T06:08:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市江津区发布大风蓝色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521815.html",
-          "author": "国家预警信息发布中心",
-          "description": "垫江县气象台2023年12月15日13时30分发布“大风蓝色预警信号”，预计未来12小时内，我县桂阳街道、桂溪街道、沙坪镇、长龙镇、新民镇、高峰镇、五洞镇、大石乡等乡镇（街道）可能受大风影响或者已经受大风影响，阵风可达7级以上或者已达7级并可能持续，请注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521815.html",
-          "publishedOn": "2023-12-15T05:48:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市垫江县发布大风蓝色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521816.html",
-          "author": "国家预警信息发布中心",
-          "description": "北碚区气象台2023年12月15日13时30分发布“大风蓝色预警信号”，预计12月15日13时30分至16日08时，天府镇、朝阳街道、澄江镇、东阳街道、三圣镇、柳荫镇、金刀峡镇、静观镇、施家梁镇、龙凤桥街道、歇马街道、蔡家岗街道、童家溪镇、复兴街道、天生街道、水土街道、北温泉街道可能受大风影响，阵风可达7级以上，请注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521816.html",
-          "publishedOn": "2023-12-15T05:48:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市北碚区发布大风蓝色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521814.html",
-          "author": "国家预警信息发布中心",
-          "description": "合川区气象台2023年12月15日13时40分发布“大风蓝色预警信号”，预计12月15日14时至16日08时，我区太和、三汇、肖家、燕窝、龙凤等全部镇街可能受大风影响，阵风可达7级以上，请注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521814.html",
-          "publishedOn": "2023-12-15T05:44:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市合川区发布大风蓝色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521812.html",
-          "author": "国家预警信息发布中心",
-          "description": "云阳县气象台2023年12月15日13时30分发布“大风蓝色预警信号”，预计未来12小时内上坝乡、桑坪镇、双土镇、渠马镇、双龙镇、江口镇、鱼泉镇、后叶镇、农坝镇、沙市镇、高阳镇、南溪镇、洞鹿乡、龙洞镇、故陵镇、堰坪镇、普安乡、蔈草镇、新津乡、清水土家族乡、红狮镇、云阳镇、耀灵镇、泥溪镇、宝坪镇、凤鸣镇、龙角镇、石门乡、大阳镇、养鹿镇、双江街道、黄石镇、人和街道、水口镇、栖霞镇、平安镇、云安镇、巴阳镇、盘龙街道、青龙街道等街道（乡镇）可能受大风影响，阵风可达7级以上，请注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521812.html",
-          "publishedOn": "2023-12-15T05:38:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市云阳县发布大风蓝色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521789.html",
-          "author": "国家预警信息发布中心",
-          "description": "沙坪坝区气象台2023年12月15日13时10分发布“大风蓝色预警信号”，预计未来12小时内，天星桥街道、磁器口街道、沙坪坝街道、小龙坎街道、土湾街道、联芳街道、土主街道、陈家桥街道、回龙坝镇、丰文街道、青木关镇、中梁镇、双碑街道、凤凰镇、覃家岗街道、歌乐山街道、新桥街道、山洞街道、渝碚路街道、石井坡街道、童家桥街道、井口街道可能受大风影响，阵风可达7级以上，请注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521789.html",
-          "publishedOn": "2023-12-15T05:22:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市沙坪坝区发布大风蓝色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521780.html",
-          "author": "国家预警信息发布中心",
-          "description": "璧山区气象台2023年12月15日12时50分发布“大风蓝色预警信号”，预计未来12小时内，我区璧泉街道、福禄镇、璧城街道、河边镇、八塘镇、大路街道、七塘镇、广普镇、三合镇、健龙镇、来凤街道、丁家街道、正兴镇、青杠街道、大兴镇可能受大风影响，阵风可达7级以上，请注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521780.html",
-          "publishedOn": "2023-12-15T05:05:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市璧山区发布大风蓝色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521779.html",
-          "author": "国家预警信息发布中心",
-          "description": "潼南区气象台2023年12月15日12时40分发布“大风蓝色预警信号”，预计未来12小时内我区全部镇街将受大风影响，风力可达6级，山口河谷地区阵风可达7级以上，请注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521779.html",
-          "publishedOn": "2023-12-15T05:05:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市潼南区发布大风蓝色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521769.html",
-          "author": "国家预警信息发布中心",
-          "description": "永川区气象台2023年12月15日12时55分发布“大风蓝色预警信号”，预计未来12小时内，茶山竹海街道、陈食街道、临江镇、板桥镇、中山路街道、大安街道、金龙镇、南大街街道、宝峰镇、青峰镇、双石镇、胜利路街道、三教镇、红炉镇、永荣镇、松溉镇、朱沱镇、仙龙镇、五间镇、吉安镇、何埂镇、来苏镇、卫星湖街道可能受大风影响或者已经受大风影响，阵风可达7级以上，或者已达阵风7级并可能持续，请注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521769.html",
-          "publishedOn": "2023-12-15T05:00:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市永川区发布大风蓝色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521735.html",
-          "author": "国家预警信息发布中心",
-          "description": "重庆市铜梁区气象台2023年12月15日12时30分发布“大风蓝色预警信号”，预计未来12小时内，巴川街道、南城街道、东城街道、高楼镇、安居镇、白羊镇、虎峰镇、大庙镇、安溪镇、西河镇、永嘉镇、双山镇、旧县街道等镇街可能受大风影响，阵风可达7级以上，请注意防范。防御指南：1.关好门窗，非必要不外出。妥善处置窗台、阳台等室外搁置物。2.暂停户外高空作业。不在玻璃门窗、广告牌、脚手架、塔吊等较易发生危险区域逗留；加固围板、棚架等搭建物。3.行驶车辆及船舶注意采取避风措施。4.相关部门和乡镇街道按照职责，做好大风防范应对工作。",
-          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521735.html",
-          "publishedOn": "2023-12-15T04:41:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市铜梁区发布大风蓝色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521734.html",
-          "author": "国家预警信息发布中心",
-          "description": "大足区气象台2023年12月15日12时25分发布“大风蓝色预警信号”：预计未来12小时内我区玉龙镇、雍溪镇、金山镇、万古镇、国梁镇、回龙镇、石马镇、拾万镇、古龙镇、三驱镇、棠香街道、智凤街道、龙岗街道、宝顶镇、高升镇、铁山镇、中敖镇、高坪镇、龙滩子街道、通桥街道、邮亭镇、双路街道、龙水镇、珠溪镇、龙石镇、季家镇、宝兴镇等镇街可能受大风影响，阵风可达7级以上，请各地加强防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526521734.html",
-          "publishedOn": "2023-12-15T04:39:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市大足区发布大风蓝色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -1418,12 +1278,22 @@
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
         {
+          "id": "7315080231626309651",
+          "author": "追逐时光者",
+          "description": "[7073670907851440160#新人报道#] 微软官方发布的C#开源、免费、实用的Windows工具箱\n今天分享一款由微软官方发布的C#开源、免费、实用的Windows工具箱（帮助用户调整和简化Windows系统的体验，从而提高工作效率）：Microsoft PowerToys。\nMicrosoft PowerToys 是使用 C++ 和 C# 编程语言开发的。它利用了 Windows 操作系统的底层功能和 API，以及 Microsoft 开发的一些开源库和工具来实现其功能，集成了20多个实用工具。\n窗口置顶、阻止睡眠、取色器、窗口镜像、环境变量、窗口布局、文件师傅、预览增强、域名表编辑、 图像裁剪器、键盘修改器、鼠标工具箱、无界鼠标、 纯文本粘贴、快速查看、批量重命名、快捷启动器、字母助手、注册表预览、屏幕标尺、快捷键指南、文本提取、直播工具。\n微软官方项目源码：https://github.com/microsoft/PowerToys\n社区汉化版源码：https://github.com/zetaloop/PowerToys-CN\n微软官方文档地址：https://learn.microsoft.com/zh-cn/windows/powertoys/",
+          "link": "https://juejin.cn/pin/7315080231626309651",
+          "publishedOn": "2023-12-22T05:48:01.000Z",
+          "wordCount": 520,
+          "title": "[7073670907851440160#新人报道#] 微软官方发布的C#开源、免费、实用的Windows工具箱 今天分享一款由微软官方发布的C#开源、免费、实用的Windows工具箱（帮助用...",
+          "imageUrl": null
+        },
+        {
           "id": "7314756012535414803",
           "author": "黄金荣",
           "description": "ChatGPT和谷歌的Gemini 无限使用 https://sunmier.com/#/ [色]",
           "link": "https://juejin.cn/pin/7314756012535414803",
           "publishedOn": "2023-12-21T09:31:49.000Z",
-          "wordCount": 467,
+          "wordCount": 511,
           "title": "ChatGPT和谷歌的Gemini 无限使用 https://sunmier.com/#/ [色]",
           "imageUrl": null
         },
@@ -1433,7 +1303,7 @@
           "description": "Typora+PicGo 搭建免费图床 #掘金文章# https://juejin.cn/post/7314829865633710131",
           "link": "https://juejin.cn/pin/7314605176832393243",
           "publishedOn": "2023-12-21T05:16:10.000Z",
-          "wordCount": 465,
+          "wordCount": 509,
           "title": "Typora+PicGo 搭建免费图床 #掘金文章# https://juejin.cn/post/7314829865633710131",
           "imageUrl": null
         },
@@ -1443,7 +1313,7 @@
           "description": "帮忙投个票吧https://activity.juejin.cn/rank/2023/writer/2849574166464637?utm_campaign=annual_2023&utm_medium=self_web_share&utm_source=%E5%B0%8F%E5%B7%B4%E5%93%A5",
           "link": "https://juejin.cn/pin/7314590974679547967",
           "publishedOn": "2023-12-21T03:00:16.000Z",
-          "wordCount": 460,
+          "wordCount": 504,
           "title": "帮忙投个票吧https://activity.juejin.cn/rank/2023/writer/2849574166464637?utm_campaign=annual_2023&utm_medium=self_web_share&utm_source=%E5%B0%8F%E5%B7...",
           "imageUrl": null
         },
@@ -1453,7 +1323,7 @@
           "description": "Eclipse 还有人在使用吗？点个赞 让我看看有多少人不用了",
           "link": "https://juejin.cn/pin/7314546931862421523",
           "publishedOn": "2023-12-20T13:15:22.000Z",
-          "wordCount": 468,
+          "wordCount": 512,
           "title": "Eclipse 还有人在使用吗？点个赞 让我看看有多少人不用了",
           "imageUrl": null
         },
@@ -1463,7 +1333,7 @@
           "description": "[7073670907851440160#新人报道#] 想做一款计算个人所得税的浏览器插件",
           "link": "https://juejin.cn/pin/7314519123177242636",
           "publishedOn": "2023-12-20T09:27:47.000Z",
-          "wordCount": 458,
+          "wordCount": 463,
           "title": "[7073670907851440160#新人报道#] 想做一款计算个人所得税的浏览器插件",
           "imageUrl": null
         },
@@ -1473,7 +1343,7 @@
           "description": "审核中 升级了系统，清理了存储。电脑还能再用用[哭笑]",
           "link": "https://juejin.cn/pin/7314365534106222630",
           "publishedOn": "2023-12-20T02:24:00.000Z",
-          "wordCount": 468,
+          "wordCount": 512,
           "title": "审核中 升级了系统，清理了存储。电脑还能再用用[哭笑]",
           "imageUrl": null
         },
@@ -1483,7 +1353,7 @@
           "description": "[7210002980895916043#挑战每日一条沸点#] 2024年，改变世界的前端仓库，麻烦点个star关注下，且看前端之虎陈随易，如何破局！\nhttps://github.com/chenbimo/yicode",
           "link": "https://juejin.cn/pin/7314190092129484800",
           "publishedOn": "2023-12-19T12:46:20.000Z",
-          "wordCount": 481,
+          "wordCount": 485,
           "title": "[7210002980895916043#挑战每日一条沸点#] 2024年，改变世界的前端仓库，麻烦点个star关注下，且看前端之虎陈随易，如何破局！ https://github.com/chenbimo/yic...",
           "imageUrl": null
         },
@@ -1493,7 +1363,7 @@
           "description": "新项目/大项目梳理慢？用这个插件一键定位组件对应的源码！\ncode-inspector-plugin: 开发环境点击页面元素，就能自动打开 vscode(其他IDE也支持)并定位到元素源码位置，大幅提升开发效率。\n支持 webpack/vite/rspack 中使用，支持vue2/vue3/react/solid/preact!",
           "link": "https://juejin.cn/pin/7314125877486125095",
           "publishedOn": "2023-12-19T12:34:19.000Z",
-          "wordCount": 475,
+          "wordCount": 44,
           "title": "新项目/大项目梳理慢？用这个插件一键定位组件对应的源码！ code-inspector-plugin: 开发环境点击页面元素，就能自动打开 vscode(其他IDE也支持)并定位到元素源...",
           "imageUrl": null
         },
@@ -1503,7 +1373,7 @@
           "description": "为什么我的小米手机使用Google的附近分享（nearby share）显示此设备不支持附近分享功能?[疑问]在网上查了好多资料了，要么说蓝牙和位置定位功能没打开，要么说安卓版本太低，但我不尽这两个功能都打开了，而且安卓版本也是最新的，Google账号也是好的，换成pixel手机就可以正常使用。有大佬知道为什么吗，是这个功能不能在国产手机上用吗？[流泪]",
           "link": "https://juejin.cn/pin/7313887095415472128",
           "publishedOn": "2023-12-19T01:28:44.000Z",
-          "wordCount": 460,
+          "wordCount": 44,
           "title": "为什么我的小米手机使用Google的附近分享（nearby share）显示此设备不支持附近分享功能?[疑问]在网上查了好多资料了，要么说蓝牙和位置定位功能没打开，要么说...",
           "imageUrl": null
         },
@@ -1513,7 +1383,7 @@
           "description": "大家手机截图的时候，都是怎么截图的呀？有用LogCat的这个截图功能的吗？",
           "link": "https://juejin.cn/pin/7313414896782508041",
           "publishedOn": "2023-12-18T02:09:52.000Z",
-          "wordCount": 460,
+          "wordCount": 44,
           "title": "大家手机截图的时候，都是怎么截图的呀？有用LogCat的这个截图功能的吗？",
           "imageUrl": null
         },
@@ -1523,7 +1393,7 @@
           "description": "uni-app 扫码插件推荐：基于支付宝 mPaaS 扫码组件进行开发 https://juejin.cn/post/7312358144924188722",
           "link": "https://juejin.cn/pin/7313203461705236516",
           "publishedOn": "2023-12-18T01:19:54.000Z",
-          "wordCount": 488,
+          "wordCount": 44,
           "title": "uni-app 扫码插件推荐：基于支付宝 mPaaS 扫码组件进行开发 https://juejin.cn/post/7312358144924188722",
           "imageUrl": null
         },
@@ -1533,7 +1403,7 @@
           "description": "🚀 MyJson.top 更新啦！新增字符串【去转义】功能！程序员们快来体验吧，更有JSON在线格式化功能可以使用！https://myjson.top 🌟 欢迎大家踏足，感受全新功能带来的便捷体验！",
           "link": "https://juejin.cn/pin/7312431790714667043",
           "publishedOn": "2023-12-15T10:06:30.000Z",
-          "wordCount": 479,
+          "wordCount": 523,
           "title": "🚀 MyJson.top 更新啦！新增字符串【去转义】功能！程序员们快来体验吧，更有JSON在线格式化功能可以使用！https://myjson.top 🌟 欢迎大家踏足，感受全新功...",
           "imageUrl": null
         },
@@ -1543,7 +1413,7 @@
           "description": "Visualization Collection应用终于上线了量子纠缠效果，大家赶紧来玩一玩，还是隐藏款的，看你能找到它吗[奸笑]\n应用地址(PC端)：https://hepengwei.cn\n源码地址：https://github.com/hepengwei/visualization-collection",
           "link": "https://juejin.cn/pin/7312272742077956122",
           "publishedOn": "2023-12-14T08:22:58.000Z",
-          "wordCount": 461,
+          "wordCount": 44,
           "title": "Visualization Collection应用终于上线了量子纠缠效果，大家赶紧来玩一玩，还是隐藏款的，看你能找到它吗[奸笑] 应用地址(PC端)：https://hepengwei.cn 源码地址...",
           "imageUrl": null
         },
@@ -1553,7 +1423,7 @@
           "description": "招聘岗位需求：\n需求2中级go服务器开发：20000-30000\n需求1高级IOS/Android开发工程师：27000-35000\n需求1中级IOS/Android开发工程师：18000-27000\n工作时间：\n周一到周五早10点到晚8点\n周六周日双休\n不包吃住\n微信：xiaobai990q",
           "link": "https://juejin.cn/pin/7311876701910843401",
           "publishedOn": "2023-12-13T11:19:34.000Z",
-          "wordCount": 458,
+          "wordCount": 44,
           "title": "招聘岗位需求： 需求2中级go服务器开发：20000-30000 需求1高级IOS/Android开发工程师：27000-35000 需求1中级IOS/Android开发工程师：18000-27000 工作时间： ...",
           "imageUrl": null
         },
@@ -1563,7 +1433,7 @@
           "description": "1分钟撸一个页面，html之父都完成不了，而我可以，xmd用它",
           "link": "https://juejin.cn/pin/7311895107531669513",
           "publishedOn": "2023-12-13T09:52:23.000Z",
-          "wordCount": 464,
+          "wordCount": 508,
           "title": "1分钟撸一个页面，html之父都完成不了，而我可以，xmd用它",
           "imageUrl": null
         },
@@ -1573,7 +1443,7 @@
           "description": "招聘岗位需求：\n需求2中级go服务器开发：20000-30000\n需求1高级IOS/Android开发工程师：27000-35000\n需求1中级IOS/Android开发工程师：18000-27000\n工作时间：\n周一到周五早10点到晚8点\n周六周日双休\n不包吃住\n（游戏研发公司）\n微信：xiaobai990q",
           "link": "https://juejin.cn/pin/7311602994572525595",
           "publishedOn": "2023-12-12T10:42:21.000Z",
-          "wordCount": 458,
+          "wordCount": 44,
           "title": "招聘岗位需求： 需求2中级go服务器开发：20000-30000 需求1高级IOS/Android开发工程师：27000-35000 需求1中级IOS/Android开发工程师：18000-27000 工作时间： ...",
           "imageUrl": null
         },
@@ -1583,7 +1453,7 @@
           "description": "招聘：Php 高级工程师\n职位描述：\n1. 负责系统服务端设计和开发，参与项目需求分析、系统设计、测试用例评审等。\n2. 参与系统架构、性能、安全、扩展等设计和实现及相关优化等。\n3. 根据产品及相关需求，积极配合相关人员，按时完成产品迭代上线。\n任职要求:\n1.计算机及相关专业大专及以上学历，具有 5 年以上 PHP 开发经验;\n2.PHP 基础扎实，精通 Phalcon，laravel, Yii 等框架，对生产系统故障排查有实际工作经\n验；\n3.有大流量并发场景的开发经验，熟悉多进程框架 Swoole、Workman 等。\n4.精通 Mysql、mongoDB，Hbase 等数据库，对数据库有较强的设计能力,对 MySQL 有较深入\n的认识， 具有索引优化、查询优化和存储优化经验、熟练掌握关系数据库理论;\n5.精通 LNMP 环境相关配置和优化, 能独立搭建服务器环境以及项目线上部署;\n6.精通 Redis、Memcache 缓存,对其使用场景及其限制有深入认识;\n7.思维活跃，逻辑清晰，善于思辨和抽象，具备良好的沟通表达和团队协作能力;\n8.有分布式、集群、高并发、高负载、高可用系统或大型网站开发经验者优先；\n9.有 java 开发经验者优先，或能快速学习并掌握 Spring ,zookeeper，kafka，hbase。\n10.自我驱动力强，有强烈的事业心和责任感，结果导向，具备良好的协调推动能力和抗压能\n力微信：xiaobai990q",
           "link": "https://juejin.cn/pin/7311602994571182107",
           "publishedOn": "2023-12-12T07:36:16.000Z",
-          "wordCount": 547,
+          "wordCount": 591,
           "title": "招聘：Php 高级工程师 职位描述： 1. 负责系统服务端设计和开发，参与项目需求分析、系统设计、测试用例评审等。 2. 参与系统架构、性能、安全、扩展等设计和实...",
           "imageUrl": null
         },
@@ -1593,7 +1463,7 @@
           "description": "这个vue中动态的属性和事件提示的插件，目前是只针对sponsor体验的，如果star超过1000的话，我会free to everyone",
           "link": "https://juejin.cn/pin/7310132538169081891",
           "publishedOn": "2023-12-10T02:32:23.000Z",
-          "wordCount": 472,
+          "wordCount": 44,
           "title": "这个vue中动态的属性和事件提示的插件，目前是只针对sponsor体验的，如果star超过1000的话，我会free to everyone",
           "imageUrl": null
         },
@@ -1603,18 +1473,8 @@
           "description": "[7073670907851440160#新人报道#] 大家觉得低代码工具好用吗，你是否尝试体验过低代码工具，并应用在你的工作中",
           "link": "https://juejin.cn/pin/7310047627669159988",
           "publishedOn": "2023-12-08T10:51:54.000Z",
-          "wordCount": 459,
+          "wordCount": 44,
           "title": "[7073670907851440160#新人报道#] 大家觉得低代码工具好用吗，你是否尝试体验过低代码工具，并应用在你的工作中",
-          "imageUrl": null
-        },
-        {
-          "id": "7310032602130432063",
-          "author": "pinge",
-          "description": "IDEA 推荐一款好用插件 CodeGeex，今天刚装上，用起来还不错。",
-          "link": "https://juejin.cn/pin/7310032602130432063",
-          "publishedOn": "2023-12-08T07:15:21.000Z",
-          "wordCount": 474,
-          "title": "IDEA 推荐一款好用插件 CodeGeex，今天刚装上，用起来还不错。",
           "imageUrl": null
         }
       ]
