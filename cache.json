@@ -34,7 +34,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": null,
+          "wordCount": 1023,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         }
@@ -118,7 +118,7 @@
           "description": "看到 Python 有 threading 模块，本以为它可以很好地支持高并发，但实际跑起来效果并不好，比单线程更慢。图二中 8 个并发比图一慢了 0.4s。\n研究之后才发现，原来 threading 底层实现并没有支持调用多个 CPU，它是一个假的并发模块😅\nPython 是采用基于栈的解释器来运行字节码的，通过全局解释器锁（global interpreter lock，GIL）的机制来确保抢占式的多线程环境相互之间不受干扰。简单来说，多个线程是通过排队抢锁的机制来轮流执行的，每个线程在抢到锁之后，都会进行一次 context 切换，这也是“并发”执行更慢的原因。\n那为什么大家经常用 Python 进行并发爬虫不觉得慢呢，那是因为在爬虫应用中，通常涉及到的任务主要是网络请求、文件读写等 I/O 操作，而不是 CPU 密集型的计算任务，反而可以在 I/O 等待的过程中发起了更多任务，充分压榨 CPU 的性能。\n要让 Python 真正利用起多核 CPU，可以使用 multiprocessing 模块，它会在每个进程内都启动一个 GIL，这样进程之间就不存在抢锁问题了，只不过对内存的开销要大很多😅",
           "link": "https://m.okjike.com/originalPosts/658513d960830f16ae280d03",
           "publishedOn": "2023-12-22T04:43:05.000Z",
-          "wordCount": 547,
+          "wordCount": 518,
           "title": "发布了: 看到 Python 有 threading 模块，本以为它可以很好地支持高并发，但实际跑起来效果并不好，比单线程更慢。图二中 8 个并发比图一慢了 0.4s。 研究之后才...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fot8tPenRGLZ5v9rube_3tYfLXbIv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -210,6 +210,16 @@
       "siteUrl": "https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/65855b6bf0da80ccb5dd2c06",
+          "author": null,
+          "description": "一个残酷的现实： \n少部分人的后代是天才，\n大部分人的后代是添才。",
+          "link": "https://m.okjike.com/originalPosts/65855b6bf0da80ccb5dd2c06",
+          "publishedOn": "2023-12-22T09:48:27.000Z",
+          "wordCount": 432,
+          "title": "发布了: 一个残酷的现实： 少部分人的后代是天才， 大部分人的后代是添才。",
+          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/6585312071cfacf609aad922",
           "author": null,
           "description": "即刻App，享受探索、表达和创造",
@@ -298,16 +308,6 @@
           "wordCount": 435,
           "title": "发布了: 〝简单不等于容易〞",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/6582944160830f16aef637bb",
-          "author": null,
-          "description": "即刻App，享受探索、表达和创造",
-          "link": "https://m.okjike.com/originalPosts/6582944160830f16aef637bb",
-          "publishedOn": "2023-12-20T07:14:09.000Z",
-          "wordCount": 487,
-          "title": "发布了: 一条动态",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fq7oesj-CgTyz9Q0ioFwaLvY3OEsv3.png?imageMogr2/auto-orient/crop/!x2192.5a0a0/thumbnail/x300"
         }
       ]
     },
@@ -523,6 +523,26 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231222/t20231222_526531701.html",
+          "author": "国家预警信息发布中心",
+          "description": "涪陵区气象台2023年12月22日19时40分发布“霜冻蓝色预警信号”，预计12月22日20时至24日20时，增福镇、大顺镇、青羊镇、龙潭镇、同乐镇、马武镇、白涛街道、焦石镇、罗云镇、大木乡、武陵山乡、蔺市街道地面最低温度将要下降到0℃以下，对农业将产生影响。防御指南：做好防寒保暖，注意用火、用电安全，燃煤取暖注意防范一氧化碳中毒。农、林、养殖业积极做好作物、树木与牲畜防冻害措施；设施农业生产企业和农户积极采取防护措施。相关部门和乡镇街道按照职责，做好霜冻防范应对工作。",
+          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231222/t20231222_526531701.html",
+          "publishedOn": "2023-12-22T12:11:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市涪陵区发布霜冻蓝色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231222/t20231222_526531641.html",
+          "author": "国家预警信息发布中心",
+          "description": "垫江县气象台2023年12月22日18时45分发布“霜冻蓝色预警信号”，预计12月22日20时至24日10时，我县周嘉镇、澄溪镇、杠家镇、普顺镇、沙坪镇、永安镇、太平镇、新民镇、长龙镇等乡镇地面最低气温将下降到0℃以下，对农业将产生影响。",
+          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231222/t20231222_526531641.html",
+          "publishedOn": "2023-12-22T11:00:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市垫江县发布霜冻蓝色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231222/t20231222_526531407.html",
           "author": "国家预警信息发布中心",
@@ -1012,46 +1032,6 @@
           "wordCount": 523,
           "title": "重庆市酉阳土家族苗族自治县发布道路结冰黄色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231215/t20231215_526522806.html",
-          "author": "国家预警信息发布中心",
-          "description": "巫溪县气象台2023年12月15日20时30分发布“道路结冰黄色预警信号”，预计12月15日21时至16日21时，我县红池坝镇、乌龙乡、双阳乡、通城镇、兰英乡、中梁乡、天元乡、文峰镇等海拔800米以上的路表温度将低于0℃，可能出现对交通有影响的道路结冰。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231215/t20231215_526522806.html",
-          "publishedOn": "2023-12-15T12:39:00.000Z",
-          "wordCount": 517,
-          "title": "重庆市巫溪县发布道路结冰黄色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231215/t20231215_526522803.html",
-          "author": "国家预警信息发布中心",
-          "description": "涪陵区气象台2023年12月15日20时发布“道路结冰黄色预警信号”，预计12月15日20时至16日20时，武陵山乡、大木乡、龙潭镇、同乐镇、青羊镇、大顺镇、增福镇、蔺市街道、马武镇、新妙镇、百胜镇、珍溪镇、罗云镇、焦石镇、白涛街道、清溪镇、南沱镇、荔枝街道、崇义街道、江北街道、龙桥街道、江东街道、石沱镇、义和街道、李渡街道海拔600米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。请注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231215/t20231215_526522803.html",
-          "publishedOn": "2023-12-15T12:34:00.000Z",
-          "wordCount": 515,
-          "title": "重庆市涪陵区发布道路结冰黄色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231215/t20231215_526522645.html",
-          "author": "国家预警信息发布中心",
-          "description": "秀山县气象台2023年12月15日18时50分发布“道路结冰黄色预警信号”，预计12月15日20时至16日20时，我县涌洞镇、隘口镇、钟灵镇、膏田镇、龙凤坝镇、梅江镇海拔800米以上的路表温度将低于0℃，可能出现对交通有影响的道路结冰。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231215/t20231215_526522645.html",
-          "publishedOn": "2023-12-15T11:10:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市秀山土家族苗族自治县发布道路结冰黄色预警",
-          "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526522507.html",
-          "author": "国家预警信息发布中心",
-          "description": "綦江区气象台2023年12月15日18时发布“大风蓝色预警信号”，预计12月15日18时至16日8时，横山镇、古南街道、通惠街道、文龙街道、新盛街道、三角镇、石壕镇、打通镇、丁山镇、郭扶镇、扶欢镇、中峰镇、永新镇、篆塘镇、三江街道、石角镇、永城镇、东溪镇、赶水镇、安稳镇、隆盛镇可能受大风影响，阵风可达7级以上，请注意防范。",
-          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526522507.html",
-          "publishedOn": "2023-12-15T10:15:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市綦江区发布大风蓝色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -1076,7 +1056,7 @@
           "description": "大家好，这里是大家的林语冰，您现在收看的是第 51 期《Vue 技术周报》。\n视频解说请传送 Vue 技术周报@bilibili。\n每周必看\n尤大的忏悔：Vue 3 启示录\n\n“Vue 之父”尤雨溪在多伦多的 Vue 大会上告诉与会者，在将 Vue 2 升级到 Vue 3 中，它吸取了某些惨痛教训。\n这位大佬科普了尤雨溪在本次演讲中的若干细节，共享了开源库作者在升级框架时的若干教训和启示，比如 Vue 2 升级到 Vue 3 时，Vue 团队应该及时和 Vue 生态的大型项目（比如 Nuxt 和 Vuetify）的作者共享信息。\nOxlint 对 ESLint 降维打击\n\n老粉都知道，尤雨溪在 Vite 大会的演讲中就爆料了 Vite 的前端基建 Rollup 将使用 Rust 锈化重构为 Rolldown，其依赖一大神器就是号称目前地表速度最快的 JS 解析器 —— Oxc。\nOxc 团队官宣 Oxlint 正式发布，将来或许可以作为 ESLint 的替代品，性能直接对 ESLint “降维打击”，测评跑分比 ESLint 快 50-100 倍。\n\n举个栗子，Shopify 是类似于淘宝天猫的跨境电商，Shopify 团队打小报告，原本用 ESLint 要跑一个多小时的代码集成，现在集成 Oxlint 只要 10 秒钟。\n尤大亲自测评，Oxlint 跑大约 600 个文件只需 50 毫秒，重新运行只需 30 毫秒。最后尤大评价道，“性能爆表！”\nVue 爱好者\n（译）Vue 并行请求优化\n\nLCP（最大内容绘制）和 FCP（首次内容绘制）这两个关键性能指标对于出色的 UX（用户体验）跑分至关重要。\n这位大佬科普了如何在 Vue 中结合生命周期钩子并行请求，实现组件 JS 文件和数据请求并行，减少网页的加载时间，优化性能瓶颈。\n（译）Vue 3 缓存清除\n\n浏览器缓存是一种…",
           "link": "https://juejin.cn/post/7314587257956941874",
           "publishedOn": "2023-12-21T01:54:02.000Z",
-          "wordCount": 1316,
+          "wordCount": 1292,
           "title": "Vue 周报：Oxlint对ESLint降维打击！尤雨溪的反思。Vitest官宣升级（51期）",
           "imageUrl": null
         },
@@ -1086,7 +1066,7 @@
           "description": "大家好，我是大澈！\n本文约1200+字，整篇阅读大约需要2分钟。\n感谢关注微信公众号：“程序员大澈”，免费领取\"面试礼包\"一份，然后免费加入问答群，从此让解决问题的你不再孤单！\n1. 资讯速览\n最近，我在网上看到一篇文章，文章说的是Firefox 正处于危险边缘，可能很快就会被淘汰。\n当时看到这句话，我感到非常震惊，曾经三巨头之一的火狐浏览器，怎么突然就会被淘汰了呢？\n还记得当年，火狐算是我除了一些国产浏览器和IE之外，最早使用的浏览器了。最初的印象，就是一个简洁且充满高级感的小狐狸，支持很多好用的音视频插件，并且可以在手机和电脑上同步使用，很方便！\n\n文章中提到，根据美国政府网站的开发指南，如果 Firefox 的市场份额低于 2%，那么美国政府的网站可以不再兼容 Firefox。\n而在过去90天，访问美国政府网站的浏览器中 Chrome 占 49%，Safari 占 34.8%，Edge 8.5%，Firefox 只有 2.2 %—— 已经非常接近临界点。\n如果 Firefox 失去了美国政府网站的支持，会影响到无数企业，就像多米诺骨牌倒下一样，会导致 Firefox 一点点走向被淘汰的边缘。\n\n2. 资讯详述\n确实，不知道从什么时候开始，我们Web开发人员现在都已普及使用了谷歌浏览器，以及系统自带的Edge和Safari，慢慢忘记了Firefox。\n2.1 Firefox流量一直呈下降趋势\n先看一组文章中提供的流量趋势图：\n\n如图所示，Firefox 流量在 2009 年 11 月达到了 31.82% 的峰值，然后开始长期下滑，几乎与 Chrome 的崛起成正比。\n而谷歌的使用率从 2009 年 1 月的 1.37% 飙升至 2020 年 9 月的峰值 66.34%，此后又回落至最新数据中“微不足道”的 62.85%。\n很鲜明的对比，很震惊！\n虽然这些数字反映了全球趋势，但美国的具体情况并没有真正更好。事实上，由于 iPhone 在美国非常受欢迎，Safari 吸引了大量用户，这也损害了 Firefox。\n其实，在国内也是如此。\n2.2 为什么Firefox会被Chrome超越\n我觉得，有两个重要因素导致 Chrome 超过 Firefox：\n兼容性和开发者支持：Chrome 在过去几年中积极推动 Web 标准和新技术的发展，并得到了许多开发者的支持。一些网站和 Web 应用程序可能更倾向于在 Chrome 上进行优化和测试，导致在 Chrome 中获得更好的性能和用户体验。\n公司强大和平台支持：Chrome 作为强大Google公司的产品，且广泛支持不同的操作系统和设备。Chrome 在 Windows、macOS、Linux 以及移动设备上都有可用的版本，相比之下，Firefox 的市场份额在移动设备上相对较小。\n\n2.3 怎么正确去看待此事\nFirefox 是由 Mozilla 组织维护和开发。Mozilla 组织致力于推动 Web 标准、隐私保护和开放性，Firefox 也提供了一些独特的功能和扩展，以满足用户的需求。\n虽然 Chrome 浏览器在市场份额上比 Firefox 更具领先优势，但 Firefox 仍然在许多方面保持着竞争力。\n所以，不能一味的去说，Firefox浏览器即将被淘汰了。作为工具而言，我们仍可以因为某些方面，坚定放心地去选择使用Firefox。\n或许，这也是对过去做个交代吧。\n结语\n建立这个平台的初衷：\n打造一个专注于前端功能问题的问答平台，让大家高效搜索处理同样问题。\n通过不断积累问题，一起练习逻辑思维，并顺便学习相关知识点。\n遇到有共鸣的问题，与众多同行朋友们一起讨论，一起沉淀成长。\n为了给功能问题专栏添加乐趣，增设技术资讯、实用干货两个新专栏。\n感谢关注微信公众号：“程序员大澈”，免费领取\"面试礼包\"一份，然后免费加入问答群，从此让解决问题的你不再孤单！",
           "link": "https://juejin.cn/post/7314558335818465307",
           "publishedOn": "2023-12-20T13:55:12.000Z",
-          "wordCount": 832,
+          "wordCount": 998,
           "title": "技术资讯：Firefox浏览器即将被淘汰？",
           "imageUrl": null
         },
@@ -1096,7 +1076,7 @@
           "description": "theme: smartblue\n这是我们团队号工程化系列的第二篇文章，将会来讲讲渲染性能优化。 全系列文章如下，欢迎和大家一同交流讨论：\n字节三年，谈谈一线团队如何搞工程化一（全景篇）\n团队尚有HC，感兴趣的小伙伴可以私信~（注明期望岗位城市：北京、上海、杭州）\n什么？今天我被 Leader 拉进小黑屋了！\n“有很多用户吐槽咱的页面太卡了啊，这个情况你了解不？”，吓的我立马答道 “不可能，绝对不可能，我开发的时候可是一点都不卡...”\n“你自己过来看看，你看这输入框，只要我输入速度一变快，整个页面都肉眼可见的变卡了！ ”\n“啊这，确...确实”，铁证如山 ，我一时无言以对，“怎么会这样呢，唉不对，这个页面配置下发的表单项也太多了吧，之前测试时可没有这么多...”\nLeader 开始触发李氏连招，“表单项多就是它卡的理由吗，再说哪里多了？这么多年了中后台项目的表单项都是这么多，不要睁着眼睛乱说，中后台想做好很难的……有的时候找找自己原因，这么多年了技术水平涨没涨，有没有在认真工作？....”\n“好好，我再去研究研究，想想办法......”\n（以上对话纯属艺术加工，咱团队的 Leader 还是很 Nice 的 ：）\n前言\n对于前端开发攻城狮们来说，性能优化是一个永恒的话题。随着前端需求复杂度的不断升高，在项目中想始终保持着良好的性能也逐渐成为了一个有挑战的事情。本文会首先简述我们在 React 项目中常用的一些性能优化方式，并将从笔者近期参与的一个实际业务需求出发，讲述我在 React 中后台场景下所遇到性能问题排查时的心路历程。\n本文标题中的卡顿减少，指的是对项目执行输入操作后，所花费的单帧渲染耗时的降低比例。 单帧渲染耗时通过 React Developer Tools 插件测得。一般来说浏览器运行帧率为 60hz，因此对于帧率要求较高的场景如内容输入后的响应、动画等，需…",
           "link": "https://juejin.cn/post/7314493192187265074",
           "publishedOn": "2023-12-20T12:20:48.000Z",
-          "wordCount": 1874,
+          "wordCount": 1778,
           "title": "⚡️卡顿减少 95% — 记一次React性能优化实践（性能篇）",
           "imageUrl": null
         },
@@ -1106,7 +1086,7 @@
           "description": "在项目开发中，代码评审是至关重要的一个环节，是整个项目健康运行的必要保障。笔者基于维护多年的 React 前端组件库 经验积累，总结了如下的代码评审清单，欢迎大家参考讨论。\n另外欢迎大家访问：KDesign React 前端组件库 参与建设。\n一. 代码风格和一致性\n1. 是否遵循团队内部的代码风格指南\n在项目开发过程中，编写符合团队编码规范的代码是尤为重要，否则阅读和维护代码需要花费很多的时间。在前端发展的前期阶段一般是团队统一制定规范约定代码格式，然后输出成文档，但团队成员无法在日常开发中去熟悉这些约定，无法真正的落地。后续出现了 eslint 和 prettier, 我们一般结合两者去实现团队的代码规范。一般代码规范由代码格式和代码质量组成:\n代码格式：单行代码长度、tab 长度、空格、逗号表达式等问题\n代码质量： 未使用变量、三等号、全局变量声明等问题\n这里是 eslint 和 prettier的文档说明，从描述中我们可以归纳为：\neslint：主要处理代码质量校验，也能处理代码格式化处理\nprettier：对代码进行格式化处理\n由于 eslint 的规则不能完全包含 prettier 的规则，比如单行最大长度，对象大括号的前后空格等，以及 prettier 支持多语言，而 eslint 只支持类 js 文件(js, jsx, ts, tsx 等)。所以我们一般使用 eslint 来校验代码质量，prettier 来统一代码格式，并结合一些插件和其他第三方包来实现团队的统一的代码规范。以下是涉及的一些 npm 包：\nnpm 包\n说明\n\n\n\n\neslint\n校验js, jsx, ts, tsx代码质量\n\n\nprettier\n统一代码格式\n\n\neslint-config-prettier\nprettier 格式化时与 eslint 的一些规则有冲突时，使用 pretti…",
           "link": "https://juejin.cn/post/7314227647176359988",
           "publishedOn": "2023-12-20T01:31:03.000Z",
-          "wordCount": 12380,
+          "wordCount": 12447,
           "title": "2023 年超全前端代码评审清单！！",
           "imageUrl": null
         },
@@ -1116,7 +1096,7 @@
           "description": "theme: cyanosis\nhighlight: an-old-hope\n转眼间又是一年快要结束了，马上圣诞节🎄就快到了。给女朋友(没有女朋友的就自己new一个吧🙈)写一个圣诞树让她开心一下吧\n使用什么技术写\n一开始我准备用html+css去写，后来感觉使用html和css写就太low了，没有一点点心意。就打算用three.js写一个3d版本的。\n简单介绍一下threejs\nThree.js是一个基于原生WebGL封装运行的三维引擎，是最著名的3D WebGL JavaScriptThree.js是一个基于原生WebGL封装运行的三维引擎，是最著名的3D WebGL JavaScript库之一。它是一个让用户通过JavaScript入手进入搭建WebGL项目的类库。Three.js提供了许多简单易用的API，使得开发者能够更加方便地创建复杂的3D场景。\nWebGL是一个只能画点、线和三角形的非常底层的系统。而Three.js则在此基础之上进行了封装，提供了一系列的图形处理功能，如渲染器、相机、灯光、材质等，以及各种几何体、粒子系统等，极大地简化了3D图形编程的难度。这使得学习WebGL需要图形学知识的要求得以降低，因为开发者可以直接通过使用Three.js提供的JS和GLSL两种语言来构建和呈现3D图形。\n实现具体步骤\n首先，我们需要在HTML文件中引入Three.js库。你可以在Three.js官方网站下载最新版本的库，或者直接从CDN获取。将以下代码添加到你的HTML文件的<head>部分：\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js\"></script>\n\n接下来，我们将开始编写JavaScript代码来创建场景、相机、渲染器以及圣诞树的各个部分。…",
           "link": "https://juejin.cn/post/7314189771378065443",
           "publishedOn": "2023-12-19T15:22:25.000Z",
-          "wordCount": 3008,
+          "wordCount": 3028,
           "title": "圣诞节快到了，用ThreeJS给女朋友写了一个圣诞树🎄，她很开心",
           "imageUrl": null
         },
@@ -1136,7 +1116,7 @@
           "description": "你知道奇怪的移动视口错误（也称为100vh bug）吗？或者如何以正确的方式创建全屏块？\n一、100vh bug\n什么是移动视口错误？\n你是否曾经在网页上创建过全屏元素？只需添加一行 CSS 并不难：\n.my-page {\n     height: 100vh\n} \n\n1vh是视口高度的1% ，正是我们所需要的。但当我们在移动设备上测试时，就会出现问题。移动浏览器的视口可以动态改变，但值保持不变。因此在移动浏览器中vh变成静态值并且不反映视口的实际高度。\n在下图中，可以看到移动屏幕的两种状态：\n带有隐藏的地址栏\n具有可见的地址栏\n\n核心问题是移动浏览器（Chrome 和 Safari）有一个“有用”的功能，地址栏有时可见，有时隐藏，从而改变视口的可见大小。这些浏览器并没有随着视口高度的变化而将高度调整100vh为屏幕的可见部分，而是将100vh地址栏设置为隐藏地址的浏览器高度。结果是，当地址栏可见时，屏幕的底部将被切断，从而违背了100vh最初的目的。\n有什么方法可以解决这个问题？\n二、常规修复\n1. CSS +  Javascript\n使用的解决方案涉及使用CSS 自定义属性和一些Javascript。\n简而言之，我们监听resize事件并在每次窗口大小更改时设置--vh自定义属性（窗口高度的1% ）：\n核心功能代码：\n//首先获得视口高度并将其乘以1%以获得1vh单位的值\n let vh = window.innerHeight * 0.01\n // 然后，我们将——vh自定义属性中的值设置为文档的根\n  document.documentElement.style.setProperty('--vh', `${vh}px`)\n // 监听resize事件 视图大小发生变化就重新计算1vh的值\n  window.addEventListener('resize', ()…",
           "link": "https://juejin.cn/post/7313979304513552435",
           "publishedOn": "2023-12-19T01:40:30.000Z",
-          "wordCount": 1205,
+          "wordCount": 1321,
           "title": "一行代码修复100vh bug | 京东云技术团队",
           "imageUrl": null
         },
@@ -1146,7 +1126,7 @@
           "description": "ref 和 reactive 可以称做是 Vue 响应式 API 中帝国双璧，一时瑜亮。\n但问题也来了，为什么整俩？怎么选？\n\n最近在开发中遇到了这个问题，来不及看 Vue 文档了，直接掘金搜索“ref reactive”热度 Top4 找答案。\n\n大致是说 ref 好使，但为啥好使没讲清楚？主要是通过对 Vue 文档的理解以及使用经验，列举了一些场景对比。\n这显然不够，只能知其然不知其所以然，让我比较震惊的是竟然没人从源码角度给解释解释。\n当时时间比较紧，只能随便选了 ref 把代码推上去。\n但是，“天性不可夺，吾辈心中亦有惑！”要是不求甚解，指不定哪天又掉到坑里，光靠加班慢慢爬出来，毕竟不是长久之计。\n趁着这股子很上头的杀劲，研究研究。\n\n一时遇到问题求快，只能直接霸道找答案。现在缓过来了，回归王道，先阅读官网文档再 debugger 分析源码。\n认认真真看了三遍 Vue 官方文档响应式基础和深入响应式系统，并在本地运行了里面的演示 Demo。\n两篇读罢，最大的收获竟然是能把 ref 和 computed 代码自己写出来，这可是头一回不看源码能写出代码逻辑，Vue 文档功力由此可见一斑，大大的赞。\n先等等，回归初心，“ref 还是 reactive？” 文档的标准答案是：\n因为 reactive() API 有一些局限性：\n有限的值类型，即只支持对象类型，不支持基本类型（number, string, boolean, undefined, null）。\n不能替换整个对象，否则响应失效。\n对解构操作不友好，解构后响应失效。\n所以建议使用 ref() 作为声明响应式状态的主要 API。\nVue 官方文档《响应式基础》\n显然，这个答案并没有解决我的困惑。\n如果说 reactive 不支持基本数据类型，那这有啥难的？直接像 ref 那样包裹一层对象写成 （{value}）不就…",
           "link": "https://juejin.cn/post/7313549609179447306",
           "publishedOn": "2023-12-18T10:52:49.000Z",
-          "wordCount": 1699,
+          "wordCount": 1662,
           "title": "ref 还是 reactive，这是个问题",
           "imageUrl": null
         },
@@ -1156,7 +1136,7 @@
           "description": "大家好，我是 dom 哥。这是我关于 Chrome 扩展开发的系列文章，感兴趣的可以 点个小星星。\n工欲善其事，必先利其器。Chrome 可能是前端开发中使用最多的浏览器。在日常开发中，下列几款 Chrome 扩展也许能让你的开发工作事半功倍 🚀\nVue.js devtools ⚙️\nvue 官方专为 vue 应用开发的调试工具。\n\n通过使用它，你可以快速查看组件的状态和属性，分析性能瓶颈，并进行性能优化。同时，它还提供了方便的 Vuex 状态管理和组件时间旅行功能。无论你是 Vue.js 初学者还是有经验的开发人员，Vue.js Devtools 都是一个值得掌握的工具。\nReact Developer Tools ⚙️\nReact Developer Tools 专为 React 应用程序开发者设计。它提供了一系列功能，帮助开发者更轻松地调试和优化 React 组件。\n\n通过深入掌握 React Developer Tools，你可以更好地理解组件层次结构、跟踪组件状态和性能，调试 React Hooks，以及进行组件时间旅行等操作。无论你是初学者还是有经验的开发者，掌握 React Developer Tools 都将极大地提升你的 React 开发能力和效率。\nVimium 🚀\n将 Vim 式的快捷键带入浏览器世界。\n\n\nVimium 为用户提供了类似 Vim 编辑器的键盘导航和操作方式，大大提升了浏览器操作的效率和速度。通过安装和使用 Vimium，你可以像在 Vim 中一样快速浏览网页、打开链接、搜索内容，甚至进行高级操作和自定义设置。不管你是 Vim 用户还是想要提高浏览器操作效率的用户，Vimium 都值得一试。\nResource Override 🔀\nResource Override 提供了实时修改，重定向和调试网页静态资源的能力。\n\n前端开发者经常需要将线上资源重定向到本地，以此实现本地开发调试，这正是 Resource Override 的用武之地。\n通过使用 Resource Override，我们可以定制和优化网页资源加载，满足个性化需求，或进行调试和优化。不论是开发者还是调试专家，Resource Override 都是一个不可或缺的工具，能够显著提升开发和调试效率。\nGoFullPage - Full Page Screen Capture 📸\n简单快速生成网页全页截图的高效工具。\n\n下面是我截的 github 首页长图：\n我们经常需要生成网页的全页截图，以便进行展示、分享、文档编写或错误排查。GoFullPage 就是这样一款强大而高效的网页截图工具，能够快速生成高质量的网页全页截图。它提供了多种截图模式、定制化设置和高性能算法，帮助开发者、设计师和测试人员更轻松地进行网页截图工作。无论是展示、分享、文档编写还是错误排查，GoFullPage 都能为你提供便捷而优质的截图体验。\n觉得不错可以 点个小星星 支持一下哦 🌹",
           "link": "https://juejin.cn/post/7313557322596466727",
           "publishedOn": "2023-12-18T06:02:34.000Z",
-          "wordCount": 893,
+          "wordCount": 1002,
           "title": "推荐给前端开发的 5 款 Chrome 扩展 🚀",
           "imageUrl": null
         },
@@ -1166,7 +1146,7 @@
           "description": "hi 大家好，我是 DHL。就职于美团、快手、小米。公众号：ByteCode，专注有用、有趣的硬核原创内容，Kotlin、性能优化、系统源码、图解算法、大厂面经\n2023 年可谓是国产自研手机操作系统百花齐放的一年，在华为官宣 HarmonyOS NEXT 开发者预览版本，不在兼容 Android 之后，小米、vivo 分别官宣了自己的操作系统。\n10 月 26 日，雷布斯宣布小米澎湃 OS，耗时 7 年将 MIUI、Vela、Mina、车机 OS 四个系统进行了合并，想打造一个万物互联的操作系统。其中 Vela 我们之前也接触过，一句话，坑是在太多了，替小米系统工程师的头发感到惋惜。hahaha\n11 月 1 日，vivo 副总裁宣布自主研发的蓝河操作系统 BlueOS，并且 vivo 自研蓝河操作系统不兼容安卓应用，未来也不会兼容。在加上 OPPO 的潘塔纳尔系统，国内的主流手机厂商都拥有了自己的操作系统。\n为什么国产手机厂商都想打造自己的操作系统？\n想脱离 Android 的控制，华为和中兴的前车之鉴，给手机厂商们敲响了警钟，都在卧薪尝胆，开发自己的操作系统\n顺应时代，想抓住万物互联的红利，打造自己的物联网生态，就必须要有自己的万物互联操作系统\n现在国产手机操作的系统的竞争进入了白热化的状态，我们来看一下全球操作系统市场份额。\n\n现在全球手机操作系统市场份额是被谷歌的 Android 和苹果的 iOS 基本垄断了，其中 Android 系统占据了 38.27%，我们在来看一下这些 Android 市场份额，被那些手机厂商瓜分了。\n\nAndroid 系统分别被 Sansung、Xiaomi、Oppo、Vivo 瓜分了，但是它们都受制于美国的控制，如果想摆脱美国的控制，那么偷摸自研就是唯一的出路。\n相比于自研新系统，最难的是生态的建立，而生态的建立就需要各个行业的人，为你…",
           "link": "https://juejin.cn/post/7313042225864540214",
           "publishedOn": "2023-12-18T00:47:04.000Z",
-          "wordCount": 1235,
+          "wordCount": 1243,
           "title": "分裂的国产自研手机系统，究竟苦了谁",
           "imageUrl": null
         },
@@ -1176,7 +1156,7 @@
           "description": "theme: channing-cyan\nFlutter 下拉刷新花式玩法 - 掘金 (juejin.cn)\nFlutter到鸿蒙,不是有手就行吗? (列表加载更多) - 掘金 (juejin.cn)\n前言\n五年前，有人告诉我，你可以错过其他技术，但千万不要错过 Flutter 。然而此刻，有人告诉我，如果你错过了鸿蒙，恐怕要错过下个时代了。\n作为发展了 5 年的 FlutterCandies 社区，我们已拥有 70+ 的 Flutter 组件。我们当然也不会止步于 Flutter 。我们希望把我们的 Flutter 组件也能带到鸿蒙生态当中，HarmonyCandies 便是为了这一刻。\n以 Flutter 开发者的角度，尽可能提供相同 Api 的鸿蒙组件。\n本文默认您已经有一定的鸿蒙开发经验，并且阅读过以下内容。\n组件导读-组件参考（基于ArkTS的声明式开发范式）-ArkTS API参考-HarmonyOS应用开发\n基本语法概述-快速入门-入门-HarmonyOS应用开发\n开发说明-ArkTS接口参考-ArkTS API参考-HarmonyOS应用开发\n使用的 ide 版本为  DevEco Studio 4.0 Release OpenHarmony v4.0 Release (2023-10-26) ，开发 sdk 为 api 9，当然也适配了 api 10 。\n\n下拉刷新\n列表在一个 App 中最常见的呈现方式，而下拉刷新是其常见的一种效果。\n在 Flutter 中你可以通过\npull_to_refresh_notification 来实现一个可以自定义任何效果的下拉刷新。\n在鸿蒙中你则可以使用  https://github.com/HarmonyCandies/pull_to_refresh 来实现。\n\n\n\n\n\n安装\n你可以通过下面的命令来下载安装\nohpm…",
           "link": "https://juejin.cn/post/7313161940283998260",
           "publishedOn": "2023-12-18T00:26:19.000Z",
-          "wordCount": 6710,
+          "wordCount": 6694,
           "title": "Flutter到鸿蒙,不是有手就行吗? (下拉刷新)",
           "imageUrl": null
         },
@@ -1196,7 +1176,7 @@
           "description": "提到状态管理，大家可能首先想到的是 redux。\nredux 是老牌状态管理库，能完成各种基本功能，并且有着庞大的中间件生态来扩展额外功能。\n但 redux 经常被人诟病它的使用繁琐。\n近两年，React 社区出现了很多新的状态管理库，比如 zustand、jotai、recoil 等，都完全能替代 redux，而且更简单。\nzustand 算是其中最流行的一个。\n看 star 数，redux 有 60k，而 zustand 也有 38k 了：\nredux：\n\nzustand：\n\n看 npm 包的周下载量，redux 有 880w，而 zustand 也有 260w 了：\nredux：\n\nzustand：\n\n从各方面来说，zustand 都在快速赶超 redux。\n那 zustand 为什么会火起来呢？\n我觉得主要是因为简单，zustand 用起来真的是没有什么学习成本，没有 redux 的 action、reducer 等概念。\n而且功能很强大，zustand 也有中间件，可以给它额外扩展功能。\n既然功能上能替代 redux，那为什么不选择一个更简单的呢？\n下面我们就来试试看：\nnpx create-react-app zustand-test\n\n\n用 cra 创建个 react 项目。\n进入项目把它跑起来：\nnpm run start\n\n浏览器访问下：\n\n没啥问题。\n然后安装 zustand:\nnpm install --save zustand\n\n改下 App.js\nimport { create } from 'zustand'\n\nconst useXxxStore = create((set) => ({\n  aaa: '',\n  bbb: '',\n  updateAaa: (value) => set(() => ({ aaa: value })),\n  upd…",
           "link": "https://juejin.cn/post/7313242064195797001",
           "publishedOn": "2023-12-17T07:05:32.000Z",
-          "wordCount": 3091,
+          "wordCount": 3087,
           "title": "手写一个 Zustand，只要 60 行",
           "imageUrl": null
         },
@@ -1206,7 +1186,7 @@
           "description": "theme: condensed-night-purple\nhighlight: atelier-dune-light\n前言\n由于公司要进行裁员，然后给我两个选择，一个是转去运维部门开发运维相关的后台管理系统，一个是拿补偿走人。最终仔细思考了一番，还是选择了拿补偿走人，觉得这也是一个好的机会，然后投入热火朝天的找工作的大潮之中。坊间都在传闻行情不好，什么“前端已死”都出来了，但是前端人还得继续往前走啊，在时代的大潮里你不走也会被时代推着向前的，而且这个世界唯一不变的就是变化。对于找工作我还是稍微有那么一点底气的，因为在4月中旬到6月中旬也准备了差不多两个月，不过是一边上班一边准备，不能说全身心的投入，但至少简历是已经写好了，项目部分的内容是稍微整理了一下的。\n1.面试实战\n1.投简历\n2023.08.28，投简历的第一天，Boss上约面试的很少，还有一些不是很匹配的，一天约了一个面试，薪资区间的最大值还没我之前的高，想着先练下手，找下面试的感觉。\n一边好好准备面试，一边投简历吧，后续看简历是否要修改，先把面试要准备的东西一步步的准备好！\n2023.08.29，面试国内某家安全厂商，招人偏一些3D的。\n2023.08.30，下午去现场二面昨天的那个，约了明晚一家车企的面试和周五下午另一家大厂的面试。去现场面完回来18:00多了，睡了一觉，一觉直接睡到差不多21:00了，起来准备明晚的面试的东西。\n2.心路历程\n离职第9天\n今天是2023.09.01，离职的第9天，已经面试了3家公司了，虽然面的总体来说都不怎么好。下午面完也收到了滴滴面试没过的通知，但是我对未来充满着希望，觉得肯定有一家无比合适的公司在那等着我，不知道哪里来的想法，莫名就有这种感觉。\n说一下今天面试滴滴的体验，总体来说今天的面试官还是很nice的，虽然没过。不得不说，面试官的专业水平还是不错的，问的其实也不难，…",
           "link": "https://juejin.cn/post/7312731537589649448",
           "publishedOn": "2023-12-16T17:12:24.000Z",
-          "wordCount": 865,
+          "wordCount": 869,
           "title": "5年前端2023面试之路",
           "imageUrl": null
         },
@@ -1226,7 +1206,7 @@
           "description": "最近有个需求需要实现自定义首页布局，需要将屏幕按照 6 列 4 行进行等分成多个格子，然后将组件可拖拽对应格子进行渲染展示。\n\n对比一些已有的插件，发现想要实现产品的交互效果，没有现成可用的。本身功能并不是太过复杂，于是决定自己基于 vue 手撸一个简易的 Grid 拖拽布局。\n完整源码在此，在线体验\n概况\n需要实现 Grid 拖拽布局，主要了解这两个东西就行\n拖放 API，关于拖放 API 介绍文章有很多 ，可以直接看 MDN 里拖放 API介绍，可以说很详细了。\nGrid 布局， Grid 布局与 Flex 布局很相似，但是 Grid 像是二维布局，Flex 则为一维布局，Grid 布局远比 Flex 布局强大。MDN 关于网格布局介绍\n需要实现主要包含：\n组件物料栏拖拽到布局容器\n布局容器 Grid 布局\n放置时是否重叠判断\n拖拽时样式\n放置后样式\n容器内二次拖拽\n拖放操作实现\n拖拽中主要使用到的事件如下\n被拖拽元素事件：\n事件\n触发时刻\n\n\n\n\ndragstart\n当用户开始拖拽一个元素或选中的文本时触发。\n\n\ndrag\n当拖拽元素或选中的文本时触发。\n\n\ndragend\n当拖拽操作结束时触发\n\n\n\n\n放置容器事件：\n事件\n触发时刻\n\n\n\n\ndragenter\n当拖拽元素或选中的文本到一个可释放目标时触发。\n\n\ndragleave\n当拖拽元素或选中的文本离开一个可释放目标时触发。\n\n\ndragover\n当元素或选中的文本被拖到一个可释放目标上时触发。\n\n\ndrop\n当元素或选中的文本在可释放目标上被释放时触发。\n\n\n\n可拖拽元素\n让一个元素能够拖拽只需要给元素设置 draggable=\"true\" 即可拖拽，拖拽事件 API 提供了 DataTransfer 对象，可以用于设置拖拽数据信息，但是仅仅只能 drop 事件中获取到，但是我们需要在拖拽中就需要获取到拖拽信…",
           "link": "https://juejin.cn/post/7313048145529487369",
           "publishedOn": "2023-12-16T06:54:10.000Z",
-          "wordCount": 2963,
+          "wordCount": 3032,
           "title": "手撸一个简易 Grid 拖拽布局",
           "imageUrl": null
         },
@@ -1236,7 +1216,7 @@
           "description": "前言\n大家好，我是祯民。今天想和大家聊的是前端基建中的重要一环，vscode 插件开发。对于大部分前端同学，相信都用过不少 vscode 插件，比如我们耳熟能详的美化插件 prettier，又或是类 web gpt 的插件 code-gpt，一个好的 vscode 插件在我们的开发流程中，可以起到显著的提效，对开发的流畅度又或是上限提高都是非常重要的。\n\n因为工作内容的关系，很多前端同学并不会自己去开发一个 vscode 插件，更多的是和 web 环境打交道。但事实上，不论是从技术提升上，还是个人发展上，我都非常建议大家学习 & 具备 vscode 插件开发的能力。\n从技术提升上， vscode 插件不同于 web 环境，运行于 node 运行时下，对于一个前端服务领域相关知识的有着显著帮助；而从个人发展上，作为前端基建的重要一环，不管是面试大厂业务团队，还是架构团队，掌握 vscode 插件开发都是一个不错的加分项。例如下面字节 web-infra 的一条职位要求中，就明确要求了需要熟悉 vscode 插件开发。\n\n但 vscode 插件开发 API, 分支都有一定的学习成本，加上文档全英文，对一些新入门的前端同学上手的确不够友好。出于这个背景，所以我打算出一些关于 vscode 插件实战相关的技术系列文章，帮助大家更快上手 & 具备 vscode 插件开发的基本能力，今天这一节我将为大家介绍 vscode 插件的一种常见载体 vscode 任务栏插件。\nvscode 任务栏插件是一种集成到 vscode 左侧任务栏的插件形式，通过在任务栏注册 webview 来实现自己插件能力的常驻化，在这种模式下，用户可以通过点击任务栏完成 webview 的插件操作，适合需要图形界面 & 频繁引流的插件场景。比如下图的 code-gpt 插件\n\n因为篇幅限制，今天的这节分享里我不会…",
           "link": "https://juejin.cn/post/7312724111399239743",
           "publishedOn": "2023-12-16T03:07:44.000Z",
-          "wordCount": 3366,
+          "wordCount": 3428,
           "title": "都快 2024 年了还不会 vscode 插件开发？ ---- vscode 任务栏插件",
           "imageUrl": null
         },
@@ -1256,7 +1236,7 @@
           "description": "theme: smartblue\n扯皮\n这段时间闲着没事就去翻翻红宝书，已经看到 Promise 篇了，今天又让我翻到两个陌生的知识点。\n因为 Promise 业务场景太多了自我感觉掌握的也比较透彻，之前也跟着 Promise A+ 的规范手写过完整的 Promise，所以这部分内容基本上就大致过一遍，直到看见关于 Promise 的取消以及监听进度...🤔\n只能说以后要是我当上面试官一定让候选人来谈谈这两个点，然后顺势安利我这篇文章🤣\n不过好像目前为止也没见哪个面试官出过...\n正文\n取消功能\n我们都知道 Promise 的状态是不可逆的，也就是说只能从 pending -> fulfilled 或 pending -> rejected，这一点是毋庸置疑的。\n但现在可能会有这样的需求，在状态转换过程当中我们可能不再想让它进行下去了，也就是说让它永远停留至 pending 状态。\n奇怪了，想要一直停留在 pending，那我不调用 resolve 和 reject 不就行了🤔\n const p = new Promise((resolve, reject) => {\n    setTimeout(() => {\n      // handler data, no resolve and reject\n    }, 1000);\n });\n console.log(p); // Promise {<pending>} 💡\n\n但注意我们的需求条件，是在状态转换过程中，也就是说必须有调用 resolve 和 reject，只不过中间可能由于某种条件，阻止了这两个调用。\n其实这个场景和超时中断有点类似但还是不太一样，我们先利用 Promise.race 来看看：模拟一个发送请求，如果超时则提示超时错误：\nconst getData = () =>\n  new Promis…",
           "link": "https://juejin.cn/post/7312349904046735400",
           "publishedOn": "2023-12-14T16:31:45.000Z",
-          "wordCount": 2314,
+          "wordCount": 2309,
           "title": "面试官：能不能给 Promise 增加取消功能和进度通知功能... 我：？？？",
           "imageUrl": null
         }
@@ -1293,7 +1273,7 @@
           "description": "Typora+PicGo 搭建免费图床 #掘金文章# https://juejin.cn/post/7314829865633710131",
           "link": "https://juejin.cn/pin/7314605176832393243",
           "publishedOn": "2023-12-21T05:16:10.000Z",
-          "wordCount": 509,
+          "wordCount": 506,
           "title": "Typora+PicGo 搭建免费图床 #掘金文章# https://juejin.cn/post/7314829865633710131",
           "imageUrl": null
         },
