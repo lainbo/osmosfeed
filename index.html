@@ -51,11 +51,44 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-22 datetime="2023-12-22T12:11:00.000Z">2023-12-22</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-22 datetime="2023-12-22T12:11:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-22 datetime="2023-12-22T16:00:00.000Z">2023-12-22</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-22 datetime="2023-12-22T16:00:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Epic Games Store - Free Games</button>
+                  <a class="source-heading__link" href="https://store.epicgames.com/zh-CN/free-games?lang&#x3D;zh-CN">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://store.epicgames.com/zh-CN/p/art-of-rally"
+                        open
+                      >
+                        <summary class="article-expander__title">Art of Rally</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://store.epicgames.com/zh-CN/p/art-of-rally">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>《art of rally》是一次由《Absolute Drift》的创作者为你呈现的以拉力赛黄金时代为灵感的拉风体验。玩家能够以俯视的视角周游世界，领略丰富多彩和充满特色的风景。你能称霸《art of rally》吗？
+
+Free Now to 2023-12-23T16:00:00.000Z</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -297,6 +330,96 @@
 2/ 反馈： 解决的每个问题都是自己日常操作，好坏反馈，即时知晓
 3/ 动机： 学的练的不再是屠龙技，切实感知好处</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7315242945454735414"
+                        open
+                      >
+                        <summary class="article-expander__title">还在封装 xxxForm，xxxTable 残害你的同事？试试这个工具</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7315242945454735414">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>之前写过一篇文章 我理想中的低代码开发工具的形态，已经吐槽了各种封装 xxxForm，xxxTable 的行为，这里就不啰嗦了。今天再来看看我的工具达到了什么程度。
+多图预警。。。
+以管理后台一个列表页为例
+
+选择对应的模板
+
+截图查询区域，使用 OCR 初始化查询表单的配置
+
+截图表头，使用 OCR 初始化 table 的配置
+
+使用 ChatGPT 翻译中文字段
+
+生成代码
+
+效果
+目前我们没有写一行代码，就已经达到了如下的效果
+
+下面是一部分生成的代码
+import { reactive, ref } from &#x27;vue&#x27;
+
+import { IFetchTableListResult } from &#x27;./api&#x27;
+
+interface ITableListItem {
+  /**
+   * 决算单状态
+   */
+  settlementStatus: string
+  /**
+   * 主合同编号
+   */
+  mainContractNumber: string
+  /**
+   * 客户名称
+   */
+  customerName: string
+  /**
+   * 客户手机号
+   */
+  customerPhone: string
+  /**
+   * 房屋地址
+   */
+  houseAddress: string
+  /**
+   * 工程管理
+   */
+  projectManagement: string
+  /**
+   * 接口返回的数据，新增字段不需要改 ITableListItem 直接从这里取
+   */
+  apiResult: IFetchTableListResult[&#x27;result&#x27;][&#x27;records&#x27;][0]
+}
+
+interface IFormData {
+  /**
+   * 决算单状态
+   */
+  set…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1010,9 +1133,12 @@ openai的内斗，按小时反转更新的信息，今天还看吗？
                         <summary class="article-expander__title">发布了: 局域网文件互传，推荐 ShareDrop， https://sharedrop.io，这款产品是基于 WebRTC 实现的 P2P 传输，局域网内文件互传的效率非常高。 使用方式很简单，...</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6582f31d71cfacf6097f57fb">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/FmsPyPGrW9wswEGT6FIiB61QqHYjv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>局域网文件互传，推荐 ShareDrop， https://sharedrop.io，这款产品是基于 WebRTC 实现的 P2P 传输，局域网内文件互传的效率非常高。
 使用方式很简单，电脑和手机（或其他终端）同时打开这个网址就行了，它会通过STUN（Session Traversal Utilities for NAT）服务器来获取本地网络地址和端口，然后在局域网内建立点对点连接，安全性也很高。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2361,201 +2487,11 @@ const useXxxStore &#x3D; create((set) &#x3D;&gt; ({
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-16 datetime="2023-12-16T17:12:24.000Z">2023-12-16</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-16 datetime="2023-12-16T17:12:24.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-16 datetime="2023-12-16T14:09:00.000Z">2023-12-16</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-16 datetime="2023-12-16T14:09:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7312731537589649448"
-                        open
-                      >
-                        <summary class="article-expander__title">5年前端2023面试之路</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7312731537589649448">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: condensed-night-purple
-highlight: atelier-dune-light
-前言
-由于公司要进行裁员，然后给我两个选择，一个是转去运维部门开发运维相关的后台管理系统，一个是拿补偿走人。最终仔细思考了一番，还是选择了拿补偿走人，觉得这也是一个好的机会，然后投入热火朝天的找工作的大潮之中。坊间都在传闻行情不好，什么“前端已死”都出来了，但是前端人还得继续往前走啊，在时代的大潮里你不走也会被时代推着向前的，而且这个世界唯一不变的就是变化。对于找工作我还是稍微有那么一点底气的，因为在4月中旬到6月中旬也准备了差不多两个月，不过是一边上班一边准备，不能说全身心的投入，但至少简历是已经写好了，项目部分的内容是稍微整理了一下的。
-1.面试实战
-1.投简历
-2023.08.28，投简历的第一天，Boss上约面试的很少，还有一些不是很匹配的，一天约了一个面试，薪资区间的最大值还没我之前的高，想着先练下手，找下面试的感觉。
-一边好好准备面试，一边投简历吧，后续看简历是否要修改，先把面试要准备的东西一步步的准备好！
-2023.08.29，面试国内某家安全厂商，招人偏一些3D的。
-2023.08.30，下午去现场二面昨天的那个，约了明晚一家车企的面试和周五下午另一家大厂的面试。去现场面完回来18:00多了，睡了一觉，一觉直接睡到差不多21:00了，起来准备明晚的面试的东西。
-2.心路历程
-离职第9天
-今天是2023.09.01，离职的第9天，已经面试了3家公司了，虽然面的总体来说都不怎么好。下午面完也收到了滴滴面试没过的通知，但是我对未来充满着希望，觉得肯定有一家无比合适的公司在那等着我，不知道哪里来的想法，莫名就有这种感觉。
-说一下今天面试滴滴的体验，总体来说今天的面试官还是很nice的，虽然没过。不得不说，面试官的专业水平还是不错的，问的其实也不难，…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7313048171797544997"
-                        open
-                      >
-                        <summary class="article-expander__title">前端是怎么解析Excel、PDF、Word、PPT等文件的？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7313048171797544997">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: smartblue
-一、写在前面
-作为一名开发者，大家在开发过程中是不是经常遇到各种各样的文件，比如xlsx、word、ppt等办公类型的文件格式，还有pdf这种便携式的打印格式文件等。
-但是通常情况下我们都是使用一个相关的第三方库，比如用 sheet.js 来解析xlsx，mammoth.js 来解析wrod，pptxjs 来解析ppt，如果这些库你不知道的话，你可以好好研究一下他们的文档，照着文档满足你的业务需求是肯定没问题的。
-但是本文并不尝试跟大家过一遍这些库是如何使用的，因为笔者认为做一个API调用工程师意义并不大，本文的目的是跟大家分享这些文件的本质，从而能够在平常的开发中即便遇到棘手的问题，大家也能够从容的解决，而不会被第三方库所绑架。
-如果你对以下问题有兴趣，那么仔细阅读本篇文章，你一定会有收获！
-办公文件发展史？
-前端为什么可以解析这些文件？
-第三库是怎么解析这些文件的？原理是什么？
-PDF是如何保持布局的稳定性的？
-准备好我们开始发车！ let&#x60;s get start it!
-二、办公文件的本质
-历史
-中国的 蔡伦 在公元105年发明了造纸术，它让人们进入了一个崭新的时代。从此纸张如一头猛兽闯入千家万户，人们可以在纸张上记录、编写、传播信息。
-技术的突破往往会催生出新的需求，这种在纸张上记录、编写、和传播信息的需要渐渐成为人们生活不可或缺的一部分，历史、文学、科学、艺术、日常事物都需要依赖于这种技术，因为承载了信息，纸张慢慢被人们称为文件，无论从哪个角度来看，文件的出现都是人类文明史上浓墨重彩的一笔。
-纸张统治了世界将近2000年，或许未来在相当长的时间内它还将一直存在，但是20世纪末，互联网的出现让纸质的文件地位出现了动摇，甚至大有退出历史舞台的趋势。人们发现将一切的纸张文件电子化会有令人意想不到的收益。电子文件传播更迅速、编写更方便、记…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7313048145529487369"
-                        open
-                      >
-                        <summary class="article-expander__title">手撸一个简易 Grid 拖拽布局</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7313048145529487369">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>最近有个需求需要实现自定义首页布局，需要将屏幕按照 6 列 4 行进行等分成多个格子，然后将组件可拖拽对应格子进行渲染展示。
-
-对比一些已有的插件，发现想要实现产品的交互效果，没有现成可用的。本身功能并不是太过复杂，于是决定自己基于 vue 手撸一个简易的 Grid 拖拽布局。
-完整源码在此，在线体验
-概况
-需要实现 Grid 拖拽布局，主要了解这两个东西就行
-拖放 API，关于拖放 API 介绍文章有很多 ，可以直接看 MDN 里拖放 API介绍，可以说很详细了。
-Grid 布局， Grid 布局与 Flex 布局很相似，但是 Grid 像是二维布局，Flex 则为一维布局，Grid 布局远比 Flex 布局强大。MDN 关于网格布局介绍
-需要实现主要包含：
-组件物料栏拖拽到布局容器
-布局容器 Grid 布局
-放置时是否重叠判断
-拖拽时样式
-放置后样式
-容器内二次拖拽
-拖放操作实现
-拖拽中主要使用到的事件如下
-被拖拽元素事件：
-事件
-触发时刻
-
-
-
-
-dragstart
-当用户开始拖拽一个元素或选中的文本时触发。
-
-
-drag
-当拖拽元素或选中的文本时触发。
-
-
-dragend
-当拖拽操作结束时触发
-
-
-
-
-放置容器事件：
-事件
-触发时刻
-
-
-
-
-dragenter
-当拖拽元素或选中的文本到一个可释放目标时触发。
-
-
-dragleave
-当拖拽元素或选中的文本离开一个可释放目标时触发。
-
-
-dragover
-当元素或选中的文本被拖到一个可释放目标上时触发。
-
-
-drop
-当元素或选中的文本在可释放目标上被释放时触发。
-
-
-
-可拖拽元素
-让一个元素能够拖拽只需要给元素设置 draggable&#x3D;&quot;true&quot; 即可拖拽，拖拽事件 API 提供了 DataTransfer 对象，可以用于设置拖拽数据信息，但是仅仅只能 drop 事件中获取到，但是我们需要在拖拽中就需要获取到拖拽信…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7312724111399239743"
-                        open
-                      >
-                        <summary class="article-expander__title">都快 2024 年了还不会 vscode 插件开发？ ---- vscode 任务栏插件</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7312724111399239743">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-大家好，我是祯民。今天想和大家聊的是前端基建中的重要一环，vscode 插件开发。对于大部分前端同学，相信都用过不少 vscode 插件，比如我们耳熟能详的美化插件 prettier，又或是类 web gpt 的插件 code-gpt，一个好的 vscode 插件在我们的开发流程中，可以起到显著的提效，对开发的流畅度又或是上限提高都是非常重要的。
-
-因为工作内容的关系，很多前端同学并不会自己去开发一个 vscode 插件，更多的是和 web 环境打交道。但事实上，不论是从技术提升上，还是个人发展上，我都非常建议大家学习 &amp; 具备 vscode 插件开发的能力。
-从技术提升上， vscode 插件不同于 web 环境，运行于 node 运行时下，对于一个前端服务领域相关知识的有着显著帮助；而从个人发展上，作为前端基建的重要一环，不管是面试大厂业务团队，还是架构团队，掌握 vscode 插件开发都是一个不错的加分项。例如下面字节 web-infra 的一条职位要求中，就明确要求了需要熟悉 vscode 插件开发。
-
-但 vscode 插件开发 API, 分支都有一定的学习成本，加上文档全英文，对一些新入门的前端同学上手的确不够友好。出于这个背景，所以我打算出一些关于 vscode 插件实战相关的技术系列文章，帮助大家更快上手 &amp; 具备 vscode 插件开发的基本能力，今天这一节我将为大家介绍 vscode 插件的一种常见载体 vscode 任务栏插件。
-vscode 任务栏插件是一种集成到 vscode 左侧任务栏的插件形式，通过在任务栏注册 webview 来实现自己插件能力的常驻化，在这种模式下，用户可以通过点击任务栏完成 webview 的插件操作，适合需要图形界面 &amp; 频繁引流的插件场景。比如下图的 code-gpt 插件
-
-因为篇幅限制，今天的这节分享里我不会…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -2710,6 +2646,164 @@ vscode 任务栏插件是一种集成到 vscode 左侧任务栏的插件形式�
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7313048171797544997"
+                        open
+                      >
+                        <summary class="article-expander__title">前端是怎么解析Excel、PDF、Word、PPT等文件的？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7313048171797544997">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: smartblue
+一、写在前面
+作为一名开发者，大家在开发过程中是不是经常遇到各种各样的文件，比如xlsx、word、ppt等办公类型的文件格式，还有pdf这种便携式的打印格式文件等。
+但是通常情况下我们都是使用一个相关的第三方库，比如用 sheet.js 来解析xlsx，mammoth.js 来解析wrod，pptxjs 来解析ppt，如果这些库你不知道的话，你可以好好研究一下他们的文档，照着文档满足你的业务需求是肯定没问题的。
+但是本文并不尝试跟大家过一遍这些库是如何使用的，因为笔者认为做一个API调用工程师意义并不大，本文的目的是跟大家分享这些文件的本质，从而能够在平常的开发中即便遇到棘手的问题，大家也能够从容的解决，而不会被第三方库所绑架。
+如果你对以下问题有兴趣，那么仔细阅读本篇文章，你一定会有收获！
+办公文件发展史？
+前端为什么可以解析这些文件？
+第三库是怎么解析这些文件的？原理是什么？
+PDF是如何保持布局的稳定性的？
+准备好我们开始发车！ let&#x60;s get start it!
+二、办公文件的本质
+历史
+中国的 蔡伦 在公元105年发明了造纸术，它让人们进入了一个崭新的时代。从此纸张如一头猛兽闯入千家万户，人们可以在纸张上记录、编写、传播信息。
+技术的突破往往会催生出新的需求，这种在纸张上记录、编写、和传播信息的需要渐渐成为人们生活不可或缺的一部分，历史、文学、科学、艺术、日常事物都需要依赖于这种技术，因为承载了信息，纸张慢慢被人们称为文件，无论从哪个角度来看，文件的出现都是人类文明史上浓墨重彩的一笔。
+纸张统治了世界将近2000年，或许未来在相当长的时间内它还将一直存在，但是20世纪末，互联网的出现让纸质的文件地位出现了动摇，甚至大有退出历史舞台的趋势。人们发现将一切的纸张文件电子化会有令人意想不到的收益。电子文件传播更迅速、编写更方便、记…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7313048145529487369"
+                        open
+                      >
+                        <summary class="article-expander__title">手撸一个简易 Grid 拖拽布局</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7313048145529487369">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>最近有个需求需要实现自定义首页布局，需要将屏幕按照 6 列 4 行进行等分成多个格子，然后将组件可拖拽对应格子进行渲染展示。
+
+对比一些已有的插件，发现想要实现产品的交互效果，没有现成可用的。本身功能并不是太过复杂，于是决定自己基于 vue 手撸一个简易的 Grid 拖拽布局。
+完整源码在此，在线体验
+概况
+需要实现 Grid 拖拽布局，主要了解这两个东西就行
+拖放 API，关于拖放 API 介绍文章有很多 ，可以直接看 MDN 里拖放 API介绍，可以说很详细了。
+Grid 布局， Grid 布局与 Flex 布局很相似，但是 Grid 像是二维布局，Flex 则为一维布局，Grid 布局远比 Flex 布局强大。MDN 关于网格布局介绍
+需要实现主要包含：
+组件物料栏拖拽到布局容器
+布局容器 Grid 布局
+放置时是否重叠判断
+拖拽时样式
+放置后样式
+容器内二次拖拽
+拖放操作实现
+拖拽中主要使用到的事件如下
+被拖拽元素事件：
+事件
+触发时刻
+
+
+
+
+dragstart
+当用户开始拖拽一个元素或选中的文本时触发。
+
+
+drag
+当拖拽元素或选中的文本时触发。
+
+
+dragend
+当拖拽操作结束时触发
+
+
+
+
+放置容器事件：
+事件
+触发时刻
+
+
+
+
+dragenter
+当拖拽元素或选中的文本到一个可释放目标时触发。
+
+
+dragleave
+当拖拽元素或选中的文本离开一个可释放目标时触发。
+
+
+dragover
+当元素或选中的文本被拖到一个可释放目标上时触发。
+
+
+drop
+当元素或选中的文本在可释放目标上被释放时触发。
+
+
+
+可拖拽元素
+让一个元素能够拖拽只需要给元素设置 draggable&#x3D;&quot;true&quot; 即可拖拽，拖拽事件 API 提供了 DataTransfer 对象，可以用于设置拖拽数据信息，但是仅仅只能 drop 事件中获取到，但是我们需要在拖拽中就需要获取到拖拽信…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7312724111399239743"
+                        open
+                      >
+                        <summary class="article-expander__title">都快 2024 年了还不会 vscode 插件开发？ ---- vscode 任务栏插件</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7312724111399239743">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言
+大家好，我是祯民。今天想和大家聊的是前端基建中的重要一环，vscode 插件开发。对于大部分前端同学，相信都用过不少 vscode 插件，比如我们耳熟能详的美化插件 prettier，又或是类 web gpt 的插件 code-gpt，一个好的 vscode 插件在我们的开发流程中，可以起到显著的提效，对开发的流畅度又或是上限提高都是非常重要的。
+
+因为工作内容的关系，很多前端同学并不会自己去开发一个 vscode 插件，更多的是和 web 环境打交道。但事实上，不论是从技术提升上，还是个人发展上，我都非常建议大家学习 &amp; 具备 vscode 插件开发的能力。
+从技术提升上， vscode 插件不同于 web 环境，运行于 node 运行时下，对于一个前端服务领域相关知识的有着显著帮助；而从个人发展上，作为前端基建的重要一环，不管是面试大厂业务团队，还是架构团队，掌握 vscode 插件开发都是一个不错的加分项。例如下面字节 web-infra 的一条职位要求中，就明确要求了需要熟悉 vscode 插件开发。
+
+但 vscode 插件开发 API, 分支都有一定的学习成本，加上文档全英文，对一些新入门的前端同学上手的确不够友好。出于这个背景，所以我打算出一些关于 vscode 插件实战相关的技术系列文章，帮助大家更快上手 &amp; 具备 vscode 插件开发的基本能力，今天这一节我将为大家介绍 vscode 插件的一种常见载体 vscode 任务栏插件。
+vscode 任务栏插件是一种集成到 vscode 左侧任务栏的插件形式，通过在任务栏注册 webview 来实现自己插件能力的常驻化，在这种模式下，用户可以通过点击任务栏完成 webview 的插件操作，适合需要图形界面 &amp; 频繁引流的插件场景。比如下图的 code-gpt 插件
+
+因为篇幅限制，今天的这节分享里我不会…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >竹白百科 - TOP20</button>
                   <a class="source-heading__link" href="http://analy.zhubai.wiki">Open</a>
                 </h3>
@@ -2778,82 +2872,11 @@ vscode 任务栏插件是一种集成到 vscode 左侧任务栏的插件形式�
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-15 datetime="2023-12-15T17:05:00.000Z">2023-12-15</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-15 datetime="2023-12-15T17:05:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-15 datetime="2023-12-15T10:06:30.000Z">2023-12-15</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-15 datetime="2023-12-15T10:06:30.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >国家应急广播 - 重庆预警信息</button>
-                  <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231216/t20231216_526523079.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市彭水苗族土家族自治县发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231216/t20231216_526523079.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>彭水自治县气象台2023年12月15日22时50分发布“道路结冰黄色预警信号”，预计12月15日23时至17日20时，我县石盘乡、大同镇、石柳乡、桑柘镇、梅子垭镇、鞍子镇、黄家镇、润溪乡、三义乡、普子镇、龙射镇、朗溪乡等乡镇街道海拔800米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。防御指南：1.行人注意防滑。2.驾车注意路况，安全行驶。3.相关部门和乡镇街道按照职责，做好道路结冰防范应对工作。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20231216/t20231216_526523057.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市云阳县发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20231216/t20231216_526523057.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>云阳县气象台2023年12月15日23时40分发布“道路结冰黄色预警信号”，预计12月16日00时至16日12时，清水土家族乡、上坝乡、桑坪镇、大阳镇、石门乡路表温度将低于0℃，可能出现对交通有影响的道路结冰。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526523056.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市云阳县发布大风蓝色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/lanseyj/20231215/t20231215_526523056.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>云阳县气象台2023年12月15日23时40分发布“大风蓝色预警信号”，预计未来12小时内上坝乡、桑坪镇、双土镇、渠马镇、双龙镇、江口镇、鱼泉镇、后叶镇、农坝镇、沙市镇、高阳镇、南溪镇、洞鹿乡、龙洞镇、故陵镇、堰坪镇、普安乡、蔈草镇、新津乡、清水土家族乡、红狮镇、云阳镇、耀灵镇、泥溪镇、宝坪镇、凤鸣镇、龙角镇、石门乡、大阳镇、养鹿镇、双江街道、黄石镇、人和街道、水口镇、栖霞镇、平安镇、云安镇、巴阳镇、盘龙街道、青龙街道等街道（乡镇）可能受大风影响，阵风可达7级以上，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -4267,6 +4290,7 @@ const getData &#x3D; () &#x3D;&gt;
                         <summary class="article-expander__title">Reading #183 至少每天承认一次“我不知道”</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://open.zhubai.wiki/a/l/t/z/pq/workreview/2345979910444638208">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>1/ 对一个东西最好的批评   
     
@@ -4319,6 +4343,8 @@ const getData &#x3D; () &#x3D;&gt;
    3.        Phew Tab        
     
    使用 AI 自动对标签页进行分组的 Chrome 扩展，产品正在开发中，可以…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;45
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4608,6 +4634,8 @@ const getData &#x3D; () &#x3D;&gt;
    在 Figma 中创建流程图   
     
    使用原生 Fig…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;98
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4946,8 +4974,8 @@ const getData &#x3D; () &#x3D;&gt;
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7301629505">
-        <time id="build-timestamp" datetime="2023-12-22T15:57:19.531Z">2023-12-22T15:57:19.531Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7302991600">
+        <time id="build-timestamp" datetime="2023-12-22T18:52:53.702Z">2023-12-22T18:52:53.702Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
