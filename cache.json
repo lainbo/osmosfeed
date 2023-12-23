@@ -34,7 +34,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": 1024,
+          "wordCount": 1023,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         }
@@ -108,7 +108,7 @@
           "description": "看教练教孩子轮滑，才意识到，自己对孩子的鼓励还是太少了。\n对结果给予 90 分的肯定，不如过程中持续 80 的肯定和鼓励。而教练则更加突出，无论是结果还是过程，都给予 100 分的肯定，不仅仅是精神上，还会有小奖品小礼物。相形见愧😪",
           "link": "https://m.okjike.com/originalPosts/65864e998a7c5ba8ae89bd08",
           "publishedOn": "2023-12-23T03:06:01.000Z",
-          "wordCount": 453,
+          "wordCount": 464,
           "title": "发布了: 看教练教孩子轮滑，才意识到，自己对孩子的鼓励还是太少了。 对结果给予 90 分的肯定，不如过程中持续 80 的肯定和鼓励。而教练则更加突出，无论是结果...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -1078,6 +1078,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7312731537589649448",
+          "author": "星空海绵",
+          "description": "theme: condensed-night-purple\nhighlight: atelier-dune-light\n前言\n由于公司要进行裁员，然后给我两个选择，一个是转去运维部门开发运维相关的后台管理系统，一个是拿补偿走人。最终仔细思考了一番，还是选择了拿补偿走人，觉得这也是一个好的机会，然后投入热火朝天的找工作的大潮之中。坊间都在传闻行情不好，什么“前端已死”都出来了，但是前端人还得继续往前走啊，在时代的大潮里你不走也会被时代推着向前的，而且这个世界唯一不变的就是变化。对于找工作我还是稍微有那么一点底气的，因为在4月中旬到6月中旬也准备了差不多两个月，不过是一边上班一边准备，不能说全身心的投入，但至少简历是已经写好了，项目部分的内容是稍微整理了一下的。\n1.面试实战\n1.投简历\n2023.08.28，投简历的第一天，Boss上约面试的很少，还有一些不是很匹配的，一天约了一个面试，薪资区间的最大值还没我之前的高，想着先练下手，找下面试的感觉。\n一边好好准备面试，一边投简历吧，后续看简历是否要修改，先把面试要准备的东西一步步的准备好！\n2023.08.29，面试国内某家安全厂商，招人偏一些3D的。\n2023.08.30，下午去现场二面昨天的那个，约了明晚一家车企的面试和周五下午另一家大厂的面试。去现场面完回来18:00多了，睡了一觉，一觉直接睡到差不多21:00了，起来准备明晚的面试的东西。\n2.心路历程\n离职第9天\n今天是2023.09.01，离职的第9天，已经面试了3家公司了，虽然面的总体来说都不怎么好。下午面完也收到了滴滴面试没过的通知，但是我对未来充满着希望，觉得肯定有一家无比合适的公司在那等着我，不知道哪里来的想法，莫名就有这种感觉。\n说一下今天面试滴滴的体验，总体来说今天的面试官还是很nice的，虽然没过。不得不说，面试官的专业水平还是不错的，问的其实也不难，…",
+          "link": "https://juejin.cn/post/7312731537589649448",
+          "publishedOn": "2023-12-16T17:12:24.000Z",
+          "wordCount": 869,
+          "title": "5年前端2023面试之路",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7313048171797544997",
           "author": "Story",
           "description": "theme: smartblue\n一、写在前面\n作为一名开发者，大家在开发过程中是不是经常遇到各种各样的文件，比如xlsx、word、ppt等办公类型的文件格式，还有pdf这种便携式的打印格式文件等。\n但是通常情况下我们都是使用一个相关的第三方库，比如用 sheet.js 来解析xlsx，mammoth.js 来解析wrod，pptxjs 来解析ppt，如果这些库你不知道的话，你可以好好研究一下他们的文档，照着文档满足你的业务需求是肯定没问题的。\n但是本文并不尝试跟大家过一遍这些库是如何使用的，因为笔者认为做一个API调用工程师意义并不大，本文的目的是跟大家分享这些文件的本质，从而能够在平常的开发中即便遇到棘手的问题，大家也能够从容的解决，而不会被第三方库所绑架。\n如果你对以下问题有兴趣，那么仔细阅读本篇文章，你一定会有收获！\n办公文件发展史？\n前端为什么可以解析这些文件？\n第三库是怎么解析这些文件的？原理是什么？\nPDF是如何保持布局的稳定性的？\n准备好我们开始发车！ let`s get start it!\n二、办公文件的本质\n历史\n中国的 蔡伦 在公元105年发明了造纸术，它让人们进入了一个崭新的时代。从此纸张如一头猛兽闯入千家万户，人们可以在纸张上记录、编写、传播信息。\n技术的突破往往会催生出新的需求，这种在纸张上记录、编写、和传播信息的需要渐渐成为人们生活不可或缺的一部分，历史、文学、科学、艺术、日常事物都需要依赖于这种技术，因为承载了信息，纸张慢慢被人们称为文件，无论从哪个角度来看，文件的出现都是人类文明史上浓墨重彩的一笔。\n纸张统治了世界将近2000年，或许未来在相当长的时间内它还将一直存在，但是20世纪末，互联网的出现让纸质的文件地位出现了动摇，甚至大有退出历史舞台的趋势。人们发现将一切的纸张文件电子化会有令人意想不到的收益。电子文件传播更迅速、编写更方便、记…",
@@ -1105,16 +1115,6 @@
           "publishedOn": "2023-12-16T03:07:44.000Z",
           "wordCount": 3428,
           "title": "都快 2024 年了还不会 vscode 插件开发？ ---- vscode 任务栏插件",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7312510748310863887",
-          "author": "秋天的一阵风",
-          "description": "highlight: arduino-light\ntheme: cyanosis\nwidth:100%与width:auto区别\n一、 width属性介绍\nwidth 属性用于设置元素的宽度。width 默认设置内容区域的宽度，但如果 box-sizing 属性被设置为 border-box，就转而设置边框区域的宽度。\n二、 话不多说，直接上代码看效果\n<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Document</title>\n  </head>\n\n  <style>\n    div {\n      color: #fff;\n      font-size: 2rem;\n      text-align: center;\n    }\n    .parent {\n      width: 600px;\n      height: 600px;\n      background-color: blue;\n      border: 10px solid black;\n      padding: 20px;\n    }\n\n    .child {\n      background-color: red;\n      border: 10px solid grey;\n      margin: 20px;\n      height: 100px;\n    }\n\n    .auto{\n      width: auto;\n    }\n    \n    .hundred-percent{\n      width: 100%;\n    }\n  </style>\n\n  <body>\n    <div class=\"parent\">\n      parent\n      <div class=\"child auto\">child1:  width:auto</div>\n      <div class=\"child hundred-percent\">child2:  width:100%</div>\n    </div>\n  </body>\n</html>\n\n\n\n三、 分析比较\n我们给parent设置了padding:20px 内边距，给两个child都设置了margin:20px的外边距。child1的width属性是auto,child2的width属性是100%。\n很明显地看到两个child的不同表现，child1的宽度是可以适应的，不会溢出其父元素。\n$child1最终的宽度值: 540px = 600px(父元素宽度) - 20px (child1 外边距) * 2 - 10px *2  (child1 边框值) - 0px (child1 内边距) $\n\n而child2的宽度则是和父元素一样大最终溢出了其父元素。\n$child2最终的宽度值: 600px = 600px(父元素宽度)  $\n\n四、 结论\nwidth:100% : 子元素的 content 撑满父元素的content，如果子元素还有 padding、border等属性，或者是在父元素上设置了边距和填充，都有可能会造成子元素区域溢出显示;\nwidth:auto :  是子元素的 content+padding+border+margin 等撑满父元素的 content 区域。\n所以，在开发中尽量还是选择 width:auto ,因为当从边距、填充或边框添加额外空间时，它将尽可能努力保持元素与其父容器的宽度相同。而宽度：100%将使元素与父容器一样宽。额外的间距将添加到元素的大小，而不考虑父元素。这通常会导致问题。",
-          "link": "https://juejin.cn/post/7312510748310863887",
-          "publishedOn": "2023-12-15T07:53:07.000Z",
-          "wordCount": 1457,
-          "title": "探究 width:100%与width:auto区别",
           "imageUrl": null
         },
         {
