@@ -34,7 +34,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": 1022,
+          "wordCount": 1024,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         }
@@ -103,6 +103,46 @@
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/65864e998a7c5ba8ae89bd08",
+          "author": null,
+          "description": "看教练教孩子轮滑，才意识到，自己对孩子的鼓励还是太少了。\n对结果给予 90 分的肯定，不如过程中持续 80 的肯定和鼓励。而教练则更加突出，无论是结果还是过程，都给予 100 分的肯定，不仅仅是精神上，还会有小奖品小礼物。相形见愧😪",
+          "link": "https://m.okjike.com/originalPosts/65864e998a7c5ba8ae89bd08",
+          "publishedOn": "2023-12-23T03:06:01.000Z",
+          "wordCount": 453,
+          "title": "发布了: 看教练教孩子轮滑，才意识到，自己对孩子的鼓励还是太少了。 对结果给予 90 分的肯定，不如过程中持续 80 的肯定和鼓励。而教练则更加突出，无论是结果...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+        },
+        {
+          "id": "https://m.okjike.com/originalPosts/658647dd492ec2e1bb2b40ef",
+          "author": null,
+          "description": "马一龙这个月打钱有点频繁啊，都两次了。",
+          "link": "https://m.okjike.com/originalPosts/658647dd492ec2e1bb2b40ef",
+          "publishedOn": "2023-12-23T02:37:17.000Z",
+          "wordCount": 453,
+          "title": "发布了: 马一龙这个月打钱有点频繁啊，都两次了。",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fv7AmNPlPfQgQOSBuTi4W66vj_S8v3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
+        },
+        {
+          "id": "https://m.okjike.com/originalPosts/658636a41f0812cca5b577ca",
+          "author": null,
+          "description": "在了解 Python 线程和协程的时候，又看到了微线程、纤程、绿色线程、超线程等概念，捋了一下。\n之前提到 Python 的 threading 模块并不支持并发，这里的「并发」一词并不准确，threading 是对线程的控制，也就是让多个任务轮流抢占单个 CPU，这个操作就叫做「并发」操作，因此 threading 模块是可以很好支持并发的；而「并行」指的是在多个 CPU 上同时执行，Python 的 multiprocessing 模块会在每个 process 中都启动一个 global interpreter lock（GIL），相互隔离，它是可以做到并行的。\n线程是进行 CPU 独立运行和调度的基本单元，协程也是如此，只不过协程不是被内核态所管理，而完全由程序控制，在用户态执行。刚开始看到 Python 协程的时候，以为是个啥新鲜玩意儿，研究了下 asyncio 模块的使用，才发现它跟 JavaScript 的 EventLoop 设计如出一辙，通过 async/await 等指令控制程序的相互协作和调用，由于协程不存在线程上下文切换的开销、没有原子操作锁定及同步的开销，因此可以更高性能压榨 CPU 达到并发效果。所以爬虫的时候使用“multiprocessing+asyncio”可以最高效地调度所有 CPU 执行高并发、高并行的 I/O。\n微线程、纤程、绿色线程等术语可以说是协程的代名词，它们的共同特点就是：1）资源调度和程序控制在用户态进行而不是内核态；2）可以便捷地控制程序之间的相互协作，对应的英文名还有 Coroutine、Green Thread、Fiber、Microthread 等等。\n而超线程（Hyper-Threading）是硬件层面提供的技术，它可以将一个物理 CPU 模拟划分为多个逻辑 CPU，每个 CPU 都有自己的寄存器和执行单元，这样可以大幅提升 CPU 的利用率，也只有超强的 CPU 才会这么干，如果 CPU 的执行速度还跟不上程序指令的下发速度，自然也没必要再去划分更多逻辑单元了。\n关于 Python 协程和任务，推荐阅读这篇文档：https://docs.python.org/zh-cn/3/library/asyncio-task.html，关于 Python 的事件循环，推荐阅读这篇文档：https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html，官方文档写的还是很详细的。",
+          "link": "https://m.okjike.com/originalPosts/658636a41f0812cca5b577ca",
+          "publishedOn": "2023-12-23T01:23:48.000Z",
+          "wordCount": 553,
+          "title": "发布了: 在了解 Python 线程和协程的时候，又看到了微线程、纤程、绿色线程、超线程等概念，捋了一下。 之前提到 Python 的 threading 模块并不支持并发，这里的...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+        },
+        {
+          "id": "https://m.okjike.com/originalPosts/658613a11f0812cca5b31baf",
+          "author": null,
+          "description": "承认苦难是生命组成的重要部分，也就不会逃避苦难，反感苦难，或因苦难而变得消极、萎靡。\n桌上的菜，有苦瓜，有香瓜，筷子夹起来，不慌不忙地放到嘴里咀嚼，均各有滋味。生活亦是如此。",
+          "link": "https://m.okjike.com/originalPosts/658613a11f0812cca5b31baf",
+          "publishedOn": "2023-12-22T22:54:25.000Z",
+          "wordCount": 442,
+          "title": "发布了: 承认苦难是生命组成的重要部分，也就不会逃避苦难，反感苦难，或因苦难而变得消极、萎靡。 桌上的菜，有苦瓜，有香瓜，筷子夹起来，不慌不忙地放到嘴里...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/65853965492ec2e1bb17e809",
           "author": null,
           "description": "看到一篇文章《禁用 Python 的 GC 机制后，Instagram 性能提升 10%》，https://www.infoq.cn/article/disable-python-gc-mechanism-instagram-performance-increase/，惊奇 Python 在禁用 GC 的情况下竟然不会 OOM。\nInstagram 节点是以 1 master - N worker 的模式提供的服务，启动 master 进程后，会 fork N 个 worker 进程，worker 和 master 之间共享一部分内存。而问题就出在共享内存上，worker 进程在启动后不久会把共享内存 copy 一份，这显然是不符合预期的。\n最后定位到是 GC 触发了 CoW（Copy-on-Write），GC的引用计数操作会修改共享内存，导致 worker 不得不自己 copy 一份内存到自己的进程里。让人没想到的是，Instagram 的解决方案是直接就把 GC 给 disable 了😂\n为啥没有出现 OOM 呢？在Python中，内存管理主要依赖于两个机制：\n1）引用计数： 它是Python主要的内存管理机制。每个对象都有一个引用计数，当对象被引用时计数增加，当对象被解除引用时计数减少；当引用计数降为零时，对象被认为是不再被使用，Python就会回收这块内存\n2）垃圾回收： 除了引用计数外，Python还使用垃圾回收器来处理循环引用等情况，即引用计数无法解决的情况；垃圾回收器通过检测和处理不再被引用的循环引用，确保这些对象的内存能够被正确释放\n事实上 Instagram 的操作主要影响的是第二点，这当然也会带来潜在的风险，例如较大的内存块出现循环引用而没有被及时清理时，内存就会出现严重的泄露问题。不过，他们还有一个比较骚的操作，一旦 RSS（Resident Set Size）超过了某个阈值，直接重启 worker😂\n这个优化方案肯定是不推荐的，带来 10% 吞吐量提升的背后，也一定承担了更多的运维压力。",
@@ -118,7 +158,7 @@
           "description": "看到 Python 有 threading 模块，本以为它可以很好地支持高并发，但实际跑起来效果并不好，比单线程更慢。图二中 8 个并发比图一慢了 0.4s。\n研究之后才发现，原来 threading 底层实现并没有支持调用多个 CPU，它是一个假的并发模块😅\nPython 是采用基于栈的解释器来运行字节码的，通过全局解释器锁（global interpreter lock，GIL）的机制来确保抢占式的多线程环境相互之间不受干扰。简单来说，多个线程是通过排队抢锁的机制来轮流执行的，每个线程在抢到锁之后，都会进行一次 context 切换，这也是“并发”执行更慢的原因。\n那为什么大家经常用 Python 进行并发爬虫不觉得慢呢，那是因为在爬虫应用中，通常涉及到的任务主要是网络请求、文件读写等 I/O 操作，而不是 CPU 密集型的计算任务，反而可以在 I/O 等待的过程中发起了更多任务，充分压榨 CPU 的性能。\n要让 Python 真正利用起多核 CPU，可以使用 multiprocessing 模块，它会在每个进程内都启动一个 GIL，这样进程之间就不存在抢锁问题了，只不过对内存的开销要大很多😅",
           "link": "https://m.okjike.com/originalPosts/658513d960830f16ae280d03",
           "publishedOn": "2023-12-22T04:43:05.000Z",
-          "wordCount": 518,
+          "wordCount": 547,
           "title": "发布了: 看到 Python 有 threading 模块，本以为它可以很好地支持高并发，但实际跑起来效果并不好，比单线程更慢。图二中 8 个并发比图一慢了 0.4s。 研究之后才...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fot8tPenRGLZ5v9rube_3tYfLXbIv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -161,46 +201,6 @@
           "wordCount": 485,
           "title": "发布了: 局域网文件互传，推荐 ShareDrop， https://sharedrop.io，这款产品是基于 WebRTC 实现的 P2P 传输，局域网内文件互传的效率非常高。 使用方式很简单，...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FmsPyPGrW9wswEGT6FIiB61QqHYjv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/6582e28379cb2b9f35e70ff4",
-          "author": null,
-          "description": "强烈推荐这本在线免费的电子书，《动手学深度学习》，https://zh.d2l.ai，上线一年多时间，已经更新到了第二版，光看作者阵容就已经十分强大了，这本书也被上百所名校列为教材或参考书，当前也出版了实体书。\n本书的每个章节都是可以直接运行的 Jupyter 记事本，你可以在本地直接跑，也可以克隆到 Google Colab 在云端跑；讲解的时候，不仅结合文字、公式和图示来阐明深度学习里常用的模型和算法，还提供代码来演示如何从零开始实现它们，并使用真实数据来提供一个交互式的学习体验。\n第二版的内容是 2023 年更新的，手把手教你搭建 Bert/Transformer，各种语言框架都有，包括 Pytorch/Tensorflow/JAX 等，而且还支持中英文对照，英文域名是 https://d2l.ai，它对于初学者和有经验的深度学习从业者都是一份宝贵的资源。",
-          "link": "https://m.okjike.com/originalPosts/6582e28379cb2b9f35e70ff4",
-          "publishedOn": "2023-12-20T12:48:03.000Z",
-          "wordCount": 500,
-          "title": "发布了: 强烈推荐这本在线免费的电子书，《动手学深度学习》，https://zh.d2l.ai，上线一年多时间，已经更新到了第二版，光看作者阵容就已经十分强大了，这本书...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FqieJGE9ZxmmGASrnFniyW_03hOXv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/65826b74f0da80ccb59f4812",
-          "author": null,
-          "description": "我经常跟自己说，在网络上，尽量不要去尝试说服跟自己观点不一样的人，因为我跟对方的立场、认知以及经历都各不相同，所以我很少回复，更不太会去争论，你保持你的观点就好了，如果我觉得你说的有道理，我也会去改进我自己。",
-          "link": "https://m.okjike.com/originalPosts/65826b74f0da80ccb59f4812",
-          "publishedOn": "2023-12-20T04:20:04.000Z",
-          "wordCount": 446,
-          "title": "发布了: 我经常跟自己说，在网络上，尽量不要去尝试说服跟自己观点不一样的人，因为我跟对方的立场、认知以及经历都各不相同，所以我很少回复，更不太会去争论，...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/6582279e8a7c5ba8ae34a704",
-          "author": null,
-          "description": "手机其实不是一个好的阅读工具，因为它太容易让人专注，而大部分的阅读是不需要那么保持专注的，快速扫一眼即可，在 PC 上以更大的屏幕、更快的滚动速度，可以更好地支撑这一点。\n但是手机是一个很好的思考和记录工具，随时随地，懒得打字还可以语音记录，比如这条。",
-          "link": "https://m.okjike.com/originalPosts/6582279e8a7c5ba8ae34a704",
-          "publishedOn": "2023-12-19T23:30:38.000Z",
-          "wordCount": 528,
-          "title": "发布了: 手机其实不是一个好的阅读工具，因为它太容易让人专注，而大部分的阅读是不需要那么保持专注的，快速扫一眼即可，在 PC 上以更大的屏幕、更快的滚动速度...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/6581c3b4979083134a6b89a3",
-          "author": null,
-          "description": "有的时候忍住不说话真的十分痛苦，我解决这个问题的办法：把字都打出来，自己对着读一遍，然后删掉。",
-          "link": "https://m.okjike.com/originalPosts/6581c3b4979083134a6b89a3",
-          "publishedOn": "2023-12-19T16:24:20.000Z",
-          "wordCount": 513,
-          "title": "发布了: 有的时候忍住不说话真的十分痛苦，我解决这个问题的办法：把字都打出来，自己对着读一遍，然后删掉。",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         }
       ]
     },
