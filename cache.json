@@ -34,7 +34,7 @@
           "description": "本文通过真实的demo演示案例给大家展示如何使用JS获取本地音乐文件的封面图、文件名及时长等信息。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/",
           "publishedOn": "2023-11-28T16:21:17.000Z",
-          "wordCount": 1018,
+          "wordCount": 1022,
           "title": "本地MP3封面图、时长等信息的JS读取",
           "imageUrl": null
         }
@@ -118,7 +118,7 @@
           "description": "看到 Python 有 threading 模块，本以为它可以很好地支持高并发，但实际跑起来效果并不好，比单线程更慢。图二中 8 个并发比图一慢了 0.4s。\n研究之后才发现，原来 threading 底层实现并没有支持调用多个 CPU，它是一个假的并发模块😅\nPython 是采用基于栈的解释器来运行字节码的，通过全局解释器锁（global interpreter lock，GIL）的机制来确保抢占式的多线程环境相互之间不受干扰。简单来说，多个线程是通过排队抢锁的机制来轮流执行的，每个线程在抢到锁之后，都会进行一次 context 切换，这也是“并发”执行更慢的原因。\n那为什么大家经常用 Python 进行并发爬虫不觉得慢呢，那是因为在爬虫应用中，通常涉及到的任务主要是网络请求、文件读写等 I/O 操作，而不是 CPU 密集型的计算任务，反而可以在 I/O 等待的过程中发起了更多任务，充分压榨 CPU 的性能。\n要让 Python 真正利用起多核 CPU，可以使用 multiprocessing 模块，它会在每个进程内都启动一个 GIL，这样进程之间就不存在抢锁问题了，只不过对内存的开销要大很多😅",
           "link": "https://m.okjike.com/originalPosts/658513d960830f16ae280d03",
           "publishedOn": "2023-12-22T04:43:05.000Z",
-          "wordCount": 547,
+          "wordCount": 518,
           "title": "发布了: 看到 Python 有 threading 模块，本以为它可以很好地支持高并发，但实际跑起来效果并不好，比单线程更慢。图二中 8 个并发比图一慢了 0.4s。 研究之后才...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fot8tPenRGLZ5v9rube_3tYfLXbIv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -1160,7 +1160,7 @@
           "description": "Typora+PicGo 搭建免费图床 #掘金文章# https://juejin.cn/post/7314829865633710131",
           "link": "https://juejin.cn/pin/7314605176832393243",
           "publishedOn": "2023-12-21T05:16:10.000Z",
-          "wordCount": 506,
+          "wordCount": 510,
           "title": "Typora+PicGo 搭建免费图床 #掘金文章# https://juejin.cn/post/7314829865633710131",
           "imageUrl": null
         },
