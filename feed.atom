@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-12-27T09:53:22.328Z</id>
+    <id>urn:2023-12-27T12:56:05.714Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-12-27T09:53:22.328Z</updated>
+    <updated>2023-12-27T12:56:05.714Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[重庆市铜梁区发布大雾黄色预警]]></title>
+        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20231227/t20231227_526536964.html</id>
+        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20231227/t20231227_526536964.html"/>
+        <updated>2023-12-27T12:41:00.000Z</updated>
+        <summary type="html"><![CDATA[重庆市铜梁区气象台2023年12月27日20时30分发布“大雾黄色预警信号”，预计12月28日05时至11时，蒲吕街道、巴川街道、东城街道、旧县街道、南城街道、高楼镇、安居镇、少云镇、白羊镇、平滩镇、西河镇、围龙镇、华兴镇等大部镇街可能出现能见度小于500米的雾。请以上各地注意防范大雾天气可能造成的影响。防御指南：1.车辆驾驶及户外活动注意安全。2.机场、高速公路、水上交通等单位加强交通管理。3.相关部门和乡镇街道按照职责，做好大雾防范应对工作。]]></summary>
+        <author>
+            <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[重庆市万州区发布大雾黄色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/huangsyj/20231227/t20231227_526536439.html</id>
@@ -256,6 +266,80 @@ function App() {
         <summary type="html"><![CDATA[忠县气象台2023年12月26日14时20分继续发布“大雾黄色预警信号”，预计12月26日23时至27日10时，涂井乡、石宝镇、汝溪镇、金声乡、野鹤镇、磨子土家族乡、乌杨街道、石子乡、白公街道、复兴镇、东溪镇、忠州街道、黄金镇、永丰镇、花桥镇、三汇镇、马灌镇、官坝镇、金鸡镇、石黄镇、兴峰乡、新生街道、白石镇、任家镇、双桂镇、拔山镇、洋渡镇、善广乡、新立镇可能出现能见度小于500米的雾，或者已经出现能见度小于500米、大于等于200米的雾并将持续。]]></summary>
         <author>
             <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[因为一道try...catch的题，我的面试挂掉了]]></title>
+        <id>https://juejin.cn/post/7316539952475619362</id>
+        <link href="https://juejin.cn/post/7316539952475619362"/>
+        <updated>2023-12-26T03:07:11.000Z</updated>
+        <summary type="html"><![CDATA[说到try...catch都觉得非常熟悉了，不就是用来捕捉代码块中的错误嘛，平时也用得比较多的。然而因为了解不够多，我的面试却栽在了一个简单的知识点上：try...catch只能捕捉到同步执行代码块中的错误。
+题目是：以下代码有错吗？如果有错，应该如何改正？
+try {
+  setTimeout(() => {
+    throw new Error('err')
+  }, 200);
+} catch (err) {
+  console.log(err);
+}
+
+try {
+  Promise.resolve().then(() => {
+    throw new Error('err')
+  })
+} catch (err) {
+  console.log(err);
+}
+
+反正就是不知道咋回事，我之前的知识储备中就是没有这个知识点：try...catch不能异步捕获代码错误，因为它本身就是一个同步代码块。所以看到这道题我就懵了，平时代码不就是这样写的吗，用try...catch来捕获错误，所以当时就直接回了我不知道，感觉没有啥错误。。。，面试官无奈的看了我一眼，下来可以了解一下，然后就没有然后了。
+下来我就赶紧查了资料，才知道try...catch不能异步捕获代码错误。在JavaScript中，setTimeout是一个异步函数，它的回调函数会在指定的延时后被放入事件队列，等待当前执行栈清空后才执行。因此，当setTimeout的回调函数执行并抛出错误时，try...catch已经执行完毕，无法捕捉到异步回调中的错误。
+正确的做法是在异步操作中直接处理错误，例如使用回调函数、Promises或者async/await结合try...catch
+new Promise((resolve, reject) => {
+  setTimeout(() => {
+    try {
+      throw new Error('err');
+    } catch (err) {
+      reject(err);
+    }
+  }, 200);
+})
+  .then(() => {
+    // 正常执行时的处理逻辑
+  })
+  .catch((err) => {
+    console.log(err); // 这里会捕捉到错误
+  });
+
+
+至于第二个例子，尝试使用try...catch来捕捉一个在Promise链中抛出的错误。这种方式同样是无效的，因为try...catch不能捕捉到在Promise链中的异步错误。
+Promise对象用于表示一个异步操作的最终完成（或失败），及其结果值。一个Promise的状态可能是以下几种：
+Pending（等待态） ：初始状态，既不是成功，也不是失败状态。
+Fulfilled（成功态） ：意味着操作成功完成。
+Rejected（失败态） ：意味着操作失败。
+在Promise中抛出一个错误（例如通过throw语句）会导致Promise被拒绝（或失败）。要正确处理这个错误，需要在Promise链中使用.catch方法或者在一个async函数中使用try...catch。
+// 方法一
+Promise.resolve()
+  .then(() => {
+    throw new Error('err');
+  })
+  .catch((err) => {
+    console.log(err); // 这里会捕捉到错误
+  });
+
+// 方法二
+async function handleError() {
+  try {
+    await Promise.resolve().then(() => {
+      throw new Error('err');
+    });
+  } catch (err) {
+    console.log(err); // 这里会捕捉到错误
+  }
+}
+
+handleError();]]></summary>
+        <author>
+            <name>自驱</name>
         </author>
     </entry>
     <entry>
@@ -801,43 +885,6 @@ uploadFiles(@UploadedFiles() files: Array<Express.Multer.File>, @Bod…]]></summ
 在各个方向上平等地探索。 这是一种非常…]]></summary>
         <author>
             <name>pubuzhixing</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[react项目中配置代理]]></title>
-        <id>https://juejin.cn/post/7315304715809472512</id>
-        <link href="https://juejin.cn/post/7315304715809472512"/>
-        <updated>2023-12-23T07:51:39.000Z</updated>
-        <summary type="html"><![CDATA[theme: channing-cyan
-最近在react开发的过程中遇到跨域问题，之前都是交由后端进行处理，但是本次项目调试由于特殊情况，最终交由前端进行处理，很久没有处理过跨域问题了，因此本次配置对于个人来说有些曲折，特意在此进行记录。
-环境
-使用 create-react-app 创建的react项目； react V18.2.0
-http-proxy-middleware V2.0.6
-操作流程
-本次实现前端代理我们使用的是http-proxy-middleware V2.0.6，来实现react工程中代理操作。
-1、安装代理插件
-    npm install http-proxy-middleware --save
-
-2、配置代理并调试
-（1）新增 setupProxy.js 文件
-注意：该文件必须在 项目的 src 目录下如下图：
-
-（2）进行代理配置
-const { createProxyMiddleware } = require('http-proxy-middleware');
-
-module.exports = function (app) {
-  app.use(
-    createProxyMiddleware(
-      '/api',
-      {
-        // 遇见‘/api’这个前缀的请求，就会触发这个代理
-        target: 'http://192.168.3.11:5000', // 请求转发的目标（target）地址
-        changeOrigin: true, // 默认值为false，控制服务器收到的请求头中Host字段的值
-        /*
-          changeOrigin设置为true时，服务器收到的请求头中的host为：localhost:5000
-          c…]]></summary>
-        <author>
-            <name>fly_dream</name>
         </author>
     </entry>
     <entry>
