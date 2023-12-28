@@ -974,6 +974,52 @@ Reac…</span>
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7317132381012770826"
+                        open
+                      >
+                        <summary class="article-expander__title">为什么我总学不好TS？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7317132381012770826">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>大家好，我卡颂。
+有没有同学 学TS的步骤和我一样：
+先看TS文档（或各种入门教材），学学各种类型的定义
+为现有项目中的JS代码增加类型
+随着增加的类型越来越多，类型报错越来越多，不得已改为any类型，或者增加// @ts-ignore注释
+最后，使用TS的成本（改各种类型报错耽误的时间）超过了收益（TS带来的类型安全），TypeScript也学成了AnyScript。
+上述历程我反复经历了两次。痛定思痛，决定系统学一遍TS。
+经过这次系统学习，我终于明白我为什么总学不好TS。希望这篇文章对和我有同样经历的同学有帮助。
+打包领取卡颂原创React教程、加入人类高质量前端群
+学不好的原因
+想必你听过一句话 —— TS是JS的超集。这句话本身是没错的，TS在JS的基础上扩展了类型系统与语法。
+
+但如果我们以这句话为基础开始学习TS，很容易形成一个惯性：以JS为起点，逐步学习TS知识。
+也就是下图中从红圈（JS）逐渐向外学习（蓝圈），目标是最终覆盖绿圈（TS）。
+
+从这个思路出发的学习步骤就是我们开篇提到的学习步骤。
+按这个步骤学习的问题出在哪呢？当我们只把TS看作JS超集时，会忽略TS本身就是一门语言这一事实。作为一门语言，TS有自己的语法规范，与JS相比：
+TS作为语言，操作的单位是类型，语法规范定义的是类型之间的操作逻辑，工作在编译时
+JS作为语言，操作的单位是变量，语法规范定义的是变量之间的操作逻辑，工作在运行时
+如果我们只从JS出发，是可以理解TS与JS兼容的部分（类型部分）。但不兼容的部分（TS作为语言本身的语法规则）会成为我们进阶路上的绊脚石。
+
+一个例子
+举个例子，下面三个都是TS中合法的类型：
+object：对应引用类型
+{}：空对象字面量对应的类型
+Object：Object构造函数对应的类型
+请问下面三个类型别名的结果是什么？
+extends关键字在条件类型…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -1351,114 +1397,6 @@ function App() {
     
       {ne…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;15
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7316795553798815783"
-                        open
-                      >
-                        <summary class="article-expander__title">h5端调用手机摄像头实现扫一扫功能</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7316795553798815783">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>highlight: a11y-dark
-一、前言
-最近有遇到一个需求，在h5浏览器中实现扫码功能，其本质便是打开手机摄像头定时拍照，特此做一个记录。主要技术栈采用的是vue2，使用的开发工具是hbuilderX。
-经过测试发现部分浏览器并不支持打开摄像头，测试了果子，华子和米，发现夸克浏览器无法打开摄像头实现功能。
-h5调用摄像头实现扫一扫只能在https环境下，亦或者是本地调试环境！！
-
-二、技术方案
-经过一番了解之后，找到了两个方案
-1.使用html5-qrcode(对二维码的精度要求较高，胜在使用比较方便，公司用的是vue2，因此最终采用此方案)
-2.使用vue-qrcode-reader(对vue版本和node有一定要求，推荐vue3使用，这里就不展开说了)
-三、使用方式
-
-当点击中间的扫码时，设置isScanning属性为true,即可打开扫码功能，代码复制粘贴即可放心‘食用’。
-使用之前做的准备
-通过npm install html5-qrcode 下载包
-引入  import { Html5Qrcode } from &#x27;html5-qrcode&#x27;;
-html结构
-
-
-
-
-所用数据
-data(){
-    return{
-        html5Qrcode: null,
-        isScaning: false,
-    }
-}
-
-
-methods方法
-openQrcode() {
-    this.isScaning &#x3D; true;
-    Html5Qrcode.getCameras().then((devices) &#x3D;&gt; {
-    if (devices &amp;&amp; devices.length) {
-    this.html5Qrcode &#x3D; new Html5Qrcode(&#x27;reader&#x27;);
-    this.html5Qrcode.start(
-        {
-        facingMode: &#x27;environment&#x27;
-        },
-        {
-        focusMode: &#x27;continuous&#x27;, //设置连续聚焦模式
-        fps: 5,       //设置扫码识别速度
-        qrbox: 280   //设置二维码扫描框大小
-        },
-        (decodeText, decodeResult) &#x3D;&gt; {
-         if (decodeText) {//这里decodeText就是通过扫描二维码得到的内容
-            this.action(decodeText)  //对二维码逻辑处理
-            this.stopScan(); //关闭扫码功能
-        }
-    },
-        (err) &#x3D;&gt; {
-            // console.log(err);  //错误信息
-         }
-     );
-    }
-    });
-},
-
-stopScan() {
-console.log(&#x27;停止扫码&#x27;)
-this.isScaning &#x3D; false;
-if(this.html5Qrcode){
-    this.html5Qrcode.stop();
-}
-}
-
-css样式
-.reader-box {
-position: fixed;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-background-color: rgba(0, 0, 0, 0.5);
-}
-
-.reader {
-width:100%;
-// width: 540rpx;
-// height: 540rpx;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-}
-
-四、最终效果
-
-如有问题，欢迎指正，若此文对您有帮助，不要忘记收藏+关注！</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -5155,8 +5093,8 @@ Cybertruck 是世界第一辆没有 12V 供电，只有 48V 供电的汽车。�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7350418314">
-        <time id="build-timestamp" datetime="2023-12-28T18:53:16.075Z">2023-12-28T18:53:16.075Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7351499765">
+        <time id="build-timestamp" datetime="2023-12-28T21:53:01.569Z">2023-12-28T21:53:01.569Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
