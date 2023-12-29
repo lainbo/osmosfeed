@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-12-29T01:13:40.115Z</id>
+    <id>urn:2023-12-29T03:53:13.340Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-12-29T01:13:40.115Z</updated>
+    <updated>2023-12-29T03:53:13.340Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[重庆市长寿区发布大雾黄色预警]]></title>
+        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20231229/t20231229_526539235.html</id>
+        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20231229/t20231229_526539235.html"/>
+        <updated>2023-12-29T02:05:00.000Z</updated>
+        <summary type="html"><![CDATA[长寿区气象台2023年12月29日9时40分发布“大雾黄色预警信号”，预计12月29日10时至30日12时，万顺镇、洪湖镇、葛兰镇、石堰镇、云台镇、海棠镇、龙河镇、云集镇、长寿湖镇、邻封镇、双龙镇、新市街道、渡舟街道、八颗街道、晏家街道、菩提街道、凤城街道、但渡镇、江南街道可能出现能见度小于500米的雾，或者已经出现能见度小于500米、大于等于200米的雾并将持续。]]></summary>
+        <author>
+            <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[重庆市垫江县发布大雾黄色预警]]></title>
+        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20231229/t20231229_526539170.html</id>
+        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20231229/t20231229_526539170.html"/>
+        <updated>2023-12-29T01:44:00.000Z</updated>
+        <summary type="html"><![CDATA[垫江县气象台2023年12月29日9时30分发布“大雾黄色预警信号”。预计12月29日9时至18时，我县所有乡镇（街道）将出现能见度小于500米的雾，局部地区能见度小于200米。请各地注意防范大雾天气可能造成的影响。]]></summary>
+        <author>
+            <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[重庆市云阳县发布大雾黄色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/huangsyj/20231229/t20231229_526538970.html</id>
@@ -711,6 +731,105 @@ function App() {
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[h5端调用手机摄像头实现扫一扫功能]]></title>
+        <id>https://juejin.cn/post/7316795553798815783</id>
+        <link href="https://juejin.cn/post/7316795553798815783"/>
+        <updated>2023-12-26T09:11:42.000Z</updated>
+        <summary type="html"><![CDATA[highlight: a11y-dark
+一、前言
+最近有遇到一个需求，在h5浏览器中实现扫码功能，其本质便是打开手机摄像头定时拍照，特此做一个记录。主要技术栈采用的是vue2，使用的开发工具是hbuilderX。
+经过测试发现部分浏览器并不支持打开摄像头，测试了果子，华子和米，发现夸克浏览器无法打开摄像头实现功能。
+h5调用摄像头实现扫一扫只能在https环境下，亦或者是本地调试环境！！
+
+二、技术方案
+经过一番了解之后，找到了两个方案
+1.使用html5-qrcode(对二维码的精度要求较高，胜在使用比较方便，公司用的是vue2，因此最终采用此方案)
+2.使用vue-qrcode-reader(对vue版本和node有一定要求，推荐vue3使用，这里就不展开说了)
+三、使用方式
+
+当点击中间的扫码时，设置isScanning属性为true,即可打开扫码功能，代码复制粘贴即可放心‘食用’。
+使用之前做的准备
+通过npm install html5-qrcode 下载包
+引入  import { Html5Qrcode } from 'html5-qrcode';
+html结构
+<view class="reader-box" v-if="isScaning">
+<view class="reader" id="reader"></view>
+</view>
+
+所用数据
+data(){
+    return{
+        html5Qrcode: null,
+        isScaning: false,
+    }
+}
+
+
+methods方法
+openQrcode() {
+    this.isScaning = true;
+    Html5Qrcode.getCameras().then((devices) => {
+    if (devices && devices.length) {
+    this.html5Qrcode = new Html5Qrcode('reader');
+    this.html5Qrcode.start(
+        {
+        facingMode: 'environment'
+        },
+        {
+        focusMode: 'continuous', //设置连续聚焦模式
+        fps: 5,       //设置扫码识别速度
+        qrbox: 280   //设置二维码扫描框大小
+        },
+        (decodeText, decodeResult) => {
+         if (decodeText) {//这里decodeText就是通过扫描二维码得到的内容
+            this.action(decodeText)  //对二维码逻辑处理
+            this.stopScan(); //关闭扫码功能
+        }
+    },
+        (err) => {
+            // console.log(err);  //错误信息
+         }
+     );
+    }
+    });
+},
+
+stopScan() {
+console.log('停止扫码')
+this.isScaning = false;
+if(this.html5Qrcode){
+    this.html5Qrcode.stop();
+}
+}
+
+css样式
+.reader-box {
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+.reader {
+width:100%;
+// width: 540rpx;
+// height: 540rpx;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+四、最终效果
+
+如有问题，欢迎指正，若此文对您有帮助，不要忘记收藏+关注！]]></summary>
+        <author>
+            <name>极客转</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[发布了: 为什么会有各种守恒定律？]]></title>
         <id>https://m.okjike.com/originalPosts/658a983bde5f28734859cb46</id>
         <link href="https://m.okjike.com/originalPosts/658a983bde5f28734859cb46"/>
@@ -1127,42 +1246,6 @@ const angle = (Math.PI * 2) * (i / numberOfIcons);
 const x = centerX + a * Math.cos(ang…]]></summary>
         <author>
             <name>程序员Sunday</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[百度考题：反复横跳的个性签名]]></title>
-        <id>https://juejin.cn/post/7315730050576367616</id>
-        <link href="https://juejin.cn/post/7315730050576367616"/>
-        <updated>2023-12-24T10:03:19.000Z</updated>
-        <summary type="html"><![CDATA[theme: nico
-浅聊一下
-在各种社交网站上，都会有个性签名一栏，当没有写入时，默认为 “这个人很懒，什么也没有留下”
-
-动手
-我们要有JS组件思维，个性签名是很多地方都可以用到的，我们把它做成组件，用到的时候直接搬过去就好了。所以我们将使用原生JS将组件封装起来(大家也可以使用VUE)
-EditInPlace 类
-我们要使用这个JS组件，首先得将其方法和参数封装在一个类里，再通过类的实例化对象来展示。
-function EditInPlace(id,parent,value){
-    this.id = id;
-    this.parent = parent;
-    this.value =value || "这个家伙很懒，什么都没有留下"; 
-    this.createElements()//动态装配html结点
-    this.attachEvents();
-}
-
-将传入的id、parent和value参数赋值给新创建的对象的对应属性。
-如果没有提供value参数，则将默认字符串"这个家伙很懒，什么都没有留下"赋值给新对象的value属性。
-调用createElements方法来动态装配HTML节点。
-调用attachEvents方法来附加事件。
-EditInPlace.prototype
-在 EditInPlace 类中，我们调用了createElements() attachEvents()两个方法，所以我们得在原型上定义这两个方法
-createElements
-    createElements:function(){
-        this.containerElement = document.createElement('div');
-        this.containerElement.id= this.id;
-       …]]></summary>
-        <author>
-            <name>滚去睡觉</name>
         </author>
     </entry>
     <entry>
