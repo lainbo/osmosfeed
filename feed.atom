@@ -1,10 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2023-12-30T15:53:18.901Z</id>
+    <id>urn:2023-12-30T18:53:09.970Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2023-12-30T15:53:18.901Z</updated>
+    <updated>2023-12-30T18:53:09.970Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[Saints Row]]></title>
+        <id>https://store.epicgames.com/zh-CN/p/saints-row</id>
+        <link href="https://store.epicgames.com/zh-CN/p/saints-row"/>
+        <updated>2023-12-30T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[曾梦想有天能打造出自己真正想成为的老大吗？《Saints Row》的老大工厂就是能实现这个梦想的地方，你将能打造出史上最具个人特色的老大。你心目中的完美老大。使用《Saints Row》系列有史以来功能最强大的自定义工具，释放你内心的“圣徒魂”。
+
+Free Now to 2023-12-31T16:00:00.000Z]]></summary>
+        <author>
+            <name>Epic Dev Test Account</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[重庆市綦江区发布大雾黄色预警]]></title>
+        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20231231/t20231231_526542019.html</id>
+        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20231231/t20231231_526542019.html"/>
+        <updated>2023-12-30T15:57:00.000Z</updated>
+        <summary type="html"><![CDATA[綦江区气象台2023年12月30日23时50分发布“大雾黄色预警信号”，预计31日2时至14时，我区全部镇街可能出现能见度小于500米的雾，局部地区能见度小于200米。请注意防范大雾天气可能造成的影响。]]></summary>
+        <author>
+            <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[重庆市云阳县发布大雾黄色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/huangsyj/20231230/t20231230_526542004.html</id>
@@ -749,6 +771,44 @@ Context: PR#9674
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[JS实用小方法-将时间转换为 `刚刚`、`几秒前`、`几分钟前`、`几小时前`、`几天前`、几月前或按照传入格式显示]]></title>
+        <id>https://juejin.cn/post/7317704519160266779</id>
+        <link href="https://juejin.cn/post/7317704519160266779"/>
+        <updated>2023-12-29T03:44:22.000Z</updated>
+        <summary type="html"><![CDATA[theme: smartblue
+highlight: a11y-dark
+一、代码注释详解
+参数相关
+date为传入时间 例："2023/5/10 11:32:01" 2023-02-01 09:32:01
+type为返回类型 例：YYYY-MM-DD YYYY年MM月DD日 X月前   参数字母统一为大写
+默认规则，大于一天(24小时)展示'X天前；如果大于等于30天，展示"X个月前"
+zeroFillFlag参数为是否数字补零，默认补零
+传入时间为必写参数，type和zeroFillFlag参数可选填
+时间处理公式依据
+10秒：  10 * 1000
+1分钟：   60 * 1000
+1小时： 60 * 60 * 1000
+24小时（一天）：60 * 60 * 24 * 1000
+const formatPast = (date, type = "X个月前", zeroFillFlag = true) => {
+  // 定义countTime变量，用于存储计算后的数据
+  let countTime;
+  // 获取当前时间戳
+  let time = new Date().getTime();
+  // 转换传入参数为时间戳
+  let afferentTime = new Date(date).getTime();
+  // 当前时间戳 - 传入时间戳
+  time = Number.parseInt(`${time - afferentTime}`);
+  if (time < 10000) {
+    // 10秒内
+    return "刚刚";
+  } else if (time < 60000 && time >= 10000) {
+    // 超过10秒少于1分钟内
+    countTime = Math.floor(time / 1000);…]]></summary>
+        <author>
+            <name>加油乐</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[发布了: 新年立新志, 总是这么让人期待。 ━━━━━━━━━━━━━━ 2024 年立愿： 每月和老婆去一个新城市游玩。]]></title>
         <id>https://m.okjike.com/originalPosts/658e3e7b9185c305d15473ed</id>
         <link href="https://m.okjike.com/originalPosts/658e3e7b9185c305d15473ed"/>
@@ -1414,47 +1474,6 @@ ChatGPT 已经完成了人类知识的浓缩，在知识的记忆上，人类比
         <summary type="html"><![CDATA[组里一起出去吃饭，突然讨论起了工龄，有 95 的、98 的、99 的，才知道最小的是 01 的😅，80 后俨然已经是大叔了。]]></summary>
         <author>
             <name>Barret李靖的即刻动态</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[grid布局--超炫酷的电子商务布局]]></title>
-        <id>https://juejin.cn/post/7316723621292916774</id>
-        <link href="https://juejin.cn/post/7316723621292916774"/>
-        <updated>2023-12-26T13:01:54.000Z</updated>
-        <summary type="html"><![CDATA[theme: cyanosis
-前言
-最近在学习grid布局，发现了一个很有意思的布局（来自Code Pen上一位神奇的网友所做），如下图：
-
-是一个电子商务的网页，页面上陈列着琳琅满目的鞋子，这些鞋子呈阶梯式摆放，给人一种3d空间的视觉。
-那么它是怎么实现的呢？发动你的小脑袋，好好想一下。
-好了，如果你还没想到，那么就跟着我，一起来解密下这个网页是如何实现的吧~
-一起来解密吧~
-这个阶梯式网格我们可以使用网格布局实现。
-具体步骤
-第一步、先把DOM结构建立下
-<div class="container">
-  <div class="adidas">
-    <div class="desc">
-      <h2>I-5923 RUNNER PRIDE</h2>
-      <p>£99.95</p>
-    </div>
-    <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/881020/adidas01.png' alt='' />
-  </div>
-  <div class="tiger">
-    <div class="desc">
-      <h2>TIGER ALLY</h2>
-      <p>£95.00</p>
-    </div>
-    <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/881020/tiger05.png' alt='' />
-  </div>
-  <div class="adidas">
-    <div class="desc">
-      <h2>NMD_R1</h2>
-      <p>£109.95</p>
-    </div>
-    <img src='https://s3-us-west…]]></summary>
-        <author>
-            <name>叁两</name>
         </author>
     </entry>
     <entry>
