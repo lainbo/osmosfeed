@@ -74,7 +74,7 @@
           "description": "其实使用Web Audio API就能从视频中提取音频文件了，本文有演示页面，有实现代码，有详细讲解，值得一看。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/12/js-fetch-video-audio-mp3-mp4-wav/",
           "publishedOn": "2023-12-24T13:47:59.000Z",
-          "wordCount": 1496,
+          "wordCount": 1497,
           "title": "使用JS提取视频中的音频资源",
           "imageUrl": null
         }
@@ -138,7 +138,7 @@
           "description": "看了无数道理，依然过不好这一生。\n还是得把别人的道理内化成自己的道理，只有经历才让人成长。",
           "link": "https://m.okjike.com/originalPosts/65910252164d89e601b3705f",
           "publishedOn": "2023-12-31T05:55:30.000Z",
-          "wordCount": 443,
+          "wordCount": 455,
           "title": "发布了: 看了无数道理，依然过不好这一生。 还是得把别人的道理内化成自己的道理，只有经历才让人成长。",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -148,7 +148,7 @@
           "description": "Chrome 在 2024.01.04 也就是下周四，会开启 1% 的全球灰度，限制（默认禁止）Chrome 浏览器访问第三方 cookies，https://blog.google/products/chrome/privacy-sandbox-tracking-protection/，其目的是通过限制网站对第三方 cookie 的访问来限制跨站点跟踪，同时也可以防范大量 CSRF 攻击问题，影响的网站会比较多（如图一）。\n会存在哪些影响呢？主要包括两类场景：\n1）A 站点下如果 iframe 内嵌了 B 站点，当 iframe 中的 B 站点发起请求时，它当前域下的 cookie 会禁止被携带。举个栗子，如果要求 B 站点必须是登录态，那么即便 B 站点刚在独立 Tab 页登录过，它在 iframe 下仍然会是未登录态，因为这种情况不允许它获取 B 站点下的 cookies 了。很多公司的内部系统都是各种 iframe 相互穿插，需要引起注意\n2）A 站点通过 ajax 请求 B 站点的接口，此时 B 站点下的 cookies 在请求时会禁止被携带。也就是说，广告类、推荐类业务等都会直接受到影响，请求是可以发出去的，但是丢失了当前用户身份信息，无法进行身份识别和内容推荐\n其实这个 Privacy-Sandbox 隐私保护 Chrome 在 19 年就开始推了，当初是第一阶段，增加了一个叫做 SameSite 的 cookie 配置，设置为 None 即可；当前的策略则更强，不管你是否有设置 SameSite=None，默认禁止访问第三方 cookies。\n当然，它也提供了几个规避策略，允许网站自主修复这个问题：\n1）在 cookies 中增加 partitioned 属性（如图二），例如 key=value; SameSite=None; Secure; Partitioned; 注意这里多了一个 Partitioned，它的作用是允许在 A 站点下新写一份 cookies，这份 cookies 跟独立打开 A 站点写下的 cookies 是两个储存空间，互不干扰，详情可以看这里：https://developers.google.com/privacy-sandbox/3pcd/chips?hl=zh-cn\n2）Chrome 提供了一个 Related Website Sets 的白名单机制（如图三），允许你通过提交配置的方式给浏览器增加白名单，配置的作用是明确 A 站点与 B 站点存在关联关系，详情可以看这里：https://github.com/GoogleChrome/related-website-sets/blob/main/RWS-Submission_Guidelines.md\n3）通过 Storage Access API 向用户获得授权（如图四），跟网页要打开摄像头要求授权一样，只不过有效期只有 30 天。详情可以看这里：https://developers.google.com/privacy-sandbox/3pcd/storage-access-api?hl=zh-cn\nChrome 计划在 2024 年底完成全量发布，下周只开启 1% 的灰度，现在修改还来得及，哈哈😄",
           "link": "https://m.okjike.com/originalPosts/658e915a164d89e601890799",
           "publishedOn": "2023-12-29T09:28:58.000Z",
-          "wordCount": 658,
+          "wordCount": 657,
           "title": "发布了: Chrome 在 2024.01.04 也就是下周四，会开启 1% 的全球灰度，限制（默认禁止）Chrome 浏览器访问第三方 cookies，https://blog.google/products/chrome/...",
           "imageUrl": "https://cdnv2.ruguoapp.com/FuX0usNIhgr9toYtILvwP4L0yAVsv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -285,7 +285,7 @@
           "description": "新年立新志, 总是这么让人期待。\n━━━━━━━━━━━━━━\n2024 年立愿： 每月和老婆去一个新城市游玩。",
           "link": "https://m.okjike.com/originalPosts/658e3e7b9185c305d15473ed",
           "publishedOn": "2023-12-29T03:35:23.000Z",
-          "wordCount": 435,
+          "wordCount": 433,
           "title": "发布了: 新年立新志, 总是这么让人期待。 ━━━━━━━━━━━━━━ 2024 年立愿： 每月和老婆去一个新城市游玩。",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -553,6 +553,36 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231231/t20231231_526542979.html",
+          "author": "国家预警信息发布中心",
+          "description": "丰都县气象台2023年12月31日21时30分发布“大雾黄色预警信号”，预计1月1日0时至12时，社坛镇、虎威镇、树人镇、保合镇、十直镇、龙孔镇、高家镇、兴义镇、名山街道、三合街道、双路镇、湛普镇、包鸾镇、南天湖镇、三建乡、龙河镇、江池镇、栗子乡、都督乡、兴龙镇、仁沙镇、三元镇、许明寺镇、董家镇、双龙镇、青龙乡、暨龙镇、武平镇、太平坝乡、仙女湖镇部分地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231231/t20231231_526542979.html",
+          "publishedOn": "2023-12-31T13:33:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市丰都县发布大雾黄色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20231231/t20231231_526542972.html",
+          "author": "国家预警信息发布中心",
+          "description": "巴南区气象台2023年12月31日20时40分发布“大雾橙色预警信号”，预计2023年12月31日23时至2024年1月1日14时，我区姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇可能出现能见度小于200米的雾，或者已经出现能见度小于200米、大于等于50米的雾并将持续。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20231231/t20231231_526542972.html",
+          "publishedOn": "2023-12-31T12:58:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市巴南区发布大雾橙色预警",
+          "imageUrl": null
+        },
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231231/t20231231_526542965.html",
+          "author": "国家预警信息发布中心",
+          "description": "涪陵区气象台2023年12月31日19时50分发布“大雾黄色预警信号”，预计12月31日20时至2024年1月1日12时，马鞍街道、李渡街道、江北街道、龙桥街道、白涛街道、敦仁街道、崇义街道、江东街道、清溪镇、义和街道、石沱镇、蔺市街道、荔枝街道、南沱镇、珍溪镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。防御指南：有关部门和单位按照职责做好防雾准备工作；机场、高速公路、轮渡码头等单位加强交通管理，保障安全；驾驶人员注意雾的变化，小心驾驶；户外活动注意安全。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20231231/t20231231_526542965.html",
+          "publishedOn": "2023-12-31T12:06:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市涪陵区发布大雾黄色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20231231/t20231231_526542954.html",
           "author": "国家预警信息发布中心",
@@ -1698,6 +1728,16 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
+          "id": "https://juejin.cn/post/7317827078116081691",
+          "author": "OpenTiny社区",
+          "description": "背景介绍\nTinyEngine 低代码引擎介绍\n随着企业对于低代码开发平台的需求日益增长，急需一个通用的解决方案来满足各种低代码平台的开发需求。正是在这种情况下，低代码引擎应运而生。它是一种通用的开发框架，通过对低代码平台系统常用的功能进行解构，将其划分为多个功能模块，并为每个模块定义了相应的协议和开发范式，使得开发者可以根据自身的业务需求，轻松定制开发出自己的低代码开发平台。 \n\nTinyEngine 提供了低代码底层能力，并集成了人工智能，从而使用户能够高效开发。TinyEngine 具有强大的拖拽功能，无论是图元还是复杂组件，都能在画布上带来流畅的体验。它适用于多场景的低代码平台开发，包括资源编排、流程编排、服务端渲染、模型驱动、移动端、大屏端以及页面编排等低代码平台。 \n\n服务端开源介绍\n2023年9月21日，TinyEngine 在华为全联接大会正式宣布开源，引发了广泛的关注，3个月时间收获了960个 Star，组建了4个用户交流社群，成员数772名。 \n\n很多企业和个人开发者尝试基于 TinyEngine 搭建自己的低代码平台，为搭建企业 Web 应用提效，在使用过程中，大家也遇到了很多问题，比较常见的包括：如何对接服务端、如何导入第三方组件库、如何使用插槽、如何生成代码、如何开发自定义插件等，为此我们在10月27日策划了一次线上直播答疑活动，邀请了团队技术专家为大家答疑解惑。 \n\n其中如何对接服务端是众多开发者非常关注的问题，为了帮助开发者打通低代码平台搭建的前后端整体流程，本次 TinyEngine 低代码引擎服务端配套代码的开源，让开发者能够深入了解 TinyEngine 低代码引擎的前后端运行机制，更能够让更多的小伙伴以更深的层次参与到产品共建，共同探讨并改进系统，推动其不断优化，带来更高的创新潜力，使得更多的人能够从中受益。 \n\n同时服务端的开源为自由…",
+          "link": "https://juejin.cn/post/7317827078116081691",
+          "publishedOn": "2023-12-29T09:15:01.000Z",
+          "wordCount": 1165,
+          "title": "TinyEngine 服务端正式开源啦！！！",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7317809451187208218",
           "author": "_知秋_",
           "description": "theme: simplicity-green\nhighlight: atom-one-dark-reasonable\n本文为翻译\n原文地址：Announcing Vue 3.4 | The Vue Point --- Vue 3.4 发布公告 |Vue 点 (vuejs.org)\n今天，我们很高兴地宣布 Vue 3.4 “🏀灌篮高手”的发布！\n此版本包括一些实质性的内部改进 - 最引人注目的是重写的模板解析器，速度提高了 2 倍，以及重构的反应系统，使效果触发更加准确和高效。它还包含许多生活质量 API 改进，包括绑定 prop 时的 defineModel 稳定性和新的同名速记。\n这篇文章概述了 3.4 中的突出功能。有关更改的完整列表，请参阅 GitHub 上的完整更新日志。\n可能需要采取的行动\n为了充分利用 3.4 中的新功能，建议在升级到 3.4 时还更新以下依赖项：\nVolar / vue-tsc@^1.8.27 (required)\n@vitejs/plugin-vue@^5.0.0 (如果使用 Vite)\nnuxt@^3.9.0 (如果使用 Nuxt)\nvue-loader@^17.4.0 (如果使用 webpack or vue-cli)\n如果将 TSX 与 Vue 一起使用，请在 Removed: Global JSX Namespace 中检查所需的操作。\n确保您不再使用任何已弃用的特性(如果使用了，控制台中应该有警告告诉您)。它们可能在3.4中被删除了。\n亮点功能\n解析速度提高 2 倍，SFC 构建性能提高\nContext: PR#9674\n在 3.4 中，我们完全重写了模板解析器。以前，Vue 使用递归下降解析器，它依赖于许多正则表达式和前瞻搜索。新的解析器使用基于 htmlparser2 中的分词器的状态机分词器，该分词器仅循环访问整个模板字符…",
@@ -1815,16 +1855,6 @@
           "publishedOn": "2023-12-26T03:07:11.000Z",
           "wordCount": 1089,
           "title": "因为一道try...catch的题，我的面试挂掉了",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7316145140073775167",
-          "author": "程序员Sunday",
-          "description": "theme: vuepress\n文章首发自公众号：程序员Sunday\nHello，大家好，我是 Sunday。\n如果你在近几年使用过JavaScript框架，你可能会听到“虚拟DOM很快”的说法，这通常意味着虚拟DOM比真实DOM更快。然而，这其实是一个关于虚拟DOM强大之处的误解。有些人可能会问：“为什么Svelte不使用虚拟DOM，却仍然能运行得如此之快？”\n现在看来，我们有必要深入探讨一下这个问题了。\n什么是“虚拟 DOM”\n虚拟 DOM（Virtual DOM）是一个概念，用于优化 Web 应用程序的性能。它是一个虚拟表示真实 DOM 树的内存中的对象树。通过对比前后两个虚拟 DOM 树的差异，可以最小化实际 DOM 操作的次数，从而提高渲染效率。\n假设你有一个页面，其中有一个列表需要更新。使用虚拟 DOM，Vue 和 React 会创建一个虚拟的树结构来表示这个列表。当数据发生变化时，Vue 和 React 不会直接操作真实的 DOM。相反，它们会生成一个新的虚拟 DOM 树，并与之前的虚拟 DOM 树进行比较。\n例如，假设你有一个待办事项列表，用 Vue 编写的代码可能是这样的：\n<div id=\"app\">\n  <ul>\n    <li v-for=\"todo in todos\" :key=\"todo.id\">{{ todo.text }}</li>\n  </ul>\n</div>\n\n当 todos 数组中的待办事项发生变化时，Vue 会生成一个新的虚拟 DOM 树，然后与之前的虚拟 DOM 树进行比较。它会找出变化的部分，并只更新那些需要改变的地方，而不是重新渲染整个列表。\nReact 中也有类似的机制。比如，使用 JSX 编写的 React 代码可能如下所示：\nfunction TodoList({ todos }) {\n  return (\n    <di…",
-          "link": "https://juejin.cn/post/7316145140073775167",
-          "publishedOn": "2023-12-25T05:48:13.000Z",
-          "wordCount": 1516,
-          "title": "虚拟DOM已成过去式？全新框架 RE:DOM，纯 JS 的模板语言库",
           "imageUrl": null
         },
         {
