@@ -51,8 +51,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-01 datetime="2024-01-01T06:34:00.000Z">2024-01-01</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-01 datetime="2024-01-01T06:34:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-01 datetime="2024-01-01T08:25:00.000Z">2024-01-01</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-01 datetime="2024-01-01T08:25:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -67,6 +67,44 @@
                   <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240101/t20240101_526543506.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市奉节县发布大雾黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240101/t20240101_526543506.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>奉节县气象台2024年1月1日16时10分发布“大雾黄色预警信号”，预计未来12小时，夔门街道、草堂镇、白帝镇、康乐镇、汾河镇、岩湾乡、龙桥土家族乡、新民镇、长安土家族乡、永乐镇、冯坪乡、鹤峰乡、夔州街道、永安街道、鱼复街道、康坪乡、大树镇、平安乡、青莲镇、公平镇、朱衣镇、红土乡、石岗乡、竹园镇、兴隆镇、云雾土家族乡、青龙镇、太和土家族乡、吐祥镇、羊市镇、五马镇、安坪镇、甲高镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。防御指南：1．车辆驾驶及户外活动注意安全。2．机场、高速公路、水上交通等单位加强交通管理。3.相关部门和乡镇街道按照职责，做好大雾防范应对工作。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20240101/t20240101_526543472.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市铜梁区发布大雾橙色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20240101/t20240101_526543472.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>铜梁区气象台2024年1月1日15时30分更新发布“大雾橙色预警信号”，预计1月1日15时至2日11时，巴川街道、东城街道、蒲吕街道、旧县街道、侣俸镇、太平镇、水口镇、白羊镇、少云镇、安居镇、维新镇、高楼镇、华兴镇、安溪镇、大庙镇、虎峰镇、福果镇、石鱼镇、永嘉镇、围龙镇、西河镇、平滩镇、小林镇、双山镇可能出现能见度小于200米的雾，局部地区能见度小于50米。请以上各地注意防范大雾天气可能造成的影响。防御指南：1.减少户外活动；驾驶人员打开雾灯、减速慢行、保持车距、勤用喇叭。2.机场、高速公路、水上交通等单位加强调度指挥。3.相关部门和乡镇街道按照职责，做好大雾防范应对工作。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -2394,6 +2432,72 @@ Chrome 计划在 2024 年底完成全量发布，下周只开启 1% 的灰度，
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7317838211661266955"
+                        open
+                      >
+                        <summary class="article-expander__title">vue使用scss、less切换主题（scss篇），进来就是赚到</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7317838211661266955">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: cyanosis
+highlight: atelier-savanna-light
+最近想做一个切换主题的功能，但是发现scss和less使用起来还有些区别，写完之后自己总结了一些，大家可以看看。
+vue使用less切换主题
+1、scss切换
+sass  和  sass-loader
+
+
+theme.scss
+$white: #fff;
+$black: #0e1225;
+$themes: (
+  light: (
+    // 背景色
+    bg-color: $white,
+    // 文字颜色
+    font-color: #000,
+    // 渐变背景起始色
+    bg-color-start: #fefeff,
+    // 渐变背景结束色
+    bg-color-end: #e5f1fd,
+    // 代码块背景色
+    code-bg-color: #f5f7fa,
+    // 代码块文字颜色
+    code-font-color: #409eff,
+  ),
+  dark: (
+    bg-color: #192342,
+    font-color: #c2c2c2,
+    bg-color-start: #0e1225,
+    bg-color-end: #0e1225,
+    code-bg-color: #2d2d2d,
+    code-font-color: #ccc,
+  ),
+);
+
+
+handle.scss
+@import &quot;./theme.scss&quot;;
+
+// 从主题色map中取出对应颜色
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
+// 切换主题时 获取不同的主题色值
+@mixin themeify {
+  @…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7317827078116081691"
                         open
                       >
@@ -3852,6 +3956,34 @@ ChatGPT 已经完成了人类知识的浓缩，在知识的记忆上，人类比
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7317117745704091648"
+                        open
+                      >
+                        <summary class="article-expander__title">【年终总结】—— 工作一年，经历裁员，因祸得福</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7317117745704091648">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: smartblue
+一、前言
+2023年即将结束，回首这一年的学习与成长，作为一个刚毕业一年出头的学生，我感觉这一年已经经历了很多。
+大四的时候，我才决定踏入前端开发的道路，经历了很多挫折，现在终于稳定而且朝好的方向发展。
+二、应届求职
+虽然说是年终总结，但是还是将去年的经历补上，这样这段时间所经历的事才算完整。
+大学期间其实过的比较浑浑噩噩，高中初中被管的太严，一上大学就好像一根弦绷断了，吃喝玩乐似乎停不下来。大一直接挂了好多科，5的绩点，大一好像只有1.9...大二算是正常了点，不过也就止步在正常；大三上算是回归初心了，复习周哐哐复习，那学期绩点差点上4（满分5），算是把大一的拉回来了点。
+大三下结束后，学校组织了一个在学校的实习，那时算是真正与前端产生交集的时间。说是实习，其实算是上课，教我们组成小组，然后写前后端，当时组里有写后端的大佬，我就分去做前端，做着做着就感觉，挺享受写页面这个过程，写了之后看到漂亮的页面，马上就有成就感，后面就开始主攻前端了，其实想想这种理由也挺原始的了。本来开始之前还想着要考研，最后想了想还是算了，感觉已经没有当初高中时候那种学习劲了。
+放完暑假回来直接开始“魔鬼训练”，每天11点醒，吃完饭没课去机房学到晚上10点，不重要的课也翘了，就嗯学前端，当时搞了个项目边学边做，感觉做项目确实能巩固你学到的东西，当然八股该背还是得背的。学到九月十月，才开始投简历，当时心里想着，要不再学一点再投吧，不然好像浪费了机会，现在想想，应该先投些练练手的，不然你不熟悉这个流程，还是会有点紧张。
+一开始面的几家，巨紧张，有些知识点本来应该知道的，都忘了，一面都没过，后来才习惯面试的感觉，逐渐的有二面、hr面了；不过有点奇怪的是，我好多面试都是hr面挂的，现在想想都有点难顶；面到大概快11月，才拿到了第一家offer，是个小公司，开了广州15k，当…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -5315,230 +5447,6 @@ handleError();</span>
                 </section>
               </section>
             </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >国家应急广播 - 重庆预警信息</button>
-                  <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/lanseyj/20231225/t20231225_526533888.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市梁平区发布霜冻蓝色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/lanseyj/20231225/t20231225_526533888.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>梁平区气象台2023年12月25日16时20分继续发布“霜冻蓝色预警信号”，预计12月25日20时至27日10时，曲水镇、安胜镇、星桥镇、合兴街道、文化镇、复平镇、大观镇、紫照镇、柏家镇、石安镇、金带街道、蟠龙镇、双桂街道、福禄镇、梁山街道、礼让镇、竹山镇、袁驿镇、龙胜乡、明达镇、龙门镇、碧山镇、虎城镇、新盛镇、荫平镇、铁门乡、屏锦镇、云龙镇、和林镇、回龙镇、聚奎镇、仁贤街道、七星镇地面最低温度将要下降到0℃以下，对农业将产生影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/lanseyj/20231225/t20231225_526533707.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市黔江区发布霜冻蓝色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/lanseyj/20231225/t20231225_526533707.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>黔江区气象台2023年12月25日14时50分继续发布“霜冻蓝色预警信号”，预计12月25日20时至28日10时，邻鄂镇、五里镇、马喇镇、金洞乡、石家镇、水市镇、鹅池镇等海拔800米以上的乡镇，地面最低温度将要下降到0℃以下，对农业将产生影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7316145140073775167"
-                        open
-                      >
-                        <summary class="article-expander__title">虚拟DOM已成过去式？全新框架 RE:DOM，纯 JS 的模板语言库</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7316145140073775167">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: vuepress
-文章首发自公众号：程序员Sunday
-Hello，大家好，我是 Sunday。
-如果你在近几年使用过JavaScript框架，你可能会听到“虚拟DOM很快”的说法，这通常意味着虚拟DOM比真实DOM更快。然而，这其实是一个关于虚拟DOM强大之处的误解。有些人可能会问：“为什么Svelte不使用虚拟DOM，却仍然能运行得如此之快？”
-现在看来，我们有必要深入探讨一下这个问题了。
-什么是“虚拟 DOM”
-虚拟 DOM（Virtual DOM）是一个概念，用于优化 Web 应用程序的性能。它是一个虚拟表示真实 DOM 树的内存中的对象树。通过对比前后两个虚拟 DOM 树的差异，可以最小化实际 DOM 操作的次数，从而提高渲染效率。
-假设你有一个页面，其中有一个列表需要更新。使用虚拟 DOM，Vue 和 React 会创建一个虚拟的树结构来表示这个列表。当数据发生变化时，Vue 和 React 不会直接操作真实的 DOM。相反，它们会生成一个新的虚拟 DOM 树，并与之前的虚拟 DOM 树进行比较。
-例如，假设你有一个待办事项列表，用 Vue 编写的代码可能是这样的：
-
-  
-{{ todo.text }}
-  
-
-
-当 todos 数组中的待办事项发生变化时，Vue 会生成一个新的虚拟 DOM 树，然后与之前的虚拟 DOM 树进行比较。它会找出变化的部分，并只更新那些需要改变的地方，而不是重新渲染整个列表。
-React 中也有类似的机制。比如，使用 JSX 编写的 React 代码可能如下所示：
-function TodoList({ todos }) {
-  return (
-    &lt;di…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7316202809383845897"
-                        open
-                      >
-                        <summary class="article-expander__title">lottie 动画在 vue 中的使用</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7316202809383845897">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: simplicity-green
-highlight: atom-one-dark-reasonable
-前言
-最近我所负责的项目中采用了动画效果，最早使用 gif 来实现。然而，在实践过程中，我发现 gif 格式的动画在 git 中出现了明显的锯齿感，这让我非常困扰。为了追求更完美的表现效果，我最终选择了 lottie 来实现我的动画需求。我深知动画效果的呈现对于用户体验至关重要，因此我非常认真地对待每一个细节，希望通过我的努力，为用户带来更加流畅、自然的视觉体验。
-Lottie 简介
-Lottie 是一个适用于 Android、iOS、Web 和 Windows 的库，它使用 Bodymovin 解析导出为 JSON 的 Adobe After Effects 动画，并在移动设备和 Web 上原生渲染它们！
-这是第一次，设计师可以创建和发布精美的动画，而无需工程师精心手工重新创建它们。他们说一图胜千言，请看示例：
-
-上述动画是在 After Effects 中创建的，可以使用简单的 JSON 文件在所有平台上进行本机渲染。
-lottie 的安装
-# 由于在 web 端，所以安装的是 lottie-web
-pnpm add lottie-web
-
-lottie 的使用
-简单介绍 lottie 的使用
-import lottie from &#x27;lottie-web&#x27;
-import animationData from &#x27;xx/xx/xx.json&#x27;
-
-lottie.loadAnimation({
-    animationData,
-    loop: true,
-    autoplay: true,
-    renderer: &#x27;svg&#x27;,
-    container: document.querySelector(&#x27;container&#x27;)
-})
-
-调用 l…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7316202755159572531"
-                        open
-                      >
-                        <summary class="article-expander__title">🎉Ant Design Web3 发布 1.0 ，聊聊我们的设计理念~</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7316202755159572531">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>基于 Ant Design 的 Web3 开源组件库 Ant Design Web3 正式发布 🎉🎉🎉
-官网：https://web3.ant.design/
-国内加速：https://web3.antdigital.dev/
-Github 地址：https://github.com/ant-design/ant-design-web3（欢迎 Star ⭐）
-Twitter：https://twitter.com/AntDesignWeb3
-本文会给大家介绍我们的设计理念和新特性，阅读时间大概 3 分钟。如果对我们的项目感兴趣欢迎给我们的 Github Star 或者关注我们的 Twitter，我们会非常高兴的。
-在介绍 Ant Design Web3 之前先简单说说 Web3 DApp（去中心化应用）。DApp 可以说是除了 AI 应用外当下最受前端独立开发者青睐的应用了。当然，在 ChatGPT 还没有火的时候，Web3 DApp 才是最火的。因为通过一个连接区块链的 DApp（去中心化应用）你可以获得如下能力：
-💰交易加密资产，你可以通过加密货币比如 ETH、USDT 等加密货币交易，提高了经济活动的效率，无需任何后端支持你就可以让你的应用获得收款能力。
-👥连接用户的 Web3 账号，触达更多加密用户。你不需要开发注册登录页面，就可以通过加密账号连接上用户。
-📼发行加密资产，你可以通过发行 NFT 就能获得类似发布会员卡作用的功能。而且，当你理解了 Web3 的意义后，你会发现你能做的不止于此！
-但是我们如何开发一个 DApp 呢？对于一个前端开发者来说开发一个 DApp 简单吗？或者不会前端的开发如何可以更方便的构建一个 DApp 呢？
-其实对于一个 DApp 的前端部分来说，最关键的就是要连接用户的钱包：
-
-如上图所示，Ant Design Web3 …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7316202725330796571"
-                        open
-                      >
-                        <summary class="article-expander__title">前端部署真的不简单</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7316202725330796571">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>现在大部分的中小型公司部署前端代码都是比较简单的，主要步骤如下:
-首先，通过脚手架提供的命令npm run build打包前端代码，生成dist文件夹；
-最后，将dist文件夹丢给后台开发人员放在他们的工程里面，随后台一起部署；现在普遍是前后端分开部署，因此，利用nginx起一个web服务器，将dist文件夹放到指定的路径下，配置下nginx访问路径，对于请求接口使用proxy_pass进行转发，解决跨域的问题。
-更加高端一点的操作，是利用CI/CD + Docker进行自动化部署。
-但是，你是否真的想过前端部署真的就这么简单吗？
-这其实是一个非常严肃且复杂的问题，因为这关系到线上生产环境的稳定。
-有一天，从自知乎上看到一篇张云龙大佬在2014年写的文章，非常有启发，即使这篇文章距离现在有快10年了，但是其中的思想仍然熠熠生辉。
-因为写的真的是太好了，为了让更多的人看到，所以大部分内容直接就照搬过来，为了让自己加深印象。如果想看原文，原文网址在这里。
-那让我们从原始的前端开发讲起。
-下图是一个 index.html 页面和它的样式文件 a.css，无需编译，本地预览，丢到服务器，等待用户访问。
-
-哇，前端这么简单，门槛好低啊。这也是前端有太多人涌入进来的原因。
-接着，我们访问页面，看到效果，再查看一下网络请求，200！不错，太完美了！
-
-那么，研发完成。。。。了么？
-等等，这还没完呢！
-对于像 BAT 这种公司来说，那些变态的访问量和性能指标，将会让前端一点也不好玩。
-看看那个 a.css 的请求，如果每次用户访问页面都要加载，是不是很影响性能，很浪费带宽啊，我们希望最好这样：
-
-利用304，让浏览器使用本地缓存。
-但，这样也就够了吗？
-不够！
-304叫协商缓存，这玩意还是要和服务器通信一次，我们的优化级别是变态级，所以必须彻底灭掉这个请求，要变成这样：
-
-强制浏览器使用本…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -5696,6 +5604,49 @@ createElements
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7315606159742058530"
+                        open
+                      >
+                        <summary class="article-expander__title">工程化第一步这个package.json要真的搞明白才行</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7315606159742058530">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>工程化最开始就是package.json开始的，很多人学了很多年也没搞清楚这个为什么这么神奇，其实有些字段是在特定场景才有效的，那每个属性的适用场景和作用是什么，又牵扯很多知识点，今天先解读一些常见的属性，关注我，后期在遇到特定场景也会再逐步的补充这些属性，只有真正清楚知道每个自动的属性和场景你才能真正使用它得心应手，也才能真正掌握并帮助你解决你的问题。
+创建
+一个package.json 你可以使用npm init 按指令创建，也可以通过npm init -y来快速创建，当然也可以手动来创建，那现在我们创建一个。
+package.json
+{
+  &quot;name&quot;: &quot;package-demo&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+  },
+  &quot;keywords&quot;: [],
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;
+}
+
+
+这个是原装的属性，当然还有一些额外的场景才有的，接下来我们来逐步分析：
+常用属性
+这些属性没有没有太复杂，但还是要仔细看看每个都可以做什么，适用于什么场景，如何去使用和配置
+name
+package.json 中最重要字段之一就是名称name 字段，有人的说为什么我没有配置也没有影响我项目的正常运行呢？这个是因为你没有发布npm 包，这个name就是你发布到npm的包名，如果你不打算发布你的包到npm上这个是可以省略的。
+当然这个名称也不是随便乱起的，它也有一定的规则，否则有警告的如下：
+字符串与 &quot;^(?:(?:@(?:[a-z0-9-*~][a-z0-9-*._~]*)?/[a-z0-…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -5708,11 +5659,64 @@ createElements
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-23 datetime="2023-12-23T06:55:43.000Z">2023-12-23</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-23 datetime="2023-12-23T06:55:43.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-23 datetime="2023-12-23T16:35:53.000Z">2023-12-23</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-23 datetime="2023-12-23T16:35:53.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7315612852890026021"
+                        open
+                      >
+                        <summary class="article-expander__title">我来给你写一个滴水不漏的深拷贝！面试官：怎么把getter和setter拷贝上？😅😅😅</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7315612852890026021">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: smartblue
+扯皮
+关于深拷贝相关的文章真的是太多了，但是看了很多实现的文章都不完整...可能得集合好几篇文章才能算一个功能全一点的🤨🤨🤨
+其实深拷贝本身的细节就很多，因为完整的深拷贝要考虑各种数据类型，因此也是一道高频考题，不管是问实现原理还是手撕，几乎五场面试下来必有一场被问到
+因此有了本篇文章，尽量考虑多种数据类型的拷贝以后方便回看复习😉。并且如标题所说，这是前段时间秋招时数码宝贝一个面试官问的逆天问题，咱们放到最后来讨论一下，如果不想看深拷贝实现的话直接划到最后即可
+为了防止有人说我标题党，先上图为敬，面经链接就不放了。因为数码宝贝那段时间高强度约面，估计也是同一个面试官问的：
+
+
+正文
+数组和对象
+咱们从最简单的开始，首先就是针对于一个普通的对象，其属性可能是数组或对象
+只需要考虑引用值的判断并创建新的引用值即可，简单粗暴没有任何难度，需要注意的点就是使用 typeof 判断类型时关于 null 的判断，以及 for...in 遍历原型链的属性，通过 hasOwnProperty 进行限制：
+function deepClone(origin) {
+  const target &#x3D; {};
+  for (const key in origin) {
+    if (origin.hasOwnProperty(key)) {
+      if (typeof origin[key] !&#x3D;&#x3D; &quot;object&quot; || origin[key] &#x3D;&#x3D;&#x3D; null) target[key] &#x3D; origin[key];
+      else if (Array.isArray(origin[key])) {
+        target[key] &#x3D; Array.from(origin[key]);
+      } else {
+        t…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;19
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -6499,8 +6503,8 @@ Cybertruck 是世界第一辆没有 12V 供电，只有 48V 供电的汽车。�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7375589289">
-        <time id="build-timestamp" datetime="2024-01-01T06:53:47.800Z">2024-01-01T06:53:47.800Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7376485191">
+        <time id="build-timestamp" datetime="2024-01-01T09:53:39.187Z">2024-01-01T09:53:39.187Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
