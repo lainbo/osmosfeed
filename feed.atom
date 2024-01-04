@@ -1,10 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2024-01-04T03:53:33.317Z</id>
+    <id>urn:2024-01-04T06:53:44.522Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2024-01-04T03:53:33.317Z</updated>
+    <updated>2024-01-04T06:53:44.522Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[发布了: 最近学到一招: 上升与下沉 ━━━━━━━━━━━━━━ 把自己每天所做之事按投入注意力的多寡, 分为三类: 1. 习惯 几乎不用你投入注意力, 靠潜意识和...]]></title>
+        <id>https://m.okjike.com/originalPosts/65964eb03af12f55ba30f42e</id>
+        <link href="https://m.okjike.com/originalPosts/65964eb03af12f55ba30f42e"/>
+        <updated>2024-01-04T06:22:40.000Z</updated>
+        <summary type="html"><![CDATA[最近学到一招: 上升与下沉
+━━━━━━━━━━━━━━
+把自己每天所做之事按投入注意力的多寡, 分为三类:
+1. 习惯
+   几乎不用你投入注意力, 靠潜意识和肌肉记忆即可完成的事项。
+   
+2. 日常
+   需要根据临时发生的重要程度, 分配注意力去响应处理的事项。
+   
+3. 仪式感
+   让你慎重对待(slow down, take a deep breath, and think step by step), 投入大量注意力的事项。
+你需要做的： 将每天「日常」事项进行分析, 要么上升到「仪式感」， 要么下沉到「习惯」。
+这样做的好处有两个： 不累， 并且every day counts!]]></summary>
+        <author>
+            <name>李继刚的即刻动态</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[发布了: 所谓决策，即分配资源。]]></title>
+        <id>https://m.okjike.com/originalPosts/659629a5f60303d6569fca63</id>
+        <link href="https://m.okjike.com/originalPosts/659629a5f60303d6569fca63"/>
+        <updated>2024-01-04T03:44:37.000Z</updated>
+        <summary type="html"><![CDATA[所谓决策，即分配资源。]]></summary>
+        <author>
+            <name>李继刚的即刻动态</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[发布了: Chrome 浏览器禁用三方 Cookies，今天已经开始全球 1% 的灰度，这个问题也折腾了我好几天，踩到一些坑。 1）禁用三方 Cookies 是 Google 搞的 Privacy-S...]]></title>
+        <id>https://m.okjike.com/originalPosts/65961f03f60303d6569eb871</id>
+        <link href="https://m.okjike.com/originalPosts/65961f03f60303d6569eb871"/>
+        <updated>2024-01-04T02:59:15.000Z</updated>
+        <summary type="html"><![CDATA[Chrome 浏览器禁用三方 Cookies，今天已经开始全球 1% 的灰度，这个问题也折腾了我好几天，踩到一些坑。
+1）禁用三方 Cookies 是 Google 搞的 Privacy-Sandbox 项目的子项，最主要的目的是为了保护用户的在线隐私，但从厂商角度来看，这也是 Google 对数字广告业的一次主动出击，未来广告主推送广告的精准度将更大程度依赖 Google 系统或平台提供的能力；对应的，苹果在 iOS 14 也推出了 App Tracking Transparency（ATT）技术，目的也是为了提高用户隐私透明度，看资讯说这项技术让 Facebook 损失了 100 亿美元的广告收入，而苹果自身却没有受到此规则的限制。
+2）禁用三方 Cookies，类似的还有禁用三方 Storage，这意味着未来跨站点的用户隐私信息收集将被强约束，例如 A 网站嵌入了 B 网站的内容，用户在 B 网站中储存的所有信息，包括 Cookies、LocalStorage、Cache 等等一大堆的东西，在 A 网站下默认都不允许使用（因为这些储存是根据域名分区的），这也会带来一些负面问题，假设你的网站（如文档类、流程图工具、代码演示工具等）大量被人内嵌，同时要求登录才能被使用，那意味着用户需要在每个内嵌你网站的地方重新登陆一次才能正常使用。
+3）为了实现跨域数据交互，最通用的做法是在 Cookies 上添加 Partitioned 属性，有了这个属性，就会在跨域储存分区下成功种下 Cookies，但在 Chrome 灰度阶段，包括新旧版本浏览器共存阶段（Chrome 114 版本是分界线），需要考虑新旧 Cookies 的共存问题，例如之前有一个登录态 Cookie A，新增 Partitioned Cookies A'，此时浏览器在发送请求时会携带两个不一致的 Cookies，服务端获取到错误的 Cookie 会告知登录失败；有人会想到，将旧的 Cookies 全部删除，再重新种 Partitioned Cookie，然而这又是一项高危且难以全覆盖的活儿。
+4）针对 3 中的问题，Chrome 推荐的做法是在 Partitioned Cookie 中添加一个前缀，如 __Host-cookiename，来实现新旧 Cookie 共存，这也会带来新的问题，例如服务器对 Cookie 的处理就变成了先判断 cookiename 是否存在，如果不存在再获取 __Host-cookiename，倘若未来不小心在哪个环节删除了 cookiename 而未删除 __Host-cookiename，也会给带来不一致问题，排查起来也相当麻烦；另外，Chrome 还限制了 Cookies 的总数量不超过 180 个，且总大小不超过 10kb，对于部分已经滥用 Cookie 的网站来说，继续冗余一份 __Host-cookiename，也会是一个麻烦；另外一个问题是，__Host- 和 __Secure- 是浏览器的两个私有前缀，它要求 Cookies 的 domain 属性与当前网页的域名是一致，也就是不允许跨子域设置，当然，为了解决这个问题，可以考虑换一个前缀。
+这项技术，保护隐私的同时，也引入了大量的复杂度，甚至还降低了浏览网页的体验，好在 Chrome 预留了一年时间让开发者进行网页改造，也提供了很多新鲜 API 供开发者升级体验。]]></summary>
+        <author>
+            <name>Barret李靖的即刻动态</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[发布了: 幸福不是外在的，而是内在的，它不取决于拥有什么，而取决自己是一个怎样的人，因此它与品格、信任、捍卫自己权利的能力以及积极向上的人生观是强相关的...]]></title>
         <id>https://m.okjike.com/originalPosts/65960bb39185c305d1e42d37</id>
@@ -523,17 +570,6 @@ Vue3、Vue2、React函数式组件开发/class组件开发皆可
 有人说鸡汤太多，空洞无味。一个观察是，思考越深入，就越显得没有干货，越形而上。
 知识就是这样，别人掰开了、揉碎了，再吃下去，功效来的快、去的也快。一场演讲、一本书，能记住一两句，帮到自己，便已经非常有意义了。奢望太多，是在苛求自己。
 那些高密度的知识（俗称鸡汤），也只有自己去经历一次，才真的属于自己。]]></summary>
-        <author>
-            <name>Barret李靖的即刻动态</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[发布了: 李笑来写的《人人都能用英语》，https://github.com/xiaolai/everyone-can-use-english，Everyone can use English，总共八个章节，花几个小时就可以阅...]]></title>
-        <id>https://m.okjike.com/originalPosts/659388b4164d89e601e08f71</id>
-        <link href="https://m.okjike.com/originalPosts/659388b4164d89e601e08f71"/>
-        <updated>2024-01-02T03:53:24.000Z</updated>
-        <summary type="html"><![CDATA[李笑来写的《人人都能用英语》，https://github.com/xiaolai/everyone-can-use-english，Everyone can use English，总共八个章节，花几个小时就可以阅读完，“想明白之后，就该干嘛干嘛了”，这本书会带着读者一起把语言学习这件事情看清楚、想明白，让读者找到该有的自信，掌握一些有效的学习技巧，很受启发。
-第一章花了很长的篇幅，论证了“大脑是可塑的”，以及“语言能力是后天习得的”，作者试图让读者先选择相信自己可以去完成某项似乎不适合在当前年龄段完成的任务，这种“自我催眠”很有用，不仅仅适用于语言学习，跨领域的知识学习也很参考价值。]]></summary>
         <author>
             <name>Barret李靖的即刻动态</name>
         </author>
@@ -2244,31 +2280,6 @@ const formatPast = (date, type = "X天前", zeroFillFlag = true) => {
     return `${countTime}…]]></summary>
         <author>
             <name>加油乐</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[发布了: 新年立新志, 总是这么让人期待。 ━━━━━━━━━━━━━━ 2024 年立愿： 每月和老婆去一个新城市游玩。]]></title>
-        <id>https://m.okjike.com/originalPosts/658e3e7b9185c305d15473ed</id>
-        <link href="https://m.okjike.com/originalPosts/658e3e7b9185c305d15473ed"/>
-        <updated>2023-12-29T03:35:23.000Z</updated>
-        <summary type="html"><![CDATA[新年立新志, 总是这么让人期待。
-━━━━━━━━━━━━━━
-2024 年立愿： 每月和老婆去一个新城市游玩。]]></summary>
-        <author>
-            <name>李继刚的即刻动态</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[发布了: 我们都知道，如果可以回到过去，改变任何一件小事情，都将极大地改变未来。 然而，几乎没有人想到，今天只要小小改变，就会改变自己的未来。 ━━━━━...]]></title>
-        <id>https://m.okjike.com/originalPosts/658e3d6012ed2fda68da3325</id>
-        <link href="https://m.okjike.com/originalPosts/658e3d6012ed2fda68da3325"/>
-        <updated>2023-12-29T03:30:40.000Z</updated>
-        <summary type="html"><![CDATA[我们都知道，如果可以回到过去，改变任何一件小事情，都将极大地改变未来。
-然而，几乎没有人想到，今天只要小小改变，就会改变自己的未来。
-━━━━━━━━━━━━━━ 
-BenSassiAladin@Twitter]]></summary>
-        <author>
-            <name>李继刚的即刻动态</name>
         </author>
     </entry>
     <entry>
