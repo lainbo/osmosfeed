@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2024-01-04T01:15:52.865Z</id>
+    <id>urn:2024-01-04T03:53:33.317Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2024-01-04T01:15:52.865Z</updated>
+    <updated>2024-01-04T03:53:33.317Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[发布了: 幸福不是外在的，而是内在的，它不取决于拥有什么，而取决自己是一个怎样的人，因此它与品格、信任、捍卫自己权利的能力以及积极向上的人生观是强相关的...]]></title>
+        <id>https://m.okjike.com/originalPosts/65960bb39185c305d1e42d37</id>
+        <link href="https://m.okjike.com/originalPosts/65960bb39185c305d1e42d37"/>
+        <updated>2024-01-04T01:36:51.000Z</updated>
+        <summary type="html"><![CDATA[幸福不是外在的，而是内在的，它不取决于拥有什么，而取决自己是一个怎样的人，因此它与品格、信任、捍卫自己权利的能力以及积极向上的人生观是强相关的。
+通过外部物质的积累获得的快乐是瞬间的，来的快，消散的也快，在内心积聚能量，保持内心的平静和幸福感。
+选择如何获得幸福的方式，也决定了自己将成为怎样的人。]]></summary>
+        <author>
+            <name>Barret李靖的即刻动态</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[重庆市巫溪县发布大雾黄色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/huangsyj/20240104/t20240104_526546741.html</id>
@@ -605,16 +617,6 @@ Vue3、Vue2、React函数式组件开发/class组件开发皆可
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[发布了: 支付宝无实际控制人的解读，原来如此]]></title>
-        <id>https://m.okjike.com/originalPosts/65936144f60303d65668fe5c</id>
-        <link href="https://m.okjike.com/originalPosts/65936144f60303d65668fe5c"/>
-        <updated>2024-01-02T01:05:08.000Z</updated>
-        <summary type="html"><![CDATA[支付宝无实际控制人的解读，原来如此]]></summary>
-        <author>
-            <name>Barret李靖的即刻动态</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[重庆市巫溪县发布大雾黄色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/huangsyj/20240102/t20240102_526543987.html</id>
         <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20240102/t20240102_526543987.html"/>
@@ -852,7 +854,7 @@ Vue3、Vue2、React函数式组件开发/class组件开发皆可
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[2023年底被裁，这段时间我经历了什么]]></title>
+        <title type="html"><![CDATA[2023年底被裁，分享一下面试经历]]></title>
         <id>https://juejin.cn/post/7318446300591030281</id>
         <link href="https://juejin.cn/post/7318446300591030281"/>
         <updated>2024-01-01T08:43:50.000Z</updated>
@@ -2216,15 +2218,15 @@ highlight: a11y-dark
 参数相关
 date为传入时间 例："2023/5/10 11:32:01" 2023-02-01 09:32:01
 type为返回类型 例：YYYY-MM-DD YYYY年MM月DD日 X月前   参数字母统一为大写
-默认规则，大于一天(24小时)展示'X天前；如果大于等于30天，展示"X个月前"
+默认规则，大于等于一天(24小时)展示'X天前；如果大于等于一天(24小时)且有传入规则，则按照规则展示
 zeroFillFlag参数为是否数字补零，默认补零
-传入时间为必写参数，type和zeroFillFlag参数可选填
+时间参数date为必写参数
 时间处理公式依据
 10秒：  10 * 1000
 1分钟：   60 * 1000
 1小时： 60 * 60 * 1000
 24小时（一天）：60 * 60 * 24 * 1000
-const formatPast = (date, type = "X个月前", zeroFillFlag = true) => {
+const formatPast = (date, type = "X天前", zeroFillFlag = true) => {
   // 定义countTime变量，用于存储计算后的数据
   let countTime;
   // 获取当前时间戳
@@ -2236,9 +2238,10 @@ const formatPast = (date, type = "X个月前", zeroFillFlag = true) => {
   if (time < 10000) {
     // 10秒内
     return "刚刚";
-  } else if (time < 60000 && time >= 10000) {
+  } else if (time < 60000) {
     // 超过10秒少于1分钟内
-    countTime = Math.floor(time / 1000);…]]></summary>
+    countTime = Math.floor(time / 1000);
+    return `${countTime}…]]></summary>
         <author>
             <name>加油乐</name>
         </author>
@@ -2618,16 +2621,6 @@ export default {
         <summary type="html"><![CDATA[请教下jym，大家都用哪些工具检测代码安全性和质量[看][看][看][看]]]></summary>
         <author>
             <name>狗头军师007</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[重庆市巴南区发布大雾黄色预警]]></title>
-        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20231228/t20231228_526537420.html</id>
-        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20231228/t20231228_526537420.html"/>
-        <updated>2023-12-28T01:18:00.000Z</updated>
-        <summary type="html"><![CDATA[巴南区气象台2023年12月28日9时发布“大雾黄色预警信号”，预计28日9时至20时，姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇可能出现能见度小于500米的雾，或者已经出现能见度小于500米、大于等于200米的雾并将持续。]]></summary>
-        <author>
-            <name>国家预警信息发布中心</name>
         </author>
     </entry>
     <entry>
