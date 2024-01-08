@@ -51,11 +51,44 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-08 datetime="2024-01-08T05:35:39.000Z">2024-01-08</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-08 datetime="2024-01-08T05:35:39.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-08 datetime="2024-01-08T07:47:00.000Z">2024-01-08</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-08 datetime="2024-01-08T07:47:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >国家应急广播 - 重庆预警信息</button>
+                  <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240108/t20240108_526550913.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市酉阳土家族苗族自治县发布大雾黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240108/t20240108_526550913.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>酉阳县气象台2024年1月8日15时30分发布“大雾黄色预警信号”，预计1月8日22时至9日10时，桃花源街道、钟多街道、毛坝乡等全部乡镇街道可能出现能见度小于500米的雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -817,6 +850,48 @@ Windows Registry Editor Version 5.00 这行表明该文件是一个 Windows 注�
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7320655424641990682"
+                        open
+                      >
+                        <summary class="article-expander__title">有了它 Antd 样式覆盖不要太爽</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7320655424641990682">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>背景
+目前作者所在的业务正在升级 Antd5.0，不得不说 Antd5.0 真的太香了，但是由于团队的 UE 规范进行了大改版，Antd5.0 所有的组件必须对齐最新的规范，因此就需要对 Antd5.0 组件做主题定制。
+现状
+目前针对项目中使用的 antd 高频组件进行了梳理，并且根据规范基于 design token 对这些高频组件进行样式定制，对于主题色、圆角、边框、字体等用户关注度高的主题都已经满足团队规范。
+虽然 Design Token 提供了非常强大的拓展能力，但是同样它也有限制，例如当某些组件（button、select）的主题实现不能单纯依赖某种 Token 时，开发者就需要通过样式覆盖的方式去改写 antd 的样式以满足需求。
+目标
+从高频组件中梳理出需要进行样式覆盖的组件及其需要覆盖点。
+调研出一套具备高性能、高可扩展、兼容性强的样式覆盖方案。
+Antd主题定制演进
+Antd4.x时代
+简单概要
+在 antd4.x 时代，antd 的样式使用了 less 作为开发语言，其内部定义了一系列的全局/组件的样式变量，开发者可以根据业务需求去覆盖这些样式变量。
+@primary-color: #1890ff; // 全局主色
+@link-color: #1890ff; // 链接色
+@success-color: #52c41a; // 成功色
+@warning-color: #faad14; // 警告色
+@error-color: #f5222d; // 错误色
+@font-size-base: 14px; // 主字号
+
+对于样式变量的覆盖，原理上是使用 less 提供的 modifyVars 方式进行变量的覆盖，以 webpack 为例：
+// webpack.config.js
+module.exports &#x3D; {
+  rules: [{
+    t…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -882,6 +957,59 @@ Windows Registry Editor Version 5.00 这行表明该文件是一个 Windows 注�
                             <span class="media-object__text">
                               <span>合川区气象台2024年1月6日08时发布“大雾黄色预警信号”，预计6日08时至12时，我区南津街街道、钓鱼城街道、合阳城街道、云门街道、太和镇、龙市镇等全部镇街可能出现能见度小于500米的大雾，局部地区能见度小于200米。请注意防范大雾天气可能造成的影响。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >竹白百科 - TOP20</button>
+                  <a class="source-heading__link" href="http://analy.zhubai.wiki">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://open.zhubai.wiki/a/l/t/z/fp/houjoe/2355342337506586624"
+                        open
+                      >
+                        <summary class="article-expander__title">Joe&#x27;s Recap: 2023 玩物志</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://open.zhubai.wiki/a/l/t/z/fp/houjoe/2355342337506586624">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>原本计划在跨年前写完这篇年终盘点，奈何在南京跨年，酒吧没有我的位置，陪一只狗在路边待了许久。期间，在朋友家写了一会儿，在手机上写了一会儿，又在酒店继续写，直到年后也没有真正写完。   
+    
+   为了省事，我已经把每年的年度软硬件盘点、定期的 Recap（回顾系列）以及 2023 年度复盘合在了一起。人懒了之后，果然什么都可以干得出来……   
+    
+   当我尝试回顾这一年，记忆始终有些嘈杂，至少，五月之前的记忆已变得模糊，好在有相册时间线和之前码出来的一些文章帮助回忆。   
+    
+   另外，网上闲逛时偶遇了推特上网友分享的某大神每年问自己的 40 个问题，《       40 questions to ask yourself every year       》。边回忆边回答，非常推荐。回顾与盘点的意义在于”存档“，就当做写给未来的自己，等到回溯时不至于混沌一片。   
+    
+   让我用这 40 个问题的最后一个来开始：如何用一句话总结你的这一年？   
+    
+   未读万卷书，但行万里路。   
+    
+   江浙沪包游：延伸到 2024 的主题   
+    
+   不确定什么时候会离开杭州，但以杭州为中心辐射到周边的探索，贯穿整个 2023。不出意外的话，应该还会继续。去年一整年，一次 3000 多公里的华南自驾，好几趟往返湖北老家的长途，以及环杭州与太湖的各种短途旅行。以高德年度记录来看，2023 年总共穿行了 57 个城市。   
+        
+   不过，在我的滴答清单里，“想去的地方”还有许多江浙沪的地方有待探索，其实也不需要那种震撼心灵的景色，每个地方都有自己的不同韵味，或景致或文化，当个观察者，肉身体验其中的不同。   
+        
+   个体的自由，与不太好的大时代   
+    
+   不管有多少祝福语，从…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;16
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2850,53 +2978,6 @@ theme: hydrogen
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://open.zhubai.wiki/a/l/t/z/fp/weixin/2353894232495915008"
-                        open
-                      >
-                        <summary class="article-expander__title">AI视野：美图大模型将向公众开放；阿里AnyText破解AI绘图模型写字难题；Meta推全新视频生成模型FlowVid；黑客大规模恶意注册ChatGPT相似域名</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://open.zhubai.wiki/a/l/t/z/fp/weixin/2353894232495915008">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>🤖📈💻💡    大模型动态   
-    
-        美图大模型       将向公众开放   
-    
-   美图公司的AI视觉大模型MiracleVision于2023年6月内测，已升级至4.0版本并通过备案，成为国内唯一专注视觉领域的大模型，将在电商、广告、游戏、动漫、影视等行业开放服务。   
-    
-   【AiBase提要:】   
-    
-   🌐 MiracleVision4.0升级，为美图旗下产品提供AI模型能力。   
-    
-   🔓 是国内备案通过的唯一专注视觉领域的大模型。   
-    
-   🚀 将在电商、广告、游戏、动漫、影视等行业开放服务。   
-    
-   Meta推全新视频生成模型FlowVid   
-    
-   Meta与清华校友合作开发的FlowVid视频生成模型利用V2V技术，在短短1.5分钟内生成4秒视频，突破了时间连贯性难题，通过光流技术实现视频帧之间的高度一致性。   
-        
-   论文地址:https://arxiv.org/pdf/2312.17681.pdf   
-    
-   项目地址:https://top.aibase.com/tool/flowvid   
-    
-   【AiBase提要:】   
-    
-   🚀 新模型发布: Meta与清华校友联手推出FlowVid视频生成模型，采用V2V技术，为AI视频生成领域带来新突破。   
-    
-   ⚙️ 核心技术: FlowVid利用空间条件和源视频中的时间光流信息，解决了V2V合成的时间连贯性难题，保持视频帧之间的一致性。   
-    
-   🌐 用户研究表现: 在用户研究中，FlowVid在及时对齐和整体视频质量方面表现出色，以45.7%的偏好率超越其他V2V模型，如CoDeF、Rerende…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://open.zhubai.wiki/a/l/t/z/fp/ouranswers/2353893828785762304"
                         open
                       >
@@ -3572,40 +3653,6 @@ Vue3、Vue2、React函数式组件开发/class组件开发皆可
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7319312761073958975"
-                        open
-                      >
-                        <summary class="article-expander__title">业务中后台用户体验优化方法论总结（体验篇）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7319312761073958975">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: smartblue
-这是我们团队号工程化系列文章的第五篇，全系列文章如下：
-字节三年，谈谈一线团队如何搞工程化一（全景篇）
-⚡️卡顿减少 95% — 记一次React性能优化实践（性能篇）
-Modal管理-看这篇文章就够了 (实践篇)
-# 🍓中台表单技术选型实践(表单实践)
-团队尚有HC，感兴趣的小伙伴可以私信~（注明期望岗位城市：北京、上海、杭州）
-中台为什么要做用户体验
-提起中台体验优化，很多人的第一反应可能是“不重要、没意义、没事做，在瞎卷”，那我们来看一个真实的案例：
-
-上述是一个中台比较普遍的的现象，但由于中台的特殊性（没有选择余地的，真的没得选），用户一般只能一边骂着娘一边继续用。那这种糟糕的体验也仅仅是内部用户的吐槽吗？结果远不止于此！！！这种糟糕的体验会给内部合作带来裂痕，使双方互不信任（研发觉得用户笨，用户觉得研发菜），影响后续合作（有需求也不找你们了）。还会直接给客户和公司带来资损， 迷惑的交互会使用户工作效率降低，工作错误率上升，各种隐患层叠不穷 。 所以所有的系统只要它的用户是人就要做好用户体验，因为它的存在是为了解决问题而不是制造问题。
-中台体验建设有哪些难点
-中台体验差难道是产研故意为之吗？答案肯定是否定的。中台在体验建设上有自己困境，相较于C端甚至更难：
-不重视，很多中台业务为了更快的解决用户问题，而不是更好的解决问题。一个需求过来，研发来个一把搓，没有任何交互设计，一切只为了尽快上线。
-价值难衡量， 缺少明确的收益指标。中台不像C有转化率、收益率等明确的结果指标，中台更多依赖依靠用户反馈，但这些反馈通常是滞后的，带有一定主观性，很难从全局的角度给出设计建议。
-缺少行业标杆， 中台通常都是企业内部用户使用，使用场景相对封闭，在设计理念上沟通先天不足，缺少全场景的标准解决方案，在具体的业务场景下全凭业务自我发挥，导致质量参差不齐。…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7318379549720723475"
                         open
                       >
@@ -4044,101 +4091,6 @@ Modal管理-看这篇文章就够了 (实践篇)
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>开州区气象局2024年1月1日18时10分继续发布“大雾黄色预警信号”，预计1月1日19时至2日12时，我区大部分乡镇（街道）将出现能见度小于500米的雾，局部地区能见度小于200米。请各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240101/t20240101_526543553.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市巴南区发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240101/t20240101_526543553.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>巴南区气象台2024年1月1日17时30分发布“大雾黄色预警信号”，预计1月1日18时至2日12时，我区姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇可能出现能见度小于500米的雾，或者已经出现能见度小于500米、大于等于200米的雾并将持续。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240101/t20240101_526543547.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市云阳县发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240101/t20240101_526543547.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>云阳县气象台2024年1月1日17时05分发布“大雾黄色预警信号”，预计未来12小时，全县各乡镇（街道）将出现能见度小于500米的大雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20240101/t20240101_526543541.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市潼南区发布大雾橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20240101/t20240101_526543541.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>潼南区气象台2024年1月1日16时50分发布“大雾橙色预警信号”，预计1月1日17时至2日17时，我区全部镇街将出现能见度小于200米的雾，部分地区能见度不足50米，请各地加强防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240101/t20240101_526543506.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市奉节县发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240101/t20240101_526543506.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>奉节县气象台2024年1月1日16时10分发布“大雾黄色预警信号”，预计未来12小时，夔门街道、草堂镇、白帝镇、康乐镇、汾河镇、岩湾乡、龙桥土家族乡、新民镇、长安土家族乡、永乐镇、冯坪乡、鹤峰乡、夔州街道、永安街道、鱼复街道、康坪乡、大树镇、平安乡、青莲镇、公平镇、朱衣镇、红土乡、石岗乡、竹园镇、兴隆镇、云雾土家族乡、青龙镇、太和土家族乡、吐祥镇、羊市镇、五马镇、安坪镇、甲高镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。防御指南：1．车辆驾驶及户外活动注意安全。2．机场、高速公路、水上交通等单位加强交通管理。3.相关部门和乡镇街道按照职责，做好大雾防范应对工作。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20240101/t20240101_526543472.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市铜梁区发布大雾橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20240101/t20240101_526543472.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>铜梁区气象台2024年1月1日15时30分更新发布“大雾橙色预警信号”，预计1月1日15时至2日11时，巴川街道、东城街道、蒲吕街道、旧县街道、侣俸镇、太平镇、水口镇、白羊镇、少云镇、安居镇、维新镇、高楼镇、华兴镇、安溪镇、大庙镇、虎峰镇、福果镇、石鱼镇、永嘉镇、围龙镇、西河镇、平滩镇、小林镇、双山镇可能出现能见度小于200米的雾，局部地区能见度小于50米。请以上各地注意防范大雾天气可能造成的影响。防御指南：1.减少户外活动；驾驶人员打开雾灯、减速慢行、保持车距、勤用喇叭。2.机场、高速公路、水上交通等单位加强调度指挥。3.相关部门和乡镇街道按照职责，做好大雾防范应对工作。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -5638,8 +5590,8 @@ Cybertruck 是世界第一辆没有 12V 供电，只有 48V 供电的汽车。�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7444130055">
-        <time id="build-timestamp" datetime="2024-01-08T06:54:55.812Z">2024-01-08T06:54:55.812Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7445758426">
+        <time id="build-timestamp" datetime="2024-01-08T09:54:51.103Z">2024-01-08T09:54:51.103Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
