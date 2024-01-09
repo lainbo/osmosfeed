@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2024-01-09T03:55:28.058Z</id>
+    <id>urn:2024-01-09T06:55:03.734Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2024-01-09T03:55:28.058Z</updated>
+    <updated>2024-01-09T06:55:03.734Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[发布了: 生产关系决定着生产力。 ━━━━━━━━━━━━━━ 不同的分类方法带来不同的要素集合, 这些要素合集的配合关系也随之变动。 同样一群兵， 不同的切...]]></title>
+        <id>https://m.okjike.com/originalPosts/659cc4c06d9f190631e084ef</id>
+        <link href="https://m.okjike.com/originalPosts/659cc4c06d9f190631e084ef"/>
+        <updated>2024-01-09T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[生产关系决定着生产力。
+━━━━━━━━━━━━━━
+不同的分类方法带来不同的要素集合, 这些要素合集的配合关系也随之变动。
+同样一群兵， 不同的切法， 会带来完全不同的战力。
+注意你的下刀角度。]]></summary>
+        <author>
+            <name>李继刚的即刻动态</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Vue开发调试工具——vue-inspector-plugin，支持查看组件状态、快速跳转到组件文件对应行号，支持Vue2、Vue3、Webpack、Vite。https://github.com/varHarrie/vue...]]></title>
         <id>7321589055883968527</id>
@@ -205,6 +219,42 @@ p {
 原本的红色颜色，我们把它设置…]]></summary>
         <author>
             <name>Chokcoco</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GPT自动投简历，一周斩获三offer，开源分享！]]></title>
+        <id>https://juejin.cn/post/7320949203542409231</id>
+        <link href="https://juejin.cn/post/7320949203542409231"/>
+        <updated>2024-01-08T00:17:29.000Z</updated>
+        <summary type="html"><![CDATA[highlight: zenburn
+theme: devui-blue
+
+一、前言
+最近在 GitHub 上发现了一个非常有意思的项目：GitHub链接。
+该作者巧妙地结合 GPT 和 RPA 技术，打造了一个自动投简历助手。这是原作者分享的效果展示视频：B站视频链接。
+然而，由于原项目存在以下问题：
+代码使用 Python 编写，对于前端开发者不够友好。
+运行该项目需要充值 OpenAI 账户，而且只支持使用国外的信用卡，国内用户想充钱都没地。
+运行该项目还需要配置代理，对一些用户而言可能不太友好。
+折腾无果，遂决定使用 Node.js 重新实现该项目，并且完全免费、一键运行，无需设置代理：GitHub项目地址。
+在这个寒冷的招聘季，这个脚本能为您提供一些帮助，为您带来一些温暖。如果您觉得这个项目有价值，希望您能帮忙点个 star，将不胜感激。
+二、整体思路
+首先，我们会使用 selenium-webdriver 来模拟用户行为，该库是一个强大的自动化测试工具。它能够通过编程方式控制浏览器交互，通常用于自动化测试、网页抓取以及模拟用户交互等任务。
+用 selenium-webdriver 模拟用户打开浏览器窗口，并导航至直聘网的主页。
+等待页面加载完成，找到登录按钮的 DOM 节点，模拟用户点击触发登录，等待用户扫码操作。
+在用户成功扫码登录后，进入招聘信息列表页面。
+遍历招聘信息列表，对每一项进行以下操作：
+
+点击招聘信息，找到该项招聘信息的职位描述信息
+结合上传的简历信息与招聘信息传递给 GPT，等待 GPT 的响应
+在 GPT 响应后，点击“立即沟通”按钮，进入沟通聊天界面
+在聊天界面中找到输入框，将 GPT 返回的信息填入聊天框，并触发发送事件
+返回招聘信息列表页面，点击下一项招聘信息
+重复上述步骤，遍历下一项招聘信息的职位描述信息
+三、具体实现
+3.1、获取免…]]></summary>
+        <author>
+            <name>不要秃头啊</name>
         </author>
     </entry>
     <entry>
@@ -778,19 +828,6 @@ const o…]]></summary>
         <summary type="html"><![CDATA[[7073670907851440160#新人报道#] 求推荐一个前端可视化生成工具]]></summary>
         <author>
             <name>Cdd</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[发布了: 逻辑思维包含三个要素: 1. 概念： 「名」, 是思维的原子 2. 判断: 「Yes or No」, 判定名是否具有某属性 3. 推理：「因为...所以」, 从几个判断推出另一...]]></title>
-        <id>https://m.okjike.com/originalPosts/65978f77164d89e6012ffcf2</id>
-        <link href="https://m.okjike.com/originalPosts/65978f77164d89e6012ffcf2"/>
-        <updated>2024-01-05T05:11:19.000Z</updated>
-        <summary type="html"><![CDATA[逻辑思维包含三个要素:
-1. 概念： 「名」, 是思维的原子
-2. 判断: 「Yes or No」, 判定名是否具有某属性
-3. 推理：「因为...所以」, 从几个判断推出另一个判断的形式。]]></summary>
-        <author>
-            <name>李继刚的即刻动态</name>
         </author>
     </entry>
     <entry>
@@ -1799,6 +1836,57 @@ import {readFile, writeFile} from "fs/promises"
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[封装一个支持语音输入的输入框]]></title>
+        <id>https://juejin.cn/post/7319328280788336678</id>
+        <link href="https://juejin.cn/post/7319328280788336678"/>
+        <updated>2024-01-02T14:37:43.000Z</updated>
+        <summary type="html"><![CDATA[highlight: atom-one-dark
+theme: cyanosis
+前言
+这两天逛MDN查某个API文档的时候，找到两个好玩的API，一个是语音转文字一个是文字转语音下面给大家分享一下，顺便封装一个支持语音输入的输入框。
+语音转文字
+说明
+语音转文字主要使用了webkitSpeechRecognition这个api，可以new一个语音识别对象，它支持以下属性配置。
+属性
+官方说明
+实战说明
+
+
+
+
+lang
+返回并设置当前的语言
+我用不同语言测试了一下，这个属性并不是强制的，比如设置了英文，说中文还是能识别出来，但是有些中文会被识别返回拼音。
+
+
+continuous
+控制是为每次识别返回连续结果，还是仅返回单个结果。默认为单个(false)。
+也就是说如果这个属性设置为false，说一段话后会自动停止识别。如果为true，会一直识别，直到调用stop或abort方法停止识别。
+
+
+interimResults
+这个属性控制是否返回临时结果，true表示返回，false不返回。
+如果为true，说话的时候会实时返回，如果为false，一段话结束后才返回。
+
+
+maxAlternatives
+设置每个结果提供的最大数量。默认值为 1。
+这个属性控制识别后返回的结果数量，如果设置为2，会返回两个识别的可能结果。
+
+
+
+实战
+介绍完api后，我们来实战一下，封装一个支持语音输入的输入框。
+import { AudioOutlined, LoadingOutlined } from '@ant-design/icons';
+import { Button, Input, Space } from 'antd';
+import { useEffect, useMemo, useRef, useState } from 'react';
+
+function App() {…]]></summary>
+        <author>
+            <name>前端小付</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[重庆市綦江区发布大雾黄色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/huangsyj/20240102/t20240102_526545029.html</id>
         <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20240102/t20240102_526545029.html"/>
@@ -2146,16 +2234,6 @@ Modal管理-看这篇文章就够了 (实践篇)
         <summary type="html"><![CDATA[[7256630492274655271#聊聊工程化Docker#] 话说docker desktop的 用户界面是用什么框架开发的]]></summary>
         <author>
             <name>修罗_路西法</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[重庆市巴南区发布大雾黄色预警]]></title>
-        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20240102/t20240102_526544259.html</id>
-        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20240102/t20240102_526544259.html"/>
-        <updated>2024-01-02T04:19:00.000Z</updated>
-        <summary type="html"><![CDATA[巴南区气象台2024年1月2日12时继续发布“大雾黄色预警信号”，预计2日12时至22时，我区姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇可能出现能见度小于500米的雾，局地能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
-        <author>
-            <name>国家预警信息发布中心</name>
         </author>
     </entry>
     <entry>
@@ -2605,54 +2683,6 @@ v-model 最佳实践写法是官网推荐 v-model 实现方式二，“使用具
         <summary type="html"><![CDATA[公司 dev 环境没灰度，不能单独上自己的本地分支，最近推 swagger 自动 ts这个事头皮发麻，各种生成 ts 的工具的 cli 都没白名单，唯一有戏的是 pont 的vscode 插件支持这个，结果单位 sawgger 格式又太不规范。浪费一周扒源码加 diff 耽误刷圣遗物，希望大佬能研究一个v2v3通用的包]]></summary>
         <author>
             <name>黑恶势力</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2023年度稀土掘金影响力榜单发布！]]></title>
-        <id>https://juejin.cn/post/7317704533013676070</id>
-        <link href="https://juejin.cn/post/7317704533013676070"/>
-        <updated>2023-12-29T07:55:01.000Z</updated>
-        <summary type="html"><![CDATA[theme: smartblue
-稀土掘金社区2023年度影响力榜单正式公布
-为了更好地展示社区的优质创作者、激励更多优质的技术人才参与到内容创作来，持续促进社区生态完善，我们今年继续发布年度影响力榜单，今年的年度影响力榜单分别从社区的优质创作者、技术团队、畅销课程、活跃沸点用户、优质好文、优质活跃用等几个角度出发，再结合活跃度、贡献度、内容质量等角度，最终评选出几十位优质内容创作者和活跃用户。
-我们将会给每位上榜的个人和团队颁发由掘金团队制作的奖杯，期待大家新的一年继续再接再厉，和掘金社区一起共建美好社区！
-榜单地址:https://activity.juejin.cn/rank/2023/influence
-上榜个人海报地址(pc端打开下载):文件地址
-2023年度优秀创作者 | The Best 10 Creative Writers of 2023
-榜单地址:https://activity.juejin.cn/rank/2023/influence#creator
-上榜个人海报地址(pc端打开下载):文件地址
-评选规则：根据掘金作者掘力值增长及文章质量综合评估，按名称首字母序排名。
-统计周期：2023年1月1日-12月28日
-站内昵称
-个人主页
-
-
-
-
-Chokcoco
-https://juejin.cn/user/2330620350437678
-
-
-TF男孩
-https://juejin.cn/user/615370768790158
-
-
-zxg_神说要有光
-https://juejin.cn/user/2788017216685118
-
-
-荒山
-https://juejin.cn/user/430664257386558
-
-
-捡田螺的小男孩
-https://juejin.cn/user/1451011080727639
-
-
-恋猫de小郭
-https://ju…]]></summary>
-        <author>
-            <name>掘金酱</name>
         </author>
     </entry>
     <entry>
