@@ -51,6 +51,86 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-09 datetime="2024-01-09T01:45:14.000Z">2024-01-09</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-09 datetime="2024-01-09T01:45:14.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7321589055883968527"
+                        open
+                      >
+                        <summary class="article-expander__title">Vue开发调试工具——vue-inspector-plugin，支持查看组件状态、快速跳转到组件文件对应行号，支持Vue2、Vue3、Webpack、Vite。https://github.com/varHarrie/vue...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7321589055883968527">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Vue开发调试工具——vue-inspector-plugin，支持查看组件状态、快速跳转到组件文件对应行号，支持Vue2、Vue3、Webpack、Vite。https://github.com/varHarrie/vue-inspector-plugin</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >国家应急广播 - 重庆预警信息</button>
+                  <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240109/t20240109_526551555.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市云阳县发布大雾黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240109/t20240109_526551555.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>云阳县气象台2024年1月9日8时58分发布“大雾黄色预警信号”，预计1月9日9时至12时，全县各乡镇（街道）将出现能见度小于500米的大雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-08 datetime="2024-01-08T23:44:00.000Z">2024-01-08</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-08 datetime="2024-01-08T23:44:00.000Z"></time>
           </button>
@@ -1857,62 +1937,6 @@ Free Now to 2024-01-11T16:00:00.000Z</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7319904113376182323"
-                        open
-                      >
-                        <summary class="article-expander__title">停止你错误的请求封装</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7319904113376182323">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>自从上次写了一篇《如何正确处理 promise、await 产生的错误》之后，有很多童鞋问我，如何正确的封装请求，以及如何处理请求的错误。今天就来聊聊这个问题。
-本文以 axios 为例，以一般网络上的封装为例，来说明例子中的问题。
-一个错误的封装
-我们假设 api 的地址地址为：https://api.my.com
-且返回的数据格式为：
-interface ResponseBody {
-  code: number;
-  data: T;
-  message: string;
-}
-
-我们假设 code 为 0 时，表示请求成功，否则表示请求失败。
-并且假设引入 element-ui 的 Message 组件，用于显示错误信息。
-import axios from &quot;axios&quot;;
-import { Message } from &quot;element-ui&quot;;
-
-const request &#x3D; axios.create({
-  baseURL: &quot;https://api.my.com&quot;,
-});
-
-request.interceptors.response.use(
-  (response) &#x3D;&gt; {
-    const responseBody &#x3D; response.data;
-    if (responseBody.code &#x3D;&#x3D;&#x3D; 0) {
-      return responseBody.data;
-    } else {
-      Message.errror(responseBody.message);
-    }
-  },
-  (error) &#x3D;&gt; {
-    Message.error(error.message);
-  }
-);
-
-export default request;
-
-上述代码，我们在其他地方使用的时候，就可以这样使用：
-import…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7320166206215340072"
                         open
                       >
@@ -2091,8 +2115,6 @@ async function main(){
 技术选型
 由于给的时间不多，能有现成的最好；最终选择下面的开源项目进行集成和修改。
 说明：由于之前没…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2847,8 +2869,6 @@ defineModel 是一个新的  宏，旨在简化支持 v-model 的组件的�
 遇到有共鸣的问题，与众多同行朋友们一起讨论，一起沉淀成长。
 为了给功能问题专栏添加乐趣，增设技术资讯、实用干货两个新专栏。
 感谢关注微信公众号：“程序员大澈”，免费领取&quot;面试礼包&quot;一份，然后免费加入问答群，从此让解决问题的你不再孤单！</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2884,8 +2904,6 @@ theme: hydrogen
 
 
    …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2911,8 +2929,6 @@ theme: hydrogen
 有同学可能好奇为啥找工作能这么久，大家应该都了解今年大环境的影响。另外就是学历问题，我是非统招学历，另外加上非科班，双buff加持是地狱级别也不为过。当然个人技术能力不行也占一方面。
 当时是从外包裸辞的，以为可以很快找到下家，可现实给了我一记的抱拳。3个月期间没有收入，而且家里今年在装修新房，钱大部分都寄回家了，又不想让父母知道，最后只能在借呗借了2万先用着。
 这里不得不说当时社会工作经验的欠缺，一般外包如果不主动离职的话，外包会给你安排面试，同时待业期间每月会给到深圳最底薪资，起码算是有个…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3778,44 +3794,6 @@ theme: hydrogen
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240102/t20240102_526544195.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市云阳县发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240102/t20240102_526544195.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>云阳县气象台2024年1月2日11时15分更新发布“大雾黄色预警信号”，预计未来12小时，全县各乡镇（街道）将出现能见度小于500米的大雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240102/t20240102_526543987.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市巫溪县发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240102/t20240102_526543987.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>巫溪县气象台2024年1月2日8时40分发布“大雾黄色预警信号”，预计1月2日9时至14时，我县文峰镇、上磺镇、古路镇、塘坊镇、菱角镇、尖山镇、朝阳镇、通城镇、双阳乡、胜利乡、城厢镇、宁厂镇、红池坝镇、长桂乡等海拔500米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -3830,6 +3808,48 @@ theme: hydrogen
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7319541565318398003"
+                        open
+                      >
+                        <summary class="article-expander__title">使用 wasm 提高前端20倍的 md5 计算速度</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7319541565318398003">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: channing-cyan
+背景
+前阵子做大文件上传，本地内网测试发现非常慢，查了很久问题发现前端 MD5 计算消耗了非常多的时间。
+知道问题在哪那么就该想办法优化了，但以常规的优化很难有质的提升。
+最近不是流行 WebAssembly 吗，听说性能非常高，于是就决定自己写个 wasm 的 MD5 库。
+看看 wasm 对前端能提升多少，也顺便体验下 WebAssembly 的开发。
+开始
+此前我并未使用过 wasm 相关的东西，根据 mdn 的介绍可以用 c/c++ 或 rust 编写。
+我选择使用 rust 开发，并根据 mdn  的文档下载了 wasm-pack wasm 开发工具 (需要会使用 rust 相关工具链)
+折腾了两天编译了第一版 wasm 代码
+
+它是通过异步请求 .wasm 文件的形式来加载 wasm 程序的，这也是 mdn 上的标准做法
+
+    import init, {Md5, Sha256, Sha512} from &quot;./dist/digest_wasm.js&quot;
+    window.onload &#x3D; async () &#x3D;&gt; {
+        await init() // 需要先初始化加载 wasm
+        /* 后续的操作 */
+    }
+
+
+这种是适用于 web 的 node 使用可能会有问题，找不到 wasm 文件或者用构建工具时没能正确将 wasm 一起打包
+研究了一下 wasm-pack 编译后的文件，发现可以删除掉一部分初始化代码改为 base64 内嵌代码，这样就不需要异步请求，同构为 web node 通用的代码
+// patch.mjs
+import {readFile, writeFile} from &quot;fs/promises&quot;
+
+…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -3861,8 +3881,6 @@ theme: channing-cyan
 优势：
 Vue3、Vue2、React函数式组件开发/class组件开发皆可
 近2年ts使…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3895,85 +3913,6 @@ Modal管理-看这篇文章就够了 (实践篇)
 不重视，很多中台业务为了更快的解决用户问题，而不是更好的解决问题。一个需求过来，研发来个一把搓，没有任何交互设计，一切只为了尽快上线。
 价值难衡量， 缺少明确的收益指标。中台不像C有转化率、收益率等明确的结果指标，中台更多依赖依靠用户反馈，但这些反馈通常是滞后的，带有一定主观性，很难从全局的角度给出设计建议。
 缺少行业标杆， 中台通常都是企业内部用户使用，使用场景相对封闭，在设计理念上沟通先天不足，缺少全场景的标准解决方案，在具体的业务场景下全凭业务自我发挥，导致质量参差不齐。…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7318379549720723475"
-                        open
-                      >
-                        <summary class="article-expander__title">2023失业与重生：裸辞的670天，40岁的前端真的很难再找工作。</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7318379549720723475">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>40岁的前端真的很难再找工作，当然说的是投简历，内推和猎头主动找还是有的。另外远程工作也不看年龄，我身边就有几个朋友找到了收入远超以前996的海外远程机会。所以也不用太慌，2024大家一起加油。
-自2022年3月1日裸辞开始自由职业起，至今已经快700天了。
-而2023年给了我更大的惊喜，我老婆也失业了！
-我们现在是双失业家庭，
-我们家现在完全没有任何稳定收入。
-
-但我们俩心态还是很好的，工作这么多年没有点积蓄也说不过去。所以我和老婆一商量，觉得这也许是老天给我们的机会，因为小孩还有一年才上小学，现在所处的幼儿园阶段也不是非上不可。那么干脆利用这个时间一家三口去环游中国，这种时机是钱买不到的，错过就很难再有了。
-我俩一拍即合，于是迅速在网上找二手房车，我俩坐着高铁就去长春提车了，车提回来后也迅速给孩子办理幼儿园退学手续...
-
-环游中国
-我们做了非常详细的环游路线计划的excel表格，有想要我们路线计划的，请留个评论，我会发在评论区。
-这次旅行的核心目标优先级如下
-健健康康的出去健健康康的回来
-带孩子打卡全部的985大学
-足迹踏遍中国每一个省份
-从这三个目标你也能看出来，旅行都只是附加的。
-因为在我们看来，一家人一起旅行的意义是【一起去经历】，其他都是次要的
-2023年3月1日我们正式在北京出发，开启了我们一家三口环游中国的旅程。北京，天津，济南，潍坊，青岛，日照，南京，苏州，上海，杭州，合肥，武汉，长沙，江西，福州，泉州，厦门，汕头，深圳，东莞，香港，广州，佛山，珠海，澳门，阳江，湛江，海口，文昌，琼海，万宁，东方，安铺，南宁，黔南，贵阳，重庆，成都，西昌，大理，香格里拉，芒康，左贡，八宿，然乌湖，波密，林芝，拉萨，羊湖，日喀则，拉孜，珠峰大本营，萨嘎，仲巴，霍尔，普兰，冈仁波齐，狮泉河，班公湖，三十里营房，叶城，喀什，阿克苏，库车，巴音布鲁克，那拉提，独山子，乌鲁木齐，吐鲁番，哈密，敦煌，大柴旦，德令哈，青海湖，西宁，兰州，定西，固原，咸阳，西安，洛阳，许昌，长治，太原，大同，呼和浩特，乌兰察布，锡林浩特，乌拉盖，阿尔山，满洲里，呼伦贝尔，哈尔滨，长春，沈阳，大连，锦州，秦皇岛，最后从秦皇岛回到北京。
-
-我们完成了既定的核心目标，带孩子打卡了全国所有的985大学和港澳地区的部分学校以及一些艺术类院校。
-
-有一说一：内地的985我们一所都没进去，因为不让进，当然我知道有偏门的方法能进去，但我没那么做。而港澳地区的大学都是敞开的，随便进。
-
-足迹遍布33个省级行政区（缺湾湾暂时不能去） 打卡了80%的省级博物馆、美术馆 去遍了中国所有的沿海，知名的自驾路线全打卡，214、318、219、独库、331 一家三口都到达了海拔5200的珠峰大本营 打卡了神山冈仁波齐、昆仑山烈士陵园、吐鲁番火焰山，乌兰哈达火山，呼伦贝尔大草原...
-
-当然，最最重要的是，我们一路平安，一家三口健健康康的完成了这趟史诗级的环中国之行。
-而这趟旅行的全部开销你们猜多少钱？除开油费和买车的钱，路上的生活消费仅仅只有5万出头。
-
-朋友们觉得值吗？
-2023收入统计
-自由职业后，我一直坚持统计每月的收入情况。而今年由于出去旅行，收入也降了很多。但接活儿的好处我之前的文章也说过，一旦开始，你自己是很难停止的...
-因为接活儿的核心本质是【你帮客户赚钱】，而不是你在赚客户的钱，想不明这一点的，就不要去接外包活儿了哈。
-所以，去年的客户今年依然主动联系我们，这里有去年项目的维护，也有新的项目要开发。
-
-
-
-1-3月看上去收入很多，其实是去年项目的尾款今年才收完。
-这既是包工头的快乐，也是包工头的忧愁（后面你就能看到月收入为负）吧~
-
-
-
-
-
-
-
-
-
-
-还有一些零散的自媒体收入不太容易清晰统计到，就算了吧，反正也不多。那么今年的整体净利润为769898.22元。因为我们所有的项目报酬都在微信群里转账，所以微信支付年账单直接就能统计到我2023年发出去的报酬为501440.6元。
-
-
-今年还有三笔项目的款处于异常状况，总金额在15w左右。看到这些详细情况的分享，你还觉得接活儿是一个好的方向吗？
-2024目标
-2023的行情肉眼可见的不如去年，我对2024年的预期只会更惨淡，所以2024的工作重心改为全面出海
-1、做几个海外独立产品，收费或者赚广告费。
-2、开始运营自己的海外自媒体，比如推，目前已经有5k+ fo了。逐步建立海外接单、出海交流群组，欢迎志同道合的朋友们加入。
-3、今年会先去泰国待一个月，陪孩子参加一下国际冬令营感受下英文环境。然后回来考雅思，做方案，争取拿下Innovator Founder Visa带老婆孩子换一个环境生活。
-2024，第一个心愿：祝所有的朋友们2024年心想事成！
-                            ————dashuailaoyuan，写于2024年1月2日</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4352,8 +4291,6 @@ v-model 无限循环的原因，以及探索组件 v-model 最佳实践写法�
 
 v-model 最佳实践写法是官网推荐 v-model 实现方式二，“使用具有 getter 和 setter 属性的可写 computed”，我当时第一眼就觉得“专业”，今天再仔细一瞅，还“优雅”。
 “使用等价展开 :value 和 @in…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4587,8 +4524,6 @@ https://juejin.cn/user/1451011080727639
 
 恋猫de小郭
 https://ju…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5238,8 +5173,6 @@ Microsoft PowerToys 是使用 C++ 和 C# 编程语言开发的。它利用了 Wi
 这个问题也比较普遍，不能因为存储前端资源的服务出问题，就导致所有的产品业务不能使用，那损失就大了。
 前端资源现状剖析
 最初，有老师提出了一个想法：将私有云各项目的前端资源迁移到阿里云OSS的云存储上，并通过在代码中加载并运行云存储提供的URL来实现。初步来看，这种方法是可行的。然而，从网页资源加载速度的角…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5342,54 +5275,6 @@ Microsoft PowerToys 是使用 C++ 和 C# 编程语言开发的。它利用了 Wi
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-19 datetime="2023-12-19T12:46:20.000Z">2023-12-19</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-19 datetime="2023-12-19T12:46:20.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7314190092129484800"
-                        open
-                      >
-                        <summary class="article-expander__title">[7210002980895916043#挑战每日一条沸点#] 2024年，改变世界的前端仓库，麻烦点个star关注下，且看前端之虎陈随易，如何破局！ https://github.com/chenbimo/yic...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7314190092129484800">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>[7210002980895916043#挑战每日一条沸点#] 2024年，改变世界的前端仓库，麻烦点个star关注下，且看前端之虎陈随易，如何破局！
-https://github.com/chenbimo/yicode</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-15 datetime="2023-12-15T00:15:00.000Z">2023-12-15</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-15 datetime="2023-12-15T00:15:00.000Z"></time>
           </button>
@@ -5455,8 +5340,8 @@ Cybertruck 是世界第一辆没有 12V 供电，只有 48V 供电的汽车。�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7455301728">
-        <time id="build-timestamp" datetime="2024-01-09T01:17:46.755Z">2024-01-09T01:17:46.755Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7456414520">
+        <time id="build-timestamp" datetime="2024-01-09T03:55:28.037Z">2024-01-09T03:55:28.037Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
