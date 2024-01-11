@@ -51,11 +51,44 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-11 datetime="2024-01-11T00:53:09.000Z">2024-01-11</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-11 datetime="2024-01-11T00:53:09.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-11 datetime="2024-01-11T01:16:00.000Z">2024-01-11</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-11 datetime="2024-01-11T01:16:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >国家应急广播 - 重庆预警信息</button>
+                  <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240111/t20240111_526553914.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市开州区发布大雾黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240111/t20240111_526553914.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>开州区气象局2024年1月11日9时10分发布“大雾黄色预警信号”，预计1月11日9时10分至12时，我区大部分乡镇（街道）将出现能见度小于500米的雾，局部地区能见度小于200米。请各地注意防范大雾天气可能造成的影响。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -1365,6 +1398,49 @@ p {
 解释一下：
 原本的红色颜色，我们把它设置…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7321410822789316634"
+                        open
+                      >
+                        <summary class="article-expander__title">别再说项目没亮点了！！！没有就创造💪</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7321410822789316634">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>highlight: a11y-dark
+theme: juejin
+前言
+Hello，相信很多朋友在面试的时候肯定会有被面试官问项目亮点的场景并说不出所以然，然而大部分我们都是一颗螺丝钉，包括本人工作中也是经常的CRUD。所以很多时候项目中确实没啥可说的，但是面试官可不想听这个。
+见缝插针
+相信大家都用过组件库吧，或者自己在components下封装的组件，不管是ElementUI还是Ant Design又或者其他，在现在这个前后端分离的时代少不了UI组件库的加持，所以我们可以从这里开始&quot;插一针&quot;。其实不光只是UI组件库，在工作中可以去观察发现可以&quot;插针的地方&quot;，比如我们老生常谈的打包优化、FCP、LCP等，没有一个十全十美的项目，需要做的就是找到并解决这就是你的亮点，哪怕只是一点点！
+dui项目地址
+dui项目地址，这个项目从0-1搭建了一个ui组件库，不过目前一个人精力有限很多有些测试没有做、也可能存在一些bug未修复。不过对于新手学习搭建过程还是可以的，大佬就轻点喷了😬，如果你觉得对你有帮助，麻烦点个star⭐,非常感谢~
+技术选型及配置
+Storybook + Rollup + React 
+VuePress、React技术的同学也可选择dumi。
+接下来就是项目初始化，随后配置babel、eslint、prettier等，配置的话可以看站内其他文章还是比较多的。
+这里放一下比较重要的rollup的配置。
+
+文件组织及结构
+ 
+
+npm地址，预览地址
+.github：用github来做ci、cd
+.storybook：storybook相关配置，在打包文档时会读取
+src-components：源码存放的地方，最后通过index.tsx统一导出
+hooks：常用的自定义hook
+storybook-static：构建后的文档目录
+搞一个Button玩玩
+在项目都…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2878,6 +2954,8 @@ async function main(){
     
    
    方可成在 WSJ. 中文版…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;275
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3408,60 +3486,6 @@ theme: hydrogen
 
    …</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7319699173740363802"
-                        open
-                      >
-                        <summary class="article-expander__title">啊？两个vite项目怎么共用一个端口号啊</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7319699173740363802">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>问题：
-最近在业务开发中遇到一个问题，问题是这样的，当前有一个主项目和一个子项目，主项目通过微前端wujie来嵌套这个子项目，其中呢为了方便项目之间进行通信，所以规定该子项目的端口号必须为5173，否则通信失败，但是这时候发现一个问题，当我启动了该子项目后:
-
-该项目的端口号为5173，但是此时我再次通过vite的官方搭建一个react+ts+vite项目：npm create vite@latest react_demos -- --template react-ts，之后通过npm run dev启动项目，发现端口号并没有更新:
-
-这是什么原因呢？
-寻因：
-查阅官方文档，我发现:
-
-那么我主动在vite.config.ts中添加这个配置：
-
-正常来说，会出现这个报错：
-
-但是此时结果依然为：
-
-我百思不得不得其解，于是再次查阅官方文档：
-
-我寻思这也与文档描述不一致啊，于是我再次尝试，思考是不是vite版本号的问题，两个项目的版本号分别为：
-
-
-我决定创建一个4版本的项目npm create vite@^4.1.4 react_demos3 -- --template react-ts
-
-结果发现，还是有这个问题，跟版本号没有关系，于是我又耐心继续看官方文档，看到了这个配置：
-
-我抱着试试的态度，在其中一个vite项目中添加这个配置：
-
-发现，果然是这个配置的锅，当其中一个项目host配置为0.0.0.0时，vite不会自动尝试更新端口号
-难道vite的端口监测机制与host也有关？
-结果：
-不甘心的我再次进行尝试，将两个项目的host都设置成：
-
-
-vite会自动尝试更新端口号
-原来如此，vite的端口号检测机制在对比端口号之前，会先对比host，由于我的微前端项目中设置了host，而新建的项目中没有设置host，新建的项目host默认值为localhost对比不成功，vite不会自动尝试下一个可用端口，而是共用一个端口
-总结：
-在遇到问题时，要多多去猜，去想各种可能，并且最重要的是去尝试各种可能，还要加上积极去翻阅官方文档，问题一定会得到解决的；哪怕不能解决，那也会在尝试中，学到很多东西</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -5069,8 +5093,8 @@ Cybertruck 是世界第一辆没有 12V 供电，只有 48V 供电的汽车。�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7482893067">
-        <time id="build-timestamp" datetime="2024-01-11T01:17:22.552Z">2024-01-11T01:17:22.552Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7484013768">
+        <time id="build-timestamp" datetime="2024-01-11T03:55:00.570Z">2024-01-11T03:55:00.570Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
