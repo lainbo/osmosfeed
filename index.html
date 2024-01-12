@@ -51,11 +51,68 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-12 datetime="2024-01-12T00:00:03.000Z">2024-01-12</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-12 datetime="2024-01-12T00:00:03.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-12 datetime="2024-01-12T00:31:42.000Z">2024-01-12</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-12 datetime="2024-01-12T00:31:42.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >阮一峰的网络日志</button>
+                  <a class="source-heading__link" href="http://www.ruanyifeng.com/blog/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.ruanyifeng.com/blog/2024/01/weekly-issue-286.html"
+                        open
+                      >
+                        <summary class="article-expander__title">科技爱好者周刊（第 286 期）：蓝色指示灯的解决方案</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.ruanyifeng.com/blog/2024/01/weekly-issue-286.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>这里记录每周值得分享的科技内容，周五发布。
+本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。
+封面图
+
+上个月，北京城市图书馆对外开放。这个图书馆又名&quot;森林书苑&quot;，一根根白色的柱子象征树木，中间弯曲的主干道象征山谷，让读者产生&quot;在森林中读书&quot;的感觉。（via）
+蓝色指示灯的解决方案
+你注意过吗，电子设备的指示灯是什么颜色？
+一般来说，黄色和绿色的指示灯，比较能够让人接受，感觉很平和。
+
+
+怕就怕，蓝色指示灯。
+
+
+科学家早就发现，长时间暴露在蓝光中对健康不利。
+
+我来摘录一段。
+&quot;400nm～460nm 的高能短波蓝光才是影响人体健康的主要波段。
+蓝光的主要危害是对视网膜可造成光化学损害，加速黄斑区细胞的氧化损伤。同时，蓝光还可引起视疲劳、泪膜稳定性下降等。&quot;
+简单说，蓝光伤眼睛，会加速黄斑细胞的老化。
+而且，蓝光还会干扰人类睡眠。如果卧室里面有明亮的蓝光，你就睡不好。另外，蓝光对于儿童的生长发育也有影响。
+
+这就是为什么市场上有那么多&quot;防蓝光&quot;产品，配眼镜时，都会问你要不要&quot;防蓝光镀膜&quot;（虽然它可能实际上没用）。
+
+蓝光对健康不利的主要原因，可能跟它的能量高有关。可见光有&quot;红橙黄绿青蓝紫&quot;七色，排在越后面的颜色，频率越高，能量也越高。三原色（蓝、绿、红）之中，蓝色的能量是最高的。
+但是不知何故，很多厂商坚持使用蓝色指示灯，尤其是国内的电子厂商，彷佛偏爱蓝灯。他们大概觉得，蓝灯看上去很高科技。
+我家的路由器和电视盒子，电源指示灯不幸就是蓝灯，只要开机，就一直是明亮的蓝光。路由器放在角落，可以不去看它。但是，电视盒子总是正对着你，因为遥控信号的接收区跟蓝灯做在了一起。只要打开电视机，蓝灯就会亮起。我为这个事情很烦恼。
+上周，Hacker News 社区有一篇文章，一个老外也在抱怨这个问题，下面有很多…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -1874,6 +1931,8 @@ p {
 
 解释一下：
 原本的红色颜色，我们把它设置…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -1965,6 +2024,8 @@ storybook-static：构建后的文档目录
 也可能是因为程序员考虑不当，没有更加全面的考虑到策划或者经理的变化。
 4.时间的压力
 项目通常有时间限制，导致程序员可…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2433,6 +2494,8 @@ vue-router是前端路由，但是前端路由不是vue-router，这是个包含
 离职的前一个月，每天投投简历，不过基本上也都沉入大海了，投出去的也没有回复，白天就在家里打英雄联盟，下午做个饭，正好老婆下班了回来吃饭。
 一个月过后，也正式离职了，游戏也不想再打了，就打算着自己能做点什么，尝试自己每天不用上班对着电脑也可以赚到钱，当时正值 AI 发展最火热的时候，就每天早上早早起床，背着书包带着电脑，早上九点钟左右到星巴克研究一些 AI 相关的东西，再学习一些新的内容。每天在星巴克除去中午出去吃个饭是时间，一直都在对着电脑。到了下午三四点钟，就去楼上超市买个菜，回家做饭。
 除了每天…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2468,6 +2531,8 @@ console.error(
 function refreshCSS() {
     //使用[].slice.call()来将获取到所有的link标签塞到一个数组里面
     var sheets &#x3D; [].slice.call(document.getEle…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2564,6 +2629,8 @@ Windows Registry Editor Version 5.00 这行表明该文件是一个 Windows 注�
 而我也找到了这个注册表
 
 原来叫baiduyunguanjia协议（不区分大小写），使用 baiduyunguanjia://open 可以打开。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2604,6 +2671,8 @@ Antd4.x时代
 module.exports &#x3D; {
   rules: [{
     t…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2881,6 +2950,8 @@ symbol藏匿meta
 内部使用一个symbol标记来存储meta
 const LIMU_META &#x3D; symbol(&#x27;LIMU_META&#x27;);
 const o…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2919,6 +2990,8 @@ const o…</span>
    
    
    &lt;el-image :src&#x3D;&quot;item.小图图片路径&quot; style&#x3D;&quot;height: …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3074,6 +3147,8 @@ const o…</span>
     
    
    方可成在 WSJ. 中文版…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;275
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3153,6 +3228,8 @@ hi, 大家好, 我是徐小夕, 今天采访的嘉宾是掘金社区运营——
 此外，老牌社区还是有其优势的，后面新兴的社区也有其优势。实际上，国内这些诞生已有十年、二十多年的老牌社区，可能由于存在时间太久，有些地方难以改变，无法跟上新趋势。稀土掘金相较于他们的区别在于一直坚持提供优质的内容给用户，这是这个社区产品的使命和价值。包括早期我们没有原创内容的时候，作为一个精选内容的分享平台，也是通过编辑精选然后去分发出来的。因此，我个人认为坚持优质内容的调性应该是我们与其他社区区分开来的重要标准之一。
 另一方面就是我们的用户粘性，比如你去我们的板块和一些文章下面，你会发现用户的活跃度还是非常高的。
 最后，掘金已经运营7年多了，相信已经帮助和培养了一大批高质量的开发者用户群体。…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3209,6 +3286,8 @@ async function main(){
             });
 
             console.log(&#x27;行&#x27; + index2, rowData)…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3251,6 +3330,8 @@ async function main(){
 技术选型
 由于给的时间不多，能有现成的最好；最终选择下面的开源项目进行集成和修改。
 说明：由于之前没…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5238,8 +5319,8 @@ Cybertruck 是世界第一辆没有 12V 供电，只有 48V 供电的汽车。�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7496606020">
-        <time id="build-timestamp" datetime="2024-01-12T01:17:20.376Z">2024-01-12T01:17:20.376Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7497687906">
+        <time id="build-timestamp" datetime="2024-01-12T03:55:20.886Z">2024-01-12T03:55:20.886Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
