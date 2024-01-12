@@ -944,6 +944,75 @@ SSR 并不是什么新鲜事物。PHP 已经提供了整整 28 年，如果它�
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7322518827849072677"
+                        open
+                      >
+                        <summary class="article-expander__title">11K star! 这款开源神器帮你省下XX音乐的会员费</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7322518827849072677">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>平时你都有什么来听歌，都充哪些会员？我是先后冲过某Q音乐，XX云音乐，有时候因为一些歌曲的问题，还需要几家一块花钱。今天我要帮大家省钱了。
+今天我们推荐的开源项目是spotube，它是一款开源的Spotify客户端，本项目目前在GitHub已超过11K Star。
+
+spotube是什么?
+spotube 是一个开源的Spotify客户端，它支持跨平台使用，使用Spotify的数据API和YT作为音频源 ，你无需购买Spotify Premium，就可以享受无广告、高品质的音乐体验。
+
+
+下面是它的GitHub star历史，项目最近一个月上升势头很猛，短短1个月的时间，已经增长了超过5K star。
+
+为什么用 spotube
+spotube的官方给出了一些自己的特性，我先列一下：
+开源免费
+支持匿名/访客身份登录
+跨平台
+无遥测、诊断和收集用户数据
+软件体积小，系统资源占用低
+媲美原生应用的性能
+可以在设备上随意切歌
+没有Spotify和Youtube的广告
+支持歌词同步显示
+支持下载单曲
+然后我要说说我自己使用的体验，我推荐它的理由：
+曲库：我并不追一些特别新或者个人原创歌手的歌，我更偏向于经典歌曲，我发现很多歌曲在Spotify 上的版权比国内的软件还要好一些。比如下图，我对比了下周董的歌，还能说什么？
+
+
+下载：这个是真的可以下载，不是下载到app里面加密的文件，是直接下载歌曲。
+外观：spotube的外观做的还是很不错的，作为一个开源产品，已经很不错了。
+说几点遗憾：
+居然没有IOS版，不知道是不是上架有什么问题。
+需要用梯子，因为这个项目的实现原理挺有意思，所以没代理应该用不了。
+目前稳定性差一些，偶尔会有些小问题，但不算致命吧。
+使用 spotube
+首先肯定是要下载安装，spotube是跨平台支持，可以在GitHub的release页面找到自己平台对应的安装包。
+
+首先要注册一个Spotify账号。这里就一步步注册即可。如果想华语歌多一些，可以使用时把区域设置成香港。
+
+打开spotube的设置页面，点“与 Spotify 账户关联”
+
+
+这里会需要输入sp_dc 和 sp_key（或者是sp_gain）,获取方法如下：
+在浏览器中打开accounts.spotify.com
+使用您的 Spotify 帐户登录
+打开开发者工具 (F12) Chrome/基于 Chrome 的浏览器：转到“应用程序”选项卡
+找到 Cookies 部分并复制sp_dc 和 sp_key（sp_gaid）的值
+
+完成关联后就可以开始使用啦。
+
+项目信息
+项目名称：spotube
+GitHub 链接：https://github.com/KRTirtho/spotube
+Star 数：11K+</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -1819,62 +1888,6 @@ let url &#x3D;&#x27; https://lonjin.oss-cn-beijing.aliyunc…</span>
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7321910136616108070"
-                        open
-                      >
-                        <summary class="article-expander__title">RV大战之2024年我还想写React</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7321910136616108070">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>原文地址：https://blog.hophop.work/rv2024react?showSharer&#x3D;true
-全文纯属个人观点，words are my own.
-大家好，我是HopHop。
-近期又上演了一场 React/Vue 大战，我也借这个时间点大概聊一聊自己对于React以及前端目前渲染类库的理解。
-
-
-问题陈述
-前端的框架/库要解决核心问题就是页面渲染，很多框架/库在解决渲染问题时，主要采用：
-自建DSL + 编译时 + 运行时 （Vue, React)
-自建DSL + 编译时 (Svelte)
-纯运行时 (jQuery)
-React的解决方案是纯运行时解决方案。JSX的compile时编译不对运行时代码做任何优化，不属于任何性能优化的范畴。
-以上3点是目前主流的前端渲染库/框架的解决方案。但是无非是想要做到
-相对优雅的DX
-检测数据变更 → 【differ + 更新】或 【更新 + differ】
-React在设想整个UI界面时，是完全围绕view &#x3D; fn(data)的纯函数核心思想。
-此纯函数核心思想即：
-一份数据，对应一份UI
-任何副作用需标明是副作用
-同时再通过一些“技术手段”保证每次data的变更后，fn可以持续稳定一致的执行，不断的differ，最终影响到ui的变更。可以理解为优化手段完全控制在运行时。
-在这种前提下，React需要给出闭包的各种hack解法，例如：
-JavaScript闭包带来的各类快照
-状态记忆和清理
-各类快照的对比
-这也就带来了很多新手会碰到的DX问题，例如useRef, useState的选择，useEffect的概念和onMount概念的区别等等，甚至加入了strict mode，在dev模式下强制执行两遍effect来保证用户代码的正确运作。
-所以其实对于React来说，每一步设计的加入都是相当的困难，因为目前的DX体验已经完全走下坡路了。在设计API时，不仅要考虑到开发者体验（写法，理解能力），还要为了保证内部很多的hack手段的正常工作。
-React在官网上花了无数的笔墨去解释很多hook的内部到底是怎么工作，用户应该如何编写去让这些hook正确运作，例如
-使用 Effect 同步
-你可能不需要 Effect
-ref 和 state 的不同之处
-保持组件纯粹
-官方的一些compile时的优化想法
-https://react.dev/blog/2022/06/15/react-labs-what-we-have-been-working-on-june-2022#react-compiler
-用一些新的hook来解决已有的DX问题：
-https://react.dev/reference/react/use
-https://github.com/reactjs/rfcs/blob/useevent/text/0000-useevent.md
-React的hook理念在推出之初绝对是相当革新的设计，但是目前React在这条路上已经没法回头了🥺
-我觉得就搞搞React Server Component挺好的，狗头保命（</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -5659,8 +5672,8 @@ Cybertruck 是世界第一辆没有 12V 供电，只有 48V 供电的汽车。�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7504409395">
-        <time id="build-timestamp" datetime="2024-01-12T15:54:50.006Z">2024-01-12T15:54:50.006Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7506246670">
+        <time id="build-timestamp" datetime="2024-01-12T18:54:52.577Z">2024-01-12T18:54:52.577Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
