@@ -51,8 +51,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-12 datetime="2024-01-12T09:10:00.000Z">2024-01-12</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-12 datetime="2024-01-12T09:10:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-12 datetime="2024-01-12T11:36:00.000Z">2024-01-12</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-12 datetime="2024-01-12T11:36:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -67,6 +67,25 @@
                   <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240112/t20240112_526556050.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市巴南区发布大雾黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240112/t20240112_526556050.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>巴南区气象台2024年1月12日19时30分发布“大雾黄色预警信号”，预计13日05时至12时，姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇可能出现能见度小于500米的雾，局地能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -215,7 +234,6 @@
 弄完了一切。
 二次车检，结果告知灯不够亮，折返
 车辆维修，结果发现需要保养了，🥹
-保养完，路过一家 4s 店……
 我就想知道，接下来还有啥要注意的么？</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
@@ -601,7 +619,7 @@ Kimi Chat 还提供了一个微信小程序，这也是为啥高频使用它的�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>Firefox也正式支持popover属性了，大人，时代变了，所有的下拉效果要换种实现方式啦。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1137,6 +1155,93 @@ SSR 并不是什么新鲜事物。PHP 已经提供了整整 28 年，如果它�
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7322275119593242687"
+                        open
+                      >
+                        <summary class="article-expander__title">高开低走，GraphQL为什么火不起来？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7322275119593242687">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>1 GraphQL简介
+什么是GraphQL？
+GraphQL，一个API查询语言，它不同于传统的REST API，GraphQL允许客户端按需获取数据。就像你去自助餐厅，你可以自己决定要哪些食物，而不是服务员决定给你什么。这种方式让前端开发者不用依赖后端的接口设计，他们可以自由地获取他们需要的数据结构。
+GraphQL的起源
+GraphQL最初由Facebook开发，并于2015年开源。它解决了Facebook在构建移动应用时遇到的一些问题，例如多端之间的数据需求不一致，导致需要多个版本的API。GraphQL的诞生，打开了前后端数据交流的新局面，一度引起了开发社区的极大兴趣。
+2 GraphQL的优势
+因为GraphQL主要是用来替代REST API的，所以我们这里谈的也是相对REST的优势。
+客户端精确获取所需资源
+在REST API中，服务端定义了数据的结构，客户端无法自定义需要的数据结构，这就像是买了一套套装，即使你只喜欢里面的一件衣服。GraphQL允许客户端像挑选菜单上的菜一样，只获取它们真正需要的数据。
+减少冗余和提高效率
+使用REST API时，可能需要多个请求来聚合所需的数据，这就像是去多个商店购物，每个商店只能买一种商品。而GraphQL可以通过一次请求，获取多种资源，这就如同一站式购物，既省时又方便。
+简化客户端代码
+在REST中，客户端需要根据不同的URL编写不同的解析代码，这就像是每次去不同的商店都需要懂得不同的支付方式。GraphQL则提供了统一的Type和Field的访问方式，客户端不需要写复杂的解析代码，一种支付方式逛遍所有商店。
+3 如何实现GraphQL？
+服务端的角色
+定义Type及其Field
+服务端需要定义各种数据类型，包括标量类型（基本数据类型）、对象类型（复杂数据类型）、接口类型、联合类型、枚举类型、输入对象类型等。这就像是在…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7322032390574473235"
+                        open
+                      >
+                        <summary class="article-expander__title">&quot;5.25秒变0.023秒：小程序图片优化全攻略&quot;</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7322032390574473235">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: smartblue
+highlight: vs2015
+&quot;5.25秒变0.023秒：小程序图片优化全攻略&quot;
+最近在公司在写微信小程序，该小程序主要展示一些高清图片，所以图片数量非常多，而且图片尺寸也比较大，导致小程序的加载时间非常长。所以这里记录一下如何减少小程序图片的加载时间，优化用户体验。
+优化前
+这里我挑选了一些项目里面比较大的图片，还有我之前保存的一些背景图，共计12张，上传到阿里云oss，然后写了一个demo去渲染图片，这里我们先看看加载时间。
+
+可以看到，一旦文件大小到了1M以上，加载基本都在1秒以上了，而且加载最慢的一张图片大小为2.4M；加载耗时5.27秒。然而在这个小程序中，有非常多的瀑布流图片展示，需要加载的图片也非常多，这对于这种图片展示类的小程序来说，简直是非常糟糕的体验。下面我们就分析一下，如何提升用户体验，缩短加载时间。
+分析优化
+这里我总结了一些常见图片优化策略，方法如下：
+
+下面我们就根据总结的优化策略进行优化，具体如下：
+优化1：使用webp格式的图片
+首先我们知道，在小程序中是支持webp格式的图片的，所以我们可以将图片转换为webp格式，这样可以减少图片体积，提升加载速度。
+公司使用的阿里云oss进行图片存储，阿里云oss是支持格式转换的，只需要在图片url后面加一定的参数即可，我们可以给图片后面加上?x-oss-process&#x3D;image/format,webp即可。
+// 原本图片路径：
+let url &#x3D;&#x27; https://lonjin.oss-cn-beijing.aliyuncs.com/weixin-test/3%20%282%2917047050403470042.png&#x27;
+
+// 转化为webp格式的图片路径：
+let url &#x3D;&#x27; https://lonjin.oss-cn-beijing.aliyunc…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >沸点 - 开发工具推荐</button>
                   <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
                 </h3>
@@ -1173,58 +1278,6 @@ SSR 并不是什么新鲜事物。PHP 已经提供了整整 28 年，如果它�
                             <span class="media-object__text">
                               <span>给MAC电脑文件/文件夹右键出现”用VSCode打开“</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7322032390574473235"
-                        open
-                      >
-                        <summary class="article-expander__title">&quot;5.25秒变0.023秒：小程序图片优化全攻略&quot;</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7322032390574473235">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: smartblue
-highlight: vs2015
-&quot;5.25秒变0.023秒：小程序图片优化全攻略&quot;
-最近在公司在写微信小程序，该小程序主要展示一些高清图片，所以图片数量非常多，而且图片尺寸也比较大，导致小程序的加载时间非常长。所以这里记录一下如何减少小程序图片的加载时间，优化用户体验。
-优化前
-这里我挑选了一些项目里面比较大的图片，还有我之前保存的一些背景图，共计12张，上传到阿里云oss，然后写了一个demo去渲染图片，这里我们先看看加载时间。
-
-可以看到，一旦文件大小到了1M以上，加载基本都在1秒以上了，而且加载最慢的一张图片大小为2.4M；加载耗时5.27秒。然而在这个小程序中，有非常多的瀑布流图片展示，需要加载的图片也非常多，这对于这种图片展示类的小程序来说，简直是非常糟糕的体验。下面我们就分析一下，如何提升用户体验，缩短加载时间。
-分析优化
-这里我总结了一些常见图片优化策略，方法如下：
-
-下面我们就根据总结的优化策略进行优化，具体如下：
-优化1：使用webp格式的图片
-首先我们知道，在小程序中是支持webp格式的图片的，所以我们可以将图片转换为webp格式，这样可以减少图片体积，提升加载速度。
-公司使用的阿里云oss进行图片存储，阿里云oss是支持格式转换的，只需要在图片url后面加一定的参数即可，我们可以给图片后面加上?x-oss-process&#x3D;image/format,webp即可。
-// 原本图片路径：
-let url &#x3D;&#x27; https://lonjin.oss-cn-beijing.aliyuncs.com/weixin-test/3%20%282%2917047050403470042.png&#x27;
-
-// 转化为webp格式的图片路径：
-let url &#x3D;&#x27; https://lonjin.oss-cn-beijing.aliyunc…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1527,6 +1580,62 @@ let url &#x3D;&#x27; https://lonjin.oss-cn-beijing.aliyunc…</span>
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7321910136616108070"
+                        open
+                      >
+                        <summary class="article-expander__title">RV大战之2024年我还想写React</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7321910136616108070">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>原文地址：https://blog.hophop.work/rv2024react?showSharer&#x3D;true
+全文纯属个人观点，words are my own.
+大家好，我是HopHop。
+近期又上演了一场 React/Vue 大战，我也借这个时间点大概聊一聊自己对于React以及前端目前渲染类库的理解。
+
+
+问题陈述
+前端的框架/库要解决核心问题就是页面渲染，很多框架/库在解决渲染问题时，主要采用：
+自建DSL + 编译时 + 运行时 （Vue, React)
+自建DSL + 编译时 (Svelte)
+纯运行时 (jQuery)
+React的解决方案是纯运行时解决方案。JSX的compile时编译不对运行时代码做任何优化，不属于任何性能优化的范畴。
+以上3点是目前主流的前端渲染库/框架的解决方案。但是无非是想要做到
+相对优雅的DX
+检测数据变更 → 【differ + 更新】或 【更新 + differ】
+React在设想整个UI界面时，是完全围绕view &#x3D; fn(data)的纯函数核心思想。
+此纯函数核心思想即：
+一份数据，对应一份UI
+任何副作用需标明是副作用
+同时再通过一些“技术手段”保证每次data的变更后，fn可以持续稳定一致的执行，不断的differ，最终影响到ui的变更。可以理解为优化手段完全控制在运行时。
+在这种前提下，React需要给出闭包的各种hack解法，例如：
+JavaScript闭包带来的各类快照
+状态记忆和清理
+各类快照的对比
+这也就带来了很多新手会碰到的DX问题，例如useRef, useState的选择，useEffect的概念和onMount概念的区别等等，甚至加入了strict mode，在dev模式下强制执行两遍effect来保证用户代码的正确运作。
+所以其实对于React来说，每一步设计的加入都是相当的困难，因为目前的DX体验已经完全走下坡路了。在设计API时，不仅要考虑到开发者体验（写法，理解能力），还要为了保证内部很多的hack手段的正常工作。
+React在官网上花了无数的笔墨去解释很多hook的内部到底是怎么工作，用户应该如何编写去让这些hook正确运作，例如
+使用 Effect 同步
+你可能不需要 Effect
+ref 和 state 的不同之处
+保持组件纯粹
+官方的一些compile时的优化想法
+https://react.dev/blog/2022/06/15/react-labs-what-we-have-been-working-on-june-2022#react-compiler
+用一些新的hook来解决已有的DX问题：
+https://react.dev/reference/react/use
+https://github.com/reactjs/rfcs/blob/useevent/text/0000-useevent.md
+React的hook理念在推出之初绝对是相当革新的设计，但是目前React在这条路上已经没法回头了🥺
+我觉得就搞搞React Server Component挺好的，狗头保命（</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -1917,103 +2026,35 @@ Vue、React之间的讨论，即使是从技术层面出发，最后也容易陷
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >李继刚的即刻动态</button>
-                  <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/reposts/659bc73c38849f879f6e0557"
-                        open
-                      >
-                        <summary class="article-expander__title">转发了: 这个需求很简单，怎么实现我不管 //@木登_等灯_等灯: Oauth么</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/reposts/659bc73c38849f879f6e0557">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>这个需求很简单，怎么实现我不管 //@木登_等灯_等灯:  Oauth么
-
-转发 @李继刚: 无密码登录，这玩意儿应该做为整个互联网的基础服务，一个SaaS服务。
-想密码，回忆密码，找回密码，浪费的时间完全没有必要。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/659bc049a922aa28d059e304"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 《道德经》有言： 虚其心，实其腹 ━━━━━━━━━━━━━━ 当一个人饿肚子时, 他只会想到一件事; 当他吃饱喝足后, 开始想二场的事了。</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/659bc049a922aa28d059e304">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>《道德经》有言： 虚其心，实其腹
-━━━━━━━━━━━━━━
-当一个人饿肚子时, 他只会想到一件事;
-当他吃饱喝足后, 开始想二场的事了。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7321164229545345063"
-                        open
-                      >
-                        <summary class="article-expander__title">有木有 Linux 桌面的道友～[吃瓜群众]</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7321164229545345063">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>有木有 Linux 桌面的道友～[吃瓜群众]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >掘金前端本周最热</button>
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7321558573518815258"
+                        open
+                      >
+                        <summary class="article-expander__title">图解 CSS：CSS 层叠和继承</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7321558573518815258">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>CSS 中有三个概念是必须要掌握的：层叠、继承和权重。今天我们主要来了解 CSS 中的层叠和继承，对于 CSS 权重这一部分将放到 CSS 的选择器中来介绍，因为这一部分和 CSS 的选择器耦合的更为紧密。不管是初学者还是有一定工作经验的同学，花点时间阅读这篇文章都是很有必要的，这样有利于你对 CSS 更清楚的了解和理解。
+在很多 Web 开发人员眼中，CSS 不是一门程序语言，但它真真切切的是一门计算机语言。主要用来为结构化文档，比如 HTML、XML 等添加样式，其主要由 W3C 定义和维护。而 CSS 是由 Cascading Style Sheets 三个词的首字母缩写，很多人将其称为层叠样式表或者级联样式表。接下来要聊的第一个概念就是 CSS 中的层叠，也对应的是 CSS 中的第一个字母 C 。看到这里，或许你就知道为什么会说层叠是 CSS 的重要概念之一了。
+层叠
+层叠是 CSS 固有的一个东东，它赋予了层叠样式表层叠性，也常称级联。层叠是一个很强大的工具，如果错误的使用它可能会导致样式表的脆弱性，会致使 Web 开发人员在任何时候不得不进行更改时都感到头痛。比如说：初学 CSS 的同学，特别是 Web 其他端的程序员（比如服务端、客户端）在独立编写 CSS 的时候，经常会碰到这样的一个现象：“为什么写的样式不起作用呢？ ”面对这样的场景很多人会采用非常暴力的手段来处理，比如通过添加 !important 或直接在 HTML 的元素上添加内联 CSS。这就是令很多同学感到疑惑的一点？为什么要这样做呢？其实这和接下来要介绍的层叠（也有很多人称之为级联）有很大的关系。
+层叠定义
+因为我们将要深入的学习和讨论 CSS 层叠是如何工作的相关细节，因此我们有必要的了解 W3C 规范是如何定义它的：
+The cascade takes a unordered list of…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -2206,6 +2247,99 @@ theme: devui-blue
 三、具体实现
 3.1、获取免…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >李继刚的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/reposts/659bc73c38849f879f6e0557"
+                        open
+                      >
+                        <summary class="article-expander__title">转发了: 这个需求很简单，怎么实现我不管 //@木登_等灯_等灯: Oauth么</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/reposts/659bc73c38849f879f6e0557">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>这个需求很简单，怎么实现我不管 //@木登_等灯_等灯:  Oauth么
+
+转发 @李继刚: 无密码登录，这玩意儿应该做为整个互联网的基础服务，一个SaaS服务。
+想密码，回忆密码，找回密码，浪费的时间完全没有必要。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/659bc049a922aa28d059e304"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 《道德经》有言： 虚其心，实其腹 ━━━━━━━━━━━━━━ 当一个人饿肚子时, 他只会想到一件事; 当他吃饱喝足后, 开始想二场的事了。</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/659bc049a922aa28d059e304">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>《道德经》有言： 虚其心，实其腹
+━━━━━━━━━━━━━━
+当一个人饿肚子时, 他只会想到一件事;
+当他吃饱喝足后, 开始想二场的事了。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7321164229545345063"
+                        open
+                      >
+                        <summary class="article-expander__title">有木有 Linux 桌面的道友～[吃瓜群众]</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7321164229545345063">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>有木有 Linux 桌面的道友～[吃瓜群众]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3116,46 +3250,6 @@ const o…</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7320231441707040768"
-                        open
-                      >
-                        <summary class="article-expander__title">Vue3项目实战之实现物品小球飞入购物车动画</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7320231441707040768">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: fancy
-简介
-物品小球飞入购物车动画是现在许多项目中都会运用到的一个动画技术，不仅好看还很好玩捏~
-
-实现思路
-通过上面的目标图不难看出，完成该动画我们需要完成这几个任务：
-
-
-选择要加入购物车的商品，点击加入购物车后，该商品上会出现一个有该商品图片的小球。
-该小球会以曲线的形式从商品位置飞入到购物车的位置
-在小球飞入到购物车消失后，购物车会有一个弹簧动画效果，且此时购物车物品数量才增加。
-好！带着上面这几个任务，我们一起来一一实现目标效果叭~
-任务一：点击加入购物车，目标商品上会出现一个有该商品图片的小球
-首先，我们要先搞明白这些事儿，第一件事肯定是先把小球绘制出来，那问题是这个小球它该放在哪里呢？好，有人要说了，小球是从商品容器里飞出来的，放商品容器里面。你别说，第一次我就是这么干的，我们看看会出现什么问题，
-先给上我的商品图片代码，并且将小球放入小商品容器中:
- 
-   
-
-
-   
-   
-   &lt;el-image :src&#x3D;&quot;item.小图图片路径&quot; style&#x3D;&quot;height: …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -3306,8 +3400,6 @@ const o…</span>
     
    
    方可成在 WSJ. 中文版…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;275
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3340,122 +3432,6 @@ const o…</span>
     
    前段时间，我花了些时间整理了一下这一年来在白板中记录的各类大大小小的事件。有几件事情对我个人来说影响尤为深刻。在这里我想挑出 3 件来和大家分享一下，这些都核心指向一个问题，对于还在工作的设计师们，新的一年里我们会有哪些挑战？</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;126
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7320048976120594482"
-                        open
-                      >
-                        <summary class="article-expander__title">Node 和浏览器里实现 Excel 的解析和生成</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7320048976120594482">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Excel 是常用的办公软件，我们会用它来做数据的整理。
-
-后台管理系统一般都会支持从 Excel 导入数据，或者导出数据到 Excel 文件：
-
-那这种功能是如何实现的呢？
-在 Node 和浏览器里，如何解析、生成 Excel 文件呢？
-一般我们会用 exceljs 这个包来做。
-在 npm 官网可以看到，这个包每周有 30w+ 的下载量，用的还是很多的：
-
-我们具体写代码试试：
-mkdir exceljs-test
-cd exceljs-test
-npm init -y
-
-
-安装 exceljs：
-npm install --save exceljs
-
-把刚才这个 excel 文件复制过来：
-
-
-我们在代码里读取出来看看：
-const { Workbook } &#x3D; require(&#x27;exceljs&#x27;);
-
-async function main(){
-    const workbook &#x3D; new Workbook();
-
-    const workbook2 &#x3D; await workbook.xlsx.readFile(&#x27;./data.xlsx&#x27;);
-
-    workbook2.eachSheet((sheet, index1) &#x3D;&gt; {
-        console.log(&#x27;工作表&#x27; + index1);
-
-        sheet.eachRow((row, index2) &#x3D;&gt; {
-            const rowData &#x3D; [];
-    
-            row.eachCell((cell, index3) &#x3D;&gt; {
-                rowData.push(cell.value);
-            });
-
-            console.log(&#x27;行&#x27; + index2, rowData)…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7319795736153210895"
-                        open
-                      >
-                        <summary class="article-expander__title">年会了，公司想要一个离线PC抽奖应用</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7319795736153210895">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>年会了，公司想要一个离线PC抽奖应用
-
-应用github地址：https://github.com/programbao/lottery-electron-vite-vue
-背景
-公司年会需要一个能够支撑60000+人的抽奖程序，原本通过找 网页的开源项目 再定制化实现了效果，并成功运行再周年庆上；但是现在又到年会了，领导要求要能够在任何地方、任何人只要有一台电脑就能简单方便的定制自己的PC抽奖应用，所有就有了这么一个主题。
-程序需求
-以下是领导从其他地方复制粘贴过来的，就是想实现类似的效果而已。
-1、支持数字、字母、手机号、姓名部门+姓名、编号、身份证号等任意组合的抽奖形式。
-2、支持名单粘贴功能，从EXCEL、WORD、TXT等任何可以复制的地方复制名单数据内容，粘贴至抽奖软件中作为名单使用，比导入更方便。
-3、支持标题、副标题、奖项提示信息、奖品图片等都可以通过拖拽更改位置。
-4、支持内定指定中奖者。
-5、支持万人抽奖，非常流畅，中奖机率一致，保证公平性。
-6、支持中奖不重复，软件自动排除已中奖人员，每人只有一次中奖机会不会出现重复中奖。
-7、支持临时追加奖项、补奖等功能支持自定义公司名称、自定义标题。
-8、背景图片，音乐等。
-9、支持抽奖过程会自动备份中奖名单(不用担心断电没保存中奖名单)。
-10、支持任意添加奖项、标题文字奖项名额，自由设置每次抽奖人数设置不同的字体大小和列数。
-11、支持空格或回车键抽奖。
-12、支持临时增加摇号/抽奖名单，临时删掉不在场人员名单。
-目前未实现的效果
-有几个还没实现的
-关于人员信息的任意组合抽奖形式，这边只固定了上传模板的表头，需要组合只能通过改excel的内容。
-对于临时不在场名单，目前只能通过改excel表再上传才能达到效果。
-技术选型
-由于给的时间不多，能有现成的最好；最终选择下面的开源项目进行集成和修改。
-说明：由于之前没…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -5444,8 +5420,8 @@ Cybertruck 是世界第一辆没有 12V 供电，只有 48V 供电的汽车。�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7500535857">
-        <time id="build-timestamp" datetime="2024-01-12T09:55:21.539Z">2024-01-12T09:55:21.539Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7502438830">
+        <time id="build-timestamp" datetime="2024-01-12T12:58:19.217Z">2024-01-12T12:58:19.217Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
