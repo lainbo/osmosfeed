@@ -2888,6 +2888,55 @@ vue-router是前端路由，但是前端路由不是vue-router，这是个包含
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7320779681673379851"
+                        open
+                      >
+                        <summary class="article-expander__title">组件进入离开动画？试试 react-transition-group</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7320779681673379851">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>列表是很常见的场景：
+
+如果我们想给它加上进入离开的动画效果：
+
+怎么做呢？
+一般我们会用 react-transition-group 来做。
+在 npm 官网可以看到，这个包每周有 750w 下载量，还是非常流行的：
+
+那这个包怎么用呢？
+我们写下代码试一下：
+npx create-react-app transition-group-test
+
+
+用 create-react-app 创建个项目。
+把它跑起来：
+npm run start
+
+
+安装 react-transition-group：
+npm install --save react-transition-group
+
+先不着急用，先想想如果有一个 div，如何给它加上进入离开的动画效果呢？
+import &#x27;./App.css&#x27;;
+
+function App() {
+
+  return (
+    
+ {
+    setTimeout(() &#x3D;&gt; {
+      setStyle({ tran…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7321049411852288050"
                         open
                       >
@@ -3313,81 +3362,6 @@ Windows Registry Editor Version 5.00 这行表明该文件是一个 Windows 注�
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7320655424641990682"
-                        open
-                      >
-                        <summary class="article-expander__title">有了它 Antd 样式覆盖不要太爽</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7320655424641990682">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>背景
-目前作者所在的业务正在升级 Antd5.0，不得不说 Antd5.0 真的太香了，但是由于团队的 UE 规范进行了大改版，Antd5.0 所有的组件必须对齐最新的规范，因此就需要对 Antd5.0 组件做主题定制。
-现状
-目前针对项目中使用的 antd 高频组件进行了梳理，并且根据规范基于 design token 对这些高频组件进行样式定制，对于主题色、圆角、边框、字体等用户关注度高的主题都已经满足团队规范。
-虽然 Design Token 提供了非常强大的拓展能力，但是同样它也有限制，例如当某些组件（button、select）的主题实现不能单纯依赖某种 Token 时，开发者就需要通过样式覆盖的方式去改写 antd 的样式以满足需求。
-目标
-从高频组件中梳理出需要进行样式覆盖的组件及其需要覆盖点。
-调研出一套具备高性能、高可扩展、兼容性强的样式覆盖方案。
-Antd主题定制演进
-Antd4.x时代
-简单概要
-在 antd4.x 时代，antd 的样式使用了 less 作为开发语言，其内部定义了一系列的全局/组件的样式变量，开发者可以根据业务需求去覆盖这些样式变量。
-@primary-color: #1890ff; // 全局主色
-@link-color: #1890ff; // 链接色
-@success-color: #52c41a; // 成功色
-@warning-color: #faad14; // 警告色
-@error-color: #f5222d; // 错误色
-@font-size-base: 14px; // 主字号
-
-对于样式变量的覆盖，原理上是使用 less 提供的 modifyVars 方式进行变量的覆盖，以 webpack 为例：
-// webpack.config.js
-module.exports &#x3D; {
-  rules: [{
-    t…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >国家应急广播 - 重庆预警信息</button>
-                  <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240106/t20240106_526549614.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市忠县发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240106/t20240106_526549614.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>忠县气象台2024年1月6日18时发布“大雾黄色预警信号”，预计1月6日22时至7日10时，忠州街道、白公街道、新生街道、乌杨街道、东溪镇、复兴镇、磨子土家族乡、涂井乡、黄金镇、石宝镇、野鹤镇、汝溪镇、金声乡、兴峰乡、官坝镇、石黄镇、三汇镇、金鸡镇、马灌镇、花桥镇、新立镇、双桂镇、拔山镇、永丰镇、白石镇、善广乡、任家镇、洋渡镇、石子乡可能出现能见度小于500米的雾，局地能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -3605,8 +3579,6 @@ module.exports &#x3D; {
     
    
    方可成在 WSJ. 中文版…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;275
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4518,8 +4490,6 @@ module.exports &#x3D; {
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>[7256630492274655271#聊聊工程化Docker#] 话说docker desktop的 用户界面是用什么框架开发的</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4978,8 +4948,6 @@ module.exports &#x3D; {
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>公司 dev 环境没灰度，不能单独上自己的本地分支，最近推 swagger 自动 ts这个事头皮发麻，各种生成 ts 的工具的 cli 都没白名单，唯一有戏的是 pont 的vscode 插件支持这个，结果单位 sawgger 格式又太不规范。浪费一周扒源码加 diff 耽误刷圣遗物，希望大佬能研究一个v2v3通用的包</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5109,8 +5077,6 @@ YouTube 也没有透露过，这个编号是怎么产生的。
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>最近一直找不到一款合适的api调用工具，apipost内网只能用客户端不支持浏览器访问，apifox内网都不能使用，还有就是总有一些功能点不是自己想要的，打算自己写一个开源项目，支持内网部署、浏览器访问，支持在线插件开发，并且直接npm install 开箱即用，有jym一起吗[捂脸][捂脸]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5128,8 +5094,6 @@ YouTube 也没有透露过，这个编号是怎么产生的。
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>请教下jym，大家都用哪些工具检测代码安全性和质量[看][看][看][看]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5147,8 +5111,6 @@ YouTube 也没有透露过，这个编号是怎么产生的。
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>两票难求～ https://activity.juejin.cn/rank/2023/writer/2344586853496814?utm_campaign&#x3D;annual_2023&amp;utm_medium&#x3D;self_web_share&amp;utm_source&#x3D;%E6%9B%BE%E7%BB%8F%E7%9A%84%E4%BD%A0d</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5194,8 +5156,6 @@ YouTube 也没有透露过，这个编号是怎么产生的。
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>周三打个卡🤡</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5241,8 +5201,6 @@ YouTube 也没有透露过，这个编号是怎么产生的。
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>技术大佬找我找我找我[呲牙]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5384,8 +5342,6 @@ YouTube 也没有透露过，这个编号是怎么产生的。
                               <span>[7210002980895916043#挑战每日一条沸点#] vscode 插件 fnMap（函数地图）给所有程序员送码了
 比 vscode 官方 outline 强大几个档次的符号插件，只要扫码登录，即可以领取一个永久注册码。
 https://marketplace.visualstudio.com/items?itemName&#x3D;chensuiyi.fn-map</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5437,8 +5393,6 @@ Microsoft PowerToys 是使用 C++ 和 C# 编程语言开发的。它利用了 Wi
 微软官方项目源码：https://github.com/microsoft/PowerToys
 社区汉化版源码：https://github.com/zetaloop/PowerToys-CN
 微软官方文档地址：https://learn.microsoft.com/zh-cn/windows/powertoys/</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5508,80 +5462,10 @@ Microsoft PowerToys 是使用 C++ 和 C# 编程语言开发的。它利用了 Wi
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-15 datetime="2023-12-15T00:15:00.000Z">2023-12-15</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-15 datetime="2023-12-15T00:15:00.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >阮一峰的网络日志</button>
-                  <a class="source-heading__link" href="http://www.ruanyifeng.com/blog/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.ruanyifeng.com/blog/2023/12/weekly-issue-282.html"
-                        open
-                      >
-                        <summary class="article-expander__title">科技爱好者周刊（第 282 期）：电动皮卡 Cybertruck 的 48V 供电</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.ruanyifeng.com/blog/2023/12/weekly-issue-282.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>这里记录每周值得分享的科技内容，周五发布。
-本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。
-封面图
-
-上海14号线豫园地铁站，就在黄浦江边。屋顶设计采用几万片铝板，象征着一圈圈的水波，以及豫园的飞檐，并可以配合灯光形成一个天幕。（via）
-电动皮卡 Cybertruck 的 48V 供电
-这个月，特斯拉的 Cybertruck 开始在美国交付了。
-
-它是一辆皮卡，造型很奇特，车斗上面有一个挡板，打开就可以装货。
-
-这辆车创造了很多世界第一。
-世界第一辆不锈钢汽车。
-钢板据说可以防弹，而且因为车形具有棱角，普通车辆撞到它会很惨。
-最重的皮卡，自重3.5吨，加上乘客和货物可以超过4吨，是普通皮卡的2倍。
-但是，有一个世界第一，提到的人很少：它是世界首辆车内供电全部为 48V 的汽车。
-
-大家知道，汽车内部有很多电器，都需要用电，比如电动门窗、空调、灯具、点烟器等等。这里就有一个车内的电压问题。
-以前都是油车，没有太多的电子设备，不需要很大功率，所以电压定得比较低。一开始是 6V 的直流电，后来提高到 12V。
-现在，市场上所有车辆，车内都有 12V 供电。相应的，车内的电子设备一般也是 12V 电压设计。
-Cybertruck 是世界第一辆没有 12V 供电，只有 48V 供电的汽车。这意味着，它的所有电子设备都是专门定制的。
-为什么 Cybertruck 放弃了 12V？
-原因很简单，因为它的用电量太大了，12V 电压会使得电线不堪负荷。
-
-有报道透露，单单是 Cyber​​truck 长达1.2米的巨型雨刷（上图），启动功率就要3600瓦，如果使用 12V 电压，电流将高达300安培，需要极粗的电线。
-改成 48V 以后，电压提高了4倍，电流只需要原来的四分之一。
-用电功率越来越大，这不单是 C…</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7511705453">
-        <time id="build-timestamp" datetime="2024-01-13T09:55:06.591Z">2024-01-13T09:55:06.591Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7512571750">
+        <time id="build-timestamp" datetime="2024-01-13T12:57:22.404Z">2024-01-13T12:57:22.404Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
