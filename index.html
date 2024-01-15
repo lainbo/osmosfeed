@@ -51,11 +51,63 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-15 datetime="2024-01-15T01:15:00.000Z">2024-01-15</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-15 datetime="2024-01-15T01:15:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-15 datetime="2024-01-15T07:06:25.000Z">2024-01-15</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-15 datetime="2024-01-15T07:06:25.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7323948056264114228"
+                        open
+                      >
+                        <summary class="article-expander__title">GithubCopilot远程授权</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7323948056264114228">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>GithubCopilot远程授权</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7324095314770853903"
+                        open
+                      >
+                        <summary class="article-expander__title">vscode 提示音太恶心了</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7324095314770853903">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>vscode 提示音太恶心了</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -1108,6 +1160,73 @@ findOne(undefined) 所查询到的却是第一条记录
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7322850477710884902"
+                        open
+                      >
+                        <summary class="article-expander__title">一道字节的 TS 体操面试真题</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7322850477710884902">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前天，小册群友问了我一个 TS 体操问题，说是面字节时遇到的。
+
+今天又催了一下：
+
+面试题是这样的：
+
+让实现这个 FormatDate 的类型，用来限制字符串只能是指定的日期格式。
+看起来好像没多大难度，就是提取出 YY、MM、DD 和分隔符，然后构造对应的字符串类型就好了。
+但上手试了一下，还真没那么简单。
+首先，我们用模式匹配的方式，也就是 extends + infer 来提取出 YY、MM、DD 这三部分：
+type Seperator &#x3D; &#x27;-&#x27; | &#x27;.&#x27; | &#x27;/&#x27;;
+
+type FormatDate &#x3D; 
+  Pattern extends &#x60;${infer Aaa}${Seperator}${infer Bbb}${Seperator}${infer Ccc}&#x60;
+    ? [Aaa,Bbb,Ccc]
+    : never;
+
+
+
+同样，也可以提取出分隔符部分：
+type FormatDate &#x3D; 
+  Pattern extends &#x60;${infer Aaa}${Seperator}${infer Bbb}${Seperator}${infer Ccc}&#x60;
+    ? Pattern extends &#x60;${Aaa}${infer Sep}${Bbb}${infer _}${Ccc}&#x60;
+      ? [Aaa, Bbb, Ccc, Sep]
+      : never
+    : never;
+
+
+
+然后根据 YY、MM、DD 分别构造 4 位和 2 位的字符串，最后组合起来不就行了？
+但问题就在这里。
+组合字符串字面量类型是这样写：
+type Num &#x3D; 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
+
+type YY &#x3D;…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >阮一峰的网络日志</button>
                   <a class="source-heading__link" href="http://www.ruanyifeng.com/blog/">Open</a>
                 </h3>
@@ -1563,6 +1682,53 @@ Draft UI是基于React Aria而不是Radix构建的。
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7322667232998801423"
+                        open
+                      >
+                        <summary class="article-expander__title">使用lodash再次起飞</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7322667232998801423">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>真没想到使用lodash的各位爷这么多。既然这样的话，那我高低得再整一期，这样的话基本上就能够覆盖lodash在前端项目中的基本用法了，喜欢的话烦请您点个赞，这将会让我开心一整天😊
+1. debounce / 防抖
+用途 / Usage: 用于限制函数执行的频率，特别是在输入或搜索事件中。
+示例 / Code Example:
+import { debounce } from &#x27;lodash&#x27;;
+
+const handleSearch &#x3D; debounce(() &#x3D;&gt; {
+  // 在此处添加搜索逻辑
+}, 500);
+
+解释 / Detailed Explanation: debounce 用于延迟函数执行，直到一段指定的不活动时间过去。它通常在用户输入时用于防止频繁的搜索请求。
+2. filter / 筛选
+用途 / Usage: 用于根据特定条件筛选数组中的元素。
+示例 / Code Example:
+import { filter } from &#x27;lodash&#x27;;
+
+const numbers &#x3D; [1, 2, 3, 4, 5];
+const evenNumbers &#x3D; filter(numbers, num &#x3D;&gt; num % 2 &#x3D;&#x3D;&#x3D; 0);
+
+解释 / Detailed Explanation: filter 用于根据条件筛选数组中的元素，返回符合条件的元素组成的新数组。
+3. groupBy / 分组
+用途 / Usage: 用于将数组或对象按照特定属性或条件分组。
+示例 / Code Example:
+import { groupBy } from &#x27;lodash&#x27;;
+
+const people &#x3D; [
+  { name: &#x27;Alice&#x27;, age: 30 },
+  { name: &#x27;Bob&#x27;, age: 28 },
+  { name: &#x27;Carol&#x27;,…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7322347847412531254"
                         open
                       >
@@ -1583,6 +1749,50 @@ SSR 并不是什么新鲜事物。PHP 已经提供了整整 28 年，如果它�
 现在 SSR 领域重新得到了关注，每个人都想分一杯羹。长期在这个领域工作的 Ruby on Rails 群体一直在尝试用他们的无构建工作流（与 Vite 的无打包工作流相呼应，尽管两者都有一些强有力的反对意见）来吸引用户。HTMX 也是同样的主张者，再次通过应用 Memes 来宣传 —— 一个人真正需要的只是一个 HTTP 服务器来传输 HTML 文件。尽管 React 和 Svelte 现在对 Vercel 的成功有了既得利益（核心团队成员在那里工作），但 Vue 是个例外，他的 Nuxt 仍然坚持社区驱动。
 即使是移动领域也受到了影响。正如我在今年早些时候的文章《期待 React Native 中的新事物》中提到的，Szymon Rybczak 一直在开发 Reac…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7322401091237068854"
+                        open
+                      >
+                        <summary class="article-expander__title">不喜欢原子化CSS得我，还是在新项目中使用了Unocss</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7322401091237068854">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>highlight: arduino-light
+theme: channing-cyan
+前言
+本篇文章主要讲述Unocss的使用和个人使用之后的感想
+在此之前还写过一篇关于反对在Vue里使用tailwind CSS的一篇文章（主写Vue的，React等框架中没有抵抗）。当然，当时写那篇文章的时候脑子也有是有点迷糊的，后来被怼的的很惨，不敢吭声。
+近一段时间，公司里给安排了一个新项目，这次我选择安排上了Unocss+sass来写样式。但为什么本身就比较反对在Vue中使用原子化CSS的我，却在新的项目中使用了Unocss呢？
+理由很简单：主要还是原子化CSS最近被炒的非常热，前端技术本来更新的就快，并不是说讨厌某一个技术就要极力去抵抗的(当然也不是说讨厌，只是觉得Vue的css处理已经非常棒了，在Vue中可能不会那么需要一个额外的css框架来支持)，还是有就是当时说tailwind CSS不适合用在Vue中使用的时候，有部分人说我没写过tailwind CSS。哎，我就不写tailwind CSS我写Unocss (。・ω・。)
+Unocss的下载使用
+下载安装Unocss
+npm i unocss
+或
+yarn add unocss
+
+安装之后为了更好的IDE使用体验，官方是比较建议创建一个单独的文件来配置Unocss
+在项目的根目录下创建uno.confin.{js,ts,mjs,mts}文件
+//uno.config.ts
+
+import { defineConfig } from &quot;unocss&quot;;
+
+export default defineConfig({
+  //...Unocss的配置项 看下面配置介绍
+});
+
+还需要在vite.config.ts中引入一下
+//vite.config.ts
+import { defineConfig } from &quot;vi…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;15
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2422,7 +2632,7 @@ let url &#x3D;&#x27; https://lonjin.oss-cn-beijing.aliyunc…</span>
                               <span>自荐一下我的项目：ServBay（https://www.servbay.dev），一个开发环境，mac开发者必备的懒人工具
 新增了Node.js和dnsmasq支持
 欢迎jym体验，任何建议和bug都可以提出</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2873,25 +3083,6 @@ Vue、React之间的讨论，即使是从技术层面出发，最后也容易陷
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240108/t20240108_526550913.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市酉阳土家族苗族自治县发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240108/t20240108_526550913.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>酉阳县气象台2024年1月8日15时30分发布“大雾黄色预警信号”，预计1月8日22时至9日10时，桃花源街道、钟多街道、毛坝乡等全部乡镇街道可能出现能见度小于500米的雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -2925,49 +3116,6 @@ Vue、React之间的讨论，即使是从技术层面出发，最后也容易陷
 因为我们将要深入的学习和讨论 CSS 层叠是如何工作的相关细节，因此我们有必要的了解 W3C 规范是如何定义它的：
 The cascade takes a unordered list of…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7321410822789316634"
-                        open
-                      >
-                        <summary class="article-expander__title">别再说项目没亮点了！！！没有就创造💪</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7321410822789316634">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>highlight: a11y-dark
-theme: juejin
-前言
-Hello，相信很多朋友在面试的时候肯定会有被面试官问项目亮点的场景并说不出所以然，然而大部分我们都是一颗螺丝钉，包括本人工作中也是经常的CRUD。所以很多时候项目中确实没啥可说的，但是面试官可不想听这个。
-见缝插针
-相信大家都用过组件库吧，或者自己在components下封装的组件，不管是ElementUI还是Ant Design又或者其他，在现在这个前后端分离的时代少不了UI组件库的加持，所以我们可以从这里开始&quot;插一针&quot;。其实不光只是UI组件库，在工作中可以去观察发现可以&quot;插针的地方&quot;，比如我们老生常谈的打包优化、FCP、LCP等，没有一个十全十美的项目，需要做的就是找到并解决这就是你的亮点，哪怕只是一点点！
-dui项目地址
-dui项目地址，这个项目从0-1搭建了一个ui组件库，不过目前一个人精力有限很多有些测试没有做、也可能存在一些bug未修复。不过对于新手学习搭建过程还是可以的，大佬就轻点喷了😬，如果你觉得对你有帮助，麻烦点个star⭐,非常感谢~
-技术选型及配置
-Storybook + Rollup + React 
-VuePress、React技术的同学也可选择dumi。
-接下来就是项目初始化，随后配置babel、eslint、prettier等，配置的话可以看站内其他文章还是比较多的。
-这里放一下比较重要的rollup的配置。
-
-文件组织及结构
- 
-
-npm地址，预览地址
-.github：用github来做ci、cd
-.storybook：storybook相关配置，在打包文档时会读取
-src-components：源码存放的地方，最后通过index.tsx统一导出
-hooks：常用的自定义hook
-storybook-static：构建后的文档目录
-搞一个Button玩玩
-在项目都…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3071,84 +3219,6 @@ uCrop
 Android 端使用的是系统通知接口，与推送通知是相同的（需要通知权限）。
 iOS 端，微信是自定义了一个通知视图，与系统推送通…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;11
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7321049431489544229"
-                        open
-                      >
-                        <summary class="article-expander__title">面试官：谈谈前端路由的实现原理【hash＆history】</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7321049431489544229">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: vuepress
-highlight: atelier-heath-dark
-vue-router是前端路由，但是前端路由不是vue-router，这是个包含关系
-路由
-路由一词最早来自服务器，和前端没有关系。当你想要从服务器中读取某个盘的文件，这个文件的路径就是路由。也就是说路由是服务器端用来描述路径的，或者是说url和文件的映射关系
-后来因为前端的SPA单页应用，前端也借鉴了路由这个概念。浏览器的url变了需要映射到页面的某个组件，url变了需要展示某个组件。/home和Home.vue，/about和About.vue就是一一映射的关系。前端借鉴路由的称呼来描述url和组件的映射关系。这个时候你就想起来router中index.js文件中，一个path对应一个component，也就是一个路径对应一个组件
-实现路由需要解决的问题
-如何修改url还不引起页面的刷新
-如何知道url变化了
-若是能解决这两个问题就可以实现前端路由了。
-哈希Hash
-哈希是一种值，按照某种规则生成的一串值，用来代表一个唯一的文件，文件名后加一个哈希值，可以看到文件是否被修改过。
-在浏览器中也有hash这个概念，url中接一个#，#后的值就是哈希值，按道理url变了，页面一定会刷新，但是哈希是个特例，放个哈希值就是不会刷新页面，这样，我们就解决了第一个问题，修改url不引起页面的刷新
-在浏览器url后加个哈希值，哈希值的变更不会引起浏览器页面的刷新
-下面利用哈希模式实现路由
-哈希手搓一个路由
-我们新建一个hash.html文件，放两个a标签，但是a标签有个机制，就是点击必定会引起页面的刷新。但浏览器的机制是哈希值的变更不会引起页面刷新，所以地址放哈希值可以解决这一问题
-
-    
-首页
- 
-    
-&lt;a hre…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7320606758239092775"
-                        open
-                      >
-                        <summary class="article-expander__title">live-server给我的代码加了什么？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7320606758239092775">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: juejin
-前言
-对于前端程序员来说，live-server插件估计都不陌生，想起刚开始学前端的时候，每次改完代码，浏览器直接就能自动更新页面，真的很方便。一次偶然的机会，我在浏览器中检查代码的时候发现，诶？这段代码是哪里来的？
-
-逐层拆解
-看着这段似懂非懂的代码，我决定花上几个晚上认真研究一下，不说废话，一起来看代码。
-if (&quot;WebSocket&quot; in window) {
-} else {
-console.error(
-    &quot;Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.&quot;
-);}
-
-先来看最外层，这个好理解，判断浏览器的全局对象window是否包含WebSocket；简单来说，WebSocket是浏览器和服务器进行双向即时通讯的一项技术，如果浏览器没有这个对象，就要报错了。
-接下来作者用了一个立即执行的匿名函数，作者在代码中使用了var关键字；我们都知道，在函数中用var定义的变量是不会影响到函数以外的变量的，这样就很好地避免污染全局变量。
-分析refreshCSS
-随后作者定义了一个refreshCSS方法，见名知意，这是用来刷新css样式的。这里要注意一下[].slice.call(),call能够让slice方法的this指向传入的伪数组，对于slice方法来说，不传递参数的时候它可以返回原数组，那么通过这个方法我们得到了一个数组sheets，于此同时，我们还获取了一个parentElement。
-function refreshCSS() {
-    //使用[].slice.call()来将获取到所有的link标签塞到一个数组里面
-    var sheets &#x3D; [].slice.call(document.getEle…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3558,7 +3628,7 @@ YouTube 也没有透露过，这个编号是怎么产生的。
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>请教下jym，大家都用哪些工具检测代码安全性和质量[看][看][看][看]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3577,100 +3647,6 @@ YouTube 也没有透露过，这个编号是怎么产生的。
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>两票难求～ https://activity.juejin.cn/rank/2023/writer/2344586853496814?utm_campaign&#x3D;annual_2023&amp;utm_medium&#x3D;self_web_share&amp;utm_source&#x3D;%E6%9B%BE%E7%BB%8F%E7%9A%84%E4%BD%A0d</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-27 datetime="2023-12-27T00:09:25.000Z">2023-12-27</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-27 datetime="2023-12-27T00:09:25.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7316775422186766388"
-                        open
-                      >
-                        <summary class="article-expander__title">周三打个卡🤡</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7316775422186766388">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>周三打个卡🤡</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-26 datetime="2023-12-26T11:52:15.000Z">2023-12-26</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-26 datetime="2023-12-26T11:52:15.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7316783747490447395"
-                        open
-                      >
-                        <summary class="article-expander__title">技术大佬找我找我找我[呲牙]</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7316783747490447395">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>技术大佬找我找我找我[呲牙]</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -3852,8 +3828,8 @@ YouTube 也没有透露过，这个编号是怎么产生的。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7525347452">
-        <time id="build-timestamp" datetime="2024-01-15T06:52:24.634Z">2024-01-15T06:52:24.634Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7527104619">
+        <time id="build-timestamp" datetime="2024-01-15T09:52:23.080Z">2024-01-15T09:52:23.080Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
