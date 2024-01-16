@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2024-01-16T15:52:27.503Z</id>
+    <id>urn:2024-01-16T18:52:42.735Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2024-01-16T15:52:27.503Z</updated>
+    <updated>2024-01-16T18:52:42.735Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[重庆市綦江区发布大雾黄色预警]]></title>
+        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20240116/t20240116_526560317.html</id>
+        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20240116/t20240116_526560317.html"/>
+        <updated>2024-01-16T15:31:00.000Z</updated>
+        <summary type="html"><![CDATA[綦江区气象台2024年1月16日23时20分发布“大雾黄色预警信号”，预计17日0时至12时，通惠街道、古南街道、文龙街道、新盛街道、横山镇、三角镇、三江街道、篆塘镇、东溪镇、扶欢镇、赶水镇、石角镇将出现能见度小于500米的雾，局地能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
+        <author>
+            <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[发布了: AI 的潜力需要融入到具体的场景当中去，场景就是 AI 工作的上下文，从场景中获取数据、工具，识别场景中的内容、行为，最终给上下文中的主角提效，甚至...]]></title>
         <id>https://m.okjike.com/originalPosts/65a697eb12ed2fda68a469db</id>
@@ -317,6 +327,30 @@ github 地址: https://github.com/haixin-fang/tojson.js
 所以其实这个交互是用来阻止查看用户信息的么？]]></summary>
         <author>
             <name>Barret李靖的即刻动态</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[前端 同时多次调用同个接口，如何只触发一次而不是触发多次]]></title>
+        <id>https://juejin.cn/post/7324155708613804086</id>
+        <link href="https://juejin.cn/post/7324155708613804086"/>
+        <updated>2024-01-15T10:01:25.000Z</updated>
+        <summary type="html"><![CDATA[前言
+场景：我们进入某应用项目某页面，同时调用多个接口，此时，我们需要请求token，如果我们使用的是axios来请求，我们一般会在请求拦截器里进行处理，大致是如何检查到本地缓存不存在 token，说明是第一次进入应用，还没请求token并缓存下到本地，与此同时调用多个接口，也就会触发请求token的接口多次，而我们理想的方案是多个接口使用的是均是第一次请求的token，后续接口使用的也是第一次缓存的token，那么我们如何操作才能达实现呢？
+方案
+我们需要编写一个 重复触发多次，只返回第一次请求的结果 函数
+function repeatOnce (getResult, local_name) {
+    return new Promise(async (resolve) => {
+        const local_result = localStorage.getItem(local_name)
+        if(local_result){
+            console.log('%c [ 存在 ]-1166', 'font-size:13px; background:pink; color:#bf2c9f;', )
+            resolve(local_result)
+        } else{
+            if (!repeatOnce.count) {
+                repeatOnce.count = 0
+                repeatOnce.count++
+                console.log('%c [ 刚进入应用页面，缓存结果不存在，需要请求并缓存到本地 ]-1169', 'font-size:13px; background:pink; color:…]]></summary>
+        <author>
+            <name>rookie_fly</name>
         </author>
     </entry>
     <entry>
@@ -970,36 +1004,6 @@ type Num = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
 type YY =…]]></summary>
         <author>
             <name>zxg_神说要有光</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[前端性能优化手册 - RoadMap]]></title>
-        <id>https://juejin.cn/post/7322677530469122111</id>
-        <link href="https://juejin.cn/post/7322677530469122111"/>
-        <updated>2024-01-12T03:02:06.000Z</updated>
-        <summary type="html"><![CDATA[theme: cyanosis
-highlight: a11y-dark
-
-一、前言
-在日常需求中，开发者只要能保证静态、动效、功能、埋点都正确实现，再把需求和接口文档认真理理就已经称得上信赖的好同事了。但对于性能优化，我们通常只是依赖零散的经验，如偶尔的图片压缩、点击的防抖节流这种散点式手段。本文旨在把常见的前端性能优化的手段归类整理，画大图，供大家在自己的自测流程中参考。
-
-对于性能优化，并不是说有了这张大图，就不管开发什么项目都对着来一遍。优化是有场景与前提的，「乱优化不如不优化」。因此在优化前，有几点要注意：
-01 | 依据数字而不是猜想
-尽管有些开发者能凭直觉找出性能瓶颈，这并非理想做法。
-警惕优化措施可能带来的新问题，要用性能数据验证优化效果，而非依赖猜测。
-02 | 个体数据不足信
-有时候，你可能会发现某个著名网站加载异常缓慢，耗时许多秒。但仅凭单次体验就认定其“慢”是不科学的，性能评估也容易犯同样的错误。
-因为个别请求的数据并不足以代表整体，响应时间会因用户环境和网络条件的不同而有所差异。更客观的方法是分析统计数据，包括平均响应时间、吞吐量（TP 值）和响应时间的分布情况等，以便全面评估性能表现。
-03 | 不要过早优化和过度优化
-“过早的优化是万恶之源” —— Donald Knuth（计算机科学家）
-无需过分投入于微不足道的提升。我们应该将精力集中在最关键的性能瓶颈上，而不是偏离目标进行非关键优化。
-通常，极致优化的代码可读性较差，结构也可能妥协，导致维护困难。过早优化可能将这些问题带入项目，增加后期的重构难度。最佳实践是，将性能优化作为独立的阶段，在项目架构和功能基本稳定后再进行。以确保优化工作既高效又有针对性。
-04 | 保持良好的编码习惯
-因为开发与优化是两个独立的阶段，所以遵循良好的编码规范有助于日后的代码重构
-二、性能指标
-既然是优化，肯定不能…]]></summary>
-        <author>
-            <name>狂炫冰美式</name>
         </author>
     </entry>
     <entry>
