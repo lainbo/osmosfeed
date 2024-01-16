@@ -51,11 +51,44 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-15 datetime="2024-01-15T15:55:26.000Z">2024-01-15</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-15 datetime="2024-01-15T15:55:26.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-15 datetime="2024-01-15T23:33:00.000Z">2024-01-15</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-15 datetime="2024-01-15T23:33:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >国家应急广播 - 重庆预警信息</button>
+                  <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240116/t20240116_526559170.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市巴南区发布大雾黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240116/t20240116_526559170.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>巴南区气象台2024年1月16日7时10分发布“大雾黄色预警信号”，预计16日7时10分至14时，我区姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇可能出现能见度小于500米的雾，局地能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -1956,6 +1989,50 @@ SSR 并不是什么新鲜事物。PHP 已经提供了整整 28 年，如果它�
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7322401091237068854"
+                        open
+                      >
+                        <summary class="article-expander__title">不喜欢原子化CSS得我，还是在新项目中使用了Unocss</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7322401091237068854">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>highlight: arduino-light
+theme: channing-cyan
+前言
+本篇文章主要讲述Unocss的使用和个人使用之后的感想
+在此之前还写过一篇关于反对在Vue里使用tailwind CSS的一篇文章（主写Vue的，React等框架中没有抵抗）。当然，当时写那篇文章的时候脑子也有是有点迷糊的，后来被怼的的很惨，不敢吭声。
+近一段时间，公司里给安排了一个新项目，这次我选择安排上了Unocss+sass来写样式。但为什么本身就比较反对在Vue中使用原子化CSS的我，却在新的项目中使用了Unocss呢？
+理由很简单：主要还是原子化CSS最近被炒的非常热，前端技术本来更新的就快，并不是说讨厌某一个技术就要极力去抵抗的(当然也不是说讨厌，只是觉得Vue的css处理已经非常棒了，在Vue中可能不会那么需要一个额外的css框架来支持)，还是有就是当时说tailwind CSS不适合用在Vue中使用的时候，有部分人说我没写过tailwind CSS。哎，我就不写tailwind CSS我写Unocss (。・ω・。)
+Unocss的下载使用
+下载安装Unocss
+npm i unocss
+或
+yarn add unocss
+
+安装之后为了更好的IDE使用体验，官方是比较建议创建一个单独的文件来配置Unocss
+在项目的根目录下创建uno.confin.{js,ts,mjs,mts}文件
+//uno.config.ts
+
+import { defineConfig } from &quot;unocss&quot;;
+
+export default defineConfig({
+  //...Unocss的配置项 看下面配置介绍
+});
+
+还需要在vite.config.ts中引入一下
+//vite.config.ts
+import { defineConfig } from &quot;vi…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;15
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -2963,65 +3040,6 @@ GitHub，在线求 star 🌟🌟🌟
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7321589055883427855"
-                        open
-                      >
-                        <summary class="article-expander__title">当别人因为React、Vue吵起来时，我们应该做什么</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7321589055883427855">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>大家好，我卡颂。
-最近尤大的一个推文引起了不小热议，大概经过是：
-有人在推上夸React文档写的好，把可能的坑点都列出来
-尤看到后批评道：框架应该自己处理这些坑点，而不是把他们暴露给用户
-
-尤大在推上的发言一直比较耿直，这次又涉及到React这个老对手，关注度自然不低。
-再加上国内前端自媒体的一波引导发酵，比如知乎下这个话题相关的问题中的措辞是怒喷，懂得都懂。
-
-在这样氛围与二手信源的影响下，会给人一种大佬都亲手下场撕了的感觉，自然会引来React、Vue各自拥趸的一番激烈讨论。
-年年都是一样的套路，毫无新意......
-打包领取卡颂原创React教程、加入人类高质量前端群
-面对这样的争吵，我们应该做什么呢？
-首先，回到源头本身，尤大diss的有道理么？有。
-React的心智负担重么？确实重。比如useEffec这个API，你能想象文档中一个章节居然有6篇文章是教你如何正确使用useEffec的么？
-
-造成这一现象的原因有很多，比如：
-Hooks的实现原理使得必须显式声明依赖
-显式声明依赖无法覆盖useEffect所有场景，为此专门提出一个叫Effect Event的概念，以及一个对应的新hook —— useEffectEvent
-useEffect承载了太多功能，比如未来Offscreen的显隐回调（类似Vue中的Keep-Alive）也是通过useEffect实现
-当我们继续往前回溯，Hooks必须显式声明依赖是React更新机制决定的，而React更新机制又是React实现原理的核心。
-本质来说，还是React既往的成功、庞大的社区生态让他积重难返，无法从底层重写。
-这是历史必然的进程，如果Vue所有新特性都在Vue2基础上迭代（而不是完全重写的Vue3），我相信也是同样的局面。
-所以，当前React的迭代方向是 —— 支持上层框架（比如Next.js、Remix），寄希望于靠这些框架的封装能力弥补React自身心智负担重的缺点。这个策略显然也是成功的。
-回到这次争吵本身，尤大不知道React文档为什么要花大篇幅帮开发者避坑（以及背后反映的积重难返）么？他显然是知道的。
-他如此回复是因为他所处的位置是框架作者，React是他的竞争对手。设想一下，如果你的竞争对手在一些方面确实不如你，但他的用户对此的反应不是“太难用了，我要换个好用的”，而是“一定是我用的姿势不对，你快出个文档好好教教我”
-面对这样的用户，换谁都得有一肚子牢骚吧～
-
-让我们再把视角转到React的用户（也就是我们这些普通开发者）上。我们为什么选择React呢？
-可能有些人是处于喜好。但大部分开发者之所以用React，完全是因为公司要求用React。
-用React的公司多，招React的岗位多，自然选择React的开发者就多了。
-那么为什么用React的公司多呢？这显然是多年前React在先发优势、社区生态两场战役取胜后得到的结果。
-总结
-所以，我们需要尊重两个事实：
-React心智负担重是事实
-用React的公司多也是事实
-两者并不矛盾，他们都是历史进程的产物。
-Vue、React之间的讨论，即使是从技术层面出发，最后也容易陷入“React心智负担这么重，你们还甘之如饴，你们React党是不是傻”这样的争吵中。
-这显然就是忽略了历史的进程。
-正确的应对方式是多关心关心自己未来的发展：
-如果我的重心在海外，那应该给Next.js更多关注。海外远程团队不是Next就是Nest
-如果我的重心在国内，国内流量都被小程序分割了。一个长远的增长点应该是鸿蒙</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -3062,63 +3080,6 @@ Vue、React之间的讨论，即使是从技术层面出发，最后也容易陷
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>巫溪县气象台2024年1月9日7时30分发布“大雾黄色预警信号”，预计9日7时至11时，我县文峰镇、上磺镇、古路镇、塘坊镇、菱角镇、尖山镇、朝阳镇、通城镇、双阳乡、胜利乡、城厢镇、宁厂镇、红池坝镇、长桂乡等海拔500米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240109/t20240109_526551401.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市涪陵区发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240109/t20240109_526551401.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>涪陵区气象台2024年1月9日06时10分继续发布“大雾黄色预警信号”，预计1月9日06时10分至9日12时，马鞍街道、李渡街道、江北街道、龙桥街道、敦仁街道、崇义街道、江东街道、清溪镇、蔺市街道、荔枝街道、南沱镇、珍溪镇将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。防御指南：有关部门和单位按照职责做好防雾准备工作；机场、高速公路、轮渡码头等单位加强交通管理，保障安全；驾驶人员注意雾的变化，小心驾驶；户外活动注意安全。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20240109/t20240109_526551403.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市忠县发布大雾橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20240109/t20240109_526551403.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>忠县气象台2024年1月9日6时10分发布“大雾橙色预警信号”，预计9日6时至11时，忠州街道、白公街道、乌杨街道、新生街道、白石镇、黄金镇、涂井乡、石宝镇、野鹤镇、汝溪镇、金声乡、兴峰乡、官坝镇、石黄镇、三汇镇、金鸡镇、马灌镇、花桥镇、新立镇、永丰镇、拔山镇、双桂镇、善广乡、洋渡镇、任家镇、石子乡、磨子土家族乡、东溪镇、复兴镇可能出现能见度小于200米的雾，局地能见度小于50米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240109/t20240109_526551399.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市丰都县发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240109/t20240109_526551399.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>丰都县气象台2024年1月9日6时15分发布“大雾黄色预警信号”，预计9日6时至12时，兴龙镇、社坛镇、保合镇、树人镇、十直镇、龙孔镇、兴义镇、高家镇、名山街道、虎威镇、湛普镇、三合街道、双路镇、龙河镇、江池镇、栗子乡、三建乡、南天湖镇、包鸾镇、仙女湖镇、太平坝乡、武平镇、暨龙镇可能出现能见度小于500米的雾，局地能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -3833,8 +3794,8 @@ YouTube 也没有透露过，这个编号是怎么产生的。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7534320666">
-        <time id="build-timestamp" datetime="2024-01-15T21:52:41.115Z">2024-01-15T21:52:41.115Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7535721091">
+        <time id="build-timestamp" datetime="2024-01-16T01:14:58.148Z">2024-01-16T01:14:58.148Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
