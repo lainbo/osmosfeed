@@ -51,8 +51,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-15 datetime="2024-01-15T23:33:00.000Z">2024-01-15</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-15 datetime="2024-01-15T23:33:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-15 datetime="2024-01-15T23:45:00.000Z">2024-01-15</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-15 datetime="2024-01-15T23:45:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -67,6 +67,25 @@
                   <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240116/t20240116_526559175.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市巫溪县发布大雾黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240116/t20240116_526559175.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>巫溪县气象台2024年1月16日7时30分发布“大雾黄色预警信号”，受降雨影响，预计未来12小时，我县文峰镇、上磺镇、古路镇、塘坊镇、菱角镇、尖山镇、朝阳镇、通城镇、双阳乡、胜利乡、城厢镇、宁厂镇、红池坝镇、长桂乡等海拔500米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -796,7 +815,7 @@ CodeGist在线链接：https://codegist.cn/</span>
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>[7073670907851440160#新人报道#] 最新5款程序员免费绘图工具[强]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1398,6 +1417,52 @@ findOne(undefined) 所查询到的却是第一条记录
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7323018598465011762"
+                        open
+                      >
+                        <summary class="article-expander__title">公式规则编辑器，满足业务规则公式编辑场景</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7323018598465011762">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>项目开发又要到特殊的场景，不是函数公式的编辑器，是业务需求的公式规则编辑器，如满足营收计算、项目系统计算
+、一些特定场景计算，主要是字段来源于系统、已定义字段，满足基础可配置的场景需求
+实现效果
+
+1. 需求确认
+基于原型需求，与产品、后端讨论出来了以下需求：
+基础编辑框与富文本编辑器接近, 编辑历史记录
+实现外部规则子项选择填入，规则子项在编辑区可删除（Delete）
+支持加减乘除，与或非，括号的选择填入
+支持任意基础中英文、符号的自由编辑
+编辑后显示以文本形式展示
+实际规则是以字段形式的规则公式提供后端使用
+公式校验由接口提供
+支持函数选择填入
+方案确定
+首先明确是以富文本形式实现，富文本可以基于contenteditable实现，原计划是参考钉钉的薪酬计算规则的编辑组件自己用contenteditable实现富文本组件，但是考虑到快照（snapshot），插入处理，回显等一些文字需要耗费不少时间，决定基于现有的第三方富文本库来实现该公式规则编辑器。
+项目上的富文本是Tinymce， 查找文档后提供插入方法，直接决定在Tinymce基础上实现。
+    // 插入方法
+    const editor &#x3D; window.tinyMCE.editors[curId.value];
+    editor.insertContent(value);
+
+代码实现
+富文本编辑器组件 tinymce-formula
+向富文本插入内容
+    const insertContent &#x3D; ({ value, type, offset, offsetIdx }) &#x3D;&gt; {
+      const editor &#x3D; window.tinyMCE.editors[curId.value];
+      if (type &#x3D;&#x3D;&#x3D; &#x27;operator&#x27;) { //计算规则
+        if …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -2724,25 +2789,6 @@ let url &#x3D;&#x27; https://lonjin.oss-cn-beijing.aliyunc…</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240109/t20240109_526551555.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市云阳县发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240109/t20240109_526551555.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>云阳县气象台2024年1月9日8时58分发布“大雾黄色预警信号”，预计1月9日9时至12时，全县各乡镇（街道）将出现能见度小于500米的大雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -2996,50 +3042,6 @@ weixin平台：pnpm build:h5, 打包后的文件在 dist/build/mp-weixin，然�
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7321569896454914059"
-                        open
-                      >
-                        <summary class="article-expander__title">新年伊始，新书出版了——大胆仿了一个“稀土掘金”</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7321569896454914059">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>新书的综合实战项目 —— 全栈开发 “仿稀土掘金” 开源啦 🎉🎉🎉
-GitHub，在线求 star 🌟🌟🌟
-微信 联系作者，可进实战答疑群。
-大家好，我是杨成功。
-卡在元旦的前后，我的第一本前端类书籍《前端开发实战派》终于出版了。目前已经拿到实体书 —— 磨砂手感，双色彩印，这个印刷质量我是非常满意。
-废话不多说，直接上图：
-
-
-
-有关这本书的故事，我想和大家聊聊。
-从目录看，为什么叫实战派？
-这本书叫做前端开发实战派，直接看这个题目不知道书中讲了啥，所以我加了一个副标题 “Vue.js 3+Node.js+Serverless+Git”。
-之所以叫实战派，原因很简单 ——— 这本书就是为实战服务的。
-在这本书设计之初，我就在想一个场景：一个前端工程师从第 1 年干到第 5 年，如果要成长为一个高级前端工程师，必须要掌握哪些技术？
-在前期，当然是三驾马车 —— HTML、CSS、JavaScipt 最重要，再掌握一个框架，基本可以干活了。那么接下来呢？
-面对前端日新月异、复杂庞大的知识点，可能很多人不知道下一步该从哪里突破，我也有过同样的困扰。
-好在经过 7 年的摸索，这条路线渐渐明朗。我把这些技术重新整理，加上个人理解，于是有了这本书。
-下图是这本书的完整目录（长图警告）。
-
-
-
-为什么浏览器调试、团队协作很重要？
-上面的目录内容丰富，包含了大量的前端知识。
-但是“浏览器调试”和“团队协作”，貌似并不是前端的核心技术。其实不是这样。
-没有人可以一次性写好逻辑完美的代码，一边调试一边开发是常态。我接触过很多同事，开发者工具只会查看样式、查看请求、console.log()，甚至 debugger 都不会打。
-事实上，Chrome 浏览器提供了非常多高效好用的调试功能，用好了可以大幅提升效率、快速定位问题，但我们宁愿花时间研究些晦涩的知识，也没有研究浏览器的意识。…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -3052,44 +3054,11 @@ GitHub，在线求 star 🌟🌟🌟
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-08 datetime="2024-01-08T23:44:00.000Z">2024-01-08</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-08 datetime="2024-01-08T23:44:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-08 datetime="2024-01-08T10:54:07.000Z">2024-01-08</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-08 datetime="2024-01-08T10:54:07.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >国家应急广播 - 重庆预警信息</button>
-                  <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240109/t20240109_526551439.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市巫溪县发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240109/t20240109_526551439.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>巫溪县气象台2024年1月9日7时30分发布“大雾黄色预警信号”，预计9日7时至11时，我县文峰镇、上磺镇、古路镇、塘坊镇、菱角镇、尖山镇、朝阳镇、通城镇、双阳乡、胜利乡、城厢镇、宁厂镇、红池坝镇、长桂乡等海拔500米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -3269,7 +3238,7 @@ iOS 端，微信是自定义了一个通知视图，与系统推送通…</span>
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>[7073670907851440160#新人报道#] 求推荐一个前端可视化生成工具</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3794,8 +3763,8 @@ YouTube 也没有透露过，这个编号是怎么产生的。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7535721091">
-        <time id="build-timestamp" datetime="2024-01-16T01:14:58.148Z">2024-01-16T01:14:58.148Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7536791977">
+        <time id="build-timestamp" datetime="2024-01-16T03:52:23.920Z">2024-01-16T03:52:23.920Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
