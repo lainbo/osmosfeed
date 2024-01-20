@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2024-01-20T01:15:23.806Z</id>
+    <id>urn:2024-01-20T03:53:15.149Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2024-01-20T01:15:23.806Z</updated>
+    <updated>2024-01-20T03:53:15.149Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -548,6 +548,36 @@ AODMA家用小夜灯加湿器
         <summary type="html"><![CDATA[忠县气象台2024年1月17日12时发布“大雾黄色预警信号”，预计1月17日17时至18日10时，忠州街道、白公街道、新生街道、乌杨街道、东溪镇、复兴镇、涂井乡、黄金镇、白石镇、善广乡、任家镇、洋渡镇、石子乡、磨子土家族乡、石宝镇、野鹤镇、汝溪镇、金声乡、兴峰乡、官坝镇、石黄镇、三汇镇、金鸡镇、马灌镇、永丰镇、拔山镇、花桥镇、新立镇、双桂镇可能出现能见度小于500米的雾，局地能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
         <author>
             <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[html中的lang起到什么作用？]]></title>
+        <id>https://juejin.cn/post/7324750286329282597</id>
+        <link href="https://juejin.cn/post/7324750286329282597"/>
+        <updated>2024-01-17T03:16:33.000Z</updated>
+        <summary type="html"><![CDATA[今天被lang="en"这玩意给坑了，平时看着不起眼的一个小配置，结果在中文换行的时候出现了不一样的效果……
+在chrome上是这样的
+
+再看一下火狐浏览器的效果，加不加en都一样…… 起初还以为是chrome渲染机制的问题，把所有代码都删了才找到问题所在……
+
+记录一下，避坑~
+
+代码贴在下面，感兴趣的可以去试一下
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Document</title>
+</head>
+
+<body>
+  <p class="MsoNormal" style="width: 300px;background: yellow;">这一党章内容增写入宪法第一条第二款。<span lang="EN-US">“</span>中国特色</p>
+</body>
+
+</html>]]></summary>
+        <author>
+            <name>lwlcode</name>
         </author>
     </entry>
     <entry>
@@ -1390,33 +1420,6 @@ fn.day()
    比如我说我要多运动，他就会问「    你打算怎么样做才算多运动呢」    。我说新的一年多去健身房？之前一直是在家运动的，但是估计会等过一阵子再去。    他说 Why not？    我说现在太冷了，我不喜欢运动得满头大汗之后还要在冷风中回家。他半开玩笑地…]]></summary>
         <author>
             <name>xinyue</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[tRPC+Prisma初体验，不得不说全栈开发体验太赞了。]]></title>
-        <id>https://juejin.cn/post/7323484289354006591</id>
-        <link href="https://juejin.cn/post/7323484289354006591"/>
-        <updated>2024-01-14T14:32:24.000Z</updated>
-        <summary type="html"><![CDATA[theme: cyanosis
-highlight: atom-one-dark
-前言
-前段时间狼叔在年终总结中提到了tRPC，并且给了很高的评价，引起了我的好奇。于是我最近研究了一下，写了几个小demo后，发现体验真的太棒了，下面给大家分享一下我这几天的学习成果，让大家简单了解一下tRPC。
-下面是狼叔文章里的截图
-
-tRPC是什么
-先看官网首页的一张动图，也可以自己去这个地址体验一下，体验完你可能就知道tRPC用来干嘛的了。
-
-tRPC（TypeScript RPC）是一个用于在 TypeScript 应用程序中构建类型安全的 API 的工具。它允许开发者创建端到端类型安全的API，这意味着客户端和服务器之间的通信可以完全通过 TypeScript 类型进行验证和推断。
-tRPC 通过结合远程过程调用（RPC）的概念与 TypeScript 的强类型系统，消除了编写单独的API类型定义或运行时验证代码的需要。客户端可以直接像调用本地函数一样调用服务器上的函数，而无需担心参数类型或返回值类型是否匹配。
-主要特点包括：
-类型安全：客户端与服务器端代码共享相同的类型定义，保证了API请求和响应的类型安全。
-无需定义REST路由：不需要手动设置RESTful API路由，tRPC 会自动为你提供基于函数的端点。
-轻量级：tRPC 是一个轻量级库，它不需要依赖大型框架。
-前后端集成：tRPC 可以与现代前端框架（如 Next.js、React、Vue等）深度集成，提供更加流畅的开发体验。
-总的来说，tRPC 提供了一种简洁、高效且类型安全的方式来构建应用程序的后端API，并能轻松与 TypeScript 前端代码集成。
-上面是chatgpt说的，通过我这几天实践，补充一个真实有用的场景，关注我的人应该知道我在开发一套全栈后台管理系统，在开发的过程有个很恶心的地方，就是后端定义过一…]]></summary>
-        <author>
-            <name>前端小付</name>
         </author>
     </entry>
     <entry>
