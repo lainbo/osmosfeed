@@ -51,8 +51,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-20 datetime="2024-01-20T12:02:00.000Z">2024-01-20</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-20 datetime="2024-01-20T12:02:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-20 datetime="2024-01-20T14:19:00.000Z">2024-01-20</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-20 datetime="2024-01-20T14:19:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -67,6 +67,25 @@
                   <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240120/t20240120_526565006.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市奉节县发布道路结冰黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240120/t20240120_526565006.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>奉节县气象台2024年1月20日22时发布“道路结冰黄色预警信号”，预计1月20日22时至21日10时，平安乡、青莲镇、竹园镇、红土乡、公平镇、大树镇、汾河镇、岩湾乡、长安土家族乡、兴隆镇、龙桥土家族乡、太和土家族乡、云雾土家族乡、冯坪乡、青龙镇、吐祥镇等乡镇海拔600米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -1727,6 +1746,246 @@ Free Now to 2024-01-25T16:00:00.000Z</span>
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7324923422295670834"
+                        open
+                      >
+                        <summary class="article-expander__title">在微信小程序里运行完整的 Flutter，我们是怎么做到的？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7324923422295670834">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>背景
+小程序是一种全新的业务形态，特别是微信小程序，既结合了 Web 动态化特性，又拥有 Native 丰富的设备能力支持。
+在微信这个宿主上，小程序不仅有稳定的分发渠道，更拥有完善的生命周期、数据、AI 能力支持。
+在该微信上开发小程序，一般使用以下两种方法：
+JavaScript + WXML + WCSS
+Taro + React + JavaScript
+本文要介绍的是使用 Flutter Framework 开发小程序的方法，以及该方法背后的技术原理。
+技术挑战
+尽管 Flutter 官方已经提供 Flutter Web 实现，Flutter Web 本身就是基于 dart2js 运行的，微信小程序可以运行 JavaScript，在原理上跑起 Flutter Web 是没有问题的。
+但仍然存在以下技术挑战：
+微信小程序没有 W3C 标准的 JavaScript 对象，Flutter Web 不能直接运行。
+微信小程序也没有 DOM 实现，Flutter Web HTML Renderer 不能直接渲染。
+微信小程序对包大小的限制十分严格，主包不能超过 2M，而 Flutter Web 所编译的 main.dart.js 初始体积就有 1.3 M，必须有合理的分包机制才能上传。
+我们在 MPFlutter 1.x 版本中，针对上述问题已有一定的探索，1.x 版本的解决方法如下：
+使用微信开源的 kbone 库，模拟 W3C 实现，并通过模拟的 DOM 对象渲染出符合 WXML 要求的视图树。
+通过 Shadow Element Tree 的方式，使用 JSON 在 Dart 与 JavaScript 上下文同步视图树。
+Fork Flutter Framework，并对其进行外科手术式的裁剪，使 main.dart.js 初始体积降低到 600K。
+MPFlutte…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7324750302320869414"
+                        open
+                      >
+                        <summary class="article-expander__title">🐲真龙不怕火炼 | 春节创意投稿大赛来袭</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7324750302320869414">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: cyanosis
+
+新年就要到了，祝大家新的一年：龙行龘龘，前程朤朤！
+请用神奇的代码描绘出专属于开发者的新年气象吧~
+一、活动时间
+2024年1月18日-2024年2月24日
+二、如何参与
+在 # 创意投稿大赛 话题下，发布「龙年春节」相关的技术文章，即可成功参与，选题参考如下：
+龙的传承与创新：可以编写与中国传统龙文化相关的创意代码，比如龙舞编程模拟、龙的形态生成算法等；
+春节习俗互动：比如春联生成器、拜年祝福小程序、虚拟红包游戏等；
+春节旅游体验：设计与春节旅游相关的应用，比如旅游线路规划工具、当地特色文化体验平台、春节旅游记忆分享网站等；
+春节文化传播：春节故事演绎、传统民俗游戏等。
+......包括但不限于以上方向，无论什么方向必须有龙元素
+（一定要放效果图展示！！！可以使用码上掘金功能展现，也可以使用截图/GIF）
+三、文章要求
+文章体裁：必须是与春节 / 新春/龙年主题相关的技术文章，如读后感类、人生经历、面试经历、年中总结、转行产品经理、区块链等与技术不是直接相关的或与主题没有任何相关性的，都不能参与活动评选。
+文章分类：春节创意投稿文章推荐选择前端、后端、Android、iOS、人工智能分类。
+内容规范： 文章要求原创，内容符合掘金社区的内容标准和规范， 正文字数不得少于650字，不得有广告/洗稿/凑字数等行为。注意，所有的文章都不能只贴代码，要放展示效果图，有实现思路以及知识点解读，否则不计数！
+注意：如果被发现有刷量行为的，直接取消活动资格，并且会影响到后续升级的权益！请大家注意！
+其他：本次活动不与站内其他活动并行，也就是说一篇文章只能参加一个活动；若活动中发现作弊行为，立即取消活动资格！
+四、奖品设置
+奖项名称
+获奖规则
+奖品名称
+奖品图片
+
+
+
+
+最佳创意奖
+TOP1-TOP5
+【龙腾虎跃】三模热插拔机械键盘
+
+
+
+-
+TOP6-TOP10
+稀土掘金 x A-SOUL「码力加持」电脑内胆包（颜色随机）
+
+
+
+-
+TOP11-TOP20
+AODMA家用小夜灯加湿器
+
+
+
+优秀文章奖
+文章获得了官方推荐即可（每人一份）
+稀土掘金「解码系列」皮革鼠标垫
+
+
+
+
+四、扫码进群
+欢迎大家进入活动群，在群内有官方运营同学进行活动答疑，有任何活动相关的问题都可以进群咨询！
+进群方式：
+
+五、小惊喜抽奖
+时间：1月18日-1月28日
+活动规则：在本文评论区说出自己的新年愿望或者新年FLAG，抽取3位赠送掘金whocare咖啡杯 。
+例：新的一年希望家人身体健康，自己工作顺利！
+注意：评论数量不限，但是低质评论（如：666等）算无效评论</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7324736507016822810"
+                        open
+                      >
+                        <summary class="article-expander__title">游泳教练-&gt;前端程序员-&gt;两家公司小老板的2023年终总结</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7324736507016822810">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: channing-cyan
+真快
+
+转眼月哥入行前端5年有余了，想当年月哥还是泡在游泳池的教练，培训转行，从当年的6点起床俱乐部，手抄代码，狂背两本面试宝典，到拿到一堆的offer，各种励志故事，白手起家，同时也是一路被骂，养成了大心脏，到现在已经有两家公司，通过这些故事大家了解到我，然后看我一步一步成长。
+这次年终总结信息量很大，关键词人外有人、天外有天 入职就要考虑离职、努力的意义、融资的坑、大厂晋升、大厂高p的煎熬、裁员的苦与乐、程序员接外包项目的坑、投资、职场选择、程序员加班、梦想和现实、专科犹如panxing、大龄程序员的出路与煎熬、转行这条路还可行不、培训&#x3D;&#x3D;&#x3D;割韭菜、程序员的职场向上管理，前端已死、后端以亡记录这一年创业的所见所闻！写的有点乱，想到哪写到哪里，见谅！但是还是希望能够给到大家思考！
+首先一点先感谢粉丝们的支持，还有这么多同学关注，月哥属于井底之蛙，爪子一步一步蜕变成双手一点一点爬到井口，看到了以前不曾看到的画面！
+2020年总结：之前为了跳槽，把这边篇文章删了，哈哈
+
+2021年随笔：前端三年：小白变成老油条
+2021年终总结：卷王的2021年终总结
+2022年中总结：前端做题家的｜2022 年中总结
+2022年终总结：2022底层程序员4年的逆袭之旅：穷屌丝--&gt;小老板
+2023年终总结：游泳教练-&gt;前端程序员-&gt;两家公司小老板的年终总结
+正向反馈
+我现在之所以那么努力是因为正向的反馈，它告诉我努力是有意义的在这个行业。学历三本，之前在干游泳教练，18年培训出来拿到17k,相当极度的努力，告诉我努力一定有意义。然后就疯狂学习！
+20年把助学贷款全部还完，20年底，第一次月入十万，兴奋的睡不着觉，尼玛怎么能挣这么多，我艹。
+然后就更加的努力去学习，那一刻让我知道努力可以真真切切的可以改变命运。
+去年给自己买了一辆奔驰，现在有两辆车，…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7324750286329282597"
+                        open
+                      >
+                        <summary class="article-expander__title">html中的lang起到什么作用？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7324750286329282597">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>今天被lang&#x3D;&quot;en&quot;这玩意给坑了，平时看着不起眼的一个小配置，结果在中文换行的时候出现了不一样的效果……
+在chrome上是这样的
+
+再看一下火狐浏览器的效果，加不加en都一样…… 起初还以为是chrome渲染机制的问题，把所有代码都删了才找到问题所在……
+
+记录一下，避坑~
+
+代码贴在下面，感兴趣的可以去试一下
+
+
+
+
+  
+  Document
+
+
+
+  
+这一党章内容增写入宪法第一条第二款。“中国特色</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7324750282859528229"
+                        open
+                      >
+                        <summary class="article-expander__title">44K star！2023最火的前端开源项目</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7324750282859528229">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前端一直都是开源项目的热门领域，太多耳熟能详的名字：react、vue、bootstrap。对于前端领域每年都有新人来，今年同样不例外。
+今天我们推荐的就是2023年最火的前端开源项目，目前在GitHub已超过44K Star，它就是：shadcn-ui。
+
+shadcn-ui是什么?
+在JavaScript Rising Stars 公布的2023 年 JavaScript 明星项目榜单中，shadcn-ui 获得了整体推荐的总冠军。
+
+shadcn-ui 是用 React 编写的 UI 组件的集合，允许通过 TailwindCSS 进行自定义样式。shadcn-ui构建于Radix之上，这是一组无头组件，为可访问性和键盘交互等问题提供原语，shadcn-ui 与其他流行库（例如 MUI、ChakraUI、React Spectrum）的区别在于它不是可下载的 NPM 包。相反，您可以通过终端命令集成 shadcn-ui 组件，该命令安装底层依赖项并将组件源代码直接复制到代码库中以进行进一步修改。
+列几个shadcn-ui 的核心能力：
+主题和主题编辑器：可以使用图形界面来创建自定义主题。编辑器会生成包含自定义样式定义的代码片段，只需将其复制粘贴到程序中即可使用。
+
+深色模式：支持 Next.js 和 Vite 应用的暗黑模式
+cli工具：自动配置项目，与框架集成、生成配置文件及添加组件等。
+组件库：包含40+的基础组件库。
+下面是它的GitHub star历史，shadcn-ui 于今年1月份创建，不到1年的时间，shadcn-ui 就获得了超过40Kstar，这是多少项目都难以企及的。
+
+为什么用 shadcn-ui
+从前面的介绍能看出shadcn-ui和传统组件库有明显的差异， 我们也来看看它带来的显著优势：
+开箱即用：任何具备 HTML、CSS、JavaScrip…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >李继刚的即刻动态</button>
                   <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
                 </h3>
@@ -1913,210 +2172,6 @@ Web2.0的出现改变了工作的逻辑，人人都可以成为互联网的参�
                             <span class="media-object__text">
                               <span>想问下大家gpt4.0都是怎么充值的[送心][送心]</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7324750302320869414"
-                        open
-                      >
-                        <summary class="article-expander__title">🐲真龙不怕火炼 | 春节创意投稿大赛来袭</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7324750302320869414">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: cyanosis
-
-新年就要到了，祝大家新的一年：龙行龘龘，前程朤朤！
-请用神奇的代码描绘出专属于开发者的新年气象吧~
-一、活动时间
-2024年1月18日-2024年2月24日
-二、如何参与
-在 # 创意投稿大赛 话题下，发布「龙年春节」相关的技术文章，即可成功参与，选题参考如下：
-龙的传承与创新：可以编写与中国传统龙文化相关的创意代码，比如龙舞编程模拟、龙的形态生成算法等；
-春节习俗互动：比如春联生成器、拜年祝福小程序、虚拟红包游戏等；
-春节旅游体验：设计与春节旅游相关的应用，比如旅游线路规划工具、当地特色文化体验平台、春节旅游记忆分享网站等；
-春节文化传播：春节故事演绎、传统民俗游戏等。
-......包括但不限于以上方向，无论什么方向必须有龙元素
-（一定要放效果图展示！！！可以使用码上掘金功能展现，也可以使用截图/GIF）
-三、文章要求
-文章体裁：必须是与春节 / 新春/龙年主题相关的技术文章，如读后感类、人生经历、面试经历、年中总结、转行产品经理、区块链等与技术不是直接相关的或与主题没有任何相关性的，都不能参与活动评选。
-文章分类：春节创意投稿文章推荐选择前端、后端、Android、iOS、人工智能分类。
-内容规范： 文章要求原创，内容符合掘金社区的内容标准和规范， 正文字数不得少于650字，不得有广告/洗稿/凑字数等行为。注意，所有的文章都不能只贴代码，要放展示效果图，有实现思路以及知识点解读，否则不计数！
-注意：如果被发现有刷量行为的，直接取消活动资格，并且会影响到后续升级的权益！请大家注意！
-其他：本次活动不与站内其他活动并行，也就是说一篇文章只能参加一个活动；若活动中发现作弊行为，立即取消活动资格！
-四、奖品设置
-奖项名称
-获奖规则
-奖品名称
-奖品图片
-
-
-
-
-最佳创意奖
-TOP1-TOP5
-【龙腾虎跃】三模热插拔机械键盘
-
-
-
--
-TOP6-TOP10
-稀土掘金 x A-SOUL「码力加持」电脑内胆包（颜色随机）
-
-
-
--
-TOP11-TOP20
-AODMA家用小夜灯加湿器
-
-
-
-优秀文章奖
-文章获得了官方推荐即可（每人一份）
-稀土掘金「解码系列」皮革鼠标垫
-
-
-
-
-四、扫码进群
-欢迎大家进入活动群，在群内有官方运营同学进行活动答疑，有任何活动相关的问题都可以进群咨询！
-进群方式：
-
-五、小惊喜抽奖
-时间：1月18日-1月28日
-活动规则：在本文评论区说出自己的新年愿望或者新年FLAG，抽取3位赠送掘金whocare咖啡杯 。
-例：新的一年希望家人身体健康，自己工作顺利！
-注意：评论数量不限，但是低质评论（如：666等）算无效评论</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7324736507016822810"
-                        open
-                      >
-                        <summary class="article-expander__title">游泳教练-&gt;前端程序员-&gt;两家公司小老板的2023年终总结</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7324736507016822810">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: channing-cyan
-真快
-
-转眼月哥入行前端5年有余了，想当年月哥还是泡在游泳池的教练，培训转行，从当年的6点起床俱乐部，手抄代码，狂背两本面试宝典，到拿到一堆的offer，各种励志故事，白手起家，同时也是一路被骂，养成了大心脏，到现在已经有两家公司，通过这些故事大家了解到我，然后看我一步一步成长。
-这次年终总结信息量很大，关键词人外有人、天外有天 入职就要考虑离职、努力的意义、融资的坑、大厂晋升、大厂高p的煎熬、裁员的苦与乐、程序员接外包项目的坑、投资、职场选择、程序员加班、梦想和现实、专科犹如panxing、大龄程序员的出路与煎熬、转行这条路还可行不、培训&#x3D;&#x3D;&#x3D;割韭菜、程序员的职场向上管理，前端已死、后端以亡记录这一年创业的所见所闻！写的有点乱，想到哪写到哪里，见谅！但是还是希望能够给到大家思考！
-首先一点先感谢粉丝们的支持，还有这么多同学关注，月哥属于井底之蛙，爪子一步一步蜕变成双手一点一点爬到井口，看到了以前不曾看到的画面！
-2020年总结：之前为了跳槽，把这边篇文章删了，哈哈
-
-2021年随笔：前端三年：小白变成老油条
-2021年终总结：卷王的2021年终总结
-2022年中总结：前端做题家的｜2022 年中总结
-2022年终总结：2022底层程序员4年的逆袭之旅：穷屌丝--&gt;小老板
-2023年终总结：游泳教练-&gt;前端程序员-&gt;两家公司小老板的年终总结
-正向反馈
-我现在之所以那么努力是因为正向的反馈，它告诉我努力是有意义的在这个行业。学历三本，之前在干游泳教练，18年培训出来拿到17k,相当极度的努力，告诉我努力一定有意义。然后就疯狂学习！
-20年把助学贷款全部还完，20年底，第一次月入十万，兴奋的睡不着觉，尼玛怎么能挣这么多，我艹。
-然后就更加的努力去学习，那一刻让我知道努力可以真真切切的可以改变命运。
-去年给自己买了一辆奔驰，现在有两辆车，…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7324750286329282597"
-                        open
-                      >
-                        <summary class="article-expander__title">html中的lang起到什么作用？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7324750286329282597">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>今天被lang&#x3D;&quot;en&quot;这玩意给坑了，平时看着不起眼的一个小配置，结果在中文换行的时候出现了不一样的效果……
-在chrome上是这样的
-
-再看一下火狐浏览器的效果，加不加en都一样…… 起初还以为是chrome渲染机制的问题，把所有代码都删了才找到问题所在……
-
-记录一下，避坑~
-
-代码贴在下面，感兴趣的可以去试一下
-
-
-
-
-  
-  Document
-
-
-
-  
-这一党章内容增写入宪法第一条第二款。“中国特色</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7324750282859528229"
-                        open
-                      >
-                        <summary class="article-expander__title">44K star！2023最火的前端开源项目</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7324750282859528229">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前端一直都是开源项目的热门领域，太多耳熟能详的名字：react、vue、bootstrap。对于前端领域每年都有新人来，今年同样不例外。
-今天我们推荐的就是2023年最火的前端开源项目，目前在GitHub已超过44K Star，它就是：shadcn-ui。
-
-shadcn-ui是什么?
-在JavaScript Rising Stars 公布的2023 年 JavaScript 明星项目榜单中，shadcn-ui 获得了整体推荐的总冠军。
-
-shadcn-ui 是用 React 编写的 UI 组件的集合，允许通过 TailwindCSS 进行自定义样式。shadcn-ui构建于Radix之上，这是一组无头组件，为可访问性和键盘交互等问题提供原语，shadcn-ui 与其他流行库（例如 MUI、ChakraUI、React Spectrum）的区别在于它不是可下载的 NPM 包。相反，您可以通过终端命令集成 shadcn-ui 组件，该命令安装底层依赖项并将组件源代码直接复制到代码库中以进行进一步修改。
-列几个shadcn-ui 的核心能力：
-主题和主题编辑器：可以使用图形界面来创建自定义主题。编辑器会生成包含自定义样式定义的代码片段，只需将其复制粘贴到程序中即可使用。
-
-深色模式：支持 Next.js 和 Vite 应用的暗黑模式
-cli工具：自动配置项目，与框架集成、生成配置文件及添加组件等。
-组件库：包含40+的基础组件库。
-下面是它的GitHub star历史，shadcn-ui 于今年1月份创建，不到1年的时间，shadcn-ui 就获得了超过40Kstar，这是多少项目都难以企及的。
-
-为什么用 shadcn-ui
-从前面的介绍能看出shadcn-ui和传统组件库有明显的差异， 我们也来看看它带来的显著优势：
-开箱即用：任何具备 HTML、CSS、JavaScrip…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2698,56 +2753,6 @@ Celeris Web的特点
 ☁️ Netlify准备就绪：在Netlify上零配置部署 ☁️
 有…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7324478279720206377"
-                        open
-                      >
-                        <summary class="article-expander__title">前端基础-设计层次</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7324478279720206377">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>视觉设计的核心就是“让它们看起来好看”，但如果我们没有天生的设计天赋，我们会觉得很难实现。但并不是这样的，对于&quot;变好看&quot;这件事情本身其实是有理可依、有据可循的。而层次结构就是这其中的一部分。
-视觉层次结构指的是界面中的元素彼此之间的重要性，它是你所拥有的让人感觉“设计”的最有效的工具。当一个界面中的所有东西都在争夺注意力时，从直觉上就是丑陋和嘈杂混乱的，就像一堵巨大的内容墙：
-
-当我们故意减少对次要和第三级信息的强调，并努力突出最重要的元素时，看起来会立马好很多：
-
-不使用大小去突出元素
-通常我们在设计一个板块的时候，总是会思考通过字体的大小去突出内容的重要性和层次，但是这并不是一个好的做法，通常就会导致主要的内容太大，次要的内容太小。
-就像这个例子一样:
-
-但如果使用 font-weight来做同样的事情，会合理得多:
-
-再加上颜色那？给次要文本使用一个次要的颜色
-
-而通常在一个block里 2-3种颜色和 2种字重显然就已经足够了。
-颜色：
-主要内容使用深一点的颜色，就比如黑色。
-次要内容使用灰色或者黑色降低透明度。
-三级的内容浅灰色。
-字重：
-字体本身的font-weight
-600 或者 700的需要强调的加粗
-最终就像这样：
-
-不在彩色背景上使用灰色的字
-让文本变成浅灰色是在白色背景上降低强调度的好方法，但在彩色背景上看起来不那么好。
-
-这是因为我们看到的灰色对白色的效果减少了对比。
-而文本更接近背景色实际上有助于创建层次结构，而不是使它变成浅灰色。
-
-但我们不改变背景应该怎么办那？实现这一点的最简单的方法是使用白文本，并不停的尝试透明度，但其实这也是往常我们开发的一些做法~，但这其实不是一个最好的实践，只能算是一个最简单取巧的办法而已：
-
-一个更好的方法是根据背景色手工选择一种新的颜色。选择相同色调的颜色，调整饱和度和亮度，直到正确，用这种方式手调选择颜色很容易…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -5402,8 +5407,8 @@ YouTube 也没有透露过，这个编号是怎么产生的。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7594499128">
-        <time id="build-timestamp" datetime="2024-01-20T12:55:38.354Z">2024-01-20T12:55:38.354Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7595365179">
+        <time id="build-timestamp" datetime="2024-01-20T15:52:58.585Z">2024-01-20T15:52:58.585Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
