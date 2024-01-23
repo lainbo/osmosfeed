@@ -51,8 +51,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-23 datetime="2024-01-23T12:20:00.000Z">2024-01-23</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-23 datetime="2024-01-23T12:20:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-23 datetime="2024-01-23T13:22:00.000Z">2024-01-23</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-23 datetime="2024-01-23T13:22:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -67,6 +67,25 @@
                   <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/lanseyj/20240123/t20240123_526568924.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市石柱土家族自治县发布霜冻蓝色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/lanseyj/20240123/t20240123_526568924.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>石柱县气象台2024年1月23日21时20分发布“霜冻蓝色预警信号”，预计1月23日22时至25日8时，黄水镇、枫木镇、临溪镇、石家乡、王家乡、冷水镇、金竹乡、中益乡、沙子镇、新乐乡、洗新乡、黄鹤镇、金铃乡、三益乡、桥头镇、万朝镇、龙沙镇、鱼池镇、沿溪镇、悦崃镇、王场镇、龙潭乡、下路街道、三星乡、六塘乡、马武镇、万安街道、南宾街道、三河镇地面最低温度将要下降到0℃以下，对农业将产生影响。请注意防范！</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -1879,6 +1898,50 @@
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7326268947069534234"
+                        open
+                      >
+                        <summary class="article-expander__title">中高级前端工程师必备14种性能优化方案</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326268947069534234">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: channing-cyan
+前端性能优化在中高级的面试中出现概率相当之高。不了解前端的性能优化并不会影响你成为一名合格的前端工程师。但它是每一个优秀的前端工程师多多少少都需要知道的东西。
+希望以下内容对你后面找工作/换工作有帮助。
+good luck brother/girl.
+
+第一种，启用前端缓存
+所谓的前端缓存，其实就是http缓存，通过（强缓存/协商缓存）等方式让计算机直接从缓存中读取静态资源，从而实现节约宽带，提高响应速度，减少服务器压力等优化。
+参考案例:
+中高级前端工程师都需要熟悉的技能--前端缓存 - 掘金 (juejin.cn)
+一文！彻底弄懂前端缓存_zz_jesse的博客-CSDN博客
+第二种，开启GZIP压缩
+这主要针对工程化项目，如react/vue等。
+常规情况下前端部署所需要的dist包中会有一些静态文件（如js，css，图片文件）。这些静态文件会在项目初始化后续某个动作下被加载。出于体积大小的不同，加载速度也不一样。有些文件比较大，加载所需时间相对较长，针对文件加载慢的情况。
+我们可以采用一些压缩方案，让这些静态文件的体积尽量变小。这样，就可以相对的节约宽带，而因为这些文件的变小，对这些的静态文件的加载的速度也会得到提升，客户端也可以尽快响应给用户一个良好的体验。
+gzip有着比zip更优秀的压缩算法，可以有效的减少文件的大小。
+每个框架配置gzip的方法都不太一样，没有标准答案。但是大概的流程都是一样的。
+下载compression-webpack-plugin插件
+配置到webpack中
+通知后端开启gzip
+完成
+参考案例
+react中的umi框架开启gzip.com
+vue开启gzip压缩.com
+第三种，使用函数节流和函数防抖
+节流和防抖是经典的优化方案。
+节流和防抖都是将我们大量重复多余的操作进行合并，以达到减少客户…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7325993514701635638"
                         open
                       >
@@ -3204,7 +3267,7 @@ Object 会存储 id、文件内容、元数据三部分信息：
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>idea官网下载不了了吗，宝贝们</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3223,7 +3286,7 @@ Object 会存储 id、文件内容、元数据三部分信息：
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>最近突然发现，Edge比google浏览器更好用。。。。[发呆]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3752,7 +3815,7 @@ console.log(clonedObj);   // { a: 1, b: { c: 3 } }
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>ApiPost是不是崩了，怎么打不开</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3974,73 +4037,6 @@ MPFlutte…</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7324750284190105651"
-                        open
-                      >
-                        <summary class="article-expander__title">我们应避免感动自己的无效学习！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7324750284190105651">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: vuepress
-Hello，大家好，我是 Sunday。
-很多同学老找我沟通时，多会说：“Sunday老师，我想要学 angular，我想要学 node，我还要学 go，学 python，学 java。对了，数据库也得学！ sunday 老师，你觉得 webGL 有必要学吗？我听说现在好多公司都在用”。
-天呢！为了学而学，你学的完吗？
-每次，看到这种情况，我都需要安慰他们好久，舒缓大家的紧张情绪。
-我能够明显感觉到，在现在 “内卷” 日益严重的大行情之下，很多同学都会充满的焦虑，生怕自己一个不小心就会被淘汰掉。从而开始学习很多很多的内容，期望可以通过这种方式来 “安慰自己”，告诉我已经很努力了，我不会被淘汰。
-可是很多时候，这种无目标，无结果的努力，其实是 毫无价值 的！
-为了学而学，毫无价值。
-我们学习的目的只有一个，那就是：“通过最小的付出，获得最高的收入”。
-所以，不要做 “感动自己的事情”。
-通过无意义的折磨自己，无效的努力学习，只会为你带来痛苦。而痛苦就是痛苦，它和成功毫无关系！
-那么我们应该如何做呢？
-01：做减法
-我做开发有 10 多年了，做技术讲师也有 5 年了。期间见过大量的、各种各样情况的同学。
-有同学： 学完了 Vue、React、Angular，但是哪个都不精，所以只能一边拿着不算高的薪水，一边问我：“sunday 老师，为什么我学完了这么多的东西，还没有办法拿到更高的薪资？”
-有同学： 不光学习前端，还学习后端。美其名曰 全栈。并期望以此来获得更高的薪资。但是往往事与愿违，老板不愿意给他涨薪，让他时常觉得自己 “怀才不遇”。
-有同学： 每天都会学习到晚上 12 点，永远在追逐最新的技术。有了什么新的框架、哪位大佬说了什么话、圈子里面发生了什么事 了熟于胸。日常吹牛高谈阔论，一到面试百无一能。
-有同学： 钻研 “技术细节”，5 种实现继承的方法、JS 打印有几种写法 摸得门清。但是一到日常开发，却 bug 百出，百思不得其解。
-有同学： ......
-对于现在很多的同学而言，大家都已经非常的 “卷” 了。并且已经把 “卷” 当成了日常，生怕自己跑的太慢，而被 “抛弃”。
-但是，漫无目的的跑，本身毫无意义，只是在 “感动自己罢了”。
-所以说 适当的做做减法吧！
-明确自己的目标： 你到底想要什么？想要涨薪？想要在社群有更多的话语权？想要掌握一些谈资？不同的目标下，你所需要做的事情是不同的。
-摆脱掉所有与你的目标无关的事情：
-
-买了一堆书也不看的，就把它们收起来，听我讲就行了（可以关注我的B站讲书模块 -- 程序员Sunday）
-之前整理过的笔记，把那些不看的删了，把感觉有价值的，整理成博客发出来，以输出来反哺输入
-炒股的同学，把炒股软件删了吧，除了影响心态，其他的没啥用
-02：学而不用，是为 null
-有人多同学学习的时候习惯 记笔记。特别是我在黑马工作的时候，经常会见到有很多同学 记了满满一大本子的笔记。但是在实际工作之后，却从来没有再次翻开过。
-我们总会去学习各种各样的新知识，但是因为我们的工作内容并不会发生太大的变化，所以就会导致很多的知识点因为不经常使用而被忘掉。甚至，当我们遇到一个问题的时候，去百度发现...百度到自己的文章......
-所以说 学而不用，是为空。
-知识分为广度和深度，任何的一个人都有自己的 “能力圈”。
-想清楚你的能力圈是什么
-然后，学习你能力圈之内做事情
-学而有用，避免学习任何你用不到的知识。
-03：找到你真正喜欢的事情
-有很多同学学习开发只是因为 做开发可以赚更多的钱。 这本没有错，我们都是为了钱而工作。
-但是，如果你本身并不喜欢开发的话，则这份工作对你而言可能并不是一个长久之计。
-所以，找到你真正喜欢做的事情很重要，因为任何一个你不喜欢的职业，你都不可能一直做下去。
-所以，找到你真正喜欢做的事情。在日常工作之余，开始做这个事情。在这里给大家讲一个真实的故事：
-我之前工作的时候有一个同事，咱们暂且叫他老张。老张平时不争不抢，就喜欢摆弄一些多肉。
-很多在我们看起来很无聊的养护工作，在他做起来却乐此不疲。
-后来在 21 年的时候，他从公司被迫离开。就开始全职 抖音卖多肉。
-后来跟他沟通，据说卖的还不错，比他在公司的收入要高不少。并且每天都更快乐了。
-所以，找到你真正喜欢的事情，在开始的时候可以把它当做副业来去做。或许，某一天它可以给你带来意想不到的收获。
-总结
-随笔所写，可能并不全面。先说这些吧，如果大家有兴趣，咱们后面详聊~~~~~~
-前端训练营：1v1私教，终身辅导计划，帮你拿到满意的 offer。 已帮助数百位同学拿到了中大厂 offer。欢迎来撩~~~~~~~~</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7324750302320869414"
                         open
                       >
@@ -4235,8 +4231,6 @@ cli工具：自动配置项目，与框架集成、生成配置文件及添加�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>想问下大家gpt4.0都是怎么充值的[送心][送心]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4577,25 +4571,6 @@ cli工具：自动配置项目，与框架集成、生成配置文件及添加�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>綦江区气象台2024年1月16日23时20分发布“大雾黄色预警信号”，预计17日0时至12时，通惠街道、古南街道、文龙街道、新盛街道、横山镇、三角镇、三江街道、篆塘镇、东溪镇、扶欢镇、赶水镇、石角镇将出现能见度小于500米的雾，局地能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240116/t20240116_526560287.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市万盛经开区发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240116/t20240116_526560287.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>万盛经开区气象台2024年1月16日22时30分发布“大雾黄色预警信号”，万东镇部分地区已出现能见度小于500米的雾并将持续，预计16日23时至17日10时，南桐镇、关坝镇、青年镇、丛林镇、金桥镇、石林镇、黑山镇可能出现能见度小于500米的雾，局地能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -4995,8 +4970,6 @@ cli工具：自动配置项目，与框架集成、生成配置文件及添加�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>[7073670907851440160#新人报道#] [呲牙]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5018,8 +4991,6 @@ RedisMate是一款专为开发过程中, 简化Redis调试操作而设计的macO
 产品演示和下载：https://redismate.hunterji.com
 或者也可以直接使用Mac在app store中搜索“RedisMate&quot;下载体验。
 欢迎各位老哥的体验和反馈！</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5037,8 +5008,6 @@ RedisMate是一款专为开发过程中, 简化Redis调试操作而设计的macO
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>我的第一款独立开发产品RedisMate，前两天刚完成MVP版本。经过几天推广，居然已经到app store开发工具类排名第9名了？！前面可是postman啊！有点慌...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5511,8 +5480,6 @@ Modal管理-看这篇文章就够了 (实践篇)
 tojson.js 是一个支持解析 Psd、Sketch、PPT转 json 的类库, 该 json 满足 fabric.js 渲染的数据格式.
 github 地址: https://github.com/haixin-fang/tojson.js
 预览地址:  https://haixin-fang.github.io/tojson.js/playground/</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5532,8 +5499,6 @@ github 地址: https://github.com/haixin-fang/tojson.js
                               <span>又多了一段功能代码片段，下次再遇到类似Word文档转HTML需求就能估2小时，然后3分钟搞定; 剩下的时间用来摸。
 CodeGist 真是帮我大忙啦[玫瑰][玫瑰][玫瑰]
 兄弟们快用起来，https://codegist.cn/</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5551,8 +5516,6 @@ CodeGist 真是帮我大忙啦[玫瑰][玫瑰][玫瑰]
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>GithubCopilot远程授权</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5570,8 +5533,6 @@ CodeGist 真是帮我大忙啦[玫瑰][玫瑰][玫瑰]
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>vscode 提示音太恶心了</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5755,8 +5716,6 @@ export function deepDefObserve(obj, week) {
                             <span class="media-object__text">
                               <span>代码管理工具 CodeGist
 简介如下👇👇👇</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5808,8 +5767,6 @@ export function deepDefObserve(obj, week) {
 4. 本地存储，业务代码无需担心安全问题
 5. 支持自定义标签分类
 CodeGist在线链接：https://codegist.cn/</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -6165,8 +6122,8 @@ YouTube 也没有透露过，这个编号是怎么产生的。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7626031181">
-        <time id="build-timestamp" datetime="2024-01-23T12:57:09.123Z">2024-01-23T12:57:09.123Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7628335129">
+        <time id="build-timestamp" datetime="2024-01-23T15:53:07.425Z">2024-01-23T15:53:07.425Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
