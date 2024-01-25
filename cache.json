@@ -94,7 +94,7 @@
           "description": "其实获取视频的缩略图并不需要视频解码就能实现，方法就是其貌不扬的HTML video元素。",
           "link": "https://www.zhangxinxu.com/wordpress/2024/01/js-get-video-thumb-poster/",
           "publishedOn": "2024-01-15T15:55:26.000Z",
-          "wordCount": 1558,
+          "wordCount": 1556,
           "title": "使用JS快速获取video视频任意位置的缩略图",
           "imageUrl": null
         },
@@ -104,7 +104,7 @@
           "description": "Firefox也正式支持popover属性了，大人，时代变了，所有的下拉效果要换种实现方式啦。",
           "link": "https://www.zhangxinxu.com/wordpress/2024/01/js-html-popover-dropdown/",
           "publishedOn": "2024-01-11T15:01:33.000Z",
-          "wordCount": 1375,
+          "wordCount": 1376,
           "title": "时代变了，该使用原生popover属性模拟下拉了",
           "imageUrl": null
         },
@@ -1642,16 +1642,6 @@
           "wordCount": 523,
           "title": "重庆市巴南区发布大雾黄色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20240118/t20240118_526562100.html",
-          "author": "国家预警信息发布中心",
-          "description": "开州区气象局2024年1月18日15时继续发布“大雾黄色预警信号”，预计1月18日20时至19日13时，我区大部分乡镇（街道）将出现能见度小于500米的雾，局部地区能见度小于200米。请各地注意防范大雾天气可能造成的影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20240118/t20240118_526562100.html",
-          "publishedOn": "2024-01-18T07:05:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市开州区发布大雾黄色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -1698,13 +1688,23 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7326547700944699432",
-          "author": "聪明的竹子爱学习",
-          "description": "作者 | Loraine Lawson译者 | 许学文策划 | 丁晓昀Vue 3 的发布让其创始人尤雨溪吃了不少苦头，也让他知道，未来再处理框架升级时需要在策略上做出重大改变。\n在 2023 年 VueConf 多伦多大会上，Vue.js 的创始人 尤雨溪 向与会者透露，在 Vue（一款用于构建用户界面的渐进式 JavaScript 框架） 从版本 2 升级到版本 3 的过程中，他犯了三大错误，并从中吸取到了一些教训。\n错误一：一次发布太多微小但破坏性的变更\n尤雨溪在 11 月发布的一段视频 中说道：“我们犯的第一个错误，是一次发布太多微小但破坏性的变更。问题的关键在于，单独的每个小变更都很容易处理，但是当这些变更合在一起时，所带来的复杂性会呈指数级增长。”\n通过这个教训，他意识到在进行变更时，优先保持原有功能的可用性是明智之举。他进一步补充到，这一做法也将给框架维护者的工作流程带来变革，未来他们将采用逐步弃用的周期性原则进行框架升级。\n“对于我们想要变更、破坏或移除的每一项内容，都应该始终首先保持其一切运行正常，然后再考虑弃用，同时应该引入一个新特性的可选阶段，此阶段在不破坏任何现有功能的前提下，允许用户自主选择是否采用新特性。最终，在未来版本中将那些需要废弃的特性移除。”\n他解释说，Vue 的维护者将会在不同版本之间采取分阶段的变更策略，以避免再次出现“一大堆破坏性的变更同时发布”的情况。他将这个计划与 Angular 和 Ember 的升级方法进行了比较，这两个框架在主要版本之间都分散了小的破坏性变更，并且时间跨度相对较长。\n“Vue 已经发展到了一个阶段，我相信长远发展所需的良好升级策略将变得至关重要。我们可以保证，在短期内，绝对不会考虑进行任何破坏性变更。对于长期来说，我希望 Vue 3 能成为稳定的基础版本，并且未来我们将会非常认真地对待这种变更。”\n错误二：低…",
-          "link": "https://juejin.cn/post/7326547700944699432",
-          "publishedOn": "2024-01-22T05:51:59.000Z",
-          "wordCount": 1071,
-          "title": "发布 Vue3 让尤雨溪吃尽苦头：犯了3个错，每一个都需开发者警惕",
+          "id": "https://juejin.cn/post/7326979670485123110",
+          "author": "马格纳斯",
+          "description": "前言\n前两年在一家做电商的公司做了一个需求：鼠标框选商品卡片，开始拖拽的时候合成一个然后改变位置，页面上有几千个所以还要结合虚拟列表。当时不知道怎么做，就在 github 上到处找现成的库，最后找到了 react-selectable-fast，并结合 react-virtualized、react-sortable-hoc 完成了需求。虽然该库已经很久不维护了，但大致上能满足我的需求了，尽管它是以 dom 的方式，很不 react，但秉承着能用就行的原则。意料之中，开发过程中遇到了 bug，最后只能 fork 一份修改源码后自己发了个 npm 包来使用。\n项目介绍\n前几个月在空闲时间突然来了兴致，自己找点事做，就想自己开发一个框选的库吧，万一也有人有这个需求不知道怎么办呢？写完后发到了 antd 的社区共建群里，有的人觉得不错也 star 了。先献上项目地址 react-selectable-box，文档完整，使用 dumi 编写。api 友好，支持自定义一些功能。\napi 设计\n一个组件在设计时，首先思考的应该是 api 如何去设计，最好符合大家平常的习惯，并具有一定的自定义和拓展能力。再加上了解 react-selectable-fast 这个库的缺点和痛点，对我的设计就更加有帮助了。大家在看下面的文章之前也可以思考一下，如果是你，你会怎么设计？这里只选取几个 api 来进行介绍。\n主组件 Selectable\n选中的值\ndefaultValue 和 value，类型为 (string | number)[]，每个方块一般都有一个唯一 id 来标识。\n禁用\ndisabled，大部分有值的组件应该都会有此属性，能直接禁用框选功能。\n模式\nmode，类型为 \"add\" | \"remove\" | \"reverse\"。模式，表明当前框选是增加、减少还是取反。这个 api 感觉…",
+          "link": "https://juejin.cn/post/7326979670485123110",
+          "publishedOn": "2024-01-23T07:55:11.000Z",
+          "wordCount": 1288,
+          "title": "实现一个鼠标框选的功能，要怎么实现和设计 api？",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7326985988768743461",
+          "author": "狂炫冰美式",
+          "description": "theme: hydrogen\n一、背景介绍\n\n看这篇文章：《视差特效的原理和实现方法》的时候，看到有一个很棒的动效。但只是PC端的效果，所以我就想在移动端实现类似的，为后续开发新需求的用户体验（炫技）做好沉淀。\n二、前置调研\n话不多说，直接开敲。本来打算创建一个 div 元素来进行调试，但在使用浏览器模拟移动设备时，我迅速遇到了一个问题：移动设备上根本没有鼠标可用！\n\nthinking...\n而且，桌面端依赖监听鼠标移动事件，在移动端被转变为触摸相关的事件，导致原本通过监听鼠标坐标的交互方式变成了通过用户触摸屏幕的方式交互。这显然与我们的预期不符\nPC 能监听鼠标移动\n \n移动端只能监听点击\n \n其中，鼠标坐标的作用是用来实时更新倾/斜移动程度的。而我需要一种不同的方式来实时捕获用户的动作位置信息，思考再三，最终决定在移动端使用陀螺仪API：DeviceOrientationEvent平替。\n点击跳转：MDN地址\n三、陀螺仪介绍\n一般来说，放手机上的是三轴陀螺仪，即可测量围绕手机的三个主轴（X、Y、Z）的旋转速率。\n\n\n\n三个指标 alpha beta gamma 表示的是相对于坐标轴，设备在某个给定轴上的旋转量:\nalpha：表示设备沿 Z 轴旋转的角度，范围为 0~360\nbeta：表示设备在x轴上的旋转角度，范围为-180~180。它描述的是设备「由后向前」旋转的情况\ngamma：表示设备在y轴上的旋转角度，范围为-90~90。它描述的是设备「由左向右」旋转的情况\n注意： 将手机水平放置，底部对着自己，此时安卓和苹果 alpha 初始值不同。\n  \n初始值\n操作系统\nAlpha\nBeta\nGamma\n\n\n\n\nAndroid\n90（右转90度趋向0，左转增加）\n0（面向用户转增加，背向转减小）\n0（右转增加，左转减小）\n\n\niOS\n0（右转从360减小，左转增加）\n0…",
+          "link": "https://juejin.cn/post/7326985988768743461",
+          "publishedOn": "2024-01-23T03:53:11.000Z",
+          "wordCount": 1291,
+          "title": "三轴陀螺仪：帮移动端实现3D动效",
           "imageUrl": null
         },
         {
@@ -1715,6 +1715,16 @@
           "publishedOn": "2024-01-22T02:40:35.000Z",
           "wordCount": 2746,
           "title": "【动画进阶】神奇的 3D 卡片反光闪烁动效",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7326393655391010853",
+          "author": "萤火架构",
+          "description": "前后端分离多年，为何服务端渲染（SSR）重回风口浪尖？\n什么是服务端渲染？\n咱们先搞明白个事儿，啥叫服务端渲染？服务端渲染的全称是 Server-Side Rendering，简称SSR。\n简单说，就是在服务器上把网页生成好，整个的HTML页面生成出来，生成出的页面已经包含了所有必要的数据和结构信息，然后直接发给浏览器进行展现。\n这和现在流行的前后端分离设计有很大的区别，在前后端分离中，浏览器首先加载到的是一个基本的框架或者说是空壳页面，随后前端通过异步请求后端API获取到数据，然后再动态构建HTML，最后再让浏览器把页面逐渐展现出来。\nWeb的发展历程\n要深入理解服务端渲染为何又成为热点，我们需要回顾Web的发展历史。\n早期Web开发（1990年代至2000年代初） ：在Web的早期，除了静态页面外，大多数网页的HTML是通过服务端渲染的。ASP、JSP、PHP等脚本语言盛行，它们通常将业务逻辑和HTML模板结合在一起，以处理请求并生成完整的HTML页面返回给客户端。在这个阶段，前后端技术混合使用，开发者往往需要同时具备前端和后端的技能。\nAJAX的崛起（2005年左右） ：Ajax技术的发展和jQuery库的普及使得网页能够动态加载数据，实现局部内容的更新，无需刷新整个页面。这一变化增强了前端的交互能力。尽管如此，服务器端渲染仍是主流，前后端职责分离尚未明显。\n前端框架的诞生（2009年以后） ：随着AngularJS、Ember.js等前端框架的诞生，前端工程师能够创建更复杂的单页应用（SPA）。这些应用通过API获取数据，并在客户端渲染页面，显著提升了用户体验。\n现代前端框架推动的前后端分离（2013年至今） ：React、Vue.js等现代前端框架凭借组件化和虚拟DOM等特性，极大地提升了开发效率和用户体验。同时，RESTful API的设计原则被广泛采纳，使后端…",
+          "link": "https://juejin.cn/post/7326393655391010853",
+          "publishedOn": "2024-01-22T00:01:43.000Z",
+          "wordCount": 1203,
+          "title": "前后端分离多年，为何服务端渲染（SSR）重回风口浪尖？",
           "imageUrl": null
         },
         {
@@ -1755,6 +1765,16 @@
           "publishedOn": "2024-01-20T15:01:13.000Z",
           "wordCount": 1564,
           "title": "🌟前端使用Lottie实现炫酷的开关效果🌟",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7325717778597199908",
+          "author": "可乐鸡翅kele",
+          "description": "前言\n时间过得好快，一眨眼2024年就来了。这两年对互联网冲击最大的想必就是大语言模型的AIGC能力了。从国外的GPT到国内的文心一言、混元、盘古等等，AIGC的出现大大的提升了我们的生产力，现在GPT逐渐也变成了我每天都会使用到的工具。\n那趁着新年即将来临，我们今天就使用AIGC去生成春节必不可少的元素——春联。\n\n注册\n对于大模型接口来说，我这边选择的是国产的讯飞星火大模型。选择它的原因绝对不是它现在可以领取免费的token，而是我觉得我们需要支持国产软件自主化（手动狗头），如果你不喜欢用这个也可以使用别的，思路都是一样的。\n首先打开它的官网 https://xinghuo.xfyun.cn/sparkapi 注册一个账号，然后点击领取token就好了\n\n领取到了之后就可以对着它的文档来使用API了。\n构造鉴权API\n我们是通过websocket去使用星火的大模型api，在连接之前则需要构造一个鉴权参数。这个参数主要是为了安全以及用户身份的鉴权吧，这里主要还是要根据它的文档里面的规则去构造，实现代码如下：\nconst getWebsocketUrl = () => {\n  var apiKey = APIKey;\n  var apiSecret = APISecret;\n  var url = \"wss://spark-api.xf-yun.com/v3.1/chat\";\n  var host = location.host;\n  var date = new Date().toGMTString();\n  var algorithm = \"hmac-sha256\";\n  var headers = \"host date request-line\";\n  var signatureOrigin = `host: ${host}\\ndate: ${date}\\nGET /…",
+          "link": "https://juejin.cn/post/7325717778597199908",
+          "publishedOn": "2024-01-20T10:26:35.000Z",
+          "wordCount": 1349,
+          "title": "🐲龙年大吉——AIGC生成龙年春联🐲",
           "imageUrl": null
         },
         {
@@ -1803,7 +1823,7 @@
           "description": "theme: serene-rose\n🔔概述\n动效作为产品与用户沟通的广泛形式，经历了从静态到动态，从不透明到透明，从单一到多元的进化。本文依托于业务需求，充分对比了常用的 Web 动效格式及其区别，调研优秀的特效播放方案，参考其原理经过改造并完成升级功能。\n背景\n礼物特效是直播间及语聊房中很常见的增值玩法，用户对玩法的多样性需求也在不断地增加。近期业务上期望能够参考抖音实现定制跑车特效。用户通过个性化的选配，最终送出形式各样的礼物，从而满足用户独一无二及炫耀的心理。\n抖音效果：\n\n方案调研\n看到这个效果的第一反应是通过游戏引擎实现。\n方案一：制作3D模型，更换每个部件，类似换装。但有几个问题：\n3D模型制作成本较高，周期长；\n技术方案不可复用，下次仍需研发周期及成本；\n业务属性决定礼物特效多平面的，非单一主体不适用游戏研发，视频播放最合适；\n方案二：枚举合成组合好的视频，提前生成。同时这样也是有问题的：\n存储成本和服务端压力，部件越多需提前合成的视频数量越多，排列组合；\n需要运营配置和检查的成本较高，每一个视频都需要运营确认无误；\n定好了就不能再加部件分类，不然所有的视频都需要重新合成，无法扩展；\n由此，需要我们沉下心，从头开始寻找解决方案：\n1 常用动效格式\n​Web 动效有很多种，不同文件格式之间各有利弊，从业务需求角度出发选取相对较优方案是我们的目的。常见的动效格式有 gif、apng、webp、lottie、svga、mp4 等[3]。\n1.1 Gif\n​Gif（Graphics Interchange Format）是在1987年由 Compu Serve 为了填补跨平台图像格式的空白发展起来的位图动画格式，具有 GIF87a 和 GIF89a 两个版本。\n优点：\n支持平台多，兼容性性好\nGIF89a 版本支持透明\n缺点：\n仅支持 8 位 256 种颜色，对于…",
           "link": "https://juejin.cn/post/7325429835387731987",
           "publishedOn": "2024-01-19T09:44:00.000Z",
-          "wordCount": 2452,
+          "wordCount": 2426,
           "title": "🔥实现一个抖音汽车定制礼物特效",
           "imageUrl": null
         },
@@ -1846,36 +1866,6 @@
           "wordCount": 1117,
           "title": "一个 TODO 引发的血案",
           "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7325040809698656256",
-          "author": "关山月",
-          "description": "theme: cyanosis\n如果你曾经在浏览网页时看到三条线堆叠在一起，那么你就遇到了汉堡菜单。它是移动和响应式网页设计中使用的一种流行设计元素，用于创建干净、简约的界面。\n单击时，这个小菜单会从屏幕的任一侧滑出，显示导航项或选项列表。当菜单打开时，汉堡菜单也会变成“X”或其他形状。\n在这篇文章中，我们将向您展示如何在 CSS 中创建不同的汉堡菜单动画。让我们开始吧！\n创建汉堡菜单\n要创建汉堡菜单，我们首先需要创建 HTML 。由一个按钮元素和三个嵌套的 div 元素组成，每个元素代表汉堡图标的一行。\n<button class=\"hamburger\">\n    <div class=\"hamburger__line\"></div>\n    <div class=\"hamburger__line\"></div>\n    <div class=\"hamburger__line\"></div>\n</button>\n\n接下来，我们将为元素添加一些基本样式。我们将从按钮元素中删除任何默认样式，包括背景和边框颜色。\n.hamburger {\n    background: transparent;\n    border: transparent;\n    cursor: pointer;\n    padding: 0;\n}\n\n然后，对于每个线元素，我们将设置背景颜色、高度、宽度和每个直线之间的间距。\n.hamburger__line {\n    background: rgb(203 213 225);\n    margin: 0.25rem 0;\n    height: 0.25rem;\n    width: 2rem;\n}\n\nX\n是时候使用 CSS 创建一个很酷的汉堡菜单动画了。当用户将鼠标悬停在按钮上时，我们希望线条转换为“X”形。\n为了实现这一点，我们将使用  :hove…",
-          "link": "https://juejin.cn/post/7325040809698656256",
-          "publishedOn": "2024-01-18T05:31:56.000Z",
-          "wordCount": 1662,
-          "title": "前端实现汉堡菜单",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7325040809697591296",
-          "author": "星光漫步者",
-          "description": "在JavaScript中，Object.assign() 是一个用于合并对象属性的常见方法。然而，对于许多开发者来说，关于它是否执行深拷贝的认识可能存在一些混淆。先说答案Object.assign() 不属于深拷贝，我们接着往下看。\nObject.assign() 概览\n首先，让我们回顾一下 Object.assign() 的基本用法。该方法用于将一个或多个源对象的属性复制到目标对象，并返回目标对象。这一过程是浅拷贝的，即对于嵌套对象或数组，只是拷贝了引用而非创建新的对象。\nconst obj = { a: 1, b: { c: 2 } };\nconst obj2 = { d: 3 };\n\nconst mergedObj = Object.assign({}, obj, obj2);\n\nconsole.log(mergedObj);\n// 输出: { a: 1, b: { c: 2 }, d: 3 }\n\n浅拷贝的陷阱\n浅拷贝的特性意味着如果源对象中包含对象或数组，那么它们的引用将被复制到新的对象中。这可能导致问题，尤其是在修改新对象时，原始对象也会受到影响。\nconst obj = { a: 1, b: { c: 2 } };\nconst clonedObj = Object.assign({}, obj);\nclonedObj.b.c = 3;\n\nconsole.log(obj);         // { a: 1, b: { c: 3 } }\nconsole.log(clonedObj);   // { a: 1, b: { c: 3 } }\n\n在这个例子中，修改 clonedObj 的属性也会影响到原始对象 obj。\n因此，如果我们需要创建一个全新且独立于原始对象的拷贝，我们就需要进行深拷贝。而 Object.assign() 并不提供深拷贝的功能。\n深拷贝的需求\n…",
-          "link": "https://juejin.cn/post/7325040809697591296",
-          "publishedOn": "2024-01-18T02:17:30.000Z",
-          "wordCount": 1315,
-          "title": "Object.assign 这算是深拷贝吗",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7324923422295670834",
-          "author": "PonyCui",
-          "description": "背景\n小程序是一种全新的业务形态，特别是微信小程序，既结合了 Web 动态化特性，又拥有 Native 丰富的设备能力支持。\n在微信这个宿主上，小程序不仅有稳定的分发渠道，更拥有完善的生命周期、数据、AI 能力支持。\n在该微信上开发小程序，一般使用以下两种方法：\nJavaScript + WXML + WCSS\nTaro + React + JavaScript\n本文要介绍的是使用 Flutter Framework 开发小程序的方法，以及该方法背后的技术原理。\n技术挑战\n尽管 Flutter 官方已经提供 Flutter Web 实现，Flutter Web 本身就是基于 dart2js 运行的，微信小程序可以运行 JavaScript，在原理上跑起 Flutter Web 是没有问题的。\n但仍然存在以下技术挑战：\n微信小程序没有 W3C 标准的 JavaScript 对象，Flutter Web 不能直接运行。\n微信小程序也没有 DOM 实现，Flutter Web HTML Renderer 不能直接渲染。\n微信小程序对包大小的限制十分严格，主包不能超过 2M，而 Flutter Web 所编译的 main.dart.js 初始体积就有 1.3 M，必须有合理的分包机制才能上传。\n我们在 MPFlutter 1.x 版本中，针对上述问题已有一定的探索，1.x 版本的解决方法如下：\n使用微信开源的 kbone 库，模拟 W3C 实现，并通过模拟的 DOM 对象渲染出符合 WXML 要求的视图树。\n通过 Shadow Element Tree 的方式，使用 JSON 在 Dart 与 JavaScript 上下文同步视图树。\nFork Flutter Framework，并对其进行外科手术式的裁剪，使 main.dart.js 初始体积降低到 600K。\nMPFlutte…",
-          "link": "https://juejin.cn/post/7324923422295670834",
-          "publishedOn": "2024-01-17T17:29:43.000Z",
-          "wordCount": 1545,
-          "title": "在微信小程序里运行完整的 Flutter，我们是怎么做到的？",
-          "imageUrl": null
         }
       ]
     },
@@ -1890,7 +1880,7 @@
           "description": "[7073670907851440160#新人报道#]",
           "link": "https://juejin.cn/pin/7327691403844763684",
           "publishedOn": "2024-01-25T06:01:41.000Z",
-          "wordCount": 457,
+          "wordCount": 451,
           "title": "[7073670907851440160#新人报道#]",
           "imageUrl": null
         },
@@ -1900,7 +1890,7 @@
           "description": "再说明一下我们的方法需要做的主要事情：\n- 需要搭建一个私有的matrix服务器，并且通过nginx转发。\n- 需要在每一个设备上安装一个应用，也就是Element。\n[7243698841848348730#每天一个知识点#]",
           "link": "https://juejin.cn/pin/7327157426297815055",
           "publishedOn": "2024-01-23T14:46:46.000Z",
-          "wordCount": 515,
+          "wordCount": 512,
           "title": "再说明一下我们的方法需要做的主要事情： - 需要搭建一个私有的matrix服务器，并且通过nginx转发。 - 需要在每一个设备上安装一个应用，也就是Element。 [724369...",
           "imageUrl": null
         },
@@ -1920,7 +1910,7 @@
           "description": "[7073670907851440160#新人报道#]",
           "link": "https://juejin.cn/pin/7326978201006932005",
           "publishedOn": "2024-01-23T01:09:22.000Z",
-          "wordCount": 459,
+          "wordCount": 453,
           "title": "[7073670907851440160#新人报道#]",
           "imageUrl": null
         },
@@ -2020,7 +2010,7 @@
           "description": "[7073670907851440160#新人报道#] [呲牙]",
           "link": "https://juejin.cn/pin/7324531750621904931",
           "publishedOn": "2024-01-16T08:53:54.000Z",
-          "wordCount": 461,
+          "wordCount": 455,
           "title": "[7073670907851440160#新人报道#] [呲牙]",
           "imageUrl": null
         },

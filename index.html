@@ -1225,6 +1225,113 @@ npm安装的速度比cnpm安装的速度慢。
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7326979670485123110"
+                        open
+                      >
+                        <summary class="article-expander__title">实现一个鼠标框选的功能，要怎么实现和设计 api？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326979670485123110">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言
+前两年在一家做电商的公司做了一个需求：鼠标框选商品卡片，开始拖拽的时候合成一个然后改变位置，页面上有几千个所以还要结合虚拟列表。当时不知道怎么做，就在 github 上到处找现成的库，最后找到了 react-selectable-fast，并结合 react-virtualized、react-sortable-hoc 完成了需求。虽然该库已经很久不维护了，但大致上能满足我的需求了，尽管它是以 dom 的方式，很不 react，但秉承着能用就行的原则。意料之中，开发过程中遇到了 bug，最后只能 fork 一份修改源码后自己发了个 npm 包来使用。
+项目介绍
+前几个月在空闲时间突然来了兴致，自己找点事做，就想自己开发一个框选的库吧，万一也有人有这个需求不知道怎么办呢？写完后发到了 antd 的社区共建群里，有的人觉得不错也 star 了。先献上项目地址 react-selectable-box，文档完整，使用 dumi 编写。api 友好，支持自定义一些功能。
+api 设计
+一个组件在设计时，首先思考的应该是 api 如何去设计，最好符合大家平常的习惯，并具有一定的自定义和拓展能力。再加上了解 react-selectable-fast 这个库的缺点和痛点，对我的设计就更加有帮助了。大家在看下面的文章之前也可以思考一下，如果是你，你会怎么设计？这里只选取几个 api 来进行介绍。
+主组件 Selectable
+选中的值
+defaultValue 和 value，类型为 (string | number)[]，每个方块一般都有一个唯一 id 来标识。
+禁用
+disabled，大部分有值的组件应该都会有此属性，能直接禁用框选功能。
+模式
+mode，类型为 &quot;add&quot; | &quot;remove&quot; | &quot;reverse&quot;。模式，表明当前框选是增加、减少还是取反。这个 api 感觉…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7326985988768743461"
+                        open
+                      >
+                        <summary class="article-expander__title">三轴陀螺仪：帮移动端实现3D动效</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326985988768743461">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: hydrogen
+一、背景介绍
+
+看这篇文章：《视差特效的原理和实现方法》的时候，看到有一个很棒的动效。但只是PC端的效果，所以我就想在移动端实现类似的，为后续开发新需求的用户体验（炫技）做好沉淀。
+二、前置调研
+话不多说，直接开敲。本来打算创建一个 div 元素来进行调试，但在使用浏览器模拟移动设备时，我迅速遇到了一个问题：移动设备上根本没有鼠标可用！
+
+thinking...
+而且，桌面端依赖监听鼠标移动事件，在移动端被转变为触摸相关的事件，导致原本通过监听鼠标坐标的交互方式变成了通过用户触摸屏幕的方式交互。这显然与我们的预期不符
+PC 能监听鼠标移动
+ 
+移动端只能监听点击
+ 
+其中，鼠标坐标的作用是用来实时更新倾/斜移动程度的。而我需要一种不同的方式来实时捕获用户的动作位置信息，思考再三，最终决定在移动端使用陀螺仪API：DeviceOrientationEvent平替。
+点击跳转：MDN地址
+三、陀螺仪介绍
+一般来说，放手机上的是三轴陀螺仪，即可测量围绕手机的三个主轴（X、Y、Z）的旋转速率。
+
+
+
+三个指标 alpha beta gamma 表示的是相对于坐标轴，设备在某个给定轴上的旋转量:
+alpha：表示设备沿 Z 轴旋转的角度，范围为 0~360
+beta：表示设备在x轴上的旋转角度，范围为-180~180。它描述的是设备「由后向前」旋转的情况
+gamma：表示设备在y轴上的旋转角度，范围为-90~90。它描述的是设备「由左向右」旋转的情况
+注意： 将手机水平放置，底部对着自己，此时安卓和苹果 alpha 初始值不同。
+  
+初始值
+操作系统
+Alpha
+Beta
+Gamma
+
+
+
+
+Android
+90（右转90度趋向0，左转增加）
+0（面向用户转增加，背向转减小）
+0（右转增加，左转减小）
+
+
+iOS
+0（右转从360减小，左转增加）
+0…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >Lainbo&#x27;s Blog</button>
                   <a class="source-heading__link" href="https://lainbo.com/">Open</a>
                 </h3>
@@ -1713,33 +1820,6 @@ npm安装的速度比cnpm安装的速度慢。
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7326547700944699432"
-                        open
-                      >
-                        <summary class="article-expander__title">发布 Vue3 让尤雨溪吃尽苦头：犯了3个错，每一个都需开发者警惕</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326547700944699432">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>作者 | Loraine Lawson译者 | 许学文策划 | 丁晓昀Vue 3 的发布让其创始人尤雨溪吃了不少苦头，也让他知道，未来再处理框架升级时需要在策略上做出重大改变。
-在 2023 年 VueConf 多伦多大会上，Vue.js 的创始人 尤雨溪 向与会者透露，在 Vue（一款用于构建用户界面的渐进式 JavaScript 框架） 从版本 2 升级到版本 3 的过程中，他犯了三大错误，并从中吸取到了一些教训。
-错误一：一次发布太多微小但破坏性的变更
-尤雨溪在 11 月发布的一段视频 中说道：“我们犯的第一个错误，是一次发布太多微小但破坏性的变更。问题的关键在于，单独的每个小变更都很容易处理，但是当这些变更合在一起时，所带来的复杂性会呈指数级增长。”
-通过这个教训，他意识到在进行变更时，优先保持原有功能的可用性是明智之举。他进一步补充到，这一做法也将给框架维护者的工作流程带来变革，未来他们将采用逐步弃用的周期性原则进行框架升级。
-“对于我们想要变更、破坏或移除的每一项内容，都应该始终首先保持其一切运行正常，然后再考虑弃用，同时应该引入一个新特性的可选阶段，此阶段在不破坏任何现有功能的前提下，允许用户自主选择是否采用新特性。最终，在未来版本中将那些需要废弃的特性移除。”
-他解释说，Vue 的维护者将会在不同版本之间采取分阶段的变更策略，以避免再次出现“一大堆破坏性的变更同时发布”的情况。他将这个计划与 Angular 和 Ember 的升级方法进行了比较，这两个框架在主要版本之间都分散了小的破坏性变更，并且时间跨度相对较长。
-“Vue 已经发展到了一个阶段，我相信长远发展所需的良好升级策略将变得至关重要。我们可以保证，在短期内，绝对不会考虑进行任何破坏性变更。对于长期来说，我希望 Vue 3 能成为稳定的基础版本，并且未来我们将会非常认真地对待这种变更。”
-错误二：低…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7326461075447201843"
                         open
                       >
@@ -1783,6 +1863,35 @@ body {
     width: 100vw;
     …</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7326393655391010853"
+                        open
+                      >
+                        <summary class="article-expander__title">前后端分离多年，为何服务端渲染（SSR）重回风口浪尖？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326393655391010853">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前后端分离多年，为何服务端渲染（SSR）重回风口浪尖？
+什么是服务端渲染？
+咱们先搞明白个事儿，啥叫服务端渲染？服务端渲染的全称是 Server-Side Rendering，简称SSR。
+简单说，就是在服务器上把网页生成好，整个的HTML页面生成出来，生成出的页面已经包含了所有必要的数据和结构信息，然后直接发给浏览器进行展现。
+这和现在流行的前后端分离设计有很大的区别，在前后端分离中，浏览器首先加载到的是一个基本的框架或者说是空壳页面，随后前端通过异步请求后端API获取到数据，然后再动态构建HTML，最后再让浏览器把页面逐渐展现出来。
+Web的发展历程
+要深入理解服务端渲染为何又成为热点，我们需要回顾Web的发展历史。
+早期Web开发（1990年代至2000年代初） ：在Web的早期，除了静态页面外，大多数网页的HTML是通过服务端渲染的。ASP、JSP、PHP等脚本语言盛行，它们通常将业务逻辑和HTML模板结合在一起，以处理请求并生成完整的HTML页面返回给客户端。在这个阶段，前后端技术混合使用，开发者往往需要同时具备前端和后端的技能。
+AJAX的崛起（2005年左右） ：Ajax技术的发展和jQuery库的普及使得网页能够动态加载数据，实现局部内容的更新，无需刷新整个页面。这一变化增强了前端的交互能力。尽管如此，服务器端渲染仍是主流，前后端职责分离尚未明显。
+前端框架的诞生（2009年以后） ：随着AngularJS、Ember.js等前端框架的诞生，前端工程师能够创建更复杂的单页应用（SPA）。这些应用通过API获取数据，并在客户端渲染页面，显著提升了用户体验。
+现代前端框架推动的前后端分离（2013年至今） ：React、Vue.js等现代前端框架凭借组件化和虚拟DOM等特性，极大地提升了开发效率和用户体验。同时，RESTful API的设计原则被广泛采纳，使后端…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2713,6 +2822,44 @@ Lottie
 Lottie是由Airbnb开发的一个开源库，用于在移动端和Web上呈现矢量动画。它基于JSON格式的Bodymovin文件，可以将由设计师在AE中创建的动画导出为可在Lottie库中播放的文件。
 相对于手写CSS/JS动画而言，它可以大大减少前端开发的工作量，相对于GIF文件来说，它可以在一个合理的文件体积内保证动画的清晰度以及流畅程度。下面我们就介绍一下如何播放一个Lo…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7325717778597199908"
+                        open
+                      >
+                        <summary class="article-expander__title">🐲龙年大吉——AIGC生成龙年春联🐲</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7325717778597199908">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言
+时间过得好快，一眨眼2024年就来了。这两年对互联网冲击最大的想必就是大语言模型的AIGC能力了。从国外的GPT到国内的文心一言、混元、盘古等等，AIGC的出现大大的提升了我们的生产力，现在GPT逐渐也变成了我每天都会使用到的工具。
+那趁着新年即将来临，我们今天就使用AIGC去生成春节必不可少的元素——春联。
+
+注册
+对于大模型接口来说，我这边选择的是国产的讯飞星火大模型。选择它的原因绝对不是它现在可以领取免费的token，而是我觉得我们需要支持国产软件自主化（手动狗头），如果你不喜欢用这个也可以使用别的，思路都是一样的。
+首先打开它的官网 https://xinghuo.xfyun.cn/sparkapi 注册一个账号，然后点击领取token就好了
+
+领取到了之后就可以对着它的文档来使用API了。
+构造鉴权API
+我们是通过websocket去使用星火的大模型api，在连接之前则需要构造一个鉴权参数。这个参数主要是为了安全以及用户身份的鉴权吧，这里主要还是要根据它的文档里面的规则去构造，实现代码如下：
+const getWebsocketUrl &#x3D; () &#x3D;&gt; {
+  var apiKey &#x3D; APIKey;
+  var apiSecret &#x3D; APISecret;
+  var url &#x3D; &quot;wss://spark-api.xf-yun.com/v3.1/chat&quot;;
+  var host &#x3D; location.host;
+  var date &#x3D; new Date().toGMTString();
+  var algorithm &#x3D; &quot;hmac-sha256&quot;;
+  var headers &#x3D; &quot;host date request-line&quot;;
+  var signatureOrigin &#x3D; &#x60;host: ${host}\ndate: ${date}\nGET /…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4142,25 +4289,6 @@ Object 会存储 id、文件内容、元数据三部分信息：
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240118/t20240118_526562100.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市开州区发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240118/t20240118_526562100.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>开州区气象局2024年1月18日15时继续发布“大雾黄色预警信号”，预计1月18日20时至19日13时，我区大部分乡镇（街道）将出现能见度小于500米的雾，局部地区能见度小于200米。请各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -4288,100 +4416,6 @@ VM8183:2 Uncaught TypeError: Cannot redefine property: length
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7325040809698656256"
-                        open
-                      >
-                        <summary class="article-expander__title">前端实现汉堡菜单</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7325040809698656256">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: cyanosis
-如果你曾经在浏览网页时看到三条线堆叠在一起，那么你就遇到了汉堡菜单。它是移动和响应式网页设计中使用的一种流行设计元素，用于创建干净、简约的界面。
-单击时，这个小菜单会从屏幕的任一侧滑出，显示导航项或选项列表。当菜单打开时，汉堡菜单也会变成“X”或其他形状。
-在这篇文章中，我们将向您展示如何在 CSS 中创建不同的汉堡菜单动画。让我们开始吧！
-创建汉堡菜单
-要创建汉堡菜单，我们首先需要创建 HTML 。由一个按钮元素和三个嵌套的 div 元素组成，每个元素代表汉堡图标的一行。
-
-    
-
-    
-
-    
-
-
-
-接下来，我们将为元素添加一些基本样式。我们将从按钮元素中删除任何默认样式，包括背景和边框颜色。
-.hamburger {
-    background: transparent;
-    border: transparent;
-    cursor: pointer;
-    padding: 0;
-}
-
-然后，对于每个线元素，我们将设置背景颜色、高度、宽度和每个直线之间的间距。
-.hamburger__line {
-    background: rgb(203 213 225);
-    margin: 0.25rem 0;
-    height: 0.25rem;
-    width: 2rem;
-}
-
-X
-是时候使用 CSS 创建一个很酷的汉堡菜单动画了。当用户将鼠标悬停在按钮上时，我们希望线条转换为“X”形。
-为了实现这一点，我们将使用  :hove…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7325040809697591296"
-                        open
-                      >
-                        <summary class="article-expander__title">Object.assign 这算是深拷贝吗</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7325040809697591296">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>在JavaScript中，Object.assign() 是一个用于合并对象属性的常见方法。然而，对于许多开发者来说，关于它是否执行深拷贝的认识可能存在一些混淆。先说答案Object.assign() 不属于深拷贝，我们接着往下看。
-Object.assign() 概览
-首先，让我们回顾一下 Object.assign() 的基本用法。该方法用于将一个或多个源对象的属性复制到目标对象，并返回目标对象。这一过程是浅拷贝的，即对于嵌套对象或数组，只是拷贝了引用而非创建新的对象。
-const obj &#x3D; { a: 1, b: { c: 2 } };
-const obj2 &#x3D; { d: 3 };
-
-const mergedObj &#x3D; Object.assign({}, obj, obj2);
-
-console.log(mergedObj);
-// 输出: { a: 1, b: { c: 2 }, d: 3 }
-
-浅拷贝的陷阱
-浅拷贝的特性意味着如果源对象中包含对象或数组，那么它们的引用将被复制到新的对象中。这可能导致问题，尤其是在修改新对象时，原始对象也会受到影响。
-const obj &#x3D; { a: 1, b: { c: 2 } };
-const clonedObj &#x3D; Object.assign({}, obj);
-clonedObj.b.c &#x3D; 3;
-
-console.log(obj);         // { a: 1, b: { c: 3 } }
-console.log(clonedObj);   // { a: 1, b: { c: 3 } }
-
-在这个例子中，修改 clonedObj 的属性也会影响到原始对象 obj。
-因此，如果我们需要创建一个全新且独立于原始对象的拷贝，我们就需要进行深拷贝。而 Object.assign() 并不提供深拷贝的功能。
-深拷贝的需求
-…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -4473,61 +4507,11 @@ console.log(clonedObj);   // { a: 1, b: { c: 3 } }
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-17 datetime="2024-01-17T17:29:43.000Z">2024-01-17</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-17 datetime="2024-01-17T17:29:43.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-17 datetime="2024-01-17T10:40:30.000Z">2024-01-17</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-17 datetime="2024-01-17T10:40:30.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7324923422295670834"
-                        open
-                      >
-                        <summary class="article-expander__title">在微信小程序里运行完整的 Flutter，我们是怎么做到的？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7324923422295670834">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>背景
-小程序是一种全新的业务形态，特别是微信小程序，既结合了 Web 动态化特性，又拥有 Native 丰富的设备能力支持。
-在微信这个宿主上，小程序不仅有稳定的分发渠道，更拥有完善的生命周期、数据、AI 能力支持。
-在该微信上开发小程序，一般使用以下两种方法：
-JavaScript + WXML + WCSS
-Taro + React + JavaScript
-本文要介绍的是使用 Flutter Framework 开发小程序的方法，以及该方法背后的技术原理。
-技术挑战
-尽管 Flutter 官方已经提供 Flutter Web 实现，Flutter Web 本身就是基于 dart2js 运行的，微信小程序可以运行 JavaScript，在原理上跑起 Flutter Web 是没有问题的。
-但仍然存在以下技术挑战：
-微信小程序没有 W3C 标准的 JavaScript 对象，Flutter Web 不能直接运行。
-微信小程序也没有 DOM 实现，Flutter Web HTML Renderer 不能直接渲染。
-微信小程序对包大小的限制十分严格，主包不能超过 2M，而 Flutter Web 所编译的 main.dart.js 初始体积就有 1.3 M，必须有合理的分包机制才能上传。
-我们在 MPFlutter 1.x 版本中，针对上述问题已有一定的探索，1.x 版本的解决方法如下：
-使用微信开源的 kbone 库，模拟 W3C 实现，并通过模拟的 DOM 对象渲染出符合 WXML 要求的视图树。
-通过 Shadow Element Tree 的方式，使用 JSON 在 Dart 与 JavaScript 上下文同步视图树。
-Fork Flutter Framework，并对其进行外科手术式的裁剪，使 main.dart.js 初始体积降低到 600K。
-MPFlutte…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -6105,8 +6089,8 @@ YouTube 也没有透露过，这个编号是怎么产生的。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7650920336">
-        <time id="build-timestamp" datetime="2024-01-25T06:53:10.113Z">2024-01-25T06:53:10.113Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7652721456">
+        <time id="build-timestamp" datetime="2024-01-25T09:52:49.065Z">2024-01-25T09:52:49.065Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
