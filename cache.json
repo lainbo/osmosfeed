@@ -94,7 +94,7 @@
           "description": "其实获取视频的缩略图并不需要视频解码就能实现，方法就是其貌不扬的HTML video元素。",
           "link": "https://www.zhangxinxu.com/wordpress/2024/01/js-get-video-thumb-poster/",
           "publishedOn": "2024-01-15T15:55:26.000Z",
-          "wordCount": 1570,
+          "wordCount": 1576,
           "title": "使用JS快速获取video视频任意位置的缩略图",
           "imageUrl": null
         },
@@ -114,7 +114,7 @@
           "description": "原来前端纯JS就能实现人脸识别检测，使用简单，性能优异，准确率也高，有案例演示，有源码，希望可以帮到大家的学习。",
           "link": "https://www.zhangxinxu.com/wordpress/2023/12/js-image-video-face-detect/",
           "publishedOn": "2023-12-28T15:55:02.000Z",
-          "wordCount": 1304,
+          "wordCount": 1303,
           "title": "纯JS实现图像的人脸识别功能",
           "imageUrl": null
         }
@@ -593,6 +593,16 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20240125/t20240125_526571648.html",
+          "author": "国家预警信息发布中心",
+          "description": "奉节县气象台2024年1月25日21时50分发布“道路结冰黄色预警信号”，预计1月25日22时至26日10时，平安乡、青莲镇、竹园镇、红土乡、公平镇、大树镇、汾河镇、岩湾乡、长安土家族乡、兴隆镇、龙桥土家族乡、太和土家族乡、云雾土家族乡、冯坪乡、青龙镇、吐祥镇等乡镇海拔600米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20240125/t20240125_526571648.html",
+          "publishedOn": "2024-01-25T14:06:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市奉节县发布道路结冰黄色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20240125/t20240125_526570873.html",
           "author": "国家预警信息发布中心",
@@ -1778,6 +1788,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7325717778597199908",
+          "author": "可乐鸡翅kele",
+          "description": "前言\n时间过得好快，一眨眼2024年就来了。这两年对互联网冲击最大的想必就是大语言模型的AIGC能力了。从国外的GPT到国内的文心一言、混元、盘古等等，AIGC的出现大大的提升了我们的生产力，现在GPT逐渐也变成了我每天都会使用到的工具。\n那趁着新年即将来临，我们今天就使用AIGC去生成春节必不可少的元素——春联。\n\n注册\n对于大模型接口来说，我这边选择的是国产的讯飞星火大模型。选择它的原因绝对不是它现在可以领取免费的token，而是我觉得我们需要支持国产软件自主化（手动狗头），如果你不喜欢用这个也可以使用别的，思路都是一样的。\n首先打开它的官网 https://xinghuo.xfyun.cn/sparkapi 注册一个账号，然后点击领取token就好了\n\n领取到了之后就可以对着它的文档来使用API了。\n构造鉴权API\n我们是通过websocket去使用星火的大模型api，在连接之前则需要构造一个鉴权参数。这个参数主要是为了安全以及用户身份的鉴权吧，这里主要还是要根据它的文档里面的规则去构造，实现代码如下：\nconst getWebsocketUrl = () => {\n  var apiKey = APIKey;\n  var apiSecret = APISecret;\n  var url = \"wss://spark-api.xf-yun.com/v3.1/chat\";\n  var host = location.host;\n  var date = new Date().toGMTString();\n  var algorithm = \"hmac-sha256\";\n  var headers = \"host date request-line\";\n  var signatureOrigin = `host: ${host}\\ndate: ${date}\\nGET /…",
+          "link": "https://juejin.cn/post/7325717778597199908",
+          "publishedOn": "2024-01-20T10:26:35.000Z",
+          "wordCount": 1349,
+          "title": "🐲龙年大吉——AIGC生成龙年春联🐲",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7325730345840066612",
           "author": "工边页字",
           "description": "theme: channing-cyan\nhighlight: ascetic\n前言\n在日常的开发中，我们经常能碰见服务端需要主动推送给客户端数据的业务场景，比如数据大屏的实时数据，比如消息中心的未读消息，比如聊天功能等等。\n本文主要介绍SSE的使用场景和如何使用SSE。\n\n服务端向客户端推送数据的实现方案有哪几种？\n我们常规实现这些需求的方案有以下三种\n轮询\nwebsocket\nSSE\n轮询简介\n在很久很久以前，前端一般使用轮询来进行服务端向客户端进行消息的伪推送，为什么说轮询是伪推送？因为轮询本质上还是通过客户端向服务端发起一个单项传输的请求，服务端对这个请求做出响应而已。通过不断的请求来实现服务端向客户端推送数据的错觉。并不是服务端主动向客户端推送数据。显然，轮询一定是上述三个方法里最下策的决定。\n轮询的缺点：\n首先轮询需要不断的发起请求，每一个请求都需要经过http建立连接的流程（比如三次握手，四次挥手），是没有必要的消耗。\n客户端需要从页面被打开的那一刻开始就一直处理请求。虽然每次轮询的消耗不大，但是一直处理请求对于客户端来说一定是不友好的。\n浏览器请求并发是有限制的。比如Chrome 最大并发请求数目为 6，这个限制还有一个前提是针对同一域名的，超过这一限制的后续请求将会被阻塞。而轮询意味着会有一个请求长时间的占用并发名额。\n而如果轮询时间较长，可能又没有办法非常及时的获取数据\nwebsocket简介\nwebsocket是一个双向通讯的协议，他的优点是，可以同时支持客户端和服务端彼此相互进行通讯。功能上很强大。\n缺点也很明显，websocket是一个新的协议，ws/wss。也就是说，支持http协议的浏览器不一定支持ws协议。\n相较于SSE来说，websocket因为功能更强大。结构更复杂。所以相对比较重。\nwebsocket对于各大浏览器的兼容性↓\n\nSSE简…",
@@ -1855,16 +1875,6 @@
           "publishedOn": "2024-01-18T14:24:26.000Z",
           "wordCount": 1820,
           "title": "【2024】uniapp+vue3超实用模板（番外篇）",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7325271065831292928",
-          "author": "一介4188",
-          "description": "引\nChrome 都用过吧，V8 都知道吧，V8 性能杠杠的没问题吧。但是你知道吗，有这样一段神奇的代码因为 V8 的优化导致了与实际设计预期的行为发生了相悖。\nObject.defineProperty\nObject.defineProperty([], 'length', {value: -1, configurable: true})\nObject.defineProperty([], 'len' + 'gth', {value: -1, configurable: true})\n我们可以来看一下这俩段代码，从 JavaScript 的语义上来说，这俩段代码并没有什么不同，但是当我们将他们运行在 Chrome 或者 Node.js 中，我们便能得到俩个截然不同的错误。\nObject.defineProperty([], 'length', {value: -1, configurable: true})\nVM8179:1 Uncaught RangeError: Invalid array length\n    at Function.defineProperty (<anonymous>)\n    at <anonymous>:1:8\n(anonymous) @ VM8179:1\n\nObject.defineProperty([], 'len' + 'gth', {value: -1, configurable: true})\nVM8183:2 Uncaught TypeError: Cannot redefine property: length\n    at Function.defineProperty (<anonymous>)\n    at <anonymous>:2:8\n\n为什么呢？\n那这和 V8 性能优化极好又有什么关系呢？我们可以在他们的源码中看到如…",
-          "link": "https://juejin.cn/post/7325271065831292928",
-          "publishedOn": "2024-01-18T12:41:00.000Z",
-          "wordCount": 1117,
-          "title": "一个 TODO 引发的血案",
           "imageUrl": null
         }
       ]

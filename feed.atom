@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2024-01-25T12:57:01.515Z</id>
+    <id>urn:2024-01-25T15:53:28.996Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2024-01-25T12:57:01.515Z</updated>
+    <updated>2024-01-25T15:53:28.996Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[重庆市奉节县发布道路结冰黄色预警]]></title>
+        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20240125/t20240125_526571648.html</id>
+        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20240125/t20240125_526571648.html"/>
+        <updated>2024-01-25T14:06:00.000Z</updated>
+        <summary type="html"><![CDATA[奉节县气象台2024年1月25日21时50分发布“道路结冰黄色预警信号”，预计1月25日22时至26日10时，平安乡、青莲镇、竹园镇、红土乡、公平镇、大树镇、汾河镇、岩湾乡、长安土家族乡、兴隆镇、龙桥土家族乡、太和土家族乡、云雾土家族乡、冯坪乡、青龙镇、吐祥镇等乡镇海拔600米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。]]></summary>
+        <author>
+            <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[7073670907851440160#新人报道#]]]></title>
         <id>7327691403844763684</id>
@@ -1500,6 +1510,35 @@ Lottie是由Airbnb开发的一个开源库，用于在移动端和Web上呈现�
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[🐲龙年大吉——AIGC生成龙年春联🐲]]></title>
+        <id>https://juejin.cn/post/7325717778597199908</id>
+        <link href="https://juejin.cn/post/7325717778597199908"/>
+        <updated>2024-01-20T10:26:35.000Z</updated>
+        <summary type="html"><![CDATA[前言
+时间过得好快，一眨眼2024年就来了。这两年对互联网冲击最大的想必就是大语言模型的AIGC能力了。从国外的GPT到国内的文心一言、混元、盘古等等，AIGC的出现大大的提升了我们的生产力，现在GPT逐渐也变成了我每天都会使用到的工具。
+那趁着新年即将来临，我们今天就使用AIGC去生成春节必不可少的元素——春联。
+
+注册
+对于大模型接口来说，我这边选择的是国产的讯飞星火大模型。选择它的原因绝对不是它现在可以领取免费的token，而是我觉得我们需要支持国产软件自主化（手动狗头），如果你不喜欢用这个也可以使用别的，思路都是一样的。
+首先打开它的官网 https://xinghuo.xfyun.cn/sparkapi 注册一个账号，然后点击领取token就好了
+
+领取到了之后就可以对着它的文档来使用API了。
+构造鉴权API
+我们是通过websocket去使用星火的大模型api，在连接之前则需要构造一个鉴权参数。这个参数主要是为了安全以及用户身份的鉴权吧，这里主要还是要根据它的文档里面的规则去构造，实现代码如下：
+const getWebsocketUrl = () => {
+  var apiKey = APIKey;
+  var apiSecret = APISecret;
+  var url = "wss://spark-api.xf-yun.com/v3.1/chat";
+  var host = location.host;
+  var date = new Date().toGMTString();
+  var algorithm = "hmac-sha256";
+  var headers = "host date request-line";
+  var signatureOrigin = `host: ${host}\ndate: ${date}\nGET /…]]></summary>
+        <author>
+            <name>可乐鸡翅kele</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[重庆市梁平区发布寒潮蓝色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/lanseyj/20240120/t20240120_526564863.html</id>
         <link href="http://www.cneb.gov.cn/yjxx/lanseyj/20240120/t20240120_526564863.html"/>
@@ -2280,34 +2319,6 @@ flex: flex, items-center, justify-center, flex-1
 搜索想要…]]></summary>
         <author>
             <name>菲鸽</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[一个 TODO 引发的血案]]></title>
-        <id>https://juejin.cn/post/7325271065831292928</id>
-        <link href="https://juejin.cn/post/7325271065831292928"/>
-        <updated>2024-01-18T12:41:00.000Z</updated>
-        <summary type="html"><![CDATA[引
-Chrome 都用过吧，V8 都知道吧，V8 性能杠杠的没问题吧。但是你知道吗，有这样一段神奇的代码因为 V8 的优化导致了与实际设计预期的行为发生了相悖。
-Object.defineProperty
-Object.defineProperty([], 'length', {value: -1, configurable: true})
-Object.defineProperty([], 'len' + 'gth', {value: -1, configurable: true})
-我们可以来看一下这俩段代码，从 JavaScript 的语义上来说，这俩段代码并没有什么不同，但是当我们将他们运行在 Chrome 或者 Node.js 中，我们便能得到俩个截然不同的错误。
-Object.defineProperty([], 'length', {value: -1, configurable: true})
-VM8179:1 Uncaught RangeError: Invalid array length
-    at Function.defineProperty (<anonymous>)
-    at <anonymous>:1:8
-(anonymous) @ VM8179:1
-
-Object.defineProperty([], 'len' + 'gth', {value: -1, configurable: true})
-VM8183:2 Uncaught TypeError: Cannot redefine property: length
-    at Function.defineProperty (<anonymous>)
-    at <anonymous>:2:8
-
-为什么呢？
-那这和 V8 性能优化极好又有什么关系呢？我们可以在他们的源码中看到如…]]></summary>
-        <author>
-            <name>一介4188</name>
         </author>
     </entry>
     <entry>
