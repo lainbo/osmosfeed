@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2024-01-25T01:15:34.848Z</id>
+    <id>urn:2024-01-25T03:53:02.427Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2024-01-25T01:15:34.848Z</updated>
+    <updated>2024-01-25T03:53:02.427Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[重庆市秀山土家族苗族自治县发布道路结冰黄色预警]]></title>
+        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20240125/t20240125_526570710.html</id>
+        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20240125/t20240125_526570710.html"/>
+        <updated>2024-01-25T01:49:00.000Z</updated>
+        <summary type="html"><![CDATA[秀山县气象台2024年1月25日9时30分继续发布“道路结冰黄色预警信号”，预计1月25日10时至27日10时，溪口镇、溶溪镇、膏田镇、龙凤坝镇、隘口镇、钟灵镇、梅江镇、岑溪乡、涌洞镇、龙池镇、官庄街道、里仁镇、清溪场街道、大溪乡等乡镇街道海拔500米以上的路表温度将低于0℃，可能出现对交通有影响的道路结冰。]]></summary>
+        <author>
+            <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[重庆市开州区发布霜冻蓝色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/lanseyj/20240124/t20240124_526570379.html</id>
@@ -43,6 +53,63 @@
         <summary type="html"><![CDATA[长寿区气象台2024年1月24日17时40分发布“道路结冰黄色预警信号”，预计1月25日01时至12时，八颗街道、洪湖镇、万顺镇、葛兰镇、石堰镇、云台镇、海棠镇、云集镇、长寿湖镇、但渡镇路表温度将低于0℃，可能出现对交通有影响的道路结冰。]]></summary>
         <author>
             <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[技术资讯：npm 淘宝镜像正式到期，赶紧更新！]]></title>
+        <id>https://juejin.cn/post/7327472360863924224</id>
+        <link href="https://juejin.cn/post/7327472360863924224"/>
+        <updated>2024-01-24T09:56:03.000Z</updated>
+        <summary type="html"><![CDATA[大家好，我是大澈！
+本文约800+字，整篇阅读大约需要2分钟。
+感谢关注微信公众号：“程序员大澈”，免费领取"面试礼包"一份，然后免费加入问答群，从此让解决问题的你不再孤单！
+1. 资讯速览
+由于node安装插件是从国外服务器下载，如果没有“特殊手法”，就可能会遇到下载速度慢、或其它异常问题。
+所以如果npm的服务器在中国就好了，于是我们乐于分享的淘宝团队干了这事。你可以用此只读的淘宝服务代替官方版本，且同步频率目前为 10 分钟一次。
+但在 1 月 22 日，淘宝原镜像域名（registry.npm.taobao.org）的 HTTPS 证书正式到期。如果想要继续使用，需要将 npm 源切换到新的源（registry.npmmirror.com），否则会报错。
+
+
+2. 资讯详细
+先聊聊如何切换新的镜像地址，再说一下淘宝镜像使用的两种方式。
+2.1 如何切换新的镜像地址
+如果你使用淘宝命令工具cnpm，则不需要去手动更新镜像地址，官方已自动做了处理。
+如果你是将npm官方镜像改成了淘宝镜像，则需要按下面步骤去手动更新。
+// 1. 清空缓存
+npm cache clean --force
+
+// 2. 切换新源
+npm config set registry https://registry.npmmirror.com
+
+2.2 第一次如何使用淘宝镜像
+npm官方镜像改成淘宝镜像的使用方式：
+// 1. 切换镜像源
+npm config set registry https://registry.npmmirror.com
+
+// 2. 检测是否切换成功
+npm config get registry
+
+淘宝命令工具cnpm的使用方式：
+// 1. 安装cnpm
+npm install -g cnpm --registry=https://registry.npmmirror.com
+
+// 2. 检测是否安装成功
+cnpm -v
+
+2.3 npm改成淘宝和cnpm区别
+npm安装的包只有1个模块，而cnpm安装的包有2个模块，两者存在引用关系。
+npm安装的速度比cnpm安装的速度慢。
+2.4 小结
+淘宝原镜像域名（registry.npm.taobao.org）的 HTTPS 证书正式到期。
+如果你是将npm官方镜像改成了淘宝镜像，并想要继续使用，需要将 npm 源切换到新的源（registry.npmmirror.com），否则会报错。
+
+结语
+建立这个平台的初衷：
+打造一个专注于前端功能问题的问答平台，让大家高效搜索处理同样问题。
+遇到有共鸣的问题，与众多同行朋友们一起讨论，一起沉淀成长。
+平台现拥有功能问题、技术资讯、实用干货3个专栏内容。
+感谢关注微信公众号：“程序员大澈”，免费领取"面试礼包"一份，然后免费加入问答群，从此让解决问题的你不再孤单！]]></summary>
+        <author>
+            <name>程序员大澈</name>
         </author>
     </entry>
     <entry>
@@ -368,59 +435,6 @@
         <summary type="html"><![CDATA[秀山县气象台2024年1月23日11时40分继续发布“道路结冰黄色预警信号”，预计1月23日12时至25日10时，溪口镇、溶溪镇、膏田镇、龙凤坝镇、隘口镇、钟灵镇、梅江镇、岑溪乡、涌洞镇、龙池镇、官庄街道、里仁镇、清溪场街道、大溪乡等乡镇街道海拔500米以上的路表温度将低于0℃，可能出现对交通有影响的道路结冰。]]></summary>
         <author>
             <name>国家预警信息发布中心</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[三轴陀螺仪：帮移动端实现3D动效]]></title>
-        <id>https://juejin.cn/post/7326985988768743461</id>
-        <link href="https://juejin.cn/post/7326985988768743461"/>
-        <updated>2024-01-23T03:53:11.000Z</updated>
-        <summary type="html"><![CDATA[theme: hydrogen
-一、背景介绍
-
-看这篇文章：《视差特效的原理和实现方法》的时候，看到有一个很棒的动效。但只是PC端的效果，所以我就想在移动端实现类似的，为后续开发新需求的用户体验（炫技）做好沉淀。
-二、前置调研
-话不多说，直接开敲。本来打算创建一个 div 元素来进行调试，但在使用浏览器模拟移动设备时，我迅速遇到了一个问题：移动设备上根本没有鼠标可用！
-
-thinking...
-而且，桌面端依赖监听鼠标移动事件，在移动端被转变为触摸相关的事件，导致原本通过监听鼠标坐标的交互方式变成了通过用户触摸屏幕的方式交互。这显然与我们的预期不符
-PC 能监听鼠标移动
- 
-移动端只能监听点击
- 
-其中，鼠标坐标的作用是用来实时更新倾/斜移动程度的。而我需要一种不同的方式来实时捕获用户的动作位置信息，思考再三，最终决定在移动端使用陀螺仪API：DeviceOrientationEvent平替。
-点击跳转：MDN地址
-三、陀螺仪介绍
-一般来说，放手机上的是三轴陀螺仪，即可测量围绕手机的三个主轴（X、Y、Z）的旋转速率。
-
-
-
-三个指标 alpha beta gamma 表示的是相对于坐标轴，设备在某个给定轴上的旋转量:
-alpha：表示设备沿 Z 轴旋转的角度，范围为 0~360
-beta：表示设备在x轴上的旋转角度，范围为-180~180。它描述的是设备「由后向前」旋转的情况
-gamma：表示设备在y轴上的旋转角度，范围为-90~90。它描述的是设备「由左向右」旋转的情况
-注意： 将手机水平放置，底部对着自己，此时安卓和苹果 alpha 初始值不同。
-  
-初始值
-操作系统
-Alpha
-Beta
-Gamma
-
-
-
-
-Android
-90（右转90度趋向0，左转增加）
-0（面向用户转增加，背向转减小）
-0（右转增加，左转减小）
-
-
-iOS
-0（右转从360减小，左转增加）
-0…]]></summary>
-        <author>
-            <name>狂炫冰美式</name>
         </author>
     </entry>
     <entry>
@@ -2249,26 +2263,6 @@ console.log(clonedObj);   // { a: 1, b: { c: 3 } }
         <summary type="html"><![CDATA[ApiPost是不是崩了，怎么打不开]]></summary>
         <author>
             <name>立林</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[重庆市巫溪县发布大雾黄色预警]]></title>
-        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20240118/t20240118_526561752.html</id>
-        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20240118/t20240118_526561752.html"/>
-        <updated>2024-01-18T01:34:00.000Z</updated>
-        <summary type="html"><![CDATA[巫溪县气象台2024年1月18日9时继续发布“大雾黄色预警信号”，受降水影响，预计未来12小时，我县文峰镇、上磺镇、古路镇、塘坊镇、菱角镇、尖山镇、朝阳镇、通城镇、双阳乡、胜利乡、城厢镇、宁厂镇、红池坝镇、长桂乡等海拔600米以上及坪坝河谷地区将出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
-        <author>
-            <name>国家预警信息发布中心</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[重庆市巴南区发布大雾黄色预警]]></title>
-        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20240118/t20240118_526561673.html</id>
-        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20240118/t20240118_526561673.html"/>
-        <updated>2024-01-18T00:58:00.000Z</updated>
-        <summary type="html"><![CDATA[巴南区气象台2024年1月18日8时40分继续发布“大雾黄色预警信号”，预计18日9时至20时，我区姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇可能出现能见度小于500米的雾，局地能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
-        <author>
-            <name>国家预警信息发布中心</name>
         </author>
     </entry>
     <entry>
