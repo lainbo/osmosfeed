@@ -193,6 +193,79 @@ Free Now to 2024-02-01T16:00:00.000Z</span>
                 </section>
               </section>
             </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7327691403844665380"
+                        open
+                      >
+                        <summary class="article-expander__title">相见恨晚的前端开发利器-PageSpy</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7327691403844665380">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: orange
+highlight: shades-of-purple
+以下文章来源于前端帮 ，作者xintianyou
+今天介绍一个非常有用的前端开发工具。
+做前端开发的你，一定有过以下经历：
+我这里是好的啊，你截个图给我看看
+不会吧，你打开f12，控制台截个图给我看看
+录个屏给我看看你是怎么操作的
+...
+还有，我们在开发h5的时候，一般为了调试方便，可能会在开发环境和测试环境实例化一个vConsole，遇到问题看一下大概就能定位到错误。
+可是如果测试小姐姐在远程呢？如果是线上环境呢？如果有这么一个工具，能让我坐在工位上就能调(窥)试(探)用户的操作，那岂不是美滋滋。
+你可能会说，这不就是埋点吗，先别急，今天介绍的这个工具和埋点有着本质区别。
+不啰嗦了，有请主角**「PageSpy」**登场。
+PageSpy是什么？
+❝
+PageSpy[1] 是由货拉拉大前端开源的一款用于调试 H5 、或者远程 Web 项目的工具。是一个强大的开源前端远程调试平台，它可以显著提高我们在面对前端问题时的效率。
+❞
+
+有什么作用？
+一眼查看客户端信息 能识别客户端运行环境，支持Linux/Mac/Window/IOS/Android
+实时查看输出 可以实时输出客户端的Element,Console,Network,Storage
+网络请求监控 可以捕获和显示页面的网络请求
+远程控制台 支持远程调试客户机上的js代码
+如何使用？
+查看官方文档[2]
+安装npm包
+yarn global add @huolala-tech/page-spy-api
+
+# 如果你使用 npm
+
+npm install -g @huolala-tech/page-spy-api
+
+启动服务
+直接在命令行执行page-spy-api，部署完成后浏览器访问
+:6752，页面顶部会出现接入SDK菜单，点击菜单查看如何在业务项目中配置并集成。命令行执行后出现这个界面表示服务启动成功了，然后访问我自己的ip+端口，再点击顶部接入SDK去创建一个测试项目，建一个最简单的index.html，按照文档接入SDK，然后在浏览器访问这个页面左下角出现Pagepy的logo说明引入成功了。
+此时点击顶部菜单房间列表点击调试，就可以看到这个项目的一些实时调试信息，但是还没加什么代码。现在改一下我们的代码，加一些输出信息。Console控制台的信息直接输出用户端代码变量的实时的值加个定时器试试，也是实时输出的再来看看Storage信息Element信息调个接口试试
+好了，今天的介绍就到这里，这么牛叉的工具，是不是有种相见恨晚的感觉，感兴趣的小伙伴快去试试吧！
+Reference
+[1] PageSpy:https://huolalatech.github.io/page-spy-web
+[2] 官方文档:https://github.com/HuolalaTech/page-spy-web/blob/main/README_ZH.md
+阅读原文</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -3012,44 +3085,6 @@ Lottie是由Airbnb开发的一个开源库，用于在移动端和Web上呈现�
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7325717778597199908"
-                        open
-                      >
-                        <summary class="article-expander__title">🐲龙年大吉——AIGC生成龙年春联🐲</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7325717778597199908">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-时间过得好快，一眨眼2024年就来了。这两年对互联网冲击最大的想必就是大语言模型的AIGC能力了。从国外的GPT到国内的文心一言、混元、盘古等等，AIGC的出现大大的提升了我们的生产力，现在GPT逐渐也变成了我每天都会使用到的工具。
-那趁着新年即将来临，我们今天就使用AIGC去生成春节必不可少的元素——春联。
-
-注册
-对于大模型接口来说，我这边选择的是国产的讯飞星火大模型。选择它的原因绝对不是它现在可以领取免费的token，而是我觉得我们需要支持国产软件自主化（手动狗头），如果你不喜欢用这个也可以使用别的，思路都是一样的。
-首先打开它的官网 https://xinghuo.xfyun.cn/sparkapi 注册一个账号，然后点击领取token就好了
-
-领取到了之后就可以对着它的文档来使用API了。
-构造鉴权API
-我们是通过websocket去使用星火的大模型api，在连接之前则需要构造一个鉴权参数。这个参数主要是为了安全以及用户身份的鉴权吧，这里主要还是要根据它的文档里面的规则去构造，实现代码如下：
-const getWebsocketUrl &#x3D; () &#x3D;&gt; {
-  var apiKey &#x3D; APIKey;
-  var apiSecret &#x3D; APISecret;
-  var url &#x3D; &quot;wss://spark-api.xf-yun.com/v3.1/chat&quot;;
-  var host &#x3D; location.host;
-  var date &#x3D; new Date().toGMTString();
-  var algorithm &#x3D; &quot;hmac-sha256&quot;;
-  var headers &#x3D; &quot;host date request-line&quot;;
-  var signatureOrigin &#x3D; &#x60;host: ${host}\ndate: ${date}\nGET /…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7325730345840066612"
                         open
                       >
@@ -5349,8 +5384,6 @@ RedisMate是一款专为开发过程中, 简化Redis调试操作而设计的macO
    ✏️ 写作。2023 年，有 257 天我都使用 flomo 记录或创作，累计积累了 728 条 memos，字数达到 29 万字以上。其中 95% 的内容都是原创，极少部分是未加入个人思考的纯摘录，这是今年要极力避免的状况。还是那句话：「读书不做笔记就是白读，笔记不是原创就是白记。」当然，这很片面。我也认识了大量阅读却只做消遣的新朋友，自得其乐于阅读之中，绝无过错。不过对自己的要求上，我还是愿意通过这种限制，继续修炼文字表达的修养。一年中通过竹白发布了 25 篇文章，新增阅读量 2000+，感谢订阅我专栏的 98 位读者朋友们。你们当中有的是我现实生活中的亲朋好友，更多则是从各种社媒发现而订阅的网络朋友，你们的支持是我继续创作的极大动力，再次感谢你们！   
         
    🎵 音乐。过去一年，我完全摆脱网易云音乐和 QQ 音乐的限制，全面转向 Spotify+Apple Music，这是之前从未有过的尝试。在 Spotify 中，一共度过 42,219 分钟，而 Apple Music 里这一数字是 10,147。听音乐这件事情上，不可否认的是 Hiphop 仍是我耳机里最常出现的音乐类型，但这一年来我探索了比原来多太多的新音乐。我开始频繁打开上世纪的摇滚乐、新浪潮音乐，重新回到 Kpop 的世界，探索层出不穷的新鲜流行乐，也听了不少来自东南亚乃至非洲小…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -6090,8 +6123,8 @@ YouTube 也没有透露过，这个编号是怎么产生的。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7659119363">
-        <time id="build-timestamp" datetime="2024-01-25T18:53:16.420Z">2024-01-25T18:53:16.420Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7660887929">
+        <time id="build-timestamp" datetime="2024-01-25T21:52:57.908Z">2024-01-25T21:52:57.908Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

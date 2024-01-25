@@ -84,7 +84,7 @@
           "description": "从名称上看，@scope似乎是实现CSS作用域的，这个讨论了近20年的特性终于是要支持了吗，还是并非如此？",
           "link": "https://www.zhangxinxu.com/wordpress/2024/01/css-at-scope/",
           "publishedOn": "2024-01-21T13:53:26.000Z",
-          "wordCount": 1430,
+          "wordCount": 1432,
           "title": "CSS @scope他来了",
           "imageUrl": null
         },
@@ -104,7 +104,7 @@
           "description": "Firefox也正式支持popover属性了，大人，时代变了，所有的下拉效果要换种实现方式啦。",
           "link": "https://www.zhangxinxu.com/wordpress/2024/01/js-html-popover-dropdown/",
           "publishedOn": "2024-01-11T15:01:33.000Z",
-          "wordCount": 1375,
+          "wordCount": 1376,
           "title": "时代变了，该使用原生popover属性模拟下拉了",
           "imageUrl": null
         },
@@ -522,7 +522,7 @@
           "description": "时常在各平台收到评论、回复，对我每月的小结赞不绝口。不过，我却不觉得自己足够自觉，仍有太多时间浪费在重复性的工作、无意义的学习中。更让我坐立难安，并想要将经验分享给读者的原因是，其实大家都能做到，甚至能做得比我更好。   \n      \n   在新的一年开始之际，通过复盘去年的成长，给我自己更通透的自省之外，以期给我的读者们一些启发或灵感。想必我们都能从中收获良多，那就从几组数据展开吧。   \n    \n   ✏️ 写作。2023 年，有 257 天我都使用 flomo 记录或创作，累计积累了 728 条 memos，字数达到 29 万字以上。其中 95% 的内容都是原创，极少部分是未加入个人思考的纯摘录，这是今年要极力避免的状况。还是那句话：「读书不做笔记就是白读，笔记不是原创就是白记。」当然，这很片面。我也认识了大量阅读却只做消遣的新朋友，自得其乐于阅读之中，绝无过错。不过对自己的要求上，我还是愿意通过这种限制，继续修炼文字表达的修养。一年中通过竹白发布了 25 篇文章，新增阅读量 2000+，感谢订阅我专栏的 98 位读者朋友们。你们当中有的是我现实生活中的亲朋好友，更多则是从各种社媒发现而订阅的网络朋友，你们的支持是我继续创作的极大动力，再次感谢你们！   \n        \n   🎵 音乐。过去一年，我完全摆脱网易云音乐和 QQ 音乐的限制，全面转向 Spotify+Apple Music，这是之前从未有过的尝试。在 Spotify 中，一共度过 42,219 分钟，而 Apple Music 里这一数字是 10,147。听音乐这件事情上，不可否认的是 Hiphop 仍是我耳机里最常出现的音乐类型，但这一年来我探索了比原来多太多的新音乐。我开始频繁打开上世纪的摇滚乐、新浪潮音乐，重新回到 Kpop 的世界，探索层出不穷的新鲜流行乐，也听了不少来自东南亚乃至非洲小…",
           "link": "https://open.zhubai.wiki/a/l/t/z/fp/depykung/2358639715962146816",
           "publishedOn": "2024-01-15T11:22:23.000Z",
-          "wordCount": 2438,
+          "wordCount": null,
           "title": "035 | 年度分享：2023 个人成长复盘",
           "imageUrl": null
         },
@@ -1658,6 +1658,16 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
+          "id": "https://juejin.cn/post/7327691403844665380",
+          "author": "丝绒拿铁有点甜",
+          "description": "theme: orange\nhighlight: shades-of-purple\n以下文章来源于前端帮 ，作者xintianyou\n今天介绍一个非常有用的前端开发工具。\n做前端开发的你，一定有过以下经历：\n我这里是好的啊，你截个图给我看看\n不会吧，你打开f12，控制台截个图给我看看\n录个屏给我看看你是怎么操作的\n...\n还有，我们在开发h5的时候，一般为了调试方便，可能会在开发环境和测试环境实例化一个vConsole，遇到问题看一下大概就能定位到错误。\n可是如果测试小姐姐在远程呢？如果是线上环境呢？如果有这么一个工具，能让我坐在工位上就能调(窥)试(探)用户的操作，那岂不是美滋滋。\n你可能会说，这不就是埋点吗，先别急，今天介绍的这个工具和埋点有着本质区别。\n不啰嗦了，有请主角**「PageSpy」**登场。\nPageSpy是什么？\n❝\nPageSpy[1] 是由货拉拉大前端开源的一款用于调试 H5 、或者远程 Web 项目的工具。是一个强大的开源前端远程调试平台，它可以显著提高我们在面对前端问题时的效率。\n❞\n\n有什么作用？\n一眼查看客户端信息 能识别客户端运行环境，支持Linux/Mac/Window/IOS/Android\n实时查看输出 可以实时输出客户端的Element,Console,Network,Storage\n网络请求监控 可以捕获和显示页面的网络请求\n远程控制台 支持远程调试客户机上的js代码\n如何使用？\n查看官方文档[2]\n安装npm包\nyarn global add @huolala-tech/page-spy-api\n\n# 如果你使用 npm\n\nnpm install -g @huolala-tech/page-spy-api\n\n启动服务\n直接在命令行执行page-spy-api，部署完成后浏览器访问<host>:6752，页面顶部会出现接入SDK菜单，点击菜单查看如何在业务项目中配置并集成。命令行执行后出现这个界面表示服务启动成功了，然后访问我自己的ip+端口，再点击顶部接入SDK去创建一个测试项目，建一个最简单的index.html，按照文档接入SDK，然后在浏览器访问这个页面左下角出现Pagepy的logo说明引入成功了。\n此时点击顶部菜单房间列表点击调试，就可以看到这个项目的一些实时调试信息，但是还没加什么代码。现在改一下我们的代码，加一些输出信息。Console控制台的信息直接输出用户端代码变量的实时的值加个定时器试试，也是实时输出的再来看看Storage信息Element信息调个接口试试\n好了，今天的介绍就到这里，这么牛叉的工具，是不是有种相见恨晚的感觉，感兴趣的小伙伴快去试试吧！\nReference\n[1] PageSpy:https://huolalatech.github.io/page-spy-web\n[2] 官方文档:https://github.com/HuolalaTech/page-spy-web/blob/main/README_ZH.md\n阅读原文",
+          "link": "https://juejin.cn/post/7327691403844665380",
+          "publishedOn": "2024-01-25T05:47:31.000Z",
+          "wordCount": 805,
+          "title": "相见恨晚的前端开发利器-PageSpy",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7327472360863924224",
           "author": "程序员大澈",
           "description": "大家好，我是大澈！\n本文约800+字，整篇阅读大约需要2分钟。\n感谢关注微信公众号：“程序员大澈”，免费领取\"面试礼包\"一份，然后免费加入问答群，从此让解决问题的你不再孤单！\n1. 资讯速览\n由于node安装插件是从国外服务器下载，如果没有“特殊手法”，就可能会遇到下载速度慢、或其它异常问题。\n所以如果npm的服务器在中国就好了，于是我们乐于分享的淘宝团队干了这事。你可以用此只读的淘宝服务代替官方版本，且同步频率目前为 10 分钟一次。\n但在 1 月 22 日，淘宝原镜像域名（registry.npm.taobao.org）的 HTTPS 证书正式到期。如果想要继续使用，需要将 npm 源切换到新的源（registry.npmmirror.com），否则会报错。\n\n\n2. 资讯详细\n先聊聊如何切换新的镜像地址，再说一下淘宝镜像使用的两种方式。\n2.1 如何切换新的镜像地址\n如果你使用淘宝命令工具cnpm，则不需要去手动更新镜像地址，官方已自动做了处理。\n如果你是将npm官方镜像改成了淘宝镜像，则需要按下面步骤去手动更新。\n// 1. 清空缓存\nnpm cache clean --force\n\n// 2. 切换新源\nnpm config set registry https://registry.npmmirror.com\n\n2.2 第一次如何使用淘宝镜像\nnpm官方镜像改成淘宝镜像的使用方式：\n// 1. 切换镜像源\nnpm config set registry https://registry.npmmirror.com\n\n// 2. 检测是否切换成功\nnpm config get registry\n\n淘宝命令工具cnpm的使用方式：\n// 1. 安装cnpm\nnpm install -g cnpm --registry=https://registry.npmmirror.com\n\n// 2. 检测是否安装成功\ncnpm -v\n\n2.3 npm改成淘宝和cnpm区别\nnpm安装的包只有1个模块，而cnpm安装的包有2个模块，两者存在引用关系。\nnpm安装的速度比cnpm安装的速度慢。\n2.4 小结\n淘宝原镜像域名（registry.npm.taobao.org）的 HTTPS 证书正式到期。\n如果你是将npm官方镜像改成了淘宝镜像，并想要继续使用，需要将 npm 源切换到新的源（registry.npmmirror.com），否则会报错。\n\n结语\n建立这个平台的初衷：\n打造一个专注于前端功能问题的问答平台，让大家高效搜索处理同样问题。\n遇到有共鸣的问题，与众多同行朋友们一起讨论，一起沉淀成长。\n平台现拥有功能问题、技术资讯、实用干货3个专栏内容。\n感谢关注微信公众号：“程序员大澈”，免费领取\"面试礼包\"一份，然后免费加入问答群，从此让解决问题的你不再孤单！",
@@ -1778,16 +1788,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7325717778597199908",
-          "author": "可乐鸡翅kele",
-          "description": "前言\n时间过得好快，一眨眼2024年就来了。这两年对互联网冲击最大的想必就是大语言模型的AIGC能力了。从国外的GPT到国内的文心一言、混元、盘古等等，AIGC的出现大大的提升了我们的生产力，现在GPT逐渐也变成了我每天都会使用到的工具。\n那趁着新年即将来临，我们今天就使用AIGC去生成春节必不可少的元素——春联。\n\n注册\n对于大模型接口来说，我这边选择的是国产的讯飞星火大模型。选择它的原因绝对不是它现在可以领取免费的token，而是我觉得我们需要支持国产软件自主化（手动狗头），如果你不喜欢用这个也可以使用别的，思路都是一样的。\n首先打开它的官网 https://xinghuo.xfyun.cn/sparkapi 注册一个账号，然后点击领取token就好了\n\n领取到了之后就可以对着它的文档来使用API了。\n构造鉴权API\n我们是通过websocket去使用星火的大模型api，在连接之前则需要构造一个鉴权参数。这个参数主要是为了安全以及用户身份的鉴权吧，这里主要还是要根据它的文档里面的规则去构造，实现代码如下：\nconst getWebsocketUrl = () => {\n  var apiKey = APIKey;\n  var apiSecret = APISecret;\n  var url = \"wss://spark-api.xf-yun.com/v3.1/chat\";\n  var host = location.host;\n  var date = new Date().toGMTString();\n  var algorithm = \"hmac-sha256\";\n  var headers = \"host date request-line\";\n  var signatureOrigin = `host: ${host}\\ndate: ${date}\\nGET /…",
-          "link": "https://juejin.cn/post/7325717778597199908",
-          "publishedOn": "2024-01-20T10:26:35.000Z",
-          "wordCount": 1349,
-          "title": "🐲龙年大吉——AIGC生成龙年春联🐲",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7325730345840066612",
           "author": "工边页字",
           "description": "theme: channing-cyan\nhighlight: ascetic\n前言\n在日常的开发中，我们经常能碰见服务端需要主动推送给客户端数据的业务场景，比如数据大屏的实时数据，比如消息中心的未读消息，比如聊天功能等等。\n本文主要介绍SSE的使用场景和如何使用SSE。\n\n服务端向客户端推送数据的实现方案有哪几种？\n我们常规实现这些需求的方案有以下三种\n轮询\nwebsocket\nSSE\n轮询简介\n在很久很久以前，前端一般使用轮询来进行服务端向客户端进行消息的伪推送，为什么说轮询是伪推送？因为轮询本质上还是通过客户端向服务端发起一个单项传输的请求，服务端对这个请求做出响应而已。通过不断的请求来实现服务端向客户端推送数据的错觉。并不是服务端主动向客户端推送数据。显然，轮询一定是上述三个方法里最下策的决定。\n轮询的缺点：\n首先轮询需要不断的发起请求，每一个请求都需要经过http建立连接的流程（比如三次握手，四次挥手），是没有必要的消耗。\n客户端需要从页面被打开的那一刻开始就一直处理请求。虽然每次轮询的消耗不大，但是一直处理请求对于客户端来说一定是不友好的。\n浏览器请求并发是有限制的。比如Chrome 最大并发请求数目为 6，这个限制还有一个前提是针对同一域名的，超过这一限制的后续请求将会被阻塞。而轮询意味着会有一个请求长时间的占用并发名额。\n而如果轮询时间较长，可能又没有办法非常及时的获取数据\nwebsocket简介\nwebsocket是一个双向通讯的协议，他的优点是，可以同时支持客户端和服务端彼此相互进行通讯。功能上很强大。\n缺点也很明显，websocket是一个新的协议，ws/wss。也就是说，支持http协议的浏览器不一定支持ws协议。\n相较于SSE来说，websocket因为功能更强大。结构更复杂。所以相对比较重。\nwebsocket对于各大浏览器的兼容性↓\n\nSSE简…",
@@ -1890,7 +1890,7 @@
           "description": "【嵌入式资源分享】\n开发资源 ║ Linux 内核交互式地图\n▌ 今日加更一篇，Linux内核交互地图，可以非常方便的查看从用户空间到内核空间，关键结构体的划分与交互。\n地址：https://makelinux.github.io/kernel/map/\n更多嵌入式资料，详见：https://t.zsxq.com/0eUcTOhdO",
           "link": "https://juejin.cn/pin/7327094228350369842",
           "publishedOn": "2024-01-23T09:20:29.000Z",
-          "wordCount": 483,
+          "wordCount": 485,
           "title": "【嵌入式资源分享】 开发资源 ║ Linux 内核交互式地图 ▌ 今日加更一篇，Linux内核交互地图，可以非常方便的查看从用户空间到内核空间，关键结构体的划分与交互...",
           "imageUrl": null
         },
@@ -1910,7 +1910,7 @@
           "description": "昨晚直播半小时撸了个小插件，主要是为了解决下面的问题：\n当你想借助别的库来实现时，我需要经常复制库里面的使用案例，然后我还要再从命令行输入去安装这个依赖，我觉得有点麻烦了，我希望这个库能够监听到我的导入语句，在头部增加一个按钮，帮助我点击完直接安装依赖，这样我就不用再去复制粘贴了。",
           "link": "https://juejin.cn/pin/7326567743989481499",
           "publishedOn": "2024-01-22T07:52:15.000Z",
-          "wordCount": 467,
+          "wordCount": 470,
           "title": "昨晚直播半小时撸了个小插件，主要是为了解决下面的问题： 当你想借助别的库来实现时，我需要经常复制库里面的使用案例，然后我还要再从命令行输入去安装这个依...",
           "imageUrl": null
         },
@@ -1920,7 +1920,7 @@
           "description": "这个接口调试插件太强了 推荐给你们",
           "link": "https://juejin.cn/pin/7326268755420856370",
           "publishedOn": "2024-01-21T01:19:52.000Z",
-          "wordCount": 467,
+          "wordCount": 469,
           "title": "这个接口调试插件太强了 推荐给你们",
           "imageUrl": null
         },
@@ -1930,7 +1930,7 @@
           "description": "这几行 puppeteer 服务端 Docker 部署配置。当初折腾了我一天把坑都踩完,还写了一篇文章记录解决的过程 \n文章标题: Linux服务器上运行Puppeteer的Docker部署指南\n文章地址: https://juejin.cn/post/7283873796977066036\n现在把 puppeteer 服务端 Docker 部署配置记录在 CodeGist ，下次再遇到这类需求，复制一下改改就能用了，省心。\nCodeGist：https://codegist.cn/",
           "link": "https://juejin.cn/pin/7325730345838706740",
           "publishedOn": "2024-01-20T02:06:00.000Z",
-          "wordCount": 517,
+          "wordCount": 519,
           "title": "这几行 puppeteer 服务端 Docker 部署配置。当初折腾了我一天把坑都踩完,还写了一篇文章记录解决的过程 文章标题: Linux服务器上运行Puppeteer的Docker部署指南 ...",
           "imageUrl": null
         },
@@ -1940,7 +1940,7 @@
           "description": "这个接口调试插件太强了 推荐给你们",
           "link": "https://juejin.cn/pin/7325495601269948425",
           "publishedOn": "2024-01-19T06:42:45.000Z",
-          "wordCount": 468,
+          "wordCount": 470,
           "title": "这个接口调试插件太强了 推荐给你们",
           "imageUrl": null
         },
@@ -1970,7 +1970,7 @@
           "description": "ApiPost是不是崩了，怎么打不开",
           "link": "https://juejin.cn/pin/7325132087282991131",
           "publishedOn": "2024-01-18T01:40:36.000Z",
-          "wordCount": 455,
+          "wordCount": 457,
           "title": "ApiPost是不是崩了，怎么打不开",
           "imageUrl": null
         },
@@ -1980,7 +1980,7 @@
           "description": "我的独立开发产品RedisMate MVP版本，上线五天，从没有排名到现在app store的开发工具类排名第6位，还有了第一笔收入。到现在我还是有点懵的。不少xd给了我很积极的反馈，并帮我分享给朋友和同事。真的感谢道上兄弟们的关照[抱拳] 。正在写开发和推广总结，思绪还有点乱，完成后跟各位xd分享一下这其中的过程，希望也能帮助一些xd。",
           "link": "https://juejin.cn/pin/7324939118243692571",
           "publishedOn": "2024-01-17T10:40:30.000Z",
-          "wordCount": 474,
+          "wordCount": 476,
           "title": "我的独立开发产品RedisMate MVP版本，上线五天，从没有排名到现在app store的开发工具类排名第6位，还有了第一笔收入。到现在我还是有点懵的。不少xd给了我很积...",
           "imageUrl": null
         },
@@ -1990,7 +1990,7 @@
           "description": "想问下大家gpt4.0都是怎么充值的[送心][送心]",
           "link": "https://juejin.cn/pin/7324712506748862491",
           "publishedOn": "2024-01-17T01:23:09.000Z",
-          "wordCount": 457,
+          "wordCount": 459,
           "title": "想问下大家gpt4.0都是怎么充值的[送心][送心]",
           "imageUrl": null
         },
@@ -2010,7 +2010,7 @@
           "description": "分享一下我的第一款独立开发产品——RedisMate.\nRedisMate是一款专为开发过程中, 简化Redis调试操作而设计的macOS原生GUI应用。 通过简洁的界面设计和场景操作优化，提升开发者的调试效率。\n产品演示和下载：https://redismate.hunterji.com\n或者也可以直接使用Mac在app store中搜索“RedisMate\"下载体验。\n欢迎各位老哥的体验和反馈！",
           "link": "https://juejin.cn/pin/7324482778116210725",
           "publishedOn": "2024-01-16T08:32:45.000Z",
-          "wordCount": 475,
+          "wordCount": 477,
           "title": "分享一下我的第一款独立开发产品——RedisMate. RedisMate是一款专为开发过程中, 简化Redis调试操作而设计的macOS原生GUI应用。 通过简洁的界面设计和场景操作优...",
           "imageUrl": null
         },
@@ -2020,7 +2020,7 @@
           "description": "我的第一款独立开发产品RedisMate，前两天刚完成MVP版本。经过几天推广，居然已经到app store开发工具类排名第9名了？！前面可是postman啊！有点慌...",
           "link": "https://juejin.cn/pin/7324351711656067099",
           "publishedOn": "2024-01-16T08:26:25.000Z",
-          "wordCount": 465,
+          "wordCount": 467,
           "title": "我的第一款独立开发产品RedisMate，前两天刚完成MVP版本。经过几天推广，居然已经到app store开发工具类排名第9名了？！前面可是postman啊！有点慌...",
           "imageUrl": null
         },
@@ -2030,7 +2030,7 @@
           "description": "开源了tojson.js\ntojson.js 是一个支持解析 Psd、Sketch、PPT转 json 的类库, 该 json 满足 fabric.js 渲染的数据格式.\ngithub 地址: https://github.com/haixin-fang/tojson.js\n预览地址:  https://haixin-fang.github.io/tojson.js/playground/",
           "link": "https://juejin.cn/pin/7324011403026333747",
           "publishedOn": "2024-01-15T10:32:36.000Z",
-          "wordCount": 540,
+          "wordCount": 542,
           "title": "开源了tojson.js tojson.js 是一个支持解析 Psd、Sketch、PPT转 json 的类库, 该 json 满足 fabric.js 渲染的数据格式. github 地址: https://github.com/haixin...",
           "imageUrl": null
         },
@@ -2060,7 +2060,7 @@
           "description": "vscode 提示音太恶心了",
           "link": "https://juejin.cn/pin/7324095314770853903",
           "publishedOn": "2024-01-15T07:04:53.000Z",
-          "wordCount": 472,
+          "wordCount": 474,
           "title": "vscode 提示音太恶心了",
           "imageUrl": null
         }
