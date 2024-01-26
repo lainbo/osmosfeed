@@ -124,7 +124,7 @@
                             <span class="media-object__text">
                               <span>“要事第一”，已经跟我六岁的女儿叨叨了快一年，在她每一次拖拖拉拉的时候，都会不停地复述这四个字，以及为什么要做到这四个字。
 不奢望她能够真正理解，只希望可以更早地刻画到她的脑子里，在她十几岁、二十几岁的时候能够更早地实践起来。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1811,6 +1811,59 @@ iOS
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7326816030042669110"
+                        open
+                      >
+                        <summary class="article-expander__title">真的不考虑下grid布局？有时候真的很方便！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326816030042669110">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言
+flex布局大家应该已经运用的炉火纯青了，相信在日常开发中大家和我一样不管遇到什么都是flex一把搜哈。直到我遇到grid，才发现有些场景下，不是说flex实现不了而是使用grid能够更加轻松的完成任务。下面拿几个场景和大家分享一下。
+宫格类的布局
+比如我要实现一个布局，最外层元素的宽度是1000px，高度自适应。子元素宽度为300px，一行展示3个，从左到右排列。其中最左边与最右边的元素需要紧挨父元素的左右边框。如下图所示：
+
+使用flex实现
+这个页面布局在日常开发中非常常见，考虑下使用flex布局如何实现，横向排列元素，固定宽度300，wrap设置换行显示，设置双端对齐。看起来很简单，来实现一下。
+
+
+
+
+    
+        .box{
+            width: 1000px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .item{
+            background: pink;
+            width: 300px;
+            height: 150px;
+        }
+    
+
+
+
+    
+1
+        
+2
+        
+3
+   …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -1990,259 +2043,6 @@ iOS
                             <span class="media-object__text">
                               <span>gpts 的商业化要是走上了广告联盟的老路，可就太没意思了。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7326809915434483750"
-                        open
-                      >
-                        <summary class="article-expander__title">前端工具分享</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326809915434483750">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: smartblue
-Web Tools
-文章来源：Web Tools - 下落香樟树 (zxkv)
-注意事项
-[✔]：组件或工具后的 [] 标注有 ✔ 的，为已经尝试使用过的。
-截图工具
-Snipaste「✔ 截屏工具」
-PixPin「✔ 截屏工具」
-pear-rec「✔ 截屏、录屏、图片处理」
-浏览器工具
-HiPC 桌面工具
-HiPC 系统助手
-Infinity 新标签页 (Pro)「🔥」
-iTab 新标签页「✔」
-Wetab
-howdz 启始页
-电影日历「电影日历 - 在线版」
-AI 旋风「✔ 工具集合」
-终端工具
-hyper.js「✔ 终端工具」
-工具箱
-He3 🔨「辅助工具」
-AppWorks 🔨「辅助工具」
-前端工具箱「前端工具网站」
-工具箱(在线版)「前端工具网站」
-菜鸟工具(在线版)「前端工具网站」
-零代码工具箱 🧰(在线版)「前端工具网站」
-框架模板
-COOL
-RuoYi「✔」
-Vben Admin「✔」
-AntD Pro Vue
-vue element admin「✔」
-Naive Ui Admin
-微服务框架
-无界 wujie
-乾坤 qiankun
-single-spa
-前端插件
-InfiniteGrid「瀑布流」
-FullCalendar「日历」
-Virtual Tree「✔」
-Vue virtual tree「✔」
-vue-concise-slider「✔」
-handsontable
-pinia-plugin-persistedstate「✔ 数据持久化」
-lite-virtual-list「✔ 虚拟列表」
-vue-drag-resize「✔ 拖拽」
-Editor.md「Markdown 编辑器」
-bpmn 流程图「在线版流程图」
-million「React 代码优化工具」
-ofa.js「JS 框架」
-medium-zoom「图片点击放大预览」
-开源图标库
-IconFont「✔」
-IconPark「✔」
-xicons
-intoGIF「✔ loading 动画制作」
-LOADING.IO「✔ loading 动画，部分免费」
-开源图库
-unDraw
-pixabay
-unsplash
-pexels
-wallspic
-辅助工具
-语雀「✔」
-excalidraw「在线流程图」
-知犀思维导图「在线版、安装版思维导图、流程图」
-tinify(中文版)「🔥 🐼 熊猫压缩、只能压缩、最大 20 张，单张限制 5M」
-tinify(英文版)「🔥 🐼 熊猫压缩、可转格式」
-百度脑图「✔ 在线版思维导图」
-TreeMind 树图「💰 收费」
-GitMind「💰 收费」
-ZhiMap「在线版思维导图」
-draw.io
-Moonvy 月维「在线设计图」
-蓝湖「在线设计图」
-Figma「在线设计图」
-模拟数据
-Better Mock「🔥 Mock Data - 无需登录」
-MockJS「🔥 Mock Data - 无需登录」
-Easy Mock「✔ Mock Data - 需要登录」
-rap2「✔ TaoBao Mock Data - 需要登录」
-数据统计
-umami「✔」
-百度数据统计</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7326461075447201843"
-                        open
-                      >
-                        <summary class="article-expander__title">【动画进阶】神奇的 3D 卡片反光闪烁动效</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326461075447201843">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>最近，有群里在群里发了这么一个非常有意思的卡片 Hover 动效，来源于此网站 -- key-drop，效果如下：
-
-非常有意思酷炫的效果。而本文，我们不会完全还原此效果，而是基于此效果，尝试去制作这么一个类似的卡片交互效果：
-
-该效果的几个核心点：
-卡片的 3D 旋转跟随鼠标移动效果
-如何让卡片在 Hover 状态，有不同的光泽变化
-如何让卡片在 Hover 状态，有 Blink，Blink 的星星闪烁效果
-当然，要做到卡片的 3D 旋转跟随鼠标移动效果需要一定程度的借助 JavaScript，因此，最终的效果是 CSS 配合 JavaScript 以及一些动态效果的 Gif 共同实现。
-好，下面就让我们一步一步一起来实现这个效果。
-卡片的 3D 旋转跟随效果
-OK，接下来，如何实现 3D 卡片效果呢？
-这个效果之前在 让交互更加生动！有意思的鼠标跟随 3D 旋转动效 实现过一次，我们复习一下。
-这个交互效果主要有两个核心：
-借助了 CSS 3D 的能力
-元素的旋转需要和鼠标的移动相结合
-我们的目标是实现这样一个动画效果：
-
-这里，我们其实有两个核心元素：
-鼠标活动区域
-旋转物体本身
-鼠标在鼠标活动区域内的移动，会影响旋转物体本身的 3D 旋转，而旋转的方向其实可以被分解为 X 轴方向与 Y 轴方向。
-我们来看一下，假设我们的 HTML 结构如下：
-
-    
-
-
-
-得到这样一个图形：
-
-这里，body 的范围就是整个鼠标可活动区域，也是我们添加鼠标的 mousemove 事件的宿主 target，而 #element 就是需要跟随鼠标一起转动的旋转物体本身。
-因为整个效果是需要基于 CSS 3D 的，我们首先加上简单的 CSS 3D 效果：
-body {
-    width: 100vw;
-    …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7326378145573011467"
-                        open
-                      >
-                        <summary class="article-expander__title">🐲 🐲 🐲 js谐音梗创意小游戏《望子成龙》</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326378145573011467">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: smartblue
-🌻 前言
-龙年到来，祥瑞满天。愿您如龙般矫健，事业腾飞；如龙鳞闪耀，生活美满。祝您龙年大吉，万事如意！
-时隔许久，终于再次上线了创意投稿大赛，又到了我最喜欢的环节。
-🔥 游戏体验
-游戏灵感
-灵感来源于一个成语“望子成龙”，我把它具象化，把成语的意思字面化。即看到孩子变成龙，从而我联想到如果看到孩子变成龙，即闯关成功，如果看到孩子变成了其他动物，则闯关失败。
-顺藤摸瓜，据此思路我想到了1，2，3木头人这款游戏，类似的规则进行二创，最终想到了我这款小游戏。
-具体游戏介绍可以看游戏首页简介。
-
-游戏背景
-背景故事：有一天你被一条恶龙捉回了老巢，你发现它守着几颗蛋，盼望着它的孩子出生。你可怜巴巴的乞求恶龙放了你，恶龙说：“如果一会儿我的孩子出生成为猛龙，我一开心或许会放了你”。你听到这，暗暗想办法如何能找到真正的龙蛋孵化成龙，于是，一场集眼力、反应、手速的较量开始了。。。
-
-游戏规则
-找到真正的龙蛋（考验眼力和专注力）
-页面中有n颗蛋，在开始游戏时，会有n个光点随机进入这几个蛋。其中开始闪烁蓝光的光点即“龙魂”，“龙魂”进入的蛋即可孵化成龙。你需要盯紧蓝色光点的运动轨迹，不要“跟丢了”，找到真正的龙蛋！
-
-龙魂通过旋转随机打乱：
-
-快速点击蛋帮其破壳（考验手速）
-在光点进入蛋之后，即游戏正式开始，进入倒计时阶段。你需要快速点击“龙蛋”帮助其孵化。每颗蛋上都写了距离破壳剩余的点击次数。你需要在倒计时结束前敲碎“龙蛋”，孵化成龙。
-
-成功孵化龙蛋即挑战成功：
-
-孵化出了其他动物即挑战失败：
-
-恶龙睁眼时不能敲击龙蛋（考验反应力）
-在倒计时阶段，恶龙会随机睁眼，在恶龙睁眼时，千万不能点集蛋，否则直接挑战失败！
-
-游戏共5关，越来越难（挑战极限）
-每过一关，会增加蛋的数量或者提高蛋破壳需要点击的次数，过五关即可挑战成功。
-
-在线地址
-体验地址：http…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7326393655391010853"
-                        open
-                      >
-                        <summary class="article-expander__title">前后端分离多年，为何服务端渲染（SSR）重回风口浪尖？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326393655391010853">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前后端分离多年，为何服务端渲染（SSR）重回风口浪尖？
-什么是服务端渲染？
-咱们先搞明白个事儿，啥叫服务端渲染？服务端渲染的全称是 Server-Side Rendering，简称SSR。
-简单说，就是在服务器上把网页生成好，整个的HTML页面生成出来，生成出的页面已经包含了所有必要的数据和结构信息，然后直接发给浏览器进行展现。
-这和现在流行的前后端分离设计有很大的区别，在前后端分离中，浏览器首先加载到的是一个基本的框架或者说是空壳页面，随后前端通过异步请求后端API获取到数据，然后再动态构建HTML，最后再让浏览器把页面逐渐展现出来。
-Web的发展历程
-要深入理解服务端渲染为何又成为热点，我们需要回顾Web的发展历史。
-早期Web开发（1990年代至2000年代初） ：在Web的早期，除了静态页面外，大多数网页的HTML是通过服务端渲染的。ASP、JSP、PHP等脚本语言盛行，它们通常将业务逻辑和HTML模板结合在一起，以处理请求并生成完整的HTML页面返回给客户端。在这个阶段，前后端技术混合使用，开发者往往需要同时具备前端和后端的技能。
-AJAX的崛起（2005年左右） ：Ajax技术的发展和jQuery库的普及使得网页能够动态加载数据，实现局部内容的更新，无需刷新整个页面。这一变化增强了前端的交互能力。尽管如此，服务器端渲染仍是主流，前后端职责分离尚未明显。
-前端框架的诞生（2009年以后） ：随着AngularJS、Ember.js等前端框架的诞生，前端工程师能够创建更复杂的单页应用（SPA）。这些应用通过API获取数据，并在客户端渲染页面，显著提升了用户体验。
-现代前端框架推动的前后端分离（2013年至今） ：React、Vue.js等现代前端框架凭借组件化和虚拟DOM等特性，极大地提升了开发效率和用户体验。同时，RESTful API的设计原则被广泛采纳，使后端…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2504,6 +2304,154 @@ AJAX的崛起（2005年左右） ：Ajax技术的发展和jQuery库的普及使�
                               <span>昨晚直播半小时撸了个小插件，主要是为了解决下面的问题：
 当你想借助别的库来实现时，我需要经常复制库里面的使用案例，然后我还要再从命令行输入去安装这个依赖，我觉得有点麻烦了，我希望这个库能够监听到我的导入语句，在头部增加一个按钮，帮助我点击完直接安装依赖，这样我就不用再去复制粘贴了。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7326461075447201843"
+                        open
+                      >
+                        <summary class="article-expander__title">【动画进阶】神奇的 3D 卡片反光闪烁动效</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326461075447201843">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>最近，有群里在群里发了这么一个非常有意思的卡片 Hover 动效，来源于此网站 -- key-drop，效果如下：
+
+非常有意思酷炫的效果。而本文，我们不会完全还原此效果，而是基于此效果，尝试去制作这么一个类似的卡片交互效果：
+
+该效果的几个核心点：
+卡片的 3D 旋转跟随鼠标移动效果
+如何让卡片在 Hover 状态，有不同的光泽变化
+如何让卡片在 Hover 状态，有 Blink，Blink 的星星闪烁效果
+当然，要做到卡片的 3D 旋转跟随鼠标移动效果需要一定程度的借助 JavaScript，因此，最终的效果是 CSS 配合 JavaScript 以及一些动态效果的 Gif 共同实现。
+好，下面就让我们一步一步一起来实现这个效果。
+卡片的 3D 旋转跟随效果
+OK，接下来，如何实现 3D 卡片效果呢？
+这个效果之前在 让交互更加生动！有意思的鼠标跟随 3D 旋转动效 实现过一次，我们复习一下。
+这个交互效果主要有两个核心：
+借助了 CSS 3D 的能力
+元素的旋转需要和鼠标的移动相结合
+我们的目标是实现这样一个动画效果：
+
+这里，我们其实有两个核心元素：
+鼠标活动区域
+旋转物体本身
+鼠标在鼠标活动区域内的移动，会影响旋转物体本身的 3D 旋转，而旋转的方向其实可以被分解为 X 轴方向与 Y 轴方向。
+我们来看一下，假设我们的 HTML 结构如下：
+
+    
+
+
+
+得到这样一个图形：
+
+这里，body 的范围就是整个鼠标可活动区域，也是我们添加鼠标的 mousemove 事件的宿主 target，而 #element 就是需要跟随鼠标一起转动的旋转物体本身。
+因为整个效果是需要基于 CSS 3D 的，我们首先加上简单的 CSS 3D 效果：
+body {
+    width: 100vw;
+    …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7326378145573011467"
+                        open
+                      >
+                        <summary class="article-expander__title">🐲 🐲 🐲 js谐音梗创意小游戏《望子成龙》</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326378145573011467">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: smartblue
+🌻 前言
+龙年到来，祥瑞满天。愿您如龙般矫健，事业腾飞；如龙鳞闪耀，生活美满。祝您龙年大吉，万事如意！
+时隔许久，终于再次上线了创意投稿大赛，又到了我最喜欢的环节。
+🔥 游戏体验
+游戏灵感
+灵感来源于一个成语“望子成龙”，我把它具象化，把成语的意思字面化。即看到孩子变成龙，从而我联想到如果看到孩子变成龙，即闯关成功，如果看到孩子变成了其他动物，则闯关失败。
+顺藤摸瓜，据此思路我想到了1，2，3木头人这款游戏，类似的规则进行二创，最终想到了我这款小游戏。
+具体游戏介绍可以看游戏首页简介。
+
+游戏背景
+背景故事：有一天你被一条恶龙捉回了老巢，你发现它守着几颗蛋，盼望着它的孩子出生。你可怜巴巴的乞求恶龙放了你，恶龙说：“如果一会儿我的孩子出生成为猛龙，我一开心或许会放了你”。你听到这，暗暗想办法如何能找到真正的龙蛋孵化成龙，于是，一场集眼力、反应、手速的较量开始了。。。
+
+游戏规则
+找到真正的龙蛋（考验眼力和专注力）
+页面中有n颗蛋，在开始游戏时，会有n个光点随机进入这几个蛋。其中开始闪烁蓝光的光点即“龙魂”，“龙魂”进入的蛋即可孵化成龙。你需要盯紧蓝色光点的运动轨迹，不要“跟丢了”，找到真正的龙蛋！
+
+龙魂通过旋转随机打乱：
+
+快速点击蛋帮其破壳（考验手速）
+在光点进入蛋之后，即游戏正式开始，进入倒计时阶段。你需要快速点击“龙蛋”帮助其孵化。每颗蛋上都写了距离破壳剩余的点击次数。你需要在倒计时结束前敲碎“龙蛋”，孵化成龙。
+
+成功孵化龙蛋即挑战成功：
+
+孵化出了其他动物即挑战失败：
+
+恶龙睁眼时不能敲击龙蛋（考验反应力）
+在倒计时阶段，恶龙会随机睁眼，在恶龙睁眼时，千万不能点集蛋，否则直接挑战失败！
+
+游戏共5关，越来越难（挑战极限）
+每过一关，会增加蛋的数量或者提高蛋破壳需要点击的次数，过五关即可挑战成功。
+
+在线地址
+体验地址：http…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7326393655391010853"
+                        open
+                      >
+                        <summary class="article-expander__title">前后端分离多年，为何服务端渲染（SSR）重回风口浪尖？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326393655391010853">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前后端分离多年，为何服务端渲染（SSR）重回风口浪尖？
+什么是服务端渲染？
+咱们先搞明白个事儿，啥叫服务端渲染？服务端渲染的全称是 Server-Side Rendering，简称SSR。
+简单说，就是在服务器上把网页生成好，整个的HTML页面生成出来，生成出的页面已经包含了所有必要的数据和结构信息，然后直接发给浏览器进行展现。
+这和现在流行的前后端分离设计有很大的区别，在前后端分离中，浏览器首先加载到的是一个基本的框架或者说是空壳页面，随后前端通过异步请求后端API获取到数据，然后再动态构建HTML，最后再让浏览器把页面逐渐展现出来。
+Web的发展历程
+要深入理解服务端渲染为何又成为热点，我们需要回顾Web的发展历史。
+早期Web开发（1990年代至2000年代初） ：在Web的早期，除了静态页面外，大多数网页的HTML是通过服务端渲染的。ASP、JSP、PHP等脚本语言盛行，它们通常将业务逻辑和HTML模板结合在一起，以处理请求并生成完整的HTML页面返回给客户端。在这个阶段，前后端技术混合使用，开发者往往需要同时具备前端和后端的技能。
+AJAX的崛起（2005年左右） ：Ajax技术的发展和jQuery库的普及使得网页能够动态加载数据，实现局部内容的更新，无需刷新整个页面。这一变化增强了前端的交互能力。尽管如此，服务器端渲染仍是主流，前后端职责分离尚未明显。
+前端框架的诞生（2009年以后） ：随着AngularJS、Ember.js等前端框架的诞生，前端工程师能够创建更复杂的单页应用（SPA）。这些应用通过API获取数据，并在客户端渲染页面，显著提升了用户体验。
+现代前端框架推动的前后端分离（2013年至今） ：React、Vue.js等现代前端框架凭借组件化和虚拟DOM等特性，极大地提升了开发效率和用户体验。同时，RESTful API的设计原则被广泛采纳，使后端…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4609,6 +4557,7 @@ GIF89a 版本支持透明
                         <summary class="article-expander__title">财富的真相</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://open.zhubai.wiki/a/l/t/z/pq/kuang/2359691792494870528">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>1、利息是资金的机会成本补偿；足够的钱+足够的时间&#x3D;财富上的自由，以进一步实现时间的自由。   
     
@@ -4841,8 +4790,6 @@ GIF89a 版本支持透明
    好了，以上就是本期的食堂周刊，观众老爷们如果觉得还不错，一键三连是对食堂老板最大的支持。   
     
    你的前端食堂，吃好每一顿饭，我们下期见。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -6291,8 +6238,8 @@ YouTube 也没有透露过，这个编号是怎么产生的。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7670300100">
-        <time id="build-timestamp" datetime="2024-01-26T15:53:09.410Z">2024-01-26T15:53:09.410Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7672182642">
+        <time id="build-timestamp" datetime="2024-01-26T18:52:51.790Z">2024-01-26T18:52:51.790Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
