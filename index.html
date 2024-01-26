@@ -2266,6 +2266,58 @@ body {
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7326378145573011467"
+                        open
+                      >
+                        <summary class="article-expander__title">🐲 🐲 🐲 js谐音梗创意小游戏《望子成龙》</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326378145573011467">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: smartblue
+🌻 前言
+龙年到来，祥瑞满天。愿您如龙般矫健，事业腾飞；如龙鳞闪耀，生活美满。祝您龙年大吉，万事如意！
+时隔许久，终于再次上线了创意投稿大赛，又到了我最喜欢的环节。
+🔥 游戏体验
+游戏灵感
+灵感来源于一个成语“望子成龙”，我把它具象化，把成语的意思字面化。即看到孩子变成龙，从而我联想到如果看到孩子变成龙，即闯关成功，如果看到孩子变成了其他动物，则闯关失败。
+顺藤摸瓜，据此思路我想到了1，2，3木头人这款游戏，类似的规则进行二创，最终想到了我这款小游戏。
+具体游戏介绍可以看游戏首页简介。
+
+游戏背景
+背景故事：有一天你被一条恶龙捉回了老巢，你发现它守着几颗蛋，盼望着它的孩子出生。你可怜巴巴的乞求恶龙放了你，恶龙说：“如果一会儿我的孩子出生成为猛龙，我一开心或许会放了你”。你听到这，暗暗想办法如何能找到真正的龙蛋孵化成龙，于是，一场集眼力、反应、手速的较量开始了。。。
+
+游戏规则
+找到真正的龙蛋（考验眼力和专注力）
+页面中有n颗蛋，在开始游戏时，会有n个光点随机进入这几个蛋。其中开始闪烁蓝光的光点即“龙魂”，“龙魂”进入的蛋即可孵化成龙。你需要盯紧蓝色光点的运动轨迹，不要“跟丢了”，找到真正的龙蛋！
+
+龙魂通过旋转随机打乱：
+
+快速点击蛋帮其破壳（考验手速）
+在光点进入蛋之后，即游戏正式开始，进入倒计时阶段。你需要快速点击“龙蛋”帮助其孵化。每颗蛋上都写了距离破壳剩余的点击次数。你需要在倒计时结束前敲碎“龙蛋”，孵化成龙。
+
+成功孵化龙蛋即挑战成功：
+
+孵化出了其他动物即挑战失败：
+
+恶龙睁眼时不能敲击龙蛋（考验反应力）
+在倒计时阶段，恶龙会随机睁眼，在恶龙睁眼时，千万不能点集蛋，否则直接挑战失败！
+
+游戏共5关，越来越难（挑战极限）
+每过一关，会增加蛋的数量或者提高蛋破壳需要点击的次数，过五关即可挑战成功。
+
+在线地址
+体验地址：http…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7326393655391010853"
                         open
                       >
@@ -4239,49 +4291,6 @@ GIF89a 版本支持透明
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7325627704782307337"
-                        open
-                      >
-                        <summary class="article-expander__title">前端金额运算精度丢失问题及解决方案</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7325627704782307337">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-前端开发中难免会遇到价格和金额计算的需求，这类需求所要计算的数值大多数情况下是要求精确到小数点后的多少位。但是因为JS语言本身的缺陷，在处理浮点数的运算时会出现一些奇怪的问题，导致计算不精确。
-本文尝试从现象入手，分析造成这一问题原因，并总结和整合一些通用的解决方案，以供大家参考。
-现象回顾
-下面的是JS进行数值运算过程中常见的问题，这个问题有个专业的名称叫精度丢失。
-在 JavaScript 中整数和浮点数都属于 Number 数据类型，所有的数字都是以 64 位浮点数形式存储，整数也是如此。所以我们在打印 1.00 这样的浮点数的结果是 1 而非 1.00 。在一些特殊的数值表示中，例如金额，这样看上去有点别扭，但是至少值是正确了。然而要命的是，当浮点数做数学运算的时候，你经常会发现一些问题，举几个例子：
-// 加法
-0.1 + 0.2 &#x3D; 0.30000000000000004
-0.7 + 0.1 &#x3D; 0.7999999999999999
-0.2 + 0.4 &#x3D; 0.6000000000000001
-2.22 + 0.1 &#x3D; 2.3200000000000003
-
-// 减法
-1.5 - 1.2 &#x3D; 0.30000000000000004
-0.3 - 0.2 &#x3D; 0.09999999999999998
-
-// 乘法
-19.9 * 100 &#x3D; 1989.9999999999998
-19.9 * 10 * 10 &#x3D; 1990
-1306377.64 * 100 &#x3D; 130637763.99999999
-1306377.64 * 10 * 10 &#x3D; 130637763.99999999
-0.7 * 180 &#x3D; 125.99999999999999
-9.7 * 100 &#x3D; 969.9999999999999
-39.7 * 100 &#x3D; 3970.0000000000005
-…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -4410,23 +4419,6 @@ GIF89a 版本支持透明
                               <span>这个接口调试插件太强了 推荐给你们</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7325495640053235738"
-                        open
-                      >
-                        <summary class="article-expander__title">idea官网下载不了了吗，宝贝们</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7325495640053235738">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>idea官网下载不了了吗，宝贝们</span>
                             </span>
                           </div>
                         </a>
@@ -5536,7 +5528,6 @@ RedisMate是一款专为开发过程中, 简化Redis调试操作而设计的macO
                         <summary class="article-expander__title">小树的 2024 年计划</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://open.zhubai.wiki/a/l/t/z/pq/xiaoshu/2358499036816498688">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>你好，我是小树。这是我为你写的第 95 封信。每期都会同步更新在微信公众号       一颗小树       。   
     
@@ -5892,6 +5883,40 @@ CodeGist 真是帮我大忙啦[玫瑰][玫瑰][玫瑰]
                 </section>
               </section>
             </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7323494008850743348"
+                        open
+                      >
+                        <summary class="article-expander__title">代码管理工具 CodeGist 简介如下👇👇👇</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7323494008850743348">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>代码管理工具 CodeGist
+简介如下👇👇👇</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -6192,8 +6217,8 @@ YouTube 也没有透露过，这个编号是怎么产生的。
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7666490187">
-        <time id="build-timestamp" datetime="2024-01-26T09:53:08.935Z">2024-01-26T09:53:08.935Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7668311011">
+        <time id="build-timestamp" datetime="2024-01-26T12:55:04.226Z">2024-01-26T12:55:04.226Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
