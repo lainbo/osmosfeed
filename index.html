@@ -501,7 +501,7 @@ Free Now to 2024-02-01T16:00:00.000Z</span>
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>[7073670907851440160#新人报道#]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -593,11 +593,285 @@ Reference
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-24 datetime="2024-01-24T14:01:00.000Z">2024-01-24</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-24 datetime="2024-01-24T14:01:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-24 datetime="2024-01-24T14:37:56.000Z">2024-01-24</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-24 datetime="2024-01-24T14:37:56.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7327547320832294966"
+                        open
+                      >
+                        <summary class="article-expander__title">我写了一个根据项目自动切换node版本的插件，再也不用手动使用命令切换了。</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7327547320832294966">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: cyanosis
+highlight: atom-one-dark
+背景
+事情是这样的，我最近在学习Next.js，启动Next.js项目需要node版本不低于v18.17.0，然而我们公司里的老项目要求node版本不能高于v16.20.0版本。于是我上班的时候使用的版本是v16.20.0，下班学习Next使用的版本是v20.0.0。
+最开始切换node版本工具，我使用的是n，但是每次上班或下班启动项目时，总是会忘记切换版本，导致启动报错，这让我觉得很麻烦，于是我打算写一个能根据项目自动切换node版本的插件。
+n和nvm实现原理
+n实现原理
+n将所有版本的Node.js都保存在一个目录中（默认是/usr/local/n/versions），每个版本的Node.js被保存在一个以版本号命名的子目录中。
+切换版本就是把/usr/local/n/versions/{版本号}/bin/node二进制文件复制到/usr/local/bin目录下。
+所以n切换版本是全局的，不能按目录设置node版本。
+/usr/local/n/versions目录
+
+nvm实现原理
+安装：当你使用 nvm 安装特定版本的 Node.js 时，它会从 Node.js 的官方网站下载预编译的二进制包，然后将这个包解压到 ~/.nvm/versions/node 目录下的一个以版本号命名的子目录中。这意味着每个版本的 Node.js 都有各自独立的安装位置。
+切换版本：当你使用 nvm use  命令切换 Node.js 版本时，nvm 实际上是修改了 PATH 环境变量，将选定版本的 Node.js 二进制文件所在路径添加到 PATH 最前面。这样，当你在 shell 中输入 node 或 npm 命令时，就会调用选定版本的 Node.js 或 npm。
+脚本加载：为了在…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7327472360863924224"
+                        open
+                      >
+                        <summary class="article-expander__title">技术资讯：npm 淘宝镜像正式到期，赶紧更新！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7327472360863924224">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>大家好，我是大澈！
+本文约800+字，整篇阅读大约需要2分钟。
+感谢关注微信公众号：“程序员大澈”，免费领取&quot;面试礼包&quot;一份，然后免费加入问答群，从此让解决问题的你不再孤单！
+1. 资讯速览
+由于node安装插件是从国外服务器下载，如果没有“特殊手法”，就可能会遇到下载速度慢、或其它异常问题。
+所以如果npm的服务器在中国就好了，于是我们乐于分享的淘宝团队干了这事。你可以用此只读的淘宝服务代替官方版本，且同步频率目前为 10 分钟一次。
+但在 1 月 22 日，淘宝原镜像域名（registry.npm.taobao.org）的 HTTPS 证书正式到期。如果想要继续使用，需要将 npm 源切换到新的源（registry.npmmirror.com），否则会报错。
+
+
+2. 资讯详细
+先聊聊如何切换新的镜像地址，再说一下淘宝镜像使用的两种方式。
+2.1 如何切换新的镜像地址
+如果你使用淘宝命令工具cnpm，则不需要去手动更新镜像地址，官方已自动做了处理。
+如果你是将npm官方镜像改成了淘宝镜像，则需要按下面步骤去手动更新。
+// 1. 清空缓存
+npm cache clean --force
+
+// 2. 切换新源
+npm config set registry https://registry.npmmirror.com
+
+2.2 第一次如何使用淘宝镜像
+npm官方镜像改成淘宝镜像的使用方式：
+// 1. 切换镜像源
+npm config set registry https://registry.npmmirror.com
+
+// 2. 检测是否切换成功
+npm config get registry
+
+淘宝命令工具cnpm的使用方式：
+// 1. 安装cnpm
+npm install -g cnpm --registry&#x3D;https://registry.npmmirror.com
+
+// 2. 检测是否安装成功
+cnpm -v
+
+2.3 npm改成淘宝和cnpm区别
+npm安装的包只有1个模块，而cnpm安装的包有2个模块，两者存在引用关系。
+npm安装的速度比cnpm安装的速度慢。
+2.4 小结
+淘宝原镜像域名（registry.npm.taobao.org）的 HTTPS 证书正式到期。
+如果你是将npm官方镜像改成了淘宝镜像，并想要继续使用，需要将 npm 源切换到新的源（registry.npmmirror.com），否则会报错。
+
+结语
+建立这个平台的初衷：
+打造一个专注于前端功能问题的问答平台，让大家高效搜索处理同样问题。
+遇到有共鸣的问题，与众多同行朋友们一起讨论，一起沉淀成长。
+平台现拥有功能问题、技术资讯、实用干货3个专栏内容。
+感谢关注微信公众号：“程序员大澈”，免费领取&quot;面试礼包&quot;一份，然后免费加入问答群，从此让解决问题的你不再孤单！</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7327467832866095130"
+                        open
+                      >
+                        <summary class="article-expander__title">pixi.js实战——《智慧路口（车辆轨迹实时追踪）》WebGL 2D 项目</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7327467832866095130">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>项目效果
+项目功能：
+位置更新、航向角计算。
+debug模式。
+位置角度线性补帧。
+变道、转弯、碰撞检测。
+mock轨迹数据
+大小屏适配
+图片效果：
+
+视频效果：
+jvideo
+项目启动
+项目地址
+github：(https://github.com/huoguozhang/car-tracking-2d)
+线上：todo
+(如果觉得项目对你有帮助的话, 可以给我一个star 和 赞，❤️)
+启动demo项目
+cd car-tracking-2d/demos/react-demo
+yarn
+yarn start
+界面使用
+debug 模式
+浏览器url ?后面(search部分)加入参数debug&#x3D;1
+例如：http://localhost:3000/home?tunnelNo&#x3D;tunnel1&amp;debug&#x3D;1
+将会展示调试信息：
+
+如图：车旁边的白色文字信息为debug模式才会展示的内容（由上到下为：里程、车id、车道id、[x,y]、旋转角度）
+实现：
+技术栈：
+ts+pixi.js+任意前端框架
+（前端框架使用vue和react或者其他框架都可以。只需要在mounted阶段，实例化我们暴露出来class即可。然后在destroyed或者unmounted阶段destory示例即可，后面会提到。）
+pixi.js
+官网介绍：
+Create beautiful digital content with the fastest, most flexible 2D WebGL renderer.
+pixi.js是一个2D的WebGL的渲染库。但是没有three.js知名度高。一个原因是，我们2D的需求技术路线很多，可以是dom、svg、canvas draw api等，包括本项目也可以使用其他技术方案实现，希望通过本文，大家在实现这种频繁更新元素位置的功能，可以考虑一下pixi…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7327500902108807205"
+                        open
+                      >
+                        <summary class="article-expander__title">备案过的域名过期后没管，竟被博彩网站接管了</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7327500902108807205">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>写在前面
+去年曾经申请过一个域名玩，特别便宜，九块钱一年。放上去了一个静态页面，当时研究了一下配置https，然后给自己的网站做过一次备案。
+前几天，到期后一直提醒我，但是我工作繁忙，也忘了去处理。直到前两天，突然一个云厂商电话打过来，居然说我的网站涉嫌赌博，存在违法行为，要取消备案？？？
+备案域名接管
+我的网站就是一个静态页面啊？咋可能涉嫌赌博，而且域名也早已过期了？
+电话过来之后，然后收到了一封云服务商发来的邮件
+
+好家伙，这咋突然变成赌博网站了？？？
+完了，域名接管算是让我碰到了，域名到期直接被抢注了，然后把备案信息也直接接管了。
+因为电话里已经确认域名过期了，但是备案信息忘了取消，所以云厂商这边就自动发起了取消流程。这个赌博网站已经访问不到了。
+写在后面
+这危害还挺大的，通过抢注过期的备案域名，来部署违法网站，这就代表着这是一个拥有国内工信部备案的违法网站。
+万万没想到，这波让我碰上了，没意识备案信息没有随域名到期一块取消，导致自己的备案信息被接管了。
+大家也注意，域名到期的时候记得把自己的备案信息给取消掉。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7327424955037564965"
+                        open
+                      >
+                        <summary class="article-expander__title">揭秘 &quot;mitt&quot; 源码：为什么作者钟情于 &#x60;map&#x60; 而放弃 &#x60;forEach&#x60;</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7327424955037564965">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>故事是这样的，半年前我提交了一个 Pull Request（PR），想要将作者在代码中使用的 map 改成 forEach，
+而作者的回应却是：map() is used because it is 3 bytes smaller when gzipped. （使用 map 是因为在 Gzip 压缩时可以减小 3 字节的体积。）
+咦？为什么会这样呢？
+&quot;mitt&quot; 简介
+首先，让我们认识一下 &quot;mitt&quot;，它是一只小巧灵活的事件发射器（event emitter）库，体积仅有 200 字节，但功能强大。这个小家伙在项目中充当了事件的传播者，有点像是一个小型的邮差，把消息传递给需要它的地方。
+developit/mitt: 🥊 Tiny 200 byte functional event emitter / pubsub. (github.com)
+作者的选择：map vs forEach
+在源码中，我们发现作者选择使用了 Array.prototype.map()，这是一个处理数组每个元素并返回新数组的函数。然而，有趣的地方在于，作者并没有在 map 中返回任何值。这和我对 map 的期望有些出入，因为我们习惯于用它生成一个新的数组。
+代码的细微变化
+曾经，代码片段是这样的，作者想要用 map 来执行一些操作，但却不生成新数组。
+if (handlers) {
+  (handlers as EventHandlerList)
+    .slice()
+    .map((handler) &#x3D;&gt; {
+      handler(evt!);
+    });
+}
+
+我希望修改成这样：
+if (handlers) {
+  (handlers as EventHandlerList)
+    .slice()
+    .forEach((handler) &#x3D;&gt; {
+      handler(evt!);
+    });
+}
+
+所以我很快就交了个PR：将map改成了forEach，经过了几个月的等待，PR被拒了，作者的回应是：map() is used because it is 3 bytes smaller when gzipped.（使用 map 是因为在 Gzip 压缩时可以减小 3 字节的体积。）
+
+
+小技巧背后的逻辑
+虽然 map 通常用于生成新数组，但作者在这里使用它更像是在借助压缩的优势，让代码更轻量。
+大小对比
+通过实验验证，使用 map 的打包大小确实稍微小一些：
+使用 map 时，打包大小为：
+  - 190 B: mitt.js.gz
+  - 162 B: mitt.js.br
+  - 189 B: mitt.mjs.gz
+  - 160 B: mitt.mjs.br
+  - 268 B: mitt.umd.js.gz
+  - 228 B: mitt.umd.js.br
+
+而使用 forEach 后，打包大小为：
+  - 192 B: mitt.js.gz
+  - 164 B: mitt.js.br
+  - 191 B: mitt.mjs.gz
+  - 162 B: mitt.mjs.br
+  - 270 B: mitt.umd.js.gz
+  - 230 B: mitt.umd.js.br
+
+进一步实验
+为了深入了解选择的影响，我又进行了一个实验。有趣的是，当我将代码中的一处使用 map 改为 forEach，而另一处保持不变时，结果居然是打包体积更大了。
+
+总结
+这个故事让我不仅仅关注于代码表面，还开始注重微小选择可能带来的影响。学到了很多平时容易忽略的点，&quot;mitt&quot; 作者的选择展现了在开发中面对权衡时的智慧，通过选择不同的API，以轻松的方式达到减小代码体积的目标。在编写代码时，无处不充满着权衡的乐趣。
+如果你对这个故事有更多的想法或者其他技术话题感兴趣，随时和我分享哦！</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -847,246 +1121,6 @@ Reference
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7327472360863924224"
-                        open
-                      >
-                        <summary class="article-expander__title">技术资讯：npm 淘宝镜像正式到期，赶紧更新！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7327472360863924224">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>大家好，我是大澈！
-本文约800+字，整篇阅读大约需要2分钟。
-感谢关注微信公众号：“程序员大澈”，免费领取&quot;面试礼包&quot;一份，然后免费加入问答群，从此让解决问题的你不再孤单！
-1. 资讯速览
-由于node安装插件是从国外服务器下载，如果没有“特殊手法”，就可能会遇到下载速度慢、或其它异常问题。
-所以如果npm的服务器在中国就好了，于是我们乐于分享的淘宝团队干了这事。你可以用此只读的淘宝服务代替官方版本，且同步频率目前为 10 分钟一次。
-但在 1 月 22 日，淘宝原镜像域名（registry.npm.taobao.org）的 HTTPS 证书正式到期。如果想要继续使用，需要将 npm 源切换到新的源（registry.npmmirror.com），否则会报错。
-
-
-2. 资讯详细
-先聊聊如何切换新的镜像地址，再说一下淘宝镜像使用的两种方式。
-2.1 如何切换新的镜像地址
-如果你使用淘宝命令工具cnpm，则不需要去手动更新镜像地址，官方已自动做了处理。
-如果你是将npm官方镜像改成了淘宝镜像，则需要按下面步骤去手动更新。
-// 1. 清空缓存
-npm cache clean --force
-
-// 2. 切换新源
-npm config set registry https://registry.npmmirror.com
-
-2.2 第一次如何使用淘宝镜像
-npm官方镜像改成淘宝镜像的使用方式：
-// 1. 切换镜像源
-npm config set registry https://registry.npmmirror.com
-
-// 2. 检测是否切换成功
-npm config get registry
-
-淘宝命令工具cnpm的使用方式：
-// 1. 安装cnpm
-npm install -g cnpm --registry&#x3D;https://registry.npmmirror.com
-
-// 2. 检测是否安装成功
-cnpm -v
-
-2.3 npm改成淘宝和cnpm区别
-npm安装的包只有1个模块，而cnpm安装的包有2个模块，两者存在引用关系。
-npm安装的速度比cnpm安装的速度慢。
-2.4 小结
-淘宝原镜像域名（registry.npm.taobao.org）的 HTTPS 证书正式到期。
-如果你是将npm官方镜像改成了淘宝镜像，并想要继续使用，需要将 npm 源切换到新的源（registry.npmmirror.com），否则会报错。
-
-结语
-建立这个平台的初衷：
-打造一个专注于前端功能问题的问答平台，让大家高效搜索处理同样问题。
-遇到有共鸣的问题，与众多同行朋友们一起讨论，一起沉淀成长。
-平台现拥有功能问题、技术资讯、实用干货3个专栏内容。
-感谢关注微信公众号：“程序员大澈”，免费领取&quot;面试礼包&quot;一份，然后免费加入问答群，从此让解决问题的你不再孤单！</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7327467832866095130"
-                        open
-                      >
-                        <summary class="article-expander__title">pixi.js实战——《智慧路口（车辆轨迹实时追踪）》WebGL 2D 项目</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7327467832866095130">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>项目效果
-项目功能：
-位置更新、航向角计算。
-debug模式。
-位置角度线性补帧。
-变道、转弯、碰撞检测。
-mock轨迹数据
-大小屏适配
-图片效果：
-
-视频效果：
-jvideo
-项目启动
-项目地址
-github：(https://github.com/huoguozhang/car-tracking-2d)
-线上：todo
-(如果觉得项目对你有帮助的话, 可以给我一个star 和 赞，❤️)
-启动demo项目
-cd car-tracking-2d/demos/react-demo
-yarn
-yarn start
-界面使用
-debug 模式
-浏览器url ?后面(search部分)加入参数debug&#x3D;1
-例如：http://localhost:3000/home?tunnelNo&#x3D;tunnel1&amp;debug&#x3D;1
-将会展示调试信息：
-
-如图：车旁边的白色文字信息为debug模式才会展示的内容（由上到下为：里程、车id、车道id、[x,y]、旋转角度）
-实现：
-技术栈：
-ts+pixi.js+任意前端框架
-（前端框架使用vue和react或者其他框架都可以。只需要在mounted阶段，实例化我们暴露出来class即可。然后在destroyed或者unmounted阶段destory示例即可，后面会提到。）
-pixi.js
-官网介绍：
-Create beautiful digital content with the fastest, most flexible 2D WebGL renderer.
-pixi.js是一个2D的WebGL的渲染库。但是没有three.js知名度高。一个原因是，我们2D的需求技术路线很多，可以是dom、svg、canvas draw api等，包括本项目也可以使用其他技术方案实现，希望通过本文，大家在实现这种频繁更新元素位置的功能，可以考虑一下pixi…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7327500902108807205"
-                        open
-                      >
-                        <summary class="article-expander__title">备案过的域名过期后没管，竟被博彩网站接管了</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7327500902108807205">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>写在前面
-去年曾经申请过一个域名玩，特别便宜，九块钱一年。放上去了一个静态页面，当时研究了一下配置https，然后给自己的网站做过一次备案。
-前几天，到期后一直提醒我，但是我工作繁忙，也忘了去处理。直到前两天，突然一个云厂商电话打过来，居然说我的网站涉嫌赌博，存在违法行为，要取消备案？？？
-备案域名接管
-我的网站就是一个静态页面啊？咋可能涉嫌赌博，而且域名也早已过期了？
-电话过来之后，然后收到了一封云服务商发来的邮件
-
-好家伙，这咋突然变成赌博网站了？？？
-完了，域名接管算是让我碰到了，域名到期直接被抢注了，然后把备案信息也直接接管了。
-因为电话里已经确认域名过期了，但是备案信息忘了取消，所以云厂商这边就自动发起了取消流程。这个赌博网站已经访问不到了。
-写在后面
-这危害还挺大的，通过抢注过期的备案域名，来部署违法网站，这就代表着这是一个拥有国内工信部备案的违法网站。
-万万没想到，这波让我碰上了，没意识备案信息没有随域名到期一块取消，导致自己的备案信息被接管了。
-大家也注意，域名到期的时候记得把自己的备案信息给取消掉。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7327424955037564965"
-                        open
-                      >
-                        <summary class="article-expander__title">揭秘 &quot;mitt&quot; 源码：为什么作者钟情于 &#x60;map&#x60; 而放弃 &#x60;forEach&#x60;</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7327424955037564965">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>故事是这样的，半年前我提交了一个 Pull Request（PR），想要将作者在代码中使用的 map 改成 forEach，
-而作者的回应却是：map() is used because it is 3 bytes smaller when gzipped. （使用 map 是因为在 Gzip 压缩时可以减小 3 字节的体积。）
-咦？为什么会这样呢？
-&quot;mitt&quot; 简介
-首先，让我们认识一下 &quot;mitt&quot;，它是一只小巧灵活的事件发射器（event emitter）库，体积仅有 200 字节，但功能强大。这个小家伙在项目中充当了事件的传播者，有点像是一个小型的邮差，把消息传递给需要它的地方。
-developit/mitt: 🥊 Tiny 200 byte functional event emitter / pubsub. (github.com)
-作者的选择：map vs forEach
-在源码中，我们发现作者选择使用了 Array.prototype.map()，这是一个处理数组每个元素并返回新数组的函数。然而，有趣的地方在于，作者并没有在 map 中返回任何值。这和我对 map 的期望有些出入，因为我们习惯于用它生成一个新的数组。
-代码的细微变化
-曾经，代码片段是这样的，作者想要用 map 来执行一些操作，但却不生成新数组。
-if (handlers) {
-  (handlers as EventHandlerList)
-    .slice()
-    .map((handler) &#x3D;&gt; {
-      handler(evt!);
-    });
-}
-
-我希望修改成这样：
-if (handlers) {
-  (handlers as EventHandlerList)
-    .slice()
-    .forEach((handler) &#x3D;&gt; {
-      handler(evt!);
-    });
-}
-
-所以我很快就交了个PR：将map改成了forEach，经过了几个月的等待，PR被拒了，作者的回应是：map() is used because it is 3 bytes smaller when gzipped.（使用 map 是因为在 Gzip 压缩时可以减小 3 字节的体积。）
-
-
-小技巧背后的逻辑
-虽然 map 通常用于生成新数组，但作者在这里使用它更像是在借助压缩的优势，让代码更轻量。
-大小对比
-通过实验验证，使用 map 的打包大小确实稍微小一些：
-使用 map 时，打包大小为：
-  - 190 B: mitt.js.gz
-  - 162 B: mitt.js.br
-  - 189 B: mitt.mjs.gz
-  - 160 B: mitt.mjs.br
-  - 268 B: mitt.umd.js.gz
-  - 228 B: mitt.umd.js.br
-
-而使用 forEach 后，打包大小为：
-  - 192 B: mitt.js.gz
-  - 164 B: mitt.js.br
-  - 191 B: mitt.mjs.gz
-  - 162 B: mitt.mjs.br
-  - 270 B: mitt.umd.js.gz
-  - 230 B: mitt.umd.js.br
-
-进一步实验
-为了深入了解选择的影响，我又进行了一个实验。有趣的是，当我将代码中的一处使用 map 改为 forEach，而另一处保持不变时，结果居然是打包体积更大了。
-
-总结
-这个故事让我不仅仅关注于代码表面，还开始注重微小选择可能带来的影响。学到了很多平时容易忽略的点，&quot;mitt&quot; 作者的选择展现了在开发中面对权衡时的智慧，通过选择不同的API，以轻松的方式达到减小代码体积的目标。在编写代码时，无处不充满着权衡的乐趣。
-如果你对这个故事有更多的想法或者其他技术话题感兴趣，随时和我分享哦！</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >李继刚的即刻动态</button>
                   <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
                 </h3>
@@ -1250,9 +1284,11 @@ if (handlers) {
                         <summary class="article-expander__title">如何向人类提问 [译]</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://lainbo.com/article/how-to-ask-questions">
                           <div class="article-summary-box-inner media-object">
-                              <img src="/bg_image.jpg" loading="lazy" class="media-object__media article-image" />
+                              <img src="https://www.notion.so/images/page-cover/nasa_earth_grid.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>工程师在寻求帮助时会遇到多种障碍。今天，我想提一提其中的一些问题，并分享我个人如何应对这些障碍的经验</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3553,42 +3589,6 @@ SSE简…</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7325800661231386663"
-                        open
-                      >
-                        <summary class="article-expander__title">一文搞懂插件架构设计原则</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7325800661231386663">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: orange
-最近在公司设计了插件平台架构，我之前写的Rallie.js（源码解读文章烂尾了）也非常适合用来做插件架构，两次实践让我对该领域略有心得，在此分享。
-文章内容主要是聊设计原则，没有具体的代码实现
-为什么需要插件架构
-需要插件架构的往往是国内SaaS产品，国内SaaS企业做到一定规模，很难避开的一个场景就是客户定制。面向海外市场的SaaS，产品力比较重要，用户为了击中他们爽点的设计买单，本质上更像C端市场。而在国内，产品的灵活性比较重要，很多企业往往并不需要你提供一个标准简洁的最佳实践，而是需要你的产品能帮助他们解决内部已有系统的痛点，否则用户的续费概率往往很低。
-海外SaaS为爽点买单，国内SaaS为痛点买单
-正是因为这个区别，导致国内做SaaS的企业到了海外往往水土不服，很难生存。因为在客户定制的土壤下生长起来的产品很难不受定制企业的影响，从而充满了各种非标设计，使产品力直线下降。
-如果有一个插件平台专门用来承载客户企业的定制需求，那就可以将客户企业对标准产品的影响降到最低，有利于产品摸索出最简洁又实用的SaaS产品
-
-设计的取舍
-在插件架构设计中，我总结出一个不可能三角：
-较低的设计与实现难度
-较丰富的功能
-较高的安全性
-最多只能实现两个。
-
-举个例子，在设计前端插件平台时，要相对容易地实现一个「让页面中的任意一个位置都支持注入插件代码进行定制」的系统，那么就只能运行受信任的插件代码。如果要运行不受信任的插件代码，只能放弃「让页面中的任意一个位置都支持注入插件代码进行定制」的诉求，规定一个或几个相对固定的区域安全地执行插件渲染逻辑。而如果想要实现安全性与丰富性兼得，那就需要处理沙箱运行，平台与插件之间数据的安全传递等问题，那么设计难度就会陡然飙升。
-在这里，我说的「设计难度」是实现API友好的架构的设计难度，而非单纯「完成设计」的难度。因为要与…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7325739662033879090"
                         open
                       >
@@ -3679,158 +3679,6 @@ jcode
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/lanseyj/20240120/t20240120_526564883.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市北碚区发布寒潮蓝色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/lanseyj/20240120/t20240120_526564883.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>北碚区气象台2024年1月20日18时10分发布“寒潮蓝色预警信号”，预计1月20日20时至23日8时，天府镇、朝阳街道、澄江镇、东阳街道、三圣镇、柳荫镇、金刀峡镇、静观镇、施家梁镇、龙凤桥街道、歇马街道、蔡家岗街道、童家溪镇、复兴街道、天生街道、水土街道、北温泉街道日平均气温将要下降6~8℃。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/lanseyj/20240120/t20240120_526564876.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市铜梁区发布寒潮蓝色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/lanseyj/20240120/t20240120_526564876.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>重庆市铜梁区气象台2024年1月20日18时10分发布“寒潮蓝色预警信号”，预计1月20日20时至23日08时，我区所有镇街日平均气温将要下降6℃以上。防御指南：1.做好防寒保暖，注意用火、用电安全，燃煤取暖注意防范一氧化碳中毒。2.农、林、养殖业做好作物、树木与牲畜防冻害准备；设施农业生产企业和农户注意采取防护措施。3.相关部门和乡镇街道按照职责，做好寒潮防范应对工作。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/lanseyj/20240120/t20240120_526564863.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市梁平区发布寒潮蓝色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/lanseyj/20240120/t20240120_526564863.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>梁平区气象台2024年1月20日17时50分发布“寒潮蓝色预警信号”，预计1月20日20时至23日8时，曲水镇、安胜镇、星桥镇、合兴街道、文化镇、复平镇、大观镇、紫照镇、柏家镇、石安镇、金带街道、蟠龙镇、双桂街道、福禄镇、梁山街道、礼让镇、竹山镇、袁驿镇、龙胜乡、明达镇、龙门镇、碧山镇、虎城镇、新盛镇、荫平镇、铁门乡、屏锦镇、云龙镇、和林镇、回龙镇、聚奎镇、仁贤街道、七星镇日平均气温将要下降6℃以上。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/lanseyj/20240120/t20240120_526564860.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市垫江县发布寒潮蓝色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/lanseyj/20240120/t20240120_526564860.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>垫江县气象台2024年1月20日18时发布“寒潮蓝色预警信号”。预计1月20日20时至23日8时，我县所有乡镇（街道）日平均气温将要下降6℃以上。做好防寒保暖，注意用火、用电安全，燃煤取暖注意防范一氧化碳中毒。农、林、养殖业做好作物、树木与牲畜防冻害准备；设施农业生产企业和农户注意采取防护措施。相关部门和乡镇街道按照职责，做好寒潮防范应对工作。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/lanseyj/20240120/t20240120_526564843.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市万盛经开区发布寒潮蓝色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/lanseyj/20240120/t20240120_526564843.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>万盛经开区气象台2024年1月20日17时40分发布“寒潮蓝色预警信号”，预计1月20日20时至23日8时，万东镇、东林街道、万盛街道、金桥镇、丛林镇、关坝镇、石林镇、青年镇、黑山镇、南桐镇日平均气温将要下降6℃以上。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/lanseyj/20240120/t20240120_526564846.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市大足区发布寒潮蓝色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/lanseyj/20240120/t20240120_526564846.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>大足区气象台2024年1月20日17时45分发布“寒潮蓝色预警信号”：预计20日20时至22日20时我区龙岗街道、棠香街道、玉龙镇、雍溪镇、金山镇、万古镇、国梁镇、回龙镇、石马镇、拾万镇、古龙镇、三驱镇、智凤街道、宝顶镇、高升镇、铁山镇、中敖镇、高坪镇、龙滩子街道、通桥街道、邮亭镇、双路街道、龙水镇、珠溪镇、龙石镇、季家镇、宝兴镇等镇街日平均气温将要下降6℃以上，山口河谷地区阵风可达5～7级，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/lanseyj/20240120/t20240120_526564837.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市忠县发布寒潮蓝色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/lanseyj/20240120/t20240120_526564837.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>忠县气象台2024年1月20日17时30分发布“寒潮蓝色预警信号”，预计1月20日20时至23日8时，忠州街道、白公街道、新生街道、乌杨街道、涂井乡、石宝镇、汝溪镇、金声乡、野鹤镇、磨子土家族乡、石子乡、复兴镇、东溪镇、黄金镇、永丰镇、花桥镇、三汇镇、马灌镇、官坝镇、金鸡镇、石黄镇、兴峰乡、白石镇、任家镇、双桂镇、拔山镇、洋渡镇、善广乡、新立镇日平均气温将要下降6℃以上。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/lanseyj/20240120/t20240120_526564835.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市黔江区发布寒潮蓝色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/lanseyj/20240120/t20240120_526564835.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>黔江区气象台2024年1月20日17时30分发布“寒潮蓝色预警信号”，预计1月20日20时至23日8时，我区城南街道、正阳街道、水市镇、邻鄂镇、新华乡、白土乡等所有乡镇街道日平均气温将要下降6-8℃。冷空气影响时，山口河谷地区阵风可达4-6级，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -3906,6 +3754,7 @@ CodeGist：https://codegist.cn/</span>
                         <summary class="article-expander__title">#42 订阅制的消亡？</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://open.zhubai.wiki/a/l/t/z/pq/adrian/2360064802070450176">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>本文是一个在reddit上关于订阅制的讨论，我觉得很有启发意义，所以搬运分享一下！文末会写上我的观点。   
       
@@ -5177,7 +5026,6 @@ RedisMate是一款专为开发过程中, 简化Redis调试操作而设计的macO
                         <summary class="article-expander__title">小树的 2024 年计划</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://open.zhubai.wiki/a/l/t/z/pq/xiaoshu/2358499036816498688">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>你好，我是小树。这是我为你写的第 95 封信。每期都会同步更新在微信公众号       一颗小树       。   
     
@@ -5753,75 +5601,10 @@ CodeGist 真是帮我大忙啦[玫瑰][玫瑰][玫瑰]
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-29 datetime="2023-12-29T00:11:07.000Z">2023-12-29</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-29 datetime="2023-12-29T00:11:07.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >阮一峰的网络日志</button>
-                  <a class="source-heading__link" href="http://www.ruanyifeng.com/blog/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.ruanyifeng.com/blog/2023/12/weekly-issue-284.html"
-                        open
-                      >
-                        <summary class="article-expander__title">科技爱好者周刊（第 284 期）：YouTube 有多少个视频？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.ruanyifeng.com/blog/2023/12/weekly-issue-284.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>这里记录每周值得分享的科技内容，周五发布。
-本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。
-封面图
-
-一位意大利摄影师，苦苦尝试了6年，终于在本月拍到了一张难以置信的照片：大教堂、山峰、月亮处于一条直线，并且地球反射的太阳光，通过长曝光，可以照亮月亮顶部。（via）
-YouTube 有多少个视频？
-YouTube 是世界最大视频网站，全世界的人都在上传视频。
-
-但是，它没有透露过，内部一共有多少个视频。
-上周，网上出现了一篇有趣的文章，使用概率方法，估计 YouTube 的视频总数。
-
-这篇文章非常有启发意义，面试可能也会出这一类的题目。下面，我就分享作者是怎么做的。
-我们知道，每一个 YouTube 视频都有唯一编号，放在 URL 里面。
-比如，某个视频的 URL 是https://www.youtube.com/watch?v&#x3D;NJHG0yuBabQ&amp;，那么它的视频编号就是NJHG0yuBabQ&amp;。
-
-YouTube 也没有透露过，这个编号是怎么产生的。
-但是根据观察，可以得知它是一个11位字符串，前十位字符的取值范围是64个值（[a-zA-Z0-9_-]），最后的第十一位字符的取值范围只有16个值。
-这意味着，所有的编号一共有 2^64 种可能，这是一个超级巨大的数字，足以容纳过去和将来所有可能生成的视频。
-显然，不是每一个编号，都有对应的视频，绝大部分是空号，而且空号远远多于实际视频。如果我们假定，YouTube 一共有10亿个视频，那么你大概猜184亿次，才会猜中一个有效的编号（前提是这些编号为均匀分布）。
-那么，我们可以反推，通过抽中有效编号的概率，判断出 YouTube 一共有多少个视频。
-这就好比，某个地区的电话号码是从 843-000-0000 到 843-999-9999，一…</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7677840409">
-        <time id="build-timestamp" datetime="2024-01-27T09:52:55.576Z">2024-01-27T09:52:55.576Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7678756971">
+        <time id="build-timestamp" datetime="2024-01-27T12:53:37.781Z">2024-01-27T12:53:37.781Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
