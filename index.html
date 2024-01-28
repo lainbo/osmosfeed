@@ -381,6 +381,62 @@
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7327881655405789236"
+                        open
+                      >
+                        <summary class="article-expander__title">没有虚拟DOM版本的vue（Vue Vapor）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7327881655405789236">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: z-blue
+前言
+随着Svelte和SolidJS的流行，无虚拟DOM模式逐渐开始火了起来。vue也推出了无虚拟DOM模式的版本，就是我们今天要讲的Vue Vapor。
+什么是Vue Vapor
+Vue Vapor是一个无虚拟DOM模式版本的vue。这个仓库是2023年11月9日基于vuejs/core仓库（也就是vue3仓库）新建的，项目地址为 https://github.com/vuejs/core-vapor。Vue Vapor目前还处于实验阶段，不过你可以通过官方提供的Vue Vapor演练场在线体验无虚拟DOM版本的vue。playground演练场的地址为：https://vapor-repl.netlify.app。
+目前Vue Vapor只实现了vue3中的部分功能，KeepAlive、Teleport等还未实现。详情查看官方的TODO：https://github.com/vuejs/core-vapor?tab&#x3D;readme-ov-file#todo
+如何使用Vue Vapor
+对于使用者来说无虚拟DOM模式版本的vue和目前的vue3用法是一样的，vue只是对内部实现进行了修改，对外暴露出的API还是一样的，当然关于虚拟DOM相关的API在Vue Vapor中没有了。
+我们来看看一个demo，和目前vue3写法是一样的：
+
+import { ref } from &#x27;vue&#x27;
+const msg &#x3D; ref(&#x27;Hello World!&#x27;)
+
+
+
+  
+{{ msg }}
+  
+
+
+我们再来看看运行效果：
+
+从*.vue文件渲染到浏览器真实DOM的过程
+我们先来看看目前版本的vue是如何从一…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >Lainbo&#x27;s Blog</button>
                   <a class="source-heading__link" href="https://lainbo.com/">Open</a>
                 </h3>
@@ -743,6 +799,65 @@ nvm实现原理
 切换版本：当你使用 nvm use  命令切换 Node.js 版本时，nvm 实际上是修改了 PATH 环境变量，将选定版本的 Node.js 二进制文件所在路径添加到 PATH 最前面。这样，当你在 shell 中输入 node 或 npm 命令时，就会调用选定版本的 Node.js 或 npm。
 脚本加载：为了在…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7327469683631325219"
+                        open
+                      >
+                        <summary class="article-expander__title">一文学会用 react-spring 做弹簧动画</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7327469683631325219">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>网页中经常会见到一些动画，动画可以让产品的交互体验更好。
+一般的动画我们会用 css 的 animation 和 transition 来做，但当涉及到多个元素的时候，事情就会变得复杂。
+比如下面这个动画：
+
+横线和竖线依次做动画，最后是笑脸的动画。
+这么多个元素的动画如何来安排顺序呢？
+如果用 css 动画来做，那要依次设置不同的动画开始时间，就很麻烦。
+这种就需要用到专门的动画库了，比如 react-spring。
+我们创建个 react 项目：
+npx create-react-app --template&#x3D;typescript react-spring-test
+
+
+安装 react-spring 的包：
+npm install --save @react-spring/web
+
+然后改下 App.tsx
+import { useSpringValue, animated, useSpring } from &#x27;@react-spring/web&#x27;
+import { useEffect } from &#x27;react&#x27;;
+import &#x27;./App.css&#x27;;
+
+export default function App() {
+  const width &#x3D; useSpringValue(0, {
+    config: {
+      duration: 2000
+    }
+  });
+
+  useEffect(() &#x3D;&gt; {
+    width.start(300);
+  }, []);
+
+  return 
+}
+
+还有 App.css
+.box {
+  background: blue;
+  height: 100px;
+}
+
+跑一下开发服务…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2261,6 +2376,335 @@ flex布局大家应该已经运用的炉火纯青了，相信在日常开发中�
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7326809915434483750"
+                        open
+                      >
+                        <summary class="article-expander__title">前端工具分享</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326809915434483750">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: smartblue
+Web Tools
+文章来源：Web Tools - 下落香樟树 (zxkv)
+注意事项
+[✔]：组件或工具后的 [] 标注有 ✔ 的，为已经尝试使用过的。
+截图工具
+Snipaste「✔ 截屏工具」
+PixPin「✔ 截屏工具」
+pear-rec「✔ 截屏、录屏、图片处理」
+浏览器工具
+HiPC 桌面工具
+HiPC 系统助手
+Infinity 新标签页 (Pro)「🔥」
+iTab 新标签页「✔」
+Wetab
+howdz 启始页
+电影日历「电影日历 - 在线版」
+AI 旋风「✔ 工具集合」
+终端工具
+hyper.js「✔ 终端工具」
+工具箱
+He3 🔨「辅助工具」
+AppWorks 🔨「辅助工具」
+前端工具箱「前端工具网站」
+工具箱(在线版)「前端工具网站」
+菜鸟工具(在线版)「前端工具网站」
+零代码工具箱 🧰(在线版)「前端工具网站」
+框架模板
+COOL
+RuoYi「✔」
+Vben Admin「✔」
+AntD Pro Vue
+vue element admin「✔」
+Naive Ui Admin
+微服务框架
+无界 wujie
+乾坤 qiankun
+single-spa
+前端插件
+InfiniteGrid「瀑布流」
+FullCalendar「日历」
+Virtual Tree「✔」
+Vue virtual tree「✔」
+vue-concise-slider「✔」
+handsontable
+pinia-plugin-persistedstate「✔ 数据持久化」
+lite-virtual-list「✔ 虚拟列表」
+vue-drag-resize「✔ 拖拽」
+Editor.md「Markdown 编辑器」
+bpmn 流程图「在线版流程图」
+million「React 代码优化工具」
+ofa.js「JS 框架」
+medium-zoom「图片点击放大预览」
+开源图标库
+IconFont「✔」
+IconPark「✔」
+xicons
+intoGIF「✔ loading 动画制作」
+LOADING.IO「✔ loading 动画，部分免费」
+开源图库
+unDraw
+pixabay
+unsplash
+pexels
+wallspic
+辅助工具
+语雀「✔」
+excalidraw「在线流程图」
+知犀思维导图「在线版、安装版思维导图、流程图」
+tinify(中文版)「🔥 🐼 熊猫压缩、只能压缩、最大 20 张，单张限制 5M」
+tinify(英文版)「🔥 🐼 熊猫压缩、可转格式」
+百度脑图「✔ 在线版思维导图」
+TreeMind 树图「💰 收费」
+GitMind「💰 收费」
+ZhiMap「在线版思维导图」
+draw.io
+Moonvy 月维「在线设计图」
+蓝湖「在线设计图」
+Figma「在线设计图」
+模拟数据
+Better Mock「🔥 Mock Data - 无需登录」
+MockJS「🔥 Mock Data - 无需登录」
+Easy Mock「✔ Mock Data - 需要登录」
+rap2「✔ TaoBao Mock Data - 需要登录」
+数据统计
+umami「✔」
+百度数据统计</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7326733138422480905"
+                        open
+                      >
+                        <summary class="article-expander__title">你可能不太熟知的布局技巧</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326733138422480905">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言，如果你想更系统的掌握 Web 布局技术，请移步阅读《现代 Web 布局》！
+随着Web技术不断的革新，CSS近几年也变得多年前要更强大。在Web开发中，CSS是不可或缺的一部分，对于很多Web开发者来说，有很多CSS属性不知道，或者说他们知道，但忘记在最恰当的时候使用最适合的CSS属性。而且时至今日，其中有一些CSS的属性可以让开发者能节约更多的时间。比如说，在Web布局中，现代CSS特性就可以更好的帮助我们快速实现，例如等高布局，水平垂直居中，经典的圣杯布局、宽高比例、页脚保持在底部等。在本文中，我将会介绍一些不同的CSS属性来实现这些效果，希望大家会感兴趣。更希望对大家今后的工作有所帮助。
+水平垂直居中
+如何实现水平垂直居中 可以说是CSS面试题中的经典面试题，在多年前这个面试题给很多同学都带来了困惑，但 Flexbxo布局模块 和 CSS Grid布局模块 的到来，可以说实现水平垂直居中已是非常的容易。
+Flexbox中实现水平垂直居中
+在Flexbox布局模块中，不管是单行还是多行，要让它们在容器中水平垂直居中都是件易事，而且方法也有多种。最常见的是在Flex容器上设置对齐方式，在Flex项目上设置margin:auto。
+先来看在Flex容器上设置对齐方式。
+Flex容器和Flex项目上设置对齐方式
+从《Flexbox 布局中的对齐方式》一文中，我们可以知道在Flex容器上设置justify-content、align-items的值为center时，可以让元素在Flex容器中达到水平垂直居中的效果。来看一个示例：
+
+
+    
+
+
+
+/* CSS */
+.flex__container {
+    dis…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;18
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7326551966854217763"
+                        open
+                      >
+                        <summary class="article-expander__title">200 行代码实现一个超瘦的 React （起步篇）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326551966854217763">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>&#x27;Hi, my name is, what?&#x27;,
+&#x27;My name is, who?&#x27;,
+&#x27;My name is, chka-chka&#x27;,
+&#x27;Slim React! 🤣&#x27;
+月更计划 2/1
+每每看到好兄弟们的内推、平台上的职位要求，大都是“深入了解框架原理”之类的要求，苦于自己作为一个菜鸟，看源码是不可能看源码的，先不说看不看的懂，甚至也看不下去；恰好 @阿崔cxr 大佬拉着一群哥们搞了个 7 天打卡手写一个简单的 Mini-React 的活动，本着学点，反正学不进多少的态度，就跟着一步步写完了这个小项目。鉴于这个 Mini-React 相比 @阿崔cxr 大佬之前做的 Mini-Vue 项目，实在是 mini 太多，我更愿意称我的这个项目为 Slim-React 🤪。
+Slim-React 的仓库地址: https://github.com/Nauxscript/slim-react，如果有疑问的可以查阅代码或者留下你的 issue，哪怕是动动发财的手指点个不要钱的 ⭐ 和 follow 一下呢~
+那直入今天正题：
+
+“如何用 200 行代码实现一个超瘦的 React ?” 
+简单组件渲染
+首先，去 React 官网看看文档最简单使用方式；其示例代码如下：
+import { createRoot } from &#x27;react-dom/client&#x27;;
+
+// Clear the existing HTML content
+document.body.innerHTML &#x3D; &#x27;
+&#x27;;
+
+// Render your React component instead
+const root &#x3D; createRoot(document.getElementById(&#x27;app&#x27;));
+root.render(
+Hello, world&lt;/…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7326461075447201843"
+                        open
+                      >
+                        <summary class="article-expander__title">【动画进阶】神奇的 3D 卡片反光闪烁动效</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326461075447201843">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>最近，有群里在群里发了这么一个非常有意思的卡片 Hover 动效，来源于此网站 -- key-drop，效果如下：
+
+非常有意思酷炫的效果。而本文，我们不会完全还原此效果，而是基于此效果，尝试去制作这么一个类似的卡片交互效果：
+
+该效果的几个核心点：
+卡片的 3D 旋转跟随鼠标移动效果
+如何让卡片在 Hover 状态，有不同的光泽变化
+如何让卡片在 Hover 状态，有 Blink，Blink 的星星闪烁效果
+当然，要做到卡片的 3D 旋转跟随鼠标移动效果需要一定程度的借助 JavaScript，因此，最终的效果是 CSS 配合 JavaScript 以及一些动态效果的 Gif 共同实现。
+好，下面就让我们一步一步一起来实现这个效果。
+卡片的 3D 旋转跟随效果
+OK，接下来，如何实现 3D 卡片效果呢？
+这个效果之前在 让交互更加生动！有意思的鼠标跟随 3D 旋转动效 实现过一次，我们复习一下。
+这个交互效果主要有两个核心：
+借助了 CSS 3D 的能力
+元素的旋转需要和鼠标的移动相结合
+我们的目标是实现这样一个动画效果：
+
+这里，我们其实有两个核心元素：
+鼠标活动区域
+旋转物体本身
+鼠标在鼠标活动区域内的移动，会影响旋转物体本身的 3D 旋转，而旋转的方向其实可以被分解为 X 轴方向与 Y 轴方向。
+我们来看一下，假设我们的 HTML 结构如下：
+
+    
+
+
+
+得到这样一个图形：
+
+这里，body 的范围就是整个鼠标可活动区域，也是我们添加鼠标的 mousemove 事件的宿主 target，而 #element 就是需要跟随鼠标一起转动的旋转物体本身。
+因为整个效果是需要基于 CSS 3D 的，我们首先加上简单的 CSS 3D 效果：
+body {
+    width: 100vw;
+    …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7326378145573011467"
+                        open
+                      >
+                        <summary class="article-expander__title">🐲 🐲 🐲 js谐音梗创意小游戏《望子成龙》</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326378145573011467">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: smartblue
+🌻 前言
+龙年到来，祥瑞满天。愿您如龙般矫健，事业腾飞；如龙鳞闪耀，生活美满。祝您龙年大吉，万事如意！
+时隔许久，终于再次上线了创意投稿大赛，又到了我最喜欢的环节。
+🔥 游戏体验
+游戏灵感
+灵感来源于一个成语“望子成龙”，我把它具象化，把成语的意思字面化。即看到孩子变成龙，从而我联想到如果看到孩子变成龙，即闯关成功，如果看到孩子变成了其他动物，则闯关失败。
+顺藤摸瓜，据此思路我想到了1，2，3木头人这款游戏，类似的规则进行二创，最终想到了我这款小游戏。
+具体游戏介绍可以看游戏首页简介。
+
+游戏背景
+背景故事：有一天你被一条恶龙捉回了老巢，你发现它守着几颗蛋，盼望着它的孩子出生。你可怜巴巴的乞求恶龙放了你，恶龙说：“如果一会儿我的孩子出生成为猛龙，我一开心或许会放了你”。你听到这，暗暗想办法如何能找到真正的龙蛋孵化成龙，于是，一场集眼力、反应、手速的较量开始了。。。
+
+游戏规则
+找到真正的龙蛋（考验眼力和专注力）
+页面中有n颗蛋，在开始游戏时，会有n个光点随机进入这几个蛋。其中开始闪烁蓝光的光点即“龙魂”，“龙魂”进入的蛋即可孵化成龙。你需要盯紧蓝色光点的运动轨迹，不要“跟丢了”，找到真正的龙蛋！
+
+龙魂通过旋转随机打乱：
+
+快速点击蛋帮其破壳（考验手速）
+在光点进入蛋之后，即游戏正式开始，进入倒计时阶段。你需要快速点击“龙蛋”帮助其孵化。每颗蛋上都写了距离破壳剩余的点击次数。你需要在倒计时结束前敲碎“龙蛋”，孵化成龙。
+
+成功孵化龙蛋即挑战成功：
+
+孵化出了其他动物即挑战失败：
+
+恶龙睁眼时不能敲击龙蛋（考验反应力）
+在倒计时阶段，恶龙会随机睁眼，在恶龙睁眼时，千万不能点集蛋，否则直接挑战失败！
+
+游戏共5关，越来越难（挑战极限）
+每过一关，会增加蛋的数量或者提高蛋破壳需要点击的次数，过五关即可挑战成功。
+
+在线地址
+体验地址：http…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7326393655391010853"
+                        open
+                      >
+                        <summary class="article-expander__title">前后端分离多年，为何服务端渲染（SSR）重回风口浪尖？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326393655391010853">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前后端分离多年，为何服务端渲染（SSR）重回风口浪尖？
+什么是服务端渲染？
+咱们先搞明白个事儿，啥叫服务端渲染？服务端渲染的全称是 Server-Side Rendering，简称SSR。
+简单说，就是在服务器上把网页生成好，整个的HTML页面生成出来，生成出的页面已经包含了所有必要的数据和结构信息，然后直接发给浏览器进行展现。
+这和现在流行的前后端分离设计有很大的区别，在前后端分离中，浏览器首先加载到的是一个基本的框架或者说是空壳页面，随后前端通过异步请求后端API获取到数据，然后再动态构建HTML，最后再让浏览器把页面逐渐展现出来。
+Web的发展历程
+要深入理解服务端渲染为何又成为热点，我们需要回顾Web的发展历史。
+早期Web开发（1990年代至2000年代初） ：在Web的早期，除了静态页面外，大多数网页的HTML是通过服务端渲染的。ASP、JSP、PHP等脚本语言盛行，它们通常将业务逻辑和HTML模板结合在一起，以处理请求并生成完整的HTML页面返回给客户端。在这个阶段，前后端技术混合使用，开发者往往需要同时具备前端和后端的技能。
+AJAX的崛起（2005年左右） ：Ajax技术的发展和jQuery库的普及使得网页能够动态加载数据，实现局部内容的更新，无需刷新整个页面。这一变化增强了前端的交互能力。尽管如此，服务器端渲染仍是主流，前后端职责分离尚未明显。
+前端框架的诞生（2009年以后） ：随着AngularJS、Ember.js等前端框架的诞生，前端工程师能够创建更复杂的单页应用（SPA）。这些应用通过API获取数据，并在客户端渲染页面，显著提升了用户体验。
+现代前端框架推动的前后端分离（2013年至今） ：React、Vue.js等现代前端框架凭借组件化和虚拟DOM等特性，极大地提升了开发效率和用户体验。同时，RESTful API的设计原则被广泛采纳，使后端…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >Barret李靖的即刻动态</button>
                   <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
                 </h3>
@@ -2482,154 +2926,6 @@ flex布局大家应该已经运用的炉火纯青了，相信在日常开发中�
                               <span>昨晚直播半小时撸了个小插件，主要是为了解决下面的问题：
 当你想借助别的库来实现时，我需要经常复制库里面的使用案例，然后我还要再从命令行输入去安装这个依赖，我觉得有点麻烦了，我希望这个库能够监听到我的导入语句，在头部增加一个按钮，帮助我点击完直接安装依赖，这样我就不用再去复制粘贴了。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7326461075447201843"
-                        open
-                      >
-                        <summary class="article-expander__title">【动画进阶】神奇的 3D 卡片反光闪烁动效</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326461075447201843">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>最近，有群里在群里发了这么一个非常有意思的卡片 Hover 动效，来源于此网站 -- key-drop，效果如下：
-
-非常有意思酷炫的效果。而本文，我们不会完全还原此效果，而是基于此效果，尝试去制作这么一个类似的卡片交互效果：
-
-该效果的几个核心点：
-卡片的 3D 旋转跟随鼠标移动效果
-如何让卡片在 Hover 状态，有不同的光泽变化
-如何让卡片在 Hover 状态，有 Blink，Blink 的星星闪烁效果
-当然，要做到卡片的 3D 旋转跟随鼠标移动效果需要一定程度的借助 JavaScript，因此，最终的效果是 CSS 配合 JavaScript 以及一些动态效果的 Gif 共同实现。
-好，下面就让我们一步一步一起来实现这个效果。
-卡片的 3D 旋转跟随效果
-OK，接下来，如何实现 3D 卡片效果呢？
-这个效果之前在 让交互更加生动！有意思的鼠标跟随 3D 旋转动效 实现过一次，我们复习一下。
-这个交互效果主要有两个核心：
-借助了 CSS 3D 的能力
-元素的旋转需要和鼠标的移动相结合
-我们的目标是实现这样一个动画效果：
-
-这里，我们其实有两个核心元素：
-鼠标活动区域
-旋转物体本身
-鼠标在鼠标活动区域内的移动，会影响旋转物体本身的 3D 旋转，而旋转的方向其实可以被分解为 X 轴方向与 Y 轴方向。
-我们来看一下，假设我们的 HTML 结构如下：
-
-    
-
-
-
-得到这样一个图形：
-
-这里，body 的范围就是整个鼠标可活动区域，也是我们添加鼠标的 mousemove 事件的宿主 target，而 #element 就是需要跟随鼠标一起转动的旋转物体本身。
-因为整个效果是需要基于 CSS 3D 的，我们首先加上简单的 CSS 3D 效果：
-body {
-    width: 100vw;
-    …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7326378145573011467"
-                        open
-                      >
-                        <summary class="article-expander__title">🐲 🐲 🐲 js谐音梗创意小游戏《望子成龙》</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326378145573011467">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: smartblue
-🌻 前言
-龙年到来，祥瑞满天。愿您如龙般矫健，事业腾飞；如龙鳞闪耀，生活美满。祝您龙年大吉，万事如意！
-时隔许久，终于再次上线了创意投稿大赛，又到了我最喜欢的环节。
-🔥 游戏体验
-游戏灵感
-灵感来源于一个成语“望子成龙”，我把它具象化，把成语的意思字面化。即看到孩子变成龙，从而我联想到如果看到孩子变成龙，即闯关成功，如果看到孩子变成了其他动物，则闯关失败。
-顺藤摸瓜，据此思路我想到了1，2，3木头人这款游戏，类似的规则进行二创，最终想到了我这款小游戏。
-具体游戏介绍可以看游戏首页简介。
-
-游戏背景
-背景故事：有一天你被一条恶龙捉回了老巢，你发现它守着几颗蛋，盼望着它的孩子出生。你可怜巴巴的乞求恶龙放了你，恶龙说：“如果一会儿我的孩子出生成为猛龙，我一开心或许会放了你”。你听到这，暗暗想办法如何能找到真正的龙蛋孵化成龙，于是，一场集眼力、反应、手速的较量开始了。。。
-
-游戏规则
-找到真正的龙蛋（考验眼力和专注力）
-页面中有n颗蛋，在开始游戏时，会有n个光点随机进入这几个蛋。其中开始闪烁蓝光的光点即“龙魂”，“龙魂”进入的蛋即可孵化成龙。你需要盯紧蓝色光点的运动轨迹，不要“跟丢了”，找到真正的龙蛋！
-
-龙魂通过旋转随机打乱：
-
-快速点击蛋帮其破壳（考验手速）
-在光点进入蛋之后，即游戏正式开始，进入倒计时阶段。你需要快速点击“龙蛋”帮助其孵化。每颗蛋上都写了距离破壳剩余的点击次数。你需要在倒计时结束前敲碎“龙蛋”，孵化成龙。
-
-成功孵化龙蛋即挑战成功：
-
-孵化出了其他动物即挑战失败：
-
-恶龙睁眼时不能敲击龙蛋（考验反应力）
-在倒计时阶段，恶龙会随机睁眼，在恶龙睁眼时，千万不能点集蛋，否则直接挑战失败！
-
-游戏共5关，越来越难（挑战极限）
-每过一关，会增加蛋的数量或者提高蛋破壳需要点击的次数，过五关即可挑战成功。
-
-在线地址
-体验地址：http…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7326393655391010853"
-                        open
-                      >
-                        <summary class="article-expander__title">前后端分离多年，为何服务端渲染（SSR）重回风口浪尖？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326393655391010853">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前后端分离多年，为何服务端渲染（SSR）重回风口浪尖？
-什么是服务端渲染？
-咱们先搞明白个事儿，啥叫服务端渲染？服务端渲染的全称是 Server-Side Rendering，简称SSR。
-简单说，就是在服务器上把网页生成好，整个的HTML页面生成出来，生成出的页面已经包含了所有必要的数据和结构信息，然后直接发给浏览器进行展现。
-这和现在流行的前后端分离设计有很大的区别，在前后端分离中，浏览器首先加载到的是一个基本的框架或者说是空壳页面，随后前端通过异步请求后端API获取到数据，然后再动态构建HTML，最后再让浏览器把页面逐渐展现出来。
-Web的发展历程
-要深入理解服务端渲染为何又成为热点，我们需要回顾Web的发展历史。
-早期Web开发（1990年代至2000年代初） ：在Web的早期，除了静态页面外，大多数网页的HTML是通过服务端渲染的。ASP、JSP、PHP等脚本语言盛行，它们通常将业务逻辑和HTML模板结合在一起，以处理请求并生成完整的HTML页面返回给客户端。在这个阶段，前后端技术混合使用，开发者往往需要同时具备前端和后端的技能。
-AJAX的崛起（2005年左右） ：Ajax技术的发展和jQuery库的普及使得网页能够动态加载数据，实现局部内容的更新，无需刷新整个页面。这一变化增强了前端的交互能力。尽管如此，服务器端渲染仍是主流，前后端职责分离尚未明显。
-前端框架的诞生（2009年以后） ：随着AngularJS、Ember.js等前端框架的诞生，前端工程师能够创建更复杂的单页应用（SPA）。这些应用通过API获取数据，并在客户端渲染页面，显著提升了用户体验。
-现代前端框架推动的前后端分离（2013年至今） ：React、Vue.js等现代前端框架凭借组件化和虚拟DOM等特性，极大地提升了开发效率和用户体验。同时，RESTful API的设计原则被广泛采纳，使后端…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3196,82 +3492,6 @@ AJAX的崛起（2005年左右） ：Ajax技术的发展和jQuery库的普及使�
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240121/t20240121_526565428.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市彭水苗族土家族自治县发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240121/t20240121_526565428.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>彭水自治县气象台2024年1月21日12时30分发布“道路结冰黄色预警信号”，预计1月21日16时至23日8时，我县石柳乡、桑柘镇、大同镇、梅子垭镇、太原镇、龙射镇、普子镇、润溪乡、朗溪乡、石盘乡等全部乡镇（街道）海拔600米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240121/t20240121_526565424.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市酉阳土家族苗族自治县发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240121/t20240121_526565424.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>酉阳县气象台2024年1月21日12时20分发布“道路结冰黄色预警信号”，预计1月21日16时至23日12时，毛坝乡、木叶乡、黑水镇等全部乡镇街道600米以上路表温度将低于0℃，可能出现对交通有影响的道路结冰。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240121/t20240121_526565420.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市武隆区发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240121/t20240121_526565420.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>武隆区气象台2024年1月21日12时发布“道路结冰黄色预警信号”，预计1月21日13时至23日12时，仙女山街道、双河镇、羊角街道、芙蓉街道、火炉镇、接龙乡、后坪乡、桐梓镇、土地乡、和顺镇、白云乡、大洞河乡、白马镇、赵家乡、黄莺乡、凤山街道、文复乡、浩口乡、石桥乡、凤来镇、庙垭乡、长坝镇、江口镇、沧沟乡、鸭江镇、平桥镇海拔600米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240121/t20240121_526565414.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市黔江区发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240121/t20240121_526565414.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>黔江区气象台2024年1月21日12时发布“道路结冰黄色预警信号”，预计1月21日16时至23日8时，我区水市镇、马喇镇、五里镇、邻鄂镇、金洞乡、黎水镇、黄溪镇、中塘镇、舟白街道、鹅池镇、石家镇、白土乡等全部乡镇街道海拔600米以上路表温度将低于0℃，可能出现对交通有影响的道路结冰。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -3394,36 +3614,6 @@ vue开启gzip压缩.com
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7325993514701635638"
-                        open
-                      >
-                        <summary class="article-expander__title">以Rspack为例，使用Xcode Instruments分析Rust应用性能</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7325993514701635638">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>序言
-最近我给 Rspack 提了一个 PR（Pull Request），用于完善 SourceMapDevToolPlugin 的功能和配置选项。你可以在这个链接查看 PR 的具体内容：https://github.com/web-infra-dev/rspack/pull/5108 。
-PR 的改动比较大。在完成了新功能并编写了必要的测试用例后，我兴奋地创建了 PR 并期待着评审。评审结果显示功能实现得不错，但考虑到代码的大幅度变更，我被要求进行性能基准测试。测试结果让人有些失望，因为性能显著下降了。
-
-针对性能下降的问题，我投入了三天时间来解决。由于我还是 Rust 领域的新手，对如何进行 Rust 性能分析并不太了解，这个任务较为困难。
-经过反复尝试多种方法后，我发现在 Mac 电脑上，用 Instruments 工具做 Rust 应用的 CPU 时间性能分析是最为有效的手段。本文将详细介绍如何利用 Instruments 对 Rust 应用进行 CPU/时间性能分析。
-Instruments 的 Time Profiler 工具
-Instruments 是内嵌于 macOS 的 Xcode 开发环境中的一个强大的分析工具集。它不仅可用于监测内存使用、文件 I/O 和网络活动等领域，还可以帮助开发者深入理解 CPU 性能问题，这对于优化 Rust 程序至关重要。
-
-在 Instruments 的众多工具中，我们将聚焦于 Time Profiler——一个用于揭示程序中 CPU 时间分配的分析器。它唯一的任务是通过采样来揭示 CPU 如何在程序的不同部分之间分配时间，这对开发者意味着能够快速识别性能瓶颈并对症下药。
-
-Time Profiler 基于采样动态记录程序在运行中的堆栈信息，而不是跟踪记录每次函数调用，这允许它在不显著影响程序性能的前提下，提供详尽的性能分析…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -3469,210 +3659,11 @@ Time Profiler 基于采样动态记录程序在运行中的堆栈信息，而不
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-20 datetime="2024-01-20T15:01:13.000Z">2024-01-20</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-20 datetime="2024-01-20T15:01:13.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-20 datetime="2024-01-20T02:06:00.000Z">2024-01-20</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-20 datetime="2024-01-20T02:06:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7325717778597773348"
-                        open
-                      >
-                        <summary class="article-expander__title">🌟前端使用Lottie实现炫酷的开关效果🌟</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7325717778597773348">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-在平时的开发过程中，前端或多或少都会遇到实现动画效果的场景。手写动画是一件相当麻烦的事情，调来调去不仅费时费力，可能还会被产品/UI吐槽：这动画效果也不难呀，为什么就不能实现呢？/为什么就没有还原成我想要的样子呢。
-
-比如说产品让我们实现这样的一个开关动效
-
-今天我们就用动画的实现方式——Lottie，来百分百还原设计师的动画效果，并且可以大大提高我们的工作效率（摸鱼时间）。
-
-Lottie简介
-首先我们先来看一下，平时我们实现动画都有哪些方式，它们分别有什么优缺点：
-动画类型
-优点
-缺点
-
-
-
-
-CSS 动画
-使用简便，通过@keyframes和transition创建动画；浏览器原生支持，性能较好
-控制有限，不适用于复杂动画；复杂动画可能需要大量 CSS 代码，冗长
-
-
-JavaScript 动画
-提供更高程度的控制和灵活性；适用于复杂和精细动画效果
-引入库增加页面负担，可能需要学习曲线；使用不当容器对页面性能造成影响，产生卡顿
-
-
-
-
-
-
-
-GIF 动画
-制作和使用简单，无需额外代码；几乎所有浏览器原生支持
-有限颜色深度，不适用于所有场景；清晰度与文件尺寸成正比，无法适应所有分辨率
-
-
-Lottie
-支持矢量动画，保持清晰度和流畅性 ；跨平台使用，适用于 iOS、Android 和 Web
-在一些较旧或性能较低的设备上，播放较大的 Lottie 动画可能会导致性能问题；对设计师要求较高
-
-
-
-Lottie是由Airbnb开发的一个开源库，用于在移动端和Web上呈现矢量动画。它基于JSON格式的Bodymovin文件，可以将由设计师在AE中创建的动画导出为可在Lottie库中播放的文件。
-相对于手写CSS/JS动画而言，它可以大大减少前端开发的工作量，相对于GIF文件来说，它可以在一个合理的文件体积内保证动画的清晰度以及流畅程度。下面我们就介绍一下如何播放一个Lo…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7325717778597199908"
-                        open
-                      >
-                        <summary class="article-expander__title">🐲龙年大吉——AIGC生成龙年春联🐲</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7325717778597199908">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-时间过得好快，一眨眼2024年就来了。这两年对互联网冲击最大的想必就是大语言模型的AIGC能力了。从国外的GPT到国内的文心一言、混元、盘古等等，AIGC的出现大大的提升了我们的生产力，现在GPT逐渐也变成了我每天都会使用到的工具。
-那趁着新年即将来临，我们今天就使用AIGC去生成春节必不可少的元素——春联。
-
-注册
-对于大模型接口来说，我这边选择的是国产的讯飞星火大模型。选择它的原因绝对不是它现在可以领取免费的token，而是我觉得我们需要支持国产软件自主化（手动狗头），如果你不喜欢用这个也可以使用别的，思路都是一样的。
-首先打开它的官网 https://xinghuo.xfyun.cn/sparkapi 注册一个账号，然后点击领取token就好了
-
-领取到了之后就可以对着它的文档来使用API了。
-构造鉴权API
-我们是通过websocket去使用星火的大模型api，在连接之前则需要构造一个鉴权参数。这个参数主要是为了安全以及用户身份的鉴权吧，这里主要还是要根据它的文档里面的规则去构造，实现代码如下：
-const getWebsocketUrl &#x3D; () &#x3D;&gt; {
-  var apiKey &#x3D; APIKey;
-  var apiSecret &#x3D; APISecret;
-  var url &#x3D; &quot;wss://spark-api.xf-yun.com/v3.1/chat&quot;;
-  var host &#x3D; location.host;
-  var date &#x3D; new Date().toGMTString();
-  var algorithm &#x3D; &quot;hmac-sha256&quot;;
-  var headers &#x3D; &quot;host date request-line&quot;;
-  var signatureOrigin &#x3D; &#x60;host: ${host}\ndate: ${date}\nGET /…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7325730345840066612"
-                        open
-                      >
-                        <summary class="article-expander__title">你还在使用websocket实现实时消息推送吗？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7325730345840066612">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: channing-cyan
-highlight: ascetic
-前言
-在日常的开发中，我们经常能碰见服务端需要主动推送给客户端数据的业务场景，比如数据大屏的实时数据，比如消息中心的未读消息，比如聊天功能等等。
-本文主要介绍SSE的使用场景和如何使用SSE。
-
-服务端向客户端推送数据的实现方案有哪几种？
-我们常规实现这些需求的方案有以下三种
-轮询
-websocket
-SSE
-轮询简介
-在很久很久以前，前端一般使用轮询来进行服务端向客户端进行消息的伪推送，为什么说轮询是伪推送？因为轮询本质上还是通过客户端向服务端发起一个单项传输的请求，服务端对这个请求做出响应而已。通过不断的请求来实现服务端向客户端推送数据的错觉。并不是服务端主动向客户端推送数据。显然，轮询一定是上述三个方法里最下策的决定。
-轮询的缺点：
-首先轮询需要不断的发起请求，每一个请求都需要经过http建立连接的流程（比如三次握手，四次挥手），是没有必要的消耗。
-客户端需要从页面被打开的那一刻开始就一直处理请求。虽然每次轮询的消耗不大，但是一直处理请求对于客户端来说一定是不友好的。
-浏览器请求并发是有限制的。比如Chrome 最大并发请求数目为 6，这个限制还有一个前提是针对同一域名的，超过这一限制的后续请求将会被阻塞。而轮询意味着会有一个请求长时间的占用并发名额。
-而如果轮询时间较长，可能又没有办法非常及时的获取数据
-websocket简介
-websocket是一个双向通讯的协议，他的优点是，可以同时支持客户端和服务端彼此相互进行通讯。功能上很强大。
-缺点也很明显，websocket是一个新的协议，ws/wss。也就是说，支持http协议的浏览器不一定支持ws协议。
-相较于SSE来说，websocket因为功能更强大。结构更复杂。所以相对比较重。
-websocket对于各大浏览器的兼容性↓
-
-SSE简…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7325739662033879090"
-                        open
-                      >
-                        <summary class="article-expander__title">原生手写 · 一镜到底特效· 龙年大吉</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7325739662033879090">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-作为一名前端技术开发人员， 我最爱的还是用前端技术实现各种炫酷的特效，对我来说，这不仅仅是一种样式语言，更是一种表达情感、一种对美好事物追求，  虽然每天要沉浸在代码的海洋里，但也要寻找着技术与艺术的交汇点，努力把吃饭的家伙变成自己热爱的事情。 龙年来临之际， 通宵写了一个全新的CSS3 一镜到底的特效案例，如下图， 希望能与大家分享这份创意与激情， 祝各位掘友们新年快乐， 龙年行大运！
-
-上源码：
-jcode
-整体实现思路介绍
-整个案例使用到CSS3 和 HTML技术， 案例的核心知识点 使用到了 CSS3 中的透视 、3D变换、 动画 、无缝滚动等技术要点， 下面我会逐一进行介绍
-知识点1: 一镜到底特效的 案例的整体布局、设计、及动画思路
-知识点2：CSS3中的3D坐标系
-知识点3：CSS3中的3D变换及案例应用
-知识点4：CSS3中的3D透视及案例应用
-知识点5：CSS3中的 透视及3d变换的异同点
-知识点6：CSS3中的 动画及案例应用
-1、一镜到底特效 的整体布局、设计、及动画思路
-如下图所示，一镜到底的案例特效 最核心的就是要 构成一套 在3D 空间中， 有多个平行的场景， 然后以摄像机的视角  从前往后 移动，在场景中穿梭， 依次穿过每一个场景的页面即可啦，自己闭上眼睛来体会一下吧。
-
-对应到本案例中效果就是这样啦：
-
-当然有朋友会说看上图，感觉不到明显的3D 立体效果， 那再来看看下面这个图吧；
-
-上面这张图就是 基于人眼 看不同距离的物体呈现出的结果， 也就是透视效果， 透视效果最核心的特点就是近大远小；而影响看到透视物体大小的一个参数就是消失点距离， 比如消失点越近，最远处的物体会越小， 近大远小的效果越明显， 自己闭上眼睛来体会一下吧。
-对应到本案例中效果就是这样啦：
-
-注意：本案例中 的主要功能是动效， 所以在页面框架布局上，大多使用的都是定…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -3745,7 +3736,6 @@ CodeGist：https://codegist.cn/</span>
                         <summary class="article-expander__title">#42 订阅制的消亡？</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://open.zhubai.wiki/a/l/t/z/pq/adrian/2360064802070450176">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>本文是一个在reddit上关于订阅制的讨论，我觉得很有启发意义，所以搬运分享一下！文末会写上我的观点。   
       
@@ -4570,6 +4560,8 @@ GIF89a 版本支持透明
         播客相对论｜2023年 11月份不能错过的播客单集       
        播客相对论｜2022年 十二月份不能错过的播客单集       
        我的播客年度大讲2022 Podcast盘点</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4680,8 +4672,6 @@ GIF89a 版本支持透明
    不同于其他 AI 云平台，这个网站主要使用你自己的浏览器调用你的本地资源实现计算（借助 Tensorflow.js）。   
     
    以可视化拖拽的方式建立自定义的 AI 应用，上传图片、声音、身体捕捉等样本后直接训练自己的模型…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;27
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5320,6 +5310,8 @@ CodeGist 真是帮我大忙啦[玫瑰][玫瑰][玫瑰]
    他问我新的一年除此之外还想有什么 change, 我于是说了多运动多读书之类的废话。后来我发现他真的在很认真地和我聊天，也可能我说的内容实在是有点经不起推敲，他问出了很关键的推进问题：    「你想要做哪些具体的行动去实现呢？」   
     
    比如我说我要多运动，他就会问「    你打算怎么样做才算多运动呢」    。我说新的一年多去健身房？之前一直是在家运动的，但是估计会等过一阵子再去。    他说 Why not？    我说现在太冷了，我不喜欢运动得满头大汗之后还要在冷风中回家。他半开玩笑地…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5591,8 +5583,8 @@ CodeGist 真是帮我大忙啦[玫瑰][玫瑰][玫瑰]
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7683222858">
-        <time id="build-timestamp" datetime="2024-01-28T03:53:37.044Z">2024-01-28T03:53:37.044Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7684066141">
+        <time id="build-timestamp" datetime="2024-01-28T06:53:02.550Z">2024-01-28T06:53:02.550Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
