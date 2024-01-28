@@ -51,11 +51,45 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-28 datetime="2024-01-28T01:41:02.000Z">2024-01-28</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-28 datetime="2024-01-28T01:41:02.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-28 datetime="2024-01-28T12:04:01.000Z">2024-01-28</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-28 datetime="2024-01-28T12:04:01.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Lainbo&#x27;s Blog</button>
+                  <a class="source-heading__link" href="https://lainbo.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lainbo.com/article/optimized-cdn-mainland-china"
+                        open
+                      >
+                        <summary class="article-expander__title">一些适用于中国大陆的CDN整理</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lainbo.com/article/optimized-cdn-mainland-china">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://www.notion.so/images/page-cover/nasa_earth_grid.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>由于某些众所周知的原因, 很多开源的库、开箱即用的Blog模板采用的都是国外CDN, 在大陆访问速度不尽人意, 这可能导致你的网站打开速度非常慢, 我特地整理收集了目前稳定运行的免费CDN站, 能让你的站点资源在国内外都获得不错的速度。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -647,43 +681,62 @@ Free Now to 2024-02-01T16:00:00.000Z</span>
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="7327691403844763684"
+                        data-accordion-key="https://juejin.cn/post/7327863960008392738"
                         open
                       >
-                        <summary class="article-expander__title">[7073670907851440160#新人报道#]</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7327691403844763684">
+                        <summary class="article-expander__title">大厂真实 Git 开发工作流程</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7327863960008392738">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>[7073670907851440160#新人报道#]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                              <span>theme: cyanosis
+记得之前也写过一篇类似的文章，来到我东后感觉不够详尽，很多流程还是太局限了。大厂的开发流程还是比较规范的。如果你来不及学习长篇大论的 git 文档，这篇文章够你入职时用一段时间了。
+一、开发分支模型分类
+目前所在部门使用是主要是四种：dev（开发）、test（测试）、uat（预发）、release（生产）
+小公司可能就一个 dev、一个 master 就搞定了，测试都是开发人员自己来🤣。
+二、开发主体流程
+需求评审
+开发排期
+编码开发
+冒烟测试（自检验）
+冒烟通过，提交测试，合并代码到测试分支，部署测试环境
+测试环境测试，开发修 bug
+测试完成，提交预发，合并代码到预发分支，部署预发环境
+预发环境测试，开发修 bug（修完的 bug 要重新走测试再走预发，这个下面会解释）
+测试完成，产品验收
+验收完成，提交生产，合并代码到生产分支，部署生产环境
+生产运营（客户）验收
+验收完成，结项
+三、具体操作
+1. 拉取代码
+一般都会在本地默认创建一个 master 分支
+git clone https://code.xxx.com/xxx/xxx.git
+
+2. 初次开发需求前，要先拉取生产/预发分支，然后基于这个分支之上，创建自己的特性分支进行开发
+git fetch origin release:release
+
+git checkout release
+
+git checkout -b feat-0131-jie
+
+此时，在你本地已经有了一个 release 分支对应着远程仓库的 release 分支，还有一个内容基于 release 分支的特性分支，之后便可以在这个特性分支上进行需求开发了。
+注意1：分支名称是有规范和含义的，不能乱取。
+推荐格式：分支责任-需求日期/需求号-开发人姓名，一般按部门规范来，常见的有以下几种。
+  - feat：…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
                       </details>
                     </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
@@ -737,6 +790,39 @@ Reference
 [2] 官方文档:https://github.com/HuolalaTech/page-spy-web/blob/main/README_ZH.md
 阅读原文</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7327691403844763684"
+                        open
+                      >
+                        <summary class="article-expander__title">[7073670907851440160#新人报道#]</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7327691403844763684">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>[7073670907851440160#新人报道#]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1465,11 +1551,9 @@ if (handlers) {
                         <summary class="article-expander__title">Chat GPT最佳实践 [译]</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://lainbo.com/article/chatgpt-best-practice">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://www.notion.so/images/page-cover/nasa_earth_grid.jpg" loading="lazy" class="media-object__media article-image" />
+                              <img src="/bg_image.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>在这个AI井喷式爆发的时代，谁和GPT做朋友，谁就遥遥领先</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2142,61 +2226,6 @@ iOS
 0（右转从360减小，左转增加）
 0…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7326816030042931254"
-                        open
-                      >
-                        <summary class="article-expander__title">vue2都停止更新维护了，你还没学会打包优化吗？（打包体积减少78%，冷启动速度提升93%， 打包速度提升73%）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326816030042931254">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: smartblue
-前言
-之前的开发工作中对vue2项目也有做过不同的优化，但是都比较零散且没有系统化的记录下来。
-正好最近接手了一个老项目，虽然项目不大性能也还过得去，但是我觉得可优化的空间还是比较多的。
-所以也趁此机会能把vue打包，编译，启动时间的一些优化方法记录下。在阅读之前你需要确保以下几点：
-本项目是基于vue2.x + vue-cli4.x的，不适用于vue3.x+vite项目
-本文一些配置的写法可能因插件或者loader版本差异不同而报错，如出现错误，请查阅官方文档最新配置信息
-文章不会一次性把全部配置代码贴出来，目的是为了让读者们能够真正熟悉每一项优化配置
-文章介绍了多种优化方式，希望读者不要全部照抄，而是应该根据自己项目和实际情况进行选择配置。没有最完美的配置，只有最适合自己的配置~
-
-好了，闲话不多说了。在开始之前我们先看下打包体积大小和时间，这样有利于我们优化后进行对比。
-优化前：
-1. 打包体积：6.38M
-
-2. 冷启动耗费时间：61.39秒
-
-3. 编译耗费时间：50.13秒
-
-准备工作
-1. 安装speed-measure-webpack-plugin
-npm i speed-measure-webpack-plugin
-
-const SpeedMeasurePlugin &#x3D; require(&quot;speed-measure-webpack-plugin&quot;);
-
-module.exports &#x3D; { 
-configureWebpack: {
- plugins: [
-      new BundleAnalyzerPlugin(),
-      new SpeedMeasurePlugin(),
-   ]
-   }
-};
-    
-
-2. 安装webpack-bundle-analyzer
-
-+ npm i webpack-bundl…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3167,120 +3196,6 @@ AJAX的崛起（2005年左右） ：Ajax技术的发展和jQuery库的普及使�
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240121/t20240121_526565777.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市梁平区发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240121/t20240121_526565777.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>梁平区气象台2024年1月21日18时30分发布“道路结冰黄色预警信号”，预计1月21日18时至23日8时，曲水镇、安胜镇、星桥镇、合兴街道、文化镇、复平镇、大观镇、紫照镇、柏家镇、石安镇、金带街道、蟠龙镇、双桂街道、福禄镇、梁山街道、礼让镇、竹山镇、袁驿镇、龙胜乡、明达镇、龙门镇、碧山镇、虎城镇、新盛镇、荫平镇、铁门乡、屏锦镇、云龙镇、和林镇、回龙镇、聚奎镇、仁贤街道、七星镇路表温度将低于0℃，可能出现对交通有影响的道路结冰。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240121/t20240121_526565756.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市奉节县发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240121/t20240121_526565756.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>奉节县气象台2024年1月21日17时45分发布“道路结冰黄色预警信号”，预计1月21日18时至22日06时，平安乡、青莲镇、竹园镇、红土乡、公平镇、大树镇、汾河镇、岩湾乡、长安土家族乡、兴隆镇、龙桥土家族乡、太和土家族乡、云雾土家族乡、冯坪乡、青龙镇、吐祥镇等乡镇海拔600米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。防御指南：1.行人注意防滑。2.驾车注意路况，安全行驶。3.相关部门和乡镇街道按照职责，做好道路结冰防范应对工作。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240121/t20240121_526565744.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市酉阳土家族苗族自治县发布暴雪黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240121/t20240121_526565744.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>酉阳县气象台2024年1月21日17时40分发布“暴雪黄色预警信号”，预计1月21日18时至22日8时，毛坝乡、木叶乡、黑水镇等全部乡镇街道海拔400米以上地区降雪量将达6毫米以上，可能对交通或者农牧业有影响。防御指南：1.减少户外作业和活动。2.行人注意防寒防滑，不要在有积雪的广告牌、树木、临时建筑等附近逗留。驾车注意路况、保持车距、减速慢行。3.燃煤取暖注意防范一氧化碳中毒。4.农、林、养殖业应做好作物、树木防冻害、牲畜防寒与防雪灾工作；对危房、大棚和临时搭建物采取加固措施。5.相关部门和乡镇街道按照职责，做好暴雪防范应对工作。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/lanseyj/20240121/t20240121_526565728.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市云阳县发布大风蓝色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/lanseyj/20240121/t20240121_526565728.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>云阳县气象台2024年1月21日17时18分发布“大风蓝色预警信号”，预计1月21日18时至22日6时，龙洞镇、故陵镇、新津乡、红狮镇、云阳镇、双江街道、人和街道、水口镇、栖霞镇、巴阳镇、宝坪镇、凤鸣镇、盘龙街道、青龙街道、江口镇、路阳镇、后叶镇、黄石镇、高阳镇、南溪镇、普安乡、蔈草镇、泥溪镇、外郎乡、龙角镇、洞鹿乡、双土镇、云安镇等乡镇街道可能受大风影响，阵风可达7级以上。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240121/t20240121_526565715.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市垫江县发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240121/t20240121_526565715.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>垫江县气象台2024年1月21日17时发布“道路结冰黄色预警信号”，预计1月21日17时至22日08时，桂阳街道、桂溪街道、太平镇、新民镇、沙坪镇、澄溪镇、普顺镇、永安镇、沙河乡、杠家镇、三溪镇等乡镇(街道)海拔600米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240121/t20240121_526565692.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市江津区发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240121/t20240121_526565692.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>江津区气象台2024年1月21日16时40分发布“道路结冰黄色预警信号”，预计1月21日20时至23日8时，四面山镇、四屏镇、柏林镇、西湖镇、中山镇等镇街海拔600米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -3481,7 +3396,6 @@ CodeGist：https://codegist.cn/</span>
                         <summary class="article-expander__title">#42 订阅制的消亡？</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://open.zhubai.wiki/a/l/t/z/pq/adrian/2360064802070450176">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>本文是一个在reddit上关于订阅制的讨论，我觉得很有启发意义，所以搬运分享一下！文末会写上我的观点。   
       
@@ -3550,6 +3464,8 @@ CodeGist：https://codegist.cn/</span>
    from 雯子   
     
    下周三见</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4416,39 +4332,7 @@ GIF89a 版本支持透明
    不同于其他 AI 云平台，这个网站主要使用你自己的浏览器调用你的本地资源实现计算（借助 Tensorflow.js）。   
     
    以可视化拖拽的方式建立自定义的 AI 应用，上传图片、声音、身体捕捉等样本后直接训练自己的模型…</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Lainbo&#x27;s Blog</button>
-                  <a class="source-heading__link" href="https://lainbo.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lainbo.com/article/cognitive-bias"
-                        open
-                      >
-                        <summary class="article-expander__title">认知偏差手册</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lainbo.com/article/cognitive-bias">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://www.notion.so/images/page-cover/nasa_earth_grid.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>认知偏差是人们在知觉自身、他人或外部环境时，常因自身或情境的原因使得知觉结果出现失真的现象。这里列出了所有的认知偏差并告诉你如何修正。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                &ensp;<span class="article-reading-time">(&hairsp;27
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -5327,8 +5211,8 @@ CodeGist 真是帮我大忙啦[玫瑰][玫瑰][玫瑰]
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7684916168">
-        <time id="build-timestamp" datetime="2024-01-28T09:53:15.785Z">2024-01-28T09:53:15.785Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7685874953">
+        <time id="build-timestamp" datetime="2024-01-28T12:53:49.708Z">2024-01-28T12:53:49.708Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
