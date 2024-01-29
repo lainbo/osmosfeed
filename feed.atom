@@ -1,10 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2024-01-29T09:53:11.254Z</id>
+    <id>urn:2024-01-29T12:55:03.727Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2024-01-29T09:53:11.254Z</updated>
+    <updated>2024-01-29T12:55:03.727Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[一些适用于中国大陆的CDN整理]]></title>
+        <id>https://lainbo.com/article/mainland-china-cdn</id>
+        <link href="https://lainbo.com/article/mainland-china-cdn"/>
+        <updated>2024-01-29T11:22:45.000Z</updated>
+        <summary type="html"><![CDATA[由于某些众所周知的原因, 很多开源的库、开箱即用的Blog模板采用的都是国外CDN, 在大陆访问速度不尽人意, 这可能导致你的网站打开速度非常慢, 我整理收集了目前稳定运行的免费CDN站, 能让你的站点资源在国内外都获得不错的速度。]]></summary>
+        <author>
+            <name>Lainbo's Blog</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[发布了: “做你热爱的事”是未来式， “热爱你正在做的事”则是现在进行时。 ━━━━━━━━━━━━━━ Paul Buchheit]]></title>
+        <id>https://m.okjike.com/originalPosts/65b77d4138849f879f79f1e2</id>
+        <link href="https://m.okjike.com/originalPosts/65b77d4138849f879f79f1e2"/>
+        <updated>2024-01-29T10:26:09.000Z</updated>
+        <summary type="html"><![CDATA[“做你热爱的事”是未来式，
+“热爱你正在做的事”则是现在进行时。
+━━━━━━━━━━━━━━ 
+Paul Buchheit]]></summary>
+        <author>
+            <name>李继刚的即刻动态</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[IDEA中收费的插件可以破解吗[呲牙]]]></title>
+        <id>7329352197837389833</id>
+        <link href="https://juejin.cn/pin/7329352197837389833"/>
+        <updated>2024-01-29T10:17:52.000Z</updated>
+        <summary type="html"><![CDATA[IDEA中收费的插件可以破解吗[呲牙]]]></summary>
+        <author>
+            <name>mharvay</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[发布了: F = ma ━━━━━━━━━━━━━━ 有个感觉, 以前的企业在努力做大自身质量(m), 现在的 AI 企业把思路转到了成长加速度(a) 上。 人不用多, 跑的超级...]]></title>
         <id>https://m.okjike.com/originalPosts/65b7644d3b9c66cae428ba23</id>
@@ -16,16 +49,6 @@
 人不用多, 跑的超级快。]]></summary>
         <author>
             <name>李继刚的即刻动态</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[一些适用于中国大陆的CDN整理]]></title>
-        <id>https://lainbo.com/article/mainland-china-cdn</id>
-        <link href="https://lainbo.com/article/mainland-china-cdn"/>
-        <updated>2024-01-29T07:58:05.000Z</updated>
-        <summary type="html"><![CDATA[由于某些众所周知的原因, 很多开源的库、开箱即用的Blog模板采用的都是国外CDN, 在大陆访问速度不尽人意, 这可能导致你的网站打开速度非常慢, 我整理收集了目前稳定运行的免费CDN站, 能让你的站点资源在国内外都获得不错的速度。]]></summary>
-        <author>
-            <name>Lainbo's Blog</name>
         </author>
     </entry>
     <entry>
@@ -151,6 +174,38 @@ async function put () {
     con…]]></summary>
         <author>
             <name>zxg_神说要有光</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[因为通宵看恋综让我差点误了 TC39 第100次会议的提案 deadline]]></title>
+        <id>https://juejin.cn/post/7329033936955523082</id>
+        <link href="https://juejin.cn/post/7329033936955523082"/>
+        <updated>2024-01-28T09:57:37.000Z</updated>
+        <summary type="html"><![CDATA[这个恋爱综艺是挺上头，我连夜看了，但也得吐槽一下，上次我找 Hux黄玄 帮我一起搞 JS 提案他就说没空，原来是上恋综去了。我只好自己写提案。而且因为通宵看恋综，磕他和二号女嘉宾「毒舌凯西」的糖（不用搜了，这是本人给她起的诨号），我差点误了给 TC39 标准委员会第100次全体大会提交议题的 deadline（这次会议是2月6日，deadline 是会议前 10 天，也就是1月27日，这个恋综的播出时间是1月26日晚上）。
+关于这次的提案，起因是这样滴： 当前 JavaScript 代码里要内嵌一段包含 backtick （`）的大段文本是不容易的。你得用转义符。比如
+let sql = `
+  select * 
+  from \`table\` 
+  where \`name\` = ?
+`
+
+【MySql 等数据库要求字段用`包裹，但是我们没法直接在 JS 里写，只能转义 \`。】
+当然这个例子很简单，你可以用传统字符串就不用转义了，但复杂文本或者大段文本我们一般都用 template literal。而 template literal 使用`作为定界符，你就不能在文本里直接包含它。用 String.raw 也不解决问题甚至更糟，因为你压根没法在 String.raw 后的 template literal 里直接表达`（因为连转义都没了），你只能写成
+let sql = `
+  select * 
+  from ${"`"}table${"`"} 
+  where ${"`"}name${"`"} = ?
+`
+
+【没有 escaping 只能用插值】
+我打赌没人想阅读这样的代码。
+当然，各位程序员可以脑洞大开，用其他方式搞得好看一点，比如这样：
+let sql = `
+  select * 
+  from 🤡table🤡 
+  where 🤡name🤡 =…]]></summary>
+        <author>
+            <name>hax</name>
         </author>
     </entry>
     <entry>
@@ -1488,18 +1543,6 @@ mode，类型为 "add" | "remove" | "reverse"。模式，表明当前框选是�
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[发布了: 《为什么伟大不能被计划》书中提出了一个算法：新奇性搜索算法。 这个算法是说，评判你的一个动作好坏的标准， 要看它是否带来新鲜和有趣的东西。 在人...]]></title>
-        <id>https://m.okjike.com/originalPosts/65af49139185c305d1c2809a</id>
-        <link href="https://m.okjike.com/originalPosts/65af49139185c305d1c2809a"/>
-        <updated>2024-01-23T05:05:23.000Z</updated>
-        <summary type="html"><![CDATA[《为什么伟大不能被计划》书中提出了一个算法：新奇性搜索算法。
-这个算法是说，评判你的一个动作好坏的标准， 要看它是否带来新鲜和有趣的东西。
-在人生意义这个层面上，值得花时间思考一下这个算法。]]></summary>
-        <author>
-            <name>李继刚的即刻动态</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[参考周刊Vol.37｜识人指南：这个人类是怎么回事？]]></title>
         <id>https://open.zhubai.wiki/a/l/t/z/fp/ouranswers/2361429034845351936</id>
         <link href="https://open.zhubai.wiki/a/l/t/z/fp/ouranswers/2361429034845351936"/>
@@ -1995,102 +2038,6 @@ flex布局大家应该已经运用的炉火纯青了，相信在日常开发中�
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[前端工具分享]]></title>
-        <id>https://juejin.cn/post/7326809915434483750</id>
-        <link href="https://juejin.cn/post/7326809915434483750"/>
-        <updated>2024-01-22T15:20:05.000Z</updated>
-        <summary type="html"><![CDATA[theme: smartblue
-Web Tools
-文章来源：Web Tools - 下落香樟树 (zxkv)
-注意事项
-[✔]：组件或工具后的 [] 标注有 ✔ 的，为已经尝试使用过的。
-截图工具
-Snipaste「✔ 截屏工具」
-PixPin「✔ 截屏工具」
-pear-rec「✔ 截屏、录屏、图片处理」
-浏览器工具
-HiPC 桌面工具
-HiPC 系统助手
-Infinity 新标签页 (Pro)「🔥」
-iTab 新标签页「✔」
-Wetab
-howdz 启始页
-电影日历「电影日历 - 在线版」
-AI 旋风「✔ 工具集合」
-终端工具
-hyper.js「✔ 终端工具」
-工具箱
-He3 🔨「辅助工具」
-AppWorks 🔨「辅助工具」
-前端工具箱「前端工具网站」
-工具箱(在线版)「前端工具网站」
-菜鸟工具(在线版)「前端工具网站」
-零代码工具箱 🧰(在线版)「前端工具网站」
-框架模板
-COOL
-RuoYi「✔」
-Vben Admin「✔」
-AntD Pro Vue
-vue element admin「✔」
-Naive Ui Admin
-微服务框架
-无界 wujie
-乾坤 qiankun
-single-spa
-前端插件
-InfiniteGrid「瀑布流」
-FullCalendar「日历」
-Virtual Tree「✔」
-Vue virtual tree「✔」
-vue-concise-slider「✔」
-handsontable
-pinia-plugin-persistedstate「✔ 数据持久化」
-lite-virtual-list「✔ 虚拟列表」
-vue-drag-resize「✔ 拖拽」
-Editor.md「Markdown 编辑器」
-bpmn 流程图「在线版流程图」
-million「React 代码优化工具」
-ofa.js「JS 框架」
-medium-zoom「图片点击放大预览」
-开源图标库
-IconFont「✔」
-IconPark「✔」
-xicons
-intoGIF「✔ loading 动画制作」
-LOADING.IO「✔ loading 动画，部分免费」
-开源图库
-unDraw
-pixabay
-unsplash
-pexels
-wallspic
-辅助工具
-语雀「✔」
-excalidraw「在线流程图」
-知犀思维导图「在线版、安装版思维导图、流程图」
-tinify(中文版)「🔥 🐼 熊猫压缩、只能压缩、最大 20 张，单张限制 5M」
-tinify(英文版)「🔥 🐼 熊猫压缩、可转格式」
-百度脑图「✔ 在线版思维导图」
-TreeMind 树图「💰 收费」
-GitMind「💰 收费」
-ZhiMap「在线版思维导图」
-draw.io
-Moonvy 月维「在线设计图」
-蓝湖「在线设计图」
-Figma「在线设计图」
-模拟数据
-Better Mock「🔥 Mock Data - 无需登录」
-MockJS「🔥 Mock Data - 无需登录」
-Easy Mock「✔ Mock Data - 需要登录」
-rap2「✔ TaoBao Mock Data - 需要登录」
-数据统计
-umami「✔」
-百度数据统计]]></summary>
-        <author>
-            <name>下落香樟树</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[发布了: 国家对公募基金的态度还是很鄙视的😅]]></title>
         <id>https://m.okjike.com/originalPosts/65ae857ca922aa28d0bf52c4</id>
         <link href="https://m.okjike.com/originalPosts/65ae857ca922aa28d0bf52c4"/>
@@ -2227,16 +2174,6 @@ umami「✔」
 你看，有一个健康的身体有多么重要呀！]]></summary>
         <author>
             <name>Barret李靖的即刻动态</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[重庆市云阳县发布霜冻蓝色预警]]></title>
-        <id>http://www.cneb.gov.cn/yjxx/lanseyj/20240122/t20240122_526567326.html</id>
-        <link href="http://www.cneb.gov.cn/yjxx/lanseyj/20240122/t20240122_526567326.html"/>
-        <updated>2024-01-22T10:45:00.000Z</updated>
-        <summary type="html"><![CDATA[云阳县气象台2024年1月22日18时30分发布“霜冻蓝色预警信号”，预计1月22日20时至24日20时，上坝乡、桑坪镇、江口镇、鱼泉镇、农坝镇、沙市镇、洞鹿乡、石门乡、大阳镇、双土镇、宝坪镇、凤鸣镇、盘龙街道、蔈草镇、后叶镇、红狮镇、清水土家族乡等海拔600米以上地区地面最低温度将下降到0℃以下，对农业将产生影响。]]></summary>
-        <author>
-            <name>国家预警信息发布中心</name>
         </author>
     </entry>
     <entry>
@@ -2765,19 +2702,6 @@ RedisMate是一款专为开发过程中, 简化Redis调试操作而设计的macO
         <summary type="html"><![CDATA[其实获取视频的缩略图并不需要视频解码就能实现，方法就是其貌不扬的HTML video元素。]]></summary>
         <author>
             <name>张 鑫旭</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[开源了tojson.js tojson.js 是一个支持解析 Psd、Sketch、PPT转 json 的类库, 该 json 满足 fabric.js 渲染的数据格式. github 地址: https://github.com/haixin...]]></title>
-        <id>7324011403026333747</id>
-        <link href="https://juejin.cn/pin/7324011403026333747"/>
-        <updated>2024-01-15T10:32:36.000Z</updated>
-        <summary type="html"><![CDATA[开源了tojson.js
-tojson.js 是一个支持解析 Psd、Sketch、PPT转 json 的类库, 该 json 满足 fabric.js 渲染的数据格式.
-github 地址: https://github.com/haixin-fang/tojson.js
-预览地址:  https://haixin-fang.github.io/tojson.js/playground/]]></summary>
-        <author>
-            <name>Starfish</name>
         </author>
     </entry>
     <entry>
