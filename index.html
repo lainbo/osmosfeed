@@ -51,11 +51,50 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-29 datetime="2024-01-29T02:51:37.000Z">2024-01-29</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-29 datetime="2024-01-29T02:51:37.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-29 datetime="2024-01-29T03:55:12.000Z">2024-01-29</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-29 datetime="2024-01-29T03:55:12.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >李继刚的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/65b721a0164d89e6018149a9"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: ❝ 老年人相信一切， 中年人怀疑一切， 青年人什么都懂。❞ ━━━━━━━━━━━━━━ 王尔德</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65b721a0164d89e6018149a9">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>❝
+老年人相信一切，
+中年人怀疑一切，
+青年人什么都懂。❞ 
+━━━━━━━━━━━━━━ 
+王尔德</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -228,6 +267,80 @@
                             <span class="media-object__text">
                               <span>奉节县气象台2024年1月28日22时发布“道路结冰黄色预警信号”，预计1月28日22时至29日10时，平安乡、青莲镇、竹园镇、红土乡、公平镇、大树镇、汾河镇、岩湾乡、长安土家族乡、兴隆镇、龙桥土家族乡、太和土家族乡、云雾土家族乡、冯坪乡、青龙镇、吐祥镇等乡镇海拔600米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。防御指南：1.行人注意防滑。2.驾车注意路况，安全行驶。3.相关部门和乡镇街道按照职责，做好道路结冰防范应对工作。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7329034058380935218"
+                        open
+                      >
+                        <summary class="article-expander__title">自己搭一个 OSS 服务，和阿里云的一毛一样</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7329034058380935218">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>文件上传是常见需求，一般我们不会直接把文件保存在服务器的某个目录下，因为服务器的存储容量是有限的，这样不好扩展。
+我们会用 OSS （Object Storage Service）对象存储服务来存文件，它是支持分布式扩展的，不用担心存储容量问题，而且也好管理。
+比如阿里云的 OSS 服务。
+但是有一些业务场景下，数据需要保密，要求私有部署，也就是要在自己的机房里部署一套 OSS 服务。
+这时候怎么办呢？
+这种需求一般我们会用 minio 来做。
+它可以实现和阿里云 OSS 一样的功能。
+首先，我们用一下阿里云的 OSS 服务。
+OSS 里的文件是放在一个个 Bucekt（桶）里的：
+
+我们创建个 Bucket：
+
+然后进入文件列表，就可以上传文件了：
+
+因为创建的 Bucket 设置了公共读，所以可以直接访问：
+
+此外，阿里云 OSS 还可以通过 SDK 来上传文件。
+创建个项目：
+mkdir minio-test
+cd minio-test
+npm init -y
+
+
+进入项目，安装 ali-oss：
+npm install ali-oss
+
+创建 index.js
+const OSS &#x3D; require(&#x27;ali-oss&#x27;)
+
+const client &#x3D; new OSS({
+    region: &#x27;oss-cn-beijing&#x27;,
+    bucket: &#x27;guang-666&#x27;,
+    accessKeyId: &#x27;&#x27;,
+    accessKeySecret: &#x27;&#x27;,
+});
+
+async function put () {
+  try {
+    const result &#x3D; await client.put(&#x27;smile.png&#x27;, &#x27;./smile.png&#x27;);
+    console.log(result);
+  } catch (e) {
+    con…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -589,6 +702,42 @@ MacOs的同学可以在终端使用 sudo vi /etc/hosts 命令修改
 结语
 我是饮东，欢迎点赞关注，我们江湖再会</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7327971289743278121"
+                        open
+                      >
+                        <summary class="article-expander__title">瀑布流优化：我把小红书的瀑布流虚拟列表撕出来了🧐！但女友不理我了😭😭</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7327971289743278121">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: smartblue
+扯皮
+接上篇瀑布流内容，我仔细研究发现小红书的首页布局并不是简单的瀑布流，所以停下手边的游戏开始打开 F12 慢慢查看🤔
+不知不觉忘记了女朋友跟我发的小红书链接具体内容，一头扎在了小红书的首页，快半小时过去才想起忘来给女朋友回消息了😇
+当我反应过来赶紧发消息后，发现两极反转，这次换成我被冷落了😶😶😶
+啧啧啧，如今女朋友已经成为了前女友，我们也已经分手有将近两年时间了，记得分手半年之后身边的朋友推荐我读一本书：《非暴力沟通》，说能够加强自己的沟通能力，虽然以后会成为码农但人与人之间的沟通还是需要的，所以提前学习一下沟通技巧
+读完之后发现自己纯粹是一个🤡，书中举的反例都让哥们踩完了，而且完美的应用到了女友身上🤡🤡🤡
+如今写最近两篇文章时脑子不断浮现以前的日子，回想起来自己真是铁直男啊，不过还好前女友和我都是初恋，双方彼此还是比较包容的，都是没谈过恋爱的傻瓜罢了
+不过纸包不住火，初恋虽然美好，但是没有任何恋爱经验，女方矫情一些，男方再直男一些，直接就寄了😑
+感觉大学的恋爱就是一句话：一个敢说，一个敢信...
+只能说一场恋爱下来最大的成长就是让我踩了不少关于女生的坑，也感受到了年轻时代爱情的美好，同时掌握了一些沟通的技巧吧😁
+不知道以后如果还有机会的话同一个坑自己会不会长记性呢😔😔😔
+正文
+这次扯的无关内容有点多哈，不过都是有感而发😜
+终于来到了关于虚拟列表的最终篇：使用 Vue3 + TS 实现瀑布流虚拟列表，其实之前的几篇文章可以说都是为了这一篇做铺垫，没想到会有这么多人看😂，其实我当时的想法是希望这篇文章阅读量高一些来着...😶
+如果你还不了解虚拟列表相关实现的话，请出门左转👇：
+定高的虚拟列表会了，那不定高的...... 哈，我也会！看我详解一波！🤪🤪🤪 - 掘金 (juejin.cn)
+面试官：能…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;24
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1252,8 +1401,6 @@ P人不反感的年度复盘问题
    回忆童年时代，我的 comfort food 绝对是面。甚至于有一颗牙 🦷 就在吃面的过程中脱落，对我这个几乎每颗牙都要去医院才能拔下的人而言，可真是难忘的经历咯。   
     
    🍲 食即人生，透过食物的故事能回溯人的过去。你的 comfort food 是什么呢？欢迎来信分享你的故事！📨：depykung@gmail.com</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3644,45 +3791,6 @@ flex布局大家应该已经运用的炉火纯青了，相信在日常开发中�
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >李继刚的即刻动态</button>
-                  <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/65aea3319185c305d1b8107f"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 说〝我不做x〞，决策意志在你手中。 说〝我不能做x〞，外界强加限制于你。 说〝原来如此〞，又想通了一件事的道理。 说〝不过如此〞，又拒绝了一次成长...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65aea3319185c305d1b8107f">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>说〝我不做x〞，决策意志在你手中。
-说〝我不能做x〞，外界强加限制于你。
-说〝原来如此〞，又想通了一件事的道理。
-说〝不过如此〞，又拒绝了一次成长的机会。
-你的思想，会影响你说的话。
-你说的话，会影响你的思想。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >掘金前端本周最热</button>
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
@@ -3822,99 +3930,6 @@ Flex容器和Flex项目上设置对齐方式
 .flex__container {
     dis…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;18
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7326551966854217763"
-                        open
-                      >
-                        <summary class="article-expander__title">200 行代码实现一个超瘦的 React （起步篇）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326551966854217763">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>&#x27;Hi, my name is, what?&#x27;,
-&#x27;My name is, who?&#x27;,
-&#x27;My name is, chka-chka&#x27;,
-&#x27;Slim React! 🤣&#x27;
-月更计划 2/1
-每每看到好兄弟们的内推、平台上的职位要求，大都是“深入了解框架原理”之类的要求，苦于自己作为一个菜鸟，看源码是不可能看源码的，先不说看不看的懂，甚至也看不下去；恰好 @阿崔cxr 大佬拉着一群哥们搞了个 7 天打卡手写一个简单的 Mini-React 的活动，本着学点，反正学不进多少的态度，就跟着一步步写完了这个小项目。鉴于这个 Mini-React 相比 @阿崔cxr 大佬之前做的 Mini-Vue 项目，实在是 mini 太多，我更愿意称我的这个项目为 Slim-React 🤪。
-Slim-React 的仓库地址: https://github.com/Nauxscript/slim-react，如果有疑问的可以查阅代码或者留下你的 issue，哪怕是动动发财的手指点个不要钱的 ⭐ 和 follow 一下呢~
-那直入今天正题：
-
-“如何用 200 行代码实现一个超瘦的 React ?” 
-简单组件渲染
-首先，去 React 官网看看文档最简单使用方式；其示例代码如下：
-import { createRoot } from &#x27;react-dom/client&#x27;;
-
-// Clear the existing HTML content
-document.body.innerHTML &#x3D; &#x27;
-&#x27;;
-
-// Render your React component instead
-const root &#x3D; createRoot(document.getElementById(&#x27;app&#x27;));
-root.render(
-Hello, world&lt;/…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7326461075447201843"
-                        open
-                      >
-                        <summary class="article-expander__title">【动画进阶】神奇的 3D 卡片反光闪烁动效</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326461075447201843">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>最近，有群里在群里发了这么一个非常有意思的卡片 Hover 动效，来源于此网站 -- key-drop，效果如下：
-
-非常有意思酷炫的效果。而本文，我们不会完全还原此效果，而是基于此效果，尝试去制作这么一个类似的卡片交互效果：
-
-该效果的几个核心点：
-卡片的 3D 旋转跟随鼠标移动效果
-如何让卡片在 Hover 状态，有不同的光泽变化
-如何让卡片在 Hover 状态，有 Blink，Blink 的星星闪烁效果
-当然，要做到卡片的 3D 旋转跟随鼠标移动效果需要一定程度的借助 JavaScript，因此，最终的效果是 CSS 配合 JavaScript 以及一些动态效果的 Gif 共同实现。
-好，下面就让我们一步一步一起来实现这个效果。
-卡片的 3D 旋转跟随效果
-OK，接下来，如何实现 3D 卡片效果呢？
-这个效果之前在 让交互更加生动！有意思的鼠标跟随 3D 旋转动效 实现过一次，我们复习一下。
-这个交互效果主要有两个核心：
-借助了 CSS 3D 的能力
-元素的旋转需要和鼠标的移动相结合
-我们的目标是实现这样一个动画效果：
-
-这里，我们其实有两个核心元素：
-鼠标活动区域
-旋转物体本身
-鼠标在鼠标活动区域内的移动，会影响旋转物体本身的 3D 旋转，而旋转的方向其实可以被分解为 X 轴方向与 Y 轴方向。
-我们来看一下，假设我们的 HTML 结构如下：
-
-    
-
-
-
-得到这样一个图形：
-
-这里，body 的范围就是整个鼠标可活动区域，也是我们添加鼠标的 mousemove 事件的宿主 target，而 #element 就是需要跟随鼠标一起转动的旋转物体本身。
-因为整个效果是需要基于 CSS 3D 的，我们首先加上简单的 CSS 3D 效果：
-body {
-    width: 100vw;
-    …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4098,25 +4113,6 @@ body {
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>云阳县气象台2024年1月22日18时30分发布“霜冻蓝色预警信号”，预计1月22日20时至24日20时，上坝乡、桑坪镇、江口镇、鱼泉镇、农坝镇、沙市镇、洞鹿乡、石门乡、大阳镇、双土镇、宝坪镇、凤鸣镇、盘龙街道、蔈草镇、后叶镇、红狮镇、清水土家族乡等海拔600米以上地区地面最低温度将下降到0℃以下，对农业将产生影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240122/t20240122_526566645.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市永川区发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240122/t20240122_526566645.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>永川区气象台2024年1月22日12时25分发布“道路结冰黄色预警信号”，预计1月22日13时至23日10时，我区茶山竹海街道、何埂镇、南大街街道、红炉镇等海拔600米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -5074,8 +5070,8 @@ github 地址: https://github.com/haixin-fang/tojson.js
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7690927227">
-        <time id="build-timestamp" datetime="2024-01-29T03:53:10.868Z">2024-01-29T03:53:10.868Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7692262431">
+        <time id="build-timestamp" datetime="2024-01-29T06:53:10.438Z">2024-01-29T06:53:10.438Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
