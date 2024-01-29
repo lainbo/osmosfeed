@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2024-01-28T21:53:25.647Z</id>
+    <id>urn:2024-01-29T01:15:28.856Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2024-01-28T21:53:25.647Z</updated>
+    <updated>2024-01-29T01:15:28.856Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -102,6 +102,36 @@
         <summary type="html"><![CDATA[奉节县气象台2024年1月26日21时发布“道路结冰黄色预警信号”，预计1月26日21时至27日10时，平安乡、青莲镇、竹园镇、红土乡、公平镇、大树镇、汾河镇、岩湾乡、长安土家族乡、兴隆镇、龙桥土家族乡、太和土家族乡、云雾土家族乡、冯坪乡、青龙镇、吐祥镇等乡镇海拔600米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。防御指南：1.行人注意防滑。2.驾车注意路况，安全行驶。3.相关部门和乡镇街道按照职责，做好道路结冰防范应对工作。]]></summary>
         <author>
             <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[突破React限制：Million.js带来的性能新境界]]></title>
+        <id>https://juejin.cn/post/7327938054240108585</id>
+        <link href="https://juejin.cn/post/7327938054240108585"/>
+        <updated>2024-01-26T03:32:17.000Z</updated>
+        <summary type="html"><![CDATA[1. million
+Million.js 是一款极其快速和轻量级的优化编译器，可以使组件速度提升高达 70%。
+。它提供了一种叫做“block”虚拟 DOM 的技术，这种技术比 React 的传统虚拟 DOM 更快，因为它通过 diff 算法比对数据而不是 DOM 本身。
+它可以轻松集成到现有的 React 应用中，不需要学习新的框架，并且可以在几分钟内部署。
+2. 诞生背景
+Million 是一个为 React 应用程序提供优化的 JS 库。它的创造是为了解决特定的性能问题，特别是在虚拟 DOM（Virtual DOM）和更新过程中。React 是一个非常受欢迎的 JavaScript 库，它允许开发者通过声明式的方式构建用户界面，并通过其虚拟 DOM 系统来高效地更新和渲染组件。然而，当处理大型或复杂的应用程序时，React 可能会遇到性能瓶颈。
+2.1 对比 React 演示
+要明白为什么要使用Million.js，我们需要了解 React 是如何更新界面的。当一个应用的状态(state)或属性(props)发生变化时，React 会经历一个分为渲染(rendering)和对比更新(reconciliation)的两部分的更新过程。
+以我们的 App 为例：
+function App() {
+  const [count, setCount] = useState(0);
+  const increment = () => setCount(count + 1);
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment</button>
+    </div>
+  );
+}
+
+在这个 App 中，当我点击按钮时，count 状态将更新，<p…]]></summary>
+        <author>
+            <name>lecepin</name>
         </author>
     </entry>
     <entry>
@@ -2430,26 +2460,6 @@ body {
    若读友对「APP 不释手」饶有兴致，欢迎关注小程序「APP 不释手」或添加微信好友「MHummels」骚扰一波：]]></summary>
         <author>
             <name>APP不释手</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[前后端分离多年，为何服务端渲染（SSR）重回风口浪尖？]]></title>
-        <id>https://juejin.cn/post/7326393655391010853</id>
-        <link href="https://juejin.cn/post/7326393655391010853"/>
-        <updated>2024-01-22T00:01:43.000Z</updated>
-        <summary type="html"><![CDATA[前后端分离多年，为何服务端渲染（SSR）重回风口浪尖？
-什么是服务端渲染？
-咱们先搞明白个事儿，啥叫服务端渲染？服务端渲染的全称是 Server-Side Rendering，简称SSR。
-简单说，就是在服务器上把网页生成好，整个的HTML页面生成出来，生成出的页面已经包含了所有必要的数据和结构信息，然后直接发给浏览器进行展现。
-这和现在流行的前后端分离设计有很大的区别，在前后端分离中，浏览器首先加载到的是一个基本的框架或者说是空壳页面，随后前端通过异步请求后端API获取到数据，然后再动态构建HTML，最后再让浏览器把页面逐渐展现出来。
-Web的发展历程
-要深入理解服务端渲染为何又成为热点，我们需要回顾Web的发展历史。
-早期Web开发（1990年代至2000年代初） ：在Web的早期，除了静态页面外，大多数网页的HTML是通过服务端渲染的。ASP、JSP、PHP等脚本语言盛行，它们通常将业务逻辑和HTML模板结合在一起，以处理请求并生成完整的HTML页面返回给客户端。在这个阶段，前后端技术混合使用，开发者往往需要同时具备前端和后端的技能。
-AJAX的崛起（2005年左右） ：Ajax技术的发展和jQuery库的普及使得网页能够动态加载数据，实现局部内容的更新，无需刷新整个页面。这一变化增强了前端的交互能力。尽管如此，服务器端渲染仍是主流，前后端职责分离尚未明显。
-前端框架的诞生（2009年以后） ：随着AngularJS、Ember.js等前端框架的诞生，前端工程师能够创建更复杂的单页应用（SPA）。这些应用通过API获取数据，并在客户端渲染页面，显著提升了用户体验。
-现代前端框架推动的前后端分离（2013年至今） ：React、Vue.js等现代前端框架凭借组件化和虚拟DOM等特性，极大地提升了开发效率和用户体验。同时，RESTful API的设计原则被广泛采纳，使后端…]]></summary>
-        <author>
-            <name>萤火架构</name>
         </author>
     </entry>
     <entry>

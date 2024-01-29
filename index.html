@@ -422,6 +422,45 @@
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7327938054240108585"
+                        open
+                      >
+                        <summary class="article-expander__title">突破React限制：Million.js带来的性能新境界</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7327938054240108585">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>1. million
+Million.js 是一款极其快速和轻量级的优化编译器，可以使组件速度提升高达 70%。
+。它提供了一种叫做“block”虚拟 DOM 的技术，这种技术比 React 的传统虚拟 DOM 更快，因为它通过 diff 算法比对数据而不是 DOM 本身。
+它可以轻松集成到现有的 React 应用中，不需要学习新的框架，并且可以在几分钟内部署。
+2. 诞生背景
+Million 是一个为 React 应用程序提供优化的 JS 库。它的创造是为了解决特定的性能问题，特别是在虚拟 DOM（Virtual DOM）和更新过程中。React 是一个非常受欢迎的 JavaScript 库，它允许开发者通过声明式的方式构建用户界面，并通过其虚拟 DOM 系统来高效地更新和渲染组件。然而，当处理大型或复杂的应用程序时，React 可能会遇到性能瓶颈。
+2.1 对比 React 演示
+要明白为什么要使用Million.js，我们需要了解 React 是如何更新界面的。当一个应用的状态(state)或属性(props)发生变化时，React 会经历一个分为渲染(rendering)和对比更新(reconciliation)的两部分的更新过程。
+以我们的 App 为例：
+function App() {
+  const [count, setCount] &#x3D; useState(0);
+  const increment &#x3D; () &#x3D;&gt; setCount(count + 1);
+  return (
+    
+Count: {count}
+Increment
+    
+  );
+}
+
+在这个 App 中，当我点击按钮时，count 状态将更新，&lt;p…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7327881655405789236"
                         open
                       >
@@ -2429,8 +2468,6 @@ if (handlers) {
    【AiBase提要：】   
     
    📱 &quot;Help Me Write&quot;新功能即将支…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3789,35 +3826,6 @@ body {
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7326393655391010853"
-                        open
-                      >
-                        <summary class="article-expander__title">前后端分离多年，为何服务端渲染（SSR）重回风口浪尖？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326393655391010853">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前后端分离多年，为何服务端渲染（SSR）重回风口浪尖？
-什么是服务端渲染？
-咱们先搞明白个事儿，啥叫服务端渲染？服务端渲染的全称是 Server-Side Rendering，简称SSR。
-简单说，就是在服务器上把网页生成好，整个的HTML页面生成出来，生成出的页面已经包含了所有必要的数据和结构信息，然后直接发给浏览器进行展现。
-这和现在流行的前后端分离设计有很大的区别，在前后端分离中，浏览器首先加载到的是一个基本的框架或者说是空壳页面，随后前端通过异步请求后端API获取到数据，然后再动态构建HTML，最后再让浏览器把页面逐渐展现出来。
-Web的发展历程
-要深入理解服务端渲染为何又成为热点，我们需要回顾Web的发展历史。
-早期Web开发（1990年代至2000年代初） ：在Web的早期，除了静态页面外，大多数网页的HTML是通过服务端渲染的。ASP、JSP、PHP等脚本语言盛行，它们通常将业务逻辑和HTML模板结合在一起，以处理请求并生成完整的HTML页面返回给客户端。在这个阶段，前后端技术混合使用，开发者往往需要同时具备前端和后端的技能。
-AJAX的崛起（2005年左右） ：Ajax技术的发展和jQuery库的普及使得网页能够动态加载数据，实现局部内容的更新，无需刷新整个页面。这一变化增强了前端的交互能力。尽管如此，服务器端渲染仍是主流，前后端职责分离尚未明显。
-前端框架的诞生（2009年以后） ：随着AngularJS、Ember.js等前端框架的诞生，前端工程师能够创建更复杂的单页应用（SPA）。这些应用通过API获取数据，并在客户端渲染页面，显著提升了用户体验。
-现代前端框架推动的前后端分离（2013年至今） ：React、Vue.js等现代前端框架凭借组件化和虚拟DOM等特性，极大地提升了开发效率和用户体验。同时，RESTful API的设计原则被广泛采纳，使后端…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -4149,6 +4157,8 @@ AJAX的崛起（2005年左右） ：Ajax技术的发展和jQuery库的普及使�
         https://chrome.google.com/webstore/detail/dbjbempljhcmhlfpfacalomonjpalpko        
         
 …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;25
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5126,8 +5136,8 @@ CodeGist 真是帮我大忙啦[玫瑰][玫瑰][玫瑰]
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7688620061">
-        <time id="build-timestamp" datetime="2024-01-28T21:53:25.617Z">2024-01-28T21:53:25.617Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7689807741">
+        <time id="build-timestamp" datetime="2024-01-29T01:15:28.835Z">2024-01-29T01:15:28.835Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
