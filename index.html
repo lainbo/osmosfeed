@@ -117,7 +117,7 @@
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>发现还得是单位有个npm仓库用起来方便，自己也省事，项目CI也快</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -643,6 +643,53 @@ let sql &#x3D; &#x60;
   from 🤡table🤡 
   where 🤡name🤡 &#x3D;…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7328753414724435968"
+                        open
+                      >
+                        <summary class="article-expander__title">threejs 实现一个简易的泊车</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7328753414724435968">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>在上一篇文章 threejs都有些啥 搭建的场景的基础上，咱们尝试做一个简单的自动泊车，进一步探究下 threejs 中还有哪些东西
+简易版小车
+因为之前用的模型比较大，加载很慢，这里就先自己简单实现一辆小车（后面统称自车），如下图：
+
+将车轮、车体和边框组合成一个 Group，便于后面做自车的一些操作，实现代码如下：
+ // 自车车体
+const geometry &#x3D; new THREE.BoxGeometry(2, 0.6, 3);
+const material &#x3D; new THREE.MeshBasicMaterial({
+  color: 0x00ffff,
+  side: THREE.DoubleSide,
+});
+const vehicle &#x3D; new THREE.Mesh(geometry, material);
+vehicle.position.set(0, 1, 0);
+scene.add(vehicle);
+// 增加自车边框
+const box &#x3D; geometry.clone();
+const edges &#x3D; new THREE.EdgesGeometry(box);
+const edgesMaterial &#x3D; new THREE.LineBasicMaterial({
+  color: 0x333333,
+});
+const line &#x3D; new THREE.LineSegments(edges, edgesMaterial);
+line.position.x &#x3D; 0;
+line.position.y &#x3D; 1;
+line.position.z &#x3D; 0;
+scene.add(line);
+// 组成一个Group
+const egoCar &#x3D; new THREE.Group();
+egoCar.name &#x3D; &quot;自车&quot;;
+egoCar.add(vehi…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1539,7 +1586,7 @@ Reference
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>[7073670907851440160#新人报道#]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1912,8 +1959,6 @@ P人不反感的年度复盘问题
     
    支付宝宣布升级 Logo   
 …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2683,7 +2728,7 @@ if (handlers) {
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>[7073670907851440160#新人报道#]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3089,68 +3134,6 @@ disabled，大部分有值的组件应该都会有此属性，能直接禁用框
 模式
 mode，类型为 &quot;add&quot; | &quot;remove&quot; | &quot;reverse&quot;。模式，表明当前框选是增加、减少还是取反。这个 api 感觉…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7326985988768743461"
-                        open
-                      >
-                        <summary class="article-expander__title">三轴陀螺仪：帮移动端实现3D动效</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326985988768743461">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: hydrogen
-一、背景介绍
-
-看这篇文章：《视差特效的原理和实现方法》的时候，看到有一个很棒的动效。但只是PC端的效果，所以我就想在移动端实现类似的，为后续开发新需求的用户体验（炫技）做好沉淀。
-二、前置调研
-话不多说，直接开敲。本来打算创建一个 div 元素来进行调试，但在使用浏览器模拟移动设备时，我迅速遇到了一个问题：移动设备上根本没有鼠标可用！
-
-thinking...
-而且，桌面端依赖监听鼠标移动事件，在移动端被转变为触摸相关的事件，导致原本通过监听鼠标坐标的交互方式变成了通过用户触摸屏幕的方式交互。这显然与我们的预期不符
-PC 能监听鼠标移动
- 
-移动端只能监听点击
- 
-其中，鼠标坐标的作用是用来实时更新倾/斜移动程度的。而我需要一种不同的方式来实时捕获用户的动作位置信息，思考再三，最终决定在移动端使用陀螺仪API：DeviceOrientationEvent平替。
-点击跳转：MDN地址
-三、陀螺仪介绍
-一般来说，放手机上的是三轴陀螺仪，即可测量围绕手机的三个主轴（X、Y、Z）的旋转速率。
-
-
-
-三个指标 alpha beta gamma 表示的是相对于坐标轴，设备在某个给定轴上的旋转量:
-alpha：表示设备沿 Z 轴旋转的角度，范围为 0~360
-beta：表示设备在x轴上的旋转角度，范围为-180~180。它描述的是设备「由后向前」旋转的情况
-gamma：表示设备在y轴上的旋转角度，范围为-90~90。它描述的是设备「由左向右」旋转的情况
-注意： 将手机水平放置，底部对着自己，此时安卓和苹果 alpha 初始值不同。
-  
-初始值
-操作系统
-Alpha
-Beta
-Gamma
-
-
-
-
-Android
-90（右转90度趋向0，左转增加）
-0（面向用户转增加，背向转减小）
-0（右转增加，左转减小）
-
-
-iOS
-0（右转从360减小，左转增加）
-0…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3645,6 +3628,8 @@ flex布局大家应该已经运用的炉火纯青了，相信在日常开发中�
    苹果税   
     
    美国最高法院驳回了双方对 Epic 诉苹果反垄断案的上诉，要求苹果允许开发者在应用中 ”添加按钮、外部链接或需他号召性用于，引导用户使用 IAP 以外的购买机制“ 来完成交易。看上去 Epic 实现了他们对于苹果…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;70
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4427,6 +4412,8 @@ GIF89a 版本支持透明
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>我的独立开发产品RedisMate MVP版本，上线五天，从没有排名到现在app store的开发工具类排名第6位，还有了第一笔收入。到现在我还是有点懵的。不少xd给了我很积极的反馈，并帮我分享给朋友和同事。真的感谢道上兄弟们的关照[抱拳] 。正在写开发和推广总结，思绪还有点乱，完成后跟各位xd分享一下这其中的过程，希望也能帮助一些xd。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4736,8 +4723,8 @@ GIF89a 版本支持透明
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7707384795">
-        <time id="build-timestamp" datetime="2024-01-30T06:53:06.235Z">2024-01-30T06:53:06.235Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7709268405">
+        <time id="build-timestamp" datetime="2024-01-30T09:53:09.236Z">2024-01-30T09:53:09.236Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

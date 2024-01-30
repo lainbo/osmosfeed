@@ -84,7 +84,7 @@
           "description": "从名称上看，@scope似乎是实现CSS作用域的，这个讨论了近20年的特性终于是要支持了吗，还是并非如此？",
           "link": "https://www.zhangxinxu.com/wordpress/2024/01/css-at-scope/",
           "publishedOn": "2024-01-21T13:53:26.000Z",
-          "wordCount": 1428,
+          "wordCount": 1429,
           "title": "CSS @scope他来了",
           "imageUrl": null
         },
@@ -432,7 +432,7 @@
           "description": "重要提示：由于竹白已经非常长的时间没有更新了，很多功能出现问题    \n    \n   所以本周刊在微信公众号“偷懒爱好者”首发，欢迎您关注！    \n        \n   \n   \n    \n   一、上周科技圈大事记   \n    \n   \n   \n   周一（1.15）   \n    \n   \n   希音蝉联 2023 全球购物类 APP 下载量冠军   \n    \n   微软正式发布 Copilot Pro，提供通过对话生成 PPT 等能力   \n   \n   \n    \n   \n   周二（1.16）   \n    \n   \n   我国国内有效发明专利数量突破 400 万件   \n    \n   比亚迪发布璇玑 AI 大模型，将人工智能应用到车辆全领域   \n    \n   智谱 AI 发布新一代底层大模型 GLM-4，性能逼近 GPT-4   \n   \n   \n    \n   \n   周三（1.17）   \n    \n   \n   天舟七号成功发射   \n    \n   Google CEO 称 2024 年将继续裁员   \n   \n   \n    \n   \n   周四（1.18）   \n    \n   \n   华为鸿蒙星河系统正式发布，不再兼容安卓应用   \n    \n   我国在四川雅江探获亚洲规模最大的伟晶岩型单体锂矿，锂资源量近百万吨   \n    \n   宾夕法尼亚大学成功将猪肝移植到人体   \n    \n   扎克伯格宣布 Meta 将会致力于实现 AGI （通用人工智能）   \n   \n   \n    \n   \n   周五（1.19）   \n    \n   \n   我国首届“国家工程师奖”颁发，81 人被授予“国家卓越工程师”称号   \n    \n   夸克 App 升级多个智能 AI 应用   \n    \n   支付宝宣布升级 Logo   \n…",
           "link": "https://open.zhubai.wiki/a/l/t/z/fp/toolight/2361747375485157376",
           "publishedOn": "2024-01-24T01:11:07.000Z",
-          "wordCount": 620,
+          "wordCount": null,
           "title": "第66期 - 偷懒爱好者周刊 24/01/24",
           "imageUrl": null
         },
@@ -532,7 +532,7 @@
           "description": "Artifact 宣布停止服务   \n    \n   推出近一年的 Artifcat 宣布因为“判断市场机会并没有大到能够维持当前的投入”并将在二月底停止服务，此时距离其获得 Google Playstore 年度必备应用的荣誉不过寥寥数日，显然这样的荣誉并没有改变它的命运。与此同时，仍然有不少用户       在关闭公告下留言表示这款 App 是他最喜欢的应用       ，但数据显示 App 的实际安装量在这一年来实际是逐渐走低的。   \n    \n   从 Artifact [这一年的更新记录](https://medium.com/@artifact_team)来看，在去年年中开始，团队可能对于产品未来的发展已经产生了分歧，或者是面对市场和用户群体时迷失了方向，许多展现出来的业务与功能更新，看上去让 Artifact 更像是一个容纳用户公开创作的内容平台，与它最初出现时的让 AI 改善新闻推送与信息茧房问题的初衷相差甚远。这也让 Artifact 越来越像是一个技术与市场探索的试验品。   \n    \n   豆瓣播客   \n    \n   豆瓣       增加了播客条目的标记与评分功能       ，你现在可以播客节目标记想听、在听和听过，对节目打分，也可以直接在 App 内收听每一期节目。与书影音等版权内容不同，大部分播客节目的维护者可能更喜欢自己的节目在不同平台都能够上架并获得更多听众。作为国内较早的音频服务供应商（豆瓣FM，知识课程等），相比进入播客领域，豆瓣在这个时间点才入场播客可能更出乎意料。   \n    \n   苹果税   \n    \n   美国最高法院驳回了双方对 Epic 诉苹果反垄断案的上诉，要求苹果允许开发者在应用中 ”添加按钮、外部链接或需他号召性用于，引导用户使用 IAP 以外的购买机制“ 来完成交易。看上去 Epic 实现了他们对于苹果…",
           "link": "https://open.zhubai.wiki/a/l/t/z/fp/speciouspm/2361051118865235968",
           "publishedOn": "2024-01-22T03:04:26.000Z",
-          "wordCount": null,
+          "wordCount": 20919,
           "title": "有所启发 #002 Artifact，Meta，Arc Browser，苹果税，作为装饰的图书以及抢夺注意力的路牌。",
           "imageUrl": null
         },
@@ -868,6 +868,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7328753414724435968",
+          "author": "_lucas",
+          "description": "在上一篇文章 threejs都有些啥 搭建的场景的基础上，咱们尝试做一个简单的自动泊车，进一步探究下 threejs 中还有哪些东西\n简易版小车\n因为之前用的模型比较大，加载很慢，这里就先自己简单实现一辆小车（后面统称自车），如下图：\n\n将车轮、车体和边框组合成一个 Group，便于后面做自车的一些操作，实现代码如下：\n // 自车车体\nconst geometry = new THREE.BoxGeometry(2, 0.6, 3);\nconst material = new THREE.MeshBasicMaterial({\n  color: 0x00ffff,\n  side: THREE.DoubleSide,\n});\nconst vehicle = new THREE.Mesh(geometry, material);\nvehicle.position.set(0, 1, 0);\nscene.add(vehicle);\n// 增加自车边框\nconst box = geometry.clone();\nconst edges = new THREE.EdgesGeometry(box);\nconst edgesMaterial = new THREE.LineBasicMaterial({\n  color: 0x333333,\n});\nconst line = new THREE.LineSegments(edges, edgesMaterial);\nline.position.x = 0;\nline.position.y = 1;\nline.position.z = 0;\nscene.add(line);\n// 组成一个Group\nconst egoCar = new THREE.Group();\negoCar.name = \"自车\";\negoCar.add(vehi…",
+          "link": "https://juejin.cn/post/7328753414724435968",
+          "publishedOn": "2024-01-28T07:55:53.000Z",
+          "wordCount": 2217,
+          "title": "threejs 实现一个简易的泊车",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7328366295091331110",
           "author": "程序员马晓博",
           "description": "我们所有人都被一只手推着，在一条名为人生的路上狂飙。 -- 不知名的小孩。\n2023 年，我经历了两次裁员，一次是在网易，属于意料之中，一次是在前司，属于意料之外。说实话，可以说是打乱了我原本的职业规划，而今年也恰好是我的而立之年，所以写篇文章来分享记录下这一年的心路历程。\n不得不说，时间过的是真的很快，去年的 年终随笔 都还历历在目。转瞬之间，就到了 2023 年结束的日子。\n你什么时候过期\n你什么时候过期？\n这是我所在的云音乐某团队，在 2023年年初，大家见面的第一个问题：你什么时候过期？\n因为彼时，已经有很多同事被约谈，劳动合同到期的，全部不进行续签，可能可以算是变相裁员吧。\n而我，是 6 月份到期。\n但是团队没有事情做，其实是从年后就发现了。\n那时候，使得流水翻了好几倍的一项业务，由于合规问题被叫停，就开始暗搓搓裁员的模式，能砍的业务线都砍掉，合同到期的员工均不续期。\n而团队内部，也进入了人心惶惶的阶段。打招呼用语也是从早，好啊，改成了，兄弟，你什么时候过期？\n我所负责的业务线，虽不是直接关联，但是也不免唇亡齿寒。\n平时提需求的运营，产品，也都陷入了沉寂，年前规划的所有项目，均一动不动。\n时不时就发现，这个同学的头像上展示已离职，那个同学的签名改成了江湖再见，那个同学的签名改成了 xx 业务已交接。\n我当时的工作心态呢，应该大部分同学都一样，都比较平和。因为年终该发的，都已经发掉，和去年基本持平。\n剩下的，就是静静等待通知。\n就像 耗子叔说的：认真工作，等待裁员(原话不记得了，大概就是这么个意思)。\n不出意外，我也被约谈了，基本是提前了 2个月就得知了自己不续签的消息。\n虽然我上年度刚刚晋升，但是合同到期不续签，这一项合法合规，没有任何反驳的机会。并且公司还提前了 2个多月就提醒了我。也算是给我了充足的时间来寻找下家。\n在此期间，我刷了 leetcode，我是跟着…",
@@ -998,16 +1008,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7326985988768743461",
-          "author": "狂炫冰美式",
-          "description": "theme: hydrogen\n一、背景介绍\n\n看这篇文章：《视差特效的原理和实现方法》的时候，看到有一个很棒的动效。但只是PC端的效果，所以我就想在移动端实现类似的，为后续开发新需求的用户体验（炫技）做好沉淀。\n二、前置调研\n话不多说，直接开敲。本来打算创建一个 div 元素来进行调试，但在使用浏览器模拟移动设备时，我迅速遇到了一个问题：移动设备上根本没有鼠标可用！\n\nthinking...\n而且，桌面端依赖监听鼠标移动事件，在移动端被转变为触摸相关的事件，导致原本通过监听鼠标坐标的交互方式变成了通过用户触摸屏幕的方式交互。这显然与我们的预期不符\nPC 能监听鼠标移动\n \n移动端只能监听点击\n \n其中，鼠标坐标的作用是用来实时更新倾/斜移动程度的。而我需要一种不同的方式来实时捕获用户的动作位置信息，思考再三，最终决定在移动端使用陀螺仪API：DeviceOrientationEvent平替。\n点击跳转：MDN地址\n三、陀螺仪介绍\n一般来说，放手机上的是三轴陀螺仪，即可测量围绕手机的三个主轴（X、Y、Z）的旋转速率。\n\n\n\n三个指标 alpha beta gamma 表示的是相对于坐标轴，设备在某个给定轴上的旋转量:\nalpha：表示设备沿 Z 轴旋转的角度，范围为 0~360\nbeta：表示设备在x轴上的旋转角度，范围为-180~180。它描述的是设备「由后向前」旋转的情况\ngamma：表示设备在y轴上的旋转角度，范围为-90~90。它描述的是设备「由左向右」旋转的情况\n注意： 将手机水平放置，底部对着自己，此时安卓和苹果 alpha 初始值不同。\n  \n初始值\n操作系统\nAlpha\nBeta\nGamma\n\n\n\n\nAndroid\n90（右转90度趋向0，左转增加）\n0（面向用户转增加，背向转减小）\n0（右转增加，左转减小）\n\n\niOS\n0（右转从360减小，左转增加）\n0…",
-          "link": "https://juejin.cn/post/7326985988768743461",
-          "publishedOn": "2024-01-23T03:53:11.000Z",
-          "wordCount": 1291,
-          "title": "三轴陀螺仪：帮移动端实现3D动效",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7326816030042669110",
           "author": "欲买炸鸡同载可乐",
           "description": "前言\nflex布局大家应该已经运用的炉火纯青了，相信在日常开发中大家和我一样不管遇到什么都是flex一把搜哈。直到我遇到grid，才发现有些场景下，不是说flex实现不了而是使用grid能够更加轻松的完成任务。下面拿几个场景和大家分享一下。\n宫格类的布局\n比如我要实现一个布局，最外层元素的宽度是1000px，高度自适应。子元素宽度为300px，一行展示3个，从左到右排列。其中最左边与最右边的元素需要紧挨父元素的左右边框。如下图所示：\n\n使用flex实现\n这个页面布局在日常开发中非常常见，考虑下使用flex布局如何实现，横向排列元素，固定宽度300，wrap设置换行显示，设置双端对齐。看起来很简单，来实现一下。\n<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <style>\n        .box{\n            width: 1000px;\n            display: flex;\n            flex-wrap: wrap;\n            justify-content: space-between;\n            gap: 10px;\n        }\n        .item{\n            background: pink;\n            width: 300px;\n            height: 150px;\n        }\n    </style>\n</head>\n\n<body>\n    <div class=\"box\">\n        <div class=\"item\">1</div>\n        <div class=\"item\">2</div>\n        <div class=\"item\">3</div>\n   …",
@@ -1080,7 +1080,7 @@
           "description": "发现还得是单位有个npm仓库用起来方便，自己也省事，项目CI也快",
           "link": "https://juejin.cn/pin/7329413905028120588",
           "publishedOn": "2024-01-30T01:02:06.000Z",
-          "wordCount": 448,
+          "wordCount": 451,
           "title": "发现还得是单位有个npm仓库用起来方便，自己也省事，项目CI也快",
           "imageUrl": null
         },
@@ -1120,7 +1120,7 @@
           "description": "🤓文章、文档模板上线啦！\n✍️大量简易实用模板上线已上线，创建内容可以直接选择模板进行撰写使用！\n学习工作日报周报\n会议纪要\n产品需求文档\n技术需求文档\n论文项目汇报\n读书笔记……\n专业文档模板随时使用参考，再也不用担心不会写文档，不会总结输出内容啦😉",
           "link": "https://juejin.cn/pin/7329118494895833125",
           "publishedOn": "2024-01-29T01:19:20.000Z",
-          "wordCount": 476,
+          "wordCount": 479,
           "title": "🤓文章、文档模板上线啦！ ✍️大量简易实用模板上线已上线，创建内容可以直接选择模板进行撰写使用！ 学习工作日报周报 会议纪要 产品需求文档 技术需求文档 ...",
           "imageUrl": null
         },
@@ -1130,7 +1130,7 @@
           "description": "[7073670907851440160#新人报道#]",
           "link": "https://juejin.cn/pin/7327691403844763684",
           "publishedOn": "2024-01-25T06:01:41.000Z",
-          "wordCount": 447,
+          "wordCount": 464,
           "title": "[7073670907851440160#新人报道#]",
           "imageUrl": null
         },
@@ -1160,7 +1160,7 @@
           "description": "[7073670907851440160#新人报道#]",
           "link": "https://juejin.cn/pin/7326978201006932005",
           "publishedOn": "2024-01-23T01:09:22.000Z",
-          "wordCount": 449,
+          "wordCount": 466,
           "title": "[7073670907851440160#新人报道#]",
           "imageUrl": null
         },
@@ -1230,7 +1230,7 @@
           "description": "我的独立开发产品RedisMate MVP版本，上线五天，从没有排名到现在app store的开发工具类排名第6位，还有了第一笔收入。到现在我还是有点懵的。不少xd给了我很积极的反馈，并帮我分享给朋友和同事。真的感谢道上兄弟们的关照[抱拳] 。正在写开发和推广总结，思绪还有点乱，完成后跟各位xd分享一下这其中的过程，希望也能帮助一些xd。",
           "link": "https://juejin.cn/pin/7324939118243692571",
           "publishedOn": "2024-01-17T10:40:30.000Z",
-          "wordCount": 44,
+          "wordCount": 467,
           "title": "我的独立开发产品RedisMate MVP版本，上线五天，从没有排名到现在app store的开发工具类排名第6位，还有了第一笔收入。到现在我还是有点懵的。不少xd给了我很积...",
           "imageUrl": null
         },
@@ -1250,7 +1250,7 @@
           "description": "[7073670907851440160#新人报道#] [呲牙]",
           "link": "https://juejin.cn/pin/7324531750621904931",
           "publishedOn": "2024-01-16T08:53:54.000Z",
-          "wordCount": 451,
+          "wordCount": 468,
           "title": "[7073670907851440160#新人报道#] [呲牙]",
           "imageUrl": null
         }
