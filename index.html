@@ -709,6 +709,67 @@ Paul Buchheit</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7329310941106356275"
+                        open
+                      >
+                        <summary class="article-expander__title">从‘相信前端能做一切’到‘连这个都做不了么’</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7329310941106356275">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: condensed-night-purple
+
+帮助阅读
+此篇文章主要是为了实现仪表盘功能，前后过了4种方案，每篇方案从逻辑、代码、效果、问题四个方面出发。最后个人总结。同时非常非常希望有大佬能够提供一个方案，个人实在想不到实现方案了
+需求
+h5页面中，做一个环形仪表盘（如下图），需要一个从0%到实际百分比的增长过渡动效
+
+前提
+使用前端原生Html、css、js语言实现, 不打算借助第三方插件。
+最初Scheme
+将UI图片作为背景，上面放一个白色div作为遮罩，再利用css3将白色div旋转，从而达到过渡效果。
+代码如下:
+
+.light-strip {
+width: 500px;
+height:500px;
+border: 1px solid #efefef;
+background-image: url(&#x27;Frame 29@3x.png&#x27;);
+float: right;
+background-size: 100% 100%;
+}
+.light-strip-top {
+margin-top: 0%;
+width: 500px;
+height: 250px;
+background: #fff;
+transform-origin: bottom center;
+/* transform: rotate 5s ; */
+rotate: 0deg;
+transition: all 2s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+function load() {
+setTimeout(() &#x3D;&gt; {
+document.quer…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7329034439408615451"
                         open
                       >
@@ -950,6 +1011,53 @@ let sql &#x3D; &#x60;
   from 🤡table🤡 
   where 🤡name🤡 &#x3D;…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7328753414724435968"
+                        open
+                      >
+                        <summary class="article-expander__title">threejs 实现一个简易的泊车</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7328753414724435968">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>在上一篇文章 threejs都有些啥 搭建的场景的基础上，咱们尝试做一个简单的自动泊车，进一步探究下 threejs 中还有哪些东西
+简易版小车
+因为之前用的模型比较大，加载很慢，这里就先自己简单实现一辆小车（后面统称自车），如下图：
+
+将车轮、车体和边框组合成一个 Group，便于后面做自车的一些操作，实现代码如下：
+ // 自车车体
+const geometry &#x3D; new THREE.BoxGeometry(2, 0.6, 3);
+const material &#x3D; new THREE.MeshBasicMaterial({
+  color: 0x00ffff,
+  side: THREE.DoubleSide,
+});
+const vehicle &#x3D; new THREE.Mesh(geometry, material);
+vehicle.position.set(0, 1, 0);
+scene.add(vehicle);
+// 增加自车边框
+const box &#x3D; geometry.clone();
+const edges &#x3D; new THREE.EdgesGeometry(box);
+const edgesMaterial &#x3D; new THREE.LineBasicMaterial({
+  color: 0x333333,
+});
+const line &#x3D; new THREE.LineSegments(edges, edgesMaterial);
+line.position.x &#x3D; 0;
+line.position.y &#x3D; 1;
+line.position.z &#x3D; 0;
+scene.add(line);
+// 组成一个Group
+const egoCar &#x3D; new THREE.Group();
+egoCar.name &#x3D; &quot;自车&quot;;
+egoCar.add(vehi…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1879,7 +1987,7 @@ Reference
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>[7073670907851440160#新人报道#]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2252,6 +2360,8 @@ P人不反感的年度复盘问题
     
    支付宝宣布升级 Logo   
 …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2451,80 +2561,6 @@ pixi.js是一个2D的WebGL的渲染库。但是没有three.js知名度高。一�
 万万没想到，这波让我碰上了，没意识备案信息没有随域名到期一块取消，导致自己的备案信息被接管了。
 大家也注意，域名到期的时候记得把自己的备案信息给取消掉。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7327424955037564965"
-                        open
-                      >
-                        <summary class="article-expander__title">揭秘 &quot;mitt&quot; 源码：为什么作者钟情于 &#x60;map&#x60; 而放弃 &#x60;forEach&#x60;</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7327424955037564965">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>故事是这样的，半年前我提交了一个 Pull Request（PR），想要将作者在代码中使用的 map 改成 forEach，
-而作者的回应却是：map() is used because it is 3 bytes smaller when gzipped. （使用 map 是因为在 Gzip 压缩时可以减小 3 字节的体积。）
-咦？为什么会这样呢？
-&quot;mitt&quot; 简介
-首先，让我们认识一下 &quot;mitt&quot;，它是一只小巧灵活的事件发射器（event emitter）库，体积仅有 200 字节，但功能强大。这个小家伙在项目中充当了事件的传播者，有点像是一个小型的邮差，把消息传递给需要它的地方。
-developit/mitt: 🥊 Tiny 200 byte functional event emitter / pubsub. (github.com)
-作者的选择：map vs forEach
-在源码中，我们发现作者选择使用了 Array.prototype.map()，这是一个处理数组每个元素并返回新数组的函数。然而，有趣的地方在于，作者并没有在 map 中返回任何值。这和我对 map 的期望有些出入，因为我们习惯于用它生成一个新的数组。
-代码的细微变化
-曾经，代码片段是这样的，作者想要用 map 来执行一些操作，但却不生成新数组。
-if (handlers) {
-  (handlers as EventHandlerList)
-    .slice()
-    .map((handler) &#x3D;&gt; {
-      handler(evt!);
-    });
-}
-
-我希望修改成这样：
-if (handlers) {
-  (handlers as EventHandlerList)
-    .slice()
-    .forEach((handler) &#x3D;&gt; {
-      handler(evt!);
-    });
-}
-
-所以我很快就交了个PR：将map改成了forEach，经过了几个月的等待，PR被拒了，作者的回应是：map() is used because it is 3 bytes smaller when gzipped.（使用 map 是因为在 Gzip 压缩时可以减小 3 字节的体积。）
-
-
-小技巧背后的逻辑
-虽然 map 通常用于生成新数组，但作者在这里使用它更像是在借助压缩的优势，让代码更轻量。
-大小对比
-通过实验验证，使用 map 的打包大小确实稍微小一些：
-使用 map 时，打包大小为：
-  - 190 B: mitt.js.gz
-  - 162 B: mitt.js.br
-  - 189 B: mitt.mjs.gz
-  - 160 B: mitt.mjs.br
-  - 268 B: mitt.umd.js.gz
-  - 228 B: mitt.umd.js.br
-
-而使用 forEach 后，打包大小为：
-  - 192 B: mitt.js.gz
-  - 164 B: mitt.js.br
-  - 191 B: mitt.mjs.gz
-  - 162 B: mitt.mjs.br
-  - 270 B: mitt.umd.js.gz
-  - 230 B: mitt.umd.js.br
-
-进一步实验
-为了深入了解选择的影响，我又进行了一个实验。有趣的是，当我将代码中的一处使用 map 改为 forEach，而另一处保持不变时，结果居然是打包体积更大了。
-
-总结
-这个故事让我不仅仅关注于代码表面，还开始注重微小选择可能带来的影响。学到了很多平时容易忽略的点，&quot;mitt&quot; 作者的选择展现了在开发中面对权衡时的智慧，通过选择不同的API，以轻松的方式达到减小代码体积的目标。在编写代码时，无处不充满着权衡的乐趣。
-如果你对这个故事有更多的想法或者其他技术话题感兴趣，随时和我分享哦！</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2890,8 +2926,6 @@ if (handlers) {
    【AiBase提要：】   
     
    📱 &quot;Help Me Write&quot;新功能即将支…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3098,73 +3132,6 @@ if (handlers) {
 曾经看完三国演义，会经常浮想，如果自己是曹操，是张飞，当遇到眼前这堆琐事的时候会如何处理，当面对别人讥笑的时候又该如何回应，多次的实践发现，曹操的包容、张飞的坦荡、鲁肃的正襟危坐都非常有用武之地。
 人们几乎都是在模仿中学习，然后慢慢才形成自己独有的风格，而阅读联想、影视联想，甚至身边人联想，都是值得去实践的好办法。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7326816030042669110"
-                        open
-                      >
-                        <summary class="article-expander__title">真的不考虑下grid布局？有时候真的很方便！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7326816030042669110">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-flex布局大家应该已经运用的炉火纯青了，相信在日常开发中大家和我一样不管遇到什么都是flex一把搜哈。直到我遇到grid，才发现有些场景下，不是说flex实现不了而是使用grid能够更加轻松的完成任务。下面拿几个场景和大家分享一下。
-宫格类的布局
-比如我要实现一个布局，最外层元素的宽度是1000px，高度自适应。子元素宽度为300px，一行展示3个，从左到右排列。其中最左边与最右边的元素需要紧挨父元素的左右边框。如下图所示：
-
-使用flex实现
-这个页面布局在日常开发中非常常见，考虑下使用flex布局如何实现，横向排列元素，固定宽度300，wrap设置换行显示，设置双端对齐。看起来很简单，来实现一下。
-
-
-
-
-    
-        .box{
-            width: 1000px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 10px;
-        }
-        .item{
-            background: pink;
-            width: 300px;
-            height: 150px;
-        }
-    
-
-
-
-    
-1
-        
-2
-        
-3
-   …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3394,6 +3361,8 @@ flex布局大家应该已经运用的炉火纯青了，相信在日常开发中�
    书籍种类繁多，阅读方式各异。有些书安抚心灵，有些是研究用的工具书，还有些是值得反复阅读的经典。不是每本书都必须读完，每本书对我们的影响也各不相同。重要的是找到适合自己的好书，这需要阅读经验和清醒的判断力。   
     
    养成阅读习惯，爱上阅读，自然会吸引到合适的书籍。阅读时，我们与书的内容建立联系，这种联系越深，对我们的思维和…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3452,8 +3421,6 @@ flex布局大家应该已经运用的炉火纯青了，相信在日常开发中�
    🧩        了解移动UI组件↗︎        
     
   …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3495,8 +3462,6 @@ flex布局大家应该已经运用的炉火纯青了，相信在日常开发中�
    图由        AI帮个忙        绘制   
       
    以前对所谓的「名人经验」有些不屑，慢慢长大会懂得这里面的两面性。对靠风口成功的名人祛魅，但对于有自己方法论的名人，还是应该去积极学习呀。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;28
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3872,8 +3837,6 @@ Flex容器和Flex项目上设置对齐方式
         https://chrome.google.com/webstore/detail/dbjbempljhcmhlfpfacalomonjpalpko        
         
 …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;25
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4621,8 +4584,8 @@ GIF89a 版本支持透明
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7722291534">
-        <time id="build-timestamp" datetime="2024-01-31T06:53:29.982Z">2024-01-31T06:53:29.982Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7724165832">
+        <time id="build-timestamp" datetime="2024-01-31T09:53:09.406Z">2024-01-31T09:53:09.406Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
