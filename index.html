@@ -51,8 +51,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-03 datetime="2024-02-03T08:04:00.000Z">2024-02-03</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-03 datetime="2024-02-03T08:04:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-03 datetime="2024-02-03T09:28:00.000Z">2024-02-03</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-03 datetime="2024-02-03T09:28:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -67,6 +67,25 @@
                   <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240203/t20240203_526582285.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市石柱土家族自治县发布暴雪黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240203/t20240203_526582285.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>石柱县气象台2024年2月3日16时50分发布“暴雪黄色预警信号”，预计2月3日17时至4日12时，黄水镇、枫木镇、临溪镇、石家乡、王家乡、河嘴乡、冷水镇、金竹乡、中益乡、沙子镇、新乐乡、洗新乡、黄鹤镇、金铃乡、三益乡、桥头镇、万朝镇、龙沙镇、鱼池镇、沿溪镇、悦崃镇、王场镇、西沱镇、黎场乡、龙潭乡、下路街道、三星乡、六塘乡、马武镇、万安街道、南宾街道、三河镇、大歇镇降雪量将达6毫米以上，可能对交通或者农牧业有影响。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -846,7 +865,7 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
                         <summary class="article-expander__title">Vue2的12种和Vue3的7种组件通信</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://lainbo.com/article/vue-components">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://www.notion.so/images/page-cover/nasa_robert_stewart_spacewalk_2.jpg" loading="lazy" class="media-object__media article-image" />
+                              <img src="https://www.notion.so/images/page-cover/nasa_earth_grid.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>Vue2、3有非常多的传值方式，他们适合的场景各不相同，我进行了全面的总结</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;4
@@ -1597,6 +1616,56 @@ const App &#x3D; () &#x3D;&gt; {
 控制非 React 组件
 有时需要添加不是使用 React 编写的 UI …</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7329967013923962895"
+                        open
+                      >
+                        <summary class="article-expander__title">js如何实现当文本内容过长时，中间显示省略号...,两端正常展示</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7329967013923962895">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: channing-cyan
+highlight: a11y-dark
+前一阵做需求时，有个小功能实现起来废了点脑细胞，觉得可以记录一下。
+产品的具体诉求是：用户点击按钮进入详情页面，详情页内的卡片标题内容过长时，标题的前后两端正常展示，中间用省略号...表示，并且鼠标悬浮后，展示全部内容。
+关于鼠标悬浮展示全部内容的代码就不放在这里了，本文主要写关于实现中间省略号...的代码。
+实现思路
+获取标题盒子的真实宽度, 我这里用的是clientWidth；
+获取文本内容所占的实际宽度；
+根据文字的大小计算出每个文字所占的宽度；
+判断文本内容的实际宽度是否超出了标题盒子的宽度；
+通过文字所占的宽度累加之和与标题盒子的宽度做对比，计算出要截取位置的索引；
+同理，文本尾部的内容需要翻转一下，然后计算索引，截取完之后再翻转回来；
+代码
+html代码
+近日，银行纷纷下调大额存单利率，但银行定期存款仍被疯抢。银行理财经理表示：有意向购买定期存款要尽快，不确定利率是否会再降。
+
+css代码: 设置文本不换行，同时设置overflow:hidden让文本溢出盒子隐藏
+.title {
+    width: 640px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #00b388;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
+    white-space: nowrap;
+    /* box-sizing: border-box; */
+    padding: 0 10px;
+}
+
+j…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2413,7 +2482,7 @@ gitee: codercup/unibest
                         <summary class="article-expander__title">一些适用于中国大陆的CDN整理</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://lainbo.com/article/mainland-china-cdn">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://www.notion.so/images/page-cover/nasa_robert_stewart_spacewalk_2.jpg" loading="lazy" class="media-object__media article-image" />
+                              <img src="https://www.notion.so/images/page-cover/nasa_earth_grid.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>由于某些众所周知的原因, 很多开源的库、开箱即用的Blog模板采用的都是国外CDN, 在大陆访问速度不尽人意, 这可能导致你的网站打开速度非常慢, 我整理收集了目前稳定运行的免费CDN站, 能让你的站点资源在国内外都获得不错的速度。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
@@ -2433,7 +2502,7 @@ gitee: codercup/unibest
                         <summary class="article-expander__title">Prettier、ESLint配置及注释</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://lainbo.com/article/prettier-eslint-config">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://www.notion.so/images/page-cover/nasa_robert_stewart_spacewalk_2.jpg" loading="lazy" class="media-object__media article-image" />
+                              <img src="https://www.notion.so/images/page-cover/nasa_earth_grid.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>每个项目都会有ESLint，可能有Prettier，这里记录一些常见配置的含义</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
@@ -3052,56 +3121,6 @@ egoCar.add(vehi…</span>
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7327971289743278121"
-                        open
-                      >
-                        <summary class="article-expander__title">瀑布流优化：我把小红书的瀑布流虚拟列表撕出来了🧐！但女友不理我了😭😭</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7327971289743278121">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: smartblue
-扯皮
-接上篇瀑布流内容，我仔细研究发现小红书的首页布局并不是简单的瀑布流，所以停下手边的游戏开始打开 F12 慢慢查看🤔
-不知不觉忘记了女朋友跟我发的小红书链接具体内容，一头扎在了小红书的首页，快半小时过去才想起忘来给女朋友回消息了😇
-当我反应过来赶紧发消息后，发现两极反转，这次换成我被冷落了😶😶😶
-啧啧啧，如今女朋友已经成为了前女友，我们也已经分手有将近两年时间了，记得分手半年之后身边的朋友推荐我读一本书：《非暴力沟通》，说能够加强自己的沟通能力，虽然以后会成为码农但人与人之间的沟通还是需要的，所以提前学习一下沟通技巧
-读完之后发现自己纯粹是一个🤡，书中举的反例都让哥们踩完了，而且完美的应用到了女友身上🤡🤡🤡
-如今写最近两篇文章时脑子不断浮现以前的日子，回想起来自己真是铁直男啊，不过还好前女友和我都是初恋，双方彼此还是比较包容的，都是没谈过恋爱的傻瓜罢了
-不过纸包不住火，初恋虽然美好，但是没有任何恋爱经验，女方矫情一些，男方再直男一些，直接就寄了😑
-感觉大学的恋爱就是一句话：一个敢说，一个敢信...
-只能说一场恋爱下来最大的成长就是让我踩了不少关于女生的坑，也感受到了年轻时代爱情的美好，同时掌握了一些沟通的技巧吧😁
-不知道以后如果还有机会的话同一个坑自己会不会长记性呢😔😔😔
-正文
-这次扯的无关内容有点多哈，不过都是有感而发😜
-终于来到了关于虚拟列表的最终篇：使用 Vue3 + TS 实现瀑布流虚拟列表，其实之前的几篇文章可以说都是为了这一篇做铺垫，没想到会有这么多人看😂，其实我当时的想法是希望这篇文章阅读量高一些来着...😶
-如果你还不了解虚拟列表相关实现的话，请出门左转👇：
-定高的虚拟列表会了，那不定高的...... 哈，我也会！看我详解一波！🤪🤪🤪 - 掘金 (juejin.cn)
-面试官：能…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;24
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >Lainbo&#x27;s Blog</button>
                   <a class="source-heading__link" href="https://lainbo.com/">Open</a>
                 </h3>
@@ -3116,7 +3135,7 @@ egoCar.add(vehi…</span>
                         <summary class="article-expander__title">如何编写高质量AI Prompt</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://lainbo.com/article/high-quality-prompt">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://www.notion.so/images/page-cover/nasa_robert_stewart_spacewalk_2.jpg" loading="lazy" class="media-object__media article-image" />
+                              <img src="https://www.notion.so/images/page-cover/nasa_earth_grid.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>如果你认为ChatGPT给出的官方教程太长了, 或无法看明白, 可以看看这个这个总结的版本, 除了指导如何编写高质量Prompt, 还在文末给出了适应大部分场景的模板</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
@@ -3406,8 +3425,6 @@ P人不反感的年度复盘问题
     
    我今年最想完成的事情是什么？   
    …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3628,7 +3645,7 @@ P人不反感的年度复盘问题
                         <summary class="article-expander__title">Chat GPT最佳实践 [译]</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://lainbo.com/article/chatgpt-best-practice">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://www.notion.so/images/page-cover/nasa_robert_stewart_spacewalk_2.jpg" loading="lazy" class="media-object__media article-image" />
+                              <img src="https://www.notion.so/images/page-cover/nasa_earth_grid.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>在这个AI井喷式爆发的时代，谁和GPT做朋友，谁就遥遥领先</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
@@ -4308,8 +4325,6 @@ P人不反感的年度复盘问题
    图由        AI帮个忙        绘制   
       
    以前对所谓的「名人经验」有些不屑，慢慢长大会懂得这里面的两面性。对靠风口成功的名人祛魅，但对于有自己方法论的名人，还是应该去积极学习呀。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;28
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5026,76 +5041,10 @@ CodeGist：https://codegist.cn/</span>
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-05 datetime="2024-01-05T00:14:33.000Z">2024-01-05</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-05 datetime="2024-01-05T00:14:33.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >阮一峰的网络日志</button>
-                  <a class="source-heading__link" href="http://www.ruanyifeng.com/blog/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.ruanyifeng.com/blog/2024/01/weekly-issue-285.html"
-                        open
-                      >
-                        <summary class="article-expander__title">科技爱好者周刊（第 285 期）：为什么 PPT 不如备忘录</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.ruanyifeng.com/blog/2024/01/weekly-issue-285.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>这里记录每周值得分享的科技内容，周五发布。
-本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。
-封面图
-
-西安某小区正在新建的儿童游乐园。（via）
-为什么 PPT 不如备忘录
-莱克斯·弗里德曼（Lex Fridman）是一个非常有名的美国主持人，他的播客节目影响很大，很多名人都愿意上他的节目，接受专访。
-
-12月15日的节目嘉宾，是亚马逊公司的创始人贝佐斯。他们一共谈了两个多小时。
-
-贝佐斯已经不担任亚马逊 CEO，只留任董事会，算是半退休了，主要精力都放在他的太空旅游公司&quot;蓝色起源&quot;（Blue Origin）。从现场照片看，他退休后显得更年轻健壮，精力旺盛。
-这个采访有很多有意思的内容，YouTube 有完整的视频。
-我想分享其中一段，贝佐斯谈亚马逊是怎么开会的。
-主持人问贝佐斯：&quot;我听说亚马逊开会时，不准使用 PPT，发言人必须提交一份六页的备忘录。这是真的吗？&quot;
-这个事情一直是传闻，但这一次，贝佐斯亲口承认确实如此。&quot;新来的人可能会大吃一惊，我们的开会方式与众不同。&quot;
-&quot;会议的前30分钟，我们是不说话的。大家在会议室中安静地坐在一起，阅读这份六页的备忘录，在空白处做笔记，过了30分钟才开始讨论。&quot;
-这真的很奇怪，你见过半个小时没人说话的会议吗？
-贝佐斯解释：&quot;你可以说，更好的做法是，大家都提前阅读这些备忘录。但问题是，人们没有时间这样做，他们参加会议只是因为必须出席。&quot;
-&quot;我们索性在会议上留出时间，让大家现场阅读材料，然后就可以进行真正高层次的讨论了，所有人都跟得上讨论的主题，不会搞不清一些基本的事实。&quot; 
-那么，为什么一定要当事人提交六页的备忘录，而不是现场主讲 PPT 呢？
-贝佐斯说，书面的备忘录要比 PPT 演示，效果好得多，主要有以下几点原因。
-（1）PPT 的设计目的是说服，这是一…</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7766088357">
-        <time id="build-timestamp" datetime="2024-02-03T09:53:11.882Z">2024-02-03T09:53:11.882Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7767010404">
+        <time id="build-timestamp" datetime="2024-02-03T12:54:06.438Z">2024-02-03T12:54:06.438Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
