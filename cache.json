@@ -94,7 +94,7 @@
           "description": "从名称上看，@scope似乎是实现CSS作用域的，这个讨论了近20年的特性终于是要支持了吗，还是并非如此？",
           "link": "https://www.zhangxinxu.com/wordpress/2024/01/css-at-scope/",
           "publishedOn": "2024-01-21T13:53:26.000Z",
-          "wordCount": 1429,
+          "wordCount": 1430,
           "title": "CSS @scope他来了",
           "imageUrl": null
         },
@@ -188,7 +188,7 @@
           "description": "触目惊心，一辆强行加塞的小汽车，被后面怼了一下，直接侧翻90度，向前翻转飞出去二三十米，车身旋转180度，在向前滑行时，车顶贴着地面擦出了火花，那场面就跟拍电影一样，就差爆炸了。\n吓得坐在后排的我，默默地系上了安全带。",
           "link": "https://m.okjike.com/originalPosts/65baf3ae37f7165b219bd8fc",
           "publishedOn": "2024-02-01T01:28:14.000Z",
-          "wordCount": 457,
+          "wordCount": 451,
           "title": "发布了: 触目惊心，一辆强行加塞的小汽车，被后面怼了一下，直接侧翻90度，向前翻转飞出去二三十米，车身旋转180度，在向前滑行时，车顶贴着地面擦出了火花，那...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -422,7 +422,7 @@
           "description": "Hello大家！周三好～   \n    \n   这期很巧，我们都分享了关于「行动」相关的内容。Kwen分享的就是私人用的年度复盘11个问题，相比于前几期我们的年度问答，这个会更偏向于个人的目标感行动总结。而 Abbie 分享的则是关于徒步故事的书籍，用行动去感受旅途的快乐。   \n    \n   新来的同学想要了解我们更多，欢迎       回看往期内容       。   \n          \n   @ kwan\nP人不反感的年度复盘问题   \n    \n   作为一个超P人，其实一直都不喜欢做复盘类型的总结，但是很喜欢看J人的年度总结，都会很好看，听说每一个P人都想要成为J人，想要自己也有一个整整齐齐按着时间表和进度稳步前行的心。   \n    \n   为了帮2024年开个好头，我拾起了年度个人复盘的行动，想要一步步靠近2023年末许下的愿望。好看且宏大的可视化数据总结对于我来说会比较难，所以我找了一个以问题为主的复盘问题，有11个大问题，然后我自己再拆分了一些帮助分析的分支问题，比较全面，围绕着日常的工作、情绪管理、习惯以及亲密关系。   \n    \n   分享给大家可以一起来试试看。   \n    \n   2023年，我取得了哪些成就？   \n    \n   \n   我今年做了什么值得骄傲的事情？   \n    \n   我今年取得了哪些突破？   \n    \n   我今年有什么值得纪念的事情？   \n   \n    \n   我大部分时间都和谁在一起？   \n    \n   \n   我最亲密的朋友是谁？   \n    \n   我最喜欢的家人是谁？   \n    \n   我最喜欢的工作伙伴是谁？   \n   \n    \n   我今年想实现哪些三大目标？   \n    \n   \n   我今年的目标是什么？   \n    \n   我今年最想完成的事情是什么？   \n   …",
           "link": "https://open.zhubai.wiki/a/l/t/z/fp/usefulness/2361924416411062272",
           "publishedOn": "2024-01-24T12:54:37.000Z",
-          "wordCount": null,
+          "wordCount": 1770,
           "title": "057｜行动派的一期分享",
           "imageUrl": null
         },
@@ -482,7 +482,7 @@
           "description": "长文   \n    \n   利用随机数算法突破游戏安全限制   \n        \n        当随机数不再随机       ，文章作者回忆了一段当年玩《魔兽世界》的往事。   \n    \n   作者在 14 岁接触这款当时爆火的游戏，与其他游戏不同的是，这款游戏允许用户编写一些 Lua 脚本来作为游戏的扩展（Addon）。   \n    \n   一般用来对游戏界面进行定制，或者增强游戏交互。   \n    \n   为了安全起见，游戏厂商当然限制了脚本的一些能力，使其不至于影响到游戏的核心规则，比如宝物数量和法术激发等。   \n    \n   具体做法就是，只允许在一个安全的环境中调用有限的接口。   \n    \n   这刺激了作者的破解欲望，但是他不希望通过一些强制的手段（比如修改内存等等），而是使用游戏本身的机制，在许可的范围内“合法”地突破限制。   \n    \n   绕来绕去，作者将目光锁定在了 MSVC 运行库（因为魔兽世界是用 MSVC 编译的，微软又躺枪）提供的随机数函数     rand     上。   \n    \n   这个函数，一共就 4 行代码 ：   \n      \n    \n    \n   使用“线性共余”算法生成随机数，注意那个     state     全局变量，导致了所有随机数的生成都共享了这个数据。   \n    \n   作者通过这个算法，做出了最关键的一步，即根据随机数生成的值，逆向猜出了这个共享的状态值，然后就可以放心猜测接下来的随机数会产生什么值了。   \n    \n   有了这些随机数值的提前预测，就像考试提前知道了答案一样，作者可以随心所欲地将一些信息输出在屏幕上给自己参考，整个游戏也就变得“索然无味”了。   \n    \n   调试器是如何工作的？   \n        \n   调试是每个开发者必备的技能，调试器是离不开…",
           "link": "https://open.zhubai.wiki/a/l/t/z/fp/niupitools/2361381804830625792",
           "publishedOn": "2024-01-23T00:58:28.000Z",
-          "wordCount": 4433,
+          "wordCount": null,
           "title": "机器文摘 第 068 期",
           "imageUrl": null
         },
@@ -1300,7 +1300,7 @@
           "description": "https://sunmier.com/#/  推荐金融开发的高富帅们用的工具",
           "link": "https://juejin.cn/pin/7329518660501979177",
           "publishedOn": "2024-01-30T03:42:13.000Z",
-          "wordCount": 455,
+          "wordCount": 44,
           "title": "https://sunmier.com/#/ 推荐金融开发的高富帅们用的工具",
           "imageUrl": null
         },
@@ -1320,7 +1320,7 @@
           "description": "IDEA中收费的插件可以破解吗[呲牙]",
           "link": "https://juejin.cn/pin/7329352197837389833",
           "publishedOn": "2024-01-29T10:17:52.000Z",
-          "wordCount": 451,
+          "wordCount": 44,
           "title": "IDEA中收费的插件可以破解吗[呲牙]",
           "imageUrl": null
         },
@@ -1370,7 +1370,7 @@
           "description": "再说明一下我们的方法需要做的主要事情：\n- 需要搭建一个私有的matrix服务器，并且通过nginx转发。\n- 需要在每一个设备上安装一个应用，也就是Element。\n[7243698841848348730#每天一个知识点#]",
           "link": "https://juejin.cn/pin/7327157426297815055",
           "publishedOn": "2024-01-23T14:46:46.000Z",
-          "wordCount": 518,
+          "wordCount": 44,
           "title": "再说明一下我们的方法需要做的主要事情： - 需要搭建一个私有的matrix服务器，并且通过nginx转发。 - 需要在每一个设备上安装一个应用，也就是Element。 [724369...",
           "imageUrl": null
         },
@@ -1420,7 +1420,7 @@
           "description": "这几行 puppeteer 服务端 Docker 部署配置。当初折腾了我一天把坑都踩完,还写了一篇文章记录解决的过程 \n文章标题: Linux服务器上运行Puppeteer的Docker部署指南\n文章地址: https://juejin.cn/post/7283873796977066036\n现在把 puppeteer 服务端 Docker 部署配置记录在 CodeGist ，下次再遇到这类需求，复制一下改改就能用了，省心。\nCodeGist：https://codegist.cn/",
           "link": "https://juejin.cn/pin/7325730345838706740",
           "publishedOn": "2024-01-20T02:06:00.000Z",
-          "wordCount": 512,
+          "wordCount": 44,
           "title": "这几行 puppeteer 服务端 Docker 部署配置。当初折腾了我一天把坑都踩完,还写了一篇文章记录解决的过程 文章标题: Linux服务器上运行Puppeteer的Docker部署指南 ...",
           "imageUrl": null
         },
@@ -1430,7 +1430,7 @@
           "description": "这个接口调试插件太强了 推荐给你们",
           "link": "https://juejin.cn/pin/7325495601269948425",
           "publishedOn": "2024-01-19T06:42:45.000Z",
-          "wordCount": 463,
+          "wordCount": 44,
           "title": "这个接口调试插件太强了 推荐给你们",
           "imageUrl": null
         },
