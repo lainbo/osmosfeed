@@ -51,6 +51,56 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-05 datetime="2024-02-05T04:58:22.000Z">2024-02-05</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-05 datetime="2024-02-05T04:58:22.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >李继刚的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/65c06aee38849f879f261279"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: ❝ 我们既不特殊又很特殊，这就要求我们既谦卑又自尊。 ❞</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65c06aee38849f879f261279">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>❝
+我们既不特殊又很特殊，这就要求我们既谦卑又自尊。
+ ❞</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-04 datetime="2024-02-04T11:53:00.000Z">2024-02-04</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-04 datetime="2024-02-04T11:53:00.000Z"></time>
           </button>
@@ -1636,6 +1686,56 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7330879790155890729"
+                        open
+                      >
+                        <summary class="article-expander__title">Vue 终于也有属于自己的 CSSInJs 原子库啦！一款动静结合，极致体积，融合了原子 css 优点的样式库 @usacss/vue</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7330879790155890729">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Vue 终于也有属于自己的 CSSInJs 原子库啦！一款动静结合，极致体积，融合了原子 css 优点的样式库 @usacss/vue
+简介
+纯动态的 css-in-js 库大家都见过
+0js 无运行时的 css-in-js 库大家都见过
+atom 原子样式库大家都见过
+那么 3 者结合，还是搭配 Vue 的大家是否见过呢？
+@usacss/vue 就是这么一个怪兽，将 css-in-js 的灵活与 atom 原子样式的体积优势相结合，目标是带给用户项目一个优秀的样式解决方案
+为什么选择它？它有什么优点？
+市面上的 css 方案有很多，Vue 本身自带的也不失为一个很棒的样式方案，可 @usacss/vue 是结合了多方的特点，权衡利弊下得出的产物
+关于各种 css 方案的优劣势对比的文章有很多，这里只介绍自身的优点，是否真的值得一试有你来决定~
+为原子样式赋予动态能力
+大家常见的原子样式哭，缺点也很明显。比较致命的一点就是，我的项目中用了 ui 库，因某些业务原因我需要修改组件样式，自己写 css 文件就是破坏人家的原则，不这样又很难办到
+@usacss/vue 提供深度选择器来支持修改，但内部没有用编译器，所以性能会纯 css-in-js 库要高很多
+动静结合下的极致体积
+体积可以说是原子样式库最大的卖点之一，同样也是 @usacss/vue 最大的卖点
+自身体积小。大一个全包的 js 体积为 9.6kb，gzip 压缩后的体积为 3.7kb，支持 treeshaking，最终体积可能会更小
+样式继承。内部的样式全是以 json 存储的样式规则，允许把一个项目或者一个库（例如组件）的样式导出为 json，使用的项目则可以进行规则继承，然后统一生成，这就可以做到跨项目的样式共享，总体项目的样式体积会骤降
+原子样式的复用能力。对于任意地方使用的 color:red 这种同样…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >李继刚的即刻动态</button>
                   <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
                 </h3>
@@ -1677,30 +1777,6 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
 昨日不懂，今天了然，即是新知。
 但求开辟自身认知之疆域。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/65bc7fd13b9c66cae48a0232"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 吴军说：计算机科学从业人员在做两件事: 1. 计算机科学家: 将现实问题变成数学问题(建立模型) 2. 计算机工程师: 将数学问题变成计算问题(自然语言»编程...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65bc7fd13b9c66cae48a0232">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>吴军说：计算机科学从业人员在做两件事:
-1. 计算机科学家: 将现实问题变成数学问题(建立模型)
-2. 计算机工程师: 将数学问题变成计算问题(自然语言»编程语言)
-━━━━━━━━━━━━━━ 
-那么ChatGPT 再迭代一下, 把第二个问题给彻底解决掉，大家拼的就只能是第一个点: 建模能力了。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1765,7 +1841,6 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
                         <summary class="article-expander__title">第32期-2023年度总结</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://open.zhubai.wiki/a/l/t/z/pq/daydayup/2365058865420271616">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>1-2月 幸运和表演   
     
@@ -3057,6 +3132,63 @@ j…</span>
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7329807974967345186"
+                        open
+                      >
+                        <summary class="article-expander__title">未来10年（到2035年）前端发展趋势的预测</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7329807974967345186">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>大家好，我卡颂。
+随着最近两年互联网行情走弱，前端岗位需求减少，悲观情绪在从业者之间蔓延。去年社区甚至传出前端已死的论调。
+那么，未来10年（到2035年）前端行情会越来越弱么？在我看来，恰恰相反。本文会分析其中原因。
+打包领取卡颂原创React教程、加入人类高质量前端群
+当前现状
+在互联网繁荣时期，资本对行业预期足够高，催生出大量岗位需求。在此行情下演化出一条程序员职业发展路径：
+
+要跑通这条路径的关键是获得高绩效（高绩效和升职加薪、跳槽强相关），而高绩效和两方面因素相关：
+你为公司创造的价值（背后反映了你的能力）
+公司的经营状况
+所以，在行情好时，程序员只要提升个人能力，就能跑通这条职业路径。
+而在未来10年（到 2035 年），中国会加速进入行业整合期，各领域寡头拥有的资源会越来越集中，这一点在互联网行业尤为明显。
+虽然政府通过反垄断法案在极力延后这一过程，但整体趋势是不可逆的（日本、韩国、亚洲四小龙亦如此）。到 2035 年，单一领域可能只会剩下一到两家寡头企业。
+对于小企业以及大企业的非核心业务来说，未来十年的生存环境会持续恶化。公司经营状况影响绩效，进而导致之前的程序员职业发展路径对大部分人来说不再适用。
+但是，大厂核心业务仍然需要人员更迭。所以对于少数名校高材生来说，这条职业发展路径仍然适用。
+普通程序员怎么办？
+对于广大中小企业，通过软件降本增效的诉求始终存在，所以程序员的需求会始终存在。
+只不过在互联网行情好的时候，程序员的高薪有资本加持，而往后对于普通程序员，只是作为企业中降本增效的职能员工而存在，薪酬上会有所下降。
+同时，对于技术的要求也会不同。在之前的职业路径中，为了适应大厂螺丝钉的职责，技术上你需要体现出领域专精的能力。
+而未来十年对于普通程序员，更多需要前端为主的伪全栈能力，这怎么理解呢？
+对于中小企业，最需要的是根据企业个性化需求定制的软件，比如：
+定制小程序、App、网站
+定制ERP系统
+在互联网行情好时，由于：
+程序员薪酬太高，自己养团队不划算
+专业的ERP年费太贵（比如用友）
+大厂的SaaS不符合个性化需求，或不想将数据交给大厂
+所以这部分需求一直被压制，只能用人力解决。这部分需求有个显著特点 —— 并发不会太高，对后端要求不高，主要逻辑都在流程、交互上。
+未来10年，由于：
+普通程序员薪酬回归正常值
+云服务厂商集成度越来越高（比如Serverless）
+前端各种框架封装能力越来越高（比如Next.js、Remix）
+这部分定制化程度高、重交互的需求会逐渐释放出来，对于“掌握伪全栈技能的前端”需求会越来越大。
+总结
+在未来10年间， 程序员会逐渐分层为两类：
+名校背景的高材生会在大厂，走当前我们熟知的职业发展路径
+中小企业由于自身降本增效的考虑，会提供大量难度不高的定制化需求
+对于前者，需要掌握单一领域的专精技能。对于后者，掌握伪全栈技能的前端即可胜任。
+对于当前还在纠结要不要刷算法、背面经进大厂的前端同学来说，如果你自认不是程序员中最优秀的那一茬，可以早些转型发展伪全栈技能，未来会有很多中小厂需求等着你。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -3254,8 +3386,6 @@ j…</span>
    2、EPUB &amp; PDF 电子书：    会员社群每周推送，可导入微信读书、Kindle等电子阅读器沉浸阅读。   
     
    【还未开通权限的会员朋友，请点击链接，联系值日生👉        https://sourl.cn/mr8AYz       】</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;160
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3989,6 +4119,8 @@ Chat-Craft目前已经实现了即时通讯的基本功能，支持Android和IOS
     
     
    如果你觉得这篇文章对你有用，欢迎分享给更多好友。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;281
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4239,125 +4371,56 @@ vue-loader@^17.4.0（如果使用了 webpack 或 vue-cli）
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7329126541320536074"
+                        data-accordion-key="https://juejin.cn/post/7329126541321601034"
                         open
                       >
-                        <summary class="article-expander__title">【2024】前端，该卷什么呢？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7329126541320536074">
+                        <summary class="article-expander__title">如何实现一个雨滴滑落效果</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7329126541321601034">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>theme: channing-cyan
-2024已来，过去的 2023 可以说是具有里程碑意义的一年，ChatGPT 的炸裂式发展，很多大佬都亲自入场整活儿，你不得不说，人工智能时代的未来已来，大势所趋，不可阻挡。随着生成式AI的迅猛发展，程序员的生存也受到了前所未有的挑战，你可能已经嗅到了满世界都在裁员的味道了。但并不是说这件事儿马上就会发生，机器它当前还只是个“有点聪明”的机器，尚不具备完全替代人的能力，但几年后，谁知道呢？所以，还是未雨绸缪比较好~ 卷起来！
-结尾有推荐很多篇优质的前端文章~
-主要包括下面几部分：
-人工智能会革掉我们的命吗？
-继续学习JavaScript，使用TypeScript
-你必须要会微前端了
-全栈框架的兴起
-你得会 SSR
-跨端：建议别入坑 Flutter 了
-低代码要入吗
-要搞全栈吗？
-鸿蒙生态要入吗？
-推荐一些 2023 看过的好文章
-人工智能会革掉我们的命吗？
-可能会，但不是现在，这个趋势应该是不需要太多争议的，毕竟随着 ChatGPT 的爆发，在生成式人工智能引发的革命性变革已经来临，未来机器能做的事情只会越来越多，迟早是要“解放一批人的”。
-如果在当下还没有使用人工智能作为日常开发辅助工具的，显然你可能已经走在时代列车的尾灯后面了，之前也写过几篇这方的文章，供大家参考：
-GPT-4 炸裂成那样，前端真的还有机会吗？我是这么看的~
-【ChatGPT】一文教你怎么编写清晰有效的（Prompt）提示词~
-【前端】一些让你事半功倍的 ChatGPT Prompts 建议~
-随着人们争先恐后地寻找某种方式（任何方式）将人工智能产品化作为前端工作流程的一部分，这个领域出现了很多问题。其中一个不断出现的问题是“机器会抢走我们的工作吗？”
-今年，可以说，“人工智能的不可阻挡的前进”在你失去前端工作的原因列表中可以往后放一放了。但该行业的市场潜力已经…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7329034439408615451"
-                        open
-                      >
-                        <summary class="article-expander__title">🔥2024年最好用的 uniapp 开发模板，近一个月 star 数飙升！🔥</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7329034439408615451">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>🔥2024年最好用的 uniapp 开发模板，近一个月 star 数飙升！🔥
-unibest 自称是 最好用的 uniapp 开发模板，  最近比较火热，star 数飙升，请看与 vitesse-uni-helper 的对比：
-Star History
+                              <span>如何实现一个雨滴落下效果
+前言
+下雨天坐在车窗前，看着雨滴顺着车窗渐渐落下，这一唯美的场景，忍不住想记录下来。最近在纠结电脑壁纸时，无意间看到有类似的场景，可以将自己喜欢的壁纸加上这种效果。作为多年切图仔，不由地想到了用css动画应该可以实现这一效果，于是，直接开干。先上效果图：
 
-vitesse-uni-app 由 unihelper 官方维护；
-如上 star 趋势图，unibest 可能在下个月数超过 vitesse-uni-app。
-📖 介绍
-unibest - 最好用的 uniapp 开发模板
+实现思路
+定义多个小水滴
+首先直接使用absolute定位，只需要亿点点时间就能创造出多个分布于不同位置以及不同大小的水滴。大致代码如下：
+.border {
+    position: absolute;
+    margin-left: 2px;
+    margin-top: 1px;
+    border-radius: 100%;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5);
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+}
+
+ .border:nth-child(1) {
+    left: 10.04698vw;
+    top: 91.82078vh;
+    width: 2px;
+    height: 7.15325px;
+}
+
+.border:nth-child(2) {
+    left: 12.82745vw;
+    top: 77.30419vh;
+    width: 10px;
+    height: 12.27636px;
+}
+
+....
 
 
+最终实现了如下效果：
 
-
-
-
-
-
-
-
-unibest 是由 uniapp + Vue3 + Ts + Vite4 + UnoCss + UniUI + VSCode 驱动的跨端快速启动模板，具有代码提示、自动格式化、统一配置、代码片段等功能，内置了大量常用的基本组件和基本功能，开箱即用，让你编写 uniapp 拥有 best 体验。
-
-✨ 特性
-⚡️ Vue 3, Vite, pnpm, esbuild - 就是快！
-🔥 最新语法：使用新的  语法
-🎨 UnoCSS - 高性能且极具灵活性的即时原子化 CSS 引擎
-🍍 pinia &amp; pinia-plugin-persistedstate - 全端适配的全局数据管理
-🦾 TypeScript &amp; ESLint &amp; stylelint - 保证代码质量
-😃 UnoCSS Icons &amp; icones - 海量图标供你选择
-📦 组件自动化加载 - 可配置化的组件加载方式，轻松加载组件
-📥 API 自动加载 - 直接使用 Composition API 无需引入
-🌈 husky &amp; lint-staged + commitlint - 保证代码提交质量
-🎉 v3 Code Snippets 加快你的页面生成
-🗂 uni.request 请求封装 &amp; 请求拦截，一键引入，快捷使用
-💡 ES6 import 顺序自动排序，css 属性自动排序，增强编码一致性
-🖥 多环境配置分开，想则怎么配置就怎么配置
-👍 业务功能
-[x] 页面下拉刷新（全局+局部）
-[x] 页面上拉加载
-[x] 导航栏返回 or 去首页
-[x] 导航栏渐变（微信+h5+App)
-[x] 自定义导航栏顶部机型适配
-[x] 微信小程序分享（好友+朋友圈）
-[x] 微信登录
-[ ] 非微信登录（h5 和 App)
-[ ] 微信一键登录（基于手机号）- 需要非个人认证用户
-[x] 微信小程序获取头像昵称+隐私协议
-[x] 微信小程序 vconsole 调试
-[x] 多语言模板
-[x] 页面悬浮球(floating bubble)
-[x] 多 tab 列表功能
-[ ] 瀑布流
-[ ] 仿BOSS直聘个人中心
-[ ] 仿华为商城个人中心
-[ ] 仿网易云音乐 APP（独立项目）
-🎨 v3 代码段
-在 vue 文件里面输入 v3 触发这个代码段，如下图。
-
-
-上面是第一版本，下面是第二版本，用户可以在.vscode/vue3.code-snippets 里面自行修改。
-
-📱 在线预览
-在线预览地址如下(无需翻墙，网速很快，秒出)：
-unibest - 最好用的 uniapp 开发模板
-贴心的楼主把截图挪过来了：
-
-项目地址
-github: codercup/unibest
-gitee: codercup/unibest
-期待大家的点赞支持，文章点赞+收藏+评论，好项目需要推广。
-期待大家的点赞支持，github star 一下，好项目需要推广。
-期待大家的点赞，gitee star 一下，好项目需要推广。
-交流群</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
+让水珠动起来
+此时就需要用到css的animation动画效果了，又花费了亿点点时间给每个水珠加上下落的动画效果。
+.raindrop:nth-child(1) {
+    left: 10.04698vw;
+    top: 91.82078vh;
+    width: …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4529,11 +4592,76 @@ gitee: codercup/unibest
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-28 datetime="2024-01-28T23:19:42.000Z">2024-01-28</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-28 datetime="2024-01-28T23:19:42.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-28 datetime="2024-01-28T15:39:19.000Z">2024-01-28</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-28 datetime="2024-01-28T15:39:19.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >竹白百科 - TOP20</button>
+                  <a class="source-heading__link" href="http://analy.zhubai.wiki">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://open.zhubai.wiki/a/l/t/z/fp/moonvy/2363415414823837696"
+                        open
+                      >
+                        <summary class="article-expander__title">Moonvy 月维设计素材周刊 第 100 期</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://open.zhubai.wiki/a/l/t/z/fp/moonvy/2363415414823837696">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>🏆 产品推荐   
+    
+   Figma 创建线条风格插画插件：Emboss lines   
+    
+   上周介绍的使用插件生成多线条凹凸风格插画，该插件上线了，选中一个图标就能快速生成这种线性凹凸风格插画。   
+    
+        https://www.figma.com/community/plugin/1329369867868989491        
+        
+    
+    
+   Figma 复制插件：Repeater effect   
+    
+   适合做背景纹理或者图案插画，复制数量、角度、不透明度、递增或者递减都可以自定义，免费有次数限制。   
+    
+        https://www.figma.com/community/plugin/1331998824275465178/repeater-effect        
+        
+    
+    
+   本地图像压缩工具：Zipic   
+    
+   在电脑本地运行的图像压缩工具，支持批量压缩和格式转换，每天免费使用 25 次。支持 Mac 和 Windows   
+    
+        https://zipic.5km.tech/        
+        
+    
+    
+   字体删除线背后的信息：从删除线到默默无闻 MVAR   
+    
+        原文：https://fenx.work/from-strikeout-to-obscure-mvar-table/        
+    
+   苹方和 SF Pro 都是界面设计时常用的字体。在 Figma 中添加删除线样式时，上图中可以看到苹方和 SF 字体的删除线位置不一，一个偏下一个居中。   
+        
+   原因是，删除线属性由字体内的…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;33
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -4545,39 +4673,6 @@ gitee: codercup/unibest
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7329110277172985908"
-                        open
-                      >
-                        <summary class="article-expander__title">不是鸿蒙 ArkUI 不会写，而是 Flutter 更有性价比</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7329110277172985908">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: channing-cyan
-写 ArkUI 是不可能写的，这辈子不可能写 ArkUI 的。老板又不加人又不加钱，就只能写 Flutter 了，才能维持生活这样子，进 FlutterCandies 群感觉像回家一样，在 FlutterCandies 的感觉比家里感觉好多了！里面个个都是人才，说话又好听，我超喜欢里面的。
-前言
-Flutter到鸿蒙,不是有手就行吗? (下拉刷新) - 掘金 (juejin.cn)
-Flutter到鸿蒙,不是有手就行吗? (列表加载更多) - 掘金 (juejin.cn)
-从 Flutter 移植了几个组件到 ArkUI , 原理跟 Flutter 有很大的不同，开发体验不是很舒适。
-不是鸿蒙 ArkUI 不会写，而是 Flutter 更有性价比
-而距离 Flutter Love 鸿蒙 - 掘金 (juejin.cn) 已经有一段时间了，我们来看看 Flutter 鸿蒙化的进展如何了。
-重要提示，Flutter 鸿蒙化，需要华为提供的真机和最新的SDK或者自己申请了开发者预览 Beta 招募，没有的，暂时不要尝试。
-最近 华为纯血鸿蒙 HarmonyOS NEXT 开发者预览版首批 Beta 招募开启，支持 Mate 60 / Pro、X5 机型， 这给一些个人开发者提前体验鸿蒙 NEXT 的机会。
-后续内容全部基于 OpenHarmony-SIG/flutter_flutter (gitee.com) 和 OpenHarmony-SIG/flutter_engine (gitee.com) 的 dev 分支。参考文档也以 dev 分支 的文档为准。另外最新支持的是 ohos api11 。
-编译引擎
-社区已经提供了编译好的 引擎产物下载，如果你不需要时刻跟进问题修复的小伙伴，可以跳过下面的关于编译引擎的内容。
-linux
-Flut…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -4680,69 +4775,6 @@ egoCar.name &#x3D; &quot;自车&quot;;
 egoCar.add(vehi…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >竹白百科 - TOP20</button>
-                  <a class="source-heading__link" href="http://analy.zhubai.wiki">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://open.zhubai.wiki/a/l/t/z/fp/moonvy/2363415414823837696"
-                        open
-                      >
-                        <summary class="article-expander__title">Moonvy 月维设计素材周刊 第 100 期</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://open.zhubai.wiki/a/l/t/z/fp/moonvy/2363415414823837696">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>🏆 产品推荐   
-    
-   Figma 创建线条风格插画插件：Emboss lines   
-    
-   上周介绍的使用插件生成多线条凹凸风格插画，该插件上线了，选中一个图标就能快速生成这种线性凹凸风格插画。   
-    
-        https://www.figma.com/community/plugin/1329369867868989491        
-        
-    
-    
-   Figma 复制插件：Repeater effect   
-    
-   适合做背景纹理或者图案插画，复制数量、角度、不透明度、递增或者递减都可以自定义，免费有次数限制。   
-    
-        https://www.figma.com/community/plugin/1331998824275465178/repeater-effect        
-        
-    
-    
-   本地图像压缩工具：Zipic   
-    
-   在电脑本地运行的图像压缩工具，支持批量压缩和格式转换，每天免费使用 25 次。支持 Mac 和 Windows   
-    
-        https://zipic.5km.tech/        
-        
-    
-    
-   字体删除线背后的信息：从删除线到默默无闻 MVAR   
-    
-        原文：https://fenx.work/from-strikeout-to-obscure-mvar-table/        
-    
-   苹方和 SF Pro 都是界面设计时常用的字体。在 Figma 中添加删除线样式时，上图中可以看到苹方和 SF 字体的删除线位置不一，一个偏下一个居中。   
-        
-   原因是，删除线属性由字体内的…</span>
                             </span>
                           </div>
                         </a>
@@ -5590,8 +5622,8 @@ egoCar.add(vehi…</span>
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7779327460">
-        <time id="build-timestamp" datetime="2024-02-05T03:56:17.530Z">2024-02-05T03:56:17.530Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7780658927">
+        <time id="build-timestamp" datetime="2024-02-05T06:57:00.603Z">2024-02-05T06:57:00.603Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
