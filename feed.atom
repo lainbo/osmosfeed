@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2024-02-07T06:56:45.318Z</id>
+    <id>urn:2024-02-07T09:56:41.167Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2024-02-07T06:56:45.318Z</updated>
+    <updated>2024-02-07T09:56:41.167Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -116,52 +116,6 @@
         <summary type="html"><![CDATA[古法糍粑]]></summary>
         <author>
             <name>Barret李靖的即刻动态</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[React 已死 😇 如何在 Vue3 中使用 jsx & tsx]]></title>
-        <id>https://juejin.cn/post/7332010819636658216</id>
-        <link href="https://juejin.cn/post/7332010819636658216"/>
-        <updated>2024-02-06T03:02:40.000Z</updated>
-        <summary type="html"><![CDATA[首先，恭喜一下 React，再过 4 个月，就达成了两年无更新记录
-
-反观隔壁的 Vue，稳定迭代更新
-
-之前写 React 的时候，最喜欢的是 JSX/TSX 语法，把 HTML 组件当做 JavaScript/TypeScript 代码片段处理
-const App: React.FC<AppProps> = ({ title }) => {
-  const [count, setCount] = useState<number>(0);
-  // 👇👇👇
-  return (
-    <div>
-      <h1>{title}</h1>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-    </div>
-  );
-}
-
-转战 Vue 之后，最痛苦的是没办法利用 TSX 语法灵活创建组件。
-最常见的例子是，当我有一个数据表格，需要自定义字段的组件时，得用 h() 函数来创建：
-<script lang="ts" setup>
-//...
-const createColumns = () => {
-  return [
-    {
-      title: 'Action',
-      key: 'actions',
-      render (row) {
-        /* 👇👇👇 */
-        return h(
-          NButton,
-          {
-            strong: true,
-            tertiary: true,
-            size: 'small',
-     …]]></summary>
-        <author>
-            <name>吴楷鹏</name>
         </author>
     </entry>
     <entry>
