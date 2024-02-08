@@ -51,8 +51,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-08 datetime="2024-02-08T09:53:00.000Z">2024-02-08</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-08 datetime="2024-02-08T09:53:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-08 datetime="2024-02-08T12:25:10.000Z">2024-02-08</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-08 datetime="2024-02-08T12:25:10.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -1248,8 +1248,8 @@ export default function Home() {
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-04 datetime="2024-02-04T12:52:40.000Z">2024-02-04</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-04 datetime="2024-02-04T12:52:40.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-04 datetime="2024-02-04T15:09:53.000Z">2024-02-04</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-04 datetime="2024-02-04T15:09:53.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -1264,6 +1264,54 @@ export default function Home() {
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7331558973657137152"
+                        open
+                      >
+                        <summary class="article-expander__title">人均低至每天0.1元，搞定一台帕鲁服务器</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7331558973657137152">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: channing-cyan
+家人们，谁懂啊！
+《幻兽帕鲁》“过载”的热度几乎快刹不住车了
+同时在线玩家超过200万人
+真是一“卡”一个不吱声😖
+现在，被“卡”住的玩家有福啦！
+火山引擎个人服务器上线
+100%CPU独享，高性能实例，流畅超丝滑体验
+而且每人最低只要 0.1 元/天！
+是的，你没有听错，真心的“白菜价”！
+立刻搜索【火山引擎】前往官网购买吧
+
+立即Get《幻兽帕鲁》开服教程：
+第一步：准备资源
+进入火山引擎官网
+点击【最新活动】查找幻兽帕鲁游戏服务器
+在专题页上选择【即刻部署】
+建议玩家选择【4核16G】哦
+可支持4-10名玩家联机
+
+第二步：安装游戏服务器 按照指南，完成创建实例、远程连接、代码配置等操作
+你就是有私服的人啦！
+
+
+第三步：开启畅玩
+登陆游戏，在菜单中选择【加入游戏（专用服务器）】
+输入你已部署的IP地址+端口
+链接服务器成功！玩起！
+
+服务器资源已就绪，各位“帕鲁”的主人们，即刻启程吧！</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -3049,6 +3097,84 @@ Scroll Btween 有点像动…</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7330826811491287059"
+                        open
+                      >
+                        <summary class="article-expander__title">别再用旧方法了！Chrome 121对CSS滚动条样式的影响</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7330826811491287059">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>在探索前沿技术的旅途中，我们经常会遇到一些令人惊喜的变化，它们不仅挑战我们的既有知识，还为我们的开发实践带来新的可能。最近，在回顾我负责的一个项目时，我发现了一个细微却颇为关键的变化，这不仅令我重新审视了我对CSS滚动条样式的理解，还让我感受到了技术进步的魅力。
+问题的起源很简单：相较于同事的UI设计，我的项目中的滚动条看起来有些不协调。经过一番对比和研究，我意识到了问题的所在——scrollbar-color和scrollbar-width，这两个CSS属性，在我长期使用的Chrome浏览器中，曾经是不被支持的。然而，随着Chrome 121版本的更新，这一切都改变了。
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #aaa #aaa;
+}
+
+
+这个更新不仅意味着我们可以使用标准化的CSS属性来美化滚动条，也标志着我们在创建更一致、更具交互性的用户体验方面迈出了重要一步。过去，为了在Chrome上实现自定义滚动条，我们不得不依赖::-webkit-*伪选择器，这一方法虽然有效，却因其局限性（仅在Chrome和Safari上支持）和不一致性（Firefox不支持）而备受诟病。
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #6d7c77 #cfd7c7;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--tertiary-color);
+    border-radius: 0.7rem;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: var(--primary-color);
+    border-radius: 0.7rem;
+}
+
+在Chrome 121的世界里，沿用旧有的::-webkit-*伪选择器写法会导致样式不符合我们的预期，详细参考资料可以在Chrome开发者文档中找到。
+面对这样的变化，我们可以采取的一种策略是，将新的滚动条属性应用于body元素，以保证在Chrome中的兼容性，虽然Firefox对此似乎还不支持。
+body {
+    scrollbar-width: thin;
+    scrollbar-color: #aaa #aaa;
+}
+
+通过查询资料，我发现Chrome团队最近发布的博客文章详细介绍了这一变更。这篇文章不仅提供了一个深入了解滚动条样式如何受操作系统影响的机会，还为我们提供了一个快速修复方法：针对不支持::-webkit-*伪选择器的浏览器，我们可以通过添加一个@supports规则来检查并应用新的滚动条属性。
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--tertiary-color);
+    border-radius: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+}
+
+/* 不支持&#x60;::-webkit-scrollbar-*&#x60;的浏览器 */
+@supports not selector(::-webkit-scrollbar) {
+    html {
+        scrollbar-width: thin;
+        scrollbar-color: #aaa #aaa;
+    }
+}
+
+个人偏好可能让我依旧钟情于::-webkit-*伪选择器，CSS规范的进步和标准化告诉我们，探索和适应标准属性的重要性。虽然历史上的选择可能被视为一种错误，但正是这些探索和变革，推动了我们向前发展，向着更优、更一致的用户体验迈进。
+这次的经历不仅仅是关于技术的更新，更是一个关于持续学习、适应变化的故事。在追求完美的用户体验道路上，我们应该始终保持好奇心，探索最新的技术，同时也要有选择地采用那些真正适合我们项目的解决方案。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7330792655125463067"
                         open
                       >
@@ -3133,7 +3259,6 @@ export default defineConfig(async (merge, { command, mode }) &#x3D;&gt; {
                         <summary class="article-expander__title">第32期-2023年度总结</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://open.zhubai.wiki/a/l/t/z/pq/daydayup/2365058865420271616">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>1-2月 幸运和表演   
     
@@ -3443,93 +3568,6 @@ Free Now to 2024-02-08T16:00:00.000Z</span>
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7330521390510424127"
-                        open
-                      >
-                        <summary class="article-expander__title">React Native 2023 现状 - 调查结果发布！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7330521390510424127">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>React Native 现状调查结果已经发布，人们对 React Native 的总体感觉越来越积极，通过这些调查可以让我们了解到其生态系统中正在发生的事情！
-下面是大纲：
-
-开发者背景
-回顾今年的成果，我想起了 Rick Hanlon 在 ReactConf 2021 上的演讲，他分享了 React 的“多平台”愿景；这是一个通过在每个平台上改进 React 来使 React 在每个平台上变得更好的愿景。我们正在 React Native 生态系统中看到这种趋势 — 从 Web 到原生，从移动到桌面，在各个行业领域，以及跨越许多开发者背景。
-随着行业继续模糊 Web 和原生之间的界限，我预计我们将继续看到 React Native 在更多领域的使用趋势 — 包括在桌面等已经成熟的领域的进一步增长，以及在虚拟现实等更为新兴的领域的增长。在微软，我们相信这个“多平台”的愿景，并使用 React Native 在我们产品的广泛范围内提供高质量的体验（包括在 Xbox、Office，甚至部分 Windows 操作系统中），我们很高兴看到越来越多的应用程序也在超越移动平台。
-React Native 出现之前
-
-React Native 库的开源贡献
-
-React Native 贡献
-
-行业领域
-
-你的目标是哪些移动操作系统版本？
-
-目标平台
-
-桌面系统
-
-发布的应用数量
-
-团队规模
-
-你如何使用 React Naite？
-
-React Native 应用用户数量排名
-
-平台 API
-在选择 React Native 作为应用技术的关键原因之一是能够访问应用程序中的原生平台API。当移动设备硬件的全部功能处于应用程序控制之下时，它可以为用户提供一些非常有用的体验。然而，创建和维护React Native的原生API包装器的技术挑战是艰巨的！如“React Native痛点”部分所…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7330521390510096447"
-                        open
-                      >
-                        <summary class="article-expander__title">前端智能化，扣子（coze.cn）能做什么</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7330521390510096447">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: z-blue
-初体验
-进入网站 https://www.coze.cn/ 后，注册或者使用抖音账号登录，即可开启使用。
-进入主页面后，操作非常简单，类似 ChatGPT 式的交流形式即可快速、低门槛的搭建一个专属的 Chatbot，示例步骤如下：
-我： 我想创建一个 Bot
-扣子： 当然，我很乐意帮助你创建一个 Bot。首先，我需要知道这个 Bot 将被用来做什么？这将有助于我为它取一个合适的名字并提供一个描述。
-我： 每天在微信订阅号自动抓取内容发布文章
-扣子： 好的，我想我们可以为你的 Bot 取一个创意丰富的名字，例如“内容自动抓取器”。它的描述可以是“一个能够在微信订阅号上自动抓取内容并发布文章的 Bot”。这样的名字和描述是否满足你的需求？如果满足，我将为你创建这个 Bot，这大约需要 30 秒钟的时间。
-我： 名称改一下，要有吸引力和专业性
-扣子： balabalabala...
-我： 还是算了吧，称改成微信订阅号自动发布机器人 扣子：好的，你的机器人的名字已经成功更改为“微信订阅号自动发布机器人”。你可以从这个链接访问你的机器人：微信订阅号自动发布机器人。希望它能为你的工作提供极大的帮助！
-好了，就这么简单，一个 Chatbot 即创建完成，总结体验过程中的优缺点：
-优点：
-聊天回复速度快，对比国内的通义千问、文心一言其内容生成速率和展现速率有明显优势，非常接近 ChatGPT
-使用简洁，对新手友好，进入页面后没有任何阻碍，可以轻松上手
-界面友好，风格非常像 ChatGPT，蓝紫配色在视觉上也非常舒适，没有疲劳感
-缺点：
-最好不要问一些深度问题，有可能会得到非常奇怪的答案
-最后生成的链接，有概率无法访问，打开 chrome 控制台，发现 a 标签没有 href，应该是个 bug
-右上角的三个点很难被发现，在未点击的情况下并不能一眼知道是干什么的
-…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -4016,8 +4054,6 @@ ESLint 自定义示例：TypeScript
    30.云服务解决方案商“云端畅游”获数百万元天使轮融资   
     
    31.消费级AR眼镜设计及制造厂商“XREAL”获6000万美元战略融资</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4193,6 +4229,7 @@ React 生态包罗万象，我们把常用的 React 周边库都学一遍之后�
                         <summary class="article-expander__title">Ideas #9 临近春节，避开险，避开恶，避开微小的不善</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://open.zhubai.wiki/a/l/t/z/pq/workreview/2363966844810977280">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>1/ 一个人在巨大的压力和焦虑之下，太过迫不及待地想要做什么事情，很容易忽略了自身的安全。   
     
@@ -5844,8 +5881,8 @@ React 生态包罗万象，我们把常用的 React 周边库都学一遍之后�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7829905301">
-        <time id="build-timestamp" datetime="2024-02-08T12:58:32.050Z">2024-02-08T12:58:32.050Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7832270934">
+        <time id="build-timestamp" datetime="2024-02-08T15:57:29.530Z">2024-02-08T15:57:29.530Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
