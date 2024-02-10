@@ -452,9 +452,9 @@
           "description": "注：本文原是    我写给好朋友L的生日祝福    。当时写得着急，承诺她这只是初稿。今天终于在地铁上改完了全文。改的时候觉得，    这些思绪不仅属于我和她，也是现在的我对亲密关系（广义）的注解之一    。因此隐去其中隐私信息和大家分享。   \n      \n   送《故事照亮旅程》给你的原因是我很喜欢这本书的概念：   \n    \n   “    故事可以照亮我们的人生旅程    ，让我们在黑暗和混乱中的摸索有前辈旅伴的指引，让我们与陌生的世界通过各式各样的人物而相识熟悉，最重要的是，让我们借助想象找到通往美好生活的道路。”    \n    \n   因为与你相识，我幸运地聆听着你过去的故事，也与你一起体验着你正在经历的故事。我喜欢听你和我说童年如何影响自己，也喜欢听你描述自己想成为的样子。    这些叙述堆叠在我的人生故事上，让我常常觉得自己像同时走在两条路上。一条路在脚下，一条路在头顶。后者由你轻巧的语言编织而成，轻盈地悬浮着。    不像棉花那样轻，是像蜘蛛网那样轻，是看似纤细，实则拥有极大力量的结构。\n   \n    \n   而这两条路之所以不在同一平面，是因为我们是如此不同的人    。我们思考世界和看待生活的方式是这样不同，以至于我们对问题的初始想法总不太一样，我们总走在截然不同的两条路上。   \n    \n   阿兰·德波顿在《爱的进化论》里说，    “对的人”的真正指标与其说是某种概念上的完美互补，不如说是容忍差异的能力。相容性是爱的成就，不该是爱的前提。   \n    \n   过去我读这句话只是在逻辑上认同，但在与你的相处中，我真正深深卷入由差异编织成的迷宫中。   \n      \n   之前你问我：“    为什么我们在面对有些人的时候，会害怕说出跟他们不一样的观点。但我们却可以很直接地说出自己对一个事情的看法。    不觉得对方会站在道德或者知识…",
           "link": "https://open.zhubai.wiki/a/l/t/z/pq/warpdrive/2364105052345487360",
           "publishedOn": "2024-01-30T13:19:41.000Z",
-          "wordCount": 63,
+          "wordCount": null,
           "title": "16：致我的天才女友：“喜欢你的样子，也喜欢自己的样子”｜曲率飞船newsletter",
-          "imageUrl": "https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png"
+          "imageUrl": null
         },
         {
           "id": "https://open.zhubai.wiki/a/l/t/z/fp/depykung/2364038703254495232",
@@ -472,9 +472,9 @@
           "description": "1/ 一个人在巨大的压力和焦虑之下，太过迫不及待地想要做什么事情，很容易忽略了自身的安全。   \n    \n   2/ 一个人越是在艰难困苦中，越不可能得到什么关心和照顾，只能靠自己看顾自己。   \n    \n   3/ 其实对于什么该做什么不该做，人自己心里是极为清楚的，不要自己去主动模糊，闭上眼睛欺骗自己。   \n    \n   \n   和菜头",
           "link": "https://open.zhubai.wiki/a/l/t/z/pq/workreview/2363966844810977280",
           "publishedOn": "2024-01-30T04:10:30.000Z",
-          "wordCount": null,
+          "wordCount": 63,
           "title": "Ideas #9 临近春节，避开险，避开恶，避开微小的不善",
-          "imageUrl": null
+          "imageUrl": "https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png"
         },
         {
           "id": "https://open.zhubai.wiki/a/l/t/z/fp/ouranswers/2363964085768454144",
@@ -1498,6 +1498,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7332767759431729190",
+          "author": "zhiyuanzmj",
+          "description": "前言\nHi，今天是大年29，在新年前的最后两天写一个年终总结，分享一下我是怎么加入 vue-macros 并走上开源的道路。\n由于本人的工作中用到了ag-grid所以使用JSX定义cellRenderer成为了我的刚需。我挺喜欢JSX的书写方式，除了用三元表达式和map渲染列表，要是能和vue指令一样简单就好了，于是我在今年8月份左右的时候写了第一个库：\nunplugin-jsx-vue-directive\n在 JSX 中实现 v-if 和 v-for 指令，编译的时候把 v-if 转成三元表达式。最初的想法是让所有使用 JSX 的框架都可以使用，所以以把 JSX 放在库名的最前面。也因为这个库让我结识到了vue的大佬三咲智子。\n\n当我把这个库分享到了antfu的微信群里后，没过几秒钟智子就给我点了第一个 star，并邀请我把这个功能添加到 vue-macros 里。于是我开始研究 vue-macros，三天后提交了第一个PR。\n@vue-macros/jsx-directive\n实现了v-if,v-for,v-slot,v-memo等常用的vue指令。\n<script setup lang=\"tsx\"> \nimport Child from './Child.vue'\nconst { foo, list } = defineProps<{ foo: number list: number[] }>() \ndefineRender(( \n  <form onSubmit_prevent> \n    <div v-if={foo === 0}>\n      <div v-if={foo === 0}>0-0</div>\n      <div v-else-if={foo === 1}>0-1</div> \n      <div v-else>0-2</div> \n    </…",
+          "link": "https://juejin.cn/post/7332767759431729190",
+          "publishedOn": "2024-02-08T15:20:32.000Z",
+          "wordCount": 1493,
+          "title": "2023 年终总结：vue-jsx 的最佳实践",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7332388389944819748",
           "author": "古韵",
           "description": "嗨，我们又见面了！今天我要和大家分享一个前端工程师都会遇到的问题：如何优化移动端网络请求。相信很多人都用过 axios 或 fetch API，但你是否觉得处理分页逻辑、缓存、请求防抖等很麻烦呢？别担心，我找到了一个解决方案——Alova.js。\n\nAlova.js 是一个轻量级的请求策略库，它可以帮助我们简化网络请求的编写，让我们更专注于业务逻辑。它提供了多种服务端数据缓存模式，比如内存模式和持久化模式，这些都能提升用户体验，同时降低服务端的压力。而且，Alova.js 只有 4kb+，体积是 axios 的 30%，非常适合移动端使用。\nAlova.js 的基础请求功能非常简单，比如你可以这样请求数据：\nconst todoDetail = alova.Get('/todo', { params: { id: 1 } });\nconst { loading, data, error } = useRequest(todoDetail);\n\n它还提供了分页请求、表单提交、验证码发送、文件上传等多种请求策略，大大减少了我们的工作量。比如，使用分页请求策略，你只需要这样：\nconst {\n  loading,\n  data,\n  isLastPage,\n  page,\n  pageSize,\n  pageCount,\n  total,\n} = usePagination((page, pageSize) => queryStudents(page, pageSize));\n\n怎么样，是不是很简单？Alova.js 还支持 Vue、React、React Native、Svelte 等多种前端框架，以及 Next、Nuxt、SvelteKit 等服务端渲染框架，非常适合现代前端开发。\n感兴趣的话，可以去 Alova.js 的官网看看：Alova.js 官网。也可以在评论区分享你对 Alova.js 的看法哦！嘿嘿，今天就聊到这里，下次见！👋\n有任何问题，你可以加入以下群聊咨询，也可以在github 仓库中发布 Discussions，如果遇到问题，也请在github 的 issues中提交，我们会在最快的时间解决。\n加入微信群参与交流\n加入在 Discord 社区参与交流\n同时也欢迎贡献你的一份力量，请移步贡献指南。",
@@ -1575,16 +1585,6 @@
           "publishedOn": "2024-02-05T10:15:37.000Z",
           "wordCount": 2079,
           "title": "react-native-dropdown",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7331657679012479026",
-          "author": "某哈压力大",
-          "description": "大批量接口请求的前端优化\n背景\n接到一个需求，需要做一个运维的功能，对公司下平台子系统做一个开关界面，要求可以大批量对系统进行修改。这样大批量的修改，如果有个老哥手一抖点了全选，那可能同时会发送几十上百个接口，对浏览器和服务器都会是一个比较大的负担。\n相似的应用场景还有：文件批量上传等\n使用技术栈：react hooks + antd4\n分析\n维护一个任务池，先默认发出最大并发数量的接口请求，一个萝卜一个坑，当上一个请求结束（无论成功失败），则让下一个请求进入任务队列，之道所有请求列表都请求完成，返回这个任务池的最终结果。\n部分代码实现\n主要业务逻辑\n// ... 点击确定，先进行前置校验\nconst onSubmitHandle = (event) => {\n    event.preventDefault(); // 防止触发原生submit，导致浏览器页面刷新\n    validateFields((err, values) => {\n        // 校验通过\n        if(!err){\n            // 通过遍历组装参数\n            const arrParam = concateDynamicParams(values);\n            concurrentControl(arrParm, 5)\n            .then(res)=> {\n                // 获取成功列表和失败列表\n                const { sucSystem, faildSystem } = getSucAndFailedResult(res);\n                const content = (\n                  <p>\n                     …",
-          "link": "https://juejin.cn/post/7331657679012479026",
-          "publishedOn": "2024-02-05T02:45:01.000Z",
-          "wordCount": 1217,
-          "title": "大批量接口请求的前端优化",
           "imageUrl": null
         },
         {
@@ -1820,7 +1820,7 @@
           "description": "[7243698841848348730#每天一个知识点#] \n平时下载github上的项目慢的着急，怎么办，两个技巧，助你起飞[呲牙]",
           "link": "https://juejin.cn/pin/7329126541320634378",
           "publishedOn": "2024-01-29T02:51:37.000Z",
-          "wordCount": 513,
+          "wordCount": 514,
           "title": "[7243698841848348730#每天一个知识点#] 平时下载github上的项目慢的着急，怎么办，两个技巧，助你起飞[呲牙]",
           "imageUrl": null
         },
@@ -1860,7 +1860,7 @@
           "description": "再说明一下我们的方法需要做的主要事情：\n- 需要搭建一个私有的matrix服务器，并且通过nginx转发。\n- 需要在每一个设备上安装一个应用，也就是Element。\n[7243698841848348730#每天一个知识点#]",
           "link": "https://juejin.cn/pin/7327157426297815055",
           "publishedOn": "2024-01-23T14:46:46.000Z",
-          "wordCount": 559,
+          "wordCount": 560,
           "title": "再说明一下我们的方法需要做的主要事情： - 需要搭建一个私有的matrix服务器，并且通过nginx转发。 - 需要在每一个设备上安装一个应用，也就是Element。 [724369...",
           "imageUrl": null
         },

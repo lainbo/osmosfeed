@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2024-02-10T18:56:53.291Z</id>
+    <id>urn:2024-02-10T21:57:06.339Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2024-02-10T18:56:53.291Z</updated>
+    <updated>2024-02-10T21:57:06.339Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -521,6 +521,34 @@ Free Now to 2024-02-15T16:00:00.000Z]]></summary>
 Free Now to 2024-02-15T16:00:00.000Z]]></summary>
         <author>
             <name>Another Indie Studio Limited</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2023 年终总结：vue-jsx 的最佳实践]]></title>
+        <id>https://juejin.cn/post/7332767759431729190</id>
+        <link href="https://juejin.cn/post/7332767759431729190"/>
+        <updated>2024-02-08T15:20:32.000Z</updated>
+        <summary type="html"><![CDATA[前言
+Hi，今天是大年29，在新年前的最后两天写一个年终总结，分享一下我是怎么加入 vue-macros 并走上开源的道路。
+由于本人的工作中用到了ag-grid所以使用JSX定义cellRenderer成为了我的刚需。我挺喜欢JSX的书写方式，除了用三元表达式和map渲染列表，要是能和vue指令一样简单就好了，于是我在今年8月份左右的时候写了第一个库：
+unplugin-jsx-vue-directive
+在 JSX 中实现 v-if 和 v-for 指令，编译的时候把 v-if 转成三元表达式。最初的想法是让所有使用 JSX 的框架都可以使用，所以以把 JSX 放在库名的最前面。也因为这个库让我结识到了vue的大佬三咲智子。
+
+当我把这个库分享到了antfu的微信群里后，没过几秒钟智子就给我点了第一个 star，并邀请我把这个功能添加到 vue-macros 里。于是我开始研究 vue-macros，三天后提交了第一个PR。
+@vue-macros/jsx-directive
+实现了v-if,v-for,v-slot,v-memo等常用的vue指令。
+<script setup lang="tsx"> 
+import Child from './Child.vue'
+const { foo, list } = defineProps<{ foo: number list: number[] }>() 
+defineRender(( 
+  <form onSubmit_prevent> 
+    <div v-if={foo === 0}>
+      <div v-if={foo === 0}>0-0</div>
+      <div v-else-if={foo === 1}>0-1</div> 
+      <div v-else>0-2</div> 
+    </…]]></summary>
+        <author>
+            <name>zhiyuanzmj</name>
         </author>
     </entry>
     <entry>
@@ -1258,39 +1286,6 @@ const Wrapper = styled.View`
         <summary type="html"><![CDATA[开州区气象局2024年2月5日15时继续发布“道路结冰黄色预警信号”，预计2月5日15时至6日14时，我区雪宝山镇、关面乡、满月镇、大进镇、谭家镇、河堰镇、紫水乡、麻柳乡、岳溪镇、长沙镇海拔1200米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰，请注意防范。]]></summary>
         <author>
             <name>国家预警信息发布中心</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[大批量接口请求的前端优化]]></title>
-        <id>https://juejin.cn/post/7331657679012479026</id>
-        <link href="https://juejin.cn/post/7331657679012479026"/>
-        <updated>2024-02-05T02:45:01.000Z</updated>
-        <summary type="html"><![CDATA[大批量接口请求的前端优化
-背景
-接到一个需求，需要做一个运维的功能，对公司下平台子系统做一个开关界面，要求可以大批量对系统进行修改。这样大批量的修改，如果有个老哥手一抖点了全选，那可能同时会发送几十上百个接口，对浏览器和服务器都会是一个比较大的负担。
-相似的应用场景还有：文件批量上传等
-使用技术栈：react hooks + antd4
-分析
-维护一个任务池，先默认发出最大并发数量的接口请求，一个萝卜一个坑，当上一个请求结束（无论成功失败），则让下一个请求进入任务队列，之道所有请求列表都请求完成，返回这个任务池的最终结果。
-部分代码实现
-主要业务逻辑
-// ... 点击确定，先进行前置校验
-const onSubmitHandle = (event) => {
-    event.preventDefault(); // 防止触发原生submit，导致浏览器页面刷新
-    validateFields((err, values) => {
-        // 校验通过
-        if(!err){
-            // 通过遍历组装参数
-            const arrParam = concateDynamicParams(values);
-            concurrentControl(arrParm, 5)
-            .then(res)=> {
-                // 获取成功列表和失败列表
-                const { sucSystem, faildSystem } = getSucAndFailedResult(res);
-                const content = (
-                  <p>
-                     …]]></summary>
-        <author>
-            <name>某哈压力大</name>
         </author>
     </entry>
     <entry>
