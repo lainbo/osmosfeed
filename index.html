@@ -2082,6 +2082,88 @@ Car.prototype.height &#x3D;…</span>
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7332411241435267081"
+                        open
+                      >
+                        <summary class="article-expander__title">2023年底前端面试找工作感受</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7332411241435267081">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>今天不写技术博客，谈个心好吗？
+楼主基本情况：辣鸡学院二本，工程类专业（非相关专业，理工类专业），19年毕业四年半，坐标深圳
+认为自己有优势的点：1.本科双学位学历 2.英语4.6级 3.原创博客demo100篇左右  4.有个人线上简历
+认为自己不足的地方：1.学历低（目前只能说是达标）2.晚上下了班不爱学习
+1.开篇
+都说2023年是程序员的寒冬和末日，楼主表示我偏不相信，那些找不到工作的程序员纯粹就是菜，像自己这种有工作经验，实战能力丰富的人怎么可能找不到工作呢，加上楼主目前待的公司一直没有年终奖，公积金也很低，涨薪也无望的多重原因，于是在23年10月左右，我还是选择了辞职再去找工作（我一直都知道这是个愚蠢的选择，但是不离职也真的没有时间去面试，在上家是个前端组长的一个角色，平常的事很多，但是钱是真的少，说出来都怕你们笑我）。
+2.休息
+辞职了之后，因为干了两年嘛，人的惰性就上来了，说是休息两周再开始面试，然后就在家玩阴阳师，打王者，玩吃鸡，真的很疯狂，阴阳师都是刷完体力，打王者，吃鸡的时候就打到禁赛，每天都是玩到早上才开始睡觉，别人上班我睡觉（每天还得刷微信步数，因为怕被家里发现我离职了），然后休息了两个星期之后，觉得还是不大想面试，其实内心是有点抗拒的，因为也不知道要面对什么问题，而且人长大了是真的不想被别人挑挑拣拣，于是我又进行了持续的摆烂，大概玩了一个半月，这时已经是2023年12月了，对了，大概在11月的时候，我妈打电话说要去买房，真的屋漏偏逢连夜雨，刚好离职期间，但是家里跟自己都觉得价格合适，于是后面就把所有的存款拿出来去买房了，留了3w给自己过渡一下。期间看了招聘的需求，有好多react的岗位，于是我又重新想着复习下react，这样子的话我vue和react双框架，优势也更大。
+3.学习
+于是接下来的两周我又开始了复习react，并且写了一个react的…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7332388389944819748"
+                        open
+                      >
+                        <summary class="article-expander__title">别再只用axios了，试试这个更轻量的网络请求库！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7332388389944819748">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>嗨，我们又见面了！今天我要和大家分享一个前端工程师都会遇到的问题：如何优化移动端网络请求。相信很多人都用过 axios 或 fetch API，但你是否觉得处理分页逻辑、缓存、请求防抖等很麻烦呢？别担心，我找到了一个解决方案——Alova.js。
+
+Alova.js 是一个轻量级的请求策略库，它可以帮助我们简化网络请求的编写，让我们更专注于业务逻辑。它提供了多种服务端数据缓存模式，比如内存模式和持久化模式，这些都能提升用户体验，同时降低服务端的压力。而且，Alova.js 只有 4kb+，体积是 axios 的 30%，非常适合移动端使用。
+Alova.js 的基础请求功能非常简单，比如你可以这样请求数据：
+const todoDetail &#x3D; alova.Get(&#x27;/todo&#x27;, { params: { id: 1 } });
+const { loading, data, error } &#x3D; useRequest(todoDetail);
+
+它还提供了分页请求、表单提交、验证码发送、文件上传等多种请求策略，大大减少了我们的工作量。比如，使用分页请求策略，你只需要这样：
+const {
+  loading,
+  data,
+  isLastPage,
+  page,
+  pageSize,
+  pageCount,
+  total,
+} &#x3D; usePagination((page, pageSize) &#x3D;&gt; queryStudents(page, pageSize));
+
+怎么样，是不是很简单？Alova.js 还支持 Vue、React、React Native、Svelte 等多种前端框架，以及 Next、Nuxt、SvelteKit 等服务端渲染框架，非常适合现代前端开发。
+感兴趣的话，可以去 Alova.js 的官网看看：Alova.js 官网。也可以在评论区分享你对 Alova.js 的看法哦！嘿嘿，今天就聊到这里，下次见！👋
+有任何问题，你可以加入以下群聊咨询，也可以在github 仓库中发布 Discussions，如果遇到问题，也请在github 的 issues中提交，我们会在最快的时间解决。
+加入微信群参与交流
+加入在 Discord 社区参与交流
+同时也欢迎贡献你的一份力量，请移步贡献指南。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >李继刚的即刻动态</button>
                   <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
                 </h3>
@@ -2508,124 +2590,6 @@ Car.prototype.height &#x3D;…</span>
                 </section>
               </section>
             </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7332388389944819748"
-                        open
-                      >
-                        <summary class="article-expander__title">别再只用axios了，试试这个更轻量的网络请求库！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7332388389944819748">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>嗨，我们又见面了！今天我要和大家分享一个前端工程师都会遇到的问题：如何优化移动端网络请求。相信很多人都用过 axios 或 fetch API，但你是否觉得处理分页逻辑、缓存、请求防抖等很麻烦呢？别担心，我找到了一个解决方案——Alova.js。
-
-Alova.js 是一个轻量级的请求策略库，它可以帮助我们简化网络请求的编写，让我们更专注于业务逻辑。它提供了多种服务端数据缓存模式，比如内存模式和持久化模式，这些都能提升用户体验，同时降低服务端的压力。而且，Alova.js 只有 4kb+，体积是 axios 的 30%，非常适合移动端使用。
-Alova.js 的基础请求功能非常简单，比如你可以这样请求数据：
-const todoDetail &#x3D; alova.Get(&#x27;/todo&#x27;, { params: { id: 1 } });
-const { loading, data, error } &#x3D; useRequest(todoDetail);
-
-它还提供了分页请求、表单提交、验证码发送、文件上传等多种请求策略，大大减少了我们的工作量。比如，使用分页请求策略，你只需要这样：
-const {
-  loading,
-  data,
-  isLastPage,
-  page,
-  pageSize,
-  pageCount,
-  total,
-} &#x3D; usePagination((page, pageSize) &#x3D;&gt; queryStudents(page, pageSize));
-
-怎么样，是不是很简单？Alova.js 还支持 Vue、React、React Native、Svelte 等多种前端框架，以及 Next、Nuxt、SvelteKit 等服务端渲染框架，非常适合现代前端开发。
-感兴趣的话，可以去 Alova.js 的官网看看：Alova.js 官网。也可以在评论区分享你对 Alova.js 的看法哦！嘿嘿，今天就聊到这里，下次见！👋
-有任何问题，你可以加入以下群聊咨询，也可以在github 仓库中发布 Discussions，如果遇到问题，也请在github 的 issues中提交，我们会在最快的时间解决。
-加入微信群参与交流
-加入在 Discord 社区参与交流
-同时也欢迎贡献你的一份力量，请移步贡献指南。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7332388389944688676"
-                        open
-                      >
-                        <summary class="article-expander__title">一年时间, 我们开发了一款开箱即用的开源博客系统</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7332388389944688676">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>hi, 大家好, 我是徐小夕, 今天给大家分享一款由helloworld开发者社区开源非常实用的博客系统——飞鹅.
-飞鹅(flygoose)是款完全免费开源博客系统，源码可以二次开发，没有任何限制，可以快速帮助开发者搭建一个专属于自己的独立站点.
-github地址: https://github.com/helloworld-Co/flygoose-blog
-官网地址: https://flygoose.helloworld.net/
-当然技术上也是使用大家最最熟悉的 vue3 生态, 如 nuxt3, antd 等, 后端采用Golang + mysql, 接下来我会和大家分享一下 飞鹅 的技术架构, 功能特点, 以及如何快速部署自己的独立博客站点.
-先给大家展示一下使用飞鹅系统配置出来的博客效果:
-
-技术架构 &amp; 技术栈
-一个好的开源项目一定离不开高效的开发模式和代码规范, 飞鹅开源博客系统在开发之初就确定好了成熟的本地开发部署的全链路研发方案, 具体 DevOps 流程如下:
-
-博客系统的技术 &amp; 产品架构:
-
-接下来分享一下飞鹅(flygoose)使用到的技术栈:
-前端部分:
-nuxt3 (seo友好)
-ant-design
-vue3 + ts
-vue3 全家桶插件库
-所以想学习 nuxt 的朋友也可以在这款开源项目中学到很多 最佳实践.
-后端部分:
-主要技术栈为go + redis + mysql , 所以大家对后台服务开发感兴趣, 也可以从中学到如何从零开发后台服务.
-基本功能介绍
-
-我们从演示图可以看到个人博客前台主要分为如下几个模块:
-logo和搜索区域
-分类区域
-内容列表区域
-侧边公告,简介和友链区
-这些区域大家都可以在后台管理系统中自定义配置:
-
-当然后台管理中有很多可配置的功能, 大家可以自己在 github 下载部署体验一下.
-接下来再介绍一下大家比较关注的博客内容界面:
-
-内容展示上我们也做了贴心的用户体验设计, 让创作者和读者对文章内容都有一个不错的体验, 内容编辑器我们也是采用了非常酷的md方案:
-
-除此之外, 我们还对博客做了响应式设计, 轻松支持移动端, 这样网站运营者就不用担心移动端适配的痛点了:
-
-在整个博客开发设计中, helloworld开发者社区 的资深设计师也从独特的产品设计理念上为飞鹅注入了独特的设计美感, 所以这款博客系统还是非常值得一试的.
-参与贡献
-如果你对这款开源博客系统感兴趣, 也欢迎贡献自己的力量, 一起和我们共建更好的开源生态.
-同时如果你对博客的部署, 启动和开发有疑问, 也随时欢迎沟通反馈:
-
-更多推荐
-爆肝1000小时, Dooring零代码搭建平台3.5正式上线</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -2848,8 +2812,6 @@ export const App &#x3D; () &#x3D;&gt; {
   return (
     
      …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2890,8 +2852,6 @@ jcode
 这种格式我们在APP中就经常见到，比如说各种全景照片和视频，其转换过程就比较直接，直接从球面坐标转换为纹理的平面二维坐标
 投影
 上述提…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3859,8 +3819,6 @@ export default function Home() {
 
 实现光源跟随效果
 1、需要监听盒子上的 mouseMove 事件和 …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3904,8 +3862,6 @@ const Wrapper &#x3D; styled.View&#x60;
   border-bottom-width: 0.5px;
   border-bottom-style: solid;
   border-bottom-color: ${({theme}) &#x3D;&gt; theme.colorV2.…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3946,8 +3902,6 @@ const onSubmitHandle &#x3D; (event) &#x3D;&gt; {
                 const content &#x3D; (
                   
                      …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4058,6 +4012,8 @@ const onSubmitHandle &#x3D; (event) &#x3D;&gt; {
     
    ⭐ 智能春联展现AI创意能力   
  …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;66
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4444,8 +4400,6 @@ const onSubmitHandle &#x3D; (event) &#x3D;&gt; {
 写个人项目以及看一些培训班课程的时候感觉这一点也没什么毕竟字段就那么多，后来实习遇到了真实项目才发现可太难受了：
 
 当时记得公司的项目表格里十几个字段，也就是说会有十几个 el-table-column 组件，光一个 table 组件就将近一两百行的代码，再加上没有使用 TS 做类…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4921,8 +4875,6 @@ React 生态包罗万象，我们把常用的 React 周边库都学一遍之后�
 融会贯通，从 0 实现一个 mini-react。
 1月31日-2月7日购买，享受早鸟 6 折特惠！
 原价￥89.9，限时￥53.94！</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5403,7 +5355,7 @@ React 生态包罗万象，我们把常用的 React 周边库都学一遍之后�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>[7073670907851440160#新人报道#]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -5767,8 +5719,8 @@ React 生态包罗万象，我们把常用的 React 周边库都学一遍之后�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7864006802">
-        <time id="build-timestamp" datetime="2024-02-11T18:53:28.041Z">2024-02-11T18:53:28.041Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7864893293">
+        <time id="build-timestamp" datetime="2024-02-11T21:53:37.450Z">2024-02-11T21:53:37.450Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
