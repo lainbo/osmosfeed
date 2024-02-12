@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2024-02-11T21:53:37.472Z</id>
+    <id>urn:2024-02-12T01:15:39.907Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2024-02-11T21:53:37.472Z</updated>
+    <updated>2024-02-12T01:15:39.907Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -416,6 +416,51 @@ RSC 把以服务器为中心的 MPA（多页面应用程序）的简单“请求
         <summary type="html"><![CDATA[江津区气象台2024年2月10日1时10分发布“大雾黄色预警信号”，预计10日1时至12时，夏坝镇、贾嗣镇、珞璜镇、支坪镇、鼎山街道、杜市镇、西湖镇、油溪镇、德感街道、吴滩镇、龙华镇、圣泉街道、双福街道、先锋镇、几江街道、永兴镇、塘河镇、慈云镇、石门镇、朱杨镇、石蟆镇、白沙镇、李市镇、柏林镇、中山镇、四屏镇、四面山镇、蔡家镇、嘉平镇等镇街可能出现能见度小于500米的雾，局地能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
         <author>
             <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[html标签中lang属性踩的一个小坑，日常中还是需要留意的风险点]]></title>
+        <id>https://juejin.cn/post/7333019950954709027</id>
+        <link href="https://juejin.cn/post/7333019950954709027"/>
+        <updated>2024-02-09T16:51:48.000Z</updated>
+        <summary type="html"><![CDATA[html中lang是什么意思
+在html中lang是英语language的缩写，是语言的意思。
+html lang的定义作用
+一般大家可能在前端项目的index.html入口html标签用的lang多一点，比如：
+<!DOCTYPE html>
+<html lang="en"><!--很多人默认都没有添加lang属性，默认会根据自己浏览器语言配置同步-->
+    <head>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite + Vue + TS</title>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
+</html>
+
+
+html标签用的lang时的一个小坑
+因为项目只有是国内使用的，没有中英文切换功能。因为疏忽html的lang为"en"一直忘了修正，因为没有发现啥影响也没在意。项目页面内部有大量的广告行业英文缩写，比如CPC（Cost Per Click ），CPM（Cost Per Click ），CPD（Cost Per Click ）等等，然后浏览器（可能是国内的某些浏览器自带翻译器的那种）碰到英文就自动提示需要翻译，用户可能一直也把翻译默认打开着。
+广告行业有一个缩写叫CPC（CostPerClick每次点击成本）。然而某些国产浏览器自带的翻译器确翻译成了中国的政党名称，导致用户反应为何有这样的名称。
+案例：
+
+解决方案
+最后改为lang="zh"就解决了误会。
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+
+    </head>
+</html>
+
+
+日常在使用中，还是需要留意一下此种问题。如果需要有多语言切换的，顺便也要切换lang配置编码。
+    // 动态修改html lang
+    document.getElementsByTagName("html")[0].lang = 'xxxx';]]></summary>
+        <author>
+            <name>天渺工作室</name>
         </author>
     </entry>
     <entry>
@@ -873,48 +918,6 @@ defineRender((
     </…]]></summary>
         <author>
             <name>zhiyuanzmj</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[请务必搞懂原型（附你想不到的网易面试题）]]></title>
-        <id>https://juejin.cn/post/7332708703399673897</id>
-        <link href="https://juejin.cn/post/7332708703399673897"/>
-        <updated>2024-02-08T14:59:33.000Z</updated>
-        <summary type="html"><![CDATA[浅聊一下
-JavaScript 中的原型是理解该语言核心特性的关键之一。在面试中，掌握原型概念通常是一个重要的议题。今天我们将深入探讨 JavaScript 中的原型，并且文章末尾附带一道你绝对想不到的网易面试题...
-什么是原型？
-我们先来聊聊到底什么是原型
-原型(prototype)是函数天生就具有的属性，它定义了构造
-函数制造出的对象的公共祖先。
-通过该构造函数产生的对象，可以隐式继承到原型上的属性和方法
-你说这到底是啥呀？语文不好，看不懂...那我们直接上代码
-function Person() {
-    this.name = '张三';
-    this.age = 18;
-}
-let p = new Person();
-console.log(p);
-
-在js中，我们用这种方法定义一个类，然后new一下创造一个对象，代码较为简单，来看打印结果
-
-我们可以看到，所创建的对象p继承到了Person( )中的属性，并且可以打印出来看到，那么我们再来上一段代码
-Person.prototype.say = function () {
-    return '我是张三'
-}
-console.log(p.say());
-console.log(p);
-
-这次我们调用p.say()
-
-在这里我们可以看到p.say()确实被调用了，说明p身上确实有这个方法，但是打印p的时候却没有显示出来，于是乎，我们可以称function Person()是p的显示原型，而Person.prototype是p的隐式原型
-为什么需要原型？
-因为可以提取公有属性，简化代码执行
-你说这话说的这么简陋，我还是看不懂...话又不多说，直接上代码
-Car.prototype.name = 'BMW';
-Car.prototype.lang = 4900; 
-Car.prototype.height =…]]></summary>
-        <author>
-            <name>滚去睡觉</name>
         </author>
     </entry>
     <entry>
