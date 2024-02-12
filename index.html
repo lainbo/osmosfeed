@@ -857,6 +857,84 @@ RSC 把以服务器为中心的 MPA（多页面应用程序）的简单“请求
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7333157879861608474"
+                        open
+                      >
+                        <summary class="article-expander__title">关于axios终止请求的思考</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7333157879861608474">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>背景
+Hello，everyone～
+笔者前段时间面字节二面，面试官提出了一个问题是说，如果发出的请求在 10s 之内没有响应，我们应该怎么去取消这个请求。
+我当时最先说了取消请求的 API 是 cancelToken 还有 AbortController，然后提出了两个思路，一个是新增标志位，在 cancelToken 里面设置时间，另一个是在 axios response 拦截器里面做处理。
+然后面试官一直说这不够优雅，最后我还是没有答出来，最后告诉我可以用 Promise.race 来实现，接下来让我一个一个方案的来说：
+方案一
+使用cancelToken参数，axios自带cancelToken参数
+学习链接
+this.axios({
+     method: &quot;post&quot;,
+     url,
+     data,
+     cancelToken: new CancelToken(function executor(c) {
+         cancel &#x3D; c;
+     }),
+ })
+ .then((response) &#x3D;&gt; {
+     clearTimeout(timer);
+     if (!response.data.hasError) {
+         this.$message.success(&quot;数据获取成功！&quot;);
+         const results &#x3D; response.data.result;
+     } else {
+         this.$message.error(&quot;数据获取失败！&quot;);
+     }
+ })
+ .catch((error) &#x3D;&gt; {
+     clearTimeout(timer);
+     if (error.response) {
+         this.$message.error(&quot;数据获取失败！&quot;);
+     }
+ });
+
+这里需要着重说一下 timer 和 cancel 的写法：
+const CancelToken &#x3D; axios.CancelToken;
+let cancel;
+let timer &#x3D; setTimeout(() &#x3D;&gt; {
+    cancel();
+    this.$message.error(&quot;连接超时，请检查网络！&quot;)
+}, 10000);
+
+这里的核心逻辑就是存在一个包含 cancel 的 timer，无论是我收到了 result 还是发生了报错，我都会取消这个请求，但是如果说上面的两种行为都没有命中，那这个请求就会被 cancel 掉。
+值得一提的是 setTimeout 肯定是存在误差的，这点我们没法去否认，就算我们使用第三种优雅的方式，我们依然会使用 setTimeout。
+方案二
+这个方式就是面试官强推的优雅的方式，我当时听到这个方式的时候还在疑惑可行性，后面重温了一下 Promise.race 之后，发现，这个真的太优雅了，具体的写法可以看看下面：
+function delayPromise(ms) {
+    return new Promise(function (resolve) {
+        setTimeout(resolve, ms);
+    });
+}
+function timeoutPromise(promise, ms) {
+    var timeout &#x3D; delayPromise(ms).then(function () {
+            throw new Error(&#x27;Operation timed out after &#x27; + ms + &#x27; ms&#x27;);
+        });
+    return Promise.race([promise, timeout]);
+}
+
+这里如果说我的 delay 时间是 10s，那我ms就设置为 10000，然后在两者之间发生竞速，如果说 promise 先执行了，那我就啥都不说，如果说 promise 是后执行的，那它就根本不会被执行了，用 Promise.race 取代了前面聊的笨笨的 API。优雅，太优雅了。
+额外思考
+写文章的时候，最开始是分成了三个方法，两个是前面写到的 cacelToken 和 Promice.race，其实还想到了一个最开始提到的axios拦截器，后来仔细的看了一下，我理解拦截器本身只是一个形式，我做请求的取消，既可以使用 cacelToken 这种 API，也可以使用 Promise.race 这种更为优雅的写法，核心的请求取消实现逻辑，还是在于前面的两种，拦截器也只是实现的位置不同罢了，所以这里就不做赘述。
+那么这就是本篇文章的全部内容啦～</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -1343,6 +1421,49 @@ JWT的使用流程一般如下：
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7332858431571263515"
+                        open
+                      >
+                        <summary class="article-expander__title">前端跨页面数据传输的方法研究</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7332858431571263515">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言
+最近在工作实现一个popup弹窗的过程中涉及到了跨页面的数据传递问题，由于之前开发的都是单页面应用，因此对于这方面就不太了解，于是今天便写下这篇文章，想好好探讨一下。
+一、问题场景还原
+1.场景模拟
+首先我来还原一下当时的场景，在我的系统的地图上需要添加一个弹窗，由于所使用的GIS库的要求，所以弹窗内容是一个独立的html文件。同时弹窗（html文件）中的内容必需根据系统中的数据进行渲染，这就涉及到了如何将系统中的数据传递给弹窗html的问题。
+现在我简单的模拟一下，我创建了两个html文件，其中index.html 代表系统:
+
+
+  
+主页面
+
+    
+      .cl-button {
+        width: 150px;
+        padding: 10px;
+        font-size: 23px;
+        cursor: pointer;
+      }
+      .cl-map {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90vw;
+        height: 1000px;
+        background…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7332858431571230747"
                         open
                       >
@@ -1564,6 +1685,8 @@ SSR 期间支持 HMR（热模块替换）
    🪟 译介 Translation   
         
    我们常常提到赫伊津哈说，游戏创造了一个魔圈（magic circle），这个魔圈与现实世界中存在某种边界，或以某种「假信」（make-believe）维系，但这其中的规则到底如…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;32
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2493,8 +2616,6 @@ logo和搜索区域
    成立于 2013 年的茶颜悦色发力原叶鲜奶茶的时间要更早，但十年过去了，茶颜悦色的门店在以长沙为半径的湖南省之外也只拓张到了武汉、南京、重庆、无锡等离长沙不是很远的地区。之前我们在节目中也分析过类似的问题，原叶鲜奶茶在整个奶茶类目里已经属于供应链和门店拓张最简单的子类目，但茶颜偏偏成为了开店速度最慢的那个，这里面肯定是主观选择，而非客观限制。   
     
    2021 年深圳文和友开业的时候，茶颜在其中开了一家快闪店，需要排队两个小时以上。在当时的时间点，霸王茶姬远远没有今天风头正劲，如果茶颜在当时就坚定地要拓张到全国，可能霸王茶姬的今天也不会这么乐观。但眼下霸王茶姬在门店数量和收入上都已经远超茶颜悦色，前者是加盟品牌，后者是直营品牌，前者门店已经超过 3000 家，后者只有 500 多家（含鸳央咖啡）。前者已经开满全国甚至走向海外，后者还固守长沙周围。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;187
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3385,8 +3506,6 @@ jcode
     
     
    若读友对「APP 不释手」饶有兴致，欢迎关注小程序「APP 不释手」或添加微信好友「MHummels」骚扰一波：</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3696,158 +3815,6 @@ jcode
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240205/t20240205_526585848.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市涪陵区发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240205/t20240205_526585848.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>道路结冰黄色预警信号：涪陵区气象台2024年2月5日20时20分发布“道路结冰黄色预警信号”，预计2月5日20时至7日20时，武陵山乡、大木乡、同乐乡、龙潭镇、马武镇海拔1200米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。请注意防范！</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240205/t20240205_526585843.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市酉阳土家族苗族自治县发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240205/t20240205_526585843.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>酉阳县气象台2024年2月5日20时10分继续发布“道路结冰黄色预警信号”，预计2月5日20时至7日20时，毛坝乡、木叶乡、黑水镇等所有乡镇街道海拔800米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240205/t20240205_526585833.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市彭水苗族土家族自治县发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240205/t20240205_526585833.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>彭水自治县气象台2024年2月5日19时50分继续发布“道路结冰黄色预警信号”，受低温降雪和冻雨影响，预计2月5日20时至7日20时，我县汉葭街道、绍庆街道、靛水街道、桑柘镇、大同镇、石柳乡、太原镇、龙射镇、普子镇、鹿鸣乡、润溪乡、朗溪乡、石盘乡等部分乡镇（街道）海拔1000米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。防御指南：1.行人注意防滑。2.驾车注意路况，安全行驶。3.相关部门和乡镇街道按照职责，做好道路结冰防范应对工作。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240205/t20240205_526585808.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市巫溪县发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240205/t20240205_526585808.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>巫溪县气象台2024年2月5日19时50分继续发布“道路结冰黄色预警信号”，预计2月5日20时至6日20时，我县红池坝镇、文峰镇、天元乡、土城镇、乌龙乡、徐家镇、鱼鳞乡、双阳乡、兰英乡、古路镇、上磺镇等海拔800米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240205/t20240205_526585798.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市丰都县发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240205/t20240205_526585798.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>丰都县气象台2024年2月5日19时30分继续发布“道路结冰黄色预警信号”，预计2月5日20时至7日20时，我县太平坝乡、暨龙镇、都督乡、武平镇、南天湖镇、仙女湖镇、包鸾镇等乡镇海拔1000米以上路段的路表温度将低于0℃，可能出现对交通有影响的道路结冰。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240205/t20240205_526585782.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市南川区发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240205/t20240205_526585782.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>南川区气象台2024年2月5日19时10分发布“道路结冰黄色预警信号”，预计2月5日20时至7日20时，山王坪镇、三泉镇、头渡镇、德隆镇、大有镇、水江镇、金山镇、南城街道等乡镇（街道）海拔1200米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240205/t20240205_526585742.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市黔江区发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240205/t20240205_526585742.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>黔江区气象台2024年2月5日18时40分继续发布“道路结冰黄色预警信号”，预计2月5日20时至8日14时，城南街道、正阳街道、五里镇、马喇镇、邻鄂镇、黎水镇、水市镇、石家镇、新华乡、白土乡等全部乡镇街道海拔800米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240205/t20240205_526585687.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市云阳县发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240205/t20240205_526585687.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>云阳县气象台2024年2月5日18时继续发布“道路结冰黄色预警信号”，预计2月5日20时至6日20时，石门乡、蔈草镇、农坝镇、桑坪镇、大阳镇、双土镇、清水乡、凤鸣镇、上坝乡、路阳镇、宝坪镇、洞鹿乡、红狮镇、沙市镇、水口镇、龙洞镇、外郎乡、后叶镇、耀灵镇、平安镇等海拔800米以上乡镇路表温度将低于0℃，可能出现对交通有影响的道路结冰。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -3862,49 +3829,6 @@ jcode
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7331938596738891788"
-                        open
-                      >
-                        <summary class="article-expander__title">🚀🚀 手摸手开发一个很 🔥 的卡片效果</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7331938596738891788">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>🚀🚀 手摸手开发一个很 🔥 的卡片效果
-最近掘金在大力推广扣子这个 AI 平台，可以看到它首页的卡片效果还是很酷炫的；大致包含两个效果，光的跟随效果还有卡片倾斜像 3D 的效果
-
-github 在你没有登录的时候，首页也有这样一个卡片效果
-
-我们也来实现一下，写一个这样的效果
-
-先准备三个盒子
-这里用的react组件和tailwind来写样式，盒子不管你怎么写，但是得有 relative 定位，因为光需要用定位来跟随
-export default function Home() {
-  return (
-    
-      
-
-      
-
-      
-
-    
-  )
-}
-
-
-实现光源跟随效果
-1、需要监听盒子上的 mouseMove 事件和 …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -4820,70 +4744,6 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
                 </section>
               </section>
             </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7330077020988244004"
-                        open
-                      >
-                        <summary class="article-expander__title">小册上新 | React 通关秘籍</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7330077020988244004">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: Chinese-red
-作者简介
-
-神说要有光，资深前端工程师，畅销小册《Nest 通关秘籍》《前端调试通关秘籍》、《TypeScript 类型体操通关秘籍》、《Babel 插件通关秘籍》作者，对前端编译原理、前端工程化等有深入研究。
-小册简介
-
-
-在前端开发工作中，我们每天都在写组件。业务组件一般不会很复杂，不需要很多封装。
-除此之外，我们也会用一些第三方组件库的组件，比如 Ant Design。这些组件的 props、ts 类型、内部实现等都做了很多设计。
-那么，像 Calendar、Table 和 Form、虚拟列表这些常用的组件，你知道是怎么写的吗？或者说，如果让你来写一个组件库，你觉得都需要考虑哪些问题呢？
-这些内容，不仅我们日常工作中会用到，还可以写在简历上加分！
-那么，这本小册主打的就是组件库。
-
-
-
-我们会写 Calender、Table、Form、Space、ColorPicker 等各种组件，然后把它们封装成一个类似 antd 的组件库。
-这个过程中，我们还会学习 CSS Modules、CSS in JS、Tailwind 等样式管理方案，学习 react-spring、react-transition-group、framer-motion、react-motion 等动画库，学习 react-dnd 来做拖拽，以及 redux、jotai、zustand 等状态管理库。
-React 生态包罗万象，我们把常用的 React 周边库都学一遍之后，再深入原理，通过 react 源码来厘清 react 渲染流程，各种特性的实现原理，最后实现一个 mini-react！
-在学习组件库的同时，我们也在进一步加深对 React的掌握。
-因为作者神光认为掌握好 React，其实主要分两方面：一方面是React 之上，学会写各种组件，并且能把这些组件封装成一个组件库，掌握各种 React 相关的库；另一方面是 React 之下，能够自己调试源码，知道 React 是怎么运行的，怎么实现一个 React。
-这两方面都掌握到一定程度，React 技术栈也就算通关了。
-适宜人群
-想全面进阶 React 的前端工程师；
-想知道如何开发一个组件库的前端工程师；
-对 React 源码感兴趣的工程师。
-你将获得
-深入源码，全面掌握 React 实现原理；
-手写组件，封装类 Ant Design 组件库；
-剖析本质，解密 React 主流生态库；
-融会贯通，从 0 实现一个 mini-react。
-1月31日-2月7日购买，享受早鸟 6 折特惠！
-原价￥89.9，限时￥53.94！</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -5720,8 +5580,8 @@ React 生态包罗万象，我们把常用的 React 周边库都学一遍之后�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7869929007">
-        <time id="build-timestamp" datetime="2024-02-12T09:53:30.059Z">2024-02-12T09:53:30.059Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7872043806">
+        <time id="build-timestamp" datetime="2024-02-12T12:55:41.885Z">2024-02-12T12:55:41.885Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
