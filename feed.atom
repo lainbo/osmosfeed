@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2024-02-13T09:53:19.731Z</id>
+    <id>urn:2024-02-13T12:55:27.579Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2024-02-13T09:53:19.731Z</updated>
+    <updated>2024-02-13T12:55:27.579Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -594,6 +594,50 @@ html标签用的lang时的一个小坑
     document.getElementsByTagName("html")[0].lang = 'xxxx';]]></summary>
         <author>
             <name>天渺工作室</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[什么时候使用 React Context ？]]></title>
+        <id>https://juejin.cn/post/7332852200937996339</id>
+        <link href="https://juejin.cn/post/7332852200937996339"/>
+        <updated>2024-02-09T15:46:06.000Z</updated>
+        <summary type="html"><![CDATA[React Context 是 React 官方提供的用于深层传递 props 的能力。在官方文档中已经有了相对详细的使用说明，因此这里是想在原理层面进行一些简单的梳理。通过了解原理，帮助我们更好地考虑“是不是可以用 React Context” 来解决问题。
+前置阅读
+使用 Context 深层传递参数 - zh-hans.react.dev
+// 示例 Context 代码
+const MyContext = React.createContext(1);
+
+const MyComponent = () => {
+    return (
+        <MyContext.Provider value={1}>my component</MyContext.Provider>
+    );
+};
+
+Fiber 节点的树状结构
+在 React 中，所熟知的虚拟 DOM 节点也被称为 Fiber 节点。例如，上面代码示例中的 <MyContext.Provider> 也算是一个 Fiber 节点。
+和常见的通过 children 数组的方式来组织树状结构不同，FiberNode 依赖于 child 、return 和 sibling 三个属性来创建树状结构。
+其中：
+child：指向第一个子节点
+return：指向父节点
+sibling：指向下一个兄弟节点
+举个例子来说：
+<section>
+    <div>
+        <span></span>
+    </div>
+    <div>
+        <span></span>
+    </div>
+    <div></div>
+</section>
+
+这段代码对应的 Fiber 节点如下：
+
+Fiber 树的遍历
+在 React 中一般会按照类似于 深度优先遍历 的逻辑来遍历 Fiber 树。
+从根节点开…]]></summary>
+        <author>
+            <name>forzoom</name>
         </author>
     </entry>
     <entry>
@@ -1779,16 +1823,6 @@ MessAuto
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[重庆市云阳县发布道路结冰黄色预警]]></title>
-        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20240206/t20240206_526587044.html</id>
-        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20240206/t20240206_526587044.html"/>
-        <updated>2024-02-06T10:09:00.000Z</updated>
-        <summary type="html"><![CDATA[云阳县气象台2024年2月6日18时继续发布“道路结冰黄色预警信号”，预计2月6日20时至7日20时，石门乡、蔈草镇、农坝镇、桑坪镇、大阳镇、双土镇、清水乡、上坝乡、洞鹿乡等海拔1000米以上乡镇路表温度将低于0℃，可能出现对交通有影响的道路结冰。]]></summary>
-        <author>
-            <name>国家预警信息发布中心</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[龙年动手实现一个喷火龙的动画效果]]></title>
         <id>https://juejin.cn/post/7332048519157907475</id>
         <link href="https://juejin.cn/post/7332048519157907475"/>
@@ -2220,42 +2254,6 @@ jcode
    21.现代汽车印度子公司据悉考虑以至多280亿美元估值上市，或成印度史上最大IPO]]></summary>
         <author>
             <name>靳斯羽</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[react-native-dropdown]]></title>
-        <id>https://juejin.cn/post/7331717626060636223</id>
-        <link href="https://juejin.cn/post/7331717626060636223"/>
-        <updated>2024-02-05T10:15:37.000Z</updated>
-        <summary type="html"><![CDATA[theme: orange
-highlight: atom-one-dark
-前言
-最近的有个需求是要实现一个下拉面板 dropdown 效果，但技术栈是 react-native, 去网上搜了一圈发现并没有相关的开源组件，于是只有自己实现，于是参考了下 vant 的实现效果，一个简单的demo如下：
-
-分析
-要实现下拉面板的效果核心元素就三个，一个触发器 trigger, 一个白色面板pannel, 一个遮罩mask
-还有一个重要的点是：下拉面板的位置并不是视窗顶部，而是在触发器的位置。所以我们需要计算tigger的 top值，然后将下拉面板的top值设置为 top，bottom设置为0,并且设置overflow: hidden 就可以了，整体思路是一样的，只是实现的代码不一样，比如计算top, 和动画这些。
-react-native的动画和 html 的动画实现方式不一样，相对复杂点。
-实现
-最终代码如下：
-import styled from '@emotion/native';
-import React, {memo} from 'react';
-import {useRef, useState} from 'react';
-import {
-  TouchableOpacity,
-  TouchableWithoutFeedback,
-  Animated,
-  Easing,
-} from 'react-native';
-
-const Wrapper = styled.View`
-  height: 36px;
-  width: 100%;
-  border-bottom-width: 0.5px;
-  border-bottom-style: solid;
-  border-bottom-color: ${({theme}) => theme.colorV2.…]]></summary>
-        <author>
-            <name>dota李天王</name>
         </author>
     </entry>
     <entry>
