@@ -861,6 +861,52 @@ RSC 把以服务器为中心的 MPA（多页面应用程序）的简单“请求
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7333021939358695464"
+                        open
+                      >
+                        <summary class="article-expander__title">你需要知道的前端代码规范方案</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7333021939358695464">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>1、为什么需要代码规范？
+约束团队成员的编码规范与编码风格
+对于一些大型的企业级项目而言，通常情况下我们都是需要一个团队来进行开发的。而又因为团队人员对技术理解上的参差不齐，所以我们需要一套统一的代码规范方案。
+代码规范有以下三点好处：
+第一：强制规范团队编码，统一新老成员编码习惯
+第二：增加项目代码的可维护性与可接入性，新成员能快速适应项目的架构与需求
+第三：保障项目整体质量，可减少无用代码、重复代码、错误代码和漏洞代码的产生几率
+2、代码格式规范
+在部署代码规范之前，我这里强调一下，因为代码规范的前提是约束整个团队的所有项目，所以  代码规范很适合使用一次部署全局运行这样的处理方式。若使用该方案，我们就不需要单独给每个项目都去配置相关文件，这样不仅可以使项目结构变得更加简洁、也节约了项目人员配置的时间成本。
+我们这里用的开发工具是vscode，插件用的是stylelint与eslint.
+1、安装依赖
+因为涉及到的依赖与配置文件太多不好管理，我用了网上一个大神整理的配置文件整合@yangzw/bruce-std，执行下面的安装命令即可，
+npm i -g @yangzw/bruce-std
+
+2、vscode配置
+1、在vscode插件市场，搜索并安装Stylelint与Eslint，安装完记得重启VSCode
+
+2、选择 文件 → 首选项 →设置，设置中可选用户或工作区
+用户：配置生效后会作用于全局项目
+工作区：配置生效后只会作用于当前打开项目
+3、点击设置右上角中间图标打开设置(json)，打开的对应文件是settings.json
+
+4、加入以下内容并重启VSCode
+ // 默认自定义配置
+&quot;css.validate&quot;: false,
+&quot;less.validate&quot;: false,
+&quot;scss.validate&quot;: false,
+&quot;editor.codeActi…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7333157879861608474"
                         open
                       >
@@ -1411,49 +1457,6 @@ JWT的使用流程一般如下：
 用户随后将此令牌用作每次向服务器请求资源时的凭据。通常，这个令牌放在HTTP请求的Authorization头部中，带上&#x27;Bearer&#x27;前缀。
 服务器会检验这个…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7332858431571263515"
-                        open
-                      >
-                        <summary class="article-expander__title">前端跨页面数据传输的方法研究</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7332858431571263515">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-最近在工作实现一个popup弹窗的过程中涉及到了跨页面的数据传递问题，由于之前开发的都是单页面应用，因此对于这方面就不太了解，于是今天便写下这篇文章，想好好探讨一下。
-一、问题场景还原
-1.场景模拟
-首先我来还原一下当时的场景，在我的系统的地图上需要添加一个弹窗，由于所使用的GIS库的要求，所以弹窗内容是一个独立的html文件。同时弹窗（html文件）中的内容必需根据系统中的数据进行渲染，这就涉及到了如何将系统中的数据传递给弹窗html的问题。
-现在我简单的模拟一下，我创建了两个html文件，其中index.html 代表系统:
-
-
-  
-主页面
-
-    
-      .cl-button {
-        width: 150px;
-        padding: 10px;
-        font-size: 23px;
-        cursor: pointer;
-      }
-      .cl-map {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 90vw;
-        height: 1000px;
-        background…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3450,6 +3453,8 @@ jcode
    ⭐️各类产品利用AI与龙年交汇，展现独特“神通”   
     
    详情：h       ttps://www.chinaz.com/202…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;12
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3948,8 +3953,6 @@ const Wrapper &#x3D; styled.View&#x60;
     
    ⭐ 智能春联展现AI创意能力   
  …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;66
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4182,8 +4185,6 @@ const Wrapper &#x3D; styled.View&#x60;
    在        #84《消费，拥有，修复，持有》       中，写到这点，当时更多是一种感性的理解：   
     
  …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4290,6 +4291,8 @@ const Wrapper &#x3D; styled.View&#x60;
    产生一个做某事的欲望，有时候并不来源于自己内心的渴望，而可能源于外部：父母的压力、同事的评价、小红书制造的焦虑……如果这个事情不是自己真正想做的，又哪里有行动力去做呢。   
     
    举个例子，xhs上最近多了很多「裸辞2个月做自媒体月入10w」的笔记，看着「博主」既光鲜亮丽又周游世界的样子，不免会让人产生自己也想做这件事的感觉，「ta看起来好厉害，我能不能也试试」。一方面，互联网上的信息以刺激人的需求博得流量，制造了一个「人人都能当博主」的假象；另一…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;16
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5547,8 +5550,8 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7881468214">
-        <time id="build-timestamp" datetime="2024-02-13T03:53:35.870Z">2024-02-13T03:53:35.870Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7882788854">
+        <time id="build-timestamp" datetime="2024-02-13T06:53:43.490Z">2024-02-13T06:53:43.490Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
