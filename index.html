@@ -51,6 +51,53 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-13 datetime="2024-02-13T07:01:00.000Z">2024-02-13</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-13 datetime="2024-02-13T07:01:00.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >国家应急广播 - 重庆预警信息</button>
+                  <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240213/t20240213_526593629.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市开州区发布大雾黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240213/t20240213_526593629.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>开州区气象局2024年2月13日15时发布“大雾黄色预警信号”，预计2月13日23时至14日12时，我区大部分乡镇（街道）将出现能见度小于500米的雾，局地能见度小于200米。请注意防范大雾天气可能造成的影响。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-12 datetime="2024-02-12T04:58:03.000Z">2024-02-12</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-12 datetime="2024-02-12T04:58:03.000Z"></time>
           </button>
@@ -1457,6 +1504,49 @@ JWT的使用流程一般如下：
 用户随后将此令牌用作每次向服务器请求资源时的凭据。通常，这个令牌放在HTTP请求的Authorization头部中，带上&#x27;Bearer&#x27;前缀。
 服务器会检验这个…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7332858431571263515"
+                        open
+                      >
+                        <summary class="article-expander__title">前端跨页面数据传输的方法研究</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7332858431571263515">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言
+最近在工作实现一个popup弹窗的过程中涉及到了跨页面的数据传递问题，由于之前开发的都是单页面应用，因此对于这方面就不太了解，于是今天便写下这篇文章，想好好探讨一下。
+一、问题场景还原
+1.场景模拟
+首先我来还原一下当时的场景，在我的系统的地图上需要添加一个弹窗，由于所使用的GIS库的要求，所以弹窗内容是一个独立的html文件。同时弹窗（html文件）中的内容必需根据系统中的数据进行渲染，这就涉及到了如何将系统中的数据传递给弹窗html的问题。
+现在我简单的模拟一下，我创建了两个html文件，其中index.html 代表系统:
+
+
+  
+主页面
+
+    
+      .cl-button {
+        width: 150px;
+        padding: 10px;
+        font-size: 23px;
+        cursor: pointer;
+      }
+      .cl-map {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90vw;
+        height: 1000px;
+        background…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3092,50 +3182,6 @@ jcode
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7331938596740300812"
-                        open
-                      >
-                        <summary class="article-expander__title">探索 React 19：4个可能正式发布的新 hook</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7331938596740300812">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: github
-本文为翻译作品，原文链接：Exploring React 19: 4 New Hooks for Practical Use
-React 开发者们，准备好 React 新版本发布吧！React 团队不会发布 v18.3版本了，他们目前正在开发 React v19 版本。开发者的期待的功能中有四个新的 hook——旨在解决 React 中两个常见的痛点：数据获取和表单处理。虽然这些 hook 目前作为实验性 API 在 React 预览版本中可用，但它们预计将成为 React 19 的稳定功能，并且在最终发布之前可能会有 API 更改。
-让我们深入了解这些新 hook：
-1. use
-use hook 是一个实验性的 React hook，允许你以类似于使用 Promise 或上下文的方式从资源（如 promise 或上下文）中读取值。
-const value &#x3D; use(resource);
-
-更多详情请查看官方文档。
-示例：
-import * as React from &#x27;react&#x27;;
-import { useState, use, Suspense } from &#x27;react&#x27;;
-import { faker } from &#x27;@faker-js/faker&#x27;;
-
-export const App &#x3D; () &#x3D;&gt; {
-  const [newsPromise, setNewsPromise] &#x3D; useState(() &#x3D;&gt; fetchNews());
-
-  const handleUpdate &#x3D; () &#x3D;&gt; {
-    fetchNews().then((news) &#x3D;&gt; {
-      setNewsPromise(Promise.resolve(news));
-    });
-  };
-
-  return (
-    
-     …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7331949295396487180"
                         open
                       >
@@ -3283,63 +3329,6 @@ jcode
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>云阳县气象台2024年2月6日18时继续发布“道路结冰黄色预警信号”，预计2月6日20时至7日20时，石门乡、蔈草镇、农坝镇、桑坪镇、大阳镇、双土镇、清水乡、上坝乡、洞鹿乡等海拔1000米以上乡镇路表温度将低于0℃，可能出现对交通有影响的道路结冰。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240206/t20240206_526586980.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市开州区发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240206/t20240206_526586980.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>开州区气象局2024年2月6日17时20分继续发布“道路结冰黄色预警信号”，预计2月6日20时至7日20时，我区雪宝山镇、关面乡、满月镇、大进镇、谭家镇、河堰镇、紫水乡、麻柳乡、岳溪镇、长沙镇海拔1200米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240206/t20240206_526586974.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市巫溪县发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240206/t20240206_526586974.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>巫溪县气象台2024年2月6日17时继续发布“道路结冰黄色预警信号”，预计2月6日17时至8日17时，田坝镇、红池坝镇、文峰镇、天元乡、土城镇、乌龙乡、徐家镇、鱼鳞乡、双阳乡、兰英乡、蒲莲镇、古路镇、上磺镇等乡镇路表温度将低于0℃，可能出现对交通有影响的道路结冰。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240206/t20240206_526586950.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市石柱土家族自治县发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240206/t20240206_526586950.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>石柱县气象台2024年2月6日16时40分继续发布“道路结冰黄色预警信号”，预计2月6日17时至8日8时，黄水镇、枫木镇、冷水镇、金竹乡、沙子镇、洗新乡、黄鹤镇、金铃乡、龙潭乡、六塘乡路表温度将低于0℃，可能出现对交通有影响的道路结冰。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -4185,6 +4174,8 @@ const Wrapper &#x3D; styled.View&#x60;
    在        #84《消费，拥有，修复，持有》       中，写到这点，当时更多是一种感性的理解：   
     
  …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4252,8 +4243,6 @@ const Wrapper &#x3D; styled.View&#x60;
    最后提前祝大家 2024 新春快乐，下周停更一周，我们来年再见ヾ(￣▽￣)Bye~Bye~   
     
         2024 Moonvy 月维限量红包封面</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;41
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5550,8 +5539,8 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7882788854">
-        <time id="build-timestamp" datetime="2024-02-13T06:53:43.490Z">2024-02-13T06:53:43.490Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7884635869">
+        <time id="build-timestamp" datetime="2024-02-13T09:53:19.709Z">2024-02-13T09:53:19.709Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
