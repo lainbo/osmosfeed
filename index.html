@@ -868,6 +868,48 @@ RSC 把以服务器为中心的 MPA（多页面应用程序）的简单“请求
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7332836966351880207"
+                        open
+                      >
+                        <summary class="article-expander__title">ECharts快速上手</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7332836966351880207">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言
+ECharts，全称Enterprise Charts，是百度基于 JavaScript 实现的一个开源可视化图表库，主要特点就是可视化类型丰富、动画炫酷、使用简单，广泛应用于数据报表展示、商业智能分析等多个领域。接下来，本文将带领大家快速走进ECharts的世界，从环境搭建到基础使用，一起体验其强大而便捷的数据可视化能力。
+一、环境准备
+在开始使用ECharts之前，确保你的开发环境中已经包含了基本的HTML、CSS和JavaScript环境。然后，通过以下步骤引入ECharts库：
+下载并引入ECharts：你可以在ECharts官网下载最新版本的ECharts库，或者直接通过CDN方式引入：快速上手 - 使用手册 - Apache ECharts)
+Html
+
+
+
+二、创建ECharts容器
+在HTML文件中创建一个用于承载图表的
+元素，并为其分配一个id，以便于JavaScript中获取该元素：
+
+
+三、初始化ECharts实例
+在JavaScript部分，首先获取上述div元素，然后调用echarts.init()方法来初始化一个ECharts实例：
+// 获取图表容器
+var myChart &#x3D; document.getElementById(&#x27;main&#x27;);
+
+// 初始化ECharts实例
+var chartInstance &#x3D; echarts.init(myChart);
+
+四、准备配置项和绘制图表
+配置图表需要创建一个包含相…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7332865125640044556"
                         open
                       >
@@ -1473,58 +1515,6 @@ html标签用的lang时的一个小坑
     // 动态修改html lang
     document.getElementsByTagName(&quot;html&quot;)[0].lang &#x3D; &#x27;xxxx&#x27;;</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7332852200937996339"
-                        open
-                      >
-                        <summary class="article-expander__title">什么时候使用 React Context ？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7332852200937996339">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>React Context 是 React 官方提供的用于深层传递 props 的能力。在官方文档中已经有了相对详细的使用说明，因此这里是想在原理层面进行一些简单的梳理。通过了解原理，帮助我们更好地考虑“是不是可以用 React Context” 来解决问题。
-前置阅读
-使用 Context 深层传递参数 - zh-hans.react.dev
-// 示例 Context 代码
-const MyContext &#x3D; React.createContext(1);
-
-const MyComponent &#x3D; () &#x3D;&gt; {
-    return (
-        my component
-    );
-};
-
-Fiber 节点的树状结构
-在 React 中，所熟知的虚拟 DOM 节点也被称为 Fiber 节点。例如，上面代码示例中的  也算是一个 Fiber 节点。
-和常见的通过 children 数组的方式来组织树状结构不同，FiberNode 依赖于 child 、return 和 sibling 三个属性来创建树状结构。
-其中：
-child：指向第一个子节点
-return：指向父节点
-sibling：指向下一个兄弟节点
-举个例子来说：
-
-    
-
-    
-
-    
-
-
-
-这段代码对应的 Fiber 节点如下：
-
-Fiber 树的遍历
-在 React 中一般会按照类似于 深度优先遍历 的逻辑来遍历 Fiber 树。
-从根节点开…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2540,8 +2530,6 @@ const {
 加入微信群参与交流
 加入在 Discord 社区参与交流
 同时也欢迎贡献你的一份力量，请移步贡献指南。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2602,8 +2590,6 @@ logo和搜索区域
 
 更多推荐
 爆肝1000小时, Dooring零代码搭建平台3.5正式上线</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2954,8 +2940,6 @@ logo和搜索区域
    美图宣布以约 2.85 亿元人民币收购设计网站“站酷”   
     
    Meta 由于业绩远超预期，创造市值一夜暴涨 1970 亿美元的纪…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3140,8 +3124,6 @@ MessAuto
 
 总结
 由于文章篇幅较长，更多好用的软件后续会继续分享，请在评论区分享大家觉得适合前端的效率工具😘</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3186,8 +3168,6 @@ jcode
 
 这里设置一张背景图片，其宽度1300px、横向重复，并设置整个背景元素的宽3900px、高100vh，超出图片的部分设置背景色 #348cb2。
 为了让背景图片动起来（看起来是龙在动...），我们添加animation动画，设置transform属性从-1300px到0px，间隔是…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3223,8 +3203,6 @@ jcode
 好的没问题，就我一个人吗
 嗯，技术选型到部署上线，有问题可以找文档看看
 当时我的心情很复杂的，那时候工作也就刚一年，更多的是…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3265,8 +3243,6 @@ jcode
 这种格式我们在APP中就经常见到，比如说各种全景照片和视频，其转换过程就比较直接，直接从球面坐标转换为纹理的平面二维坐标
 投影
 上述提…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3379,7 +3355,6 @@ jcode
                         <summary class="article-expander__title">#34 我把我儿子揍了</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://open.zhubai.wiki/a/l/t/z/pq/huiris/2366579050266734592">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>朋友们，你们好呀。   
     
@@ -3461,8 +3436,6 @@ jcode
    ⭐️各类产品利用AI与龙年交汇，展现独特“神通”   
     
    详情：h       ttps://www.chinaz.com/202…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;12
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5503,8 +5476,8 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7886797832">
-        <time id="build-timestamp" datetime="2024-02-13T12:55:27.556Z">2024-02-13T12:55:27.556Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7889149229">
+        <time id="build-timestamp" datetime="2024-02-13T15:53:41.858Z">2024-02-13T15:53:41.858Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
