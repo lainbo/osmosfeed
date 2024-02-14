@@ -374,6 +374,53 @@ react是前端主流框架之一,是我们今天的主角,他和vue有着类似�
                 </section>
               </section>
             </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7333535323932082227"
+                        open
+                      >
+                        <summary class="article-expander__title">Vue中Scoped样式：优雅解决组件化开发中的样式隔离问题</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7333535323932082227">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>1. Scoped 的原理
+在 Vue 中，Scoped 样式是一种很棒的特性，能够确保你的样式只在当前组件内起作用。这意味着，你在一个 Vue 组件中写的样式只会影响这个组件内的元素，而不会影响其他组件或者全局的样式。那么，让我们来简单明了地了解一下 Scoped 样式是怎么实现的吧！
+1.1 Vue Scoped 的基本原理
+首先，Vue 会给你的组件的根元素（通常是 
+）添加一个独一无二的标识属性，比如说 data-v-xxx。这个 xxx 是一个特殊的标识，用来确保你的样式只对这个组件有效。
+其次，Vue 会对你在组件中写的样式做一些特殊处理。比如说，你写了这样一个样式 .container，在编译的时候，Vue 会把它变成 .container[data-v-xxx]。这样一来，这个样式就只会作用于有着相同标识的元素，也就是说，只会影响当前组件内的元素，其他地方不受影响。
+这样一来，每个组件的样式都被限制在了自己的范围内，不会互相干扰，也不会跟全局的样式冲突。这就是 Scoped 样式的基本原理啦！
+1.2 Vue Loader 如何处理 Scoped 样式
+在 Vue 项目中，Vue Loader 是负责处理 .vue 文件的工具。它会把你写在  里面的样式代码拿出来，然后做一些特殊的处理。
+首先，Vue Loader 会给每个样式块生成一个特殊的标识，保证每个组件的样式都是唯一的。
+然后，它会处理你的样式代码，把选择器末尾加上对应的标识，变成适用于当前组件的格式。
+通过 Vue Loader 的处理，Scoped 样式就能够在每个组件里正常工作啦！它们能够保持样式私有，不影响其他地方，让我们的代码更加整洁清晰。
+所以，这就是 Vue Scoped 样式的原理啦！简单易懂吧？
+2. Scoped 的使用方法
+好了，现在我们已经…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -945,6 +992,56 @@ react是前端主流框架之一,是我们今天的主角,他和vue有着类似�
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7332762964376616960"
+                        open
+                      >
+                        <summary class="article-expander__title">Vue3+vite+Ts+pinia—第五章 watch与watchEffect</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7332762964376616960">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>highlight: a11y-dark
+5.1 watch概述
+作用：监视数据的变化（和Vue2中的watch作用一致）
+特点：Vue3中的watch只能监视以下四种数据：
+ref定义的数据。
+reactive定义的数据。
+函数返回一个值（getter函数）。
+一个包含上述内容的数组。
+5.2 监听ref基本类型
+1、Vue2
+对于基本类型的监听，Vue2就是一个函数，里面有newValue和oldValue返回新值和旧值。
+watch: {
+  sum(newValue, oldValue) {
+    ......
+  }
+}
+
+2、Vue3
+在Vue3里使用watch要先import引入，而且watch里面传入两个参数：第一个是监视的属性名，第二个是回调函数。
+import {watch} from &#x27;vue&#x27;
+watch(sum, (newValue, oldValue) &#x3D;&gt; {
+  ......
+})
+
+这里举一个最简单的例子：点按钮，数字+1。数字属于基本类型，我们对它进行监听：
+
+  
+当前求和为：{{sum}}
+点我sum+1
+  
+{
+    console.log(&#x27;sum变化了&#x27;, …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -1901,6 +1998,49 @@ SSR 期间支持 HMR（热模块替换）
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7332852200937291827"
+                        open
+                      >
+                        <summary class="article-expander__title">Vue 3的数据监视利器：深入解析watch属性的高级用法</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7332852200937291827">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: yu
+highlight: a11y-light
+前言
+我们都知道在Vue3中，watch是一个用于观察和响应组件中数据变化的强大工具。在Vue 3中，watch属性不仅可以用于监视Vue实例数据的变化，并在数据发生变化时执行相应的操作；也可以在监视数据变化的同时，在变化时执行回调函数，从而实现对数据的监听和响应。本文将主要讲述watch的扩展内容：immediate以及deep。
+watch的基本用法
+示例
+import { watch, reactive } from &#x27;vue&#x27;;
+
+const state &#x3D; reactive({
+  count: 0
+});
+
+watch(() &#x3D;&gt; state.count, (newValue, oldValue) &#x3D;&gt; {
+  console.log(&#x60;count值从${oldValue}变为${newValue}&#x60;);
+});
+
+state.count++; // 控制台输出：count值从0变为1
+
+在这个示例中，我们首先导入了Vue 3中的watch函数和reactive函数。然后创建了一个名为state的响应式对象。接着我们使用watch函数监视state.count的变化，并传入一个回调函数，该回调函数会在count属性发生变化时被调用。最后，我们通过修改state.count的值来触发watch的回调函数，从而验证监视功能的有效性。
+immediate属性
+immediate属性用于指定在初始化时是否立即执行watch回调函数。默认情况下，Vue 3中的watch不会在初始化时执行回调函数，但可以通过设置immediate属性为true来实现。这对于需要在数据进行首次绑定时执行某些操作的场景有着很大的作用。
+示例
+import { watch, reactive } from &#x27;vue&#x27;;
+
+const…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -2502,120 +2642,6 @@ Car.prototype.height &#x3D;…</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240207/t20240207_526588667.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市奉节县发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240207/t20240207_526588667.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>奉节县气象台2024年2月7日20时20分继续发布“道路结冰黄色预警信号”，预计2月7日21时至9日14时，平安乡、青莲镇、竹园镇、红土乡、公平镇、大树镇、汾河镇、岩湾乡、长安土家族乡、兴隆镇、龙桥土家族乡、太和土家族乡、云雾土家族乡、冯坪乡、青龙镇、吐祥镇等乡镇海拔800米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。防御指南：1.行人注意防滑。2.驾车注意路况，安全行驶。3.相关部门和乡镇街道按照职责，做好道路结冰防范应对工作。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240207/t20240207_526588665.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市酉阳土家族苗族自治县发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240207/t20240207_526588665.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>酉阳县气象台2024年2月7日20时30分继续发布“道路结冰黄色预警信号”，预计2月7日20时30分至8日14时，毛坝乡、木叶乡、黑水镇等所有乡镇街道海拔800米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240207/t20240207_526588662.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市开州区发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240207/t20240207_526588662.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>开州区气象局2024年2月7日20时30分继续发布“道路结冰黄色预警信号”，预计2月7日20时30分至8日20时，我区雪宝山镇、关面乡、满月镇、大进镇、谭家镇、河堰镇、紫水乡、麻柳乡、岳溪镇、长沙镇海拔1200米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240207/t20240207_526588652.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市彭水苗族土家族自治县发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240207/t20240207_526588652.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>彭水自治县气象台2024年2月7日20时继续发布“道路结冰黄色预警信号”，预计2月7日20时至8日14时，我县汉葭街道、靛水街道、桑柘镇、大同镇、石柳乡、太原镇、龙射镇、普子镇、三义乡、鹿鸣乡、润溪乡、朗溪乡、石盘乡等部分乡镇（街道）海拔1000米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。防御指南：1.行人注意防滑。2.驾车注意路况，安全行驶。3.相关部门和乡镇街道按照职责，做好道路结冰防范应对工作。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240207/t20240207_526588630.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市涪陵区发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240207/t20240207_526588630.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>涪陵区气象台2024年2月7日19时50分继续发布“道路结冰黄色预警信号”，预计2月7日20时至8日12时，武陵山乡、大木乡、同乐乡、龙潭镇、马武镇海拔1200米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240207/t20240207_526588616.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市秀山土家族苗族自治县发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240207/t20240207_526588616.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>秀山县气象台2024年2月7日19时更新发布“道路结冰黄色预警信号”，预计2月7日19时至9日14时，涌洞镇、雅江镇、洪安镇、峨溶镇、石堤镇、里仁镇、膏田镇、溶溪镇、官庄街道、龙池镇、钟灵镇、梅江镇、清溪场街道、隘口镇、兰桥镇、龙凤坝镇、溪口镇等乡镇街道海拔800米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -3198,145 +3224,6 @@ Car.prototype.height &#x3D;…</span>
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7332048519157907475"
-                        open
-                      >
-                        <summary class="article-expander__title">龙年动手实现一个喷火龙的动画效果</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7332048519157907475">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>🐲真龙不怕火炼 | 春节创意投稿大赛来袭
-前言
-人生天地之间，若白驹过隙，忽然而已。不知不觉中，2023年已然逝去了。
-挺久前就关注到龙年春节创意投稿大赛了，初步想法是画一条龙，不过实践起来有点难度，加上之前没画过类似的，遂放弃...
-后来，想着用 Vue3 + CSS 实现一个喷火龙的动画效果吧，于是有了这篇文章。
-最终效果如下所示：
-
-码上掘金预览：
-jcode
-搜集素材
-从网上找了一张龙的图片（可爱点的），用PS将背景处理成透明的。类似地，找了一个透明背景的弹窗图片。
-最后，还要准备一张背景图片。
-
-设置滚动背景
-这里添加一个背景元素
-，设置样式：
-.bg{
-  width: 3900px;
-  height: 100vh;
-  background-color: #348cb2;
-  background-image: url(&#x27;https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/147d616a42d346289a5756959117d8b0~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w&#x3D;1500&amp;h&#x3D;500&amp;s&#x3D;238027&amp;e&#x3D;jpg&amp;b&#x3D;348cb2&#x27;);
-  background-position: 0 100%;
-  background-repeat: repeat-x;
-  background-size: 1300px auto;
-}
-
-这里设置一张背景图片，其宽度1300px、横向重复，并设置整个背景元素的宽3900px、高100vh，超出图片的部分设置背景色 #348cb2。
-为了让背景图片动起来（看起来是龙在动...），我们添加animation动画，设置transform属性从-1300px到0px，间隔是…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7332292236019712019"
-                        open
-                      >
-                        <summary class="article-expander__title">聊聊焦虑和内耗：这事我有资格做吗？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7332292236019712019">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-大家好，我是祯民。今天我们不聊技术，聊聊焦虑和内耗，最近和一些小册读者同学闲聊的时候，他们都经常会有类似的一个顾虑，这事我有资格做吗？就像这样：
-我想面试大厂，但是我感觉我能力还不够，还是等一段时间多准备准备
-我 mentor 让我独立负责一个项目，这个项目需要全栈，但我只会前端怎么办，要不要拒绝我 mentor
-我开始带校招同学了，但我会不会带不好他，有时候感觉他技术比我还厉害
-...
-这些问题不仅有校招的同学会有，即使是工作几年的同学也有类似的问题，也包括我。这种焦虑和内耗很常见，它体现了你对自身能力与责任的认真态度，这是积极的一面。在面对新的挑战或任务时，我们可能会担心自己是否有足够的资历去胜任，这主要源于对未知的恐惧以及对成功的渴望。
-
-这种焦虑和内耗会带给人不同的痛苦和徘徊，导致很多同学会对一件事情的过分焦虑内耗。因为害怕他人的指责，你是否够资格去做，而放弃一些机会选择舒适区。
-
-这种场景同样也时常发生在我自己身上，所以我就自身的一些例子给大家讲讲我当时是怎么面对焦虑和内耗的，以及如何定义一个事情你是否有资格去做。虽然不一定正确，但也希望能帮助到大家，给予一定启发。
-正文
-别人相信你的事情，你就有资格做
-当一件事情，有人愿意相信你能做成的时候，愿意托付给你去完成时，即使你的能力并不是能把这个事情做到最好的那个人，但你也有资格做。我们来听第一个故事。
-三年前刚进字节的时候，我只会 vue ，一点 nodejs 皮毛（说皮毛可能都过分了）和还勉强能看的八股文和 leetcode 水平（当然这个对工作几乎没任何作用）。在字节看了2，3天的新人 landing 文档后，我老板找我聊：
-祯民，我想让你支持一下抖音前端技术团队官网，做一下团队推广
-好的没问题，就我一个人吗
-嗯，技术选型到部署上线，有问题可以找文档看看
-当时我的心情很复杂的，那时候工作也就刚一年，更多的是…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7331949295396487180"
-                        open
-                      >
-                        <summary class="article-expander__title">🐲还在人挤人赏龙年烟花？你难道不想拥有一个私人的全景天际盛宴吗？｜春节创意投稿</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7331949295396487180">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: condensed-night-purple
-前言
-随着春节的脚步越来越近，中国的城市景象也随之变得喜庆热闹，除夕夜的庆典活动逐一展开，烟花大会和无人机灯光秀等成为了璀璨的夜空中最抢眼的亮点。然而，对于像我这样的社交恐惧症患者和居家技术宅来说，云上观赏烟花才是真正的应景之选。
-基于这样的原因，借助全景播放器来观赏世界各地的烟花盛况成了不错的选择。虽然全景播放器的开发一般属于OpenGL等图形渲染引擎的范畴，但现在Flutter已经开始对自定义着色器提供支持，这无疑为像我这样的开发者打开了新的大门。
-那么，是时候开始搞事了！
-效果图
-图中的那个白色圆点代表触摸点位置
-
-附带一个全景图片查看功能的版本，支持拖动改变视角：
-另外请在能访问github的网络中查看，shader文件我放在github上了
-jcode
-实现介绍
-用Flutter来实现这个全景播放器效果，需要的东西正如前言中提到的，在flutter3.7中引入了fragment shader来支持自定义着色器，这次依靠的就是它了，当然还需要补充一些全景播放器和计算机图形学的知识：
-全景播放器有哪些实现方式
-全景播放器一般就分为两种类型的，其他的都是基于这两种方案上的改进版本：
-等角度立方体贴图（Equi-Angular Cubemap）
-这东西俗称就是天空盒，这种方案经常用在游戏开发这块，其原理用一张图就能解释：
-
-简而言之，其实就是球面坐标先转换为立方体的向量，最后映射为纹理上的二维坐标。不过这些转换步骤所需的公式什么的，我相信大家看过一遍维基百科上的概述就都知道，这里就不赘述了🤪
-等距圆柱投影（equidistant cylindrical projection）
-
-这种格式我们在APP中就经常见到，比如说各种全景照片和视频，其转换过程就比较直接，直接从球面坐标转换为纹理的平面二维坐标
-投影
-上述提…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >竹白百科 - TOP20</button>
                   <a class="source-heading__link" href="http://analy.zhubai.wiki">Open</a>
                 </h3>
@@ -3510,6 +3397,8 @@ jcode
     
     
    若读友对「APP 不释手」饶有兴致，欢迎关注小程序「APP 不释手」或添加微信好友「MHummels」骚扰一波：</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3814,6 +3703,8 @@ jcode
    气：生命过程中不断流转的能量，负责维持身体功能和生命活动的正常进行。   
     
    神：精神和心灵活动的总称，反映了个体的心理状态和生命活动的精微层面。（一切生命的根源…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;15
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3907,8 +3798,6 @@ jcode
    我已经提前把上面这篇论文以 PDF 的格式下载好，接下来看看它的表现如何。   
     
   …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;35
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5424,8 +5313,8 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7899355736">
-        <time id="build-timestamp" datetime="2024-02-14T09:53:41.330Z">2024-02-14T09:53:41.330Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7901500660">
+        <time id="build-timestamp" datetime="2024-02-14T12:55:18.525Z">2024-02-14T12:55:18.525Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
