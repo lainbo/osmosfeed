@@ -51,11 +51,44 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-15 datetime="2024-02-15T14:43:49.000Z">2024-02-15</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-15 datetime="2024-02-15T14:43:49.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-15 datetime="2024-02-15T16:00:00.000Z">2024-02-15</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-15 datetime="2024-02-15T16:00:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Epic Games Store - Free Games</button>
+                  <a class="source-heading__link" href="https://store.epicgames.com/zh-CN/free-games?lang&#x3D;zh-CN">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://store.epicgames.com/zh-CN/p/dakar-desert-rally"
+                        open
+                      >
+                        <summary class="article-expander__title">Dakar Desert Rally</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://store.epicgames.com/zh-CN/p/dakar-desert-rally">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Dakar Desert Rally is the biggest off-road rally racing adventure ever developed. Experience the speed and excitement of the largest rally race on the planet, featuring a wide variety of licensed vehicles from motorcycles, cars, trucks, quads and SSVs.
+
+Free Now to 2024-02-22T16:00:00.000Z</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -193,8 +226,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-12 datetime="2024-02-12T07:45:54.000Z">2024-02-12</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-12 datetime="2024-02-12T07:45:54.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-12 datetime="2024-02-12T14:25:34.000Z">2024-02-12</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-12 datetime="2024-02-12T14:25:34.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -209,6 +242,58 @@
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7333236033038090281"
+                        open
+                      >
+                        <summary class="article-expander__title">百度考题之单例模式</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7333236033038090281">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>浅聊一下
+设计模式是我们必不可少的编程素养，今天我们要聊的是百度考题——单例模式
+es6新增 “类”
+要讲单例模式，我们就从es6新增的类开始说起，我们先来看代码
+class SingleDog{
+    show(){
+        console.log(&#x27;我是一个单例对象&#x27;);
+    }
+}
+
+const s1 &#x3D; new SingleDog();
+const s2 &#x3D; new SingleDog();
+
+console.log(s1 &#x3D;&#x3D;&#x3D; s2);
+
+这段代码定义了一个类，名字叫SingleDog，我们创建了两个SingleDog的实例对象s1和s2，打印一下他们的结果，这并不难理解，因为创建的s1和s2所存储的地址不同，他们是相同类的不同实例对象，于是乎，打印的结果肯定是 false
+
+那么跟我们今天要讲的单例模式有什么关系呢？我们先来了解一下单例模式到底是什么...
+单例模式
+当我们谈论单例模式时，我们指的是一种设计模式，用于确保一个类只有一个实例，并提供一个全局访问点来访问该实例。
+什么意思？就是说在我上面的SingleDog类只能有一个实例对象，不管你创建了多少个对象，都会返回创建的第一个对象...那该咋办？我们得用到static
+static
+在 JavaScript 中，static 是一个关键字，用于定义类的静态属性和静态方法。静态成员属于类本身，而不是类的实例。
+讲的这么深奥，我还是看不懂...那就直接上代码
+class SingleDog{
+    //属于对象的
+    show(){
+        console.log(&#x27;我是一个单例对象&#x27;);
+    
+    }
+    // 不要直接new 
+    // 属于类的
+    static getInstance(){
+        console.log(&#x27;静态方法&#x27;);   …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -2311,6 +2396,8 @@ const…</span>
    所以，他们攻击的不是你，只是他们内心的投影。   
     
    你真正要在意…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2382,25 +2469,6 @@ const…</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20240209/t20240209_526589967.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市合川区发布大雾橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20240209/t20240209_526589967.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>合川区气象台2024年2月9日01时50分发布“大雾橙色预警信号”，预计9日02时至11时，我区合阳城街道、大石街道、渭沱镇、铜溪镇、南津街街道、草街街道、大石街道、钓鱼城街道、太和镇、盐井街道、土场镇等全部镇街将出现能见度小于200米的雾，局部地区能见度小于50米。请注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -2461,58 +2529,6 @@ const…</span>
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Epic Games Store - Free Games</button>
-                  <a class="source-heading__link" href="https://store.epicgames.com/zh-CN/free-games?lang&#x3D;zh-CN">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://store.epicgames.com/zh-CN/p/doki-doki-literature-club-plus"
-                        open
-                      >
-                        <summary class="article-expander__title">Doki Doki Literature Club Plus!</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://store.epicgames.com/zh-CN/p/doki-doki-literature-club-plus">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>欢迎加入文学部！在这个广受好评的心理恐怖故事之中，为暗恋对象写诗，尽情体验校园浪漫的恐怖之处吧。
-
-Free Now to 2024-02-15T16:00:00.000Z</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://store.epicgames.com/zh-CN/p/lost-castle-abb2e2"
-                        open
-                      >
-                        <summary class="article-expander__title">失落城堡</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://store.epicgames.com/zh-CN/p/lost-castle-abb2e2">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>《失落城堡》是一款包含了rogue-like随机元素的动作冒险类游戏，尝试用随机拾取的装备，道具和宝物挑战盘踞城堡的敌人，游戏支持在线及本地最多4位玩家进行联机。
-
-Free Now to 2024-02-15T16:00:00.000Z</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >掘金前端本周最热</button>
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
@@ -2550,57 +2566,6 @@ defineRender((
 0-2
  
     &lt;/…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7332708703399673897"
-                        open
-                      >
-                        <summary class="article-expander__title">请务必搞懂原型（附你想不到的网易面试题）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7332708703399673897">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>浅聊一下
-JavaScript 中的原型是理解该语言核心特性的关键之一。在面试中，掌握原型概念通常是一个重要的议题。今天我们将深入探讨 JavaScript 中的原型，并且文章末尾附带一道你绝对想不到的网易面试题...
-什么是原型？
-我们先来聊聊到底什么是原型
-原型(prototype)是函数天生就具有的属性，它定义了构造
-函数制造出的对象的公共祖先。
-通过该构造函数产生的对象，可以隐式继承到原型上的属性和方法
-你说这到底是啥呀？语文不好，看不懂...那我们直接上代码
-function Person() {
-    this.name &#x3D; &#x27;张三&#x27;;
-    this.age &#x3D; 18;
-}
-let p &#x3D; new Person();
-console.log(p);
-
-在js中，我们用这种方法定义一个类，然后new一下创造一个对象，代码较为简单，来看打印结果
-
-我们可以看到，所创建的对象p继承到了Person( )中的属性，并且可以打印出来看到，那么我们再来上一段代码
-Person.prototype.say &#x3D; function () {
-    return &#x27;我是张三&#x27;
-}
-console.log(p.say());
-console.log(p);
-
-这次我们调用p.say()
-
-在这里我们可以看到p.say()确实被调用了，说明p身上确实有这个方法，但是打印p的时候却没有显示出来，于是乎，我们可以称function Person()是p的显示原型，而Person.prototype是p的隐式原型
-为什么需要原型？
-因为可以提取公有属性，简化代码执行
-你说这话说的这么简陋，我还是看不懂...话又不多说，直接上代码
-Car.prototype.name &#x3D; &#x27;BMW&#x27;;
-Car.prototype.lang &#x3D; 4900; 
-Car.prototype.height &#x3D;…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
@@ -2903,8 +2868,6 @@ Car.prototype.height &#x3D;…</span>
            她说出这个约定的时候并没有意识到问题，50年对精灵来说只是一瞬间，对于寿命不足百年的人类来说，下次相见可能就是永别。而辛美尔作为勇者小队中的人类欣然接受。   
     
        …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;99
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5324,8 +5287,8 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7918623759">
-        <time id="build-timestamp" datetime="2024-02-15T15:53:29.127Z">2024-02-15T15:53:29.127Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7920858095">
+        <time id="build-timestamp" datetime="2024-02-15T18:53:18.858Z">2024-02-15T18:53:18.858Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

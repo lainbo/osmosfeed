@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2024-02-15T15:53:29.147Z</id>
+    <id>urn:2024-02-15T18:53:18.881Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2024-02-15T15:53:29.147Z</updated>
+    <updated>2024-02-15T18:53:18.881Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[Dakar Desert Rally]]></title>
+        <id>https://store.epicgames.com/zh-CN/p/dakar-desert-rally</id>
+        <link href="https://store.epicgames.com/zh-CN/p/dakar-desert-rally"/>
+        <updated>2024-02-15T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Dakar Desert Rally is the biggest off-road rally racing adventure ever developed. Experience the speed and excitement of the largest rally race on the planet, featuring a wide variety of licensed vehicles from motorcycles, cars, trucks, quads and SSVs.
+
+Free Now to 2024-02-22T16:00:00.000Z]]></summary>
+        <author>
+            <name>Saber Interactive</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Clash Verge系列使用最佳实践]]></title>
         <id>https://lainbo.com/article/clash-config</id>
@@ -33,6 +45,49 @@
         <summary type="html"><![CDATA[开州区气象局2024年2月13日15时发布“大雾黄色预警信号”，预计2月13日23时至14日12时，我区大部分乡镇（街道）将出现能见度小于500米的雾，局地能见度小于200米。请注意防范大雾天气可能造成的影响。]]></summary>
         <author>
             <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[百度考题之单例模式]]></title>
+        <id>https://juejin.cn/post/7333236033038090281</id>
+        <link href="https://juejin.cn/post/7333236033038090281"/>
+        <updated>2024-02-12T14:25:34.000Z</updated>
+        <summary type="html"><![CDATA[浅聊一下
+设计模式是我们必不可少的编程素养，今天我们要聊的是百度考题——单例模式
+es6新增 “类”
+要讲单例模式，我们就从es6新增的类开始说起，我们先来看代码
+class SingleDog{
+    show(){
+        console.log('我是一个单例对象');
+    }
+}
+
+const s1 = new SingleDog();
+const s2 = new SingleDog();
+
+console.log(s1 === s2);
+
+这段代码定义了一个类，名字叫SingleDog，我们创建了两个SingleDog的实例对象s1和s2，打印一下他们的结果，这并不难理解，因为创建的s1和s2所存储的地址不同，他们是相同类的不同实例对象，于是乎，打印的结果肯定是 false
+
+那么跟我们今天要讲的单例模式有什么关系呢？我们先来了解一下单例模式到底是什么...
+单例模式
+当我们谈论单例模式时，我们指的是一种设计模式，用于确保一个类只有一个实例，并提供一个全局访问点来访问该实例。
+什么意思？就是说在我上面的SingleDog类只能有一个实例对象，不管你创建了多少个对象，都会返回创建的第一个对象...那该咋办？我们得用到static
+static
+在 JavaScript 中，static 是一个关键字，用于定义类的静态属性和静态方法。静态成员属于类本身，而不是类的实例。
+讲的这么深奥，我还是看不懂...那就直接上代码
+class SingleDog{
+    //属于对象的
+    show(){
+        console.log('我是一个单例对象');
+    
+    }
+    // 不要直接new 
+    // 属于类的
+    static getInstance(){
+        console.log('静态方法');   …]]></summary>
+        <author>
+            <name>滚去睡觉</name>
         </author>
     </entry>
     <entry>
@@ -1359,40 +1414,6 @@ const…]]></summary>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[重庆市合川区发布大雾橙色预警]]></title>
-        <id>http://www.cneb.gov.cn/yjxx/csyj/20240209/t20240209_526589967.html</id>
-        <link href="http://www.cneb.gov.cn/yjxx/csyj/20240209/t20240209_526589967.html"/>
-        <updated>2024-02-08T17:57:00.000Z</updated>
-        <summary type="html"><![CDATA[合川区气象台2024年2月9日01时50分发布“大雾橙色预警信号”，预计9日02时至11时，我区合阳城街道、大石街道、渭沱镇、铜溪镇、南津街街道、草街街道、大石街道、钓鱼城街道、太和镇、盐井街道、土场镇等全部镇街将出现能见度小于200米的雾，局部地区能见度小于50米。请注意防范大雾天气可能造成的影响。]]></summary>
-        <author>
-            <name>国家预警信息发布中心</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Doki Doki Literature Club Plus!]]></title>
-        <id>https://store.epicgames.com/zh-CN/p/doki-doki-literature-club-plus</id>
-        <link href="https://store.epicgames.com/zh-CN/p/doki-doki-literature-club-plus"/>
-        <updated>2024-02-08T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[欢迎加入文学部！在这个广受好评的心理恐怖故事之中，为暗恋对象写诗，尽情体验校园浪漫的恐怖之处吧。
-
-Free Now to 2024-02-15T16:00:00.000Z]]></summary>
-        <author>
-            <name>Serenity Forge</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[失落城堡]]></title>
-        <id>https://store.epicgames.com/zh-CN/p/lost-castle-abb2e2</id>
-        <link href="https://store.epicgames.com/zh-CN/p/lost-castle-abb2e2"/>
-        <updated>2024-02-08T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[《失落城堡》是一款包含了rogue-like随机元素的动作冒险类游戏，尝试用随机拾取的装备，道具和宝物挑战盘踞城堡的敌人，游戏支持在线及本地最多4位玩家进行联机。
-
-Free Now to 2024-02-15T16:00:00.000Z]]></summary>
-        <author>
-            <name>Another Indie Studio Limited</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[2023 年终总结：vue-jsx 的最佳实践]]></title>
         <id>https://juejin.cn/post/7332767759431729190</id>
         <link href="https://juejin.cn/post/7332767759431729190"/>
@@ -1418,48 +1439,6 @@ defineRender((
     </…]]></summary>
         <author>
             <name>zhiyuanzmj</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[请务必搞懂原型（附你想不到的网易面试题）]]></title>
-        <id>https://juejin.cn/post/7332708703399673897</id>
-        <link href="https://juejin.cn/post/7332708703399673897"/>
-        <updated>2024-02-08T14:59:33.000Z</updated>
-        <summary type="html"><![CDATA[浅聊一下
-JavaScript 中的原型是理解该语言核心特性的关键之一。在面试中，掌握原型概念通常是一个重要的议题。今天我们将深入探讨 JavaScript 中的原型，并且文章末尾附带一道你绝对想不到的网易面试题...
-什么是原型？
-我们先来聊聊到底什么是原型
-原型(prototype)是函数天生就具有的属性，它定义了构造
-函数制造出的对象的公共祖先。
-通过该构造函数产生的对象，可以隐式继承到原型上的属性和方法
-你说这到底是啥呀？语文不好，看不懂...那我们直接上代码
-function Person() {
-    this.name = '张三';
-    this.age = 18;
-}
-let p = new Person();
-console.log(p);
-
-在js中，我们用这种方法定义一个类，然后new一下创造一个对象，代码较为简单，来看打印结果
-
-我们可以看到，所创建的对象p继承到了Person( )中的属性，并且可以打印出来看到，那么我们再来上一段代码
-Person.prototype.say = function () {
-    return '我是张三'
-}
-console.log(p.say());
-console.log(p);
-
-这次我们调用p.say()
-
-在这里我们可以看到p.say()确实被调用了，说明p身上确实有这个方法，但是打印p的时候却没有显示出来，于是乎，我们可以称function Person()是p的显示原型，而Person.prototype是p的隐式原型
-为什么需要原型？
-因为可以提取公有属性，简化代码执行
-你说这话说的这么简陋，我还是看不懂...话又不多说，直接上代码
-Car.prototype.name = 'BMW';
-Car.prototype.lang = 4900; 
-Car.prototype.height =…]]></summary>
-        <author>
-            <name>滚去睡觉</name>
         </author>
     </entry>
     <entry>
