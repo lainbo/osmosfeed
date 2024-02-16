@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2024-02-16T06:53:38.260Z</id>
+    <id>urn:2024-02-16T09:53:39.141Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2024-02-16T06:53:38.260Z</updated>
+    <updated>2024-02-16T09:53:39.141Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[重庆市忠县发布大雾黄色预警]]></title>
+        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20240216/t20240216_526595673.html</id>
+        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20240216/t20240216_526595673.html"/>
+        <updated>2024-02-16T07:18:00.000Z</updated>
+        <summary type="html"><![CDATA[忠县气象台2024年2月16日15时发布“大雾黄色预警信号”，预计2月16日23时至17日10时，忠州街道、白公街道、新生街道、乌杨街道、东溪镇、复兴镇、任家镇、洋渡镇、黄金镇、白石镇、永丰镇、拔山镇、三汇镇、官坝镇、汝溪镇、野鹤镇、石宝镇、石黄镇、金鸡镇、马灌镇、花桥镇、新立镇、双桂镇、涂井乡、金声乡、兴峰乡、善广乡、磨子土家族乡、石子乡可能出现能见度小于500米的雾，局地能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
+        <author>
+            <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[重庆市大足区发布大雾黄色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/huangsyj/20240216/t20240216_526595356.html</id>
@@ -55,6 +65,40 @@ Free Now to 2024-02-22T16:00:00.000Z]]></summary>
         <summary type="html"><![CDATA[合川区气象台2024年2月14日21时30分发布“大风蓝色预警信号”，预计2月14日22时至15日08时，我区古楼镇、龙凤镇、燕窝镇、二郎镇、香龙镇等全部镇街可能受大风影响，局地阵风可达7级以上，请注意防范。]]></summary>
         <author>
             <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[到底该用ref还是reactive？？？]]></title>
+        <id>https://juejin.cn/post/7334225435944173609</id>
+        <link href="https://juejin.cn/post/7334225435944173609"/>
+        <updated>2024-02-14T09:29:28.000Z</updated>
+        <summary type="html"><![CDATA[浅聊一下
+今天情人节，掘友们都在想今天该和哪个女or男朋友出去玩，而我还在想在处理响应式数据时到底是该用ref还是reactive...
+响应式数据
+要写ref和reactive，就不能只写ref和reactive，还要写那响应式数据。何为响应式数据？先来讲段大道理
+响应式数据是指在 Vue.js 中，当数据发生变化时，相关的视图会自动更新以反映这些变化的特性。Vue.js 的响应式系统通过数据绑定实现了数据和视图之间的自动同步。
+具体来说，当你在 Vue 实例中声明一个数据属性时，Vue 将会将这些属性转换成响应式数据。这意味着当这些属性的值发生变化时，相关的视图会自动更新以反映这些变化。
+看不下去...不用看，举个例子就好
+<template>
+  <div>数据a:{{ a }}</div>
+  <button @click="add">+1</button>
+</template>
+<script setup>
+let a = 1;
+const add = () => {
+  a++;
+  console.log(a);
+};
+</script>
+<style lang="css" scoped></style>
+
+有一个数据a，点击按钮“+1”，数据a会增加1，并且会打印当前a的值，来看效果
+
+我点了n下+1，可是显示的a的值并没有改变，但是我们可以从打印的结果发现，我们的a实际上是改变了的。如果要让我们的a变成一个响应式数据，也就是说a改变，展示在屏幕上的a也要变化，那么我们就要使用到 ref和reactive
+ref
+在 Vue 3 中，ref 是一个用于创建响应式引用的函数。它接受一个初始值作为参数，并返回一个包含响应式引用的对象。使用 ref 创建的值可以在模板中直接使用，并且当其值发生变化时，相关的 DOM 元素会自动更新。ref 通常用于创建可变的响应…]]></summary>
+        <author>
+            <name>滚去睡觉</name>
         </author>
     </entry>
     <entry>
@@ -1293,73 +1337,6 @@ Fiber 树的遍历
         <summary type="html"><![CDATA[垫江县气象台2024年2月9日16时30分发布“大雾黄色预警信号”。预计2月9日23时至10日11时，我县所有乡镇（街道）可能出现能见度小于500米的雾，局部地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
         <author>
             <name>国家预警信息发布中心</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[重庆市荣昌区发布大雾黄色预警]]></title>
-        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20240209/t20240209_526590573.html</id>
-        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20240209/t20240209_526590573.html"/>
-        <updated>2024-02-09T07:22:00.000Z</updated>
-        <summary type="html"><![CDATA[荣昌区气象台2024年2月9日15时03分发布“大雾黄色预警信号”，预计9日23时至10日10时，我区全部镇街可能出现能见度小于500米的雾。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
-        <author>
-            <name>国家预警信息发布中心</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[重庆市铜梁区发布大雾黄色预警]]></title>
-        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20240209/t20240209_526590568.html</id>
-        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20240209/t20240209_526590568.html"/>
-        <updated>2024-02-09T07:15:00.000Z</updated>
-        <summary type="html"><![CDATA[重庆市铜梁区气象台2024年2月9日15时10分发布“大雾黄色预警信号”：预计2月10日04时至11时，我区南城街道、东城街道、巴川街道、蒲吕街道、太平镇、侣俸镇、平滩镇、土桥镇、二坪镇、庆隆镇、石鱼镇等镇街可能出现能见度小于500米的雾，局地能见度小于200米。请各地注意防范大雾天气可能造成的影响。防御指南：1.车辆驾驶及户外活动注意安全。2.机场、高速公路、水上交通等单位加强交通管理。3.相关部门和乡镇街道按照职责，做好大雾防范应对工作。]]></summary>
-        <author>
-            <name>国家预警信息发布中心</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[重庆市开州区发布大雾黄色预警]]></title>
-        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20240209/t20240209_526590549.html</id>
-        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20240209/t20240209_526590549.html"/>
-        <updated>2024-02-09T07:01:00.000Z</updated>
-        <summary type="html"><![CDATA[开州区气象局2024年2月9日15时发布“大雾黄色预警信号”，预计2月9日23时至10日12时，我区大部分乡镇（街道）将出现能见度小于500米的雾，局地能见度小于200米。请注意防范大雾天气可能造成的影响。]]></summary>
-        <author>
-            <name>国家预警信息发布中心</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[前端跨页面数据传输的方法研究]]></title>
-        <id>https://juejin.cn/post/7332858431571263515</id>
-        <link href="https://juejin.cn/post/7332858431571263515"/>
-        <updated>2024-02-09T03:06:04.000Z</updated>
-        <summary type="html"><![CDATA[前言
-最近在工作实现一个popup弹窗的过程中涉及到了跨页面的数据传递问题，由于之前开发的都是单页面应用，因此对于这方面就不太了解，于是今天便写下这篇文章，想好好探讨一下。
-一、问题场景还原
-1.场景模拟
-首先我来还原一下当时的场景，在我的系统的地图上需要添加一个弹窗，由于所使用的GIS库的要求，所以弹窗内容是一个独立的html文件。同时弹窗（html文件）中的内容必需根据系统中的数据进行渲染，这就涉及到了如何将系统中的数据传递给弹窗html的问题。
-现在我简单的模拟一下，我创建了两个html文件，其中index.html 代表系统:
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>主页面</title>
-
-    <style>
-      .cl-button {
-        width: 150px;
-        padding: 10px;
-        font-size: 23px;
-        cursor: pointer;
-      }
-      .cl-map {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 90vw;
-        height: 1000px;
-        background…]]></summary>
-        <author>
-            <name>Carlos_sam</name>
         </author>
     </entry>
     <entry>
