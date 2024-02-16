@@ -842,6 +842,32 @@ let handler &#x3D; {
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7333066398175510565"
+                        open
+                      >
+                        <summary class="article-expander__title">重构利器：如何用 Immer 优雅地管理应用状态</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7333066398175510565">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>1. immer
+immer 是一个 JavaScript 库，用于处理不可变数据的状态更新。不可变数据意味着一旦创建，数据结构就不能被修改。在编写复杂的应用程序时，不可变性可以带来一系列好处，比如更容易追踪数据的改变、更容易实现撤销/重做功能以及更简单的状态管理。
+然而，处理不可变数据结构通常需要编写大量的样板代码，尤其是在更新嵌套结构时。immer 库通过提供一个简单的可变（mutable）API 来更新不可变（immutable）状态，从而简化了这一过程。
+immer 的核心概念是“草稿状态”（draft state）。这个库允许你编写看似可变的代码来更新一个不变的状态，但实际上，你是在修改的一个临时的草稿状态。一旦修改完成，immer 会基于这个草稿状态产生一个新的不可变状态。
+2. 诞生背景
+immer 的诞生背景主要与在 JavaScript 应用中管理复杂的不可变状态有关。在 React 和 Redux 等现代前端框架和库中，不可变数据的概念非常重要，因为它帮助开发者避免直接修改状态，从而避免潜在的副作用和性能问题。不可变数据还使得状态的变化更加可预测，便于跟踪和调试，同时也简化了复杂的功能如时间旅行（time travel debugging）和状态快照的实现。
+React 的 setState 方法和 Redux 的 reducer 函数都要求你返回一个新的状态对象，而不是修改原有的状态。当状态结构简单时，这通常不是问题，但当应用逐渐变得复杂，状态结构也变得更加嵌套时，更新状态会变得越来越繁琐。例如，如果你需要更新一个嵌套的数组或对象，你需要逐层克隆所有父级对象，直到达到你想要修改的属性。这不仅编写起来复杂，而且容易出错。
+为了解决这个问题，Michel Weststrate（也是 MobX 库的作者）创建了 immer。他的目标是创建一个库，它能够让你以…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -1582,6 +1608,45 @@ var chartInstance &#x3D; echarts.init(myChart);
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7333037551530508300"
+                        open
+                      >
+                        <summary class="article-expander__title">还在为请求失败烦恼？这个方法你试过吗？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7333037551530508300">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>嘿嘿，我又来了！先祝大家新年快乐
+今天我们要聊聊前端工程师经常遇到的一个头疼问题——请求重试机制。想象一下，你正在开发一个应用，突然发现某个请求总是失败，但又不能让用户反复重试，怎么办呢？别急，alovajs来帮你解决这个问题。
+啥是alovajs的请求重试机制？
+alovajs的请求重试机制允许你在请求失败时自动重试。这个机制有几个很酷的特性：
+自定义重试次数：你可以设定重试的最大次数，或者根据特定条件来判断是否需要重试。
+重试延迟机制：每次重试之前都有一个延迟，而且这个延迟时间是可以自定义的。
+手动停止重试：如果需要，你还可以手动停止重试过程。
+alova.js如何解决请求重试问题？
+使用alovajs，你可以通过设置最大重试次数、延迟时间和重试判定规则来优化请求过程。比如，你可以设置在遇到特定错误时停止重试，或者根据请求的错误类型来决定是否继续重试。
+来点代码看看？
+当然，让我们看看alovajs中请求重试的一个基本用法示例：
+const { loading, data, error, onError, onRetry, onFail, onSuccess, onComplete } &#x3D; useRetriableRequest(request);
+
+在这个例子中，useRetriableRequest是alovajs提供的用于处理可重试请求的hook。它允许你监听请求的不同状态，比如loading、data、error等。
+想要更多？
+alovajs的请求重试机制非常灵活，你可以根据自己的需求进行各种自定义设置。如果你对这个话题感兴趣，强烈建议访问alovajs的官网查看更多详细信息：alovajs官网。
+好啦，今天就聊到这里。如果你对alovajs的请求重试机制有啥想法或者疑问，评论区见哦！别忘了给我点个赞，分享给你的小伙伴，我们下次再见！😊👍
+有任何问题，你可以加入以下群聊咨询，也可以在github 仓库中发布 Discussions，如果遇到问题，也请在github 的 issues中提交，我们会在最快的时间解决。
+加入微信群参与交流
+加入在 Discord 社区参与交流
+同时也欢迎贡献你的一份力量，请移步贡献指南。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7333021939358695464"
                         open
                       >
@@ -2241,73 +2306,6 @@ sibling：指向下一个兄弟节点
 Fiber 树的遍历
 在 React 中一般会按照类似于 深度优先遍历 的逻辑来遍历 Fiber 树。
 从根节点开…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7332735079163346979"
-                        open
-                      >
-                        <summary class="article-expander__title">从画一个点入手学习 WebGL</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7332735079163346979">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>WebGL 简介
-webgl 是一个可以结合 h5 和 js 在网页上绘制渲染 3D/2D 图形的 js api，gl 即 Graphics Library，图形库的意思。webgl 基于 OpenGL ES 2.0，OpenGL ES 是专为嵌入式系统设计的图形 api，是 OpenGL 的子集。
-绘制点
-webgl 的这些 api 都是在  元素中使用的，关于  的一些细节知识，可参见《canvas 实现卫星绕月动画》，本文不再赘述。要使用 webgl 画一个点，我们可以新建一个 html 文件，在里面放上一个 ，然后使用 js 去获取 canvas 元素，再通过 getContext 传入 &#x27;webgl&#x27; 得到 gl，即 WebGLRenderingContext 接口 —— 正是它提供了基于 OpenGL ES 2.0 的绘图上下文，我们才能在  中绘图：
-
-  
-  
-    const canvas &#x3D; document.getElementById(&#x27;canvas&#x27;)
-    const gl &#x3D; canvas.getContext(&#x27;webgl&#x27;)
-  
-
-
-重置画布颜色
-如果现在打开浏览器查看代码的运行效果，看到的会是一片空白。如果想看到 canvas 画布，之前我们都是直接给  设置 css 样式 background-color 来实现，有了 gl， 我们就可以使用它的 clearColor() 与 clear() 方法来重置画布的颜色：
-gl.clearColor(0.5, 0, 0, 1)
-gl.clear(gl.COLOR_BUFFER_BIT)
-
-g…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7332735436325224502"
-                        open
-                      >
-                        <summary class="article-expander__title">伪造请求怎么办？看这篇就够了</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7332735436325224502">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>您好， 如果喜欢我的文章或者想上岸大厂，可以关注公众号「量子前端」，将不定期关注推送前端好文、分享就业资料秘籍，也希望有机会一对一帮助你实现梦想
-JWT身份鉴权方案，token会作为主要的鉴权方式来作为前后端通信校验的凭证，当该token被篡改或者直接被第三方拿到，就可以伪造该用户做一系列业务操作，是一种非常严重的安全漏洞。
-那，JWT是啥？如果你不知道，借助AI的力量，看看它的解释：
-JWT（JSON Web Tokens）是一种开放标准（RFC 7519），用于在各方之间安全地传输信息作为JSON对象。由于其信息可以被验证和信任，JWT通常用于身份验证和信息交换。由于其较小的尺寸，它们特别适合于空间受限的环境，例如HTTP头部。
-JWT主要由三个部分组成：
-Header（头部）：Header通常由两部分组成，令牌的类型（即JWT）以及所使用的签名算法（如HMAC SHA256或RSA）。
-Payload（负载）：其中包含所谓的Claims（声明），Claims是有关实体（通常是用户）和其他数据的声明。有三种类型的Claims：注册的声明、公共的声明和私有的声明。
-Signature（签名）：为了获取这部分的签名，必须有编码过的header（头部）、编码过的payload（负载）、一个密钥，通过header中指定的算法进行签名。签名用于验证消息在传输途中没有被更改，并且，对于使用私有秘钥签署的token，还可以验证请求方是否为token的合法发布者。
-JWT的使用流程一般如下：
-用户使用各种方法（如用户名和密码）向认证服务器进行身份验证。
-一旦服务器验证了用户的身份，它将生成一个JWT，并将其作为响应返回给用户。
-用户随后将此令牌用作每次向服务器请求资源时的凭据。通常，这个令牌放在HTTP请求的Authorization头部中，带上&#x27;Bearer&#x27;前缀。
-服务器会检验这个…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
@@ -3199,7 +3197,6 @@ JWT的使用流程一般如下：
                         <summary class="article-expander__title">#34 我把我儿子揍了</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://open.zhubai.wiki/a/l/t/z/pq/huiris/2366579050266734592">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://img.zhubai.love/1225cec194bc4873a078e95f7f2be4cc.png" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>朋友们，你们好呀。   
     
@@ -3281,6 +3278,8 @@ JWT的使用流程一般如下：
    ⭐️各类产品利用AI与龙年交汇，展现独特“神通”   
     
    详情：h       ttps://www.chinaz.com/202…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;12
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5274,8 +5273,8 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7925777273">
-        <time id="build-timestamp" datetime="2024-02-16T03:53:29.517Z">2024-02-16T03:53:29.517Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7927090098">
+        <time id="build-timestamp" datetime="2024-02-16T06:53:38.239Z">2024-02-16T06:53:38.239Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
