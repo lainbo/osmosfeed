@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2024-02-16T21:53:13.893Z</id>
+    <id>urn:2024-02-17T01:15:38.136Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2024-02-16T21:53:13.893Z</updated>
+    <updated>2024-02-17T01:15:38.136Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[重庆市涪陵区发布大雾黄色预警]]></title>
+        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20240217/t20240217_526595970.html</id>
+        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20240217/t20240217_526595970.html"/>
+        <updated>2024-02-17T00:22:00.000Z</updated>
+        <summary type="html"><![CDATA[涪陵区气象台2024年2月17日7时50分发布“大雾黄色预警信号”，预计2月17日8时至11时，南沱镇、马鞍街道、李渡街道、江北街道、龙桥街道、敦仁街道、崇义街道、江东街道、马武镇、百胜镇、清溪镇可能出现能见度小于500米的雾，局地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。防御指南：1.车辆驾驶及户外活动注意安全。2.机场、高速公路、水上交通等单位加强交通管理。3.相关部门和乡镇街道按照职责，做好大雾防范应对工作。]]></summary>
+        <author>
+            <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[重庆市忠县发布大雾黄色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/huangsyj/20240216/t20240216_526595673.html</id>
@@ -262,6 +272,48 @@ MVP（Minimum Viable…]]></summary>
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[setState到底是同步的还是异步的？]]></title>
+        <id>https://juejin.cn/post/7333416709121097764</id>
+        <link href="https://juejin.cn/post/7333416709121097764"/>
+        <updated>2024-02-12T10:02:30.000Z</updated>
+        <summary type="html"><![CDATA[您好，如果喜欢我的文章，可以关注我的公众号「量子前端」，将不定期关注推送前端好文~
+以下内容针对React v18以下版本。
+前言
+setState到底是同步还是异步？很多人可能面试都被问到过，就好比这道代码输出题：
+constructor(props) {
+  super(props);
+  this.state = {
+    data: 'data'
+  }
+}
+
+componentDidMount() {
+  this.setState({
+    data: 'did mount state'
+  })
+
+  console.log("did mount state ", this.state.data);
+  // did mount state data
+
+  setTimeout(() => {
+    this.setState({
+      data: 'setTimeout'
+    })
+
+    console.log("setTimeout ", this.state.data);
+  })
+}
+
+这段代码的输出结果，第一个console.log会输出data，而第二个console.log会输出setTimeout。也就是第一次setState的时候，是异步更新的，而第二次setState的时候，它又变成了同步更新，是不是有点晕呢？我们去源码里看一下setState更新调度的时候到底做了些什么。
+探针
+setState被调用后最终会走到scheduleUpdateOnFiber函数中，那我们看一下这个函数做了些什么呢？
+if (executionContext === NoContext) {
+  // Flush the synchronous work now, unless we're already working or inside…]]></summary>
+        <author>
+            <name>sorryhc</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[react实现简易xiaomi日历]]></title>
         <id>https://juejin.cn/post/7333631025757306899</id>
         <link href="https://juejin.cn/post/7333631025757306899"/>
@@ -470,6 +522,28 @@ React 的 setState 方法和 Redux 的 reducer 函数都要求你返回一个新
 为了解决这个问题，Michel Weststrate（也是 MobX 库的作者）创建了 immer。他的目标是创建一个库，它能够让你以…]]></summary>
         <author>
             <name>lecepin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[神仙打架：Vue vs React]]></title>
+        <id>https://juejin.cn/post/7333027152138960905</id>
+        <link href="https://juejin.cn/post/7333027152138960905"/>
+        <updated>2024-02-11T01:25:42.000Z</updated>
+        <summary type="html"><![CDATA[大家好，这里是大家的林语冰。坚持阅读，自律打卡，每天一次，进步一点。
+免责声明
+本文属于是语冰的直男翻译了属于是，略有删改，仅供粉丝参考。英文原味版请传送 Vue vs React: Comparing frontend options in 2023。
+本期共享的是 —— 两大人气最高前端框架 Vue vs React 的横向比较，辅助大家根据自己的需求理智地选择适合的框架。
+
+如今，大多数大型 Web App 都是使用给力的 JS 前端开发库构建的。其中人气最高的两个库是 —— React 和 Vue。最近，我们测评了 React vs Vue。
+Vue 更年轻，某种意义上而言，Vue 挑战了一大坨 React 的实质设计原则，尤其是数据绑定。但 Vue 3 大量借鉴了 React，或者说深受 React 启发，并且围绕当今的功能和约定，还有一大坨值得深度学习的东东。在本文中，我们会探讨两者的异同点和优缺点。
+Vue 是什么鬼物？
+Vue 是一个开源库，最初由谷歌工程师尤雨溪开发。Vue 遵循 MVVM 模型，将 UI 与底层数据模型解耦。Vue 是一个声明式库，开发者只需更新数据对象，Vue 就会执行适当变更。
+粉丝请注意，Vue 的使用方式十分灵活。Vue 不需要替换整个网站的堆栈。举个栗子，开发者可以使用 Vue 来增强纯 HTML，而无需 JS 构建步骤。虽然但是，Vue 也可以作为一个全栈库来实现，满足经验丰富的开发者需求。
+Vue 的设计包括但不限于：
+组件支持。与 React 不同，Vue 本质上并非组件筑基，因为 Vue 可用于修改现有 HTML。虽然但是，Vue 确实支持可复用组件，比如可以接受 prop 值的可复用 UI 部分。
+虚拟 DOM。Vue 使用虚拟 DOM 更新和渲染 UI。虚拟 DOM 使 Vue 变得很快。更新虚拟 DOM 后，Vue…]]></summary>
+        <author>
+            <name>人猫神话</name>
         </author>
     </entry>
     <entry>
@@ -1046,125 +1120,6 @@ Addictive Animation
         <summary type="html"><![CDATA[武隆区气象台2024年2月10日8时30分发布“大雾橙色预警信号”，预计10日9时至12时，鸭江镇、平桥镇、凤来镇、庙垭乡、和顺镇、长坝镇、白云乡、白马镇、大洞河乡、羊角街道、凤山街道、芙蓉街道、仙女山街道、江口镇、石桥乡、文复乡、双河镇、火炉镇等乡镇街道可能出现能见度小于200米的雾，局地能见度小于50米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
         <author>
             <name>国家预警信息发布中心</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[重庆市万盛经开区发布大雾橙色预警]]></title>
-        <id>http://www.cneb.gov.cn/yjxx/csyj/20240210/t20240210_526591346.html</id>
-        <link href="http://www.cneb.gov.cn/yjxx/csyj/20240210/t20240210_526591346.html"/>
-        <updated>2024-02-10T00:06:00.000Z</updated>
-        <summary type="html"><![CDATA[万盛经开区气象台2024年2月10日07时55分发布“大雾橙色预警信号”，我区万东镇、金桥镇、黑山镇、石林镇已出现能见度小于200米的雾并将持续，预计10日08时至12时，我区万盛街道、东林街道、丛林镇、关坝镇、青年镇、南桐镇将出现能见度小于200米的雾，局部地区能见度小于50米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
-        <author>
-            <name>国家预警信息发布中心</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[重庆市黔江区发布大雾橙色预警]]></title>
-        <id>http://www.cneb.gov.cn/yjxx/csyj/20240210/t20240210_526591343.html</id>
-        <link href="http://www.cneb.gov.cn/yjxx/csyj/20240210/t20240210_526591343.html"/>
-        <updated>2024-02-10T00:05:00.000Z</updated>
-        <summary type="html"><![CDATA[黔江区气象台2024年2月10日7时50分发布“大雾橙色预警信号”，目前我区局地出现能见度小于50米的大雾，预计10日8时至12时，全区所有乡镇街道可能出现能见度小于200米的雾，局地能见度小于50米。请各地注意防范大雾天气可能造成的影响。]]></summary>
-        <author>
-            <name>国家预警信息发布中心</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[重庆市綦江区发布大雾黄色预警]]></title>
-        <id>http://www.cneb.gov.cn/yjxx/huangsyj/20240210/t20240210_526591215.html</id>
-        <link href="http://www.cneb.gov.cn/yjxx/huangsyj/20240210/t20240210_526591215.html"/>
-        <updated>2024-02-09T22:52:00.000Z</updated>
-        <summary type="html"><![CDATA[綦江区气象台2024年2月10日6时30分发布“大雾黄色预警信号”，预计10日7时至12时，文龙街道、通惠街道、古南街道、三江街道、新盛街道、永城镇、横山镇、扶欢镇、篆塘镇、东溪镇、郭扶镇、永新镇将出现能见度小于500米的雾，局地能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。]]></summary>
-        <author>
-            <name>国家预警信息发布中心</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[html标签中lang属性踩的一个小坑，日常中还是需要留意的风险点]]></title>
-        <id>https://juejin.cn/post/7333019950954709027</id>
-        <link href="https://juejin.cn/post/7333019950954709027"/>
-        <updated>2024-02-09T16:51:48.000Z</updated>
-        <summary type="html"><![CDATA[html中lang是什么意思
-在html中lang是英语language的缩写，是语言的意思。
-html lang的定义作用
-一般大家可能在前端项目的index.html入口html标签用的lang多一点，比如：
-<!DOCTYPE html>
-<html lang="en"><!--很多人默认都没有添加lang属性，默认会根据自己浏览器语言配置同步-->
-    <head>
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Vite + Vue + TS</title>
-    </head>
-    <body>
-        <div id="app"></div>
-        <script type="module" src="/src/main.ts"></script>
-    </body>
-</html>
-
-
-html标签用的lang时的一个小坑
-因为项目只有是国内使用的，没有中英文切换功能。因为疏忽html的lang为"en"一直忘了修正，因为没有发现啥影响也没在意。项目页面内部有大量的广告行业英文缩写，比如CPC（Cost Per Click ），CPM（Cost Per Click ），CPD（Cost Per Click ）等等，然后浏览器（可能是国内的某些浏览器自带翻译器的那种）碰到英文就自动提示需要翻译，用户可能一直也把翻译默认打开着。
-广告行业有一个缩写叫CPC（CostPerClick每次点击成本）。然而某些国产浏览器自带的翻译器确翻译成了中国的政党名称，导致用户反应为何有这样的名称。
-案例：
-
-解决方案
-最后改为lang="zh"就解决了误会。
-<!DOCTYPE html>
-<html lang="zh">
-    <head>
-
-    </head>
-</html>
-
-
-日常在使用中，还是需要留意一下此种问题。如果需要有多语言切换的，顺便也要切换lang配置编码。
-    // 动态修改html lang
-    document.getElementsByTagName("html")[0].lang = 'xxxx';]]></summary>
-        <author>
-            <name>天渺工作室</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[什么时候使用 React Context ？]]></title>
-        <id>https://juejin.cn/post/7332852200937996339</id>
-        <link href="https://juejin.cn/post/7332852200937996339"/>
-        <updated>2024-02-09T15:46:06.000Z</updated>
-        <summary type="html"><![CDATA[React Context 是 React 官方提供的用于深层传递 props 的能力。在官方文档中已经有了相对详细的使用说明，因此这里是想在原理层面进行一些简单的梳理。通过了解原理，帮助我们更好地考虑“是不是可以用 React Context” 来解决问题。
-前置阅读
-使用 Context 深层传递参数 - zh-hans.react.dev
-// 示例 Context 代码
-const MyContext = React.createContext(1);
-
-const MyComponent = () => {
-    return (
-        <MyContext.Provider value={1}>my component</MyContext.Provider>
-    );
-};
-
-Fiber 节点的树状结构
-在 React 中，所熟知的虚拟 DOM 节点也被称为 Fiber 节点。例如，上面代码示例中的 <MyContext.Provider> 也算是一个 Fiber 节点。
-和常见的通过 children 数组的方式来组织树状结构不同，FiberNode 依赖于 child 、return 和 sibling 三个属性来创建树状结构。
-其中：
-child：指向第一个子节点
-return：指向父节点
-sibling：指向下一个兄弟节点
-举个例子来说：
-<section>
-    <div>
-        <span></span>
-    </div>
-    <div>
-        <span></span>
-    </div>
-    <div></div>
-</section>
-
-这段代码对应的 Fiber 节点如下：
-
-Fiber 树的遍历
-在 React 中一般会按照类似于 深度优先遍历 的逻辑来遍历 Fiber 树。
-从根节点开…]]></summary>
-        <author>
-            <name>forzoom</name>
         </author>
     </entry>
     <entry>

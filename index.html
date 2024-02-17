@@ -51,6 +51,53 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-17 datetime="2024-02-17T00:22:00.000Z">2024-02-17</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-17 datetime="2024-02-17T00:22:00.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >国家应急广播 - 重庆预警信息</button>
+                  <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240217/t20240217_526595970.html"
+                        open
+                      >
+                        <summary class="article-expander__title">重庆市涪陵区发布大雾黄色预警</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240217/t20240217_526595970.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>涪陵区气象台2024年2月17日7时50分发布“大雾黄色预警信号”，预计2月17日8时至11时，南沱镇、马鞍街道、李渡街道、江北街道、龙桥街道、敦仁街道、崇义街道、江东街道、马武镇、百胜镇、清溪镇可能出现能见度小于500米的雾，局地区能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。防御指南：1.车辆驾驶及户外活动注意安全。2.机场、高速公路、水上交通等单位加强交通管理。3.相关部门和乡镇街道按照职责，做好大雾防范应对工作。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-16 datetime="2024-02-16T07:18:00.000Z">2024-02-16</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-16 datetime="2024-02-16T07:18:00.000Z"></time>
           </button>
@@ -603,6 +650,57 @@ MVP（Minimum Viable…</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7333416709121097764"
+                        open
+                      >
+                        <summary class="article-expander__title">setState到底是同步的还是异步的？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7333416709121097764">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>您好，如果喜欢我的文章，可以关注我的公众号「量子前端」，将不定期关注推送前端好文~
+以下内容针对React v18以下版本。
+前言
+setState到底是同步还是异步？很多人可能面试都被问到过，就好比这道代码输出题：
+constructor(props) {
+  super(props);
+  this.state &#x3D; {
+    data: &#x27;data&#x27;
+  }
+}
+
+componentDidMount() {
+  this.setState({
+    data: &#x27;did mount state&#x27;
+  })
+
+  console.log(&quot;did mount state &quot;, this.state.data);
+  // did mount state data
+
+  setTimeout(() &#x3D;&gt; {
+    this.setState({
+      data: &#x27;setTimeout&#x27;
+    })
+
+    console.log(&quot;setTimeout &quot;, this.state.data);
+  })
+}
+
+这段代码的输出结果，第一个console.log会输出data，而第二个console.log会输出setTimeout。也就是第一次setState的时候，是异步更新的，而第二次setState的时候，它又变成了同步更新，是不是有点晕呢？我们去源码里看一下setState更新调度的时候到底做了些什么。
+探针
+setState被调用后最终会走到scheduleUpdateOnFiber函数中，那我们看一下这个函数做了些什么呢？
+if (executionContext &#x3D;&#x3D;&#x3D; NoContext) {
+  // Flush the synchronous work now, unless we&#x27;re already working or inside…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7333631025757306899"
                         open
                       >
@@ -967,6 +1065,37 @@ immer 的诞生背景主要与在 JavaScript 应用中管理复杂的不可变�
 React 的 setState 方法和 Redux 的 reducer 函数都要求你返回一个新的状态对象，而不是修改原有的状态。当状态结构简单时，这通常不是问题，但当应用逐渐变得复杂，状态结构也变得更加嵌套时，更新状态会变得越来越繁琐。例如，如果你需要更新一个嵌套的数组或对象，你需要逐层克隆所有父级对象，直到达到你想要修改的属性。这不仅编写起来复杂，而且容易出错。
 为了解决这个问题，Michel Weststrate（也是 MobX 库的作者）创建了 immer。他的目标是创建一个库，它能够让你以…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7333027152138960905"
+                        open
+                      >
+                        <summary class="article-expander__title">神仙打架：Vue vs React</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7333027152138960905">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>大家好，这里是大家的林语冰。坚持阅读，自律打卡，每天一次，进步一点。
+免责声明
+本文属于是语冰的直男翻译了属于是，略有删改，仅供粉丝参考。英文原味版请传送 Vue vs React: Comparing frontend options in 2023。
+本期共享的是 —— 两大人气最高前端框架 Vue vs React 的横向比较，辅助大家根据自己的需求理智地选择适合的框架。
+
+如今，大多数大型 Web App 都是使用给力的 JS 前端开发库构建的。其中人气最高的两个库是 —— React 和 Vue。最近，我们测评了 React vs Vue。
+Vue 更年轻，某种意义上而言，Vue 挑战了一大坨 React 的实质设计原则，尤其是数据绑定。但 Vue 3 大量借鉴了 React，或者说深受 React 启发，并且围绕当今的功能和约定，还有一大坨值得深度学习的东东。在本文中，我们会探讨两者的异同点和优缺点。
+Vue 是什么鬼物？
+Vue 是一个开源库，最初由谷歌工程师尤雨溪开发。Vue 遵循 MVVM 模型，将 UI 与底层数据模型解耦。Vue 是一个声明式库，开发者只需更新数据对象，Vue 就会执行适当变更。
+粉丝请注意，Vue 的使用方式十分灵活。Vue 不需要替换整个网站的堆栈。举个栗子，开发者可以使用 Vue 来增强纯 HTML，而无需 JS 构建步骤。虽然但是，Vue 也可以作为一个全栈库来实现，满足经验丰富的开发者需求。
+Vue 的设计包括但不限于：
+组件支持。与 React 不同，Vue 本质上并非组件筑基，因为 Vue 可用于修改现有 HTML。虽然但是，Vue 确实支持可复用组件，比如可以接受 prop 值的可复用 UI 部分。
+虚拟 DOM。Vue 使用虚拟 DOM 更新和渲染 UI。虚拟 DOM 使 Vue 变得很快。更新虚拟 DOM 后，Vue…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1495,44 +1624,6 @@ React 的 setState 方法和 Redux 的 reducer 函数都要求你返回一个新
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20240210/t20240210_526591346.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市万盛经开区发布大雾橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20240210/t20240210_526591346.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>万盛经开区气象台2024年2月10日07时55分发布“大雾橙色预警信号”，我区万东镇、金桥镇、黑山镇、石林镇已出现能见度小于200米的雾并将持续，预计10日08时至12时，我区万盛街道、东林街道、丛林镇、关坝镇、青年镇、南桐镇将出现能见度小于200米的雾，局部地区能见度小于50米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20240210/t20240210_526591343.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市黔江区发布大雾橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20240210/t20240210_526591343.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>黔江区气象台2024年2月10日7时50分发布“大雾橙色预警信号”，目前我区局地出现能见度小于50米的大雾，预计10日8时至12时，全区所有乡镇街道可能出现能见度小于200米的雾，局地能见度小于50米。请各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -1962,161 +2053,11 @@ Addictive Animation
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-09 datetime="2024-02-09T22:52:00.000Z">2024-02-09</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-09 datetime="2024-02-09T22:52:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-09 datetime="2024-02-09T14:45:26.000Z">2024-02-09</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-09 datetime="2024-02-09T14:45:26.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >国家应急广播 - 重庆预警信息</button>
-                  <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240210/t20240210_526591215.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市綦江区发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240210/t20240210_526591215.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>綦江区气象台2024年2月10日6时30分发布“大雾黄色预警信号”，预计10日7时至12时，文龙街道、通惠街道、古南街道、三江街道、新盛街道、永城镇、横山镇、扶欢镇、篆塘镇、东溪镇、郭扶镇、永新镇将出现能见度小于500米的雾，局地能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7333019950954709027"
-                        open
-                      >
-                        <summary class="article-expander__title">html标签中lang属性踩的一个小坑，日常中还是需要留意的风险点</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7333019950954709027">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>html中lang是什么意思
-在html中lang是英语language的缩写，是语言的意思。
-html lang的定义作用
-一般大家可能在前端项目的index.html入口html标签用的lang多一点，比如：
-
-
-    
-Vite + Vue + TS
-    
-
-        
-    
-
-
-
-html标签用的lang时的一个小坑
-因为项目只有是国内使用的，没有中英文切换功能。因为疏忽html的lang为&quot;en&quot;一直忘了修正，因为没有发现啥影响也没在意。项目页面内部有大量的广告行业英文缩写，比如CPC（Cost Per Click ），CPM（Cost Per Click ），CPD（Cost Per Click ）等等，然后浏览器（可能是国内的某些浏览器自带翻译器的那种）碰到英文就自动提示需要翻译，用户可能一直也把翻译默认打开着。
-广告行业有一个缩写叫CPC（CostPerClick每次点击成本）。然而某些国产浏览器自带的翻译器确翻译成了中国的政党名称，导致用户反应为何有这样的名称。
-案例：
-
-解决方案
-最后改为lang&#x3D;&quot;zh&quot;就解决了误会。
-
-
-    
-
-    
-
-
-
-日常在使用中，还是需要留意一下此种问题。如果需要有多语言切换的，顺便也要切换lang配置编码。
-    // 动态修改html lang
-    document.getElementsByTagName(&quot;html&quot;)[0].lang &#x3D; &#x27;xxxx&#x27;;</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7332852200937996339"
-                        open
-                      >
-                        <summary class="article-expander__title">什么时候使用 React Context ？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7332852200937996339">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>React Context 是 React 官方提供的用于深层传递 props 的能力。在官方文档中已经有了相对详细的使用说明，因此这里是想在原理层面进行一些简单的梳理。通过了解原理，帮助我们更好地考虑“是不是可以用 React Context” 来解决问题。
-前置阅读
-使用 Context 深层传递参数 - zh-hans.react.dev
-// 示例 Context 代码
-const MyContext &#x3D; React.createContext(1);
-
-const MyComponent &#x3D; () &#x3D;&gt; {
-    return (
-        my component
-    );
-};
-
-Fiber 节点的树状结构
-在 React 中，所熟知的虚拟 DOM 节点也被称为 Fiber 节点。例如，上面代码示例中的  也算是一个 Fiber 节点。
-和常见的通过 children 数组的方式来组织树状结构不同，FiberNode 依赖于 child 、return 和 sibling 三个属性来创建树状结构。
-其中：
-child：指向第一个子节点
-return：指向父节点
-sibling：指向下一个兄弟节点
-举个例子来说：
-
-    
-
-    
-
-    
-
-
-
-这段代码对应的 Fiber 节点如下：
-
-Fiber 树的遍历
-在 React 中一般会按照类似于 深度优先遍历 的逻辑来遍历 Fiber 树。
-从根节点开…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -2572,6 +2513,8 @@ Fiber 树的遍历
    成立于 2013 年的茶颜悦色发力原叶鲜奶茶的时间要更早，但十年过去了，茶颜悦色的门店在以长沙为半径的湖南省之外也只拓张到了武汉、南京、重庆、无锡等离长沙不是很远的地区。之前我们在节目中也分析过类似的问题，原叶鲜奶茶在整个奶茶类目里已经属于供应链和门店拓张最简单的子类目，但茶颜偏偏成为了开店速度最慢的那个，这里面肯定是主观选择，而非客观限制。   
     
    2021 年深圳文和友开业的时候，茶颜在其中开了一家快闪店，需要排队两个小时以上。在当时的时间点，霸王茶姬远远没有今天风头正劲，如果茶颜在当时就坚定地要拓张到全国，可能霸王茶姬的今天也不会这么乐观。但眼下霸王茶姬在门店数量和收入上都已经远超茶颜悦色，前者是加盟品牌，后者是直营品牌，前者门店已经超过 3000 家，后者只有 500 多家（含鸳央咖啡）。前者已经开满全国甚至走向海外，后者还固守长沙周围。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;187
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2744,8 +2687,6 @@ Fiber 树的遍历
    美图宣布以约 2.85 亿元人民币收购设计网站“站酷”   
     
    Meta 由于业绩远超预期，创造市值一夜暴涨 1970 亿美元的纪…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4514,6 +4455,8 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
                             <span class="media-object__text">
                               <span>[7243698841848348730#每天一个知识点#] 
 平时下载github上的项目慢的着急，怎么办，两个技巧，助你起飞[呲牙]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4558,6 +4501,8 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
 论文项目汇报
 读书笔记……
 专业文档模板随时使用参考，再也不用担心不会写文档，不会总结输出内容啦😉</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4709,6 +4654,8 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>[7073670907851440160#新人报道#]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4805,6 +4752,8 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
 - 需要搭建一个私有的matrix服务器，并且通过nginx转发。
 - 需要在每一个设备上安装一个应用，也就是Element。
 [7243698841848348730#每天一个知识点#]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4826,6 +4775,8 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
 ▌ 今日加更一篇，Linux内核交互地图，可以非常方便的查看从用户空间到内核空间，关键结构体的划分与交互。
 地址：https://makelinux.github.io/kernel/map/
 更多嵌入式资料，详见：https://t.zsxq.com/0eUcTOhdO</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4843,6 +4794,8 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>[7073670907851440160#新人报道#]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4889,6 +4842,8 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
                             <span class="media-object__text">
                               <span>昨晚直播半小时撸了个小插件，主要是为了解决下面的问题：
 当你想借助别的库来实现时，我需要经常复制库里面的使用案例，然后我还要再从命令行输入去安装这个依赖，我觉得有点麻烦了，我希望这个库能够监听到我的导入语句，在头部增加一个按钮，帮助我点击完直接安装依赖，这样我就不用再去复制粘贴了。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5016,8 +4971,8 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7936635913">
-        <time id="build-timestamp" datetime="2024-02-16T21:53:13.873Z">2024-02-16T21:53:13.873Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7938232446">
+        <time id="build-timestamp" datetime="2024-02-17T01:15:38.115Z">2024-02-17T01:15:38.115Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
