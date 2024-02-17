@@ -684,6 +684,57 @@ MVP（Minimum Viable…</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7333416709121097764"
+                        open
+                      >
+                        <summary class="article-expander__title">setState到底是同步的还是异步的？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7333416709121097764">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>您好，如果喜欢我的文章，可以关注我的公众号「量子前端」，将不定期关注推送前端好文~
+以下内容针对React v18以下版本。
+前言
+setState到底是同步还是异步？很多人可能面试都被问到过，就好比这道代码输出题：
+constructor(props) {
+  super(props);
+  this.state &#x3D; {
+    data: &#x27;data&#x27;
+  }
+}
+
+componentDidMount() {
+  this.setState({
+    data: &#x27;did mount state&#x27;
+  })
+
+  console.log(&quot;did mount state &quot;, this.state.data);
+  // did mount state data
+
+  setTimeout(() &#x3D;&gt; {
+    this.setState({
+      data: &#x27;setTimeout&#x27;
+    })
+
+    console.log(&quot;setTimeout &quot;, this.state.data);
+  })
+}
+
+这段代码的输出结果，第一个console.log会输出data，而第二个console.log会输出setTimeout。也就是第一次setState的时候，是异步更新的，而第二次setState的时候，它又变成了同步更新，是不是有点晕呢？我们去源码里看一下setState更新调度的时候到底做了些什么。
+探针
+setState被调用后最终会走到scheduleUpdateOnFiber函数中，那我们看一下这个函数做了些什么呢？
+if (executionContext &#x3D;&#x3D;&#x3D; NoContext) {
+  // Flush the synchronous work now, unless we&#x27;re already working or inside…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7333631025757306899"
                         open
                       >
@@ -1870,49 +1921,6 @@ function timeoutPromise(promise, ms) {
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7332665033800335360"
-                        open
-                      >
-                        <summary class="article-expander__title">角色动作Equip, Crouch，Aim(3)</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7332665033800335360">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>写在前面
-这一节开始，我们开始着手AimOffset，一个特殊的Blend Space，用来产生角色瞄准时的头部转向和枪口瞄准效果。但在完成效果之前，我觉得我们还有必要认识一下Addictive Animation。
-Addictive Animation
-说是可加动画，但其实是在先做减法再做加法。
-首先，我们会有一个Base Pose——比如说向前跑，然后我们使用当前动画身体前倾得向前跑。
-那我们拿身体前倾得向前跑-向前跑 &#x3D; 身体前倾。
-此时，我们把这个可加动画直接应用于持枪向前跑，那我们就可以得到身体前倾得持枪向前跑。
-还记得我们之前在做Equip Animation时的Lean参数吗，当时我们为了得到每个动作的Lean，把每一个动作都做了一个左右倾斜的副本用在BlendSpace时，但其实那样的效果不仅麻烦，而且还很差。如果我们做两个Addictive Animation，分别是向左倾斜向前跑, 向右倾斜向前跑，把它们的Base Pose设定为向前跑，接着再把这两个动作做成Blend Space应用于向后跑,向右跑等动作，我们就会得到倾斜着向后跑，倾斜着向右跑等动作。很合理吧？
-制作 AimOffset Asset
-制作AimOffset的素材，我们需要每个动作的Addictive Animation。
-
-在UE提供的Animation Pack中，我们可以对现成的Animation Sequence进行切片来得到
-
-只要在你想切除的特定的帧，切除之前帧再切除之后帧即可，只保留当前帧。
-
-最后，我们得到各个方向的动画，每个动画只有一帧：
-
-接着我们对每个动画进行Addictive Type进行批量设置：
-
-这里的Base Pose统一都是角色的正前方，也就是Center Center
-
-
-接着我们开始制作AimOffset Space
-
-横轴为Yaw即角色瞄准的水平…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -2093,8 +2101,6 @@ Addictive Animation
    所以，他们攻击的不是你，只是他们内心的投影。   
     
    你真正要在意…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3002,8 +3008,6 @@ Addictive Animation
         
    2.增强资产流动性和提高效率。    在TraFI中，比如房子交易，就需要非常大的资金体量才能交易。而代币化后，资产持有人可以通过数字代币轻松实现价值分化和分配风险。小投资者也能够进入到传统行业的高投资门槛的资产。Defi中自动做市（AMM）可以让资产持有者轻松获得流动性，在TraFI中结算流程却非常复杂的（见下图）。   
  …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3668,6 +3672,8 @@ Addictive Animation
    产生一个做某事的欲望，有时候并不来源于自己内心的渴望，而可能源于外部：父母的压力、同事的评价、小红书制造的焦虑……如果这个事情不是自己真正想做的，又哪里有行动力去做呢。   
     
    举个例子，xhs上最近多了很多「裸辞2个月做自媒体月入10w」的笔记，看着「博主」既光鲜亮丽又周游世界的样子，不免会让人产生自己也想做这件事的感觉，「ta看起来好厉害，我能不能也试试」。一方面，互联网上的信息以刺激人的需求博得流量，制造了一个「人人都能当博主」的假象；另一…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;16
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4878,8 +4884,8 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7939144180">
-        <time id="build-timestamp" datetime="2024-02-17T03:53:30.498Z">2024-02-17T03:53:30.498Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7940021143">
+        <time id="build-timestamp" datetime="2024-02-17T06:53:38.892Z">2024-02-17T06:53:38.892Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

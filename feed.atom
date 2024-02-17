@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2024-02-17T03:53:30.520Z</id>
+    <id>urn:2024-02-17T06:53:38.912Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2024-02-17T03:53:30.520Z</updated>
+    <updated>2024-02-17T06:53:38.912Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -294,6 +294,48 @@ MVP版本
 MVP（Minimum Viable…]]></summary>
         <author>
             <name>Icicle_Crino</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[setState到底是同步的还是异步的？]]></title>
+        <id>https://juejin.cn/post/7333416709121097764</id>
+        <link href="https://juejin.cn/post/7333416709121097764"/>
+        <updated>2024-02-12T10:02:30.000Z</updated>
+        <summary type="html"><![CDATA[您好，如果喜欢我的文章，可以关注我的公众号「量子前端」，将不定期关注推送前端好文~
+以下内容针对React v18以下版本。
+前言
+setState到底是同步还是异步？很多人可能面试都被问到过，就好比这道代码输出题：
+constructor(props) {
+  super(props);
+  this.state = {
+    data: 'data'
+  }
+}
+
+componentDidMount() {
+  this.setState({
+    data: 'did mount state'
+  })
+
+  console.log("did mount state ", this.state.data);
+  // did mount state data
+
+  setTimeout(() => {
+    this.setState({
+      data: 'setTimeout'
+    })
+
+    console.log("setTimeout ", this.state.data);
+  })
+}
+
+这段代码的输出结果，第一个console.log会输出data，而第二个console.log会输出setTimeout。也就是第一次setState的时候，是异步更新的，而第二次setState的时候，它又变成了同步更新，是不是有点晕呢？我们去源码里看一下setState更新调度的时候到底做了些什么。
+探针
+setState被调用后最终会走到scheduleUpdateOnFiber函数中，那我们看一下这个函数做了些什么呢？
+if (executionContext === NoContext) {
+  // Flush the synchronous work now, unless we're already working or inside…]]></summary>
+        <author>
+            <name>sorryhc</name>
         </author>
     </entry>
     <entry>
@@ -1029,40 +1071,6 @@ function timeoutPromise(promise, ms) {
 那么这就是本篇文章的全部内容啦～]]></summary>
         <author>
             <name>阳树阳树</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[角色动作Equip, Crouch，Aim(3)]]></title>
-        <id>https://juejin.cn/post/7332665033800335360</id>
-        <link href="https://juejin.cn/post/7332665033800335360"/>
-        <updated>2024-02-10T04:05:45.000Z</updated>
-        <summary type="html"><![CDATA[写在前面
-这一节开始，我们开始着手AimOffset，一个特殊的Blend Space，用来产生角色瞄准时的头部转向和枪口瞄准效果。但在完成效果之前，我觉得我们还有必要认识一下Addictive Animation。
-Addictive Animation
-说是可加动画，但其实是在先做减法再做加法。
-首先，我们会有一个Base Pose——比如说向前跑，然后我们使用当前动画身体前倾得向前跑。
-那我们拿身体前倾得向前跑-向前跑 = 身体前倾。
-此时，我们把这个可加动画直接应用于持枪向前跑，那我们就可以得到身体前倾得持枪向前跑。
-还记得我们之前在做Equip Animation时的Lean参数吗，当时我们为了得到每个动作的Lean，把每一个动作都做了一个左右倾斜的副本用在BlendSpace时，但其实那样的效果不仅麻烦，而且还很差。如果我们做两个Addictive Animation，分别是向左倾斜向前跑, 向右倾斜向前跑，把它们的Base Pose设定为向前跑，接着再把这两个动作做成Blend Space应用于向后跑,向右跑等动作，我们就会得到倾斜着向后跑，倾斜着向右跑等动作。很合理吧？
-制作 AimOffset Asset
-制作AimOffset的素材，我们需要每个动作的Addictive Animation。
-
-在UE提供的Animation Pack中，我们可以对现成的Animation Sequence进行切片来得到
-
-只要在你想切除的特定的帧，切除之前帧再切除之后帧即可，只保留当前帧。
-
-最后，我们得到各个方向的动画，每个动画只有一帧：
-
-接着我们对每个动画进行Addictive Type进行批量设置：
-
-这里的Base Pose统一都是角色的正前方，也就是Center Center
-
-
-接着我们开始制作AimOffset Space
-
-横轴为Yaw即角色瞄准的水平…]]></summary>
-        <author>
-            <name>jjjoker</name>
         </author>
     </entry>
     <entry>
