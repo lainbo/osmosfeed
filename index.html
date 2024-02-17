@@ -383,8 +383,8 @@ ref
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-13 datetime="2024-02-13T11:36:25.000Z">2024-02-13</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-13 datetime="2024-02-13T11:36:25.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-13 datetime="2024-02-13T18:12:29.000Z">2024-02-13</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-13 datetime="2024-02-13T18:12:29.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -399,6 +399,40 @@ ref
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7333421776461135881"
+                        open
+                      >
+                        <summary class="article-expander__title">死磕前端之 —— 规范、语言、引擎、运行时</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7333421776461135881">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: cyanosis
+ECMAscript、JavaScript、JS Engine、JS Runtime
+JavaScript vs. ECMAscript
+ECMAScript 是一个标准，JavaScript 是 ECMAScript 的实现。
+ECMAScript
+ECMAScript 是一种脚本语言的规范，由 Ecma International 标准化组织定义。该规范定义了语言的核心特性和行为，包括语法、类型、语句、关键字等。
+ECMAScript 并不直接实现具体的功能，而是提供了一种标准，以便不同的平台和环境可以根据该标准实现自己的 JavaScript 引擎。
+ECMAScript 规定了 JavaScript 中的基本语法和功能，但没有规定与环境交互的具体方式，比如 DOM (Document Object Model)、BOM (Browser Object Model)。
+JavaScript
+JavaScript 是一种基于 ECMAScript 规范的实现。它是一种高级、解释性的脚本语言，通常用于在 Web 页面上实现动态交互效果。
+JavaScript 包含了 ECMAScript 规范定义的核心特性，同时也具有与 Web 浏览器相关的附加功能，如操作 DOM、处理事件、与服务器通信等。
+JavaScript 还可以用于非浏览器环境，例如服务器端的 Node.js 环境。
+JavaScript 语言的执行方式
+从语言的执行方式划分，我们可以将 JavaScript 划分为解释型语言，同时我们可以知道，解释型语言的执行需要解释器。通常解释器解释一行代码，执行一行代码。而 JavaScript 引擎，就是用来解析 JavaScript 代码的。
+JavaScript/ECMAScript Engine
+https://en.wikiped…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -640,57 +674,6 @@ class SingleDog{
 MVP版本
 MVP（Minimum Viable…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;11
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7333416709121097764"
-                        open
-                      >
-                        <summary class="article-expander__title">setState到底是同步的还是异步的？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7333416709121097764">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>您好，如果喜欢我的文章，可以关注我的公众号「量子前端」，将不定期关注推送前端好文~
-以下内容针对React v18以下版本。
-前言
-setState到底是同步还是异步？很多人可能面试都被问到过，就好比这道代码输出题：
-constructor(props) {
-  super(props);
-  this.state &#x3D; {
-    data: &#x27;data&#x27;
-  }
-}
-
-componentDidMount() {
-  this.setState({
-    data: &#x27;did mount state&#x27;
-  })
-
-  console.log(&quot;did mount state &quot;, this.state.data);
-  // did mount state data
-
-  setTimeout(() &#x3D;&gt; {
-    this.setState({
-      data: &#x27;setTimeout&#x27;
-    })
-
-    console.log(&quot;setTimeout &quot;, this.state.data);
-  })
-}
-
-这段代码的输出结果，第一个console.log会输出data，而第二个console.log会输出setTimeout。也就是第一次setState的时候，是异步更新的，而第二次setState的时候，它又变成了同步更新，是不是有点晕呢？我们去源码里看一下setState更新调度的时候到底做了些什么。
-探针
-setState被调用后最终会走到scheduleUpdateOnFiber函数中，那我们看一下这个函数做了些什么呢？
-if (executionContext &#x3D;&#x3D;&#x3D; NoContext) {
-  // Flush the synchronous work now, unless we&#x27;re already working or inside…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1541,82 +1524,6 @@ Vue 的设计包括但不限于：
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>忠县气象台2024年2月10日14时10分发布“大雾黄色预警信号”，预计2月10日22时至11日11时，忠州街道、白公街道、新生街道、乌杨街道、磨子土家族乡、东溪镇、复兴镇、石子乡、洋渡镇、任家镇、善广乡、白石镇、永丰镇、三汇镇、黄金镇、涂井乡、石宝镇、野鹤镇、汝溪镇、金声乡、兴峰乡、官坝镇、石黄镇、金鸡镇、马灌镇、花桥镇、新立镇、双桂镇、拔山镇可能出现能见度小于500米的雾，局地能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20240210/t20240210_526591510.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市万州区发布大雾橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20240210/t20240210_526591510.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>万州区气象台2024年2月10日9时发布“大雾橙色预警信号”，预计10日9时至12时，孙家镇、长坪乡、新乡镇、武陵镇、燕山乡、溪口乡、龙沙镇、太龙镇、五桥街道、百安坝街道、陈家坝街道、钟鼓楼街道、高笋塘街道、太白街道、九池街道、牌楼街道等镇乡街将出现能见度小于200米的雾，局地能见度小于50米。请以上各地注意防范大雾天气可能造成的影响。减少户外活动；驾驶人员打开雾灯、减速慢行、保持车距、勤用喇叭。机场、高速公路、水上交通等单位加强调度指挥。相关部门和乡镇街道按照职责，做好大雾防范应对工作。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/hsyj/20240210/t20240210_526591481.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市长寿区发布大雾红色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/hsyj/20240210/t20240210_526591481.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>长寿区气象台2024年2月10日9时发布“大雾红色预警信号”，预计10日9时至12时，江南街道、凤城街道、晏家街道、菩提街道、八颗街道、洪湖镇、万顺镇、葛兰镇、新市街道、渡舟街道、但渡镇、邻封镇、长寿湖镇、云集镇、双龙镇、龙河镇、石堰镇、云台镇、海棠镇可能出现能见度小于50米的雾。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20240210/t20240210_526591425.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市酉阳土家族苗族自治县发布大雾橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20240210/t20240210_526591425.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>酉阳县气象台2024年2月10日8时30分升级发布“大雾橙色预警信号”，预计10日8时30分至12时，毛坝乡、桃花源街道、钟多街道等所有乡镇街道可能出现能见度小于200米的雾，局地能见度小于50米。请以上各地注意防范大雾天气可能造成的影响。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/csyj/20240210/t20240210_526591412.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市武隆区发布大雾橙色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/csyj/20240210/t20240210_526591412.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>武隆区气象台2024年2月10日8时30分发布“大雾橙色预警信号”，预计10日9时至12时，鸭江镇、平桥镇、凤来镇、庙垭乡、和顺镇、长坝镇、白云乡、白马镇、大洞河乡、羊角街道、凤山街道、芙蓉街道、仙女山街道、江口镇、石桥乡、文复乡、双河镇、火炉镇等乡镇街道可能出现能见度小于200米的雾，局地能见度小于50米。请以上各地注意防范大雾天气可能造成的影响。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -2687,6 +2594,8 @@ Addictive Animation
    美图宣布以约 2.85 亿元人民币收购设计网站“站酷”   
     
    Meta 由于业绩远超预期，创造市值一夜暴涨 1970 亿美元的纪…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3759,8 +3668,6 @@ Addictive Animation
    产生一个做某事的欲望，有时候并不来源于自己内心的渴望，而可能源于外部：父母的压力、同事的评价、小红书制造的焦虑……如果这个事情不是自己真正想做的，又哪里有行动力去做呢。   
     
    举个例子，xhs上最近多了很多「裸辞2个月做自媒体月入10w」的笔记，看着「博主」既光鲜亮丽又周游世界的样子，不免会让人产生自己也想做这件事的感觉，「ta看起来好厉害，我能不能也试试」。一方面，互联网上的信息以刺激人的需求博得流量，制造了一个「人人都能当博主」的假象；另一…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;16
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4971,8 +4878,8 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7938232446">
-        <time id="build-timestamp" datetime="2024-02-17T01:15:38.115Z">2024-02-17T01:15:38.115Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7939144180">
+        <time id="build-timestamp" datetime="2024-02-17T03:53:30.498Z">2024-02-17T03:53:30.498Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
