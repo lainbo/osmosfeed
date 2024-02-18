@@ -84,7 +84,7 @@
           "description": "只要你的产品有SEO的需求，那么MicroData微数据就是必须要了解的知识，通过几个属性，让数据结构更适合搜索引擎识别。",
           "link": "https://www.zhangxinxu.com/wordpress/2024/01/html-microdata/",
           "publishedOn": "2024-01-31T14:58:31.000Z",
-          "wordCount": 1407,
+          "wordCount": 1406,
           "title": "HTML MicroData微数据结构简介",
           "imageUrl": null
         },
@@ -94,7 +94,7 @@
           "description": "从名称上看，@scope似乎是实现CSS作用域的，这个讨论了近20年的特性终于是要支持了吗，还是并非如此？",
           "link": "https://www.zhangxinxu.com/wordpress/2024/01/css-at-scope/",
           "publishedOn": "2024-01-21T13:53:26.000Z",
-          "wordCount": 1433,
+          "wordCount": 1432,
           "title": "CSS @scope他来了",
           "imageUrl": null
         }
@@ -335,7 +335,7 @@
           "description": "同处而立或不惑之年, 有的人仍给人\"少年感\", 有的人却给人\"油腻中年人\"之感, 原因在哪？\n以我经验, 应是好奇心和开放性。\n好奇心决定着一个人是否仍对外界感兴趣，是否还能提起探索心, 追根究柢。\n开放性决定着一个人是否仍能从外界吸取能量，是否还能放下胜负心, 求真务实。",
           "link": "https://m.okjike.com/originalPosts/65c214833624666324d66432",
           "publishedOn": "2024-02-06T11:14:11.000Z",
-          "wordCount": 448,
+          "wordCount": 450,
           "title": "发布了: 同处而立或不惑之年, 有的人仍给人\"少年感\", 有的人却给人\"油腻中年人\"之感, 原因在哪？ 以我经验, 应是好奇心和开放性。 好奇心决定着一个人是否仍对外...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         }
@@ -748,6 +748,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7334623638115598347",
+          "author": "滚去睡觉",
+          "description": "浅聊一下\n在上一篇文章(到底该用ref还是reactive？？？)中，我们说到ref在处理对象类型和reactive处理复杂数据的时候，返回的是一个Proxy的实例化对象,在本篇文章中，我们将来详解Vue3到底是如何基于Proxy实现响应式的...\nProxy\n我们先来看看阮一峰老师对于Proxy的描述\nProxy 可以理解成，在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须先通过这层拦截，因此提供了一种机制，可以对外界的访问进行过滤和改写。Proxy 这个词的原意是代理，用在这里表示由它来“代理”某些操作，可以译为“代理器”。\n可能不是那么通俗易懂，我们上代码\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Document</title>\n</head>\n<body>\n <script>\n    let person = {\n        name: '张三',\n        age: 18,\n        sex:'男'\n    }\n    let p = new Proxy(person,{})\n </script>\n</body>\n</html>\n\nProxy需要接收两个参数const p = new Proxy(target, handler)\ntarget\n要使用 Proxy 包装的目标对象（可以是任何类型的对象，包括原生数组，函数，甚至另一个代理）。\nhandler\n一个通常以函数作为属性的对象，各属性中的函数分别定义了在执行各种操作时代理 p 的行为。\n我们在上述例子中传入了一个pers…",
+          "link": "https://juejin.cn/post/7334623638115598347",
+          "publishedOn": "2024-02-14T13:23:23.000Z",
+          "wordCount": 1071,
+          "title": "你一定看得懂的Vue3响应式实现原理",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7334225435944173609",
           "author": "滚去睡觉",
           "description": "浅聊一下\n今天情人节，掘友们都在想今天该和哪个女or男朋友出去玩，而我还在想在处理响应式数据时到底是该用ref还是reactive...\n响应式数据\n要写ref和reactive，就不能只写ref和reactive，还要写那响应式数据。何为响应式数据？先来讲段大道理\n响应式数据是指在 Vue.js 中，当数据发生变化时，相关的视图会自动更新以反映这些变化的特性。Vue.js 的响应式系统通过数据绑定实现了数据和视图之间的自动同步。\n具体来说，当你在 Vue 实例中声明一个数据属性时，Vue 将会将这些属性转换成响应式数据。这意味着当这些属性的值发生变化时，相关的视图会自动更新以反映这些变化。\n看不下去...不用看，举个例子就好\n<template>\n  <div>数据a:{{ a }}</div>\n  <button @click=\"add\">+1</button>\n</template>\n<script setup>\nlet a = 1;\nconst add = () => {\n  a++;\n  console.log(a);\n};\n</script>\n<style lang=\"css\" scoped></style>\n\n有一个数据a，点击按钮“+1”，数据a会增加1，并且会打印当前a的值，来看效果\n\n我点了n下+1，可是显示的a的值并没有改变，但是我们可以从打印的结果发现，我们的a实际上是改变了的。如果要让我们的a变成一个响应式数据，也就是说a改变，展示在屏幕上的a也要变化，那么我们就要使用到 ref和reactive\nref\n在 Vue 3 中，ref 是一个用于创建响应式引用的函数。它接受一个初始值作为参数，并返回一个包含响应式引用的对象。使用 ref 创建的值可以在模板中直接使用，并且当其值发生变化时，相关的 DOM 元素会自动更新。ref 通常用于创建可变的响应…",
@@ -865,16 +875,6 @@
           "publishedOn": "2024-02-12T02:44:05.000Z",
           "wordCount": 2332,
           "title": "好看的登录界面源码，希望您喜欢",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7333535323932082227",
-          "author": "至臻",
-          "description": "1. Scoped 的原理\n在 Vue 中，Scoped 样式是一种很棒的特性，能够确保你的样式只在当前组件内起作用。这意味着，你在一个 Vue 组件中写的样式只会影响这个组件内的元素，而不会影响其他组件或者全局的样式。那么，让我们来简单明了地了解一下 Scoped 样式是怎么实现的吧！\n1.1 Vue Scoped 的基本原理\n首先，Vue 会给你的组件的根元素（通常是 <div>）添加一个独一无二的标识属性，比如说 data-v-xxx。这个 xxx 是一个特殊的标识，用来确保你的样式只对这个组件有效。\n其次，Vue 会对你在组件中写的样式做一些特殊处理。比如说，你写了这样一个样式 .container，在编译的时候，Vue 会把它变成 .container[data-v-xxx]。这样一来，这个样式就只会作用于有着相同标识的元素，也就是说，只会影响当前组件内的元素，其他地方不受影响。\n这样一来，每个组件的样式都被限制在了自己的范围内，不会互相干扰，也不会跟全局的样式冲突。这就是 Scoped 样式的基本原理啦！\n1.2 Vue Loader 如何处理 Scoped 样式\n在 Vue 项目中，Vue Loader 是负责处理 .vue 文件的工具。它会把你写在 <style scoped> 里面的样式代码拿出来，然后做一些特殊的处理。\n首先，Vue Loader 会给每个样式块生成一个特殊的标识，保证每个组件的样式都是唯一的。\n然后，它会处理你的样式代码，把选择器末尾加上对应的标识，变成适用于当前组件的格式。\n通过 Vue Loader 的处理，Scoped 样式就能够在每个组件里正常工作啦！它们能够保持样式私有，不影响其他地方，让我们的代码更加整洁清晰。\n所以，这就是 Vue Scoped 样式的原理啦！简单易懂吧？\n2. Scoped 的使用方法\n好了，现在我们已经…",
-          "link": "https://juejin.cn/post/7333535323932082227",
-          "publishedOn": "2024-02-11T13:16:04.000Z",
-          "wordCount": 1234,
-          "title": "Vue中Scoped样式：优雅解决组件化开发中的样式隔离问题",
           "imageUrl": null
         }
       ]

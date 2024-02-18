@@ -784,6 +784,55 @@ const cube &#x3D; new THREE.Mesh(cubeGeometry, cubeMaterial…</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7334623638115598347"
+                        open
+                      >
+                        <summary class="article-expander__title">你一定看得懂的Vue3响应式实现原理</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7334623638115598347">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>浅聊一下
+在上一篇文章(到底该用ref还是reactive？？？)中，我们说到ref在处理对象类型和reactive处理复杂数据的时候，返回的是一个Proxy的实例化对象,在本篇文章中，我们将来详解Vue3到底是如何基于Proxy实现响应式的...
+Proxy
+我们先来看看阮一峰老师对于Proxy的描述
+Proxy 可以理解成，在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须先通过这层拦截，因此提供了一种机制，可以对外界的访问进行过滤和改写。Proxy 这个词的原意是代理，用在这里表示由它来“代理”某些操作，可以译为“代理器”。
+可能不是那么通俗易懂，我们上代码
+
+
+
+    
+    
+    Document
+
+
+ 
+    let person &#x3D; {
+        name: &#x27;张三&#x27;,
+        age: 18,
+        sex:&#x27;男&#x27;
+    }
+    let p &#x3D; new Proxy(person,{})
+ 
+
+
+
+Proxy需要接收两个参数const p &#x3D; new Proxy(target, handler)
+target
+要使用 Proxy 包装的目标对象（可以是任何类型的对象，包括原生数组，函数，甚至另一个代理）。
+handler
+一个通常以函数作为属性的对象，各属性中的函数分别定义了在执行各种操作时代理 p 的行为。
+我们在上述例子中传入了一个pers…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7334225435944173609"
                         open
                       >
@@ -1549,53 +1598,6 @@ let handler &#x3D; {
                             <span class="media-object__text">
                               <span>江津区气象台2024年2月11日23时10分发布“大雾黄色预警信号”，预计12日1时至12时，支坪镇、鼎山街道、油溪镇、德感街道、龙华镇、圣泉街道、先锋镇、几江街道、永兴镇、塘河镇、慈云镇、石门镇、朱杨镇、石蟆镇、白沙镇、李市镇、柏林镇、中山镇、四屏镇、四面山镇、蔡家镇等镇街可能出现能见度小于500米的雾，局地能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7333535323932082227"
-                        open
-                      >
-                        <summary class="article-expander__title">Vue中Scoped样式：优雅解决组件化开发中的样式隔离问题</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7333535323932082227">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>1. Scoped 的原理
-在 Vue 中，Scoped 样式是一种很棒的特性，能够确保你的样式只在当前组件内起作用。这意味着，你在一个 Vue 组件中写的样式只会影响这个组件内的元素，而不会影响其他组件或者全局的样式。那么，让我们来简单明了地了解一下 Scoped 样式是怎么实现的吧！
-1.1 Vue Scoped 的基本原理
-首先，Vue 会给你的组件的根元素（通常是 
-）添加一个独一无二的标识属性，比如说 data-v-xxx。这个 xxx 是一个特殊的标识，用来确保你的样式只对这个组件有效。
-其次，Vue 会对你在组件中写的样式做一些特殊处理。比如说，你写了这样一个样式 .container，在编译的时候，Vue 会把它变成 .container[data-v-xxx]。这样一来，这个样式就只会作用于有着相同标识的元素，也就是说，只会影响当前组件内的元素，其他地方不受影响。
-这样一来，每个组件的样式都被限制在了自己的范围内，不会互相干扰，也不会跟全局的样式冲突。这就是 Scoped 样式的基本原理啦！
-1.2 Vue Loader 如何处理 Scoped 样式
-在 Vue 项目中，Vue Loader 是负责处理 .vue 文件的工具。它会把你写在  里面的样式代码拿出来，然后做一些特殊的处理。
-首先，Vue Loader 会给每个样式块生成一个特殊的标识，保证每个组件的样式都是唯一的。
-然后，它会处理你的样式代码，把选择器末尾加上对应的标识，变成适用于当前组件的格式。
-通过 Vue Loader 的处理，Scoped 样式就能够在每个组件里正常工作啦！它们能够保持样式私有，不影响其他地方，让我们的代码更加整洁清晰。
-所以，这就是 Vue Scoped 样式的原理啦！简单易懂吧？
-2. Scoped 的使用方法
-好了，现在我们已经…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2454,7 +2456,7 @@ let handler &#x3D; {
 以我经验, 应是好奇心和开放性。
 好奇心决定着一个人是否仍对外界感兴趣，是否还能提起探索心, 追根究柢。
 开放性决定着一个人是否仍能从外界吸取能量，是否还能放下胜负心, 求真务实。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4473,8 +4475,8 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7949128574">
-        <time id="build-timestamp" datetime="2024-02-18T12:54:27.242Z">2024-02-18T12:54:27.242Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7950093934">
+        <time id="build-timestamp" datetime="2024-02-18T15:53:35.778Z">2024-02-18T15:53:35.778Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
