@@ -176,6 +176,34 @@
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7335466697396649996"
+                        open
+                      >
+                        <summary class="article-expander__title">新年首秀，React 19 预热！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7335466697396649996">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>大家好，这里是大家的林语冰。坚持阅读，自律打卡，每天一次，进步一点。
+免责声明
+本文属于是语冰的直男翻译了属于是，略有删改，仅供粉丝参考。英文原味版请传送 React Labs: What We&#x27;ve Been Working On。
+本期共享的是 —— 自上次更新以来 React 实验室关于 React 18 进一步的研究成果，以及 React 19 的前瞻性功能。
+React 编译器
+React 编译器不再是一个研究项目：该编译器现在用于驱动 instagram.com 的生产环境，我们正在努力将编译器搬运到 Meta（前脸书）的其他平台，并准备首个开源版本。
+当状态变化时，React 有时会过量重新渲染。自 React 早期以来，我们针对此类情况的解决方案一直是手动记忆化。在目前的 API 中，这意味着，应用 useMemo/useCallback/memo API，手动调整状态更改时 React 重新渲染的程度。但手动记忆化是一种妥协。这使代码变得混乱，容易出错，且需要额外的工作才能保持最新状态。
+手动记忆化是一个合理的妥协，但我们欲求不满。我们的愿景是，当状态变化时，React 能够自动重新渲染 UI 的正确部分，而不影响核心心智模型。我们相信 React 的方案，即 UI 作为一个简单的状态函数，具有标准的 JS 值和习惯用法，是 React 能够被海量开发者青睐的关键所在。这就是我们投资构建 React 优化编译器的原因。
+由于 JS 宽松的规则和动态特性，JS 是一种臭名昭著的、难以优化的语言。React 编译器能够通过对 JS 规则和“React 规则”建模，安全地编译代码。举个栗子，React 组件必须是幂等的，即给定相同的输入返回相同的值，且不能改变 props 或 state 的值。这些规则限制了开发者的所作所为，并有助于为编译器优化开辟安全空间。
+…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7335337310547017768"
                         open
                       >
@@ -359,44 +387,44 @@ Free Now to 2024-02-22T16:00:00.000Z</span>
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Lainbo&#x27;s Blog</button>
-                  <a class="source-heading__link" href="https://lainbo.com/">Open</a>
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://lainbo.com/article/clash-config"
+                        data-accordion-key="https://juejin.cn/post/7334755783751794724"
                         open
                       >
-                        <summary class="article-expander__title">Clash Verge系列使用最佳实践</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lainbo.com/article/clash-config">
+                        <summary class="article-expander__title">全新的 CSS 语法，新年新样式</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7334755783751794724">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://www.notion.so/images/page-cover/nasa_earth_grid.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
-                              <span>Clash确实是开箱即用，但开箱时并不是一个优秀的状态。当我将所有服务迁移到国外服务商时，我意识到在短时间内离不开Clash了。为了防止出现问题，我研究了一些Clash相关的东西。现在是时候做一个总结了。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                              <span>大家好，这里是大家的林语冰。坚持阅读，自律打卡，每天一次，进步一点。
+免责声明
+本文属于是语冰的直男翻译了属于是，略有删改，仅供粉丝参考。英文原味版请传送 Writing CSS In 2023: Is It Any Different Than A Few Years Ago?。
+本期共享的是 —— CSS 的发展速度比以往都快。自从几年前有了 Flexbox 和 Grid 以来，随着所有现在可用的和即将推出的新功能，我们编写 CSS 的方式也在与时俱进。本文共享了了哪些功能对当前的 CSS 写法影响最大，以及哪些功能没有。
+CSS 所有花里胡哨的野蛮生长真的改变了我们编写 CSS 的方式吗？新功能无疑改变了本人今天编写 CSS 的方式，但没有完全改变。
+我记得当 SCSS 开始蚕食 CSS 时，它经常被用作代码示例的首选语法。我并没有看到同样的有机采用发生在原生 CSS 的逻辑属性上，因为大部分 CSS 爱好者并不知道这些新功能，而我们已经为它们提供了全面的浏览器支持已有大约两年了。
+就本人而言，CSS 的演变让我十分鸡冻。一大坨最新功能都是我们多年来梦寐以求的，这足以让我现在比以往任何时候都更喜欢编写 CSS。
+容器查询
+本人郑重声明：我从不喜欢为响应式布局编写媒体查询。内容对视口宽度的响应不同，具体取决于其所在的组件。平衡一个组件中的内容一直是​​一种与平衡其他组件中的内容的整活行为，在看似任意的断点处增加了一堆媒体查询。使用 SCSS 将媒体查询嵌套在选择器中已经勉为其难，但也只是差强人意。
+容器查询对我而言是正确的选择。现在，我们可以将子元素的范围限定为父容器，并依靠容器的大小来定义布局的移动位置，而无需考虑其他周围的组件。
+.parent {
+  container-type: inline-size;
+}
+
+/* 容器查询 */
+@container (mi…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
                       </details>
                     </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
@@ -425,6 +453,99 @@ Free Now to 2024-02-22T16:00:00.000Z</span>
 阿里巴巴国际 lazada（杭州），打电话过来约一面，问了我有没有移动端经验，然后就没有下文
 同花顺 B2C（杭州，vue）一面挂，问得很…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7334503381199880243"
+                        open
+                      >
+                        <summary class="article-expander__title">2024年最新Three.js零基础入门教程（超详细）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7334503381199880243">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: scrolls-light
+highlight: a11y-dark
+一、本地搭建Threejs官方文档网站
+1.官网地址
+Github：https://github.com/mrdoob/three.js
+我们可以直接下载压缩包并解压或使用 git clone 
+若 github 过慢，则使用 gitee 对应镜像仓库：three.js: mrdoob/three.js 同步库
+2.目录解析
+
+部署步骤
+1.为项目创建一个目录，并在项目根目录下执行
+    npm create vite@latest
+
+2、APP.vue
+    import * as THREE from &quot;three&quot;;
+ 
+// console.log(THREE);
+ 
+// 目标：了解three.js最基本的内容
+ 
+// 1、创建场景
+const scene &#x3D; new THREE.Scene();
+ 
+// 2、创建相机
+const camera &#x3D; new THREE.PerspectiveCamera(
+  75,
+  window.innerWidth / window.innerHeight,
+  0.1,
+  1000
+);
+ 
+// 设置相机位置
+camera.position.set(0, 0, 10);
+scene.add(camera);
+ 
+// 添加物体
+// 创建几何体
+const cubeGeometry &#x3D; new THREE.BoxGeometry(1, 1, 1);
+const cubeMaterial &#x3D; new THREE.MeshBasicMaterial({ color: 0xffff00 });
+// 根据几何体和材质创建物体
+const cube &#x3D; new THREE.Mesh(cubeGeometry, cubeMaterial…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;18
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Lainbo&#x27;s Blog</button>
+                  <a class="source-heading__link" href="https://lainbo.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lainbo.com/article/clash-config"
+                        open
+                      >
+                        <summary class="article-expander__title">Clash Verge系列使用最佳实践</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lainbo.com/article/clash-config">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://www.notion.so/images/page-cover/nasa_earth_grid.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Clash确实是开箱即用，但开箱时并不是一个优秀的状态。当我将所有服务迁移到国外服务商时，我意识到在短时间内离不开Clash了。为了防止出现问题，我研究了一些Clash相关的东西。现在是时候做一个总结了。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1427,37 +1548,6 @@ React 的 setState 方法和 Redux 的 reducer 函数都要求你返回一个新
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7333027152138960905"
-                        open
-                      >
-                        <summary class="article-expander__title">神仙打架：Vue vs React</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7333027152138960905">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>大家好，这里是大家的林语冰。坚持阅读，自律打卡，每天一次，进步一点。
-免责声明
-本文属于是语冰的直男翻译了属于是，略有删改，仅供粉丝参考。英文原味版请传送 Vue vs React: Comparing frontend options in 2023。
-本期共享的是 —— 两大人气最高前端框架 Vue vs React 的横向比较，辅助大家根据自己的需求理智地选择适合的框架。
-
-如今，大多数大型 Web App 都是使用给力的 JS 前端开发库构建的。其中人气最高的两个库是 —— React 和 Vue。最近，我们测评了 React vs Vue。
-Vue 更年轻，某种意义上而言，Vue 挑战了一大坨 React 的实质设计原则，尤其是数据绑定。但 Vue 3 大量借鉴了 React，或者说深受 React 启发，并且围绕当今的功能和约定，还有一大坨值得深度学习的东东。在本文中，我们会探讨两者的异同点和优缺点。
-Vue 是什么鬼物？
-Vue 是一个开源库，最初由谷歌工程师尤雨溪开发。Vue 遵循 MVVM 模型，将 UI 与底层数据模型解耦。Vue 是一个声明式库，开发者只需更新数据对象，Vue 就会执行适当变更。
-粉丝请注意，Vue 的使用方式十分灵活。Vue 不需要替换整个网站的堆栈。举个栗子，开发者可以使用 Vue 来增强纯 HTML，而无需 JS 构建步骤。虽然但是，Vue 也可以作为一个全栈库来实现，满足经验丰富的开发者需求。
-Vue 的设计包括但不限于：
-组件支持。与 React 不同，Vue 本质上并非组件筑基，因为 Vue 可用于修改现有 HTML。虽然但是，Vue 确实支持可复用组件，比如可以接受 prop 值的可复用 UI 部分。
-虚拟 DOM。Vue 使用虚拟 DOM 更新和渲染 UI。虚拟 DOM 使 Vue 变得很快。更新虚拟 DOM 后，Vue…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -1470,117 +1560,11 @@ Vue 的设计包括但不限于：
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-10 datetime="2024-02-10T15:20:08.000Z">2024-02-10</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-10 datetime="2024-02-10T15:20:08.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-10 datetime="2024-02-10T12:55:16.000Z">2024-02-10</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-10 datetime="2024-02-10T12:55:16.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7332762964376616960"
-                        open
-                      >
-                        <summary class="article-expander__title">Vue3+vite+Ts+pinia—第五章 watch与watchEffect</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7332762964376616960">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>highlight: a11y-dark
-5.1 watch概述
-作用：监视数据的变化（和Vue2中的watch作用一致）
-特点：Vue3中的watch只能监视以下四种数据：
-ref定义的数据。
-reactive定义的数据。
-函数返回一个值（getter函数）。
-一个包含上述内容的数组。
-5.2 监听ref基本类型
-1、Vue2
-对于基本类型的监听，Vue2就是一个函数，里面有newValue和oldValue返回新值和旧值。
-watch: {
-  sum(newValue, oldValue) {
-    ......
-  }
-}
-
-2、Vue3
-在Vue3里使用watch要先import引入，而且watch里面传入两个参数：第一个是监视的属性名，第二个是回调函数。
-import {watch} from &#x27;vue&#x27;
-watch(sum, (newValue, oldValue) &#x3D;&gt; {
-  ......
-})
-
-这里举一个最简单的例子：点按钮，数字+1。数字属于基本类型，我们对它进行监听：
-
-  
-当前求和为：{{sum}}
-点我sum+1
-  
-{
-    console.log(&#x27;sum变化了&#x27;, …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7332836966351880207"
-                        open
-                      >
-                        <summary class="article-expander__title">ECharts快速上手</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7332836966351880207">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-ECharts，全称Enterprise Charts，是百度基于 JavaScript 实现的一个开源可视化图表库，主要特点就是可视化类型丰富、动画炫酷、使用简单，广泛应用于数据报表展示、商业智能分析等多个领域。接下来，本文将带领大家快速走进ECharts的世界，从环境搭建到基础使用，一起体验其强大而便捷的数据可视化能力。
-一、环境准备
-在开始使用ECharts之前，确保你的开发环境中已经包含了基本的HTML、CSS和JavaScript环境。然后，通过以下步骤引入ECharts库：
-下载并引入ECharts：你可以在ECharts官网下载最新版本的ECharts库，或者直接通过CDN方式引入：快速上手 - 使用手册 - Apache ECharts)
-Html
-
-
-
-二、创建ECharts容器
-在HTML文件中创建一个用于承载图表的
-元素，并为其分配一个id，以便于JavaScript中获取该元素：
-
-
-三、初始化ECharts实例
-在JavaScript部分，首先获取上述div元素，然后调用echarts.init()方法来初始化一个ECharts实例：
-// 获取图表容器
-var myChart &#x3D; document.getElementById(&#x27;main&#x27;);
-
-// 初始化ECharts实例
-var chartInstance &#x3D; echarts.init(myChart);
-
-四、准备配置项和绘制图表
-配置图表需要创建一个包含相…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -2259,8 +2243,6 @@ var chartInstance &#x3D; echarts.init(myChart);
    美图宣布以约 2.85 亿元人民币收购设计网站“站酷”   
     
    Meta 由于业绩远超预期，创造市值一夜暴涨 1970 亿美元的纪…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3204,6 +3186,8 @@ var chartInstance &#x3D; echarts.init(myChart);
    在        #84《消费，拥有，修复，持有》       中，写到这点，当时更多是一种感性的理解：   
     
  …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4205,7 +4189,7 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>[7073670907851440160#新人报道#]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4454,8 +4438,8 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7945568990">
-        <time id="build-timestamp" datetime="2024-02-18T01:16:02.346Z">2024-02-18T01:16:02.346Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/7946396467">
+        <time id="build-timestamp" datetime="2024-02-18T03:54:04.340Z">2024-02-18T03:54:04.340Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
