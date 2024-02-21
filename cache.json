@@ -1413,7 +1413,7 @@
           "description": "theme: smartblue\nhighlight: a11y-dark\n前言\n在百度的学长，帮我内推了下简历。高兴还没有两秒，就接到通知面试的电话，瞬间压力山大。小公司也没怎么面，八股文背的也不利索，看到镜头里又秃又强的面试官，有如看恐怖片，吓尿了！！！\n百度一面\n1. 宇宙铁律，介绍下自己\n还好，之前看到过敖丙大佬面试自我介绍5句话公式 - 掘金 (juejin.cn)一文，里面有个公式：我是谁+从哪里来+我做过什么+有什么成绩+为什么能胜任。\n面试官您好，我叫梦梦，东华理工大学25届软件专业大三在读，想来百度前端岗位实习，要是是AIGC项目就更好了。低年级的时候，跟着学长一起在B站学习、打些比赛，拿过蓝桥杯省二，奖学金也拿了一些。个人比较喜欢前端，也能用node写后端。chatgpt火了后，又对AIGC非常感兴趣，所以学习了python、prompt enginneering、吴恩达AI课程等，平时写代码会用一些AI Copilot工具提升编程效率。\n仔细读过《你不知道的JavaScript》,并在掘金上写过JS基础和底层相关系列文章，热爱技术分享，掘金优秀作者。平时主要使用vue,熟悉全家桶开发，数据流按理及后台管理系统开发。阅读过vue、axios、ElementPlus的源码，未来会持续学习。\n未来最大的机会是AI的机会， 非常期待在AIGC产品或项目写下自己的代码。同时非常看好百度代表中国队参与AI技术革命，为用户开发划时代的产品与体验。未来几年，我将为此而奋斗， 谢谢。\n2. var a = []; a.push()、a.pop() 请说明在js中的意义\n使用的是字面量初始化创建了一个空数组，这是最简洁、直观且推荐的写法。这种方法直接在内存中创建并初始化数组对象，执行效率高。\nvar a = new Array(); 使用了Array构造函数来创建一个空数…",
           "link": "https://juejin.cn/post/7335337310547017768",
           "publishedOn": "2024-02-17T04:11:07.000Z",
-          "wordCount": 44,
+          "wordCount": 2481,
           "title": "面试：百度一面，吓尿了",
           "imageUrl": null
         },
@@ -1473,7 +1473,7 @@
           "description": "theme: fancy\n前言\n当我们在切页面时，如果不了解margin外边距会重叠的话，可能会导致一些意外的效果。这些效果可能会影响到页面的外观和用户体验。以下是外边距重叠可能带来的一些负面影响：\n不符合预期的间距：当外边距重叠发生时，元素之间的间距可能会比预期的大或小，这可能会破坏设计的均衡性。\n难以控制布局：外边距重叠使得布局变得更加复杂，尤其是在需要精确控制元素间距的情况下。开发人员可能需要花费更多的时间来调整样式以达到预期的布局效果。\n影响响应式设计：在响应式设计中，外边距重叠可能会导致不同屏幕尺寸下的布局问题，使得页面在不同设备上显示效果不一致。\n视觉上的不连贯性：外边距重叠可能导致相邻元素之间的间距不一致，从而影响到页面的整体外观和用户体验。\n影响页面的可读性：外边距重叠可能使页面的内容难以阅读或理解，特别是当内容之间的间距过大或过小时。\n布局偏移：在某些情况下，外边距重叠可能会导致布局偏移，使得页面的内容错位或错乱。\n什么情况下会导致margin重叠\nMargin collapsing是CSS中一个常见的现象，当两个相邻的元素的上下外边距发生重叠时，会出现这个问题。外边距重叠是指两个相邻块级元素的上下外边距合并为一个外边距，而不是简单地相加。\n外边距重叠会影响布局，可能导致预期之外的间距。以下是一些关于外边距重叠的情况：\n兄弟元素之间的外边距重叠：当两个相邻的兄弟元素的外边距相遇时，它们的外边距会合并为一个外边距，取其中较大的值。\n父子元素之间的外边距重叠：如果子元素的外边距没有被边框、填充、行内内容或清除分隔，则会与父元素的外边距相重叠。\n空块级元素的外边距重叠：如果一个元素没有上边距或下边距，那么它的外边距可能会与其相邻的元素的外边距相重叠。\n兄弟元素之间的外边距重叠：\n <style>\n   .sibling {\n     margin: 20px 0…",
           "link": "https://juejin.cn/post/7334882866012291107",
           "publishedOn": "2024-02-15T08:50:48.000Z",
-          "wordCount": 44,
+          "wordCount": 1051,
           "title": "解决margin重叠问题，切页面更加丝滑",
           "imageUrl": null
         },
@@ -1483,7 +1483,7 @@
           "description": "theme: scrolls-light\nhighlight: a11y-dark\n一、本地搭建Threejs官方文档网站\n1.官网地址\nGithub：https://github.com/mrdoob/three.js\n我们可以直接下载压缩包并解压或使用 git clone \n若 github 过慢，则使用 gitee 对应镜像仓库：three.js: mrdoob/three.js 同步库\n2.目录解析\n\n部署步骤\n1.为项目创建一个目录，并在项目根目录下执行\n    npm create vite@latest\n\n2、APP.vue\n    import * as THREE from \"three\";\n \n// console.log(THREE);\n \n// 目标：了解three.js最基本的内容\n \n// 1、创建场景\nconst scene = new THREE.Scene();\n \n// 2、创建相机\nconst camera = new THREE.PerspectiveCamera(\n  75,\n  window.innerWidth / window.innerHeight,\n  0.1,\n  1000\n);\n \n// 设置相机位置\ncamera.position.set(0, 0, 10);\nscene.add(camera);\n \n// 添加物体\n// 创建几何体\nconst cubeGeometry = new THREE.BoxGeometry(1, 1, 1);\nconst cubeMaterial = new THREE.MeshBasicMaterial({ color: 0xffff00 });\n// 根据几何体和材质创建物体\nconst cube = new THREE.Mesh(cubeGeometry, cubeMaterial…",
           "link": "https://juejin.cn/post/7334503381199880243",
           "publishedOn": "2024-02-15T00:22:01.000Z",
-          "wordCount": 44,
+          "wordCount": 5502,
           "title": "2024年最新Three.js零基础入门教程（超详细）",
           "imageUrl": null
         },
@@ -1550,7 +1550,7 @@
           "description": "4个好用插件轻松给产品添加尺寸参数表格\n产品页面需要展示详细的产品参数表格\nProduct Size Charts Plugin for WooCommerce\nWPB Product Size Chart for WooCommerce\nYITH Product Size Charts for WooCommerce\nwpDataTables\n#wordpress外贸建站 #谷歌SEO优化 #Wordpress插件 #WooCommerce #woocommerce建站 #woocommerce商城 #woocommerce模板",
           "link": "https://juejin.cn/pin/7331347165212491802",
           "publishedOn": "2024-02-04T06:30:16.000Z",
-          "wordCount": 543,
+          "wordCount": 44,
           "title": "4个好用插件轻松给产品添加尺寸参数表格 产品页面需要展示详细的产品参数表格 Product Size Charts Plugin for WooCommerce WPB Product Size Chart for WooComm...",
           "imageUrl": null
         },
@@ -1560,7 +1560,7 @@
           "description": "使用Mac  Apple Silicon的 同学想在Mac上玩原神可以私信我",
           "link": "https://juejin.cn/pin/7331045767434633256",
           "publishedOn": "2024-02-04T02:43:35.000Z",
-          "wordCount": 487,
+          "wordCount": 44,
           "title": "使用Mac Apple Silicon的 同学想在Mac上玩原神可以私信我",
           "imageUrl": null
         },
@@ -1570,7 +1570,7 @@
           "description": "易语言的与国际接轨，为啥是这个“溶”字[不失礼貌的微笑]",
           "link": "https://juejin.cn/pin/7330845506414116904",
           "publishedOn": "2024-02-03T04:28:32.000Z",
-          "wordCount": 459,
+          "wordCount": 44,
           "title": "易语言的与国际接轨，为啥是这个“溶”字[不失礼貌的微笑]",
           "imageUrl": null
         },
@@ -1580,7 +1580,7 @@
           "description": "#极客时间#\n有XD买过这个极客时间的会员吗 靠谱吗\nhttps://sourl.cn/RuwqPs",
           "link": "https://juejin.cn/pin/7330807271009845300",
           "publishedOn": "2024-02-02T15:51:02.000Z",
-          "wordCount": 461,
+          "wordCount": 44,
           "title": "#极客时间# 有XD买过这个极客时间的会员吗 靠谱吗 https://sourl.cn/RuwqPs",
           "imageUrl": null
         },
@@ -1590,7 +1590,7 @@
           "description": "iFoto专为跨境电商的AI工具，太强大了\niFoto.ai是一款由 AI 驱动的照片编辑工具，通过在各种场景中展示服装来帮助提升电子商务，提供数百种真实环境。\n凭借其 AI 时装模特功能，它将时尚人体模特转变为具有多样化专业外观的栩栩如生的模特。\niFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态背景，而产品 AI 背景功能则通过 AI 生成的工作室质量的产品照片提升电子商务。\n#跨境电商独立站 #跨境电商运营 #ai电商工具 #ifoto #ai创作工具 #亚马逊跨境电商 #AI商拍",
           "link": "https://juejin.cn/pin/7330521875649871898",
           "publishedOn": "2024-02-02T03:54:40.000Z",
-          "wordCount": 518,
+          "wordCount": 44,
           "title": "iFoto专为跨境电商的AI工具，太强大了 iFoto.ai是一款由 AI 驱动的照片编辑工具，通过在各种场景中展示服装来帮助提升电子商务，提供数百种真实环境。 凭借其 AI...",
           "imageUrl": null
         },
@@ -1600,7 +1600,7 @@
           "description": "jym，有什么好用的翻译浏览器插件推荐吗",
           "link": "https://juejin.cn/pin/7330388563790872613",
           "publishedOn": "2024-02-01T07:30:50.000Z",
-          "wordCount": 464,
+          "wordCount": 44,
           "title": "jym，有什么好用的翻译浏览器插件推荐吗",
           "imageUrl": null
         },
@@ -1610,7 +1610,7 @@
           "description": "[庆祝]平台新增支持对【会议室】、【任务看板】的全文搜索\n[庆祝] 欢迎继续体验",
           "link": "https://juejin.cn/pin/7330203936286244890",
           "publishedOn": "2024-02-01T02:33:17.000Z",
-          "wordCount": 483,
+          "wordCount": 44,
           "title": "[庆祝]平台新增支持对【会议室】、【任务看板】的全文搜索 [庆祝] 欢迎继续体验",
           "imageUrl": null
         },
@@ -1620,7 +1620,7 @@
           "description": "ChatGPT和谷歌的Gemini 无限使用  https://sunmier.com/#/",
           "link": "https://juejin.cn/pin/7329518660501995561",
           "publishedOn": "2024-01-30T03:43:31.000Z",
-          "wordCount": 467,
+          "wordCount": 44,
           "title": "ChatGPT和谷歌的Gemini 无限使用 https://sunmier.com/#/",
           "imageUrl": null
         },
@@ -1630,7 +1630,7 @@
           "description": "https://sunmier.com/#/  推荐金融开发的高富帅们用的工具",
           "link": "https://juejin.cn/pin/7329518660501979177",
           "publishedOn": "2024-01-30T03:42:13.000Z",
-          "wordCount": 461,
+          "wordCount": 44,
           "title": "https://sunmier.com/#/ 推荐金融开发的高富帅们用的工具",
           "imageUrl": null
         },
@@ -1640,7 +1640,7 @@
           "description": "发现还得是单位有个npm仓库用起来方便，自己也省事，项目CI也快",
           "link": "https://juejin.cn/pin/7329413905028120588",
           "publishedOn": "2024-01-30T01:02:06.000Z",
-          "wordCount": 456,
+          "wordCount": 44,
           "title": "发现还得是单位有个npm仓库用起来方便，自己也省事，项目CI也快",
           "imageUrl": null
         },
@@ -1650,7 +1650,7 @@
           "description": "IDEA中收费的插件可以破解吗[呲牙]",
           "link": "https://juejin.cn/pin/7329352197837389833",
           "publishedOn": "2024-01-29T10:17:52.000Z",
-          "wordCount": 457,
+          "wordCount": 44,
           "title": "IDEA中收费的插件可以破解吗[呲牙]",
           "imageUrl": null
         },
@@ -1660,7 +1660,7 @@
           "description": "[7243698841848348730#每天一个知识点#] \n平时下载github上的项目慢的着急，怎么办，两个技巧，助你起飞[呲牙]",
           "link": "https://juejin.cn/pin/7329126541320634378",
           "publishedOn": "2024-01-29T02:51:37.000Z",
-          "wordCount": 479,
+          "wordCount": 44,
           "title": "[7243698841848348730#每天一个知识点#] 平时下载github上的项目慢的着急，怎么办，两个技巧，助你起飞[呲牙]",
           "imageUrl": null
         },
@@ -1670,7 +1670,7 @@
           "description": "推荐一个快速搜索npm包的浏览器插件",
           "link": "https://juejin.cn/pin/7329187434544431154",
           "publishedOn": "2024-01-29T02:41:09.000Z",
-          "wordCount": 461,
+          "wordCount": 44,
           "title": "推荐一个快速搜索npm包的浏览器插件",
           "imageUrl": null
         },
@@ -1680,7 +1680,7 @@
           "description": "🤓文章、文档模板上线啦！\n✍️大量简易实用模板上线已上线，创建内容可以直接选择模板进行撰写使用！\n学习工作日报周报\n会议纪要\n产品需求文档\n技术需求文档\n论文项目汇报\n读书笔记……\n专业文档模板随时使用参考，再也不用担心不会写文档，不会总结输出内容啦😉",
           "link": "https://juejin.cn/pin/7329118494895833125",
           "publishedOn": "2024-01-29T01:19:20.000Z",
-          "wordCount": 487,
+          "wordCount": 44,
           "title": "🤓文章、文档模板上线啦！ ✍️大量简易实用模板上线已上线，创建内容可以直接选择模板进行撰写使用！ 学习工作日报周报 会议纪要 产品需求文档 技术需求文档 ...",
           "imageUrl": null
         },
@@ -1690,7 +1690,7 @@
           "description": "[7073670907851440160#新人报道#]",
           "link": "https://juejin.cn/pin/7327691403844763684",
           "publishedOn": "2024-01-25T06:01:41.000Z",
-          "wordCount": 463,
+          "wordCount": 44,
           "title": "[7073670907851440160#新人报道#]",
           "imageUrl": null
         },
@@ -1700,7 +1700,7 @@
           "description": "再说明一下我们的方法需要做的主要事情：\n- 需要搭建一个私有的matrix服务器，并且通过nginx转发。\n- 需要在每一个设备上安装一个应用，也就是Element。\n[7243698841848348730#每天一个知识点#]",
           "link": "https://juejin.cn/pin/7327157426297815055",
           "publishedOn": "2024-01-23T14:46:46.000Z",
-          "wordCount": 525,
+          "wordCount": 44,
           "title": "再说明一下我们的方法需要做的主要事情： - 需要搭建一个私有的matrix服务器，并且通过nginx转发。 - 需要在每一个设备上安装一个应用，也就是Element。 [724369...",
           "imageUrl": null
         }
