@@ -12,6 +12,16 @@
       "siteUrl": "https://lainbo.com/",
       "articles": [
         {
+          "id": "https://lainbo.com/article/clash-config",
+          "author": null,
+          "description": "Clash确实是开箱即用，但开箱时并不是一个优秀的状态。当我将所有服务迁移到国外服务商时，我意识到在短时间内离不开Clash了。为了防止出现问题，我研究了一些Clash相关的东西。现在是时候做一个总结了。",
+          "link": "https://lainbo.com/article/clash-config",
+          "publishedOn": "2024-02-22T02:38:47.000Z",
+          "wordCount": 867,
+          "title": "Clash Verge系列使用最佳实践",
+          "imageUrl": "https://www.notion.so/images/page-cover/nasa_earth_grid.jpg"
+        },
+        {
           "id": "https://lainbo.com/article/high-quality-prompt",
           "author": null,
           "description": "如果你认为ChatGPT给出的官方教程太长了, 或无法看明白, 可以看看这个这个总结的版本, 除了指导如何编写高质量Prompt, 还在文末给出了适应大部分场景的模板",
@@ -29,16 +39,6 @@
           "publishedOn": "2024-02-21T08:46:00.000Z",
           "wordCount": 448,
           "title": "nvm-desktop的使用",
-          "imageUrl": "https://www.notion.so/images/page-cover/nasa_earth_grid.jpg"
-        },
-        {
-          "id": "https://lainbo.com/article/clash-config",
-          "author": null,
-          "description": "Clash确实是开箱即用，但开箱时并不是一个优秀的状态。当我将所有服务迁移到国外服务商时，我意识到在短时间内离不开Clash了。为了防止出现问题，我研究了一些Clash相关的东西。现在是时候做一个总结了。",
-          "link": "https://lainbo.com/article/clash-config",
-          "publishedOn": "2024-02-21T06:21:54.000Z",
-          "wordCount": 865,
-          "title": "Clash Verge系列使用最佳实践",
           "imageUrl": "https://www.notion.so/images/page-cover/nasa_earth_grid.jpg"
         },
         {
@@ -84,7 +84,7 @@
           "description": "只要你的产品有SEO的需求，那么MicroData微数据就是必须要了解的知识，通过几个属性，让数据结构更适合搜索引擎识别。",
           "link": "https://www.zhangxinxu.com/wordpress/2024/01/html-microdata/",
           "publishedOn": "2024-01-31T14:58:31.000Z",
-          "wordCount": 1414,
+          "wordCount": 1412,
           "title": "HTML MicroData微数据结构简介",
           "imageUrl": null
         }
@@ -543,6 +543,16 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20240222/t20240222_526603565.html",
+          "author": "国家预警信息发布中心",
+          "description": "巫山县气象台2024年2月22日9时发布“暴雪蓝色预警信号”，预计22日9时至21时，三溪乡、两坪乡、巫峡镇、龙门街道、高唐街道、建平乡、曲尺乡、大溪乡、铜鼓镇、庙宇镇、官渡镇、红椿乡、抱龙镇、邓家乡、笃坪乡、培石乡、骡坪镇、金坪乡、双龙镇、福田镇、龙溪镇、大昌镇、平河乡、竹贤乡、官阳镇、当阳乡等乡镇降雪量将达4毫米以上，可能对交通或者农牧业有影响。",
+          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20240222/t20240222_526603565.html",
+          "publishedOn": "2024-02-22T01:33:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市巫山县发布暴雪蓝色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20240222/t20240222_526603407.html",
           "author": "国家预警信息发布中心",
@@ -1368,6 +1378,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7336812458646290495",
+          "author": "sorryhc",
+          "description": "您好， 如果喜欢我的文章或者想上岸大厂，可以关注公众号「量子前端」，将不定期关注推送前端好文、分享就业资料秘籍，也希望有机会一对一帮助你实现梦想\n简单来说，DNS 的作用是将域名解析为 IP 地址，解析的过程是耗时的，转化后会做本地缓存，我们的优化的目标主要是针对用户第一次访问站点的时候陷入长时间白屏的问题。\nDNS 解析可以分为两类，第一类是页面 DNS 解析，当用户输入 url 地址后（比如是第一次访问站点），便开始页面 DNS 解析，这个过程是省不了的，因为你无法在用户访问站点之前就让他提前把 DNS 解析好；\n第二类是其他资源的 DNS 解析，在浏览器解析 html 的时候，会遇到一些 script 元素、link 元素，此时会暂停 html 的解析，转而加载 JS，里面就包含了 DNS 解析，这个过程是耗时的，会阻塞浏览器渲染主线程，所以该如何进行优化呢？答案是采用 DNS 预解析！\n一、DNS预解析是什么\nDNS预解析（dns-prefetch ）是前端网络性能优化的一种措施，它根据浏览器定义的规则，提前解析之后可能会用到的域名，使解析结果缓存到系统缓存中，缩短DNS解析时间，进而提高网站的访问速度。\nDNS预解析能够让浏览器在用户访问链接之前解析域名，其范围包括文档的所有链接，包括图片、CSS、JS；域名解析后，如果用户确实访问该域名，那么DNS解析时间将不会有延迟。因为预读取会在后台执行，所以DNS很可能在链接对应的东西出现之前就已经解析完毕，这能够减少用户点击链接时的延迟。\n二、DNS预解析的原理\n当浏览器访问一个域名的时候，需要解析一次 DNS，获得对应域名的 ip 地址；在解析过程中，按照如下的顺序逐步读取缓存，直到拿到IP地址：\n浏览器缓存\n系统缓存\n路由器缓存\nISP(运营商)DNS缓存\n根域名服务器\n顶级域名服务器\n主域名服务器\ndns-pref…",
+          "link": "https://juejin.cn/post/7336812458646290495",
+          "publishedOn": "2024-02-18T15:26:47.000Z",
+          "wordCount": 1373,
+          "title": "一对HTML标签，让你的网站白屏时间减少300ms！",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7336466381801324607",
           "author": "sincenir",
           "description": "theme: arknights\n淘宝源镜像站：https://npmmirror.com/\nnpm.taobao.org 于 2024 年 1 月 22 日 正式过期\n建议大家 点赞、收藏 ~ 以备不时之需 ~\n全文 4000 字~\n前言\n我们通过 npm 安装包时，默认是通过国外的服务器安装的。因此大家在安装时，经常会遇到魔法问题。解决魔法问题的方案有两种，一种是 npm 走代理，另外一种则是通过国内镜像源安装。\n据我观察，大多数开发者（包括资深大牛）为了方便，常常使用 taobao 源来解决该问题。\n但在最近，淘宝源出现了一些问题。\n具体信息\n2022 年 5 月 淘宝源发布了公告：\nregistry.npm.taobao.org 替换为了 registry.npmmirror.com 。\n迄今为止，已经有接近一年半的时间了。但很多人忽略了这个新闻，因为 registry.npm.taobao.org 一直处在可用的状态，并没有说明具体废弃时间。\n2024 年 1 月 22 日 ，registry.npm.taobao.org 的 SSL 证书正式过期。因此通过安全的方式使用该源的方法已不可用。\n就在今天，我在安装新包时报错：\nERR_PNPM_META_FETCH_FAIL GET https://registry.npm.taobao.org/@threlte%2Ftheatre: request to https://registry.npm.taobao.org/@threlte%2Ftheatre failed, reason: certificate has expired\n\n这个错误的原因是 registry.npm.taobao.org 的 SSL 证书过期了。\n虽然这并不意味着 taobao 源完全废弃，我们依旧可以通过关闭 SSL 严格检测来跳过该…",
@@ -1485,16 +1505,6 @@
           "publishedOn": "2024-02-15T08:50:48.000Z",
           "wordCount": 1051,
           "title": "解决margin重叠问题，切页面更加丝滑",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7334503381199880243",
-          "author": "swipe",
-          "description": "theme: scrolls-light\nhighlight: a11y-dark\n一、本地搭建Threejs官方文档网站\n1.官网地址\nGithub：https://github.com/mrdoob/three.js\n我们可以直接下载压缩包并解压或使用 git clone \n若 github 过慢，则使用 gitee 对应镜像仓库：three.js: mrdoob/three.js 同步库\n2.目录解析\n\n部署步骤\n1.为项目创建一个目录，并在项目根目录下执行\n    npm create vite@latest\n\n2、APP.vue\n    import * as THREE from \"three\";\n \n// console.log(THREE);\n \n// 目标：了解three.js最基本的内容\n \n// 1、创建场景\nconst scene = new THREE.Scene();\n \n// 2、创建相机\nconst camera = new THREE.PerspectiveCamera(\n  75,\n  window.innerWidth / window.innerHeight,\n  0.1,\n  1000\n);\n \n// 设置相机位置\ncamera.position.set(0, 0, 10);\nscene.add(camera);\n \n// 添加物体\n// 创建几何体\nconst cubeGeometry = new THREE.BoxGeometry(1, 1, 1);\nconst cubeMaterial = new THREE.MeshBasicMaterial({ color: 0xffff00 });\n// 根据几何体和材质创建物体\nconst cube = new THREE.Mesh(cubeGeometry, cubeMaterial…",
-          "link": "https://juejin.cn/post/7334503381199880243",
-          "publishedOn": "2024-02-15T00:22:01.000Z",
-          "wordCount": 5502,
-          "title": "2024年最新Three.js零基础入门教程（超详细）",
           "imageUrl": null
         },
         {
@@ -1670,7 +1680,7 @@
           "description": "[7243698841848348730#每天一个知识点#] \n平时下载github上的项目慢的着急，怎么办，两个技巧，助你起飞[呲牙]",
           "link": "https://juejin.cn/pin/7329126541320634378",
           "publishedOn": "2024-01-29T02:51:37.000Z",
-          "wordCount": 44,
+          "wordCount": 484,
           "title": "[7243698841848348730#每天一个知识点#] 平时下载github上的项目慢的着急，怎么办，两个技巧，助你起飞[呲牙]",
           "imageUrl": null
         },
@@ -1680,7 +1690,7 @@
           "description": "推荐一个快速搜索npm包的浏览器插件",
           "link": "https://juejin.cn/pin/7329187434544431154",
           "publishedOn": "2024-01-29T02:41:09.000Z",
-          "wordCount": 44,
+          "wordCount": 461,
           "title": "推荐一个快速搜索npm包的浏览器插件",
           "imageUrl": null
         },
@@ -1690,7 +1700,7 @@
           "description": "🤓文章、文档模板上线啦！\n✍️大量简易实用模板上线已上线，创建内容可以直接选择模板进行撰写使用！\n学习工作日报周报\n会议纪要\n产品需求文档\n技术需求文档\n论文项目汇报\n读书笔记……\n专业文档模板随时使用参考，再也不用担心不会写文档，不会总结输出内容啦😉",
           "link": "https://juejin.cn/pin/7329118494895833125",
           "publishedOn": "2024-01-29T01:19:20.000Z",
-          "wordCount": 44,
+          "wordCount": 487,
           "title": "🤓文章、文档模板上线啦！ ✍️大量简易实用模板上线已上线，创建内容可以直接选择模板进行撰写使用！ 学习工作日报周报 会议纪要 产品需求文档 技术需求文档 ...",
           "imageUrl": null
         },
@@ -1700,18 +1710,8 @@
           "description": "[7073670907851440160#新人报道#]",
           "link": "https://juejin.cn/pin/7327691403844763684",
           "publishedOn": "2024-01-25T06:01:41.000Z",
-          "wordCount": 44,
+          "wordCount": 463,
           "title": "[7073670907851440160#新人报道#]",
-          "imageUrl": null
-        },
-        {
-          "id": "7327157426297815055",
-          "author": "socrates",
-          "description": "再说明一下我们的方法需要做的主要事情：\n- 需要搭建一个私有的matrix服务器，并且通过nginx转发。\n- 需要在每一个设备上安装一个应用，也就是Element。\n[7243698841848348730#每天一个知识点#]",
-          "link": "https://juejin.cn/pin/7327157426297815055",
-          "publishedOn": "2024-01-23T14:46:46.000Z",
-          "wordCount": 44,
-          "title": "再说明一下我们的方法需要做的主要事情： - 需要搭建一个私有的matrix服务器，并且通过nginx转发。 - 需要在每一个设备上安装一个应用，也就是Element。 [724369...",
           "imageUrl": null
         }
       ]

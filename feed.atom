@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2024-02-22T01:16:25.721Z</id>
+    <id>urn:2024-02-22T03:54:38.687Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2024-02-22T01:16:25.721Z</updated>
+    <updated>2024-02-22T03:54:38.687Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[Clash Verge系列使用最佳实践]]></title>
+        <id>https://lainbo.com/article/clash-config</id>
+        <link href="https://lainbo.com/article/clash-config"/>
+        <updated>2024-02-22T02:38:47.000Z</updated>
+        <summary type="html"><![CDATA[Clash确实是开箱即用，但开箱时并不是一个优秀的状态。当我将所有服务迁移到国外服务商时，我意识到在短时间内离不开Clash了。为了防止出现问题，我研究了一些Clash相关的东西。现在是时候做一个总结了。]]></summary>
+        <author>
+            <name>Lainbo's Blog</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[重庆市巫山县发布暴雪蓝色预警]]></title>
+        <id>http://www.cneb.gov.cn/yjxx/lanseyj/20240222/t20240222_526603565.html</id>
+        <link href="http://www.cneb.gov.cn/yjxx/lanseyj/20240222/t20240222_526603565.html"/>
+        <updated>2024-02-22T01:33:00.000Z</updated>
+        <summary type="html"><![CDATA[巫山县气象台2024年2月22日9时发布“暴雪蓝色预警信号”，预计22日9时至21时，三溪乡、两坪乡、巫峡镇、龙门街道、高唐街道、建平乡、曲尺乡、大溪乡、铜鼓镇、庙宇镇、官渡镇、红椿乡、抱龙镇、邓家乡、笃坪乡、培石乡、骡坪镇、金坪乡、双龙镇、福田镇、龙溪镇、大昌镇、平河乡、竹贤乡、官阳镇、当阳乡等乡镇降雪量将达4毫米以上，可能对交通或者农牧业有影响。]]></summary>
+        <author>
+            <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[重庆市云阳县发布道路结冰黄色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/huangsyj/20240222/t20240222_526603407.html</id>
@@ -179,16 +199,6 @@
 一些表达习惯里也是如此，“还行”变成”很好”，“不太行”变成“也还行”，“很不好”变成“还不错”，本来可以直接在会上讨论清楚的问题，却说“我们下来再看看”……]]></summary>
         <author>
             <name>Barret李靖的即刻动态</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Clash Verge系列使用最佳实践]]></title>
-        <id>https://lainbo.com/article/clash-config</id>
-        <link href="https://lainbo.com/article/clash-config"/>
-        <updated>2024-02-21T06:21:54.000Z</updated>
-        <summary type="html"><![CDATA[Clash确实是开箱即用，但开箱时并不是一个优秀的状态。当我将所有服务迁移到国外服务商时，我意识到在短时间内离不开Clash了。为了防止出现问题，我研究了一些Clash相关的东西。现在是时候做一个总结了。]]></summary>
-        <author>
-            <name>Lainbo's Blog</name>
         </author>
     </entry>
     <entry>
@@ -1256,6 +1266,32 @@ https://www.zbj.com
    LifeOS 不仅是一个 Obsidian 模板，它更像是一个全方位的个人 Obsidian 生产力系统 。无论是生活 还是工作 ，都可…]]></summary>
         <author>
             <name>四喜茶茶</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[一对HTML标签，让你的网站白屏时间减少300ms！]]></title>
+        <id>https://juejin.cn/post/7336812458646290495</id>
+        <link href="https://juejin.cn/post/7336812458646290495"/>
+        <updated>2024-02-18T15:26:47.000Z</updated>
+        <summary type="html"><![CDATA[您好， 如果喜欢我的文章或者想上岸大厂，可以关注公众号「量子前端」，将不定期关注推送前端好文、分享就业资料秘籍，也希望有机会一对一帮助你实现梦想
+简单来说，DNS 的作用是将域名解析为 IP 地址，解析的过程是耗时的，转化后会做本地缓存，我们的优化的目标主要是针对用户第一次访问站点的时候陷入长时间白屏的问题。
+DNS 解析可以分为两类，第一类是页面 DNS 解析，当用户输入 url 地址后（比如是第一次访问站点），便开始页面 DNS 解析，这个过程是省不了的，因为你无法在用户访问站点之前就让他提前把 DNS 解析好；
+第二类是其他资源的 DNS 解析，在浏览器解析 html 的时候，会遇到一些 script 元素、link 元素，此时会暂停 html 的解析，转而加载 JS，里面就包含了 DNS 解析，这个过程是耗时的，会阻塞浏览器渲染主线程，所以该如何进行优化呢？答案是采用 DNS 预解析！
+一、DNS预解析是什么
+DNS预解析（dns-prefetch ）是前端网络性能优化的一种措施，它根据浏览器定义的规则，提前解析之后可能会用到的域名，使解析结果缓存到系统缓存中，缩短DNS解析时间，进而提高网站的访问速度。
+DNS预解析能够让浏览器在用户访问链接之前解析域名，其范围包括文档的所有链接，包括图片、CSS、JS；域名解析后，如果用户确实访问该域名，那么DNS解析时间将不会有延迟。因为预读取会在后台执行，所以DNS很可能在链接对应的东西出现之前就已经解析完毕，这能够减少用户点击链接时的延迟。
+二、DNS预解析的原理
+当浏览器访问一个域名的时候，需要解析一次 DNS，获得对应域名的 ip 地址；在解析过程中，按照如下的顺序逐步读取缓存，直到拿到IP地址：
+浏览器缓存
+系统缓存
+路由器缓存
+ISP(运营商)DNS缓存
+根域名服务器
+顶级域名服务器
+主域名服务器
+dns-pref…]]></summary>
+        <author>
+            <name>sorryhc</name>
         </author>
     </entry>
     <entry>
@@ -2432,56 +2468,6 @@ Margin collapsing是CSS中一个常见的现象，当两个相邻的元素的上
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[2024年最新Three.js零基础入门教程（超详细）]]></title>
-        <id>https://juejin.cn/post/7334503381199880243</id>
-        <link href="https://juejin.cn/post/7334503381199880243"/>
-        <updated>2024-02-15T00:22:01.000Z</updated>
-        <summary type="html"><![CDATA[theme: scrolls-light
-highlight: a11y-dark
-一、本地搭建Threejs官方文档网站
-1.官网地址
-Github：https://github.com/mrdoob/three.js
-我们可以直接下载压缩包并解压或使用 git clone 
-若 github 过慢，则使用 gitee 对应镜像仓库：three.js: mrdoob/three.js 同步库
-2.目录解析
-
-部署步骤
-1.为项目创建一个目录，并在项目根目录下执行
-    npm create vite@latest
-
-2、APP.vue
-    import * as THREE from "three";
- 
-// console.log(THREE);
- 
-// 目标：了解three.js最基本的内容
- 
-// 1、创建场景
-const scene = new THREE.Scene();
- 
-// 2、创建相机
-const camera = new THREE.PerspectiveCamera(
-  75,
-  window.innerWidth / window.innerHeight,
-  0.1,
-  1000
-);
- 
-// 设置相机位置
-camera.position.set(0, 0, 10);
-scene.add(camera);
- 
-// 添加物体
-// 创建几何体
-const cubeGeometry = new THREE.BoxGeometry(1, 1, 1);
-const cubeMaterial = new THREE.MeshBasicMaterial({ color: 0xffff00 });
-// 根据几何体和材质创建物体
-const cube = new THREE.Mesh(cubeGeometry, cubeMaterial…]]></summary>
-        <author>
-            <name>swipe</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[事不过三 过年日更第 5 天]]></title>
         <id>https://open.zhubai.wiki/a/l/t/z/fp/via/2369542782181785600</id>
         <link href="https://open.zhubai.wiki/a/l/t/z/fp/via/2369542782181785600"/>
@@ -3409,19 +3395,6 @@ class RefImpl<T> {
         <summary type="html"><![CDATA[[7073670907851440160#新人报道#]]]></summary>
         <author>
             <name>云喵君</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[再说明一下我们的方法需要做的主要事情： - 需要搭建一个私有的matrix服务器，并且通过nginx转发。 - 需要在每一个设备上安装一个应用，也就是Element。 [724369...]]></title>
-        <id>7327157426297815055</id>
-        <link href="https://juejin.cn/pin/7327157426297815055"/>
-        <updated>2024-01-23T14:46:46.000Z</updated>
-        <summary type="html"><![CDATA[再说明一下我们的方法需要做的主要事情：
-- 需要搭建一个私有的matrix服务器，并且通过nginx转发。
-- 需要在每一个设备上安装一个应用，也就是Element。
-[7243698841848348730#每天一个知识点#]]]></summary>
-        <author>
-            <name>socrates</name>
         </author>
     </entry>
 </feed>
