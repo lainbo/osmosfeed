@@ -524,11 +524,65 @@ iFixit 网站拆解了苹果头盔，证实了 CPU 是 M2 芯片，跟 MacBook �
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-22 datetime="2024-02-22T16:00:00.000Z">2024-02-22</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-22 datetime="2024-02-22T16:00:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-22 datetime="2024-02-22T19:14:55.000Z">2024-02-22</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-22 datetime="2024-02-22T19:14:55.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7338335869709385780"
+                        open
+                      >
+                        <summary class="article-expander__title">面试官：实现一个吸附在键盘上的输入框</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7338335869709385780">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>实现效果
+话不多说，先上效果和 demo 地址：
+demo 地址：https://codesandbox.io/p/devbox/keyboard-7fsqr8?file&#x3D;%2Fsrc%2Fkeyboard.ts%3A54%2C24
+https://7fsqr8-5173.csb.app
+
+实现原理
+要实现一个吸附在键盘上的 input，可以分为以下步骤：
+监听键盘高度的变化
+获取「键盘顶部距离视口顶部的高度」
+设置 input 的位置
+第一步：监听监听键盘键盘高度的变化
+要监听键盘高度的变化，我们得先看看在键盘展开或收起的时候，分别会触发哪些浏览器事件：
+iOS 和部分 Android 浏览器
+展开：键盘展示时会依次触发 visualViewport resize -&gt; focusin -&gt; visualViewport scroll，部分情况下手动调用 input.focus 不触发 focusin
+收起：键盘收起时会依次触发 visualViewport resize -&gt; focusout -&gt; visualViewport scroll
+其他 Android 浏览器
+展开：键盘展示的时候会触发一段连续的 window resize，约过 200 毫秒稳定
+收起：键盘收起的时候会触发一段连续的 window resize，约过 200 毫秒稳定，但是部分手机上有些异常的 case：键盘收起时 viewport 会先变小，然后变大，最后再变小
+总结两者来看，我们要监听键盘高度的变化，可以添加以下监听事件：
+if (window.visualViewport) {
+  window.visualViewport?.addEventListener(&quot;resize&quot;, listener);
+  window.visualViewport?.addEventListener…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -5131,52 +5185,6 @@ vue3的宏是什么？
                 </section>
               </section>
             </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7333458486434938918"
-                        open
-                      >
-                        <summary class="article-expander__title">【翻译】谈判Offer的十条准则(上)</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7333458486434938918">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: smartblue
-缘起
-最近我看到一篇关于谈判Offer的文章，个人认为他写的非常好，在很多方面给我了不一样的思考，例如找工作是一种价值交换，如何能够在与HR谈判中得到更高的薪资等，于是我将其翻译如下，希望也能带给你一些收获。兄弟们，学会这些，避免如下惨剧。
-正文
-引入
-当我在Airbnb求职的经历故事在网络上爆红时，我惊讶地发现人们对我的谈判过程如此着迷。媒体的报道将我描绘成一位精明老练的谈判大师——一名前职业扑克玩家，能够巧妙地与科技巨头周旋并赢得丰厚的工作机会。
-这其实挺可笑的。之所以说它可笑，有很多原因，但其中主要的一点是，在现实中，我的谈判技巧其实并无过人之处。有众多求职者在谈判方面比我更胜一筹，更不用提那些专业招聘人员和其他职业谈判专家了。
-实际情况是，大多数人在求职时根本不去谈判，或者即使进行谈判，也只是蜻蜓点水般地进行一下，仅为了让自己感觉尽力了而已。
-更糟糕的是，市面上关于谈判的大部分建议几乎都派不上用场。你在这个话题上读到的几乎所有内容都是模糊而冗长的劝告，诸如确保你要进行谈判以及千万不要先报出数字。除了这两条基本建议之外，剩下的就全靠你自己摸索了。
-我曾自问：为什么有关谈判的具体可行建议如此之少呢？我推测原因在于，很多人内心深处认为谈判无法解释清楚，认为有些人能做得到而有些人做不到，而且没有什么真正有效的方法能让任何人都能学会它。
-我认为这种观点纯属无稽之谈。谈判是一种可以像学习其他任何技能一样被掌握的技巧，并且我不认为它特别难以理解或捉摸不定。因此，我打算尝试解释如何让任何人都能掌握这项技能。
-不过在引入我观点时，有3点注意事项：
-我不是专家。确实有人在谈判领域是真正的专家，当我的建议与他们的观点相悖时，请假定我是错误的。
-谈判很难一概而论，因为它与社会动态和权力紧密交织在一起。对硅谷亚裔男性的合适建议可能并不适用于阿拉巴马州伯明翰的…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -6188,8 +6196,8 @@ class RefImpl {
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8031616847">
-        <time id="build-timestamp" datetime="2024-02-24T15:54:22.464Z">2024-02-24T15:54:22.464Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8032543959">
+        <time id="build-timestamp" datetime="2024-02-24T18:54:22.840Z">2024-02-24T18:54:22.840Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
