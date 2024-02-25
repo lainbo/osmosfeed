@@ -84,7 +84,7 @@
           "description": "只要你的产品有SEO的需求，那么MicroData微数据就是必须要了解的知识，通过几个属性，让数据结构更适合搜索引擎识别。",
           "link": "https://www.zhangxinxu.com/wordpress/2024/01/html-microdata/",
           "publishedOn": "2024-01-31T14:58:31.000Z",
-          "wordCount": 1411,
+          "wordCount": 1408,
           "title": "HTML MicroData微数据结构简介",
           "imageUrl": null
         }
@@ -128,7 +128,7 @@
           "description": "这样的支付宝看着就清爽多了。",
           "link": "https://m.okjike.com/originalPosts/65d7433b164d89e601e94078",
           "publishedOn": "2024-02-22T12:51:07.000Z",
-          "wordCount": 461,
+          "wordCount": 459,
           "title": "发布了: 这样的支付宝看着就清爽多了。",
           "imageUrl": "https://cdnv2.ruguoapp.com/FkhUcedqfit_v-s8fa-wr-6cZRvZv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -543,6 +543,16 @@
       "feedUrl": "https://rsshub.app/cneb/yjxx/%E9%87%8D%E5%BA%86",
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
+        {
+          "id": "http://www.cneb.gov.cn/yjxx/csyj/20240225/t20240225_526607704.html",
+          "author": "国家预警信息发布中心",
+          "description": "潼南区气象台2024年2月25日7时40分发布“大雾橙色预警信号”，目前我区已出现能见度小于200米的雾，局地能见度小于50米，预计将持续至13时。请注意防范大雾天气可能造成的影响。",
+          "link": "http://www.cneb.gov.cn/yjxx/csyj/20240225/t20240225_526607704.html",
+          "publishedOn": "2024-02-25T00:05:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市潼南区发布大雾橙色预警",
+          "imageUrl": null
+        },
         {
           "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20240224/t20240224_526607471.html",
           "author": "国家预警信息发布中心",
@@ -1608,16 +1618,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7336095267189817354",
-          "author": "五月君",
-          "description": "Node.js 老牌框架 Express 沉寂已久，长时间以来一直处于维护模式。近期其维护者提出了关于 Express 项目的未来计划，将会引入新的贡献者，以便该项目重新走上健康的轨道。\nExpress 项目最新的稳定版本是 4.x，这已经是几年之前的事情了。有一个 5.0.0 的 beta 版本，也是两年前了，但一直未发布。\n\n计划\n这个计划分为几个阶段，重点是直接的战术步骤，而不是战略目标。尽管如此，大多数战术目标都有更大的战略目标支持，但由于篇幅限制，我们省略了这些。此外，这里还有一些待办事项和模糊的地方。理想情况下，随着我们的推进，这些将由合作者填补，并不应成为达成一般方向和目标的障碍。\n即时需求\n这些是我们建议在批准这个计划后立即执行的事情。\n审查并采纳 Repo Captains 提案\n\n审查并进行最后的措辞修改，然后合并\n立即给予提交权限\n立即在 npm 上给予发布权限\n为招募更多 Repo Captains 设置快速跟进\n重组活跃 TC 并开放新的 TC 席位\n\n未来始终保持 5 名活跃成员的目标\n向所有组织、仓库和 npm 包添加基金会帐户\nExpress 5.0\n在所有与基金会共享的包上发布\n\n尽快发布\n\n最后的更新主题\n2020 年的最后 PR 列表\n除非我们开会并发现明显的问题，否则我们应该立即发布\n在补丁/小版本中立即解决任何剩余的问题\n将 Express-Generator 更改为默认使用 express 5\n博客和公告\n\n应该向社区展示和分享这些变化并提醒更新需求\nExpress 6.0\n评估 Node.js 版本支持\n\n更好地与 Node.js LTS 计划保持一致\n这有助于加速 Express 和 Node.js 向前发展的能力\n帮助人们拥有更可预测的升级计划以应对重大变化\n帮助规划人们何时需要在 Express 上引入重大变化\n这并不意味着我们会为了做而做重大变更，只是我们不会在新的主要版本发布后测试或明确支持非 LTS 版本\n自动化发布流程\n\n将发布授权移到 GH 权限中\n在所有仓库之间自动发布\n移除未使用的中间件\n\nTODO：列出清单\n使用 Node.js 核心解决方案替换中间件\n\nTODO：列出清单\n从 Express 中移除模板和渲染\n\n转移到中间件\nExpress 作为 API 的一等公民\n重组 Github 组织以澄清所有权和焦点\n\n审查每个并决定其命运\n\nhttps://github.com/orgs/jshttp/repositories?type=all\nhttps://github.com/orgs/pillarjs/repositories?type=all\n淘汰实际上处于不活跃状态的仓库，然后存档\n@express 在 npm 上的作用范围适用于子包\n\n所有新的包都在该范围内\n评估是否要迁移任何现有包\n停止使用 Node.js internals/monkey-patching Node.js\n官方维护的TypeScript类型\n\n生成并测试，带有文档\nExpress Generator 改版\n\n仅 API 为目标（删除用于 HTML 渲染的模板）\nExpress 7.0\n生态系统合作\n\n与 Node 核心合作，为 Express 拥有的许多模块的未来工作\nWeb 平台事项，如 Request/Response 和 URL\n重写中间件以添加到 Node 核心/为性能重写\n与 Web 服务器框架团队合作\n停止使用 Node.js internals/monkey-patching Node.js\nLTS 计划和发布时间表\n\n镜像 Node.js LTS 并设置主要版本发布时间表\n现代化工作\n\n直接支持元框架、Graphql 和 GRPC 风格的使用\n新网站\n这一切都可以讨论，这里的目标更多地是团结人们一起推动进展，但我们认为提出具体的事项清单会更有成效，所以请随时讨论各个具体点。如果需要的话，我们可以将讨论分开，但请将此问题作为中心。理想情况下，首要任务是安排 TC 会议并将 Express 5 推出门外，所以让我们不要让完美成为进展的敌人，承诺开始并保持进展的流动。\n以上 “计划” 内容翻译自 https://github.com/expressjs/discussions/issues/160。查看该讨论关注最新 Express 项目计划的最新动态。",
-          "link": "https://juejin.cn/post/7336095267189817354",
-          "publishedOn": "2024-02-17T23:59:25.000Z",
-          "wordCount": 944,
-          "title": "沉寂已久的 Node.js 老牌框架 Express 提出未来发展计划，包括 5.0/6.0/7.0 版本！",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7335721246931189795",
           "author": "欧阳码农",
           "description": "theme: z-blue\n前言\n从vue3开始vue引入了宏，比如defineProps、defineEmits等。我们每天写vue代码时都会使用到这些宏，但是你有没有思考过vue中的宏到底是什么？为什么这些宏不需要手动从vue中import？为什么只能在setup顶层中使用这些宏？\nvue 文件如何渲染到浏览器上\n要回答上面的问题，我们先来了解一下从一个vue文件到渲染到浏览器这一过程经历了什么？\n我们的vue代码一般都是写在后缀名为vue的文件上，显然浏览器是不认识vue文件的，浏览器只认识html、css、jss等文件。所以第一步就是通过webpack或者vite将一个vue文件编译为一个包含render函数的js文件。然后执行render函数生成虚拟DOM，再调用浏览器的DOM API根据虚拟DOM生成真实DOM挂载到浏览器上。\n\nvue3的宏是什么？\n我们先来看看vue官方的解释：\n宏是一种特殊的代码，由编译器处理并转换为其他东西。它们实际上是一种更巧妙的字符串替换形式。\n宏是在哪个阶段运行？\n通过前面我们知道了vue 文件渲染到浏览器上主要经历了两个阶段。\n第一阶段是编译时，也就是从一个vue文件经过webpack或者vite编译变成包含render函数的js文件。此时的运行环境是nodejs环境，所以这个阶段可以调用nodejs相关的api，但是没有在浏览器环境内执行，所以不能调用浏览器的API。\n第二阶段是运行时，此时浏览器会执行js文件中的render函数，然后依次生成虚拟DOM和真实DOM。此时的运行环境是浏览器环境内，所以可以调用浏览器的API，但是在这一阶段中是不能调用nodejs相关的api。\n而宏就是作用于编译时，也就是从vue文件编译为js文件这一过程。\n举个defineProps的例子：在编译时defineProps宏就会被转换为定义pro…",
@@ -1625,6 +1625,16 @@
           "publishedOn": "2024-02-17T23:32:01.000Z",
           "wordCount": 1391,
           "title": "vue3的宏到底是什么东西？",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7333458486434938918",
+          "author": "鑫宝Code",
+          "description": "theme: smartblue\n缘起\n最近我看到一篇关于谈判Offer的文章，个人认为他写的非常好，在很多方面给我了不一样的思考，例如找工作是一种价值交换，如何能够在与HR谈判中得到更高的薪资等，于是我将其翻译如下，希望也能带给你一些收获。兄弟们，学会这些，避免如下惨剧。\n正文\n引入\n当我在Airbnb求职的经历故事在网络上爆红时，我惊讶地发现人们对我的谈判过程如此着迷。媒体的报道将我描绘成一位精明老练的谈判大师——一名前职业扑克玩家，能够巧妙地与科技巨头周旋并赢得丰厚的工作机会。\n这其实挺可笑的。之所以说它可笑，有很多原因，但其中主要的一点是，在现实中，我的谈判技巧其实并无过人之处。有众多求职者在谈判方面比我更胜一筹，更不用提那些专业招聘人员和其他职业谈判专家了。\n实际情况是，大多数人在求职时根本不去谈判，或者即使进行谈判，也只是蜻蜓点水般地进行一下，仅为了让自己感觉尽力了而已。\n更糟糕的是，市面上关于谈判的大部分建议几乎都派不上用场。你在这个话题上读到的几乎所有内容都是模糊而冗长的劝告，诸如确保你要进行谈判以及千万不要先报出数字。除了这两条基本建议之外，剩下的就全靠你自己摸索了。\n我曾自问：为什么有关谈判的具体可行建议如此之少呢？我推测原因在于，很多人内心深处认为谈判无法解释清楚，认为有些人能做得到而有些人做不到，而且没有什么真正有效的方法能让任何人都能学会它。\n我认为这种观点纯属无稽之谈。谈判是一种可以像学习其他任何技能一样被掌握的技巧，并且我不认为它特别难以理解或捉摸不定。因此，我打算尝试解释如何让任何人都能掌握这项技能。\n不过在引入我观点时，有3点注意事项：\n我不是专家。确实有人在谈判领域是真正的专家，当我的建议与他们的观点相悖时，请假定我是错误的。\n谈判很难一概而论，因为它与社会动态和权力紧密交织在一起。对硅谷亚裔男性的合适建议可能并不适用于阿拉巴马州伯明翰的…",
+          "link": "https://juejin.cn/post/7333458486434938918",
+          "publishedOn": "2024-02-12T06:04:59.000Z",
+          "wordCount": 864,
+          "title": "【翻译】谈判Offer的十条准则(上)",
           "imageUrl": null
         },
         {

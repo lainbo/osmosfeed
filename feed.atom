@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2024-02-24T21:54:24.294Z</id>
+    <id>urn:2024-02-25T01:16:40.093Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2024-02-24T21:54:24.294Z</updated>
+    <updated>2024-02-25T01:16:40.093Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[重庆市潼南区发布大雾橙色预警]]></title>
+        <id>http://www.cneb.gov.cn/yjxx/csyj/20240225/t20240225_526607704.html</id>
+        <link href="http://www.cneb.gov.cn/yjxx/csyj/20240225/t20240225_526607704.html"/>
+        <updated>2024-02-25T00:05:00.000Z</updated>
+        <summary type="html"><![CDATA[潼南区气象台2024年2月25日7时40分发布“大雾橙色预警信号”，目前我区已出现能见度小于200米的雾，局地能见度小于50米，预计将持续至13时。请注意防范大雾天气可能造成的影响。]]></summary>
+        <author>
+            <name>国家预警信息发布中心</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[重庆市酉阳土家族苗族自治县发布道路结冰黄色预警]]></title>
         <id>http://www.cneb.gov.cn/yjxx/huangsyj/20240224/t20240224_526607471.html</id>
@@ -1939,102 +1949,6 @@ im页面在web层面多次优化后已接近架构上限，无法基于现有架
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[沉寂已久的 Node.js 老牌框架 Express 提出未来发展计划，包括 5.0/6.0/7.0 版本！]]></title>
-        <id>https://juejin.cn/post/7336095267189817354</id>
-        <link href="https://juejin.cn/post/7336095267189817354"/>
-        <updated>2024-02-17T23:59:25.000Z</updated>
-        <summary type="html"><![CDATA[Node.js 老牌框架 Express 沉寂已久，长时间以来一直处于维护模式。近期其维护者提出了关于 Express 项目的未来计划，将会引入新的贡献者，以便该项目重新走上健康的轨道。
-Express 项目最新的稳定版本是 4.x，这已经是几年之前的事情了。有一个 5.0.0 的 beta 版本，也是两年前了，但一直未发布。
-
-计划
-这个计划分为几个阶段，重点是直接的战术步骤，而不是战略目标。尽管如此，大多数战术目标都有更大的战略目标支持，但由于篇幅限制，我们省略了这些。此外，这里还有一些待办事项和模糊的地方。理想情况下，随着我们的推进，这些将由合作者填补，并不应成为达成一般方向和目标的障碍。
-即时需求
-这些是我们建议在批准这个计划后立即执行的事情。
-审查并采纳 Repo Captains 提案
-
-审查并进行最后的措辞修改，然后合并
-立即给予提交权限
-立即在 npm 上给予发布权限
-为招募更多 Repo Captains 设置快速跟进
-重组活跃 TC 并开放新的 TC 席位
-
-未来始终保持 5 名活跃成员的目标
-向所有组织、仓库和 npm 包添加基金会帐户
-Express 5.0
-在所有与基金会共享的包上发布
-
-尽快发布
-
-最后的更新主题
-2020 年的最后 PR 列表
-除非我们开会并发现明显的问题，否则我们应该立即发布
-在补丁/小版本中立即解决任何剩余的问题
-将 Express-Generator 更改为默认使用 express 5
-博客和公告
-
-应该向社区展示和分享这些变化并提醒更新需求
-Express 6.0
-评估 Node.js 版本支持
-
-更好地与 Node.js LTS 计划保持一致
-这有助于加速 Express 和 Node.js 向前发展的能力
-帮助人们拥有更可预测的升级计划以应对重大变化
-帮助规划人们何时需要在 Express 上引入重大变化
-这并不意味着我们会为了做而做重大变更，只是我们不会在新的主要版本发布后测试或明确支持非 LTS 版本
-自动化发布流程
-
-将发布授权移到 GH 权限中
-在所有仓库之间自动发布
-移除未使用的中间件
-
-TODO：列出清单
-使用 Node.js 核心解决方案替换中间件
-
-TODO：列出清单
-从 Express 中移除模板和渲染
-
-转移到中间件
-Express 作为 API 的一等公民
-重组 Github 组织以澄清所有权和焦点
-
-审查每个并决定其命运
-
-https://github.com/orgs/jshttp/repositories?type=all
-https://github.com/orgs/pillarjs/repositories?type=all
-淘汰实际上处于不活跃状态的仓库，然后存档
-@express 在 npm 上的作用范围适用于子包
-
-所有新的包都在该范围内
-评估是否要迁移任何现有包
-停止使用 Node.js internals/monkey-patching Node.js
-官方维护的TypeScript类型
-
-生成并测试，带有文档
-Express Generator 改版
-
-仅 API 为目标（删除用于 HTML 渲染的模板）
-Express 7.0
-生态系统合作
-
-与 Node 核心合作，为 Express 拥有的许多模块的未来工作
-Web 平台事项，如 Request/Response 和 URL
-重写中间件以添加到 Node 核心/为性能重写
-与 Web 服务器框架团队合作
-停止使用 Node.js internals/monkey-patching Node.js
-LTS 计划和发布时间表
-
-镜像 Node.js LTS 并设置主要版本发布时间表
-现代化工作
-
-直接支持元框架、Graphql 和 GRPC 风格的使用
-新网站
-这一切都可以讨论，这里的目标更多地是团结人们一起推动进展，但我们认为提出具体的事项清单会更有成效，所以请随时讨论各个具体点。如果需要的话，我们可以将讨论分开，但请将此问题作为中心。理想情况下，首要任务是安排 TC 会议并将 Express 5 推出门外，所以让我们不要让完美成为进展的敌人，承诺开始并保持进展的流动。
-以上 “计划” 内容翻译自 https://github.com/expressjs/discussions/issues/160。查看该讨论关注最新 Express 项目计划的最新动态。]]></summary>
-        <author>
-            <name>五月君</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[vue3的宏到底是什么东西？]]></title>
         <id>https://juejin.cn/post/7335721246931189795</id>
         <link href="https://juejin.cn/post/7335721246931189795"/>
@@ -3070,6 +2984,29 @@ vue3的宏是什么？
    若读友对「APP 不释手」饶有兴致，欢迎关注小程序「APP 不释手」或添加微信好友「MHummels」骚扰一波：]]></summary>
         <author>
             <name>APP不释手</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【翻译】谈判Offer的十条准则(上)]]></title>
+        <id>https://juejin.cn/post/7333458486434938918</id>
+        <link href="https://juejin.cn/post/7333458486434938918"/>
+        <updated>2024-02-12T06:04:59.000Z</updated>
+        <summary type="html"><![CDATA[theme: smartblue
+缘起
+最近我看到一篇关于谈判Offer的文章，个人认为他写的非常好，在很多方面给我了不一样的思考，例如找工作是一种价值交换，如何能够在与HR谈判中得到更高的薪资等，于是我将其翻译如下，希望也能带给你一些收获。兄弟们，学会这些，避免如下惨剧。
+正文
+引入
+当我在Airbnb求职的经历故事在网络上爆红时，我惊讶地发现人们对我的谈判过程如此着迷。媒体的报道将我描绘成一位精明老练的谈判大师——一名前职业扑克玩家，能够巧妙地与科技巨头周旋并赢得丰厚的工作机会。
+这其实挺可笑的。之所以说它可笑，有很多原因，但其中主要的一点是，在现实中，我的谈判技巧其实并无过人之处。有众多求职者在谈判方面比我更胜一筹，更不用提那些专业招聘人员和其他职业谈判专家了。
+实际情况是，大多数人在求职时根本不去谈判，或者即使进行谈判，也只是蜻蜓点水般地进行一下，仅为了让自己感觉尽力了而已。
+更糟糕的是，市面上关于谈判的大部分建议几乎都派不上用场。你在这个话题上读到的几乎所有内容都是模糊而冗长的劝告，诸如确保你要进行谈判以及千万不要先报出数字。除了这两条基本建议之外，剩下的就全靠你自己摸索了。
+我曾自问：为什么有关谈判的具体可行建议如此之少呢？我推测原因在于，很多人内心深处认为谈判无法解释清楚，认为有些人能做得到而有些人做不到，而且没有什么真正有效的方法能让任何人都能学会它。
+我认为这种观点纯属无稽之谈。谈判是一种可以像学习其他任何技能一样被掌握的技巧，并且我不认为它特别难以理解或捉摸不定。因此，我打算尝试解释如何让任何人都能掌握这项技能。
+不过在引入我观点时，有3点注意事项：
+我不是专家。确实有人在谈判领域是真正的专家，当我的建议与他们的观点相悖时，请假定我是错误的。
+谈判很难一概而论，因为它与社会动态和权力紧密交织在一起。对硅谷亚裔男性的合适建议可能并不适用于阿拉巴马州伯明翰的…]]></summary>
+        <author>
+            <name>鑫宝Code</name>
         </author>
     </entry>
     <entry>
