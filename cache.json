@@ -84,7 +84,7 @@
           "description": "只要你的产品有SEO的需求，那么MicroData微数据就是必须要了解的知识，通过几个属性，让数据结构更适合搜索引擎识别。",
           "link": "https://www.zhangxinxu.com/wordpress/2024/01/html-microdata/",
           "publishedOn": "2024-01-31T14:58:31.000Z",
-          "wordCount": 1411,
+          "wordCount": 1409,
           "title": "HTML MicroData微数据结构简介",
           "imageUrl": null
         }
@@ -1422,16 +1422,6 @@
           "wordCount": 523,
           "title": "重庆市巫溪县发布大风蓝色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/lanseyj/20240219/t20240219_526598721.html",
-          "author": "国家预警信息发布中心",
-          "description": "巫山县气象台2024年2月19日12时40分发布“大风蓝色预警信号”，预计未来12小时，三溪乡、培石乡、两坪乡、抱龙镇、建平乡、龙门街道、巫峡镇、高唐街道、曲尺乡、铜鼓镇、大溪乡、庙宇镇、金坪乡、骡坪镇、官渡镇、笃坪乡、邓家乡、红椿乡、平河乡、大昌镇等乡镇及高海拔山口河谷地区可能受大风影响，阵风可达7级以上。",
-          "link": "http://www.cneb.gov.cn/yjxx/lanseyj/20240219/t20240219_526598721.html",
-          "publishedOn": "2024-02-19T04:55:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市巫山县发布大风蓝色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -1465,6 +1455,26 @@
           "publishedOn": "2024-02-25T13:18:32.000Z",
           "wordCount": 3602,
           "title": "看完zustand源码后，我的TypeScript水平突飞猛进。",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7338702103882399744",
+          "author": "知了知了__",
+          "description": "theme: vue-pro\n如果你也在准备春招，欢迎加微信shunwuyu。这里有几十位一心去大厂的友友可以相互鼓励，分享信息，模拟面试，共读源码，齐刷算法，手撕面经。\n前言\n连夜肝文，面试以来最尴尬的一次，事情是这样的，最近有开始面稍微有难度一点岗位，本文的主题出自北京某一小厂的正式岗面试题，薪资水平大概开在10k-12k。之前一直是投的比较小的公司比较简单的实习岗位，这个是无意间投出去的一个，由于是 0 年经验小白*1，结果没想到简历过筛，硬着头皮上了。\n结果很惨，40分钟的面试有 80% 不会回答，像大文件上传、缓存优化、滑动 text-area标签用什么属性（话说为什么有这么冷的题）等等，有一个算一个，都没答出来。\n\n重点来了，在两个面试官问到前端请求如何避免明文传输的时候，在我绞尽脑汁思考五秒之后，现场气氛非常凝重，这道题也成为了这次面试的最后一题。\n在此提醒各位小伙伴，如果你的简历或者自我介绍中有提到网络请求，一定要注意了解一下有关数据加密处理，出现频率巨高！！！\n最后，下午四点面试，六点hr就通知了我面试结果，凉凉\n\n如何避免前端请求明文传输\n要在前端发送请求时做到不明文，有以下几种方法：\nHTTPS 加密传输： 使用 HTTPS 协议发送请求，所有的数据都会在传输过程中进行加密，从而保护数据不以明文形式传输。这样即使数据被截获，黑客也无法直接获取到数据的内容。\n数据加密处理： 在前端对敏感数据进行加密处理，然后再发送请求。可以使用一些加密算法，如 AES、RSA 等，将敏感数据进行加密后再发送到服务器。这样即使数据在传输过程中被截获，也无法直接获取其内容。\n请求签名验证： 在发送请求之前，前端对请求参数进行签名处理，并将签名结果和请求一起发送到服务器。服务器端根据事先约定的签名算法和密钥对请求参数进行验证，确保请求的完整性和可靠性。\nToken 验证： 在…",
+          "link": "https://juejin.cn/post/7338702103882399744",
+          "publishedOn": "2024-02-24T05:23:52.000Z",
+          "wordCount": 918,
+          "title": "面试官：前端请求如何避免明文传输？谁沉默了，原来是我",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7338376035829563446",
+          "author": "IT咖啡馆",
+          "description": "Node.js已经有了超过14年的历史，虽然它一直有着不错的表现，但是关联的JavaScript 工具链正变得缓慢而复杂。我们今天要介绍的开源项目是一个快速的全能工具包，用于运行、构建、测试和调试 JavaScript 和 TypeScript，它就是：Bun\n\nBun是什么\nBun 的核心是一个快速的 JavaScript 运行时，旨在取代 Node.js。但它并不仅仅是一个运行时，它也是一个包管理器(类似 Yarn、 NPM、 PNPM)，一个构建工具(类似 Webpack、 ESBuild、 Parcel) ，一个测试运行器，一个全能的工具包。它是用 Zig 语言编写的，并在底层由 JavaScriptCore 提供支持，大大减少了启动时间和内存使用。\n从发布就一直热度高涨，是了2022年最火的前端项目，2023年的评选中也是第二名。\n\nBun 的目标很简单，就是要消除JavaScript工具链的缓慢和复杂性，但同时保留JavaScript本身的优点。Bun希望让开发者继续使用喜欢的库和框架，并且无需放弃已经熟悉的规范和约定。Bun一直追求极致的性能，在各个方面都要比Nodejs快不少。\n\n以下是项目github 的 star 历史数据，一直保持着超高的增长速度。\n\n为什么用 Bun？\n\n如果犹豫要不要试一下，那不如先来看看下面这些点能不能吸引你：\n速度：Bun 旨在提供高性能，无论是启动时间、执行速度还是安装依赖包的速度。进程的启动速度比Nodejs快4倍。\n兼容性 Nodejs：Bun 致力于与现有的 JavaScript 生态系统兼容，包括 Node.js 的软件包。\nAll in one：Bun 可以让你省下很多工具，因为内置了，比如npx，webpack，babel，jest等等\n原生的 Web API：Bun 提供了许多浏览器中的 Web API，这使得编写服务器端代码与编写客户端代码更为相似。\n\n使用Bun\nBun 提供了非常多的安装方式，对于Linux和MacOS用户，可以使用 curl、npm、Homebrew，docker等方式安装：\n# with install script (recommended)\ncurl -fsSL <https://bun.sh/install> | bash\n\n# with npm\nnpm install -g bun\n\n# with Homebrew\nbrew tap oven-sh/bun\nbrew install bun\n\n# with Docker\ndocker pull oven/bun\ndocker run --rm --init --ulimit memlock=-1:-1 oven/bun\n\nWindows的用户要求是win10 version 1809以上（不保证稳定性），可以通过Scoop来安装：\n# WARNING: No stability is guaranteed on the experimental Windows builds\nscoop bucket add versions\nscoop install bun-canary\n\n安装完成后，执行 bun --version ，看到输出版本号就是安装成功了。\n接下来我们可以跑一个helloworld体验一下，可以试用 bun init命令\n\n修改一下 index.ts 的内容\nconst server = Bun.serve({\n  port: 3000,\n  fetch(req) {\n    return new Response(\"Bun!\");\n  },\n});\n\nconsole.log(`Listening on <http://localhost>:${server.port} ...`);\n\n启动服务 bun index.ts ，就可以看到起的服务了\n\n用起来上手不难，和Nodejs的使用接近。即使不把 Bun 用作运行时，Bun 内置的软件包管理器也能加快你的开发工作流程。Bun的安装速度比 npm、yarn 和 pnpm 快好几个数量级，还可以用 bun run 来替换 npm run，每次运行命令都能节省 150 毫秒的时间。\n\n我只是抛砖引玉，更多详细的使用就等着大家自己去尝试吧。\n项目信息\n项目名称：Bun\nGitHub 链接：https://github.com/oven-sh/bun\nStar 数：68K+",
+          "link": "https://juejin.cn/post/7338376035829563446",
+          "publishedOn": "2024-02-23T04:06:47.000Z",
+          "wordCount": 1030,
+          "title": "68K star！24年替换Node.js的最佳选择",
           "imageUrl": null
         },
         {
@@ -1568,6 +1578,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7337207433868197915",
+          "author": "魔术师卡颂",
+          "description": "大家好，我卡颂。\nReact当前的稳定版本是18.2，发布时间是22年6月，在此之后就没有新的稳定版本发布。\n\n直到今年2月15日，官方博客才透露下一个稳定版本的计划。没错，他就是React19。\n\n为什么时隔1年多才公布下个稳定版本的计划？\n为什么下个版本直接跳到了19？\n18我都还没升呢，19就来了，是不是要学很多东西？\n这篇文章会为你详细解答这些疑问。\n打包领取卡颂原创React教程、加入人类高质量前端群\n从React16聊起\n近年来React最为人津津乐道的版本应该是16.8，这个版本引入了Hooks，为React（乃至整个前端框架领域）注入了新的活力。\n再之后的v17没有新特性引入。既然没有新特性引入，为什么要发布一个大版本（从16到17）呢？\n这是因为从同步更新升级到并发更新的React，中间存在breaking change。\n这么大体量的框架，在升级时需要保证过程尽可能平顺。这除了是一种专业、负责的体现，更重要的，版本割裂会造成大量用户损失（参考当年ng1升级到anuglar2时）。\n当升级到18后，React团队发现 —— 真正升级到18，并大量使用并发特性（比如useTransition）的开发者并不多。\n更常见的场景是 —— 知名开源库集成并发特性，开发者再直接用这些库。\n所以，React团队转变策略，将迭代重心从赋能开发者转变为赋能开源库。那么，什么样的库受众最多呢？显然是框架。\n所以，React的重心逐渐变为 —— 赋能上层框架，开发者通过使用上层框架间接使用React。\n为什么我说React团队转变了策略，而不是React团队一开始的计划就是赋能上层框架呢？\n如果一开始的计划就是赋能上层框架，React团队就不会花大量精力在版本的渐进升级上 —— 反正开发者最终使用的会是上层框架（而不是React），版本割裂上层框架会解决，根本不需要引导开发者升…",
+          "link": "https://juejin.cn/post/7337207433868197915",
+          "publishedOn": "2024-02-20T00:16:18.000Z",
+          "wordCount": 1049,
+          "title": "关于 React19，你需要了解的前因后果",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7337112002551955494",
           "author": "萤火架构",
           "description": "在移动应用开发领域，React Native 和 Flutter 是最近几年最热门的两个跨平台开发框架，它们都以高效、快速、灵活的特点，赢得了大量开发者的青睐。那么，它们之间究竟有何异同，我们又该如何选择呢？\n本文就和大家对比下 React Native 和 Flutter 这两个流行的移动应用开发框架。\n\n发展历程\nReact Native：由 Facebook 开发，2015年正式对外开源发布。它是基于React（一个用于构建用户界面的 JavaScript 库）的原理，让开发者可以用相同的 React 架构来开发iOS和Android 应用，旨在实现一次编写，多平台运行。它的设计理念是让开发者用熟悉的Web开发技术栈来构建原生应用。\nFlutter：由 Google 开发的开源框架，2017年发布了第一个beta版本，然后迅速获得了开发者的关注。Flutter 采用 Dart 编程语言，并提供了全新的UI框架。Flutter 强调高性能、高生产力和精美设计，从底层渲染引擎到顶层开发框架都由Google自研，力求达到媲美原生应用的体验。\n如果把它俩比作汽车，那么 React Native 就像是一台采用了经典内燃机技术与现代电动技术相结合的混动车，用了老司机 JavaScript 来驾驶，而 Flutter 更像是一辆全新的电动跑车，配备了尖端的Dart编程语言这一高性能引擎，旨在为开发者提供前所未有的操控体验。\n从发展历程上看，如果你倾向于选择一个历史更悠久、社区支持更加成熟的框架，React Native是一个不错的选择。但如果你愿意尝试一些新兴的、可能在未来更有发展空间的技术，那么可以选择 Flutter。\n\n编程语言\nReact Native：使用JavaScript（或通过TypeScript增强），这是一门广泛使用的语言，也是Web开发者的首选，这使得许多W…",
@@ -1598,26 +1618,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7337114587122941964",
-          "author": "程序员大澈",
-          "description": "大家好，我是大澈！\n本文约800+字，整篇阅读大约需要1分钟。\n感谢关注微信公众号：“程序员大澈”，免费领取\"面试礼包\"一份，然后免费加入问答群，从此让解决问题的你不再孤单！\n1. 资讯速览\n最近，Promise 新出了一个方法，已经进入 Stage 3 （候选阶段） ，相信很快就能达到 Stage 4 （完成阶段），并在项目中广泛使用。\n这个方法就是 Promise.withResolvers。它是一个静态方法，返回一个包含新的 Promise 对象和两个函数的对象。\n其中，两个函数即：resolve 和 reject。分别对应于传递给 Promise 构造函数执行器的两个参数。\n\nPromise.withResolvers 的关键点，在于现在解决和拒绝函数与 Promise 对象本身处于同一作用域，而不是在执行器中创建并且只能使用一次。\n这使得在某些更高级的用例中可能会更加方便，例如：在重复事件中重用解决和拒绝函数，特别是在处理流和队列时。这也意味着嵌套层级较少，而不是在执行器中包含大量逻辑。\n\n2. 资讯详细\n先举例对比说明该方法的妙用，再补充一下注意点，最后做小结。\n2.1 举例说明\n在没有 Promise.withResolvers 之前，你可能实现了这样的代码：\n<script>\n  let num = true;\n  let resolve, reject;\n\n  const promise = new Promise((res, rej) => {\n      resolve = res;\n      reject = rej;\n  });\n\n  num ? resolve(\"ok\") : reject(\"not ok\");\n</script>\n\n在使用 Promise.withResolvers 之后：\n<script>\n  let num = true;\n\n  const { promise, resolve, reject } = Promise.withResolvers();\n\n  num ? resolve(\"ok\") : reject(\"not ok\");\n</script>\n\n很明显的发现，当我们单独使用 resolve 和 reject 时，用上 Promise.withResolvers ，不需要再定义一个额外的变量去存储。\n2.2 注意点\n该特性目前还在 Stage 3 阶段，预计2024年正式发版。\n目前主流浏览器还没有全部支持该特性，谷歌需要 117以上的版本才能使用这个方法。\n2.3 小结\nPromise 新出了一个方法，已经进入 Stage 3 （候选阶段）。\n它的关键点，在于现在解决和拒绝函数与 Promise 对象本身处于同一作用域，而不是在执行器中创建并且只能使用一次。\n\n结语\n建立这个平台的初衷：\n打造一个专注于前端功能问题的问答平台，让大家高效搜索处理同样问题。\n遇到有共鸣的问题，与众多同行朋友们一起讨论，一起沉淀成长。\n平台现拥有功能问题、技术资讯、实用干货3个专栏内容。\n感谢关注微信公众号：“程序员大澈”，免费领取\"面试礼包\"一份，然后免费加入问答群，从此让解决问题的你不再孤单！",
-          "link": "https://juejin.cn/post/7337114587122941964",
-          "publishedOn": "2024-02-19T07:28:18.000Z",
-          "wordCount": 884,
-          "title": "技术资讯：一个Promise全新API，真好用！",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7336921343205900328",
-          "author": "腾讯TNTWeb前端团队",
-          "description": "新的一年，前端领域再次掀起波澜壮阔的变革。开源世界日新月异，每天都有新奇的惊喜涌现。我们精心整理了15个令人眼前一亮的开源项目，涵盖了前端技术的各个层面。无论您是资深开发者还是初学者，相信这些项目中总有一个会触动您的心弦。\n1. draw-a-ui\nSite: https://github.com/SawyerHood/draw-a-ui\n\ndraw-a-ui巧妙地结合了tldraw这一开源数字画板和GPT-4-Vision API，用户只需通过tldraw绘制线框图并添加标注，应用便能生成令人惊艳的基于HTML的UI设计。其背后的技术原理是将当前画布的SVG图形转换为PNG格式，并通过GPT-4-Vision API生成带有tailwind的HTML文件。这一创新流程展示了AI人工智能工具GPT的强大能力，为用户提供了更加自由和灵活的UI设计体验。\n2. Orillusion\nSite: https://github.com/Orillusion/orillusion\n\nOrillusion是一个高性能的Web3D渲染引擎，基于WebGPU图形API，具备与PC端图形API相当的渲染能力。它充分利用了GPU的开放能力，如灵活的GPU缓存操作、强大的着色器（Webgpu Shader/WGSL）以及备受关注的Compute Shader计算内核，从而充分发挥了GPU在非光栅化阶段的并行处理能力，为用户带来卓越的渲染效果。\n3. FFCreator\nSite: https://github.com/tnfe/FFCreator\n\n4. shadcn-ui\nSite: https://github.com/shadcn-ui/ui\nshadcn-ui，基于React构建的UI组件库，利用TailwindCSS实现样式自定义。它建立在Radix之上，提供无头组件，解决可访问性和键…",
-          "link": "https://juejin.cn/post/7336921343205900328",
-          "publishedOn": "2024-02-19T05:06:44.000Z",
-          "wordCount": 1062,
-          "title": "15个值得收藏的开源项目推荐",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7336812458646290495",
           "author": "sorryhc",
           "description": "您好， 如果喜欢我的文章或者想上岸大厂，可以关注公众号「量子前端」，将不定期关注推送前端好文、分享就业资料秘籍，也希望有机会一对一帮助你实现梦想\n简单来说，DNS 的作用是将域名解析为 IP 地址，解析的过程是耗时的，转化后会做本地缓存，我们的优化的目标主要是针对用户第一次访问站点的时候陷入长时间白屏的问题。\nDNS 解析可以分为两类，第一类是页面 DNS 解析，当用户输入 url 地址后（比如是第一次访问站点），便开始页面 DNS 解析，这个过程是省不了的，因为你无法在用户访问站点之前就让他提前把 DNS 解析好；\n第二类是其他资源的 DNS 解析，在浏览器解析 html 的时候，会遇到一些 script 元素、link 元素，此时会暂停 html 的解析，转而加载 JS，里面就包含了 DNS 解析，这个过程是耗时的，会阻塞浏览器渲染主线程，所以该如何进行优化呢？答案是采用 DNS 预解析！\n一、DNS预解析是什么\nDNS预解析（dns-prefetch ）是前端网络性能优化的一种措施，它根据浏览器定义的规则，提前解析之后可能会用到的域名，使解析结果缓存到系统缓存中，缩短DNS解析时间，进而提高网站的访问速度。\nDNS预解析能够让浏览器在用户访问链接之前解析域名，其范围包括文档的所有链接，包括图片、CSS、JS；域名解析后，如果用户确实访问该域名，那么DNS解析时间将不会有延迟。因为预读取会在后台执行，所以DNS很可能在链接对应的东西出现之前就已经解析完毕，这能够减少用户点击链接时的延迟。\n二、DNS预解析的原理\n当浏览器访问一个域名的时候，需要解析一次 DNS，获得对应域名的 ip 地址；在解析过程中，按照如下的顺序逐步读取缓存，直到拿到IP地址：\n浏览器缓存\n系统缓存\n路由器缓存\nISP(运营商)DNS缓存\n根域名服务器\n顶级域名服务器\n主域名服务器\ndns-pref…",
@@ -1629,7 +1629,7 @@
         },
         {
           "id": "https://juejin.cn/post/7335721246931189795",
-          "author": "欧阳码农",
+          "author": "前端欧阳",
           "description": "theme: z-blue\n前言\n从vue3开始vue引入了宏，比如defineProps、defineEmits等。我们每天写vue代码时都会使用到这些宏，但是你有没有思考过vue中的宏到底是什么？为什么这些宏不需要手动从vue中import？为什么只能在setup顶层中使用这些宏？\nvue 文件如何渲染到浏览器上\n要回答上面的问题，我们先来了解一下从一个vue文件到渲染到浏览器这一过程经历了什么？\n我们的vue代码一般都是写在后缀名为vue的文件上，显然浏览器是不认识vue文件的，浏览器只认识html、css、jss等文件。所以第一步就是通过webpack或者vite将一个vue文件编译为一个包含render函数的js文件。然后执行render函数生成虚拟DOM，再调用浏览器的DOM API根据虚拟DOM生成真实DOM挂载到浏览器上。\n\nvue3的宏是什么？\n我们先来看看vue官方的解释：\n宏是一种特殊的代码，由编译器处理并转换为其他东西。它们实际上是一种更巧妙的字符串替换形式。\n宏是在哪个阶段运行？\n通过前面我们知道了vue 文件渲染到浏览器上主要经历了两个阶段。\n第一阶段是编译时，也就是从一个vue文件经过webpack或者vite编译变成包含render函数的js文件。此时的运行环境是nodejs环境，所以这个阶段可以调用nodejs相关的api，但是没有在浏览器环境内执行，所以不能调用浏览器的API。\n第二阶段是运行时，此时浏览器会执行js文件中的render函数，然后依次生成虚拟DOM和真实DOM。此时的运行环境是浏览器环境内，所以可以调用浏览器的API，但是在这一阶段中是不能调用nodejs相关的api。\n而宏就是作用于编译时，也就是从vue文件编译为js文件这一过程。\n举个defineProps的例子：在编译时defineProps宏就会被转换为定义pro…",
           "link": "https://juejin.cn/post/7335721246931189795",
           "publishedOn": "2024-02-17T23:32:01.000Z",
