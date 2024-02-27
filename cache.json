@@ -1063,7 +1063,7 @@
           "description": "前言\n今天面试的时候面试官直接问了一句后端一次性返回10万条数据给你，你如何处理？，我脑中浮现的第一句话就是拿着物理学圣剑找后端进行 “友好的协商”，谁打赢了听谁的。不过虽然这种情况很少，不过我在实际开发中还真遇到了类似的情况，接下来我将带着大家一些处理方案。\n正文\n方案一 直接渲染\n如果请求到10万条数据直接渲染，页面会卡死的，很显然，这种方式是不可取的。 pass!\n async getData() {\n      this.loading = true;\n      const res = await axios.get(\"/api/getData\");\n      this.arr = res.data.data;\n      this.loading = false;\n}\n\n方案二 setTimeout分页渲染\n这个方法就是，把10w按照每页数量limit分成总共Math.ceil(total / limit)页，然后利用setTimeout，每次渲染1页数据，这样的话，渲染出首页数据的时间大大缩减了。\nconst renderData = async () => {\n    const Data = await getData()\n    const total = Data.length\n    \n    const page = 0\n    //每页数量\n    const limit = 200\n    //总页数\n    const totalPage = Math.ceil(total / limit)\n\n    const render = (page) => {\n        if (page >= totalPage) return\n        setTimeout(() => {\n            for (let i = page…",
           "link": "https://juejin.cn/post/7338636024212504613",
           "publishedOn": "2024-02-23T07:49:22.000Z",
-          "wordCount": 2137,
+          "wordCount": 44,
           "title": "我的发！被后端五万条数据爆破我是怎么处理的",
           "imageUrl": null
         },
@@ -1093,7 +1093,7 @@
           "description": "前言：本文着眼于梳理业界微前端技术（介绍下微前端几场恶仗的主打人）的发展脉络、在主流产品中的应用情况，以及目前不同技术方案之间的架构和核心原理对比，只关注精华部分，不纠结于技术细节，帮大家快速建立起对微前端整体上的认识。\n注：相信本文对各个微前端方案的总结是相对全面的，但缺点是对每个方案深入了解的程度有限，难免有错误和遗漏之处，欢迎大家评论勘误和补充！也欢迎大家通过我提供的索引，选择自己感兴趣的方向继续深入学习。\n微前端简介\n什么是微前端？\n相信大家对此已经耳熟能详，我就不多废话了，直接摘一段词条解释。\n微前端是一种由独立交付的多个前端应用组成整体的架构风格，将前端应用分解成一些更小、更简单的能够独立开发、测试、部署的应用，而在用户看来仍然是内聚的单个产品。\n此外，Martin Fowler 还给过一个更简洁的英文解释：\nAn architectural style where independently deliverable frontend applications are composed into a greater whole.\n厘清一些关于微前端概念的误区：\n微前端不是一门具体的技术，而是整合了技术、策略和方法，可能会以脚手架、配套工具和规范约束等等成体系的形式综合呈现，是一种宏观上的架构。这种架构目前有多种方案，各有利弊，但只要适用业务场景的就是好方案。\n微前端本身并没有技术栈的约束（技术栈无关不是微前端的固然要求）。每一套微前端方案的设计，都是基于实际需求出发。如果是多团队统一使用了 React 技术栈，可能对微前端方案的跨技术栈使用并没有要求；如果是多团队同时使用了 React 和 Vue 技术栈，可能就对微前端的跨技术栈要求比较高。\n微前端要求各个应用能独立开发、测试、部署，但并不要求各个应用能独立运行。也就是说，微前端的粒度不一定是应用级的，也有可能…",
           "link": "https://juejin.cn/post/7338230967390224435",
           "publishedOn": "2024-02-22T07:37:05.000Z",
-          "wordCount": 5529,
+          "wordCount": 44,
           "title": "微前端五大门派大 Battle",
           "imageUrl": null
         },
@@ -1133,7 +1133,7 @@
           "description": "大家好，这里是大家的林语冰。坚持阅读，自律打卡，每天一次，进步一点。\n免责声明\n本文属于是语冰的直男翻译了属于是，略有删改，仅供粉丝参考。英文原味版请传送 The Most Demanded Frontend Frameworks in 2023。\n本期共享的是，哪个前端框架有最多市场需求，以及在实际工作机会中薪酬最高。\n我们分析了过去 14 个月里的约 50 万个前端岗位。所有工作都来自受信任的网站，比如领英等。\n让我们来瞄一眼大数据统计的真相。\n\n需求最大的前端框架\n\n经过 14 个月的大数据分析，大约有 50 万个前端工作机会，我们发现 React 是需求最大的前端框架，总共有 22.5 万个工作机会，强势占据半壁江山。Angular 屈居第二，共有 172,000 个 offer。位居第三的是 Vue，有 48k 个 offer。“Others”代表所有其他前端框架，比如 Svelte/Solid/Lit......尽管其中某些框架目前人气爆棚，但真正的岗位需求却少得可怜。\n我们可以瞄一下前端框架的工作机会百分比：\n\n如你所见：\n~50% 选择使用 React\n~38% 选择使用 Angular\n~11% 选择使用 Vue\n~2% 选择其他前端框架\n粉丝请注意注意，该数据代表所有需要前端框架的工作机会。有一小部分前端工作机会不需要任何不在此数据集中的前端框架，比如日本前端还在使用主流的 jQuery 库。\n去年前端需求变化\n我们瞄一下去年每月的前端框架岗位数量。\n\n我们可以瞄到 Angular 和 React 势均力敌。直到最后一个月，React 才开始稍微碾压 Angular。Vue 和其他框架则在前端框架市场占有量中占比较小。\n去年前端框架的需求与前年的大数据一龙一猪。前年，与 React 相比，Angular 的需求明显减少，但到了年底 Angular 就直逼 React，呈现出有趣的上升趋势。\n\n国际前端框架的需求差异\n如果我们按国家/地区划分这些前端框架工作机会，那会发生什么？它会变化无常吗？我们按国家/地区细分了前端工作机会。\n\n虽然在大多数国家中，React 占据主导地位，但也有某些欧洲国家并非如此。瑞士、法国、西班牙和意大利就是这样的例子，与 React 相比，Angular 的就业机会比例更高。在瑞士，Angular 工作占前端工作的 65%。说到市场颠覆，比利时是最具颠覆性的，显然比其他框架更青睐 Vue。在比利时，59% 的前端职位列表需要 Vue 专业知识。\n前端框架的职阶分布\n\n上图显示了每个前端框架的初级、高级和领导/架构师角色的数量。我们显然认为 React 和 Vue 没有太大区别，大多数职位都被标记为“高级”。但 Angular 的工作机会却不一样，约 35% 的 Angular 工作拥有“主管”或“架构师”。为什么在 Angular 工作机会中会发生这种情况，这可能是因为 Angular 拥有更大的 App，可能需要领导或架构师配置文件，或者基本上是社区内倾向于将职位指定为领导或架构师的原因。\n薪酬最高的前端框架\n\nReact 是薪酬最高的前端框架，平均年薪为 11.6 万美元。位居第二和第三位的是 Angular 和 Vue，年薪分别为 11 万美元和 10.7 万美元。\n粉丝请注意，这项薪资研究只基于美国的工作样本。各国之间的工资存在显着差异，而且本次调查拥有大量来自美国的工作岗位。\n高潮总结\n毋庸置疑，截至去年，React 仍主导前端框架市场，约占所有指定前端框架要求的岗位的 50%。此外，React 是薪酬最高的前端框架，平均年薪为 11.6 万美元。\n话虽如此，Angular 在职位空缺中也占有很大份额，其中 38% 的前端职位需要 Angular 知识。鉴于 StateOfJs2022 调查显示，Angular 可能是一个非常可行的选择。它可能提供比 React 更少的竞争，但仍然保持大量的就业机会。这些见解对于那些开始从事前端的职业开发者而言可能很有价值。\n关于 Vue，它是一个很棒的框架，人气爆棚，但是 Vue 的就业市场相对较小。从 Vue 作为主要前端框架入行可能并不可取；相反，从 React 或 Angular 入行，然后在必要时过渡到 Vue 是更具战略性的职业规划。\n本期话题是 —— 你从事或像从事的公司更青睐那个前端框架？\n欢迎在本文下方群聊自由言论，文明共享。谢谢大家的点赞，掰掰~\n《前端 9 点半》每日更新，坚持阅读，自律打卡，每天一次，进步一点。",
           "link": "https://juejin.cn/post/7337849561479921727",
           "publishedOn": "2024-02-21T10:08:07.000Z",
-          "wordCount": 924,
+          "wordCount": 44,
           "title": "年度需求最大的前端框架",
           "imageUrl": null
         },
@@ -1143,7 +1143,7 @@
           "description": "theme: fancy\n公众号: 程序员白特，欢迎一起交流学习~\n近日， React 团队发布消息称，不会再发布v18.3版本了，而是将重点放在React v19 版本。新版本将推出四个新的 hook，旨在解决 React 中痛点：\n数据获取\n表单处理\n虽然这些 hook 目前作为实验性 API 在 React 预览版本中可用，但它们预计将成为 React 19 的稳定功能，但是最终发布React v19之前，API 可能会有所变化。\n新的 Hooks 包括：\nuse\nuseFormState\nuseFormStatus\nuseOptimistic\n除此之外，还更新了：\nAsync Transitions\nForm Actions\nuse\nuse 是一个实验性 React Hook，它可以让读取类似于 Promise 或 context 的资源的值。\nconst value = use(resource);\n\n官方文档：\nhttps://zh-hans.react.dev/reference/react/use\nuse(Promise)\nuse 可以在客户端进行“挂起”的 API。可以将一个 promise 传递给它，React 将会在该 promise 解决之前进行挂起。它的基本语法如下：\nimport { use } from 'react';\n\nfunction MessageComponent({ messagePromise }) {\n  const message = use(messagePromise);\n  // ...\n}\n\n下面来看一个简单的例子：\nimport * as React from 'react';\nimport { useState, use, Suspense } from 'react';\nimport { faker } from…",
           "link": "https://juejin.cn/post/7337668768678559755",
           "publishedOn": "2024-02-21T05:50:23.000Z",
-          "wordCount": 3840,
+          "wordCount": 44,
           "title": "React 19 即将迎来大更新！",
           "imageUrl": null
         },
@@ -1153,7 +1153,7 @@
           "description": "theme: nico\n写在前面\n经过了社区贡献者们的三个多月的努力，Varlet 的 3.0 版本终于发布了！ 🎉🎉🎉，这次的版本升级主要围绕的是设计系统升级和组件视觉和交互优化。我们重构了几千个 css 变量，最终的最终，终于同时支持了 Material Design 2 和 Material Design 3 两种设计系统。同时对组件库整体做了一次重构和细节优化，又又又撇去了一些技术债务。\n文档地址: https://varlet.gitee.io/varlet-ui/#/zh-CN/home \n新增 Material Design 3 支持\nVarlet 3.0 以前，我们以 Material Design 2 作为默认的设计系统，并且提供了暗黑模式的主题包。3.0 之后我们依然以 md2 为默认 ^_^，提供了对 Material Design 3 的支持。(md3 真的很出色，作者个人真的超爱)。\n\n\n\n\n\n\n新增更多通用 css 变量，更易定制\n为了使组件样式定制更加容易，并且支持 Material Design 3，3.x 版本对组件库的样式变量进行了一次大重构，新增了一些基础样式变量，每个组件都动了刀子。\n `--color-on-primary`                \n `--color-on-info`                   \n `--color-on-success`                \n `--color-on-warning`                \n `--color-on-danger`                 \n `--color-primary-container`         \n `--color-info-container`            \n `--color-s…",
           "link": "https://juejin.cn/post/7337573189516410920",
           "publishedOn": "2024-02-20T17:57:37.000Z",
-          "wordCount": 1358,
+          "wordCount": 44,
           "title": "🎉🎉 Vue3 组件库 Varlet v3.0.0 发布了！支持 Material Design 3",
           "imageUrl": null
         },
@@ -1163,7 +1163,7 @@
           "description": "unibest ui 库选择\n背景\nunibest 作为最好的 uniapp 开发模板，那 UI 框架 的选择也是要仔细斟酌的。\nunibest 作为 uniapp + vue3 + ts 的项目，自然也要选择满足 vue3 的 UI库，所以像 vue2 时代的 uview 就不考虑在内了。但是在 uview 的基础上衍生出来的支持 vue3 的 uview 系 的 ui框架 还有不少，而且热度很高。\n再来说说官方维护的 uni-ui，支持全端，而且有类型提示，目前已经内置到 unibest 了，如果用户确实用不到里面的组件也可以删除，减少包体积。\nTIPS: uni-ui 本身是 js 开发的，但是官方提供了完备的类型提示( by @uni-helper/uni-ui-types)所以看起来就像是 ts 开发的一样，开发体验很好。所有的组件都有提示，很方便，很贴心。\nUI 框架\n经过搜寻了一番，目前参加对比的 UI 框架有：\nuv-ui (uveiw 系) - 文档地址\nuview-plus (uveiw 系) - 文档地址\nWot Design Uni (wot 系) - 文档地址\nTuniaoUI （图鸟系） - 文档地址\n还有 2 个 UI 框架也很优秀，但是部分组件开源免费，部分组件收费：\nThorUI 文档链接\nFirstUI 文档链接\n温馨提示：\n收费没有对错，开源作者也要恰饭，需要有收入，光为爱发电可能半路夭折，或者质量很差。只要做得好，别人愿意买，提供优质的服务，也是极好的。\n2.当然了 unibest 作为开源库，自然会选择免费的 UI 框架，下面我们就来对比一下下~\nUI 框架对比\n1. 开源热度\n截止到 2024-02-20 发表文章时的数据:\nUI 框架\nuv-ui\nuview-plus\nWot\nTuniaoUI\n\n\n\n\ngithub stars\n…",
           "link": "https://juejin.cn/post/7337513012393607207",
           "publishedOn": "2024-02-20T10:55:22.000Z",
-          "wordCount": 1242,
+          "wordCount": 44,
           "title": "【unibest】 uniapp + vue3 模板 UI 框架选型",
           "imageUrl": null
         },
@@ -1173,7 +1173,7 @@
           "description": "今天接着上篇再来分享一下10个常见的前端手写功能下集，可以让你在数据处理上得心应手，让你的开发工作事半功倍。\n开始吧！\n1. 实现继承\nES5 继承（寄生组合式继承）\n寄生组合式继承是对组合式继承（调用了2次父构造方法）的改进，使用父类的原型的副本来作为子类的原型，这样就只调用一次父构造函数，避免了创建不必要的属性。\nfunction Parent (name) {\n   this.name = name;\n   this.colors = ['red', 'blue', 'green'];\n}\nParent.prototype.getName = function () {\n   console.log(this.name)\n}\nfunction Child (name, age) {\n   Parent.call(this, name);//借用构造函数的方式来实现属性的继承和传参\n   this.age = age;\n}\n \n//这里不用Child.prototype = new Parent()原型链方式的原因是会调用2次父类的构造方法，导致子类的原型上多了不需要的父类属性\nChild.prototype = Object.create(Parent.prototype);//这里就是对组合继承的改进,创建了父类原型的副本\nChild.prototype.constructor = Child;//把子类的构造指向子类本身\n \nvar child1 = new Child('AK、dadada', '18');\nconsole.log(child1.colors);//[ 'red', 'blue', 'green' ]\nchild1.getName();//AK、dadada\n\n测试结果：\n\nES6继承\n在ES6中，可以使用class类去实现继承。使用extend…",
           "link": "https://juejin.cn/post/7337519776795066377",
           "publishedOn": "2024-02-20T09:24:49.000Z",
-          "wordCount": 3293,
+          "wordCount": 44,
           "title": "10个常考的前端手写题，你全都会吗？（下）",
           "imageUrl": null
         }
