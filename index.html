@@ -3723,35 +3723,40 @@ ES6继承
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7337207433868197915"
+                        data-accordion-key="https://juejin.cn/post/7337169269951283235"
                         open
                       >
-                        <summary class="article-expander__title">关于 React19，你需要了解的前因后果</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7337207433868197915">
+                        <summary class="article-expander__title">THREE.JS——让你的logo切割出高级感</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7337169269951283235">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>大家好，我卡颂。
-React当前的稳定版本是18.2，发布时间是22年6月，在此之后就没有新的稳定版本发布。
+                              <span>theme: jzman
+灵感图
+每次都根据灵感图写代码，我都快成灵感大王了，本文较长，跨度较大，效果较好，请耐心看完，本文阶段代码有tag可以分部查看
+前言
+这是B站的一段视频，用3D渲染的方式表达各个大厂的logo如何制作出来的，其中提取出一小段，用于本文的灵感，就是这个图的切割效果，下文不包含激光的圆圈和工作平台，只有切割的光线、切割效果和分离动画，灵感图中切割的部分是超过logo的，如果有UI设计师，可以让设计师给提供分段的svg，我孤军奋战没有那么些资源，文中的点位都是从logo的svg文件获取的，场景创建就不赘述了，以前的文章也讲过很多次，那么我们开始吧
+准备工作
+threejs
+ts
+vite
+找一个这个小鸟的svg文件。
+将svg文件的点位获取出来并将svg加入到场景中
+渲染svg
+// 加载模型
+const loadModel &#x3D; async () &#x3D;&gt; {
 
-直到今年2月15日，官方博客才透露下一个稳定版本的计划。没错，他就是React19。
+    svgLoader.load(&#x27;./svg/logo.svg&#x27;, (data) &#x3D;&gt; {
 
-为什么时隔1年多才公布下个稳定版本的计划？
-为什么下个版本直接跳到了19？
-18我都还没升呢，19就来了，是不是要学很多东西？
-这篇文章会为你详细解答这些疑问。
-打包领取卡颂原创React教程、加入人类高质量前端群
-从React16聊起
-近年来React最为人津津乐道的版本应该是16.8，这个版本引入了Hooks，为React（乃至整个前端框架领域）注入了新的活力。
-再之后的v17没有新特性引入。既然没有新特性引入，为什么要发布一个大版本（从16到17）呢？
-这是因为从同步更新升级到并发更新的React，中间存在breaking change。
-这么大体量的框架，在升级时需要保证过程尽可能平顺。这除了是一种专业、负责的体现，更重要的，版本割裂会造成大量用户损失（参考当年ng1升级到anuglar2时）。
-当升级到18后，React团队发现 —— 真正升级到18，并大量使用并发特性（比如useTransition）的开发者并不多。
-更常见的场景是 —— 知名开源库集成并发特性，开发者再直接用这些库。
-所以，React团队转变策略，将迭代重心从赋能开发者转变为赋能开源库。那么，什么样的库受众最多呢？显然是框架。
-所以，React的重心逐渐变为 —— 赋能上层框架，开发者通过使用上层框架间接使用React。
-为什么我说React团队转变了策略，而不是React团队一开始的计划就是赋能上层框架呢？
-如果一开始的计划就是赋能上层框架，React团队就不会花大量精力在版本的渐进升级上 —— 反正开发者最终使用的会是上层框架（而不是React），版本割裂上层框架会解决，根本不需要引导开发者升…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
+        const material &#x3D; new THREE.MeshBasicMaterial({
+            color: &#x27;#000&#x27;,
+        });
+
+        for (const path of data.paths) {
+            const shapes &#x3D; SVGLoader.createShapes(path);
+            for (const shape of shapes) {
+                const geometry &#x3D; new THREE.ShapeGeometry(shape);
+                const mesh &#x3D; new THREE.Mesh(geometry, m…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;12
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -5479,6 +5484,8 @@ iFoto.ai是一款由 AI 驱动的照片编辑工具，通过在各种场景中�
 凭借其 AI 时装模特功能，它将时尚人体模特转变为具有多样化专业外观的栩栩如生的模特。
 iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态背景，而产品 AI 背景功能则通过 AI 生成的工作室质量的产品照片提升电子商务。
 #跨境电商独立站 #跨境电商运营 #ai电商工具 #ifoto #ai创作工具 #亚马逊跨境电商 #AI商拍</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5611,6 +5618,8 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>jym，有什么好用的翻译浏览器插件推荐吗</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5629,6 +5638,8 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
                             <span class="media-object__text">
                               <span>[庆祝]平台新增支持对【会议室】、【任务看板】的全文搜索
 [庆祝] 欢迎继续体验</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5785,6 +5796,8 @@ class RefImpl {
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>ChatGPT和谷歌的Gemini 无限使用  https://sunmier.com/#/</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5802,6 +5815,8 @@ class RefImpl {
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>https://sunmier.com/#/  推荐金融开发的高富帅们用的工具</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5819,6 +5834,8 @@ class RefImpl {
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>发现还得是单位有个npm仓库用起来方便，自己也省事，项目CI也快</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5918,6 +5935,8 @@ class RefImpl {
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>IDEA中收费的插件可以破解吗[呲牙]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5935,6 +5954,8 @@ class RefImpl {
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>推荐一个快速搜索npm包的浏览器插件</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -5947,8 +5968,8 @@ class RefImpl {
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8056059208">
-        <time id="build-timestamp" datetime="2024-02-26T21:53:41.844Z">2024-02-26T21:53:41.844Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8058061027">
+        <time id="build-timestamp" datetime="2024-02-27T01:15:31.842Z">2024-02-27T01:15:31.842Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
