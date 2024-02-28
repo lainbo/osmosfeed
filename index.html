@@ -327,6 +327,70 @@ Emacs 圈有一位大佬叫李杀，他在博客中把 Emacs 中的很多常见�
                 </section>
               </section>
             </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7340286503505592330"
+                        open
+                      >
+                        <summary class="article-expander__title">了解 MIME 类型：Web 开发中的重要概念</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7340286503505592330">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>引言：
+在 Web 开发中，我们经常听到 MIME（Multipurpose Internet Mail Extensions）类型这个术语。虽然它听起来可能有点晦涩，但它在 Web 的世界里扮演着非常重要的角色。本文将介绍 MIME 类型的概念，探讨它在 Web 开发中的应用，并提供一些实用的例子和建议。
+什么是 MIME 类型
+MIME 类型是一种标识数据类型的方式，它在 Internet 上用于标识文件的内容类型。它最初是为了在电子邮件中传输多媒体数据而设计的，但后来也被广泛用于 Web 开发中。每种 MIME 类型都由一个唯一的字符串标识，如 text/html 表示 HTML 文档，image/jpeg 表示 JPEG 图像。
+MIME 类型的作用
+MIME 类型在 Web 开发中扮演着至关重要的角色，它决定了浏览器如何处理从服务器发送到客户端的文件。通过正确设置 MIME 类型，可以确保浏览器能够正确地解析和显示文件内容。例如，浏览器将 text/html 类型的文件解析为 HTML 文档，并按照 HTML 标准进行渲染；将 image/jpeg 类型的文件解析为 JPEG 图像，并显示在页面上。
+MIME的语法
+语法：type/subtype(大类型/小类型)
+MIME的组成结构非常简单；由类型与子类型两个字符串中间用’/&#x27;分隔而组成。不允许空格存在。type 表示可以被分多个子类的独立类别。subtype 表示细分后的每个类型。
+MIME类型对大小写不敏感，但是传统写法都是小写
+MIME 类型
+常见的 MIME 类型：
+类型
+描述
+示例
+
+
+
+
+text
+普通文本
+text/plaintext/html text/javascript
+
+
+image
+图片
+image/gifimage/png
+
+
+audio
+音频文件
+audio/wavaudio/mpeg…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -1001,142 +1065,11 @@ jcode
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-24 datetime="2024-02-24T12:49:53.000Z">2024-02-24</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-24 datetime="2024-02-24T12:49:53.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-24 datetime="2024-02-24T12:42:00.000Z">2024-02-24</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-24 datetime="2024-02-24T12:42:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7338665672468217907"
-                        open
-                      >
-                        <summary class="article-expander__title">一个 vue 指令,帮你优化滚动条场景</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7338665672468217907">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: channing-cyan
-highlight: vs2015
-前言
-彦祖们,首先祝各位元宵节快乐!团团圆圆,阖家幸福!成为彦祖,超越彦祖
-言归正传,滚动条场景应该是每一位前端开发者必定接触过的
-今天让我们一步步用纯css来优化一下这个滚动条场景
-优化前
-没错,场景就是这么淳朴
-彦祖们有没有发现以下问题
-鼠标移入之前,用户无法感知是否存在更多内容,可能会因此忽略滚动功能
-
-优化用户体验
-我们的最终目的就是让用户能够感受到当前区域是可滚动的
-
-今天看到这本书里介绍了 Google Reader 的做法
-那我们就跟着大佬的思路来实现吧~
-效果
-先来看下效果
-
-滚动的时候,顶部/底部都会出现蛋蛋的阴影区域
-实现一个顶部阴影
-接下来,让我们来实现一个顶部阴影效果吧(底部同理)
-实现思路
-笔者整理了一下大致思路,大概就是这两点
-1.滚动到顶部时,区域底部会出现一层淡淡的阴影
-2.滚动到中间时,区域顶部会出现一层淡淡的阴影
-必要 css 属性介绍
-既然我们要用纯css来实现这个指令,就必须先了解下以下几个css属性
-1.linear-gradient
-线性渐变,这个属性彦祖们应该是比较熟悉的,如果不熟悉的话看下这个
-https://developer.mozilla.org/zh-CN/docs/Web/CSS/gradient/linear-gradient
-2.radial-gradient
-径向渐变和线性渐变差不多,工作中也有用到,不再多做介绍
-https://developer.mozilla.org/zh-CN/docs/Web/CSS/gradient/radial-gradient
-3.background-attachment
-https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-attac…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7338702103882399744"
-                        open
-                      >
-                        <summary class="article-expander__title">面试官：前端请求如何避免明文传输？谁沉默了，原来是我</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7338702103882399744">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: vue-pro
-如果你也在准备春招，欢迎加微信shunwuyu。这里有几十位一心去大厂的友友可以相互鼓励，分享信息，模拟面试，共读源码，齐刷算法，手撕面经。
-前言
-连夜肝文，面试以来最尴尬的一次，事情是这样的，最近有开始面稍微有难度一点岗位，本文的主题出自北京某一小厂的正式岗面试题，薪资水平大概开在10k-12k。之前一直是投的比较小的公司比较简单的实习岗位，这个是无意间投出去的一个，由于是 0 年经验小白*1，结果没想到简历过筛，硬着头皮上了。
-结果很惨，40分钟的面试有 80% 不会回答，像大文件上传、缓存优化、滑动 text-area标签用什么属性（话说为什么有这么冷的题）等等，有一个算一个，都没答出来。
-
-重点来了，在两个面试官问到前端请求如何避免明文传输的时候，在我绞尽脑汁思考五秒之后，现场气氛非常凝重，这道题也成为了这次面试的最后一题。
-在此提醒各位小伙伴，如果你的简历或者自我介绍中有提到网络请求，一定要注意了解一下有关数据加密处理，出现频率巨高！！！
-最后，下午四点面试，六点hr就通知了我面试结果，凉凉
-
-如何避免前端请求明文传输
-要在前端发送请求时做到不明文，有以下几种方法：
-HTTPS 加密传输： 使用 HTTPS 协议发送请求，所有的数据都会在传输过程中进行加密，从而保护数据不以明文形式传输。这样即使数据被截获，黑客也无法直接获取到数据的内容。
-数据加密处理： 在前端对敏感数据进行加密处理，然后再发送请求。可以使用一些加密算法，如 AES、RSA 等，将敏感数据进行加密后再发送到服务器。这样即使数据在传输过程中被截获，也无法直接获取其内容。
-请求签名验证： 在发送请求之前，前端对请求参数进行签名处理，并将签名结果和请求一起发送到服务器。服务器端根据事先约定的签名算法和密钥对请求参数进行验证，确保请求的完整性和可靠性。
-Token 验证： 在…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7338702103882121216"
-                        open
-                      >
-                        <summary class="article-expander__title">为什么前端开发变得越来越复杂了？这可能是我们的错</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7338702103882121216">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: vuepress
-Hello，大家好，我是 Sunday。
-最近有很多同学来问我：“Sunday 老师，前端学起来好多的东西啊。各种框架、各种库、各种语法、各种标准，弄得我完全懵逼了。Sunday 老师，你之前是怎么学的，好厉害啊！”
-这不禁让我开始反思：“我厉害吗？我可不这么觉得！” 那我之前是怎么学习这些东西的呢？
-我只是占了时间的便利而已~~
-背景
-如今可用的大量框架和工具给人的印象是 Web 开发可能已经变得过于复杂。如果是一个新人，有这么多要考虑的东西确实会令人感到“恐惧”。好像每一个框架都需要学习，如果不学习给人的感觉就是 “就是没有办法工作” 的样子。更何况还有各种新的热门框架教程和课程增加我们的焦虑感。
-但是，大家有没有想过一点，或许前端开发远没有那么负责，这一切也只是一种所谓的 “夸张” 而已。
-我记得最初在我学习前端的时候，Angular 还是 1 的版本。Vue 也才刚刚出现。那个时候前端开发好像很简单。标准网站主要由 HTML 和 CSS 组成的静态页面组成，并添加少量 JavaScript 和 jQuery。
-快进到今天，看起来就像一个平行宇宙正在发生，有大量的选择。新项目应该使用哪个框架？也许是更成熟的产品，如 React、Angular、Vue、Svelte，或者可能是上个月推出的热门新产品？每个框架都有其独特的生态系统。你还需要决定是否使用 TypeScript 而不是 “普通的” JavaScript，并选择如何使用Next、Nuxt 或 Gatsby 等框架进行服务器端渲染（或静态站点生成） 。如果你想要一个没有错误的应用程序，还不能忘记单元和端到端测试。不过哪怕做到了这些，我们也仅仅知识触及了前端生态系统的表面！
-但建立网站真的变得更加复杂了吗？我们今天使用的许多框架和工具最初都是为大型项目而设计的。作为一个新人，真的有这…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -1218,6 +1151,83 @@ Hello，大家好，我是 Sunday。
                             <span class="media-object__text">
                               <span>城口县气象台2024年2月24日8时升级发布“道路结冰橙色预警信号”，预计2月24日08时至27日14时，我县所有乡镇（街道）将出现对交通有较大影响的道路结冰，请加强防范。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7338702103882399744"
+                        open
+                      >
+                        <summary class="article-expander__title">面试官：前端请求如何避免明文传输？谁沉默了，原来是我</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7338702103882399744">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: vue-pro
+如果你也在准备春招，欢迎加微信shunwuyu。这里有几十位一心去大厂的友友可以相互鼓励，分享信息，模拟面试，共读源码，齐刷算法，手撕面经。
+前言
+连夜肝文，面试以来最尴尬的一次，事情是这样的，最近有开始面稍微有难度一点岗位，本文的主题出自北京某一小厂的正式岗面试题，薪资水平大概开在10k-12k。之前一直是投的比较小的公司比较简单的实习岗位，这个是无意间投出去的一个，由于是 0 年经验小白*1，结果没想到简历过筛，硬着头皮上了。
+结果很惨，40分钟的面试有 80% 不会回答，像大文件上传、缓存优化、滑动 text-area标签用什么属性（话说为什么有这么冷的题）等等，有一个算一个，都没答出来。
+
+重点来了，在两个面试官问到前端请求如何避免明文传输的时候，在我绞尽脑汁思考五秒之后，现场气氛非常凝重，这道题也成为了这次面试的最后一题。
+在此提醒各位小伙伴，如果你的简历或者自我介绍中有提到网络请求，一定要注意了解一下有关数据加密处理，出现频率巨高！！！
+最后，下午四点面试，六点hr就通知了我面试结果，凉凉
+
+如何避免前端请求明文传输
+要在前端发送请求时做到不明文，有以下几种方法：
+HTTPS 加密传输： 使用 HTTPS 协议发送请求，所有的数据都会在传输过程中进行加密，从而保护数据不以明文形式传输。这样即使数据被截获，黑客也无法直接获取到数据的内容。
+数据加密处理： 在前端对敏感数据进行加密处理，然后再发送请求。可以使用一些加密算法，如 AES、RSA 等，将敏感数据进行加密后再发送到服务器。这样即使数据在传输过程中被截获，也无法直接获取其内容。
+请求签名验证： 在发送请求之前，前端对请求参数进行签名处理，并将签名结果和请求一起发送到服务器。服务器端根据事先约定的签名算法和密钥对请求参数进行验证，确保请求的完整性和可靠性。
+Token 验证： 在…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7338702103882121216"
+                        open
+                      >
+                        <summary class="article-expander__title">为什么前端开发变得越来越复杂了？这可能是我们的错</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7338702103882121216">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: vuepress
+Hello，大家好，我是 Sunday。
+最近有很多同学来问我：“Sunday 老师，前端学起来好多的东西啊。各种框架、各种库、各种语法、各种标准，弄得我完全懵逼了。Sunday 老师，你之前是怎么学的，好厉害啊！”
+这不禁让我开始反思：“我厉害吗？我可不这么觉得！” 那我之前是怎么学习这些东西的呢？
+我只是占了时间的便利而已~~
+背景
+如今可用的大量框架和工具给人的印象是 Web 开发可能已经变得过于复杂。如果是一个新人，有这么多要考虑的东西确实会令人感到“恐惧”。好像每一个框架都需要学习，如果不学习给人的感觉就是 “就是没有办法工作” 的样子。更何况还有各种新的热门框架教程和课程增加我们的焦虑感。
+但是，大家有没有想过一点，或许前端开发远没有那么负责，这一切也只是一种所谓的 “夸张” 而已。
+我记得最初在我学习前端的时候，Angular 还是 1 的版本。Vue 也才刚刚出现。那个时候前端开发好像很简单。标准网站主要由 HTML 和 CSS 组成的静态页面组成，并添加少量 JavaScript 和 jQuery。
+快进到今天，看起来就像一个平行宇宙正在发生，有大量的选择。新项目应该使用哪个框架？也许是更成熟的产品，如 React、Angular、Vue、Svelte，或者可能是上个月推出的热门新产品？每个框架都有其独特的生态系统。你还需要决定是否使用 TypeScript 而不是 “普通的” JavaScript，并选择如何使用Next、Nuxt 或 Gatsby 等框架进行服务器端渲染（或静态站点生成） 。如果你想要一个没有错误的应用程序，还不能忘记单元和端到端测试。不过哪怕做到了这些，我们也仅仅知识触及了前端生态系统的表面！
+但建立网站真的变得更加复杂了吗？我们今天使用的许多框架和工具最初都是为大型项目而设计的。作为一个新人，真的有这…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1998,82 +2008,11 @@ Free Now to 2024-02-29T16:00:00.000Z</span>
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-21 datetime="2024-02-21T16:05:00.000Z">2024-02-21</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-21 datetime="2024-02-21T16:05:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-21 datetime="2024-02-21T14:59:49.000Z">2024-02-21</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-21 datetime="2024-02-21T14:59:49.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >国家应急广播 - 重庆预警信息</button>
-                  <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/lanseyj/20240222/t20240222_526603306.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市云阳县发布大风蓝色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/lanseyj/20240222/t20240222_526603306.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>云阳县气象台2024年2月22日0时继续发布“大风蓝色预警信号”，预计未来12小时内，我县全部镇街的山口河谷地区可能受大风影响，阵风可达7级以上，请注意防范。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240221/t20240221_526603271.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市巫山县发布道路结冰黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240221/t20240221_526603271.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>巫山县气象台2024年2月21日23时20分发布“道路结冰黄色预警信号”，预计2月22日00时至24日20时，当阳乡、两坪乡、骡坪镇、培石乡、三溪乡、竹贤乡、笃坪乡、邓家乡、高唐街道、龙门街道、双龙镇、金坪乡、福田镇、龙溪镇、大昌镇、平河乡、官阳镇、铜鼓镇、庙宇镇、官渡镇、红椿乡、抱龙镇、大溪乡、巫峡镇、曲尺乡、建平乡等乡镇（街道）海拔高于800米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/lanseyj/20240221/t20240221_526603256.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市巫山县发布大风蓝色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/lanseyj/20240221/t20240221_526603256.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>巫山县气象台2024年2月21日23时10分继续发布“大风蓝色预警信号”，预计未来12小时，大昌镇、平河乡、巫峡镇、龙门街道、高唐街道、两坪乡、三溪乡、金坪乡、骡坪镇、曲尺乡、大溪乡、庙宇镇、铜鼓镇、建平乡、官渡镇、抱龙镇、培石乡、笃坪乡、红椿乡、邓家乡12小时内可能受大风影响，阵风可达7级以上。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -3192,8 +3131,8 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8083230853">
-        <time id="build-timestamp" datetime="2024-02-28T15:52:24.807Z">2024-02-28T15:52:24.807Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8085592069">
+        <time id="build-timestamp" datetime="2024-02-28T18:52:23.943Z">2024-02-28T18:52:23.943Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
