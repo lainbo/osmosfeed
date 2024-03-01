@@ -64,7 +64,7 @@
           "description": "音视频合成的时候，有倍速合成的需求，起初，我以为这只是个手到擒来的小需求，细究之下发现问题并不简单……",
           "link": "https://www.zhangxinxu.com/wordpress/2024/02/js-audioencoder-backplayrate-audiobuffer/",
           "publishedOn": "2024-02-29T14:22:22.000Z",
-          "wordCount": 1719,
+          "wordCount": 1717,
           "title": "不改变音调情况下Audio音频的倍速合成JS实现",
           "imageUrl": null
         }
@@ -225,7 +225,7 @@
           "description": "Macbook 笔记本键盘的引号符号显示的是:\n「｛  」｝\n【［  】］\n━━━━━━━━━\n为什么不弄成对称式的?\n 「｛ ｝」\n 【［ ］】",
           "link": "https://m.okjike.com/originalPosts/65e140f737f7165b217a87ad",
           "publishedOn": "2024-03-01T02:44:07.000Z",
-          "wordCount": 452,
+          "wordCount": 464,
           "title": "发布了: Macbook 笔记本键盘的引号符号显示的是: 「｛ 」｝ 【［ 】］ ━━━━━━━━━ 为什么不弄成对称式的? 「｛ ｝」 【［ ］】",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -678,6 +678,16 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
+          "id": "https://juejin.cn/post/7340603873604599843",
+          "author": "陈佬昔没带相机",
+          "description": "《2023 的 Javascript 星趋势》在 1 月就出来了，当时略略看了一下，并没有想太多。\n过年期间，回想起来，似乎感觉到这次有一点不一样：也许，全栈的时代已经到来了。\nReact 与 Vue 生态对比\n首先，我们来看看 React 与 Vue 生态的星趋势对比：\n\n上图中，React 整个生态的星星数远超于 Vue，第十名都要比 Vue 第一名的多。我们将其做一个分类：\n排名\nReact\nVue\n\n\n\n\n1\nUI\n全栈\n\n\n2\n白板\n演示文稿\n\n\n3\n全栈\n后台管理系统\n\n\n4\n状态管理\nhook\n\n\n5\n后台管理系统\nUI\n\n\n6\n文档\n文档\n\n\n7\n全栈框架集成\nUI\n\n\n8\n全栈框架UI\n框架\n\n\n9\n后台管理系统\nUI\n\n\n10\n无服务栈\n状态管理\n\n\n\n可以看到 React 这边的生态链基本成熟，几乎每一个分类都有一个上榜的库，不再像 Vue 那样还在卷 UI 框架。\n在全栈方面，Vue 的首位就是全栈 Nuxt。\nReact 的 Next.js 虽然不在首位，但是服务端/全栈相关的内容就占了 4 个，其中包含第 10 名的无服务栈。另外值得注意的是，React 这边还有服务端组件的概念。Shadcn/ui 能占到第一位，因为它基于无头 UI Radix 实现的，在服务端组件也能运用。所以，服务端/全栈在 React 中占的比重相当大的。\n这样看来，前端往服务端进发已经成为一个必然趋势。\nhtmx 框架的倒退\n再看看框架这边，htmx 在星趋势里，排行第二位，2023增长的星星数为 15.6K，与第一位的 React 颇为相近。\n而 htmx 也是今年讨论度最高的。\n在我经历过前后端不分离的阶段中，使用 jsp 生成前端页面，js 更多是页面炫技的工具。然后在 jQuery + Ajax 得到广泛应用之后，才真正有前后端分离的项目。\nhtmx 的出现，不…",
+          "link": "https://juejin.cn/post/7340603873604599843",
+          "publishedOn": "2024-02-29T06:15:57.000Z",
+          "wordCount": 1043,
+          "title": "2024 前端趋势：全栈也许已经是必选项",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7340286503505592330",
           "author": "乐予吕",
           "description": "引言：\n在 Web 开发中，我们经常听到 MIME（Multipurpose Internet Mail Extensions）类型这个术语。虽然它听起来可能有点晦涩，但它在 Web 的世界里扮演着非常重要的角色。本文将介绍 MIME 类型的概念，探讨它在 Web 开发中的应用，并提供一些实用的例子和建议。\n什么是 MIME 类型\nMIME 类型是一种标识数据类型的方式，它在 Internet 上用于标识文件的内容类型。它最初是为了在电子邮件中传输多媒体数据而设计的，但后来也被广泛用于 Web 开发中。每种 MIME 类型都由一个唯一的字符串标识，如 text/html 表示 HTML 文档，image/jpeg 表示 JPEG 图像。\nMIME 类型的作用\nMIME 类型在 Web 开发中扮演着至关重要的角色，它决定了浏览器如何处理从服务器发送到客户端的文件。通过正确设置 MIME 类型，可以确保浏览器能够正确地解析和显示文件内容。例如，浏览器将 text/html 类型的文件解析为 HTML 文档，并按照 HTML 标准进行渲染；将 image/jpeg 类型的文件解析为 JPEG 图像，并显示在页面上。\nMIME的语法\n语法：type/subtype(大类型/小类型)\nMIME的组成结构非常简单；由类型与子类型两个字符串中间用’/'分隔而组成。不允许空格存在。type 表示可以被分多个子类的独立类别。subtype 表示细分后的每个类型。\nMIME类型对大小写不敏感，但是传统写法都是小写\nMIME 类型\n常见的 MIME 类型：\n类型\n描述\n示例\n\n\n\n\ntext\n普通文本\ntext/plaintext/html text/javascript\n\n\nimage\n图片\nimage/gifimage/png\n\n\naudio\n音频文件\naudio/wavaudio/mpeg…",
@@ -705,6 +715,16 @@
           "publishedOn": "2024-02-27T03:49:21.000Z",
           "wordCount": 892,
           "title": "2024年令人眼前一亮的Web框架",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7339814359886348328",
+          "author": "Dignity_呱",
+          "description": "theme: fancy\nhighlight: arduino-light\n前言\n常网IT戳我呀！\n常网IT源码上线啦！\n本篇录入技术选型专栏，希望能祝君拿下Offer一臂之力，各位看官感兴趣可移步🚶。\n有人说面试造火箭，进去拧螺丝；其实个人觉得问的问题是项目中涉及的点 || 热门的技术栈都是很好的面试体验，不要是旁门左道冷门的知识，实际上并不会用到的。\n接下来想分享一些自己在项目中遇到的导出功能场景。\n如果你觉得你现在做的事情很累，很难，那一定是你方法用错了。\n\n一、问题剖析\n那是一个倾盆大雨的早上，花瓣随风雨落在我的肩膀上，是五颜六色的花朵。\n我轻轻抚摸着他，随后拨开第一朵花瓣，她不爱我。\n拨开第二朵，她爱我。\n正当我沉迷于甜蜜的幻想中，后端小白🙋喊道：这个导出你前端应该就能做的吧！\n🙋🏻‍♂️那是自然，有什么功能是我大前端做不了的，必须得让你们大开眼界。\n二、为什么导出要前端做？\n前端导出的场景：\n轻量级数据：如果要导出的表格数据相对较小，可以直接在前端生成和导出，避免服务器端的处理和通信开销。\n数据已存在于前端：如果表格数据已经以 JSON 或其他形式存在于前端，可以直接利用前端技术将其导出为 Excel、CSV 或其他格式。\n实时生成/计算：如果导出的表格需要根据用户输入或动态生成，可以使用前端技术基于用户操作实时生成表格，并提供导出功能。\n快速响应：前端导出表格可以提供更快的响应速度，避免等待服务器端的处理和下载时间。\n后端导出的场景：\n大量数据：如果要导出的表格数据量很大，超过了前端处理能力或网络传输限制，那么在服务器端进行导出会更高效。\n安全性和数据保护：敏感数据不适合在前端暴露，因此在服务器端进行导出可以更好地控制和保护数据的安全。\n复杂的业务逻辑：如果导出涉及复杂的业务逻辑、数据处理或数据查询，使用服务器端的计算能力和数据库访问更合适。\n跨平台支…",
+          "link": "https://juejin.cn/post/7339814359886348328",
+          "publishedOn": "2024-02-27T02:06:15.000Z",
+          "wordCount": 2899,
+          "title": "小小导出，我大前端足矣！",
           "imageUrl": null
         },
         {
@@ -838,26 +858,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7338335869709385780",
-          "author": "DAHUIAAAAAA",
-          "description": "实现效果\n话不多说，先上效果和 demo 地址：\ndemo 地址：https://codesandbox.io/p/devbox/keyboard-7fsqr8?file=%2Fsrc%2Fkeyboard.ts%3A54%2C24\nhttps://7fsqr8-5173.csb.app\n\n实现原理\n要实现一个吸附在键盘上的 input，可以分为以下步骤：\n监听键盘高度的变化\n获取「键盘顶部距离视口顶部的高度」\n设置 input 的位置\n第一步：监听监听键盘键盘高度的变化\n要监听键盘高度的变化，我们得先看看在键盘展开或收起的时候，分别会触发哪些浏览器事件：\niOS 和部分 Android 浏览器\n展开：键盘展示时会依次触发 visualViewport resize -> focusin -> visualViewport scroll，部分情况下手动调用 input.focus 不触发 focusin\n收起：键盘收起时会依次触发 visualViewport resize -> focusout -> visualViewport scroll\n其他 Android 浏览器\n展开：键盘展示的时候会触发一段连续的 window resize，约过 200 毫秒稳定\n收起：键盘收起的时候会触发一段连续的 window resize，约过 200 毫秒稳定，但是部分手机上有些异常的 case：键盘收起时 viewport 会先变小，然后变大，最后再变小\n总结两者来看，我们要监听键盘高度的变化，可以添加以下监听事件：\nif (window.visualViewport) {\n  window.visualViewport?.addEventListener(\"resize\", listener);\n  window.visualViewport?.addEventListener…",
-          "link": "https://juejin.cn/post/7338335869709385780",
-          "publishedOn": "2024-02-22T19:14:55.000Z",
-          "wordCount": 2177,
-          "title": "面试官：实现一个吸附在键盘上的输入框",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7338230967390224435",
-          "author": "字节架构前端",
-          "description": "前言：本文着眼于梳理业界微前端技术（介绍下微前端几场恶仗的主打人）的发展脉络、在主流产品中的应用情况，以及目前不同技术方案之间的架构和核心原理对比，只关注精华部分，不纠结于技术细节，帮大家快速建立起对微前端整体上的认识。\n注：相信本文对各个微前端方案的总结是相对全面的，但缺点是对每个方案深入了解的程度有限，难免有错误和遗漏之处，欢迎大家评论勘误和补充！也欢迎大家通过我提供的索引，选择自己感兴趣的方向继续深入学习。\n微前端简介\n什么是微前端？\n相信大家对此已经耳熟能详，我就不多废话了，直接摘一段词条解释。\n微前端是一种由独立交付的多个前端应用组成整体的架构风格，将前端应用分解成一些更小、更简单的能够独立开发、测试、部署的应用，而在用户看来仍然是内聚的单个产品。\n此外，Martin Fowler 还给过一个更简洁的英文解释：\nAn architectural style where independently deliverable frontend applications are composed into a greater whole.\n厘清一些关于微前端概念的误区：\n微前端不是一门具体的技术，而是整合了技术、策略和方法，可能会以脚手架、配套工具和规范约束等等成体系的形式综合呈现，是一种宏观上的架构。这种架构目前有多种方案，各有利弊，但只要适用业务场景的就是好方案。\n微前端本身并没有技术栈的约束（技术栈无关不是微前端的固然要求）。每一套微前端方案的设计，都是基于实际需求出发。如果是多团队统一使用了 React 技术栈，可能对微前端方案的跨技术栈使用并没有要求；如果是多团队同时使用了 React 和 Vue 技术栈，可能就对微前端的跨技术栈要求比较高。\n微前端要求各个应用能独立开发、测试、部署，但并不要求各个应用能独立运行。也就是说，微前端的粒度不一定是应用级的，也有可能…",
-          "link": "https://juejin.cn/post/7338230967390224435",
-          "publishedOn": "2024-02-22T07:37:05.000Z",
-          "wordCount": 5529,
-          "title": "微前端五大门派大 Battle",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7337513012393607207",
           "author": "菲鸽",
           "description": "unibest ui 库选择\n背景\nunibest 作为最好的 uniapp 开发模板，那 UI 框架 的选择也是要仔细斟酌的。\nunibest 作为 uniapp + vue3 + ts 的项目，自然也要选择满足 vue3 的 UI库，所以像 vue2 时代的 uview 就不考虑在内了。但是在 uview 的基础上衍生出来的支持 vue3 的 uview 系 的 ui框架 还有不少，而且热度很高。\n再来说说官方维护的 uni-ui，支持全端，而且有类型提示，目前已经内置到 unibest 了，如果用户确实用不到里面的组件也可以删除，减少包体积。\nTIPS: uni-ui 本身是 js 开发的，但是官方提供了完备的类型提示( by @uni-helper/uni-ui-types)所以看起来就像是 ts 开发的一样，开发体验很好。所有的组件都有提示，很方便，很贴心。\nUI 框架\n经过搜寻了一番，目前参加对比的 UI 框架有：\nuv-ui (uveiw 系) - 文档地址\nuview-plus (uveiw 系) - 文档地址\nWot Design Uni (wot 系) - 文档地址\nTuniaoUI （图鸟系） - 文档地址\n还有 2 个 UI 框架也很优秀，但是部分组件开源免费，部分组件收费：\nThorUI 文档链接\nFirstUI 文档链接\n温馨提示：\n收费没有对错，开源作者也要恰饭，需要有收入，光为爱发电可能半路夭折，或者质量很差。只要做得好，别人愿意买，提供优质的服务，也是极好的。\n2.当然了 unibest 作为开源库，自然会选择免费的 UI 框架，下面我们就来对比一下下~\nUI 框架对比\n1. 开源热度\n截止到 2024-02-20 发表文章时的数据:\nUI 框架\nuv-ui\nuview-plus\nWot\nTuniaoUI\n\n\n\n\ngithub stars\n…",
@@ -900,7 +900,7 @@
           "description": "京东莫奈可视化平台上线啦~\n丰富的组件素材，可以便捷快速的搭建可视化大屏~\n新用户可以免费试用高级版权益喔\n官网地址: http://imonet.jdcloud.com https://code.juejin.cn/pen/7340831046139101193",
           "link": "https://juejin.cn/pin/7340537214987157540",
           "publishedOn": "2024-02-29T01:49:25.000Z",
-          "wordCount": 483,
+          "wordCount": 480,
           "title": "京东莫奈可视化平台上线啦~ 丰富的组件素材，可以便捷快速的搭建可视化大屏~ 新用户可以免费试用高级版权益喔 官网地址: http://imonet.jdcloud.com https://cod...",
           "imageUrl": null
         },
@@ -910,7 +910,7 @@
           "description": "分享一个Java堆外内存泄漏排查工具：Javahttps://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2Fhengyoush%2FJavaMemLeak",
           "link": "https://juejin.cn/pin/7338307026245713972",
           "publishedOn": "2024-02-23T04:44:43.000Z",
-          "wordCount": 474,
+          "wordCount": 471,
           "title": "分享一个Java堆外内存泄漏排查工具：Javahttps://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2Fhengyoush%2FJavaMemLeak",
           "imageUrl": null
         },
@@ -920,7 +920,7 @@
           "description": "#码上掘金# ServBay 1.2.2 版本于2024年2月22日正式发布。这次更新集中在增强用户体验、提升产品性能、以及根据您的反馈修复已知问题上。欢迎下载体验和解放生产力，不要把时间浪费在配置开发环境上。",
           "link": "https://juejin.cn/pin/7338042858703241270",
           "publishedOn": "2024-02-22T13:59:00.000Z",
-          "wordCount": 537,
+          "wordCount": 534,
           "title": "#码上掘金# ServBay 1.2.2 版本于2024年2月22日正式发布。这次更新集中在增强用户体验、提升产品性能、以及根据您的反馈修复已知问题上。欢迎下载体验和解放生产...",
           "imageUrl": null
         },
@@ -930,7 +930,7 @@
           "description": "摸了个工具，同一个网络下，手机扫个码就能看电脑上文件🤳",
           "link": "https://juejin.cn/pin/7338053219994091570",
           "publishedOn": "2024-02-22T08:37:07.000Z",
-          "wordCount": 487,
+          "wordCount": 484,
           "title": "摸了个工具，同一个网络下，手机扫个码就能看电脑上文件🤳",
           "imageUrl": null
         },
@@ -940,7 +940,7 @@
           "description": "事半功倍！清爽的纯后端代码生成器！",
           "link": "https://juejin.cn/pin/7338074027281219624",
           "publishedOn": "2024-02-22T07:50:08.000Z",
-          "wordCount": 492,
+          "wordCount": 489,
           "title": "事半功倍！清爽的纯后端代码生成器！",
           "imageUrl": null
         },
@@ -950,7 +950,7 @@
           "description": "jym 红米 14 笔记本 怎么样 我看才 3300 狠狠的心动啊",
           "link": "https://juejin.cn/pin/7337631207024230439",
           "publishedOn": "2024-02-21T05:08:42.000Z",
-          "wordCount": 498,
+          "wordCount": 495,
           "title": "jym 红米 14 笔记本 怎么样 我看才 3300 狠狠的心动啊",
           "imageUrl": null
         },
@@ -960,7 +960,7 @@
           "description": "开发了一款本地压缩图片的工具，加载完离线也可以用。无任何限制，永久免费，还支持单个图片编辑。https://free.tinypng.site 求关注[拥抱][拥抱][拥抱]",
           "link": "https://juejin.cn/pin/7337630368907411494",
           "publishedOn": "2024-02-21T04:58:23.000Z",
-          "wordCount": 478,
+          "wordCount": 475,
           "title": "开发了一款本地压缩图片的工具，加载完离线也可以用。无任何限制，永久免费，还支持单个图片编辑。https://free.tinypng.site 求关注[拥抱][拥抱][拥抱]",
           "imageUrl": null
         },
@@ -970,7 +970,7 @@
           "description": "开工小玩具—Topping， 基于wails开发对我图片悬浮置顶桌面软件，希望能帮助你提高一丢丢效率。支持Mac和windows, 源码地址：https://github.com/CiroLee/Topping [送心][送心]",
           "link": "https://juejin.cn/pin/7337528205618446362",
           "publishedOn": "2024-02-20T10:37:02.000Z",
-          "wordCount": 490,
+          "wordCount": 487,
           "title": "开工小玩具—Topping， 基于wails开发对我图片悬浮置顶桌面软件，希望能帮助你提高一丢丢效率。支持Mac和windows, 源码地址：https://github.com/CiroLee/Toppin...",
           "imageUrl": null
         },
@@ -980,7 +980,7 @@
           "description": "git status 乱码了",
           "link": "https://juejin.cn/pin/7331771415316709403",
           "publishedOn": "2024-02-05T08:05:24.000Z",
-          "wordCount": 496,
+          "wordCount": 493,
           "title": "git status 乱码了",
           "imageUrl": null
         },
@@ -990,7 +990,7 @@
           "description": "4个好用插件轻松给产品添加尺寸参数表格\n产品页面需要展示详细的产品参数表格\nProduct Size Charts Plugin for WooCommerce\nWPB Product Size Chart for WooCommerce\nYITH Product Size Charts for WooCommerce\nwpDataTables\n#wordpress外贸建站 #谷歌SEO优化 #Wordpress插件 #WooCommerce #woocommerce建站 #woocommerce商城 #woocommerce模板",
           "link": "https://juejin.cn/pin/7331347165212491802",
           "publishedOn": "2024-02-04T06:30:16.000Z",
-          "wordCount": 559,
+          "wordCount": 556,
           "title": "4个好用插件轻松给产品添加尺寸参数表格 产品页面需要展示详细的产品参数表格 Product Size Charts Plugin for WooCommerce WPB Product Size Chart for WooComm...",
           "imageUrl": null
         },
@@ -1000,7 +1000,7 @@
           "description": "使用Mac  Apple Silicon的 同学想在Mac上玩原神可以私信我",
           "link": "https://juejin.cn/pin/7331045767434633256",
           "publishedOn": "2024-02-04T02:43:35.000Z",
-          "wordCount": 503,
+          "wordCount": 500,
           "title": "使用Mac Apple Silicon的 同学想在Mac上玩原神可以私信我",
           "imageUrl": null
         },
@@ -1010,7 +1010,7 @@
           "description": "易语言的与国际接轨，为啥是这个“溶”字[不失礼貌的微笑]",
           "link": "https://juejin.cn/pin/7330845506414116904",
           "publishedOn": "2024-02-03T04:28:32.000Z",
-          "wordCount": 475,
+          "wordCount": 472,
           "title": "易语言的与国际接轨，为啥是这个“溶”字[不失礼貌的微笑]",
           "imageUrl": null
         },
@@ -1020,7 +1020,7 @@
           "description": "#极客时间#\n有XD买过这个极客时间的会员吗 靠谱吗\nhttps://sourl.cn/RuwqPs",
           "link": "https://juejin.cn/pin/7330807271009845300",
           "publishedOn": "2024-02-02T15:51:02.000Z",
-          "wordCount": 477,
+          "wordCount": 474,
           "title": "#极客时间# 有XD买过这个极客时间的会员吗 靠谱吗 https://sourl.cn/RuwqPs",
           "imageUrl": null
         },
@@ -1030,7 +1030,7 @@
           "description": "iFoto专为跨境电商的AI工具，太强大了\niFoto.ai是一款由 AI 驱动的照片编辑工具，通过在各种场景中展示服装来帮助提升电子商务，提供数百种真实环境。\n凭借其 AI 时装模特功能，它将时尚人体模特转变为具有多样化专业外观的栩栩如生的模特。\niFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态背景，而产品 AI 背景功能则通过 AI 生成的工作室质量的产品照片提升电子商务。\n#跨境电商独立站 #跨境电商运营 #ai电商工具 #ifoto #ai创作工具 #亚马逊跨境电商 #AI商拍",
           "link": "https://juejin.cn/pin/7330521875649871898",
           "publishedOn": "2024-02-02T03:54:40.000Z",
-          "wordCount": 534,
+          "wordCount": 531,
           "title": "iFoto专为跨境电商的AI工具，太强大了 iFoto.ai是一款由 AI 驱动的照片编辑工具，通过在各种场景中展示服装来帮助提升电子商务，提供数百种真实环境。 凭借其 AI...",
           "imageUrl": null
         },
@@ -1040,7 +1040,7 @@
           "description": "jym，有什么好用的翻译浏览器插件推荐吗",
           "link": "https://juejin.cn/pin/7330388563790872613",
           "publishedOn": "2024-02-01T07:30:50.000Z",
-          "wordCount": 474,
+          "wordCount": 471,
           "title": "jym，有什么好用的翻译浏览器插件推荐吗",
           "imageUrl": null
         },
@@ -1050,7 +1050,7 @@
           "description": "[庆祝]平台新增支持对【会议室】、【任务看板】的全文搜索\n[庆祝] 欢迎继续体验",
           "link": "https://juejin.cn/pin/7330203936286244890",
           "publishedOn": "2024-02-01T02:33:17.000Z",
-          "wordCount": 499,
+          "wordCount": 496,
           "title": "[庆祝]平台新增支持对【会议室】、【任务看板】的全文搜索 [庆祝] 欢迎继续体验",
           "imageUrl": null
         }
