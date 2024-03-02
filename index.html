@@ -302,50 +302,6 @@ AI 生成的摘要, 基本都是文章的结果总结。原文中表述源起，
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/65e1687337f7165b217e6152"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 世界如同一本书，个人内心亦如一本书。 生活经历和思考交流都是在努力读懂它们。</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65e1687337f7165b217e6152">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>世界如同一本书，个人内心亦如一本书。
-生活经历和思考交流都是在努力读懂它们。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/65e15b4e38849f879f9a7d1d"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 人类的思考, 需要大脑这个硬件存在。 GPT 训练好参数的模型, 进行推理, 是否也必须 GPU 硬件? 人类大脑受损,会影响思考表达。 如果 GPU 受损（算力下降...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65e15b4e38849f879f9a7d1d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>人类的思考, 需要大脑这个硬件存在。
-GPT 训练好参数的模型, 进行推理, 是否也必须 GPU 硬件?
-人类大脑受损,会影响思考表达。
-如果 GPU 受损（算力下降），会影响 GPT 的思考吗？</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://m.okjike.com/originalPosts/65e140f737f7165b217a87ad"
                         open
                       >
@@ -649,6 +605,74 @@ Free Now to 2024-03-07T16:00:00.000Z</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7340621141697413156"
+                        open
+                      >
+                        <summary class="article-expander__title">看了千万项目的 vue 代码，我陷入了沉思</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7340621141697413156">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言
+哈喽大家好，我是 SuperYing。最近接了个成本千万级的业务系统运维工作，前端是用 Vue3 写的。看了代码之后，我大为震惊，让我不得不重新思考下使用 Vue3 的正确姿势。
+本文设计 Vue3 computed watch 以及 ref 的相关说明及反面案例
+正文
+业务场景：
+某业务单据管理模块，单据详情页面允许同时打开多个（单据 id 不同的情况下），需要根据不同的操作类型（新增、查看、编辑等）对页面元素进行控制，如：查看操作不允许任何编辑操作，新增/编辑操作则允许编辑。操作类型会在从上级页面跳转时添加到 URL 参数上，即使用 vue-router push 函数参数的 query 属性实现。
+项目代码
+清楚了业务，我们来看看原项目的小伙伴是如何实现的：
+const route &#x3D; useRoute()
+
+const isView &#x3D; ref(route.query.opType &#x3D;&#x3D;&#x3D; &#x27;view&#x27;)
+
+watch(
+   () &#x3D;&gt; route,
+   (newVal) &#x3D;&gt; {
+       if (newValue.query.opType &#x3D;&#x3D;&#x3D; &#x27;view&#x27;) isView.value &#x3D; true
+   },
+   {
+       deep: true,
+       immediate: true
+   }
+)
+
+以上是精简过的代码，核心思路是通过 isView 来控制页面元素的编辑状态，isView 的值由操作类型 route.query.opType 确定，若其等于 view，则为 true，否则为 false。
+分析
+上面代码看似是实现了业务功能，监听路由 route 变更，以更新 isView 的值，达到控制页面元素编辑状态的目的。
+那么哪里让我陷入沉思了呢？主要有以下两点：
+isView 的值仅仅由路径参数 opType 决定，是否有必要手动赋值？
+仅为了获取路由参数 opType 的值，是否有必要始终监听 route 对象？
+针对以上两个问题，我的答案都是否。因为 isView 的值来源单一，仅仅是通过 opType 来决定，没有其他任何需要赋值的逻辑；而且对于 route 对象，很可能 queyr.opType 不会变更，而变更其他属性，如 name，path 等，或 query 的其他属性值，这种情况不需要为 isView 重新赋值，如果可以用缓存的值那就完美了。
+鉴于以上思路，我认为针对此业务场景，使用 计算属性 computed 更为适合。
+computed 和 watch 的区别
+我们来简单回顾一下 computed 和 watch 的主要区别，两者都可以监听响应式依赖的变化。
+computed 接收一个 getter 函数作为参数，返回一个计算属性 ref，有缓存，仅响应式依赖变更时才重新计算，否则使用缓存的值。
+watcher 在响应式依赖发生变化时执行副作用函数，无缓存，返回值是一个停止 watch 的函数。
+可见，computed 可用于定义 ref 变量，且可缓存，无需每次 route 对象变更时都重新计算。
+ref 与 computed 定义变量的区别
+由于 ref 和 computed 都可创建响应式数据，因此也拉来一起比一比😄
+ref 比较直接，就是用来创建响应式数据的 API。
+computed 返回的计算属性也是响应式数据，不同之处在于，computed 不建议手动赋值，应始终保持其派生状态。即使可以通过 getter/setter 的定义方式实现该特性。
+优化后代码
+通过以上分析，可以发现，computed 不仅可以监听 route.query.opType 的变更，还可以创建响应式数据，且有缓存，顺便小小的提升了一波性能。
+const route &#x3D; useRoute()
+
+const isView &#x3D; computed(() &#x3D;&gt; route.query.opType &#x3D;&#x3D;&#x3D; &#x27;view&#x27;)
+
+搞定，不仅同样实现了业务功能，还减少了代码量，更提升了可读性和维护性，perfect！！！
+结语
+好啦，本文内容就到这里。实践出真知，只有真正动手实践，真正参与其中才能更深刻的体会到技术的魅力，才能总结出更合理的开发方式，爱动手的小伙伴们赶快行动起来吧😁。
+若本文内容有错误或遗漏的地方，欢迎评论指出。感谢阅读，愿你我共同进步，谢谢！！！</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7340603873604599843"
                         open
                       >
@@ -920,6 +944,61 @@ work-life balance 的一个大前提，是把生活这个因子算进来，而�
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/65df0c236d9f190631ceedb0"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 笔记的技巧： 原子问题笔记 ━━━━━━━━━━━━━━ Emacs 圈有一位大佬叫李杀，他在博客中把 Emacs 中的很多常见概念和问题都单独形成一篇文章，...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65df0c236d9f190631ceedb0">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>笔记的技巧： 原子问题笔记
+━━━━━━━━━━━━━━
+Emacs 圈有一位大佬叫李杀，他在博客中把 Emacs 中的很多常见概念和问题都单独形成一篇文章， 文章很短，基本就是「什么是 X？」「如何配置 X？」之类的内容。
+当对某些模块比较熟悉时，读他的博客感觉很平常，都是常识而已。
+但 Emacs 博大精深，每天都有很多不熟悉的知识点，搜索引擎经常会引导到他的某篇博客文章，答案就那么简单直接摆在眼前，刚刚好地回答了当下的疑惑。
+这种笔记/博客方式，我且称之为「原子问题笔记法」。人人可学, 步骤如下：
+1. 在你的笔记系统中，新建一个目录，名为你的一个知识领域，可以是你当下的公司业务（XX 业务知识库），也可以是一个知识模块（写作）。
+2. 先试想下都有哪些常见概念和问题，在该目录下，单独起文件记录该问题并解答。如不会，学会它，再记录解答。
+3. 日常工作生活中，遇到任何一件不在该目录中记录的新概念/新问题，均立马起文件记录。（凡有发生，必有教我。）
+日积月累，在这个目录（知识领域）中沉淀的那一个个文件（问题-答案），就是你在该领域的底气。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/65def11d38849f879f6ba360"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 最喜欢即刻的点有两个: 一是社区氛围。 凑了一群有趣有爱真诚的人，就像是坐在小镇街头聚上几伙聊着一些感兴趣的话题。 二是功能克制。 用户关注的人(信...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65def11d38849f879f6ba360">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>最喜欢即刻的点有两个:
+一是社区氛围。
+凑了一群有趣有爱真诚的人，就像是坐在小镇街头聚上几伙聊着一些感兴趣的话题。
+二是功能克制。
+用户关注的人(信息)就在「动态」页， 想看关注圈以外的内容就去「发现」页。
+比较几个主流的社区平台，还有哪个能忍住往「关注」列表页中插入「广告」和「猜你喜欢」内容的？
+罗马的归罗马，凯撒的归凯撒。各归其所，少折腾，真好。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -1117,51 +1196,6 @@ Wasp - 全栈，开箱即用🚀
 你希望获得一个为React和Node.js预配置的免费SaaS模板—— Open SaaS
 对于希望简单轻松地全面控制其堆栈的工具的用户，无需再寻找！Wasp是一个…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7339814359886348328"
-                        open
-                      >
-                        <summary class="article-expander__title">小小导出，我大前端足矣！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7339814359886348328">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: fancy
-highlight: arduino-light
-前言
-常网IT戳我呀！
-常网IT源码上线啦！
-本篇录入技术选型专栏，希望能祝君拿下Offer一臂之力，各位看官感兴趣可移步🚶。
-有人说面试造火箭，进去拧螺丝；其实个人觉得问的问题是项目中涉及的点 || 热门的技术栈都是很好的面试体验，不要是旁门左道冷门的知识，实际上并不会用到的。
-接下来想分享一些自己在项目中遇到的导出功能场景。
-如果你觉得你现在做的事情很累，很难，那一定是你方法用错了。
-
-一、问题剖析
-那是一个倾盆大雨的早上，花瓣随风雨落在我的肩膀上，是五颜六色的花朵。
-我轻轻抚摸着他，随后拨开第一朵花瓣，她不爱我。
-拨开第二朵，她爱我。
-正当我沉迷于甜蜜的幻想中，后端小白🙋喊道：这个导出你前端应该就能做的吧！
-🙋🏻‍♂️那是自然，有什么功能是我大前端做不了的，必须得让你们大开眼界。
-二、为什么导出要前端做？
-前端导出的场景：
-轻量级数据：如果要导出的表格数据相对较小，可以直接在前端生成和导出，避免服务器端的处理和通信开销。
-数据已存在于前端：如果表格数据已经以 JSON 或其他形式存在于前端，可以直接利用前端技术将其导出为 Excel、CSV 或其他格式。
-实时生成/计算：如果导出的表格需要根据用户输入或动态生成，可以使用前端技术基于用户操作实时生成表格，并提供导出功能。
-快速响应：前端导出表格可以提供更快的响应速度，避免等待服务器端的处理和下载时间。
-后端导出的场景：
-大量数据：如果要导出的表格数据量很大，超过了前端处理能力或网络传输限制，那么在服务器端进行导出会更高效。
-安全性和数据保护：敏感数据不适合在前端暴露，因此在服务器端进行导出可以更好地控制和保护数据的安全。
-复杂的业务逻辑：如果导出涉及复杂的业务逻辑、数据处理或数据查询，使用服务器端的计算能力和数据库访问更合适。
-跨平台支…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2233,8 +2267,6 @@ iFixit 网站拆解了苹果头盔，证实了 CPU 是 M2 芯片，跟 MacBook �
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>摸了个工具，同一个网络下，手机扫个码就能看电脑上文件🤳</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2252,8 +2284,6 @@ iFixit 网站拆解了苹果头盔，证实了 CPU 是 M2 芯片，跟 MacBook �
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>事半功倍！清爽的纯后端代码生成器！</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2923,8 +2953,6 @@ Handheld 是精心挑选的一流移动设计集合。您可以按产品类型�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>jym 红米 14 笔记本 怎么样 我看才 3300 狠狠的心动啊</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3543,8 +3571,6 @@ ES6继承
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>开工小玩具—Topping， 基于wails开发对我图片悬浮置顶桌面软件，希望能帮助你提高一丢丢效率。支持Mac和windows, 源码地址：https://github.com/CiroLee/Topping [送心][送心]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4113,8 +4139,6 @@ ES6继承
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>git status 乱码了</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4166,8 +4190,6 @@ WPB Product Size Chart for WooCommerce
 YITH Product Size Charts for WooCommerce
 wpDataTables
 	#wordpress外贸建站 #谷歌SEO优化 #Wordpress插件 #WooCommerce #woocommerce建站 #woocommerce商城 #woocommerce模板</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4185,8 +4207,6 @@ wpDataTables
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>使用Mac  Apple Silicon的 同学想在Mac上玩原神可以私信我</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4232,8 +4252,6 @@ wpDataTables
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>易语言的与国际接轨，为啥是这个“溶”字[不失礼貌的微笑]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4281,31 +4299,6 @@ wpDataTables
                               <span>#极客时间#
 有XD买过这个极客时间的会员吗 靠谱吗
 https://sourl.cn/RuwqPs</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7330521875649871898"
-                        open
-                      >
-                        <summary class="article-expander__title">iFoto专为跨境电商的AI工具，太强大了 iFoto.ai是一款由 AI 驱动的照片编辑工具，通过在各种场景中展示服装来帮助提升电子商务，提供数百种真实环境。 凭借其 AI...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7330521875649871898">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>iFoto专为跨境电商的AI工具，太强大了
-iFoto.ai是一款由 AI 驱动的照片编辑工具，通过在各种场景中展示服装来帮助提升电子商务，提供数百种真实环境。
-凭借其 AI 时装模特功能，它将时尚人体模特转变为具有多样化专业外观的栩栩如生的模特。
-iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态背景，而产品 AI 背景功能则通过 AI 生成的工作室质量的产品照片提升电子商务。
-#跨境电商独立站 #跨境电商运营 #ai电商工具 #ifoto #ai创作工具 #亚马逊跨境电商 #AI商拍</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -4352,8 +4345,8 @@ iFoto.ai的 AI 背景功能允许您创建令人惊叹的产品照片和动态�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8123832070">
-        <time id="build-timestamp" datetime="2024-03-02T15:53:23.734Z">2024-03-02T15:53:23.734Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8124760900">
+        <time id="build-timestamp" datetime="2024-03-02T18:53:36.142Z">2024-03-02T18:53:36.142Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
