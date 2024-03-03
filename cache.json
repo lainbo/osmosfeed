@@ -54,7 +54,7 @@
           "description": "音视频合成的时候，有倍速合成的需求，起初，我以为这只是个手到擒来的小需求，细究之下发现问题并不简单……",
           "link": "https://www.zhangxinxu.com/wordpress/2024/02/js-audioencoder-backplayrate-audiobuffer/",
           "publishedOn": "2024-02-29T14:22:22.000Z",
-          "wordCount": 1718,
+          "wordCount": 1721,
           "title": "不改变音调情况下Audio音频的倍速合成JS实现",
           "imageUrl": null
         }
@@ -588,16 +588,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7340621141697413156",
-          "author": "是嘟老板呐",
-          "description": "前言\n哈喽大家好，我是 SuperYing。最近接了个成本千万级的业务系统运维工作，前端是用 Vue3 写的。看了代码之后，我大为震惊，让我不得不重新思考下使用 Vue3 的正确姿势。\n本文设计 Vue3 computed watch 以及 ref 的相关说明及反面案例\n正文\n业务场景：\n某业务单据管理模块，单据详情页面允许同时打开多个（单据 id 不同的情况下），需要根据不同的操作类型（新增、查看、编辑等）对页面元素进行控制，如：查看操作不允许任何编辑操作，新增/编辑操作则允许编辑。操作类型会在从上级页面跳转时添加到 URL 参数上，即使用 vue-router push 函数参数的 query 属性实现。\n项目代码\n清楚了业务，我们来看看原项目的小伙伴是如何实现的：\nconst route = useRoute()\n\nconst isView = ref(route.query.opType === 'view')\n\nwatch(\n   () => route,\n   (newVal) => {\n       if (newValue.query.opType === 'view') isView.value = true\n   },\n   {\n       deep: true,\n       immediate: true\n   }\n)\n\n以上是精简过的代码，核心思路是通过 isView 来控制页面元素的编辑状态，isView 的值由操作类型 route.query.opType 确定，若其等于 view，则为 true，否则为 false。\n分析\n上面代码看似是实现了业务功能，监听路由 route 变更，以更新 isView 的值，达到控制页面元素编辑状态的目的。\n那么哪里让我陷入沉思了呢？主要有以下两点：\nisView 的值仅仅由路径参数 opType 决定，是否有必要手动赋值？\n仅为了获取路由参数 opType 的值，是否有必要始终监听 route 对象？\n针对以上两个问题，我的答案都是否。因为 isView 的值来源单一，仅仅是通过 opType 来决定，没有其他任何需要赋值的逻辑；而且对于 route 对象，很可能 queyr.opType 不会变更，而变更其他属性，如 name，path 等，或 query 的其他属性值，这种情况不需要为 isView 重新赋值，如果可以用缓存的值那就完美了。\n鉴于以上思路，我认为针对此业务场景，使用 计算属性 computed 更为适合。\ncomputed 和 watch 的区别\n我们来简单回顾一下 computed 和 watch 的主要区别，两者都可以监听响应式依赖的变化。\ncomputed 接收一个 getter 函数作为参数，返回一个计算属性 ref，有缓存，仅响应式依赖变更时才重新计算，否则使用缓存的值。\nwatcher 在响应式依赖发生变化时执行副作用函数，无缓存，返回值是一个停止 watch 的函数。\n可见，computed 可用于定义 ref 变量，且可缓存，无需每次 route 对象变更时都重新计算。\nref 与 computed 定义变量的区别\n由于 ref 和 computed 都可创建响应式数据，因此也拉来一起比一比😄\nref 比较直接，就是用来创建响应式数据的 API。\ncomputed 返回的计算属性也是响应式数据，不同之处在于，computed 不建议手动赋值，应始终保持其派生状态。即使可以通过 getter/setter 的定义方式实现该特性。\n优化后代码\n通过以上分析，可以发现，computed 不仅可以监听 route.query.opType 的变更，还可以创建响应式数据，且有缓存，顺便小小的提升了一波性能。\nconst route = useRoute()\n\nconst isView = computed(() => route.query.opType === 'view')\n\n搞定，不仅同样实现了业务功能，还减少了代码量，更提升了可读性和维护性，perfect！！！\n结语\n好啦，本文内容就到这里。实践出真知，只有真正动手实践，真正参与其中才能更深刻的体会到技术的魅力，才能总结出更合理的开发方式，爱动手的小伙伴们赶快行动起来吧😁。\n若本文内容有错误或遗漏的地方，欢迎评论指出。感谢阅读，愿你我共同进步，谢谢！！！",
-          "link": "https://juejin.cn/post/7340621141697413156",
-          "publishedOn": "2024-02-29T08:08:30.000Z",
-          "wordCount": 981,
-          "title": "看了千万项目的 vue 代码，我陷入了沉思",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7340603873604599843",
           "author": "陈佬昔没带相机",
           "description": "《2023 的 Javascript 星趋势》在 1 月就出来了，当时略略看了一下，并没有想太多。\n过年期间，回想起来，似乎感觉到这次有一点不一样：也许，全栈的时代已经到来了。\nReact 与 Vue 生态对比\n首先，我们来看看 React 与 Vue 生态的星趋势对比：\n\n上图中，React 整个生态的星星数远超于 Vue，第十名都要比 Vue 第一名的多。我们将其做一个分类：\n排名\nReact\nVue\n\n\n\n\n1\nUI\n全栈\n\n\n2\n白板\n演示文稿\n\n\n3\n全栈\n后台管理系统\n\n\n4\n状态管理\nhook\n\n\n5\n后台管理系统\nUI\n\n\n6\n文档\n文档\n\n\n7\n全栈框架集成\nUI\n\n\n8\n全栈框架UI\n框架\n\n\n9\n后台管理系统\nUI\n\n\n10\n无服务栈\n状态管理\n\n\n\n可以看到 React 这边的生态链基本成熟，几乎每一个分类都有一个上榜的库，不再像 Vue 那样还在卷 UI 框架。\n在全栈方面，Vue 的首位就是全栈 Nuxt。\nReact 的 Next.js 虽然不在首位，但是服务端/全栈相关的内容就占了 4 个，其中包含第 10 名的无服务栈。另外值得注意的是，React 这边还有服务端组件的概念。Shadcn/ui 能占到第一位，因为它基于无头 UI Radix 实现的，在服务端组件也能运用。所以，服务端/全栈在 React 中占的比重相当大的。\n这样看来，前端往服务端进发已经成为一个必然趋势。\nhtmx 框架的倒退\n再看看框架这边，htmx 在星趋势里，排行第二位，2023增长的星星数为 15.6K，与第一位的 React 颇为相近。\n而 htmx 也是今年讨论度最高的。\n在我经历过前后端不分离的阶段中，使用 jsp 生成前端页面，js 更多是页面炫技的工具。然后在 jQuery + Ajax 得到广泛应用之后，才真正有前后端分离的项目。\nhtmx 的出现，不…",
@@ -645,6 +635,16 @@
           "publishedOn": "2024-02-27T03:49:21.000Z",
           "wordCount": 892,
           "title": "2024年令人眼前一亮的Web框架",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7339814359886348328",
+          "author": "Dignity_呱",
+          "description": "theme: fancy\nhighlight: arduino-light\n前言\n常网IT戳我呀！\n常网IT源码上线啦！\n本篇录入技术选型专栏，希望能祝君拿下Offer一臂之力，各位看官感兴趣可移步🚶。\n有人说面试造火箭，进去拧螺丝；其实个人觉得问的问题是项目中涉及的点 || 热门的技术栈都是很好的面试体验，不要是旁门左道冷门的知识，实际上并不会用到的。\n接下来想分享一些自己在项目中遇到的导出功能场景。\n如果你觉得你现在做的事情很累，很难，那一定是你方法用错了。\n\n一、问题剖析\n那是一个倾盆大雨的早上，花瓣随风雨落在我的肩膀上，是五颜六色的花朵。\n我轻轻抚摸着他，随后拨开第一朵花瓣，她不爱我。\n拨开第二朵，她爱我。\n正当我沉迷于甜蜜的幻想中，后端小白🙋喊道：这个导出你前端应该就能做的吧！\n🙋🏻‍♂️那是自然，有什么功能是我大前端做不了的，必须得让你们大开眼界。\n二、为什么导出要前端做？\n前端导出的场景：\n轻量级数据：如果要导出的表格数据相对较小，可以直接在前端生成和导出，避免服务器端的处理和通信开销。\n数据已存在于前端：如果表格数据已经以 JSON 或其他形式存在于前端，可以直接利用前端技术将其导出为 Excel、CSV 或其他格式。\n实时生成/计算：如果导出的表格需要根据用户输入或动态生成，可以使用前端技术基于用户操作实时生成表格，并提供导出功能。\n快速响应：前端导出表格可以提供更快的响应速度，避免等待服务器端的处理和下载时间。\n后端导出的场景：\n大量数据：如果要导出的表格数据量很大，超过了前端处理能力或网络传输限制，那么在服务器端进行导出会更高效。\n安全性和数据保护：敏感数据不适合在前端暴露，因此在服务器端进行导出可以更好地控制和保护数据的安全。\n复杂的业务逻辑：如果导出涉及复杂的业务逻辑、数据处理或数据查询，使用服务器端的计算能力和数据库访问更合适。\n跨平台支…",
+          "link": "https://juejin.cn/post/7339814359886348328",
+          "publishedOn": "2024-02-27T02:06:15.000Z",
+          "wordCount": 2899,
+          "title": "小小导出，我大前端足矣！",
           "imageUrl": null
         },
         {
@@ -784,6 +784,26 @@
       "feedUrl": "https://rsshub.app/juejin/pins/6824710202000932877",
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
+        {
+          "id": "7341394494901305381",
+          "author": "Aooohan",
+          "description": "上榜GitHub Trending啦~\nhttps://vfox.lhan.me/",
+          "link": "https://juejin.cn/pin/7341394494901305381",
+          "publishedOn": "2024-03-03T03:00:16.000Z",
+          "wordCount": 483,
+          "title": "上榜GitHub Trending啦~ https://vfox.lhan.me/",
+          "imageUrl": null
+        },
+        {
+          "id": "7341416970939170853",
+          "author": "Serendipity85",
+          "description": "有没有懂超图iserver web 开发的，创建服务gis服务，怎么能选加载一个obj的模型，网上都是在桌面上的方式加载的。。",
+          "link": "https://juejin.cn/pin/7341416970939170853",
+          "publishedOn": "2024-03-03T03:00:07.000Z",
+          "wordCount": 464,
+          "title": "有没有懂超图iserver web 开发的，创建服务gis服务，怎么能选加载一个obj的模型，网上都是在桌面上的方式加载的。。",
+          "imageUrl": null
+        },
         {
           "id": "7341288345782304809",
           "author": "程序员吾真本",
