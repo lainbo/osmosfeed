@@ -608,6 +608,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7340573362214699049",
+          "author": "qiugu",
+          "description": "theme: qklhk-chocolate\nhighlight: brown-paper\n前言\nRust 可能正在逐渐渗透前端的方方面面，所以作为一个前端究竟有没有必要学习 Rust 呢？我认为，还是看个人的精力吧，有那个精力多学一点没有坏处，没那个精力不学也没有影响。本篇不是讨论该不该学 Rust，而是将 Rust 大概是一个什么样的语言展现给可能在观望的小伙伴，并以一个前端的视角来看看 Rust 究竟和前端有什么不一样。\n本篇也是我在认真阅读了Rust 程序设计语言（中文版）几遍以后，才敢下笔做一些总结，因能力有限，错误之处还望大家及时指出。\n我会从一个语言层面的几个方面来分析 Rust 究竟和 JavaScript 以及 TypeScript 这样的语言的不同之处，以及相似之处，并且希望能给想要学习 Rust 的同学一些语言的梗概，也给前端学习 JS 的同学一些新的理解。\nRust VS JavaScript\n属性\nRust\nJavaScript\n\n\n\n\n编译器\nrustc\nv8\n\n\n包管理工具\ncargo\nnpm、yarn、pnpm、cnpm\n\n\n第三方依赖注册表\ncrates.io\nnpmjs.com\n\n\n垃圾回收\n无\n有\n\n\n\n数据类型\nRust 的数据类型同样分为基础类型和复杂类型，主要包括以下几类：\n基础类型：包括整型、浮点型、布尔型、字符型\n复杂类型：元组、数组以及其他复合类型\n这点和传统的强类型语言基本是一致的，但是 Rust 也拥有不同的地方。\nRust 声明变量的方法竟然和 JS 出奇的一致，并且很多方面也是类似 JS 或 TS 的写法：\n// 声明不可变变量\nlet a = 1;\n\n// 声明可变变量\n// 如果没有 mut 关键字，修改变量会导致报错\nlet mut b = 2;\nb = 3;\n\n// 重复声明变量，会发生遮蔽，即覆盖原有变量\n…",
+          "link": "https://juejin.cn/post/7340573362214699049",
+          "publishedOn": "2024-02-28T14:01:03.000Z",
+          "wordCount": 2782,
+          "title": "写给想学 Rust 的前端同学",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7340479361219002405",
           "author": "Dolphin_海豚",
           "description": "theme: vuepress\nhighlight: atelier-dune-dark\n目前大三，最近刚分手，想着正好沉下心来去搞就业，寒假期间抱着摸自己底的心态去试试面试，海投了许多厂，小厂，中厂，大厂都有，给我的感觉就是大部分内容都是八股，怎么跟别人的面试不一样，本期就来记录下我面试中遇到的那些面试题，希望对大家春招有所帮助\n一、聊聊盒子模型\n盒模型是css描述布局用的概念，盒子模型有两种，默认情况下为标准盒模型，还有一种为IE或者怪异盒模型，这个是曾经IE使用的盒模型，如今使用需要打上box-sizing: border-box;\n对于标准盒模型，一个盒子最终的宽度为width + padding + border + margin。而对于IE盒模型，一个盒子最终的宽度为width + margin，也就是说，IE盒模型的宽度其实就是标准盒模型的width + padding + border，最终自身的真实宽度会被边框和内边距挤掉一部分，当你为了防止盒子被撑大的时候你可以使用IE盒模型\n二、vue3的响应式如何实现\nvue3的响应式主要是靠es6的代理proxy来实现的，proxy可以拦截对象，进行读值操作，能够捕获到数据的修改\nreactive能够将引用类型变成响应式，ref通常用于将原始数据类型变成响应式，但是ref也可以将引用类型变成响应式，另外还有个副作用函数effect，当响应式数据发生变更，副作用函数就会重新执行\n三、computed和watch是什么，有什么应用场景\ncomputed是计算属性，依赖响应式数据，只要发生变更就会重新计算，另外computed有缓存机制，多次使用计算属性的逻辑时只会执行一次。所以当数据是根据其他响应式数据计算而来的时候，可使用computed\nwatch是监听器，监听一个数据的变化，当数据变化时，就会执行一个回调，可以用…",
@@ -688,6 +698,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7339743984100212777",
+          "author": "前端猫猫教",
+          "description": "大家好，这里是大家的林语冰。坚持阅读，自律打卡，每天一次，进步一点。\n免责声明\n本文属于是语冰的直男翻译了属于是，略有删改，仅供粉丝参考。英文原味版请传送 Top 8 Most Demanded Programming Languages in 2023。\n\n本期共享的是 —— 大家有没有想过 2023 人气最高的是什么编程语言？尽管目前地球上已存在超过 200 多种编程语言，但只有少数语言在现实世界的各行各业中普遍使用。了解这些关键资讯对于在开发者工作行业夺取先机至关重要。\n在过去 17 个月里，DevJobsScanner（开发岗雷达）分析了超过 1_400 万个开发者岗位。从这 1_400 万个职位中，DevJobsScanner 只挑选了明确需要编程语言的职位，了解哪些语言的市场需求最大。\n1. JS/TS\n自从地球上出现第一个网站以来，多年来 JS 的人气一直高居不下。话虽如此，目前 JS 是整个市场上需求最大的编程语言。此外，作为类型安全的 JS 超集，TS 的诞生也可能有助于实现这一里程碑。TS 人气和热度近年来与日俱增。一大坨新型 JS 框架完全采用 TS 编写，包括但不限于 Vue/Angular/NestJS 等等。\n过去 17 个月里，我们发现了 91.5 万份明确需要 JS/TS 作为编程语言的工作机会，约占工作的 29%。\n\n匹配的工作岗位：915K (~29%)\n大数据关键词：javascript、typescript、react、Angular、vue、node\n2. Python\nPython 悄无声息地成为 2023 第二大需求编程语言。Python 的多功能性，从脚本编写、运行服务器到数据分析，都是实现这一里程碑的关键。此外，Python 拥有又大又棒的社区之一。\n在这 17 个月中，我们发现了 60.3 万份明确需要 Python 作为…",
+          "link": "https://juejin.cn/post/7339743984100212777",
+          "publishedOn": "2024-02-26T13:26:29.000Z",
+          "wordCount": 1266,
+          "title": "2023 需求最高的八大编程语言",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7339741848079302694",
           "author": "全宝",
           "description": "theme: nico\n前言\n前方高能,长文警告!!\n\n个人比较喜欢在一个集成的平台上进行各种开发, vscode正好满足我的需求,下面我会介绍一些我比较常用的插件.\n插件类型速览:\n主题插件、基础插件、Vue插件、react插件、小程序插件、代码格式化...\n主题\nMonokai Pro\n\n同时提供 配色主题和文件主题,看起来比较舒服.\n配色方案有多种,用ctrl+k+t快速选择主题\n\n基础插件\nHTML CSS Support\n\n提供html和css的代码高亮和提示,必备插件\nJavaScript (ES6) code snippets\n\nvscode本身有内置js的代码提示,装一个JavaScript (ES6) code snippets用来提示代码片段就够了.\n\nVue插件推荐\nVue Language Features (Volar)\n开发 vue项目必备的插件,代码的高亮和智能提示全靠它了.\n安装之后的样子\nVue Peek\n在大型的Vue项目中如果想要快速跳转到某一个组件去,需要找很久才能找到.非常浪费时间\n这个插件就完美解决这个问题\n\nVue VSCode Snippets\n这个插件提供一些Vue的代码片段,在日常开发中,可以节省很多时间\nReact\nreact本身用的 jsx和tsx可以被 vscode识别到,所以不像 vue那样还需要装高亮插件.\nSimple React Snippets\nreact的代码片段插件,这个插件里面有很多react的代码片段,写新文件的时候可以用来快速生成代码.\n\nTypescript React code snippets\ntypescript版本的react的代码片段.\nES7+ React/Redux/React-Native snippets\n也是一个 react代码片段的插件,\n小程序\n平常开发主要用到的是Uni…",
@@ -695,6 +715,16 @@
           "publishedOn": "2024-02-26T12:51:55.000Z",
           "wordCount": 2535,
           "title": "打造舒适的vscode开发环境",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7339741848078139430",
+          "author": "dahai",
+          "description": "theme: smartblue\nhighlight: agate\n在前端开发中，实现无感刷新 token 通常是为了保持用户的登录状态，并确保其访问权限的有效性。下面将介绍如何实现无感刷新 token 的原理以及给出一个示例。\n前端如何无感刷新token 实现原理\n无感刷新 token 的实现通常基于以下几个步骤：\nToken 有效期：首先，服务器会为每个 token 设置一个有效期，例如 30 分钟或 1 小时。在这个有效期内，用户可以使用 token 访问受保护的资源。\n定期检查：前端应用会在用户活动期间定期检查 token 的有效期。通常通过轮询或心跳机制实现，即在一定时间间隔后发送请求到服务器，检查 token 是否仍然有效。\n刷新 Token：如果服务器返回 token 已失效的信息，前端应用会立即发起一个新的请求到认证服务器，使用refreshToken这个token（后端一般会返回一个长token和一个短token，长短指的是过期时间，refreshToken作为长token存在localstorage中用来向后端携带这个token去请求短token，accessToken作为短token也是存在localstorage中用这个token去请求受保护的请求放到请求头headers中）来获取新的访问 token。\n无缝切换：在获取到新 token 后，前端应用会立即更新本地存储的 token，并使用新 token 继续之前的操作，从而实现了无缝的用户体验。\n示例\n下面是一个简单的示例，展示了如何在前端实现无感刷新 token：\n设置 Token 有效期：假设服务器为每个 token 设置了 30 分钟的有效期。\n定期检查：前端应用每 5 分钟向服务器发送一个请求，检查当前 token 是否仍然有效。\n\t// 使用 setInterval 定时发送心跳请求  \n…",
+          "link": "https://juejin.cn/post/7339741848078139430",
+          "publishedOn": "2024-02-26T09:51:20.000Z",
+          "wordCount": 2086,
+          "title": "前端面试：前端如何无感刷新token；token还没有刷新完成时，发送了其他请求需要如何处理",
           "imageUrl": null
         },
         {
@@ -756,36 +786,6 @@
           "wordCount": 1201,
           "title": "2023 顶级前端工具",
           "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7339042131467747368",
-          "author": "永春哥哥",
-          "description": "前言\n最近公司在招聘，经常会问到应试者一个问题，“flex: 1 是哪些属性的缩写？”，很多同学答的都不是很好，今天我们来理解一下。\nflex：1是哪些属性的缩写\nflex：1 是 flex-grow: 1, flex-shrink: 1,flex-basis: 0% 的缩写；\n解释下flex-grow\nflex-grow是将剩余的空间，根据flex-grow的值平分，然后加到flex-basis上\njcode\n可以看到子元素的flex-basis加起来是240px，父容器分完以后剩下260px，ABCD的flex-grow加起来10，那么每一份是26px，最终AB是60px + 26px = 86px，CD是60px + 26px * 4 = 164px。\n是不是特别像老爷子突然噶了留下500块钱的遗产，兄弟4个来分，老大和老二说“我要60块钱，如果有多的可以再给我来一份”，老三和老四说“我们也要60块钱，如果有多的我们要四份”。最终老大和老二分到86，老三老四分到164，大家还都挺满意。\n解释下flex-shrink\nflex-shrink是将多出的空间根据flex-shrink的值平分，然后flex-basis减去分到的值\njcode\n可以看到子元素的flex-basis加起来是600px，而父容器只有500px，那么少的100px，就得从ABCD往出扣，ABCD的flex-shrink加起来是10，那么每一份就是10px，最终AB是150px - 10px = 140px，CD是150px - 10px * 4 = 110px;\n是不是特码像老父亲在外面吃喝嫖赌欠下500块钱的巨大债务，父债子偿嘛，兄弟4人出钱，老大和老二说\"我们一人出150，超出部分我要收回1成\"，老三和老四说“我们也出150块钱，超出部分我要收回4成”。最终老大和老二出140块钱，老三老四出110块钱。\n结尾\n通过上面例子想必大家对flex有了新的认识，最后给大家留个作业。\n老父亲突然又噶了四个孩子不知道老父亲是有存款还是有负债，老大和老二说“如果老爸有遗产我要100块钱，多出来的我要1成，如果有负债我出100块钱，超出的我要收回4成”，老三和老四说“如果老爸有遗产我要100块钱，多出来的我要2成，如果有负债我出100块钱，超出的我要收回2成”，用flex如何表示？",
-          "link": "https://juejin.cn/post/7339042131467747368",
-          "publishedOn": "2024-02-25T06:58:36.000Z",
-          "wordCount": 795,
-          "title": "离不开钱的flex",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7338702103882121216",
-          "author": "程序员Sunday",
-          "description": "theme: vuepress\nHello，大家好，我是 Sunday。\n最近有很多同学来问我：“Sunday 老师，前端学起来好多的东西啊。各种框架、各种库、各种语法、各种标准，弄得我完全懵逼了。Sunday 老师，你之前是怎么学的，好厉害啊！”\n这不禁让我开始反思：“我厉害吗？我可不这么觉得！” 那我之前是怎么学习这些东西的呢？\n我只是占了时间的便利而已~~\n背景\n如今可用的大量框架和工具给人的印象是 Web 开发可能已经变得过于复杂。如果是一个新人，有这么多要考虑的东西确实会令人感到“恐惧”。好像每一个框架都需要学习，如果不学习给人的感觉就是 “就是没有办法工作” 的样子。更何况还有各种新的热门框架教程和课程增加我们的焦虑感。\n但是，大家有没有想过一点，或许前端开发远没有那么负责，这一切也只是一种所谓的 “夸张” 而已。\n我记得最初在我学习前端的时候，Angular 还是 1 的版本。Vue 也才刚刚出现。那个时候前端开发好像很简单。标准网站主要由 HTML 和 CSS 组成的静态页面组成，并添加少量 JavaScript 和 jQuery。\n快进到今天，看起来就像一个平行宇宙正在发生，有大量的选择。新项目应该使用哪个框架？也许是更成熟的产品，如 React、Angular、Vue、Svelte，或者可能是上个月推出的热门新产品？每个框架都有其独特的生态系统。你还需要决定是否使用 TypeScript 而不是 “普通的” JavaScript，并选择如何使用Next、Nuxt 或 Gatsby 等框架进行服务器端渲染（或静态站点生成） 。如果你想要一个没有错误的应用程序，还不能忘记单元和端到端测试。不过哪怕做到了这些，我们也仅仅知识触及了前端生态系统的表面！\n但建立网站真的变得更加复杂了吗？我们今天使用的许多框架和工具最初都是为大型项目而设计的。作为一个新人，真的有这…",
-          "link": "https://juejin.cn/post/7338702103882121216",
-          "publishedOn": "2024-02-24T04:08:05.000Z",
-          "wordCount": 991,
-          "title": "为什么前端开发变得越来越复杂了？这可能是我们的错",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7338645701659131941",
-          "author": "和耳朵",
-          "description": "Coze到底应该怎么玩？一文解答你的全部疑惑\n虽然从 23 年开始 AI 就已经火遍全球，但是我发现仍有许多技术领域的小伙伴不知道 Coze 这个工具要如何来玩，正好最近掘金发起了 我用Coze来掘金 | AI Agent 创意征文大赛来啦！，所以今天特意出一篇教程给大家详细解释一下什么是 Coze。\n1. Coze 的作用\n先来说说字节在 AI 方面的布局，字节 AI 的发力方向首先在海外，首批产品有：Cici（国内版叫豆包）、ChitChop（类似 Cici）和Coze（国内版叫扣子）。\n这三个产品都允许用户自己在上面创建一个机器人，并自定义机器人的角色、功能和回复限制，但是偏向有所不同，Cici 其实更加偏向用户，也就是使用侧，它的页面是这样的：\n\n随便点进去一个机器人都可以很方便利用这个机器人的能力进行对话，是一个打开即用的平台。\n而 Coze 是一个纯机器人创建平台，它的介绍是这样的：\n\n它并不推荐你在上面进行聊天对话，而是通过把 Coze 中创建的机器人发布到豆包平台，在豆包平台上面进行对话聊天。\n所以在 Coze 平台上整体是以创建机器人和调试为主。\n2. Coze 的背后是什么\nCoze 作为一个机器人创建平台，可能有些小白会有些疑问：\n为什么我随便点点就创建了一个类似 GPT 的聊天机器人，并且它能像 GPT 一样回答我的很多问题？\n这一切都要得益于Coze 背后的字节云雀大模型，大模型提供了能力，而 Coze 则是提供了用户接口，通过 Coze 这个用户接口你就可以访问云雀大模型的问答能力了。\n整体结构类似这样：\n\n整个系统的最前端是 Coze，Coze 除了访问云雀大模型之外还提供了知识库和数据库两个数据源，根据机器人的 Prompt 来使云雀大模型在处理用户命令时，可以去加载这两个数据源的数据，利用数据源数据来进行更好的回复。\n3. Coze 功能介…",
-          "link": "https://juejin.cn/post/7338645701659131941",
-          "publishedOn": "2024-02-23T16:17:44.000Z",
-          "wordCount": 1120,
-          "title": "Coze到底应该怎么玩（元宵更新版）？一文解答你的全部疑惑",
-          "imageUrl": null
         }
       ]
     },
@@ -800,7 +800,7 @@
           "description": "上榜GitHub Trending啦~\nhttps://vfox.lhan.me/",
           "link": "https://juejin.cn/pin/7341394494901305381",
           "publishedOn": "2024-03-03T03:00:16.000Z",
-          "wordCount": 483,
+          "wordCount": 481,
           "title": "上榜GitHub Trending啦~ https://vfox.lhan.me/",
           "imageUrl": null
         },
@@ -810,7 +810,7 @@
           "description": "有没有懂超图iserver web 开发的，创建服务gis服务，怎么能选加载一个obj的模型，网上都是在桌面上的方式加载的。。",
           "link": "https://juejin.cn/pin/7341416970939170853",
           "publishedOn": "2024-03-03T03:00:07.000Z",
-          "wordCount": 464,
+          "wordCount": 462,
           "title": "有没有懂超图iserver web 开发的，创建服务gis服务，怎么能选加载一个obj的模型，网上都是在桌面上的方式加载的。。",
           "imageUrl": null
         },
@@ -830,7 +830,7 @@
           "description": "有没有jy，懂3dMAX开发的。通过obj转gltf后，在webG上加载不出来，是什么问题",
           "link": "https://juejin.cn/pin/7341227381045854249",
           "publishedOn": "2024-03-01T08:52:56.000Z",
-          "wordCount": 458,
+          "wordCount": 456,
           "title": "有没有jy，懂3dMAX开发的。通过obj转gltf后，在webG上加载不出来，是什么问题",
           "imageUrl": null
         },
@@ -940,7 +940,7 @@
           "description": "4个好用插件轻松给产品添加尺寸参数表格\n产品页面需要展示详细的产品参数表格\n\tProduct Size Charts Plugin for WooCommerce\nWPB Product Size Chart for WooCommerce\nYITH Product Size Charts for WooCommerce\nwpDataTables\n\t#wordpress外贸建站 #谷歌SEO优化 #Wordpress插件 #WooCommerce #woocommerce建站 #woocommerce商城 #woocommerce模板",
           "link": "https://juejin.cn/pin/7331347165212491802",
           "publishedOn": "2024-02-04T06:30:16.000Z",
-          "wordCount": 44,
+          "wordCount": 542,
           "title": "4个好用插件轻松给产品添加尺寸参数表格 产品页面需要展示详细的产品参数表格 Product Size Charts Plugin for WooCommerce WPB Product Size Chart for WooComm...",
           "imageUrl": null
         },
