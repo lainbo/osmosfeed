@@ -54,7 +54,7 @@
           "description": "音视频合成的时候，有倍速合成的需求，起初，我以为这只是个手到擒来的小需求，细究之下发现问题并不简单……",
           "link": "https://www.zhangxinxu.com/wordpress/2024/02/js-audioencoder-backplayrate-audiobuffer/",
           "publishedOn": "2024-02-29T14:22:22.000Z",
-          "wordCount": 1720,
+          "wordCount": 1719,
           "title": "不改变音调情况下Audio音频的倍速合成JS实现",
           "imageUrl": null
         }
@@ -668,6 +668,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7340167256267391012",
+          "author": "娜个小部呀",
+          "description": "highlight: atelier-cave-light\ntheme: channing-cyan\n今天看到一个面试题，是关于img图片加载方面的，有必要记录一下。其实关于这个问题，只要知道图片什么时候加载完成就能解决了。\n通过onload事件判断Img标签加载完成\n实现逻辑：新建一个Image对象实例，为实例对象设置src属性等，在onload事件中添加此实例对象到父元素中，然后将图片地址数组中的第一个元素剔除，继续调用此方法直到存储图片地址的数组为空。\n代码\nconst imgArrs = [...]; // 图片地址\nconst content = document.getElementById('content');\nconst loadImg = () => {\n  if (!imgArrs.length)  return;\n  const img = new Image(); // 新建一个Image对象\n  img.src = imgArrs[0];\n  img.setAttribute('class', 'img-item');\n  img.onload = () => { // 监听onload事件\n    // setTimeout(() => { // 使用setTimeout可以更清晰的看清实现效果\n      content.appendChild(img);\n        imgArrs.shift();\n        loadImg();\n    // }, 1000);\n  }\n  img.onerror = () => {\n    // do something here\n  }\n}\n  loadImg();\n\n</script>\n\n实现效果\n\n加上setTimeout后，看到的效果更加明显,我这里加了500毫秒的延迟(录屏软件只支持…",
+          "link": "https://juejin.cn/post/7340167256267391012",
+          "publishedOn": "2024-02-27T12:08:33.000Z",
+          "wordCount": 1156,
+          "title": "js如何控制一次只加载一张图片，加载完成后再加载下一张",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7339830464000213027",
           "author": "腾讯TNTWeb前端团队",
           "description": "本文翻译自 https://dev.to/wasp/web-frameworks-we-are-most-excited-for-in-2024-4d15\n介绍\n2024年正向我们走来，我们怀着满腔热情为新的一年制定计划，探索未来一年可以学习或实现的目标。此时此刻，正是探寻来年值得学习的框架、理解其功能和特色的最佳时刻。我们以2023年JS 新星名单为指引，力求保持客观公正的态度。对于每一个特色框架，我们都将突出其最大的优势，使您能够全面理解它们的优点，从而选择适合自己的框架进行尝试！\nHTMX - 返璞归真🚲\n\n为谁而设：\n你希望减少JavaScript的编写量\n你希望代码更简单，以超媒体为中心\nHTMX在2023年迅速走红，过去一年间在GitHub上赢得了大量星标。HTMX并非普通的JS框架。如果你使用HTMX，你将大部分时间都花在超媒体的世界中，以与我们通常对现代Web开发的JS密集型视角完全不同的视角看待Web开发。HTMX利用HATEOAS（Hypermedia作为应用程序状态的引擎）的概念，使开发人员能够直接从HTML访问浏览器功能，而不是使用Javascript。\n此外，它还证明了通过发布令人惊叹的表情符号并以口碑作为主要营销手段，你可以获得人气和认可。不仅如此，你还可能成为HTMX的CEO！它吸引了许多开发人员尝试这种构建网站的方法，并重新思考他们当前的实践。所有这些都使2024年对于这个库的未来发展充满了激动人心的可能性。\nWasp - 全栈，开箱即用🚀\n\n为谁而设：\n你希望快速构建全栈应用\n你希望在一个出色的一体化解决方案中继续使用React和Node.js，而无需手动挑选堆栈的每一部分\n你希望获得一个为React和Node.js预配置的免费SaaS模板—— Open SaaS\n对于希望简单轻松地全面控制其堆栈的工具的用户，无需再寻找！Wasp是一个…",
@@ -748,6 +758,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7339328501357461540",
+          "author": "一尾流莺",
+          "description": "highlight: a11y-dark\ntheme: smartblue\n求职宝典\n一尾流莺在此祝大家龙年大吉 ~ ！\n写在开始\n本篇文章结合我自己工作过的公司以及一些现实中的朋友的工作经历，给大家整理了一份 求职宝典，有些雷，有些坑，你没有遇见过，你也不知道它的存在，你也不会去问。有了这篇宝典，可以帮小伙伴们少走几年弯路。\n由于每个人对 工作的要求和认知 是不一致的， 所以有些方面只要是自己提前确认好的，哪怕比较苛刻，只要你接受就行，千万不要入职以后才发现接受不了的事情，到时候走的话浪费了时间还得重新找工作，不走的话自己待的还很难受。\n所以本文将面试、工作中所有可能遇到的问题都整理出来，仅供大家 参考使用，自己心里有一杆秤，哪些是自己 可以接受 的，哪些是自己 完全不能接受 的。以便帮助大家找到相对于自己而言比较理想的工作。\n薪资待遇篇\n在所有的问题中，最应该在意的就是薪资问题了，通俗点讲就是一个字 钱。\n普通人打工说白了就是为了钱，大家不要觉得正规公司按月按时按点就会给你卡里打钱了，拖欠工资，拖欠年终奖都是再正常不过的事了。\n我朋友之前有一家公司效益不好时都要给你签协议，每个月的 30% 都会延后半年给你发，然后稍微给你那么一丢丢利息，我忘了是多少了，到时候搞得你连离职都没法离。\n一定要问清 工资什么时候发？ 一般公司是每个月固定日期，像我现在的公司是年初的时候就定好了一年的发薪日，到日期就发。节假日提前还是延后？ 这个没太所谓，了解一下就行。 如果到日期没发工资一定要去找，最多拖欠一个月就赶紧离职，不要越拖越久，越陷越深。\n薪资统计周期？ 了解一下就行，大部分都是算自然月的，也就是 1-31号 。也有别的，比如我现在是每个月 5 号左右发工资，但工资周期是每个月的 23 号，也就是说 2.5号 发的工资是 12.23号 ~ 1.23号 的。\n要了解 薪资的构成？ 免…",
+          "link": "https://juejin.cn/post/7339328501357461540",
+          "publishedOn": "2024-02-26T01:04:05.000Z",
+          "wordCount": 1806,
+          "title": "【万字求职宝典】送给🐉年要找工作的同学（非面试题）",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7338797433899221043",
           "author": "前端双越老师",
           "description": "前端技术栈已经稳定，纯前端、切图仔是没有未来的。全栈 + AI 才是出路。\n开始\n大家好，我是前端双越老师~\n我打算花几个月的时间搞一个 AIGC 方向的项目，一个 AI 写作项目 —— 划水AI\nnotion AI 。相面有详细的功能介绍。\n\n但这个项目不是随便搞一个 demo 然后写篇博客结束了。我对它提出如下要求：\n必须是真实上线运维的项目，能让你注册使用的，看得见摸得着的项目。要有域名、备案、SSL 证书、服务器或 Serverless 服务、数据库、CDN、OSS、统计、监控报警等基础服务，还有手机号注册、微信扫码登录、微信支付或退款，等常见功能\n全栈项目。拥抱全栈吧，纯前端，切图仔，未来没有前途的。前端框架和技术栈已经未定了，你再去卷源码、造轮子没有太多意义的。node 全栈（或 SSR）却有另外一片天地\n要有一定的技术难度和挑战性，项目中会开发编辑器，AI 能力集成，多人在线协同编辑，这些都很难，放到简历中都是亮点。\n一个有前途、且实用的业务方向。例如低代码、中台 已经过时了，开源项目也不可持续，都不好。目前看来，AIGC 是一个不错的方向（就在前两天 OpenAI 发布 Sora 智能生成视频，刷爆朋友圈）\n如果你有兴趣，欢迎来围观，可以学习项目的设计、开发、上线、运维过程，也可以加入一起远程开发。可以在 这里 加群 ，或者私信我~\n我的技术价值观\n程序员，尤其是独立开发者，应该有自己的作品和代表作。就像作家、画家、歌手一样，都要有自己的作品，才能称得上这个职位。PS：我还是一个业余画手~ 哈哈 ~~\n\n我虽然自称“双越老师”，但我不想只当一个讲师，也不能只当讲师。 无论你技术再好，只当讲师不冲到项目第一线，慢慢就技术落后了，慢慢的就只剩下靠嘴巴和所谓的名气来“忽悠”学员。\n最开始我在大厂（某度、某滴）工作。后来我的代表作是 wangEditor 开源富文本…",
@@ -766,26 +786,6 @@
           "wordCount": 1593,
           "title": "古茗是如何将小程序编译速度提升3倍的",
           "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7339364757386264612",
-          "author": "前端小付",
-          "description": "theme: cyanosis\nhighlight: atom-one-dark\n前言\n过年期间在家里没事，把zustand的源码看了一遍，看完后我最大的收获就是ts水平突飞猛进，再去刷那些类型体操题目就变得简单了，下面和大家分享一下zustand库是怎么定义ts类型的。\nts类型推断\n个人认为ts最大的作用有两个，一个是类型约束，另外一个是类型推断。\n类型约束也叫类型安全，在编译阶段就能发现语法错误，可以有效减少低级错误。\n类型推断，当你没有标明变量的类型时，编译器会根据一些简单的规则来推断你定义的变量的类型\n这一篇主要和大家分享类型推断，类型推断主要有以下几种情况。\n根据变量的值自动推导类型\n\n\n函数返回值自动推断\n\n函数中如果有条件分支，推导出来的返回值类型是所有分支的返回值类型的联合类型\n\nts的类型推导方式是懒推导，也就是说不会实际执行代码。\n\n上图中如果实际执行了，c的类型是能确认为null的。\n使用范型推导\n\n可以看到按照上面写法，对象合并推导不出来，如果能推导出来u3应该等于 {name: string, age: number}。\n这时候我们可以借助范型来推导\n\n可以给上面代码简写为这样，编辑器也能推导出来\n\n实战\n实现pick方法\n从一个对象中，返回指定的属性名称。\n\n上面代码中定义了两个范型T和U，T表示对象，U被限定为T的属性名(U extends keyof T)，返回值的类型为{[K in U]: T[K]}，in的作用就是遍历U这个数组。\n\n可以看到数组元素被限制了只能是user对象里的key\n\n\n也正确的推导出来了\n实现useRequest\n先看一个例子\nimport { useEffect, useState } from 'react';\n\n// 模拟请求接口，返回用户列表\nfunction getUsers(): Promise<{ n…",
-          "link": "https://juejin.cn/post/7339364757386264612",
-          "publishedOn": "2024-02-25T13:18:32.000Z",
-          "wordCount": 3602,
-          "title": "看完zustand源码后，我的TypeScript水平突飞猛进。",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7339035831402741796",
-          "author": "前端猫猫教",
-          "description": "大家好，这里是大家的林语冰。坚持阅读，自律打卡，每天一次，进步一点。\n免责声明\n本文属于是语冰的直男翻译了属于是，略有删改，仅供粉丝参考。英文原味版请传送 Top Front-End Tools Of 2023。\n本期共享的是 —— 2023 人气最高的 Web 开发者工具，这些工具涵盖许多类别，包括 JS 库、Web 框架、CSS 生成器、数据库工具、React 组件、CLI 工具，甚至 ChatGPT 和AI 筑基的工具。\nEffect\nEffect 被描述为“一个给力的 TS 库，旨在辅助开发者轻松创建复杂的同步和异步程序。”\n\nEffect 的幕后动机是辅助开发者通过所谓的结构化并发 —— 一种允许多个复杂操作同时运行的编程范式，构建鲁棒可扩展的 App。\nVanJS\nVanJS 是一个类似 React 的 UI 库，但不使用 JSX、虚拟 DOM、转译等。此想法是为了避免通常与使用诸如 React 之类的库相关的配置开销。\n\nVanJS 声称是地球上最小的 UI 库，大小不到 1kb。它对 TS 有一流的支持，天然拥有比 React/Vue 等给力的性能。\nCSS Loaders\nCSS Loaders 是一个庞大的集合，包含 30 多个类别下的 600 多个 CSS 加载动画。\n\nCSS Loaders 包含我们能想到的几乎任何样式的加载程序，只需单击一下即可轻松复制粘贴任何加载程序的 HTML/CSS。\nKuma UI\nKuma UI 自诩为“CSS-in-JS 的未来”，是一个 headless、实用程序优先、零运行时的组件库，其中包括自己的 CSS-in-JS 解决方案。\n\nKuma UI 的与众不同之处在于其混合方案，允许在运行时动态更改样式，同时仍然保持零运行时 CSS-in-JS 的性能优势。\nOpenGPT\nOpenGPT 是过去一年里人气爆棚的众…",
-          "link": "https://juejin.cn/post/7339035831402741796",
-          "publishedOn": "2024-02-25T12:18:06.000Z",
-          "wordCount": 1201,
-          "title": "2023 顶级前端工具",
-          "imageUrl": null
         }
       ]
     },
@@ -800,7 +800,7 @@
           "description": "上榜GitHub Trending啦~\nhttps://vfox.lhan.me/",
           "link": "https://juejin.cn/pin/7341394494901305381",
           "publishedOn": "2024-03-03T03:00:16.000Z",
-          "wordCount": 481,
+          "wordCount": 480,
           "title": "上榜GitHub Trending啦~ https://vfox.lhan.me/",
           "imageUrl": null
         },
@@ -810,7 +810,7 @@
           "description": "有没有懂超图iserver web 开发的，创建服务gis服务，怎么能选加载一个obj的模型，网上都是在桌面上的方式加载的。。",
           "link": "https://juejin.cn/pin/7341416970939170853",
           "publishedOn": "2024-03-03T03:00:07.000Z",
-          "wordCount": 462,
+          "wordCount": 461,
           "title": "有没有懂超图iserver web 开发的，创建服务gis服务，怎么能选加载一个obj的模型，网上都是在桌面上的方式加载的。。",
           "imageUrl": null
         },
@@ -830,7 +830,7 @@
           "description": "有没有jy，懂3dMAX开发的。通过obj转gltf后，在webG上加载不出来，是什么问题",
           "link": "https://juejin.cn/pin/7341227381045854249",
           "publishedOn": "2024-03-01T08:52:56.000Z",
-          "wordCount": 456,
+          "wordCount": 455,
           "title": "有没有jy，懂3dMAX开发的。通过obj转gltf后，在webG上加载不出来，是什么问题",
           "imageUrl": null
         },

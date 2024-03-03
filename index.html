@@ -1352,6 +1352,55 @@ strapi实战
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7340167256267391012"
+                        open
+                      >
+                        <summary class="article-expander__title">js如何控制一次只加载一张图片，加载完成后再加载下一张</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7340167256267391012">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>highlight: atelier-cave-light
+theme: channing-cyan
+今天看到一个面试题，是关于img图片加载方面的，有必要记录一下。其实关于这个问题，只要知道图片什么时候加载完成就能解决了。
+通过onload事件判断Img标签加载完成
+实现逻辑：新建一个Image对象实例，为实例对象设置src属性等，在onload事件中添加此实例对象到父元素中，然后将图片地址数组中的第一个元素剔除，继续调用此方法直到存储图片地址的数组为空。
+代码
+const imgArrs &#x3D; [...]; // 图片地址
+const content &#x3D; document.getElementById(&#x27;content&#x27;);
+const loadImg &#x3D; () &#x3D;&gt; {
+  if (!imgArrs.length)  return;
+  const img &#x3D; new Image(); // 新建一个Image对象
+  img.src &#x3D; imgArrs[0];
+  img.setAttribute(&#x27;class&#x27;, &#x27;img-item&#x27;);
+  img.onload &#x3D; () &#x3D;&gt; { // 监听onload事件
+    // setTimeout(() &#x3D;&gt; { // 使用setTimeout可以更清晰的看清实现效果
+      content.appendChild(img);
+        imgArrs.shift();
+        loadImg();
+    // }, 1000);
+  }
+  img.onerror &#x3D; () &#x3D;&gt; {
+    // do something here
+  }
+}
+  loadImg();
+
+
+
+实现效果
+
+加上setTimeout后，看到的效果更加明显,我这里加了500毫秒的延迟(录屏软件只支持…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7339830464000213027"
                         open
                       >
@@ -1734,6 +1783,39 @@ v19 新特性预测
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7339328501357461540"
+                        open
+                      >
+                        <summary class="article-expander__title">【万字求职宝典】送给🐉年要找工作的同学（非面试题）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7339328501357461540">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>highlight: a11y-dark
+theme: smartblue
+求职宝典
+一尾流莺在此祝大家龙年大吉 ~ ！
+写在开始
+本篇文章结合我自己工作过的公司以及一些现实中的朋友的工作经历，给大家整理了一份 求职宝典，有些雷，有些坑，你没有遇见过，你也不知道它的存在，你也不会去问。有了这篇宝典，可以帮小伙伴们少走几年弯路。
+由于每个人对 工作的要求和认知 是不一致的， 所以有些方面只要是自己提前确认好的，哪怕比较苛刻，只要你接受就行，千万不要入职以后才发现接受不了的事情，到时候走的话浪费了时间还得重新找工作，不走的话自己待的还很难受。
+所以本文将面试、工作中所有可能遇到的问题都整理出来，仅供大家 参考使用，自己心里有一杆秤，哪些是自己 可以接受 的，哪些是自己 完全不能接受 的。以便帮助大家找到相对于自己而言比较理想的工作。
+薪资待遇篇
+在所有的问题中，最应该在意的就是薪资问题了，通俗点讲就是一个字 钱。
+普通人打工说白了就是为了钱，大家不要觉得正规公司按月按时按点就会给你卡里打钱了，拖欠工资，拖欠年终奖都是再正常不过的事了。
+我朋友之前有一家公司效益不好时都要给你签协议，每个月的 30% 都会延后半年给你发，然后稍微给你那么一丢丢利息，我忘了是多少了，到时候搞得你连离职都没法离。
+一定要问清 工资什么时候发？ 一般公司是每个月固定日期，像我现在的公司是年初的时候就定好了一年的发薪日，到日期就发。节假日提前还是延后？ 这个没太所谓，了解一下就行。 如果到日期没发工资一定要去找，最多拖欠一个月就赶紧离职，不要越拖越久，越陷越深。
+薪资统计周期？ 了解一下就行，大部分都是算自然月的，也就是 1-31号 。也有别的，比如我现在是每个月 5 号左右发工资，但工资周期是每个月的 23 号，也就是说 2.5号 发的工资是 12.23号 ~ 1.23号 的。
+要了解 薪资的构成？ 免…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7338797433899221043"
                         open
                       >
@@ -1843,134 +1925,6 @@ Taro 构建没毛病
                             <span class="media-object__text">
                               <span>巫山县气象台2024年2月26日10时继续发布“道路结冰黄色预警信号”，预计2月26日10时至28日10时，当阳乡、两坪乡、骡坪镇、培石乡、三溪乡、竹贤乡、笃坪乡、邓家乡、双龙镇、金坪乡、福田镇、龙溪镇、大昌镇、平河乡、官阳镇、铜鼓镇、庙宇镇、官渡镇、红椿乡、抱龙镇、大溪乡、巫峡镇、曲尺乡、建平乡等乡镇（街道）海拔高于1000米以上地区路表温度将低于0℃，可能出现对交通有影响的道路结冰。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-25 datetime="2024-02-25T13:18:32.000Z">2024-02-25</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-25 datetime="2024-02-25T13:18:32.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7339364757386264612"
-                        open
-                      >
-                        <summary class="article-expander__title">看完zustand源码后，我的TypeScript水平突飞猛进。</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7339364757386264612">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: cyanosis
-highlight: atom-one-dark
-前言
-过年期间在家里没事，把zustand的源码看了一遍，看完后我最大的收获就是ts水平突飞猛进，再去刷那些类型体操题目就变得简单了，下面和大家分享一下zustand库是怎么定义ts类型的。
-ts类型推断
-个人认为ts最大的作用有两个，一个是类型约束，另外一个是类型推断。
-类型约束也叫类型安全，在编译阶段就能发现语法错误，可以有效减少低级错误。
-类型推断，当你没有标明变量的类型时，编译器会根据一些简单的规则来推断你定义的变量的类型
-这一篇主要和大家分享类型推断，类型推断主要有以下几种情况。
-根据变量的值自动推导类型
-
-
-函数返回值自动推断
-
-函数中如果有条件分支，推导出来的返回值类型是所有分支的返回值类型的联合类型
-
-ts的类型推导方式是懒推导，也就是说不会实际执行代码。
-
-上图中如果实际执行了，c的类型是能确认为null的。
-使用范型推导
-
-可以看到按照上面写法，对象合并推导不出来，如果能推导出来u3应该等于 {name: string, age: number}。
-这时候我们可以借助范型来推导
-
-可以给上面代码简写为这样，编辑器也能推导出来
-
-实战
-实现pick方法
-从一个对象中，返回指定的属性名称。
-
-上面代码中定义了两个范型T和U，T表示对象，U被限定为T的属性名(U extends keyof T)，返回值的类型为{[K in U]: T[K]}，in的作用就是遍历U这个数组。
-
-可以看到数组元素被限制了只能是user对象里的key
-
-
-也正确的推导出来了
-实现useRequest
-先看一个例子
-import { useEffect, useState } from &#x27;react&#x27;;
-
-// 模拟请求接口，返回用户列表
-function getUsers(): Promise&lt;{ n…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;12
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7339035831402741796"
-                        open
-                      >
-                        <summary class="article-expander__title">2023 顶级前端工具</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7339035831402741796">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>大家好，这里是大家的林语冰。坚持阅读，自律打卡，每天一次，进步一点。
-免责声明
-本文属于是语冰的直男翻译了属于是，略有删改，仅供粉丝参考。英文原味版请传送 Top Front-End Tools Of 2023。
-本期共享的是 —— 2023 人气最高的 Web 开发者工具，这些工具涵盖许多类别，包括 JS 库、Web 框架、CSS 生成器、数据库工具、React 组件、CLI 工具，甚至 ChatGPT 和AI 筑基的工具。
-Effect
-Effect 被描述为“一个给力的 TS 库，旨在辅助开发者轻松创建复杂的同步和异步程序。”
-
-Effect 的幕后动机是辅助开发者通过所谓的结构化并发 —— 一种允许多个复杂操作同时运行的编程范式，构建鲁棒可扩展的 App。
-VanJS
-VanJS 是一个类似 React 的 UI 库，但不使用 JSX、虚拟 DOM、转译等。此想法是为了避免通常与使用诸如 React 之类的库相关的配置开销。
-
-VanJS 声称是地球上最小的 UI 库，大小不到 1kb。它对 TS 有一流的支持，天然拥有比 React/Vue 等给力的性能。
-CSS Loaders
-CSS Loaders 是一个庞大的集合，包含 30 多个类别下的 600 多个 CSS 加载动画。
-
-CSS Loaders 包含我们能想到的几乎任何样式的加载程序，只需单击一下即可轻松复制粘贴任何加载程序的 HTML/CSS。
-Kuma UI
-Kuma UI 自诩为“CSS-in-JS 的未来”，是一个 headless、实用程序优先、零运行时的组件库，其中包括自己的 CSS-in-JS 解决方案。
-
-Kuma UI 的与众不同之处在于其混合方案，允许在运行时动态更改样式，同时仍然保持零运行时 CSS-in-JS 的性能优势。
-OpenGPT
-OpenGPT 是过去一年里人气爆棚的众…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4299,8 +4253,8 @@ wpDataTables
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8130338103">
-        <time id="build-timestamp" datetime="2024-03-03T12:54:17.903Z">2024-03-03T12:54:17.903Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8131344783">
+        <time id="build-timestamp" datetime="2024-03-03T15:53:43.889Z">2024-03-03T15:53:43.889Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
