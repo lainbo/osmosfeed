@@ -51,8 +51,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-04 datetime="2024-03-04T07:44:59.000Z">2024-03-04</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-04 datetime="2024-03-04T07:44:59.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-04 datetime="2024-03-04T16:16:14.000Z">2024-03-04</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-04 datetime="2024-03-04T16:16:14.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -67,6 +67,32 @@
                   <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7342406486910517274"
+                        open
+                      >
+                        <summary class="article-expander__title">[西瓜]ServBay 1.2.3版本正式发布！ ServBay是一个集成式、图形化的本地化Web开发环境。开发者通过ServBay几分钟内就能部署一个本地化的开发环境。主要解决Web开...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7342406486910517274">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>[西瓜]ServBay 1.2.3版本正式发布！
+ServBay是一个集成式、图形化的本地化Web开发环境。开发者通过ServBay几分钟内就能部署一个本地化的开发环境。主要解决Web开发者（比如PHP、Nodejs）、测试工程师、小型团队安装和维护开发测试环境的问题，后期还可以快速的进行环境的升级以及维护。
+本次更新了：
+[礼物]全新架构及软件包
+[礼物]增强的错误日志
+[礼物]phpMyAdmin支持MariaDB 11.3
+[礼物]ServBay Helper运行状况的判断
+期待您在ServBay 1.2.3版本中享受到更加优化和流畅的体验[庆祝]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -2169,6 +2195,42 @@ null 和  undefined 的区别了 阮一峰
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7340197367515578378"
+                        open
+                      >
+                        <summary class="article-expander__title">如果iconfont停止服务了，我们怎么办</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7340197367515578378">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言
+个人一直都比较喜欢阿里大佬提供的一些组件服务什么的，这里就只说图标管理吧，最开始的时候我是使用的https://icomoon.io 后面发现https://www.iconfont.cn/ 在以前开发是时候我们为了图片的请求少点，提升网站的性能会把这些小图标做到一张图上面专业叫法是雪碧图，后来随着前端发展有了字体图标，不啰嗦了吧，回到正题，由于上次icofont官网挂了之后，导致我的项目无法进行正常迭代，我就决定要自己弄个简单的图标管理。
+需求
+一般使用需要的是把设计做好的图标或者其他地方下载的svg图标上传到服务器然后可以查看，并且打包成一个js文件加载到项目中。
+准备
+都说天下文章一大抄，我也是去抄iconfont,我把iconfont的使用demo打开研究了一下。
+
+
+我这里只说Symbol，通过分析看到就是我们需要在项目中引入./iconfont.js
+
+iconfont把我们上传的图标进行了删减优化,最外层就一个svg标签里面使用了一个symbol标签来包裹之前的图标内容，每一个symbol的id都对应之前的svg图标名称。
+iconfont也没有开源,具体怎么做的咱也不知道，只能知道目前这些信息了，然后就按照自己理解开始开发实现了
+前端开发
+通过上面我们可以知道，现在我们前端需要的是把设计稿的svg图变成symbol里面的内容，打开svg图
+可以简单测试下，直接把内容复制然后粘贴带了iconfont.js中，然后运行demo图标正常显示就说明是ok的，不然就是这样做是不行的。
+
+通过图片我们可以看到，现在需要的就是把svg里面的path改成用symblo来包裹，在开发中svg图我们是通过文档流上传上来的，这个时候我们就需要对文档流进行操作，先把文档流变成字符串，然后js操作字符串拼接达到目的。
+使用到FileReader和readAsText获取到字符串…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -2878,62 +2940,6 @@ highlight: arduino-light
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7339731406195441699"
-                        open
-                      >
-                        <summary class="article-expander__title">技术资讯：Node.js 新吉祥物，来了！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7339731406195441699">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>大家好，我是大澈！
-本文约600+字，整篇阅读大约需要1分钟。
-感谢关注微信公众号：“程序员大澈”，免费领取&quot;面试礼包&quot;一份，然后免费加入问答群，从此让解决问题的你不再孤单！
-1. 资讯速览
-就在前两天，历时半年，Node 终于是推出了自己的新吉祥物，火箭龟！
-没错，就是下面这只站在火箭上的呆萌小乌龟，有点丑萌丑萌的，哈哈，个人觉得还挺可爱。
-
-吉祥物的设计师是 Angela，她是一位拥有超过 15 年经验的多学科设计师，也是 OramaSearch 的联合创始人和设计师。
-
-同时，Node 为了纪念新吉祥物，还提供 Node.js 培训和认证 60% 的折扣。
-下面一起来看资讯详细。
-
-2. 资讯详细
-先聊聊之前的 Node.js 吉祥物设计大赛，最后做小结。
-2.1 吉祥物设计大赛
-记得去年，Node.js 于 2023 年 10 月份，在其 X（原 Twitter）官方账号下，宣布了关于 Node.js 吉祥物设计大赛，目的是寻找一个新的吉祥物来做为 Node.js 的代言人。
-大赛历时大概是一个月的时间，众多网友为此都送上了“精彩”作品，真是脑洞大开哈哈。
-下面我找了几张图，我们一起欣赏欣赏：
-
-
-这货有点熟悉，哈哈哈！
-
-
-
-
-
-总结一下，两个字，精彩！
-
-2.2 小结
-历时半年，Node 终于是推出了自己的新吉祥物，火箭龟。
-此举的意义，对于 Node而言，算是具有里程碑的意义了，毕竟期待已久，终也算是圆满了。
-
-结语
-建立这个平台的初衷：
-打造一个专注于前端功能问题的问答平台，让大家高效搜索处理同样问题。
-遇到有共鸣的问题，与众多同行朋友们一起讨论，一起沉淀成长。
-平台现拥有功能问题、技术资讯、实用干货3个专栏内容。
-感谢关注微信公众号：“程序员大澈”，免费领取&quot;面试礼包&quot;一份，然后免费加入问答群，从此让解决问题的你不再孤单！</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -4005,63 +4011,10 @@ iFixit 网站拆解了苹果头盔，证实了 CPU 是 M2 芯片，跟 MacBook �
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-04 datetime="2024-02-04T06:30:16.000Z">2024-02-04</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-04 datetime="2024-02-04T06:30:16.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7331347165212491802"
-                        open
-                      >
-                        <summary class="article-expander__title">4个好用插件轻松给产品添加尺寸参数表格 产品页面需要展示详细的产品参数表格 Product Size Charts Plugin for WooCommerce WPB Product Size Chart for WooComm...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7331347165212491802">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>4个好用插件轻松给产品添加尺寸参数表格
-产品页面需要展示详细的产品参数表格
-	Product Size Charts Plugin for WooCommerce
-WPB Product Size Chart for WooCommerce
-YITH Product Size Charts for WooCommerce
-wpDataTables
-	#wordpress外贸建站 #谷歌SEO优化 #Wordpress插件 #WooCommerce #woocommerce建站 #woocommerce商城 #woocommerce模板</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8143080965">
-        <time id="build-timestamp" datetime="2024-03-04T15:54:03.671Z">2024-03-04T15:54:03.671Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8145469071">
+        <time id="build-timestamp" datetime="2024-03-04T18:53:54.021Z">2024-03-04T18:53:54.021Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

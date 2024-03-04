@@ -64,7 +64,7 @@
           "description": "音视频合成的时候，有倍速合成的需求，起初，我以为这只是个手到擒来的小需求，细究之下发现问题并不简单……",
           "link": "https://www.zhangxinxu.com/wordpress/2024/02/js-audioencoder-backplayrate-audiobuffer/",
           "publishedOn": "2024-02-29T14:22:22.000Z",
-          "wordCount": 1717,
+          "wordCount": 1718,
           "title": "不改变音调情况下Audio音频的倍速合成JS实现",
           "imageUrl": null
         }
@@ -148,7 +148,7 @@
           "description": "大公司想要保持创业，逃逸平庸的重力，或许只是一个美好的愿望。https://mp.weixin.qq.com/s/rgBCufdfMn66d0STEav3bg\n“一个需求，一开始评估要 1000 人天，深入问之后发现只需要 15 人天。”\n”汝波举了一个例子，需求本身并不复杂，但是拉了一堆人，而且大家给出的判断是基于错误的信息去做的，最后就出现了这么大的评估偏差。”\n一些表达习惯里也是如此，“还行”变成”很好”，“不太行”变成“也还行”，“很不好”变成“还不错”，本来可以直接在会上讨论清楚的问题，却说“我们下来再看看”……",
           "link": "https://m.okjike.com/originalPosts/65d5982712ed2fda6821412b",
           "publishedOn": "2024-02-21T06:28:55.000Z",
-          "wordCount": 467,
+          "wordCount": 469,
           "title": "发布了: 大公司想要保持创业，逃逸平庸的重力，或许只是一个美好的愿望。https://mp.weixin.qq.com/s/rgBCufdfMn66d0STEav3bg “一个需求，一开始评估要 1000 人...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -688,6 +688,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7340197367515578378",
+          "author": "纯阳阳",
+          "description": "前言\n个人一直都比较喜欢阿里大佬提供的一些组件服务什么的，这里就只说图标管理吧，最开始的时候我是使用的https://icomoon.io 后面发现https://www.iconfont.cn/ 在以前开发是时候我们为了图片的请求少点，提升网站的性能会把这些小图标做到一张图上面专业叫法是雪碧图，后来随着前端发展有了字体图标，不啰嗦了吧，回到正题，由于上次icofont官网挂了之后，导致我的项目无法进行正常迭代，我就决定要自己弄个简单的图标管理。\n需求\n一般使用需要的是把设计做好的图标或者其他地方下载的svg图标上传到服务器然后可以查看，并且打包成一个js文件加载到项目中。\n准备\n都说天下文章一大抄，我也是去抄iconfont,我把iconfont的使用demo打开研究了一下。\n\n\n我这里只说Symbol，通过分析看到就是我们需要在项目中引入./iconfont.js\n\niconfont把我们上传的图标进行了删减优化,最外层就一个svg标签里面使用了一个symbol标签来包裹之前的图标内容，每一个symbol的id都对应之前的svg图标名称。\niconfont也没有开源,具体怎么做的咱也不知道，只能知道目前这些信息了，然后就按照自己理解开始开发实现了\n前端开发\n通过上面我们可以知道，现在我们前端需要的是把设计稿的svg图变成symbol里面的内容，打开svg图\n可以简单测试下，直接把内容复制然后粘贴带了iconfont.js中，然后运行demo图标正常显示就说明是ok的，不然就是这样做是不行的。\n\n通过图片我们可以看到，现在需要的就是把svg里面的path改成用symblo来包裹，在开发中svg图我们是通过文档流上传上来的，这个时候我们就需要对文档流进行操作，先把文档流变成字符串，然后js操作字符串拼接达到目的。\n使用到FileReader和readAsText获取到字符串…",
+          "link": "https://juejin.cn/post/7340197367515578378",
+          "publishedOn": "2024-02-28T01:50:36.000Z",
+          "wordCount": 1078,
+          "title": "如果iconfont停止服务了，我们怎么办",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7340152660224819212",
           "author": "码窝酱",
           "description": "序言\n很早以前就知道strap的存在，一直没有机会使用到。\n很早以前就想找一个类似strapi的框架，来帮我快速搭建后台服务。\n如果你只懂前端、那么它将非常适合你用来快速构建自己的api服务，以此实现全栈项目开发。\n\nstrapi是什么？\nStrapi在国内鲜为人知，但它在国外的使用情况真的很Nice！\n\n其仓库也是一直在维护、更新的。\nStrapi 是一个开源的 Headless CMS（无头内容管理系统）。它允许开发者通过自定义的方式快速构建、管理和分发内容。Strapi 提供了一个强大的后端 API，支持 RESTful 和 GraphQL 两种方式，使得开发者可以方便地将内容分发到任何设备或服务，无论是网站、移动应用还是 IoT 设备。\nStrapi 的主要特点包括：\n灵活性和可扩展性：通过自定义模型、API、插件等，Strapi 提供了极高的灵活性，可以满足各种业务需求。\n易于使用的 API：Strapi 提供了一个简洁、直观的 API，使得开发者可以轻松地与数据库进行交互。\n内容管理界面：Strapi 提供了一个易于使用的管理界面，使得用户可以轻松地创建、编辑和发布内容。\n多语言支持：Strapi 支持多种语言，包括中文、英语、法语、德语等。\n可扩展性：Strapi 具有高度的可扩展性，可以通过插件和自定义模块、插件来扩展其功能。\n社区支持：Strapi 拥有一个活跃的社区，提供了大量的文档、示例和插件，使得开发人员可以轻松地解决问题和扩展功能。\n主要适用场景：\n多平台内容分发（ 将内容分发到不同web、h5等不同平台 ）\n定制化 CMS 需求（ 通过插件等扩展性高度定制 ）\n快速开发api（API管理界面能够大大加快开发速度，尤其是MVP（最小可行产品）阶段 ）\nstrapi实战\n光看官网界面（原官网地址），还是相当漂亮的🙈：\n\n安装Strapi\n超级简单，…",
@@ -725,16 +735,6 @@
           "publishedOn": "2024-02-27T02:06:15.000Z",
           "wordCount": 2899,
           "title": "小小导出，我大前端足矣！",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7339731406195441699",
-          "author": "程序员大澈",
-          "description": "大家好，我是大澈！\n本文约600+字，整篇阅读大约需要1分钟。\n感谢关注微信公众号：“程序员大澈”，免费领取\"面试礼包\"一份，然后免费加入问答群，从此让解决问题的你不再孤单！\n1. 资讯速览\n就在前两天，历时半年，Node 终于是推出了自己的新吉祥物，火箭龟！\n没错，就是下面这只站在火箭上的呆萌小乌龟，有点丑萌丑萌的，哈哈，个人觉得还挺可爱。\n\n吉祥物的设计师是 Angela，她是一位拥有超过 15 年经验的多学科设计师，也是 OramaSearch 的联合创始人和设计师。\n\n同时，Node 为了纪念新吉祥物，还提供 Node.js 培训和认证 60% 的折扣。\n下面一起来看资讯详细。\n\n2. 资讯详细\n先聊聊之前的 Node.js 吉祥物设计大赛，最后做小结。\n2.1 吉祥物设计大赛\n记得去年，Node.js 于 2023 年 10 月份，在其 X（原 Twitter）官方账号下，宣布了关于 Node.js 吉祥物设计大赛，目的是寻找一个新的吉祥物来做为 Node.js 的代言人。\n大赛历时大概是一个月的时间，众多网友为此都送上了“精彩”作品，真是脑洞大开哈哈。\n下面我找了几张图，我们一起欣赏欣赏：\n\n\n这货有点熟悉，哈哈哈！\n\n\n\n\n\n总结一下，两个字，精彩！\n\n2.2 小结\n历时半年，Node 终于是推出了自己的新吉祥物，火箭龟。\n此举的意义，对于 Node而言，算是具有里程碑的意义了，毕竟期待已久，终也算是圆满了。\n\n结语\n建立这个平台的初衷：\n打造一个专注于前端功能问题的问答平台，让大家高效搜索处理同样问题。\n遇到有共鸣的问题，与众多同行朋友们一起讨论，一起沉淀成长。\n平台现拥有功能问题、技术资讯、实用干货3个专栏内容。\n感谢关注微信公众号：“程序员大澈”，免费领取\"面试礼包\"一份，然后免费加入问答群，从此让解决问题的你不再孤单！",
-          "link": "https://juejin.cn/post/7339731406195441699",
-          "publishedOn": "2024-02-26T15:37:53.000Z",
-          "wordCount": 750,
-          "title": "技术资讯：Node.js 新吉祥物，来了！",
           "imageUrl": null
         },
         {
@@ -785,6 +785,16 @@
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
         {
+          "id": "7342406486910517274",
+          "author": "ServBay",
+          "description": "[西瓜]ServBay 1.2.3版本正式发布！\nServBay是一个集成式、图形化的本地化Web开发环境。开发者通过ServBay几分钟内就能部署一个本地化的开发环境。主要解决Web开发者（比如PHP、Nodejs）、测试工程师、小型团队安装和维护开发测试环境的问题，后期还可以快速的进行环境的升级以及维护。\n本次更新了：\n[礼物]全新架构及软件包\n[礼物]增强的错误日志\n[礼物]phpMyAdmin支持MariaDB 11.3\n[礼物]ServBay Helper运行状况的判断\n期待您在ServBay 1.2.3版本中享受到更加优化和流畅的体验[庆祝]",
+          "link": "https://juejin.cn/pin/7342406486910517274",
+          "publishedOn": "2024-03-04T16:16:14.000Z",
+          "wordCount": 474,
+          "title": "[西瓜]ServBay 1.2.3版本正式发布！ ServBay是一个集成式、图形化的本地化Web开发环境。开发者通过ServBay几分钟内就能部署一个本地化的开发环境。主要解决Web开...",
+          "imageUrl": null
+        },
+        {
           "id": "7342319793154572303",
           "author": "丢掉幻想",
           "description": "蓝月亮，蓝禾，三七互娱，顺丰，康冠科技，金证科技24春招内推\n①蓝月亮\n【招聘岗位】技术，研发，lT，供应链，市场，职能等\n【网申链接】https://sourl.cn/NsVxG6\n【内推码】 在网申页面“信息获取渠道”中“其他渠道”输入内推码：CS01\n②蓝禾\n【岗位】运营类、设计类、研发类，供应链类，职能等\n【一键内推】https://lanhevip.jobs.feishu.cn/index/m/?external_referral_code=T1KYX4B\n【校园大使推荐码】T1KYX4B\n③三七互娱\n【岗位】美术设计类，运营类，游戏研发类，策划类，市场推广类等\n【一键内推】https://sourl.cn/4tzszW\n【官方内推码】DSQ526j8\n④顺丰\n【招聘岗位】研发类、算法与大数据类，设计类，产品类、职能类\n【官方内推码】4FOLXH\n【一键内推】https://sourl.cn/viaZZt\n⑤康冠科技\n 【岗位】算法类，软硬件类，供应链类，产品类，商务类，职能类\n【一键内推】https://sourl.cn/aJJ2YE \n【内推码】 EVBM88\n⑥金证科技\n【岗位】C/C++/Java/Web/大模型算法，测试/实施/维护/运维，产品/销售/交易员\n【内推码】EVVG83\n【投递链接】https://sourl.cn/SUhk4b",
@@ -800,7 +810,7 @@
           "description": "上榜GitHub Trending啦~\nhttps://vfox.lhan.me/",
           "link": "https://juejin.cn/pin/7341394494901305381",
           "publishedOn": "2024-03-03T03:00:16.000Z",
-          "wordCount": 480,
+          "wordCount": 483,
           "title": "上榜GitHub Trending啦~ https://vfox.lhan.me/",
           "imageUrl": null
         },
@@ -810,7 +820,7 @@
           "description": "有没有懂超图iserver web 开发的，创建服务gis服务，怎么能选加载一个obj的模型，网上都是在桌面上的方式加载的。。",
           "link": "https://juejin.cn/pin/7341416970939170853",
           "publishedOn": "2024-03-03T03:00:07.000Z",
-          "wordCount": 461,
+          "wordCount": 464,
           "title": "有没有懂超图iserver web 开发的，创建服务gis服务，怎么能选加载一个obj的模型，网上都是在桌面上的方式加载的。。",
           "imageUrl": null
         },
@@ -830,7 +840,7 @@
           "description": "有没有jy，懂3dMAX开发的。通过obj转gltf后，在webG上加载不出来，是什么问题",
           "link": "https://juejin.cn/pin/7341227381045854249",
           "publishedOn": "2024-03-01T08:52:56.000Z",
-          "wordCount": 455,
+          "wordCount": 458,
           "title": "有没有jy，懂3dMAX开发的。通过obj转gltf后，在webG上加载不出来，是什么问题",
           "imageUrl": null
         },
@@ -932,16 +942,6 @@
           "publishedOn": "2024-02-05T08:05:24.000Z",
           "wordCount": 479,
           "title": "git status 乱码了",
-          "imageUrl": null
-        },
-        {
-          "id": "7331347165212491802",
-          "author": "小王子的外贸笔记",
-          "description": "4个好用插件轻松给产品添加尺寸参数表格\n产品页面需要展示详细的产品参数表格\n\tProduct Size Charts Plugin for WooCommerce\nWPB Product Size Chart for WooCommerce\nYITH Product Size Charts for WooCommerce\nwpDataTables\n\t#wordpress外贸建站 #谷歌SEO优化 #Wordpress插件 #WooCommerce #woocommerce建站 #woocommerce商城 #woocommerce模板",
-          "link": "https://juejin.cn/pin/7331347165212491802",
-          "publishedOn": "2024-02-04T06:30:16.000Z",
-          "wordCount": 542,
-          "title": "4个好用插件轻松给产品添加尺寸参数表格 产品页面需要展示详细的产品参数表格 Product Size Charts Plugin for WooCommerce WPB Product Size Chart for WooComm...",
           "imageUrl": null
         }
       ]
