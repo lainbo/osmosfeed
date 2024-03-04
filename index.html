@@ -315,7 +315,7 @@ You are an expert Tailwind developer
 You take screenshots of a reference web page from the user, and then build single page apps 
 using Tailwind, HTML and JS.
 You might also be given a screenshot(The secon…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -450,6 +450,37 @@ Docs 和 Certification 页面没有什么变化，还是跳到现有的 API 文�
 欢迎您的体验和反馈！
 欢迎关注我的公号（全网同名），一起学习和进步。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7341267497428025344"
+                        open
+                      >
+                        <summary class="article-expander__title">2024最新版：前端性能优化方案汇总</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7341267497428025344">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: vuepress
+Hello，大家好，我是 Sunday。
+前端性能优化一直是很多同学非常关注的问题，在日常的面试中也是经常会被问到的点。所以今天咱们就花一点时间来了解一下2024最新的前端性能优化方案，以此来助大家高效工作，面试顺利！
+一：页面渲染相关
+01：减少页面重绘和回流
+回流（reflow）：是指由于DOM结构或样式发生改变，浏览器需要重新计算元素的几何属性，然后重新布局页面的过程
+重绘（repaint）：是指当元素样式发生改变，但不影响布局时，浏览器只需要重新绘制受影响的部分，而不需要重新计算布局
+尽量减少使用 CSS 属性的快捷方式：例如，使用 border-width、border-style 和 border-color 而不是 border。CSS 属性的快捷方式会将所有值初始化为“初始值”，因此避免使用它们可以最小化重绘和回流（在实际工作中，CSS 快捷方式的性能影响微乎其微，并且使用快捷方式可以简化样式并解决一些样式覆盖问题）。
+在 GPU 上渲染动画：浏览器已经优化了 CSS 动画，使其适用于触发动画属性的重绘（因此也包括回流）。为了提高性能，将具有动画效果的元素移动到 GPU 上。可以触发 GPU 硬件加速的 CSS 属性包括 transform、filter、will-change 和 position:fixed。动画将在 GPU 上处理，提高性能，特别是在移动设备上（但避免过度使用，因为可能会导致性能问题）。
+使用 will-change CSS 属性来提高性能：它通知浏览器元素需要修改的属性，使浏览器能够在实际更改之前进行优化（但避免过度使用 will-change；在动画中遇到性能问题时考虑使用它）。
+通过更改 className 批量修改元素样式。
+将复杂的动画元素定位为 fixed 或 absolute 以防止回流。
+…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2132,42 +2163,6 @@ null 和  undefined 的区别了 阮一峰
 在我们想要面试的时候，把八股文背熟悉，还有写几个项目，在面试之前要熟悉自己的项目，项目中的难点，自己能够讲给面试官听。面试官再问，项目难点的时候，能够把自己难点的知识讲清楚。还要把自我介绍，讲好，控制在3分钟之内。在讲一遍八股文一定要背熟，理解。还要能够表达清楚。
 如觉得本文对你有帮助的话，欢迎点赞❤❤❤，写作不易，持续输出的背后是无数个日夜的积累，您的点赞是持续写作的动力，感谢支持！</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7340197367515578378"
-                        open
-                      >
-                        <summary class="article-expander__title">如果iconfont停止服务了，我们怎么办</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7340197367515578378">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-个人一直都比较喜欢阿里大佬提供的一些组件服务什么的，这里就只说图标管理吧，最开始的时候我是使用的https://icomoon.io 后面发现https://www.iconfont.cn/ 在以前开发是时候我们为了图片的请求少点，提升网站的性能会把这些小图标做到一张图上面专业叫法是雪碧图，后来随着前端发展有了字体图标，不啰嗦了吧，回到正题，由于上次icofont官网挂了之后，导致我的项目无法进行正常迭代，我就决定要自己弄个简单的图标管理。
-需求
-一般使用需要的是把设计做好的图标或者其他地方下载的svg图标上传到服务器然后可以查看，并且打包成一个js文件加载到项目中。
-准备
-都说天下文章一大抄，我也是去抄iconfont,我把iconfont的使用demo打开研究了一下。
-
-
-我这里只说Symbol，通过分析看到就是我们需要在项目中引入./iconfont.js
-
-iconfont把我们上传的图标进行了删减优化,最外层就一个svg标签里面使用了一个symbol标签来包裹之前的图标内容，每一个symbol的id都对应之前的svg图标名称。
-iconfont也没有开源,具体怎么做的咱也不知道，只能知道目前这些信息了，然后就按照自己理解开始开发实现了
-前端开发
-通过上面我们可以知道，现在我们前端需要的是把设计稿的svg图变成symbol里面的内容，打开svg图
-可以简单测试下，直接把内容复制然后粘贴带了iconfont.js中，然后运行demo图标正常显示就说明是ok的，不然就是这样做是不行的。
-
-通过图片我们可以看到，现在需要的就是把svg里面的path改成用symblo来包裹，在开发中svg图我们是通过文档流上传上来的，这个时候我们就需要对文档流进行操作，先把文档流变成字符串，然后js操作字符串拼接达到目的。
-使用到FileReader和readAsText获取到字符串…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4058,25 +4053,6 @@ wpDataTables
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7331045767434633256"
-                        open
-                      >
-                        <summary class="article-expander__title">使用Mac Apple Silicon的 同学想在Mac上玩原神可以私信我</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7331045767434633256">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>使用Mac  Apple Silicon的 同学想在Mac上玩原神可以私信我</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -4084,8 +4060,8 @@ wpDataTables
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8140522379">
-        <time id="build-timestamp" datetime="2024-03-04T12:56:22.180Z">2024-03-04T12:56:22.180Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8143080965">
+        <time id="build-timestamp" datetime="2024-03-04T15:54:03.671Z">2024-03-04T15:54:03.671Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

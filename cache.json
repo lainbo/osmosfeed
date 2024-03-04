@@ -593,7 +593,7 @@
           "description": "今天瞧见了一个开源库，https://github.com/abi/screenshot-to-code ，根据它的描述，这个简单的应用程序可以将屏幕截图转换为代码（HTML/Tailwind CSS、React、Bootstrap 或 Vue）。 它使用 GPT-4 Vision 生成代码，并使用 DALL-E 3 生成外观相似的图像。 更加逆天的是，现在是你只要输入一个 URL，他就给你把人家网站克隆了。\n这技术背后的实现原理是什么\nscreenshot-to-code这个工具，其核心功能是将图像转化为代码。它基于开放人工智能库GPT-4 Vision和DALL-E 3的技术，这两种AI模型都是OpenAI的产品且在视觉理解方面表现出色。\n当用户上传截图，GPT-4 Vision会读取并理解截图中的内容，然后基于这些理解生成对应的HTML，Tailwind，React，Vue等代码。这部分对应的源码可以在这里查看 https://github.com/abi/screenshot-to-code/blob/072b286b6dfa65eaa646f68def8a0b0f6d157217/backend/routes/generate_code.py#L43 ，背后推动的 prompt 可以简单了解下\nHTML_TAILWIND_SYSTEM_PROMPT = \"\"\"\nYou are an expert Tailwind developer\nYou take screenshots of a reference web page from the user, and then build single page apps \nusing Tailwind, HTML and JS.\nYou might also be given a screenshot(The secon…",
           "link": "https://juejin.cn/post/7341391477014593572",
           "publishedOn": "2024-03-03T03:29:22.000Z",
-          "wordCount": 1314,
+          "wordCount": 1395,
           "title": "一个 url 就把人家网站克隆了？",
           "imageUrl": null
         },
@@ -605,6 +605,16 @@
           "publishedOn": "2024-03-02T16:04:22.000Z",
           "wordCount": 825,
           "title": "Node.js 新官网来了，UI 和 UX 全面升级，欢迎体验和反馈！",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7341267497428025344",
+          "author": "程序员Sunday",
+          "description": "theme: vuepress\nHello，大家好，我是 Sunday。\n前端性能优化一直是很多同学非常关注的问题，在日常的面试中也是经常会被问到的点。所以今天咱们就花一点时间来了解一下2024最新的前端性能优化方案，以此来助大家高效工作，面试顺利！\n一：页面渲染相关\n01：减少页面重绘和回流\n回流（reflow）：是指由于DOM结构或样式发生改变，浏览器需要重新计算元素的几何属性，然后重新布局页面的过程\n重绘（repaint）：是指当元素样式发生改变，但不影响布局时，浏览器只需要重新绘制受影响的部分，而不需要重新计算布局\n尽量减少使用 CSS 属性的快捷方式：例如，使用 border-width、border-style 和 border-color 而不是 border。CSS 属性的快捷方式会将所有值初始化为“初始值”，因此避免使用它们可以最小化重绘和回流（在实际工作中，CSS 快捷方式的性能影响微乎其微，并且使用快捷方式可以简化样式并解决一些样式覆盖问题）。\n在 GPU 上渲染动画：浏览器已经优化了 CSS 动画，使其适用于触发动画属性的重绘（因此也包括回流）。为了提高性能，将具有动画效果的元素移动到 GPU 上。可以触发 GPU 硬件加速的 CSS 属性包括 transform、filter、will-change 和 position:fixed。动画将在 GPU 上处理，提高性能，特别是在移动设备上（但避免过度使用，因为可能会导致性能问题）。\n使用 will-change CSS 属性来提高性能：它通知浏览器元素需要修改的属性，使浏览器能够在实际更改之前进行优化（但避免过度使用 will-change；在动画中遇到性能问题时考虑使用它）。\n通过更改 className 批量修改元素样式。\n将复杂的动画元素定位为 fixed 或 absolute 以防止回流。\n…",
+          "link": "https://juejin.cn/post/7341267497428025344",
+          "publishedOn": "2024-03-02T04:30:20.000Z",
+          "wordCount": 2004,
+          "title": "2024最新版：前端性能优化方案汇总",
           "imageUrl": null
         },
         {
@@ -675,16 +685,6 @@
           "publishedOn": "2024-02-28T05:11:18.000Z",
           "wordCount": 912,
           "title": "人生第一次面试 海康",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7340197367515578378",
-          "author": "纯阳阳",
-          "description": "前言\n个人一直都比较喜欢阿里大佬提供的一些组件服务什么的，这里就只说图标管理吧，最开始的时候我是使用的https://icomoon.io 后面发现https://www.iconfont.cn/ 在以前开发是时候我们为了图片的请求少点，提升网站的性能会把这些小图标做到一张图上面专业叫法是雪碧图，后来随着前端发展有了字体图标，不啰嗦了吧，回到正题，由于上次icofont官网挂了之后，导致我的项目无法进行正常迭代，我就决定要自己弄个简单的图标管理。\n需求\n一般使用需要的是把设计做好的图标或者其他地方下载的svg图标上传到服务器然后可以查看，并且打包成一个js文件加载到项目中。\n准备\n都说天下文章一大抄，我也是去抄iconfont,我把iconfont的使用demo打开研究了一下。\n\n\n我这里只说Symbol，通过分析看到就是我们需要在项目中引入./iconfont.js\n\niconfont把我们上传的图标进行了删减优化,最外层就一个svg标签里面使用了一个symbol标签来包裹之前的图标内容，每一个symbol的id都对应之前的svg图标名称。\niconfont也没有开源,具体怎么做的咱也不知道，只能知道目前这些信息了，然后就按照自己理解开始开发实现了\n前端开发\n通过上面我们可以知道，现在我们前端需要的是把设计稿的svg图变成symbol里面的内容，打开svg图\n可以简单测试下，直接把内容复制然后粘贴带了iconfont.js中，然后运行demo图标正常显示就说明是ok的，不然就是这样做是不行的。\n\n通过图片我们可以看到，现在需要的就是把svg里面的path改成用symblo来包裹，在开发中svg图我们是通过文档流上传上来的，这个时候我们就需要对文档流进行操作，先把文档流变成字符串，然后js操作字符串拼接达到目的。\n使用到FileReader和readAsText获取到字符串…",
-          "link": "https://juejin.cn/post/7340197367515578378",
-          "publishedOn": "2024-02-28T01:50:36.000Z",
-          "wordCount": 1078,
-          "title": "如果iconfont停止服务了，我们怎么办",
           "imageUrl": null
         },
         {
@@ -942,16 +942,6 @@
           "publishedOn": "2024-02-04T06:30:16.000Z",
           "wordCount": 542,
           "title": "4个好用插件轻松给产品添加尺寸参数表格 产品页面需要展示详细的产品参数表格 Product Size Charts Plugin for WooCommerce WPB Product Size Chart for WooComm...",
-          "imageUrl": null
-        },
-        {
-          "id": "7331045767434633256",
-          "author": "薯条爸爸",
-          "description": "使用Mac  Apple Silicon的 同学想在Mac上玩原神可以私信我",
-          "link": "https://juejin.cn/pin/7331045767434633256",
-          "publishedOn": "2024-02-04T02:43:35.000Z",
-          "wordCount": 486,
-          "title": "使用Mac Apple Silicon的 同学想在Mac上玩原神可以私信我",
           "imageUrl": null
         }
       ]
