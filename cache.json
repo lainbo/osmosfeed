@@ -588,6 +588,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7341391477014593572",
+          "author": "brzhang",
+          "description": "今天瞧见了一个开源库，https://github.com/abi/screenshot-to-code ，根据它的描述，这个简单的应用程序可以将屏幕截图转换为代码（HTML/Tailwind CSS、React、Bootstrap 或 Vue）。 它使用 GPT-4 Vision 生成代码，并使用 DALL-E 3 生成外观相似的图像。 更加逆天的是，现在是你只要输入一个 URL，他就给你把人家网站克隆了。\n这技术背后的实现原理是什么\nscreenshot-to-code这个工具，其核心功能是将图像转化为代码。它基于开放人工智能库GPT-4 Vision和DALL-E 3的技术，这两种AI模型都是OpenAI的产品且在视觉理解方面表现出色。\n当用户上传截图，GPT-4 Vision会读取并理解截图中的内容，然后基于这些理解生成对应的HTML，Tailwind，React，Vue等代码。这部分对应的源码可以在这里查看 https://github.com/abi/screenshot-to-code/blob/072b286b6dfa65eaa646f68def8a0b0f6d157217/backend/routes/generate_code.py#L43 ，背后推动的 prompt 可以简单了解下\nHTML_TAILWIND_SYSTEM_PROMPT = \"\"\"\nYou are an expert Tailwind developer\nYou take screenshots of a reference web page from the user, and then build single page apps \nusing Tailwind, HTML and JS.\nYou might also be given a screenshot(The secon…",
+          "link": "https://juejin.cn/post/7341391477014593572",
+          "publishedOn": "2024-03-03T03:29:22.000Z",
+          "wordCount": 1314,
+          "title": "一个 url 就把人家网站克隆了？",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7341408996597792787",
           "author": "FED实验室",
           "description": "最新消息，Node.js 新官网已发布 Beta 预览版本，正在招募测试志愿者。如果你对新的 Node.js 网站感兴趣，欢迎参与体验，并在对应 Github 仓库提供反馈和建议！\n小懒也是第一时间详细体验了各个页面，在感受新网站带来的 UX 提升同时，也发现了一些问题。\n新官网：首页\n新版首页，相比老版本，从视觉效果、页面布局、展现内容都有了很大的提升，整体上看着更大气。Node.js 的介绍相比老版本也变得更突出、描述更全面。\n\n最大的不同是增加了搜索框，提供全站检索（包含文档、博客、下载等），这样使用户检索信息变的更为快捷！\n\n但体验的同时，也发现几个体验问题：\n首页的 Node.js LTS 下载按钮的“向右箭头”看着有些奇怪，这里的下载并不是跳转，而是直接下载文件，改成“向下箭头”可能更有语义。\n右侧的代码 Tab，在切换时会造成页面闪动，体验不是太好。\n搜索框在视口中没有垂直居中，对于前端同学来说，不能理解。\n新官网：Learn 页面\nLearn 页由老版本的两列布局变成了三列布局，同时对左侧导航菜单进行了 UX 改造，树型目录形式的呈现，第三列给出了阅读时长、反馈入库及文档目录，用户体验变得更好。\n\n发现问题：\n当滚动左侧导航目录时，点击某一菜单后，导航目录会滚回到顶部，这里的体验不是很好。\n文档顶部有面包屑导航，可能体验会更好一些。\n新官网：About 页面\nAbout 页面布局和 Learn 页面类似，在介绍页新增了 Node.js 吉祥物 “火箭龟” 的图片。\n\n新官网：Download 页面\nDownload 页面的变化主要是将原有的列表 List，改成了 Select 形式，相比老版本，在历史版本、系统选择、版本选择等方便变得更为快捷。尤其是用户想下载历史版本的场景。\n\n新官网：Blog 页面\nBlog 页面的布局方式变化比较大，UX 体验更好了！内容包括最新的 Node.js 新闻，案例研究，教程和资源，同时增加了 Everything、Announcements、Releases、Vulnerabilities、Events 等 Tab 筛选，查找内容更便捷了。\n\n发现问题：\n点击 Events 时，出现了 404 的情况 “Page could not be found”。\n切换到移动端访问，下拉选择框的面板定位位置也有问题。\n新官网：Docs 和 Certification 页面\nDocs 和 Certification 页面没有什么变化，还是跳到现有的 API 文档页面和对应站点。\n体验地址： https://beta-node-js-org.vercel.app/en\n反馈地址： https://github.com/nodejs/nodejs.org/issues\n欢迎您的体验和反馈！\n欢迎关注我的公号（全网同名），一起学习和进步。",
@@ -728,16 +738,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7339743984100212777",
-          "author": "前端猫猫教",
-          "description": "大家好，这里是大家的林语冰。坚持阅读，自律打卡，每天一次，进步一点。\n免责声明\n本文属于是语冰的直男翻译了属于是，略有删改，仅供粉丝参考。英文原味版请传送 Top 8 Most Demanded Programming Languages in 2023。\n\n本期共享的是 —— 大家有没有想过 2023 人气最高的是什么编程语言？尽管目前地球上已存在超过 200 多种编程语言，但只有少数语言在现实世界的各行各业中普遍使用。了解这些关键资讯对于在开发者工作行业夺取先机至关重要。\n在过去 17 个月里，DevJobsScanner（开发岗雷达）分析了超过 1_400 万个开发者岗位。从这 1_400 万个职位中，DevJobsScanner 只挑选了明确需要编程语言的职位，了解哪些语言的市场需求最大。\n1. JS/TS\n自从地球上出现第一个网站以来，多年来 JS 的人气一直高居不下。话虽如此，目前 JS 是整个市场上需求最大的编程语言。此外，作为类型安全的 JS 超集，TS 的诞生也可能有助于实现这一里程碑。TS 人气和热度近年来与日俱增。一大坨新型 JS 框架完全采用 TS 编写，包括但不限于 Vue/Angular/NestJS 等等。\n过去 17 个月里，我们发现了 91.5 万份明确需要 JS/TS 作为编程语言的工作机会，约占工作的 29%。\n\n匹配的工作岗位：915K (~29%)\n大数据关键词：javascript、typescript、react、Angular、vue、node\n2. Python\nPython 悄无声息地成为 2023 第二大需求编程语言。Python 的多功能性，从脚本编写、运行服务器到数据分析，都是实现这一里程碑的关键。此外，Python 拥有又大又棒的社区之一。\n在这 17 个月中，我们发现了 60.3 万份明确需要 Python 作为…",
-          "link": "https://juejin.cn/post/7339743984100212777",
-          "publishedOn": "2024-02-26T13:26:29.000Z",
-          "wordCount": 1266,
-          "title": "2023 需求最高的八大编程语言",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7339741848079302694",
           "author": "全宝",
           "description": "theme: nico\n前言\n前方高能,长文警告!!\n\n个人比较喜欢在一个集成的平台上进行各种开发, vscode正好满足我的需求,下面我会介绍一些我比较常用的插件.\n插件类型速览:\n主题插件、基础插件、Vue插件、react插件、小程序插件、代码格式化...\n主题\nMonokai Pro\n\n同时提供 配色主题和文件主题,看起来比较舒服.\n配色方案有多种,用ctrl+k+t快速选择主题\n\n基础插件\nHTML CSS Support\n\n提供html和css的代码高亮和提示,必备插件\nJavaScript (ES6) code snippets\n\nvscode本身有内置js的代码提示,装一个JavaScript (ES6) code snippets用来提示代码片段就够了.\n\nVue插件推荐\nVue Language Features (Volar)\n开发 vue项目必备的插件,代码的高亮和智能提示全靠它了.\n安装之后的样子\nVue Peek\n在大型的Vue项目中如果想要快速跳转到某一个组件去,需要找很久才能找到.非常浪费时间\n这个插件就完美解决这个问题\n\nVue VSCode Snippets\n这个插件提供一些Vue的代码片段,在日常开发中,可以节省很多时间\nReact\nreact本身用的 jsx和tsx可以被 vscode识别到,所以不像 vue那样还需要装高亮插件.\nSimple React Snippets\nreact的代码片段插件,这个插件里面有很多react的代码片段,写新文件的时候可以用来快速生成代码.\n\nTypescript React code snippets\ntypescript版本的react的代码片段.\nES7+ React/Redux/React-Native snippets\n也是一个 react代码片段的插件,\n小程序\n平常开发主要用到的是Uni…",
@@ -769,7 +769,7 @@
         },
         {
           "id": "https://juejin.cn/post/7339221543992426559",
-          "author": "BigYe程普",
+          "author": "程普",
           "description": "theme: github\nReact 上一次发布版本还要追溯到2022年6月14日，版本号是18.2.0。在大前端领域，一项热门技术更新如此缓慢属实罕见。这也引起社区里一些大佬的不满，在我的上一篇文章里有提到，感兴趣的朋友可以点击查看：React 社区里的分歧。\n在社区不满的声音越来越大的背景下，React 新版本的消息终于来了。\nReact 团队也回应了迟迟未发布新的正式版本的质疑：此前发布到 Canary 版本的多项特性，因为这些特性是相互关联的，所以 React 团队需要投入大量时间确保它们能够协同工作，然后才能逐步发布到 Stable 版本。\n事实也确实如此，虽然在这将近两年的时间里 React 没有发布正式版本，但是 Canary 却有一些重磅更新，例如：use、useOptimistic hook，use client、use server 指令。这些更新客观上丰富了 React 生态系统，特别是推动了 Next.js 和 Remix 等全栈框架的高速发展。\nReact 团队已经确定，下一个版本将是大版本号，即版本号会是 19.0.0。\nv19 新特性预测\n现在，让我们根据 React 团队最新发布的消息，来抢先学习一下 v19 版本可能正式发布的新特性。\n自动记忆化\n你是否还记得 React Conf 2021 上黄玄介绍的 React Forget？\n\n现在，它来了。\n它是一个编译器，目前已经在 instagram 的生产环境中应用，React 团队计划在 Meta 的更多平台中应用，并且未来会进行开源发布。\n在使用新编译器以前，我们使用 useMemo、useCallback 和 memo 来手动缓存状态，以减少不必要的重新渲染，这种实现方式虽然可行，但 React 团队认为这并不是他们认为理想的方式，他们一直寻找让 React 在状态变化时自动且只重新…",
           "link": "https://juejin.cn/post/7339221543992426559",
           "publishedOn": "2024-02-26T02:28:05.000Z",
@@ -792,16 +792,6 @@
           "publishedOn": "2024-03-04T07:44:59.000Z",
           "wordCount": 472,
           "title": "蓝月亮，蓝禾，三七互娱，顺丰，康冠科技，金证科技24春招内推 ①蓝月亮 【招聘岗位】技术，研发，lT，供应链，市场，职能等 【网申链接】https://sourl.cn/NsVx...",
-          "imageUrl": null
-        },
-        {
-          "id": "7341952374368387111",
-          "author": "Looper_56",
-          "description": "可以试试这个，帮忙安装下扩展\n\n这个AI工具超好用，每天都有免费额度，写文章、总结长视频、画图等，都几秒搞定！快去下载Sider Chrome或Edge插件，薅羊毛！\nhttps://sider.ai/invited?c=e841da627313fddb3844465bb31ab9d4",
-          "link": "https://juejin.cn/pin/7341952374368387111",
-          "publishedOn": "2024-03-04T02:10:48.000Z",
-          "wordCount": 44,
-          "title": "可以试试这个，帮忙安装下扩展 这个AI工具超好用，每天都有免费额度，写文章、总结长视频、画图等，都几秒搞定！快去下载Sider Chrome或Edge插件，薅羊毛！ http...",
           "imageUrl": null
         },
         {
