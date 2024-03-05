@@ -212,6 +212,65 @@ ServBay是一个集成式、图形化的本地化Web开发环境。开发者通�
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7342384485696520246"
+                        open
+                      >
+                        <summary class="article-expander__title">Rust! 无VDom! 尤雨溪解析 Vue.js 2024 新特性</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7342384485696520246">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>B站搜索“云前端”观看视频版
+在 VueJS Amsterdam 2004 大会首日，Vue 创始人 Evan You 进行了开场主旨演讲。他首先回顾了 Vue 十年以来的累累硕果，指出 VueJS 从一个视图层工具，成功演化出全流程的社区生态。
+Vue 3.4
+
+谈到 Vue 3 的发展时他回顾了 2023 年末发布的 Vue 3.4。在这个版本中，Vue 完全重写了模板解析器；新的解析器不再依赖于许多正则表达式和前瞻搜索等，而是使用基于 htmlparser2 中分词器的状态机 -- 这使得解析速度至少提高了两倍。
+3.4 还对响应式系统进行了实质性的重构，目的是提高计算属性的重新计算效率。在 3.4 之前，即使计算结果保持不变，每次 count.value 都将触发 watchEffect 的回调；而 3.4 之后的回调现在仅在计算结果实际更改时触发。
+简化支持 v-model 的 defineModel 和标识为冒号 : 的 v-bind 同名速记也是这个版本的特性。
+Vue 3.5
+
+接下来 Evan You 透露了在即将到来的 Vue 3.5 版本中包含的特性，这个版本主要是在框架底层的优化。
+一方面是响应式系统上的提升。包括在调度任务中使用位运算标记优化 queueJob 任务队列，这项优化被从 vue 试验性的无虚拟 DOM 版本 Vue Vapor 中移植回主版本中，使得内存使用率得到了 56% 的提升。
+还有一项对数组追踪的优化：在处理响应式的大数组时，此项优化甚至可以获得十倍性能收益；对于格外重视性能的开发者来说，Vue 内置的数组方法并不完美。@vue/reactivity 暴露的readArray 方法是一个面向性能的高级响应式函数，它返回原始数组并对其进行完整跟踪，并可以用入参指示是否深度跟踪响应式数组。
+公开readArray的原因在于，对于某些内置数组函数无法很好覆盖的高性能操作场景，这个API非常有用。例如，Vue 的 v-for 循环会使用此功能，响应式矩阵的乘法运算可以显著受益以提升计算速度，以及新增的 Object.groupBy API 可能在未来广泛应用，由于它并非数组实例方法，因此不能自动进行优化，但可以通过用户自定义代码结合 readArray 来提高性能。
+在 SSR 服务器渲染方面，也优化了 Suspend 等特性。
+Vapor
+
+除了 Vue 3.5，受到 Solid.js 启发的无虚拟 DOM 版本的 Vue Vapor 日臻完善，已经可以在 playground 中运行 TodoMVC 程序。
+在计划中，组件级别的优先级控制将是重要工作，这将保证即便组件数量庞大，整体性能也不会受到影响，不知道是否会借鉴 React 的异步可中断方式呢？
+DX
+
+在开发体验方面，vite 的新版本中可能会包含新的打包工具 Rolldown，这是一个具有兼容性 API 的 Rust 移植版 Rollup。该工具已经经历了长期的开发，目前已经支持 tree shaking 等特性，基本达到了 ESbuild 两倍的编译速度。等其能够同时替换 Rollup 和 ESbuild 之后，开发者无论是在开发模式还是生产模式下，都能无缝地自动获得巨大的性能收益。
+从更底层来说，Rolldown 使用了一项叫做 Oxc 的工具，Oxc 的核心是一种用 Rust 编写的
+高性能 JS Parser，在其体系中还有 Typescript 转移等工具。值得注意的是，该工具一旦最终成型，构建 Vue 工程时 Babel、ESbuild、Rollup、Tercer 等工具将合而为一，开发过程会变得统一、高效且易于理解。
+We are far from done
+最后，Evan You 再次回顾了十年的历程，表示 VueJS 生态从刚刚推出时受到的竭诚欢迎，真可谓占尽天时，那种勃勃生机、万物竟发的境界，犹在眼前。而在十年之后，团队和社区仍在做出很多有趣的贡献，虽然从 Vue 2 到 Vue 3 的升级过程坎坷，但无论怎么样，随着 Vue 2 的官方支持正式结束，新的社区仍会保持优势。
+Vue 或许并不总是时髦的新玩意，但会致力于总是做好新的改变
+B站搜索“云前端”观看视频版</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >李继刚的即刻动态</button>
                   <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
                 </h3>
@@ -275,7 +334,7 @@ ServBay是一个集成式、图形化的本地化Web开发环境。开发者通�
                         <summary class="article-expander__title">⭐收集有特色的库</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://lainbo.com/article/collection">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://www.notion.so/images/page-cover/nasa_earth_grid.jpg" loading="lazy" class="media-object__media article-image" />
+                              <img src="/bg_image.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>日常看见一些有特色的库会收集下来，持续收集中</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
@@ -332,61 +391,6 @@ ServBay是一个集成式、图形化的本地化Web开发环境。开发者通�
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7341394494901616677"
-                        open
-                      >
-                        <summary class="article-expander__title">深圳打响第一枪！鸿蒙技术是否有前途的最强信号来了</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7341394494901616677">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: smartblue
-大家好，我是拭心。
-今天上午 10 点，有一篇关于鸿蒙技术发展的重要文章发布，看到这篇文章后我非常激动，忍不住和大家分享一下！
-鸿蒙技术的不同态度
-
-华为鸿蒙系统自提出以来，网友们的态度各不相同，有嘲笑“安卓套壳”的，也有认可自主操作系统价值的，更有很多“尝螃蟹”的人开始学习并分享。
-之所以态度不同，根本上是因为屁股坐的位置不同。
-
-那些开始学习并分享的，除去部分有远见者，大多数是因为公司处于行业头部，华为有主动沟通对接，需要在正式上线前做好鸿蒙版 APP。工作上需要使用，那学习也就自然而然了。
-而那些持观望态度、犹豫要不要学的，主要是因为工作上用不到，不确定学习鸿蒙技术有没有前景，值不值得投入时间。
-重要方向已经明确
-在今天以前，“鸿蒙技术是否有前景”还没有明确的信号，网络上看到的都是网友的主观判断。
-但今天（2024.03.03）不同了。
-上午十点，深圳发布公众号发布了一篇文章：#《深圳市支持开源鸿蒙原生应用发展2024年行动计划》印发。
-https://mp.weixin.qq.com/s/5SrlIyCJTkWVQ5yWHU1Snw
-这篇文章很长，主要讲了这么几点：
-这篇文章是深圳工信局发布，经过深圳市政府同意（政府官方意见，重要性可见一斑）
-深圳要成为鸿蒙应用软件的重点发展城市，从需求、供给、生态多方面发力
-2024 年树立了多个具体目标
-
-深圳开发的鸿蒙应用数量要占全国 10% 以上（今年会有很多鸿蒙招聘需求，找工作的可以先学起来了）
-深圳市高校和培训机构会开设鸿蒙开发课程，取得资质的鸿蒙开发者占全国 15% 以上（几年后鸿蒙开发者会如雨后春笋冒出来）
-建成 2 家以上鸿蒙软件开发产业园（企业老板可以关注一下，做鸿蒙应用会有政策支持和奖励）
-一句话总结：深圳 2024 年会支持和推动政务和公共服务系统推出鸿蒙版应用，并且还会推动其他行业企业开发鸿蒙应用，分级分类给予奖励。
-深圳不愧是改革先驱地，相信不久后其他一线城市也会有类似的政策发布！
-如果说之前还没有充分学习的理由，今天深圳的这篇文章已经给出了理由：
-鸿蒙自主操作系统，未来会作为深圳乃至全国政务、公共服务乃至其他行业的重要软件平台，现在学习，大有可为！
-
-推荐阅读:
-2023 总结：我在上海做程序员的第八年
-前段时间面试了一些人，有这些槽点跟大家说说
-简历共赏｜一位不愿透露姓名的技术专家
-七年老程序员的五六月总结：十一件有意义的事
-七年老程序员的三四月总结：三十岁、准备婚礼、三次分享
-经过半年的努力，我终于成为了谷歌开发者专家（GDE）
-六年安卓开发的技术回顾和展望
-两位阿里 P10 的成长经历，让我学到这几点</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -726,7 +730,7 @@ Hello，大家好，我是 Sunday。
                         <summary class="article-expander__title">Clash Verge系列使用最佳实践</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://lainbo.com/article/clash-config">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://www.notion.so/images/page-cover/nasa_earth_grid.jpg" loading="lazy" class="media-object__media article-image" />
+                              <img src="/bg_image.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>Clash确实是开箱即用，但开箱时并不是一个优秀的状态。当我将所有服务迁移到国外服务商时，我意识到在短时间内离不开Clash了。为了防止出现问题，我研究了一些Clash相关的东西。现在是时候做一个总结了。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;3
@@ -2062,79 +2066,127 @@ work-life balance 的一个大前提，是把生活这个因子算进来，而�
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >李继刚的即刻动态</button>
-                  <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/65df21433b9c66cae4225bbe"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 名可名, 非常名。每个概念都是一个「名」。 我习惯将每个概念视为一个个不同的圆圈，每个都有其独特的指向和边界。 探究一个概念，不是在玩文字游戏，而...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65df21433b9c66cae4225bbe">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>名可名, 非常名。每个概念都是一个「名」。
-我习惯将每个概念视为一个个不同的圆圈，每个都有其独特的指向和边界。
-探究一个概念，不是在玩文字游戏，而是在弄清楚这个边界，只有搞清楚了这些 brick, 才有可能基于你的逻辑链去建立一个大厦。
-如何搞清楚概念的边界? 找它的定义固然是出发点, 但通常这个定义所圈定的圆圈边界都比较模糊，还有三个小技巧可用：
-1. 反义词。试着对比看下概率的反义词。你想知道什么是活，对比着分析下什么是死。
-2. 同义词。打磨边界细微之处的线条，可用此招。对比分析下「开心」和「快乐」。
-3. 经验示例。在前两步的方法中，也可穿插套用此招，把你的生活经验和示例往上套，把理念空间的虚给拽实。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/65df0c236d9f190631ceedb0"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 笔记的技巧： 原子问题笔记 ━━━━━━━━━━━━━━ Emacs 圈有一位大佬叫李杀，他在博客中把 Emacs 中的很多常见概念和问题都单独形成一篇文章，...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65df0c236d9f190631ceedb0">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>笔记的技巧： 原子问题笔记
-━━━━━━━━━━━━━━
-Emacs 圈有一位大佬叫李杀，他在博客中把 Emacs 中的很多常见概念和问题都单独形成一篇文章， 文章很短，基本就是「什么是 X？」「如何配置 X？」之类的内容。
-当对某些模块比较熟悉时，读他的博客感觉很平常，都是常识而已。
-但 Emacs 博大精深，每天都有很多不熟悉的知识点，搜索引擎经常会引导到他的某篇博客文章，答案就那么简单直接摆在眼前，刚刚好地回答了当下的疑惑。
-这种笔记/博客方式，我且称之为「原子问题笔记法」。人人可学, 步骤如下：
-1. 在你的笔记系统中，新建一个目录，名为你的一个知识领域，可以是你当下的公司业务（XX 业务知识库），也可以是一个知识模块（写作）。
-2. 先试想下都有哪些常见概念和问题，在该目录下，单独起文件记录该问题并解答。如不会，学会它，再记录解答。
-3. 日常工作生活中，遇到任何一件不在该目录中记录的新概念/新问题，均立马起文件记录。（凡有发生，必有教我。）
-日积月累，在这个目录（知识领域）中沉淀的那一个个文件（问题-答案），就是你在该领域的底气。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >掘金前端本周最热</button>
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7340573362214699049"
+                        open
+                      >
+                        <summary class="article-expander__title">写给想学 Rust 的前端同学</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7340573362214699049">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: qklhk-chocolate
+highlight: brown-paper
+前言
+Rust 可能正在逐渐渗透前端的方方面面，所以作为一个前端究竟有没有必要学习 Rust 呢？我认为，还是看个人的精力吧，有那个精力多学一点没有坏处，没那个精力不学也没有影响。本篇不是讨论该不该学 Rust，而是将 Rust 大概是一个什么样的语言展现给可能在观望的小伙伴，并以一个前端的视角来看看 Rust 究竟和前端有什么不一样。
+本篇也是我在认真阅读了Rust 程序设计语言（中文版）几遍以后，才敢下笔做一些总结，因能力有限，错误之处还望大家及时指出。
+我会从一个语言层面的几个方面来分析 Rust 究竟和 JavaScript 以及 TypeScript 这样的语言的不同之处，以及相似之处，并且希望能给想要学习 Rust 的同学一些语言的梗概，也给前端学习 JS 的同学一些新的理解。
+Rust VS JavaScript
+属性
+Rust
+JavaScript
+
+
+
+
+编译器
+rustc
+v8
+
+
+包管理工具
+cargo
+npm、yarn、pnpm、cnpm
+
+
+第三方依赖注册表
+crates.io
+npmjs.com
+
+
+垃圾回收
+无
+有
+
+
+
+数据类型
+Rust 的数据类型同样分为基础类型和复杂类型，主要包括以下几类：
+基础类型：包括整型、浮点型、布尔型、字符型
+复杂类型：元组、数组以及其他复合类型
+这点和传统的强类型语言基本是一致的，但是 Rust 也拥有不同的地方。
+Rust 声明变量的方法竟然和 JS 出奇的一致，并且很多方面也是类似 JS 或 TS 的写法：
+// 声明不可变变量
+let a &#x3D; 1;
+
+// 声明可变变量
+// 如果没有 mut 关键字，修改变量会导致报错
+let mut b &#x3D; 2;
+b &#x3D; 3;
+
+// 重复声明变量，会发生遮蔽，即覆盖原有变量
+…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7340462380336660490"
+                        open
+                      >
+                        <summary class="article-expander__title">摸鱼时间写了个库，比lodash更丰富！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7340462380336660490">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>highlight: an-old-hope
+theme: smartblue
+想必大家在日常工作中总会需要使用到各种各样的工具函数，例如：防抖、节流、日期计算、日期格式化、正则....等等，每次用到就要百度，可不可靠先且不谈，每次查找/验证的过程都是非常烦人的，有天我在摸鱼的时候突然想到，为啥不自己写一个呢？方便自己方便他人，二话不说，干！于是乎BootsJS诞生了，下面为大家介绍下目前BootsJS使用以及支持的功能。
+
+BootsJS 是一个致力于扩展原生 JavaScript 功能的库，旨在解决 JavaScript 原生不支持的常见数据结构、方法和常用算法。
+安装
+npm
+npm install boots-js
+
+yarn
+yarn add boots-js
+
+使用
+CommonJS
+// 全局导入
+const BootsJS&#x3D;require(&#x27;boots-js&#x27;);
+let ascPriorityQueue &#x3D; new BootsJS.PriorityQueue(true);
+ascPriorityQueue.enqueue(&#x27;1&#x27;, 1)
+ascPriorityQueue.length
+// 按需导入
+const { PriorityQueue } &#x3D; require(&#x27;boots-js/priority-queue&#x27;);
+let priorityQueue &#x3D; new PriorityQueue();
+priorityQueue.enqueue(&#x27;1&#x27;, 1)
+priorityQueue.length
+
+ES6 Module
+// 全局导入
+import BootsJS from &#x27;boots-js&#x27;
+let ascPriorityQueue &#x3D; new BootsJS.PriorityQueue(true);
+ascPriorityQueue.enque…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -2300,6 +2352,75 @@ iconfont也没有开源,具体怎么做的咱也不知道，只能知道目前�
                 </section>
               </section>
             </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >李继刚的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/65df21433b9c66cae4225bbe"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 名可名, 非常名。每个概念都是一个「名」。 我习惯将每个概念视为一个个不同的圆圈，每个都有其独特的指向和边界。 探究一个概念，不是在玩文字游戏，而...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65df21433b9c66cae4225bbe">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>名可名, 非常名。每个概念都是一个「名」。
+我习惯将每个概念视为一个个不同的圆圈，每个都有其独特的指向和边界。
+探究一个概念，不是在玩文字游戏，而是在弄清楚这个边界，只有搞清楚了这些 brick, 才有可能基于你的逻辑链去建立一个大厦。
+如何搞清楚概念的边界? 找它的定义固然是出发点, 但通常这个定义所圈定的圆圈边界都比较模糊，还有三个小技巧可用：
+1. 反义词。试着对比看下概率的反义词。你想知道什么是活，对比着分析下什么是死。
+2. 同义词。打磨边界细微之处的线条，可用此招。对比分析下「开心」和「快乐」。
+3. 经验示例。在前两步的方法中，也可穿插套用此招，把你的生活经验和示例往上套，把理念空间的虚给拽实。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/65df0c236d9f190631ceedb0"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 笔记的技巧： 原子问题笔记 ━━━━━━━━━━━━━━ Emacs 圈有一位大佬叫李杀，他在博客中把 Emacs 中的很多常见概念和问题都单独形成一篇文章，...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65df0c236d9f190631ceedb0">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>笔记的技巧： 原子问题笔记
+━━━━━━━━━━━━━━
+Emacs 圈有一位大佬叫李杀，他在博客中把 Emacs 中的很多常见概念和问题都单独形成一篇文章， 文章很短，基本就是「什么是 X？」「如何配置 X？」之类的内容。
+当对某些模块比较熟悉时，读他的博客感觉很平常，都是常识而已。
+但 Emacs 博大精深，每天都有很多不熟悉的知识点，搜索引擎经常会引导到他的某篇博客文章，答案就那么简单直接摆在眼前，刚刚好地回答了当下的疑惑。
+这种笔记/博客方式，我且称之为「原子问题笔记法」。人人可学, 步骤如下：
+1. 在你的笔记系统中，新建一个目录，名为你的一个知识领域，可以是你当下的公司业务（XX 业务知识库），也可以是一个知识模块（写作）。
+2. 先试想下都有哪些常见概念和问题，在该目录下，单独起文件记录该问题并解答。如不会，学会它，再记录解答。
+3. 日常工作生活中，遇到任何一件不在该目录中记录的新概念/新问题，均立马起文件记录。（凡有发生，必有教我。）
+日积月累，在这个目录（知识领域）中沉淀的那一个个文件（问题-答案），就是你在该领域的底气。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -2447,51 +2568,6 @@ Wasp - 全栈，开箱即用🚀
 你希望获得一个为React和Node.js预配置的免费SaaS模板—— Open SaaS
 对于希望简单轻松地全面控制其堆栈的工具的用户，无需再寻找！Wasp是一个…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7339814359886348328"
-                        open
-                      >
-                        <summary class="article-expander__title">小小导出，我大前端足矣！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7339814359886348328">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: fancy
-highlight: arduino-light
-前言
-常网IT戳我呀！
-常网IT源码上线啦！
-本篇录入技术选型专栏，希望能祝君拿下Offer一臂之力，各位看官感兴趣可移步🚶。
-有人说面试造火箭，进去拧螺丝；其实个人觉得问的问题是项目中涉及的点 || 热门的技术栈都是很好的面试体验，不要是旁门左道冷门的知识，实际上并不会用到的。
-接下来想分享一些自己在项目中遇到的导出功能场景。
-如果你觉得你现在做的事情很累，很难，那一定是你方法用错了。
-
-一、问题剖析
-那是一个倾盆大雨的早上，花瓣随风雨落在我的肩膀上，是五颜六色的花朵。
-我轻轻抚摸着他，随后拨开第一朵花瓣，她不爱我。
-拨开第二朵，她爱我。
-正当我沉迷于甜蜜的幻想中，后端小白🙋喊道：这个导出你前端应该就能做的吧！
-🙋🏻‍♂️那是自然，有什么功能是我大前端做不了的，必须得让你们大开眼界。
-二、为什么导出要前端做？
-前端导出的场景：
-轻量级数据：如果要导出的表格数据相对较小，可以直接在前端生成和导出，避免服务器端的处理和通信开销。
-数据已存在于前端：如果表格数据已经以 JSON 或其他形式存在于前端，可以直接利用前端技术将其导出为 Excel、CSV 或其他格式。
-实时生成/计算：如果导出的表格需要根据用户输入或动态生成，可以使用前端技术基于用户操作实时生成表格，并提供导出功能。
-快速响应：前端导出表格可以提供更快的响应速度，避免等待服务器端的处理和下载时间。
-后端导出的场景：
-大量数据：如果要导出的表格数据量很大，超过了前端处理能力或网络传输限制，那么在服务器端进行导出会更高效。
-安全性和数据保护：敏感数据不适合在前端暴露，因此在服务器端进行导出可以更好地控制和保护数据的安全。
-复杂的业务逻辑：如果导出涉及复杂的业务逻辑、数据处理或数据查询，使用服务器端的计算能力和数据库访问更合适。
-跨平台支…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3006,66 +3082,6 @@ highlight: arduino-light
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7339741848079302694"
-                        open
-                      >
-                        <summary class="article-expander__title">打造舒适的vscode开发环境</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7339741848079302694">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: nico
-前言
-前方高能,长文警告!!
-
-个人比较喜欢在一个集成的平台上进行各种开发, vscode正好满足我的需求,下面我会介绍一些我比较常用的插件.
-插件类型速览:
-主题插件、基础插件、Vue插件、react插件、小程序插件、代码格式化...
-主题
-Monokai Pro
-
-同时提供 配色主题和文件主题,看起来比较舒服.
-配色方案有多种,用ctrl+k+t快速选择主题
-
-基础插件
-HTML CSS Support
-
-提供html和css的代码高亮和提示,必备插件
-JavaScript (ES6) code snippets
-
-vscode本身有内置js的代码提示,装一个JavaScript (ES6) code snippets用来提示代码片段就够了.
-
-Vue插件推荐
-Vue Language Features (Volar)
-开发 vue项目必备的插件,代码的高亮和智能提示全靠它了.
-安装之后的样子
-Vue Peek
-在大型的Vue项目中如果想要快速跳转到某一个组件去,需要找很久才能找到.非常浪费时间
-这个插件就完美解决这个问题
-
-Vue VSCode Snippets
-这个插件提供一些Vue的代码片段,在日常开发中,可以节省很多时间
-React
-react本身用的 jsx和tsx可以被 vscode识别到,所以不像 vue那样还需要装高亮插件.
-Simple React Snippets
-react的代码片段插件,这个插件里面有很多react的代码片段,写新文件的时候可以用来快速生成代码.
-
-Typescript React code snippets
-typescript版本的react的代码片段.
-ES7+ React/Redux/React-Native snippets
-也是一个 react代码片段的插件,
-小程序
-平常开发主要用到的是Uni…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -3682,7 +3698,7 @@ iFixit 网站拆解了苹果头盔，证实了 CPU 是 M2 芯片，跟 MacBook �
                         <summary class="article-expander__title">如何编写高质量AI Prompt</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://lainbo.com/article/high-quality-prompt">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://www.notion.so/images/page-cover/nasa_earth_grid.jpg" loading="lazy" class="media-object__media article-image" />
+                              <img src="/bg_image.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>如果你认为ChatGPT给出的官方教程太长了, 或无法看明白, 可以看看这个这个总结的版本, 除了指导如何编写高质量Prompt, 还在文末给出了适应大部分场景的模板</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
@@ -3702,7 +3718,7 @@ iFixit 网站拆解了苹果头盔，证实了 CPU 是 M2 芯片，跟 MacBook �
                         <summary class="article-expander__title">nvm-desktop的使用</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://lainbo.com/article/use-nvm-desktop">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://www.notion.so/images/page-cover/nasa_earth_grid.jpg" loading="lazy" class="media-object__media article-image" />
+                              <img src="/bg_image.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>在用过一些Node版本管理工具后, 这似乎是一个最好的解决方案。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
@@ -4079,8 +4095,8 @@ iFixit 网站拆解了苹果头盔，证实了 CPU 是 M2 芯片，跟 MacBook �
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8149486413">
-        <time id="build-timestamp" datetime="2024-03-05T01:15:43.915Z">2024-03-05T01:15:43.915Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8150763607">
+        <time id="build-timestamp" datetime="2024-03-05T03:53:32.366Z">2024-03-05T03:53:32.366Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
