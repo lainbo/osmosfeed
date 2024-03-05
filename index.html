@@ -261,6 +261,39 @@ B站搜索“云前端”观看视频版</span>
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7341983885726187559"
+                        open
+                      >
+                        <summary class="article-expander__title">✊构建浏览器工作原理知识体系（开篇）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7341983885726187559">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>本文为稀土掘金技术社区首发签约文章，30天内禁止转载，30天后未获授权禁止转载，侵权必究！
+🌻 前言
+作为一个前端工程师，浏览器是我们密不可分的朋友，想要深耕前端，就必须和浏览器“交心”💞。
+为什么你觉得偶尔看浏览器的工作原理，但总是忘呢😵‍💫，因为你没有形成一个完整的知识网络，你的记忆是碎片化的。正如人的神经网络，只有当你的记忆相互依赖，相互链接，才能形成长期稳定的记忆。
+所以本文我将用一条知识线将浏览器工作原理的知识串联起来，因为本文的目的是为了帮助大家建立浏览器基础的思维树，所以很多细节点不做过多阐述，先有了树，后面你在上面伸展枝叶就会发现清晰明了很多。欢迎点赞支持或评论指正。
+🪴一、了解进程、线程
+进程：计算机正在运行的一个程序的实例。每个进程都有自己的内存空间、系统资源（如文件描述符、I/O 等），以及一个或多个线程（执行指令的基本单位）；
+线程：线程是进程中的执行单元，是操作系统调度的最小单位。在一个进程中可以有多个线程，它们共享进程的资源，但拥有各自的执行流。线程是进程的一部分，同一个进程中的多个线程可以并发执行，共享进程的地址空间和系统资源。
+通俗的说，比如浏览器是一座工厂，进程就是工厂里的不同车间，线程是车间里的流水线，它是是工厂中的实际运作单位。
+你需要了解：
+进程具有独立性，所有进程互相隔离，独立运行。一个进程崩溃不会影响其他进程。进程与进程之间的通信，是通过进程间通信（Inter-Process Communication，简称IPC）来进行数据交换和协作的。
+一个进程包含多个线程，每个线程并行执行不同的任务。其中一个线程崩溃了，那么整个进程也就崩溃了。线程之间可以相互通信。
+并行和并发
+🚨关于并行和并发的概念一定要清晰，因为很多问题的根源或者性能优化方案都是依靠并行或并发的。
+并发是指多个任务在同一时间段内交替执行，从外部看似乎是同时执…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -3703,71 +3736,6 @@ iFixit 网站拆解了苹果头盔，证实了 CPU 是 M2 芯片，跟 MacBook �
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7337892215225368613"
-                        open
-                      >
-                        <summary class="article-expander__title">小册上新｜基于 Rust 的 HarmonyOS 应用开发实战</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7337892215225368613">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: arknights
-
-
-
-以下图片展示的是使用 ArkTS 开发的“纯血鸿蒙”应用在 Mate 60 的运行效果，功能为 TodoMVC。
-
-随着 HarmonyOS Next 宣布正式移除 AOSP 内核，完全脱离安卓生态，一个新的操作系统正式出现在了众多开发者眼前，但随之而来的也是各种讨论和争议。
-不过作为一个开发者，更多的是应该抛开与技术无关的内容，着眼是否能从中学习到一些知识，从其开发模式、设计思想以及涉及技术栈的角度来思考对自身学习和工作的用处。比如：为什么 HarmonyOS Next 要选择 ArkTS 作为开发语言？会面临什么问题？应该如何解决？假设我们在日常开发中遇到了类似的问题，应该从什么角度着手去解决？
-而 Rust 作为目前开发者社区最热门的“当红炸子鸡” ，因其卓越的性能和安全性不断地在各行各业被采用，那它又能够和 HarmonyOS 碰撞出怎么样的火花呢？
-《基于 Rust 的 HarmonyOS 应用开发实战》这本小册将会从 HarmonyOS 原生应用基础开发开始，通过大量对比与示例，带你快速入门原生鸿蒙应用开发，学习使用 C++ 开发更加底层的系统能力，全面体系化地学会鸿蒙应用开发。
-然后从 0 到 1 开始学习 Rust 应用开发，利用 Rust 实现一个用于开发原生鸿蒙应用底层的开发框架，并且使用该框架将很多社区已有的开源能力移植到鸿蒙系统上，比如：MMKV、jieba、bcrypt 等。
-通过本小册，你能够学习到鸿蒙原生应用开发和 Rust 相关的知识，以及项目工程化相关的实践。无论你将来是否从事鸿蒙应用开发或者 Rust 应用开发，相信你都能从本小册中了解或掌握到一些对学习和工作有用的内容。
-小册内容设置
-小册 大纲 如下：
-
-可以看到，小册整体共分为 四大模块。
-模块一：鸿蒙原生应用开发。介绍鸿蒙开发中最基本的一些知识点和开发套路，并通过一个真实的项目来实践这些知识点。
-模块二：Rust 基础入门。讲解 Rust 中一些基础知识点，并着重剖析在本小册中会使用的重点和难点。
-模块三：Rust 开发模块。从 0 开始实现一个开发 Native 模块的基础框架，并将社区相关库编译为真实的 Native 模块供鸿蒙应用使用。
-模块四：工程化。实践基于 Rust &amp; 鸿蒙的基建和工程化能力，让使用 Rust 开发原生模块更加方便简洁。
-通过这些模块，你就能够对鸿蒙原生应用开发、Rust 应用开发以及二者结合的开发流程有一个较为全面的认知。对一些开发中的常见坑点和优秀实践也能有一些知识储备。
-作者是谁？
-
-Ranger0929，软件工程师，ohos-rs 开源项目作者。Rust 爱好者和开源爱好者，一个不太有名却又想做一些有意义的事情的人。
-曾就职于腾讯，主要工作面向于内部组件库、底层 SDK、脚手架等基础设施建设。目前个人精力主要集中于 Rust 在鸿蒙应用以及跨端应用上的运用。
-适合谁学？
-有一定开发编程经验的同学，无论是客户端还是前端，或者是其他开发者。
-目前从事鸿蒙开发或者即将从事鸿蒙开发的同学。
-希望了解和学习 Rust 的同学。
-最低价：上新特惠，限时 6 折中
-在鸿蒙中，使用 Rust 作为 C++ 的替代者来进行底层能力开发，这使鸿蒙应用获得了更加优秀的安全和性能表现。通过本小册的学习，你不仅可以掌握在鸿蒙上的 Native 开发，同时对于 Rust 在其他领域的理论、实践也有更进一步的学习和运用！
-2 月 21 日～28 日，上新限时 6 折，原价 ¥39.9，算下来仅需 ¥23.94，现在购买最省钱！！！
-赶紧点击下方图片或者扫描海报二维码，一起加入学习吧！</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >Barret李靖的即刻动态</button>
                   <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
                 </h3>
@@ -4125,8 +4093,8 @@ Ranger0929，软件工程师，ohos-rs 开源项目作者。Rust 爱好者和开
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8154251509">
-        <time id="build-timestamp" datetime="2024-03-05T09:53:44.948Z">2024-03-05T09:53:44.948Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8156583272">
+        <time id="build-timestamp" datetime="2024-03-05T12:55:44.579Z">2024-03-05T12:55:44.579Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
