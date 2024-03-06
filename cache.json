@@ -64,7 +64,7 @@
           "description": "音视频合成的时候，有倍速合成的需求，起初，我以为这只是个手到擒来的小需求，细究之下发现问题并不简单……",
           "link": "https://www.zhangxinxu.com/wordpress/2024/02/js-audioencoder-backplayrate-audiobuffer/",
           "publishedOn": "2024-02-29T14:22:22.000Z",
-          "wordCount": 1720,
+          "wordCount": 1716,
           "title": "不改变音调情况下Audio音频的倍速合成JS实现",
           "imageUrl": null
         }
@@ -148,7 +148,7 @@
           "description": "大公司想要保持创业，逃逸平庸的重力，或许只是一个美好的愿望。https://mp.weixin.qq.com/s/rgBCufdfMn66d0STEav3bg\n“一个需求，一开始评估要 1000 人天，深入问之后发现只需要 15 人天。”\n”汝波举了一个例子，需求本身并不复杂，但是拉了一堆人，而且大家给出的判断是基于错误的信息去做的，最后就出现了这么大的评估偏差。”\n一些表达习惯里也是如此，“还行”变成”很好”，“不太行”变成“也还行”，“很不好”变成“还不错”，本来可以直接在会上讨论清楚的问题，却说“我们下来再看看”……",
           "link": "https://m.okjike.com/originalPosts/65d5982712ed2fda6821412b",
           "publishedOn": "2024-02-21T06:28:55.000Z",
-          "wordCount": 467,
+          "wordCount": 469,
           "title": "发布了: 大公司想要保持创业，逃逸平庸的重力，或许只是一个美好的愿望。https://mp.weixin.qq.com/s/rgBCufdfMn66d0STEav3bg “一个需求，一开始评估要 1000 人...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -534,6 +534,16 @@
       "siteUrl": "http://www.cneb.gov.cn/yjxx",
       "articles": [
         {
+          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20240306/t20240306_526618145.html",
+          "author": "国家预警信息发布中心",
+          "description": "巴南区气象台2024年3月6日8时40分发布“大雾黄色预警信号”，预计6日8时40分至14时，姜家镇、东温泉镇、石龙镇、石滩镇、双河口镇、丰盛镇、麻柳嘴镇、天星寺镇、莲花街道、南泉街道、惠民街道、二圣镇、花溪街道、李家沱街道、木洞镇、龙洲湾街道、接龙镇、鱼洞街道、圣灯山镇、一品街道、南彭街道、安澜镇、界石镇可能出现能见度小于500米的雾，局地能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
+          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20240306/t20240306_526618145.html",
+          "publishedOn": "2024-03-06T00:53:00.000Z",
+          "wordCount": 523,
+          "title": "重庆市巴南区发布大雾黄色预警",
+          "imageUrl": null
+        },
+        {
           "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20240306/t20240306_526618041.html",
           "author": "国家预警信息发布中心",
           "description": "石柱县气象台2024年3月6日5时30分发布“大雾黄色预警信号”，预计6日6时至11时，黄水镇、枫木镇、临溪镇、石家乡、王家乡、河嘴乡、冷水镇、金竹乡、中益乡、沙子镇、新乐乡、洗新乡、黄鹤镇、金铃乡、三益乡、桥头镇、万朝镇、龙沙镇、鱼池镇、沿溪镇、悦崃镇、王场镇、西沱镇、黎场乡、龙潭乡、下路街道、三星乡、六塘乡、马武镇、万安街道、南宾街道、三河镇、大歇镇可能出现能见度小于500米的雾，局地能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
@@ -663,7 +673,7 @@
           "description": "今天瞧见了一个开源库，https://github.com/abi/screenshot-to-code ，根据它的描述，这个简单的应用程序可以将屏幕截图转换为代码（HTML/Tailwind CSS、React、Bootstrap 或 Vue）。 它使用 GPT-4 Vision 生成代码，并使用 DALL-E 3 生成外观相似的图像。 更加逆天的是，现在是你只要输入一个 URL，他就给你把人家网站克隆了。\n这技术背后的实现原理是什么\nscreenshot-to-code这个工具，其核心功能是将图像转化为代码。它基于开放人工智能库GPT-4 Vision和DALL-E 3的技术，这两种AI模型都是OpenAI的产品且在视觉理解方面表现出色。\n当用户上传截图，GPT-4 Vision会读取并理解截图中的内容，然后基于这些理解生成对应的HTML，Tailwind，React，Vue等代码。这部分对应的源码可以在这里查看 https://github.com/abi/screenshot-to-code/blob/072b286b6dfa65eaa646f68def8a0b0f6d157217/backend/routes/generate_code.py#L43 ，背后推动的 prompt 可以简单了解下\nHTML_TAILWIND_SYSTEM_PROMPT = \"\"\"\nYou are an expert Tailwind developer\nYou take screenshots of a reference web page from the user, and then build single page apps \nusing Tailwind, HTML and JS.\nYou might also be given a screenshot(The secon…",
           "link": "https://juejin.cn/post/7341391477014593572",
           "publishedOn": "2024-03-03T03:29:22.000Z",
-          "wordCount": 19,
+          "wordCount": 1395,
           "title": "一个 url 就把人家网站克隆了？",
           "imageUrl": null
         },
@@ -673,7 +683,7 @@
           "description": "最新消息，Node.js 新官网已发布 Beta 预览版本，正在招募测试志愿者。如果你对新的 Node.js 网站感兴趣，欢迎参与体验，并在对应 Github 仓库提供反馈和建议！\n小懒也是第一时间详细体验了各个页面，在感受新网站带来的 UX 提升同时，也发现了一些问题。\n新官网：首页\n新版首页，相比老版本，从视觉效果、页面布局、展现内容都有了很大的提升，整体上看着更大气。Node.js 的介绍相比老版本也变得更突出、描述更全面。\n\n最大的不同是增加了搜索框，提供全站检索（包含文档、博客、下载等），这样使用户检索信息变的更为快捷！\n\n但体验的同时，也发现几个体验问题：\n首页的 Node.js LTS 下载按钮的“向右箭头”看着有些奇怪，这里的下载并不是跳转，而是直接下载文件，改成“向下箭头”可能更有语义。\n右侧的代码 Tab，在切换时会造成页面闪动，体验不是太好。\n搜索框在视口中没有垂直居中，对于前端同学来说，不能理解。\n新官网：Learn 页面\nLearn 页由老版本的两列布局变成了三列布局，同时对左侧导航菜单进行了 UX 改造，树型目录形式的呈现，第三列给出了阅读时长、反馈入库及文档目录，用户体验变得更好。\n\n发现问题：\n当滚动左侧导航目录时，点击某一菜单后，导航目录会滚回到顶部，这里的体验不是很好。\n文档顶部有面包屑导航，可能体验会更好一些。\n新官网：About 页面\nAbout 页面布局和 Learn 页面类似，在介绍页新增了 Node.js 吉祥物 “火箭龟” 的图片。\n\n新官网：Download 页面\nDownload 页面的变化主要是将原有的列表 List，改成了 Select 形式，相比老版本，在历史版本、系统选择、版本选择等方便变得更为快捷。尤其是用户想下载历史版本的场景。\n\n新官网：Blog 页面\nBlog 页面的布局方式变化比较大，UX 体验更好了！内容包括最新的 Node.js 新闻，案例研究，教程和资源，同时增加了 Everything、Announcements、Releases、Vulnerabilities、Events 等 Tab 筛选，查找内容更便捷了。\n\n发现问题：\n点击 Events 时，出现了 404 的情况 “Page could not be found”。\n切换到移动端访问，下拉选择框的面板定位位置也有问题。\n新官网：Docs 和 Certification 页面\nDocs 和 Certification 页面没有什么变化，还是跳到现有的 API 文档页面和对应站点。\n体验地址： https://beta-node-js-org.vercel.app/en\n反馈地址： https://github.com/nodejs/nodejs.org/issues\n欢迎您的体验和反馈！\n欢迎关注我的公号（全网同名），一起学习和进步。",
           "link": "https://juejin.cn/post/7341408996597792787",
           "publishedOn": "2024-03-02T16:04:22.000Z",
-          "wordCount": 19,
+          "wordCount": 825,
           "title": "Node.js 新官网来了，UI 和 UX 全面升级，欢迎体验和反馈！",
           "imageUrl": null
         },
@@ -683,7 +693,7 @@
           "description": "theme: vuepress\nHello，大家好，我是 Sunday。\n前端性能优化一直是很多同学非常关注的问题，在日常的面试中也是经常会被问到的点。所以今天咱们就花一点时间来了解一下2024最新的前端性能优化方案，以此来助大家高效工作，面试顺利！\n一：页面渲染相关\n01：减少页面重绘和回流\n回流（reflow）：是指由于DOM结构或样式发生改变，浏览器需要重新计算元素的几何属性，然后重新布局页面的过程\n重绘（repaint）：是指当元素样式发生改变，但不影响布局时，浏览器只需要重新绘制受影响的部分，而不需要重新计算布局\n尽量减少使用 CSS 属性的快捷方式：例如，使用 border-width、border-style 和 border-color 而不是 border。CSS 属性的快捷方式会将所有值初始化为“初始值”，因此避免使用它们可以最小化重绘和回流（在实际工作中，CSS 快捷方式的性能影响微乎其微，并且使用快捷方式可以简化样式并解决一些样式覆盖问题）。\n在 GPU 上渲染动画：浏览器已经优化了 CSS 动画，使其适用于触发动画属性的重绘（因此也包括回流）。为了提高性能，将具有动画效果的元素移动到 GPU 上。可以触发 GPU 硬件加速的 CSS 属性包括 transform、filter、will-change 和 position:fixed。动画将在 GPU 上处理，提高性能，特别是在移动设备上（但避免过度使用，因为可能会导致性能问题）。\n使用 will-change CSS 属性来提高性能：它通知浏览器元素需要修改的属性，使浏览器能够在实际更改之前进行优化（但避免过度使用 will-change；在动画中遇到性能问题时考虑使用它）。\n通过更改 className 批量修改元素样式。\n将复杂的动画元素定位为 fixed 或 absolute 以防止回流。\n…",
           "link": "https://juejin.cn/post/7341267497428025344",
           "publishedOn": "2024-03-02T04:30:20.000Z",
-          "wordCount": 19,
+          "wordCount": 2004,
           "title": "2024最新版：前端性能优化方案汇总",
           "imageUrl": null
         },
@@ -693,7 +703,7 @@
           "description": "凌晨2点，Dan仍坐在电脑桌前，表情严肃。\n作为React社区最知名的布道者，此时正遭遇一场不小的变故 —— 他拥有38w粉丝的推特账号被影子封禁了。\n所谓影子封禁，是指粉丝无法在流中刷到被封禁者的任何推文，只能点进被封禁者的账号才能看到新推文\n\n在RSC（React Server Component）特性发布后，Dan经常用这个账号科普各种RSC知识。这次封禁，显然对他的布道事业造成不小打击，不得已只能启用新账号。\n虽然新账号粉丝不多，但值得宽慰的是 —— 这篇题为The Two Reacts的RSC布道文数据还不错。\n\n这篇文章通过解释世界上存在2个React：\n在客户端运行的React，遵循UI = f(state)，其中state是状态，是可变的\n在服务端运行的React，遵循UI = f(data)，其中data是数据源，是不变的\n来论证RSC的必要性（他为服务端运行的React提供了底层技术支持）。\n安静的夜总是让人思绪良多，Dan合上MacBook Pro，回想起当年参加行业会议，在会议开始前一周才实现演讲所需的Demo（也就是Redux的雏形）。也正是以这次参会为契机，他才得以加入Meta伦敦，进入React核心团队。\n随后，Dan又回想起在React Conf 2018介绍Hook特性时，台下观众惊喜的欢呼。\n\n想到这里，不禁又感叹 —— 曾经并肩战斗的战友们都已各奔东西。\nRedux的联合作者Andrew Clark离开了（入职Vercel），Hook的作者sebastian markbåge也离开了（入职Vercel），连自己最终也离开了（入职bluesky）。\n虽然React仍是前端领域最热门的框架，但一些微妙的东西似乎在慢慢变化，是什么变了呢？\n打包领取卡颂原创React教程、加入人类高质量前端群\nReact正迎来自己口碑的拐点\n作为一款11岁高龄…",
           "link": "https://juejin.cn/post/7340926094614511626",
           "publishedOn": "2024-03-01T02:53:22.000Z",
-          "wordCount": 19,
+          "wordCount": 857,
           "title": "11岁的React正迎来自己口碑的拐点",
           "imageUrl": null
         },
@@ -703,7 +713,7 @@
           "description": "theme: smartblue\nhighlight: atelier-forest-light\n如果没有时间想直接解决问题，看最下面的最终代码即可\n场景需求\n总结：\n20分钟内如果不操作，页面就是提示失效并且回到列表页面，如果操作了，计时就会清零。\n如果 A  在编辑，B 点击编辑会提示正在编辑。A 在编辑期间，每分钟会向后端发送续租（即正在编辑）的请求，后端收到请求后，会在服务端帮你保留这一分钟的编辑状态，别人就无法在编辑了。并且别人编辑时，后端会返回相应的信息。\n前言\n乐了，产品提出了需求，然后我去找导师问问团队中有没有现成的解决方案。。。没有，然后导师提出了 web worker 的思路，让我自己思考解决方案。好吧，那就开始吧。\n一开始，我想着能否能用 setInterval 来进行定时的，结果后端发来消息\nemm......后端大佬，惹不起~\n如图上所说，如果切换了页面，setInterval 会停止计时的（咱就说不信的可以试试），也就是说这个线程被停止了。\n那么就需要新建一个线程，也就是 web worker 了，用它单纯来进行计时，不用管其他逻辑，切换页面也不会终止。\n正文思路\n基本demo\n首先，百度了下 web worker 的基本实现案例，一文彻底学会使用web worker\n需要该需求的页面\n// editEmail.vue（主线程）\n<template>\n    <div>编辑页面哦</div>\n</template>\n\n<script>\nconst myWorker = new Worker('/worker.js'); // 创建worker，函数里的值为 webWorker 文件名\n\n // 向 worker.js 线程发送消息，对应 worker.js 线程中的 e.data\nmyWorker.postMessage('Greeting fr…",
           "link": "https://juejin.cn/post/7340636105765535796",
           "publishedOn": "2024-02-29T08:31:40.000Z",
-          "wordCount": 19,
+          "wordCount": 3027,
           "title": "实战（简单）：20分钟页面不操作，页面失效",
           "imageUrl": null
         },
@@ -713,7 +723,7 @@
           "description": "《2023 的 Javascript 星趋势》在 1 月就出来了，当时略略看了一下，并没有想太多。\n过年期间，回想起来，似乎感觉到这次有一点不一样：也许，全栈的时代已经到来了。\nReact 与 Vue 生态对比\n首先，我们来看看 React 与 Vue 生态的星趋势对比：\n\n上图中，React 整个生态的星星数远超于 Vue，第十名都要比 Vue 第一名的多。我们将其做一个分类：\n排名\nReact\nVue\n\n\n\n\n1\nUI\n全栈\n\n\n2\n白板\n演示文稿\n\n\n3\n全栈\n后台管理系统\n\n\n4\n状态管理\nhook\n\n\n5\n后台管理系统\nUI\n\n\n6\n文档\n文档\n\n\n7\n全栈框架集成\nUI\n\n\n8\n全栈框架UI\n框架\n\n\n9\n后台管理系统\nUI\n\n\n10\n无服务栈\n状态管理\n\n\n\n可以看到 React 这边的生态链基本成熟，几乎每一个分类都有一个上榜的库，不再像 Vue 那样还在卷 UI 框架。\n在全栈方面，Vue 的首位就是全栈 Nuxt。\nReact 的 Next.js 虽然不在首位，但是服务端/全栈相关的内容就占了 4 个，其中包含第 10 名的无服务栈。另外值得注意的是，React 这边还有服务端组件的概念。Shadcn/ui 能占到第一位，因为它基于无头 UI Radix 实现的，在服务端组件也能运用。所以，服务端/全栈在 React 中占的比重相当大的。\n这样看来，前端往服务端进发已经成为一个必然趋势。\nhtmx 框架的倒退\n再看看框架这边，htmx 在星趋势里，排行第二位，2023增长的星星数为 15.6K，与第一位的 React 颇为相近。\n而 htmx 也是今年讨论度最高的。\n在我经历过前后端不分离的阶段中，使用 jsp 生成前端页面，js 更多是页面炫技的工具。然后在 jQuery + Ajax 得到广泛应用之后，才真正有前后端分离的项目。\nhtmx 的出现，不…",
           "link": "https://juejin.cn/post/7340603873604599843",
           "publishedOn": "2024-02-29T06:15:57.000Z",
-          "wordCount": 19,
+          "wordCount": 1106,
           "title": "2024 前端趋势：全栈也许已经是必选项",
           "imageUrl": null
         },
@@ -723,7 +733,7 @@
           "description": "theme: z-blue\n前言\n上周五晚上8点，开开心心的等着产品验收完毕后就可以顺利上线。结果产品突然找到我说要加需求，并且维护这一块业务的同事已经下班走了，所以只有我来做。虽然内心一万头草泥马在狂奔，但是嘴里还是一口答应没问题。由于这一块业务很复杂并且我也不熟悉，加上还饿着肚子，在梳理代码逻辑的时候我差点崩溃了。需要修改的那个vue文件有几千行代码，迭代业务对应的ref变量有10多个watch。我光是梳理这些watch的逻辑就搞了很久，然后小心翼翼的在原有代码上面加上新的业务逻辑，不敢去修改原有逻辑（担心搞出线上bug背锅）。\n滥用watch带来的问题\n首先我们来看一个例子：\n<template>\n  {{ dataList }}\n</template>\n\n<script setup lang=\"ts\">\nimport { ref, watch } from \"vue\";\n\nconst dataList = ref([]);\nconst props = defineProps([\"disableList\", \"type\", \"id\"]);\nwatch(\n  () => props.disableList,\n  () => {\n    // 根据disableList逻辑很复杂同步计算出新list\n    const newList = getListFromDisabledList(dataList.value);\n    dataList.value = newList;\n  },\n  { deep: true }\n);\nwatch(\n  () => props.type,\n  () => {\n    // 根据type逻辑很复杂同步计算出新list\n    const newList = getListFromType(dataList.value);\n    d…",
           "link": "https://juejin.cn/post/7340573783744102435",
           "publishedOn": "2024-02-29T04:00:33.000Z",
-          "wordCount": 19,
+          "wordCount": 1248,
           "title": "答应我，在vue中不要滥用watch好吗？",
           "imageUrl": null
         },
@@ -733,8 +743,18 @@
           "description": "theme: qklhk-chocolate\nhighlight: brown-paper\n前言\nRust 可能正在逐渐渗透前端的方方面面，所以作为一个前端究竟有没有必要学习 Rust 呢？我认为，还是看个人的精力吧，有那个精力多学一点没有坏处，没那个精力不学也没有影响。本篇不是讨论该不该学 Rust，而是将 Rust 大概是一个什么样的语言展现给可能在观望的小伙伴，并以一个前端的视角来看看 Rust 究竟和前端有什么不一样。\n本篇也是我在认真阅读了Rust 程序设计语言（中文版）几遍以后，才敢下笔做一些总结，因能力有限，错误之处还望大家及时指出。\n我会从一个语言层面的几个方面来分析 Rust 究竟和 JavaScript 以及 TypeScript 这样的语言的不同之处，以及相似之处，并且希望能给想要学习 Rust 的同学一些语言的梗概，也给前端学习 JS 的同学一些新的理解。\nRust VS JavaScript\n属性\nRust\nJavaScript\n\n\n\n\n编译器\nrustc\nv8\n\n\n包管理工具\ncargo\nnpm、yarn、pnpm、cnpm\n\n\n第三方依赖注册表\ncrates.io\nnpmjs.com\n\n\n垃圾回收\n无\n有\n\n\n\n数据类型\nRust 的数据类型同样分为基础类型和复杂类型，主要包括以下几类：\n基础类型：包括整型、浮点型、布尔型、字符型\n复杂类型：元组、数组以及其他复合类型\n这点和传统的强类型语言基本是一致的，但是 Rust 也拥有不同的地方。\nRust 声明变量的方法竟然和 JS 出奇的一致，并且很多方面也是类似 JS 或 TS 的写法：\n// 声明不可变变量\nlet a = 1;\n\n// 声明可变变量\n// 如果没有 mut 关键字，修改变量会导致报错\nlet mut b = 2;\nb = 3;\n\n// 重复声明变量，会发生遮蔽，即覆盖原有变量\n…",
           "link": "https://juejin.cn/post/7340573362214699049",
           "publishedOn": "2024-02-28T14:01:03.000Z",
-          "wordCount": 19,
+          "wordCount": 2782,
           "title": "写给想学 Rust 的前端同学",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7340462380336660490",
+          "author": "汪啊汪QAQ",
+          "description": "highlight: an-old-hope\ntheme: smartblue\n想必大家在日常工作中总会需要使用到各种各样的工具函数，例如：防抖、节流、日期计算、日期格式化、正则....等等，每次用到就要百度，可不可靠先且不谈，每次查找/验证的过程都是非常烦人的，有天我在摸鱼的时候突然想到，为啥不自己写一个呢？方便自己方便他人，二话不说，干！于是乎BootsJS诞生了，下面为大家介绍下目前BootsJS使用以及支持的功能。\n\nBootsJS 是一个致力于扩展原生 JavaScript 功能的库，旨在解决 JavaScript 原生不支持的常见数据结构、方法和常用算法。\n安装\nnpm\nnpm install boots-js\n\nyarn\nyarn add boots-js\n\n使用\nCommonJS\n// 全局导入\nconst BootsJS=require('boots-js');\nlet ascPriorityQueue = new BootsJS.PriorityQueue(true);\nascPriorityQueue.enqueue('1', 1)\nascPriorityQueue.length\n// 按需导入\nconst { PriorityQueue } = require('boots-js/priority-queue');\nlet priorityQueue = new PriorityQueue();\npriorityQueue.enqueue('1', 1)\npriorityQueue.length\n\nES6 Module\n// 全局导入\nimport BootsJS from 'boots-js'\nlet ascPriorityQueue = new BootsJS.PriorityQueue(true);\nascPriorityQueue.enque…",
+          "link": "https://juejin.cn/post/7340462380336660490",
+          "publishedOn": "2024-02-28T09:24:24.000Z",
+          "wordCount": 2009,
+          "title": "摸鱼时间写了个库，比lodash更丰富！",
           "imageUrl": null
         },
         {
@@ -743,7 +763,7 @@
           "description": "theme: vuepress\nhighlight: atelier-dune-dark\n目前大三，最近刚分手，想着正好沉下心来去搞就业，寒假期间抱着摸自己底的心态去试试面试，海投了许多厂，小厂，中厂，大厂都有，给我的感觉就是大部分内容都是八股，怎么跟别人的面试不一样，本期就来记录下我面试中遇到的那些面试题，希望对大家春招有所帮助\n一、聊聊盒子模型\n盒模型是css描述布局用的概念，盒子模型有两种，默认情况下为标准盒模型，还有一种为IE或者怪异盒模型，这个是曾经IE使用的盒模型，如今使用需要打上box-sizing: border-box;\n对于标准盒模型，一个盒子最终的宽度为width + padding + border + margin。而对于IE盒模型，一个盒子最终的宽度为width + margin，也就是说，IE盒模型的宽度其实就是标准盒模型的width + padding + border，最终自身的真实宽度会被边框和内边距挤掉一部分，当你为了防止盒子被撑大的时候你可以使用IE盒模型\n二、vue3的响应式如何实现\nvue3的响应式主要是靠es6的代理proxy来实现的，proxy可以拦截对象，进行读值操作，能够捕获到数据的修改\nreactive能够将引用类型变成响应式，ref通常用于将原始数据类型变成响应式，但是ref也可以将引用类型变成响应式，另外还有个副作用函数effect，当响应式数据发生变更，副作用函数就会重新执行\n三、computed和watch是什么，有什么应用场景\ncomputed是计算属性，依赖响应式数据，只要发生变更就会重新计算，另外computed有缓存机制，多次使用计算属性的逻辑时只会执行一次。所以当数据是根据其他响应式数据计算而来的时候，可使用computed\nwatch是监听器，监听一个数据的变化，当数据变化时，就会执行一个回调，可以用…",
           "link": "https://juejin.cn/post/7340479361219002405",
           "publishedOn": "2024-02-28T08:57:55.000Z",
-          "wordCount": 19,
+          "wordCount": 1004,
           "title": "同学们说我染上面试了",
           "imageUrl": null
         },
@@ -753,7 +773,7 @@
           "description": "引言：\n在 Web 开发中，我们经常听到 MIME（Multipurpose Internet Mail Extensions）类型这个术语。虽然它听起来可能有点晦涩，但它在 Web 的世界里扮演着非常重要的角色。本文将介绍 MIME 类型的概念，探讨它在 Web 开发中的应用，并提供一些实用的例子和建议。\n什么是 MIME 类型\nMIME 类型是一种标识数据类型的方式，它在 Internet 上用于标识文件的内容类型。它最初是为了在电子邮件中传输多媒体数据而设计的，但后来也被广泛用于 Web 开发中。每种 MIME 类型都由一个唯一的字符串标识，如 text/html 表示 HTML 文档，image/jpeg 表示 JPEG 图像。\nMIME 类型的作用\nMIME 类型在 Web 开发中扮演着至关重要的角色，它决定了浏览器如何处理从服务器发送到客户端的文件。通过正确设置 MIME 类型，可以确保浏览器能够正确地解析和显示文件内容。例如，浏览器将 text/html 类型的文件解析为 HTML 文档，并按照 HTML 标准进行渲染；将 image/jpeg 类型的文件解析为 JPEG 图像，并显示在页面上。\nMIME的语法\n语法：type/subtype(大类型/小类型)\nMIME的组成结构非常简单；由类型与子类型两个字符串中间用’/'分隔而组成。不允许空格存在。type 表示可以被分多个子类的独立类别。subtype 表示细分后的每个类型。\nMIME类型对大小写不敏感，但是传统写法都是小写\nMIME 类型\n常见的 MIME 类型：\n类型\n描述\n示例\n\n\n\n\ntext\n普通文本\ntext/plaintext/html text/javascript\n\n\nimage\n图片\nimage/gifimage/png\n\n\naudio\n音频文件\naudio/wavaudio/mpeg…",
           "link": "https://juejin.cn/post/7340286503505592330",
           "publishedOn": "2024-02-28T06:22:45.000Z",
-          "wordCount": 19,
+          "wordCount": 1544,
           "title": "了解 MIME 类型：Web 开发中的重要概念",
           "imageUrl": null
         },
@@ -763,7 +783,7 @@
           "description": "theme: cyanosis\n大家好！ 我叫扯蛋蛋 ，前几天我带着玩玩的心态着投了些简历，结果还有一个比较大点的公司，通过我的简历约到啦面试，听着我的前端领路人讲述面试官的过程，面试前我内心十分害怕，紧张万分。说实话，面试是很遥远的事情，但是不知不觉的中，感觉一切都始料未及。我的的八股文还没有背完，只背啦ccs部分 2024 高频前端面试题汇总之CSS篇（一）这个只是我更新的一部分，还有一大半没有分享给大家。js八股文还没开始背，这个让我这次面试直接寄的原因之一。接下来讲讲面试的过程。\n\n介绍项目和项目的难点\n我的第一次面试，我以为是视频面试，结果是电话面试。当我接到电话，面试官第一句话就是说：‘看你的简历没有项目，你有做什么项目嘛’。我说：‘有啊’ 面试官：‘介绍一下你的项目’。我的内心想不是第一个问题来自我介绍吗。为了准备自我自我介绍我还特意的在掘金上看了自我介绍的教程，结果白看了。我说‘做了个商城的项目’ 面试官：‘说说你项目中的难点’，我说：‘在这个项目中是购物车功能，我用的是vuex状态管理工具，来实现数据交换，商品的数据可以在页面的自由交换’ 面试官：‘vuex是什么’\nvuex\n1、Vuex的状态存储是响应式的，当store中的状态state发生变化，相应的组件也会相应地得到高效更新\n2、不能直接改变store的状态state，改变store状态的唯一方法就是提交commit mutation\n3、action通过调用mutation来更改状态\n4、getter存放公共函数供组件调用，类似计算属性computed\n我还说：“在登入页面的用到啦 路由守卫”  什么是路由守卫 ，这个我只说出啦一点点\n路由守卫\n# vue切换页面才看得到的显眼包这篇文章是我朋友写的，不懂可以去看一下，有时间我在补一下，我有好的文章没有写，过年时间都去贪玩啦。\n问到这个路由守卫我没回答出来，我当时就有点紧张啦  导致接下来的问题我都没有回答好，接下来就是问我js问题\n设计模式 发布订阅\n这个我当时一听，脑子更蒙，根本没有接触过的东西，也没学过。我就回答没有\n在这个里我借用大佬的文章,你们也不懂的 可以看一下 借鉴一下\n 前端最常见的设计模式——发布订阅篇\n双向绑定\n问这个问题，我脑子就想到了 v-model 跟面试官说了 在input框里面 设置 v-model你输入的值，就可以获取输入值，你改变 input 文本框的内容的时候，p 标签中的内容会跟着进行改变。 这个我讲的不详细  在这里我又借用一下大佬的文章，你们不理解的也可以看看\nVue双向数据绑定原理(面试必问)\nnull 和  undefined 的区别\n看到我前面的问题没有回答好  就问了点简单的  当时我蒙了  这个简单的问题，我脑子没转起来，就没有快速回答出来  就说出啦一点\nnull 和  undefined 的区别了 阮一峰\n回答了这些问题之后，我说现在我有点紧张，脑子懵懵的  面试官说：下次准备好一点，然后就挂啦  面试啦10分钟\n总结\n在我们想要面试的时候，把八股文背熟悉，还有写几个项目，在面试之前要熟悉自己的项目，项目中的难点，自己能够讲给面试官听。面试官再问，项目难点的时候，能够把自己难点的知识讲清楚。还要把自我介绍，讲好，控制在3分钟之内。在讲一遍八股文一定要背熟，理解。还要能够表达清楚。\n如觉得本文对你有帮助的话，欢迎点赞❤❤❤，写作不易，持续输出的背后是无数个日夜的积累，您的点赞是持续写作的动力，感谢支持！",
           "link": "https://juejin.cn/post/7340295805998497826",
           "publishedOn": "2024-02-28T05:11:18.000Z",
-          "wordCount": 19,
+          "wordCount": 912,
           "title": "人生第一次面试 海康",
           "imageUrl": null
         },
@@ -773,18 +793,8 @@
           "description": "前言\n个人一直都比较喜欢阿里大佬提供的一些组件服务什么的，这里就只说图标管理吧，最开始的时候我是使用的https://icomoon.io 后面发现https://www.iconfont.cn/ 在以前开发是时候我们为了图片的请求少点，提升网站的性能会把这些小图标做到一张图上面专业叫法是雪碧图，后来随着前端发展有了字体图标，不啰嗦了吧，回到正题，由于上次icofont官网挂了之后，导致我的项目无法进行正常迭代，我就决定要自己弄个简单的图标管理。\n需求\n一般使用需要的是把设计做好的图标或者其他地方下载的svg图标上传到服务器然后可以查看，并且打包成一个js文件加载到项目中。\n准备\n都说天下文章一大抄，我也是去抄iconfont,我把iconfont的使用demo打开研究了一下。\n\n\n我这里只说Symbol，通过分析看到就是我们需要在项目中引入./iconfont.js\n\niconfont把我们上传的图标进行了删减优化,最外层就一个svg标签里面使用了一个symbol标签来包裹之前的图标内容，每一个symbol的id都对应之前的svg图标名称。\niconfont也没有开源,具体怎么做的咱也不知道，只能知道目前这些信息了，然后就按照自己理解开始开发实现了\n前端开发\n通过上面我们可以知道，现在我们前端需要的是把设计稿的svg图变成symbol里面的内容，打开svg图\n可以简单测试下，直接把内容复制然后粘贴带了iconfont.js中，然后运行demo图标正常显示就说明是ok的，不然就是这样做是不行的。\n\n通过图片我们可以看到，现在需要的就是把svg里面的path改成用symblo来包裹，在开发中svg图我们是通过文档流上传上来的，这个时候我们就需要对文档流进行操作，先把文档流变成字符串，然后js操作字符串拼接达到目的。\n使用到FileReader和readAsText获取到字符串…",
           "link": "https://juejin.cn/post/7340197367515578378",
           "publishedOn": "2024-02-28T01:50:36.000Z",
-          "wordCount": 19,
+          "wordCount": 44,
           "title": "如果iconfont停止服务了，我们怎么办",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7340167256267391012",
-          "author": "娜个小部呀",
-          "description": "highlight: atelier-cave-light\ntheme: channing-cyan\n今天看到一个面试题，是关于img图片加载方面的，有必要记录一下。其实关于这个问题，只要知道图片什么时候加载完成就能解决了。\n通过onload事件判断Img标签加载完成\n实现逻辑：新建一个Image对象实例，为实例对象设置src属性等，在onload事件中添加此实例对象到父元素中，然后将图片地址数组中的第一个元素剔除，继续调用此方法直到存储图片地址的数组为空。\n代码\nconst imgArrs = [...]; // 图片地址\nconst content = document.getElementById('content');\nconst loadImg = () => {\n  if (!imgArrs.length)  return;\n  const img = new Image(); // 新建一个Image对象\n  img.src = imgArrs[0];\n  img.setAttribute('class', 'img-item');\n  img.onload = () => { // 监听onload事件\n    // setTimeout(() => { // 使用setTimeout可以更清晰的看清实现效果\n      content.appendChild(img);\n        imgArrs.shift();\n        loadImg();\n    // }, 1000);\n  }\n  img.onerror = () => {\n    // do something here\n  }\n}\n  loadImg();\n\n</script>\n\n实现效果\n\n加上setTimeout后，看到的效果更加明显,我这里加了500毫秒的延迟(录屏软件只支持…",
-          "link": "https://juejin.cn/post/7340167256267391012",
-          "publishedOn": "2024-02-27T12:08:33.000Z",
-          "wordCount": 19,
-          "title": "js如何控制一次只加载一张图片，加载完成后再加载下一张",
           "imageUrl": null
         },
         {
@@ -793,7 +803,7 @@
           "description": "theme: smartblue\nhighlight: agate\n在前端开发中，实现无感刷新 token 通常是为了保持用户的登录状态，并确保其访问权限的有效性。下面将介绍如何实现无感刷新 token 的原理以及给出一个示例。\n前端如何无感刷新token 实现原理\n无感刷新 token 的实现通常基于以下几个步骤：\nToken 有效期：首先，服务器会为每个 token 设置一个有效期，例如 30 分钟或 1 小时。在这个有效期内，用户可以使用 token 访问受保护的资源。\n定期检查：前端应用会在用户活动期间定期检查 token 的有效期。通常通过轮询或心跳机制实现，即在一定时间间隔后发送请求到服务器，检查 token 是否仍然有效。\n刷新 Token：如果服务器返回 token 已失效的信息，前端应用会立即发起一个新的请求到认证服务器，使用refreshToken这个token（后端一般会返回一个长token和一个短token，长短指的是过期时间，refreshToken作为长token存在localstorage中用来向后端携带这个token去请求短token，accessToken作为短token也是存在localstorage中用这个token去请求受保护的请求放到请求头headers中）来获取新的访问 token。\n无缝切换：在获取到新 token 后，前端应用会立即更新本地存储的 token，并使用新 token 继续之前的操作，从而实现了无缝的用户体验。\n示例\n下面是一个简单的示例，展示了如何在前端实现无感刷新 token：\n设置 Token 有效期：假设服务器为每个 token 设置了 30 分钟的有效期。\n定期检查：前端应用每 5 分钟向服务器发送一个请求，检查当前 token 是否仍然有效。\n\t// 使用 setInterval 定时发送心跳请求  \n…",
           "link": "https://juejin.cn/post/7339741848078139430",
           "publishedOn": "2024-02-26T09:51:20.000Z",
-          "wordCount": 19,
+          "wordCount": 44,
           "title": "前端面试：前端如何无感刷新token；token还没有刷新完成时，发送了其他请求需要如何处理",
           "imageUrl": null
         },
@@ -803,7 +813,7 @@
           "description": "theme: channing-cyan\n技术无止境 创作不间断\n\n👏 2024年创作者训练营第1期来咯，如果你想\"变身\"为创作者，却不知如何下笔；如果你想让自己的作品会被更多人看见；如果你想能凭一己之力\"横扫\"掘金平台......那就快来和我们一起探索技术写作进阶之旅吧～！\n这一次为了培养新手作者们的创作习惯以及鼓励大家创作出更多优质的内容，除了一如既往的为大家准备了丰厚的奖品池外，还重磅推出了写作辅导群——创作者训练营群。\n群里一切都为创作者服务，会尽可能帮助大家创作出更多优质的内容，为大家提供活动相关问题解答、1v1的创作指导、单篇文章的辅导解析（不被推荐原因和修改建议）等等，快来加入吧 👀 👇\n参加活动的掘友添加掘金酱为好友，回复关键词「训练营」入群。\nps：之前有被移动到其他的企业微信好友的创作者，可以删除掘金酱好友，重新添加回复关键词就行\n✏️ 官方创作指南（持续更新）\n标题\n简介\n作者\n\n\n\n\n🔗 如何从 0 到 1 写好技术文章\n有想法想沉淀，动笔前却犯了难？本篇文章将通过五个步骤教你写一篇技术文章。\nPDI技术写作团队\n\n\n🔗 如何写作系列教程\n《如何写作通用教程》将写作拆解成五个部分，总结了在写作前、写作中和写作后三个阶段需要注意的写作要点和技巧，通读整个系列文档，可以帮助你初步搭建系统的基础写作知识。\nPDI技术写作团队\n\n\n\n👍 优秀案例赏析\n标题\n简介\n作者\n\n\n\n\n🚀3.40秒到231.84毫秒，我用Performance面板分析性能瓶颈全流程（多图流量预警⚠️）\n如何优化不是本文的关键，本文主要和大家一起学习如何使用performance面板来进行性能瓶颈的定位，学习面板的使用，找到性能瓶颈源码并解决问题。\n一只大加号\n\n\nMongoDB保姆级指南(上)：七万字从零到进阶，助你掌握又一款强大的NoSQL！\n关于MongoDB相关的…",
           "link": "https://juejin.cn/post/7339357105144676406",
           "publishedOn": "2024-02-26T06:40:57.000Z",
-          "wordCount": 19,
+          "wordCount": 44,
           "title": "创作者训练营 · 助力每一位创作新星，写出个人影响力！",
           "imageUrl": null
         },
@@ -813,7 +823,7 @@
           "description": "theme: github\nReact 上一次发布版本还要追溯到2022年6月14日，版本号是18.2.0。在大前端领域，一项热门技术更新如此缓慢属实罕见。这也引起社区里一些大佬的不满，在我的上一篇文章里有提到，感兴趣的朋友可以点击查看：React 社区里的分歧。\n在社区不满的声音越来越大的背景下，React 新版本的消息终于来了。\nReact 团队也回应了迟迟未发布新的正式版本的质疑：此前发布到 Canary 版本的多项特性，因为这些特性是相互关联的，所以 React 团队需要投入大量时间确保它们能够协同工作，然后才能逐步发布到 Stable 版本。\n事实也确实如此，虽然在这将近两年的时间里 React 没有发布正式版本，但是 Canary 却有一些重磅更新，例如：use、useOptimistic hook，use client、use server 指令。这些更新客观上丰富了 React 生态系统，特别是推动了 Next.js 和 Remix 等全栈框架的高速发展。\nReact 团队已经确定，下一个版本将是大版本号，即版本号会是 19.0.0。\nv19 新特性预测\n现在，让我们根据 React 团队最新发布的消息，来抢先学习一下 v19 版本可能正式发布的新特性。\n自动记忆化\n你是否还记得 React Conf 2021 上黄玄介绍的 React Forget？\n\n现在，它来了。\n它是一个编译器，目前已经在 instagram 的生产环境中应用，React 团队计划在 Meta 的更多平台中应用，并且未来会进行开源发布。\n在使用新编译器以前，我们使用 useMemo、useCallback 和 memo 来手动缓存状态，以减少不必要的重新渲染，这种实现方式虽然可行，但 React 团队认为这并不是他们认为理想的方式，他们一直寻找让 React 在状态变化时自动且只重新…",
           "link": "https://juejin.cn/post/7339221543992426559",
           "publishedOn": "2024-02-26T02:28:05.000Z",
-          "wordCount": 19,
+          "wordCount": 44,
           "title": "React 19 发布在即，抢先学习一下新特性",
           "imageUrl": null
         }
@@ -830,7 +840,7 @@
           "description": "[西瓜]ServBay 1.2.3版本正式发布！\nServBay是一个集成式、图形化的本地化Web开发环境。开发者通过ServBay几分钟内就能部署一个本地化的开发环境。主要解决Web开发者（比如PHP、Nodejs）、测试工程师、小型团队安装和维护开发测试环境的问题，后期还可以快速的进行环境的升级以及维护。\n本次更新了：\n[礼物]全新架构及软件包\n[礼物]增强的错误日志\n[礼物]phpMyAdmin支持MariaDB 11.3\n[礼物]ServBay Helper运行状况的判断\n期待您在ServBay 1.2.3版本中享受到更加优化和流畅的体验[庆祝]",
           "link": "https://juejin.cn/pin/7342406486910517274",
           "publishedOn": "2024-03-04T16:16:14.000Z",
-          "wordCount": 477,
+          "wordCount": 471,
           "title": "[西瓜]ServBay 1.2.3版本正式发布！ ServBay是一个集成式、图形化的本地化Web开发环境。开发者通过ServBay几分钟内就能部署一个本地化的开发环境。主要解决Web开...",
           "imageUrl": null
         },
@@ -840,7 +850,7 @@
           "description": "蓝月亮，蓝禾，三七互娱，顺丰，康冠科技，金证科技24春招内推\n①蓝月亮\n【招聘岗位】技术，研发，lT，供应链，市场，职能等\n【网申链接】https://sourl.cn/NsVxG6\n【内推码】 在网申页面“信息获取渠道”中“其他渠道”输入内推码：CS01\n②蓝禾\n【岗位】运营类、设计类、研发类，供应链类，职能等\n【一键内推】https://lanhevip.jobs.feishu.cn/index/m/?external_referral_code=T1KYX4B\n【校园大使推荐码】T1KYX4B\n③三七互娱\n【岗位】美术设计类，运营类，游戏研发类，策划类，市场推广类等\n【一键内推】https://sourl.cn/4tzszW\n【官方内推码】DSQ526j8\n④顺丰\n【招聘岗位】研发类、算法与大数据类，设计类，产品类、职能类\n【官方内推码】4FOLXH\n【一键内推】https://sourl.cn/viaZZt\n⑤康冠科技\n 【岗位】算法类，软硬件类，供应链类，产品类，商务类，职能类\n【一键内推】https://sourl.cn/aJJ2YE \n【内推码】 EVBM88\n⑥金证科技\n【岗位】C/C++/Java/Web/大模型算法，测试/实施/维护/运维，产品/销售/交易员\n【内推码】EVVG83\n【投递链接】https://sourl.cn/SUhk4b",
           "link": "https://juejin.cn/pin/7342319793154572303",
           "publishedOn": "2024-03-04T07:44:59.000Z",
-          "wordCount": 484,
+          "wordCount": 478,
           "title": "蓝月亮，蓝禾，三七互娱，顺丰，康冠科技，金证科技24春招内推 ①蓝月亮 【招聘岗位】技术，研发，lT，供应链，市场，职能等 【网申链接】https://sourl.cn/NsVx...",
           "imageUrl": null
         },
@@ -850,18 +860,8 @@
           "description": "上榜GitHub Trending啦~\nhttps://vfox.lhan.me/",
           "link": "https://juejin.cn/pin/7341394494901305381",
           "publishedOn": "2024-03-03T03:00:16.000Z",
-          "wordCount": 495,
+          "wordCount": 489,
           "title": "上榜GitHub Trending啦~ https://vfox.lhan.me/",
-          "imageUrl": null
-        },
-        {
-          "id": "7341416970939170853",
-          "author": "Serendipity85",
-          "description": "有没有懂超图iserver web 开发的，创建服务gis服务，怎么能选加载一个obj的模型，网上都是在桌面上的方式加载的。。",
-          "link": "https://juejin.cn/pin/7341416970939170853",
-          "publishedOn": "2024-03-03T03:00:07.000Z",
-          "wordCount": 476,
-          "title": "有没有懂超图iserver web 开发的，创建服务gis服务，怎么能选加载一个obj的模型，网上都是在桌面上的方式加载的。。",
           "imageUrl": null
         },
         {
@@ -870,18 +870,8 @@
           "description": "windows超越mac成为web应用开发体验赢家\nDHH几天前发文说，在windows11上用vscode和wsl2开发web应用，尤其是使用docker的体验，已经好过mac😆😀😂他的体验和我的怎么那么一样😂\n[7073670907851440160#新人报道#]",
           "link": "https://juejin.cn/pin/7341288345782304809",
           "publishedOn": "2024-03-01T15:05:13.000Z",
-          "wordCount": 465,
+          "wordCount": 464,
           "title": "windows超越mac成为web应用开发体验赢家 DHH几天前发文说，在windows11上用vscode和wsl2开发web应用，尤其是使用docker的体验，已经好过mac😆😀😂他的体验...",
-          "imageUrl": null
-        },
-        {
-          "id": "7341227381045854249",
-          "author": "Serendipity85",
-          "description": "有没有jy，懂3dMAX开发的。通过obj转gltf后，在webG上加载不出来，是什么问题",
-          "link": "https://juejin.cn/pin/7341227381045854249",
-          "publishedOn": "2024-03-01T08:52:56.000Z",
-          "wordCount": 467,
-          "title": "有没有jy，懂3dMAX开发的。通过obj转gltf后，在webG上加载不出来，是什么问题",
           "imageUrl": null
         },
         {
@@ -890,7 +880,7 @@
           "description": "ChatGPT、Midjourney、Sora等全网顶尖AI工具一站式解决",
           "link": "https://juejin.cn/pin/7340998385304354852",
           "publishedOn": "2024-03-01T02:53:52.000Z",
-          "wordCount": 472,
+          "wordCount": 469,
           "title": "ChatGPT、Midjourney、Sora等全网顶尖AI工具一站式解决",
           "imageUrl": null
         },
@@ -900,7 +890,7 @@
           "description": "京东莫奈可视化平台上线啦~\n丰富的组件素材，可以便捷快速的搭建可视化大屏~\n新用户可以免费试用高级版权益喔\n官网地址: http://imonet.jdcloud.com https://code.juejin.cn/pen/7340831046139101193",
           "link": "https://juejin.cn/pin/7340537214987157540",
           "publishedOn": "2024-02-29T01:49:25.000Z",
-          "wordCount": 478,
+          "wordCount": 472,
           "title": "京东莫奈可视化平台上线啦~ 丰富的组件素材，可以便捷快速的搭建可视化大屏~ 新用户可以免费试用高级版权益喔 官网地址: http://imonet.jdcloud.com https://cod...",
           "imageUrl": null
         },
@@ -910,7 +900,7 @@
           "description": "分享一个Java堆外内存泄漏排查工具：Javahttps://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2Fhengyoush%2FJavaMemLeak",
           "link": "https://juejin.cn/pin/7338307026245713972",
           "publishedOn": "2024-02-23T04:44:43.000Z",
-          "wordCount": 469,
+          "wordCount": 463,
           "title": "分享一个Java堆外内存泄漏排查工具：Javahttps://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2Fhengyoush%2FJavaMemLeak",
           "imageUrl": null
         },
@@ -920,7 +910,7 @@
           "description": "#码上掘金# ServBay 1.2.2 版本于2024年2月22日正式发布。这次更新集中在增强用户体验、提升产品性能、以及根据您的反馈修复已知问题上。欢迎下载体验和解放生产力，不要把时间浪费在配置开发环境上。",
           "link": "https://juejin.cn/pin/7338042858703241270",
           "publishedOn": "2024-02-22T13:59:00.000Z",
-          "wordCount": 532,
+          "wordCount": 526,
           "title": "#码上掘金# ServBay 1.2.2 版本于2024年2月22日正式发布。这次更新集中在增强用户体验、提升产品性能、以及根据您的反馈修复已知问题上。欢迎下载体验和解放生产...",
           "imageUrl": null
         },
@@ -930,7 +920,7 @@
           "description": "摸了个工具，同一个网络下，手机扫个码就能看电脑上文件🤳",
           "link": "https://juejin.cn/pin/7338053219994091570",
           "publishedOn": "2024-02-22T08:37:07.000Z",
-          "wordCount": 482,
+          "wordCount": 476,
           "title": "摸了个工具，同一个网络下，手机扫个码就能看电脑上文件🤳",
           "imageUrl": null
         },
@@ -940,7 +930,7 @@
           "description": "事半功倍！清爽的纯后端代码生成器！",
           "link": "https://juejin.cn/pin/7338074027281219624",
           "publishedOn": "2024-02-22T07:50:08.000Z",
-          "wordCount": 487,
+          "wordCount": 481,
           "title": "事半功倍！清爽的纯后端代码生成器！",
           "imageUrl": null
         },
@@ -950,7 +940,7 @@
           "description": "jym 红米 14 笔记本 怎么样 我看才 3300 狠狠的心动啊",
           "link": "https://juejin.cn/pin/7337631207024230439",
           "publishedOn": "2024-02-21T05:08:42.000Z",
-          "wordCount": 511,
+          "wordCount": 505,
           "title": "jym 红米 14 笔记本 怎么样 我看才 3300 狠狠的心动啊",
           "imageUrl": null
         },
@@ -960,7 +950,7 @@
           "description": "开发了一款本地压缩图片的工具，加载完离线也可以用。无任何限制，永久免费，还支持单个图片编辑。https://free.tinypng.site 求关注[拥抱][拥抱][拥抱]",
           "link": "https://juejin.cn/pin/7337630368907411494",
           "publishedOn": "2024-02-21T04:58:23.000Z",
-          "wordCount": 473,
+          "wordCount": 467,
           "title": "开发了一款本地压缩图片的工具，加载完离线也可以用。无任何限制，永久免费，还支持单个图片编辑。https://free.tinypng.site 求关注[拥抱][拥抱][拥抱]",
           "imageUrl": null
         },
@@ -970,7 +960,7 @@
           "description": "开工小玩具—Topping， 基于wails开发对我图片悬浮置顶桌面软件，希望能帮助你提高一丢丢效率。支持Mac和windows, 源码地址：https://github.com/CiroLee/Topping [送心][送心]",
           "link": "https://juejin.cn/pin/7337528205618446362",
           "publishedOn": "2024-02-20T10:37:02.000Z",
-          "wordCount": 489,
+          "wordCount": 483,
           "title": "开工小玩具—Topping， 基于wails开发对我图片悬浮置顶桌面软件，希望能帮助你提高一丢丢效率。支持Mac和windows, 源码地址：https://github.com/CiroLee/Toppin...",
           "imageUrl": null
         }
