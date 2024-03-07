@@ -576,6 +576,54 @@ https://marketplace.visualstudio.com/items?itemName&#x3D;chensuiyi.fn-map</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7342718848816381964"
+                        open
+                      >
+                        <summary class="article-expander__title">前端妹子失业在家刷题，开发了个leetcode刷题工具，效率直接翻倍！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7342718848816381964">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: smartblue
+大家好，我是薇薇，一名沪漂女程序员，年前惨遭被裁，正值在家悲伤抠脚之际，突然看到两位朋友在合谋开发一款刷leetcode的小工具——leetcode-practice……
+下面重点稍微来介绍一下
+朋友A：Angular的忠实信徒，插件的主创+仓库创建人
+朋友S：n年（n&gt;&#x3D;5）前端经验的神秘大佬，有钱有闲热爱开源
+在神秘力量的号召下~~（主要是A太热情了，把我拉了项目，实在不好意思挂名贡献者却啥也不干）~~，从一开始的摆烂抠脚到参与进来，现在这款工具也初具雏形
+关于详细的介绍参见A佬写的这篇# [leetcode-practice]一款能够适合骑驴找马程序员的摸鱼神器
+快速开始
+leetcode-practice拥有多种形态，但是我更倾向于脱离仓库本身的使用方式，也就是说你可以尝试在终端内执行（node版本大于20）
+这样做的好处主要是你可以自己脱离leetcode-practice项目建立自己的git题库，方便回顾。
+npm install -g leetcode-practice
+
+比如说你想刷这道题
+ 那么可以执行一下
+lc 1
+
+或者
+lc -i 1
+
+ 这时候当前目录会出现一个文件夹
+ description是题目的markdown格式的描述，当然index.js的注释中也可以看到题目描述，但是markdown可以更方便的查看图片，这里推荐下载一个markdown preview 插件
+index.js的内容如下
+
+/**
+ * 1.两数之和 
+ * 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。
+ * 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。
+ * 你可以按任意顺序返回答案。
+ *  
+ …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7342511044290789430"
                         open
                       >
@@ -2733,89 +2781,6 @@ work-life balance 的一个大前提，是把生活这个因子算进来，而�
                 </section>
               </section>
             </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7340573362214699049"
-                        open
-                      >
-                        <summary class="article-expander__title">写给想学 Rust 的前端同学</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7340573362214699049">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: qklhk-chocolate
-highlight: brown-paper
-前言
-Rust 可能正在逐渐渗透前端的方方面面，所以作为一个前端究竟有没有必要学习 Rust 呢？我认为，还是看个人的精力吧，有那个精力多学一点没有坏处，没那个精力不学也没有影响。本篇不是讨论该不该学 Rust，而是将 Rust 大概是一个什么样的语言展现给可能在观望的小伙伴，并以一个前端的视角来看看 Rust 究竟和前端有什么不一样。
-本篇也是我在认真阅读了Rust 程序设计语言（中文版）几遍以后，才敢下笔做一些总结，因能力有限，错误之处还望大家及时指出。
-我会从一个语言层面的几个方面来分析 Rust 究竟和 JavaScript 以及 TypeScript 这样的语言的不同之处，以及相似之处，并且希望能给想要学习 Rust 的同学一些语言的梗概，也给前端学习 JS 的同学一些新的理解。
-Rust VS JavaScript
-属性
-Rust
-JavaScript
-
-
-
-
-编译器
-rustc
-v8
-
-
-包管理工具
-cargo
-npm、yarn、pnpm、cnpm
-
-
-第三方依赖注册表
-crates.io
-npmjs.com
-
-
-垃圾回收
-无
-有
-
-
-
-数据类型
-Rust 的数据类型同样分为基础类型和复杂类型，主要包括以下几类：
-基础类型：包括整型、浮点型、布尔型、字符型
-复杂类型：元组、数组以及其他复合类型
-这点和传统的强类型语言基本是一致的，但是 Rust 也拥有不同的地方。
-Rust 声明变量的方法竟然和 JS 出奇的一致，并且很多方面也是类似 JS 或 TS 的写法：
-// 声明不可变变量
-let a &#x3D; 1;
-
-// 声明可变变量
-// 如果没有 mut 关键字，修改变量会导致报错
-let mut b &#x3D; 2;
-b &#x3D; 3;
-
-// 重复声明变量，会发生遮蔽，即覆盖原有变量
-…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -4188,8 +4153,8 @@ iFixit 网站拆解了苹果头盔，证实了 CPU 是 M2 芯片，跟 MacBook �
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8186133951">
-        <time id="build-timestamp" datetime="2024-03-07T09:53:31.120Z">2024-03-07T09:53:31.120Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8188437826">
+        <time id="build-timestamp" datetime="2024-03-07T12:55:36.179Z">2024-03-07T12:55:36.179Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
