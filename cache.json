@@ -118,7 +118,7 @@
           "description": "有段时间没用 GPT-4 了，尝试了好几种方法续费均失败：\n1）Dupay 虚拟 Visa 银行卡，之前购买就用的这张卡，不过现在不能用了，提示被拒，还有可用的虚拟卡商么？\n2）Wise 申请的银行卡，绑定到了手机钱包，使用 Apple Pay 时也失败了，姿势不对？\n3）直接使用 Wise 卡号和 cvc 支付，提示「您的银行卡被拒绝了」，所以其实是不支持 Wise 卡的卡段么？\n最后可行的是，直接在 APP 内购买，也有两种方式：\n1）在支付宝里头购买礼品卡，然后给 iCloud 账户充值，参考 https://twitter.com/Barret_China/status/1638223359375966208\n2）申请一张 OCBC 的新加坡银行卡，绑定到新加坡的 iCloud 账户，参考 https://twitter.com/Barret_China/status/1698338662088622167 和 https://twitter.com/Barret_China/status/1638215085788372993",
           "link": "https://m.okjike.com/originalPosts/65e9c6b6164d89e6014fe00a",
           "publishedOn": "2024-03-07T13:52:54.000Z",
-          "wordCount": 581,
+          "wordCount": 577,
           "title": "发布了: 有段时间没用 GPT-4 了，尝试了好几种方法续费均失败： 1）Dupay 虚拟 Visa 银行卡，之前购买就用的这张卡，不过现在不能用了，提示被拒，还有可用的虚...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -718,6 +718,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7342432361097871410",
+          "author": "BrittanyZ",
+          "description": "今天打开vue项目的时候，弹出警告 The \"TypeScript Vue Plugin (Volar)\" extension is no longer needed in version 2.0. Please uninstall it.  然后发现vue插件前几天更新了，翻译过来记录一下，原文链接：\n特性\n混合模式\nTakeover 模式已弃用。扩展现在默认具有与 Takeover 模式相同的性能。\n将 TypeScript 语言支持从 Vue 语言服务器移至 TypeScript 插件 (#3788)\n集成了所有 TypeScript 编辑器功能\n当内部 TypeScript 扩展被禁用或安装了 \"TypeScript Vue Plugin\" 扩展时发出警告\n使用 TypeScript LanguageService 迁移到命名管道服务器 (#3908, #3916)\n不再报告 typescript.tsdk 重复注册错误\nlanguage-service: 在 TypeScript 插件中重新实现了组件标签语义令牌 (#3915)\nlanguage-service: 在 TypeScript 插件中重新实现了自动导入补丁 (#3917)\nlanguage-service: 在请求自动插入 .value 时确保 tsserver 准备就绪 (#3914)\n升级到 Volar 2.0 和 2.1 (#3736, #3906)\nvscode: 扩展现在兼容 Volar Labs v2\nvscode: 移除了 volar.format.initialIndent 选项，替换为 3 个新选项：\nvue.format.template.initialIndent\nvue.format.script.initialIndent\nvue.format.style.initialIn…",
+          "link": "https://juejin.cn/post/7342432361097871410",
+          "publishedOn": "2024-03-05T03:15:28.000Z",
+          "wordCount": 1243,
+          "title": "Vue vscode 插件版本更新：写TS不需要装两个插件了",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7342400998856065039",
           "author": "Chokcoco",
           "description": "本文为稀土掘金技术社区首发签约文章，30天内禁止转载，30天后未获授权禁止转载，侵权必究！\n最近，群里聊到了一个很有意思的布局效果。大致效果如下所示，希望使用 CSS 实现如下所示的布局效果：\n\n正常而言，我们的 HTML 结构大致是如下所示：\n<div class=\"g-container\">\n    <div class=\"g-nav\">\n        <ul>\n            <li>Tab 1</li>\n            <li>Tab 2</li>\n            <li>Tab 3</li>\n            <li>Tab 4</li>\n        </ul>\n    </div>\n    <div class=\"g-main\">\n        <ul class=\"g-content\">\n            <li>...</li>\n            <li>...</li>\n            <li>...</li>\n            <li>...</li>\n        </ul>\n    </div>\n</div>\n\n对于 Hover 导航 Tab 时候的内容切换，暂且不谈。本文，我们核心想探讨的是两个点：\n一是对于如下所示的不规则布局，应该如何实现：\n\n并且，这里我们可能还需要给它加上阴影效果：\n\n如何配合 Hover 动作，实现整个切换效果\n带着这两个问题，我们一起来尝试慢慢把这个效果实现。\n借助伪元素实现不规则按钮\n首先，我们需要实现这个效果：\n\n这个，其实在很多篇文章都有提及过：\n由小见大！不规则造型按钮解决方案\n使用 CSS 轻松实现高频出现的各类奇形怪状按钮\n想一想，这里其实就是竖向的 Chrome 分 Tab 的效果：\n像是这样：\n\n我们对这个按钮形状拆解一下，这里其实是 3 …",
@@ -835,16 +845,6 @@
           "publishedOn": "2024-03-01T15:24:39.000Z",
           "wordCount": 1535,
           "title": "5年前端面经",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7341272885061124122",
-          "author": "前端猫猫教",
-          "description": "大家好，这里是大家的林语冰。\n《前端猫猫教》每日 9 点半更新，坚持阅读，自律打卡，每天一次，进步一点。\n免责声明\n本文属于是语冰的直男翻译了属于是，略有删改，仅供粉丝参考。英文原味版请传送 The Building Blocks of a Greenfield Vue Application in 2024。\n\n在没有任何遗留限制的情况下从零启动一个项目可能会令人鸡冻，但也会令人头大。不受限制地自由构建 App 可能会导致浪费大量时间研究和评估工具，最终会分散实际工作的注意力。即使做出了最好的选择，也总会重新考虑备胎方案，这就是“选择的悖论”。\n本期共享的是 —— Vue 生态系统中的所有行业标准工具。\n包管理器\n处理外部包的人气工具有 3 种：\nnpm\nyarn\npnpm\nnpm 又老又慢。yarn 速度更快，是一个可靠的选择。但总体而言，pnpm 天下第一，它速度极快且节省空间。pnpm 在许多地方使用每段代码，而不需要额外的副本。此外，pnpm 本身支持具有最少配置的 monorepo 设置。\n个人建议：包管理器优先选择 pnpm\n构建工具\n在这里推荐 Vite 应该不足为奇。Vite 使用原生 ES 模块，实现快如闪电的服务器启动。Vite 具有内置的热模块替换支持，而且还通过 Rollup 优化生产构建，确保既小又快的加载打包。此外，与其他备胎方案相比，Vite 配置要容易得多。最后，Vite 因为与框架无关而获得加分。\n个人推荐：构建工具优先选择 Vite\nVue 版本\nVue 2 文档在搜索引擎和 Stackoverflow 中的排名仍然高举不下，如果我们必须在版本之间进行选择，这可能会令人头大。但粉丝请记住，Vue 2 不再开源维护，Vue 3 现在是长期支持的版本。Vue 3 具有先前版本的所有优点，但具有利用组合式 API 的不同语法。\n个人建议：Vu…",
-          "link": "https://juejin.cn/post/7341272885061124122",
-          "publishedOn": "2024-03-01T12:52:03.000Z",
-          "wordCount": 1116,
-          "title": "2024 Vue 生态工具推荐",
           "imageUrl": null
         },
         {
