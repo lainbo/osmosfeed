@@ -1,10 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2024-03-08T01:16:03.529Z</id>
+    <id>urn:2024-03-08T03:53:53.511Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2024-03-08T01:16:03.529Z</updated>
+    <updated>2024-03-08T03:53:53.511Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[发布了: 大学里的「计算机科学与技术」专业， 其中的「科学」，指的是研究计算机的内在规律，知其原委。「技术」，指的是研究用计算机做出有用的东西，起而行之...]]></title>
+        <id>https://m.okjike.com/originalPosts/65ea713ea922aa28d036d5fc</id>
+        <link href="https://m.okjike.com/originalPosts/65ea713ea922aa28d036d5fc"/>
+        <updated>2024-03-08T02:00:30.000Z</updated>
+        <summary type="html"><![CDATA[大学里的「计算机科学与技术」专业， 其中的「科学」，指的是研究计算机的内在规律，知其原委。「技术」，指的是研究用计算机做出有用的东西，起而行之。]]></summary>
+        <author>
+            <name>李继刚的即刻动态</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[科技爱好者周刊（第 292 期）：所有代码都是技术债]]></title>
+        <id>http://www.ruanyifeng.com/blog/2024/03/weekly-issue-292.html</id>
+        <link href="http://www.ruanyifeng.com/blog/2024/03/weekly-issue-292.html"/>
+        <updated>2024-03-08T00:24:48.000Z</updated>
+        <summary type="html"><![CDATA[这里记录每周值得分享的科技内容，周五发布。
+本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。
+封面图
+
+意大利佛罗伦萨新机场，宣布了设计方案。候机楼顶部将有一个7.7公顷的葡萄种植园，用来酿造当地著名的葡萄酒。（via）
+所有代码都是技术债
+代码是公司的资产，公司总是鼓励大家多写代码。但是，很多人（尤其是管理层）没有意识到，代码也是负债。
+代码越多，债越多，这就是程序员常说的"技术债"。
+
+今天我想谈谈，什么是"技术债"？为什么你拥有的代码太多，不是一件好事。
+"技术债"（technical debt）源自著名程序员沃德·坎宁安（Ward Cunningham）的一篇文章。他写了一句话："交付代码就像负债累累。"
+
+你的代码一旦进入生产环境，就像背上一笔债务，将来需要不断支付利息，除非代码不再使用。
+这个比喻获得了共鸣，人们把代码带来的负担，称为"技术债"。
+为什么代码好比负债累累？这有两个原因。
+第一个原因是，由于各种限制，代码的实现有问题，包含了 Bug，或者选择了有问题的组件，后期需要修改或重写。
+第二个原因是，即使代码是完美的，但由于技术进步，它会逐渐腐化过时，后期需要不断维护和更新，这通常比原始开发成本更高。
+这意味着，无论多么小心，上线的代码总是有"技术债"。 可以这样说，所有的代码都是技术债。
+
+"技术债"的可怕之处，在于你必须按时偿还，如果拖着不还，它就会像雪球一样越滚越多，维护成本越来越高，直到再也无法维护，只能放弃这段代码。
+既然所有代码都是技术债，程序员写代码时，就必须考虑到它的长期成本，尽量减轻自己或别人日后的负担（利息）。
+一个基本的事实是 代码越少，技术债越小；没有代码，就没有技术债。从这个角度看，软件开发的正确做法是下面两点。
+（1）冗余的代码都要删除。
+（2）只实现…]]></summary>
+        <author>
+            <name>阮一峰的网络日志</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[《Astro Duel 2》]]></title>
         <id>https://store.epicgames.com/zh-CN/p/astro-duel-2-e1261d</id>
@@ -251,6 +294,32 @@ index.js的内容如下
 --《剑来》]]></summary>
         <author>
             <name>李继刚的即刻动态</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[unocss 究竟比 tailwindcss 快多少？]]></title>
+        <id>https://juejin.cn/post/7342693286447087625</id>
+        <link href="https://juejin.cn/post/7342693286447087625"/>
+        <updated>2024-03-05T12:03:20.000Z</updated>
+        <summary type="html"><![CDATA[unocss 究竟比 tailwindcss 快多少？
+前言
+我们知道 unocss 很快，也许是目前最快的原子化 CSS 引擎 (没有之一)。
+unocss 解释它为什么这么快的原因，是因为它不用去解析 CSS 抽象语法树，直接在 content 里面通过正则表达式从内容中提取 token，然后生成样式。
+这点从 unocss 官方提供目前最新的测试结果可以看到（2023-08-11 版本）:
+11/8/2023, 3:53:41 PM
+1656 utilities | x200 runs (75% build time)
+
+none                             33.99 ms / delta.      0.00 ms
+unocss       v0.57.2            359.46 ms / delta.    325.47 ms (x1.00)
+tailwindcss  v3.3.5            1238.25 ms / delta.   1204.26 ms (x3.70)
+windicss     v3.5.6            1742.45 ms / delta.   1708.46 ms (x5.25)
+
+可以看到 unocss 比 tailwindcss 快 3.7 倍左右。
+其中官方的 unocss 测试素材，使用的是 vite + @unocss/vite，tailwindcss 测试素材则是 vite + postcss + tailwindcss。
+可是假如我们以 vite / webpack 插件的方式去使用 unocss 的话，默认是不支持 tailwindcss 那些 @apply, @screen, theme() 这些 CSS 指令的。
+这时候我们就需要额外去安装 @unocss/…]]></summary>
+        <author>
+            <name>icebreaker</name>
         </author>
     </entry>
     <entry>
@@ -1038,20 +1107,6 @@ Q7：首发的定义是什么？
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[发布了: 道动则返。 ━━━━━━━━━━━━━━ 很多事，反过来想，会有另外一种味道。 虚事，实做：把理念，意义给落地，知行合一。 实事，虚做：提升抽象层...]]></title>
-        <id>https://m.okjike.com/originalPosts/65e16c21a922aa28d088d7cf</id>
-        <link href="https://m.okjike.com/originalPosts/65e16c21a922aa28d088d7cf"/>
-        <updated>2024-03-01T05:48:17.000Z</updated>
-        <summary type="html"><![CDATA[道动则返。
-━━━━━━━━━━━━━━
-很多事，反过来想，会有另外一种味道。
-虚事，实做：把理念，意义给落地，知行合一。
-实事，虚做：提升抽象层级，不是为了眼前的任务去做这点事，而是为了从这些小事中提炼经验和方法论。]]></summary>
-        <author>
-            <name>李继刚的即刻动态</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[ChatGPT、Midjourney、Sora等全网顶尖AI工具一站式解决]]></title>
         <id>7340998385304354852</id>
         <link href="https://juejin.cn/pin/7340998385304354852"/>
@@ -1059,35 +1114,6 @@ Q7：首发的定义是什么？
         <summary type="html"><![CDATA[ChatGPT、Midjourney、Sora等全网顶尖AI工具一站式解决]]></summary>
         <author>
             <name>码农996</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[11岁的React正迎来自己口碑的拐点]]></title>
-        <id>https://juejin.cn/post/7340926094614511626</id>
-        <link href="https://juejin.cn/post/7340926094614511626"/>
-        <updated>2024-03-01T02:53:22.000Z</updated>
-        <summary type="html"><![CDATA[凌晨2点，Dan仍坐在电脑桌前，表情严肃。
-作为React社区最知名的布道者，此时正遭遇一场不小的变故 —— 他拥有38w粉丝的推特账号被影子封禁了。
-所谓影子封禁，是指粉丝无法在流中刷到被封禁者的任何推文，只能点进被封禁者的账号才能看到新推文
-
-在RSC（React Server Component）特性发布后，Dan经常用这个账号科普各种RSC知识。这次封禁，显然对他的布道事业造成不小打击，不得已只能启用新账号。
-虽然新账号粉丝不多，但值得宽慰的是 —— 这篇题为The Two Reacts的RSC布道文数据还不错。
-
-这篇文章通过解释世界上存在2个React：
-在客户端运行的React，遵循UI = f(state)，其中state是状态，是可变的
-在服务端运行的React，遵循UI = f(data)，其中data是数据源，是不变的
-来论证RSC的必要性（他为服务端运行的React提供了底层技术支持）。
-安静的夜总是让人思绪良多，Dan合上MacBook Pro，回想起当年参加行业会议，在会议开始前一周才实现演讲所需的Demo（也就是Redux的雏形）。也正是以这次参会为契机，他才得以加入Meta伦敦，进入React核心团队。
-随后，Dan又回想起在React Conf 2018介绍Hook特性时，台下观众惊喜的欢呼。
-
-想到这里，不禁又感叹 —— 曾经并肩战斗的战友们都已各奔东西。
-Redux的联合作者Andrew Clark离开了（入职Vercel），Hook的作者sebastian markbåge也离开了（入职Vercel），连自己最终也离开了（入职bluesky）。
-虽然React仍是前端领域最热门的框架，但一些微妙的东西似乎在慢慢变化，是什么变了呢？
-打包领取卡颂原创React教程、加入人类高质量前端群
-React正迎来自己口碑的拐点
-作为一款11岁高龄…]]></summary>
-        <author>
-            <name>魔术师卡颂</name>
         </author>
     </entry>
     <entry>
