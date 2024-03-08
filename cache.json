@@ -64,7 +64,7 @@
           "description": "音视频合成的时候，有倍速合成的需求，起初，我以为这只是个手到擒来的小需求，细究之下发现问题并不简单……",
           "link": "https://www.zhangxinxu.com/wordpress/2024/02/js-audioencoder-backplayrate-audiobuffer/",
           "publishedOn": "2024-02-29T14:22:22.000Z",
-          "wordCount": 1726,
+          "wordCount": 1725,
           "title": "不改变音调情况下Audio音频的倍速合成JS实现",
           "imageUrl": null
         }
@@ -220,6 +220,16 @@
       "siteUrl": "https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/65ea8294de5f2873487a7b32",
+          "author": null,
+          "description": "人： 说清楚自己想要什么\nLLM： 理解人所说 + 实现效果\nLLM 的快速进步，压缩了人表达的空间。",
+          "link": "https://m.okjike.com/originalPosts/65ea8294de5f2873487a7b32",
+          "publishedOn": "2024-03-08T03:14:28.000Z",
+          "wordCount": 443,
+          "title": "发布了: 人： 说清楚自己想要什么 LLM： 理解人所说 + 实现效果 LLM 的快速进步，压缩了人表达的空间。",
+          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/65ea713ea922aa28d036d5fc",
           "author": null,
           "description": "大学里的「计算机科学与技术」专业， 其中的「科学」，指的是研究计算机的内在规律，知其原委。「技术」，指的是研究用计算机做出有用的东西，起而行之。",
@@ -308,16 +318,6 @@
           "wordCount": 469,
           "title": "发布了: AI 的应用方向, 一个高频出现的场景就是: 信息摘要。 各家 LLM 平台上都出现了相关的 Agent，使用的过程中总感觉哪里不对劲，今天想了下， 大概有如下两...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/65e1826ba922aa28d08aebab",
-          "author": null,
-          "description": "所谓「失败」\n━━━━━━━━━━━━━━\n你设想了一条发展路径，然而世界却选择了另一种演变。",
-          "link": "https://m.okjike.com/originalPosts/65e1826ba922aa28d08aebab",
-          "publishedOn": "2024-03-01T07:23:23.000Z",
-          "wordCount": 441,
-          "title": "发布了: 所谓「失败」 ━━━━━━━━━━━━━━ 你设想了一条发展路径，然而世界却选择了另一种演变。",
-          "imageUrl": "https://cdnv2.ruguoapp.com/FvMtbO8H9evueT2LKBQ0cnr5pHtXv3.jpg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
         },
         {
           "id": "https://m.okjike.com/originalPosts/65d833c99185c305d1cda9d5",
@@ -709,7 +709,7 @@
         },
         {
           "id": "https://juejin.cn/post/7342384485696520246",
-          "author": "江米小枣tonylua",
+          "author": "云前端",
           "description": "B站搜索“云前端”观看视频版\n在 VueJS Amsterdam 2004 大会首日，Vue 创始人 Evan You 进行了开场主旨演讲。他首先回顾了 Vue 十年以来的累累硕果，指出 VueJS 从一个视图层工具，成功演化出全流程的社区生态。\nVue 3.4\n\n谈到 Vue 3 的发展时他回顾了 2023 年末发布的 Vue 3.4。在这个版本中，Vue 完全重写了模板解析器；新的解析器不再依赖于许多正则表达式和前瞻搜索等，而是使用基于 htmlparser2 中分词器的状态机 -- 这使得解析速度至少提高了两倍。\n3.4 还对响应式系统进行了实质性的重构，目的是提高计算属性的重新计算效率。在 3.4 之前，即使计算结果保持不变，每次 count.value 都将触发 watchEffect 的回调；而 3.4 之后的回调现在仅在计算结果实际更改时触发。\n简化支持 v-model 的 defineModel 和标识为冒号 : 的 v-bind 同名速记也是这个版本的特性。\nVue 3.5\n\n接下来 Evan You 透露了在即将到来的 Vue 3.5 版本中包含的特性，这个版本主要是在框架底层的优化。\n一方面是响应式系统上的提升。包括在调度任务中使用位运算标记优化 queueJob 任务队列，这项优化被从 vue 试验性的无虚拟 DOM 版本 Vue Vapor 中移植回主版本中，使得内存使用率得到了 56% 的提升。\n还有一项对数组追踪的优化：在处理响应式的大数组时，此项优化甚至可以获得十倍性能收益；对于格外重视性能的开发者来说，Vue 内置的数组方法并不完美。@vue/reactivity 暴露的readArray 方法是一个面向性能的高级响应式函数，它返回原始数组并对其进行完整跟踪，并可以用入参指示是否深度跟踪响应式数组。\n公开readArray的原因在于，对于某些内置数组函数无法很好覆盖的高性能操作场景，这个API非常有用。例如，Vue 的 v-for 循环会使用此功能，响应式矩阵的乘法运算可以显著受益以提升计算速度，以及新增的 Object.groupBy API 可能在未来广泛应用，由于它并非数组实例方法，因此不能自动进行优化，但可以通过用户自定义代码结合 readArray 来提高性能。\n在 SSR 服务器渲染方面，也优化了 Suspend 等特性。\nVapor\n\n除了 Vue 3.5，受到 Solid.js 启发的无虚拟 DOM 版本的 Vue Vapor 日臻完善，已经可以在 playground 中运行 TodoMVC 程序。\n在计划中，组件级别的优先级控制将是重要工作，这将保证即便组件数量庞大，整体性能也不会受到影响，不知道是否会借鉴 React 的异步可中断方式呢？\nDX\n\n在开发体验方面，vite 的新版本中可能会包含新的打包工具 Rolldown，这是一个具有兼容性 API 的 Rust 移植版 Rollup。该工具已经经历了长期的开发，目前已经支持 tree shaking 等特性，基本达到了 ESbuild 两倍的编译速度。等其能够同时替换 Rollup 和 ESbuild 之后，开发者无论是在开发模式还是生产模式下，都能无缝地自动获得巨大的性能收益。\n从更底层来说，Rolldown 使用了一项叫做 Oxc 的工具，Oxc 的核心是一种用 Rust 编写的\n高性能 JS Parser，在其体系中还有 Typescript 转移等工具。值得注意的是，该工具一旦最终成型，构建 Vue 工程时 Babel、ESbuild、Rollup、Tercer 等工具将合而为一，开发过程会变得统一、高效且易于理解。\nWe are far from done\n最后，Evan You 再次回顾了十年的历程，表示 VueJS 生态从刚刚推出时受到的竭诚欢迎，真可谓占尽天时，那种勃勃生机、万物竟发的境界，犹在眼前。而在十年之后，团队和社区仍在做出很多有趣的贡献，虽然从 Vue 2 到 Vue 3 的升级过程坎坷，但无论怎么样，随着 Vue 2 的官方支持正式结束，新的社区仍会保持优势。\nVue 或许并不总是时髦的新玩意，但会致力于总是做好新的改变\nB站搜索“云前端”观看视频版",
           "link": "https://juejin.cn/post/7342384485696520246",
           "publishedOn": "2024-03-04T13:49:25.000Z",
@@ -870,7 +870,7 @@
           "description": "百度ai辅助写代码竟然开始给程序员撒钱了[发][发]\n最新vscode辅助代码插件免费用还给钱，我上来直接提了三十，代码生成效果还可以，https://comate.baidu.com/?inviteCode=atyt07gu[7201008222164451331#前端开发现状#]\n点这个链接，登录账号，根据页面提示跳转到vscode百度的代码辅助插件安装后登录一下，最低可以免费领30京东e卡，通过邀请链接进的多给10块，当天奖励售罄可以第二天在看",
           "link": "https://juejin.cn/pin/7343429147815034930",
           "publishedOn": "2024-03-07T06:58:30.000Z",
-          "wordCount": 468,
+          "wordCount": 474,
           "title": "百度ai辅助写代码竟然开始给程序员撒钱了[发][发] 最新vscode辅助代码插件免费用还给钱，我上来直接提了三十，代码生成效果还可以，https://comate.baidu.com/?i...",
           "imageUrl": null
         },
@@ -930,7 +930,7 @@
           "description": "windows超越mac成为web应用开发体验赢家\nDHH几天前发文说，在windows11上用vscode和wsl2开发web应用，尤其是使用docker的体验，已经好过mac😆😀😂他的体验和我的怎么那么一样😂\n[7073670907851440160#新人报道#]",
           "link": "https://juejin.cn/pin/7341288345782304809",
           "publishedOn": "2024-03-01T15:05:13.000Z",
-          "wordCount": 464,
+          "wordCount": 465,
           "title": "windows超越mac成为web应用开发体验赢家 DHH几天前发文说，在windows11上用vscode和wsl2开发web应用，尤其是使用docker的体验，已经好过mac😆😀😂他的体验...",
           "imageUrl": null
         },
