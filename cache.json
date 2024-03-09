@@ -64,7 +64,7 @@
           "description": "音视频合成的时候，有倍速合成的需求，起初，我以为这只是个手到擒来的小需求，细究之下发现问题并不简单……",
           "link": "https://www.zhangxinxu.com/wordpress/2024/02/js-audioencoder-backplayrate-audiobuffer/",
           "publishedOn": "2024-02-29T14:22:22.000Z",
-          "wordCount": 1724,
+          "wordCount": 1726,
           "title": "不改变音调情况下Audio音频的倍速合成JS实现",
           "imageUrl": null
         }
@@ -118,7 +118,7 @@
           "description": "有段时间没用 GPT-4 了，尝试了好几种方法续费均失败：\n1）Dupay 虚拟 Visa 银行卡，之前购买就用的这张卡，不过现在不能用了，提示被拒，还有可用的虚拟卡商么？\n2）Wise 申请的银行卡，绑定到了手机钱包，使用 Apple Pay 时也失败了，姿势不对？\n3）直接使用 Wise 卡号和 cvc 支付，提示「您的银行卡被拒绝了」，所以其实是不支持 Wise 卡的卡段么？\n最后可行的是，直接在 APP 内购买，也有两种方式：\n1）在支付宝里头购买礼品卡，然后给 iCloud 账户充值，参考 https://twitter.com/Barret_China/status/1638223359375966208\n2）申请一张 OCBC 的新加坡银行卡，绑定到新加坡的 iCloud 账户，参考 https://twitter.com/Barret_China/status/1698338662088622167 和 https://twitter.com/Barret_China/status/1638215085788372993",
           "link": "https://m.okjike.com/originalPosts/65e9c6b6164d89e6014fe00a",
           "publishedOn": "2024-03-07T13:52:54.000Z",
-          "wordCount": 581,
+          "wordCount": 577,
           "title": "发布了: 有段时间没用 GPT-4 了，尝试了好几种方法续费均失败： 1）Dupay 虚拟 Visa 银行卡，之前购买就用的这张卡，不过现在不能用了，提示被拒，还有可用的虚...",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -793,7 +793,7 @@
           "description": "theme: smartblue\n前言\n前段时间老板心血来潮，要我们前端组对整个的项目都做一下接口防止重复请求的处理（似乎是有用户通过一些快速点击薅到了一些优惠券啥的）。。。听到这个需求，第一反应就是，防止薅羊毛最保险的方案不还是在服务端加限制吗？前端加限制能够拦截的毕竟有限。可老板就是执意要前端搞一下子，行吧，搞就搞吧，you happy jiu ok。\n虽然大部分的接口处理我们都是加了loading的，但又不能确保真的是每个接口都加了的，可是如果要一个接口一个接口的排查，那这维护了四五年的系统，成百上千的接口肯定要耗费非常多的精力，根本就是不现实的，所以就只能去做全局处理。下面就来总结一下这次的防重复请求的实现方案：\n方案一\n这个方案是最容易想到也是最朴实无华的一个方案：通过使用axios拦截器，在请求拦截器中开启全屏Loading，然后在响应拦截器中将Loading关闭。\n这个方案固然已经可以满足我们目前的需求，但不管三七二十一，直接搞个全屏Loading还是不太美观，何况在目前项目的接口处理逻辑中还有一些局部Loading，就有可能会出现Loading套Loading的情况，两个圈一起转，头皮发麻。\n方案二\n加Loading的方案不太友好，而对于同一个接口，如果传参都是一样的，一般来说都没有必要连续请求多次吧。那我们可不可以通过代码逻辑直接把完全相同的请求给拦截掉，不让它到达服务端呢？这个思路不错，我们说干就干。\n首先，我们要判断什么样的请求属于是相同请求：\n一个请求包含的内容不外乎就是请求方法，地址，参数以及请求发出的页面hash。那我们是不是就可以根据这几个数据把这个请求生成一个key来作为这个请求的标识呢？\n// 根据请求生成对应的key\nfunction generateReqKey(config, hash) {\n    const { method, u…",
           "link": "https://juejin.cn/post/7341840038964363283",
           "publishedOn": "2024-03-04T01:10:01.000Z",
-          "wordCount": 1561,
+          "wordCount": 44,
           "title": "前端接口防止重复请求实现方案",
           "imageUrl": null
         },
@@ -823,7 +823,7 @@
           "description": "最新消息，Node.js 新官网已发布 Beta 预览版本，正在招募测试志愿者。如果你对新的 Node.js 网站感兴趣，欢迎参与体验，并在对应 Github 仓库提供反馈和建议！\n小懒也是第一时间详细体验了各个页面，在感受新网站带来的 UX 提升同时，也发现了一些问题。\n新官网：首页\n新版首页，相比老版本，从视觉效果、页面布局、展现内容都有了很大的提升，整体上看着更大气。Node.js 的介绍相比老版本也变得更突出、描述更全面。\n\n最大的不同是增加了搜索框，提供全站检索（包含文档、博客、下载等），这样使用户检索信息变的更为快捷！\n\n但体验的同时，也发现几个体验问题：\n首页的 Node.js LTS 下载按钮的“向右箭头”看着有些奇怪，这里的下载并不是跳转，而是直接下载文件，改成“向下箭头”可能更有语义。\n右侧的代码 Tab，在切换时会造成页面闪动，体验不是太好。\n搜索框在视口中没有垂直居中，对于前端同学来说，不能理解。\n新官网：Learn 页面\nLearn 页由老版本的两列布局变成了三列布局，同时对左侧导航菜单进行了 UX 改造，树型目录形式的呈现，第三列给出了阅读时长、反馈入库及文档目录，用户体验变得更好。\n\n发现问题：\n当滚动左侧导航目录时，点击某一菜单后，导航目录会滚回到顶部，这里的体验不是很好。\n文档顶部有面包屑导航，可能体验会更好一些。\n新官网：About 页面\nAbout 页面布局和 Learn 页面类似，在介绍页新增了 Node.js 吉祥物 “火箭龟” 的图片。\n\n新官网：Download 页面\nDownload 页面的变化主要是将原有的列表 List，改成了 Select 形式，相比老版本，在历史版本、系统选择、版本选择等方便变得更为快捷。尤其是用户想下载历史版本的场景。\n\n新官网：Blog 页面\nBlog 页面的布局方式变化比较大，UX 体验更好了！内容包括最新的 Node.js 新闻，案例研究，教程和资源，同时增加了 Everything、Announcements、Releases、Vulnerabilities、Events 等 Tab 筛选，查找内容更便捷了。\n\n发现问题：\n点击 Events 时，出现了 404 的情况 “Page could not be found”。\n切换到移动端访问，下拉选择框的面板定位位置也有问题。\n新官网：Docs 和 Certification 页面\nDocs 和 Certification 页面没有什么变化，还是跳到现有的 API 文档页面和对应站点。\n体验地址： https://beta-node-js-org.vercel.app/en\n反馈地址： https://github.com/nodejs/nodejs.org/issues\n欢迎您的体验和反馈！\n欢迎关注我的公号（全网同名），一起学习和进步。",
           "link": "https://juejin.cn/post/7341408996597792787",
           "publishedOn": "2024-03-02T16:04:22.000Z",
-          "wordCount": 825,
+          "wordCount": 44,
           "title": "Node.js 新官网来了，UI 和 UX 全面升级，欢迎体验和反馈！",
           "imageUrl": null
         },
@@ -833,7 +833,7 @@
           "description": "theme: vuepress\nHello，大家好，我是 Sunday。\n前端性能优化一直是很多同学非常关注的问题，在日常的面试中也是经常会被问到的点。所以今天咱们就花一点时间来了解一下2024最新的前端性能优化方案，以此来助大家高效工作，面试顺利！\n一：页面渲染相关\n01：减少页面重绘和回流\n回流（reflow）：是指由于DOM结构或样式发生改变，浏览器需要重新计算元素的几何属性，然后重新布局页面的过程\n重绘（repaint）：是指当元素样式发生改变，但不影响布局时，浏览器只需要重新绘制受影响的部分，而不需要重新计算布局\n尽量减少使用 CSS 属性的快捷方式：例如，使用 border-width、border-style 和 border-color 而不是 border。CSS 属性的快捷方式会将所有值初始化为“初始值”，因此避免使用它们可以最小化重绘和回流（在实际工作中，CSS 快捷方式的性能影响微乎其微，并且使用快捷方式可以简化样式并解决一些样式覆盖问题）。\n在 GPU 上渲染动画：浏览器已经优化了 CSS 动画，使其适用于触发动画属性的重绘（因此也包括回流）。为了提高性能，将具有动画效果的元素移动到 GPU 上。可以触发 GPU 硬件加速的 CSS 属性包括 transform、filter、will-change 和 position:fixed。动画将在 GPU 上处理，提高性能，特别是在移动设备上（但避免过度使用，因为可能会导致性能问题）。\n使用 will-change CSS 属性来提高性能：它通知浏览器元素需要修改的属性，使浏览器能够在实际更改之前进行优化（但避免过度使用 will-change；在动画中遇到性能问题时考虑使用它）。\n通过更改 className 批量修改元素样式。\n将复杂的动画元素定位为 fixed 或 absolute 以防止回流。\n…",
           "link": "https://juejin.cn/post/7341267497428025344",
           "publishedOn": "2024-03-02T04:30:20.000Z",
-          "wordCount": 2004,
+          "wordCount": 44,
           "title": "2024最新版：前端性能优化方案汇总",
           "imageUrl": null
         },
@@ -843,7 +843,7 @@
           "description": "theme: healer-readable\n面经\n每一家面试风格都不一样，但基本上除了开放问题都不会脱离简历。\n基本功\n建议大家一定要把简历上所有提到的技术（或者实现的功能用到的技术）都能知道：\n为啥用它（技术选型）\n它的怎么做的（原理）\n怎么用它更好（优化）\n钉钉\n小程序和 h5 架构上有什么不同？\n资源很大，如何尽快显示第一屏页面？\n如何监测性能，上报等？\n虚拟列表 item height 不定怎么办？\nvite webpack 优缺点对比？\nvue react 异同？\n小红书\ntailwind 优点\ntailwind 预设的样式很多会不会包很大？\ntailwind 原子类名负责单一属性，假设我想 font-weight、font-size 结合用一个类名怎么做？\n前端性能优化？\n项目主要考察怎么做，细节到代码怎么写的\n从客户端和服务端角度说一下鉴权（用 cookie 讲故事）\nhttponly 是干嘛的\n响应式怎么做\n追问 除了 rem、vw 还有啥（我猜面试官是想问如果布局改变应该怎么做所以答了媒体查询）\nReact 和 Vue 逻辑复用，用啥\nReact 的 hook 为啥不能放入类似 if else 的代码块\nReact 性能优化（我是从用一些 hook 的角度答的）\nReact 和 Vue 的 Router 作用、原理（我是从用浏览器 API 角度答的）\nwebpack 优化\nvite 如何处理 commonjs\nesbuild 和 webpack 区别\nwebpack 的 loader、plugin\ngit 的 merge 和 rebase 啥区别\n1688\n对前端工程化的理解\n小程序为什么有平面检测的能力\ncss 盒模型\ncss 定位\n变量提升\n网页渲染过程\n前端性能优化\n浏览器缓存\nReact 比以前的 html+js 那种好在哪里\n为啥用函数式组件\n…",
           "link": "https://juejin.cn/post/7341288345782353961",
           "publishedOn": "2024-03-01T15:24:39.000Z",
-          "wordCount": 1535,
+          "wordCount": 44,
           "title": "5年前端面经",
           "imageUrl": null
         },
@@ -853,7 +853,7 @@
           "description": "theme: channing-cyan\n技术无止境 创作不间断\n\n👏 2024年创作者训练营第1期来咯，如果你想\"变身\"为创作者，却不知如何下笔；如果你想让自己的作品会被更多人看见；如果你想能凭一己之力\"横扫\"掘金平台......那就快来和我们一起探索技术写作进阶之旅吧～！\n这一次为了培养新手作者们的创作习惯以及鼓励大家创作出更多优质的内容，除了一如既往的为大家准备了丰厚的奖品池外，还重磅推出了写作辅导群——创作者训练营群。\n群里一切都为创作者服务，会尽可能帮助大家创作出更多优质的内容，为大家提供活动相关问题解答、1v1的创作指导、单篇文章的辅导解析（不被推荐原因和修改建议）等等，快来加入吧 👀 👇\n参加活动的掘友添加掘金酱为好友，回复关键词「训练营」入群。\nps：之前有被移动到其他的企业微信好友的创作者，可以删除掘金酱好友，重新添加回复关键词就行\n✏️ 官方创作指南（持续更新）\n标题\n简介\n作者\n\n\n\n\n🔗 如何从 0 到 1 写好技术文章\n有想法想沉淀，动笔前却犯了难？本篇文章将通过五个步骤教你写一篇技术文章。\nPDI技术写作团队\n\n\n🔗 如何写作系列教程\n《如何写作通用教程》将写作拆解成五个部分，总结了在写作前、写作中和写作后三个阶段需要注意的写作要点和技巧，通读整个系列文档，可以帮助你初步搭建系统的基础写作知识。\nPDI技术写作团队\n\n\n\n👍 优秀案例赏析\n标题\n简介\n作者\n\n\n\n\n🚀3.40秒到231.84毫秒，我用Performance面板分析性能瓶颈全流程（多图流量预警⚠️）\n如何优化不是本文的关键，本文主要和大家一起学习如何使用performance面板来进行性能瓶颈的定位，学习面板的使用，找到性能瓶颈源码并解决问题。\n一只大加号\n\n\nMongoDB保姆级指南(上)：七万字从零到进阶，助你掌握又一款强大的NoSQL！\n关于MongoDB相关的…",
           "link": "https://juejin.cn/post/7339357105144676406",
           "publishedOn": "2024-02-26T06:40:57.000Z",
-          "wordCount": 1182,
+          "wordCount": 44,
           "title": "创作者训练营 · 助力每一位创作新星，写出个人影响力！",
           "imageUrl": null
         }
@@ -1010,7 +1010,7 @@
           "description": "jym 红米 14 笔记本 怎么样 我看才 3300 狠狠的心动啊",
           "link": "https://juejin.cn/pin/7337631207024230439",
           "publishedOn": "2024-02-21T05:08:42.000Z",
-          "wordCount": 44,
+          "wordCount": 507,
           "title": "jym 红米 14 笔记本 怎么样 我看才 3300 狠狠的心动啊",
           "imageUrl": null
         },
@@ -1020,7 +1020,7 @@
           "description": "开发了一款本地压缩图片的工具，加载完离线也可以用。无任何限制，永久免费，还支持单个图片编辑。https://free.tinypng.site 求关注[拥抱][拥抱][拥抱]",
           "link": "https://juejin.cn/pin/7337630368907411494",
           "publishedOn": "2024-02-21T04:58:23.000Z",
-          "wordCount": 44,
+          "wordCount": 469,
           "title": "开发了一款本地压缩图片的工具，加载完离线也可以用。无任何限制，永久免费，还支持单个图片编辑。https://free.tinypng.site 求关注[拥抱][拥抱][拥抱]",
           "imageUrl": null
         },
@@ -1030,7 +1030,7 @@
           "description": "开工小玩具—Topping， 基于wails开发对我图片悬浮置顶桌面软件，希望能帮助你提高一丢丢效率。支持Mac和windows, 源码地址：https://github.com/CiroLee/Topping [送心][送心]",
           "link": "https://juejin.cn/pin/7337528205618446362",
           "publishedOn": "2024-02-20T10:37:02.000Z",
-          "wordCount": 44,
+          "wordCount": 485,
           "title": "开工小玩具—Topping， 基于wails开发对我图片悬浮置顶桌面软件，希望能帮助你提高一丢丢效率。支持Mac和windows, 源码地址：https://github.com/CiroLee/Toppin...",
           "imageUrl": null
         }
