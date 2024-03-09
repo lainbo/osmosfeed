@@ -723,7 +723,7 @@
           "description": "unocss 究竟比 tailwindcss 快多少？\n前言\n我们知道 unocss 很快，也许是目前最快的原子化 CSS 引擎 (没有之一)。\nunocss 解释它为什么这么快的原因，是因为它不用去解析 CSS 抽象语法树，直接在 content 里面通过正则表达式从内容中提取 token，然后生成样式。\n这点从 unocss 官方提供目前最新的测试结果可以看到（2023-08-11 版本）:\n11/8/2023, 3:53:41 PM\n1656 utilities | x200 runs (75% build time)\n\nnone                             33.99 ms / delta.      0.00 ms\nunocss       v0.57.2            359.46 ms / delta.    325.47 ms (x1.00)\ntailwindcss  v3.3.5            1238.25 ms / delta.   1204.26 ms (x3.70)\nwindicss     v3.5.6            1742.45 ms / delta.   1708.46 ms (x5.25)\n\n可以看到 unocss 比 tailwindcss 快 3.7 倍左右。\n其中官方的 unocss 测试素材，使用的是 vite + @unocss/vite，tailwindcss 测试素材则是 vite + postcss + tailwindcss。\n可是假如我们以 vite / webpack 插件的方式去使用 unocss 的话，默认是不支持 tailwindcss 那些 @apply, @screen, theme() 这些 CSS 指令的。\n这时候我们就需要额外去安装 @unocss/…",
           "link": "https://juejin.cn/post/7342693286447087625",
           "publishedOn": "2024-03-05T12:03:20.000Z",
-          "wordCount": 1434,
+          "wordCount": 19,
           "title": "unocss 究竟比 tailwindcss 快多少？",
           "imageUrl": null
         },
@@ -823,7 +823,7 @@
           "description": "大家好，这里是大家的林语冰。\n《前端猫猫教》每日 9 点半更新，坚持阅读，自律打卡，每天一次，进步一点。\n免责声明\n本文属于是语冰的直男翻译了属于是，略有删改，仅供粉丝参考。英文原味版请传送 Top 10 highest paid programming languages in 2023。\n\n本期共享的是 —— 地球上目前已知超过 200 种可用的编程语言，了解哪些语言在 2023 为开发者提供更高的薪水至关重要。\n过去一年里，DevJobsScanner 分析了来自地球各地超过 1000 万个开发职位空缺，辅助我们了解市场，以及人气最高和收入最高的语言。粉丝请注意，在这项研究中，我们主要关注来自美国就业市场的开发岗位，这不是具备代表性的结果，无法显着减少开发就业机会任何潜在的数据偏差。\n在纳入调查的 1000 万个开发职位中，存在 130 万个有涨薪。在这 130 万种语言中，有 230_000 种可以归类为编程语言。在这 230_000 份工作中，大约 86_000 个工作机会来自美国。\n10. Java\nJava 位列前十。Java 的工作机会大多要求非常高水平的经验，而且像 Spring 这样的 Java 框架的薪资也是业界最高。Java 开发者的平均年薪约为 11.8 万美元。\n平均工资：$118k\n薪资中位数：$117k\n就业岗位：23K 个工作\n9. Python\nPython 是如今人气最高的语言之一，也在薪资最高的工作中排名第九的。Python 是一种无类型的高级语言，它具有全方位的实用程序，从脚本和工具，到使用 Django 框架编写整个 Web App。Python 也大量用于数据科学。\n虽然 Python 开发者的平均工资为每年 12.5 万美元，但某些 Python 大神的薪资也高达每年 50 万美元。\n平均工资：$125K\n薪资中位数：12 万…",
           "link": "https://juejin.cn/post/7341617121955758090",
           "publishedOn": "2024-03-03T12:43:17.000Z",
-          "wordCount": 1258,
+          "wordCount": 44,
           "title": "2023 收入最高的十大编程语言",
           "imageUrl": null
         },
@@ -853,7 +853,7 @@
           "description": "theme: channing-cyan\n技术无止境 创作不间断\n\n👏 2024年创作者训练营第1期来咯，如果你想\"变身\"为创作者，却不知如何下笔；如果你想让自己的作品会被更多人看见；如果你想能凭一己之力\"横扫\"掘金平台......那就快来和我们一起探索技术写作进阶之旅吧～！\n这一次为了培养新手作者们的创作习惯以及鼓励大家创作出更多优质的内容，除了一如既往的为大家准备了丰厚的奖品池外，还重磅推出了写作辅导群——创作者训练营群。\n群里一切都为创作者服务，会尽可能帮助大家创作出更多优质的内容，为大家提供活动相关问题解答、1v1的创作指导、单篇文章的辅导解析（不被推荐原因和修改建议）等等，快来加入吧 👀 👇\n参加活动的掘友添加掘金酱为好友，回复关键词「训练营」入群。\nps：之前有被移动到其他的企业微信好友的创作者，可以删除掘金酱好友，重新添加回复关键词就行\n✏️ 官方创作指南（持续更新）\n标题\n简介\n作者\n\n\n\n\n🔗 如何从 0 到 1 写好技术文章\n有想法想沉淀，动笔前却犯了难？本篇文章将通过五个步骤教你写一篇技术文章。\nPDI技术写作团队\n\n\n🔗 如何写作系列教程\n《如何写作通用教程》将写作拆解成五个部分，总结了在写作前、写作中和写作后三个阶段需要注意的写作要点和技巧，通读整个系列文档，可以帮助你初步搭建系统的基础写作知识。\nPDI技术写作团队\n\n\n\n👍 优秀案例赏析\n标题\n简介\n作者\n\n\n\n\n🚀3.40秒到231.84毫秒，我用Performance面板分析性能瓶颈全流程（多图流量预警⚠️）\n如何优化不是本文的关键，本文主要和大家一起学习如何使用performance面板来进行性能瓶颈的定位，学习面板的使用，找到性能瓶颈源码并解决问题。\n一只大加号\n\n\nMongoDB保姆级指南(上)：七万字从零到进阶，助你掌握又一款强大的NoSQL！\n关于MongoDB相关的…",
           "link": "https://juejin.cn/post/7339357105144676406",
           "publishedOn": "2024-02-26T06:40:57.000Z",
-          "wordCount": 1182,
+          "wordCount": 44,
           "title": "创作者训练营 · 助力每一位创作新星，写出个人影响力！",
           "imageUrl": null
         }
@@ -890,7 +890,7 @@
           "description": "[7243698841848348730#每天一个知识点#] VSCode扩展fnMap（函数地图）v4.4.0版本发布啦！本次增加了标记行功能的稳定性。\n什么是标记行呢？请看下方动图。\n这只是fnMap的冰山一角，更多功能，可以点击下方链接，安装使用。\nhttps://marketplace.visualstudio.com/items?itemName=chensuiyi.fn-map",
           "link": "https://juejin.cn/pin/7343138429939580947",
           "publishedOn": "2024-03-06T16:02:16.000Z",
-          "wordCount": 482,
+          "wordCount": 479,
           "title": "[7243698841848348730#每天一个知识点#] VSCode扩展fnMap（函数地图）v4.4.0版本发布啦！本次增加了标记行功能的稳定性。 什么是标记行呢？请看下方动图。 这只...",
           "imageUrl": null
         },
@@ -940,7 +940,7 @@
           "description": "windows超越mac成为web应用开发体验赢家\nDHH几天前发文说，在windows11上用vscode和wsl2开发web应用，尤其是使用docker的体验，已经好过mac😆😀😂他的体验和我的怎么那么一样😂\n[7073670907851440160#新人报道#]",
           "link": "https://juejin.cn/pin/7341288345782304809",
           "publishedOn": "2024-03-01T15:05:13.000Z",
-          "wordCount": 490,
+          "wordCount": 487,
           "title": "windows超越mac成为web应用开发体验赢家 DHH几天前发文说，在windows11上用vscode和wsl2开发web应用，尤其是使用docker的体验，已经好过mac😆😀😂他的体验...",
           "imageUrl": null
         },
