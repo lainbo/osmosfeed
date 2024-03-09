@@ -712,6 +712,57 @@ https://marketplace.visualstudio.com/items?itemName&#x3D;chensuiyi.fn-map</span>
                 </section>
               </section>
             </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7342864744599257099"
+                        open
+                      >
+                        <summary class="article-expander__title">VSCode 1.87 发布，新增魔法功能-动动嘴就能写代码</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7342864744599257099">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Visual Studio Code（VS Code）又搞大事了！发布的1.87版本，它不仅带来了一系列令人兴奋的新功能，更是在提升开发者工作效率的道路上迈出了坚实的一步。
+语音听写功能
+首先，让我们来探索VS Code 1.87的语音听写功能。想象一下，你只需动动嘴，代码就能自动在编辑器中生成。这不再是科幻电影中的场景，而是VS Code Speech扩展带来的现实。
+
+通过简单的快捷键（Ctrl+Alt+V），你就能启动这项神奇的功能，而Escape键则能随时停止。这不仅让编程变得更加轻松，也为那些喜欢通过语音输入的开发者提供了极大的便利。
+
+语音多语言支持也是VS Code 1.87的一大亮点。现在，VS Code Speech扩展支持多达 26 种语言的语音识别，无论你来自哪里，都能找到适合自己的编程语言。现在可以使用accessibility.voice.speechLanguage 设置从 26 种支持的语言中选择一种。
+欢迎关注公众号《前端界》，文章会同步更新，也可快速加入前端交流群！
+多光标内联建议
+VS Code 1.87还增加了对多光标内联补全的支持。这意味着你可以在主要和辅助光标位置同时预览并应用内联补全，极大地提高了编码的效率。
+
+同时，Copilot 的重命名建议功能也得到了增强，现在可以更智能地为你的代码符号提供重命名建议。
+Side-by-side 预览重构
+在重构代码时，VS Code 1.87引入了Side-by-side预览功能，允许你使用多重差异编辑器来预览跨文件的重构。这不仅让代码变更更加直观，也使得重构过程更加安全，因为你可以在提交前仔细检查所有的变更。
+
+此外，VS Code 1.87还默认启用了Sticky scroll功能，让你在浏览长文档时更加方便。你可以通过设置来调整Sticky scroll的参数，以适应你的个人习惯。
+最后，Python开发者们也有福了，VS Code 1.87带来了更智能的Python导入功能。它能够自动添加缺失的Python导入，让你的代码更加整洁，同时也减少了因遗漏导入而导致的错误。
+VS Code 1.87的发布，不仅是对现有功能的一次升级，更是对未来编程方式的一次大胆探索。它让我们看到了编程工具与人工智能结合的无限可能。如果你已经迫不及待想要体验这些新功能，不妨前往VS Code的官方网站下载最新版本.
+欢迎关注公众号《前端界》，文章会同步更新，也可快速加入前端交流群！</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -1351,6 +1402,188 @@ B站搜索“云前端”观看视频版</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7342153878065135667"
+                        open
+                      >
+                        <summary class="article-expander__title">下一代 Node.js？运行速度狂飙 10 倍！！！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7342153878065135667">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>【💥 重磅新闻 💥】JavaScript 服务端运行时环境又出新秀，LLRT 来势汹汹！🌟
+嘿，各位 JavaScript 开发者们，你们知道吗？最近有个叫 LLRT 的新运行时环境火了起来，据说速度比 Node.js 快了 10 倍！🏎️
+前有 Deno，后有 Bun，现在又来了个 LLRT，Node.js 这些年的日子可真是“不是被超越就是在被超越的路上”啊！😅
+那么问题来了，你觉得 LLRT 的出现会对 Node.js 造成威胁吗？
+什么是 LLRT
+LLRT（低延迟运行时）是亚马逊推出的一种轻量级 JavaScript 运行时。旨在满足对快速高效的无服务器应用程序不断增长的需求。
+LLRT 优势：
+🔥 不使用 V8 引擎，而是采用 Rust 构建，确保高效内存使用。就像给应用程序装了涡轮增压器，速度瞬间飙升！💨
+🔥 使用 QuickJS 作为 JavaScript 引擎，快速启动不是梦！就像闪电一样快，让你的应用程序瞬间响应！⚡
+如下所示 LLRT 和 Node.js 20 运行速度对比，可以看出
+LLRT - DynamoDB Put, ARM, 128MB:
+
+Node.js 20 - DynamoDB Put, ARM, 128MB:
+
+LLRT 兼容性
+LLRT 仅支持一小部分 Node.js API。它不是 Node.js 的替代品，也永远不会是。下面是部分支持的 API 和模块的高级概述。有关更多详细信息，请参阅 API 文档:https://github.com/awslabs/llrt/blob/main/API.md
+
+Node.js
+LLRT ⚠️
+
+
+
+
+buffer
+✔︎
+✔︎️
+
+
+streams
+✔︎
+✔︎*
+
+
+child_process
+✔︎
+✔︎⏱
+
+
+net:sockets
+✔︎
+✔︎⏱
+
+
+net:server
+✔︎
+✔︎
+
+
+tls
+✔︎
+✘⏱
+
+
+fetch
+✔︎
+✔︎
+
+
+http
+✔︎
+✘⏱**
+
+
+https
+✔︎
+✘⏱**
+
+
+fs/promises
+✔︎
+✔︎
+
+
+fs
+✔︎
+✘⏱
+
+
+path
+✔︎
+✔︎
+
+
+timers
+✔︎
+✔︎
+
+
+uuid
+✔︎
+✔︎
+
+
+crypto
+✔︎
+✔︎
+
+
+process
+✔︎
+✔︎
+
+
+encoding
+✔︎
+✔︎
+
+
+console
+✔︎
+✔︎
+
+
+events
+✔︎
+✔︎
+
+
+ESM
+✔︎
+✔︎
+
+
+CJS
+✔︎
+✔︎
+
+
+async/await
+✔︎
+✔︎
+
+
+Other modules
+✔︎
+✘
+
+
+
+LLRT 能否替代 Node.js
+LLRT 的出现确实对 Node.js 构成了一定程度的挑战，但这并不意味着 Node.js 会立即被淘汰。
+事实上，Node.js 在许多方面仍然具有优势，例如生态系统的庞大规模、广泛的社区支持和大量的现有项目。此外，Node.js 作为一个成熟的运行时环境，已经积累了大量的功能和模块，这些在 LLRT 中可能尚未实现。
+然而，LLRT 的出现确实为 JavaScript 服务端运行时环境带来了新的选择。对于那些对性能有较高要求、需要快速启动和低内存占用的项目，LLRT 可能是一个更好的选择。
+总之，LLRT 的出现对 Node.js 构成了一定程度的挑战，但这并不意味着 Node.js 会立即被淘汰。开发者可以根据项目需求和场景来选择最适合的运行时环境。
+参考连接:
+https://github.com/awslabs/llrt/blob/main/README.md
+写在最后
+公众号：前端开发爱好者 专注分享 web 前端相关技术文章、视频教程资源、热点资讯等，如果喜欢我的分享，给 🐟🐟 点一个赞 👍 或者 ➕关注 都是对我最大的支持。
+欢迎长按图片加好友，我会第一时间和你分享前端行业趋势，面试资源，学习途径等等。
+欢迎加我好友，我会第一时间和你分享前端行业趋势，面试资源，学习途径等等。
+WX: xuxuxu_yyy
+关注公众号后，在首页：
+回复 面试题，获取最新大厂面试资料。
+回复简历，获取 3200 套 简历模板。
+回复React实战，获取 React 最新实战教程。
+回复Vue实战，获取 Vue 最新实战教程。
+回复ts，获取 TypeScript 精讲课程。
+回复vite，获取 Vite 精讲课程。
+回复uniapp，获取 uniapp 精讲课程。
+回复js书籍，获取 js 进阶 必看书籍。
+回复Node，获取 Nodejs+koa2 实战教程。
+回复数据结构算法，获取数据结构算法教程。
+回复架构师，获取 架构师学习资源教程。
+更多教程资源应有尽有，欢迎关注获取</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7342064032060637199"
                         open
                       >
@@ -1790,37 +2023,6 @@ Docs 和 Certification 页面没有什么变化，还是跳到现有的 API 文�
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7341267497428025344"
-                        open
-                      >
-                        <summary class="article-expander__title">2024最新版：前端性能优化方案汇总</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7341267497428025344">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: vuepress
-Hello，大家好，我是 Sunday。
-前端性能优化一直是很多同学非常关注的问题，在日常的面试中也是经常会被问到的点。所以今天咱们就花一点时间来了解一下2024最新的前端性能优化方案，以此来助大家高效工作，面试顺利！
-一：页面渲染相关
-01：减少页面重绘和回流
-回流（reflow）：是指由于DOM结构或样式发生改变，浏览器需要重新计算元素的几何属性，然后重新布局页面的过程
-重绘（repaint）：是指当元素样式发生改变，但不影响布局时，浏览器只需要重新绘制受影响的部分，而不需要重新计算布局
-尽量减少使用 CSS 属性的快捷方式：例如，使用 border-width、border-style 和 border-color 而不是 border。CSS 属性的快捷方式会将所有值初始化为“初始值”，因此避免使用它们可以最小化重绘和回流（在实际工作中，CSS 快捷方式的性能影响微乎其微，并且使用快捷方式可以简化样式并解决一些样式覆盖问题）。
-在 GPU 上渲染动画：浏览器已经优化了 CSS 动画，使其适用于触发动画属性的重绘（因此也包括回流）。为了提高性能，将具有动画效果的元素移动到 GPU 上。可以触发 GPU 硬件加速的 CSS 属性包括 transform、filter、will-change 和 position:fixed。动画将在 GPU 上处理，提高性能，特别是在移动设备上（但避免过度使用，因为可能会导致性能问题）。
-使用 will-change CSS 属性来提高性能：它通知浏览器元素需要修改的属性，使浏览器能够在实际更改之前进行优化（但避免过度使用 will-change；在动画中遇到性能问题时考虑使用它）。
-通过更改 className 批量修改元素样式。
-将复杂的动画元素定位为 fixed 或 absolute 以防止回流。
-…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -2152,84 +2354,6 @@ Hello，大家好，我是 Sunday。
     
    38.人形机器人创企Figure获6.75亿美元融资</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7341288345782353961"
-                        open
-                      >
-                        <summary class="article-expander__title">5年前端面经</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7341288345782353961">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: healer-readable
-面经
-每一家面试风格都不一样，但基本上除了开放问题都不会脱离简历。
-基本功
-建议大家一定要把简历上所有提到的技术（或者实现的功能用到的技术）都能知道：
-为啥用它（技术选型）
-它的怎么做的（原理）
-怎么用它更好（优化）
-钉钉
-小程序和 h5 架构上有什么不同？
-资源很大，如何尽快显示第一屏页面？
-如何监测性能，上报等？
-虚拟列表 item height 不定怎么办？
-vite webpack 优缺点对比？
-vue react 异同？
-小红书
-tailwind 优点
-tailwind 预设的样式很多会不会包很大？
-tailwind 原子类名负责单一属性，假设我想 font-weight、font-size 结合用一个类名怎么做？
-前端性能优化？
-项目主要考察怎么做，细节到代码怎么写的
-从客户端和服务端角度说一下鉴权（用 cookie 讲故事）
-httponly 是干嘛的
-响应式怎么做
-追问 除了 rem、vw 还有啥（我猜面试官是想问如果布局改变应该怎么做所以答了媒体查询）
-React 和 Vue 逻辑复用，用啥
-React 的 hook 为啥不能放入类似 if else 的代码块
-React 性能优化（我是从用一些 hook 的角度答的）
-React 和 Vue 的 Router 作用、原理（我是从用浏览器 API 角度答的）
-webpack 优化
-vite 如何处理 commonjs
-esbuild 和 webpack 区别
-webpack 的 loader、plugin
-git 的 merge 和 rebase 啥区别
-1688
-对前端工程化的理解
-小程序为什么有平面检测的能力
-css 盒模型
-css 定位
-变量提升
-网页渲染过程
-前端性能优化
-浏览器缓存
-React 比以前的 html+js 那种好在哪里
-为啥用函数式组件
-…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4248,8 +4372,8 @@ iFixit 网站拆解了苹果头盔，证实了 CPU 是 M2 芯片，跟 MacBook �
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8211963360">
-        <time id="build-timestamp" datetime="2024-03-09T03:53:47.640Z">2024-03-09T03:53:47.640Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8212864353">
+        <time id="build-timestamp" datetime="2024-03-09T06:53:42.205Z">2024-03-09T06:53:42.205Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
