@@ -300,6 +300,101 @@ Free Now to 2024-03-14T16:00:00.000Z</span>
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7343484473185746981"
+                        open
+                      >
+                        <summary class="article-expander__title">小鹅通一面：被问碎了...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7343484473185746981">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>浅聊一下
+大三学生，今天面了一下小鹅通，大概四十多分钟...问的有点细，汗流浃背
+小鹅通
+自我介绍
+首先进行了一个简单的自我介绍，介绍了一下我是谁、来自哪里、做过什么，实习经历、有什么成绩、为什么能胜任...面了好几家，状态还蛮好的，但是面小鹅通的时候有一点语无伦次(面试官挺好的)...
+学习途径
+问了我如何学习的...
+项目
+懒加载
+看了一下我的项目，说：在展示图片的时候你使用了lazyload指令实现的一个懒加载，那你能不能不用组件库来实现，介绍一下思路...
+在前面的文章中已经写过了懒加载(懒加载是如何实现的 - 掘金 (juejin.cn))，简单说了一下，在image标签内有两个属性，src和data-original，把图片地址放在data-original属性内，然后获取屏幕的宽高，当图片出现在可视范围内，就将data-original内的值赋值给src，然后忘记说要之后要移除data-original属性了...
+图片太大如何解决
+第二个问题顺势问了我如果图片太大应该如何解决...我回答的是使用webp后缀的图片，接着追问如何将图片后缀改成webp，直接修改吗？我回答的是有些网站可以在线转换...继续追问：将图片后缀修改为webp会模糊吗？兼容性呢？为什么转换为webp图片大小会变小？问到这里我属实是汗流浃背了...
+webp
+WebP 是一种同时提供了有损压缩与无损压缩（可逆压缩）的图片文件格式，派生自影像编码格式VP8。   WebP最初在2010年发布，目标是减少文件大小，但达到和JPEG格式相同的图片质量，希望能够减少图片档在网络上的发送时间。根据Google较早的测试，WebP的无损压缩比网络上找到的PNG档少了45％的文件大小，即使这些PNG档在使用pngcrush和PNGOUT处理过，WebP还是可以减少28％的文件大小。
+WebP图片这么好，…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7343137522069995529"
+                        open
+                      >
+                        <summary class="article-expander__title">一夜之间，3.0万 Star，全部清零！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7343137522069995529">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>这是开源圈不久前发生的一件事情。
+不知道大家有没有听说过NeteaseCloudMusicApi这个项目，从项目名字大家也能猜出，这是一个和网易云音乐API有关的开源项目。
+该项目之前由开发者Binaryify所打造，是网易云音乐API的一个非官方封装库。
+该项目采用Node.js编写，可以实现非官方的网易云音乐API调用，从而可以让其他开发者可以基于该项目来获取网易云音乐平台上的一些歌曲、歌单、歌词、专辑、电台等信息，方便开发者构建基于网易云音乐服务的应用程序。
+
+这个项目曾经在GitHub上非常火热，也因此一度获得了超过3.0w的Star标星，以及1.5w+的Fork。
+
+不过就在最近，该项目的作者彻底清零了这个项目，包括其所有的代码、文档，以及commit提交信息，并在项目的主页README中更新了动态：
+保护版权，此仓库不再维护
+
+原因很简单，原来是作者收到了来自网易云音乐官方发送的法务通知函。
+网易云音乐声明该项目侵犯了其公司的相关版权，并且要求开发者立即下线该项目中盗链网易云音乐的方法及内容。
+具体的通知如下：
+网易云音乐由杭州网易云音乐有限公司独立开发运营，网易云音乐作为国内知名的在线音乐平台，致力于为用户提供优质的音乐内容服务，我司以高额的成本采购了海量音乐作品的内容，在未我司合法授权的任何第三方均没有权利播放由我司享有版权的音乐作品，我司有权以自己的名义或授权第三方进行维权。
+我司收到用户的举报，您开发的 NeteaseCloudMusicApi 或存在涉嫌通过非法破解网易云音乐内容接口的方式获取网易云音乐享有版权的歌曲内容。
+贵司未经我司授权，通过技术手段破解绕开限制直接提供网易云音乐享有版权的音乐作品内容，该行为不仅侵犯了我司享有的音乐作品版权，亦非法攫取了网易云音乐的用户流量构成不正当竞争，损害了我司作为权利人的合法权益。
+同时贵方通过非法技术手段破解网站获取大量歌曲内容的行为，涉嫌构成侵犯著作权罪，破坏 / 非法入侵计算机信息系统罪及 / 或提供破坏 / 非法入侵计算机信息系统工具罪。
+针对上述侵权行为，根据中华人民共和国《著作权法》、《刑法》等相关法律法规规定，我司现郑重致函：
+1、立即下线 NeteaseCloudMusicApi 上盗链网易云音乐的方法及内容；
+2、在未获得我方授权的前提下，停止一切侵犯我司合法权益的行为。
+请贵方充分认识到该行为的违法性和严重性，按照本函要求立即处理侵权行为，并将处理结果及时告知我方。若贵方怠于履行该项义务，为维护自身合法权益，我司将采取包括诉讼、投诉、举报等在内的一切必要的法律措施确保合法权利得到有效保护。
+从这个项目的维护历史可以看出，曾经作者对于该项目还是花了不少心血的，包括维护的活跃度以及项目文档这块，都做了不少工作。
+
+而且也有不少开发者来基于该项目进行二开，从而实现开发者自己的不同想法和需求。
+然而面对这样一封告知函，项目作者也不得不做出清空仓库并将其进行永久归档的处理，毕竟这类项目确实存在版权方面的问题。
+而尊重版权和合规开源也确实是每一位开源作者的基本职责。
+其实像这类项目在GitHub上还是有不少的，在之前官方没有明确追责的情况下，其实大家对于一些非盈利性的小众开源项目基本也会睁一只眼闭一只眼，但是官方一旦追责起来，这类项目生存的概率就微乎其微了。
+所以这件事也提醒我们，后续大家如果要经营和维护自己的开源项目，也是要多关注和留意一下版权方面的问题，从而避免后续可能会出现的一些不必要的麻烦。
+注：本文在GitHub开源仓库「编程之路」 https://github.com/rd2coding/Road2Coding 中已经收录，里面有我整理的6大编程方向(岗位)的自学路线+知识点大梳理、面试考点、我的简历、几本硬核pdf笔记，以及程序员生活和感悟，欢迎star。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >Barret李靖的即刻动态</button>
                   <a class="source-heading__link" href="https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7">Open</a>
                 </h3>
@@ -450,67 +545,6 @@ Free Now to 2024-03-14T16:00:00.000Z</span>
 但你看看有多少人死守之前的观点，坚持与他人争辩对错。好像曾经说过的话，就是嵌到地上的钉子一样不能改变分毫。
 归根结底，是事实决定观点，而不是观点决定事实。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7343137522069995529"
-                        open
-                      >
-                        <summary class="article-expander__title">一夜之间，3.0万 Star，全部清零！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7343137522069995529">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>这是开源圈不久前发生的一件事情。
-不知道大家有没有听说过NeteaseCloudMusicApi这个项目，从项目名字大家也能猜出，这是一个和网易云音乐API有关的开源项目。
-该项目之前由开发者Binaryify所打造，是网易云音乐API的一个非官方封装库。
-该项目采用Node.js编写，可以实现非官方的网易云音乐API调用，从而可以让其他开发者可以基于该项目来获取网易云音乐平台上的一些歌曲、歌单、歌词、专辑、电台等信息，方便开发者构建基于网易云音乐服务的应用程序。
-
-这个项目曾经在GitHub上非常火热，也因此一度获得了超过3.0w的Star标星，以及1.5w+的Fork。
-
-不过就在最近，该项目的作者彻底清零了这个项目，包括其所有的代码、文档，以及commit提交信息，并在项目的主页README中更新了动态：
-保护版权，此仓库不再维护
-
-原因很简单，原来是作者收到了来自网易云音乐官方发送的法务通知函。
-网易云音乐声明该项目侵犯了其公司的相关版权，并且要求开发者立即下线该项目中盗链网易云音乐的方法及内容。
-具体的通知如下：
-网易云音乐由杭州网易云音乐有限公司独立开发运营，网易云音乐作为国内知名的在线音乐平台，致力于为用户提供优质的音乐内容服务，我司以高额的成本采购了海量音乐作品的内容，在未我司合法授权的任何第三方均没有权利播放由我司享有版权的音乐作品，我司有权以自己的名义或授权第三方进行维权。
-我司收到用户的举报，您开发的 NeteaseCloudMusicApi 或存在涉嫌通过非法破解网易云音乐内容接口的方式获取网易云音乐享有版权的歌曲内容。
-贵司未经我司授权，通过技术手段破解绕开限制直接提供网易云音乐享有版权的音乐作品内容，该行为不仅侵犯了我司享有的音乐作品版权，亦非法攫取了网易云音乐的用户流量构成不正当竞争，损害了我司作为权利人的合法权益。
-同时贵方通过非法技术手段破解网站获取大量歌曲内容的行为，涉嫌构成侵犯著作权罪，破坏 / 非法入侵计算机信息系统罪及 / 或提供破坏 / 非法入侵计算机信息系统工具罪。
-针对上述侵权行为，根据中华人民共和国《著作权法》、《刑法》等相关法律法规规定，我司现郑重致函：
-1、立即下线 NeteaseCloudMusicApi 上盗链网易云音乐的方法及内容；
-2、在未获得我方授权的前提下，停止一切侵犯我司合法权益的行为。
-请贵方充分认识到该行为的违法性和严重性，按照本函要求立即处理侵权行为，并将处理结果及时告知我方。若贵方怠于履行该项义务，为维护自身合法权益，我司将采取包括诉讼、投诉、举报等在内的一切必要的法律措施确保合法权利得到有效保护。
-从这个项目的维护历史可以看出，曾经作者对于该项目还是花了不少心血的，包括维护的活跃度以及项目文档这块，都做了不少工作。
-
-而且也有不少开发者来基于该项目进行二开，从而实现开发者自己的不同想法和需求。
-然而面对这样一封告知函，项目作者也不得不做出清空仓库并将其进行永久归档的处理，毕竟这类项目确实存在版权方面的问题。
-而尊重版权和合规开源也确实是每一位开源作者的基本职责。
-其实像这类项目在GitHub上还是有不少的，在之前官方没有明确追责的情况下，其实大家对于一些非盈利性的小众开源项目基本也会睁一只眼闭一只眼，但是官方一旦追责起来，这类项目生存的概率就微乎其微了。
-所以这件事也提醒我们，后续大家如果要经营和维护自己的开源项目，也是要多关注和留意一下版权方面的问题，从而避免后续可能会出现的一些不必要的麻烦。
-注：本文在GitHub开源仓库「编程之路」 https://github.com/rd2coding/Road2Coding 中已经收录，里面有我整理的6大编程方向(岗位)的自学路线+知识点大梳理、面试考点、我的简历、几本硬核pdf笔记，以及程序员生活和感悟，欢迎star。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1439,188 +1473,6 @@ B站搜索“云前端”观看视频版</span>
             container: &#x27;map&#x27;, //地图容器
             style:&#x27;http://192.168.126.44/mms-style/d…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7342153878065135667"
-                        open
-                      >
-                        <summary class="article-expander__title">下一代 Node.js？运行速度狂飙 10 倍！！！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7342153878065135667">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>【💥 重磅新闻 💥】JavaScript 服务端运行时环境又出新秀，LLRT 来势汹汹！🌟
-嘿，各位 JavaScript 开发者们，你们知道吗？最近有个叫 LLRT 的新运行时环境火了起来，据说速度比 Node.js 快了 10 倍！🏎️
-前有 Deno，后有 Bun，现在又来了个 LLRT，Node.js 这些年的日子可真是“不是被超越就是在被超越的路上”啊！😅
-那么问题来了，你觉得 LLRT 的出现会对 Node.js 造成威胁吗？
-什么是 LLRT
-LLRT（低延迟运行时）是亚马逊推出的一种轻量级 JavaScript 运行时。旨在满足对快速高效的无服务器应用程序不断增长的需求。
-LLRT 优势：
-🔥 不使用 V8 引擎，而是采用 Rust 构建，确保高效内存使用。就像给应用程序装了涡轮增压器，速度瞬间飙升！💨
-🔥 使用 QuickJS 作为 JavaScript 引擎，快速启动不是梦！就像闪电一样快，让你的应用程序瞬间响应！⚡
-如下所示 LLRT 和 Node.js 20 运行速度对比，可以看出
-LLRT - DynamoDB Put, ARM, 128MB:
-
-Node.js 20 - DynamoDB Put, ARM, 128MB:
-
-LLRT 兼容性
-LLRT 仅支持一小部分 Node.js API。它不是 Node.js 的替代品，也永远不会是。下面是部分支持的 API 和模块的高级概述。有关更多详细信息，请参阅 API 文档:https://github.com/awslabs/llrt/blob/main/API.md
-
-Node.js
-LLRT ⚠️
-
-
-
-
-buffer
-✔︎
-✔︎️
-
-
-streams
-✔︎
-✔︎*
-
-
-child_process
-✔︎
-✔︎⏱
-
-
-net:sockets
-✔︎
-✔︎⏱
-
-
-net:server
-✔︎
-✔︎
-
-
-tls
-✔︎
-✘⏱
-
-
-fetch
-✔︎
-✔︎
-
-
-http
-✔︎
-✘⏱**
-
-
-https
-✔︎
-✘⏱**
-
-
-fs/promises
-✔︎
-✔︎
-
-
-fs
-✔︎
-✘⏱
-
-
-path
-✔︎
-✔︎
-
-
-timers
-✔︎
-✔︎
-
-
-uuid
-✔︎
-✔︎
-
-
-crypto
-✔︎
-✔︎
-
-
-process
-✔︎
-✔︎
-
-
-encoding
-✔︎
-✔︎
-
-
-console
-✔︎
-✔︎
-
-
-events
-✔︎
-✔︎
-
-
-ESM
-✔︎
-✔︎
-
-
-CJS
-✔︎
-✔︎
-
-
-async/await
-✔︎
-✔︎
-
-
-Other modules
-✔︎
-✘
-
-
-
-LLRT 能否替代 Node.js
-LLRT 的出现确实对 Node.js 构成了一定程度的挑战，但这并不意味着 Node.js 会立即被淘汰。
-事实上，Node.js 在许多方面仍然具有优势，例如生态系统的庞大规模、广泛的社区支持和大量的现有项目。此外，Node.js 作为一个成熟的运行时环境，已经积累了大量的功能和模块，这些在 LLRT 中可能尚未实现。
-然而，LLRT 的出现确实为 JavaScript 服务端运行时环境带来了新的选择。对于那些对性能有较高要求、需要快速启动和低内存占用的项目，LLRT 可能是一个更好的选择。
-总之，LLRT 的出现对 Node.js 构成了一定程度的挑战，但这并不意味着 Node.js 会立即被淘汰。开发者可以根据项目需求和场景来选择最适合的运行时环境。
-参考连接:
-https://github.com/awslabs/llrt/blob/main/README.md
-写在最后
-公众号：前端开发爱好者 专注分享 web 前端相关技术文章、视频教程资源、热点资讯等，如果喜欢我的分享，给 🐟🐟 点一个赞 👍 或者 ➕关注 都是对我最大的支持。
-欢迎长按图片加好友，我会第一时间和你分享前端行业趋势，面试资源，学习途径等等。
-欢迎加我好友，我会第一时间和你分享前端行业趋势，面试资源，学习途径等等。
-WX: xuxuxu_yyy
-关注公众号后，在首页：
-回复 面试题，获取最新大厂面试资料。
-回复简历，获取 3200 套 简历模板。
-回复React实战，获取 React 最新实战教程。
-回复Vue实战，获取 Vue 最新实战教程。
-回复ts，获取 TypeScript 精讲课程。
-回复vite，获取 Vite 精讲课程。
-回复uniapp，获取 uniapp 精讲课程。
-回复js书籍，获取 js 进阶 必看书籍。
-回复Node，获取 Nodejs+koa2 实战教程。
-回复数据结构算法，获取数据结构算法教程。
-回复架构师，获取 架构师学习资源教程。
-更多教程资源应有尽有，欢迎关注获取</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4386,8 +4238,8 @@ iFixit 网站拆解了苹果头盔，证实了 CPU 是 M2 芯片，跟 MacBook �
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8213720101">
-        <time id="build-timestamp" datetime="2024-03-09T09:53:50.702Z">2024-03-09T09:53:50.702Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8214679242">
+        <time id="build-timestamp" datetime="2024-03-09T12:54:19.038Z">2024-03-09T12:54:19.038Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
