@@ -113,6 +113,16 @@
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/65edcef712ed2fda68f5e342",
+          "author": null,
+          "description": "三四年过去了，再回头去看自己写的这篇文章，多了几分淡定，想对那个时候的自己说：“凡事慢慢来，不用悲观，也无需亢奋，很高兴地告诉你，当初的那个决定今天没有后悔，继续保持，向前走，走自己的路”。https://www.yuque.com/barretlee/thinking/wiwvy8",
+          "link": "https://m.okjike.com/originalPosts/65edcef712ed2fda68f5e342",
+          "publishedOn": "2024-03-10T15:17:11.000Z",
+          "wordCount": 442,
+          "title": "发布了: 三四年过去了，再回头去看自己写的这篇文章，多了几分淡定，想对那个时候的自己说：“凡事慢慢来，不用悲观，也无需亢奋，很高兴地告诉你，当初的那个决...",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/65e9c6b6164d89e6014fe00a",
           "author": null,
           "description": "有段时间没用 GPT-4 了，尝试了好几种方法续费均失败：\n1）Dupay 虚拟 Visa 银行卡，之前购买就用的这张卡，不过现在不能用了，提示被拒，还有可用的虚拟卡商么？\n2）Wise 申请的银行卡，绑定到了手机钱包，使用 Apple Pay 时也失败了，姿势不对？\n3）直接使用 Wise 卡号和 cvc 支付，提示「您的银行卡被拒绝了」，所以其实是不支持 Wise 卡的卡段么？\n最后可行的是，直接在 APP 内购买，也有两种方式：\n1）在支付宝里头购买礼品卡，然后给 iCloud 账户充值，参考 https://twitter.com/Barret_China/status/1638223359375966208\n2）申请一张 OCBC 的新加坡银行卡，绑定到新加坡的 iCloud 账户，参考 https://twitter.com/Barret_China/status/1698338662088622167 和 https://twitter.com/Barret_China/status/1638215085788372993",
@@ -201,16 +211,6 @@
           "wordCount": 452,
           "title": "发布了: 劳动人民从不浪费每一寸土地😅",
           "imageUrl": "https://cdnv2.ruguoapp.com/FrimKH0RrAkiTxseheTv91_4FC5Tv3.jpeg?imageMogr2/auto-orient/thumbnail/300x2000%3E/quality/70/interlace/1"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/65d49b763624666324325430",
-          "author": null,
-          "description": "对 PMF 的一个理解：有自然注册流量，并且这群人里持续有回头客。",
-          "link": "https://m.okjike.com/originalPosts/65d49b763624666324325430",
-          "publishedOn": "2024-02-20T12:30:46.000Z",
-          "wordCount": 448,
-          "title": "发布了: 对 PMF 的一个理解：有自然注册流量，并且这群人里持续有回头客。",
-          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         }
       ]
     },
@@ -688,12 +688,22 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7343266235871756325",
+          "author": "神三元",
+          "description": "随着前端技术栈的发展，Rust 作为一门系统级语言，也逐渐进入了前端开发者的视野。最近很明显的一个例子就是，今年的 ViteConf 中尤雨溪宣布 Vite 的底层即将用 Rust 重写，即开发一个基于 Rust 的打包工具 Rolldown，以此替换掉原有的 Esbuild 和 Rollup。当这个消息传出后，不少前端开发者开始关注起了 Rust，也陆续有不少的读者朋友问我相同的问题：作为一个前端，我有必要学 Rust 吗？\n首先给出我的回答：作为一个前端，你没有必要学 Rust。当然，这并不是说 Rust 对于前端开发者没有任何价值，而是说 Rust 并不是前端开发者必须要学习的技术。为什么这么说？接下来我来跟大家详细聊聊。\nRust 在前端做些什么\n不可否认的是，Rust 作为一门现代化的系统级编程语言，本身有着很多优势，比如它的内存安全、并发安全、现代化的工程化能力(如包管理)，这些优势使得 Rust 在如今的操作系统、云计算、区块链等等领域都有着越来越多的应用。而在前端领域，Rust 也有着自己的一席之地。\nVercel（Next.js 背后的公司）的 CEO Lee Robinson 老哥在两年前写过一篇文章——《Rust 是前端基建的未来》。\n原文链接：https://leerob.io/blog/rust\n他在这篇文章中指出了以下的几个基建方向会被 Rust 所颠覆：\nwebpack。即底层构建工具层。\nBabel。即 JavaScript 编译器。\nESLint。即代码检查器。\nPrettier。即代码格式化工具。\nTerser。即代码压缩器。\n而到如今 2023 年，两年过去了，这个判断也越来越接近现实。我们不妨来看看这些年 Rust 在前端做了些什么。\n构建工具\n首先是构建工具。在前端领域，构建工具的重要性想必不用多说，而在 2022 年 10 月底，…",
+          "link": "https://juejin.cn/post/7343266235871756325",
+          "publishedOn": "2024-03-07T04:40:13.000Z",
+          "wordCount": 1344,
+          "title": "作为一个前端开发者，你没有必要学 Rust",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7343137522069995529",
           "author": "CodeSheep",
           "description": "这是开源圈不久前发生的一件事情。\n不知道大家有没有听说过NeteaseCloudMusicApi这个项目，从项目名字大家也能猜出，这是一个和网易云音乐API有关的开源项目。\n该项目之前由开发者Binaryify所打造，是网易云音乐API的一个非官方封装库。\n该项目采用Node.js编写，可以实现非官方的网易云音乐API调用，从而可以让其他开发者可以基于该项目来获取网易云音乐平台上的一些歌曲、歌单、歌词、专辑、电台等信息，方便开发者构建基于网易云音乐服务的应用程序。\n\n这个项目曾经在GitHub上非常火热，也因此一度获得了超过3.0w的Star标星，以及1.5w+的Fork。\n\n不过就在最近，该项目的作者彻底清零了这个项目，包括其所有的代码、文档，以及commit提交信息，并在项目的主页README中更新了动态：\n保护版权，此仓库不再维护\n\n原因很简单，原来是作者收到了来自网易云音乐官方发送的法务通知函。\n网易云音乐声明该项目侵犯了其公司的相关版权，并且要求开发者立即下线该项目中盗链网易云音乐的方法及内容。\n具体的通知如下：\n网易云音乐由杭州网易云音乐有限公司独立开发运营，网易云音乐作为国内知名的在线音乐平台，致力于为用户提供优质的音乐内容服务，我司以高额的成本采购了海量音乐作品的内容，在未我司合法授权的任何第三方均没有权利播放由我司享有版权的音乐作品，我司有权以自己的名义或授权第三方进行维权。\n我司收到用户的举报，您开发的 NeteaseCloudMusicApi 或存在涉嫌通过非法破解网易云音乐内容接口的方式获取网易云音乐享有版权的歌曲内容。\n贵司未经我司授权，通过技术手段破解绕开限制直接提供网易云音乐享有版权的音乐作品内容，该行为不仅侵犯了我司享有的音乐作品版权，亦非法攫取了网易云音乐的用户流量构成不正当竞争，损害了我司作为权利人的合法权益。\n同时贵方通过非法技术手段破解网站获取大量歌曲内容的行为，涉嫌构成侵犯著作权罪，破坏 / 非法入侵计算机信息系统罪及 / 或提供破坏 / 非法入侵计算机信息系统工具罪。\n针对上述侵权行为，根据中华人民共和国《著作权法》、《刑法》等相关法律法规规定，我司现郑重致函：\n1、立即下线 NeteaseCloudMusicApi 上盗链网易云音乐的方法及内容；\n2、在未获得我方授权的前提下，停止一切侵犯我司合法权益的行为。\n请贵方充分认识到该行为的违法性和严重性，按照本函要求立即处理侵权行为，并将处理结果及时告知我方。若贵方怠于履行该项义务，为维护自身合法权益，我司将采取包括诉讼、投诉、举报等在内的一切必要的法律措施确保合法权利得到有效保护。\n从这个项目的维护历史可以看出，曾经作者对于该项目还是花了不少心血的，包括维护的活跃度以及项目文档这块，都做了不少工作。\n\n而且也有不少开发者来基于该项目进行二开，从而实现开发者自己的不同想法和需求。\n然而面对这样一封告知函，项目作者也不得不做出清空仓库并将其进行永久归档的处理，毕竟这类项目确实存在版权方面的问题。\n而尊重版权和合规开源也确实是每一位开源作者的基本职责。\n其实像这类项目在GitHub上还是有不少的，在之前官方没有明确追责的情况下，其实大家对于一些非盈利性的小众开源项目基本也会睁一只眼闭一只眼，但是官方一旦追责起来，这类项目生存的概率就微乎其微了。\n所以这件事也提醒我们，后续大家如果要经营和维护自己的开源项目，也是要多关注和留意一下版权方面的问题，从而避免后续可能会出现的一些不必要的麻烦。\n注：本文在GitHub开源仓库「编程之路」 https://github.com/rd2coding/Road2Coding 中已经收录，里面有我整理的6大编程方向(岗位)的自学路线+知识点大梳理、面试考点、我的简历、几本硬核pdf笔记，以及程序员生活和感悟，欢迎star。",
           "link": "https://juejin.cn/post/7343137522069995529",
           "publishedOn": "2024-03-07T00:27:23.000Z",
-          "wordCount": 19,
+          "wordCount": 668,
           "title": "一夜之间，3.0万 Star，全部清零！",
           "imageUrl": null
         },
@@ -713,7 +723,7 @@
           "description": "highlight: a11y-dark\nHolle 大家好，我是阳阳羊，在前两天的面试中，面试官问了这样一个问题：“在 Vue 中，我们在使用 v-for 渲染列表的时候，为什么要绑定一个 key？能不能用 index 做 key？”\n在聊这个问题之前我们还得需要知道 Vue 是如何操作 DOM 结构的。\n虚拟DOM\n我们知道，Vue 不可以直接操作 DOM 结构，而是通过数据驱动、指令等机制来间接操作 DOM 结构。当我们修改模版中的数据时，Vue 会触发重新渲染过程，调用render函数，它会返回一个 虚拟 DOM 树，它描述了整个组件模版的结构。\n举个栗子🌰：\n<template>\n  <ul class=\"list\">\n    <li v-for=\"item in list\" :key=\"item.index\" class=\"item\">{{ item }}</li>\n  </ul>\n</template>\n\n<script setup>\nimport { ref } from 'vue';\nconst list = ref(['html', 'css', 'js'])\n</script>\n\nVue 在渲染这个列表时，就会调用render函数，它会返回一个类似下面这个虚拟 DOM 树。\nlet VDom = {\n    tagName: 'ul',\n    props: {\n        class: 'list'\n    },\n    chilren: [\n        {\n            tagName: 'li',\n            props: {\n                class: 'item'\n            },\n            chilren: ['html']\n        },\n        {…",
           "link": "https://juejin.cn/post/7342793254096109583",
           "publishedOn": "2024-03-05T16:25:27.000Z",
-          "wordCount": 19,
+          "wordCount": 1546,
           "title": "面试官：为什么不用 index 做 key？",
           "imageUrl": null
         },
@@ -723,7 +733,7 @@
           "description": "theme: smartblue\n大家好，我是薇薇，一名沪漂女程序员，年前惨遭被裁，正值在家悲伤抠脚之际，突然看到两位朋友在合谋开发一款刷leetcode的小工具——leetcode-practice……\n下面重点稍微来介绍一下\n朋友A：Angular的忠实信徒，插件的主创+仓库创建人\n朋友S：n年（n>=5）前端经验的神秘大佬，有钱有闲热爱开源\n在神秘力量的号召下~~（主要是A太热情了，把我拉了项目，实在不好意思挂名贡献者却啥也不干）~~，从一开始的摆烂抠脚到参与进来，现在这款工具也初具雏形\n关于详细的介绍参见A佬写的这篇# [leetcode-practice]一款能够适合骑驴找马程序员的摸鱼神器\n快速开始\nleetcode-practice拥有多种形态，但是我更倾向于脱离仓库本身的使用方式，也就是说你可以尝试在终端内执行（node版本大于20）\n这样做的好处主要是你可以自己脱离leetcode-practice项目建立自己的git题库，方便回顾。\nnpm install -g leetcode-practice\n\n比如说你想刷这道题\n 那么可以执行一下\nlc 1\n\n或者\nlc -i 1\n\n 这时候当前目录会出现一个文件夹\n description是题目的markdown格式的描述，当然index.js的注释中也可以看到题目描述，但是markdown可以更方便的查看图片，这里推荐下载一个markdown preview 插件\nindex.js的内容如下\n\n/**\n * 1.两数之和 \n * 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。\n * 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。\n * 你可以按任意顺序返回答案。\n *  \n …",
           "link": "https://juejin.cn/post/7342718848816381964",
           "publishedOn": "2024-03-05T13:05:55.000Z",
-          "wordCount": 19,
+          "wordCount": 1620,
           "title": "前端妹子失业在家刷题，开发了个leetcode刷题工具，效率直接翻倍！",
           "imageUrl": null
         },
@@ -733,7 +743,7 @@
           "description": "unocss 究竟比 tailwindcss 快多少？\n前言\n我们知道 unocss 很快，也许是目前最快的原子化 CSS 引擎 (没有之一)。\nunocss 解释它为什么这么快的原因，是因为它不用去解析 CSS 抽象语法树，直接在 content 里面通过正则表达式从内容中提取 token，然后生成样式。\n这点从 unocss 官方提供目前最新的测试结果可以看到（2023-08-11 版本）:\n11/8/2023, 3:53:41 PM\n1656 utilities | x200 runs (75% build time)\n\nnone                             33.99 ms / delta.      0.00 ms\nunocss       v0.57.2            359.46 ms / delta.    325.47 ms (x1.00)\ntailwindcss  v3.3.5            1238.25 ms / delta.   1204.26 ms (x3.70)\nwindicss     v3.5.6            1742.45 ms / delta.   1708.46 ms (x5.25)\n\n可以看到 unocss 比 tailwindcss 快 3.7 倍左右。\n其中官方的 unocss 测试素材，使用的是 vite + @unocss/vite，tailwindcss 测试素材则是 vite + postcss + tailwindcss。\n可是假如我们以 vite / webpack 插件的方式去使用 unocss 的话，默认是不支持 tailwindcss 那些 @apply, @screen, theme() 这些 CSS 指令的。\n这时候我们就需要额外去安装 @unocss/…",
           "link": "https://juejin.cn/post/7342693286447087625",
           "publishedOn": "2024-03-05T12:03:20.000Z",
-          "wordCount": 19,
+          "wordCount": 1434,
           "title": "unocss 究竟比 tailwindcss 快多少？",
           "imageUrl": null
         },
@@ -743,7 +753,7 @@
           "description": "theme: yu\n前言\n一年一度个税年度综合汇算清缴的时间又到了，作为开发者的你，肯定过了起征点了吧。🫤\n去年退税退了 5676 ，今年看这个估计得补好几千，但是个税年度汇算清缴还没有预约到，抓紧提前算算金额，做做心理建设。\\同时，了解个税都扣在哪了，才可以让我们合理避税~\n下面我们简单聊聊 补税 和 预缴 ，顺便讲讲专项附加扣除应该怎么填。\n以及带大家写一个个税计算器。你可以通过码上掘金查看 在线 svelte(无UI) 版 ，后续也会推出其他框架版。\njcode\n为什么你需要补税？\n大多数情况下，公司发工资会替你把税交了，这个行为叫预缴。\n为什么预缴呢？因为国家规定：\n《个人所得税扣缴申报管理办法(试行)》(国家税务总局公告2018年第61号发布) \n这也就是我们每个月发工资都会扣税的原因。\n那为什么需要补税呢？因为预缴是根据你在当前公司的收入进行缴税，公司会计算你的累进税率，你会发现每到年底税交的越来越高了，这是累进预缴导致的。\n有些人在年中换了工作了，新公司不知道你之前已经交到哪个阶段的个税了，因此预缴时计税金额会重新累计。\n因此补税的原因不外乎：\n工作变更\n公司主体变更（如：公司拆分）\n为什么说预缴是天才发明？\n预缴制简直是个天才发明，不但会大大减少逃税人数，而且能减轻税务工作量（转移至各公司），且可以让缴税的人对税率的感知没有那么强烈。\n达成这种效果主要原因有两点，分别是 损失厌恶 、 心理账户 。\n损失厌恶\n人们对损失的敏感程度通常远远大于对同等价值的收益的敏感程度\n人们对损失的敏感程度通常远远大于对同等价值的收益的敏感程度\n人们对损失的敏感程度通常远远大于对同等价值的收益的敏感程度\n牢记这句话。\n一个最简单的例子，短视频中经常会出现的 最有效的 6 条学习方式，最后一条最重要 。这种放大损失的语言，常常能诱发更高的完播率。\n虽然我很讨厌以这种方式留住用户…",
           "link": "https://juejin.cn/post/7342511044290789430",
           "publishedOn": "2024-03-05T05:27:00.000Z",
-          "wordCount": 19,
+          "wordCount": 2958,
           "title": "💀填好个税，一年多给几千块 ~ 聊聊个人所得税，你该退税还是补税？写一个个税的计算器（退税、补税、个税）",
           "imageUrl": null
         },
@@ -753,7 +763,7 @@
           "description": "今天打开vue项目的时候，弹出警告 The \"TypeScript Vue Plugin (Volar)\" extension is no longer needed in version 2.0. Please uninstall it.  然后发现vue插件前几天更新了，翻译过来记录一下，原文链接：\n特性\n混合模式\nTakeover 模式已弃用。扩展现在默认具有与 Takeover 模式相同的性能。\n将 TypeScript 语言支持从 Vue 语言服务器移至 TypeScript 插件 (#3788)\n集成了所有 TypeScript 编辑器功能\n当内部 TypeScript 扩展被禁用或安装了 \"TypeScript Vue Plugin\" 扩展时发出警告\n使用 TypeScript LanguageService 迁移到命名管道服务器 (#3908, #3916)\n不再报告 typescript.tsdk 重复注册错误\nlanguage-service: 在 TypeScript 插件中重新实现了组件标签语义令牌 (#3915)\nlanguage-service: 在 TypeScript 插件中重新实现了自动导入补丁 (#3917)\nlanguage-service: 在请求自动插入 .value 时确保 tsserver 准备就绪 (#3914)\n升级到 Volar 2.0 和 2.1 (#3736, #3906)\nvscode: 扩展现在兼容 Volar Labs v2\nvscode: 移除了 volar.format.initialIndent 选项，替换为 3 个新选项：\nvue.format.template.initialIndent\nvue.format.script.initialIndent\nvue.format.style.initialIn…",
           "link": "https://juejin.cn/post/7342432361097871410",
           "publishedOn": "2024-03-05T03:15:28.000Z",
-          "wordCount": 19,
+          "wordCount": 1243,
           "title": "Vue vscode 插件版本更新：写TS不需要装两个插件了",
           "imageUrl": null
         },
@@ -763,7 +773,7 @@
           "description": "本文为稀土掘金技术社区首发签约文章，30天内禁止转载，30天后未获授权禁止转载，侵权必究！\n最近，群里聊到了一个很有意思的布局效果。大致效果如下所示，希望使用 CSS 实现如下所示的布局效果：\n\n正常而言，我们的 HTML 结构大致是如下所示：\n<div class=\"g-container\">\n    <div class=\"g-nav\">\n        <ul>\n            <li>Tab 1</li>\n            <li>Tab 2</li>\n            <li>Tab 3</li>\n            <li>Tab 4</li>\n        </ul>\n    </div>\n    <div class=\"g-main\">\n        <ul class=\"g-content\">\n            <li>...</li>\n            <li>...</li>\n            <li>...</li>\n            <li>...</li>\n        </ul>\n    </div>\n</div>\n\n对于 Hover 导航 Tab 时候的内容切换，暂且不谈。本文，我们核心想探讨的是两个点：\n一是对于如下所示的不规则布局，应该如何实现：\n\n并且，这里我们可能还需要给它加上阴影效果：\n\n如何配合 Hover 动作，实现整个切换效果\n带着这两个问题，我们一起来尝试慢慢把这个效果实现。\n借助伪元素实现不规则按钮\n首先，我们需要实现这个效果：\n\n这个，其实在很多篇文章都有提及过：\n由小见大！不规则造型按钮解决方案\n使用 CSS 轻松实现高频出现的各类奇形怪状按钮\n想一想，这里其实就是竖向的 Chrome 分 Tab 的效果：\n像是这样：\n\n我们对这个按钮形状拆解一下，这里其实是 3 …",
           "link": "https://juejin.cn/post/7342400998856065039",
           "publishedOn": "2024-03-05T01:55:32.000Z",
-          "wordCount": 19,
+          "wordCount": 2216,
           "title": "【布局进阶】巧用 :has & drop-shadow 实现复杂布局效果",
           "imageUrl": null
         },
@@ -773,7 +783,7 @@
           "description": "B站搜索“云前端”观看视频版\n在 VueJS Amsterdam 2004 大会首日，Vue 创始人 Evan You 进行了开场主旨演讲。他首先回顾了 Vue 十年以来的累累硕果，指出 VueJS 从一个视图层工具，成功演化出全流程的社区生态。\nVue 3.4\n\n谈到 Vue 3 的发展时他回顾了 2023 年末发布的 Vue 3.4。在这个版本中，Vue 完全重写了模板解析器；新的解析器不再依赖于许多正则表达式和前瞻搜索等，而是使用基于 htmlparser2 中分词器的状态机 -- 这使得解析速度至少提高了两倍。\n3.4 还对响应式系统进行了实质性的重构，目的是提高计算属性的重新计算效率。在 3.4 之前，即使计算结果保持不变，每次 count.value 都将触发 watchEffect 的回调；而 3.4 之后的回调现在仅在计算结果实际更改时触发。\n简化支持 v-model 的 defineModel 和标识为冒号 : 的 v-bind 同名速记也是这个版本的特性。\nVue 3.5\n\n接下来 Evan You 透露了在即将到来的 Vue 3.5 版本中包含的特性，这个版本主要是在框架底层的优化。\n一方面是响应式系统上的提升。包括在调度任务中使用位运算标记优化 queueJob 任务队列，这项优化被从 vue 试验性的无虚拟 DOM 版本 Vue Vapor 中移植回主版本中，使得内存使用率得到了 56% 的提升。\n还有一项对数组追踪的优化：在处理响应式的大数组时，此项优化甚至可以获得十倍性能收益；对于格外重视性能的开发者来说，Vue 内置的数组方法并不完美。@vue/reactivity 暴露的readArray 方法是一个面向性能的高级响应式函数，它返回原始数组并对其进行完整跟踪，并可以用入参指示是否深度跟踪响应式数组。\n公开readArray的原因在于，对于某些内置数组函数无法很好覆盖的高性能操作场景，这个API非常有用。例如，Vue 的 v-for 循环会使用此功能，响应式矩阵的乘法运算可以显著受益以提升计算速度，以及新增的 Object.groupBy API 可能在未来广泛应用，由于它并非数组实例方法，因此不能自动进行优化，但可以通过用户自定义代码结合 readArray 来提高性能。\n在 SSR 服务器渲染方面，也优化了 Suspend 等特性。\nVapor\n\n除了 Vue 3.5，受到 Solid.js 启发的无虚拟 DOM 版本的 Vue Vapor 日臻完善，已经可以在 playground 中运行 TodoMVC 程序。\n在计划中，组件级别的优先级控制将是重要工作，这将保证即便组件数量庞大，整体性能也不会受到影响，不知道是否会借鉴 React 的异步可中断方式呢？\nDX\n\n在开发体验方面，vite 的新版本中可能会包含新的打包工具 Rolldown，这是一个具有兼容性 API 的 Rust 移植版 Rollup。该工具已经经历了长期的开发，目前已经支持 tree shaking 等特性，基本达到了 ESbuild 两倍的编译速度。等其能够同时替换 Rollup 和 ESbuild 之后，开发者无论是在开发模式还是生产模式下，都能无缝地自动获得巨大的性能收益。\n从更底层来说，Rolldown 使用了一项叫做 Oxc 的工具，Oxc 的核心是一种用 Rust 编写的\n高性能 JS Parser，在其体系中还有 Typescript 转移等工具。值得注意的是，该工具一旦最终成型，构建 Vue 工程时 Babel、ESbuild、Rollup、Tercer 等工具将合而为一，开发过程会变得统一、高效且易于理解。\nWe are far from done\n最后，Evan You 再次回顾了十年的历程，表示 VueJS 生态从刚刚推出时受到的竭诚欢迎，真可谓占尽天时，那种勃勃生机、万物竟发的境界，犹在眼前。而在十年之后，团队和社区仍在做出很多有趣的贡献，虽然从 Vue 2 到 Vue 3 的升级过程坎坷，但无论怎么样，随着 Vue 2 的官方支持正式结束，新的社区仍会保持优势。\nVue 或许并不总是时髦的新玩意，但会致力于总是做好新的改变\nB站搜索“云前端”观看视频版",
           "link": "https://juejin.cn/post/7342384485696520246",
           "publishedOn": "2024-03-04T13:49:25.000Z",
-          "wordCount": 19,
+          "wordCount": 1298,
           "title": "Rust! 无VDom! 尤雨溪解析 Vue.js 2024 新特性",
           "imageUrl": null
         },
@@ -783,7 +793,7 @@
           "description": "前言\n\n2024.02.20\n下午摸鱼时接到一个客户的数字孪生项目的需求，客户什么也没说，就要求“炫酷”和“科技感”地图，还要把他们的模型都放上去，起初我以为又是一个可视化大屏的项目，准备用高德地图应付过去，然后他们又在群里发什么要求高之类的，说什么高德、百度、Mapbox、Cesium之类框架都试过了，满足不了需求，好嘛，这下给我犯了难了，会的技术栈全都给我排除了, 手撸Three.js源码我可不干，于是就在网上晃悠，尝试找一些灵感\n2024.02.24\n又试了几个地图框架，还是不行，被客户和经理催了一顿，再不行他们要换人了\n2024.02.28\n在QQ群里闲逛，发现了群友发的一个叫 Mapmost SDK for WebGL 的地图框架，于是抱着试一试的态度做了一下，好嘛，一下就对客户味了\n\n2024.03.04\n后面我发现这个SDK蛮有意思，于是把我实现客户需求的过程记录下来，分享给大家\n初始化\n这个SDK看似是个商用软件，不过目前是免费试用，官网上申请一下就行了，然后按照他们的文档，填一下参数，就能初始化一个地图，和一般的地图SDK用法差不多\n\n\n    <script src ='https://delivery.mapmost.com/cdn/sdk/webgl/v3.5.0/mapmost-webgl-min.js'></script>\n    <script>\n        let mapmost = window.mapmost\n         /* \n        * 初始化地图\n        */\n        let map = new mapmost.Map({\n            container: 'map', //地图容器\n            style:'http://192.168.126.44/mms-style/d…",
           "link": "https://juejin.cn/post/7342279484488138802",
           "publishedOn": "2024-03-04T09:18:46.000Z",
-          "wordCount": 19,
+          "wordCount": 2511,
           "title": "原来科技感的三维地图可以这么简单实现",
           "imageUrl": null
         },
@@ -793,7 +803,7 @@
           "description": "【💥 重磅新闻 💥】JavaScript 服务端运行时环境又出新秀，LLRT 来势汹汹！🌟\n嘿，各位 JavaScript 开发者们，你们知道吗？最近有个叫 LLRT 的新运行时环境火了起来，据说速度比 Node.js 快了 10 倍！🏎️\n前有 Deno，后有 Bun，现在又来了个 LLRT，Node.js 这些年的日子可真是“不是被超越就是在被超越的路上”啊！😅\n那么问题来了，你觉得 LLRT 的出现会对 Node.js 造成威胁吗？\n什么是 LLRT\nLLRT（低延迟运行时）是亚马逊推出的一种轻量级 JavaScript 运行时。旨在满足对快速高效的无服务器应用程序不断增长的需求。\nLLRT 优势：\n🔥 不使用 V8 引擎，而是采用 Rust 构建，确保高效内存使用。就像给应用程序装了涡轮增压器，速度瞬间飙升！💨\n🔥 使用 QuickJS 作为 JavaScript 引擎，快速启动不是梦！就像闪电一样快，让你的应用程序瞬间响应！⚡\n如下所示 LLRT 和 Node.js 20 运行速度对比，可以看出\nLLRT - DynamoDB Put, ARM, 128MB:\n\nNode.js 20 - DynamoDB Put, ARM, 128MB:\n\nLLRT 兼容性\nLLRT 仅支持一小部分 Node.js API。它不是 Node.js 的替代品，也永远不会是。下面是部分支持的 API 和模块的高级概述。有关更多详细信息，请参阅 API 文档:https://github.com/awslabs/llrt/blob/main/API.md\n\nNode.js\nLLRT ⚠️\n\n\n\n\nbuffer\n✔︎\n✔︎️\n\n\nstreams\n✔︎\n✔︎*\n\n\nchild_process\n✔︎\n✔︎⏱\n\n\nnet:sockets\n✔︎\n✔︎⏱\n\n\nnet:server\n✔︎\n✔︎\n\n\ntls\n✔︎\n✘⏱\n\n\nfetch\n✔︎\n✔︎\n\n\nhttp\n✔︎\n✘⏱**\n\n\nhttps\n✔︎\n✘⏱**\n\n\nfs/promises\n✔︎\n✔︎\n\n\nfs\n✔︎\n✘⏱\n\n\npath\n✔︎\n✔︎\n\n\ntimers\n✔︎\n✔︎\n\n\nuuid\n✔︎\n✔︎\n\n\ncrypto\n✔︎\n✔︎\n\n\nprocess\n✔︎\n✔︎\n\n\nencoding\n✔︎\n✔︎\n\n\nconsole\n✔︎\n✔︎\n\n\nevents\n✔︎\n✔︎\n\n\nESM\n✔︎\n✔︎\n\n\nCJS\n✔︎\n✔︎\n\n\nasync/await\n✔︎\n✔︎\n\n\nOther modules\n✔︎\n✘\n\n\n\nLLRT 能否替代 Node.js\nLLRT 的出现确实对 Node.js 构成了一定程度的挑战，但这并不意味着 Node.js 会立即被淘汰。\n事实上，Node.js 在许多方面仍然具有优势，例如生态系统的庞大规模、广泛的社区支持和大量的现有项目。此外，Node.js 作为一个成熟的运行时环境，已经积累了大量的功能和模块，这些在 LLRT 中可能尚未实现。\n然而，LLRT 的出现确实为 JavaScript 服务端运行时环境带来了新的选择。对于那些对性能有较高要求、需要快速启动和低内存占用的项目，LLRT 可能是一个更好的选择。\n总之，LLRT 的出现对 Node.js 构成了一定程度的挑战，但这并不意味着 Node.js 会立即被淘汰。开发者可以根据项目需求和场景来选择最适合的运行时环境。\n参考连接:\nhttps://github.com/awslabs/llrt/blob/main/README.md\n写在最后\n公众号：前端开发爱好者 专注分享 web 前端相关技术文章、视频教程资源、热点资讯等，如果喜欢我的分享，给 🐟🐟 点一个赞 👍 或者 ➕关注 都是对我最大的支持。\n欢迎长按图片加好友，我会第一时间和你分享前端行业趋势，面试资源，学习途径等等。\n欢迎加我好友，我会第一时间和你分享前端行业趋势，面试资源，学习途径等等。\nWX: xuxuxu_yyy\n关注公众号后，在首页：\n回复 面试题，获取最新大厂面试资料。\n回复简历，获取 3200 套 简历模板。\n回复React实战，获取 React 最新实战教程。\n回复Vue实战，获取 Vue 最新实战教程。\n回复ts，获取 TypeScript 精讲课程。\n回复vite，获取 Vite 精讲课程。\n回复uniapp，获取 uniapp 精讲课程。\n回复js书籍，获取 js 进阶 必看书籍。\n回复Node，获取 Nodejs+koa2 实战教程。\n回复数据结构算法，获取数据结构算法教程。\n回复架构师，获取 架构师学习资源教程。\n更多教程资源应有尽有，欢迎关注获取",
           "link": "https://juejin.cn/post/7342153878065135667",
           "publishedOn": "2024-03-04T07:32:46.000Z",
-          "wordCount": 19,
+          "wordCount": 921,
           "title": "下一代 Node.js？运行速度狂飙 10 倍！！！",
           "imageUrl": null
         },
@@ -803,7 +813,7 @@
           "description": "theme: cyanosis\n写在开头\n哈喽，各位看客大大好呀😀。\n没错，正如题目，小编最近正在找工作中，不过是骑驴找马。经常刷掘金沸点，感觉形势很严峻，现在不敢随便裸辞了🥶。\n金三银四好像真的成为了过去式，感觉铜三铁四差不多！！！\n还记得以前，只要稍微上某招牌APP上瞄一眼，一会功夫就一大堆主动上门打招呼了（虽然很多都是外包）。现在呢，海投上千份，全是已读不回，邀约面试也是寥寥无几，屈指可数，这就是现状，你品，你细品。（当然，也可能是小编太菜了😁）\n不过，最近这两周还是断断续续面试了几家企业，而本章就来分享其中遇到的两道稍微比较有趣的题目叭。\n正文\n请设计一个 combinations 函数，它接收一个数字数组，要求返回这些数字的所有可能组合情况。\nfunction combinations(nums) { ... }\n\ncombinations([1]); // [[], [1]];\ncombinations([1, 2]); // [[], [1], [1, 2], [2]];\ncombinations([1, 2, 3]); // [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]];\n\n初看这题目，Em...好像是一个无序组合，刷题刷到过😃，心想这题稳了，一个二层循环就能搞定，完美拿下。\n先贴最终代码：\nfunction combinations(nums) {\n  // 开头加一个空组合，即不选择任何数字的情况\n  const result = [[]];\n  // 1. 遍历这些数字\n  for (let n of nums) {\n    // 获取当前结果一共有多少，作为子循环的次数\n    const length = result.length;\n    // 2. 子循环\n    for…",
           "link": "https://juejin.cn/post/7342064032060637199",
           "publishedOn": "2024-03-04T06:46:51.000Z",
-          "wordCount": 19,
+          "wordCount": 1458,
           "title": "两道JS面试题🤡🤡🤡",
           "imageUrl": null
         },
@@ -813,7 +823,7 @@
           "description": "本文为稀土掘金技术社区首发签约文章，30天内禁止转载，30天后未获授权禁止转载，侵权必究！\n🌻 前言\n作为一个前端工程师，浏览器是我们密不可分的朋友，想要深耕前端，就必须和浏览器“交心”💞。\n为什么你觉得偶尔看浏览器的工作原理，但总是忘呢😵‍💫，因为你没有形成一个完整的知识网络，你的记忆是碎片化的。正如人的神经网络，只有当你的记忆相互依赖，相互链接，才能形成长期稳定的记忆。\n所以本文我将用一条知识线将浏览器工作原理的知识串联起来，因为本文的目的是为了帮助大家建立浏览器基础的思维树，所以很多细节点不做过多阐述，先有了树，后面你在上面伸展枝叶就会发现清晰明了很多。欢迎点赞支持或评论指正。\n🪴一、了解进程、线程\n进程：计算机正在运行的一个程序的实例。每个进程都有自己的内存空间、系统资源（如文件描述符、I/O 等），以及一个或多个线程（执行指令的基本单位）；\n线程：线程是进程中的执行单元，是操作系统调度的最小单位。在一个进程中可以有多个线程，它们共享进程的资源，但拥有各自的执行流。线程是进程的一部分，同一个进程中的多个线程可以并发执行，共享进程的地址空间和系统资源。\n通俗的说，比如浏览器是一座工厂，进程就是工厂里的不同车间，线程是车间里的流水线，它是是工厂中的实际运作单位。\n你需要了解：\n进程具有独立性，所有进程互相隔离，独立运行。一个进程崩溃不会影响其他进程。进程与进程之间的通信，是通过进程间通信（Inter-Process Communication，简称IPC）来进行数据交换和协作的。\n一个进程包含多个线程，每个线程并行执行不同的任务。其中一个线程崩溃了，那么整个进程也就崩溃了。线程之间可以相互通信。\n并行和并发\n🚨关于并行和并发的概念一定要清晰，因为很多问题的根源或者性能优化方案都是依靠并行或并发的。\n并发是指多个任务在同一时间段内交替执行，从外部看似乎是同时执…",
           "link": "https://juejin.cn/post/7341983885726187559",
           "publishedOn": "2024-03-04T02:05:38.000Z",
-          "wordCount": 19,
+          "wordCount": 1033,
           "title": "✊构建浏览器工作原理知识体系（开篇）",
           "imageUrl": null
         },
@@ -823,7 +833,7 @@
           "description": "毕业半年多了，回顾从大学到现在搞过的很有意思的开源项目\n回想当年，在高考结束后我的分数并不高，然后被调剂到了工业设计，再到后来感觉对计算机更感兴趣，于是对了很久的线努力转专业到了计算机，之后废了九牛二虎之力在大二一年修完了计算机专业大一大二两年的课程，到了大三开始搞事就开始做了一些项目。我发现项目做多了就很容易将项目串联起来，这点非常有意思。\n本着分享与开源的精神，我与大家分享我的项目经验，我也就是凭借着这些项目成功在23届的秋招混进了字节，老大后来跟我说我是23届唯一一个双非进入我们大团队的，虽然我可能是当时秋招最菜的一个，但是最终还是混进去了，所以也算是希望分享一下为之付出的努力，与君共勉。计算机还是非常有意思的，我也希望能够保持对于技术的好奇心，同样也希望能做出一些有意思的项目来获得一丝成就感。\n实际上我也只是昨天突发奇想想总结分享一下我做过的项目，因为写过的东西还是比较多的，所以也总结了好久。其实这其中我觉得最重要的问题是为什么要做这些项目，有些是想解决平时遇到的问题，比如学校App不好用就做个好用的、网页不让复制我就做个解除复制限制的，也有些是想提升技术水平做的，比如我写过的Webpack相关的、用Canvas实现的简历编辑器，还有一些是希望深入研究的，比如在线文档协同系列、富文本编辑器相关的项目。下面介绍的都是我的开源项目，内容基本也是按照时间线来的，也欢迎关注我的 GitHub:WindrunnerMax 。\n此外需要声明的是，这很像是一篇论文的综述，文章的信息密度非常高，特别是很多与项目相关的链接，如果从零开始接受相关的内容还是需要一些时间的。\n山科小站小程序\nGitHub:SHST\n首先说说为什么要做这个小程序，这其中有个背景是当时学校有个查各类信息的软件叫智校园，但是这个App很不好用，经常崩溃，在某一天我上午第一节课下课后这个App就打不开了，导致我想…",
           "link": "https://juejin.cn/post/7341805821527113747",
           "publishedOn": "2024-03-04T01:38:17.000Z",
-          "wordCount": 19,
+          "wordCount": 1350,
           "title": "毕业半年多了，回顾从大学到现在搞过的很有意思的开源项目",
           "imageUrl": null
         },
@@ -833,18 +843,8 @@
           "description": "theme: smartblue\n前言\n前段时间老板心血来潮，要我们前端组对整个的项目都做一下接口防止重复请求的处理（似乎是有用户通过一些快速点击薅到了一些优惠券啥的）。。。听到这个需求，第一反应就是，防止薅羊毛最保险的方案不还是在服务端加限制吗？前端加限制能够拦截的毕竟有限。可老板就是执意要前端搞一下子，行吧，搞就搞吧，you happy jiu ok。\n虽然大部分的接口处理我们都是加了loading的，但又不能确保真的是每个接口都加了的，可是如果要一个接口一个接口的排查，那这维护了四五年的系统，成百上千的接口肯定要耗费非常多的精力，根本就是不现实的，所以就只能去做全局处理。下面就来总结一下这次的防重复请求的实现方案：\n方案一\n这个方案是最容易想到也是最朴实无华的一个方案：通过使用axios拦截器，在请求拦截器中开启全屏Loading，然后在响应拦截器中将Loading关闭。\n这个方案固然已经可以满足我们目前的需求，但不管三七二十一，直接搞个全屏Loading还是不太美观，何况在目前项目的接口处理逻辑中还有一些局部Loading，就有可能会出现Loading套Loading的情况，两个圈一起转，头皮发麻。\n方案二\n加Loading的方案不太友好，而对于同一个接口，如果传参都是一样的，一般来说都没有必要连续请求多次吧。那我们可不可以通过代码逻辑直接把完全相同的请求给拦截掉，不让它到达服务端呢？这个思路不错，我们说干就干。\n首先，我们要判断什么样的请求属于是相同请求：\n一个请求包含的内容不外乎就是请求方法，地址，参数以及请求发出的页面hash。那我们是不是就可以根据这几个数据把这个请求生成一个key来作为这个请求的标识呢？\n// 根据请求生成对应的key\nfunction generateReqKey(config, hash) {\n    const { method, u…",
           "link": "https://juejin.cn/post/7341840038964363283",
           "publishedOn": "2024-03-04T01:10:01.000Z",
-          "wordCount": 19,
+          "wordCount": 1561,
           "title": "前端接口防止重复请求实现方案",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7341617121955758090",
-          "author": "前端猫猫教",
-          "description": "大家好，这里是大家的林语冰。\n《前端猫猫教》每日 9 点半更新，坚持阅读，自律打卡，每天一次，进步一点。\n免责声明\n本文属于是语冰的直男翻译了属于是，略有删改，仅供粉丝参考。英文原味版请传送 Top 10 highest paid programming languages in 2023。\n\n本期共享的是 —— 地球上目前已知超过 200 种可用的编程语言，了解哪些语言在 2023 为开发者提供更高的薪水至关重要。\n过去一年里，DevJobsScanner 分析了来自地球各地超过 1000 万个开发职位空缺，辅助我们了解市场，以及人气最高和收入最高的语言。粉丝请注意，在这项研究中，我们主要关注来自美国就业市场的开发岗位，这不是具备代表性的结果，无法显着减少开发就业机会任何潜在的数据偏差。\n在纳入调查的 1000 万个开发职位中，存在 130 万个有涨薪。在这 130 万种语言中，有 230_000 种可以归类为编程语言。在这 230_000 份工作中，大约 86_000 个工作机会来自美国。\n10. Java\nJava 位列前十。Java 的工作机会大多要求非常高水平的经验，而且像 Spring 这样的 Java 框架的薪资也是业界最高。Java 开发者的平均年薪约为 11.8 万美元。\n平均工资：$118k\n薪资中位数：$117k\n就业岗位：23K 个工作\n9. Python\nPython 是如今人气最高的语言之一，也在薪资最高的工作中排名第九的。Python 是一种无类型的高级语言，它具有全方位的实用程序，从脚本和工具，到使用 Django 框架编写整个 Web App。Python 也大量用于数据科学。\n虽然 Python 开发者的平均工资为每年 12.5 万美元，但某些 Python 大神的薪资也高达每年 50 万美元。\n平均工资：$125K\n薪资中位数：12 万…",
-          "link": "https://juejin.cn/post/7341617121955758090",
-          "publishedOn": "2024-03-03T12:43:17.000Z",
-          "wordCount": 19,
-          "title": "2023 收入最高的十大编程语言",
           "imageUrl": null
         },
         {
@@ -853,7 +853,7 @@
           "description": "theme: channing-cyan\n技术无止境 创作不间断\n\n👏 2024年创作者训练营第1期来咯，如果你想\"变身\"为创作者，却不知如何下笔；如果你想让自己的作品会被更多人看见；如果你想能凭一己之力\"横扫\"掘金平台......那就快来和我们一起探索技术写作进阶之旅吧～！\n这一次为了培养新手作者们的创作习惯以及鼓励大家创作出更多优质的内容，除了一如既往的为大家准备了丰厚的奖品池外，还重磅推出了写作辅导群——创作者训练营群。\n群里一切都为创作者服务，会尽可能帮助大家创作出更多优质的内容，为大家提供活动相关问题解答、1v1的创作指导、单篇文章的辅导解析（不被推荐原因和修改建议）等等，快来加入吧 👀 👇\n参加活动的掘友添加掘金酱为好友，回复关键词「训练营」入群。\nps：之前有被移动到其他的企业微信好友的创作者，可以删除掘金酱好友，重新添加回复关键词就行\n✏️ 官方创作指南（持续更新）\n标题\n简介\n作者\n\n\n\n\n🔗 如何从 0 到 1 写好技术文章\n有想法想沉淀，动笔前却犯了难？本篇文章将通过五个步骤教你写一篇技术文章。\nPDI技术写作团队\n\n\n🔗 如何写作系列教程\n《如何写作通用教程》将写作拆解成五个部分，总结了在写作前、写作中和写作后三个阶段需要注意的写作要点和技巧，通读整个系列文档，可以帮助你初步搭建系统的基础写作知识。\nPDI技术写作团队\n\n\n\n👍 优秀案例赏析\n标题\n简介\n作者\n\n\n\n\n🚀3.40秒到231.84毫秒，我用Performance面板分析性能瓶颈全流程（多图流量预警⚠️）\n如何优化不是本文的关键，本文主要和大家一起学习如何使用performance面板来进行性能瓶颈的定位，学习面板的使用，找到性能瓶颈源码并解决问题。\n一只大加号\n\n\nMongoDB保姆级指南(上)：七万字从零到进阶，助你掌握又一款强大的NoSQL！\n关于MongoDB相关的…",
           "link": "https://juejin.cn/post/7339357105144676406",
           "publishedOn": "2024-02-26T06:40:57.000Z",
-          "wordCount": 19,
+          "wordCount": 1182,
           "title": "创作者训练营 · 助力每一位创作新星，写出个人影响力！",
           "imageUrl": null
         }
@@ -910,7 +910,7 @@
           "description": "对标 Github Copilot 的百度 Baidu Comate 服务，有用过的朋友吗？\n根据官网描述，智能代码助手 Baidu Comate 是基于文心大模型，结合百度积累多年的编程现场大数据和外部优秀开源数据，打造的新一代编码辅助工具，可以释放十倍软件生产力。\n虽然可以免费试用，但是看到每年500的价格，着实捏一把冷汗，嗯，我还是去看看您对标的产品吧。\n感觉很多产品在宣传时都喜欢说可以对标openai、看齐微软、超越谷歌，后面还可能要对标sora哈哈，但是真正言行一致的有几个呢？反而像是逆向给对标的公司打了一波免费广告。\n[7338596022676881445#Sora 技术探索#]",
           "link": "https://juejin.cn/pin/7344571269554323519",
           "publishedOn": "2024-03-10T05:12:17.000Z",
-          "wordCount": 552,
+          "wordCount": 551,
           "title": "对标 Github Copilot 的百度 Baidu Comate 服务，有用过的朋友吗？ 根据官网描述，智能代码助手 Baidu Comate 是基于文心大模型，结合百度积累多年的编程现场大...",
           "imageUrl": null
         },
@@ -920,7 +920,7 @@
           "description": "fast-create-varibale支持空内容直接创建变量，检测到无内容，再选择要创建的选项后，会让你输入变量名，另外这个b站上传的视频是react组件，我可以当vue来写[呲牙]",
           "link": "https://juejin.cn/pin/7343548913034346515",
           "publishedOn": "2024-03-08T06:01:47.000Z",
-          "wordCount": 497,
+          "wordCount": 496,
           "title": "fast-create-varibale支持空内容直接创建变量，检测到无内容，再选择要创建的选项后，会让你输入变量名，另外这个b站上传的视频是react组件，我可以当vue来写[呲...",
           "imageUrl": null
         },
@@ -980,7 +980,7 @@
           "description": "上榜GitHub Trending啦~\nhttps://vfox.lhan.me/",
           "link": "https://juejin.cn/pin/7341394494901305381",
           "publishedOn": "2024-03-03T03:00:16.000Z",
-          "wordCount": 514,
+          "wordCount": 513,
           "title": "上榜GitHub Trending啦~ https://vfox.lhan.me/",
           "imageUrl": null
         },
