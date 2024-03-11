@@ -1872,6 +1872,66 @@ vue.format.style.initialIn…</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7342420969875275827"
+                        open
+                      >
+                        <summary class="article-expander__title">学会这个VS Code技巧，摸鱼的时间又变多了</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7342420969875275827">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>vscode 用户片段
+上班不划水，那还上个鬼~
+呐呐呐，，今天我又来给大家安利一个个人甚至是团队提高编码效率的好东西——vscode语法提示之用户片段。
+什么是用户片段
+官方介绍：In Visual Studio Code, snippets appear in IntelliSense (Ctrl+Space) mixed with other suggestions, as well as in a dedicated snippet picker (Insert Snippet in the Command Palette).
+简而言之就是：咱们输入一些单词前缀时，会自动匹配和提示跟这些前缀相关的内容，让我们方便输入我们想要输入的内容。看一下以下官方示例：
+
+用户片段配置后会在我们输入一些相关词汇前缀的时候提示我们，而选中对应的提示内容，就是我们设置的用户片段了。
+哦豁，这不就是低代码的一种吗！其实开发过程中很多代码和逻辑都是重复的。如果我们将一些重复的代码和逻辑，都配置成用户片段，写出前缀就会提示对应的内容，这效果就有点类似于CodePilot
+用户片段用途
+之所以叫做用户片段，是因为这东西可以根据个人需求自定义化，可以创建归属于语言、项目、用户的用户片段，这意味着不同的语言（css、html、javascript…）、项目可以根据需要设置不同的片段提示，也可以设置全局的片段提示，在任何地方都能用。
+一些平时常用的类似语法，比如打印日志、导入内容、react/vue语法模板、增删查改操作等都可以进行配置，需要用到的时候直接输入前缀匹配对应的内容即可。
+比如说前端的同学平常开发react，可能需要react的模板代码，写写useState和useEffect这些，可以类似这样使用：
+
+总的来说，它可以帮助我们划水摸鱼提高个人或团队的编程效率，使用这个，个人可以配置属于自己的专有提示，团队也可以在项目中放置对应的提示模板，提高编程效率的同时，也可以统一编程代码风格！
+用户片段怎么使用
+根据自己需求手动创建配置，点击文件→ 首选项 → 配置用户代码片段（或按Ctrl + Shift + P快捷键，然后输入代码片段）
+
+
+（1）点击新建全局代码片段文件会新建不限于项目的用户片段文件
+-   点击新建全局代码片段文件后，输入文件名，然后按下”Enter”键，就会跳转全局代码片段的文件
+
+
+（2）点击新建“xxx”文件夹的代码片段文件会新建项目内部的代码片段文件。
+-   输入用户片段文件名
+
+输入之后按下“Enter”键就会生成一个有效范围在项目内的文件，如图所示为文件的配置模板。这里大概讲一下常见的配置项，如果需要深入了解，可以访问官网学习。
+
+（3）语法：如上，模板给出的示例配置为常用的配置项。从外到内看，这是一个json文件，删除掉对于代码片段的解释，然后解开注释符。
+对象属性：作为json对象的key，没有其他的作用，这里对应”Print to console”；
+scope：代码片段应用的语言，用逗号隔开可以写多个；
+prefix：语法提示的前缀，比如这里写了一个为log，那么当你在写代码时，打出log的时候，就会有相关的提示，具体展示可以参考最上面的官方示例；
+body：提示的内容，点击对应的代码片段提示之后要展示什么内容，就在这里定义了；
+description: 代码片段描述，例如你这个代码片段提示是干嘛的，噼里啪啦写一下。
+使用别人写好的语法提示插件 输入想要的语言，然后使用@category:”snippets”就可以找出跟用户片段相关的插件，安装插件后，就可以使用这些插件自带的用户片段内容了。
+
+各种语言的都有，比如说你要搜react的，如下：
+
+查看插件，可以发现它提供了很多提示，光是console的就有很多，不过常用的可能才几个，比如“clo”
+
+备注
+snippets官网链接：https://code.visualstudio.com/docs/editor/userdefinedsnippets</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7342400998856065039"
                         open
                       >
@@ -2067,65 +2127,6 @@ ServBay是一个集成式、图形化的本地化Web开发环境。开发者通�
 【内推码】EVVG83
 【投递链接】https://sourl.cn/SUhk4b</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7342384485696520246"
-                        open
-                      >
-                        <summary class="article-expander__title">Rust! 无VDom! 尤雨溪解析 Vue.js 2024 新特性</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7342384485696520246">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>B站搜索“云前端”观看视频版
-在 VueJS Amsterdam 2004 大会首日，Vue 创始人 Evan You 进行了开场主旨演讲。他首先回顾了 Vue 十年以来的累累硕果，指出 VueJS 从一个视图层工具，成功演化出全流程的社区生态。
-Vue 3.4
-
-谈到 Vue 3 的发展时他回顾了 2023 年末发布的 Vue 3.4。在这个版本中，Vue 完全重写了模板解析器；新的解析器不再依赖于许多正则表达式和前瞻搜索等，而是使用基于 htmlparser2 中分词器的状态机 -- 这使得解析速度至少提高了两倍。
-3.4 还对响应式系统进行了实质性的重构，目的是提高计算属性的重新计算效率。在 3.4 之前，即使计算结果保持不变，每次 count.value 都将触发 watchEffect 的回调；而 3.4 之后的回调现在仅在计算结果实际更改时触发。
-简化支持 v-model 的 defineModel 和标识为冒号 : 的 v-bind 同名速记也是这个版本的特性。
-Vue 3.5
-
-接下来 Evan You 透露了在即将到来的 Vue 3.5 版本中包含的特性，这个版本主要是在框架底层的优化。
-一方面是响应式系统上的提升。包括在调度任务中使用位运算标记优化 queueJob 任务队列，这项优化被从 vue 试验性的无虚拟 DOM 版本 Vue Vapor 中移植回主版本中，使得内存使用率得到了 56% 的提升。
-还有一项对数组追踪的优化：在处理响应式的大数组时，此项优化甚至可以获得十倍性能收益；对于格外重视性能的开发者来说，Vue 内置的数组方法并不完美。@vue/reactivity 暴露的readArray 方法是一个面向性能的高级响应式函数，它返回原始数组并对其进行完整跟踪，并可以用入参指示是否深度跟踪响应式数组。
-公开readArray的原因在于，对于某些内置数组函数无法很好覆盖的高性能操作场景，这个API非常有用。例如，Vue 的 v-for 循环会使用此功能，响应式矩阵的乘法运算可以显著受益以提升计算速度，以及新增的 Object.groupBy API 可能在未来广泛应用，由于它并非数组实例方法，因此不能自动进行优化，但可以通过用户自定义代码结合 readArray 来提高性能。
-在 SSR 服务器渲染方面，也优化了 Suspend 等特性。
-Vapor
-
-除了 Vue 3.5，受到 Solid.js 启发的无虚拟 DOM 版本的 Vue Vapor 日臻完善，已经可以在 playground 中运行 TodoMVC 程序。
-在计划中，组件级别的优先级控制将是重要工作，这将保证即便组件数量庞大，整体性能也不会受到影响，不知道是否会借鉴 React 的异步可中断方式呢？
-DX
-
-在开发体验方面，vite 的新版本中可能会包含新的打包工具 Rolldown，这是一个具有兼容性 API 的 Rust 移植版 Rollup。该工具已经经历了长期的开发，目前已经支持 tree shaking 等特性，基本达到了 ESbuild 两倍的编译速度。等其能够同时替换 Rollup 和 ESbuild 之后，开发者无论是在开发模式还是生产模式下，都能无缝地自动获得巨大的性能收益。
-从更底层来说，Rolldown 使用了一项叫做 Oxc 的工具，Oxc 的核心是一种用 Rust 编写的
-高性能 JS Parser，在其体系中还有 Typescript 转移等工具。值得注意的是，该工具一旦最终成型，构建 Vue 工程时 Babel、ESbuild、Rollup、Tercer 等工具将合而为一，开发过程会变得统一、高效且易于理解。
-We are far from done
-最后，Evan You 再次回顾了十年的历程，表示 VueJS 生态从刚刚推出时受到的竭诚欢迎，真可谓占尽天时，那种勃勃生机、万物竟发的境界，犹在眼前。而在十年之后，团队和社区仍在做出很多有趣的贡献，虽然从 Vue 2 到 Vue 3 的升级过程坎坷，但无论怎么样，随着 Vue 2 的官方支持正式结束，新的社区仍会保持优势。
-Vue 或许并不总是时髦的新玩意，但会致力于总是做好新的改变
-B站搜索“云前端”观看视频版</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4446,8 +4447,8 @@ iFixit 网站拆解了苹果头盔，证实了 CPU 是 M2 芯片，跟 MacBook �
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8233125999">
-        <time id="build-timestamp" datetime="2024-03-11T12:55:44.654Z">2024-03-11T12:55:44.654Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8235792312">
+        <time id="build-timestamp" datetime="2024-03-11T15:53:47.515Z">2024-03-11T15:53:47.515Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

@@ -64,7 +64,7 @@
           "description": "音视频合成的时候，有倍速合成的需求，起初，我以为这只是个手到擒来的小需求，细究之下发现问题并不简单……",
           "link": "https://www.zhangxinxu.com/wordpress/2024/02/js-audioencoder-backplayrate-audiobuffer/",
           "publishedOn": "2024-02-29T14:22:22.000Z",
-          "wordCount": 1723,
+          "wordCount": 1724,
           "title": "不改变音调情况下Audio音频的倍速合成JS实现",
           "imageUrl": null
         }
@@ -723,7 +723,7 @@
           "description": "序言\n如果打开一个文件，看到的全是满屏幕的 import 语句，这将是一种怎样的体验？\n密密麻麻的import语句不仅仅是一种视觉上的冲击，更是对代码组织结构的一种考验。\n我们是如何做到让import“占领满屏“的了，又该如何优雅地管理这些import语句呢？\n本文将从产生大量import语句的原因、可能带来的问题以及如何优化和管理import语句几个角度来进行探讨。\n\nimport是如何“占领满屏“的？\n《拒绝使用模块重导（Re-export）》\n模块重导是一种通用的技术。在腾讯、字节、阿里等各大厂的组件库中都有大量使用。\n如：字节的arco-design组件库中的组件：https://github.com/arco-design/arco-design/blob/main/components/index.tsx\n通过重导在comonents/index.tsx文件暴露所有组件，在使用时一个import就可以使用N个组件了。\n// 不使用重导\nimport Modal from '@arco-design/web-react/es/Modal'\nimport Checkbox from '@arco-design/web-react/es/Checkbox'\nimport Message from '@arco-design/web-react/es/Message'\n...\n\n// 使用模块重导\nimport { Modal, Checkbox, Message} from '@arco-design/web-react'\n\n\nRe-export一般用于收拢同类型的模块、一般都是以文件夹为单位，如components、routes、utils、hooks、stories等都通过各自的index.tsx暴露，这样就能极大程度的简化导入路径、提升代码可读性、可维护性。\nR…",
           "link": "https://juejin.cn/post/7344571285848768524",
           "publishedOn": "2024-03-10T10:10:26.000Z",
-          "wordCount": 1834,
+          "wordCount": 1852,
           "title": "不要再写满屏import导入啦！🔥",
           "imageUrl": null
         },
@@ -858,6 +858,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7342420969875275827",
+          "author": "Eachan",
+          "description": "vscode 用户片段\n上班不划水，那还上个鬼~\n呐呐呐，，今天我又来给大家安利一个个人甚至是团队提高编码效率的好东西——vscode语法提示之用户片段。\n什么是用户片段\n官方介绍：In Visual Studio Code, snippets appear in IntelliSense (Ctrl+Space) mixed with other suggestions, as well as in a dedicated snippet picker (Insert Snippet in the Command Palette).\n简而言之就是：咱们输入一些单词前缀时，会自动匹配和提示跟这些前缀相关的内容，让我们方便输入我们想要输入的内容。看一下以下官方示例：\n\n用户片段配置后会在我们输入一些相关词汇前缀的时候提示我们，而选中对应的提示内容，就是我们设置的用户片段了。\n哦豁，这不就是低代码的一种吗！其实开发过程中很多代码和逻辑都是重复的。如果我们将一些重复的代码和逻辑，都配置成用户片段，写出前缀就会提示对应的内容，这效果就有点类似于CodePilot\n用户片段用途\n之所以叫做用户片段，是因为这东西可以根据个人需求自定义化，可以创建归属于语言、项目、用户的用户片段，这意味着不同的语言（css、html、javascript…）、项目可以根据需要设置不同的片段提示，也可以设置全局的片段提示，在任何地方都能用。\n一些平时常用的类似语法，比如打印日志、导入内容、react/vue语法模板、增删查改操作等都可以进行配置，需要用到的时候直接输入前缀匹配对应的内容即可。\n比如说前端的同学平常开发react，可能需要react的模板代码，写写useState和useEffect这些，可以类似这样使用：\n\n总的来说，它可以帮助我们划水摸鱼提高个人或团队的编程效率，使用这个，个人可以配置属于自己的专有提示，团队也可以在项目中放置对应的提示模板，提高编程效率的同时，也可以统一编程代码风格！\n用户片段怎么使用\n根据自己需求手动创建配置，点击文件→ 首选项 → 配置用户代码片段（或按Ctrl + Shift + P快捷键，然后输入代码片段）\n\n\n（1）点击新建全局代码片段文件会新建不限于项目的用户片段文件\n-   点击新建全局代码片段文件后，输入文件名，然后按下”Enter”键，就会跳转全局代码片段的文件\n\n\n（2）点击新建“xxx”文件夹的代码片段文件会新建项目内部的代码片段文件。\n-   输入用户片段文件名\n\n输入之后按下“Enter”键就会生成一个有效范围在项目内的文件，如图所示为文件的配置模板。这里大概讲一下常见的配置项，如果需要深入了解，可以访问官网学习。\n\n（3）语法：如上，模板给出的示例配置为常用的配置项。从外到内看，这是一个json文件，删除掉对于代码片段的解释，然后解开注释符。\n对象属性：作为json对象的key，没有其他的作用，这里对应”Print to console”；\nscope：代码片段应用的语言，用逗号隔开可以写多个；\nprefix：语法提示的前缀，比如这里写了一个为log，那么当你在写代码时，打出log的时候，就会有相关的提示，具体展示可以参考最上面的官方示例；\nbody：提示的内容，点击对应的代码片段提示之后要展示什么内容，就在这里定义了；\ndescription: 代码片段描述，例如你这个代码片段提示是干嘛的，噼里啪啦写一下。\n使用别人写好的语法提示插件 输入想要的语言，然后使用@category:”snippets”就可以找出跟用户片段相关的插件，安装插件后，就可以使用这些插件自带的用户片段内容了。\n\n各种语言的都有，比如说你要搜react的，如下：\n\n查看插件，可以发现它提供了很多提示，光是console的就有很多，不过常用的可能才几个，比如“clo”\n\n备注\nsnippets官网链接：https://code.visualstudio.com/docs/editor/userdefinedsnippets",
+          "link": "https://juejin.cn/post/7342420969875275827",
+          "publishedOn": "2024-03-05T02:12:03.000Z",
+          "wordCount": 935,
+          "title": "学会这个VS Code技巧，摸鱼的时间又变多了",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7342400998856065039",
           "author": "Chokcoco",
           "description": "本文为稀土掘金技术社区首发签约文章，30天内禁止转载，30天后未获授权禁止转载，侵权必究！\n最近，群里聊到了一个很有意思的布局效果。大致效果如下所示，希望使用 CSS 实现如下所示的布局效果：\n\n正常而言，我们的 HTML 结构大致是如下所示：\n<div class=\"g-container\">\n    <div class=\"g-nav\">\n        <ul>\n            <li>Tab 1</li>\n            <li>Tab 2</li>\n            <li>Tab 3</li>\n            <li>Tab 4</li>\n        </ul>\n    </div>\n    <div class=\"g-main\">\n        <ul class=\"g-content\">\n            <li>...</li>\n            <li>...</li>\n            <li>...</li>\n            <li>...</li>\n        </ul>\n    </div>\n</div>\n\n对于 Hover 导航 Tab 时候的内容切换，暂且不谈。本文，我们核心想探讨的是两个点：\n一是对于如下所示的不规则布局，应该如何实现：\n\n并且，这里我们可能还需要给它加上阴影效果：\n\n如何配合 Hover 动作，实现整个切换效果\n带着这两个问题，我们一起来尝试慢慢把这个效果实现。\n借助伪元素实现不规则按钮\n首先，我们需要实现这个效果：\n\n这个，其实在很多篇文章都有提及过：\n由小见大！不规则造型按钮解决方案\n使用 CSS 轻松实现高频出现的各类奇形怪状按钮\n想一想，这里其实就是竖向的 Chrome 分 Tab 的效果：\n像是这样：\n\n我们对这个按钮形状拆解一下，这里其实是 3 …",
@@ -865,16 +875,6 @@
           "publishedOn": "2024-03-05T01:55:32.000Z",
           "wordCount": 2216,
           "title": "【布局进阶】巧用 :has & drop-shadow 实现复杂布局效果",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7342384485696520246",
-          "author": "云前端",
-          "description": "B站搜索“云前端”观看视频版\n在 VueJS Amsterdam 2004 大会首日，Vue 创始人 Evan You 进行了开场主旨演讲。他首先回顾了 Vue 十年以来的累累硕果，指出 VueJS 从一个视图层工具，成功演化出全流程的社区生态。\nVue 3.4\n\n谈到 Vue 3 的发展时他回顾了 2023 年末发布的 Vue 3.4。在这个版本中，Vue 完全重写了模板解析器；新的解析器不再依赖于许多正则表达式和前瞻搜索等，而是使用基于 htmlparser2 中分词器的状态机 -- 这使得解析速度至少提高了两倍。\n3.4 还对响应式系统进行了实质性的重构，目的是提高计算属性的重新计算效率。在 3.4 之前，即使计算结果保持不变，每次 count.value 都将触发 watchEffect 的回调；而 3.4 之后的回调现在仅在计算结果实际更改时触发。\n简化支持 v-model 的 defineModel 和标识为冒号 : 的 v-bind 同名速记也是这个版本的特性。\nVue 3.5\n\n接下来 Evan You 透露了在即将到来的 Vue 3.5 版本中包含的特性，这个版本主要是在框架底层的优化。\n一方面是响应式系统上的提升。包括在调度任务中使用位运算标记优化 queueJob 任务队列，这项优化被从 vue 试验性的无虚拟 DOM 版本 Vue Vapor 中移植回主版本中，使得内存使用率得到了 56% 的提升。\n还有一项对数组追踪的优化：在处理响应式的大数组时，此项优化甚至可以获得十倍性能收益；对于格外重视性能的开发者来说，Vue 内置的数组方法并不完美。@vue/reactivity 暴露的readArray 方法是一个面向性能的高级响应式函数，它返回原始数组并对其进行完整跟踪，并可以用入参指示是否深度跟踪响应式数组。\n公开readArray的原因在于，对于某些内置数组函数无法很好覆盖的高性能操作场景，这个API非常有用。例如，Vue 的 v-for 循环会使用此功能，响应式矩阵的乘法运算可以显著受益以提升计算速度，以及新增的 Object.groupBy API 可能在未来广泛应用，由于它并非数组实例方法，因此不能自动进行优化，但可以通过用户自定义代码结合 readArray 来提高性能。\n在 SSR 服务器渲染方面，也优化了 Suspend 等特性。\nVapor\n\n除了 Vue 3.5，受到 Solid.js 启发的无虚拟 DOM 版本的 Vue Vapor 日臻完善，已经可以在 playground 中运行 TodoMVC 程序。\n在计划中，组件级别的优先级控制将是重要工作，这将保证即便组件数量庞大，整体性能也不会受到影响，不知道是否会借鉴 React 的异步可中断方式呢？\nDX\n\n在开发体验方面，vite 的新版本中可能会包含新的打包工具 Rolldown，这是一个具有兼容性 API 的 Rust 移植版 Rollup。该工具已经经历了长期的开发，目前已经支持 tree shaking 等特性，基本达到了 ESbuild 两倍的编译速度。等其能够同时替换 Rollup 和 ESbuild 之后，开发者无论是在开发模式还是生产模式下，都能无缝地自动获得巨大的性能收益。\n从更底层来说，Rolldown 使用了一项叫做 Oxc 的工具，Oxc 的核心是一种用 Rust 编写的\n高性能 JS Parser，在其体系中还有 Typescript 转移等工具。值得注意的是，该工具一旦最终成型，构建 Vue 工程时 Babel、ESbuild、Rollup、Tercer 等工具将合而为一，开发过程会变得统一、高效且易于理解。\nWe are far from done\n最后，Evan You 再次回顾了十年的历程，表示 VueJS 生态从刚刚推出时受到的竭诚欢迎，真可谓占尽天时，那种勃勃生机、万物竟发的境界，犹在眼前。而在十年之后，团队和社区仍在做出很多有趣的贡献，虽然从 Vue 2 到 Vue 3 的升级过程坎坷，但无论怎么样，随着 Vue 2 的官方支持正式结束，新的社区仍会保持优势。\nVue 或许并不总是时髦的新玩意，但会致力于总是做好新的改变\nB站搜索“云前端”观看视频版",
-          "link": "https://juejin.cn/post/7342384485696520246",
-          "publishedOn": "2024-03-04T13:49:25.000Z",
-          "wordCount": 1298,
-          "title": "Rust! 无VDom! 尤雨溪解析 Vue.js 2024 新特性",
           "imageUrl": null
         },
         {
@@ -910,7 +910,7 @@
           "description": "大发的经验交流 [7243698841848348730#每天一个知识点#] 《８９Ｋ３，Ⅵp》 《企鹅、１ ８ ６ ２０８５》 鸟在空中飞，天空是飞行旅途中最熟悉不过的风景；鱼在海底游，海便是它征途中最熟悉不过的风景；蜗牛在地上爬，壳是它形影不离的家，也是它最熟悉不过的风景。",
           "link": "https://juejin.cn/pin/7344164779630886938",
           "publishedOn": "2024-03-10T06:10:58.000Z",
-          "wordCount": 536,
+          "wordCount": 541,
           "title": "大发的经验交流 [7243698841848348730#每天一个知识点#] 《８９Ｋ３，Ⅵp》 《企鹅、１ ８ ６ ２０８５》 鸟在空中飞，天空是飞行旅途中最熟悉不过的风景；鱼在...",
           "imageUrl": null
         },
@@ -920,7 +920,7 @@
           "description": "大发的经验聊天室 [7243698841848348730#每天一个知识点#] 《８９Ｋ３，Ⅵp》 《企鹅、１ ８ ６ ２０８５》 鸟在空中飞，天空是飞行旅途中最熟悉不过的风景；鱼在海底游，海便是它征途中最熟悉不过的风景；蜗牛在地上爬，壳是它形影不离的家，也是它最熟悉不过的风景。",
           "link": "https://juejin.cn/pin/7343987389081010227",
           "publishedOn": "2024-03-10T06:09:36.000Z",
-          "wordCount": 534,
+          "wordCount": 539,
           "title": "大发的经验聊天室 [7243698841848348730#每天一个知识点#] 《８９Ｋ３，Ⅵp》 《企鹅、１ ８ ６ ２０８５》 鸟在空中飞，天空是飞行旅途中最熟悉不过的风景；鱼...",
           "imageUrl": null
         },
@@ -930,7 +930,7 @@
           "description": "大发的聊天室 [7243698841848348730#每天一个知识点#] 《８９Ｋ３，Ⅵp》 《企鹅、１ ８ ６ ２０８５》 鸟在空中飞，天空是飞行旅途中最熟悉不过的风景；鱼在海底游，海便是它征途中最熟悉不过的风景；蜗牛在地上爬，壳是它形影不离的家，也是它最熟悉不过的风景。",
           "link": "https://juejin.cn/pin/7344173123388719141",
           "publishedOn": "2024-03-10T06:04:48.000Z",
-          "wordCount": 536,
+          "wordCount": 541,
           "title": "大发的聊天室 [7243698841848348730#每天一个知识点#] 《８９Ｋ３，Ⅵp》 《企鹅、１ ８ ６ ２０８５》 鸟在空中飞，天空是飞行旅途中最熟悉不过的风景；鱼在海...",
           "imageUrl": null
         },
@@ -980,7 +980,7 @@
           "description": "[7243698841848348730#每天一个知识点#] VSCode扩展fnMap（函数地图）v4.4.0版本发布啦！本次增加了标记行功能的稳定性。\n什么是标记行呢？请看下方动图。\n这只是fnMap的冰山一角，更多功能，可以点击下方链接，安装使用。\nhttps://marketplace.visualstudio.com/items?itemName=chensuiyi.fn-map",
           "link": "https://juejin.cn/pin/7343138429939580947",
           "publishedOn": "2024-03-06T16:02:16.000Z",
-          "wordCount": 512,
+          "wordCount": 517,
           "title": "[7243698841848348730#每天一个知识点#] VSCode扩展fnMap（函数地图）v4.4.0版本发布啦！本次增加了标记行功能的稳定性。 什么是标记行呢？请看下方动图。 这只...",
           "imageUrl": null
         },
