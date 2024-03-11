@@ -178,7 +178,7 @@
           "description": "这样的支付宝看着就清爽多了。",
           "link": "https://m.okjike.com/originalPosts/65d7433b164d89e601e94078",
           "publishedOn": "2024-02-22T12:51:07.000Z",
-          "wordCount": 461,
+          "wordCount": 473,
           "title": "发布了: 这样的支付宝看着就清爽多了。",
           "imageUrl": "https://cdnv2.ruguoapp.com/FkhUcedqfit_v-s8fa-wr-6cZRvZv3.png?imageMogr2/auto-orient/thumbnail/300x2000%3E"
         },
@@ -708,13 +708,33 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7344325496983732250",
+          "author": "小霖家的混江龙",
+          "description": "百亿补贴为什么用 H5？H5 未来会如何发展？\n23 年 11 月末，拼多多市值超过了阿里。我想写一篇文章《百亿补贴为什么用 H5》，没有动笔；24 年新年，我想写一篇《新的一年，H5 会如何发展》，也没有动笔。\n眼看着灵感就要烂在手里，我决定把两篇文章合为一篇，与大家分享。当然，这些分析预测只是个人观点，如果你有不同的意见，欢迎在评论区讨论交流。\n拳打 H5，脚踢小程序。我是「小霖家的混江龙」，关注我，带你了解更多实用的 H5、小程序武学。\n百亿补贴为什么用 H5\n我们首先看一张控制台的图，可以确认，拼多多的「百亿补贴」技术栈是 H5，大概率是 React 写的 H5。\n\n不只是拼多多，我特地确认了，京东、淘宝的的「百亿补贴」技术栈也是 H5 (点击它们右上角三个点，拷贝分享链接，然后用浏览器打开)。\n\n那么，为什么电商巨头会在「百亿补贴」这种重要活动上选择 H5 呢？用 H5 有什么好处呢？\nH5 技术已经成熟\n第一个原因，也是最基础的原因，就是 H5 技术已经成熟，能够完整地实现功能。具体来说：\n浏览器兼容性不断提高\n自 2008 年 HTML5 草案发布以来，截止 2014 年，HTML5 已有 18 年历史。18 年间，主流浏览器对 HTML5、CSS3 和 JavaScript 的标准语法兼容性一直持续改进，22 年微软更是亲手盖上了 IE 棺材板。虽然 Safari（iOS 浏览器）的兼容性仍然备受诟病，但总体来说兼容成本已经变得可以接受。\n主流框架已经成熟\n前端最主流的两大框架 Vue 和 React 已经成熟。它们的成熟体现在多个方面：\n从时间的角度看，截止 2024 年，React 已经发布了 11 年，而 Vue 已经发布了 10 年。经过多年的发展，前端开发者已经非常熟悉 React 和 Vue，能熟练地应用它们进行开发。\n从语法的角度看，自 Rea…",
+          "link": "https://juejin.cn/post/7344325496983732250",
+          "publishedOn": "2024-03-11T00:02:46.000Z",
+          "wordCount": 1473,
+          "title": "百亿补贴为什么用 H5？H5 未来会如何发展？",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7344571285848768524",
           "author": "tager",
           "description": "序言\n如果打开一个文件，看到的全是满屏幕的 import 语句，这将是一种怎样的体验？\n密密麻麻的import语句不仅仅是一种视觉上的冲击，更是对代码组织结构的一种考验。\n我们是如何做到让import“占领满屏“的了，又该如何优雅地管理这些import语句呢？\n本文将从产生大量import语句的原因、可能带来的问题以及如何优化和管理import语句几个角度来进行探讨。\n\nimport是如何“占领满屏“的？\n《拒绝使用模块重导（Re-export）》\n模块重导是一种通用的技术。在腾讯、字节、阿里等各大厂的组件库中都有大量使用。\n如：字节的arco-design组件库中的组件：https://github.com/arco-design/arco-design/blob/main/components/index.tsx\n通过重导在comonents/index.tsx文件暴露所有组件，在使用时一个import就可以使用N个组件了。\n// 不使用重导\nimport Modal from '@arco-design/web-react/es/Modal'\nimport Checkbox from '@arco-design/web-react/es/Checkbox'\nimport Message from '@arco-design/web-react/es/Message'\n...\n\n// 使用模块重导\nimport { Modal, Checkbox, Message} from '@arco-design/web-react'\n\n\nRe-export一般用于收拢同类型的模块、一般都是以文件夹为单位，如components、routes、utils、hooks、stories等都通过各自的index.tsx暴露，这样就能极大程度的简化导入路径、提升代码可读性、可维护性。\nR…",
           "link": "https://juejin.cn/post/7344571285848768524",
           "publishedOn": "2024-03-10T10:10:26.000Z",
-          "wordCount": 1757,
+          "wordCount": 1834,
           "title": "不要再写满屏import导入啦！🔥",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7344164779630673946",
+          "author": "码头的薯条",
+          "description": "theme: yu\n哇噻，简直是个天才，无需scroll事件就能监听到元素滚动\n1. 前言\n最近在做 toolTip 弹窗相关组件封装，实现的效果就是可以通过hover或点击在元素的上面或者下面能够出现一个弹框，类似下面这样\n\n这时我遇到一个问题，因为我想当这个弹窗快要滚出屏幕之外时能够从由上面弹出变到由下面弹出，本来想着直接监听 scroll 事件就能搞定的，但是仔细一想 scroll 事件到底要绑定到那个 DOM 上呢？ 因为很多时候滚动条出现的元素并不是最外层的 body 或者 html 可能是任意一个元素上的滚动条。这个时候就无法通过绑定 scroll 事件来监听元素滚动了。\n2. 问题分析\n我脑海中首先 IntersectionObserver 这个 API，但是这个 API 只能用来 监测目标元素与视窗(viewport)的交叉状态，也就是当我的元素滚出或者滚入的时候可以触发该监听的回调。\nnew IntersectionObserver((event) => {\n        refresh();\n      }, {\n       // threshold 用来表示元素在视窗中显示的交叉比例显示\n       // 设置的是 0 即表示元素完全移出视窗，1 或者完全进入视窗时触发回调\n       // 0表示元素本身在视口中的占比0%, 1表示元素本身在视口中的占比为100%\n       // 0.1表示元素本身在视口中的占比1%,0.9表示元素本身在视口中的占比为90%\n        threshold: [0, 1, 0.1, 0.9]\n      });\n\n这样就可以在元素快要移出屏幕，或者移入屏幕时触发回调了，但是这样会有一个问题\n\n当弹窗移出屏幕时，可以很轻松的监听到，并把弹窗移动到下方，但是当弹窗滚入的时候就有问题了\n\n可以看到完全进入之…",
+          "link": "https://juejin.cn/post/7344164779630673946",
+          "publishedOn": "2024-03-10T03:50:02.000Z",
+          "wordCount": 1594,
+          "title": "哇噻，简直是个天才，无需scroll事件就能监听到元素滚动",
           "imageUrl": null
         },
         {
@@ -838,16 +858,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7342420969875275827",
-          "author": "Eachan",
-          "description": "vscode 用户片段\n上班不划水，那还上个鬼~\n呐呐呐，，今天我又来给大家安利一个个人甚至是团队提高编码效率的好东西——vscode语法提示之用户片段。\n什么是用户片段\n官方介绍：In Visual Studio Code, snippets appear in IntelliSense (Ctrl+Space) mixed with other suggestions, as well as in a dedicated snippet picker (Insert Snippet in the Command Palette).\n简而言之就是：咱们输入一些单词前缀时，会自动匹配和提示跟这些前缀相关的内容，让我们方便输入我们想要输入的内容。看一下以下官方示例：\n\n用户片段配置后会在我们输入一些相关词汇前缀的时候提示我们，而选中对应的提示内容，就是我们设置的用户片段了。\n哦豁，这不就是低代码的一种吗！其实开发过程中很多代码和逻辑都是重复的。如果我们将一些重复的代码和逻辑，都配置成用户片段，写出前缀就会提示对应的内容，这效果就有点类似于CodePilot\n用户片段用途\n之所以叫做用户片段，是因为这东西可以根据个人需求自定义化，可以创建归属于语言、项目、用户的用户片段，这意味着不同的语言（css、html、javascript…）、项目可以根据需要设置不同的片段提示，也可以设置全局的片段提示，在任何地方都能用。\n一些平时常用的类似语法，比如打印日志、导入内容、react/vue语法模板、增删查改操作等都可以进行配置，需要用到的时候直接输入前缀匹配对应的内容即可。\n比如说前端的同学平常开发react，可能需要react的模板代码，写写useState和useEffect这些，可以类似这样使用：\n\n总的来说，它可以帮助我们划水摸鱼提高个人或团队的编程效率，使用这个，个人可以配置属于自己的专有提示，团队也可以在项目中放置对应的提示模板，提高编程效率的同时，也可以统一编程代码风格！\n用户片段怎么使用\n根据自己需求手动创建配置，点击文件→ 首选项 → 配置用户代码片段（或按Ctrl + Shift + P快捷键，然后输入代码片段）\n\n\n（1）点击新建全局代码片段文件会新建不限于项目的用户片段文件\n-   点击新建全局代码片段文件后，输入文件名，然后按下”Enter”键，就会跳转全局代码片段的文件\n\n\n（2）点击新建“xxx”文件夹的代码片段文件会新建项目内部的代码片段文件。\n-   输入用户片段文件名\n\n输入之后按下“Enter”键就会生成一个有效范围在项目内的文件，如图所示为文件的配置模板。这里大概讲一下常见的配置项，如果需要深入了解，可以访问官网学习。\n\n（3）语法：如上，模板给出的示例配置为常用的配置项。从外到内看，这是一个json文件，删除掉对于代码片段的解释，然后解开注释符。\n对象属性：作为json对象的key，没有其他的作用，这里对应”Print to console”；\nscope：代码片段应用的语言，用逗号隔开可以写多个；\nprefix：语法提示的前缀，比如这里写了一个为log，那么当你在写代码时，打出log的时候，就会有相关的提示，具体展示可以参考最上面的官方示例；\nbody：提示的内容，点击对应的代码片段提示之后要展示什么内容，就在这里定义了；\ndescription: 代码片段描述，例如你这个代码片段提示是干嘛的，噼里啪啦写一下。\n使用别人写好的语法提示插件 输入想要的语言，然后使用@category:”snippets”就可以找出跟用户片段相关的插件，安装插件后，就可以使用这些插件自带的用户片段内容了。\n\n各种语言的都有，比如说你要搜react的，如下：\n\n查看插件，可以发现它提供了很多提示，光是console的就有很多，不过常用的可能才几个，比如“clo”\n\n备注\nsnippets官网链接：https://code.visualstudio.com/docs/editor/userdefinedsnippets",
-          "link": "https://juejin.cn/post/7342420969875275827",
-          "publishedOn": "2024-03-05T02:12:03.000Z",
-          "wordCount": 935,
-          "title": "学会这个VS Code技巧，摸鱼的时间又变多了",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7342400998856065039",
           "author": "Chokcoco",
           "description": "本文为稀土掘金技术社区首发签约文章，30天内禁止转载，30天后未获授权禁止转载，侵权必究！\n最近，群里聊到了一个很有意思的布局效果。大致效果如下所示，希望使用 CSS 实现如下所示的布局效果：\n\n正常而言，我们的 HTML 结构大致是如下所示：\n<div class=\"g-container\">\n    <div class=\"g-nav\">\n        <ul>\n            <li>Tab 1</li>\n            <li>Tab 2</li>\n            <li>Tab 3</li>\n            <li>Tab 4</li>\n        </ul>\n    </div>\n    <div class=\"g-main\">\n        <ul class=\"g-content\">\n            <li>...</li>\n            <li>...</li>\n            <li>...</li>\n            <li>...</li>\n        </ul>\n    </div>\n</div>\n\n对于 Hover 导航 Tab 时候的内容切换，暂且不谈。本文，我们核心想探讨的是两个点：\n一是对于如下所示的不规则布局，应该如何实现：\n\n并且，这里我们可能还需要给它加上阴影效果：\n\n如何配合 Hover 动作，实现整个切换效果\n带着这两个问题，我们一起来尝试慢慢把这个效果实现。\n借助伪元素实现不规则按钮\n首先，我们需要实现这个效果：\n\n这个，其实在很多篇文章都有提及过：\n由小见大！不规则造型按钮解决方案\n使用 CSS 轻松实现高频出现的各类奇形怪状按钮\n想一想，这里其实就是竖向的 Chrome 分 Tab 的效果：\n像是这样：\n\n我们对这个按钮形状拆解一下，这里其实是 3 …",
@@ -865,16 +875,6 @@
           "publishedOn": "2024-03-04T13:49:25.000Z",
           "wordCount": 1298,
           "title": "Rust! 无VDom! 尤雨溪解析 Vue.js 2024 新特性",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7342279484488138802",
-          "author": "清风夜半",
-          "description": "前言\n\n2024.02.20\n下午摸鱼时接到一个客户的数字孪生项目的需求，客户什么也没说，就要求“炫酷”和“科技感”地图，还要把他们的模型都放上去，起初我以为又是一个可视化大屏的项目，准备用高德地图应付过去，然后他们又在群里发什么要求高之类的，说什么高德、百度、Mapbox、Cesium之类框架都试过了，满足不了需求，好嘛，这下给我犯了难了，会的技术栈全都给我排除了, 手撸Three.js源码我可不干，于是就在网上晃悠，尝试找一些灵感\n2024.02.24\n又试了几个地图框架，还是不行，被客户和经理催了一顿，再不行他们要换人了\n2024.02.28\n在QQ群里闲逛，发现了群友发的一个叫 Mapmost SDK for WebGL 的地图框架，于是抱着试一试的态度做了一下，好嘛，一下就对客户味了\n\n2024.03.04\n后面我发现这个SDK蛮有意思，于是把我实现客户需求的过程记录下来，分享给大家\n初始化\n这个SDK看似是个商用软件，不过目前是免费试用，官网上申请一下就行了，然后按照他们的文档，填一下参数，就能初始化一个地图，和一般的地图SDK用法差不多\n\n\n    <script src ='https://delivery.mapmost.com/cdn/sdk/webgl/v3.5.0/mapmost-webgl-min.js'></script>\n    <script>\n        let mapmost = window.mapmost\n         /* \n        * 初始化地图\n        */\n        let map = new mapmost.Map({\n            container: 'map', //地图容器\n            style:'http://192.168.126.44/mms-style/d…",
-          "link": "https://juejin.cn/post/7342279484488138802",
-          "publishedOn": "2024-03-04T09:18:46.000Z",
-          "wordCount": 2511,
-          "title": "原来科技感的三维地图可以这么简单实现",
           "imageUrl": null
         },
         {
@@ -950,7 +950,7 @@
           "description": "对标 Github Copilot 的百度 Baidu Comate 服务，有用过的朋友吗？\n根据官网描述，智能代码助手 Baidu Comate 是基于文心大模型，结合百度积累多年的编程现场大数据和外部优秀开源数据，打造的新一代编码辅助工具，可以释放十倍软件生产力。\n虽然可以免费试用，但是看到每年500的价格，着实捏一把冷汗，嗯，我还是去看看您对标的产品吧。\n感觉很多产品在宣传时都喜欢说可以对标openai、看齐微软、超越谷歌，后面还可能要对标sora哈哈，但是真正言行一致的有几个呢？反而像是逆向给对标的公司打了一波免费广告。\n[7338596022676881445#Sora 技术探索#]",
           "link": "https://juejin.cn/pin/7344571269554323519",
           "publishedOn": "2024-03-10T05:12:17.000Z",
-          "wordCount": 529,
+          "wordCount": 528,
           "title": "对标 Github Copilot 的百度 Baidu Comate 服务，有用过的朋友吗？ 根据官网描述，智能代码助手 Baidu Comate 是基于文心大模型，结合百度积累多年的编程现场大...",
           "imageUrl": null
         },
@@ -1030,7 +1030,7 @@
           "description": "windows超越mac成为web应用开发体验赢家\nDHH几天前发文说，在windows11上用vscode和wsl2开发web应用，尤其是使用docker的体验，已经好过mac😆😀😂他的体验和我的怎么那么一样😂\n[7073670907851440160#新人报道#]",
           "link": "https://juejin.cn/pin/7341288345782304809",
           "publishedOn": "2024-03-01T15:05:13.000Z",
-          "wordCount": 465,
+          "wordCount": 470,
           "title": "windows超越mac成为web应用开发体验赢家 DHH几天前发文说，在windows11上用vscode和wsl2开发web应用，尤其是使用docker的体验，已经好过mac😆😀😂他的体验...",
           "imageUrl": null
         },
