@@ -64,7 +64,7 @@
           "description": "音视频合成的时候，有倍速合成的需求，起初，我以为这只是个手到擒来的小需求，细究之下发现问题并不简单……",
           "link": "https://www.zhangxinxu.com/wordpress/2024/02/js-audioencoder-backplayrate-audiobuffer/",
           "publishedOn": "2024-02-29T14:22:22.000Z",
-          "wordCount": 1725,
+          "wordCount": 1723,
           "title": "不改变音调情况下Audio音频的倍速合成JS实现",
           "imageUrl": null
         }
@@ -496,7 +496,7 @@
           "description": "序言\n如果打开一个文件，看到的全是满屏幕的 import 语句，这将是一种怎样的体验？\n密密麻麻的import语句不仅仅是一种视觉上的冲击，更是对代码组织结构的一种考验。\n我们是如何做到让import“占领满屏“的了，又该如何优雅地管理这些import语句呢？\n本文将从产生大量import语句的原因、可能带来的问题以及如何优化和管理import语句几个角度来进行探讨。\n\nimport是如何“占领满屏“的？\n《拒绝使用模块重导（Re-export）》\n模块重导是一种通用的技术。在腾讯、字节、阿里等各大厂的组件库中都有大量使用。\n如：字节的arco-design组件库中的组件：https://github.com/arco-design/arco-design/blob/main/components/index.tsx\n通过重导在comonents/index.tsx文件暴露所有组件，在使用时一个import就可以使用N个组件了。\n// 不使用重导\nimport Modal from '@arco-design/web-react/es/Modal'\nimport Checkbox from '@arco-design/web-react/es/Checkbox'\nimport Message from '@arco-design/web-react/es/Message'\n...\n\n// 使用模块重导\nimport { Modal, Checkbox, Message} from '@arco-design/web-react'\n\n\nRe-export一般用于收拢同类型的模块、一般都是以文件夹为单位，如components、routes、utils、hooks、stories等都通过各自的index.tsx暴露，这样就能极大程度的简化导入路径、提升代码可读性、可维护性。\nR…",
           "link": "https://juejin.cn/post/7344571285848768524",
           "publishedOn": "2024-03-10T10:10:26.000Z",
-          "wordCount": 1732,
+          "wordCount": 1757,
           "title": "不要再写满屏import导入啦！🔥",
           "imageUrl": null
         },
@@ -538,6 +538,16 @@
           "publishedOn": "2024-03-07T00:27:23.000Z",
           "wordCount": 668,
           "title": "一夜之间，3.0万 Star，全部清零！",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7343139078486982710",
+          "author": "前端欧阳",
+          "description": "theme: z-blue\n本文是 vue3编译原理揭秘 的第 3 篇，和该系列的其他文章一起服用效果更佳。\nvue3的宏到底是什么东西？\nVue 3 的 setup语法糖到底是什么东西？\n看不懂来打我，vue3的.vue文件(SFC)编译过程\n前言\n我们每天写的vue代码都是写在vue文件中，但是浏览器却只认识html、css、js等文件类型。所以这个时候就需要一个工具将vue文件转换为浏览器能够认识的js文件，想必你第一时间就想到了webpack或者vite。但是webpack和vite本身是没有能力处理vue文件的，其实实际背后生效的是vue-loader和@vitejs/plugin-vue。本文以@vitejs/plugin-vue举例，通过debug的方式带你一步一步的搞清楚vue文件是如何编译为js文件的，看不懂你来打我。\n举个例子\n这个是我的源代码App.vue文件：\n<template>\n  <h1 class=\"msg\">{{ msg }}</h1>\n</template>\n\n<script setup lang=\"ts\">\nimport { ref } from \"vue\";\n\nconst msg = ref(\"hello word\");\n</script>\n\n<style scoped>\n.msg {\n  color: red;\n  font-weight: bold;\n}\n</style>\n\n这个例子很简单，在setup中定义了msg变量，然后在template中将msg渲染出来。\n下面这个是我从network中找到的编译后的js文件，已经精简过了：\nimport {\n  createElementBlock as _createElementBlock,\n  defineComponent as _defineComponent,\n  openB…",
+          "link": "https://juejin.cn/post/7343139078486982710",
+          "publishedOn": "2024-03-06T14:55:52.000Z",
+          "wordCount": 3814,
+          "title": "看不懂来打我，vue3的.vue文件(SFC)编译过程",
           "imageUrl": null
         },
         {
@@ -661,16 +671,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7341840038964363283",
-          "author": "沽汣",
-          "description": "theme: smartblue\n前言\n前段时间老板心血来潮，要我们前端组对整个的项目都做一下接口防止重复请求的处理（似乎是有用户通过一些快速点击薅到了一些优惠券啥的）。。。听到这个需求，第一反应就是，防止薅羊毛最保险的方案不还是在服务端加限制吗？前端加限制能够拦截的毕竟有限。可老板就是执意要前端搞一下子，行吧，搞就搞吧，you happy jiu ok。\n虽然大部分的接口处理我们都是加了loading的，但又不能确保真的是每个接口都加了的，可是如果要一个接口一个接口的排查，那这维护了四五年的系统，成百上千的接口肯定要耗费非常多的精力，根本就是不现实的，所以就只能去做全局处理。下面就来总结一下这次的防重复请求的实现方案：\n方案一\n这个方案是最容易想到也是最朴实无华的一个方案：通过使用axios拦截器，在请求拦截器中开启全屏Loading，然后在响应拦截器中将Loading关闭。\n这个方案固然已经可以满足我们目前的需求，但不管三七二十一，直接搞个全屏Loading还是不太美观，何况在目前项目的接口处理逻辑中还有一些局部Loading，就有可能会出现Loading套Loading的情况，两个圈一起转，头皮发麻。\n方案二\n加Loading的方案不太友好，而对于同一个接口，如果传参都是一样的，一般来说都没有必要连续请求多次吧。那我们可不可以通过代码逻辑直接把完全相同的请求给拦截掉，不让它到达服务端呢？这个思路不错，我们说干就干。\n首先，我们要判断什么样的请求属于是相同请求：\n一个请求包含的内容不外乎就是请求方法，地址，参数以及请求发出的页面hash。那我们是不是就可以根据这几个数据把这个请求生成一个key来作为这个请求的标识呢？\n// 根据请求生成对应的key\nfunction generateReqKey(config, hash) {\n    const { method, u…",
-          "link": "https://juejin.cn/post/7341840038964363283",
-          "publishedOn": "2024-03-04T01:10:01.000Z",
-          "wordCount": 1561,
-          "title": "前端接口防止重复请求实现方案",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7339357105144676406",
           "author": "掘金酱",
           "description": "theme: channing-cyan\n技术无止境 创作不间断\n\n👏 2024年创作者训练营第1期来咯，如果你想\"变身\"为创作者，却不知如何下笔；如果你想让自己的作品会被更多人看见；如果你想能凭一己之力\"横扫\"掘金平台......那就快来和我们一起探索技术写作进阶之旅吧～！\n这一次为了培养新手作者们的创作习惯以及鼓励大家创作出更多优质的内容，除了一如既往的为大家准备了丰厚的奖品池外，还重磅推出了写作辅导群——创作者训练营群。\n群里一切都为创作者服务，会尽可能帮助大家创作出更多优质的内容，为大家提供活动相关问题解答、1v1的创作指导、单篇文章的辅导解析（不被推荐原因和修改建议）等等，快来加入吧 👀 👇\n参加活动的掘友添加掘金酱为好友，回复关键词「训练营」入群。\nps：之前有被移动到其他的企业微信好友的创作者，可以删除掘金酱好友，重新添加回复关键词就行\n✏️ 官方创作指南（持续更新）\n标题\n简介\n作者\n\n\n\n\n🔗 如何从 0 到 1 写好技术文章\n有想法想沉淀，动笔前却犯了难？本篇文章将通过五个步骤教你写一篇技术文章。\nPDI技术写作团队\n\n\n🔗 如何写作系列教程\n《如何写作通用教程》将写作拆解成五个部分，总结了在写作前、写作中和写作后三个阶段需要注意的写作要点和技巧，通读整个系列文档，可以帮助你初步搭建系统的基础写作知识。\nPDI技术写作团队\n\n\n\n👍 优秀案例赏析\n标题\n简介\n作者\n\n\n\n\n🚀3.40秒到231.84毫秒，我用Performance面板分析性能瓶颈全流程（多图流量预警⚠️）\n如何优化不是本文的关键，本文主要和大家一起学习如何使用performance面板来进行性能瓶颈的定位，学习面板的使用，找到性能瓶颈源码并解决问题。\n一只大加号\n\n\nMongoDB保姆级指南(上)：七万字从零到进阶，助你掌握又一款强大的NoSQL！\n关于MongoDB相关的…",
@@ -688,12 +688,22 @@
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
         {
+          "id": "7344571968175177780",
+          "author": "用户2405397104273",
+          "description": "有没有需要🪜的",
+          "link": "https://juejin.cn/pin/7344571968175177780",
+          "publishedOn": "2024-03-11T03:42:23.000Z",
+          "wordCount": 485,
+          "title": "有没有需要🪜的",
+          "imageUrl": null
+        },
+        {
           "id": "7344164779630886938",
           "author": "用户23338042887",
           "description": "大发的经验交流 [7243698841848348730#每天一个知识点#] 《８９Ｋ３，Ⅵp》 《企鹅、１ ８ ６ ２０８５》 鸟在空中飞，天空是飞行旅途中最熟悉不过的风景；鱼在海底游，海便是它征途中最熟悉不过的风景；蜗牛在地上爬，壳是它形影不离的家，也是它最熟悉不过的风景。",
           "link": "https://juejin.cn/pin/7344164779630886938",
           "publishedOn": "2024-03-10T06:10:58.000Z",
-          "wordCount": 533,
+          "wordCount": 536,
           "title": "大发的经验交流 [7243698841848348730#每天一个知识点#] 《８９Ｋ３，Ⅵp》 《企鹅、１ ８ ６ ２０８５》 鸟在空中飞，天空是飞行旅途中最熟悉不过的风景；鱼在...",
           "imageUrl": null
         },
@@ -703,7 +713,7 @@
           "description": "大发的经验聊天室 [7243698841848348730#每天一个知识点#] 《８９Ｋ３，Ⅵp》 《企鹅、１ ８ ６ ２０８５》 鸟在空中飞，天空是飞行旅途中最熟悉不过的风景；鱼在海底游，海便是它征途中最熟悉不过的风景；蜗牛在地上爬，壳是它形影不离的家，也是它最熟悉不过的风景。",
           "link": "https://juejin.cn/pin/7343987389081010227",
           "publishedOn": "2024-03-10T06:09:36.000Z",
-          "wordCount": 531,
+          "wordCount": 534,
           "title": "大发的经验聊天室 [7243698841848348730#每天一个知识点#] 《８９Ｋ３，Ⅵp》 《企鹅、１ ８ ６ ２０８５》 鸟在空中飞，天空是飞行旅途中最熟悉不过的风景；鱼...",
           "imageUrl": null
         },
@@ -713,7 +723,7 @@
           "description": "大发的聊天室 [7243698841848348730#每天一个知识点#] 《８９Ｋ３，Ⅵp》 《企鹅、１ ８ ６ ２０８５》 鸟在空中飞，天空是飞行旅途中最熟悉不过的风景；鱼在海底游，海便是它征途中最熟悉不过的风景；蜗牛在地上爬，壳是它形影不离的家，也是它最熟悉不过的风景。",
           "link": "https://juejin.cn/pin/7344173123388719141",
           "publishedOn": "2024-03-10T06:04:48.000Z",
-          "wordCount": 533,
+          "wordCount": 536,
           "title": "大发的聊天室 [7243698841848348730#每天一个知识点#] 《８９Ｋ３，Ⅵp》 《企鹅、１ ８ ６ ２０８５》 鸟在空中飞，天空是飞行旅途中最熟悉不过的风景；鱼在海...",
           "imageUrl": null
         },
@@ -723,7 +733,7 @@
           "description": "[7210002980895916043#挑战每日一条沸点#] #大发真的倒闭了吗#《８９Ｋ３，Ⅵp》 《企鹅、１ ８ ６ ２０８５》 鸟在空中飞，天空是飞行旅途中最熟悉不过的风景；鱼在海底游，海便是它征途中最熟悉不过的风景；蜗牛在地上爬，壳是它形影不离的家，也是它最熟悉不过的风景。",
           "link": "https://juejin.cn/pin/7344089411984457754",
           "publishedOn": "2024-03-10T05:55:44.000Z",
-          "wordCount": 488,
+          "wordCount": 493,
           "title": "[7210002980895916043#挑战每日一条沸点#] #大发真的倒闭了吗#《８９Ｋ３，Ⅵp》 《企鹅、１ ８ ６ ２０８５》 鸟在空中飞，天空是飞行旅途中最熟悉不过的风景；...",
           "imageUrl": null
         },
@@ -763,7 +773,7 @@
           "description": "[7243698841848348730#每天一个知识点#] VSCode扩展fnMap（函数地图）v4.4.0版本发布啦！本次增加了标记行功能的稳定性。\n什么是标记行呢？请看下方动图。\n这只是fnMap的冰山一角，更多功能，可以点击下方链接，安装使用。\nhttps://marketplace.visualstudio.com/items?itemName=chensuiyi.fn-map",
           "link": "https://juejin.cn/pin/7343138429939580947",
           "publishedOn": "2024-03-06T16:02:16.000Z",
-          "wordCount": 509,
+          "wordCount": 512,
           "title": "[7243698841848348730#每天一个知识点#] VSCode扩展fnMap（函数地图）v4.4.0版本发布啦！本次增加了标记行功能的稳定性。 什么是标记行呢？请看下方动图。 这只...",
           "imageUrl": null
         },
@@ -875,16 +885,6 @@
           "publishedOn": "2024-02-22T07:50:08.000Z",
           "wordCount": 506,
           "title": "事半功倍！清爽的纯后端代码生成器！",
-          "imageUrl": null
-        },
-        {
-          "id": "7337631207024230439",
-          "author": "小白还菜",
-          "description": "jym 红米 14 笔记本 怎么样 我看才 3300 狠狠的心动啊",
-          "link": "https://juejin.cn/pin/7337631207024230439",
-          "publishedOn": "2024-02-21T05:08:42.000Z",
-          "wordCount": 530,
-          "title": "jym 红米 14 笔记本 怎么样 我看才 3300 狠狠的心动啊",
           "imageUrl": null
         }
       ]
