@@ -51,6 +51,53 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-13 datetime="2024-03-13T03:26:53.000Z">2024-03-13</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-13 datetime="2024-03-13T03:26:53.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7345645720042962959"
+                        open
+                      >
+                        <summary class="article-expander__title">https://developer.aliyun.com/topic/lingma/activities/202403?taskCode&#x3D;14508&amp;recordId&#x3D;f024db3e41b11bd3fd40ebd113787850#/?utm_content&#x3D;m_fission_1 「通义...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7345645720042962959">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>https://developer.aliyun.com/topic/lingma/activities/202403?taskCode&#x3D;14508&amp;recordId&#x3D;f024db3e41b11bd3fd40ebd113787850#/?utm_content&#x3D;m_fission_1  「通义灵码 · 体验 AI 编码，开 AI 盲盒」</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-12 datetime="2024-03-12T16:18:00.000Z">2024-03-12</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-12 datetime="2024-03-12T16:18:00.000Z"></time>
           </button>
@@ -322,6 +369,52 @@ https://juejin.cn/post/7345105895929856011</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7344916114204049445"
+                        open
+                      >
+                        <summary class="article-expander__title">面试常问：为什么 Vite 速度比 Webpack 快？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7344916114204049445">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言
+最近作者在学习 webpack 相关的知识，之前一直对这个问题不是特别了解，甚至讲不出个123....，这个问题在面试中也是常见的，作者在学习的过程当中总结了以下几点，在这里分享给大家看一下，当然最重要的是要理解，这样回答的时候就不用死记硬背了。
+原因
+1、开发模式的差异
+在开发环境中，Webpack 是先打包再启动开发服务器，而 Vite 则是直接启动，然后再按需编译依赖文件。（大家可以启动项目后检查源码 Sources 那里看到）
+这意味着，当使用 Webpack 时，所有的模块都需要在开发前进行打包，这会增加启动时间和构建时间。
+而 Vite 则采用了不同的策略，它会在请求模块时再进行实时编译，这种按需动态编译的模式极大地缩短了编译时间，特别是在大型项目中，文件数量众多，Vite 的优势更为明显。
+Webpack启动
+
+Vite启动
+
+2、对ES Modules的支持
+现代浏览器本身就支持 ES Modules，会主动发起请求去获取所需文件。Vite充分利用了这一点，将开发环境下的模块文件直接作为浏览器要执行的文件，而不是像 Webpack 那样先打包，再交给浏览器执行。这种方式减少了中间环节，提高了效率。
+什么是ES Modules？
+通过使用 export 和 import 语句，ES Modules 允许在浏览器端导入和导出模块。
+当使用 ES Modules 进行开发时，开发者实际上是在构建一个依赖关系图，不同依赖项之间通过导入语句进行关联。
+主流浏览器（除IE外）均支持ES Modules，并且可以通过在 script 标签中设置 type&#x3D;&quot;module&quot;来加载模块。默认情况下，模块会延迟加载，执行时机在文档解析之后，触发DOMContentLoaded事件前。
+
+3、底层语言的差异
+Webpack 是基于 Node.js 构建的，而 Vite 则是基于 esbuild 进行预构建依赖。esbuild 是采用 Go 语言编写的，Go 语言是纳秒级别的，而 Node.js 是毫秒级别的。因此，Vite 在打包速度上相比Webpack 有 10-100 倍的提升。
+什么是预构建依赖？
+预构建依赖通常指的是在项目启动或构建之前，对项目中所需的依赖项进行预先的处理或构建。这样做的好处在于，当项目实际运行时，可以直接使用这些已经预构建好的依赖，而无需再进行实时的编译或构建，从而提高了应用程序的运行速度和效率。
+4、热更新的处理
+在 Webpack 中，当一个模块或其依赖的模块内容改变时，需要重新编译这些模块。
+而在 Vite 中，当某个模块内容改变时，只需要让浏览器重新请求该模块即可，这大大减少了热更新的时间。
+总结
+总的来说，Vite 之所以比 Webpack 快，主要是因为它采用了不同的开发模式、充分利用了现代浏览器的 ES Modules 支持、使用了更高效的底层语言，并优化了热更新的处理。这些特点使得 Vite在大型项目中具有显著的优势，能够快速启动和构建，提高开发效率。
+​</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7344908667039432719"
                         open
                       >
@@ -474,7 +567,7 @@ type Point &#x3D; {
 };
 
 interface Coordinate extends Point…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -792,6 +885,55 @@ R…</span>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7344290391988502538"
+                        open
+                      >
+                        <summary class="article-expander__title">复盘最近的面试</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7344290391988502538">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: vuepress
+highlight: atelier-dune-dark
+这个礼拜一直在面试，想着看看能否拿到不错的offer前去实习，从周一到周四，面了将近10家，特整理此份面经，希望对春招的各位有所帮助
+
+A公司
+一面
+面试官人很好，我回答的时候不会他会笑笑然后提醒我
+自我介绍~
+面试官简单问了下项目情况，也没继续深入~
+js数据类型
+接着又问了原始和引用类型的区别
+let，const的区别
+const之后的原始类型无法更改
+js作用域
+全局，函数，块级，eval欺骗词法~
+针对小白的js作用域详细介绍 - 掘金 (juejin.cn)
+谈谈作用域链
+函数内访问变量是顺着作用域链查找的，从内往外，但是不能从外往内，这个链状是看函数的声明位置，声明在全局，就往全局找
+es6的Promise
+先答了Promise三种状态，pending，fulfilled，rejected，然后面试官问我状态可以逆转吗，不可逆，否则处理异步就不可靠了
+Promise和async,await区别
+Promise可以用.catch或者.then的第二个参数来捕获错误，async需要借助try,catch来捕获错误，async是通过Promise和generator打造的，generator相当于可以用next控制执行
+ref和reactive区别
+源码剖析ref和reactive的区别 - 掘金 (juejin.cn)
+讲Proxy，依赖收集，依赖触发，类型判断，js对象的getter，setter~
+如何调用父组件的函数
+组件传参，通过事件或者props
+场景题：给你一个类数组，就是key，value对这种，设计一个组件，通过vue去把这些数据渲染出来，不用考虑后端
+聊了迭代类数组，父子组件传参，v-for，key
+然后希望实现分页处理，每页数据只有10条
+写两个点击函数，用…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7344164779630673946"
                         open
                       >
@@ -954,8 +1096,8 @@ new IntersectionObserver((event) &#x3D;&gt; {
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-09 datetime="2024-03-09T12:48:22.000Z">2024-03-09</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-09 datetime="2024-03-09T12:48:22.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-09 datetime="2024-03-09T15:21:56.000Z">2024-03-09</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-09 datetime="2024-03-09T15:21:56.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -970,6 +1112,43 @@ new IntersectionObserver((event) &#x3D;&gt; {
                   <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7344089411983802394"
+                        open
+                      >
+                        <summary class="article-expander__title">如何用 Next.js v14 实现一个 Streaming 接口？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7344089411983802394">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>本文为稀土掘金技术社区首发签约文章，30天内禁止转载，30天后未获授权禁止转载，侵权必究！
+前言
+什么是 Streaming ?
+百度百科倒是有关于 Streaming Media 的解释：
+流媒体（streaming media）是指将一连串的媒体数据压缩后，经过网上分段发送数据，在网上即时传输影音以供观赏的一种技术与过程，此技术使得数据包得以像流水一样发送；如果不使用此技术，就必须在使用前下载整个媒体文件。
+放到 HTTP 请求上，Streaming 差不多也是同样的意思，将数据分段发送给客户端。
+一个比较常见的应用是 ChatGPT 的打字效果：
+如果我们要用 Next.js 实现一个具有 Streaming 效果的接口该如何实现呢？
+注：本篇的最后我们会调用 OpenAI 的接口来实现这样一个效果。
+Fetch API
+我们先从 Fetch API 开始说起。
+Fetch API 想必大家已经很熟悉了，我们常常会这样使用 fetch：
+fetch(&quot;http://example.com/movies.json&quot;)
+  .then((response) &#x3D;&gt; response.json())
+  .then((data) &#x3D;&gt; console.log(data));
+
+在这个例子中，我们获取了一个 JSON 文件并将其打印。为了获取 JSON 的内容，我们需要使用 json() 方法（该方法返回一个将 response body 解析成 JSON 的 promise）。
+实际上，response 还有一个 body 只读属性，它是一个简单的 getter，用于暴露一个 ReadableStream 类型的 body 内容。简单来说，fetch 的 response.body 会返回一个流类型的内容。这样的设计在请求大体积文件的时候会很有用。
+ReadableStrea…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -1004,6 +1183,38 @@ unibest -- Best uniapp 开发模板
 
 介绍页
 unibest 是一个集成了多种工具和技术的 uniapp 开发模板，由 uniapp + Vue3 + Ts + Vite4 + UnoCss + uv-ui + VSCode 构建，模板具有代码提示、自动格式化、统一配置、…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7344245529491292179"
+                        open
+                      >
+                        <summary class="article-expander__title">2024 十大 Vue UI 库</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7344245529491292179">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>大家好，这里是大家的林语冰。
+Vue 已经成为人气爆棚的 JS 框架，凭借其简单性、灵活性和用户友好性吸引了一大波前端开发者。Vue 主要优势之一在于其广泛的 UI 库生态系统，开发者能够轻松制作令人喵瞪狗呆且响应迅速的用户界面。
+本期共享的是 —— 2024 年排名前 10 的 Vue UI 库，确保我们的开发工作流程保持优化，从而实现生产力最大化。
+
+免责声明
+本文属于是语冰的直男翻译了属于是，略有删改，仅供粉丝参考。英文原味版请传送 Top 10 Vue.js UI Libraries Shaping 2024: A Trend Analysis。
+1. Vuetify
+
+Vuetify 是专为 Vue 开发量身定制、Material Design 优先的组件框架。Vuetify 广泛的精心设计的 UI 组件、布局和主题与谷歌的 Material Design 原则无缝衔接。开发者即使没有丰富的设计专业知识，也能够构建具有专业才能的、精美且响应灵敏的 Web App。
+Vuetify 的核心功能包括但不限于：
+丰富的组件集：Vuetify 拥有广泛的 80 多个预构建 UI 组件。从按钮和表单等基本元素，到数据表和导航抽屉等复杂结构，Vuetify 涵盖了广泛的 UI 需求。
+响应式设计：Vuetify 中的每个组件都经过精心设计，具有本质上的响应性。这可确保使用 Vuetify 构建的 App 在从 PC 端到移动端的各种设备上保持视觉完整性。
+主题：Vuetify 提供强大的主题功能，开发者能够轻松定制其 App 的视觉美感。无论是创建定制主题，还是利用大量预构建选项，Vuetify 都使开发者能够定制 App 的外观和风格，满足特定偏好或品牌要求。
+国际化：凭借对国际化的内置支持，Vuetify 简化了创建迎合全球受众的 App 的过程。开发者可以无缝实现多语言…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
                             </span>
@@ -1831,102 +2042,6 @@ import {
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7342864744599257099"
-                        open
-                      >
-                        <summary class="article-expander__title">VSCode 1.87 发布，新增魔法功能-动动嘴就能写代码</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7342864744599257099">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Visual Studio Code（VS Code）又搞大事了！发布的1.87版本，它不仅带来了一系列令人兴奋的新功能，更是在提升开发者工作效率的道路上迈出了坚实的一步。
-语音听写功能
-首先，让我们来探索VS Code 1.87的语音听写功能。想象一下，你只需动动嘴，代码就能自动在编辑器中生成。这不再是科幻电影中的场景，而是VS Code Speech扩展带来的现实。
-
-通过简单的快捷键（Ctrl+Alt+V），你就能启动这项神奇的功能，而Escape键则能随时停止。这不仅让编程变得更加轻松，也为那些喜欢通过语音输入的开发者提供了极大的便利。
-
-语音多语言支持也是VS Code 1.87的一大亮点。现在，VS Code Speech扩展支持多达 26 种语言的语音识别，无论你来自哪里，都能找到适合自己的编程语言。现在可以使用accessibility.voice.speechLanguage 设置从 26 种支持的语言中选择一种。
-欢迎关注公众号《前端界》，文章会同步更新，也可快速加入前端交流群！
-多光标内联建议
-VS Code 1.87还增加了对多光标内联补全的支持。这意味着你可以在主要和辅助光标位置同时预览并应用内联补全，极大地提高了编码的效率。
-
-同时，Copilot 的重命名建议功能也得到了增强，现在可以更智能地为你的代码符号提供重命名建议。
-Side-by-side 预览重构
-在重构代码时，VS Code 1.87引入了Side-by-side预览功能，允许你使用多重差异编辑器来预览跨文件的重构。这不仅让代码变更更加直观，也使得重构过程更加安全，因为你可以在提交前仔细检查所有的变更。
-
-此外，VS Code 1.87还默认启用了Sticky scroll功能，让你在浏览长文档时更加方便。你可以通过设置来调整Sticky scroll的参数，以适应你的个人习惯。
-最后，Python开发者们也有福了，VS Code 1.87带来了更智能的Python导入功能。它能够自动添加缺失的Python导入，让你的代码更加整洁，同时也减少了因遗漏导入而导致的错误。
-VS Code 1.87的发布，不仅是对现有功能的一次升级，更是对未来编程方式的一次大胆探索。它让我们看到了编程工具与人工智能结合的无限可能。如果你已经迫不及待想要体验这些新功能，不妨前往VS Code的官方网站下载最新版本.
-欢迎关注公众号《前端界》，文章会同步更新，也可快速加入前端交流群！</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7342791123141771298"
-                        open
-                      >
-                        <summary class="article-expander__title">一款基于web的开源word文档编辑器</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7342791123141771298">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>hi, 大家好, 我是徐小夕, 最近在研究基于 web 的文档编辑器,在网上调研了很多方案, 刚好看到了一款非常有意思的开源编辑器——canvas-editor, 它底层基于 canvas 实现, 我们使用它可以实现类似于 word文档编辑器类似的效果, 同时还支持很多灵活可配置的 API, 可以帮助我们定制属于自己的文档编辑平台, 如果你刚好也想着手实现, 这个项目将非常适合你.
-同时, 作者是国内大佬, 欢迎点赞支持.
-好了, 话不多说, 接下来我们看看它具体的使用和实现效果.
-
-github地址: https://github.com/Hufe921/canvas-editor
-效果展示
-我先展示一下我本地使用 canvas-editor 开发的编辑器效果:
-
-插入表格:
-
-插入公式:
-
-是不是很像在 word 里编写文档的感觉~
-功能点介绍
-canvas-editor 功能点介绍如下:
-富文本操作（撤销、重做、字体、字号、加粗、斜体、上下标、对齐方式、标题、列表.....）
-插入元素（表格、图片、链接、代码块、分页符、Math 公式、日期选择器、内容块......）
-打印（基于 canvas 转图片、pdf 绘制）
-控件（单选、文本、复选框）
-右键菜单（内部、自定义）
-快捷键（内部、自定义）
-文字、元素、控件拖拽
-页眉、页脚、页码
-页边距
-水印
-分页
-安装 &amp; 使用
-安装依赖
-pnpm i @hufe921/canvas-editor --save
-
-基本使用案例
-// dom
-
-
-// js
-import Editor from &#x27;@hufe921/canvas-editor&#x27;
-
-new Editor(
-  document.querySelector(&#x27;.canvas-editor&#x27;),
-  {
-…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -2090,123 +2205,11 @@ new Editor(
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-05 datetime="2024-03-05T16:25:27.000Z">2024-03-05</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-05 datetime="2024-03-05T16:25:27.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-05 datetime="2024-03-05T15:25:30.000Z">2024-03-05</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-05 datetime="2024-03-05T15:25:30.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7342793254096109583"
-                        open
-                      >
-                        <summary class="article-expander__title">面试官：为什么不用 index 做 key？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7342793254096109583">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>highlight: a11y-dark
-Holle 大家好，我是阳阳羊，在前两天的面试中，面试官问了这样一个问题：“在 Vue 中，我们在使用 v-for 渲染列表的时候，为什么要绑定一个 key？能不能用 index 做 key？”
-在聊这个问题之前我们还得需要知道 Vue 是如何操作 DOM 结构的。
-虚拟DOM
-我们知道，Vue 不可以直接操作 DOM 结构，而是通过数据驱动、指令等机制来间接操作 DOM 结构。当我们修改模版中的数据时，Vue 会触发重新渲染过程，调用render函数，它会返回一个 虚拟 DOM 树，它描述了整个组件模版的结构。
-举个栗子🌰：
-
-  
-{{ item }}
-  
-
-
-
-import { ref } from &#x27;vue&#x27;;
-const list &#x3D; ref([&#x27;html&#x27;, &#x27;css&#x27;, &#x27;js&#x27;])
-
-
-Vue 在渲染这个列表时，就会调用render函数，它会返回一个类似下面这个虚拟 DOM 树。
-let VDom &#x3D; {
-    tagName: &#x27;ul&#x27;,
-    props: {
-        class: &#x27;list&#x27;
-    },
-    chilren: [
-        {
-            tagName: &#x27;li&#x27;,
-            props: {
-                class: &#x27;item&#x27;
-            },
-            chilren: [&#x27;html&#x27;]
-        },
-        {…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7342718848816381964"
-                        open
-                      >
-                        <summary class="article-expander__title">前端妹子失业在家刷题，开发了个leetcode刷题工具，效率直接翻倍！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7342718848816381964">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: smartblue
-大家好，我是薇薇，一名沪漂女程序员，年前惨遭被裁，正值在家悲伤抠脚之际，突然看到两位朋友在合谋开发一款刷leetcode的小工具——leetcode-practice……
-下面重点稍微来介绍一下
-朋友A：Angular的忠实信徒，插件的主创+仓库创建人
-朋友S：n年（n&gt;&#x3D;5）前端经验的神秘大佬，有钱有闲热爱开源
-在神秘力量的号召下~~（主要是A太热情了，把我拉了项目，实在不好意思挂名贡献者却啥也不干）~~，从一开始的摆烂抠脚到参与进来，现在这款工具也初具雏形
-关于详细的介绍参见A佬写的这篇# [leetcode-practice]一款能够适合骑驴找马程序员的摸鱼神器
-快速开始
-leetcode-practice拥有多种形态，但是我更倾向于脱离仓库本身的使用方式，也就是说你可以尝试在终端内执行（node版本大于20）
-这样做的好处主要是你可以自己脱离leetcode-practice项目建立自己的git题库，方便回顾。
-npm install -g leetcode-practice
-
-比如说你想刷这道题
- 那么可以执行一下
-lc 1
-
-或者
-lc -i 1
-
- 这时候当前目录会出现一个文件夹
- description是题目的markdown格式的描述，当然index.js的注释中也可以看到题目描述，但是markdown可以更方便的查看图片，这里推荐下载一个markdown preview 插件
-index.js的内容如下
-
-/**
- * 1.两数之和 
- * 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。
- * 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。
- * 你可以按任意顺序返回答案。
- *  
- …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -3443,11 +3446,60 @@ work-life balance 的一个大前提，是把生活这个因子算进来，而�
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-27 datetime="2024-02-27T04:21:47.000Z">2024-02-27</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-27 datetime="2024-02-27T04:21:47.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-27 datetime="2024-02-27T10:12:59.000Z">2024-02-27</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-27 datetime="2024-02-27T10:12:59.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7340071895008919590"
+                        open
+                      >
+                        <summary class="article-expander__title">开源专访:Strve.js框架作者Vam</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7340071895008919590">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>hi, 大家好, 我是徐小夕. 之前在趣谈前端和大家分享了很多前端工程化, 可视化和低代码的技术实践, 最近上线了《小夕朋友圈》栏目, 我会定期采访国内外优秀的开源作者, 独立开发者和创业者, 分享他们的学习成长经验和独立产品开发经验, 让更多热爱技术的小伙伴建立技术自信和技术连接. 同时也让 5w+ 程序员伙伴们看到国内优质的开源项目和技术产品.
+如果你也是一名独立开发者, 开源作者, 或者创业者, 欢迎自荐或交流.
+今天采访的嘉宾是一位对技术非常热爱的开源作者, 前端方向, 热爱技术创作和开源, 也一直在研究前端框架底层的一些设计思想, 他在 21 年底开源了一款前端框架 strve.js, 目前也一直在持续迭代中, 收获了很多开源社区的反馈和建议, 接下来就来听听这位开源作者在 开源 路上的一些心得体会.
+
+这次采访主要包含如下几个部分:
+作者简介
+什么机遇让Vam考虑着手做 strve.js 这样一款框架
+strve.js 框架的设计初衷, 解决的痛点, 设计实现原理, 应用场景, 优缺点
+设计 strve.js 框架的一些机遇和挑战, 以及取得的成绩
+如何看待开源
+strve.js 框架目前正在做以及未来的一些规划
+对同样准备做, 或者正在做开源的小伙伴一些建议
+作者简介
+
+大家好，我是 Vam，专注于前端开发已有 5 年多的经验。我热衷于在 CSDN、掘金、知乎、公众号等社区平台分享我的技术文章，同时也积极参与开源项目的开发。我曾在掘金发表了一篇关于 Strve 的技术文章，累计阅读量达到了 5 万，获得了 300+的点赞。
+
+Strve 是我非常自豪的一个开源项目，它是一个易用、快速、灵活且轻量级的 JavaScript 库，专为构建用户界面而设计。Strve 采用基于标签模板的 HTML 模板引擎，利用 ES6 的模板字符串进行模板编写，并充分利用浏览器的原…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -4274,39 +4326,6 @@ MongoDB保姆级指南(上)：七万字从零到进阶，助你掌握又一款�
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7338307026245713972"
-                        open
-                      >
-                        <summary class="article-expander__title">分享一个Java堆外内存泄漏排查工具：Javahttps://link.juejin.cn/?target&#x3D;https%3A%2F%2Fgithub.com%2Fhengyoush%2FJavaMemLeak</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7338307026245713972">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>分享一个Java堆外内存泄漏排查工具：Javahttps://link.juejin.cn/?target&#x3D;https%3A%2F%2Fgithub.com%2Fhengyoush%2FJavaMemLeak</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >阮一峰的网络日志</button>
                   <a class="source-heading__link" href="http://www.ruanyifeng.com/blog/">Open</a>
                 </h3>
@@ -4534,8 +4553,8 @@ iFixit 网站拆解了苹果头盔，证实了 CPU 是 M2 芯片，跟 MacBook �
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8259207897">
-        <time id="build-timestamp" datetime="2024-03-13T03:53:43.614Z">2024-03-13T03:53:43.614Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8260631765">
+        <time id="build-timestamp" datetime="2024-03-13T06:54:02.050Z">2024-03-13T06:54:02.050Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
