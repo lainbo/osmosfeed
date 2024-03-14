@@ -64,7 +64,7 @@
           "description": "音视频合成的时候，有倍速合成的需求，起初，我以为这只是个手到擒来的小需求，细究之下发现问题并不简单……",
           "link": "https://www.zhangxinxu.com/wordpress/2024/02/js-audioencoder-backplayrate-audiobuffer/",
           "publishedOn": "2024-02-29T14:22:22.000Z",
-          "wordCount": 1736,
+          "wordCount": 1734,
           "title": "不改变音调情况下Audio音频的倍速合成JS实现",
           "imageUrl": null
         }
@@ -148,7 +148,7 @@
           "description": "最近才知道，原来想离开公司，也是可以考虑主动谈 N+1 的，谈判资本就是：躺平几个月，公司成本更高。",
           "link": "https://m.okjike.com/originalPosts/65e8022712ed2fda68861bb0",
           "publishedOn": "2024-03-06T05:41:59.000Z",
-          "wordCount": 465,
+          "wordCount": 455,
           "title": "发布了: 最近才知道，原来想离开公司，也是可以考虑主动谈 N+1 的，谈判资本就是：躺平几个月，公司成本更高。",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         },
@@ -843,7 +843,7 @@
           "description": "theme: z-blue\n本文是 vue3编译原理揭秘 的第 3 篇，和该系列的其他文章一起服用效果更佳。\nvue3的宏到底是什么东西？\nVue 3 的 setup语法糖到底是什么东西？\n看不懂来打我，vue3的.vue文件(SFC)编译过程\n前言\n我们每天写的vue代码都是写在vue文件中，但是浏览器却只认识html、css、js等文件类型。所以这个时候就需要一个工具将vue文件转换为浏览器能够认识的js文件，想必你第一时间就想到了webpack或者vite。但是webpack和vite本身是没有能力处理vue文件的，其实实际背后生效的是vue-loader和@vitejs/plugin-vue。本文以@vitejs/plugin-vue举例，通过debug的方式带你一步一步的搞清楚vue文件是如何编译为js文件的，看不懂你来打我。\n举个例子\n这个是我的源代码App.vue文件：\n<template>\n  <h1 class=\"msg\">{{ msg }}</h1>\n</template>\n\n<script setup lang=\"ts\">\nimport { ref } from \"vue\";\n\nconst msg = ref(\"hello word\");\n</script>\n\n<style scoped>\n.msg {\n  color: red;\n  font-weight: bold;\n}\n</style>\n\n这个例子很简单，在setup中定义了msg变量，然后在template中将msg渲染出来。\n下面这个是我从network中找到的编译后的js文件，已经精简过了：\nimport {\n  createElementBlock as _createElementBlock,\n  defineComponent as _defineComponent,\n  openB…",
           "link": "https://juejin.cn/post/7343139078486982710",
           "publishedOn": "2024-03-06T14:55:52.000Z",
-          "wordCount": 3845,
+          "wordCount": 19,
           "title": "看不懂来打我，vue3的.vue文件(SFC)编译过程",
           "imageUrl": null
         },
@@ -863,7 +863,7 @@
           "description": "theme: channing-cyan\n技术无止境 创作不间断\n\n👏 2024年创作者训练营第1期来咯，如果你想\"变身\"为创作者，却不知如何下笔；如果你想让自己的作品会被更多人看见；如果你想能凭一己之力\"横扫\"掘金平台......那就快来和我们一起探索技术写作进阶之旅吧～！\n这一次为了培养新手作者们的创作习惯以及鼓励大家创作出更多优质的内容，除了一如既往的为大家准备了丰厚的奖品池外，还重磅推出了写作辅导群——创作者训练营群。\n群里一切都为创作者服务，会尽可能帮助大家创作出更多优质的内容，为大家提供活动相关问题解答、1v1的创作指导、单篇文章的辅导解析（不被推荐原因和修改建议）等等，快来加入吧 👀 👇\n参加活动的掘友添加掘金酱为好友，回复关键词「训练营」入群。\nps：之前有被移动到其他的企业微信好友的创作者，可以删除掘金酱好友，重新添加回复关键词就行\n✏️ 官方创作指南（持续更新）\n标题\n简介\n作者\n\n\n\n\n🔗 如何从 0 到 1 写好技术文章\n有想法想沉淀，动笔前却犯了难？本篇文章将通过五个步骤教你写一篇技术文章。\nPDI技术写作团队\n\n\n🔗 如何写作系列教程\n《如何写作通用教程》将写作拆解成五个部分，总结了在写作前、写作中和写作后三个阶段需要注意的写作要点和技巧，通读整个系列文档，可以帮助你初步搭建系统的基础写作知识。\nPDI技术写作团队\n\n\n\n👍 优秀案例赏析\n标题\n简介\n作者\n\n\n\n\n🚀3.40秒到231.84毫秒，我用Performance面板分析性能瓶颈全流程（多图流量预警⚠️）\n如何优化不是本文的关键，本文主要和大家一起学习如何使用performance面板来进行性能瓶颈的定位，学习面板的使用，找到性能瓶颈源码并解决问题。\n一只大加号\n\n\nMongoDB保姆级指南(上)：七万字从零到进阶，助你掌握又一款强大的NoSQL！\n关于MongoDB相关的…",
           "link": "https://juejin.cn/post/7339357105144676406",
           "publishedOn": "2024-02-26T06:40:57.000Z",
-          "wordCount": 1171,
+          "wordCount": 19,
           "title": "创作者训练营 · 助力每一位创作新星，写出个人影响力！",
           "imageUrl": null
         }
@@ -950,7 +950,7 @@
           "description": "[7243698841848348730#每天一个知识点#] 国产、开源、高颜值、支持单机模式、支持集群模式、支持哨兵模式的一款Redis客户端管理工具。",
           "link": "https://juejin.cn/pin/7345071662028881935",
           "publishedOn": "2024-03-12T00:35:50.000Z",
-          "wordCount": 467,
+          "wordCount": 466,
           "title": "[7243698841848348730#每天一个知识点#] 国产、开源、高颜值、支持单机模式、支持集群模式、支持哨兵模式的一款Redis客户端管理工具。",
           "imageUrl": null
         },
@@ -1000,7 +1000,7 @@
           "description": "[7243698841848348730#每天一个知识点#] VSCode扩展fnMap（函数地图）v4.4.0版本发布啦！本次增加了标记行功能的稳定性。\n什么是标记行呢？请看下方动图。\n这只是fnMap的冰山一角，更多功能，可以点击下方链接，安装使用。\nhttps://marketplace.visualstudio.com/items?itemName=chensuiyi.fn-map",
           "link": "https://juejin.cn/pin/7343138429939580947",
           "publishedOn": "2024-03-06T16:02:16.000Z",
-          "wordCount": 471,
+          "wordCount": 470,
           "title": "[7243698841848348730#每天一个知识点#] VSCode扩展fnMap（函数地图）v4.4.0版本发布啦！本次增加了标记行功能的稳定性。 什么是标记行呢？请看下方动图。 这只...",
           "imageUrl": null
         },
