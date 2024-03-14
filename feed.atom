@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2024-03-14T15:53:49.547Z</id>
+    <id>urn:2024-03-14T18:53:38.562Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2024-03-14T15:53:49.547Z</updated>
+    <updated>2024-03-14T18:53:38.562Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[《The Bridge》]]></title>
+        <id>https://store.epicgames.com/zh-CN/p/the-bridge</id>
+        <link href="https://store.epicgames.com/zh-CN/p/the-bridge"/>
+        <updated>2024-03-14T15:00:00.000Z</updated>
+        <summary type="html"><![CDATA[《The Bridge》是一款挑战玩家对物理和观察视角的固有印象的逻辑解谜游戏。犹如埃舍尔邂逅艾萨克牛顿。控制重力，将地面化作天花板，穿过物理上不可能的建筑群。
+
+Free Now to 2024-03-21T15:00:00.000Z]]></summary>
+        <author>
+            <name>The Quantum Astrophysicists Guild</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Deus Ex - Mankind Divided]]></title>
+        <id>https://store.epicgames.com/zh-CN/p/deus-ex-mankind-divided-4c6370</id>
+        <link href="https://store.epicgames.com/zh-CN/p/deus-ex-mankind-divided-4c6370"/>
+        <updated>2024-03-14T15:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Now an experienced covert operative, Adam Jensen is forced to operate in a world that has grown to despise his kind. Armed with new state-of-the-art weapons and augmentations, he must choose the right approach, along with who to trust, to unravel a vast worldwide conspiracy.
+
+Free Now to 2024-03-21T15:00:00.000Z]]></summary>
+        <author>
+            <name>Eidos Interactive Corporation</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[发布了: 以我有限的观察, 如果有人能做到「知之为知之，不知为不知」，此人可为友。 对自己诚实的人, 对其它人, 差不到哪去。]]></title>
         <id>https://m.okjike.com/originalPosts/65f2c1fe38849f879fe9ecdf</id>
@@ -227,6 +251,50 @@ React为什么要自定义合成事…]]></summary>
 👉 search.wukaipeng.com]]></summary>
         <author>
             <name>吴楷鹏</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[🚫为了防止狗上沙发，写了一个浏览器实时识别目标功能📷]]></title>
+        <id>https://juejin.cn/post/7345672631323394098</id>
+        <link href="https://juejin.cn/post/7345672631323394098"/>
+        <updated>2024-03-13T09:53:27.000Z</updated>
+        <summary type="html"><![CDATA[背景
+
+家里有一条狗🐶，很喜欢乘人不备睡沙发🛋️，恰好最近刚搬家 + 狗迎来了掉毛期 不想让沙发上很多毛。所以希望能识别到狗，然后播放“gun 下去”的音频📣。
+需求分析
+需要一个摄像头📷
+
+利用 chrome 浏览器可以调用手机摄像头，获取权限，然后利用 video 将摄像头的内容绘制到 video 上。
+通过摄像头实时识别画面中的狗🐶
+
+利用 tensorflow 和预训练的 COCO-SSD MobileNet V2 模型进行对象检测。
+将摄像头的视频流转化成视频帧图像传给模型进行识别
+录制一个音频
+
+识别到目标（狗）后播放音频📣
+需要部署在一个设备上
+
+找一个不用的旧手机📱，Android 系统
+安装 termux 来实现开启本地 http 服务🌐
+技术要点
+利用浏览器 API 调用手机摄像头，将视频流推给 video
+const stream = await navigator.mediaDevices.getUserMedia({
+  // video: { facingMode: "environment" },  // 摄像头后置
+  video: { facingMode: "user" },
+});
+
+const videoElement = document.getElementById("camera-stream");
+videoElement.srcObject = stream;
+
+加载模型，实现识别
+let dogDetector;
+
+async function loadDogDetector() {
+  // 加载预训练的SSD MobileNet V2模型
+  const model = await cocoSsd.load();
+  dogDetector = model; // 将加载好的模型赋值给dogDetect…]]></summary>
+        <author>
+            <name>前端小蜗</name>
         </author>
     </entry>
     <entry>
@@ -1101,43 +1169,6 @@ AI魔法师—高位出道奖：万里挑一、二、三
 （2）只实现…]]></summary>
         <author>
             <name>阮一峰的网络日志</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[《Astro Duel 2》]]></title>
-        <id>https://store.epicgames.com/zh-CN/p/astro-duel-2-e1261d</id>
-        <link href="https://store.epicgames.com/zh-CN/p/astro-duel-2-e1261d"/>
-        <updated>2024-03-07T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[《Astro Duel 2》是一款融合了太空俯视狗斗与近距离平台动作的科幻风格对战游戏。你可以在比拼或合作模式中，同时在太空中以及地面上战斗！在可以被完全破坏的竞技场中互相战斗，或从轨道上直接进行核弹打击。
-
-Free Now to 2024-03-14T16:00:00.000Z]]></summary>
-        <author>
-            <name>Wild Rooster</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[小鹅通一面：被问碎了...]]></title>
-        <id>https://juejin.cn/post/7343484473185746981</id>
-        <link href="https://juejin.cn/post/7343484473185746981"/>
-        <updated>2024-03-07T15:54:45.000Z</updated>
-        <summary type="html"><![CDATA[浅聊一下
-大三学生，今天面了一下小鹅通，大概四十多分钟...问的有点细，汗流浃背
-小鹅通
-自我介绍
-首先进行了一个简单的自我介绍，介绍了一下我是谁、来自哪里、做过什么，实习经历、有什么成绩、为什么能胜任...面了好几家，状态还蛮好的，但是面小鹅通的时候有一点语无伦次(面试官挺好的)...
-学习途径
-问了我如何学习的...
-项目
-懒加载
-看了一下我的项目，说：在展示图片的时候你使用了lazyload指令实现的一个懒加载，那你能不能不用组件库来实现，介绍一下思路...
-在前面的文章中已经写过了懒加载(懒加载是如何实现的 - 掘金 (juejin.cn))，简单说了一下，在image标签内有两个属性，src和data-original，把图片地址放在data-original属性内，然后获取屏幕的宽高，当图片出现在可视范围内，就将data-original内的值赋值给src，然后忘记说要之后要移除data-original属性了...
-图片太大如何解决
-第二个问题顺势问了我如果图片太大应该如何解决...我回答的是使用webp后缀的图片，接着追问如何将图片后缀改成webp，直接修改吗？我回答的是有些网站可以在线转换...继续追问：将图片后缀修改为webp会模糊吗？兼容性呢？为什么转换为webp图片大小会变小？问到这里我属实是汗流浃背了...
-webp
-WebP 是一种同时提供了有损压缩与无损压缩（可逆压缩）的图片文件格式，派生自影像编码格式VP8。   WebP最初在2010年发布，目标是减少文件大小，但达到和JPEG格式相同的图片质量，希望能够减少图片档在网络上的发送时间。根据Google较早的测试，WebP的无损压缩比网络上找到的PNG档少了45％的文件大小，即使这些PNG档在使用pngcrush和PNGOUT处理过，WebP还是可以减少28％的文件大小。
-WebP图片这么好，…]]></summary>
-        <author>
-            <name>滚去睡觉</name>
         </author>
     </entry>
     <entry>

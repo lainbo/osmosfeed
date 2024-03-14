@@ -51,11 +51,63 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-14 datetime="2024-03-14T09:23:10.000Z">2024-03-14</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-14 datetime="2024-03-14T09:23:10.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-14 datetime="2024-03-14T15:00:00.000Z">2024-03-14</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-14 datetime="2024-03-14T15:00:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Epic Games Store - Free Games</button>
+                  <a class="source-heading__link" href="https://store.epicgames.com/zh-CN/free-games?lang&#x3D;zh-CN">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://store.epicgames.com/zh-CN/p/the-bridge"
+                        open
+                      >
+                        <summary class="article-expander__title">《The Bridge》</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://store.epicgames.com/zh-CN/p/the-bridge">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>《The Bridge》是一款挑战玩家对物理和观察视角的固有印象的逻辑解谜游戏。犹如埃舍尔邂逅艾萨克牛顿。控制重力，将地面化作天花板，穿过物理上不可能的建筑群。
+
+Free Now to 2024-03-21T15:00:00.000Z</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://store.epicgames.com/zh-CN/p/deus-ex-mankind-divided-4c6370"
+                        open
+                      >
+                        <summary class="article-expander__title">Deus Ex - Mankind Divided</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://store.epicgames.com/zh-CN/p/deus-ex-mankind-divided-4c6370">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Now an experienced covert operative, Adam Jensen is forced to operate in a world that has grown to despise his kind. Armed with new state-of-the-art weapons and augmentations, he must choose the right approach, along with who to trust, to unravel a vast worldwide conspiracy.
+
+Free Now to 2024-03-21T15:00:00.000Z</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -455,6 +507,73 @@ React为什么要自定义合成事…</span>
                             <span class="media-object__text">
                               <span>https://developer.aliyun.com/topic/lingma/activities/202403?taskCode&#x3D;14508&amp;recordId&#x3D;f024db3e41b11bd3fd40ebd113787850#/?utm_content&#x3D;m_fission_1  「通义灵码 · 体验 AI 编码，开 AI 盲盒」</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7345672631323394098"
+                        open
+                      >
+                        <summary class="article-expander__title">🚫为了防止狗上沙发，写了一个浏览器实时识别目标功能📷</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7345672631323394098">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>背景
+
+家里有一条狗🐶，很喜欢乘人不备睡沙发🛋️，恰好最近刚搬家 + 狗迎来了掉毛期 不想让沙发上很多毛。所以希望能识别到狗，然后播放“gun 下去”的音频📣。
+需求分析
+需要一个摄像头📷
+
+利用 chrome 浏览器可以调用手机摄像头，获取权限，然后利用 video 将摄像头的内容绘制到 video 上。
+通过摄像头实时识别画面中的狗🐶
+
+利用 tensorflow 和预训练的 COCO-SSD MobileNet V2 模型进行对象检测。
+将摄像头的视频流转化成视频帧图像传给模型进行识别
+录制一个音频
+
+识别到目标（狗）后播放音频📣
+需要部署在一个设备上
+
+找一个不用的旧手机📱，Android 系统
+安装 termux 来实现开启本地 http 服务🌐
+技术要点
+利用浏览器 API 调用手机摄像头，将视频流推给 video
+const stream &#x3D; await navigator.mediaDevices.getUserMedia({
+  // video: { facingMode: &quot;environment&quot; },  // 摄像头后置
+  video: { facingMode: &quot;user&quot; },
+});
+
+const videoElement &#x3D; document.getElementById(&quot;camera-stream&quot;);
+videoElement.srcObject &#x3D; stream;
+
+加载模型，实现识别
+let dogDetector;
+
+async function loadDogDetector() {
+  // 加载预训练的SSD MobileNet V2模型
+  const model &#x3D; await cocoSsd.load();
+  dogDetector &#x3D; model; // 将加载好的模型赋值给dogDetect…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1985,92 +2104,11 @@ AI魔法师—高位出道奖：万里挑一、二、三
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-07 datetime="2024-03-07T16:00:00.000Z">2024-03-07</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-07 datetime="2024-03-07T16:00:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-07 datetime="2024-03-07T13:52:54.000Z">2024-03-07</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-07 datetime="2024-03-07T13:52:54.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Epic Games Store - Free Games</button>
-                  <a class="source-heading__link" href="https://store.epicgames.com/zh-CN/free-games?lang&#x3D;zh-CN">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://store.epicgames.com/zh-CN/p/astro-duel-2-e1261d"
-                        open
-                      >
-                        <summary class="article-expander__title">《Astro Duel 2》</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://store.epicgames.com/zh-CN/p/astro-duel-2-e1261d">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>《Astro Duel 2》是一款融合了太空俯视狗斗与近距离平台动作的科幻风格对战游戏。你可以在比拼或合作模式中，同时在太空中以及地面上战斗！在可以被完全破坏的竞技场中互相战斗，或从轨道上直接进行核弹打击。
-
-Free Now to 2024-03-14T16:00:00.000Z</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7343484473185746981"
-                        open
-                      >
-                        <summary class="article-expander__title">小鹅通一面：被问碎了...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7343484473185746981">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>浅聊一下
-大三学生，今天面了一下小鹅通，大概四十多分钟...问的有点细，汗流浃背
-小鹅通
-自我介绍
-首先进行了一个简单的自我介绍，介绍了一下我是谁、来自哪里、做过什么，实习经历、有什么成绩、为什么能胜任...面了好几家，状态还蛮好的，但是面小鹅通的时候有一点语无伦次(面试官挺好的)...
-学习途径
-问了我如何学习的...
-项目
-懒加载
-看了一下我的项目，说：在展示图片的时候你使用了lazyload指令实现的一个懒加载，那你能不能不用组件库来实现，介绍一下思路...
-在前面的文章中已经写过了懒加载(懒加载是如何实现的 - 掘金 (juejin.cn))，简单说了一下，在image标签内有两个属性，src和data-original，把图片地址放在data-original属性内，然后获取屏幕的宽高，当图片出现在可视范围内，就将data-original内的值赋值给src，然后忘记说要之后要移除data-original属性了...
-图片太大如何解决
-第二个问题顺势问了我如果图片太大应该如何解决...我回答的是使用webp后缀的图片，接着追问如何将图片后缀改成webp，直接修改吗？我回答的是有些网站可以在线转换...继续追问：将图片后缀修改为webp会模糊吗？兼容性呢？为什么转换为webp图片大小会变小？问到这里我属实是汗流浃背了...
-webp
-WebP 是一种同时提供了有损压缩与无损压缩（可逆压缩）的图片文件格式，派生自影像编码格式VP8。   WebP最初在2010年发布，目标是减少文件大小，但达到和JPEG格式相同的图片质量，希望能够减少图片档在网络上的发送时间。根据Google较早的测试，WebP的无损压缩比网络上找到的PNG档少了45％的文件大小，即使这些PNG档在使用pngcrush和PNGOUT处理过，WebP还是可以减少28％的文件大小。
-WebP图片这么好，…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -4567,8 +4605,8 @@ iFixit 网站拆解了苹果头盔，证实了 CPU 是 M2 芯片，跟 MacBook �
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8283692743">
-        <time id="build-timestamp" datetime="2024-03-14T15:53:49.527Z">2024-03-14T15:53:49.527Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8286095342">
+        <time id="build-timestamp" datetime="2024-03-14T18:53:38.542Z">2024-03-14T18:53:38.542Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
