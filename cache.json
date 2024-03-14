@@ -632,16 +632,6 @@
           "wordCount": 523,
           "title": "重庆市忠县发布大雾黄色预警",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.cneb.gov.cn/yjxx/huangsyj/20240307/t20240307_526620220.html",
-          "author": "国家预警信息发布中心",
-          "description": "丰都县气象台2024年3月7日21时40分发布“大雾黄色预警信号”，预计3月7日22时至8日12时，名山街道、虎威镇、湛普镇、三合街道、双路镇、兴义镇、高家镇、树人镇、江池镇、龙孔镇、包鸾镇、南天湖镇、三建乡、龙河镇、栗子乡、十直镇、武平镇、暨龙镇、仙女湖镇、太平坝乡、都督乡可能出现能见度小于500米的雾，局地能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。",
-          "link": "http://www.cneb.gov.cn/yjxx/huangsyj/20240307/t20240307_526620220.html",
-          "publishedOn": "2024-03-07T13:50:00.000Z",
-          "wordCount": 523,
-          "title": "重庆市丰都县发布大雾黄色预警",
-          "imageUrl": null
         }
       ]
     },
@@ -667,6 +657,16 @@
       "feedUrl": "https://rsshub.app/juejin/trending/frontend/weekly",
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
+        {
+          "id": "https://juejin.cn/post/7345821800880324671",
+          "author": "何遇er",
+          "description": "面试的业务是字节-千川，职级是 2-2，技术面一共 3 轮，每一面都要手写算法。我在 2023 年 7 月下旬被裁员，于 2024 年 2 月初面试字节-千川，没有通过第 3 轮面试，在这里记录下当时的面试问题，希望帮到大家\n第一轮面试\n首先是自我介绍，主要介绍在任职的公司落地了低代码平台和用户操作记录回溯，还向开源项目 rrweb 提交了两个PR，最后是公司的插件化架构。\n自我介绍完毕，面试官的第一个问题是，为什么离职？我因为被裁而离职，如实回答了，之后每一轮面试官都会询问什么被裁，另，由于我从离职到面试字节中间隔了7个月左右，面试官还重点关注了，离职之后在做什么。离职之后，我首先回家休息了近 1 个月，旅游了近 2 个月，然后写书花了 1 个多月，到 11 底开始找工作，这没什么好隐瞒的，如实告知了面试官。\n第一轮主要面试 JS 和 React基础知识，问题如下：\n在 js 中有浮点数运算不正确的时候，比如 0.1 + 0.2 不等于 0.3 这是什么原因，要怎么解决\n对 webpack 有了解吗，我看你在做低代码\nwebpack中 loader 与 plugin 有什么区别\n有没有写过 plugin\n我们写代码的时候是 es6，浏览器运行的时候是 es5，在做代码转化的时候，webpack 帮我们做了什么事情\n在 React 类组件中，为什么修改状态要使用 setState 而不是用 this.state.xxx = xxx\nsetState 函数做了哪些事情\nReact 生命周期 commpoentWillUnMount() 对应的 hooks 要怎么写\nuseState 的原理是什么，背后怎么执行的，它怎么保证一个组件中写多个 useState 不会串\n函数组件重新渲染的时候怎么拿到useState之前的状态，而不是得到初始化的状态\nReact为什么要自定义合成事…",
+          "link": "https://juejin.cn/post/7345821800880324671",
+          "publishedOn": "2024-03-14T04:11:19.000Z",
+          "wordCount": 1180,
+          "title": "字节跳动面试记录",
+          "imageUrl": null
+        },
         {
           "id": "https://juejin.cn/post/7345105809599889427",
           "author": "颜海镜",
@@ -708,18 +708,8 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7344719913019277323",
-          "author": "易师傅",
-          "description": "theme: cyanosis\n作者：易师傅 、github\n声明：本文为稀土掘金技术社区首发签约文章，30天内禁止转载，30天后未获授权禁止转载，侵权必究！\n前言\n近日，百无聊赖，上网游逛，在《2023 JavaScript Rising Stars》 上看到了一个令人匪夷所思的仓库 shadcn/ui，就一年那个 star 数啊，蹭蹭的上涨了 39500 颗星星，这星星数™甩我的王者不知道多少条街，虽然我是个星耀常驻玩家，但是也受不了这刺激啊。\n\n说来就干，研究一下什么来头，居然以迅雷不及掩耳之势，偷偷发育成难以仰望之帝~\n好家伙，看了源代码，原来是一个基于 Headless UI 组件库 radix-ui 的上层 React UI 组件库，心想 Headless UI 组件不是几年前才火起来的玩意嘛，怎么在前端怎么就有一席之地了呢？\n看样子真是一代新人换旧人，一代技术一代新人，技术的日新月异也未免是个坏事 ~\n一、Headless 的历史和背景\n我相信很多同学对计算机界的 Headless 比较熟悉，因为 Headless 一词最初就是来源于 Headless Computer（无头计算机）也就是 Headless System（无头系统），维基百科的介绍为：\n无头系统（Headless System）是指已配置为无须显示器（即“头”）、键盘和鼠标操作的计算机系统或设备。无头系统通常通过网络连接控制，但也有部分无头系统的设备需要通过RS-232串行连接进行设备的管理。服务器通常采用无头模式以降低运作成本。\n后来慢慢的就有了 Headless Browser（无头浏览器）、Headless CMS, Headless BI 等等常见的 Headless 系列；\nHeadless UI\n在 2017 年，一个在基于 React 的 高阶函数（HOC） 以及 复合组件（Co…",
-          "link": "https://juejin.cn/post/7344719913019277323",
-          "publishedOn": "2024-03-11T02:47:27.000Z",
-          "wordCount": 1643,
-          "title": "在 2023 年屌爆了一整年的 shadcn/ui 用的 Headless UI 到底是何方神圣？",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7344282440725577765",
-          "author": "红尘炼心",
+          "author": "前端大骆",
           "description": "theme: smartblue\n前言\n最近，我们部门在开发一个组件库时，我注意到一些团队成员对使用TypeScript表示出了抵触情绪，他们常常抱怨说：“TypeScript太麻烦了，我们不想用！”起初，我对此感到困惑：TypeScript真的有那么麻烦吗？然而，当我抽时间审查队伍的代码时，我终于发现了问题所在。在这篇文章中，我想和大家分享我的一些发现和解决方案。\n一、类型复用不足\n在代码审查过程中，我发现了大量的重复类型定义，这显著降低了代码的复用性。\n进一步交流后，我了解到许多团队成员并不清楚如何在TypeScript中复用类型。TypeScript允许我们使用type和interface来定义类型。\n当我询问他们type与interface之间的区别时，大多数人都表示不清楚，这也就难怪他们不知道如何有效地复用类型了。\ntype定义的类型可以通过交叉类型（&）来进行复用，而interface定义的类型则可以通过继承（extends）来实现复用。值得注意的是，type和interface定义的类型也可以互相复用。下面是一些简单的示例：\n复用type定义的类型：\ntype Point = {\n  x: number;\n  y: number;\n};\n\ntype Coordinate = Point & {\n  z: number;\n};\n\n复用interface定义的类型：\ninterface Point {\n  x: number;\n  y: number;\n};\n\ninterface Coordinate extends Point {\n  z: number;\n}\n\ninterface复用type定义的类型：\ntype Point = {\n  x: number;\n  y: number;\n};\n\ninterface Coordinate extends Point…",
           "link": "https://juejin.cn/post/7344282440725577765",
           "publishedOn": "2024-03-11T01:29:49.000Z",
@@ -876,7 +866,7 @@
       "articles": [
         {
           "id": "7346079007421808652",
-          "author": "链财君",
+          "author": "链财Web3",
           "description": "学到就是赚到！揭露币圈常见骗局，防范Web3套路攻击 | 韭菜小白必看\n大家好，欢迎来到链财Web3，我是链财君，一名经验丰富的Web3开发者，大白话解说前沿的区块链技术原理，第一时间解析web3领域的重大事件和突破性项目，关注我，链财Web3，带你网赚加密货币！\n为 web3 创始人和构建者提供的精炼见解指南\n一、工欲善其事,必先利其器\n对Web3开发者或Web3行业交流学习中，各种工具、教程、社区、语言框架种类繁多，是否有一个包罗万象的工具专注于Web3开发和Web3相关资讯能毕其功于一役de工具或APP？\nWeb3x.world 【https://web3x.world】是一个全面而深入的Web3开发者社区，为开发者们提供了丰富的工具和学习资源，以及实时更新的币圈热点。这个网站不仅仅是一个普通的学习平台，它还提供了手机安卓APP，方便用户随时随地进行Web3的学习和使用。\n\n1、使用公開的私鑰或助記詞導入到錢包中，在Gas（礦工費）足夠的情況下選擇例如USDT的轉賬，填入收款地址，設置數量，在輸入密碼轉賬後會提示一堆代碼的錯誤提示。\n图片\n2、点击上图的收款地址，记录好这个地址后面会用到，打开波场内存块链浏览器：https://tronscan.io/#填入收款地址进行查询，为了直观的展示内容，这里选择了PC端的浏览器内容演示。\n图片\n在【账户权限】中可以看到owner和active两个活动权限都为同一个地址，但是这个地址和钱包的收款地址不同，这个就很明显的可以解释为什么所有导入的资产都无法进行转账。\n这里简单的说明一下，波场公链整合了以太坊和EOS的一些特性，所以它和EOS的权限设置基本相同，分为owner、active、权重、阈值等内容，具体的功能说明和操作可以参考官方的多签说明文档：https://cn.developers.tron.network/docs/multi-signature\n在这里再次提示大家，天上不会掉馅饼，这种骗取Gas（矿工费）的骗局是一种比较早期的骗局，用户最多损失一些手续费，但是如果遇到【恶意授权】或【合约调用盗币】等方式，那么损失就会比较大了。",
           "link": "https://juejin.cn/pin/7346079007421808652",
           "publishedOn": "2024-03-14T07:57:05.000Z",

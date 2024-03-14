@@ -330,6 +330,54 @@ Web3x.world 【https://web3x.world】是一个全面而深入的Web3开发者社
                 </section>
               </section>
             </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7345821800880324671"
+                        open
+                      >
+                        <summary class="article-expander__title">字节跳动面试记录</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7345821800880324671">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>面试的业务是字节-千川，职级是 2-2，技术面一共 3 轮，每一面都要手写算法。我在 2023 年 7 月下旬被裁员，于 2024 年 2 月初面试字节-千川，没有通过第 3 轮面试，在这里记录下当时的面试问题，希望帮到大家
+第一轮面试
+首先是自我介绍，主要介绍在任职的公司落地了低代码平台和用户操作记录回溯，还向开源项目 rrweb 提交了两个PR，最后是公司的插件化架构。
+自我介绍完毕，面试官的第一个问题是，为什么离职？我因为被裁而离职，如实回答了，之后每一轮面试官都会询问什么被裁，另，由于我从离职到面试字节中间隔了7个月左右，面试官还重点关注了，离职之后在做什么。离职之后，我首先回家休息了近 1 个月，旅游了近 2 个月，然后写书花了 1 个多月，到 11 底开始找工作，这没什么好隐瞒的，如实告知了面试官。
+第一轮主要面试 JS 和 React基础知识，问题如下：
+在 js 中有浮点数运算不正确的时候，比如 0.1 + 0.2 不等于 0.3 这是什么原因，要怎么解决
+对 webpack 有了解吗，我看你在做低代码
+webpack中 loader 与 plugin 有什么区别
+有没有写过 plugin
+我们写代码的时候是 es6，浏览器运行的时候是 es5，在做代码转化的时候，webpack 帮我们做了什么事情
+在 React 类组件中，为什么修改状态要使用 setState 而不是用 this.state.xxx &#x3D; xxx
+setState 函数做了哪些事情
+React 生命周期 commpoentWillUnMount() 对应的 hooks 要怎么写
+useState 的原理是什么，背后怎么执行的，它怎么保证一个组件中写多个 useState 不会串
+函数组件重新渲染的时候怎么拿到useState之前的状态，而不是得到初始化的状态
+React为什么要自定义合成事…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -958,39 +1006,6 @@ pnpm pack
 这么重要的生态插件搞成这样，还能行不行？吐槽完毕。
 感谢阅读，如果对你有用请点个赞 ❤️</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7344719913019277323"
-                        open
-                      >
-                        <summary class="article-expander__title">在 2023 年屌爆了一整年的 shadcn/ui 用的 Headless UI 到底是何方神圣？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7344719913019277323">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: cyanosis
-作者：易师傅 、github
-声明：本文为稀土掘金技术社区首发签约文章，30天内禁止转载，30天后未获授权禁止转载，侵权必究！
-前言
-近日，百无聊赖，上网游逛，在《2023 JavaScript Rising Stars》 上看到了一个令人匪夷所思的仓库 shadcn/ui，就一年那个 star 数啊，蹭蹭的上涨了 39500 颗星星，这星星数™甩我的王者不知道多少条街，虽然我是个星耀常驻玩家，但是也受不了这刺激啊。
-
-说来就干，研究一下什么来头，居然以迅雷不及掩耳之势，偷偷发育成难以仰望之帝~
-好家伙，看了源代码，原来是一个基于 Headless UI 组件库 radix-ui 的上层 React UI 组件库，心想 Headless UI 组件不是几年前才火起来的玩意嘛，怎么在前端怎么就有一席之地了呢？
-看样子真是一代新人换旧人，一代技术一代新人，技术的日新月异也未免是个坏事 ~
-一、Headless 的历史和背景
-我相信很多同学对计算机界的 Headless 比较熟悉，因为 Headless 一词最初就是来源于 Headless Computer（无头计算机）也就是 Headless System（无头系统），维基百科的介绍为：
-无头系统（Headless System）是指已配置为无须显示器（即“头”）、键盘和鼠标操作的计算机系统或设备。无头系统通常通过网络连接控制，但也有部分无头系统的设备需要通过RS-232串行连接进行设备的管理。服务器通常采用无头模式以降低运作成本。
-后来慢慢的就有了 Headless Browser（无头浏览器）、Headless CMS, Headless BI 等等常见的 Headless 系列；
-Headless UI
-在 2017 年，一个在基于 React 的 高阶函数（HOC） 以及 复合组件（Co…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2086,39 +2101,6 @@ WebP图片这么好，…</span>
 最后可行的是，直接在 APP 内购买，也有两种方式：
 1）在支付宝里头购买礼品卡，然后给 iCloud 账户充值，参考 https://twitter.com/Barret_China/status/1638223359375966208
 2）申请一张 OCBC 的新加坡银行卡，绑定到新加坡的 iCloud 账户，参考 https://twitter.com/Barret_China/status/1698338662088622167 和 https://twitter.com/Barret_China/status/1638215085788372993</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >国家应急广播 - 重庆预警信息</button>
-                  <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.cneb.gov.cn/yjxx/huangsyj/20240307/t20240307_526620220.html"
-                        open
-                      >
-                        <summary class="article-expander__title">重庆市丰都县发布大雾黄色预警</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.cneb.gov.cn/yjxx/huangsyj/20240307/t20240307_526620220.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>丰都县气象台2024年3月7日21时40分发布“大雾黄色预警信号”，预计3月7日22时至8日12时，名山街道、虎威镇、湛普镇、三合街道、双路镇、兴义镇、高家镇、树人镇、江池镇、龙孔镇、包鸾镇、南天湖镇、三建乡、龙河镇、栗子乡、十直镇、武平镇、暨龙镇、仙女湖镇、太平坝乡、都督乡可能出现能见度小于500米的雾，局地能见度小于200米。请以上各地注意防范大雾天气可能造成的影响。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
@@ -4585,8 +4567,8 @@ iFixit 网站拆解了苹果头盔，证实了 CPU 是 M2 芯片，跟 MacBook �
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8281055198">
-        <time id="build-timestamp" datetime="2024-03-14T12:55:50.465Z">2024-03-14T12:55:50.465Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8283692743">
+        <time id="build-timestamp" datetime="2024-03-14T15:53:49.527Z">2024-03-14T15:53:49.527Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
