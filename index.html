@@ -51,11 +51,47 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-15 datetime="2024-03-15T00:57:57.000Z">2024-03-15</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-15 datetime="2024-03-15T00:57:57.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-15 datetime="2024-03-15T03:20:02.000Z">2024-03-15</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-15 datetime="2024-03-15T03:20:02.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >李继刚的即刻动态</button>
+                  <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/65f3be6238849f879ffb0fc8"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: PC 互联网产品迭代周期按年 移动互联网产品迭代周期按月 AI 产品迭代周期按周</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65f3be6238849f879ffb0fc8">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>PC 互联网产品迭代周期按年
+移动互联网产品迭代周期按月
+AI 产品迭代周期按周</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -80,7 +116,7 @@
                               <img src="https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>手机丢了，星巴克赊账成就达成</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                &ensp;<span class="article-reading-time">(&hairsp;2
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1027,6 +1063,60 @@ define(function (require, exports, module) {
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7344941254236389403"
+                        open
+                      >
+                        <summary class="article-expander__title">我为LowCodeEngine低代码引擎写了个插件，让不懂代码的产品人员也能自己开发页面了。</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7344941254236389403">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: cyanosis
+highlight: atom-one-dark
+背景
+低代码一直以来争议不断，很多人认为低代码平台不好用，坑很多，很多功能实现不了，还不如自己用代码开发。关于这个我说一下我的个人观点，我觉得低代码平台不应该给开发者使用，应该是产品或者业务人员去使用，开发人员去维护低代码平台就好了。
+低代码平台还有一个比较难平衡的点，如果想追求简单，难免拓展性和灵活性变差，如果追求灵活性，难免要写一些代码，这样上手难度就变高了。
+LowCodeEngine低代码引擎为了追求灵活性，所以对非前端技术人员不太友好，因为很多时候一个很简单的功能都还要去写代码才能实现。
+不过LowCodeEngine插件系统很强大，能够快速实现自己想要的功能。下面就和大家分享一下我自己写的一个插件，可以让非技术人员也能快速开发页面。
+不使用插件实现一个小功能
+下面先给大家演示一下，不使用我写的插件的情况下，实现点击一个按钮，弹出一个弹框整个配置流程。
+我这里用的是基于antd物料的官方demo平台，官方还有一些基于其他物料的demo平台，可以到这里查看。
+先从左侧的组件库中拖一个按钮到画布中
+
+再拖一个弹框组件到画布
+
+再拖一个文本组件到弹框里
+
+在js源码中添加一个变量
+
+给弹框是否可见属性绑定变量
+
+绑定我们刚才在state里添加的变量，这里不知道是bug，还是特性，这里选不到刚才定义的变量，需要自己手写。
+
+变量绑定完成后，可以点击这个给弹框隐藏掉，因为它会干扰我们给按钮绑定事件。
+
+选中按钮，然后给按钮onClick事件绑定方法
+
+这里选择新建一个方法，把visible设置为true。
+
+
+点击上面的预览按钮，可以看到效果
+
+弹出来之后，发现点击取消和确认不会关闭弹框，需要我们给取消和确认事件绑定方法，这里可以给弹框重新显示出来
+
+
+
+onOk事件也绑定onCancel方法…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;15
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7344916114204049445"
                         open
                       >
@@ -1941,145 +2031,6 @@ Vuetify 的核心功能包括但不限于：
 LLM： 理解人所说 + 实现效果
 LLM 的快速进步，压缩了人表达的空间。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/65ea713ea922aa28d036d5fc"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 大学里的「计算机科学与技术」专业， 其中的「科学」，指的是研究计算机的内在规律，知其原委。「技术」，指的是研究用计算机做出有用的东西，起而行之...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65ea713ea922aa28d036d5fc">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>大学里的「计算机科学与技术」专业， 其中的「科学」，指的是研究计算机的内在规律，知其原委。「技术」，指的是研究用计算机做出有用的东西，起而行之。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7343441462645260322"
-                        open
-                      >
-                        <summary class="article-expander__title">🌈 玩转沸点 | 成为AI魔法大师，释放你的完美创造力！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7343441462645260322">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: cyanosis
-💥 奔走相告！！扣子（coze.cn）创建的 AI Bot 可以发布到掘金啦！欢迎来到掘金 AI 魔法世界~🧙
-将在扣子（coze.cn）创建的有趣又实用的 Bot 一键发布至掘金，即可有更多的用户能够在沸点体验到你的新奇魔法！它可以是能够讲故事的智能小精灵，也可以是帮助解决实际问题的贴心小助手......无论哪种，你的 AI Bot都将成为掘金魔法世界的一份子~让我们一起在好奇和探索中，共同成长吧！⭐️
-⏰ 活动时间
-2024年3月8日-2024年3月31日
-👀 如何参与
-步骤一：在扣子（coze.cn）创建有趣/实用的AI Bot，并一键发布到掘金
-步骤二：在【AI聊天室】圈子中，发布相关沸点并使用该 AI Bot 与其对话
-最终根据Bot在AI聊天室圈子中的使用人数以及数据互动情况评选出「AI魔法大师」
-发布到掘金官方教程：https://www.coze.cn/docs/guides/juejin
-💡 AI Bot选题参考
-开发者技术/学习相关：例如 Java开发者的Python进修指南、前端大师、 假装看过一万本书
-摸鱼聊天相关：气人的朋友、精品爆笑段子、你写我唱
-面试招聘相关： 阿狸 P7 候选人、Java面试大师、简历诊断
-吃喝玩乐相关：来一趟说走就走的旅行、周末去哪玩、米其林星探
-资讯知识获取：AI新闻、股票趋势分析师
-情感心理相关： MBTI性格测试专家、失恋先生、完蛋！我爱上了姐姐
-🎁 活动奖品
-基础奖项
-奖项
-获奖条件
-奖品
-奖品图片
-
-
-
-
-AI魔法练习生
-在扣子（coze.cn）创建1个有趣的、实用的并符合掘金平台特质的AI Bot,并一键发布到掘金，有5个用户在沸点「AI聊天室」圈子中体验了该Bot，即可获奖。
-稀土掘金 x A-SOUL联名工卡套
-
-
-
-AI魔法大师
-在扣子（coze.cn）创建1个有趣的、实用的并符合掘金平台特质的AI Bot,并一键发布到掘金，根据在沸点「AI聊天室」圈子中体验该Bot的人数+Bot本身质量判定。TOP1-10可获奖。
-AI魔法大师实体证书+MageGee 机械风暴套装
-
-
-
-
-进阶奖项
-奖项
-获奖条件
-获奖人数
-奖品
-奖品图片
-
-
-
-
-AI魔法师—勤奋好学奖：灵感来了挡都挡不住
-发布到掘金的Bot≥3个，且均在「AI聊天室」中有其他用户使用（非本人）
-3名
-九阳榨汁随行杯
-
-
-
-AI魔法师—独门绝技奖：只要一个最，你有吗
-最有趣创意、最实用Bot、最难实现Bot，发布到掘金的Bot只要有一个最即可获奖（需要先完成AI魔法练习生任务才可参与评选）
-3名
-抖音集团-机械快充充电宝 10000mAh
-
-
-
-AI魔法师—高位出道奖：万里挑一、二、三
-创建的Bot能够完美贴合掘金沸点圈子主题，并被官方选中应用，即可获奖（需要先完成AI魔法练习生任务才可参与评选）
-不限
-抖音文创-双肩多功能可拆卸背包
-
-
-
-
-✍🏻 活动小Tips
-在扣子（coze.cn）创建的 AI Bot 需要发布在 扣子商店 中；
-给创建的 AI Bot 取一个 好听的/切合Bot主题的名字、设置Bot简介、开场白以及 推荐对话 更容易获得其他人的青睐。
-📢 活动Q&amp;A
-① 活动最后会审核，如果和该圈子无关的内容，可能会直接被移除圈子，以活动结束后公布的名单为准；
-② 作弊用户：开小号薅羊毛、刷量、凑字数、发布无意义内容等用户会被剔除活动资格；
-③ 至少需要满足沸点审核通过的条件，若不通过则该条沸点不算，卡点的建议多发几条保险哦；
-④ 若名单公布前删除沸点，则该条沸点不会计入；
-⑤ 本次活动中的基础奖项与进阶奖项可以叠加，进阶奖项中的每个奖项不能叠加，即无法既获得AI魔法师—勤奋好学奖又获得独门绝技奖；
-⑥ 同一条沸点不能同时参与沸点的多个活动；
-⑦ 发布到掘金的Bot必须要在沸点圈子「AI聊天室」中有人使用才可以计入活动，注意有人使用指非发布人以外的。
-⑧ AI Bot 不可以抄袭，70%以上复用他人创建的流程以及思路即算作抄袭，比如同一个Bot主题下，与其他人使用同一个插件、知识库、工作流。
-⑨ 活动期间新创建的 Bot 才能计入活动。
-扫码进群
-添加掘金酱为好友，回复「coze」、「扣子」关键词即可入群，加入讨论！</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4626,8 +4577,8 @@ iFixit 网站拆解了苹果头盔，证实了 CPU 是 M2 芯片，跟 MacBook �
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8289836302">
-        <time id="build-timestamp" datetime="2024-03-15T01:15:56.033Z">2024-03-15T01:15:56.033Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8291049338">
+        <time id="build-timestamp" datetime="2024-03-15T03:54:07.101Z">2024-03-15T03:54:07.101Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
