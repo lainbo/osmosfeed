@@ -64,7 +64,7 @@
           "description": "全新的Screen Wake Lock API，可以让网页无论放置多久，都不要担心熄屏，或出现屏保，Web如今越来越强了。",
           "link": "https://www.zhangxinxu.com/wordpress/2024/03/js-screen-wake-lock-api/",
           "publishedOn": "2024-03-17T15:35:45.000Z",
-          "wordCount": 1387,
+          "wordCount": 1388,
           "title": "今天才知道，Web网页也能阻止息屏了",
           "imageUrl": null
         },
@@ -74,7 +74,7 @@
           "description": "音视频合成的时候，有倍速合成的需求，起初，我以为这只是个手到擒来的小需求，细究之下发现问题并不简单……",
           "link": "https://www.zhangxinxu.com/wordpress/2024/02/js-audioencoder-backplayrate-audiobuffer/",
           "publishedOn": "2024-02-29T14:22:22.000Z",
-          "wordCount": 1742,
+          "wordCount": 1743,
           "title": "不改变音调情况下Audio音频的倍速合成JS实现",
           "imageUrl": null
         }
@@ -596,7 +596,7 @@
           "description": "大家好，我是杨成功。\n在桌面应用开发中，常常需要获取设备唯一 ID 来表示当前客户端的唯一性。一般的设备 ID 需要满足两个条件：\n基于硬件和系统配置生成，确保设备的唯一性。\n只要不重装系统，设备 ID 多次获取都是唯一的。\nnode-machine-id 是一个常用的 Node.js 模块，它能够在 Electron 中获取机器的唯一标识。\n我们的产品就是使用该模块，用法也很简单：\nimport { machineIdSync } from 'node-machine-id';\nlet id = machineIdSync();\n\n但是昨天出现了问题，排查结果是多台设备获取的 ID 竟然是一样的，造成了一些设备的数据被篡改，我从 issues 中找到了一些端倪。\n\n也就是在 Window Ghost 系统中会出现问题（啥是 Window Ghost ？）。\nWindow 中还经常遇到权限问题，而且这个 ID 总归不可控，所以还是用自定义的方式实现吧。\n自定义设置设备 ID\n自定义的设备 ID 首先需要唯一，其次在安装和卸载应用时设备 ID 不变。\n满足这两个要求，最佳的方案就是将自己生成的设备 ID 存储在用户目录下。\n假设当前用户叫张三，他的用户目录：\nWindow：C:\\Users\\张三\\\nMacOS：/Users/张三/\n很多应用程序都把配置写到用户目录下，且该目录一般不会遇到权限问题。\n（1）使用 uuid 生成设备 ID：\nimport { v4 as uuidv4 } from 'uuid';\nconst device_id = uuidv4();\n\n（2）在主进程中获取到用户目录，非常简单：\nimport { app } from 'electron';\nconst user_path = app.getPath('home'); // 自动获取 Win 或 Mac 的用户目录\n\n（3）在用户目录下创建 .elappid 文件，存放生成的设备 ID：\nimport { join } from 'node:path';\nimport fs from 'node:fs';\n// 获取配置文件地址\nlet appid_path = join(user_path, '.elappid');\n// 判断文件是否存在，不存在就先创建，并写入设备ID\nif (!fs.existsSync(appid_path)) {\n  fs.writeFileSync(appid_path, device_id, 'utf8');\n}\n\n（4）读取设备 ID，并发送给渲染进程：\nlet appid = fs.readFileSync(appid_path, 'utf8');\nwin.webContents.send('susr-config', { appid });\n\n写一个进程间交互的方法，就能拿到设备 ID 了。\n什么时候获取设备 ID\n正常情况下，我们希望用户打开应用的时候，主动获取设备 ID 并发给渲染进程。\n然而经过测试，在创建浏览器窗口的同时立即获取设备 ID 并通知渲染进程，在正式环境中，渲染进程往往接受不到消息。\n这是因为创建窗口时，页面还没有初始化完成，自然接收不到消息。\n保险的方法就是在页面加载完成后再获取设备 ID，方法如下：\nwin = new BrowserWindow({...})\n\n// 页面加载完成后触发：\nwin.webContents.on(\"did-finish-load\", () => {\n  console.log('在这里获取设备ID吧')\n})\n\n大功告成，你也试试吧！\n本文来自公众号 程序员成功，关注查看更多",
           "link": "https://juejin.cn/post/7345379924168196137",
           "publishedOn": "2024-03-13T03:07:11.000Z",
-          "wordCount": 1069,
+          "wordCount": 44,
           "title": "注意！Electron无法获取设备ID了！",
           "imageUrl": null
         },
@@ -606,7 +606,7 @@
           "description": "theme: fancy\n本篇文章主要以理解Vue3动态组件，及其相关应用与问题解析。\n什么是 Vue3 动态组件？\n简单来说，这里的动态，即：能够根据组件的呈现条件，来调整好自己需要呈现的组件，以此来满足对需求的实现。\n注：和动态样式一样，通过用户的操作来确定是什么类型的组件。\n基本使用\n在 Vue3 中，使用动态组件非常简单，我们只需要在模板中使用<component>标签，并通过设置组件的is属性来指定要渲染的组件。例如：\n<component :is=\"currentComponent\"></component>\n\n其中，currentComponent是一个变量，它的值可以是以下 2 种：\n已注册的组件名，或 HTML 标签名称\n导入的组件对象\n以下是示例：\n<script>\nimport { Transition, TransitionGroup } from 'vue'\n\nexport default {\n  components: {\n    Transition,\n    TransitionGroup\n  }\n}\n</script>\n\n<template>\n  <component :is=\"isGroup ? 'TransitionGroup' : 'Transition'\">\n    ...\n  </component>\n</template>\n\n在这个例子中，我们可以看到，component 所呈现的组件，是由isGroup来决定的。\n注意：\n如果将组件本身传递给 is 而不是其名称，则不需要注册，例如在 <script setup> 中。\n如果在 <component> 标签上使用 v-model，模板编译器会将其扩展为 modelValue prop 和 update:modelValue 事件监听器，就像对任何其他组件一样。但是，这与原生 H…",
           "link": "https://juejin.cn/post/7345297230201258024",
           "publishedOn": "2024-03-12T17:18:12.000Z",
-          "wordCount": 1361,
+          "wordCount": 44,
           "title": "Vue3 动态组件？！原来是这样啊！",
           "imageUrl": null
         },
@@ -616,7 +616,7 @@
           "description": "传统实现方式\n当前文章的gif文件较大，加载的时长可能较久\n这里我拿小红书的首页作为分析演示\n\n可以看到他们的实现方式是传统做法，把每个元素通过获取尺寸，然后算出left、top的排版位置，最后在每个元素上设置偏移值，思路没什么好说的，就是算元素坐标。那么这种做法有什么缺点？请看下面这张图的操作\n\n容器尺寸每发生一次变化，容器内部所有节点都需要更新一次样式设置，当页面元素过多时，窗口的尺寸变动卡到不得了；\n实现起来过于复杂，需要对每个元素获取尺寸然后进行计算，不利于后面修改布局样式；\n每一次的容器尺寸发生变动，图片元素都会闪烁一下（电脑好的可能不会）；\n最佳实现方式\n吐槽：早在2019年我就将下面的这种实现方式应用在小程序项目上了，但是目前还没见到有人会用这种方式去实现，为什么会没有人想到呢？表示不理解。\n代码仓库\n预览地址\n先看一下效果\n\n在上面的预览地址中，打开控制台查看节点元素，可以看到是没有任何的js控制样式操作，而是全部交给css的自适应来渲染，我在代码层中只需要把数据排列好就行。\n实现思路\n这里我将把容器里面分为4列，如下图\n\n然后再在每列的数组里面按顺序添加数据即可，这样去布局的好处既方便、兼容性好、浏览器渲染性能开销最低化，而且还不会破坏文档流，将操作做到极致简单。剩下的只需要怎样去处理每一列的数组即可。\n处理数组逻辑\n由于是要做成动态列，所以不能固定4个数组列表，那就做成动态对容器输出N列，最后再对每一列添加数据即可。这里我用ResizeObserver去代替window.onresize，理由是在实际应用中，容器会受到其他布局而影响，而非窗口变动，所以前者更精确一些，不过思路做法都是一样的。\n设置一个变量column，代表显示页面有多少列；\n声明一个变量cacheList，用来缓存接口请求回来的数据，也就是总数据；\n然后监听容器的宽度去设置column的…",
           "link": "https://juejin.cn/post/7345379926147252236",
           "publishedOn": "2024-03-12T13:53:18.000Z",
-          "wordCount": 1864,
+          "wordCount": 44,
           "title": "瀑布流最佳实现方案",
           "imageUrl": null
         },
@@ -626,7 +626,7 @@
           "description": "本文为稀土掘金技术社区首发签约文章，30天内禁止转载，30天后未获授权禁止转载，侵权必究！\n最近，群里在讨论一个很有意思的线条动画效果，效果大致如下：\n\n简单而言，就是线条沿着不规则路径的行进动画，其中的线条动画可以理解为是特殊的光效。\n本文，我们将一起探索，看看在不使用 JavaScript/Canvas 的基础上，使用纯 CSS/SVG 的方式，我们可以如何大致的还原上述的线条动画效果。\n基于 SVG 的线条动画效果\n谈到线条动画，尤其是不规则路径或者是复杂路径，我们第一时间应该想到的就是 SVG 中的 stroke-dasharray 和 stroke-dashoffset。\n这两个属性，我们在多篇文章中都有提及，也是非常有意思的线条动画效果，感兴趣的可以一并拓展阅读：\nCSS 奇技淫巧 | 妙用 drop-shadow 实现线条光影效果\n巧用 CSS 实现动态线条 Loading 动画\n首先，也是最为重要的，上面的路径动画的路径，本质上是多段线段。而使用 SVG 可以非常轻松多端线段效果，像是这样：\n<svg height=\"100%\" width=\"100%\"> xmlns=\"http://www.w3.org/2000/svg\">\n    <polyline points=\"240 10 140 10 140 90 0 90\" stroke=\"#ddd\" fill=\"transparent\" stroke-width=\"2\" />\n</svg>\n\n这样，我们就能得到这样一个多段线段：\n\n接下来，我们就可以利用 stroke-dasharray 来实现多种不同的虚线样式。\n利用与上面同样路径的 polyline，我们来实现一个虚线版本：\n<svg height=\"100%\" width=\"100%\"> xmlns=\"http://www.w3.org/2000/s…",
           "link": "https://juejin.cn/post/7345105895930331147",
           "publishedOn": "2024-03-12T02:34:49.000Z",
-          "wordCount": 2422,
+          "wordCount": 44,
           "title": "【动画进阶】巧用 CSS/SVG 实现复杂线条光效动画",
           "imageUrl": null
         },
@@ -636,7 +636,7 @@
           "description": "theme: cyanosis\nhighlight: atom-one-dark\n背景\n低代码一直以来争议不断，很多人认为低代码平台不好用，坑很多，很多功能实现不了，还不如自己用代码开发。关于这个我说一下我的个人观点，我觉得低代码平台不应该给开发者使用，应该是产品或者业务人员去使用，开发人员去维护低代码平台就好了。\n低代码平台还有一个比较难平衡的点，如果想追求简单，难免拓展性和灵活性变差，如果追求灵活性，难免要写一些代码，这样上手难度就变高了。\nLowCodeEngine低代码引擎为了追求灵活性，所以对非前端技术人员不太友好，因为很多时候一个很简单的功能都还要去写代码才能实现。\n不过LowCodeEngine插件系统很强大，能够快速实现自己想要的功能。下面就和大家分享一下我自己写的一个插件，可以让非技术人员也能快速开发页面。\n不使用插件实现一个小功能\n下面先给大家演示一下，不使用我写的插件的情况下，实现点击一个按钮，弹出一个弹框整个配置流程。\n我这里用的是基于antd物料的官方demo平台，官方还有一些基于其他物料的demo平台，可以到这里查看。\n先从左侧的组件库中拖一个按钮到画布中\n\n再拖一个弹框组件到画布\n\n再拖一个文本组件到弹框里\n\n在js源码中添加一个变量\n\n给弹框是否可见属性绑定变量\n\n绑定我们刚才在state里添加的变量，这里不知道是bug，还是特性，这里选不到刚才定义的变量，需要自己手写。\n\n变量绑定完成后，可以点击这个给弹框隐藏掉，因为它会干扰我们给按钮绑定事件。\n\n选中按钮，然后给按钮onClick事件绑定方法\n\n这里选择新建一个方法，把visible设置为true。\n\n\n点击上面的预览按钮，可以看到效果\n\n弹出来之后，发现点击取消和确认不会关闭弹框，需要我们给取消和确认事件绑定方法，这里可以给弹框重新显示出来\n\n\n\nonOk事件也绑定onCancel方法…",
           "link": "https://juejin.cn/post/7344941254236389403",
           "publishedOn": "2024-03-11T14:12:20.000Z",
-          "wordCount": 4361,
+          "wordCount": 44,
           "title": "我为LowCodeEngine低代码引擎写了个插件，让不懂代码的产品人员也能自己开发页面了。",
           "imageUrl": null
         },
@@ -646,7 +646,7 @@
           "description": "theme: smartblue\n概述\n基于 Rust 的 JavaScrip 打包工具 Rolldown 正式开源，此前尤雨溪曾在 ViteConf 2023 会议上指出，Rolldown 是目前正在进行的一个新的项目，一个范围更大的 Rust 版本的 Rollup，并且最终将会其整合到 Vite 中。而 Rolldown 的重点则是性能，将会尽力与 Rollup API 兼容，目标是在对用户影响最小的情况下，在 Vite 上切换到 Rolldown。\nRolldown 是什么？\nRolldown 项目最初由 Yian Long（又名Brooooooklyn，NAPI-RS的作者）创建，现在由 Vite 和 Vue 的作者尤雨溪（Evan You）领导。\nRolldown 是基于字节跳动的 Oxc 工具集合构建的，它提供与 Rollup 兼容的应用程序接口和插件接口，但在范围内更类似于 esbuild，其内部架构也更接近于 esbuild 而不是 Rollup，代码块拆分逻辑最终可能会与 Rollup 的不同。\nRolldown 将作为 Vite 未来使用的打包工具，号称能够提供原生级性能，并能够避免解析/序列化开销的内置转换。Rolldown 将会与 Rspack 团队展开合作，在一些共享的底层工具和功能上，还会研究如何使用模块联邦在 Rspack 和 Vite 之间工作等。\nRolldown 与 Vite 的整合需要分阶段进行：\n第一阶段专注于打包，目标是能够替代ES构建进行依赖预打包。\n第二阶段是 Rollup 功能的对等性，最重要的是与 Rollup 插件生态系统的兼容性，还需要实现 Tree-shaking 和高级块分割控制，这一阶段的目标是在 Vite 的生产构建中能够使用 Rolldown 代替 Rollup。\n第三阶段是针对一些内置的转换，例如，TypeScript、JSX、代码压缩和基于目标浏览器的语法降级等，其中 TypeScript 只会进行转译，它不会处理类型检查，仍需使用 TSC 进行类型检查。\n第四阶段则是 Rustify Vite。从长远来看，如何更多的受益于本地级别的速度，实现这一目标的一种可能方式是通过 Rust API 让 Rolldown 公开插件容器。Vite 还将以 Rolldown 作为依赖项引入自己的 Rust 核心，这样才能实现 Rustify。\nVite 最终将会用 Rolldown 替换掉 esbuild 和 Rollup，其实并不是要替代它们而成为更好的替代品，主要目的是更好的满足我们在 Vite 中面临的独特的需求，最终使所有构建在 Vite 之上的用户受益。\n值得注意的是，Rolldown 目前正在积极开发中，处于早期阶段，还不能用于生产。\n为什么要开发 Rolldown？\n由于 Vite 在开发环境是依赖于 esbuild 的，虽然 esbuild 速度极快且功能丰富，但其输出，在构建资源优化方面有非常有限的控制能力，没有太多方法来控制代码如何拆分。与 Rollup 相比，它的插件 API 也不够灵活，特别是在将多个插件链接在一起来处理相同的文件类型时，因此并不适合作为生产环境打包器。\n而 Vite 在生产环境是依赖于 Rollup 的，采用了 Rollup 灵活的插件 API 和基础建设，这对 Vite 在生态中的成功起到了重要作用，虽然 Rollup 已经开始着手改进性能，在 v4 中将其解析器切换到 SWC，但是在生产环境下还是存在一定的构建性能问题，与原生的打包工具相比仍然较慢。\n这两者在输出之间的细微差异可能会导致开发和生产构建之间的行为差异，例如，对 CommonJS 的处理和对模块转换的方式有时可能会有轻微的不一致性，这对于最终用户来说很难调试。而且用户源在整个生产构建过程中由不同的工具反复解析、转换和序列化，这导致了很多可以避免的开销。\n正是因为 Vite 目前存在的问题，才导致 Vue 团队试图能够开发一款能够取代 Rollup 和 esbuild 的打包工具，既能够有原生的速度，又具有 Rollup 的灵活性和成熟性。\n总结\n基于 Rust 的打包工具 Rspack，基于 Rust 的 TypeScript/JavaScript 编译器 SWC，基于 Rust 的 JavaScript 语言的高性能工具集合 Oxc 等基于 Rust 开发的前端技术，它们在 Rust 领域探索前端工程化中都取得显著成就。这意味着以 Rust 为前端基建被证实，意味着传统的打包工具本身所带来的问题已经成为过去式， 前端工程化在性能方面将迎来出色的表现。我相信 RollDown 借助开源社区的力量，将会有着丰富的生态系统，丰富的应用场景和丰富的用户基数。\n参考\nRolldown 官网\nViteConf 2023 会议",
           "link": "https://juejin.cn/post/7345008477695229986",
           "publishedOn": "2024-03-11T10:43:09.000Z",
-          "wordCount": 1025,
+          "wordCount": 44,
           "title": "Rolldown 正式开源！未来将作为 Vite 的打包工具",
           "imageUrl": null
         },
@@ -656,7 +656,7 @@
           "description": "highlight: arduino-light\ntheme: nico\n\n前言\n我之前写过一篇 推荐一款基于Vue3的移动H5模板，加速你的移动应用开发，那篇文章介绍了我为什么做这个模板，简单讲当时 Vite 作为一款新的构建工具刚刚出来，还有Vue3也刚刚发布不久，社区里面关于中后台模板非常丰富，但是移动端的还很少，或者说做的不够好，所以那样一个契机下我从2022年一直开源到现在，也快两年时间了。\n这个过程中，vue3-vant-mobile 也发布了 2.0 版本。新增了很多功能和示例，这是这篇文章的目的之一，讲讲新增了什么。第二个目的，2024年的时候，移动端模板也有很多了，不过我自认为我做的还算是可以的，所以我想推荐你用这一款。\n需要强调的是移动端该有的东西，本文没有太多描述，它本该如此。介绍的是相对于其它模板的优势。希望的是收获更多关注，让模板有更多人使用。为了不让文章那么乏味，会有对比、会有思考，我们开始吧！\n1. vue3生态 - 最好用的 DX 体验都有\n在模板早期的时候，它支持的事情不是很多，就是一个很普通的移动端模板，应该有的特性比如：移动端适配、Mock 数据模拟、VConsole 调试、Less 预处理器，默认内置的组件库，以及 vue3 全家桶里面的状态管理 Pinia、Router、setup、TS 支持等等。不过在 2.0 的时候，我增加了基于文件路由、组件自动引入、基于文件路由的布局系统、API自动导入、PWA（渐进式Web）、Unocss、PC 版心等等。这些新特性在使用 VS Code 编辑器进行业务开发，就会发现效率飞起。对了，Eslint 采用了antfu 的最新 eslint flat 插件配置，DX 体验更上一层楼。在同类项目当中，我发现这些特性要么就是没有集成、或者不全、甚至依赖版本滞后，但是这个模板一直在更新，使用最新最稳定…",
           "link": "https://juejin.cn/post/7344536653463076901",
           "publishedOn": "2024-03-10T23:49:29.000Z",
-          "wordCount": 1310,
+          "wordCount": 44,
           "title": "🔥 2024 推荐一款 Vue3 移动端模板 （⚠十个理由）",
           "imageUrl": null
         }
@@ -673,7 +673,7 @@
           "description": "[7073670907851440160#新人报道#] 来学习",
           "link": "https://juejin.cn/pin/7347517295356887080",
           "publishedOn": "2024-03-18T11:38:03.000Z",
-          "wordCount": 456,
+          "wordCount": 458,
           "title": "[7073670907851440160#新人报道#] 来学习",
           "imageUrl": null
         },
@@ -853,7 +853,7 @@
           "description": "windows超越mac成为web应用开发体验赢家\nDHH几天前发文说，在windows11上用vscode和wsl2开发web应用，尤其是使用docker的体验，已经好过mac😆😀😂他的体验和我的怎么那么一样😂\n[7073670907851440160#新人报道#]",
           "link": "https://juejin.cn/pin/7341288345782304809",
           "publishedOn": "2024-03-01T15:05:13.000Z",
-          "wordCount": 463,
+          "wordCount": 465,
           "title": "windows超越mac成为web应用开发体验赢家 DHH几天前发文说，在windows11上用vscode和wsl2开发web应用，尤其是使用docker的体验，已经好过mac😆😀😂他的体验...",
           "imageUrl": null
         },
