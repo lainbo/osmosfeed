@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2024-03-20T03:52:16.535Z</id>
+    <id>urn:2024-03-20T06:52:29.586Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2024-03-20T03:52:16.535Z</updated>
+    <updated>2024-03-20T06:52:29.586Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
+    <entry>
+        <title type="html"><![CDATA[发布了: 不知道"轻言敬字"是不是世界通病, 嘴上聊的时候, 满嘴跑火车好像非常轻松自然, 但当要白纸黑字写下来发出去的时候, 心紧手慢。 于己而言，可养成一个习...]]></title>
+        <id>https://m.okjike.com/originalPosts/65fa5b02164d89e6018549da</id>
+        <link href="https://m.okjike.com/originalPosts/65fa5b02164d89e6018549da"/>
+        <updated>2024-03-20T03:41:54.000Z</updated>
+        <summary type="html"><![CDATA[不知道"轻言敬字"是不是世界通病, 嘴上聊的时候, 满嘴跑火车好像非常轻松自然, 但当要白纸黑字写下来发出去的时候, 心紧手慢。
+于己而言，可养成一个习惯：每参加一次商业交谈，会后发送给对方你整理的交流纪要。]]></summary>
+        <author>
+            <name>李继刚的即刻动态</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[发布了: 永远要相信没有绝对的稳操胜券，我们只不过在自己所掌握的信息框架内给出了有限的判断，放入一个更宏观的视角，或者引入更多的决策因子，事情的结果可能...]]></title>
         <id>https://m.okjike.com/originalPosts/65fa3a5237f7165b2153f844</id>
@@ -113,6 +124,31 @@
 表单渲染中, 有些表单的显示有不同条件, 比如需要上一个表单的开关打开,或者文本内容为 xxxx, 或者需要大于或等于或小于指定值, 或者需要选中某个选项, 或者需满足以上多个条件或在满足多个条件中的一个, 有 n 种场景选择, 这样就需要条件显示配置功能, 来满足多样化需求]]></summary>
         <author>
             <name>Starfish</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Next.js v14 实现乐观更新，面向未来的 UI 更新方式，你可以不去做，但你不应该不了解]]></title>
+        <id>https://juejin.cn/post/7347957960884355113</id>
+        <link href="https://juejin.cn/post/7347957960884355113"/>
+        <updated>2024-03-19T10:03:43.000Z</updated>
+        <summary type="html"><![CDATA[本文为稀土掘金技术社区首发签约文章，30天内禁止转载，30天后未获授权禁止转载，侵权必究！
+前言
+所谓乐观更新，举个例子，当用户在 ToDoList  中添加一项 ToDo 的时候，传统的做法是等待接口返回成功时再更新 UI。乐观更新是先更新 UI，同时发送数据请求。如果数据请求成功，相安无事，用户感受到流畅的操作，提升了用户体验，数据也得到更新。如果更新失败，则视情况对错误进行处理。
+一种交互效果如下：
+
+React 为了实现乐观更新，提供了 useOptimistic 这个官方 hook（目前已经在 Canary 和实验阶段了），本篇我们不仅会介绍 useOptimistic，还会用 Next.js v14，结合最新的 Server Actions 特性来实现乐观更新。
+同时我们会讲解在出现错误的时候，如何进行撤回或者重置。以及处理一个有意思的问题：乐观更新的时候，用户要关闭网页怎么办？
+PS：其实乐观更新并不是一个新潮的思想，很多年前就有人开始做了，但是大家普遍不会去实现乐观更新，一是产品、设计不会过多考虑网速慢的情况，二是就算手动实现乐观更新，虽然并不复杂，但是有一些麻烦，接口那么多，我都加个乐观更新，代码写着写着也可能乱糟糟了，何必去实现呢？
+归根到底还是实现成本太高。所以 本篇会结合 Next.js 和 useOptimistic 讲解如何低成本并考虑全面的实现一个乐观更新。 欢迎收藏点赞本篇文章，万一以后用到了呢？如果有关于乐观更新的经验和看法，欢迎留言评论！
+PS：学习 Next.js，欢迎入手小册《Next.js 开发指南》。基础篇、实战篇、源码篇、面试篇四大篇章带你系统掌握 Next.js！
+废话不多说，让我们直接开始吧！
+创建 Next.js 项目
+使用 Next.js 官方脚手架创建项目：
+npx create-next-app@latest
+
+运行…]]></summary>
+        <author>
+            <name>冴羽</name>
         </author>
     </entry>
     <entry>
@@ -659,56 +695,6 @@ export default router
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[用node帮老婆做excel工资表]]></title>
-        <id>https://juejin.cn/post/7346421986607087635</id>
-        <link href="https://juejin.cn/post/7346421986607087635"/>
-        <updated>2024-03-15T09:34:24.000Z</updated>
-        <summary type="html"><![CDATA[我是天元，立志做1000个有趣的项目的前端。如果你喜欢的话，请点赞，收藏，转发。评论领取零花钱+100勋章
-背景
-我老婆从事HR的工作，公司有很多连锁店，她需要将所有的门店的工资汇总计算，然后再拆分给各门店请确认，最后再提供给财务发工资。
-随着门店数量渐渐增多，渐渐的我老婆已经不堪重负，每天加班都做不完，严重影响夫妻感情生活。
-最终花费了2天的时间，完成了整个node程序，她只需要传入工资表，相应的各种表格在10s内自动输出。目前已正式交付，得到了每月零花钱提高100元的重大成果。
-整体需求
-表格的导入和识别
-表格的计算（计算公式要代入），表格样式正确
-最终结果按照门店拆分为工资表
-需求示例（删减版）
-
-工资表中字段为门店，姓名，基本工资，补发补扣，最终工资（基本工资+补发补扣）。最后一行为总计
-工资表
-
-基础工资
-
-补发补扣
-
-技术选型
-这次的主力库为exceljs，官方文档介绍如下
-读取，操作并写入电子表格数据和样式到 XLSX 和 JSON 文件。
-一个 Excel 电子表格文件逆向工程项目
-选择exceljs是因为它支持完整的excel的样式及公式。
-安装及目录结构
-优先安装exceljs
-npm init
-yarn add exceljs
-
-创建input,out,src三个文件夹，src放入index.js
-
-package.json增加start脚本
-"scripts": {
-    "start": "node src/index.js"
-  },
-
-代码相关
-导入
-通过new Excel.Workbook();创建一个工作簿，通过workbook.xlsx.readFile来导入文件, 注意这是个promise
-const ExcelJS = require("exceljs");
-const path = require("path");
-const i…]]></summary>
-        <author>
-            <name>天元reborn</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[发布了: 如果将 Prompt 看作是编程语言 ━━━━━━━━━━━━━━━━━━ 编程语言的演进发展, 经历了 01 式打孔式编程, 汇编语言， C 语言, C++, Java, Go...]]></title>
         <id>https://m.okjike.com/originalPosts/65f3ebf512ed2fda686b3e6f</id>
         <link href="https://m.okjike.com/originalPosts/65f3ebf512ed2fda686b3e6f"/>
@@ -764,18 +750,6 @@ docker run -d -t \
 此命令将在您的系统上启动一个 Budibase 容器，然后您可以在 http://localhost:10000 上连接到该容器。这里需要注意一点，就是命令里包含了一个外挂存储，需要提前准备好。就是把 /lo…]]></summary>
         <author>
             <name>IT咖啡馆</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[发布了: 启蒙运动: 抛弃上帝, 拥抱理性 工业革命: 抛弃手工, 拥抱机械 AI 时代: 抛弃思考，拥抱 Cyber?]]></title>
-        <id>https://m.okjike.com/originalPosts/65f3c737efd217879be75177</id>
-        <link href="https://m.okjike.com/originalPosts/65f3c737efd217879be75177"/>
-        <updated>2024-03-15T03:57:43.000Z</updated>
-        <summary type="html"><![CDATA[启蒙运动: 抛弃上帝, 拥抱理性
-工业革命: 抛弃手工, 拥抱机械
-AI 时代: 抛弃思考，拥抱 Cyber?]]></summary>
-        <author>
-            <name>李继刚的即刻动态</name>
         </author>
     </entry>
     <entry>
