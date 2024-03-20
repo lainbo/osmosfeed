@@ -51,11 +51,46 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-20 datetime="2024-03-20T11:18:17.000Z">2024-03-20</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-20 datetime="2024-03-20T11:18:17.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-20 datetime="2024-03-20T13:40:10.000Z">2024-03-20</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-20 datetime="2024-03-20T13:40:10.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >沸点 - 开发工具推荐</button>
+                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7348275757800570895"
+                        open
+                      >
+                        <summary class="article-expander__title">#写作工具 写完博客后，都需要在文章前后写些固定内容，打一打广告，每次重复添加都挺烦的 写了个小工具，拼接文章前后固定文本，并且做了缓存，这样每次只需要...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7348275757800570895">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>#写作工具 写完博客后，都需要在文章前后写些固定内容，打一打广告，每次重复添加都挺烦的
+写了个小工具，拼接文章前后固定文本，并且做了缓存，这样每次只需要粘贴正文即可
+👉 工具地址：https://wukaipeng.com/sandwich</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -811,6 +846,40 @@ dom.scrollHeight &gt; dom.offsetHeight;
 
   欢迎关注前端侦探，这里有一些有趣的、你可能不知道的HTML、CSS、JS小技巧技巧。欢迎关注前端侦探，这里有一些有趣的…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7347210988260147210"
+                        open
+                      >
+                        <summary class="article-expander__title">一行代码引发的离奇问题，众多大佬纷纷参与点评，最终Typescript之父出手解决</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7347210988260147210">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>highlight: github
+theme: vuepress
+故事的起因是这样的， 一个前端开发人员(也算是挺有名的，ariakit.org的作者， wrodPress的前维护者)在社交媒体上发了这么一条帖子。
+
+短短几天就有了51.8万次的view。 简单的文案：又是使用 TypeScript 的一天.。表达了对Typescript的又爱又恨😂。在目前的前端市场上，Typescript已经成为标配，ts强大的类型检查机制给我们带来了非常多的好处(代码质量，强大的可维护性，代码即注释)，但是其槽点也很多， 很多奇奇怪怪的问题(相信不仅是我一个人这么觉得)，繁多的配置项组合，稍不注意就会引起页面爆红，代码量增多和代码组织也会引起一定的负担。但在这些并不能撼动Typescript 在目前前端社区中的地位，在开发项目中一般还是会选择typescript。
+反应
+话说回到这个帖子上，这个帖子发出来之后迅速引起发酵，被很多大佬转发和引用，下面的评论很多都是wait, what, why happen?类似的语气😂，有很多给出建议，比如换种写法， 重启下Typescript server试试，也有很多开发爱好者希望作者能提供一个例子来复现，他们也想看看是什么问题，看能不能尝试解决这个有趣的例子。
+（ps: 在ts中有很多奇怪的东西，特别是在和编辑器配合的时候，有些时候不能判断出来是否是个bug？还是我们代码写的有问题？还是设计如此？还是编辑器的问题？还是版本兼容问题？仅代表个人看法）
+复现例子
+后来有大佬根据作者提供的信息复现出来了样板例子 ：
+declare function hasOwnProperty(
+  object: T,
+  prop: keyof any,
+): prop is keyof T;
+
+type Effec…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2016,49 +2085,6 @@ interface Link {
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7345687862530686986"
-                        open
-                      >
-                        <summary class="article-expander__title">💥程序员警惕！首个AI软件工程师Devin问世！他们铁了心砸掉程序员饭碗</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7345687862530686986">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>只需一句指令，它可端到端地处理整个开发项目。
-一觉醒来，程序员怕是真要失业了，👀一项革命性的技术震撼了科技界。
-全球首个 AI 软件工程师一亮相，直接引爆整个科技圈。只需一句指令，它可端到端地处理整个开发项目，预示着软件开发领域的未来可能不再需要人类参与。
-
-欢迎关注公众号《前端界》，文章会同步更新，也可快速加入前端交流群！
-能力令人惊叹，只需简单的指令，它便能独立完成整个开发项目，从零开始构建网站，自动检测和修复代码错误，甚至能够自我学习和调整其AI模型， 更可怕的是，也可为一些成熟的代码库做贡献（🙉大部分多年开发经验的程序员都做不到！）。
-在最近的SWE-bench编码基准测试中，它展现了其卓越的性能。它无需人类帮助，可解决13.86% 的问题。
-而相比之下，GPT-4在同一测试中只能处理 1.74% 的问题，且都需要人类提示告知处理哪些文件。
-
-可以这样说，它远远超过了此前所有AI大模型。
-Devin被介绍为世界首个完全自主的AI软件工程师。
-它在长程推理和规划上面下了很大功夫，可以规划和执行需要数千个决策才能完成的复杂软件工程任务。
-在这之中，进行到任何一步它都可以回调所有相关的上下文信息，保证整体逻辑性，并方便随时校正错误。
-既然是一个端到端AI，软件开发人员常用的工具，比如shell、代码编辑器和浏览器等等，Devin也都配备（沙盒计算环境中），主打一个全方位服务。
-最终的Devin，让人类只需要发号施令，其他什么也不用做。
-比如Devin 通过阅读博客文章学习，用ControlNet，生成带有隐藏文字的图像，学习能力真的是一点就通～
-
-另外，Devin 可以自主查找并修复代码库中的错误。
-
-原视频地址：https://www.youtube.com/watch?v&#x3D;TiXAzn2_Xck&amp;t&#x3D;4s
-目前Devin尚未公测，不过已经有少部分人拿到了资格，开始实测了一波……
-比如这位叫Akshat Bubna的网友分享：
-
-所以，程序员们做好和 AI Devin PK的准备了吗？🐶
-欢迎关注公众号《前端界》，文章会同步更新，也可快速加入前端交流群！</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7345423755948785718"
                         open
                       >
@@ -3028,46 +3054,11 @@ https://vfox.lhan.me/</span>
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-01 datetime="2024-03-01T15:05:13.000Z">2024-03-01</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-01 datetime="2024-03-01T15:05:13.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-01 datetime="2024-03-01T00:25:43.000Z">2024-03-01</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-01 datetime="2024-03-01T00:25:43.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >沸点 - 开发工具推荐</button>
-                  <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7341288345782304809"
-                        open
-                      >
-                        <summary class="article-expander__title">windows超越mac成为web应用开发体验赢家 DHH几天前发文说，在windows11上用vscode和wsl2开发web应用，尤其是使用docker的体验，已经好过mac😆😀😂他的体验...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/pin/7341288345782304809">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>windows超越mac成为web应用开发体验赢家
-DHH几天前发文说，在windows11上用vscode和wsl2开发web应用，尤其是使用docker的体验，已经好过mac😆😀😂他的体验和我的怎么那么一样😂
-[7073670907851440160#新人报道#]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -3356,8 +3347,8 @@ iFixit 网站拆解了苹果头盔，证实了 CPU 是 M2 芯片，跟 MacBook �
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8359270013">
-        <time id="build-timestamp" datetime="2024-03-20T12:54:25.341Z">2024-03-20T12:54:25.341Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8361916394">
+        <time id="build-timestamp" datetime="2024-03-20T15:53:25.830Z">2024-03-20T15:53:25.830Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

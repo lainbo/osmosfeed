@@ -64,7 +64,7 @@
           "description": "全新的Screen Wake Lock API，可以让网页无论放置多久，都不要担心熄屏，或出现屏保，Web如今越来越强了。",
           "link": "https://www.zhangxinxu.com/wordpress/2024/03/js-screen-wake-lock-api/",
           "publishedOn": "2024-03-17T15:35:45.000Z",
-          "wordCount": 1388,
+          "wordCount": 1394,
           "title": "今天才知道，Web网页也能阻止息屏了",
           "imageUrl": null
         },
@@ -511,6 +511,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7347210988260147210",
+          "author": "xinling_any",
+          "description": "highlight: github\ntheme: vuepress\n故事的起因是这样的， 一个前端开发人员(也算是挺有名的，ariakit.org的作者， wrodPress的前维护者)在社交媒体上发了这么一条帖子。\n\n短短几天就有了51.8万次的view。 简单的文案：又是使用 TypeScript 的一天.。表达了对Typescript的又爱又恨😂。在目前的前端市场上，Typescript已经成为标配，ts强大的类型检查机制给我们带来了非常多的好处(代码质量，强大的可维护性，代码即注释)，但是其槽点也很多， 很多奇奇怪怪的问题(相信不仅是我一个人这么觉得)，繁多的配置项组合，稍不注意就会引起页面爆红，代码量增多和代码组织也会引起一定的负担。但在这些并不能撼动Typescript 在目前前端社区中的地位，在开发项目中一般还是会选择typescript。\n反应\n话说回到这个帖子上，这个帖子发出来之后迅速引起发酵，被很多大佬转发和引用，下面的评论很多都是wait, what, why happen?类似的语气😂，有很多给出建议，比如换种写法， 重启下Typescript server试试，也有很多开发爱好者希望作者能提供一个例子来复现，他们也想看看是什么问题，看能不能尝试解决这个有趣的例子。\n（ps: 在ts中有很多奇怪的东西，特别是在和编辑器配合的时候，有些时候不能判断出来是否是个bug？还是我们代码写的有问题？还是设计如此？还是编辑器的问题？还是版本兼容问题？仅代表个人看法）\n复现例子\n后来有大佬根据作者提供的信息复现出来了样板例子 ：\ndeclare function hasOwnProperty<T extends AnyObject>(\n  object: T,\n  prop: keyof any,\n): prop is keyof T;\n\ntype Effec…",
+          "link": "https://juejin.cn/post/7347210988260147210",
+          "publishedOn": "2024-03-18T00:32:47.000Z",
+          "wordCount": 1272,
+          "title": "一行代码引发的离奇问题，众多大佬纷纷参与点评，最终Typescript之父出手解决",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7346510823772733494",
           "author": "粥里有勺糖",
           "description": "theme: smartblue\n在线 Demo 体验地址 →: https://demos.sugarat.top/pages/png-compress/\njcode\n前言\n最近在迭代自己的 图床 应用，由于使用时间的累计，存储空间占用越来越大了，在做 Web 应用的时候会随手拿 tinypng 压缩一下图片。\n想着给咱图床也加个压缩的功能，这样上传/访问也能省点 💰。\n\n图片类型众多，常用的主要就是PNG/JPG/GIF。\n个人使用频率最高的场景是截图上传，格式为PNG，就先拿 PNG 试手。调研了一圈开源里最流行的就是使用 UPNG.js 进行 PNG 的压缩。\n官方对比 tinypng 介绍；\n官方在线示例 Demo。\n如何判断图片是 PNG\n第一步当然是判断图片类型，不然 UPNG.js 就不能正常工作咯，通过文件后缀 .png 判断肯定是不靠谱的。\n搜索了解了一下，可以使用 魔数 判断：一个PNG文件的前8个字节是固定的。\nPNG 的前 8 个字节是（16进制表示）：89 50 4E 47 0D 0A 1A 0A。\n我们可以拿工具看一下，我这里用 VS Code 插件 Hex Editor 查看一个 PNG 图片的 16 进制表示信息。\n\n可以看到前八个字节和上面表示的一样。\n于是可以根据这个特性判断，于是就有如下的判断代码。\nasync function isPNG(file: File) {\n  // 提取前8个字节\n  const arraybuffer = await file.slice(0, 8).arrayBuffer()\n\n  // PNG 的前8字节16进制表示\n  const signature = [0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A]\n  // const signature =…",
@@ -631,16 +641,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7345687862530686986",
-          "author": "芝士加",
-          "description": "只需一句指令，它可端到端地处理整个开发项目。\n一觉醒来，程序员怕是真要失业了，👀一项革命性的技术震撼了科技界。\n全球首个 AI 软件工程师一亮相，直接引爆整个科技圈。只需一句指令，它可端到端地处理整个开发项目，预示着软件开发领域的未来可能不再需要人类参与。\n\n欢迎关注公众号《前端界》，文章会同步更新，也可快速加入前端交流群！\n能力令人惊叹，只需简单的指令，它便能独立完成整个开发项目，从零开始构建网站，自动检测和修复代码错误，甚至能够自我学习和调整其AI模型， 更可怕的是，也可为一些成熟的代码库做贡献（🙉大部分多年开发经验的程序员都做不到！）。\n在最近的SWE-bench编码基准测试中，它展现了其卓越的性能。它无需人类帮助，可解决13.86% 的问题。\n而相比之下，GPT-4在同一测试中只能处理 1.74% 的问题，且都需要人类提示告知处理哪些文件。\n\n可以这样说，它远远超过了此前所有AI大模型。\nDevin被介绍为世界首个完全自主的AI软件工程师。\n它在长程推理和规划上面下了很大功夫，可以规划和执行需要数千个决策才能完成的复杂软件工程任务。\n在这之中，进行到任何一步它都可以回调所有相关的上下文信息，保证整体逻辑性，并方便随时校正错误。\n既然是一个端到端AI，软件开发人员常用的工具，比如shell、代码编辑器和浏览器等等，Devin也都配备（沙盒计算环境中），主打一个全方位服务。\n最终的Devin，让人类只需要发号施令，其他什么也不用做。\n比如Devin 通过阅读博客文章学习，用ControlNet，生成带有隐藏文字的图像，学习能力真的是一点就通～\n\n另外，Devin 可以自主查找并修复代码库中的错误。\n\n原视频地址：https://www.youtube.com/watch?v=TiXAzn2_Xck&t=4s\n目前Devin尚未公测，不过已经有少部分人拿到了资格，开始实测了一波……\n比如这位叫Akshat Bubna的网友分享：\n\n所以，程序员们做好和 AI Devin PK的准备了吗？🐶\n欢迎关注公众号《前端界》，文章会同步更新，也可快速加入前端交流群！",
-          "link": "https://juejin.cn/post/7345687862530686986",
-          "publishedOn": "2024-03-13T11:02:03.000Z",
-          "wordCount": 720,
-          "title": "💥程序员警惕！首个AI软件工程师Devin问世！他们铁了心砸掉程序员饭碗",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7345423755948785718",
           "author": "柚子816",
           "description": "theme: channing-cyan\n首先声明这篇文章不是讲如何逆向 wasm 文件，获取其内部逻辑，这个标题真的就是一个问题，想要问问是否可以逆向\n编写一个 wasm\n下面先演示用 rust 编写构建一个 wasm 的过程。rust 环境的安装，cargo 是什么命令就不解释了，官方网站有安装使用说明\n首先需要创建一个工程\n$ cargo new --lib greet-wasm \n\n进入工程目录添加依赖项\n[lib] \ncrate-type = [\"cdylib\"]\n\n[dependencies] \nwasm-bindgen = \"0.2\" \njs-sys = \"0.3.61\"  \n\n清空 src/lib.rs 文件中的内容，输入以下代码\nextern crate wasm_bindgen;  \nuse wasm_bindgen::prelude::*;  \n\n#[wasm_bindgen] \npub fn hello(input: &str) -> JsValue {\n  JsValue::from_str(&format!(\"Hello {}!\", input)) \n} \n\n执行打包命令\n$ wasm-pack build  --target web \n\n经过打包后，将生成 pkg 目录, 此时已经可以将目录发布到 npm 仓库，供项目使用了，此处本地引用，就不发布了\n在网页中引用wasm\n新建 html 文件，并引用 hello 方法\n<!DOCTYPE html>\n<html lang=\"en\"> \n  <head>   \n    <meta charset=\"UTF-8\">   \n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">   \n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"> \n    <title>Document</title> \n  </head> \n  <body>   \n    <script type=\"module\">     \n      import init, {hello} from './greet-wasm/pkg/greet_wasm.js';\n      async function run() {       \n        await init();       \n        console.log(hello('world'));     \n      }     \n      run(); \n    </script> \n  </body> \n</html> \n\n使用任何静态资源服务器打开 html 文件，控制台将会成功打印 Hello world!， 到此已成功调用 wasm 内方法并获取到返回值\n逆向 wasm\n如果你尝试去打印一个 wasm 暴露出来的方法，将会看到 [native code] ，wasm 直接暴露的方法被认为是原生的方法，不会打印原始代码。毕竟原始代码也不是 js 写的。如果尝试在控制直接查看 wasm 文件的内容，看到是下面的内容，一般人肯定是看不懂的\n\n生成函数签名\n所以我在想如果把项目的参数签名逻辑放在 wasm 中去实现，生成签名的过程中使用的 salt 也放在 wasm 中，这样是不是可以避免别人写脚本刷接口的尴尬了。请参考这个站点中的 demo，类似于在浏览器网络面板中看到的每个接口的入参及生成好签名。\n那下面的问题就是，这样的网站发布上线后，能否获取网站的验签逻辑，然后修改参数生成签名然后调用接口，以达到一些不可告人的小心思呢。如果你曾经干成过这事，能不能留下你的方法呢。如果你需要上面站点中的 wasm，也请从 demo 站点的控制面板中获取链接并下载",
@@ -678,6 +678,16 @@
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
         {
+          "id": "7348275757800570895",
+          "author": "吴楷鹏",
+          "description": "#写作工具 写完博客后，都需要在文章前后写些固定内容，打一打广告，每次重复添加都挺烦的\n写了个小工具，拼接文章前后固定文本，并且做了缓存，这样每次只需要粘贴正文即可\n👉 工具地址：https://wukaipeng.com/sandwich",
+          "link": "https://juejin.cn/pin/7348275757800570895",
+          "publishedOn": "2024-03-20T13:40:10.000Z",
+          "wordCount": 467,
+          "title": "#写作工具 写完博客后，都需要在文章前后写些固定内容，打一打广告，每次重复添加都挺烦的 写了个小工具，拼接文章前后固定文本，并且做了缓存，这样每次只需要...",
+          "imageUrl": null
+        },
+        {
           "id": "7347904631294525492",
           "author": "mharvay",
           "description": "掘友们，问一下大家mac上用啥建模工具来设计数据库表的，之前Windows用习惯了power designer，mac没找到好用的，有推荐的吗",
@@ -703,7 +713,7 @@
           "description": "#开源工具 ✨ MulSearch v0.2\nMulSearch，一个快速指定搜索源的入口页，方便使用多个搜索引擎和平台的开发者\n新版本做了一些调整，用 divider 做了分类，并引入了一些垂直平台的搜索源\n👉 体验地址：https://search.wukaipeng.com/",
           "link": "https://juejin.cn/pin/7347147911149436943",
           "publishedOn": "2024-03-18T05:52:06.000Z",
-          "wordCount": 487,
+          "wordCount": 493,
           "title": "#开源工具 ✨ MulSearch v0.2 MulSearch，一个快速指定搜索源的入口页，方便使用多个搜索引擎和平台的开发者 新版本做了一些调整，用 divider 做了分类，并引入...",
           "imageUrl": null
         },
@@ -723,7 +733,7 @@
           "description": "#开源工具 如果平时有使用多个搜索引擎的习惯，比如 Google、Bing、百度等，切换起来比较麻烦，可以使用这个轻量网站，功能专一，输入搜索关键词，选择想要的搜索引擎去搜索即可\n👉 search.wukaipeng.com",
           "link": "https://juejin.cn/pin/7345726691510861860",
           "publishedOn": "2024-03-13T13:20:34.000Z",
-          "wordCount": 469,
+          "wordCount": 475,
           "title": "#开源工具 如果平时有使用多个搜索引擎的习惯，比如 Google、Bing、百度等，切换起来比较麻烦，可以使用这个轻量网站，功能专一，输入搜索关键词，选择想要的搜...",
           "imageUrl": null
         },
@@ -865,16 +875,6 @@
           "publishedOn": "2024-03-03T03:00:16.000Z",
           "wordCount": 480,
           "title": "上榜GitHub Trending啦~ https://vfox.lhan.me/",
-          "imageUrl": null
-        },
-        {
-          "id": "7341288345782304809",
-          "author": "程序员吾真本",
-          "description": "windows超越mac成为web应用开发体验赢家\nDHH几天前发文说，在windows11上用vscode和wsl2开发web应用，尤其是使用docker的体验，已经好过mac😆😀😂他的体验和我的怎么那么一样😂\n[7073670907851440160#新人报道#]",
-          "link": "https://juejin.cn/pin/7341288345782304809",
-          "publishedOn": "2024-03-01T15:05:13.000Z",
-          "wordCount": 468,
-          "title": "windows超越mac成为web应用开发体验赢家 DHH几天前发文说，在windows11上用vscode和wsl2开发web应用，尤其是使用docker的体验，已经好过mac😆😀😂他的体验...",
           "imageUrl": null
         }
       ]
