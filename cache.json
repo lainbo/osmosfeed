@@ -74,7 +74,7 @@
           "description": "音视频合成的时候，有倍速合成的需求，起初，我以为这只是个手到擒来的小需求，细究之下发现问题并不简单……",
           "link": "https://www.zhangxinxu.com/wordpress/2024/02/js-audioencoder-backplayrate-audiobuffer/",
           "publishedOn": "2024-02-29T14:22:22.000Z",
-          "wordCount": 1743,
+          "wordCount": 1744,
           "title": "不改变音调情况下Audio音频的倍速合成JS实现",
           "imageUrl": null
         }
@@ -245,7 +245,7 @@
           "description": "慎重对待你选择的比喻对象\n━━━━━━━━━━━━━━\n当遇到一个陌生问题, 一个非常自然的思考方式就是将它归约类比到一个熟悉问题上。\n这种方式经常生效，确实好用。在比喻的过程中，自觉不自觉地完成了：剥离不重要元素，抽象内核， 寻找类似内核的喻体的过程。 用的好，就是在应用 80/20 原则，就是在寻找各类事物背后的一。\n但这里有个需要注意的点，你的比喻对象太关键了， 它会影响你的后续思考和行动。\n当你把一个复杂的事情，比喻成一团\"乱麻\"时，你想的是怎么去找那个\"线头\", 源头是什么,在哪里。\n当你把这个复杂的事情联想到上下游产业角色时, 会把它比喻成一条河流, 你想的是上游角色有几层, 各自拦截多少水流, 你又准备放多少水流给到下游。\n一旦使用了这个思考方式, 但又选择了错误的比喻对象, 很有可能就抓着你的喻体中的重点使劲操作， 但离真实的主要矛盾甚远。\n这里的对象选择，感觉有点像艺术。没有太好的实践方法论可以总结。",
           "link": "https://m.okjike.com/originalPosts/65fac5f912ed2fda68e9c1e9",
           "publishedOn": "2024-03-20T11:18:17.000Z",
-          "wordCount": 462,
+          "wordCount": 466,
           "title": "发布了: 慎重对待你选择的比喻对象 ━━━━━━━━━━━━━━ 当遇到一个陌生问题, 一个非常自然的思考方式就是将它归约类比到一个熟悉问题上。 这种方式经...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -566,7 +566,7 @@
           "description": "theme: vuepress\nhighlight: atelier-dune-dark\n前言\n经常我们会被面试官问，账号密码被修改了怎么办，这就涉及到token了。假设我在淘宝网站登录了账号进入首页，然后我在另一个设备上同样登录该账号，并且将密码修改，原设备刷新数据会被退出登录，这个过程的实现就需要借助token。token翻译过来是令牌的意思\ntoken的实现一定是需要你有登录页面，其他页面，以及后端，本文有点长，因为是手把手教，小白可以放心食用\n准备工作\n前端简单写两个页面，一个登录页，一个首页\n前端\nnpm create vite@latest client -- --template vue\ncd client\nnpm i \nnpm i vue-router@4 \nnpm i vant  // 安装vant\nnpm i axios \n\n路由\nimport { createWebHistory, createRouter } from 'vue-router'\n\nconst routes = [\n    {\n        path: '/login',\n        component: () => import('../views/Login.vue')\n    },\n    {\n        path: '/home',\n        component: () => import('../views/Home.vue') \n    }\n]\n\nconst router = createRouter({\n    history: createWebHistory(),\n    routes: routes\n})\n\nexport default router\n\n登录页\n借助vantUI，用他的按钮和输入框\n自行引入样式~\n<template>\n    <di…",
           "link": "https://juejin.cn/post/7346430299490189348",
           "publishedOn": "2024-03-15T11:07:43.000Z",
-          "wordCount": 44,
+          "wordCount": 3286,
           "title": "全栈项目？那你说说你的token怎么实现的吧",
           "imageUrl": null
         },
@@ -576,7 +576,7 @@
           "description": "我是天元，立志做1000个有趣的项目的前端。如果你喜欢的话，请点赞，收藏，转发。评论领取零花钱+100勋章\n背景\n我老婆从事HR的工作，公司有很多连锁店，她需要将所有的门店的工资汇总计算，然后再拆分给各门店请确认，最后再提供给财务发工资。\n随着门店数量渐渐增多，渐渐的我老婆已经不堪重负，每天加班都做不完，严重影响夫妻感情生活。\n最终花费了2天的时间，完成了整个node程序，她只需要传入工资表，相应的各种表格在10s内自动输出。目前已正式交付，得到了每月零花钱提高100元的重大成果。\n整体需求\n表格的导入和识别\n表格的计算（计算公式要代入），表格样式正确\n最终结果按照门店拆分为工资表\n需求示例（删减版）\n\n工资表中字段为门店，姓名，基本工资，补发补扣，最终工资（基本工资+补发补扣）。最后一行为总计\n工资表\n\n基础工资\n\n补发补扣\n\n技术选型\n这次的主力库为exceljs，官方文档介绍如下\n读取，操作并写入电子表格数据和样式到 XLSX 和 JSON 文件。\n一个 Excel 电子表格文件逆向工程项目\n选择exceljs是因为它支持完整的excel的样式及公式。\n安装及目录结构\n优先安装exceljs\nnpm init\nyarn add exceljs\n\n创建input,out,src三个文件夹，src放入index.js\n\npackage.json增加start脚本\n\"scripts\": {\n    \"start\": \"node src/index.js\"\n  },\n\n代码相关\n导入\n通过new Excel.Workbook();创建一个工作簿，通过workbook.xlsx.readFile来导入文件, 注意这是个promise\nconst ExcelJS = require(\"exceljs\");\nconst path = require(\"path\");\nconst i…",
           "link": "https://juejin.cn/post/7346421986607087635",
           "publishedOn": "2024-03-15T09:34:24.000Z",
-          "wordCount": 44,
+          "wordCount": 2004,
           "title": "用node帮老婆做excel工资表",
           "imageUrl": null
         },
@@ -586,7 +586,7 @@
           "description": "近几年越来越多的企业开始尝试低代码，希望可以让非专业的用户不写代码或少量代码的情况下，也能构建自己的应用。\n今天我们来推荐一个开源低代码平台，帮助工程师节省上百小时的时间去构建工作流类的应用， 目前在GitHub已超过20K Star，他就是：budibase 。\n\nbudibase 是什么?\nBudibase 是一个一体化的低代码平台，用于构建、设计和自动化业务应用程序，例如；管理面板、表单、内部工具、客户门户等。在 Budibase 出现之前，开发人员可能需要数周时间才能构建简单的 CRUD 应用程序；借助 Budibase，构建 CRUD 应用程序只需几分钟。\n\nBudibase简化整个实现的流程，你不需要有必要的编程技巧，但它也提供了一些灵活性，让你在一定程度上定制应用。\n它支持一系列的数据源：MySQL、Rest API、OracleDB、MongoDB、Google 表格等。\n\n还可以选择自托管并在你的服务器上部署应用，或者利用 Budibase 的云托管服务。\n部署 budibase\n可以选使用Docker自己部署或者使用budibase cloud的SAAS服务。\nDocker部署\n尝试 Budibase 映像的最简单方法是使用 docker run 命令，最基本的版本是：\ndocker run -d -t \\\n  --name=budibase \\\n  -p 10000:80 \\\n  -v /local/path/data:/data \\\n  --restart unless-stopped \\\n  budibase/budibase:latest\n\n此命令将在您的系统上启动一个 Budibase 容器，然后您可以在 http://localhost:10000 上连接到该容器。这里需要注意一点，就是命令里包含了一个外挂存储，需要提前准备好。就是把 /lo…",
           "link": "https://juejin.cn/post/7346148341385642023",
           "publishedOn": "2024-03-15T04:59:23.000Z",
-          "wordCount": 44,
+          "wordCount": 1018,
           "title": "2万星！开源低代码平台，帮你节省数百小时的工作",
           "imageUrl": null
         },
@@ -606,7 +606,7 @@
           "description": "Shiki 是一个使用 TextMate 语法和主题的语法高亮器，与 VS Code 使用相同的引擎。它为您的代码片段提供了最准确、最美观的语法高亮。Pine Wu 于 2018 年在 VS Code 团队期间创建了它，最初是为了使用 Oniguruma 进行语法高亮。\n与在浏览器中运行的 Prism 和 Highlight.js 等现有语法高亮器不同，Shiki 采用了预高亮的方式。它将高亮后的 HTML 发送到客户端，无需 JavaScript 即可产生准确、美观的语法高亮。很快，它便成为了一个非常受欢迎的选择，尤其是用于静态网站生成器和文档网站。\n尽管 Shiki 很出色，但它仍然是一个设计在 Node.js 上运行的库。这意味着它仅限于高亮静态代码，对于动态代码则会有问题，因为 Shiki 不能在浏览器中运行。此外，Shiki 依赖于 Oniguruma 的 WASM 二进制文件以及 JSON 格式的多个重型语法和主题文件。它使用 Node.js 的文件系统和路径解析来加载这些文件，这在浏览器中是无法访问的。\n为了改善这种情况，Anthony Fu 开始了这项 RFC，后来以 PR 的形式发布并应用于 Shiki v0.9。虽然它将文件加载层抽象为根据环境使用 fetch 或文件系统，但使用起来仍相当复杂，因为需要在包或 CDN 中手动提供语法和主题文件，然后调用 setCDN 方法告诉 Shiki 从哪里加载这些文件。\n虽然这个解决方案并不完美，但至少使 Shiki 能够在浏览器中运行以高亮动态内容。从那时起，大家一直在使用这种方法，直到本文故事的开始。\n\nShiki 的开始\nNuxt 正在积极推动 Web 发展，以降低延迟、提高性能，使 Web 更加便捷。与 CDN 服务器类似，Cloudflare Workers 等边缘托管服务遍布全球。用户可以从最近的边缘服…",
           "link": "https://juejin.cn/post/7345828305490935843",
           "publishedOn": "2024-03-14T06:44:11.000Z",
-          "wordCount": 44,
+          "wordCount": 1497,
           "title": "前端大神 Anthony Fu 新作：Shiki v1.0 重磅发布！",
           "imageUrl": null
         },
@@ -616,7 +616,7 @@
           "description": "theme: smartblue\n前言\n目前大三，这是诸多面试中的第二个面试，也是拿到的第一个offer，不过确实小厂中薪资算给的最高的一个，而且这次的面试官给我的不是压迫感而是一位大佬正在耐心指导。聊到我不了解的地方，我就会虚心请教一下面试官可否讲解一下，比如一些之前没接触过的公司业务类知识，面试官就会很用心地结合八股给我科普讲解，这一次面试其实我收获了还是蛮多东西的。\n面试了这么多天，觉得一个人的力量还是太过薄弱，如果你和我一样有向前冲的勇气，欢迎掘友们私聊我交流面经（wechat: sAnL1ng）\n自我介绍\n一上来，依旧是亘古不变的定律，就像校园时期甜甜的恋爱，彼此都从相互了解开始，然后再决定是否选择对方。\n这里可以参考我的上一篇文章，按照这个模板来介绍自己，因人而异。\n【面试官：这26分钟感觉身体被掏空】\n一、聊聊vue2和vue3中响应式处理数据的不同\n面试官听到我自我介绍说到熟悉vue全家桶，于是上来先探探底，看似问vue2和vue3的区别，其实是想看看你对这两者的底层了解多深 ，依旧是面经，结合我学习源码时的总结，一套高输出爆发给到面试官：\nvue2中采用的是Object.defineProperty和原生的getter和setter方法，当我们初始化一个数据data的时候，会实例化一个Observe类，首先它会迭代遍历data中的每一个属性，并通过Object.defineProperty给遍历到的每一个属性添加上getter和setter方法,当属性被读取的时候就会触发getter方法进行依赖(Wather)收集,当属性被修改的时候就会触发setter方法进行依赖(Wather)触发。（但是，光靠这些方法并不能建立完全的响应式数据与依赖之间的关系，这种办法效率低、功能弱。当我们使用Object.defineProperty()来进行数据劫持，只有当数据被…",
           "link": "https://juejin.cn/post/7345836282066960435",
           "publishedOn": "2024-03-14T05:56:31.000Z",
-          "wordCount": 44,
+          "wordCount": 1187,
           "title": "小厂一面：30分钟速通，拿下一血！",
           "imageUrl": null
         },
@@ -626,7 +626,7 @@
           "description": "面试的业务是字节-千川，职级是 2-2，技术面一共 3 轮，每一面都要手写算法。我在 2023 年 7 月下旬被裁员，于 2024 年 2 月初面试字节-千川，没有通过第 3 轮面试，在这里记录下当时的面试问题，希望帮到大家\n第一轮面试\n首先是自我介绍，主要介绍在任职的公司落地了低代码平台和用户操作记录回溯，还向开源项目 rrweb 提交了两个PR，最后是公司的插件化架构。\n自我介绍完毕，面试官的第一个问题是，为什么离职？我因为被裁而离职，如实回答了，之后每一轮面试官都会询问什么被裁，另，由于我从离职到面试字节中间隔了7个月左右，面试官还重点关注了，离职之后在做什么。离职之后，我首先回家休息了近 1 个月，旅游了近 2 个月，然后写书花了 1 个多月，到 11 底开始找工作，这没什么好隐瞒的，如实告知了面试官。\n第一轮主要面试 JS 和 React基础知识，问题如下：\n在 js 中有浮点数运算不正确的时候，比如 0.1 + 0.2 不等于 0.3 这是什么原因，要怎么解决\n对 webpack 有了解吗，我看你在做低代码\nwebpack中 loader 与 plugin 有什么区别\n有没有写过 plugin\n我们写代码的时候是 es6，浏览器运行的时候是 es5，在做代码转化的时候，webpack 帮我们做了什么事情\n在 React 类组件中，为什么修改状态要使用 setState 而不是用 this.state.xxx = xxx\nsetState 函数做了哪些事情\nReact 生命周期 commpoentWillUnMount() 对应的 hooks 要怎么写\nuseState 的原理是什么，背后怎么执行的，它怎么保证一个组件中写多个 useState 不会串\n函数组件重新渲染的时候怎么拿到useState之前的状态，而不是得到初始化的状态\nReact为什么要自定义合成事…",
           "link": "https://juejin.cn/post/7345821800880324671",
           "publishedOn": "2024-03-14T04:11:19.000Z",
-          "wordCount": 44,
+          "wordCount": 1169,
           "title": "字节跳动面试记录",
           "imageUrl": null
         },
@@ -636,7 +636,7 @@
           "description": "theme: vuepress\n写在前面\n大家好，我是时橙～\n本文为新式响应式系统的解析，该pr已被正式合并入minor分支，如果解析有不到位的地方，望各位提表建议。\n阅读有一定门槛，需要对响应式系统依赖追踪有一定了解\n本次重构来源于尤雨溪的本次pr ⬇️\nhttps://github.com/vuejs/core/pull/10397\n新·响应式系统带来的收益\n解决了几个bugs #10290 #10069\n更高效的内存使用，基准测试提升56%\n更合理的computed行为\n....\n正文\n现在的订阅者(Subscriber)和依赖（dep）的抽象关系长什么样？\n\n现在看不懂这个图谱没有关系，后续我们再解释这个表式什么意思\nLink是什么东西?\n3.4版本内部的Link接口定义如下：\ninterface Link {\n  dep: Dep\n  sub: Subscriber\n\n  /**\n   * - Before each effect run, all previous dep links' version are reset to -1\n   * - During the run, a link's version is synced with the source dep on access\n   * - After the run, links with version -1 (that were never used) are cleaned\n   *   up\n   */\n  version: number //依赖每次被触发时+1\n\n  /**\n   * Pointers for doubly-linked lists\n   */\n  nextDep?: Link  //左右链接的箭头相关\n  prevDep?: Link  //左右链接的箭头相关\n\n  …",
           "link": "https://juejin.cn/post/7345725753018236947",
           "publishedOn": "2024-03-13T17:21:20.000Z",
-          "wordCount": 44,
+          "wordCount": 1575,
           "title": "连yyx都要借鉴的二维双链表到底怎样？！揭秘vue3.4神秘黑魔法",
           "imageUrl": null
         },
@@ -646,7 +646,7 @@
           "description": "theme: channing-cyan\n首先声明这篇文章不是讲如何逆向 wasm 文件，获取其内部逻辑，这个标题真的就是一个问题，想要问问是否可以逆向\n编写一个 wasm\n下面先演示用 rust 编写构建一个 wasm 的过程。rust 环境的安装，cargo 是什么命令就不解释了，官方网站有安装使用说明\n首先需要创建一个工程\n$ cargo new --lib greet-wasm \n\n进入工程目录添加依赖项\n[lib] \ncrate-type = [\"cdylib\"]\n\n[dependencies] \nwasm-bindgen = \"0.2\" \njs-sys = \"0.3.61\"  \n\n清空 src/lib.rs 文件中的内容，输入以下代码\nextern crate wasm_bindgen;  \nuse wasm_bindgen::prelude::*;  \n\n#[wasm_bindgen] \npub fn hello(input: &str) -> JsValue {\n  JsValue::from_str(&format!(\"Hello {}!\", input)) \n} \n\n执行打包命令\n$ wasm-pack build  --target web \n\n经过打包后，将生成 pkg 目录, 此时已经可以将目录发布到 npm 仓库，供项目使用了，此处本地引用，就不发布了\n在网页中引用wasm\n新建 html 文件，并引用 hello 方法\n<!DOCTYPE html>\n<html lang=\"en\"> \n  <head>   \n    <meta charset=\"UTF-8\">   \n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">   \n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"> \n    <title>Document</title> \n  </head> \n  <body>   \n    <script type=\"module\">     \n      import init, {hello} from './greet-wasm/pkg/greet_wasm.js';\n      async function run() {       \n        await init();       \n        console.log(hello('world'));     \n      }     \n      run(); \n    </script> \n  </body> \n</html> \n\n使用任何静态资源服务器打开 html 文件，控制台将会成功打印 Hello world!， 到此已成功调用 wasm 内方法并获取到返回值\n逆向 wasm\n如果你尝试去打印一个 wasm 暴露出来的方法，将会看到 [native code] ，wasm 直接暴露的方法被认为是原生的方法，不会打印原始代码。毕竟原始代码也不是 js 写的。如果尝试在控制直接查看 wasm 文件的内容，看到是下面的内容，一般人肯定是看不懂的\n\n生成函数签名\n所以我在想如果把项目的参数签名逻辑放在 wasm 中去实现，生成签名的过程中使用的 salt 也放在 wasm 中，这样是不是可以避免别人写脚本刷接口的尴尬了。请参考这个站点中的 demo，类似于在浏览器网络面板中看到的每个接口的入参及生成好签名。\n那下面的问题就是，这样的网站发布上线后，能否获取网站的验签逻辑，然后修改参数生成签名然后调用接口，以达到一些不可告人的小心思呢。如果你曾经干成过这事，能不能留下你的方法呢。如果你需要上面站点中的 wasm，也请从 demo 站点的控制面板中获取链接并下载",
           "link": "https://juejin.cn/post/7345423755948785718",
           "publishedOn": "2024-03-13T05:56:31.000Z",
-          "wordCount": 44,
+          "wordCount": 1136,
           "title": "wasm可以被逆向么",
           "imageUrl": null
         },
@@ -656,7 +656,7 @@
           "description": "大家好，我是杨成功。\n在桌面应用开发中，常常需要获取设备唯一 ID 来表示当前客户端的唯一性。一般的设备 ID 需要满足两个条件：\n基于硬件和系统配置生成，确保设备的唯一性。\n只要不重装系统，设备 ID 多次获取都是唯一的。\nnode-machine-id 是一个常用的 Node.js 模块，它能够在 Electron 中获取机器的唯一标识。\n我们的产品就是使用该模块，用法也很简单：\nimport { machineIdSync } from 'node-machine-id';\nlet id = machineIdSync();\n\n但是昨天出现了问题，排查结果是多台设备获取的 ID 竟然是一样的，造成了一些设备的数据被篡改，我从 issues 中找到了一些端倪。\n\n也就是在 Window Ghost 系统中会出现问题（啥是 Window Ghost ？）。\nWindow 中还经常遇到权限问题，而且这个 ID 总归不可控，所以还是用自定义的方式实现吧。\n自定义设置设备 ID\n自定义的设备 ID 首先需要唯一，其次在安装和卸载应用时设备 ID 不变。\n满足这两个要求，最佳的方案就是将自己生成的设备 ID 存储在用户目录下。\n假设当前用户叫张三，他的用户目录：\nWindow：C:\\Users\\张三\\\nMacOS：/Users/张三/\n很多应用程序都把配置写到用户目录下，且该目录一般不会遇到权限问题。\n（1）使用 uuid 生成设备 ID：\nimport { v4 as uuidv4 } from 'uuid';\nconst device_id = uuidv4();\n\n（2）在主进程中获取到用户目录，非常简单：\nimport { app } from 'electron';\nconst user_path = app.getPath('home'); // 自动获取 Win 或 Mac 的用户目录\n\n（3）在用户目录下创建 .elappid 文件，存放生成的设备 ID：\nimport { join } from 'node:path';\nimport fs from 'node:fs';\n// 获取配置文件地址\nlet appid_path = join(user_path, '.elappid');\n// 判断文件是否存在，不存在就先创建，并写入设备ID\nif (!fs.existsSync(appid_path)) {\n  fs.writeFileSync(appid_path, device_id, 'utf8');\n}\n\n（4）读取设备 ID，并发送给渲染进程：\nlet appid = fs.readFileSync(appid_path, 'utf8');\nwin.webContents.send('susr-config', { appid });\n\n写一个进程间交互的方法，就能拿到设备 ID 了。\n什么时候获取设备 ID\n正常情况下，我们希望用户打开应用的时候，主动获取设备 ID 并发给渲染进程。\n然而经过测试，在创建浏览器窗口的同时立即获取设备 ID 并通知渲染进程，在正式环境中，渲染进程往往接受不到消息。\n这是因为创建窗口时，页面还没有初始化完成，自然接收不到消息。\n保险的方法就是在页面加载完成后再获取设备 ID，方法如下：\nwin = new BrowserWindow({...})\n\n// 页面加载完成后触发：\nwin.webContents.on(\"did-finish-load\", () => {\n  console.log('在这里获取设备ID吧')\n})\n\n大功告成，你也试试吧！\n本文来自公众号 程序员成功，关注查看更多",
           "link": "https://juejin.cn/post/7345379924168196137",
           "publishedOn": "2024-03-13T03:07:11.000Z",
-          "wordCount": 44,
+          "wordCount": 1069,
           "title": "注意！Electron无法获取设备ID了！",
           "imageUrl": null
         },
@@ -666,7 +666,7 @@
           "description": "theme: fancy\n本篇文章主要以理解Vue3动态组件，及其相关应用与问题解析。\n什么是 Vue3 动态组件？\n简单来说，这里的动态，即：能够根据组件的呈现条件，来调整好自己需要呈现的组件，以此来满足对需求的实现。\n注：和动态样式一样，通过用户的操作来确定是什么类型的组件。\n基本使用\n在 Vue3 中，使用动态组件非常简单，我们只需要在模板中使用<component>标签，并通过设置组件的is属性来指定要渲染的组件。例如：\n<component :is=\"currentComponent\"></component>\n\n其中，currentComponent是一个变量，它的值可以是以下 2 种：\n已注册的组件名，或 HTML 标签名称\n导入的组件对象\n以下是示例：\n<script>\nimport { Transition, TransitionGroup } from 'vue'\n\nexport default {\n  components: {\n    Transition,\n    TransitionGroup\n  }\n}\n</script>\n\n<template>\n  <component :is=\"isGroup ? 'TransitionGroup' : 'Transition'\">\n    ...\n  </component>\n</template>\n\n在这个例子中，我们可以看到，component 所呈现的组件，是由isGroup来决定的。\n注意：\n如果将组件本身传递给 is 而不是其名称，则不需要注册，例如在 <script setup> 中。\n如果在 <component> 标签上使用 v-model，模板编译器会将其扩展为 modelValue prop 和 update:modelValue 事件监听器，就像对任何其他组件一样。但是，这与原生 H…",
           "link": "https://juejin.cn/post/7345297230201258024",
           "publishedOn": "2024-03-12T17:18:12.000Z",
-          "wordCount": 44,
+          "wordCount": 1361,
           "title": "Vue3 动态组件？！原来是这样啊！",
           "imageUrl": null
         }
@@ -739,11 +739,11 @@
         },
         {
           "id": "7345634485780545562",
-          "author": "F西",
+          "author": "付小晨",
           "description": "xdm，在线找一款vscode插件，能在呼出代码提示后，能在每一个后面标明是property或者函数function的，如下图所示，以前不知道在哪个视频里别人的vscode有见过这种效果，救救孩子",
           "link": "https://juejin.cn/pin/7345634485780545562",
           "publishedOn": "2024-03-13T07:22:02.000Z",
-          "wordCount": 452,
+          "wordCount": 456,
           "title": "xdm，在线找一款vscode插件，能在呼出代码提示后，能在每一个后面标明是property或者函数function的，如下图所示，以前不知道在哪个视频里别人的vscode有见过这...",
           "imageUrl": null
         },
