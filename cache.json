@@ -454,23 +454,23 @@
       "siteUrl": "https://store.epicgames.com/zh-CN/free-games?lang=zh-CN",
       "articles": [
         {
-          "id": "https://store.epicgames.com/zh-CN/p/the-bridge",
-          "author": "The Quantum Astrophysicists Guild",
-          "description": "《The Bridge》是一款挑战玩家对物理和观察视角的固有印象的逻辑解谜游戏。犹如埃舍尔邂逅艾萨克牛顿。控制重力，将地面化作天花板，穿过物理上不可能的建筑群。\n\nFree Now to 2024-03-21T15:00:00.000Z",
-          "link": "https://store.epicgames.com/zh-CN/p/the-bridge",
-          "publishedOn": "2024-03-14T15:00:00.000Z",
+          "id": "https://store.epicgames.com/zh-CN/p/call-of-the-wild-the-angler",
+          "author": "Expansive Worlds AB",
+          "description": "《猎人：荒野的召唤》游戏的创作者们带来了身临其境的颠覆性钓鱼体验！探索辽阔的开放世界，找寻绝佳的钓鱼地点。单人游戏或与好友一起，尽享在开放水域钓鱼的乐趣。赶快出发，踏上钓鱼大师的成长旅途。\n\nFree Now to 2024-03-28T15:00:00.000Z",
+          "link": "https://store.epicgames.com/zh-CN/p/call-of-the-wild-the-angler",
+          "publishedOn": "2024-03-21T15:00:00.000Z",
           "wordCount": null,
-          "title": "《The Bridge》",
+          "title": "《Call of the Wild: The Angler™》",
           "imageUrl": null
         },
         {
-          "id": "https://store.epicgames.com/zh-CN/p/deus-ex-mankind-divided-4c6370",
-          "author": "Eidos Interactive Corporation",
-          "description": "Now an experienced covert operative, Adam Jensen is forced to operate in a world that has grown to despise his kind. Armed with new state-of-the-art weapons and augmentations, he must choose the right approach, along with who to trust, to unravel a vast worldwide conspiracy.\n\nFree Now to 2024-03-21T15:00:00.000Z",
-          "link": "https://store.epicgames.com/zh-CN/p/deus-ex-mankind-divided-4c6370",
-          "publishedOn": "2024-03-14T15:00:00.000Z",
+          "id": "https://store.epicgames.com/zh-CN/p/atom-eve-ff090d",
+          "author": "Skybound Game Studios, Inc.",
+          "description": "Become Atom Eve and take control of your own path as one of the most powerful superheroes in the Invincible universe! Unravel a mystery and balance the dangers and responsibilities of being a superhero with the relatable challenges of everyday life.\n\nFree Now to 2024-03-28T15:00:00.000Z",
+          "link": "https://store.epicgames.com/zh-CN/p/atom-eve-ff090d",
+          "publishedOn": "2024-03-21T15:00:00.000Z",
           "wordCount": null,
-          "title": "Deus Ex - Mankind Divided",
+          "title": "Invincible Presents: Atom Eve",
           "imageUrl": null
         }
       ]
@@ -646,7 +646,7 @@
           "description": "theme: smartblue\n需求简介\n最近接了一个需求，需要实现不同登录人员可以自定义首页模块卡片。简单来说，就是实现首页看板模块的增添与拖拉拽，效果如下：\n\n技术选型\n原生js是支持拖拉拽的，只需要将拖拽的元素的 draggable 属性设置成 \"true\"即可，然后就是调用相应的函数即可。\n拖拽操作 - Web API 接口参考 | MDN\n但是，原生js功能不够完善，使用起来需要改造的地方很多，因此，选用成熟的第三方插件比较好。\n我们的主项目采用的是vue3，,经过一系列对比，最终选择了 vue-draggable-next这个插件。\nvue-draggable-next\nvue-draggable-next的周下载量月3万左右，可以看出是一个比较靠谱的插件。\n\n它的使用方式npmj上也介绍的很详细：\nvue-draggable-next\n如果英文的使用Api看起来比较难受，网上还有中文的使用文档：\nvue.draggable.next 中文文档 - itxst.com\n这个插件也有vue2版本和纯js版本，其他框架也是也是可以完美使用的。\n实现思路\n需求与技术简析\n根据我们的需求，我们应该实现的是分组拖拽，假设我们有三列，那我们要实现的就是这A、B、C三列数据相互拖拽。\n\n我们看看中文官网给的示例：\nvue.draggable.next group 例子\n看起来很容易，我们只需要写多个draggable标签，每个draggable标签写入相同的组名即可。\n实现方案\n框架实现\n回到代码中，要想实现一个三列可拖拉拽的模块列表，我们首先需要引入组件\n<script lang=\"ts\" setup>\nimport { VueDraggableNext } from 'vue-draggable-next'\n// ....\n</script>\n\n然后定义一个数组储存数据…",
           "link": "https://juejin.cn/post/7346121373112811583",
           "publishedOn": "2024-03-15T03:30:59.000Z",
-          "wordCount": 1659,
+          "wordCount": 44,
           "title": "如何丝滑的实现首页看板拖拉拽功能？",
           "imageUrl": null
         },
@@ -676,7 +676,7 @@
           "description": "theme: fancy\n本篇文章主要以理解Vue3动态组件，及其相关应用与问题解析。\n什么是 Vue3 动态组件？\n简单来说，这里的动态，即：能够根据组件的呈现条件，来调整好自己需要呈现的组件，以此来满足对需求的实现。\n注：和动态样式一样，通过用户的操作来确定是什么类型的组件。\n基本使用\n在 Vue3 中，使用动态组件非常简单，我们只需要在模板中使用<component>标签，并通过设置组件的is属性来指定要渲染的组件。例如：\n<component :is=\"currentComponent\"></component>\n\n其中，currentComponent是一个变量，它的值可以是以下 2 种：\n已注册的组件名，或 HTML 标签名称\n导入的组件对象\n以下是示例：\n<script>\nimport { Transition, TransitionGroup } from 'vue'\n\nexport default {\n  components: {\n    Transition,\n    TransitionGroup\n  }\n}\n</script>\n\n<template>\n  <component :is=\"isGroup ? 'TransitionGroup' : 'Transition'\">\n    ...\n  </component>\n</template>\n\n在这个例子中，我们可以看到，component 所呈现的组件，是由isGroup来决定的。\n注意：\n如果将组件本身传递给 is 而不是其名称，则不需要注册，例如在 <script setup> 中。\n如果在 <component> 标签上使用 v-model，模板编译器会将其扩展为 modelValue prop 和 update:modelValue 事件监听器，就像对任何其他组件一样。但是，这与原生 H…",
           "link": "https://juejin.cn/post/7345297230201258024",
           "publishedOn": "2024-03-12T17:18:12.000Z",
-          "wordCount": 1361,
+          "wordCount": 44,
           "title": "Vue3 动态组件？！原来是这样啊！",
           "imageUrl": null
         }
@@ -813,7 +813,7 @@
           "description": "https://developer.aliyun.com/topic/lingma/activities/202403?taskCode=14508&recordId=f024db3e41b11bd3fd40ebd113787850#/?utm_content=m_fission_1  「通义灵码 · 体验 AI 编码，开 AI 盲盒」",
           "link": "https://juejin.cn/pin/7345645720042962959",
           "publishedOn": "2024-03-13T03:26:53.000Z",
-          "wordCount": 472,
+          "wordCount": 470,
           "title": "https://developer.aliyun.com/topic/lingma/activities/202403?taskCode=14508&recordId=f024db3e41b11bd3fd40ebd113787850#/?utm_content=m_fission_1 「通义...",
           "imageUrl": null
         },
@@ -883,7 +883,7 @@
           "description": "百度ai辅助写代码竟然开始给程序员撒钱了[发][发]\n最新vscode辅助代码插件免费用还给钱，我上来直接提了三十，代码生成效果还可以，https://comate.baidu.com/?inviteCode=atyt07gu[7201008222164451331#前端开发现状#]\n点这个链接，登录账号，根据页面提示跳转到vscode百度的代码辅助插件安装后登录一下，最低可以免费领30京东e卡，通过邀请链接进的多给10块，当天奖励售罄可以第二天在看",
           "link": "https://juejin.cn/pin/7343429147815034930",
           "publishedOn": "2024-03-07T06:58:30.000Z",
-          "wordCount": 469,
+          "wordCount": 44,
           "title": "百度ai辅助写代码竟然开始给程序员撒钱了[发][发] 最新vscode辅助代码插件免费用还给钱，我上来直接提了三十，代码生成效果还可以，https://comate.baidu.com/?i...",
           "imageUrl": null
         }
