@@ -240,6 +240,16 @@
       "siteUrl": "https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36",
       "articles": [
         {
+          "id": "https://m.okjike.com/originalPosts/65fd40f89185c305d19087a8",
+          "author": null,
+          "description": "关关难过关关过，前路漫漫亦灿灿。",
+          "link": "https://m.okjike.com/originalPosts/65fd40f89185c305d19087a8",
+          "publishedOn": "2024-03-22T08:27:36.000Z",
+          "wordCount": 435,
+          "title": "发布了: 关关难过关关过，前路漫漫亦灿灿。",
+          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+        },
+        {
           "id": "https://m.okjike.com/originalPosts/65fd2b43de5f287348d94de3",
           "author": null,
           "description": "个人比较期待的两个 AI 硬件: 戒指和眼镜\n━━━━━━━━━━━━━━\n- 戒指\n  + 轻巧无感\n  + 指标: 身体指标检测, 心率,睡眠,运动\n  + 录音: 自动录音并生成当天总结(数字人生)\n  + 提醒: 聊天工具的新消息通过戒指的震动来提醒\n- 眼镜\n  + 近视率高, 配戴无感\n  + AR: 识别当前观看之物,并提供相关解读信息\n  + 电话: 包含并替代掉无线耳机功能, 直接接打电话",
@@ -327,16 +337,6 @@
           "publishedOn": "2024-03-20T09:31:30.000Z",
           "wordCount": 456,
           "title": "发布了: 有一个角度可以把人分为两类: 1/ in box： 相信当前局面是多方博弈后的自然状态, 自己需要做的, 可以做的, 就是在这个局面中找到自己最舒服的位置, 适应...",
-          "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
-        },
-        {
-          "id": "https://m.okjike.com/originalPosts/65fa5b02164d89e6018549da",
-          "author": null,
-          "description": "不知道\"轻言敬字\"是不是世界通病, 嘴上聊的时候, 满嘴跑火车好像非常轻松自然, 但当要白纸黑字写下来发出去的时候, 心紧手慢。\n于己而言，可养成一个习惯：每参加一次商业交谈，会后发送给对方你整理的交流纪要。",
-          "link": "https://m.okjike.com/originalPosts/65fa5b02164d89e6018549da",
-          "publishedOn": "2024-03-20T03:41:54.000Z",
-          "wordCount": 442,
-          "title": "发布了: 不知道\"轻言敬字\"是不是世界通病, 嘴上聊的时候, 满嘴跑火车好像非常轻松自然, 但当要白纸黑字写下来发出去的时候, 心紧手慢。 于己而言，可养成一个习...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
         {
@@ -471,6 +471,16 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
+          "id": "https://juejin.cn/post/7348712837849284644",
+          "author": "前端大骆",
+          "description": "theme: smartblue\n站会\n在一次日常站会上，组员们轮流分享昨天的工作进展。一个组员提到：“昨天我整天都在排查一个BUG，今天还得继续。”\n出于好奇，我问：“是什么BUG让你排查了这么久还没解决呢？”\n他解释说：“是关于一个数据选择弹窗的问题。这个弹窗用表格展示数据，并且表格具有选择功能。问题在于，编辑这个弹窗时，表格中原本应该显示为已选状态的数据并没有正确显示已选状态。”\n我猜测道：“是不是因为表格中数据的主键ID是大数值导致的？”\n他回答说：“大数值？我不太确定。”\n我有些质疑地问：“那你昨天都是怎么排查的？需要花一整天的时间，难道是在摸鱼吗？”\n“没有摸鱼，只是这个BUG真得有点难搞，那个什么是大数值？”\n“行吧，姑且信你，我待会给你看看。”\n排查\n表格使用的是 Ant Design 4.0 提供的 Table 组件。我检查了组件的 rowKey 属性配置，如下所示：\n<Table rowKey={record => record.obj_id}></Table>\n\n这表明表格行的 key 是通过数据中的 obj_id 字段来指定的。随后，我进一步查看了服务端返回的数据。\n可以看到一条数据中的 obj_id 字段值为 \"898186844400803840\"，这是一个18位的数值。\n在ES6（ECMAScript 2015）之前，JavaScript没有专门的整数类型，所有的数字都被表示为双精度64位浮点数（遵循IEEE 754标准）。这意味着在这种情况下，JavaScript能够安全地表示的整数范围是从$-2^{53} + 1$到$2^{53} - 1$（即-9,007,199,254,740,991到9,007,199,254,740,991）。可以简单地认为超过16位的数值就是大数值。\nJavaScript中很多操作处理大数值时会导致大数值失去精度。比如 Number(\"898186844400803840\")\n\n可以看到 \"898186844400803840\" 和 \"898186844400803800\" 的区别在第16位后，从 40 变成 00 这就是大数值失去精度的表现。\n在看一下表格的数据展示，如下图所示：\n\n可以确定的是，从服务端返回的数据到在表格中的渲染过程是没有问题的。那么，可能出现问题的地方还有两个：一是在选择数据后，数据被传递到父组件的过程中；二是父组件将已选数据发送回选择数据组件的过程中。\n定位\n我检查了他将数据传递给父组件的逻辑代码，发现了一个可疑点。\n在上述代码中，JSON.parse 被用来转换数据中的每个值。在这个转换过程中，如果 item[key] 是以字符串形式出现的数值，并且这个字符串能够被 JSON.parse() 解析为 JSON 中的数值类型，那么 JSON.parse() 将会把它转换为 JavaScript 的 Number 类型。\n这种转换过程中可能会出现精度丢失的问题。因为一旦字符串表示的数值的位数超过16位后，在转换为 Number 类型时就无法保证其精度完整无损。\n解决\n我们通过正则表达式排除了这种情况，如下所示：\nnewItem[key] = typeof item[key] === 'string' && /^\\d{16,}$/.test(item[key]) ? \n               item[key] : \n               JSON.parse(item[key]);\n\n经过修改并重新验证，问题得到了解决，数据选择弹窗现在可以正确展示已选择状态。\n\n反思\n这个表面上不起眼的BUG为何花费了如此长的时间来排查？除了对大数值的概念不甚了解外，还有一个关键原因是对JavaScript中可能导致大数值失去精度的操作缺乏深入理解。\n大数值通常由两种表示方式，一个是用数值类型表示，一个是字符串类型表示。\n如果用数值类型表示一个大数值，而且你不能直接修改源代码或源数据，这种情况比较棘手，因为一旦 JavaScript 解析器处理这个数值，它可能已经失去了精度。\n这种情况通常发生在你从某个源（比如一个API或者外部数据文件）接收到一个数值类型的大数值，如果数据源头不能修改，只能使用第三方库lossless-json、json-bigint来解决。\n如果用字符串类型表示一个大数值，在JS中只要有把其转成Number类型的值就会失去精度，不管是显式转换还是隐式转换。\n显式转换，比如 Number()、parseInt()、parseFloat()、Math.floor、Math.ceil、Math.round等等。\n隐式转换，比如除了加法外的算术运算符、JSON.parse、switch 语句、sort的回调函数等等。",
+          "link": "https://juejin.cn/post/7348712837849284644",
+          "publishedOn": "2024-03-22T02:14:20.000Z",
+          "wordCount": 857,
+          "title": "一个排查了一天的BUG，你在摸鱼🐟吧！",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7348349574413467674",
           "author": "那个曾经的少年回来了",
           "description": "theme: nico\nhighlight: androidstudio\n前言\n一站式社交平台数据抓取利器，带你玩转小红书、抖音、快手、B站和微博数据分析\n不经意间，来查看MediaCrawler仓库源码，发现作者已经删库了。看来是领奖了。才几天不到的时间Star数量已经直逼10K了，增长速度近乎疯狂。\n前两天只是将代码下载下来了，还没认真的玩。还好代码本地已经有了。如果有兴趣的也可以来找我要，免费的哟。\n\n作者在这里也明显进行了标注使用了无头浏览器\n\n那到底什么事无头浏览器呢？\n无头浏览器（Headless Browser）是一种浏览器程序，没有图形用户界面（GUI），但能够执行与普通浏览器相似的功能。无头浏览器能够加载和解析网页，执行JavaScript代码，处理网页事件，并提供对DOM（文档对象模型）的访问和操作能力。\n与传统浏览器相比，无头浏览器的主要区别在于其没有可见的窗口或用户界面。这使得它在后台运行时，不会显示实际的浏览器窗口，从而节省了系统资源，并且可以更高效地执行自动化任务。\n常见的无头浏览器包括Headless Chrome（Chrome的无头模式）、PhantomJS、Puppeteer（基于Chrome的无头浏览器库）、playwright等。它们提供了编程接口，使开发者能够通过代码自动化控制和操作浏览器行为。\n\n如果您比较Playwright和 Puppeteer的贡献者页面 ，您会注意到Puppeteer的前两个贡献者现在在 Playwright 上工作。Puppeteer 团队实质上是从 Google 转移到 Microsoft 并成为 Playwright 团队。\n因此，Playwright 在很多方面与 Puppeteer 非常相似。API 方法在大多数情况下是相同的，并且默认情况下 Playwright 还捆绑了兼容的浏览器。\nPlaywright 最大的区别在于跨浏览器支持。它可以驱动 Chromium、WebKit（Safari 的浏览器引擎）和 Firefox。\n无头浏览器其实就是看不见的浏览器，所有的操作都要通过代码调用 API 来控制，所以浏览器能干的事儿，无头浏览器都能干，而且很多事儿做起来比标准的浏览器更简单。\n能够干什么呢？\n我举几个常用的功能来说明一下无头浏览器的主要使用场景\n自动化测试： 无头浏览器可以模拟用户行为，执行自动化测试任务，例如对网页进行加载、表单填写、点击按钮、检查页面元素等。\n数据抓取： 无头浏览器可用于爬取网页数据，自动访问网站并提取所需的信息，用于数据分析、搜索引擎优化等。\n屏幕截图： 无头浏览器可以加载网页并生成网页的截图，用于生成快照、生成预览图像等。\n服务器端渲染： 无头浏览器可以用于服务器端渲染（Server-side Rendering），将动态生成的页面渲染为静态HTML，提供更好的性能和搜索引擎优化效果。\n生成 PDF 文件：使用浏览器自带的生成 PDF 功能，将目标页面转换成 PDF 。\n这个仓库如何使用呢\n首先这是一个Python库，当然要安装必要的Python环境，这个我就不多说了，通过GPT或者在网上搜索都可以进行安装好。\n接下来就是拿到代码后如何使用，这个其实作者也是非常的友好了，直接看README。\n\n最后运行命令后，会出现一个二维码，比如这里我测试的是小红书，出现二维码之后，我们用小红书App来扫描，并进行确认身份，这样无头浏览器就能识别并记住我们的身份信息，后续就可以通过该身份进行抓取一些数据了。\n\n这里我配置了一条小红书的笔记ID,这里是个数据可以配置多个的。\n好了，OK ,数据就被这么简单的抓取下来了。\n\n\n作者还特意对数据存储做了封装，如果数据量大的时候存储起来可能就非常的方便了。\n如果需求量很大，还可以对其源码进行研究改造，好了今天的学习就到这里了。",
@@ -528,16 +538,6 @@
           "publishedOn": "2024-03-19T10:03:43.000Z",
           "wordCount": 3883,
           "title": "Next.js v14 实现乐观更新，面向未来的 UI 更新方式，你可以不去做，但你不应该不了解",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7347626854617202724",
-          "author": "Chokcoco",
-          "description": "本文为稀土掘金技术社区首发签约文章，30天内禁止转载，30天后未获授权禁止转载，侵权必究！\n最近，群里在讨论这么一个有趣的交互效果，来源于：vueflow.dev：\n\n通过审查元素，发现原效果借助了 Canvas 实现。\n思索了一番，觉得这个效果利用 CSS 配合部分 Javascript 代码完全也是可以做到的。\n于是动手尝试了一番，最终完美的复刻了该效果：\n\n过程中还是有非常多有意思的技巧存在的，因此，本文将带大家一起，从 0 到 1 实现这个有趣的交互效果。\n利用混合模式实现叠加效果\n整个效果，比较核心的一块便是当鼠标 Hover 上去时，整个元素叠加上一层黑色图层，但是呈现了不一样的叠加效果。\n这个了解混合模式（mix-blend-mode）的同学应该一下就能想到。\n在之前，我们也有多篇文章讲解过混合模式，感兴趣的可以随意快速浏览一下，下面是我写过的 15 篇与混合模式相关的合集链接：\niCSS - 混合模式\n在这里，我们也快速过一下效果中需要用到的混合模式。\n正常而言，假设我们有这么一个 UI 效果：\n<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.....</div>\n\nbody {\n    background: #eee;\n}\ndiv {\n    width: 400px;\n    background: #42b983;\n    color: #fff;\n    border: 3px solid #333;\n    border-radius: 5px;\n}\n\n效果如下：\n\n我们利用 div 的伪元素，在其元素本身上叠加一个纯白色块：\ndiv::before {\n  content: \"\";\n  position: absolute;\n  inset: -10px;\n  back…",
-          "link": "https://juejin.cn/post/7347626854617202724",
-          "publishedOn": "2024-03-19T02:26:05.000Z",
-          "wordCount": 2488,
-          "title": "【动画进阶】极具创意的鼠标交互动画",
           "imageUrl": null
         },
         {
@@ -677,6 +677,26 @@
       "feedUrl": "https://rsshub.app/juejin/pins/6824710202000932877",
       "siteUrl": "https://juejin.cn/pins/recommended",
       "articles": [
+        {
+          "id": "7349041579275386906",
+          "author": "五月份",
+          "description": "华为快应用程序开发封装的就是答辩，样式是一点调不了",
+          "link": "https://juejin.cn/pin/7349041579275386906",
+          "publishedOn": "2024-03-22T10:22:51.000Z",
+          "wordCount": 449,
+          "title": "华为快应用程序开发封装的就是答辩，样式是一点调不了",
+          "imageUrl": null
+        },
+        {
+          "id": "7348833905468669990",
+          "author": "肥陈",
+          "description": "几百张图片，有什么工具高清化",
+          "link": "https://juejin.cn/pin/7348833905468669990",
+          "publishedOn": "2024-03-22T09:23:39.000Z",
+          "wordCount": 451,
+          "title": "几百张图片，有什么工具高清化",
+          "imageUrl": null
+        },
         {
           "id": "7348832432081518643",
           "author": "gitboyzcf",
@@ -848,16 +868,6 @@
           "imageUrl": null
         },
         {
-          "id": "7345634485780545562",
-          "author": "付小晨",
-          "description": "xdm，在线找一款vscode插件，能在呼出代码提示后，能在每一个后面标明是property或者函数function的，如下图所示，以前不知道在哪个视频里别人的vscode有见过这种效果，救救孩子",
-          "link": "https://juejin.cn/pin/7345634485780545562",
-          "publishedOn": "2024-03-13T07:22:02.000Z",
-          "wordCount": 459,
-          "title": "xdm，在线找一款vscode插件，能在呼出代码提示后，能在每一个后面标明是property或者函数function的，如下图所示，以前不知道在哪个视频里别人的vscode有见过这...",
-          "imageUrl": null
-        },
-        {
           "id": "7345645720042962959",
           "author": "Zakary",
           "description": "https://developer.aliyun.com/topic/lingma/activities/202403?taskCode=14508&recordId=f024db3e41b11bd3fd40ebd113787850#/?utm_content=m_fission_1  「通义灵码 · 体验 AI 编码，开 AI 盲盒」",
@@ -865,16 +875,6 @@
           "publishedOn": "2024-03-13T03:26:53.000Z",
           "wordCount": 470,
           "title": "https://developer.aliyun.com/topic/lingma/activities/202403?taskCode=14508&recordId=f024db3e41b11bd3fd40ebd113787850#/?utm_content=m_fission_1 「通义...",
-          "imageUrl": null
-        },
-        {
-          "id": "7345105899151687692",
-          "author": "一只小芒果",
-          "description": "jym，有没有好用的AI代码提示工具推荐",
-          "link": "https://juejin.cn/pin/7345105899151687692",
-          "publishedOn": "2024-03-12T01:42:01.000Z",
-          "wordCount": 449,
-          "title": "jym，有没有好用的AI代码提示工具推荐",
           "imageUrl": null
         }
       ]
