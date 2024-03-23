@@ -44,7 +44,7 @@
           "description": "带大家快速了解下CSS initial-letter属性，可以更好地设置首字母的排版效果。",
           "link": "https://www.zhangxinxu.com/wordpress/2024/03/css-initial-letter/",
           "publishedOn": "2024-03-21T15:34:35.000Z",
-          "wordCount": 1315,
+          "wordCount": 1311,
           "title": "CSS initial-letter属性，嗯……也就这样吧",
           "imageUrl": null
         },
@@ -54,7 +54,7 @@
           "description": "全新的Screen Wake Lock API，可以让网页无论放置多久，都不要担心熄屏，或出现屏保，Web如今越来越强了。",
           "link": "https://www.zhangxinxu.com/wordpress/2024/03/js-screen-wake-lock-api/",
           "publishedOn": "2024-03-17T15:35:45.000Z",
-          "wordCount": 1404,
+          "wordCount": 1400,
           "title": "今天才知道，Web网页也能阻止息屏了",
           "imageUrl": null
         },
@@ -64,7 +64,7 @@
           "description": "音视频合成的时候，有倍速合成的需求，起初，我以为这只是个手到擒来的小需求，细究之下发现问题并不简单……",
           "link": "https://www.zhangxinxu.com/wordpress/2024/02/js-audioencoder-backplayrate-audiobuffer/",
           "publishedOn": "2024-02-29T14:22:22.000Z",
-          "wordCount": 1750,
+          "wordCount": 1746,
           "title": "不改变音调情况下Audio音频的倍速合成JS实现",
           "imageUrl": null
         }
@@ -122,16 +122,6 @@
       "feedUrl": "https://rsshub.app/jike/user/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "siteUrl": "https://m.okjike.com/users/83F8C091-4C46-43B7-B7AC-B90CD72255E7",
       "articles": [
-        {
-          "id": "https://m.okjike.com/originalPosts/65fefc6c164d89e601dd6c0c",
-          "author": null,
-          "description": "强制倒时差的一个技巧，飞机上灌一瓶酒下去。",
-          "link": "https://m.okjike.com/originalPosts/65fefc6c164d89e601dd6c0c",
-          "publishedOn": "2024-03-23T15:59:40.000Z",
-          "wordCount": null,
-          "title": "发布了: 强制倒时差的一个技巧，飞机上灌一瓶酒下去。",
-          "imageUrl": null
-        },
         {
           "id": "https://m.okjike.com/originalPosts/65fb857c12ed2fda68f56ba3",
           "author": null,
@@ -220,6 +210,16 @@
           "publishedOn": "2024-03-15T00:57:57.000Z",
           "wordCount": 453,
           "title": "发布了: 手机丢了，星巴克赊账成就达成",
+          "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
+        },
+        {
+          "id": "https://m.okjike.com/originalPosts/65ef8f9937f7165b218bcc08",
+          "author": null,
+          "description": "决策力需要在高密度的决策中训练出来，也需要有承担相应决策后果的勇气，害怕犯错永远做不好未来，就连当下都是唯唯诺诺的。",
+          "link": "https://m.okjike.com/originalPosts/65ef8f9937f7165b218bcc08",
+          "publishedOn": "2024-03-11T23:11:21.000Z",
+          "wordCount": 442,
+          "title": "发布了: 决策力需要在高密度的决策中训练出来，也需要有承担相应决策后果的勇气，害怕犯错永远做不好未来，就连当下都是唯唯诺诺的。",
           "imageUrl": "https://cdnv2.ruguoapp.com/Fs-eSdFZY-o3eJCp506HPIEBqkXe?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/!120x120r/gravity/Center/crop/!120x120a0a0"
         }
       ]
@@ -646,7 +646,7 @@
           "description": "theme: smartblue\n在线 Demo 体验地址 →: https://demos.sugarat.top/pages/png-compress/\njcode\n前言\n最近在迭代自己的 图床 应用，由于使用时间的累计，存储空间占用越来越大了，在做 Web 应用的时候会随手拿 tinypng 压缩一下图片。\n想着给咱图床也加个压缩的功能，这样上传/访问也能省点 💰。\n\n图片类型众多，常用的主要就是PNG/JPG/GIF。\n个人使用频率最高的场景是截图上传，格式为PNG，就先拿 PNG 试手。调研了一圈开源里最流行的就是使用 UPNG.js 进行 PNG 的压缩。\n官方对比 tinypng 介绍；\n官方在线示例 Demo。\n如何判断图片是 PNG\n第一步当然是判断图片类型，不然 UPNG.js 就不能正常工作咯，通过文件后缀 .png 判断肯定是不靠谱的。\n搜索了解了一下，可以使用 魔数 判断：一个PNG文件的前8个字节是固定的。\nPNG 的前 8 个字节是（16进制表示）：89 50 4E 47 0D 0A 1A 0A。\n我们可以拿工具看一下，我这里用 VS Code 插件 Hex Editor 查看一个 PNG 图片的 16 进制表示信息。\n\n可以看到前八个字节和上面表示的一样。\n于是可以根据这个特性判断，于是就有如下的判断代码。\nasync function isPNG(file: File) {\n  // 提取前8个字节\n  const arraybuffer = await file.slice(0, 8).arrayBuffer()\n\n  // PNG 的前8字节16进制表示\n  const signature = [0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A]\n  // const signature =…",
           "link": "https://juejin.cn/post/7346510823772733494",
           "publishedOn": "2024-03-16T13:02:32.000Z",
-          "wordCount": 44,
+          "wordCount": 1673,
           "title": "纯前端实现 PNG 图片压缩 | UPNG.js",
           "imageUrl": null
         }
