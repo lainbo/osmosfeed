@@ -44,7 +44,7 @@
           "description": "带大家快速了解下CSS initial-letter属性，可以更好地设置首字母的排版效果。",
           "link": "https://www.zhangxinxu.com/wordpress/2024/03/css-initial-letter/",
           "publishedOn": "2024-03-21T15:34:35.000Z",
-          "wordCount": 1312,
+          "wordCount": 1311,
           "title": "CSS initial-letter属性，嗯……也就这样吧",
           "imageUrl": null
         },
@@ -54,7 +54,7 @@
           "description": "全新的Screen Wake Lock API，可以让网页无论放置多久，都不要担心熄屏，或出现屏保，Web如今越来越强了。",
           "link": "https://www.zhangxinxu.com/wordpress/2024/03/js-screen-wake-lock-api/",
           "publishedOn": "2024-03-17T15:35:45.000Z",
-          "wordCount": 1401,
+          "wordCount": 1400,
           "title": "今天才知道，Web网页也能阻止息屏了",
           "imageUrl": null
         },
@@ -64,7 +64,7 @@
           "description": "音视频合成的时候，有倍速合成的需求，起初，我以为这只是个手到擒来的小需求，细究之下发现问题并不简单……",
           "link": "https://www.zhangxinxu.com/wordpress/2024/02/js-audioencoder-backplayrate-audiobuffer/",
           "publishedOn": "2024-02-29T14:22:22.000Z",
-          "wordCount": 1747,
+          "wordCount": 1746,
           "title": "不改变音调情况下Audio音频的倍速合成JS实现",
           "imageUrl": null
         }
@@ -461,6 +461,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7348433631944556555",
+          "author": "石小石Orz",
+          "description": "theme: smartblue\n需求背景\n前几天，甲方提了个需求，想让下面的数据循环展示，准备放在他们集团首页给他们领导演示用。\n\n我们领导很重视这个事儿，拍了拍我，语重心长的说，小伙子，好好做。\n我啪的一下就兴奋了，老板居然如此器重我，我必当鞠躬尽瘁，减少摸鱼，我要让老板拜倒在精湛的技术下！\n于是，我搬出自己的库存代码，仅2min就实现了数据的滚动：\n没错，我直接照搬了自己以前写过的文章：JS实现可滚动区域自动滚动展示 - 掘金\n就在我准备告诉老板我做完了的时候，我突然想了想，这么快做完，老板一定觉得我没好好做，我以后还怎么升职加薪，赢取白富美？\n于是，我连夜研究，终于改进了数据滚动方式，赢得了老板的大饼（以后涨500）。最终效果：\n\n技术方案\n技术选型\n观察最终效果图，可以发现这其实就是一个数据循环滚动的效果，每条内容之间间隔1000ms，每条出现动的时间为500ms。用术语来说，这就是一个单步停顿滚动效果。\n我百度了一下，社区还是有这个实现的现成方案的：vue-seamless-scroll，周下载也还行。\n\n于是，我果断试了试，结果不知道什么原因，并不生效...\n既然如此，直接手写一个吧！\n实现思路\n要实现上述效果其实很简单，如图\n\n我们创造一个含有六个值的数组，每隔一段时间循环更改黄色区域的数据，当黄色区域数据变成最新的时候，红色区域整体向下移动，当有数值超出滚动区域后，在删除这个数据即可。\n数据更新\n如果不考虑动画，我们的代码应该这么写\n<template>\n    <div class=\"item-wrap\" v-for=\"(item, index) in animationData\">\n          <!-- 模块内容 -->     \n     </div>\n</template>\n<script setup lang=\"ts\">\n// #假设这是…",
+          "link": "https://juejin.cn/post/7348433631944556555",
+          "publishedOn": "2024-03-21T07:51:19.000Z",
+          "wordCount": 1492,
+          "title": "我改进了数据滚动方式！老板直接加薪",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7348349574413467674",
           "author": "那个曾经的少年回来了",
           "description": "theme: nico\nhighlight: androidstudio\n前言\n一站式社交平台数据抓取利器，带你玩转小红书、抖音、快手、B站和微博数据分析\n不经意间，来查看MediaCrawler仓库源码，发现作者已经删库了。看来是领奖了。才几天不到的时间Star数量已经直逼10K了，增长速度近乎疯狂。\n前两天只是将代码下载下来了，还没认真的玩。还好代码本地已经有了。如果有兴趣的也可以来找我要，免费的哟。\n\n作者在这里也明显进行了标注使用了无头浏览器\n\n那到底什么事无头浏览器呢？\n无头浏览器（Headless Browser）是一种浏览器程序，没有图形用户界面（GUI），但能够执行与普通浏览器相似的功能。无头浏览器能够加载和解析网页，执行JavaScript代码，处理网页事件，并提供对DOM（文档对象模型）的访问和操作能力。\n与传统浏览器相比，无头浏览器的主要区别在于其没有可见的窗口或用户界面。这使得它在后台运行时，不会显示实际的浏览器窗口，从而节省了系统资源，并且可以更高效地执行自动化任务。\n常见的无头浏览器包括Headless Chrome（Chrome的无头模式）、PhantomJS、Puppeteer（基于Chrome的无头浏览器库）、playwright等。它们提供了编程接口，使开发者能够通过代码自动化控制和操作浏览器行为。\n\n如果您比较Playwright和 Puppeteer的贡献者页面 ，您会注意到Puppeteer的前两个贡献者现在在 Playwright 上工作。Puppeteer 团队实质上是从 Google 转移到 Microsoft 并成为 Playwright 团队。\n因此，Playwright 在很多方面与 Puppeteer 非常相似。API 方法在大多数情况下是相同的，并且默认情况下 Playwright 还捆绑了兼容的浏览器。\nPlaywright 最大的区别在于跨浏览器支持。它可以驱动 Chromium、WebKit（Safari 的浏览器引擎）和 Firefox。\n无头浏览器其实就是看不见的浏览器，所有的操作都要通过代码调用 API 来控制，所以浏览器能干的事儿，无头浏览器都能干，而且很多事儿做起来比标准的浏览器更简单。\n能够干什么呢？\n我举几个常用的功能来说明一下无头浏览器的主要使用场景\n自动化测试： 无头浏览器可以模拟用户行为，执行自动化测试任务，例如对网页进行加载、表单填写、点击按钮、检查页面元素等。\n数据抓取： 无头浏览器可用于爬取网页数据，自动访问网站并提取所需的信息，用于数据分析、搜索引擎优化等。\n屏幕截图： 无头浏览器可以加载网页并生成网页的截图，用于生成快照、生成预览图像等。\n服务器端渲染： 无头浏览器可以用于服务器端渲染（Server-side Rendering），将动态生成的页面渲染为静态HTML，提供更好的性能和搜索引擎优化效果。\n生成 PDF 文件：使用浏览器自带的生成 PDF 功能，将目标页面转换成 PDF 。\n这个仓库如何使用呢\n首先这是一个Python库，当然要安装必要的Python环境，这个我就不多说了，通过GPT或者在网上搜索都可以进行安装好。\n接下来就是拿到代码后如何使用，这个其实作者也是非常的友好了，直接看README。\n\n最后运行命令后，会出现一个二维码，比如这里我测试的是小红书，出现二维码之后，我们用小红书App来扫描，并进行确认身份，这样无头浏览器就能识别并记住我们的身份信息，后续就可以通过该身份进行抓取一些数据了。\n\n这里我配置了一条小红书的笔记ID,这里是个数据可以配置多个的。\n好了，OK ,数据就被这么简单的抓取下来了。\n\n\n作者还特意对数据存储做了封装，如果数据量大的时候存储起来可能就非常的方便了。\n如果需求量很大，还可以对其源码进行研究改造，好了今天的学习就到这里了。",
@@ -558,16 +568,6 @@
           "publishedOn": "2024-03-18T13:25:12.000Z",
           "wordCount": 3882,
           "title": "我为LowCodeEngine低代码写了个AI插件，降低低代码上手难度。",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7347300843001462793",
-          "author": "前端双越老师",
-          "description": "润物细无声。这就是好的技术栈，让你不知不觉就用上了。\n大家好，我是双越老师～\n背景\n3 月初宣布做一个 Node 全栈 AIGC 知识库项目 划水AI （类似 Notion AI 和协同编辑），受到很多同学的关注和支持。\n项目背景和功能可看这里 前端转全栈: Next.js + ChatGPT 开发 AIGC 知识库(AI 写作) 欢迎围观~ \n\n项目计划 4 月正式开始，现在我正在做一些调研和准备工作。项目的核心技术选型是 React 和 Next.js 。某些模块也会使用 Nest.js ，扩充项目的技术广度。\n本文是 Next.js 的介绍和入门，主要给已经参与了 划水AI 项目的同学，让他们快速学习 Next.js 。源代码在文章末尾。\n为何选择 React 和 Next.js\n因为简单。\n上周我写过一篇文章 【长文】只会 Vue 不会 React ？22 点证明 React 比 Vue3 更简单 ，从多个方面介绍了 React 其实非常简单，会 JS 就会 React 。\n其实 Next.js 也一样，它没有太多新概念，只要你会 React 和 HTTP 协议，你就能轻松入门 Next.js ，不需要你熟悉很多 Node.js 的知识。不信可以阅读完本文，如果没有理解上的障碍，那就是已经入门了。\nPS：可以对比一下隔壁的 Nest.js ，上来就是一堆概念（Module Service Controller...），代码里还有各种 @ 装饰器语法。很多前端同学都没见过。\n创建项目\n参照 Next.js 文档 一键安装。\n\nPS：推荐使用 tailwindcss ，这也是 Next.js 推荐的 CSS 方案，很多 example 都会用它\n运行 npm run dev 然后浏览器访问 http://localhost:3000 即可。\n修改首页内容\n源码中，打开 …",
-          "link": "https://juejin.cn/post/7347300843001462793",
-          "publishedOn": "2024-03-18T05:45:59.000Z",
-          "wordCount": 2067,
-          "title": "会了 React 和 HTTP 协议，就等于会了 Next.js",
           "imageUrl": null
         },
         {

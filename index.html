@@ -714,6 +714,55 @@ export const num2 &#x3D; computed(()&#x3D;&gt; {
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7348433631944556555"
+                        open
+                      >
+                        <summary class="article-expander__title">我改进了数据滚动方式！老板直接加薪</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7348433631944556555">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: smartblue
+需求背景
+前几天，甲方提了个需求，想让下面的数据循环展示，准备放在他们集团首页给他们领导演示用。
+
+我们领导很重视这个事儿，拍了拍我，语重心长的说，小伙子，好好做。
+我啪的一下就兴奋了，老板居然如此器重我，我必当鞠躬尽瘁，减少摸鱼，我要让老板拜倒在精湛的技术下！
+于是，我搬出自己的库存代码，仅2min就实现了数据的滚动：
+没错，我直接照搬了自己以前写过的文章：JS实现可滚动区域自动滚动展示 - 掘金
+就在我准备告诉老板我做完了的时候，我突然想了想，这么快做完，老板一定觉得我没好好做，我以后还怎么升职加薪，赢取白富美？
+于是，我连夜研究，终于改进了数据滚动方式，赢得了老板的大饼（以后涨500）。最终效果：
+
+技术方案
+技术选型
+观察最终效果图，可以发现这其实就是一个数据循环滚动的效果，每条内容之间间隔1000ms，每条出现动的时间为500ms。用术语来说，这就是一个单步停顿滚动效果。
+我百度了一下，社区还是有这个实现的现成方案的：vue-seamless-scroll，周下载也还行。
+
+于是，我果断试了试，结果不知道什么原因，并不生效...
+既然如此，直接手写一个吧！
+实现思路
+要实现上述效果其实很简单，如图
+
+我们创造一个含有六个值的数组，每隔一段时间循环更改黄色区域的数据，当黄色区域数据变成最新的时候，红色区域整体向下移动，当有数值超出滚动区域后，在删除这个数据即可。
+数据更新
+如果不考虑动画，我们的代码应该这么写
+
+    
+     
+     
+
+
+// #假设这是…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7348349574413467674"
                         open
                       >
@@ -2005,44 +2054,6 @@ action: 执行的动作
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7347300843001462793"
-                        open
-                      >
-                        <summary class="article-expander__title">会了 React 和 HTTP 协议，就等于会了 Next.js</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7347300843001462793">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>润物细无声。这就是好的技术栈，让你不知不觉就用上了。
-大家好，我是双越老师～
-背景
-3 月初宣布做一个 Node 全栈 AIGC 知识库项目 划水AI （类似 Notion AI 和协同编辑），受到很多同学的关注和支持。
-项目背景和功能可看这里 前端转全栈: Next.js + ChatGPT 开发 AIGC 知识库(AI 写作) 欢迎围观~ 
-
-项目计划 4 月正式开始，现在我正在做一些调研和准备工作。项目的核心技术选型是 React 和 Next.js 。某些模块也会使用 Nest.js ，扩充项目的技术广度。
-本文是 Next.js 的介绍和入门，主要给已经参与了 划水AI 项目的同学，让他们快速学习 Next.js 。源代码在文章末尾。
-为何选择 React 和 Next.js
-因为简单。
-上周我写过一篇文章 【长文】只会 Vue 不会 React ？22 点证明 React 比 Vue3 更简单 ，从多个方面介绍了 React 其实非常简单，会 JS 就会 React 。
-其实 Next.js 也一样，它没有太多新概念，只要你会 React 和 HTTP 协议，你就能轻松入门 Next.js ，不需要你熟悉很多 Node.js 的知识。不信可以阅读完本文，如果没有理解上的障碍，那就是已经入门了。
-PS：可以对比一下隔壁的 Nest.js ，上来就是一堆概念（Module Service Controller...），代码里还有各种 @ 装饰器语法。很多前端同学都没见过。
-创建项目
-参照 Next.js 文档 一键安装。
-
-PS：推荐使用 tailwindcss ，这也是 Next.js 推荐的 CSS 方案，很多 example 都会用它
-运行 npm run dev 然后浏览器访问 http://localhost:3000 即可。
-修改首页内容
-源码中，打开 …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7347000319983386643"
                         open
                       >
@@ -3084,8 +3095,8 @@ AI 没有护城河
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8406684744">
-        <time id="build-timestamp" datetime="2024-03-24T03:52:13.972Z">2024-03-24T03:52:13.972Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8407555348">
+        <time id="build-timestamp" datetime="2024-03-24T06:52:22.950Z">2024-03-24T06:52:22.950Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
