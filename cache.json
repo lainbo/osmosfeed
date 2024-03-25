@@ -10,7 +10,28 @@
       "title": "Lainbo's Blog",
       "feedUrl": "https://lainbo.com/rss/feed.xml",
       "siteUrl": "https://lainbo.com/",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://lainbo.com/article/collection",
+          "author": null,
+          "description": "日常看见一些有特色的库会收集下来，持续收集中",
+          "link": "https://lainbo.com/article/collection",
+          "publishedOn": "2024-03-19T12:01:37.000Z",
+          "wordCount": 343,
+          "title": "⭐收集有特色的库",
+          "imageUrl": "/bg_image.jpg"
+        },
+        {
+          "id": "https://lainbo.com/article/clash-config",
+          "author": null,
+          "description": "Clash确实是开箱即用，但开箱时并不是一个优秀的状态。当我将所有服务迁移到国外服务商时，我意识到在短时间内离不开Clash了。为了防止出现问题，我研究了一些Clash相关的东西。现在是时候做一个总结了。",
+          "link": "https://lainbo.com/article/clash-config",
+          "publishedOn": "2024-03-02T04:39:02.000Z",
+          "wordCount": 874,
+          "title": "Clash Verge系列使用最佳实践",
+          "imageUrl": "/bg_image.jpg"
+        }
+      ]
     },
     {
       "title": "张鑫旭-鑫空间-鑫生活",
@@ -23,7 +44,7 @@
           "description": "带大家快速了解下CSS initial-letter属性，可以更好地设置首字母的排版效果。",
           "link": "https://www.zhangxinxu.com/wordpress/2024/03/css-initial-letter/",
           "publishedOn": "2024-03-21T15:34:35.000Z",
-          "wordCount": 1309,
+          "wordCount": 1310,
           "title": "CSS initial-letter属性，嗯……也就这样吧",
           "imageUrl": null
         },
@@ -33,7 +54,7 @@
           "description": "全新的Screen Wake Lock API，可以让网页无论放置多久，都不要担心熄屏，或出现屏保，Web如今越来越强了。",
           "link": "https://www.zhangxinxu.com/wordpress/2024/03/js-screen-wake-lock-api/",
           "publishedOn": "2024-03-17T15:35:45.000Z",
-          "wordCount": 1398,
+          "wordCount": 1399,
           "title": "今天才知道，Web网页也能阻止息屏了",
           "imageUrl": null
         },
@@ -43,7 +64,7 @@
           "description": "音视频合成的时候，有倍速合成的需求，起初，我以为这只是个手到擒来的小需求，细究之下发现问题并不简单……",
           "link": "https://www.zhangxinxu.com/wordpress/2024/02/js-audioencoder-backplayrate-audiobuffer/",
           "publishedOn": "2024-02-29T14:22:22.000Z",
-          "wordCount": 1744,
+          "wordCount": 1745,
           "title": "不改变音调情况下Audio音频的倍速合成JS实现",
           "imageUrl": null
         }
@@ -840,6 +861,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7348623091276316682",
+          "author": "德育处主任",
+          "description": "theme: smartblue\n本文简介\n点赞 + 关注 + 收藏 = 学会了\n今天介绍一个超哇的工具：Localtunnel\nLocaltunnel 是一个基于 Node.js 的内网穿透工具，它允许开发者将本地开发环境暴露给互联网，然后你的亲戚朋友就可以访问它了。\nLocaltunnel 的应用场景：\n开发调试：你可以在本地环境运行 Web 服务，然后通过 Localtunnel 将其暴露到公网，其他人就可以远程查阅或调试。如果你的 Web 项目是运行在移动端，也可以通过 Localtunnel 将其暴露出来，然后在手机上访问。\n展示作品：要向外部展示你的作品时也可以使用 Localtunnel 将其暴露出来，尤其适合那种临时展示的场景，展示完就关掉服务，别人就不能再访问了。也很适合面试时需要展示作品，但又没钱买域名服务器。或者有些纯前端的工友在远程面试时需要展示作品就可以让 Localtunnel 帮个忙。\n动手操作\n先说说如何使用。\n我随便找个项目演示。我使用 Vite 创建了一个 Svelte 项目。\nnpm create vite@latest svelte-demo\n\ncd svelte-demo\nnpm install\n\n之后可以执行 npm run dev 运行项目。\n也可以打包后再运行。\nnpm run build\nnpm run preview\n\n我是打包后再运行项目的，运行完 npm run preview 后给回一个地址我，http://localhost:4173/\n这里的端口是 4173，记住这个端口号。\n然后执行 Localtunnel 提供的命令把你本机的这个端口暴露到公网。\nnpx localtunnel --port 端口号\n\n我前面得到的端口号是 4173 ，所以就执行下面这条命令\nnpx localtunnel --port 4173\n\n\n执行完这条命令会返回一个地址给你，这个网址是动态分配的。在浏览器打开这个地址。\n\n此时需要你输入一个密码，这个密码就是你的IP地址。\n如果你不知道你的IP地址是多少，可以继续往下拉，看到 https://loca.lt/mytunnelpassword ，然后点进去就能查看到你的IP地址。\n\n\n把你的IP地址复制到“Tunnel Password”输入框，然后点击“Click to Submit”按钮，等个几秒钟就能在公网访问你的网站了。\n\n但是，如果别人（或者别的设备）想访问你的网站，你需要把你的网址和你的IP给到别人。建议不要把你的IP随便发给陌生人。或者你可以使用手机开个热点，用蜂窝网络的IP。\n前面是通过 npx 去执行 Localtunnel 的命令，如果你需要经常使用 Localtunnel 也可以全局安装它。\n全局安装的命令：\nnpm install -g localtunnel\n\n全局安装 Localtunnel 后，只需使用 lt 命令启动隧道即可。\nlt --port 端口号\n\n更多 Localtunnel 的配置可以查阅官方文档。\n点赞 + 关注 + 收藏 = 学会了",
+          "link": "https://juejin.cn/post/7348623091276316682",
+          "publishedOn": "2024-03-21T05:38:05.000Z",
+          "wordCount": 831,
+          "title": "本地项目放到公网访问！炒鸡煎蛋！",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7348349574413467674",
           "author": "那个曾经的少年回来了",
           "description": "theme: nico\nhighlight: androidstudio\n前言\n一站式社交平台数据抓取利器，带你玩转小红书、抖音、快手、B站和微博数据分析\n不经意间，来查看MediaCrawler仓库源码，发现作者已经删库了。看来是领奖了。才几天不到的时间Star数量已经直逼10K了，增长速度近乎疯狂。\n前两天只是将代码下载下来了，还没认真的玩。还好代码本地已经有了。如果有兴趣的也可以来找我要，免费的哟。\n\n作者在这里也明显进行了标注使用了无头浏览器\n\n那到底什么事无头浏览器呢？\n无头浏览器（Headless Browser）是一种浏览器程序，没有图形用户界面（GUI），但能够执行与普通浏览器相似的功能。无头浏览器能够加载和解析网页，执行JavaScript代码，处理网页事件，并提供对DOM（文档对象模型）的访问和操作能力。\n与传统浏览器相比，无头浏览器的主要区别在于其没有可见的窗口或用户界面。这使得它在后台运行时，不会显示实际的浏览器窗口，从而节省了系统资源，并且可以更高效地执行自动化任务。\n常见的无头浏览器包括Headless Chrome（Chrome的无头模式）、PhantomJS、Puppeteer（基于Chrome的无头浏览器库）、playwright等。它们提供了编程接口，使开发者能够通过代码自动化控制和操作浏览器行为。\n\n如果您比较Playwright和 Puppeteer的贡献者页面 ，您会注意到Puppeteer的前两个贡献者现在在 Playwright 上工作。Puppeteer 团队实质上是从 Google 转移到 Microsoft 并成为 Playwright 团队。\n因此，Playwright 在很多方面与 Puppeteer 非常相似。API 方法在大多数情况下是相同的，并且默认情况下 Playwright 还捆绑了兼容的浏览器。\nPlaywright 最大的区别在于跨浏览器支持。它可以驱动 Chromium、WebKit（Safari 的浏览器引擎）和 Firefox。\n无头浏览器其实就是看不见的浏览器，所有的操作都要通过代码调用 API 来控制，所以浏览器能干的事儿，无头浏览器都能干，而且很多事儿做起来比标准的浏览器更简单。\n能够干什么呢？\n我举几个常用的功能来说明一下无头浏览器的主要使用场景\n自动化测试： 无头浏览器可以模拟用户行为，执行自动化测试任务，例如对网页进行加载、表单填写、点击按钮、检查页面元素等。\n数据抓取： 无头浏览器可用于爬取网页数据，自动访问网站并提取所需的信息，用于数据分析、搜索引擎优化等。\n屏幕截图： 无头浏览器可以加载网页并生成网页的截图，用于生成快照、生成预览图像等。\n服务器端渲染： 无头浏览器可以用于服务器端渲染（Server-side Rendering），将动态生成的页面渲染为静态HTML，提供更好的性能和搜索引擎优化效果。\n生成 PDF 文件：使用浏览器自带的生成 PDF 功能，将目标页面转换成 PDF 。\n这个仓库如何使用呢\n首先这是一个Python库，当然要安装必要的Python环境，这个我就不多说了，通过GPT或者在网上搜索都可以进行安装好。\n接下来就是拿到代码后如何使用，这个其实作者也是非常的友好了，直接看README。\n\n最后运行命令后，会出现一个二维码，比如这里我测试的是小红书，出现二维码之后，我们用小红书App来扫描，并进行确认身份，这样无头浏览器就能识别并记住我们的身份信息，后续就可以通过该身份进行抓取一些数据了。\n\n这里我配置了一条小红书的笔记ID,这里是个数据可以配置多个的。\n好了，OK ,数据就被这么简单的抓取下来了。\n\n\n作者还特意对数据存储做了封装，如果数据量大的时候存储起来可能就非常的方便了。\n如果需求量很大，还可以对其源码进行研究改造，好了今天的学习就到这里了。",
@@ -937,16 +968,6 @@
           "publishedOn": "2024-03-18T16:13:34.000Z",
           "wordCount": 713,
           "title": "我为什么从WebStorm换到了VSCode？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7347617618511773750",
-          "author": "前端小付",
-          "description": "highlight: atom-one-dark\ntheme: cyanosis\n项目体验地址：https://dbfu.github.io/easy-builder/\n项目仓库地址：https://github.com/dbfu/easy-builder\n功能还比较简陋，后面慢慢完善，大家可以先体验一下AI助手功能。\n目前插件是和低代码项目放在一起，后面我会给单独拆出来，让想用这个插件的朋友也能在自己项目里快速使用。目前物料使用的是官方的基于antd的物料，我只改了几个组件，让组件对外暴露了方法和值。\n前言\n上一篇分享了一个不用写代码也能使用低代码的插件，但是还是有一些上手难度，比如要理解事件、方法等概念。现在AI大模型可以帮助我们处理很多事情，那AI和低代码结合能碰撞出什么样的火花呢，下面和大家分享一下我的实践。\n建议先看一下上篇文章\n我为LowCodeEngine低代码引擎写了个插件，让不懂代码的产品人员也能自己开发页面了。\n思考\n前面使用插件后配置流程虽然简化了很多，但是还不是不够简单，如果能借助AI分析用户的输入，自动实现前面所有的动作就好了。\n下面来分析一下点击按钮，打开弹框这个动作，其实只需要给它转换为下面这样的数据结构，我们就能解析并对接我们前面开发的事件流插件。\n{\n  \"componentName\": \"Button\",\n  \"event\": \"onClick\",\n  \"action\": {\n    \"type\": \"ComponentMethod\",\n    \"componentName\": \"Modal\",\n    \"method\": \"open\"\n  }\n}\n\ncomponentName: 触发事件的组件\nevent: 事件\naction: 执行的动作\n可能有人会有疑问，这里只知道组件名称，不知道是哪个组件，怎么给组件绑定事件呢，我这里的处理是，如…",
-          "link": "https://juejin.cn/post/7347617618511773750",
-          "publishedOn": "2024-03-18T13:25:12.000Z",
-          "wordCount": 3882,
-          "title": "我为LowCodeEngine低代码写了个AI插件，降低低代码上手难度。",
           "imageUrl": null
         }
       ]
