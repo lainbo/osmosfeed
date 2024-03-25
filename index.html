@@ -1048,6 +1048,47 @@ VitePress 的特点在于“内容优先，Markdown 至上”，它可以将 Mar
                 </section>
               </section>
             </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7349107210658299940"
+                        open
+                      >
+                        <summary class="article-expander__title">小厂挂了十次之后，迎来了海康威视</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7349107210658299940">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: channing-cyan
+前言
+前段时间一直忙着面试和背面经，就没怎么写文章。这段时间那是非常的煎熬，一直面试一直挂，有些感觉面试的还不错，八股和编程题都答上来了，时间也面了一个小时，但最终还是挂了，一度陷入了自我怀疑中。调整了几天索性直接狠下心放弃小厂直接投大公司，周一的时候接到了海康的面试邀约，激动的心颤抖的嘴，一轮技术面一轮hr面，最后成功拿下，既在意料之外又在情理之中。
+
+自我介绍
+自我介绍就是套用网上的一些模板然后稍微修改了一下，那毕竟要按照自己的真实情况来写，感觉好像也没啥太大的亮点，可能比别人更有优势的就是有一份实习经验吧
+面试官老师好，我叫xxx，东华理工大学25届软件工程专业大三在读，想应聘贵公司的前端实习生。低年级的时候，我通过B站来自主学习、打了些比赛，拿过传智杯省三，奖学金也拿了一些，专业人数670人，成绩排名前5%。寒假的时候在杭州的一家公司进行远程实习，使用uniapp独立开发小程序项目，个人比较喜欢前端，也能用node写后端，最近正在学习aigc。chatgpt火了之后，对AIGC非常感兴趣，所以学习了python、prompt enginneer、wtf学院的langchain课程等，并且在github上给wtf学院的ai开源项目做过贡献，拿到过该项目的contributor。平时写项目的时候会用一些AI工具提升编程效率比如copilot和通义千问，不过一般不会去用，因为目前还处于一个学习阶段，遇到问题还是需要自己去多思考，过度依赖ai工具会产生惰性。
+阅读过js相关的书籍,并在掘金上写过相应的文章，遵从费曼学习法，喜欢分享自己的学习心得。平时主要使用vue,熟悉vue全家桶开发。遇到问题时会使用浏览器和gpt查询解决办法，也会去阅读官方文档和MDN。
+我觉得未来最大的机会和风口是AI， 随着大模型的不断发展，会对很多行业产生…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -1813,72 +1854,6 @@ console.log(obj2); // {name: &quot;zhangsan&quot;}
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7348623091276316682"
-                        open
-                      >
-                        <summary class="article-expander__title">本地项目放到公网访问！炒鸡煎蛋！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7348623091276316682">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: smartblue
-本文简介
-点赞 + 关注 + 收藏 &#x3D; 学会了
-今天介绍一个超哇的工具：Localtunnel
-Localtunnel 是一个基于 Node.js 的内网穿透工具，它允许开发者将本地开发环境暴露给互联网，然后你的亲戚朋友就可以访问它了。
-Localtunnel 的应用场景：
-开发调试：你可以在本地环境运行 Web 服务，然后通过 Localtunnel 将其暴露到公网，其他人就可以远程查阅或调试。如果你的 Web 项目是运行在移动端，也可以通过 Localtunnel 将其暴露出来，然后在手机上访问。
-展示作品：要向外部展示你的作品时也可以使用 Localtunnel 将其暴露出来，尤其适合那种临时展示的场景，展示完就关掉服务，别人就不能再访问了。也很适合面试时需要展示作品，但又没钱买域名服务器。或者有些纯前端的工友在远程面试时需要展示作品就可以让 Localtunnel 帮个忙。
-动手操作
-先说说如何使用。
-我随便找个项目演示。我使用 Vite 创建了一个 Svelte 项目。
-npm create vite@latest svelte-demo
-
-cd svelte-demo
-npm install
-
-之后可以执行 npm run dev 运行项目。
-也可以打包后再运行。
-npm run build
-npm run preview
-
-我是打包后再运行项目的，运行完 npm run preview 后给回一个地址我，http://localhost:4173/
-这里的端口是 4173，记住这个端口号。
-然后执行 Localtunnel 提供的命令把你本机的这个端口暴露到公网。
-npx localtunnel --port 端口号
-
-我前面得到的端口号是 4173 ，所以就执行下面这条命令
-npx localtunnel --port 4173
-
-
-执行完这条命令会返回一个地址给你，这个网址是动态分配的。在浏览器打开这个地址。
-
-此时需要你输入一个密码，这个密码就是你的IP地址。
-如果你不知道你的IP地址是多少，可以继续往下拉，看到 https://loca.lt/mytunnelpassword ，然后点进去就能查看到你的IP地址。
-
-
-把你的IP地址复制到“Tunnel Password”输入框，然后点击“Click to Submit”按钮，等个几秒钟就能在公网访问你的网站了。
-
-但是，如果别人（或者别的设备）想访问你的网站，你需要把你的网址和你的IP给到别人。建议不要把你的IP随便发给陌生人。或者你可以使用手机开个热点，用蜂窝网络的IP。
-前面是通过 npx 去执行 Localtunnel 的命令，如果你需要经常使用 Localtunnel 也可以全局安装它。
-全局安装的命令：
-npm install -g localtunnel
-
-全局安装 Localtunnel 后，只需使用 lt 命令启动隧道即可。
-lt --port 端口号
-
-更多 Localtunnel 的配置可以查阅官方文档。
-点赞 + 关注 + 收藏 &#x3D; 学会了</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7348349574413467674"
                         open
                       >
@@ -1956,6 +1931,8 @@ Playwright 最大的区别在于跨浏览器支持。它可以驱动 Chromium、
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>带大家快速了解下CSS initial-letter属性，可以更好地设置首字母的排版效果。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2897,40 +2874,6 @@ div::before {
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Lainbo&#x27;s Blog</button>
-                  <a class="source-heading__link" href="https://lainbo.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lainbo.com/article/collection"
-                        open
-                      >
-                        <summary class="article-expander__title">⭐收集有特色的库</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lainbo.com/article/collection">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="/bg_image.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>日常看见一些有特色的库会收集下来，持续收集中</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >国家应急广播 - 重庆预警信息</button>
                   <a class="source-heading__link" href="http://www.cneb.gov.cn/yjxx">Open</a>
                 </h3>
@@ -3291,6 +3234,8 @@ MulSearch，一个快速指定搜索源的入口页，方便使用多个搜索�
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>全新的Screen Wake Lock API，可以让网页无论放置多久，都不要担心熄屏，或出现屏保，Web如今越来越强了。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3588,54 +3533,6 @@ MulSearch，一个快速指定搜索源的入口页，方便使用多个搜索�
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-02 datetime="2024-03-02T04:39:02.000Z">2024-03-02</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-02 datetime="2024-03-02T04:39:02.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Lainbo&#x27;s Blog</button>
-                  <a class="source-heading__link" href="https://lainbo.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lainbo.com/article/clash-config"
-                        open
-                      >
-                        <summary class="article-expander__title">Clash Verge系列使用最佳实践</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lainbo.com/article/clash-config">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="/bg_image.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Clash确实是开箱即用，但开箱时并不是一个优秀的状态。当我将所有服务迁移到国外服务商时，我意识到在短时间内离不开Clash了。为了防止出现问题，我研究了一些Clash相关的东西。现在是时候做一个总结了。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-01 datetime="2024-03-01T00:25:43.000Z">2024-03-01</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-01 datetime="2024-03-01T00:25:43.000Z"></time>
           </button>
@@ -3732,6 +3629,8 @@ AI 没有护城河
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>音视频合成的时候，有倍速合成的需求，起初，我以为这只是个手到擒来的小需求，细究之下发现问题并不简单……</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3744,8 +3643,8 @@ AI 没有护城河
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8418162084">
-        <time id="build-timestamp" datetime="2024-03-25T09:53:34.540Z">2024-03-25T09:53:34.540Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8420398011">
+        <time id="build-timestamp" datetime="2024-03-25T12:54:18.241Z">2024-03-25T12:54:18.241Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
