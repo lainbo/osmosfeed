@@ -2961,102 +2961,11 @@ Rust 发挥了重要作用——我们已将框架中一些最昂贵且可并行
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-19 datetime="2024-03-19T16:04:53.000Z">2024-03-19</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-19 datetime="2024-03-19T16:04:53.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-19 datetime="2024-03-19T13:29:42.000Z">2024-03-19</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-19 datetime="2024-03-19T13:29:42.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7347947619746086939"
-                        open
-                      >
-                        <summary class="article-expander__title">蔚来、得物一面: 你这个东西为什么这样?</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7347947619746086939">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>浅聊一下
-本人大三，这两天面了一下蔚来和得物，总体给我的感受就是非常的nice，在面试中学到了很多 (因为收到了特别多的为什么) 两场面试中我都发现虽然我知道的点比较多，可是对某一个知识点并没有深入了解，只会使用...推荐掘友们还是以战养战，越战越勇吧！
-面试了这么多天，觉得一个人的力量还是太过薄弱，如果你和我一样想进大厂，欢迎掘友们私聊我交流面经（wechat: LongLBond）
-得物
-自我介绍
-首先就是一个自我介绍，之前看过敖丙大佬的文章面试自我介绍5句话公式 - 掘金 (juejin.cn)，以我是谁+从哪里来+我做过什么+有什么成绩+为什么能胜任 来展开介绍...
-讲讲项目
-简单了解了一下我的实习经历以后，问了我在写自己的项目的时候有碰见过什么难点...
-我从登录模块开始讲 : 从项目开始使用的一个 路由前置守卫(Vue-router导航守卫，看这一篇就够了 - 掘金 (juejin.cn))来限制非登录用户的一些行为,讲到我了解的一种 cookie+session 的一种传统的登录模式最后再讲到使用 JWT (jsonwebtoken) 来实现这么一个效果...
-面试官问:
-我们把所有的信息都储存在token中吗？jwt就一定安全吗？如果我拿到你的token，我是否就能用这个token去访问一些你的其他接口呢？
-三板斧下来我就有点懵了...我在这里就发现我学的太浅了，没有好好去思考一下这些问题...
-数据结构
-接下来问了一道数据结构的题目:
-有一棵二叉树，打印出他的一个左视图...
-
-得物只有两道题，到这里就算结束了,大概面了半个小时...
-蔚来
-了解
-从我的简历中看到我对AIGC有过了解，问我对于AIGC的了解...回答了LLM大模型和LangChain大模型框架，以及我使用LangChain以及OpenAi接口做过的一些东西，掘友可以去我主页看看我的关于A…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7347973138787467274"
-                        open
-                      >
-                        <summary class="article-expander__title">一个vue页面复用方案</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7347973138787467274">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>前言
-问大家一个问题，曾经的你是否也遇到过，一个项目中有好几个页面长得基本相同，但又差那么一点，想用 vue extends 继承它又不能按需继承html模板部分，恰好 B 页面需要用的 A 页面 80% 的模板，剩下的 20% 由 B 页面自定义，举个栗子：
-
-我们假设这是两个页面，B页面比A页面多了个p标签，剩余的东西都一样，难道仅仅是因为这一个 p标签就要重新写一份模板吗？相信大部分伙伴解决方式是把公共部分抽成一个组件来用，这是一个好的做法。没错，但是来了，老板让你在 标题1、标题2下面分别插入一段内容，这会儿你是不是头大了？难道只能重写一份了吗？当然不是，来开始我们的填坑之路~（请大家看待问题不要局限于我举的例子,实际运用场景必然是不会这么简单的）
-准备工作
-准备以下工具包：
-node-html-parser:  将html生成dom树 官网
-npm install --save node-html-parser
-
-思路
-子页面提供继承的父页面的路径，如下：
-
-
-
-子页面需要通过一个自定义标签（假设是 extend）的方式，来决定如何拓展父页面，如下就应该是一个替换的操作,它最少应该具备拓展类型 type 与目标节点 target 属性。
-
-  
-通过replace替换掉父页面下id为div_1的元素 
-    
-  
-通过replace替换掉父页面下id为div_1的元素 替换掉之外，剩下…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -3128,6 +3037,102 @@ npm install --save node-html-parser
                             <span class="media-object__text">
                               <span>确定自己想要什么，以及真正想获得的是什么，然后再去制定自己的奋斗计划。当已经拥有了实现自己目标所需的金钱时，金钱就不再是一个有效的决策要素。换句话说，从最开始，挣钱就不是一个正确的目标。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7347973138787467274"
+                        open
+                      >
+                        <summary class="article-expander__title">一个vue页面复用方案</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7347973138787467274">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>前言
+问大家一个问题，曾经的你是否也遇到过，一个项目中有好几个页面长得基本相同，但又差那么一点，想用 vue extends 继承它又不能按需继承html模板部分，恰好 B 页面需要用的 A 页面 80% 的模板，剩下的 20% 由 B 页面自定义，举个栗子：
+
+我们假设这是两个页面，B页面比A页面多了个p标签，剩余的东西都一样，难道仅仅是因为这一个 p标签就要重新写一份模板吗？相信大部分伙伴解决方式是把公共部分抽成一个组件来用，这是一个好的做法。没错，但是来了，老板让你在 标题1、标题2下面分别插入一段内容，这会儿你是不是头大了？难道只能重写一份了吗？当然不是，来开始我们的填坑之路~（请大家看待问题不要局限于我举的例子,实际运用场景必然是不会这么简单的）
+准备工作
+准备以下工具包：
+node-html-parser:  将html生成dom树 官网
+npm install --save node-html-parser
+
+思路
+子页面提供继承的父页面的路径，如下：
+
+
+
+子页面需要通过一个自定义标签（假设是 extend）的方式，来决定如何拓展父页面，如下就应该是一个替换的操作,它最少应该具备拓展类型 type 与目标节点 target 属性。
+
+  
+通过replace替换掉父页面下id为div_1的元素 
+    
+  
+通过replace替换掉父页面下id为div_1的元素 替换掉之外，剩下…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7347911150334787584"
+                        open
+                      >
+                        <summary class="article-expander__title">还在用Axios？来试试这个基于fetch的现代请求库——Ky，完美支持ChatGPT流式传输</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7347911150334787584">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: channing-cyan
+highlight: monokai
+背景
+最近做了个AI大语言模型的前端页面，类似ChatGPT的那种，其中用到了流式传输的功能，即：
+HTTP Header中Conent-Type的值为text/event-stream，这种传输方式称之为SSE (Server-Sent Events)
+
+这是一个流式传输的数据，服务端可以一部分一部分的发送到前端，前端也可以一部分一部分的展示到页面中，就像这样：
+
+
+不必像一般的HTTP请求那样等待所有数据下载完成再展示给用户，可以边传输边展示，用户体验较好。
+fetchAPI可以轻松实现SSE流式传输，具体实现方式可以自行搜索，不是本文的重点内容。
+但由于项目中使用了axios作为请求库，就需要通过axios来实现，但经过查阅axios相关的文档、博客、GitHub issue 等，发现axios对其的支持不是太好，实现起来较为繁琐，因为axios的底层是基于XHR的，相对来说已经是一个比较古老的API了。
+所以萌生了一个想法，为何不找一个基于fetch的现代请求库来替代axios呢？毕竟都2024年这个时候了，fetch的兼容性已经非常好了。
+经过一系列的搜寻和对比，发现了这个十分优秀的请求库——ky
+Ky 简介
+Ky是一个基于浏览器Fetch API的，小型优雅的HTTP客户端，具有以下特点：
+零依赖，大小仅3.3K
+跨运行时，支持在浏览器、Node.js、Deno等不同的运行环境中使用，理论上应该可以运行在任意兼容fetchAPI的环境中
+支持创建实例 (类似axios的axios.create)
+支持请求前后的Hooks钩子函数 (类似axios的interceptors 拦截器)
+使用比fetch更加的简单便捷
+支持请求失败后自动重试的功能
+支持超时设置
+支持URL前缀
+更多…… …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3767,8 +3772,8 @@ AI 没有护城河
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8438958793">
-        <time id="build-timestamp" datetime="2024-03-26T15:52:42.292Z">2024-03-26T15:52:42.292Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8441370874">
+        <time id="build-timestamp" datetime="2024-03-26T18:52:25.343Z">2024-03-26T18:52:25.343Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
