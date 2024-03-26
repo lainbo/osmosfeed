@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>urn:2024-03-26T18:52:25.363Z</id>
+    <id>urn:2024-03-26T21:52:55.957Z</id>
     <title>Lainbo's RSS</title>
-    <updated>2024-03-26T18:52:25.363Z</updated>
+    <updated>2024-03-26T21:52:55.957Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="index.html"/>
     <entry>
@@ -775,6 +775,40 @@ VitePress 的口号就是将 Markdown 变成优雅的文档，且只需一杯泡
 VitePress 的特点在于“内容优先，Markdown 至上”，它可以将 Markdown 编写的一切内容，根据应用的主题生成静态 HTML 页面，随时随地部署到地球上。换而言之，VitePress 的设计动机就是构建快速…]]></summary>
         <author>
             <name>前端猫猫教</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ES2024即将发布！5个可能大火的JS新方法]]></title>
+        <id>https://juejin.cn/post/7349410765525483555</id>
+        <link href="https://juejin.cn/post/7349410765525483555"/>
+        <updated>2024-03-24T03:28:40.000Z</updated>
+        <summary type="html"><![CDATA[theme: vuepress
+Hello，大家好，我是 Sunday。
+ECMAScript 2024（ES15） 即将发布（2024年6月），新的版本带来了非常多全新的特性。其中有 5 个全新的 JS 方法，可以大幅度提升我们的工作效率，从而让我们得到更多的摸鱼时间。咱们一起来看看吧！
+01：Promise.withResolvers
+这个功能引入了一个新方法来创建一个 promise，直接返回 resolve 和 reject 的回调。使用 Promise.withResolvers ，我们可以创建直接在其执行函数之外 resolve 和 reject
+const [promise, resolve, reject] = Promise.withResolvers();
+
+setTimeout(() => resolve('Resolved after 2 seconds'), 2000);
+
+promise.then(value => console.log(value));
+
+02：Object.groupBy()
+Object.groupBy() 方法是一项新添加的功能，允许我们按照特定属性将数组中的 对象分组，从而使数据处理变得更加容易。
+const pets = [
+  { gender: '男', name: '张三' },
+  { gender: '女', name: '李四' },
+  { gender: '男', name: '王五' }
+];
+
+const res = Object.groupBy(pets, pet => pet.gender);
+console.log(res);
+// 输出:
+// {
+//   女: [{ gender: '女', name: '李四' }]
+//   男: [{ gender: '男', name: '张三…]]></summary>
+        <author>
+            <name>程序员Sunday</name>
         </author>
     </entry>
     <entry>
@@ -1725,40 +1759,6 @@ npm install --save node-html-parser
         <summary type="html"><![CDATA[日常看见一些有特色的库会收集下来，持续收集中]]></summary>
         <author>
             <name>Lainbo's Blog</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[还在用Axios？来试试这个基于fetch的现代请求库——Ky，完美支持ChatGPT流式传输]]></title>
-        <id>https://juejin.cn/post/7347911150334787584</id>
-        <link href="https://juejin.cn/post/7347911150334787584"/>
-        <updated>2024-03-19T09:28:27.000Z</updated>
-        <summary type="html"><![CDATA[theme: channing-cyan
-highlight: monokai
-背景
-最近做了个AI大语言模型的前端页面，类似ChatGPT的那种，其中用到了流式传输的功能，即：
-HTTP Header中Conent-Type的值为text/event-stream，这种传输方式称之为SSE (Server-Sent Events)
-
-这是一个流式传输的数据，服务端可以一部分一部分的发送到前端，前端也可以一部分一部分的展示到页面中，就像这样：
-
-
-不必像一般的HTTP请求那样等待所有数据下载完成再展示给用户，可以边传输边展示，用户体验较好。
-fetchAPI可以轻松实现SSE流式传输，具体实现方式可以自行搜索，不是本文的重点内容。
-但由于项目中使用了axios作为请求库，就需要通过axios来实现，但经过查阅axios相关的文档、博客、GitHub issue 等，发现axios对其的支持不是太好，实现起来较为繁琐，因为axios的底层是基于XHR的，相对来说已经是一个比较古老的API了。
-所以萌生了一个想法，为何不找一个基于fetch的现代请求库来替代axios呢？毕竟都2024年这个时候了，fetch的兼容性已经非常好了。
-经过一系列的搜寻和对比，发现了这个十分优秀的请求库——ky
-Ky 简介
-Ky是一个基于浏览器Fetch API的，小型优雅的HTTP客户端，具有以下特点：
-零依赖，大小仅3.3K
-跨运行时，支持在浏览器、Node.js、Deno等不同的运行环境中使用，理论上应该可以运行在任意兼容fetchAPI的环境中
-支持创建实例 (类似axios的axios.create)
-支持请求前后的Hooks钩子函数 (类似axios的interceptors 拦截器)
-使用比fetch更加的简单便捷
-支持请求失败后自动重试的功能
-支持超时设置
-支持URL前缀
-更多…… …]]></summary>
-        <author>
-            <name>薛定谔de狗狗</name>
         </author>
     </entry>
     <entry>

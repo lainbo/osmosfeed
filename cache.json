@@ -44,7 +44,7 @@
           "description": "带大家快速了解下CSS initial-letter属性，可以更好地设置首字母的排版效果。",
           "link": "https://www.zhangxinxu.com/wordpress/2024/03/css-initial-letter/",
           "publishedOn": "2024-03-21T15:34:35.000Z",
-          "wordCount": 1309,
+          "wordCount": 1308,
           "title": "CSS initial-letter属性，嗯……也就这样吧",
           "imageUrl": null
         },
@@ -275,7 +275,7 @@
           "description": "文字有力量，可直击人心。\n不压抑自己感情的阅读《我与地坛》的下面这段文字，你的经验感悟和作者的文字交织在一起，体验一下情绪是怎么崩发出来的：\n━━━━━━━━━━━━━━ \n那天我又独自坐在屋里，看着窗外的树叶刷刷啦啦地飘落。母亲进来了，挡在窗前：“北海的菊花开了，我推着你去看看吧。”她憔悴的脸上现出央求般的神色。“什么时候？”“你要是愿意，就明天？”她说。我的回答已经让她喜出望外了。“好吧，就明天。”我说。她高兴得一会儿坐下，一会儿站起：“那就赶紧准备准备。”“唉呀，烦不烦？几步路，有什么好准备的！”她也笑了，坐在我身边，絮絮叨叨地说着：“看完菊花，咱们就去‘仿膳’，你小时候最爱吃那儿的豌豆黄儿。还记得那回我带你去北海吗？你偏说那杨树花是毛毛虫，跑着，一脚踩扁一个……”她忽然不说了。对于“跑”和“踩”一类的字眼儿，她比我还敏感。她又悄悄地出去了。\n她出去了，就再也没回来。\n邻居们把她抬上车时，她还在大口大口地吐着鲜血。我没想到她已经病成那样。看着三轮车远去，也绝没有想到那竟是永远的诀别。",
           "link": "https://m.okjike.com/originalPosts/66021dc1a922aa28d0eea553",
           "publishedOn": "2024-03-26T00:58:41.000Z",
-          "wordCount": 431,
+          "wordCount": 433,
           "title": "发布了: 文字有力量，可直击人心。 不压抑自己感情的阅读《我与地坛》的下面这段文字，你的经验感悟和作者的文字交织在一起，体验一下情绪是怎么崩发出来的： ━...",
           "imageUrl": "https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
         },
@@ -801,6 +801,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7349410765525483555",
+          "author": "程序员Sunday",
+          "description": "theme: vuepress\nHello，大家好，我是 Sunday。\nECMAScript 2024（ES15） 即将发布（2024年6月），新的版本带来了非常多全新的特性。其中有 5 个全新的 JS 方法，可以大幅度提升我们的工作效率，从而让我们得到更多的摸鱼时间。咱们一起来看看吧！\n01：Promise.withResolvers\n这个功能引入了一个新方法来创建一个 promise，直接返回 resolve 和 reject 的回调。使用 Promise.withResolvers ，我们可以创建直接在其执行函数之外 resolve 和 reject\nconst [promise, resolve, reject] = Promise.withResolvers();\n\nsetTimeout(() => resolve('Resolved after 2 seconds'), 2000);\n\npromise.then(value => console.log(value));\n\n02：Object.groupBy()\nObject.groupBy() 方法是一项新添加的功能，允许我们按照特定属性将数组中的 对象分组，从而使数据处理变得更加容易。\nconst pets = [\n  { gender: '男', name: '张三' },\n  { gender: '女', name: '李四' },\n  { gender: '男', name: '王五' }\n];\n\nconst res = Object.groupBy(pets, pet => pet.gender);\nconsole.log(res);\n// 输出:\n// {\n//   女: [{ gender: '女', name: '李四' }]\n//   男: [{ gender: '男', name: '张三…",
+          "link": "https://juejin.cn/post/7349410765525483555",
+          "publishedOn": "2024-03-24T03:28:40.000Z",
+          "wordCount": 1225,
+          "title": "ES2024即将发布！5个可能大火的JS新方法",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7349107210658299940",
           "author": "金色的暴发户",
           "description": "theme: channing-cyan\n前言\n前段时间一直忙着面试和背面经，就没怎么写文章。这段时间那是非常的煎熬，一直面试一直挂，有些感觉面试的还不错，八股和编程题都答上来了，时间也面了一个小时，但最终还是挂了，一度陷入了自我怀疑中。调整了几天索性直接狠下心放弃小厂直接投大公司，周一的时候接到了海康的面试邀约，激动的心颤抖的嘴，一轮技术面一轮hr面，最后成功拿下，既在意料之外又在情理之中。\n\n自我介绍\n自我介绍就是套用网上的一些模板然后稍微修改了一下，那毕竟要按照自己的真实情况来写，感觉好像也没啥太大的亮点，可能比别人更有优势的就是有一份实习经验吧\n面试官老师好，我叫xxx，东华理工大学25届软件工程专业大三在读，想应聘贵公司的前端实习生。低年级的时候，我通过B站来自主学习、打了些比赛，拿过传智杯省三，奖学金也拿了一些，专业人数670人，成绩排名前5%。寒假的时候在杭州的一家公司进行远程实习，使用uniapp独立开发小程序项目，个人比较喜欢前端，也能用node写后端，最近正在学习aigc。chatgpt火了之后，对AIGC非常感兴趣，所以学习了python、prompt enginneer、wtf学院的langchain课程等，并且在github上给wtf学院的ai开源项目做过贡献，拿到过该项目的contributor。平时写项目的时候会用一些AI工具提升编程效率比如copilot和通义千问，不过一般不会去用，因为目前还处于一个学习阶段，遇到问题还是需要自己去多思考，过度依赖ai工具会产生惰性。\n阅读过js相关的书籍,并在掘金上写过相应的文章，遵从费曼学习法，喜欢分享自己的学习心得。平时主要使用vue,熟悉vue全家桶开发。遇到问题时会使用浏览器和gpt查询解决办法，也会去阅读官方文档和MDN。\n我觉得未来最大的机会和风口是AI， 随着大模型的不断发展，会对很多行业产生…",
@@ -928,16 +938,6 @@
           "publishedOn": "2024-03-19T12:54:38.000Z",
           "wordCount": 2711,
           "title": "一个vue页面复用方案",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7347911150334787584",
-          "author": "薛定谔de狗狗",
-          "description": "theme: channing-cyan\nhighlight: monokai\n背景\n最近做了个AI大语言模型的前端页面，类似ChatGPT的那种，其中用到了流式传输的功能，即：\nHTTP Header中Conent-Type的值为text/event-stream，这种传输方式称之为SSE (Server-Sent Events)\n\n这是一个流式传输的数据，服务端可以一部分一部分的发送到前端，前端也可以一部分一部分的展示到页面中，就像这样：\n\n\n不必像一般的HTTP请求那样等待所有数据下载完成再展示给用户，可以边传输边展示，用户体验较好。\nfetchAPI可以轻松实现SSE流式传输，具体实现方式可以自行搜索，不是本文的重点内容。\n但由于项目中使用了axios作为请求库，就需要通过axios来实现，但经过查阅axios相关的文档、博客、GitHub issue 等，发现axios对其的支持不是太好，实现起来较为繁琐，因为axios的底层是基于XHR的，相对来说已经是一个比较古老的API了。\n所以萌生了一个想法，为何不找一个基于fetch的现代请求库来替代axios呢？毕竟都2024年这个时候了，fetch的兼容性已经非常好了。\n经过一系列的搜寻和对比，发现了这个十分优秀的请求库——ky\nKy 简介\nKy是一个基于浏览器Fetch API的，小型优雅的HTTP客户端，具有以下特点：\n零依赖，大小仅3.3K\n跨运行时，支持在浏览器、Node.js、Deno等不同的运行环境中使用，理论上应该可以运行在任意兼容fetchAPI的环境中\n支持创建实例 (类似axios的axios.create)\n支持请求前后的Hooks钩子函数 (类似axios的interceptors 拦截器)\n使用比fetch更加的简单便捷\n支持请求失败后自动重试的功能\n支持超时设置\n支持URL前缀\n更多…… …",
-          "link": "https://juejin.cn/post/7347911150334787584",
-          "publishedOn": "2024-03-19T09:28:27.000Z",
-          "wordCount": 1593,
-          "title": "还在用Axios？来试试这个基于fetch的现代请求库——Ky，完美支持ChatGPT流式传输",
           "imageUrl": null
         }
       ]
@@ -1123,7 +1123,7 @@
           "description": "[7073670907851440160#新人报道#] 来学习",
           "link": "https://juejin.cn/pin/7347517295356887080",
           "publishedOn": "2024-03-18T11:38:03.000Z",
-          "wordCount": 462,
+          "wordCount": 458,
           "title": "[7073670907851440160#新人报道#] 来学习",
           "imageUrl": null
         },

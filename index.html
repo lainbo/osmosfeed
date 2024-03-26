@@ -764,6 +764,49 @@ VitePress 的特点在于“内容优先，Markdown 至上”，它可以将 Mar
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7349410765525483555"
+                        open
+                      >
+                        <summary class="article-expander__title">ES2024即将发布！5个可能大火的JS新方法</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7349410765525483555">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: vuepress
+Hello，大家好，我是 Sunday。
+ECMAScript 2024（ES15） 即将发布（2024年6月），新的版本带来了非常多全新的特性。其中有 5 个全新的 JS 方法，可以大幅度提升我们的工作效率，从而让我们得到更多的摸鱼时间。咱们一起来看看吧！
+01：Promise.withResolvers
+这个功能引入了一个新方法来创建一个 promise，直接返回 resolve 和 reject 的回调。使用 Promise.withResolvers ，我们可以创建直接在其执行函数之外 resolve 和 reject
+const [promise, resolve, reject] &#x3D; Promise.withResolvers();
+
+setTimeout(() &#x3D;&gt; resolve(&#x27;Resolved after 2 seconds&#x27;), 2000);
+
+promise.then(value &#x3D;&gt; console.log(value));
+
+02：Object.groupBy()
+Object.groupBy() 方法是一项新添加的功能，允许我们按照特定属性将数组中的 对象分组，从而使数据处理变得更加容易。
+const pets &#x3D; [
+  { gender: &#x27;男&#x27;, name: &#x27;张三&#x27; },
+  { gender: &#x27;女&#x27;, name: &#x27;李四&#x27; },
+  { gender: &#x27;男&#x27;, name: &#x27;王五&#x27; }
+];
+
+const res &#x3D; Object.groupBy(pets, pet &#x3D;&gt; pet.gender);
+console.log(res);
+// 输出:
+// {
+//   女: [{ gender: &#x27;女&#x27;, name: &#x27;李四&#x27; }]
+//   男: [{ gender: &#x27;男&#x27;, name: &#x27;张三…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -3096,49 +3139,6 @@ npm install --save node-html-parser
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7347911150334787584"
-                        open
-                      >
-                        <summary class="article-expander__title">还在用Axios？来试试这个基于fetch的现代请求库——Ky，完美支持ChatGPT流式传输</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7347911150334787584">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: channing-cyan
-highlight: monokai
-背景
-最近做了个AI大语言模型的前端页面，类似ChatGPT的那种，其中用到了流式传输的功能，即：
-HTTP Header中Conent-Type的值为text/event-stream，这种传输方式称之为SSE (Server-Sent Events)
-
-这是一个流式传输的数据，服务端可以一部分一部分的发送到前端，前端也可以一部分一部分的展示到页面中，就像这样：
-
-
-不必像一般的HTTP请求那样等待所有数据下载完成再展示给用户，可以边传输边展示，用户体验较好。
-fetchAPI可以轻松实现SSE流式传输，具体实现方式可以自行搜索，不是本文的重点内容。
-但由于项目中使用了axios作为请求库，就需要通过axios来实现，但经过查阅axios相关的文档、博客、GitHub issue 等，发现axios对其的支持不是太好，实现起来较为繁琐，因为axios的底层是基于XHR的，相对来说已经是一个比较古老的API了。
-所以萌生了一个想法，为何不找一个基于fetch的现代请求库来替代axios呢？毕竟都2024年这个时候了，fetch的兼容性已经非常好了。
-经过一系列的搜寻和对比，发现了这个十分优秀的请求库——ky
-Ky 简介
-Ky是一个基于浏览器Fetch API的，小型优雅的HTTP客户端，具有以下特点：
-零依赖，大小仅3.3K
-跨运行时，支持在浏览器、Node.js、Deno等不同的运行环境中使用，理论上应该可以运行在任意兼容fetchAPI的环境中
-支持创建实例 (类似axios的axios.create)
-支持请求前后的Hooks钩子函数 (类似axios的interceptors 拦截器)
-使用比fetch更加的简单便捷
-支持请求失败后自动重试的功能
-支持超时设置
-支持URL前缀
-更多…… …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -3772,8 +3772,8 @@ AI 没有护城河
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8441370874">
-        <time id="build-timestamp" datetime="2024-03-26T18:52:25.343Z">2024-03-26T18:52:25.343Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8443356388">
+        <time id="build-timestamp" datetime="2024-03-26T21:52:55.937Z">2024-03-26T21:52:55.937Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
