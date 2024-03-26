@@ -51,8 +51,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-26 datetime="2024-03-26T02:50:03.000Z">2024-03-26</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-26 datetime="2024-03-26T02:50:03.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-26 datetime="2024-03-26T10:28:07.000Z">2024-03-26</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-26 datetime="2024-03-26T10:28:07.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -67,6 +67,51 @@
                   <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/6602a33777b89da6580121e4"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 我的消费观：该省省，该花花 ━━━━━━━━━━━━━━ 如果一个东西，使用频次不高，尽量买便宜/一次性的。 如果一个东西，使用频次极高，尽量买预...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6602a33777b89da6580121e4">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>我的消费观：该省省，该花花
+━━━━━━━━━━━━━━
+如果一个东西，使用频次不高，尽量买便宜/一次性的。
+如果一个东西，使用频次极高，尽量买预算范围内最贵的那个。
+要么视物为工具，用完就扔，舍得。
+要么视物为艺术，爱不释手，珍爱。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://m.okjike.com/originalPosts/6602a23038849f879f0d6bfa"
+                        open
+                      >
+                        <summary class="article-expander__title">发布了: 〝思考始于问题。〞</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/6602a23038849f879f0d6bfa">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>〝思考始于问题。〞</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -628,6 +673,56 @@ console.log(a[b]);
 
 会调用…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7349837128508964873"
+                        open
+                      >
+                        <summary class="article-expander__title">用Three.js搞个炫酷雷达扩散和扫描特效</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7349837128508964873">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>theme: fancy
+highlight: vs
+1.画点建筑模型
+添加光照，开启阴影
+//开启renderer阴影
+  this.renderer.shadowMap.enabled &#x3D; true;
+this.renderer.shadowMap.type &#x3D; THREE.PCFSoftShadowMap;
+
+ //设置环境光
+  const light &#x3D; new THREE.AmbientLight(0xffffff, 0.6); // soft white light
+this.scene.add(light);
+
+ //夜晚天空蓝色，假设成蓝色的平行光
+  const dirLight &#x3D; new THREE.DirectionalLight(0x0000ff, 3);
+   dirLight.position.set(50, 50, 50);
+  this.scene.add(dirLight);   
+
+平行光设置阴影
+//开启阴影
+ dirLight.castShadow &#x3D; true;
+ //阴影相机范围
+dirLight.shadow.camera.top &#x3D; 100;
+dirLight.shadow.camera.bottom &#x3D; -100;
+dirLight.shadow.camera.left &#x3D; -100;
+dirLight.shadow.camera.right &#x3D; 100;
+//阴影影相机远近
+dirLight.shadow.camera.near &#x3D; 1;
+dirLight.shadow.camera.far &#x3D; 200;
+//阴影贴图大小
+dirLight.shadow.mapSize.set(1024, 1024);
+
+平行光的阴影相机跟正交相机一样，因为平行光的光线是平行的，就跟视线是平行一样，切割出合适的阴影视角范围，用于计算阴…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1770,26 +1865,6 @@ VitePress 的特点在于“内容优先，Markdown 至上”，它可以将 Mar
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/65fd006aa922aa28d093a220"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 𝐧𝐨 𝐫𝐢𝐬𝐤, 𝐧𝐨 𝐬𝐭𝐨𝐫𝐲.</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65fd006aa922aa28d093a220">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>𝐧𝐨 𝐫𝐢𝐬𝐤, 𝐧𝐨 𝐬𝐭𝐨𝐫𝐲.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -2064,6 +2139,8 @@ export const num2 &#x3D; computed(()&#x3D;&gt; {
 当然，以上方案仅适用于组合式 API 开发的普通项目。对于选项式 API 开发的项目，或者需要 SSR，还是乖乖用 Pinia 吧 ～
 最重要的是！如果面试官问你：除了 Pinia 和 Vuex 还有没有别的状态管理方案？
 你可别说不知道，记住这几个字：组合式函数！</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2425,40 +2502,6 @@ Free Now to 2024-03-28T15:00:00.000Z</span>
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >李继刚的即刻动态</button>
-                  <a class="source-heading__link" href="https://m.okjike.com/users/752D3103-1107-43A0-BA49-20EC29D09E36">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://m.okjike.com/originalPosts/65fc21723b9c66cae44a90d3"
-                        open
-                      >
-                        <summary class="article-expander__title">发布了: 明朝学者崔铣的《听松堂语镜》中有著名的修身养性的“六然训”，认为人生在世要做到“六然”——自处超然、处人蔼然、有事斩然、无事澄然、得意淡然、失...</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://m.okjike.com/originalPosts/65fc21723b9c66cae44a90d3">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdnv2.ruguoapp.com/o_1aif987v84gp1jcb17p11p9714nni0j?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>明朝学者崔铣的《听松堂语镜》中有著名的修身养性的“六然训”，认为人生在世要做到“六然”——自处超然、处人蔼然、有事斩然、无事澄然、得意淡然、失意泰然。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >沸点 - 开发工具推荐</button>
                   <a class="source-heading__link" href="https://juejin.cn/pins/recommended">Open</a>
                 </h3>
@@ -2494,6 +2537,8 @@ Free Now to 2024-03-28T15:00:00.000Z</span>
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>[7073670907851440160#新人报道#]大家好，新人多关照</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -2632,6 +2677,8 @@ Free Now to 2024-03-28T15:00:00.000Z</span>
                               <span>#写作工具 写完博客后，都需要在文章前后写些固定内容，打一打广告，每次重复添加都挺烦的
 写了个小工具，拼接文章前后固定文本，并且做了缓存，这样每次只需要粘贴正文即可
 👉 工具地址：https://wukaipeng.com/sandwich</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -3001,40 +3048,6 @@ npm install --save node-html-parser
   
 通过replace替换掉父页面下id为div_1的元素 替换掉之外，剩下…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7347957960884355113"
-                        open
-                      >
-                        <summary class="article-expander__title">Next.js v14 实现乐观更新，面向未来的 UI 更新方式，你可以不去做，但你不应该不了解</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7347957960884355113">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>本文为稀土掘金技术社区首发签约文章，30天内禁止转载，30天后未获授权禁止转载，侵权必究！
-前言
-所谓乐观更新，举个例子，当用户在 ToDoList  中添加一项 ToDo 的时候，传统的做法是等待接口返回成功时再更新 UI。乐观更新是先更新 UI，同时发送数据请求。如果数据请求成功，相安无事，用户感受到流畅的操作，提升了用户体验，数据也得到更新。如果更新失败，则视情况对错误进行处理。
-一种交互效果如下：
-
-React 为了实现乐观更新，提供了 useOptimistic 这个官方 hook（目前已经在 Canary 和实验阶段了），本篇我们不仅会介绍 useOptimistic，还会用 Next.js v14，结合最新的 Server Actions 特性来实现乐观更新。
-同时我们会讲解在出现错误的时候，如何进行撤回或者重置。以及处理一个有意思的问题：乐观更新的时候，用户要关闭网页怎么办？
-PS：其实乐观更新并不是一个新潮的思想，很多年前就有人开始做了，但是大家普遍不会去实现乐观更新，一是产品、设计不会过多考虑网速慢的情况，二是就算手动实现乐观更新，虽然并不复杂，但是有一些麻烦，接口那么多，我都加个乐观更新，代码写着写着也可能乱糟糟了，何必去实现呢？
-归根到底还是实现成本太高。所以 本篇会结合 Next.js 和 useOptimistic 讲解如何低成本并考虑全面的实现一个乐观更新。 欢迎收藏点赞本篇文章，万一以后用到了呢？如果有关于乐观更新的经验和看法，欢迎留言评论！
-PS：学习 Next.js，欢迎入手小册《Next.js 开发指南》。基础篇、实战篇、源码篇、面试篇四大篇章带你系统掌握 Next.js！
-废话不多说，让我们直接开始吧！
-创建 Next.js 项目
-使用 Next.js 官方脚手架创建项目：
-npx create-next-app@latest
-
-运行…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3754,8 +3767,8 @@ AI 没有护城河
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8433976113">
-        <time id="build-timestamp" datetime="2024-03-26T09:52:27.212Z">2024-03-26T09:52:27.212Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8436293942">
+        <time id="build-timestamp" datetime="2024-03-26T12:54:31.420Z">2024-03-26T12:54:31.420Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
