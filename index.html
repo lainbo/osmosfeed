@@ -752,6 +752,45 @@ console.log(a[b]);
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7349561234931515433"
+                        open
+                      >
+                        <summary class="article-expander__title">队友升职，被迫解锁 Jenkins（所以，前端需要学习Jenkins吗？🤔）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7349561234931515433">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>入坑 Jenkins
+作为一个前端，想必大家都会有这个想法：“Jenkins 会用就行了，有啥好学的”。
+我一直都是这么想的，不就会点个开始构建就行了嘛！
+可是碰巧我们之前负责 Jenkins 的前端同事升了职，碰巧这个项目组就剩了两个人，碰巧我比较闲，于是这个“活”就落在我的头上了。
+
+压力一下就上来了，一点不懂 Jenkins 可咋整？
+然而现实是没有一点儿压力。
+刚开始的时候挺轻松，也就是要发版的流程到我这了，我直接在对应项目上点击开始构建，so easy！可是某一天，突然遇到一个 bug：我们每次 web 端项目发完后，桌面端的 hybrid 包需要我手动改 OSS 上配置文件的版本号，正巧那天忘记更新版本号了，导致桌面端应用本地的 hybrid 没有更新。。。
+领导：你要不就别手动更新了，弄成自动化的
+小弟我之前没有接触过 Jenkins，看着那一堆配置着实有点费脑，于是就只能边百度学习边输出，从 Jenkins 安装开始到配置不同类型的构建流程，踩过不少坑，最后形成这篇文章。如果有能帮到大家的点，我就很开心了，毕竟我也是刚接触的！
+说说我经历过的前端部署流程
+按照我的经历，我把前端部署流程分为了以下几个阶段：即原始时代 -&gt; 脚本化时代 -&gt; CI/CD 时代。
+
+原始时代
+最开始的公司运维是一个小老头，他只负责管理服务器资源，不管各种项目打包之类的。我们就只能自己打包，再手动把构建的文件丢到服务器上。
+整体流程就是：本地合并代码 --&gt; 本地打包 --&gt; 上传服务器；
+上传服务器可以分为这几个小步骤：打开 xshell --&gt; 连接服务器 --&gt; 进入 tomcat 目录 --&gt; 通过 ftp 上传本地文件。
+可能全套下来需要 5 分钟左右。
+脚本化时代
+为了简化，我写了一个 node 脚本，通过ssh2-sftp-client将上传服务器这一步骤脚本化：
+c…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;15
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://juejin.cn/post/7349837128508964873"
                         open
                       >
@@ -3134,67 +3173,10 @@ vscode-image-manager支持3种文件结构展示方式
                         <summary class="article-expander__title">⭐收集有特色的库</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://lainbo.com/article/collection">
                           <div class="article-summary-box-inner media-object">
-                              <img src="/bg_image.jpg" loading="lazy" class="media-object__media article-image" />
+                              <img src="https://www.notion.so/images/page-cover/nasa_earth_grid.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>日常看见一些有特色的库会收集下来，持续收集中</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >掘金前端本周最热</button>
-                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7347911150334787584"
-                        open
-                      >
-                        <summary class="article-expander__title">还在用Axios？来试试这个基于fetch的现代请求库——Ky，完美支持ChatGPT流式传输</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7347911150334787584">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>theme: channing-cyan
-highlight: monokai
-背景
-最近做了个AI大语言模型的前端页面，类似ChatGPT的那种，其中用到了流式传输的功能，即：
-HTTP Header中Conent-Type的值为text/event-stream，这种传输方式称之为SSE (Server-Sent Events)
-
-这是一个流式传输的数据，服务端可以一部分一部分的发送到前端，前端也可以一部分一部分的展示到页面中，就像这样：
-
-
-不必像一般的HTTP请求那样等待所有数据下载完成再展示给用户，可以边传输边展示，用户体验较好。
-fetchAPI可以轻松实现SSE流式传输，具体实现方式可以自行搜索，不是本文的重点内容。
-但由于项目中使用了axios作为请求库，就需要通过axios来实现，但经过查阅axios相关的文档、博客、GitHub issue 等，发现axios对其的支持不是太好，实现起来较为繁琐，因为axios的底层是基于XHR的，相对来说已经是一个比较古老的API了。
-所以萌生了一个想法，为何不找一个基于fetch的现代请求库来替代axios呢？毕竟都2024年这个时候了，fetch的兼容性已经非常好了。
-经过一系列的搜寻和对比，发现了这个十分优秀的请求库——ky
-Ky 简介
-Ky是一个基于浏览器Fetch API的，小型优雅的HTTP客户端，具有以下特点：
-零依赖，大小仅3.3K
-跨运行时，支持在浏览器、Node.js、Deno等不同的运行环境中使用，理论上应该可以运行在任意兼容fetchAPI的环境中
-支持创建实例 (类似axios的axios.create)
-支持请求前后的Hooks钩子函数 (类似axios的interceptors 拦截器)
-使用比fetch更加的简单便捷
-支持请求失败后自动重试的功能
-支持超时设置
-支持URL前缀
-更多…… …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3668,7 +3650,7 @@ MulSearch，一个快速指定搜索源的入口页，方便使用多个搜索�
                         <summary class="article-expander__title">Clash Verge系列使用最佳实践</summary>
                         <a class="article-summary-link article-summary-box-outer" href="https://lainbo.com/article/clash-config">
                           <div class="article-summary-box-inner media-object">
-                              <img src="/bg_image.jpg" loading="lazy" class="media-object__media article-image" />
+                              <img src="https://www.notion.so/images/page-cover/nasa_earth_grid.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>Clash确实是开箱即用，但开箱时并不是一个优秀的状态。当我将所有服务迁移到国外服务商时，我意识到在短时间内离不开Clash了。为了防止出现问题，我研究了一些Clash相关的东西。现在是时候做一个总结了。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;3
@@ -3800,8 +3782,8 @@ AI 没有护城河
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8446388338">
-        <time id="build-timestamp" datetime="2024-03-27T03:52:25.341Z">2024-03-27T03:52:25.341Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8447793956">
+        <time id="build-timestamp" datetime="2024-03-27T06:52:28.018Z">2024-03-27T06:52:28.018Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

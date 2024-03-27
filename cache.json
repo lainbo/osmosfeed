@@ -19,7 +19,7 @@
           "publishedOn": "2024-03-19T12:01:37.000Z",
           "wordCount": 343,
           "title": "⭐收集有特色的库",
-          "imageUrl": "/bg_image.jpg"
+          "imageUrl": "https://www.notion.so/images/page-cover/nasa_earth_grid.jpg"
         },
         {
           "id": "https://lainbo.com/article/clash-config",
@@ -29,7 +29,7 @@
           "publishedOn": "2024-03-02T04:39:02.000Z",
           "wordCount": 874,
           "title": "Clash Verge系列使用最佳实践",
-          "imageUrl": "/bg_image.jpg"
+          "imageUrl": "https://www.notion.so/images/page-cover/nasa_earth_grid.jpg"
         }
       ]
     },
@@ -44,7 +44,7 @@
           "description": "带大家快速了解下CSS initial-letter属性，可以更好地设置首字母的排版效果。",
           "link": "https://www.zhangxinxu.com/wordpress/2024/03/css-initial-letter/",
           "publishedOn": "2024-03-21T15:34:35.000Z",
-          "wordCount": 1312,
+          "wordCount": 1310,
           "title": "CSS initial-letter属性，嗯……也就这样吧",
           "imageUrl": null
         },
@@ -54,7 +54,7 @@
           "description": "全新的Screen Wake Lock API，可以让网页无论放置多久，都不要担心熄屏，或出现屏保，Web如今越来越强了。",
           "link": "https://www.zhangxinxu.com/wordpress/2024/03/js-screen-wake-lock-api/",
           "publishedOn": "2024-03-17T15:35:45.000Z",
-          "wordCount": 1399,
+          "wordCount": 1400,
           "title": "今天才知道，Web网页也能阻止息屏了",
           "imageUrl": null
         },
@@ -64,7 +64,7 @@
           "description": "音视频合成的时候，有倍速合成的需求，起初，我以为这只是个手到擒来的小需求，细究之下发现问题并不简单……",
           "link": "https://www.zhangxinxu.com/wordpress/2024/02/js-audioencoder-backplayrate-audiobuffer/",
           "publishedOn": "2024-02-29T14:22:22.000Z",
-          "wordCount": 1745,
+          "wordCount": 1746,
           "title": "不改变音调情况下Audio音频的倍速合成JS实现",
           "imageUrl": null
         }
@@ -791,6 +791,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://juejin.cn/post/7349561234931515433",
+          "author": "翔子丶",
+          "description": "入坑 Jenkins\n作为一个前端，想必大家都会有这个想法：“Jenkins 会用就行了，有啥好学的”。\n我一直都是这么想的，不就会点个开始构建就行了嘛！\n可是碰巧我们之前负责 Jenkins 的前端同事升了职，碰巧这个项目组就剩了两个人，碰巧我比较闲，于是这个“活”就落在我的头上了。\n\n压力一下就上来了，一点不懂 Jenkins 可咋整？\n然而现实是没有一点儿压力。\n刚开始的时候挺轻松，也就是要发版的流程到我这了，我直接在对应项目上点击开始构建，so easy！可是某一天，突然遇到一个 bug：我们每次 web 端项目发完后，桌面端的 hybrid 包需要我手动改 OSS 上配置文件的版本号，正巧那天忘记更新版本号了，导致桌面端应用本地的 hybrid 没有更新。。。\n领导：你要不就别手动更新了，弄成自动化的\n小弟我之前没有接触过 Jenkins，看着那一堆配置着实有点费脑，于是就只能边百度学习边输出，从 Jenkins 安装开始到配置不同类型的构建流程，踩过不少坑，最后形成这篇文章。如果有能帮到大家的点，我就很开心了，毕竟我也是刚接触的！\n说说我经历过的前端部署流程\n按照我的经历，我把前端部署流程分为了以下几个阶段：即原始时代 -> 脚本化时代 -> CI/CD 时代。\n\n原始时代\n最开始的公司运维是一个小老头，他只负责管理服务器资源，不管各种项目打包之类的。我们就只能自己打包，再手动把构建的文件丢到服务器上。\n整体流程就是：本地合并代码 --> 本地打包 --> 上传服务器；\n上传服务器可以分为这几个小步骤：打开 xshell --> 连接服务器 --> 进入 tomcat 目录 --> 通过 ftp 上传本地文件。\n可能全套下来需要 5 分钟左右。\n脚本化时代\n为了简化，我写了一个 node 脚本，通过ssh2-sftp-client将上传服务器这一步骤脚本化：\nc…",
+          "link": "https://juejin.cn/post/7349561234931515433",
+          "publishedOn": "2024-03-24T13:57:46.000Z",
+          "wordCount": 4390,
+          "title": "队友升职，被迫解锁 Jenkins（所以，前端需要学习Jenkins吗？🤔）",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7349837128508964873",
           "author": "敲敲敲敲暴你脑袋",
           "description": "theme: fancy\nhighlight: vs\n1.画点建筑模型\n添加光照，开启阴影\n//开启renderer阴影\n  this.renderer.shadowMap.enabled = true;\nthis.renderer.shadowMap.type = THREE.PCFSoftShadowMap;\n\n //设置环境光\n  const light = new THREE.AmbientLight(0xffffff, 0.6); // soft white light\nthis.scene.add(light);\n\n //夜晚天空蓝色，假设成蓝色的平行光\n  const dirLight = new THREE.DirectionalLight(0x0000ff, 3);\n   dirLight.position.set(50, 50, 50);\n  this.scene.add(dirLight);   \n\n平行光设置阴影\n//开启阴影\n dirLight.castShadow = true;\n //阴影相机范围\ndirLight.shadow.camera.top = 100;\ndirLight.shadow.camera.bottom = -100;\ndirLight.shadow.camera.left = -100;\ndirLight.shadow.camera.right = 100;\n//阴影影相机远近\ndirLight.shadow.camera.near = 1;\ndirLight.shadow.camera.far = 200;\n//阴影贴图大小\ndirLight.shadow.mapSize.set(1024, 1024);\n\n平行光的阴影相机跟正交相机一样，因为平行光的光线是平行的，就跟视线是平行一样，切割出合适的阴影视角范围，用于计算阴…",
@@ -938,16 +948,6 @@
           "publishedOn": "2024-03-20T02:30:06.000Z",
           "wordCount": 1096,
           "title": "还在用tinypng？试试这个vscode插件！",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7347911150334787584",
-          "author": "薛定谔de狗狗",
-          "description": "theme: channing-cyan\nhighlight: monokai\n背景\n最近做了个AI大语言模型的前端页面，类似ChatGPT的那种，其中用到了流式传输的功能，即：\nHTTP Header中Conent-Type的值为text/event-stream，这种传输方式称之为SSE (Server-Sent Events)\n\n这是一个流式传输的数据，服务端可以一部分一部分的发送到前端，前端也可以一部分一部分的展示到页面中，就像这样：\n\n\n不必像一般的HTTP请求那样等待所有数据下载完成再展示给用户，可以边传输边展示，用户体验较好。\nfetchAPI可以轻松实现SSE流式传输，具体实现方式可以自行搜索，不是本文的重点内容。\n但由于项目中使用了axios作为请求库，就需要通过axios来实现，但经过查阅axios相关的文档、博客、GitHub issue 等，发现axios对其的支持不是太好，实现起来较为繁琐，因为axios的底层是基于XHR的，相对来说已经是一个比较古老的API了。\n所以萌生了一个想法，为何不找一个基于fetch的现代请求库来替代axios呢？毕竟都2024年这个时候了，fetch的兼容性已经非常好了。\n经过一系列的搜寻和对比，发现了这个十分优秀的请求库——ky\nKy 简介\nKy是一个基于浏览器Fetch API的，小型优雅的HTTP客户端，具有以下特点：\n零依赖，大小仅3.3K\n跨运行时，支持在浏览器、Node.js、Deno等不同的运行环境中使用，理论上应该可以运行在任意兼容fetchAPI的环境中\n支持创建实例 (类似axios的axios.create)\n支持请求前后的Hooks钩子函数 (类似axios的interceptors 拦截器)\n使用比fetch更加的简单便捷\n支持请求失败后自动重试的功能\n支持超时设置\n支持URL前缀\n更多…… …",
-          "link": "https://juejin.cn/post/7347911150334787584",
-          "publishedOn": "2024-03-19T09:28:27.000Z",
-          "wordCount": 1593,
-          "title": "还在用Axios？来试试这个基于fetch的现代请求库——Ky，完美支持ChatGPT流式传输",
           "imageUrl": null
         }
       ]
