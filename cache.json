@@ -44,7 +44,7 @@
           "description": "带大家快速了解下CSS initial-letter属性，可以更好地设置首字母的排版效果。",
           "link": "https://www.zhangxinxu.com/wordpress/2024/03/css-initial-letter/",
           "publishedOn": "2024-03-21T15:34:35.000Z",
-          "wordCount": 1312,
+          "wordCount": 1311,
           "title": "CSS initial-letter属性，嗯……也就这样吧",
           "imageUrl": null
         },
@@ -791,6 +791,16 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
+          "id": "https://juejin.cn/post/7350571075547938866",
+          "author": "Moment",
+          "description": "theme: cyanosis\nhighlight: atom-one-dark\n本文内容来源于我的开源脚手架里面的某个技术点，如果想了解到更多前端的技术，提升个人技能或影响力，可以加我微信 yunmz777 进行交流学习，你也可以参与开发，\n脚手架项目地址\nHusky 是一个流行的工具，它可以让你轻松地在 Git 钩子中使用脚本，从而在提交（commit）代码前运行诸如代码风格检查、单元测试等任务。这有助于保持代码库的质量和一致性。Husky 的工作原理是在你的项目中创建特定的钩子，当你执行 git 操作（如 commit）时，这些钩子会被触发。\npre-commit 钩子和 commit-msg 钩子\npre-commit 钩子\npre-commit 钩子是 Git 钩子系统中的一个重要部分，用于在提交（commit）操作完成之前执行特定的脚本或任务。这个钩子的主要作用是允许开发者检查即将提交的代码快照（也就是 commit），以确保它符合项目的质量标准和风格指南。如果 pre-commit 钩子中的脚本返回非零状态（即执行失败），Git 将阻止提交。\npre-commit 钩子产用于以下场景：\n代码风格检查：运行如 ESLint 或 Prettier 这样的工具，确保代码风格一致性。\n代码质量分析：执行静态代码分析工具，发现潜在的错误或代码异味。\n运行单元测试：确保更改没有破坏现有功能。\n自动格式化代码：在提交前自动格式化代码，以满足代码风格要求。\ncommit-msg 钩子\ncommit-msg 钩子是 Git 的一个钩子，它在提交信息（commit message）被提交之前执行。这个钩子主要用于验证提交信息的格式，确保它遵循项目的规范或指南。如果 commit-msg 钩子脚本返回非零状态（即失败），Git 将拒绝提交。\ncommit-msg 钩子常用于以下场景…",
+          "link": "https://juejin.cn/post/7350571075547938866",
+          "publishedOn": "2024-03-26T23:47:31.000Z",
+          "wordCount": 1541,
+          "title": "💯 前端要学会自己写shell脚本，让你的项目看起来非常牛逼！💯",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7350140676615798824",
           "author": "晓得迷路了",
           "description": "前端有很多小而美的库，接入成本很低又能满足日常开发需求，同时无论是 npm 方式引入还是直接复制到本地使用都可以。\n2024年推荐以下小而美的库。\nradash\n实用的工具库，相比与 lodash，更加面向现代，提供更多新功能（tryit，retry 等函数），源码可读性高，如果不想安装它，大部分函数可以直接复制到本地使用。\n\nuse-debounce\nReact Hook Debouce 库，让你不再为使用防抖烦恼。库的特点：体积小 < 1 Kb、与 underscore / lodash impl 兼容 - 一次学习，随处使用、服务器渲染友好。\n\ntimeago.js\n格式化日期时间库，比如：“3 hours ago”，支持多语言，仅 2Kb 大小。同时提供了 React 版本 timeago-react。\ntimeage.format(1544666010224, 'zh_CN') // 输出 “5 年前”\ntimeage.format(Date.now() - 1000, 'zh_CN') // 输出 “刚刚”\ntimeage.format(Date.now() - 1000 * 60 * 5, 'zh_CN') // 输出 “5 分钟前”\n\nreact-use\n实用 Hook 大合集 - 内容丰富，从跟踪电池状态和地理位置，到设置收藏夹、防抖和播放视频，无所不包。\n\ndayjs\nDay.js 是一个简约的 JavaScript 库，仅 2 Kb 大小。它可以使用基本兼容 Moment.js，为你提供日期的解析、处理和显示，支持多语言能力。\n\nfilesize\nfilesize.js 提供了一种简单方法，便于从数字（浮点数或整数）或字符串转换成可读性高的文件大小。\nimport {filesize} from \"filesize\";\nfilesize(265318, {standard: \"jedec\"}); // \"259.1 KB\"\ndriver.js：driver.js 是一款用原生 js 实现的页面引导库，上手非常简单，体积在 gzip 压缩下仅仅 5kb。\n\ndriver.js\ndriver.js 是一款用原生 js 实现的页面引导库，上手非常简单，体积在 gzip 压缩下仅仅 5kb。\n\n@formkit/drag-and-drop\nFormKit DnD 是一个小型库，它简单、灵活、与框架无关，压缩后只有 4Kb 左右，设计理念为数据优先。\n\n小结\n前端小而美的库使用起来一般都比较顺手，欢迎在评论区推荐你们开发中的使用小而美的库。",
@@ -828,6 +838,16 @@
           "publishedOn": "2024-03-25T06:48:10.000Z",
           "wordCount": 914,
           "title": "组件库的新选择-Banana UI，一套原生跨框架的组件库",
+          "imageUrl": null
+        },
+        {
+          "id": "https://juejin.cn/post/7349561234932367401",
+          "author": "前端开发爱好者",
+          "description": "偶尔闲逛国外网站，会不经意看到一些炫酷的网页元素，不禁呆呆的观察一会，相信你也遇到过吧，特别是新颖炫酷的界面元素，那么我们如何实现这些炫酷的效果的呢？\n如果你特别精通 css 的话, 可能这些实现起来并不是很难！！！\n但是如果你像我一样，对 css 不是很精通，那么你可能需要花上不少时间来学习和研究，而且还需要花时间来实现这些效果。\n那么今天给大家带来一个 UI 组件元素的网站，提供了大量漂亮有趣的 UI 元素，有需要赶紧动手收藏。\n什么是 Uiverse.io\nUiverse.io 一个开源免费的 UI 组件库，由 HTML&CSS 组成，为前端开发人员提供了全面有趣的 UI 元素，只需要复制粘贴代码到 Web 或者应用里面，帮你轻松节省创作 UI 组件的时间和精力，无需花费一分钱，就能使用漂亮细腻的 UI 组件。\n这里的 UI 组件包含了按钮、复选框、开关、卡片、加载、输入等六种组件类型，让写代码就像拼积木一样简单，如果你是开发人员可不要错过这么不错的资源哦。\n\n重点是它所有样式均提供代码开源免费使用， 只需要动动手指复制粘贴即可！！！\n4000+ 组件\n是的，没有听错，目前官网一共提供了 4158 个组件！！！\n\nUiverse.io 网站上的 UI 组件确实为开发者提供了丰富的选择和灵活性，这些组件可以根据不同的需求和项目特点进行定制和组合。以下是对您提到的几类组件的详细说明和应用建议：\n布局组件\n\n格子布局：网格系统是现代网页设计的基础，可以帮助开发者创建整齐、一致的布局。\n卡片：卡片式布局可用于展示内容块，适合博客、新闻网站和产品页面。\n侧边栏：侧边栏可用于放置导航链接、广告、搜索框等，增加页面的可用性。\n导航栏：导航栏是网页的门户，对于大型网站或多页面应用至关重要。\n文本组件\n\n头部和段落：定义文档结构和内容层次，使用不同的样式来吸引用户注意。\n引用：用于引述文本或强调特定信息，通常带有不同的样式。\n列表：有序和无序列表用于展示项目或要点，可以自定义列表项的样式。\n表单组件\n\n输入框：用于收集用户信息，如姓名、邮箱、搜索关键词等。\n单选框和复选框：用于让用户从多个选项中选择一个或多个答案。\n滑动条：适合于范围输入，如音量控制、日期选择等。\n按钮：用于触发动作，如提交表单、发起请求等。\n功能性组件\n\n模态窗口：用于弹出式对话框，可以在不离开当前页面的情况下展示信息或请求用户操作。\n弹出菜单：下拉菜单或侧边菜单，用于减少页面上的元素数量，优化布局。\n提示框：用于显示通知、警告或信息提示，增强用户体验。\n进度条：展示操作进度，如加载、处理中状态等。\n装饰性组件\n\n边框：可以为元素添加边框，以突出显示或区分不同的内容块。\n阴影：为元素添加深度和立体感，提升视觉效果。\n颜色渐变：颜色渐变可以创造吸引人的视觉效果，用于背景、按钮或文本。\nUiverse.io 上的每个组件都提供了自定义的空间，允许开发者根据自己的需求调整样式、尺寸和行为。通过这些组件，开发者可以构建出既美观又功能丰富的网页和应用界面。此外，Uiverse.io 的社区活跃，开发者可以在这里获得支持、分享经验和参与讨论，进一步提升自己的前端开发技能。\nUiverse 网址\nhttps://uiverse.io/\n写在最后\n公众号：前端开发爱好者 专注分享 web 前端相关技术文章、视频教程资源、热点资讯等，如果喜欢我的分享，给 🐟🐟 点一个赞 👍 或者 ➕关注 都是对我最大的支持。\n欢迎长按图片加好友，我会第一时间和你分享前端行业趋势，面试资源，学习途径等等。\n欢迎加我好友，我会第一时间和你分享前端行业趋势，面试资源，学习途径等等。\nWX: xuxuxu_yyy\n关注公众号后，在首页：\n回复 面试题，获取最新大厂面试资料。\n回复简历，获取 3200 套 简历模板。\n回复React实战，获取 React 最新实战教程。\n回复Vue实战，获取 Vue 最新实战教程。\n回复ts，获取 TypeScript 精讲课程。\n回复vite，获取 Vite 精讲课程。\n回复uniapp，获取 uniapp 精讲课程。\n回复js书籍，获取 js 进阶 必看书籍。\n回复Node，获取 Nodejs+koa2 实战教程。\n回复数据结构算法，获取数据结构算法教程。\n回复架构师，获取 架构师学习资源教程。\n更多教程资源应有尽有，欢迎关注获取",
+          "link": "https://juejin.cn/post/7349561234932367401",
+          "publishedOn": "2024-03-25T01:10:10.000Z",
+          "wordCount": 849,
+          "title": "Uiverse.io：打造 超炫酷 界面 的秘密武器！！！",
           "imageUrl": null
         },
         {
@@ -961,16 +981,6 @@
           "imageUrl": null
         },
         {
-          "id": "https://juejin.cn/post/7348433631944556555",
-          "author": "石小石Orz",
-          "description": "theme: smartblue\n需求背景\n前几天，甲方提了个需求，想让下面的数据循环展示，准备放在他们集团首页给他们领导演示用。\n\n我们领导很重视这个事儿，拍了拍我，语重心长的说，小伙子，好好做。\n我啪的一下就兴奋了，老板居然如此器重我，我必当鞠躬尽瘁，减少摸鱼，我要让老板拜倒在精湛的技术下！\n于是，我搬出自己的库存代码，仅2min就实现了数据的滚动：\n没错，我直接照搬了自己以前写过的文章：JS实现可滚动区域自动滚动展示 - 掘金\n就在我准备告诉老板我做完了的时候，我突然想了想，这么快做完，老板一定觉得我没好好做，我以后还怎么升职加薪，赢取白富美？\n于是，我连夜研究，终于改进了数据滚动方式，赢得了老板的大饼（以后涨500）。最终效果：\n\n技术方案\n技术选型\n观察最终效果图，可以发现这其实就是一个数据循环滚动的效果，每条内容之间间隔1000ms，每条出现动的时间为500ms。用术语来说，这就是一个单步停顿滚动效果。\n我百度了一下，社区还是有这个实现的现成方案的：vue-seamless-scroll，周下载也还行。\n\n于是，我果断试了试，结果不知道什么原因，并不生效...\n既然如此，直接手写一个吧！\n实现思路\n要实现上述效果其实很简单，如图\n\n我们创造一个含有六个值的数组，每隔一段时间循环更改黄色区域的数据，当黄色区域数据变成最新的时候，红色区域整体向下移动，当有数值超出滚动区域后，在删除这个数据即可。\n数据更新\n如果不考虑动画，我们的代码应该这么写\n<template>\n    <div class=\"item-wrap\" v-for=\"(item, index) in animationData\">\n          <!-- 模块内容 -->     \n     </div>\n</template>\n<script setup lang=\"ts\">\n// #假设这是…",
-          "link": "https://juejin.cn/post/7348433631944556555",
-          "publishedOn": "2024-03-21T07:51:19.000Z",
-          "wordCount": 1492,
-          "title": "我改进了数据滚动方式！老板直接加薪",
-          "imageUrl": null
-        },
-        {
           "id": "https://juejin.cn/post/7348617988138532905",
           "author": "勇宝趣学前端",
           "description": "theme: nico\nhighlight: atom-one-dark\n大家好，我是勇宝，一名正在学习前端的打工仔，欢迎大家关注我，一起探讨更多前端小知识。今天我们来好好唠一唠深浅拷贝。\n一、情景再现\n金三银四，最近找工作的小伙伴是扑面而来，这其中少不了我的好朋友张某某同学，我们‘相依为命’，我经常开导他，这不最近的一次面试中他就遇到这样一个考题：\n面试官：（...）是深拷贝吗？\n二、JavaScript数据类型\n在聊深浅拷贝之前，我们先来说一说JS中的数据类型：\n我们都知道JavaScript中有两种数据类型（基本类型和引用类型），那么我就先考考大家：数据类型都有什么？\n基本数据类型：String（字符串）、Number（数值）、Boolean（布尔值）、Null、Undefined、Symbol；\n\n基本数据类型是直接存储在栈中。\n引用数据类型：Array、Object；\n\n引用类型存储的是该对象在栈中的引用，真正的数据是存储在内存（堆）中的。\n举例一\nlet name = 'iyongbao';\nlet name2 = name;\n\nname2 = 'zhangsan';\n\nconsole.log(name); // iyongbao\nconsole.log(name2); // zhangsan\n\n举例二\nlet obj = { name: 'iyongbao' };\nlet obj2 = obj;\n\nobj2.name = 'zhangsan';\n\nconsole.log(obj); // {name: \"zhangsan\"}\nconsole.log(obj2); // {name: \"zhangsan\"}\n\n上线的案例都是‘拷贝’，从中我们可以看到，引用类型的赋值会影响到原数据，这其实就是浅拷贝。\n二、探究深浅拷贝\n对于深浅拷贝，勇宝给出自己的理解：\n浅拷贝：…",
@@ -978,16 +988,6 @@
           "publishedOn": "2024-03-21T07:38:38.000Z",
           "wordCount": 1847,
           "title": "面试官：（...）扩展运算符是深拷贝吗？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7348623091276316682",
-          "author": "德育处主任",
-          "description": "theme: smartblue\n本文简介\n点赞 + 关注 + 收藏 = 学会了\n今天介绍一个超哇的工具：Localtunnel\nLocaltunnel 是一个基于 Node.js 的内网穿透工具，它允许开发者将本地开发环境暴露给互联网，然后你的亲戚朋友就可以访问它了。\nLocaltunnel 的应用场景：\n开发调试：你可以在本地环境运行 Web 服务，然后通过 Localtunnel 将其暴露到公网，其他人就可以远程查阅或调试。如果你的 Web 项目是运行在移动端，也可以通过 Localtunnel 将其暴露出来，然后在手机上访问。\n展示作品：要向外部展示你的作品时也可以使用 Localtunnel 将其暴露出来，尤其适合那种临时展示的场景，展示完就关掉服务，别人就不能再访问了。也很适合面试时需要展示作品，但又没钱买域名服务器。或者有些纯前端的工友在远程面试时需要展示作品就可以让 Localtunnel 帮个忙。\n动手操作\n先说说如何使用。\n我随便找个项目演示。我使用 Vite 创建了一个 Svelte 项目。\nnpm create vite@latest svelte-demo\n\ncd svelte-demo\nnpm install\n\n之后可以执行 npm run dev 运行项目。\n也可以打包后再运行。\nnpm run build\nnpm run preview\n\n我是打包后再运行项目的，运行完 npm run preview 后给回一个地址我，http://localhost:4173/\n这里的端口是 4173，记住这个端口号。\n然后执行 Localtunnel 提供的命令把你本机的这个端口暴露到公网。\nnpx localtunnel --port 端口号\n\n我前面得到的端口号是 4173 ，所以就执行下面这条命令\nnpx localtunnel --port 4173\n\n\n执行完这条命令会返回一个地址给你，这个网址是动态分配的。在浏览器打开这个地址。\n\n此时需要你输入一个密码，这个密码就是你的IP地址。\n如果你不知道你的IP地址是多少，可以继续往下拉，看到 https://loca.lt/mytunnelpassword ，然后点进去就能查看到你的IP地址。\n\n\n把你的IP地址复制到“Tunnel Password”输入框，然后点击“Click to Submit”按钮，等个几秒钟就能在公网访问你的网站了。\n\n但是，如果别人（或者别的设备）想访问你的网站，你需要把你的网址和你的IP给到别人。建议不要把你的IP随便发给陌生人。或者你可以使用手机开个热点，用蜂窝网络的IP。\n前面是通过 npx 去执行 Localtunnel 的命令，如果你需要经常使用 Localtunnel 也可以全局安装它。\n全局安装的命令：\nnpm install -g localtunnel\n\n全局安装 Localtunnel 后，只需使用 lt 命令启动隧道即可。\nlt --port 端口号\n\n更多 Localtunnel 的配置可以查阅官方文档。\n点赞 + 关注 + 收藏 = 学会了",
-          "link": "https://juejin.cn/post/7348623091276316682",
-          "publishedOn": "2024-03-21T05:38:05.000Z",
-          "wordCount": 831,
-          "title": "本地项目放到公网访问！炒鸡煎蛋！",
           "imageUrl": null
         }
       ]
@@ -1023,7 +1023,7 @@
           "description": "jym都用啥接口测试工具的呀，apifox打广告打得好凶，今天学websocket的时候发现postman好像对websocket的支持更好，网页版的post woman也用过，也有优势，不需要填token。",
           "link": "https://juejin.cn/pin/7349837128527626249",
           "publishedOn": "2024-03-25T02:42:23.000Z",
-          "wordCount": 453,
+          "wordCount": 456,
           "title": "jym都用啥接口测试工具的呀，apifox打广告打得好凶，今天学websocket的时候发现postman好像对websocket的支持更好，网页版的post woman也用过，也有优势，不需要...",
           "imageUrl": null
         },
@@ -1103,7 +1103,7 @@
           "description": "jym,四千出头预算台式机有没有配置推荐，基本玩101和瓦，偶尔玩3A（能低画质带就行）",
           "link": "https://juejin.cn/pin/7348709938024202280",
           "publishedOn": "2024-03-22T02:42:41.000Z",
-          "wordCount": 451,
+          "wordCount": 454,
           "title": "jym,四千出头预算台式机有没有配置推荐，基本玩101和瓦，偶尔玩3A（能低画质带就行）",
           "imageUrl": null
         },
@@ -1123,7 +1123,7 @@
           "description": "有没有jy知道 安卓可以模拟设备id的app呀",
           "link": "https://juejin.cn/pin/7348384849403609140",
           "publishedOn": "2024-03-21T08:12:01.000Z",
-          "wordCount": 464,
+          "wordCount": 467,
           "title": "有没有jy知道 安卓可以模拟设备id的app呀",
           "imageUrl": null
         },
