@@ -781,6 +781,16 @@
       "siteUrl": "https://juejin.im/frontend?sort=weekly_hottest",
       "articles": [
         {
+          "id": "https://juejin.cn/post/7350954669742768147",
+          "author": "颜海镜",
+          "description": "本文为稀土掘金技术社区首发签约文章，30 天内禁止转载，30 天后未获授权禁止转载，侵权必究！\n业务中涉及图片的制作和审核功能，审核人员需要在图片中进行标注，并说明存在的问题，标注过程中需要支持放大缩小，移动等交互，将业务剥离，这个需求，可以定义为实现一个图片标注功能。\n实现这个功能并不容易，其涉及的前端知识点众多，本文带领大家从零到一，亲手实现一个，支持缩放，移动，编辑的图片标注功能，文字描述是抽象的，眼见为实，实现效果如下所示：\n\n技术方案\n这里涉及两个关键功能，一个是绘制，包括缩放和旋转，一个是编辑，包括选取和修改尺寸，涉及到的技术包括，缩放，移动，和自定义形状的绘制（本文仅实现矩形），绘制形状的选取，改变尺寸和旋转角度等。\n从大的技术选型来说，有两种实现思路，一种是 canvas，一种是 dom+svg，下面简单介绍下两种思路和优缺点。\ncanvas 可以方便实现绘制功能，但编辑功能就比较困难，当然这可以使用库来实现，这里我们考虑自己亲手实现功能。\n优点：\n\n性能较好，尤其是在处理大型图片和复杂图形时。\n支持更复杂的图形绘制和像素级操作。\n一旦图形绘制在 Canvas 上，就不会受到 DOM 的影响，减少重绘和回流。\n缺点：\n\n交互相对复杂，需要手动管理图形的状态和事件。\n对辅助技术（如屏幕阅读器）支持较差。\n可能遇到的困难：\n\n实现复杂的交互逻辑（如选取、移动、修改尺寸等）可能比较繁琐。\n在缩放和平移时，需要手动管理坐标变换和图形重绘。\ndom+svg 也可以实现功能，缩放和旋转可以借助 css3 的 transform。\n优点：\n\n交互相对简单，可以利用 DOM 事件系统和 CSS。\n对辅助技术支持较好，有助于提高可访问性。\n缺点：\n\n在处理大型图片和复杂图形时，性能可能不如 Canvas。\nSVG 元素数量过多时，可能会影响页面性能。\n可能遇到的困难：\n\n在实…",
+          "link": "https://juejin.cn/post/7350954669742768147",
+          "publishedOn": "2024-03-28T00:23:04.000Z",
+          "wordCount": 5233,
+          "title": "解锁前端难题：亲手实现一个图片标注工具",
+          "imageUrl": null
+        },
+        {
           "id": "https://juejin.cn/post/7350571075547938866",
           "author": "Moment",
           "description": "theme: cyanosis\nhighlight: atom-one-dark\n本文内容来源于我的开源脚手架里面的某个技术点，如果想了解到更多前端的技术，提升个人技能或影响力，可以加我微信 yunmz777 进行交流学习，你也可以参与开发，\n脚手架项目地址\nHusky 是一个流行的工具，它可以让你轻松地在 Git 钩子中使用脚本，从而在提交（commit）代码前运行诸如代码风格检查、单元测试等任务。这有助于保持代码库的质量和一致性。Husky 的工作原理是在你的项目中创建特定的钩子，当你执行 git 操作（如 commit）时，这些钩子会被触发。\npre-commit 钩子和 commit-msg 钩子\npre-commit 钩子\npre-commit 钩子是 Git 钩子系统中的一个重要部分，用于在提交（commit）操作完成之前执行特定的脚本或任务。这个钩子的主要作用是允许开发者检查即将提交的代码快照（也就是 commit），以确保它符合项目的质量标准和风格指南。如果 pre-commit 钩子中的脚本返回非零状态（即执行失败），Git 将阻止提交。\npre-commit 钩子产用于以下场景：\n代码风格检查：运行如 ESLint 或 Prettier 这样的工具，确保代码风格一致性。\n代码质量分析：执行静态代码分析工具，发现潜在的错误或代码异味。\n运行单元测试：确保更改没有破坏现有功能。\n自动格式化代码：在提交前自动格式化代码，以满足代码风格要求。\ncommit-msg 钩子\ncommit-msg 钩子是 Git 的一个钩子，它在提交信息（commit message）被提交之前执行。这个钩子主要用于验证提交信息的格式，确保它遵循项目的规范或指南。如果 commit-msg 钩子脚本返回非零状态（即失败），Git 将拒绝提交。\ncommit-msg 钩子常用于以下场景…",
@@ -969,16 +979,6 @@
           "wordCount": 1226,
           "title": "Vue3 新项目，没必要再用 Pinia 了！",
           "imageUrl": null
-        },
-        {
-          "id": "https://juejin.cn/post/7348646483385122866",
-          "author": "前端开发爱好者",
-          "description": "哈喽,大家好 我是 xy👨🏻‍💻。Vite 又在搞事情！！！\nVite 的最新版本将引入一种名为 Rolldown 的新型打包工具。\n\nRolldown 的优势\nRolldown 是一款用 Rust 重新编写的 Rollup 替代品。而 Rollup 使用的是 javascript。\nRolldown 具有以下特点：\n与 Rollup 兼容：Rolldown 设计之初就考虑到了与 Rollup 的兼容性，这意味着现有的 Rollup 插件和配置可以无缝迁移到 Rolldown，极大地方便了开发者的过渡和使用。\n更快的构建速度：Rolldown 致力于提供更快的构建速度，这对于开发效率的提升至关重要。在现代 Web 开发中，快速的反馈循环可以显著提高开发效率，而 Rolldown 正是为了满足这一需求而设计的。\n更小的输出体积：Rolldown 还专注于生成更小的输出体积，这有助于减少加载时间，提高用户体验。在移动设备和网络连接受限的环境中，这一点尤为重要。\nRolldown 类似于 esbuild，它是一款专注于速度和性能的 JavaScript 构建工具。\n尤雨溪（Evan You）表示，在捆绑纯 esm 模块时，Rolldown 比 esbuild 快 1.4~2 倍。但这次大家对性能的关注度不太高。反而是 Rust 占了很大一部分的注意力。\nVite 存在的问题\n目前，Vite 的底层使用了两个打包工具：Esbuild、Rollup\n\n首先，让我们了解一下 Esbuild 和 Rollup 的特点。\nEsbuild 是一个高性能的 JavaScript 打包器，专注于实现极速的构建过程。\n\n它支持多种模块类型、语法转换和插件扩展，且无需缓存即可迅速完成打包任务。在 Vite 中，Esbuild 被用于依赖预打包、TypeScript 和 JSX 转换、目标降级以…",
-          "link": "https://juejin.cn/post/7348646483385122866",
-          "publishedOn": "2024-03-21T15:09:04.000Z",
-          "wordCount": 1128,
-          "title": "Vite 又开始搞事情了！！！",
-          "imageUrl": null
         }
       ]
     },
@@ -993,7 +993,7 @@
           "description": "最近我越发感觉AI是一场【革命】。\n生产关系将会极大的改变，在这场【革命】中，我们能做的只有加强自身的学习能力，实现在应对变革时快速转换职业。",
           "link": "https://juejin.cn/pin/7350947906566651938",
           "publishedOn": "2024-03-28T04:41:32.000Z",
-          "wordCount": 454,
+          "wordCount": 450,
           "title": "最近我越发感觉AI是一场【革命】。 生产关系将会极大的改变，在这场【革命】中，我们能做的只有加强自身的学习能力，实现在应对变革时快速转换职业。",
           "imageUrl": null
         },
@@ -1003,7 +1003,7 @@
           "description": "vscode-highlight-text 提供了：自定义配置任意语言的高亮语法，比如 vue、react、svelte、solid 等，你可以强调突出一些特定的语法或者事件，让你更加容易阅读代码也可以让你的编辑器看上去更与众不同，如果你觉得你搭配的风格很炫酷,欢迎提 pr，可以作为内置的模板风格选择提供给更多人使用。",
           "link": "https://juejin.cn/pin/7350971151131590719",
           "publishedOn": "2024-03-28T03:25:05.000Z",
-          "wordCount": 479,
+          "wordCount": 472,
           "title": "vscode-highlight-text 提供了：自定义配置任意语言的高亮语法，比如 vue、react、svelte、solid 等，你可以强调突出一些特定的语法或者事件，让你更加容易阅读...",
           "imageUrl": null
         },
@@ -1013,7 +1013,7 @@
           "description": "jym都用啥接口测试工具的呀，apifox打广告打得好凶，今天学websocket的时候发现postman好像对websocket的支持更好，网页版的post woman也用过，也有优势，不需要填token。",
           "link": "https://juejin.cn/pin/7349837128527626249",
           "publishedOn": "2024-03-25T02:42:23.000Z",
-          "wordCount": 456,
+          "wordCount": 449,
           "title": "jym都用啥接口测试工具的呀，apifox打广告打得好凶，今天学websocket的时候发现postman好像对websocket的支持更好，网页版的post woman也用过，也有优势，不需要...",
           "imageUrl": null
         },
@@ -1023,7 +1023,7 @@
           "description": "Windows 的激活水印给我看馋了，找到一个开源的工具，可以在 macOS 显示同样效果\n👉 GitHub 地址：https://github.com/Lakr233/ActivateMac",
           "link": "https://juejin.cn/pin/7349027449144115234",
           "publishedOn": "2024-03-22T15:16:22.000Z",
-          "wordCount": 497,
+          "wordCount": 490,
           "title": "Windows 的激活水印给我看馋了，找到一个开源的工具，可以在 macOS 显示同样效果 👉 GitHub 地址：https://github.com/Lakr233/ActivateMac",
           "imageUrl": null
         },
@@ -1033,7 +1033,7 @@
           "description": "华为快应用程序开发封装的就是答辩，样式是一点调不了",
           "link": "https://juejin.cn/pin/7349041579275386906",
           "publishedOn": "2024-03-22T10:22:51.000Z",
-          "wordCount": 451,
+          "wordCount": 444,
           "title": "华为快应用程序开发封装的就是答辩，样式是一点调不了",
           "imageUrl": null
         },
@@ -1043,7 +1043,7 @@
           "description": "几百张图片，有什么工具高清化",
           "link": "https://juejin.cn/pin/7348833905468669990",
           "publishedOn": "2024-03-22T09:23:39.000Z",
-          "wordCount": 453,
+          "wordCount": 446,
           "title": "几百张图片，有什么工具高清化",
           "imageUrl": null
         },
@@ -1053,7 +1053,7 @@
           "description": "jym，有没有好用的 便宜的 稳定的 ti zi 可否推荐下[流泪]",
           "link": "https://juejin.cn/pin/7348832432081518643",
           "publishedOn": "2024-03-22T06:51:05.000Z",
-          "wordCount": 488,
+          "wordCount": 481,
           "title": "jym，有没有好用的 便宜的 稳定的 ti zi 可否推荐下[流泪]",
           "imageUrl": null
         },
@@ -1063,7 +1063,7 @@
           "description": "体验资格来了，抓紧试试 Arc for Windows beta",
           "link": "https://juejin.cn/pin/7348797898492641314",
           "publishedOn": "2024-03-22T04:23:21.000Z",
-          "wordCount": 498,
+          "wordCount": 491,
           "title": "体验资格来了，抓紧试试 Arc for Windows beta",
           "imageUrl": null
         },
@@ -1073,7 +1073,7 @@
           "description": "什么是长尾效应？\n在SEO优化项目中，新站可以优先考虑优化KD比较低，也更加精准的的长尾关键词，获取更快的关键词排名。",
           "link": "https://juejin.cn/pin/7348824894157029402",
           "publishedOn": "2024-03-22T04:16:23.000Z",
-          "wordCount": 458,
+          "wordCount": 451,
           "title": "什么是长尾效应？ 在SEO优化项目中，新站可以优先考虑优化KD比较低，也更加精准的的长尾关键词，获取更快的关键词排名。",
           "imageUrl": null
         },
@@ -1083,7 +1083,7 @@
           "description": "之前开发了一个截图美化在线应用，并在掘金宣传了一下：https://juejin.cn/post/7331584783610855460，最近这个工具被我移植到了国产的效率工具 uTools 平台上，和系统的截图功能集成，体验更好！",
           "link": "https://juejin.cn/pin/7348864869229805587",
           "publishedOn": "2024-03-22T03:40:18.000Z",
-          "wordCount": 470,
+          "wordCount": 463,
           "title": "之前开发了一个截图美化在线应用，并在掘金宣传了一下：https://juejin.cn/post/7331584783610855460，最近这个工具被我移植到了国产的效率工具 uTools 平台上，...",
           "imageUrl": null
         },
@@ -1093,7 +1093,7 @@
           "description": "jym,四千出头预算台式机有没有配置推荐，基本玩101和瓦，偶尔玩3A（能低画质带就行）",
           "link": "https://juejin.cn/pin/7348709938024202280",
           "publishedOn": "2024-03-22T02:42:41.000Z",
-          "wordCount": 454,
+          "wordCount": 447,
           "title": "jym,四千出头预算台式机有没有配置推荐，基本玩101和瓦，偶尔玩3A（能低画质带就行）",
           "imageUrl": null
         },
@@ -1103,7 +1103,7 @@
           "description": "使用Earthly快速构建项目",
           "link": "https://juejin.cn/pin/7348703569053057061",
           "publishedOn": "2024-03-22T01:01:09.000Z",
-          "wordCount": 455,
+          "wordCount": 448,
           "title": "使用Earthly快速构建项目",
           "imageUrl": null
         },
@@ -1113,7 +1113,7 @@
           "description": "有没有jy知道 安卓可以模拟设备id的app呀",
           "link": "https://juejin.cn/pin/7348384849403609140",
           "publishedOn": "2024-03-21T08:12:01.000Z",
-          "wordCount": 467,
+          "wordCount": 464,
           "title": "有没有jy知道 安卓可以模拟设备id的app呀",
           "imageUrl": null
         },
@@ -1123,7 +1123,7 @@
           "description": "[7073670907851440160#新人报道#]大家好，新人多关照",
           "link": "https://juejin.cn/pin/7348466339361521715",
           "publishedOn": "2024-03-21T07:06:15.000Z",
-          "wordCount": 464,
+          "wordCount": 462,
           "title": "[7073670907851440160#新人报道#]大家好，新人多关照",
           "imageUrl": null
         },
@@ -1133,7 +1133,7 @@
           "description": "写了一个符号映射的插件，预设了一些中文符号转英文的规则，有兴趣的可以了解一下，代码也很简单几十行，涵盖了指令，底部栏，config以及一些事件的监听和状态的更新，可以作为不错的学习 vscode 插件的学习项目👀",
           "link": "https://juejin.cn/pin/7348485761467285558",
           "publishedOn": "2024-03-21T06:11:38.000Z",
-          "wordCount": 469,
+          "wordCount": 462,
           "title": "写了一个符号映射的插件，预设了一些中文符号转英文的规则，有兴趣的可以了解一下，代码也很简单几十行，涵盖了指令，底部栏，config以及一些事件的监听和状态的...",
           "imageUrl": null
         },
@@ -1143,7 +1143,7 @@
           "description": "jym，分享一个羊毛，百度AI编码插件，现在扫码登录，使用下插件就可以获取100积分，300积分就可以兑换京东E卡，https://comate.baidu.com/?inviteCode=ab2ras39",
           "link": "https://juejin.cn/pin/7348414849397227558",
           "publishedOn": "2024-03-21T03:06:33.000Z",
-          "wordCount": 457,
+          "wordCount": 450,
           "title": "jym，分享一个羊毛，百度AI编码插件，现在扫码登录，使用下插件就可以获取100积分，300积分就可以兑换京东E卡，https://comate.baidu.com/?inviteCode=ab2ras39",
           "imageUrl": null
         },
@@ -1153,7 +1153,7 @@
           "description": "有什么开发golang的比较好的开发工具，轻量级的，除了goland",
           "link": "https://juejin.cn/pin/7348363874964553728",
           "publishedOn": "2024-03-21T03:03:15.000Z",
-          "wordCount": 453,
+          "wordCount": 444,
           "title": "有什么开发golang的比较好的开发工具，轻量级的，除了goland",
           "imageUrl": null
         },
@@ -1163,7 +1163,7 @@
           "description": "#写作工具 写完博客后，都需要在文章前后写些固定内容，打一打广告，每次重复添加都挺烦的\n写了个小工具，拼接文章前后固定文本，并且做了缓存，这样每次只需要粘贴正文即可\n👉 工具地址：https://wukaipeng.com/sandwich",
           "link": "https://juejin.cn/pin/7348275757800570895",
           "publishedOn": "2024-03-20T13:40:10.000Z",
-          "wordCount": 483,
+          "wordCount": 476,
           "title": "#写作工具 写完博客后，都需要在文章前后写些固定内容，打一打广告，每次重复添加都挺烦的 写了个小工具，拼接文章前后固定文本，并且做了缓存，这样每次只需要...",
           "imageUrl": null
         },
@@ -1173,7 +1173,7 @@
           "description": "掘友们，问一下大家mac上用啥建模工具来设计数据库表的，之前Windows用习惯了power designer，mac没找到好用的，有推荐的吗",
           "link": "https://juejin.cn/pin/7347904631294525492",
           "publishedOn": "2024-03-19T03:15:56.000Z",
-          "wordCount": 461,
+          "wordCount": 454,
           "title": "掘友们，问一下大家mac上用啥建模工具来设计数据库表的，之前Windows用习惯了power designer，mac没找到好用的，有推荐的吗",
           "imageUrl": null
         },

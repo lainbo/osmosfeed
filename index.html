@@ -194,6 +194,71 @@ Free Now to 2024-04-04T15:00:00.000Z</span>
                 </section>
               </section>
             </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >掘金前端本周最热</button>
+                  <a class="source-heading__link" href="https://juejin.im/frontend?sort&#x3D;weekly_hottest">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://juejin.cn/post/7350954669742768147"
+                        open
+                      >
+                        <summary class="article-expander__title">解锁前端难题：亲手实现一个图片标注工具</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7350954669742768147">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>本文为稀土掘金技术社区首发签约文章，30 天内禁止转载，30 天后未获授权禁止转载，侵权必究！
+业务中涉及图片的制作和审核功能，审核人员需要在图片中进行标注，并说明存在的问题，标注过程中需要支持放大缩小，移动等交互，将业务剥离，这个需求，可以定义为实现一个图片标注功能。
+实现这个功能并不容易，其涉及的前端知识点众多，本文带领大家从零到一，亲手实现一个，支持缩放，移动，编辑的图片标注功能，文字描述是抽象的，眼见为实，实现效果如下所示：
+
+技术方案
+这里涉及两个关键功能，一个是绘制，包括缩放和旋转，一个是编辑，包括选取和修改尺寸，涉及到的技术包括，缩放，移动，和自定义形状的绘制（本文仅实现矩形），绘制形状的选取，改变尺寸和旋转角度等。
+从大的技术选型来说，有两种实现思路，一种是 canvas，一种是 dom+svg，下面简单介绍下两种思路和优缺点。
+canvas 可以方便实现绘制功能，但编辑功能就比较困难，当然这可以使用库来实现，这里我们考虑自己亲手实现功能。
+优点：
+
+性能较好，尤其是在处理大型图片和复杂图形时。
+支持更复杂的图形绘制和像素级操作。
+一旦图形绘制在 Canvas 上，就不会受到 DOM 的影响，减少重绘和回流。
+缺点：
+
+交互相对复杂，需要手动管理图形的状态和事件。
+对辅助技术（如屏幕阅读器）支持较差。
+可能遇到的困难：
+
+实现复杂的交互逻辑（如选取、移动、修改尺寸等）可能比较繁琐。
+在缩放和平移时，需要手动管理坐标变换和图形重绘。
+dom+svg 也可以实现功能，缩放和旋转可以借助 css3 的 transform。
+优点：
+
+交互相对简单，可以利用 DOM 事件系统和 CSS。
+对辅助技术支持较好，有助于提高可访问性。
+缺点：
+
+在处理大型图片和复杂图形时，性能可能不如 Canvas。
+SVG 元素数量过多时，可能会影响页面性能。
+可能遇到的困难：
+
+在实…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;17
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -1116,7 +1181,7 @@ value
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>jym都用啥接口测试工具的呀，apifox打广告打得好凶，今天学websocket的时候发现postman好像对websocket的支持更好，网页版的post woman也用过，也有优势，不需要填token。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2416,7 +2481,7 @@ console.log(res);
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>华为快应用程序开发封装的就是答辩，样式是一点调不了</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2435,7 +2500,7 @@ console.log(res);
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>几百张图片，有什么工具高清化</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2531,7 +2596,7 @@ console.log(res);
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>jym,四千出头预算台式机有没有配置推荐，基本玩101和瓦，偶尔玩3A（能低画质带就行）</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2550,7 +2615,7 @@ console.log(res);
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>使用Earthly快速构建项目</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2883,42 +2948,6 @@ export const num2 &#x3D; computed(()&#x3D;&gt; {
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://juejin.cn/post/7348646483385122866"
-                        open
-                      >
-                        <summary class="article-expander__title">Vite 又开始搞事情了！！！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://juejin.cn/post/7348646483385122866">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>哈喽,大家好 我是 xy👨🏻‍💻。Vite 又在搞事情！！！
-Vite 的最新版本将引入一种名为 Rolldown 的新型打包工具。
-
-Rolldown 的优势
-Rolldown 是一款用 Rust 重新编写的 Rollup 替代品。而 Rollup 使用的是 javascript。
-Rolldown 具有以下特点：
-与 Rollup 兼容：Rolldown 设计之初就考虑到了与 Rollup 的兼容性，这意味着现有的 Rollup 插件和配置可以无缝迁移到 Rolldown，极大地方便了开发者的过渡和使用。
-更快的构建速度：Rolldown 致力于提供更快的构建速度，这对于开发效率的提升至关重要。在现代 Web 开发中，快速的反馈循环可以显著提高开发效率，而 Rolldown 正是为了满足这一需求而设计的。
-更小的输出体积：Rolldown 还专注于生成更小的输出体积，这有助于减少加载时间，提高用户体验。在移动设备和网络连接受限的环境中，这一点尤为重要。
-Rolldown 类似于 esbuild，它是一款专注于速度和性能的 JavaScript 构建工具。
-尤雨溪（Evan You）表示，在捆绑纯 esm 模块时，Rolldown 比 esbuild 快 1.4~2 倍。但这次大家对性能的关注度不太高。反而是 Rust 占了很大一部分的注意力。
-Vite 存在的问题
-目前，Vite 的底层使用了两个打包工具：Esbuild、Rollup
-
-首先，让我们了解一下 Esbuild 和 Rollup 的特点。
-Esbuild 是一个高性能的 JavaScript 打包器，专注于实现极速的构建过程。
-
-它支持多种模块类型、语法转换和插件扩展，且无需缓存即可迅速完成打包任务。在 Vite 中，Esbuild 被用于依赖预打包、TypeScript 和 JSX 转换、目标降级以…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -3054,7 +3083,7 @@ Esbuild 是一个高性能的 JavaScript 打包器，专注于实现极速的构
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>有什么开发golang的比较好的开发工具，轻量级的，除了goland</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3810,8 +3839,8 @@ AI 没有护城河
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8470018611">
-        <time id="build-timestamp" datetime="2024-03-28T15:52:31.636Z">2024-03-28T15:52:31.636Z</time>
+      <a class="footer-link" href="https://github.com/lainbo/osmosfeed/actions/runs/8472262352">
+        <time id="build-timestamp" datetime="2024-03-28T18:52:28.478Z">2024-03-28T18:52:28.478Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
