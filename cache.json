@@ -44,7 +44,7 @@
           "description": "带大家快速了解下CSS initial-letter属性，可以更好地设置首字母的排版效果。",
           "link": "https://www.zhangxinxu.com/wordpress/2024/03/css-initial-letter/",
           "publishedOn": "2024-03-21T15:34:35.000Z",
-          "wordCount": 1310,
+          "wordCount": 1312,
           "title": "CSS initial-letter属性，嗯……也就这样吧",
           "imageUrl": null
         },
@@ -54,7 +54,7 @@
           "description": "全新的Screen Wake Lock API，可以让网页无论放置多久，都不要担心熄屏，或出现屏保，Web如今越来越强了。",
           "link": "https://www.zhangxinxu.com/wordpress/2024/03/js-screen-wake-lock-api/",
           "publishedOn": "2024-03-17T15:35:45.000Z",
-          "wordCount": 1399,
+          "wordCount": 1401,
           "title": "今天才知道，Web网页也能阻止息屏了",
           "imageUrl": null
         },
@@ -64,7 +64,7 @@
           "description": "音视频合成的时候，有倍速合成的需求，起初，我以为这只是个手到擒来的小需求，细究之下发现问题并不简单……",
           "link": "https://www.zhangxinxu.com/wordpress/2024/02/js-audioencoder-backplayrate-audiobuffer/",
           "publishedOn": "2024-02-29T14:22:22.000Z",
-          "wordCount": 1746,
+          "wordCount": 1748,
           "title": "不改变音调情况下Audio音频的倍速合成JS实现",
           "imageUrl": null
         }
@@ -946,7 +946,7 @@
           "description": "theme: nico\nhighlight: atom-one-dark\n大家好，我是勇宝，一名正在学习前端的打工仔，欢迎大家关注我，一起探讨更多前端小知识。今天我们来好好唠一唠深浅拷贝。\n一、情景再现\n金三银四，最近找工作的小伙伴是扑面而来，这其中少不了我的好朋友张某某同学，我们‘相依为命’，我经常开导他，这不最近的一次面试中他就遇到这样一个考题：\n面试官：（...）是深拷贝吗？\n二、JavaScript数据类型\n在聊深浅拷贝之前，我们先来说一说JS中的数据类型：\n我们都知道JavaScript中有两种数据类型（基本类型和引用类型），那么我就先考考大家：数据类型都有什么？\n基本数据类型：String（字符串）、Number（数值）、Boolean（布尔值）、Null、Undefined、Symbol；\n\n基本数据类型是直接存储在栈中。\n引用数据类型：Array、Object；\n\n引用类型存储的是该对象在栈中的引用，真正的数据是存储在内存（堆）中的。\n举例一\nlet name = 'iyongbao';\nlet name2 = name;\n\nname2 = 'zhangsan';\n\nconsole.log(name); // iyongbao\nconsole.log(name2); // zhangsan\n\n举例二\nlet obj = { name: 'iyongbao' };\nlet obj2 = obj;\n\nobj2.name = 'zhangsan';\n\nconsole.log(obj); // {name: \"zhangsan\"}\nconsole.log(obj2); // {name: \"zhangsan\"}\n\n上线的案例都是‘拷贝’，从中我们可以看到，引用类型的赋值会影响到原数据，这其实就是浅拷贝。\n二、探究深浅拷贝\n对于深浅拷贝，勇宝给出自己的理解：\n浅拷贝：…",
           "link": "https://juejin.cn/post/7348617988138532905",
           "publishedOn": "2024-03-21T07:38:38.000Z",
-          "wordCount": 44,
+          "wordCount": 1847,
           "title": "面试官：（...）扩展运算符是深拷贝吗？",
           "imageUrl": null
         },
@@ -966,7 +966,7 @@
           "description": "theme: nico\nhighlight: androidstudio\n前言\n一站式社交平台数据抓取利器，带你玩转小红书、抖音、快手、B站和微博数据分析\n不经意间，来查看MediaCrawler仓库源码，发现作者已经删库了。看来是领奖了。才几天不到的时间Star数量已经直逼10K了，增长速度近乎疯狂。\n前两天只是将代码下载下来了，还没认真的玩。还好代码本地已经有了。如果有兴趣的也可以来找我要，免费的哟。\n\n作者在这里也明显进行了标注使用了无头浏览器\n\n那到底什么事无头浏览器呢？\n无头浏览器（Headless Browser）是一种浏览器程序，没有图形用户界面（GUI），但能够执行与普通浏览器相似的功能。无头浏览器能够加载和解析网页，执行JavaScript代码，处理网页事件，并提供对DOM（文档对象模型）的访问和操作能力。\n与传统浏览器相比，无头浏览器的主要区别在于其没有可见的窗口或用户界面。这使得它在后台运行时，不会显示实际的浏览器窗口，从而节省了系统资源，并且可以更高效地执行自动化任务。\n常见的无头浏览器包括Headless Chrome（Chrome的无头模式）、PhantomJS、Puppeteer（基于Chrome的无头浏览器库）、playwright等。它们提供了编程接口，使开发者能够通过代码自动化控制和操作浏览器行为。\n\n如果您比较Playwright和 Puppeteer的贡献者页面 ，您会注意到Puppeteer的前两个贡献者现在在 Playwright 上工作。Puppeteer 团队实质上是从 Google 转移到 Microsoft 并成为 Playwright 团队。\n因此，Playwright 在很多方面与 Puppeteer 非常相似。API 方法在大多数情况下是相同的，并且默认情况下 Playwright 还捆绑了兼容的浏览器。\nPlaywright 最大的区别在于跨浏览器支持。它可以驱动 Chromium、WebKit（Safari 的浏览器引擎）和 Firefox。\n无头浏览器其实就是看不见的浏览器，所有的操作都要通过代码调用 API 来控制，所以浏览器能干的事儿，无头浏览器都能干，而且很多事儿做起来比标准的浏览器更简单。\n能够干什么呢？\n我举几个常用的功能来说明一下无头浏览器的主要使用场景\n自动化测试： 无头浏览器可以模拟用户行为，执行自动化测试任务，例如对网页进行加载、表单填写、点击按钮、检查页面元素等。\n数据抓取： 无头浏览器可用于爬取网页数据，自动访问网站并提取所需的信息，用于数据分析、搜索引擎优化等。\n屏幕截图： 无头浏览器可以加载网页并生成网页的截图，用于生成快照、生成预览图像等。\n服务器端渲染： 无头浏览器可以用于服务器端渲染（Server-side Rendering），将动态生成的页面渲染为静态HTML，提供更好的性能和搜索引擎优化效果。\n生成 PDF 文件：使用浏览器自带的生成 PDF 功能，将目标页面转换成 PDF 。\n这个仓库如何使用呢\n首先这是一个Python库，当然要安装必要的Python环境，这个我就不多说了，通过GPT或者在网上搜索都可以进行安装好。\n接下来就是拿到代码后如何使用，这个其实作者也是非常的友好了，直接看README。\n\n最后运行命令后，会出现一个二维码，比如这里我测试的是小红书，出现二维码之后，我们用小红书App来扫描，并进行确认身份，这样无头浏览器就能识别并记住我们的身份信息，后续就可以通过该身份进行抓取一些数据了。\n\n这里我配置了一条小红书的笔记ID,这里是个数据可以配置多个的。\n好了，OK ,数据就被这么简单的抓取下来了。\n\n\n作者还特意对数据存储做了封装，如果数据量大的时候存储起来可能就非常的方便了。\n如果需求量很大，还可以对其源码进行研究改造，好了今天的学习就到这里了。",
           "link": "https://juejin.cn/post/7348349574413467674",
           "publishedOn": "2024-03-21T01:45:12.000Z",
-          "wordCount": 44,
+          "wordCount": 871,
           "title": "没想到三天10KStar的营销利器MediaCrawler开源作者已经删库了",
           "imageUrl": null
         }
@@ -983,7 +983,7 @@
           "description": "jym都用啥接口测试工具的呀，apifox打广告打得好凶，今天学websocket的时候发现postman好像对websocket的支持更好，网页版的post woman也用过，也有优势，不需要填token。",
           "link": "https://juejin.cn/pin/7349837128527626249",
           "publishedOn": "2024-03-25T02:42:23.000Z",
-          "wordCount": 446,
+          "wordCount": 453,
           "title": "jym都用啥接口测试工具的呀，apifox打广告打得好凶，今天学websocket的时候发现postman好像对websocket的支持更好，网页版的post woman也用过，也有优势，不需要...",
           "imageUrl": null
         },
@@ -1003,7 +1003,7 @@
           "description": "华为快应用程序开发封装的就是答辩，样式是一点调不了",
           "link": "https://juejin.cn/pin/7349041579275386906",
           "publishedOn": "2024-03-22T10:22:51.000Z",
-          "wordCount": 444,
+          "wordCount": 451,
           "title": "华为快应用程序开发封装的就是答辩，样式是一点调不了",
           "imageUrl": null
         },
@@ -1113,7 +1113,7 @@
           "description": "jym，分享一个羊毛，百度AI编码插件，现在扫码登录，使用下插件就可以获取100积分，300积分就可以兑换京东E卡，https://comate.baidu.com/?inviteCode=ab2ras39",
           "link": "https://juejin.cn/pin/7348414849397227558",
           "publishedOn": "2024-03-21T03:06:33.000Z",
-          "wordCount": 450,
+          "wordCount": 457,
           "title": "jym，分享一个羊毛，百度AI编码插件，现在扫码登录，使用下插件就可以获取100积分，300积分就可以兑换京东E卡，https://comate.baidu.com/?inviteCode=ab2ras39",
           "imageUrl": null
         },
@@ -1143,7 +1143,7 @@
           "description": "掘友们，问一下大家mac上用啥建模工具来设计数据库表的，之前Windows用习惯了power designer，mac没找到好用的，有推荐的吗",
           "link": "https://juejin.cn/pin/7347904631294525492",
           "publishedOn": "2024-03-19T03:15:56.000Z",
-          "wordCount": 44,
+          "wordCount": 461,
           "title": "掘友们，问一下大家mac上用啥建模工具来设计数据库表的，之前Windows用习惯了power designer，mac没找到好用的，有推荐的吗",
           "imageUrl": null
         },
@@ -1163,7 +1163,7 @@
           "description": "#开源工具 ✨ MulSearch v0.2\nMulSearch，一个快速指定搜索源的入口页，方便使用多个搜索引擎和平台的开发者\n新版本做了一些调整，用 divider 做了分类，并引入了一些垂直平台的搜索源\n👉 体验地址：https://search.wukaipeng.com/",
           "link": "https://juejin.cn/pin/7347147911149436943",
           "publishedOn": "2024-03-18T05:52:06.000Z",
-          "wordCount": 44,
+          "wordCount": 509,
           "title": "#开源工具 ✨ MulSearch v0.2 MulSearch，一个快速指定搜索源的入口页，方便使用多个搜索引擎和平台的开发者 新版本做了一些调整，用 divider 做了分类，并引入...",
           "imageUrl": null
         },
@@ -1173,7 +1173,7 @@
           "description": "idea 哪些好用得插件",
           "link": "https://juejin.cn/pin/7345757062107922484",
           "publishedOn": "2024-03-14T01:00:11.000Z",
-          "wordCount": 44,
+          "wordCount": 459,
           "title": "idea 哪些好用得插件",
           "imageUrl": null
         }
